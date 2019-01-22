@@ -8,29 +8,67 @@
 ## ⭐️ Features
 
 - High customizable components
+- Flexible *overrides* system
 - JSS
 - React Storybook
 - Unit testing
 - Weekly [dependabot](https://dependabot.com) dependency updates
 
-## 📦 Getting Started
+## 📦 Installation
 
 ```
+// with npm
+npm install hoi-poi-ui
+
+// with yarn
 yarn install hoi-poi-ui
 ```
 
+## ⚙️ Usage
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Button from 'hoi-poi-ui/Button';
+
+function App() {
+  return (
+    <Button type="big" color="primary">
+      Hello World
+    </Button>
+  );
+}
+
+ReactDOM.render(<App />, document.querySelector('#app'));
+```
+
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/k299432p77)
+
 ## 💎 Customization
 
-TODO
+🚧
 
-### npm
-```
-import HoiPoiUI from 'hoi-poi-ui';
-...
-```
+## 📜 Documentation and examples
 
-### self-host/cdn
-```
-<script src="build/hoi-poi-ui.js"></script>
-...
-```
+Check out our [storybook](https://forcemanager.github.io/hoi-poi-ui/).
+
+## 🙌 Contributing
+
+To learn how to setup a development environment and for contribution guidelines, see [CONTRIBUTING.md](/CONTRIBUTING.md).
+
+## 📜 Changelog
+
+We use [GitHub releases](https://github.com/ForceManager/hoi-poi-ui/releases).
+
+## 🌮 Thanks
+
+🚧
+
+## 📄 License
+
+This project is licensed under the terms of the
+[MIT license](/LICENSE).
+
+## 🔐 Security
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security).
