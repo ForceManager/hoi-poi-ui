@@ -8,9 +8,7 @@
 ## ⭐️ Features
 
 -   High customizable components
--   Flexible _overrides_ system
--   JSS
--   React Storybook
+-   React Storybook as development environment and documentation.
 -   Unit testing
 -   Weekly [dependabot](https://dependabot.com) dependency updates
 
