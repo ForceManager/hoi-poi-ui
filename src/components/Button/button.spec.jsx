@@ -4,6 +4,6 @@ import renderer from 'react-test-renderer';
 
 describe('Button', () => {
     test('is rendered without crashes', () => {
-        renderer.create(<Button>I'm a button</Button>);
+        renderer.create(<Button>Hello</Button>);
     });
 });
