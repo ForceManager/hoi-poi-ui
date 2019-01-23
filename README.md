@@ -7,12 +7,12 @@
 
 ## ⭐️ Features
 
-- High customizable components
-- Flexible *overrides* system
-- JSS
-- React Storybook
-- Unit testing
-- Weekly [dependabot](https://dependabot.com) dependency updates
+-   High customizable components
+-   Flexible _overrides_ system
+-   JSS
+-   React Storybook
+-   Unit testing
+-   Weekly [dependabot](https://dependabot.com) dependency updates
 
 ## 📦 Installation
 
@@ -62,7 +62,7 @@ We use [GitHub releases](https://github.com/ForceManager/hoi-poi-ui/releases).
 
 ## 🌮 Thanks
 
-🚧
+[@hodgef/js-library-boilerplate](https://github.com/hodgef/js-library-boilerplate) for the initial boilerplate.
 
 ## 📄 License
 
