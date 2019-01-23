@@ -15,7 +15,7 @@
     "husky": {
         "hooks": {
             "pre-commit": "yarn precommit",
-            "pre-push": "yarn test"
+            "pre-push": "cross-env CI=true yarn test"
         }
     },
     "lint-staged": {
