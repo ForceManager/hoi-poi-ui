@@ -8,5 +8,4 @@ install:
   - yarn install
 script:
 - yarn test
-if: type = pull_request
 - '[[ $TRAVIS_PULL_REQUEST == "false" ]] && yarn deploy-storybook --ci'
