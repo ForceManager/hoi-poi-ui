@@ -42,6 +42,8 @@ yarn install
 yarn start
 ```
 
+## Tips
+
 ## Windows users
 
 -   We use LF characters for line breaks so remember to configure your editor and git: `git config --global core.autocrlf false`

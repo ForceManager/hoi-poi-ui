@@ -1,8 +1,12 @@
 language: node_js
+branches:
+  only:
+  - master
 node_js:
  - "node"
 install:
-  - npm install
+  - yarn install
 script:
-- npm run test
-- npm run demo
+- yarn test
+- yarn build
+- yarn deploy-storybook --ci
