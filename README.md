@@ -1,13 +1,14 @@
  <div align="center">
   <h2>HoiPoi UI</h2>
   <blockquote>A flexible and customizable react component library.</blockquote>
-  <img src="https://travis-ci.org/ForceManager/hoi-poi-ui.svg?branch=master" /> <img src="https://img.shields.io/david/ForceManager/hoi-poi-ui.svg" /> <img src="https://img.shields.io/david/dev/ForceManager/hoi-poi-ui.svg" /> <img src="https://api.dependabot.com/badges/status?host=github&repo=ForceManager/hoi-poi-ui" />
+  <img src="https://travis-ci.com/ForceManager/hoi-poi-ui.svg?branch=master" /> <img src="https://img.shields.io/david/ForceManager/hoi-poi-ui.svg" /> <img src="https://img.shields.io/david/dev/ForceManager/hoi-poi-ui.svg" /> <img src="https://api.dependabot.com/badges/status?host=github&repo=ForceManager/hoi-poi-ui" />
 
 </div>
 
 ## ⭐️ Features
 
 -   High customizable components
+-   Theming with JSS.
 -   React Storybook as development environment and documentation.
 -   Unit testing
 -   Weekly [dependabot](https://dependabot.com) dependency updates
@@ -27,13 +28,15 @@ yarn install hoi-poi-ui
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from 'hoi-poi-ui/Button';
+import { HoiPoiProvider, Button } from 'hoi-poi-ui';
 
 function App() {
   return (
-    <Button type="big" color="primary">
-      Hello World
-    </Button>
+    <HoiPoiProvider>
+      <Button type="big" color="primary">
+        Hello World
+      </Button>
+    </HoiPoiProvider>
   );
 }
 
