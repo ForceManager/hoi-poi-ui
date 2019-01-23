@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import withStyles from 'react-jss';
+import styles from './styles';
 
-function Button({ onClick, children }) {
-    return <div onClick={onClick}>{children}</div>;
+function Button({ classes, onClick, children }) {
+    return (
+        <button className={classes.button} onClick={onClick}>
+            <span className={classes.label}>{children}</span>
+        </button>
+    );
 }
 
 Button.propTypes = {
@@ -10,4 +16,4 @@ Button.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default React.memo(Button);
+export default React.memo(withStyles(styles)(Button));

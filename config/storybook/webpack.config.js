@@ -4,32 +4,6 @@ const paths = require('../paths');
 const getClientEnvironment = require('../env');
 
 module.exports = (baseConfig, env, defaultConfig) => {
-  // Custom babel-loader
-  defaultConfig.module.rules[0] = {
-    test: /\.(js|mjs|jsx|ts|tsx)$/,
-    include: paths.appSrc,
-    loader: require.resolve('babel-loader'),
-    options: {
-      customize: require.resolve(
-        'babel-preset-react-app/webpack-overrides'
-      ),
-      plugins: [
-        ...defaultConfig.module.rules[0].use[0].options.plugins,
-        [
-          require.resolve('babel-plugin-named-asset-import'),
-          {
-            loaderMap: {
-              svg: {
-                ReactComponent: '@svgr/webpack?-prettier,-svgo![path]',
-              },
-            },
-          }
-        ]
-      ],
-      cacheDirectory: true,
-      cacheCompression: false,
-    },
-  };
 
   // Injecting eslint after compilation
   defaultConfig.module.rules = [
