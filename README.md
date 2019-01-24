@@ -53,6 +53,12 @@ ReactDOM.render(<App />, document.querySelector('#app'));
 
 Check out our [storybook](https://forcemanager.github.io/hoi-poi-ui/).
 
+## 🌐 Browser support
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
+| --------- | --------- | --------- | --------- |
+| IE11, Edge| >= 52| >= 49| >= 10
+
 ## 🙌 Contributing
 
 To learn how to setup a development environment and for contribution guidelines, see [CONTRIBUTING.md](/CONTRIBUTING.md).
@@ -65,11 +71,12 @@ We use [GitHub releases](https://github.com/ForceManager/hoi-poi-ui/releases).
 
 [@hodgef/js-library-boilerplate](https://github.com/hodgef/js-library-boilerplate) for the initial boilerplate.
 
+## 🔐 Security
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security).
+
 ## 📄 License
 
 This project is licensed under the terms of the
 [MIT license](/LICENSE).
 
-## 🔐 Security
-
-To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security).
