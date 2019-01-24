@@ -43,7 +43,7 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#app'));
 ```
 
-[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/k299432p77)
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/9kz3q68qw)
 
 ## 💎 Customization
 
