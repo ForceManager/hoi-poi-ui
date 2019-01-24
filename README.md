@@ -7,7 +7,7 @@
 
 ## ⭐️ Features
 
--   High customizable components
+-   High customizable components.
 -   Theming with JSS.
 -   React Storybook as development environment and documentation.
 -   Unit testing
