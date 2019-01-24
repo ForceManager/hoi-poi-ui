@@ -1176,14 +1176,14 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-info@^4.1.7":
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.7.tgz#14bc9b97ea611e472363465902d9414020a24e2f"
-  integrity sha512-Yc8Zb66hE1vOQ39b16gXbkrFSXNhJDk0eI7mHglbXFuW1lsXMKi7EhXWiuYSKF1g92KTlHumSjWnYrUmGfiLXQ==
+"@storybook/addon-info@^4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.9.tgz#287dbfa7de017e54dbc84e89029fcd9f7e8503ee"
+  integrity sha512-9D0CkuoerSqy8XDRZDPIQ6mEI0GgfVYwhYrz6a0oVnxWY+opRxYNKZrnONFVf+B51JImGR+vdMO3KmX32d1EHQ==
   dependencies:
-    "@storybook/addons" "4.1.7"
-    "@storybook/client-logger" "4.1.7"
-    "@storybook/components" "4.1.7"
+    "@storybook/addons" "4.1.9"
+    "@storybook/client-logger" "4.1.9"
+    "@storybook/components" "4.1.9"
     core-js "^2.5.7"
     global "^4.3.2"
     marksy "^6.1.0"
@@ -1248,16 +1248,6 @@
     prop-types "^15.6.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@4.1.7":
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.7.tgz#59ca76fff6594ff196bc58135689d1597cb90a1b"
-  integrity sha512-psKz/uMlImHkuUqdYaEq84Kyh3VIcSo00yHsnpWeq0xv3v6ONQKrFZ0bdmuZT30XQC0sYvXaP+YOKRq/hdgWaQ==
-  dependencies:
-    "@storybook/channels" "4.1.7"
-    "@storybook/components" "4.1.7"
-    global "^4.3.2"
-    util-deprecate "^1.0.2"
-
 "@storybook/addons@4.1.9":
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.9.tgz#d59660c7a9e1d19432b28e78c319d1c425f002a7"
@@ -1277,41 +1267,15 @@
     global "^4.3.2"
     json-stringify-safe "^5.0.1"
 
-"@storybook/channels@4.1.7":
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.1.7.tgz#bf3412859cca8cd3d221afcd68de348645dbb329"
-  integrity sha512-UVLrCcQ8f52PQYdWh97XcWBdqiXKBznePbd4L36//C6cIJkfwQ5nK9UDzzrCP/tlCnolVxnqRlorns4YeJcrSg==
-
 "@storybook/channels@4.1.9":
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.1.9.tgz#34565e25f2797299b34bd1414bf9e4a93202182f"
   integrity sha512-bm4W2uPWPEW1SONHQckw0TfW5o50/D3NapCf6sYL+b6BgFB2yFmGywDNnJnJ3SNJNLzr1t/NTD2YKkFEzMP1Vg==
 
-"@storybook/client-logger@4.1.7":
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.7.tgz#6e4c3499c76ad46633a6ba226399ee2449723fac"
-  integrity sha512-8ANFBywYmja3wMbjNfPSIYGm50iWXeH0hxSmL+CD+Sk3+px0ZhqGEaqFVNPTd0blnuVZTPNNBepEDv8etnhPXg==
-
 "@storybook/client-logger@4.1.9":
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.9.tgz#45deaefe36c4a52d59822bbdde04fe6a4f6a9ab5"
   integrity sha512-3gheaX6kjzpi/NxRATrezOOiJxiHfkxgBtR8T98HtM2poAz/Bh5L1UCn2nbaaFVdfoOh59lrBkMclYYfUiKovA==
-
-"@storybook/components@4.1.7":
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.1.7.tgz#5e7f8247aebe0b79246c19f580e520cc59a39a1d"
-  integrity sha512-PgEREFw58tlyzzGbA7q1WlXgOLk6Dd+qkHZYJ+4JlTAl6kPdjirfRshg0uyvTVy5jGbtDa5mhN7Fo1TtuYiyDw==
-  dependencies:
-    "@emotion/core" "^0.13.1"
-    "@emotion/provider" "^0.11.2"
-    "@emotion/styled" "^0.10.6"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-inspector "^2.3.0"
-    react-split-pane "^0.1.84"
-    react-textarea-autosize "^7.0.4"
-    render-fragment "^0.1.1"
 
 "@storybook/components@4.1.9":
   version "4.1.9"
@@ -1329,15 +1293,11 @@
     react-textarea-autosize "^7.0.4"
     render-fragment "^0.1.1"
 
-"@storybook/core-events@4.1.7":
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.7.tgz#15803967783231dcb96432ad45b360d5e95188df"
-  integrity sha512-IpggH1Br51UAlLaAhNr6qY0IVT5mN1akfeVi1DpCj2ji7zqdfeDO3zmX6aWSjYVefg6OvNol71WKh+wjcYNvXg==
-
 "@storybook/core-events@4.1.9":
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.9.tgz#30429fc82ee03e31979546e18b2d1896d0c69134"
   integrity sha512-HaEvFoyQg74Vn1rAqNjYcfoCwt2VjfgBIu0o22PNYHdw/3wPd2tJqaewpZpoEWLgnlX3LkwNheffgarFo+sLWw==
+
 "@storybook/core@4.1.9":
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/@storybook/core/-/core-4.1.9.tgz#e5be3c60bf7c0bc62d1f72a47107f3e50f41eb14"
