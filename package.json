@@ -6,8 +6,8 @@
         "lint": "eslint --config .eslintrc --ext js,jsx src/**",
         "precommit": "cross-env NODE_ENV=production lint-staged",
         "start": "start-storybook -p 9001 -c config/storybook",
-        "build": "node scripts/build.js",
-        "test": "node scripts/test.js",
+        "build": "cross-env NODE_ENV=production webpack --mode production --config config/webpack.config.prod.js",
+        "test": "jest",
         "test:snapshots": "jest --updateSnapshot",
         "postinstall": "node bin/postinstall",
         "deploy-storybook": "storybook-to-ghpages",
@@ -43,6 +43,10 @@
         "ui"
     ],
     "license": "MIT",
+    "peerDependencies": {
+        "react": "*",
+        "react-dom": "*"
+    },
     "devDependencies": {
         "@babel/core": "7.2.2",
         "@babel/plugin-proposal-class-properties": "^7.2.3",
@@ -84,25 +88,17 @@
         "eslint-plugin-prettier": "^3.0.1",
         "eslint-plugin-react": "7.12.4",
         "file-loader": "3.0.1",
-        "fork-ts-checker-webpack-plugin-alt": "0.4.14",
         "fs-extra": "7.0.1",
         "html-webpack-plugin": "4.0.0-beta.5",
         "husky": "^1.3.1",
         "identity-obj-proxy": "3.0.0",
         "jest": "23.6.0",
         "jest-enzyme": "^7.0.1",
-        "jest-pnp-resolver": "1.0.2",
         "jest-resolve": "23.6.0",
         "jss": "^9.8.7",
         "jss-isolate": "^5.1.0",
         "lint-staged": "^8.1.0",
-        "mini-css-extract-plugin": "0.5.0",
-        "optimize-css-assets-webpack-plugin": "5.0.1",
-        "pnp-webpack-plugin": "1.2.1",
         "postcss-flexbugs-fixes": "4.1.0",
-        "postcss-loader": "3.0.0",
-        "postcss-preset-env": "6.5.0",
-        "postcss-safe-parser": "4.0.1",
         "prettier": "^1.16.1",
         "pretty-quick": "^1.10.0",
         "react": "^16.7.0",
@@ -112,15 +108,13 @@
         "react-jss": "^8.6.1",
         "react-test-renderer": "^16.7.0",
         "resolve": "1.10.0",
-        "sass-loader": "7.1.0",
         "storybook-addon-jsx": "^6.0.0",
-        "style-loader": "0.23.1",
         "terser-webpack-plugin": "1.2.1",
         "url-loader": "1.1.2",
         "webpack": "4.29.0",
+        "webpack-cli": "^3.2.1",
         "webpack-dev-server": "3.1.14",
-        "webpack-manifest-plugin": "2.0.4",
-        "workbox-webpack-plugin": "3.6.3"
+        "webpack-manifest-plugin": "2.0.4"
     },
     "browserslist": [
         ">0.2%",
@@ -132,7 +126,6 @@
         "collectCoverageFrom": [
             "<rootDir>/src/components/**/*.{js,jsx}"
         ],
-        "resolver": "jest-pnp-resolver",
         "setupFiles": [
             "react-app-polyfill/jsdom"
         ],
@@ -143,9 +136,9 @@
         "testEnvironment": "jsdom",
         "testURL": "http://localhost",
         "transform": {
-            "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+            "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
             "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-            "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+            "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
         },
         "transformIgnorePatterns": [
             "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
