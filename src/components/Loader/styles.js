@@ -1,23 +1,92 @@
+import keyframes from 'jss-keyframes';
+
+const spinAnimation = keyframes({
+    to: { transform: 'rotate(360deg)', '-webkit-transform': 'rotate(360deg)' },
+});
+
 export default (theme) => ({
     root: {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        margin: '0',
-        textAlign: 'center',
-        zIndex: '1000',
-        transform: 'translateX(-50%) translateY(-50%)',
-        '&:before': {
-            position: 'absolute',
-            content: '""',
-            top: '0',
-            left: '50%',
-            width: '100%',
-            height: '100%',
-            borderRadius: '500rem',
-            border: '.2em solid rgba(0,0,0,.1)',
-            borderColor: 'rgba(255,255,255,.15)',
-        },
-        '&:after': {},
+        display: 'inline-block',
+        animation: `${spinAnimation} 1s linear infinite`,
+        borderStyle: 'solid',
+        borderRadius: '50%',
+    },
+    // Colors
+    primary: {
+        borderColor: theme.colors.lightGray,
+        borderTopColor: theme.colors.primary,
+    },
+    danger: {
+        borderColor: theme.colors.lightGray,
+        borderTopColor: theme.colors.danger,
+    },
+    white: {
+        borderColor: 'transparent',
+        borderTopColor: 'white',
+    },
+    // Sizes
+    mini: {
+        // 12
+        borderWidth: '3px',
+        borderRadius: '50%',
+        height: '9px',
+        width: '9px',
+        marginBottom: '-2px',
+    },
+    tiny: {
+        // 16
+        borderWidth: '3px',
+        borderRadius: '50%',
+        height: '13px',
+        width: '13px',
+        marginBottom: '-2px',
+    },
+    small: {
+        // 24
+        borderWidth: '3px',
+        borderRadius: '50%',
+        height: '21px',
+        width: '21px',
+        marginBottom: '-2px',
+    },
+    medium: {
+        // 32
+        borderWidth: '3px',
+        borderRadius: '50%',
+        height: '29px',
+        width: '29px',
+        marginBottom: '-3px',
+    },
+    large: {
+        // 48
+        borderWidth: '3px',
+        borderRadius: '50%',
+        height: '45px',
+        width: '45px',
+        marginBottom: '-3px',
+    },
+    big: {
+        // 54
+        borderWidth: '4px',
+        borderRadius: '50%',
+        height: '50px',
+        width: '50px',
+        marginBottom: '-3px',
+    },
+    huge: {
+        // 62
+        borderWidth: '4px',
+        borderRadius: '50%',
+        height: '58px',
+        width: '58px',
+        marginBottom: '-3px',
+    },
+    massive: {
+        // 68
+        borderWidth: '4px',
+        borderRadius: '50%',
+        height: '64px',
+        width: '64px',
+        marginBottom: '-3px',
     },
 });

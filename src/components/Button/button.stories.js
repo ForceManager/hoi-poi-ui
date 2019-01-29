@@ -4,8 +4,6 @@ import Button from '../Button';
 
 storiesOf('Button', module).add('default', () => <Button>ACTION</Button>);
 
-storiesOf('Button', module).add('disabled', () => <Button isDisabled={true}>ACTION</Button>);
-
 storiesOf('Button', module).add('primary', () => <Button color="primary">ACTION</Button>);
 
 storiesOf('Button', module).add('danger', () => <Button color="danger">ACTION</Button>);
@@ -33,6 +31,8 @@ storiesOf('Button', module).add('full-width', () => (
         ACTION
     </Button>
 ));
+
+storiesOf('Button', module).add('loading', () => <Button isLoading={true}>ACTION</Button>);
 
 storiesOf('Button', module).add('primary outlined', () => (
     <Button color="primary" type="outlined">

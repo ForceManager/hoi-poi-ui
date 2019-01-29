@@ -4,7 +4,7 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import styles from './styles';
 
-function Loader({ classes, size = 'normal', color = 'primary' }) {
+function Loader({ classes, size = 'medium', color = 'primary' }) {
     const rootClassName = classnames(classes.root, [classes[color]], [classes[size]]);
 
     return <div className={rootClassName} />;

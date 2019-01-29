@@ -1,5 +1,6 @@
 export default (theme) => ({
     root: {
+        position: 'relative',
         boxSizing: 'border-box',
         display: 'inline-block',
         minWidth: '100px',
@@ -17,6 +18,9 @@ export default (theme) => ({
             backgroundPosition: '0 0 !important',
             opacity: 0.5,
             cursor: 'not-allowed !important',
+            '&:hover': {
+                backgroundPosition: '0 0 !important',
+            },
             '& *': {
                 cursor: 'not-allowed',
             },
@@ -31,7 +35,31 @@ export default (theme) => ({
         alignItems: 'inherit',
         justifyContent: 'inherit',
         fontWeight: 500,
+        transition: 'opacity .2s ease-in-out',
         ...theme.typography.button,
+    },
+    labelLoading: {
+        isolate: true,
+        position: 'relative',
+        '& $label': {
+            opacity: 0,
+        },
+        '& $loader': {
+            opacity: 1,
+        },
+    },
+    loader: {
+        isolate: true,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        opacity: 0,
+        transition: 'opacity .2s ease-in-out',
     },
     // Types
     outlined: {
