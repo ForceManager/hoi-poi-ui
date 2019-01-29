@@ -80,11 +80,11 @@ Button.propTypes = {
     type: PropTypes.oneOf(['filled', 'outlined']),
     color: PropTypes.oneOf(['primary', 'danger', 'white']),
     isDisabled: PropTypes.bool,
+    /** Use the whole container */
     isFullWidth: PropTypes.bool,
     isLoading: PropTypes.bool,
+    /** Render the component as a tag <a/> with href */
     href: PropTypes.string,
 };
-
-Button.displayName = 'Button';
 
 export default React.memo(withStyles(styles)(Button));

@@ -14,6 +14,5 @@ Loader.propTypes = {
     size: PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
     color: PropTypes.oneOf(['primary', 'danger', 'white']),
 };
-Loader.displayName = 'Loader';
 
 export default React.memo(withStyles(styles)(Loader));

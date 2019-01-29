@@ -2,8 +2,8 @@
 const lightBlack = '#5f656b';
 const lightGray = '#F7F8F9';
 const grey = '#697782';
-const primary = '#FF8C00';
-const primaryDark = '#F84F03';
+const primary = '#00CED1';
+const primaryDark = '#00a0a0';
 const danger = '#f04540';
 const dangerDark = '#C43833';
 
