@@ -85,4 +85,6 @@ Button.propTypes = {
     href: PropTypes.string,
 };
 
+Button.displayName = 'Button';
+
 export default React.memo(withStyles(styles)(Button));

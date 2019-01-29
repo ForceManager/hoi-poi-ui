@@ -1,8 +1,43 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { text, boolean, select } from '@storybook/addon-knobs';
 import Button from '../Button';
 
-storiesOf('Button', module).add('default', () => <Button>ACTION</Button>);
+storiesOf('Button', module).add('[interactive]', () => (
+    <Button
+        size={select(
+            'Size',
+            {
+                Big: 'big',
+                Small: 'small',
+                Medium: 'medium',
+            },
+            'medium',
+        )}
+        color={select(
+            'Color',
+            {
+                Primary: 'primary',
+                Danger: 'danger',
+                White: 'white',
+            },
+            'primary',
+        )}
+        type={select(
+            'Type',
+            {
+                Filled: 'filled',
+                Outlined: 'outlined',
+            },
+            'filled',
+        )}
+        isLoading={boolean('Loading', false)}
+        isDisabled={boolean('Disabled', false)}
+        isFullWidth={boolean('Full Width', false)}
+    >
+        {text('Children', 'ACTION')}
+    </Button>
+));
 
 storiesOf('Button', module).add('primary', () => <Button color="primary">ACTION</Button>);
 
