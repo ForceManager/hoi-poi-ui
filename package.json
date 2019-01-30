@@ -10,7 +10,7 @@
         "test": "jest",
         "test:snapshots": "jest --updateSnapshot",
         "postinstall": "node bin/postinstall",
-        "deploy": "cross-env NODE_ENV=production styleguidist build && gh-pages -d styleguide"
+        "deploy": "cross-env NODE_ENV=production styleguidist build && gh-pages -d styleguide --repo https://$GH_TOKEN@github.com/ForceManager/hoi-poi-ui.git"
     },
     "husky": {
         "hooks": {
