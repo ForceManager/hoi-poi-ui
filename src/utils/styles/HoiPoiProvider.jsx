@@ -10,6 +10,7 @@ import defaultTheme from './defaultTheme';
 const jss = create(preset());
 jss.use(
     isolate({
+        isolate: 'root',
         reset: 'all',
     }),
 );
