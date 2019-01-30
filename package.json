@@ -10,12 +10,12 @@
         "test": "jest",
         "test:snapshots": "jest --updateSnapshot",
         "postinstall": "node bin/postinstall",
-        "deploy": "styleguidist build && gh-pages -d styleguide"
+        "deploy": "cross-env NODE_ENV=production styleguidist build && gh-pages -d styleguide"
     },
     "husky": {
         "hooks": {
             "pre-commit": "yarn precommit",
-            "pre-push": "cross-env yarn test"
+            "pre-push": "yarn test"
         }
     },
     "lint-staged": {
@@ -94,10 +94,8 @@
         "postcss-flexbugs-fixes": "4.1.0",
         "prettier": "^1.16.1",
         "pretty-quick": "^1.10.0",
-        "react": "^16.7.0",
         "react-app-polyfill": "^0.2.0",
         "react-dev-utils": "^7.0.1",
-        "react-dom": "^16.7.0",
         "react-jss": "^8.6.1",
         "react-styleguidist": "^8.0.6",
         "react-test-renderer": "^16.7.0",
@@ -115,38 +113,9 @@
         "not ie <= 11",
         "not op_mini all"
     ],
-    "jest": {
-        "collectCoverageFrom": [
-            "<rootDir>/src/components/**/*.{js,jsx}"
-        ],
-        "setupFiles": [
-            "react-app-polyfill/jsdom"
-        ],
-        "setupTestFrameworkScriptFile": "<rootDir>/config/jest/setupTests.js",
-        "testMatch": [
-            "<rootDir>/src/components/**/?(*.)+(spec|test).js?(x)"
-        ],
-        "testEnvironment": "jsdom",
-        "testURL": "http://localhost",
-        "transform": {
-            "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-            "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-            "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-        },
-        "transformIgnorePatterns": [
-            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-        ],
-        "moduleFileExtensions": [
-            "js",
-            "json",
-            "jsx",
-            "node"
-        ],
-        "snapshotSerializers": [
-            "enzyme-to-json/serializer"
-        ]
-    },
     "dependencies": {
-        "classnames": "^2.2.6"
+        "react": "^16.7.0",
+        "classnames": "^2.2.6",
+        "react-dom": "^16.7.0"
     }
 }
