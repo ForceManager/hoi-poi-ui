@@ -1,5 +1,5 @@
  <div align="center">
-  <h2>HoiPoi UI</h2>
+  <h1>HoiPoi UI</h1>
   <blockquote>A flexible and customizable react component library.</blockquote>
   <img src="https://img.shields.io/npm/l/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/npm/v/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/travis/com/ForceManager/hoi-poi-ui/master.svg?style=flat-square" /> <img src="https://img.shields.io/david/ForceManager/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/david/dev/ForceManager/hoi-poi-ui.svg?style=flat-square" /> <img src="https://api.dependabot.com/badges/status?host=github&repo=ForceManager/hoi-poi-ui&style=flat-square" />
 
@@ -56,8 +56,8 @@ Check out our [storybook](https://forcemanager.github.io/hoi-poi-ui/).
 ## 🌐 Browser support
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-| IE11, Edge| >= 52| >= 49| >= 10
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IE11, Edge                                                                                                                                                                                                      | >= 52                                                                                                                                                                                                             | >= 49                                                                                                                                                                                                         | >= 10                                                                                                                                                                                                         |
 
 ## 🙌 Contributing
 
@@ -79,4 +79,3 @@ To report a security vulnerability, please use the [Tidelift security contact](h
 
 This project is licensed under the terms of the
 [MIT license](/LICENSE).
-
