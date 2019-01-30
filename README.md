@@ -51,7 +51,7 @@ ReactDOM.render(<App />, document.querySelector('#app'));
 
 ## 📜 Documentation and examples
 
-Check out our [storybook](https://forcemanager.github.io/hoi-poi-ui/).
+Check out our [styleguide](https://forcemanager.github.io/hoi-poi-ui/).
 
 ## 🌐 Browser support
 
