@@ -9,7 +9,7 @@
 
 -   High customizable components.
 -   Theming with JSS.
--   React Storybook as development environment and documentation.
+-   React Styleguidist
 -   Unit testing
 -   Weekly [dependabot](https://dependabot.com) dependency updates
 
@@ -51,7 +51,7 @@ ReactDOM.render(<App />, document.querySelector('#app'));
 
 ## 📜 Documentation and examples
 
-Check out our [styleguide](https://forcemanager.github.io/hoi-poi-ui/).
+Check out our [styleguidist](https://forcemanager.github.io/hoi-poi-ui/).
 
 ## 🌐 Browser support
 

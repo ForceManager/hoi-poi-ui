@@ -2,38 +2,71 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
+import Loader from '../Loader';
 import styles from './styles';
 
-function Button(
-    { children, classes, onClick, size, type, color, isDisabled, isFullWidth, href },
+const LOADER_SIZES = {
+    big: 'small',
+    medium: 'tiny',
+    small: 'mini',
+};
+
+function Button({
+    children,
+    classes,
+    onClick,
+    size = 'medium',
+    type = 'filled',
+    color = 'primary',
+    isDisabled,
+    isFullWidth,
+    isLoading,
+    href,
     ...props
-) {
+}) {
     const rootClassName = classnames(classes.root, {
-        [classes.default]: !color,
+        [classes.default]: type === 'filled',
         [classes.outlined]: type === 'outlined',
         [classes.primary]: color === 'primary',
         [classes.danger]: color === 'danger',
         [classes.small]: size === 'small',
         [classes.big]: size === 'big',
-        [classes.disabled]: isDisabled,
+        [classes.disabled]: isDisabled || isLoading,
         [classes.fullWidth]: isFullWidth,
     });
 
-    const content = <span className={classes.label}>{children}</span>;
     const rootProps = {
         className: rootClassName,
-        onClick: isDisabled ? onClick : null,
+        onClick: isDisabled || isLoading ? null : onClick,
     };
+
+    const wrapperLabelClass = classnames({
+        [classes.labelLoading]: isLoading,
+    });
+
+    const content = (
+        <span className={wrapperLabelClass}>
+            {isLoading && (
+                <div className={classes.loader}>
+                    <Loader
+                        size={LOADER_SIZES[size]}
+                        color={type === 'outlined' ? color : 'white'}
+                    />
+                </div>
+            )}
+            <span className={classes.label}>{children}</span>
+        </span>
+    );
 
     if (href) {
         return (
-            <a href={href} {...rootProps} {...props}>
+            <a href={href} {...props} {...rootProps}>
                 {content}
             </a>
         );
     } else {
         return (
-            <button href={href} {...rootProps} {...props}>
+            <button {...props} {...rootProps}>
                 {content}
             </button>
         );
@@ -43,11 +76,14 @@ function Button(
 Button.propTypes = {
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
-    size: PropTypes.string,
-    type: PropTypes.string,
-    color: PropTypes.string,
+    size: PropTypes.oneOf(['big', 'medium', 'small']),
+    type: PropTypes.oneOf(['filled', 'outlined']),
+    color: PropTypes.oneOf(['primary', 'danger', 'white']),
     isDisabled: PropTypes.bool,
+    /** Use the whole container */
     isFullWidth: PropTypes.bool,
+    isLoading: PropTypes.bool,
+    /** Render the component as a tag <a/> with href */
     href: PropTypes.string,
 };
 

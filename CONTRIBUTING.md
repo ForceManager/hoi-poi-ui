@@ -13,7 +13,7 @@ We expect everyone to follow the code of conduct anywhere in our project codebas
 -   Clone it
 -   Install dependencies
 -   Make your changes
-    -   Create stories in storybook
+    -   Create examples with styleguidist
     -   Provide a complete documentation using current addons
     -   Create new passing tests if needed
 -   Make sure the tests pass
@@ -25,15 +25,7 @@ Others will give constructive feedback. This is a time for discussion and improv
 
 ## Environment
 
-We use [storybook](https://github.com/storybooks/storybook) as our development environment and as a documentation, so you must create stories for develop and debug your components. This is the list of current addons:
-
--   [actions](https://github.com/storybooks/storybook/tree/master/addons/actions): display data received by event handlers.
--   [link](https://github.com/storybooks/storybook/tree/master/addons/links): links that navigate between stories.
--   [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs): edit React props dynamically using the UI.
--   [info](https://github.com/storybooks/storybook/tree/master/addons/info): display usage or other types of documentation.
--   [options](https://github.com/storybooks/storybook/tree/master/addons/options): configure Storyboook UI at runtime
--   [viewport](https://github.com/storybooks/storybook/tree/master/addons/viewport): display your stories in different sizes and layouts.
--   [jsx](https://github.com/storybooks/addon-jsx): see whats props you set and copy-paste it.
+We use [react-styleguidist](https://github.com/styleguidist/react-styleguidist) as our development environment and as a documentation, so you must create examples for develop and debug your components.
 
 ```
 git clone REPO_URL
@@ -44,15 +36,15 @@ yarn start
 
 For styling our components we use [css-in-js JSS](https://github.com/cssinjs/jss) with (jss-preset-default)[https://github.com/cssinjs/jss-preset-default] and the isolate plugin, here is the complete list with plugins we actually use:
 
-- [jss-isolate](https://github.com/cssinjs/jss-isolate): automatic properties reset.
-- [jss-camel-case](https://github.com/cssinjs/jss-camel-case): converts everything back to dash separated names.
-- [jss-compose](https://github.com/cssinjs/jss-compose): reuse rules more granylarly.
-- [jss-expand](https://github.com/cssinjs/jss-expand): better js syntax with objects and arrays.
-- [jss-global](https://github.com/cssinjs/jss-global): globally scoped CSS with JSS. Don't use it if you can avoid it.
-- [jss-nested](https://github.com/cssinjs/jss-nested): nested selectors and presudo selectors.
-- [jss-props-sort](https://github.com/cssinjs/jss-props-sort): sorting properties for extend each other insitead of override.
-- [jss-template](https://github.com/cssinjs/jss-template): use string templates to declare CSS.
-- [jss-vendor-prefixer](https://github.com/cssinjs/jss-vendor-prefixer)
+-   [jss-isolate](https://github.com/cssinjs/jss-isolate): automatic properties reset.
+-   [jss-camel-case](https://github.com/cssinjs/jss-camel-case): converts everything back to dash separated names.
+-   [jss-compose](https://github.com/cssinjs/jss-compose): reuse rules more granylarly.
+-   [jss-expand](https://github.com/cssinjs/jss-expand): better js syntax with objects and arrays.
+-   [jss-global](https://github.com/cssinjs/jss-global): globally scoped CSS with JSS. Don't use it if you can avoid it.
+-   [jss-nested](https://github.com/cssinjs/jss-nested): nested selectors and presudo selectors.
+-   [jss-props-sort](https://github.com/cssinjs/jss-props-sort): sorting properties for extend each other insitead of override.
+-   [jss-template](https://github.com/cssinjs/jss-template): use string templates to declare CSS.
+-   [jss-vendor-prefixer](https://github.com/cssinjs/jss-vendor-prefixer)
 
 ## Tips
 
