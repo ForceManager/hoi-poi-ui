@@ -20,7 +20,7 @@
 npm install hoi-poi-ui
 
 // with yarn
-yarn install hoi-poi-ui
+yarn add hoi-poi-ui
 ```
 
 ## ⚙️ Usage
