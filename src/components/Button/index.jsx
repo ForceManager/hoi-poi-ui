@@ -17,7 +17,7 @@ function Button({
     onClick,
     size = 'medium',
     type = 'filled',
-    color = 'primary',
+    color,
     isDisabled,
     isFullWidth,
     isLoading,
@@ -27,6 +27,7 @@ function Button({
     const rootClassName = classnames(classes.root, {
         [classes.default]: type === 'filled',
         [classes.outlined]: type === 'outlined',
+        [classes.white]: !color,
         [classes.primary]: color === 'primary',
         [classes.danger]: color === 'danger',
         [classes.small]: size === 'small',

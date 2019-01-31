@@ -4,10 +4,18 @@ Default button:
 <Button>Push Me</Button>
 ```
 
+Primary button:
+
+```jsx
+<Button color="primary">Push Me</Button>
+```
+
 Big loading button:
 
 ```jsx
-<Button isLoading={true}>Push Me</Button>
+<Button color="primary" isLoading={true}>
+    Push Me
+</Button>
 ```
 
 Big outlined button with danger color:

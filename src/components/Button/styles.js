@@ -110,7 +110,7 @@ export default (theme) => ({
         },
     },
     //Colors
-    default: {
+    white: {
         backgroundColor: 'transparent',
         transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
         '& $label': {
