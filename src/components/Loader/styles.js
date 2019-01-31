@@ -1,13 +1,10 @@
-import keyframes from 'jss-keyframes';
-
-const spinAnimation = keyframes({
-    to: { transform: 'rotate(360deg)', '-webkit-transform': 'rotate(360deg)' },
-});
-
 export default (theme) => ({
+    '@keyframes spinAnimation': {
+        to: { transform: 'rotate(360deg)', '-webkit-transform': 'rotate(360deg)' },
+    },
     root: {
         display: 'inline-block',
-        animation: `${spinAnimation} 1s linear infinite`,
+        animation: '$spinAnimation 1s linear infinite',
         borderStyle: 'solid',
         borderRadius: '50%',
     },

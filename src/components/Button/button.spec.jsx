@@ -43,7 +43,7 @@ describe('Button', () => {
         expect(wrapper.find('button').props().onClick).toEqual(null);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('when is loading is disabled too', () => {
+    test("when is loading it's disabled too", () => {
         const wrapper = mount(
             <HoiPoiProvider>
                 <Button isLoading={true} onClick={() => console.log('Hello')}>
@@ -52,7 +52,8 @@ describe('Button', () => {
             </HoiPoiProvider>,
         );
         expect(wrapper.find('button').props().onClick).toEqual(null);
-        expect(wrapper.find('.HoiPoi-Button-disabled-0-2-11').length).toBe(1);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(
+            wrapper.find('.HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Button-disabled-0-2-59').length,
+        ).toBe(1);
     });
 });
