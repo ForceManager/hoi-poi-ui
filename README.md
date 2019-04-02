@@ -47,6 +47,35 @@ ReactDOM.render(<App />, document.querySelector('#app'));
 
 ## 💎 Customization
 
+### Theme
+
+We need to use `createHoiPoiTheme` for customize current theme. It will do a deep merge without concatening arrays.
+You can see the default theme [here](https://github.com/ForceManager/hoi-poi-ui/blob/master/src/utils/styles/defaultTheme.js).
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { HoiPoiProvider, createHoiPoiTheme, Button } from 'hoi-poi-ui';
+
+const theme = createHoiPoiTheme({
+  colors: {
+    primary: '#ed8b00',
+  },
+});
+
+function App() {
+  return (
+    <HoiPoiProvider theme={theme}>
+      <Button type="big" color="primary">
+        Hello World
+      </Button>
+    </HoiPoiProvider>
+  );
+}
+
+ReactDOM.render(<App />, document.querySelector('#app'));
+```
+
 🚧
 
 ## 📜 Documentation and examples
