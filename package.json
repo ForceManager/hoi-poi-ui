@@ -3,7 +3,7 @@
     "version": "0.0.1-alpha.1",
     "main": "dist/index.js",
     "scripts": {
-        "lint": "eslint --config .eslintrc --ext js,jsx src/**",
+        "lint": "eslint --config .eslintrc --ext .js,.jsx src/**",
         "precommit": "cross-env NODE_ENV=production lint-staged",
         "start": "styleguidist server",
         "build": "cross-env NODE_ENV=production webpack --mode production --config config/webpack.config.prod.js",
