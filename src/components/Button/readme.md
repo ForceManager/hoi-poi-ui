@@ -25,3 +25,10 @@ Big outlined button with danger color:
     Push Me
 </Button>
 ```
+
+### Component tree
+
+---
+
+-   label - Button inner content and `children` wrapper.
+-   [Loader](/#/Loader)

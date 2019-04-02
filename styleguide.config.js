@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
     // Customizations
     title: 'Hoi Poi UI',
+    pagePerSection: true,
     theme: {
         color: {
             link: '#00a0a0',

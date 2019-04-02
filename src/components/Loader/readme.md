@@ -15,3 +15,9 @@ Massive loader
 ```jsx
 <Loader size="massive" />
 ```
+
+### Component tree
+
+---
+
+_No related components_
