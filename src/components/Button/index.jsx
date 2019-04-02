@@ -25,7 +25,6 @@ function Button({
     ...props
 }) {
     const rootClassName = classnames(classes.root, {
-        [classes.default]: type === 'filled',
         [classes.outlined]: type === 'outlined',
         [classes.white]: !color,
         [classes.primary]: color === 'primary',
