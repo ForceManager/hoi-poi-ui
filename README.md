@@ -76,7 +76,40 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#app'));
 ```
 
-🚧
+### Classes
+
+When the className property isn't enough, you can use `classes` props for inject CSS in any deeper element.
+The list of elements for each component is documented below the respective examples.
+
+```
+const classes = {
+  Loader: 'button__custom-class'
+}
+
+return (
+  <Button type="big" color="primary" classes={classes}>
+    Hello World
+  </Button>
+)
+```
+
+### Overrides
+
+HoiPoi maximizes customization and that is why it has a system to overwrite any component properties and components used by this. Like classes you need to use the component name but in this case you can nest the prop `overrides`.
+
+```
+const overrides = {
+  Loader: {
+    size: 'small'
+  }
+}
+
+return (
+  <Button type="big" color="primary" overrides={overrides}>
+    Hello World
+  </Button>
+)
+```
 
 ## 📜 Documentation and examples
 

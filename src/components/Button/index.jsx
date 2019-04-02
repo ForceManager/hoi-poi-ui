@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
+import { getOverrides } from '../../utils/overrides';
 import Loader from '../Loader';
 import styles from './styles';
 
@@ -13,6 +14,8 @@ const LOADER_SIZES = {
 
 function Button({
     children,
+    overrides: overridesProp,
+    className: classNameProp,
     classes,
     onClick,
     size = 'medium',
@@ -24,25 +27,34 @@ function Button({
     href,
     ...props
 }) {
-    const rootClassName = classnames(classes.root, {
-        [classes.outlined]: type === 'outlined',
-        [classes.white]: !color,
-        [classes.primary]: color === 'primary',
-        [classes.danger]: color === 'danger',
-        [classes.small]: size === 'small',
-        [classes.big]: size === 'big',
-        [classes.disabled]: isDisabled || isLoading,
-        [classes.fullWidth]: isFullWidth,
-    });
+    // Overrides
+    const override = getOverrides(overridesProp, Button.overrides);
 
-    const rootProps = {
-        className: rootClassName,
-        onClick: isDisabled || isLoading ? null : onClick,
-    };
+    // Classes
+    const rootClassName = classnames(
+        classes.root,
+        {
+            [classes.outlined]: type === 'outlined',
+            [classes.white]: !color,
+            [classes.primary]: color === 'primary',
+            [classes.danger]: color === 'danger',
+            [classes.small]: size === 'small',
+            [classes.big]: size === 'big',
+            [classes.disabled]: isDisabled || isLoading,
+            [classes.fullWidth]: isFullWidth,
+        },
+        classNameProp,
+    );
 
     const wrapperLabelClass = classnames({
         [classes.labelLoading]: isLoading,
     });
+
+    const rootProps = {
+        ...props,
+        className: rootClassName,
+        onClick: isDisabled || isLoading ? null : onClick,
+    };
 
     const content = (
         <span className={wrapperLabelClass}>
@@ -51,27 +63,28 @@ function Button({
                     <Loader
                         size={LOADER_SIZES[size]}
                         color={type === 'outlined' ? color : 'white'}
+                        {...override.Loader}
                     />
                 </div>
             )}
-            <span className={classes.label}>{children}</span>
+            <span className={classes.label} {...override.label}>
+                {children}
+            </span>
         </span>
     );
 
     if (href) {
         return (
-            <a href={href} {...props} {...rootProps}>
+            <a href={href} {...rootProps}>
                 {content}
             </a>
         );
     } else {
-        return (
-            <button {...props} {...rootProps}>
-                {content}
-            </button>
-        );
+        return <button {...rootProps}>{content}</button>;
     }
 }
+
+Button.overrides = ['label', 'Loader'];
 
 Button.propTypes = {
     onClick: PropTypes.func,
@@ -87,4 +100,4 @@ Button.propTypes = {
     href: PropTypes.string,
 };
 
-export default React.memo(withStyles(styles)(Button));
+export default React.memo(withStyles(styles, { name: 'Button' })(Button));
