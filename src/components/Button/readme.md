@@ -65,4 +65,4 @@ Full-width
 ---
 
 -   label - Button inner content and `children` wrapper.
--   [Loader](/#/Loader)
+-   [Loader](#/Loader)
