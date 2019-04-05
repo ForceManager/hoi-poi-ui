@@ -1,29 +1,63 @@
-Default button:
-
+Default buttons:
 ```jsx
 <Button>Push Me</Button>
-```
-
-Primary button:
-
-```jsx
+<span> </span>
 <Button color="primary">Push Me</Button>
+<span> </span>
+<Button color="danger">Push Me</Button>
+<span> </span>
+<Button color="white">Push Me</Button>
 ```
 
-Big loading button:
-
+Sizes:
 ```jsx
-<Button color="primary" isLoading={true}>
-    Push Me
-</Button>
+<Button size="small" color="primary">Push Me</Button>
+<span> </span>
+<Button size="medium" color="primary">Push Me</Button>
+<span> </span>
+<Button size="big" color="primary">Push Me</Button>
 ```
 
-Big outlined button with danger color:
-
+Outlined buttons:
 ```jsx
-<Button size="big" type="outlined" color="danger">
-    Push Me
-</Button>
+<Button size="small" color="primary" type="outlined">Push Me</Button>
+<span> </span>
+<Button size="medium" color="primary" type="outlined">Push Me</Button>
+<span> </span>
+<Button size="big" color="primary" type="outlined">Push Me</Button>
+```
+
+Disabled buttons:
+```jsx
+<Button size="small" color="primary" isDisabled>Push Me</Button>
+<span> </span>
+<Button size="medium" color="primary" isDisabled>Push Me</Button>
+<span> </span>
+<Button size="big" color="primary" isDisabled>Push Me</Button>
+<span> </span>
+<Button size="big" color="primary" type="outlined" isDisabled>Push Me</Button>
+```
+
+Loading buttons:
+```jsx
+<Button size="small" color="primary" isLoading>Push Me</Button>
+<span> </span>
+<Button size="medium" color="primary" isLoading>Push Me</Button>
+<span> </span>
+<Button size="big" color="primary" isLoading>Push Me</Button>
+<span> </span>
+<Button size="big" color="primary" type="outlined" isLoading>Push Me</Button>
+```
+
+Full-width
+```jsx
+<Button size="big" color="primary" isFullWidth>Push Me</Button>
+<br />
+<br />
+<Button size="big" color="primary" type="outlined" isFullWidth>Push Me</Button>
+<br />
+<br />
+<Button size="big" color="primary" isFullWidth isLoading>Push Me</Button>
 ```
 
 ### Component tree
