@@ -23,7 +23,7 @@ function ScrollBar({
     const override = getOverrides(overridesProp, ScrollBar.overrides);
 
     // Classes
-    const rootClassName = classnames(classes.root, classNameProp);
+    const rootClassName = classnames(classNameProp);
 
     let style = {};
     if (width) style.width = width;
