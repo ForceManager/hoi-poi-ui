@@ -1,4 +1,5 @@
 // Colors
+const overlay = 'rgba(33,33,33,0.55)';
 const lightBlack = '#5f656b';
 const lightGray = '#F7F8F9';
 const grey = '#697782';
@@ -28,6 +29,7 @@ export default {
             primary: 'white',
             danger: 'white',
         },
+        overlay,
     },
     typography: {
         lineHeightBase,
