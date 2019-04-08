@@ -60,8 +60,8 @@ Drawer.defaultProps = {
     width: '500px',
     side: 'right',
     closeTimeout: 500,
-    shouldCloseOnOverlayClick: false,
-    shouldCloseOnEsc: false,
+    shouldCloseOnOverlayClick: true,
+    shouldCloseOnEsc: true,
 };
 
 Drawer.propTypes = {
