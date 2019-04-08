@@ -14,7 +14,7 @@ let side = state.side || 'right';
         Right
     </Button>
     <span> </span>
-    <Drawer side={state.side} isOpen={isOpen}>
+    <Drawer side={state.side} isOpen={isOpen} onRequestClose={() => setState({ isOpen: false })}>
         <span onClick={() => setState({ isOpen: false })}>Close</span>
     </Drawer>
 </div>;
@@ -36,7 +36,12 @@ let side = state.side || 'right';
         Right
     </Button>
     <span> </span>
-    <Drawer side={state.side} isOpen={isOpen} width="80%">
+    <Drawer
+        side={state.side}
+        isOpen={isOpen}
+        width="80%"
+        onRequestClose={() => setState({ isOpen: false })}
+    >
         <span onClick={() => setState({ isOpen: false })}>Close</span>
     </Drawer>
 </div>;
