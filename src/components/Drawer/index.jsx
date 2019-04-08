@@ -16,6 +16,8 @@ function Drawer({
     side,
     closeTimeout,
     onAfterOpen,
+    shouldCloseOnOverlayClick,
+    shouldCloseOnEsc,
     ...props
 }) {
     // Overrides
@@ -56,6 +58,8 @@ Drawer.defaultProps = {
     width: '500px',
     side: 'right',
     closeTimeout: 500,
+    shouldCloseOnOverlayClick: false,
+    shouldCloseOnEsc: false,
 };
 
 Drawer.propTypes = {
@@ -68,6 +72,8 @@ Drawer.propTypes = {
     closeTimeout: PropTypes.number,
     /** Function that will be called after the drawer has opened */
     onAfterOpen: PropTypes.func,
+    shouldCloseOnOverlayClick: PropTypes.bool,
+    shouldCloseOnEsc: PropTypes.bool,
 };
 
 export default React.memo(withStyles(styles, { name: 'Drawer' })(Drawer));
