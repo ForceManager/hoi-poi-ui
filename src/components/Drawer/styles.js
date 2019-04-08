@@ -4,7 +4,7 @@ export default (theme) => ({
         display: 'block',
         background: '#fff',
         height: '100%',
-        boxShadow: theme.drawerShadow,
+        boxShadow: theme.effects.boxShadow,
         transition: 'transform 0.5s',
         willChange: 'transform',
         '&:active': {
@@ -23,24 +23,9 @@ export default (theme) => ({
         top: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: theme.colors.overlay,
-        '&.ReactModal__Overlay--after-open': {
-            transition: 'background-color 0.5s',
-            willChange: 'background-color',
-        },
+        background: theme.colors.overlay,
         '&.ReactModal__Overlay--before-close': {
-            backgroundColor: theme.colors.overlay,
-            willChange: 'background-color',
-        },
-    },
-    top: {
-        marginBottom: 'auto',
-        transform: 'translateX(100%)',
-        '&.ReactModal__Content--after-open': {
-            transform: 'translateY(0%)',
-        },
-        '&.ReactModal__Content--before-close': {
-            transform: 'translateY(100%)',
+            background: 'transparent',
         },
     },
     right: {
@@ -53,24 +38,14 @@ export default (theme) => ({
             transform: 'translateX(100%)',
         },
     },
-    bottom: {
-        marginTop: 'auto',
-        transform: 'translateX(100%)',
-        '&.ReactModal__Content--after-open': {
-            transform: 'translateY(0%)',
-        },
-        '&.ReactModal__Content--before-close': {
-            transform: 'translateY(100%)',
-        },
-    },
     left: {
         marginRight: 'auto',
-        transform: 'translateX(100%)',
+        transform: 'translateX(-100%)',
         '&.ReactModal__Content--after-open': {
             transform: 'translateX(0%)',
         },
         '&.ReactModal__Content--before-close': {
-            transform: 'translateX(100%)',
+            transform: 'translateX(-100%)',
         },
     },
 });

@@ -15,7 +15,6 @@ function Drawer({
     width,
     side,
     closeTimeout,
-    onRequestClose,
     onAfterOpen,
     ...props
 }) {
@@ -25,17 +24,20 @@ function Drawer({
     // Classes
     const rootClassName = classnames(classes.root, classes[side], classNameProp);
 
+    let contentStyle = { width };
+    if (side && ['top', 'bottom'].includes(side)) contentStyle = { height: width };
+
     const rootProps = {
         ariaHideApp: false,
         isOpen,
         closeTimeoutMS: closeTimeout,
         style: {
-            content: { width },
+            content: contentStyle,
         },
         overlayClassName: classes.overlay,
         onAfterOpen: onAfterOpen,
-        onRequestClose: onRequestClose,
         shouldCloseOnOverlayClick: false,
+        shouldCloseOnEsc: false,
         ...override.modal,
     };
 
@@ -60,12 +62,10 @@ Drawer.propTypes = {
     children: PropTypes.any,
     isOpen: PropTypes.bool.isRequired,
     width: PropTypes.string,
-    side: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    side: PropTypes.oneOf(['right', 'left']),
     className: PropTypes.string,
     /**Milliseconds to wait before closing the drawer */
     closeTimeout: PropTypes.number,
-    /** Function that will be called when the modal is requested to be closed (clicking on overlay os pressing ESC) */
-    onRequestClose: PropTypes.func,
     /** Function that will be called after the drawer has opened */
     onAfterOpen: PropTypes.func,
 };

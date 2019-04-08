@@ -2,58 +2,49 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../utils/styles';
-import Button from '../Button';
+import Drawer from '../Drawer';
 
-describe('Button', () => {
-    test('is rendered without crashes', () => {
+describe('Drawer', () => {
+    test('is rendering closed', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Button>Hello</Button>
+                <Drawer isOpen={false} />
             </HoiPoiProvider>,
         );
+        expect(wrapper.exists('.ReactModal__Content--after-open')).toEqual(false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('is rendered combining props', () => {
+
+    test('is rendering opened with content', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Button color="danger" type="outlined" size="big">
-                    ACTION
-                </Button>
+                <Drawer isOpen={true}>
+                    <span>Lorem Ipsum</span>
+                </Drawer>
             </HoiPoiProvider>,
         );
+
+        expect(wrapper.exists('.ReactModal__Content--after-open')).toEqual(true);
+        expect(wrapper.find('.ReactModal__Content').contains('Lorem Ipsum')).toEqual(true);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('is rendered as a link', () => {
+
+    test('pass width and classnames to modal', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Button href="https://hello.com">Hello</Button>
+                <Drawer
+                    isOpen={true}
+                    width="400px"
+                    className="className-ipsum"
+                    classes={{ overlay: 'overlay-ipsum' }}
+                >
+                    <span>Lorem Ipsum</span>
+                </Drawer>
             </HoiPoiProvider>,
         );
-        expect(wrapper.exists('a')).toEqual(true);
+        expect(wrapper.find('.ReactModal__Content').hasClass('className-ipsum')).toEqual(true);
+        expect(wrapper.find('.ReactModal__Overlay').hasClass('overlay-ipsum')).toEqual(true);
+        expect(wrapper.find('Modal').prop('style').content.width).toBe('400px');
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    test('is disabled', () => {
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <Button isDisabled={true} onClick={() => console.log('Hello')}>
-                    Hello
-                </Button>
-            </HoiPoiProvider>,
-        );
-        expect(wrapper.find('button').props().onClick).toEqual(null);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    test("when is loading it's disabled too", () => {
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <Button isLoading={true} onClick={() => console.log('Hello')}>
-                    Hello
-                </Button>
-            </HoiPoiProvider>,
-        );
-        expect(wrapper.find('button').props().onClick).toEqual(null);
-        expect(
-            wrapper.find('.HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Button-disabled-0-2-59').length,
-        ).toBe(1);
     });
 });
