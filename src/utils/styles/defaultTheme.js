@@ -1,4 +1,7 @@
 // Colors
+const overlay = 'rgba(33,33,33,0.55)';
+const shadow = 'rgba(0, 0, 0, 0.25)';
+
 const lightBlack = '#5f656b';
 const lightGray = '#F7F8F9';
 const grey = '#697782';
@@ -14,6 +17,9 @@ const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
 const fontSizeBase = 13;
 
+// Others
+const boxShadow = `0 3px 9px 0 ${shadow}`;
+
 export default {
     colors: {
         lightBlack,
@@ -28,6 +34,8 @@ export default {
             primary: 'white',
             danger: 'white',
         },
+        overlay,
+        shadow,
     },
     typography: {
         lineHeightBase,
@@ -40,6 +48,7 @@ export default {
         },
     },
     effects: {
+        boxShadow,
         buttonActive: {
             boxShadow: 'inset 0 -2px 4px 0 rgba(122,122,122,0.23)',
         },

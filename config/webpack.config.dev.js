@@ -33,6 +33,9 @@ module.exports = {
     runtimeChunk: false,
   },
   resolve: {
+    alias: {
+      'hoi-poi-ui': path.resolve(__dirname, '../src/components'),
+    },
     modules: ['node_modules'].concat(
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
     ),
