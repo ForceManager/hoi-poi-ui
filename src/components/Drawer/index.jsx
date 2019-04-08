@@ -16,6 +16,7 @@ function Drawer({
     side,
     closeTimeout,
     onAfterOpen,
+    onRequestClose,
     shouldCloseOnOverlayClick,
     shouldCloseOnEsc,
     ...props
@@ -37,7 +38,8 @@ function Drawer({
             content: contentStyle,
         },
         overlayClassName: classes.overlay,
-        onAfterOpen: onAfterOpen,
+        onAfterOpen,
+        onRequestClose,
         shouldCloseOnOverlayClick: false,
         shouldCloseOnEsc: false,
         ...override.modal,
@@ -72,7 +74,11 @@ Drawer.propTypes = {
     closeTimeout: PropTypes.number,
     /** Function that will be called after the drawer has opened */
     onAfterOpen: PropTypes.func,
+    /** Function that will be called when the drawer is requested to be closed (either by clicking on overlay or pressing ESC) */
+    onRequestClose: PropTypes.func,
+    /** Close on overlay click, you must implement onRequestClose. */
     shouldCloseOnOverlayClick: PropTypes.bool,
+    /** Close on ESC, you must implement onRequestClose. */
     shouldCloseOnEsc: PropTypes.bool,
 };
 
