@@ -56,7 +56,7 @@ describe('Button', () => {
         );
         expect(wrapper.find('button').props().onClick).toEqual(null);
         expect(
-            wrapper.find('.HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Button-disabled-0-2-59').length,
+            wrapper.find('.HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Button-disabled-0-2-64').length,
         ).toBe(1);
     });
 });
