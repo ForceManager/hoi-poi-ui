@@ -18,8 +18,8 @@ function Button({
     className: classNameProp,
     classes,
     onClick,
-    size = 'medium',
-    type = 'filled',
+    size,
+    type,
     color,
     isDisabled,
     isFullWidth,
@@ -85,6 +85,11 @@ function Button({
 }
 
 Button.overrides = ['label', 'Loader'];
+
+Button.defaultProps = {
+    size: 'medium',
+    type: 'filled',
+};
 
 Button.propTypes = {
     onClick: PropTypes.func,

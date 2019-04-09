@@ -4,6 +4,31 @@ module.exports = {
     // Customizations
     title: 'Hoi Poi UI',
     pagePerSection: true,
+    sections: [
+        {
+            name: 'General',
+            description: 'General and global components',
+            sectionDepth: 0,
+            components: [
+                './src/components/Button/index.jsx',
+                './src/components/Loader/index.jsx',
+                './src/components/Drawer/index.jsx',
+                './src/components/Icon/index.jsx',
+            ],
+        },
+        {
+            name: 'Forms',
+            description: 'Components related (but not exclusively) to build forms.',
+            sectionDepth: 0,
+            components: ['./src/components/Section/index.jsx'],
+        },
+        {
+            name: 'Utils',
+            description: 'Utility and complementary components',
+            sectionDepth: 0,
+            components: ['./src/components/ScrollBar/index.jsx'],
+        },
+    ],
     theme: {
         color: {
             link: '#00a0a0',

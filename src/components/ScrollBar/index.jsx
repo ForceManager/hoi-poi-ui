@@ -45,6 +45,8 @@ function ScrollBar({
     );
 }
 
+ScrollBar.overrides = ['react-custom-scrollbars'];
+
 ScrollBar.defaultProps = {
     autoHide: true,
 };
