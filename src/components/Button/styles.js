@@ -109,6 +109,69 @@ export default (theme) => ({
             padding: '9px 16px',
         },
     },
+    squared: {
+        borderRadius: 2,
+        padding: '4px 9px',
+        minWidth: '0',
+        background: 'transparent',
+        backgroundColor: 'transparent',
+        border: `1px solid ${theme.colors.placeholders}`,
+        transition: `border-color .2s ease-in-out`,
+        '&:hover': {
+            border: `1px solid ${theme.colors.placeholdersHover}`,
+            background: 'transparent',
+            backgroundColor: 'transparent',
+        },
+        '&$disabled': {
+            '&:hover': {
+                border: `1px solid ${theme.colors.placeholders}`,
+                backgroundColor: 'transparent',
+            },
+        },
+        '&$white': {
+            background: 'transparent',
+            backgroundColor: 'transparent',
+            '&$disabled': {
+                '&:hover': {
+                    backgroundColor: 'transparent',
+                },
+            },
+            '&:hover': {
+                background: 'transparent',
+                backgroundColor: 'transparent',
+            },
+        },
+        '&$primary': {
+            background: 'transparent',
+            backgroundColor: 'transparent',
+            '&$disabled': {
+                '&:hover': {
+                    backgroundColor: 'transparent',
+                    '& $label': {
+                        color: theme.colors.primary,
+                    },
+                },
+            },
+            '& $label': {
+                color: theme.colors.primary,
+            },
+        },
+        '&$danger': {
+            background: 'transparent',
+            backgroundColor: 'transparent',
+            '& $label': {
+                color: theme.colors.danger,
+            },
+        },
+        '&$small': {
+            padding: '0 9px',
+            minWidth: '0',
+        },
+        '&$big': {
+            padding: '9px 9px',
+            minWidth: '0',
+        },
+    },
     //Colors
     white: {
         backgroundColor: 'transparent',

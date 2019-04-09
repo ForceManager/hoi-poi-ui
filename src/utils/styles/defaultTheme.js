@@ -3,6 +3,8 @@ const overlay = 'rgba(33,33,33,0.55)';
 const shadow = 'rgba(0, 0, 0, 0.25)';
 const lines = '#dce3eb';
 const icons = '#788590';
+const placeholders = '#e1e4e7';
+const placeholdersHover = '#d0d4d8';
 
 const lightBlack = '#5f656b';
 const lightGray = '#f0f3f5';
@@ -40,6 +42,8 @@ export default {
         shadow,
         lines,
         icons,
+        placeholders,
+        placeholdersHover,
     },
     typography: {
         lineHeightBase,

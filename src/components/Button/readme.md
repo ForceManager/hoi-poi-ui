@@ -1,4 +1,5 @@
 Default buttons:
+
 ```jsx
 <Button>Push Me</Button>
 <span> </span>
@@ -10,6 +11,7 @@ Default buttons:
 ```
 
 Sizes:
+
 ```jsx
 <Button size="small" color="primary">Push Me</Button>
 <span> </span>
@@ -19,15 +21,27 @@ Sizes:
 ```
 
 Outlined buttons:
+
 ```jsx
-<Button size="small" color="primary" type="outlined">Push Me</Button>
+<Button size="small" type="outlined">Push Me</Button>
 <span> </span>
 <Button size="medium" color="primary" type="outlined">Push Me</Button>
 <span> </span>
-<Button size="big" color="primary" type="outlined">Push Me</Button>
+<Button size="big" color="danger" type="outlined">Push Me</Button>
+```
+
+Squared buttons:
+
+```jsx
+<Button size="small" type="squared">Push Me</Button>
+<span> </span>
+<Button size="medium" color="primary" type="squared">Push Me</Button>
+<span> </span>
+<Button size="big" color="danger" type="squared">Push Me</Button>
 ```
 
 Disabled buttons:
+
 ```jsx
 <Button size="small" color="primary" isDisabled>Push Me</Button>
 <span> </span>
@@ -36,9 +50,12 @@ Disabled buttons:
 <Button size="big" color="primary" isDisabled>Push Me</Button>
 <span> </span>
 <Button size="big" color="primary" type="outlined" isDisabled>Push Me</Button>
+<span> </span>
+<Button type="squared" isDisabled>Push Me</Button>
 ```
 
 Loading buttons:
+
 ```jsx
 <Button size="small" color="primary" isLoading>Push Me</Button>
 <span> </span>
@@ -47,9 +64,12 @@ Loading buttons:
 <Button size="big" color="primary" isLoading>Push Me</Button>
 <span> </span>
 <Button size="big" color="primary" type="outlined" isLoading>Push Me</Button>
+<span> </span>
+<Button type="squared" color="primary" isLoading>Push Me</Button>
 ```
 
 Full-width
+
 ```jsx
 <Button size="big" color="primary" isFullWidth>Push Me</Button>
 <br />
