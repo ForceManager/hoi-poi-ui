@@ -19,6 +19,9 @@ describe('Button', () => {
                 <Button color="danger" type="outlined" size="big">
                     ACTION
                 </Button>
+                <Button type="squared" size="big">
+                    ACTION
+                </Button>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -34,7 +34,7 @@ function Button({
     const rootClassName = classnames(
         classes.root,
         {
-            [classes.outlined]: type === 'outlined',
+            [classes[type]]: type,
             [classes.white]: !color,
             [classes.primary]: color === 'primary',
             [classes.danger]: color === 'danger',
@@ -95,7 +95,7 @@ Button.propTypes = {
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['big', 'medium', 'small']),
-    type: PropTypes.oneOf(['filled', 'outlined']),
+    type: PropTypes.oneOf(['filled', 'outlined', 'squared']),
     color: PropTypes.oneOf(['primary', 'danger', 'white']),
     isDisabled: PropTypes.bool,
     /** Use the whole container */
