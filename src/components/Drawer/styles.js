@@ -17,6 +17,7 @@ export default (theme) => ({
         height: '100%',
     },
     overlay: {
+        isolate: true,
         position: 'fixed',
         width: '100%',
         zIndex: 1000,

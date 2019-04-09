@@ -1,9 +1,11 @@
 // Colors
 const overlay = 'rgba(33,33,33,0.55)';
 const shadow = 'rgba(0, 0, 0, 0.25)';
+const lines = '#dce3eb';
+const icons = '#788590';
 
 const lightBlack = '#5f656b';
-const lightGray = '#F7F8F9';
+const lightGray = '#f0f3f5';
 const grey = '#697782';
 
 const primary = '#00CED1';
@@ -36,6 +38,8 @@ export default {
         },
         overlay,
         shadow,
+        lines,
+        icons,
     },
     typography: {
         lineHeightBase,
