@@ -26,7 +26,10 @@ module.exports = {
             name: 'Utils',
             description: 'Utility and complementary components',
             sectionDepth: 0,
-            components: ['./src/components/ScrollBar/index.jsx'],
+            components: [
+                './src/components/ScrollBar/index.jsx',
+                './src/components/Tooltip/index.jsx',
+            ],
         },
     ],
     theme: {

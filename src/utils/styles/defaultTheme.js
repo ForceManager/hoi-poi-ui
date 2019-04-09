@@ -9,6 +9,8 @@ const placeholdersHover = '#d0d4d8';
 const lightBlack = '#5f656b';
 const lightGray = '#f0f3f5';
 const grey = '#697782';
+const black = '#262B34';
+const transparentBlack = 'rgba(38, 43, 52, 0.8)';
 
 const primary = '#00CED1';
 const primaryDark = '#00a0a0';
@@ -20,12 +22,15 @@ const dangerDark = '#C43833';
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
 const fontSizeBase = 13;
+const fontSizeSmall = 11;
 
 // Others
 const boxShadow = `0 3px 9px 0 ${shadow}`;
 
 export default {
     colors: {
+        black,
+        transparentBlack,
         lightBlack,
         grey,
         lightGray,
@@ -48,6 +53,7 @@ export default {
     typography: {
         lineHeightBase,
         fontSizeBase,
+        fontSizeSmall,
         fontFamily,
         button: {
             fontFamily,
