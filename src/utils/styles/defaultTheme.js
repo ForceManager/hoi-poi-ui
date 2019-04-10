@@ -12,8 +12,12 @@ const grey = '#697782';
 const black = '#262B34';
 const transparentBlack = 'rgba(38, 43, 52, 0.8)';
 
-const primary = '#00CED1';
-const primaryDark = '#00a0a0';
+const primary = '#FF8C00';
+const primaryDark = '#C87600';
+const primaryLight = '#FEF4E6';
+
+const secundary = '#00A8Be';
+const secundaryLight = '#D6EEF2';
 
 const danger = '#f04540';
 const dangerDark = '#C43833';
@@ -36,6 +40,9 @@ export default {
         lightGray,
         primary,
         primaryDark,
+        primaryLight,
+        secundary,
+        secundaryLight,
         danger,
         dangerDark,
         text: {
