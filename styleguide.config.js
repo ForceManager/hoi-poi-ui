@@ -20,7 +20,10 @@ module.exports = {
             name: 'Forms',
             description: 'Components related (but not exclusively) to build forms.',
             sectionDepth: 0,
-            components: ['./src/components/Section/index.jsx'],
+            components: [
+                './src/components/Section/index.jsx',
+                './src/components/Checkbox/index.jsx',
+            ],
         },
         {
             name: 'Utils',
