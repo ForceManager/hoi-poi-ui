@@ -35,8 +35,8 @@ module.exports = {
   resolve: {
     alias: {
       'hoi-poi-ui': path.resolve(__dirname, '../src'),
-      'components': path.resolve(__dirname, '../src/components'),
-      'utils': path.resolve(__dirname, '../src/utils'),
+      components: path.resolve(__dirname, '../src/components'),
+      utils: path.resolve(__dirname, '../src/utils'),
     },
     modules: ['node_modules'].concat(
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)

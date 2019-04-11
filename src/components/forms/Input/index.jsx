@@ -99,7 +99,7 @@ function Input({
 
     return (
         <div {...rootProps}>
-            <Label {...labelProps}>{label}</Label>
+            {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 {preComponent && (
                     <div className={classes.preComponent} {...override.postComponent}>

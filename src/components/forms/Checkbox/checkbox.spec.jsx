@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from 'utils/styles';
 import Checkbox from 'components/forms/Checkbox';
 
-describe('Tooltip', () => {
+describe('Checkbox', () => {
     test('unchecked match snapshot', () => {
         const wrapper = mount(
             <HoiPoiProvider>

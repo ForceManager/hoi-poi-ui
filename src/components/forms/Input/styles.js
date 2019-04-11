@@ -96,7 +96,7 @@ export default (theme) => ({
         '& $error': {},
     },
     isFullWidth: {
-        '& $formControl, & $inputControl': {
+        '& $formControl': {
             width: '100%',
         },
     },

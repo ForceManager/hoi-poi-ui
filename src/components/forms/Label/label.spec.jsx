@@ -2,29 +2,31 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from 'utils/styles';
-import Tooltip from 'components/forms/Section';
-import Button from 'components/general/Button';
+import Label from 'components/forms/Label';
 
-describe('Tooltip', () => {
-    test('match snapshot', () => {
+describe('Label', () => {
+    test('default match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Tooltip placement="top" content={<span>Hello!</span>}>
-                    <Button>top</Button>
-                </Tooltip>
+                <Label>Lorem ipsum</Label>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('visible match snapshot', () => {
+    test('is required match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Tooltip placement="top" content={<span>Hello!</span>}>
-                    <Button>top</Button>
-                </Tooltip>
+                <Label isRequired>Lorem ipsum</Label>
             </HoiPoiProvider>,
         );
-        wrapper.simulate('mouseover');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('with hint match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Label hint="I am a hint">Lorem ipsum</Label>
+            </HoiPoiProvider>,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
