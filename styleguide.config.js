@@ -10,10 +10,10 @@ module.exports = {
             description: 'General and global components',
             sectionDepth: 0,
             components: [
-                './src/components/Button/index.jsx',
-                './src/components/Loader/index.jsx',
-                './src/components/Drawer/index.jsx',
-                './src/components/Icon/index.jsx',
+                './src/components/general/Button/index.jsx',
+                './src/components/general/Loader/index.jsx',
+                './src/components/general/Drawer/index.jsx',
+                './src/components/general/Icon/index.jsx',
             ],
         },
         {
@@ -21,8 +21,10 @@ module.exports = {
             description: 'Components related (but not exclusively) to build forms.',
             sectionDepth: 0,
             components: [
-                './src/components/Section/index.jsx',
-                './src/components/Checkbox/index.jsx',
+                './src/components/forms/Section/index.jsx',
+                './src/components/forms/Checkbox/index.jsx',
+                './src/components/forms/Label/index.jsx',
+                './src/components/forms/Input/index.jsx',
             ],
         },
         {
@@ -30,8 +32,9 @@ module.exports = {
             description: 'Utility and complementary components',
             sectionDepth: 0,
             components: [
-                './src/components/ScrollBar/index.jsx',
-                './src/components/Tooltip/index.jsx',
+                './src/components/utils/ScrollBar/index.jsx',
+                './src/components/utils/Tooltip/index.jsx',
+                './src/components/utils/Popover/index.jsx',
             ],
         },
     ],
@@ -49,7 +52,7 @@ module.exports = {
             links: [
                 {
                     rel: 'stylesheet',
-                    href: 'https://fonts.googleapis.com/css?family=Roboto',
+                    href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
                 },
             ],
         },
@@ -62,7 +65,7 @@ module.exports = {
             .dirname(componentPath)
             .replace('src/components/', '')
             .replace('src\\components\\', '');
-        return `import ${name} from 'hoi-poi-ui/${name}';`;
+        return `import ${name} from 'hoi-poi-ui';`;
     },
     styleguideComponents: {
         Wrapper: path.join(__dirname, 'src/utils/styles/HoiPoiProvider'),
