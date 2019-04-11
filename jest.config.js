@@ -10,4 +10,8 @@ module.exports = {
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
     moduleFileExtensions: ['js', 'json', 'jsx', 'node'],
     snapshotSerializers: ['enzyme-to-json/serializer'],
+    moduleNameMapper: {
+        '^utils(.*)$': '<rootDir>/src/utils$1',
+        '^components(.*)$': '<rootDir>/src/components$1',
+    },
 };
