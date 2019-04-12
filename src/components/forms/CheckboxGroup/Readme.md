@@ -80,6 +80,8 @@ let onChange = (value) => setState({ value });
 
 ---
 
--   error - Error wrapper
+-   [Checkbox](#/Forms?id=checkbox)
+-   checkboxLabel - label related to one checkbox
+-   checkboxControl - wrapper with checkbox label and checkbox
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)
