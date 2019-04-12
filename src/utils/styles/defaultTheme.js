@@ -79,6 +79,11 @@ export default {
             fontSize: fontSizeBase,
             fontFamily,
         },
+        smallText: {
+            letterSpacing: 0.5,
+            fontSize: fontSizeSmall,
+            fontFamily,
+        },
     },
     effects: {
         boxShadow,

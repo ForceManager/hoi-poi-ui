@@ -134,26 +134,26 @@ Input.defaultProps = {
 
 Input.propTypes = {
     onChange: PropTypes.func,
-    /* Navite input id */
+    /** Navite input id */
     id: PropTypes.string,
-    /* Navite input name */
+    /** Navite input name */
     name: PropTypes.string,
-    /* Native input type */
+    /** Native input type */
     type: PropTypes.string,
     value: PropTypes.any,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     placeholder: PropTypes.string,
     isFullWidth: PropTypes.bool,
-    /* Info popover */
+    /** Info popover */
     hint: PropTypes.string,
-    /* Error will be displayed below the component with style changes */
+    /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
-    /* Component rendered at the input beginning */
+    /** Component rendered at the input beginning */
     preComponent: PropTypes.any,
-    /* Component rendered at the input ending */
+    /** Component rendered at the input ending */
     postComponent: PropTypes.any,
 };
 
