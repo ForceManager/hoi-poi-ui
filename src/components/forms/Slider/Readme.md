@@ -55,7 +55,7 @@ const onChange = (value) => setState({ value });
 
 ---
 
--   [rc-slider]([Native input](https://github.com/react-component/slider/))
+-   [rc-slider](https://github.com/react-component/slider/)
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)
