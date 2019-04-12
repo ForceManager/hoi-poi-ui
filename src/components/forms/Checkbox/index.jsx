@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
@@ -17,6 +17,7 @@ function Checkbox({
     checked,
     indeterminate,
     isDisabled,
+    onChange,
     ...props
 }) {
     // Overrides
@@ -31,13 +32,9 @@ function Checkbox({
         classNameProp,
     );
 
-    const onChange = useCallback(() => {
-        props.onChange && props.onChange();
-    }, [checked, indeterminate]);
-
     const rootProps = {
         className: rootClassName,
-        onClick: onChange,
+        onClick: !isDisabled ? onChange : undefined,
     };
 
     let checkState = 'unchecked';
@@ -51,7 +48,7 @@ function Checkbox({
             {checkState === 'indeterminate' && <IndeterminateIcon {...override.svg} />}
             <input
                 className={classes.input}
-                onChange={onChange}
+                onChange={!isDisabled ? onChange : undefined}
                 type="checkbox"
                 checked={checked ? 'checked' : ''}
                 disabled={isDisabled ? 'disabled' : ''}
@@ -63,7 +60,9 @@ function Checkbox({
 
 Checkbox.overrides = ['input', 'svg'];
 
-Checkbox.defaultProps = {};
+Checkbox.defaultProps = {
+    onChange: () => {},
+};
 
 Checkbox.propTypes = {
     checked: PropTypes.bool,
