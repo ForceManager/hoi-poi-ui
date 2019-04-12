@@ -1,0 +1,119 @@
+export default (theme) => ({
+    root: {},
+    Label: {
+        width: 153,
+        marginRight: 17,
+        padding: '6px 0',
+    },
+    error: {
+        ...theme.typography.defaultText,
+        position: 'absolute',
+        bottom: -15,
+        color: theme.colors.danger,
+    },
+    formControl: {
+        isolate: true,
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        width: 290,
+        lineHeight: 0,
+    },
+    errored: {
+        paddingBottom: '20px !important',
+    },
+    vertical: {
+        display: 'block',
+        padding: '12px 0 11px 0',
+        '& $formControl': {
+            marginTop: 10,
+        },
+    },
+    horizontal: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: '12px 0 11px 0',
+        '& $error': {},
+    },
+    isFullWidth: {
+        '& $formControl': {
+            width: '100%',
+        },
+    },
+    // Slider custom styles
+    slider: {
+        width: 'calc(100% - 15px)',
+        minHeight: 50,
+        margin: 'auto',
+        position: 'relative',
+        padding: '25px 0',
+        borderRadius: 6,
+        touchAction: 'none',
+        boxSizing: 'border-box',
+        '& .rc-slider-rail': {
+            isolate: true,
+            boxSizing: 'border-box',
+            position: 'absolute',
+            width: '100%',
+            backgroundColor: theme.colors.lightGrey,
+            height: 2,
+            borderRadius: 6,
+        },
+        '& .rc-slider-track': {
+            isolate: true,
+            boxSizing: 'border-box',
+            position: 'absolute',
+            left: '0',
+            height: 2,
+            borderRadius: 6,
+            backgroundColor: theme.colors.primary,
+        },
+        '& .rc-slider-step': {
+            isolate: true,
+            boxSizing: 'border-box',
+            position: 'absolute',
+            width: '100%',
+            height: 4,
+            background: 'transparent',
+        },
+    },
+    overlay: {},
+    overlayHandler: {
+        position: 'absolute',
+        marginLeft: -8,
+        marginTop: -6,
+        width: 15,
+        height: 15,
+        cursor: 'grab',
+        borderRadius: '50%',
+        border: '0',
+        backgroundColor: theme.colors.primary,
+        MsTouchAction: 'pan-x',
+        touchAction: 'pan-x',
+        '&:active': {
+            cursor: 'grabbing',
+        },
+        '&:focus': {
+            outline: 'none',
+        },
+    },
+    overlayLabel: {
+        isolate: true,
+        position: 'absolute',
+        minWidth: 15,
+        top: 4,
+        marginLeft: -7.5,
+        textAlign: 'center',
+        color: theme.colors.softGrey,
+        ...theme.typography.smallText,
+    },
+    isReadOnly: {
+        '& $overlayHandler': {
+            backgroundColor: theme.colors.lightGrey,
+            cursor: 'default',
+        },
+        '& .rc-slider-track': {
+            backgroundColor: theme.colors.lightGrey,
+        },
+    },
+});

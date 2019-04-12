@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox checked match snapshot 1`] = `
+exports[`Input custom max/min/step match 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -206,11 +206,16 @@ exports[`Checkbox checked match snapshot 1`] = `
       }
     >
       <JssContextSubscriber
-        checked={true}
+        label="Lorem ipsum"
+        max={10000}
+        min={5000}
+        onChange={[Function]}
+        step={100}
+        value={5000}
       >
-        <WithStyles(Checkbox)
-          checked={true}
+        <WithStyles(Slider)
           innerRef={null}
+          isReadOnly={false}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -351,551 +356,11 @@ exports[`Checkbox checked match snapshot 1`] = `
                 "version": "10.0.0-alpha.16",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "2": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-              },
-              "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-",
-                "generateId": [Function],
-              },
-            }
-          }
-          theme={
-            Object {
-              "colors": Object {
-                "black": "#262B34",
-                "danger": "#f04540",
-                "dangerDark": "#C43833",
-                "disabledGrey": "#ced4d9",
-                "grey": "#697782",
-                "lightBlack": "#5f656b",
-                "lightGrey": "#f0f3f5",
-                "lines": "#dce3eb",
-                "overlay": "rgba(33,33,33,0.55)",
-                "placeholders": "#e1e4e7",
-                "placeholdersHover": "#d0d4d8",
-                "primary": "#FF8C00",
-                "primaryDark": "#C87600",
-                "primaryLight": "#FEF4E6",
-                "secundary": "#00A8Be",
-                "secundaryLight": "#D6EEF2",
-                "shadow": "rgba(0, 0, 0, 0.25)",
-                "softGrey": "#788590",
-                "text": Object {
-                  "black": "#3c4248",
-                  "danger": "white",
-                  "default": "#697782",
-                  "primary": "white",
-                },
-                "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                "white": "#FFFFFF",
-              },
-              "effects": Object {
-                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                "buttonActive": Object {
-                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
-                },
-              },
-              "typography": Object {
-                "button": Object {
-                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 11,
-                  "lineHeight": 1.5,
-                },
-                "defaultText": Object {
-                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 13,
-                  "letterSpacing": 0.5,
-                },
-                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                "fontSizeBase": 13,
-                "fontSizeSmall": 11,
-                "letterSpacing": 0.5,
-                "lineHeightBase": 1.5,
-                "smallText": Object {
-                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 11,
-                  "letterSpacing": 0.5,
-                },
-              },
-            }
-          }
-        >
-          <Checkbox
-            checked={true}
-            classes={
-              Object {
-                "disabled": "HoiPoi-HoiPoi-Checkbox-disabled-0-2-6",
-                "input": "HoiPoi-HoiPoi-Checkbox-input-0-2-5",
-                "root": "HoiPoi-HoiPoi-Checkbox-root-0-2-4",
-              }
-            }
-          >
-            <div
-              className="HoiPoi-HoiPoi-Checkbox-root-0-2-4"
-              onClick={[Function]}
-            >
-              <WithTheme(Unknown)>
-                <Component
-                  theme={
-                    Object {
-                      "colors": Object {
-                        "black": "#262B34",
-                        "danger": "#f04540",
-                        "dangerDark": "#C43833",
-                        "disabledGrey": "#ced4d9",
-                        "grey": "#697782",
-                        "lightBlack": "#5f656b",
-                        "lightGrey": "#f0f3f5",
-                        "lines": "#dce3eb",
-                        "overlay": "rgba(33,33,33,0.55)",
-                        "placeholders": "#e1e4e7",
-                        "placeholdersHover": "#d0d4d8",
-                        "primary": "#FF8C00",
-                        "primaryDark": "#C87600",
-                        "primaryLight": "#FEF4E6",
-                        "secundary": "#00A8Be",
-                        "secundaryLight": "#D6EEF2",
-                        "shadow": "rgba(0, 0, 0, 0.25)",
-                        "softGrey": "#788590",
-                        "text": Object {
-                          "black": "#3c4248",
-                          "danger": "white",
-                          "default": "#697782",
-                          "primary": "white",
-                        },
-                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                        "white": "#FFFFFF",
-                      },
-                      "effects": Object {
-                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                        "buttonActive": Object {
-                          "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
-                        },
-                      },
-                      "typography": Object {
-                        "button": Object {
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 11,
-                          "lineHeight": 1.5,
-                        },
-                        "defaultText": Object {
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 13,
-                          "letterSpacing": 0.5,
-                        },
-                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                        "fontSizeBase": 13,
-                        "fontSizeSmall": 11,
-                        "letterSpacing": 0.5,
-                        "lineHeightBase": 1.5,
-                        "smallText": Object {
-                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 11,
-                          "letterSpacing": 0.5,
-                        },
-                      },
-                    }
-                  }
-                >
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g
-                      fill="none"
-                      fillRule="evenodd"
-                    >
-                      <rect
-                        fill="#00A8Be"
-                        height="14"
-                        rx="3"
-                        width="14"
-                        x="2"
-                        y="2"
-                      />
-                      <path
-                        d="M5.01 9.01l2.033 3.006 5.951-6.01"
-                        stroke="#FFF"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                      />
-                    </g>
-                  </svg>
-                </Component>
-              </WithTheme(Unknown)>
-              <input
-                checked="checked"
-                className="HoiPoi-HoiPoi-Checkbox-input-0-2-5"
-                disabled=""
-                onChange={[Function]}
-                type="checkbox"
-              />
-            </div>
-          </Checkbox>
-        </WithStyles(Checkbox)>
-      </JssContextSubscriber>
-    </JssProvider>
-  </ThemeProvider>
-</Component>
-`;
-
-exports[`Checkbox disabled match snapshot 1`] = `
-<Component>
-  <ThemeProvider
-    theme={
-      Object {
-        "colors": Object {
-          "black": "#262B34",
-          "danger": "#f04540",
-          "dangerDark": "#C43833",
-          "disabledGrey": "#ced4d9",
-          "grey": "#697782",
-          "lightBlack": "#5f656b",
-          "lightGrey": "#f0f3f5",
-          "lines": "#dce3eb",
-          "overlay": "rgba(33,33,33,0.55)",
-          "placeholders": "#e1e4e7",
-          "placeholdersHover": "#d0d4d8",
-          "primary": "#FF8C00",
-          "primaryDark": "#C87600",
-          "primaryLight": "#FEF4E6",
-          "secundary": "#00A8Be",
-          "secundaryLight": "#D6EEF2",
-          "shadow": "rgba(0, 0, 0, 0.25)",
-          "softGrey": "#788590",
-          "text": Object {
-            "black": "#3c4248",
-            "danger": "white",
-            "default": "#697782",
-            "primary": "white",
-          },
-          "transparentBlack": "rgba(38, 43, 52, 0.8)",
-          "white": "#FFFFFF",
-        },
-        "effects": Object {
-          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-          "buttonActive": Object {
-            "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
-          },
-        },
-        "typography": Object {
-          "button": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
-          "defaultText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
-            "letterSpacing": 0.5,
-          },
-          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
-          "fontSizeSmall": 11,
-          "letterSpacing": 0.5,
-          "lineHeightBase": 1.5,
-          "smallText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "letterSpacing": 0.5,
-          },
-        },
-      }
-    }
-  >
-    <JssProvider
-      classNamePrefix="HoiPoi-"
-      jss={
-        Jss {
-          "generateId": [Function],
-          "id": 2,
-          "options": Object {
-            "Renderer": [Function],
-            "createGenerateId": [Function],
-            "plugins": Array [],
-          },
-          "plugins": PluginsRegistry {
-            "plugins": Object {
-              "external": Array [
-                Object {
-                  "onCreateRule": [Function],
-                  "onProcessStyle": [Function],
-                  "onUpdate": [Function],
-                },
-                Object {
-                  "onCreateRule": [Function],
-                  "onProcessRule": [Function],
-                },
-                Object {
-                  "onProcessRule": [Function],
-                },
-                Object {
-                  "onCreateRule": [Function],
-                  "onProcessRule": [Function],
-                },
-                Object {
-                  "onChangeValue": [Function],
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onChangeValue": [Function],
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onChangeValue": [Function],
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onChangeValue": [Function],
-                  "onProcessRule": [Function],
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onProcessRule": [Function],
-                  "onProcessSheet": [Function],
-                },
-              ],
-              "internal": Array [
-                Object {
-                  "onCreateRule": [Function],
-                },
-                Object {
-                  "onCreateRule": [Function],
-                },
-                Object {
-                  "onChangeValue": [Function],
-                  "onCreateRule": [Function],
-                  "onProcessStyle": [Function],
-                },
-                Object {
-                  "onCreateRule": [Function],
-                },
-                Object {
-                  "onCreateRule": [Function],
-                },
-                Object {
-                  "onCreateRule": [Function],
-                },
-                Object {
-                  "onCreateRule": [Function],
-                },
-              ],
-            },
-            "registry": Object {
-              "onChangeValue": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onCreateRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessSheet": Array [
-                [Function],
-              ],
-              "onProcessStyle": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onUpdate": Array [
-                [Function],
-              ],
-            },
-          },
-          "version": "10.0.0-alpha.16",
-        }
-      }
-    >
-      <JssContextSubscriber
-        isDisabled={true}
-      >
-        <WithStyles(Checkbox)
-          innerRef={null}
-          isDisabled={true}
-          jssContext={
-            Object {
-              "disableStylesGeneration": false,
-              "jss": Jss {
-                "generateId": [Function],
-                "id": 2,
-                "options": Object {
-                  "Renderer": [Function],
-                  "createGenerateId": [Function],
-                  "plugins": Array [],
-                },
-                "plugins": PluginsRegistry {
-                  "plugins": Object {
-                    "external": Array [
-                      Object {
-                        "onCreateRule": [Function],
-                        "onProcessStyle": [Function],
-                        "onUpdate": [Function],
-                      },
-                      Object {
-                        "onCreateRule": [Function],
-                        "onProcessRule": [Function],
-                      },
-                      Object {
-                        "onProcessRule": [Function],
-                      },
-                      Object {
-                        "onCreateRule": [Function],
-                        "onProcessRule": [Function],
-                      },
-                      Object {
-                        "onChangeValue": [Function],
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onChangeValue": [Function],
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onChangeValue": [Function],
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onChangeValue": [Function],
-                        "onProcessRule": [Function],
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onProcessRule": [Function],
-                        "onProcessSheet": [Function],
-                      },
-                    ],
-                    "internal": Array [
-                      Object {
-                        "onCreateRule": [Function],
-                      },
-                      Object {
-                        "onCreateRule": [Function],
-                      },
-                      Object {
-                        "onChangeValue": [Function],
-                        "onCreateRule": [Function],
-                        "onProcessStyle": [Function],
-                      },
-                      Object {
-                        "onCreateRule": [Function],
-                      },
-                      Object {
-                        "onCreateRule": [Function],
-                      },
-                      Object {
-                        "onCreateRule": [Function],
-                      },
-                      Object {
-                        "onCreateRule": [Function],
-                      },
-                    ],
-                  },
-                  "registry": Object {
-                    "onChangeValue": Array [
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                    ],
-                    "onCreateRule": Array [
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                    ],
-                    "onProcessRule": Array [
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                    ],
-                    "onProcessSheet": Array [
-                      [Function],
-                    ],
-                    "onProcessStyle": Array [
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                      [Function],
-                    ],
-                    "onUpdate": Array [
-                      [Function],
-                    ],
-                  },
-                },
-                "version": "10.0.0-alpha.16",
-              },
-              "managers": Object {
-                "0": SheetsManager {
+                "3": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -906,6 +371,12 @@ exports[`Checkbox disabled match snapshot 1`] = `
               },
             }
           }
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          max={10000}
+          min={5000}
+          onChange={[Function]}
+          step={100}
           theme={
             Object {
               "colors": Object {
@@ -966,23 +437,199 @@ exports[`Checkbox disabled match snapshot 1`] = `
               },
             }
           }
+          value={5000}
         >
-          <Checkbox
+          <Slider
             classes={
               Object {
-                "disabled": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Checkbox-disabled-0-2-12",
-                "input": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Checkbox-input-0-2-11",
-                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Checkbox-root-0-2-10",
+                "Label": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-53",
+                "error": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-error-0-2-54",
+                "errored": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-errored-0-2-56",
+                "formControl": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-formControl-0-2-55",
+                "horizontal": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-horizontal-0-2-58",
+                "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-isFullWidth-0-2-59",
+                "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-isReadOnly-0-2-64",
+                "overlay": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-overlay-0-2-61",
+                "overlayHandler": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-overlayHandler-0-2-62",
+                "overlayLabel": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-overlayLabel-0-2-63",
+                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-root-0-2-52",
+                "slider": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-slider-0-2-60",
+                "vertical": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-vertical-0-2-57",
               }
             }
-            isDisabled={true}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="horizontal"
+            max={10000}
+            min={5000}
+            onChange={[Function]}
+            step={100}
+            value={5000}
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Checkbox-root-0-2-10 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Checkbox-disabled-0-2-12"
-              onClick={[Function]}
+              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-root-0-2-52 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-horizontal-0-2-58"
             >
-              <WithTheme(Unknown)>
-                <Component
+              <JssContextSubscriber
+                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-53"
+              >
+                <WithStyles(Label)
+                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-53"
+                  innerRef={null}
+                  jssContext={
+                    Object {
+                      "disableStylesGeneration": false,
+                      "jss": Jss {
+                        "generateId": [Function],
+                        "id": 2,
+                        "options": Object {
+                          "Renderer": [Function],
+                          "createGenerateId": [Function],
+                          "plugins": Array [],
+                        },
+                        "plugins": PluginsRegistry {
+                          "plugins": Object {
+                            "external": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                                "onUpdate": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                                "onProcessSheet": [Function],
+                              },
+                            ],
+                            "internal": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                            ],
+                          },
+                          "registry": Object {
+                            "onChangeValue": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onCreateRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessSheet": Array [
+                              [Function],
+                            ],
+                            "onProcessStyle": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onUpdate": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "version": "10.0.0-alpha.16",
+                      },
+                      "managers": Object {
+                        "2": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                      },
+                      "sheetOptions": Object {
+                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                        "generateId": [Function],
+                      },
+                    }
+                  }
                   theme={
                     Object {
                       "colors": Object {
@@ -1044,41 +691,187 @@ exports[`Checkbox disabled match snapshot 1`] = `
                     }
                   }
                 >
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <Label
+                    className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-53"
+                    classes={
+                      Object {
+                        "icon": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-68",
+                        "info": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-67",
+                        "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-65",
+                        "text": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-66",
+                      }
+                    }
                   >
-                    <rect
-                      fill="none"
-                      fillRule="evenodd"
-                      height="13"
-                      rx="3"
-                      stroke="#788590"
-                      width="13"
-                      x="2.5"
-                      y="2.5"
+                    <span
+                      className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-65 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-53"
+                    >
+                      <span
+                        className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-66"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </span>
+                  </Label>
+                </WithStyles(Label)>
+              </JssContextSubscriber>
+              <div
+                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-formControl-0-2-55"
+              >
+                <ComponentEnhancer(undefined)
+                  activeDotStyle={Object {}}
+                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-slider-0-2-60"
+                  defaultValue={5000}
+                  disabled={false}
+                  dotStyle={Object {}}
+                  dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  included={true}
+                  marks={Object {}}
+                  max={10000}
+                  min={5000}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
+                  prefixCls="rc-slider"
+                  railStyle={Object {}}
+                  step={100}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={5000}
+                  vertical={false}
+                >
+                  <div
+                    className="rc-slider HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-slider-0-2-60"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="rc-slider-rail"
+                      style={Object {}}
                     />
-                  </svg>
-                </Component>
-              </WithTheme(Unknown)>
-              <input
-                checked=""
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Checkbox-input-0-2-11"
-                disabled="disabled"
-                onChange={[Function]}
-                type="checkbox"
-              />
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={5000}
+                      marks={Object {}}
+                      max={10000}
+                      min={5000}
+                      prefixCls="rc-slider"
+                      step={100}
+                      upperBound={5000}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
+                      />
+                    </Steps>
+                    <div
+                      className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-overlay-0-2-61"
+                    >
+                      <span
+                        className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-overlayLabel-0-2-63"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        5000
+                      </span>
+                      <Handle
+                        className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-overlayHandler-0-2-62"
+                        disabled={false}
+                        dragging="false"
+                        index={0}
+                        max={10000}
+                        min={5000}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        style={Object {}}
+                        value={5000}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={false}
+                          aria-valuemax={10000}
+                          aria-valuemin={5000}
+                          aria-valuenow={5000}
+                          className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Slider-overlayHandler-0-2-62"
+                          dragging="false"
+                          index={0}
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                            }
+                          }
+                          tabIndex={0}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={5000}
+                      marks={Object {}}
+                      max={10000}
+                      min={5000}
+                      onClickLabel={[Function]}
+                      upperBound={5000}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
+              </div>
             </div>
-          </Checkbox>
-        </WithStyles(Checkbox)>
+          </Slider>
+        </WithStyles(Slider)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>
 </Component>
 `;
 
-exports[`Checkbox indeterminate match snapshot 1`] = `
+exports[`Input custom tip match 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -1284,13 +1077,14 @@ exports[`Checkbox indeterminate match snapshot 1`] = `
       }
     >
       <JssContextSubscriber
-        checked={true}
-        indeterminate={true}
+        label="Lorem ipsum"
+        onChange={[Function]}
+        tipFormatter={[Function]}
+        value={0}
       >
-        <WithStyles(Checkbox)
-          checked={true}
-          indeterminate={true}
+        <WithStyles(Slider)
           innerRef={null}
+          isReadOnly={false}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -1431,7 +1225,11 @@ exports[`Checkbox indeterminate match snapshot 1`] = `
                 "version": "10.0.0-alpha.16",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "2": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "3": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -1442,6 +1240,12 @@ exports[`Checkbox indeterminate match snapshot 1`] = `
               },
             }
           }
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          max={100}
+          min={0}
+          onChange={[Function]}
+          step={1}
           theme={
             Object {
               "colors": Object {
@@ -1502,24 +1306,201 @@ exports[`Checkbox indeterminate match snapshot 1`] = `
               },
             }
           }
+          tipFormatter={[Function]}
+          value={0}
         >
-          <Checkbox
-            checked={true}
+          <Slider
             classes={
               Object {
-                "disabled": "HoiPoi-HoiPoi-HoiPoi-Checkbox-disabled-0-2-9",
-                "input": "HoiPoi-HoiPoi-HoiPoi-Checkbox-input-0-2-8",
-                "root": "HoiPoi-HoiPoi-HoiPoi-Checkbox-root-0-2-7",
+                "Label": "HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-36",
+                "error": "HoiPoi-HoiPoi-HoiPoi-Slider-error-0-2-37",
+                "errored": "HoiPoi-HoiPoi-HoiPoi-Slider-errored-0-2-39",
+                "formControl": "HoiPoi-HoiPoi-HoiPoi-Slider-formControl-0-2-38",
+                "horizontal": "HoiPoi-HoiPoi-HoiPoi-Slider-horizontal-0-2-41",
+                "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-Slider-isFullWidth-0-2-42",
+                "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-Slider-isReadOnly-0-2-47",
+                "overlay": "HoiPoi-HoiPoi-HoiPoi-Slider-overlay-0-2-44",
+                "overlayHandler": "HoiPoi-HoiPoi-HoiPoi-Slider-overlayHandler-0-2-45",
+                "overlayLabel": "HoiPoi-HoiPoi-HoiPoi-Slider-overlayLabel-0-2-46",
+                "root": "HoiPoi-HoiPoi-HoiPoi-Slider-root-0-2-35",
+                "slider": "HoiPoi-HoiPoi-HoiPoi-Slider-slider-0-2-43",
+                "vertical": "HoiPoi-HoiPoi-HoiPoi-Slider-vertical-0-2-40",
               }
             }
-            indeterminate={true}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="horizontal"
+            max={100}
+            min={0}
+            onChange={[Function]}
+            step={1}
+            tipFormatter={[Function]}
+            value={0}
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-Checkbox-root-0-2-7"
-              onClick={[Function]}
+              className="HoiPoi-HoiPoi-HoiPoi-Slider-root-0-2-35 HoiPoi-HoiPoi-HoiPoi-Slider-horizontal-0-2-41"
             >
-              <WithTheme(Unknown)>
-                <Component
+              <JssContextSubscriber
+                className="HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-36"
+              >
+                <WithStyles(Label)
+                  className="HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-36"
+                  innerRef={null}
+                  jssContext={
+                    Object {
+                      "disableStylesGeneration": false,
+                      "jss": Jss {
+                        "generateId": [Function],
+                        "id": 2,
+                        "options": Object {
+                          "Renderer": [Function],
+                          "createGenerateId": [Function],
+                          "plugins": Array [],
+                        },
+                        "plugins": PluginsRegistry {
+                          "plugins": Object {
+                            "external": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                                "onUpdate": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                                "onProcessSheet": [Function],
+                              },
+                            ],
+                            "internal": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                            ],
+                          },
+                          "registry": Object {
+                            "onChangeValue": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onCreateRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessSheet": Array [
+                              [Function],
+                            ],
+                            "onProcessStyle": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onUpdate": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "version": "10.0.0-alpha.16",
+                      },
+                      "managers": Object {
+                        "2": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                      },
+                      "sheetOptions": Object {
+                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                        "generateId": [Function],
+                      },
+                    }
+                  }
                   theme={
                     Object {
                       "colors": Object {
@@ -1581,51 +1562,187 @@ exports[`Checkbox indeterminate match snapshot 1`] = `
                     }
                   }
                 >
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <Label
+                    className="HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-36"
+                    classes={
+                      Object {
+                        "icon": "HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-51",
+                        "info": "HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-50",
+                        "root": "HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-48",
+                        "text": "HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-49",
+                      }
+                    }
                   >
-                    <g
-                      fill="none"
-                      fillRule="evenodd"
+                    <span
+                      className="HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-48 HoiPoi-HoiPoi-HoiPoi-Slider-Label-0-2-36"
                     >
-                      <rect
-                        fill="#00A8Be"
-                        height="14"
-                        rx="3"
-                        width="14"
-                        x="2"
-                        y="2"
+                      <span
+                        className="HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-49"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </span>
+                  </Label>
+                </WithStyles(Label)>
+              </JssContextSubscriber>
+              <div
+                className="HoiPoi-HoiPoi-HoiPoi-Slider-formControl-0-2-38"
+              >
+                <ComponentEnhancer(undefined)
+                  activeDotStyle={Object {}}
+                  className="HoiPoi-HoiPoi-HoiPoi-Slider-slider-0-2-43"
+                  defaultValue={0}
+                  disabled={false}
+                  dotStyle={Object {}}
+                  dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  included={true}
+                  marks={Object {}}
+                  max={100}
+                  min={0}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
+                  prefixCls="rc-slider"
+                  railStyle={Object {}}
+                  step={1}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={0}
+                  vertical={false}
+                >
+                  <div
+                    className="rc-slider HoiPoi-HoiPoi-HoiPoi-Slider-slider-0-2-43"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="rc-slider-rail"
+                      style={Object {}}
+                    />
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "width": "0%",
+                          }
+                        }
                       />
-                      <path
-                        d="M4.89 9.01h8.136"
-                        stroke="#FFF"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      prefixCls="rc-slider"
+                      step={1}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
                       />
-                    </g>
-                  </svg>
-                </Component>
-              </WithTheme(Unknown)>
-              <input
-                checked="checked"
-                className="HoiPoi-HoiPoi-HoiPoi-Checkbox-input-0-2-8"
-                disabled=""
-                onChange={[Function]}
-                type="checkbox"
-              />
+                    </Steps>
+                    <div
+                      className="HoiPoi-HoiPoi-HoiPoi-Slider-overlay-0-2-44"
+                    >
+                      <span
+                        className="HoiPoi-HoiPoi-HoiPoi-Slider-overlayLabel-0-2-46"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        0%
+                      </span>
+                      <Handle
+                        className="HoiPoi-HoiPoi-HoiPoi-Slider-overlayHandler-0-2-45"
+                        disabled={false}
+                        dragging="false"
+                        index={0}
+                        max={100}
+                        min={0}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        style={Object {}}
+                        value={0}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={false}
+                          aria-valuemax={100}
+                          aria-valuemin={0}
+                          aria-valuenow={0}
+                          className="HoiPoi-HoiPoi-HoiPoi-Slider-overlayHandler-0-2-45"
+                          dragging="false"
+                          index={0}
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                            }
+                          }
+                          tabIndex={0}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      onClickLabel={[Function]}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
+              </div>
             </div>
-          </Checkbox>
-        </WithStyles(Checkbox)>
+          </Slider>
+        </WithStyles(Slider)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>
 </Component>
 `;
 
-exports[`Checkbox unchecked match snapshot 1`] = `
+exports[`Input default match 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -1830,9 +1947,14 @@ exports[`Checkbox unchecked match snapshot 1`] = `
         }
       }
     >
-      <JssContextSubscriber>
-        <WithStyles(Checkbox)
+      <JssContextSubscriber
+        label="Lorem ipsum"
+        onChange={[Function]}
+        value={0}
+      >
+        <WithStyles(Slider)
           innerRef={null}
+          isReadOnly={false}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -1973,7 +2095,11 @@ exports[`Checkbox unchecked match snapshot 1`] = `
                 "version": "10.0.0-alpha.16",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "2": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "3": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -1984,6 +2110,12 @@ exports[`Checkbox unchecked match snapshot 1`] = `
               },
             }
           }
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          max={100}
+          min={0}
+          onChange={[Function]}
+          step={1}
           theme={
             Object {
               "colors": Object {
@@ -2044,22 +2176,199 @@ exports[`Checkbox unchecked match snapshot 1`] = `
               },
             }
           }
+          value={0}
         >
-          <Checkbox
+          <Slider
             classes={
               Object {
-                "disabled": "HoiPoi-Checkbox-disabled-0-2-3",
-                "input": "HoiPoi-Checkbox-input-0-2-2",
-                "root": "HoiPoi-Checkbox-root-0-2-1",
+                "Label": "HoiPoi-Slider-Label-0-2-2",
+                "error": "HoiPoi-Slider-error-0-2-3",
+                "errored": "HoiPoi-Slider-errored-0-2-5",
+                "formControl": "HoiPoi-Slider-formControl-0-2-4",
+                "horizontal": "HoiPoi-Slider-horizontal-0-2-7",
+                "isFullWidth": "HoiPoi-Slider-isFullWidth-0-2-8",
+                "isReadOnly": "HoiPoi-Slider-isReadOnly-0-2-13",
+                "overlay": "HoiPoi-Slider-overlay-0-2-10",
+                "overlayHandler": "HoiPoi-Slider-overlayHandler-0-2-11",
+                "overlayLabel": "HoiPoi-Slider-overlayLabel-0-2-12",
+                "root": "HoiPoi-Slider-root-0-2-1",
+                "slider": "HoiPoi-Slider-slider-0-2-9",
+                "vertical": "HoiPoi-Slider-vertical-0-2-6",
               }
             }
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="horizontal"
+            max={100}
+            min={0}
+            onChange={[Function]}
+            step={1}
+            value={0}
           >
             <div
-              className="HoiPoi-Checkbox-root-0-2-1"
-              onClick={[Function]}
+              className="HoiPoi-Slider-root-0-2-1 HoiPoi-Slider-horizontal-0-2-7"
             >
-              <WithTheme(Unknown)>
-                <Component
+              <JssContextSubscriber
+                className="HoiPoi-Slider-Label-0-2-2"
+              >
+                <WithStyles(Label)
+                  className="HoiPoi-Slider-Label-0-2-2"
+                  innerRef={null}
+                  jssContext={
+                    Object {
+                      "disableStylesGeneration": false,
+                      "jss": Jss {
+                        "generateId": [Function],
+                        "id": 2,
+                        "options": Object {
+                          "Renderer": [Function],
+                          "createGenerateId": [Function],
+                          "plugins": Array [],
+                        },
+                        "plugins": PluginsRegistry {
+                          "plugins": Object {
+                            "external": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                                "onUpdate": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                                "onProcessSheet": [Function],
+                              },
+                            ],
+                            "internal": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                            ],
+                          },
+                          "registry": Object {
+                            "onChangeValue": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onCreateRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessSheet": Array [
+                              [Function],
+                            ],
+                            "onProcessStyle": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onUpdate": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "version": "10.0.0-alpha.16",
+                      },
+                      "managers": Object {
+                        "2": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                      },
+                      "sheetOptions": Object {
+                        "classNamePrefix": "HoiPoi-",
+                        "generateId": [Function],
+                      },
+                    }
+                  }
                   theme={
                     Object {
                       "colors": Object {
@@ -2121,34 +2430,1049 @@ exports[`Checkbox unchecked match snapshot 1`] = `
                     }
                   }
                 >
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <Label
+                    className="HoiPoi-Slider-Label-0-2-2"
+                    classes={
+                      Object {
+                        "icon": "HoiPoi-Label-icon-0-2-17",
+                        "info": "HoiPoi-Label-info-0-2-16",
+                        "root": "HoiPoi-Label-root-0-2-14",
+                        "text": "HoiPoi-Label-text-0-2-15",
+                      }
+                    }
                   >
-                    <rect
-                      fill="none"
-                      fillRule="evenodd"
-                      height="13"
-                      rx="3"
-                      stroke="#788590"
-                      width="13"
-                      x="2.5"
-                      y="2.5"
+                    <span
+                      className="HoiPoi-Label-root-0-2-14 HoiPoi-Slider-Label-0-2-2"
+                    >
+                      <span
+                        className="HoiPoi-Label-text-0-2-15"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </span>
+                  </Label>
+                </WithStyles(Label)>
+              </JssContextSubscriber>
+              <div
+                className="HoiPoi-Slider-formControl-0-2-4"
+              >
+                <ComponentEnhancer(undefined)
+                  activeDotStyle={Object {}}
+                  className="HoiPoi-Slider-slider-0-2-9"
+                  defaultValue={0}
+                  disabled={false}
+                  dotStyle={Object {}}
+                  dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  included={true}
+                  marks={Object {}}
+                  max={100}
+                  min={0}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
+                  prefixCls="rc-slider"
+                  railStyle={Object {}}
+                  step={1}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={0}
+                  vertical={false}
+                >
+                  <div
+                    className="rc-slider HoiPoi-Slider-slider-0-2-9"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="rc-slider-rail"
+                      style={Object {}}
                     />
-                  </svg>
-                </Component>
-              </WithTheme(Unknown)>
-              <input
-                checked=""
-                className="HoiPoi-Checkbox-input-0-2-2"
-                disabled=""
-                onChange={[Function]}
-                type="checkbox"
-              />
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      prefixCls="rc-slider"
+                      step={1}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
+                      />
+                    </Steps>
+                    <div
+                      className="HoiPoi-Slider-overlay-0-2-10"
+                    >
+                      <span
+                        className="HoiPoi-Slider-overlayLabel-0-2-12"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        0
+                      </span>
+                      <Handle
+                        className="HoiPoi-Slider-overlayHandler-0-2-11"
+                        disabled={false}
+                        dragging="false"
+                        index={0}
+                        max={100}
+                        min={0}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        style={Object {}}
+                        value={0}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={false}
+                          aria-valuemax={100}
+                          aria-valuemin={0}
+                          aria-valuenow={0}
+                          className="HoiPoi-Slider-overlayHandler-0-2-11"
+                          dragging="false"
+                          index={0}
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                            }
+                          }
+                          tabIndex={0}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      onClickLabel={[Function]}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
+              </div>
             </div>
-          </Checkbox>
-        </WithStyles(Checkbox)>
+          </Slider>
+        </WithStyles(Slider)>
+      </JssContextSubscriber>
+    </JssProvider>
+  </ThemeProvider>
+</Component>
+`;
+
+exports[`Input disabled match 1`] = `
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "colors": Object {
+          "black": "#262B34",
+          "danger": "#f04540",
+          "dangerDark": "#C43833",
+          "disabledGrey": "#ced4d9",
+          "grey": "#697782",
+          "lightBlack": "#5f656b",
+          "lightGrey": "#f0f3f5",
+          "lines": "#dce3eb",
+          "overlay": "rgba(33,33,33,0.55)",
+          "placeholders": "#e1e4e7",
+          "placeholdersHover": "#d0d4d8",
+          "primary": "#FF8C00",
+          "primaryDark": "#C87600",
+          "primaryLight": "#FEF4E6",
+          "secundary": "#00A8Be",
+          "secundaryLight": "#D6EEF2",
+          "shadow": "rgba(0, 0, 0, 0.25)",
+          "softGrey": "#788590",
+          "text": Object {
+            "black": "#3c4248",
+            "danger": "white",
+            "default": "#697782",
+            "primary": "white",
+          },
+          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "white": "#FFFFFF",
+        },
+        "effects": Object {
+          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "buttonActive": Object {
+            "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
+          },
+        },
+        "typography": Object {
+          "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "lineHeight": 1.5,
+          },
+          "defaultText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 13,
+            "letterSpacing": 0.5,
+          },
+          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "fontSizeBase": 13,
+          "fontSizeSmall": 11,
+          "letterSpacing": 0.5,
+          "lineHeightBase": 1.5,
+          "smallText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "letterSpacing": 0.5,
+          },
+        },
+      }
+    }
+  >
+    <JssProvider
+      classNamePrefix="HoiPoi-"
+      jss={
+        Jss {
+          "generateId": [Function],
+          "id": 2,
+          "options": Object {
+            "Renderer": [Function],
+            "createGenerateId": [Function],
+            "plugins": Array [],
+          },
+          "plugins": PluginsRegistry {
+            "plugins": Object {
+              "external": Array [
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                  "onUpdate": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessRule": [Function],
+                  "onProcessSheet": [Function],
+                },
+              ],
+              "internal": Array [
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+              ],
+            },
+            "registry": Object {
+              "onChangeValue": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onCreateRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessSheet": Array [
+                [Function],
+              ],
+              "onProcessStyle": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onUpdate": Array [
+                [Function],
+              ],
+            },
+          },
+          "version": "10.0.0-alpha.16",
+        }
+      }
+    >
+      <JssContextSubscriber
+        isReadOnly={true}
+        label="Lorem ipsum"
+        onChange={[Function]}
+        value={0}
+      >
+        <WithStyles(Slider)
+          innerRef={null}
+          isReadOnly={true}
+          jssContext={
+            Object {
+              "disableStylesGeneration": false,
+              "jss": Jss {
+                "generateId": [Function],
+                "id": 2,
+                "options": Object {
+                  "Renderer": [Function],
+                  "createGenerateId": [Function],
+                  "plugins": Array [],
+                },
+                "plugins": PluginsRegistry {
+                  "plugins": Object {
+                    "external": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                        "onUpdate": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessRule": [Function],
+                        "onProcessSheet": [Function],
+                      },
+                    ],
+                    "internal": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                    ],
+                  },
+                  "registry": Object {
+                    "onChangeValue": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onCreateRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessSheet": Array [
+                      [Function],
+                    ],
+                    "onProcessStyle": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onUpdate": Array [
+                      [Function],
+                    ],
+                  },
+                },
+                "version": "10.0.0-alpha.16",
+              },
+              "managers": Object {
+                "2": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "3": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+              },
+              "sheetOptions": Object {
+                "classNamePrefix": "HoiPoi-HoiPoi-",
+                "generateId": [Function],
+              },
+            }
+          }
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          max={100}
+          min={0}
+          onChange={[Function]}
+          step={1}
+          theme={
+            Object {
+              "colors": Object {
+                "black": "#262B34",
+                "danger": "#f04540",
+                "dangerDark": "#C43833",
+                "disabledGrey": "#ced4d9",
+                "grey": "#697782",
+                "lightBlack": "#5f656b",
+                "lightGrey": "#f0f3f5",
+                "lines": "#dce3eb",
+                "overlay": "rgba(33,33,33,0.55)",
+                "placeholders": "#e1e4e7",
+                "placeholdersHover": "#d0d4d8",
+                "primary": "#FF8C00",
+                "primaryDark": "#C87600",
+                "primaryLight": "#FEF4E6",
+                "secundary": "#00A8Be",
+                "secundaryLight": "#D6EEF2",
+                "shadow": "rgba(0, 0, 0, 0.25)",
+                "softGrey": "#788590",
+                "text": Object {
+                  "black": "#3c4248",
+                  "danger": "white",
+                  "default": "#697782",
+                  "primary": "white",
+                },
+                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                "white": "#FFFFFF",
+              },
+              "effects": Object {
+                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                "buttonActive": Object {
+                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
+                },
+              },
+              "typography": Object {
+                "button": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "lineHeight": 1.5,
+                },
+                "defaultText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 13,
+                  "letterSpacing": 0.5,
+                },
+                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                "fontSizeBase": 13,
+                "fontSizeSmall": 11,
+                "letterSpacing": 0.5,
+                "lineHeightBase": 1.5,
+                "smallText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "letterSpacing": 0.5,
+                },
+              },
+            }
+          }
+          value={0}
+        >
+          <Slider
+            classes={
+              Object {
+                "Label": "HoiPoi-HoiPoi-Slider-Label-0-2-19",
+                "error": "HoiPoi-HoiPoi-Slider-error-0-2-20",
+                "errored": "HoiPoi-HoiPoi-Slider-errored-0-2-22",
+                "formControl": "HoiPoi-HoiPoi-Slider-formControl-0-2-21",
+                "horizontal": "HoiPoi-HoiPoi-Slider-horizontal-0-2-24",
+                "isFullWidth": "HoiPoi-HoiPoi-Slider-isFullWidth-0-2-25",
+                "isReadOnly": "HoiPoi-HoiPoi-Slider-isReadOnly-0-2-30",
+                "overlay": "HoiPoi-HoiPoi-Slider-overlay-0-2-27",
+                "overlayHandler": "HoiPoi-HoiPoi-Slider-overlayHandler-0-2-28",
+                "overlayLabel": "HoiPoi-HoiPoi-Slider-overlayLabel-0-2-29",
+                "root": "HoiPoi-HoiPoi-Slider-root-0-2-18",
+                "slider": "HoiPoi-HoiPoi-Slider-slider-0-2-26",
+                "vertical": "HoiPoi-HoiPoi-Slider-vertical-0-2-23",
+              }
+            }
+            isReadOnly={true}
+            label="Lorem ipsum"
+            labelMode="horizontal"
+            max={100}
+            min={0}
+            onChange={[Function]}
+            step={1}
+            value={0}
+          >
+            <div
+              className="HoiPoi-HoiPoi-Slider-root-0-2-18 HoiPoi-HoiPoi-Slider-isReadOnly-0-2-30 HoiPoi-HoiPoi-Slider-horizontal-0-2-24"
+            >
+              <JssContextSubscriber
+                className="HoiPoi-HoiPoi-Slider-Label-0-2-19"
+              >
+                <WithStyles(Label)
+                  className="HoiPoi-HoiPoi-Slider-Label-0-2-19"
+                  innerRef={null}
+                  jssContext={
+                    Object {
+                      "disableStylesGeneration": false,
+                      "jss": Jss {
+                        "generateId": [Function],
+                        "id": 2,
+                        "options": Object {
+                          "Renderer": [Function],
+                          "createGenerateId": [Function],
+                          "plugins": Array [],
+                        },
+                        "plugins": PluginsRegistry {
+                          "plugins": Object {
+                            "external": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                                "onUpdate": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                                "onProcessSheet": [Function],
+                              },
+                            ],
+                            "internal": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                            ],
+                          },
+                          "registry": Object {
+                            "onChangeValue": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onCreateRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessSheet": Array [
+                              [Function],
+                            ],
+                            "onProcessStyle": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onUpdate": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "version": "10.0.0-alpha.16",
+                      },
+                      "managers": Object {
+                        "2": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                      },
+                      "sheetOptions": Object {
+                        "classNamePrefix": "HoiPoi-HoiPoi-",
+                        "generateId": [Function],
+                      },
+                    }
+                  }
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "black": "#262B34",
+                        "danger": "#f04540",
+                        "dangerDark": "#C43833",
+                        "disabledGrey": "#ced4d9",
+                        "grey": "#697782",
+                        "lightBlack": "#5f656b",
+                        "lightGrey": "#f0f3f5",
+                        "lines": "#dce3eb",
+                        "overlay": "rgba(33,33,33,0.55)",
+                        "placeholders": "#e1e4e7",
+                        "placeholdersHover": "#d0d4d8",
+                        "primary": "#FF8C00",
+                        "primaryDark": "#C87600",
+                        "primaryLight": "#FEF4E6",
+                        "secundary": "#00A8Be",
+                        "secundaryLight": "#D6EEF2",
+                        "shadow": "rgba(0, 0, 0, 0.25)",
+                        "softGrey": "#788590",
+                        "text": Object {
+                          "black": "#3c4248",
+                          "danger": "white",
+                          "default": "#697782",
+                          "primary": "white",
+                        },
+                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                        "white": "#FFFFFF",
+                      },
+                      "effects": Object {
+                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                        "buttonActive": Object {
+                          "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
+                        },
+                      },
+                      "typography": Object {
+                        "button": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "lineHeight": 1.5,
+                        },
+                        "defaultText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 13,
+                          "letterSpacing": 0.5,
+                        },
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                        "fontSizeBase": 13,
+                        "fontSizeSmall": 11,
+                        "letterSpacing": 0.5,
+                        "lineHeightBase": 1.5,
+                        "smallText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "letterSpacing": 0.5,
+                        },
+                      },
+                    }
+                  }
+                >
+                  <Label
+                    className="HoiPoi-HoiPoi-Slider-Label-0-2-19"
+                    classes={
+                      Object {
+                        "icon": "HoiPoi-HoiPoi-Label-icon-0-2-34",
+                        "info": "HoiPoi-HoiPoi-Label-info-0-2-33",
+                        "root": "HoiPoi-HoiPoi-Label-root-0-2-31",
+                        "text": "HoiPoi-HoiPoi-Label-text-0-2-32",
+                      }
+                    }
+                  >
+                    <span
+                      className="HoiPoi-HoiPoi-Label-root-0-2-31 HoiPoi-HoiPoi-Slider-Label-0-2-19"
+                    >
+                      <span
+                        className="HoiPoi-HoiPoi-Label-text-0-2-32"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </span>
+                  </Label>
+                </WithStyles(Label)>
+              </JssContextSubscriber>
+              <div
+                className="HoiPoi-HoiPoi-Slider-formControl-0-2-21"
+              >
+                <ComponentEnhancer(undefined)
+                  activeDotStyle={Object {}}
+                  className="HoiPoi-HoiPoi-Slider-slider-0-2-26"
+                  defaultValue={0}
+                  disabled={true}
+                  dotStyle={Object {}}
+                  dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  included={true}
+                  marks={Object {}}
+                  max={100}
+                  min={0}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
+                  prefixCls="rc-slider"
+                  railStyle={Object {}}
+                  step={1}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={0}
+                  vertical={false}
+                >
+                  <div
+                    className="rc-slider rc-slider-disabled HoiPoi-HoiPoi-Slider-slider-0-2-26"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="rc-slider-rail"
+                      style={Object {}}
+                    />
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      prefixCls="rc-slider"
+                      step={1}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
+                      />
+                    </Steps>
+                    <div
+                      className="HoiPoi-HoiPoi-Slider-overlay-0-2-27"
+                    >
+                      <span
+                        className="HoiPoi-HoiPoi-Slider-overlayLabel-0-2-29"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        0
+                      </span>
+                      <Handle
+                        className="HoiPoi-HoiPoi-Slider-overlayHandler-0-2-28"
+                        disabled={true}
+                        dragging="false"
+                        index={0}
+                        max={100}
+                        min={0}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        style={Object {}}
+                        value={0}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={true}
+                          aria-valuemax={100}
+                          aria-valuemin={0}
+                          aria-valuenow={0}
+                          className="HoiPoi-HoiPoi-Slider-overlayHandler-0-2-28"
+                          dragging="false"
+                          index={0}
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                            }
+                          }
+                          tabIndex={null}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      onClickLabel={[Function]}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
+              </div>
+            </div>
+          </Slider>
+        </WithStyles(Slider)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>

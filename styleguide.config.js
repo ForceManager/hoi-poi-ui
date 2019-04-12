@@ -25,6 +25,7 @@ module.exports = {
                 './src/components/forms/Checkbox/index.jsx',
                 './src/components/forms/Label/index.jsx',
                 './src/components/forms/Input/index.jsx',
+                './src/components/forms/Slider/index.jsx',
             ],
         },
         {
