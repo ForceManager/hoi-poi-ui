@@ -160,9 +160,6 @@ export default (theme) => ({
         },
         '&$small': {
             padding: '0 9px',
-            '& $label': {
-                lineHeight: '18px',
-            },
         },
         '&$big': {
             padding: '9px 9px',
