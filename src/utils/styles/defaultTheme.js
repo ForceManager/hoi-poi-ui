@@ -17,13 +17,14 @@ const transparentBlack = 'rgba(38, 43, 52, 0.8)';
 
 const primary = '#FF8C00';
 const primaryDark = '#C87600';
-const primaryLight = '#FEF4E6';
+const primaryLight = '#ff9d26';
 
 const secundary = '#00A8Be';
-const secundaryLight = '#D6EEF2';
+const secundarySoft = '#D6EEF2';
 
 const danger = '#f04540';
 const dangerDark = '#C43833';
+const dangerLight = '#FF544F';
 
 //Text
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
@@ -48,9 +49,10 @@ export default {
         primaryDark,
         primaryLight,
         secundary,
-        secundaryLight,
+        secundarySoft,
         danger,
         dangerDark,
+        dangerLight,
         text: {
             default: grey,
             black: textBlack,
@@ -88,7 +90,7 @@ export default {
     effects: {
         boxShadow,
         buttonActive: {
-            boxShadow: 'inset 0 -2px 4px 0 rgba(122,122,122,0.23)',
+            boxShadow: 'inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)',
         },
     },
 };

@@ -3,8 +3,8 @@ export default (theme) => ({
         position: 'relative',
         boxSizing: 'border-box',
         display: 'inline-block',
-        minWidth: '100px',
-        padding: '5px 16px',
+        padding: '5px 20px',
+        lineHeight: 0,
         borderRadius: '100px',
         textAlign: 'center',
         cursor: 'pointer !important',
@@ -15,11 +15,13 @@ export default (theme) => ({
             width: '100%',
         },
         '&$disabled': {
-            backgroundPosition: '0 0 !important',
             opacity: 0.5,
             cursor: 'not-allowed !important',
             '&:hover': {
-                backgroundPosition: '0 0 !important',
+                backgroundColor: theme.colors.primary,
+            },
+            '&:active': {
+                boxShadow: 'none',
             },
             '& *': {
                 cursor: 'not-allowed',
@@ -37,9 +39,10 @@ export default (theme) => ({
         fontWeight: 500,
         transition: 'opacity .2s ease-in-out',
         ...theme.typography.button,
+        lineHeight: '20px',
     },
     labelLoading: {
-        isolate: true,
+        top: 1,
         position: 'relative',
         '& $label': {
             opacity: 0,
@@ -49,7 +52,6 @@ export default (theme) => ({
         },
     },
     loader: {
-        isolate: true,
         position: 'absolute',
         top: 0,
         left: 0,
@@ -63,9 +65,8 @@ export default (theme) => ({
     },
     // Types
     outlined: {
-        padding: '4px 16px',
+        padding: '4px 20px',
         '&$primary': {
-            background: 'transparent',
             backgroundColor: 'transparent',
             border: `1px solid ${theme.colors.primary}`,
             transition: `color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .1s ease-in-out`,
@@ -81,7 +82,7 @@ export default (theme) => ({
                 color: theme.colors.primary,
             },
             '&:hover': {
-                backgroundColor: theme.colors.primary,
+                backgroundColor: theme.colors.primaryLight,
                 '& $label': {
                     color: theme.colors.text.primary,
                 },
@@ -103,24 +104,21 @@ export default (theme) => ({
             },
         },
         '&$small': {
-            padding: '0 16px',
+            padding: '0 20px',
         },
         '&$big': {
-            padding: '9px 16px',
+            padding: '9px 20px',
         },
     },
     squared: {
         borderRadius: 2,
-        padding: '4px 9px',
-        minWidth: '0',
-        background: 'transparent',
+        padding: '4px 10px',
         backgroundColor: 'transparent',
         border: `1px solid ${theme.colors.placeholders}`,
         transition: `border-color .2s ease-in-out`,
         '&:hover': {
             border: `1px solid ${theme.colors.placeholdersHover}`,
-            background: 'transparent',
-            backgroundColor: 'transparent',
+            backgroundColor: 'transparent !important',
         },
         '&$disabled': {
             '&:hover': {
@@ -129,7 +127,6 @@ export default (theme) => ({
             },
         },
         '&$white': {
-            background: 'transparent',
             backgroundColor: 'transparent',
             '&$disabled': {
                 '&:hover': {
@@ -137,12 +134,10 @@ export default (theme) => ({
                 },
             },
             '&:hover': {
-                background: 'transparent',
                 backgroundColor: 'transparent',
             },
         },
         '&$primary': {
-            background: 'transparent',
             backgroundColor: 'transparent',
             '&$disabled': {
                 '&:hover': {
@@ -165,11 +160,12 @@ export default (theme) => ({
         },
         '&$small': {
             padding: '0 9px',
-            minWidth: '0',
+            '& $label': {
+                lineHeight: '18px',
+            },
         },
         '&$big': {
             padding: '9px 9px',
-            minWidth: '0',
         },
     },
     //Colors
@@ -184,47 +180,31 @@ export default (theme) => ({
         },
     },
     primary: {
-        background: `linear-gradient(to bottom, ${theme.colors.primary} 0%, ${
-            theme.colors.primary
-        } 50%, ${theme.colors.primaryDark} 100%)`,
-        filter: `DXImageTransform.Microsoft.gradient( startColorstr='${
-            theme.colors.primary
-        }', endColorstr='${theme.colors.primaryDark}', GradientType=0 )`,
-        backgroundSize: 'auto 200% !important',
-        backgroundPosition: '100% 0 !important',
-        transition: `box-shadow .2s ease-in, background-position .1s ease-in-out`,
+        backgroundColor: theme.colors.primary,
+        transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
         '& $label': {
             color: theme.colors.text.primary,
         },
         '&:hover': {
-            backgroundPosition: '0 100% !important',
+            backgroundColor: theme.colors.primaryLight,
         },
     },
     danger: {
-        background: `linear-gradient(to bottom, ${theme.colors.danger} 0%, ${
-            theme.colors.danger
-        } 50%, ${theme.colors.dangerDark} 100%)`,
-        filter: `DXImageTransform.Microsoft.gradient( startColorstr='${
-            theme.colors.danger
-        }', endColorstr='${theme.colors.dangerDark}', GradientType=0 )`,
-        backgroundSize: 'auto 200% !important',
-        backgroundPosition: '100% 0 !important',
-        transition: `box-shadow .2s ease-in, background-position .1s ease-in-out`,
+        backgroundColor: theme.colors.danger,
+        transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
         '& $label': {
             color: theme.colors.text.danger,
         },
         '&:hover': {
-            backgroundPosition: '0 100% !important',
+            backgroundColor: theme.colors.dangerLight,
         },
     },
     // Sizes
     small: {
-        minWidth: '60px',
-        padding: '0px 10px',
+        padding: '0px 20px',
     },
     big: {
-        minWidth: '130px',
-        padding: '10px 16px',
+        padding: '10px 20px',
     },
     // States
     disabled: {},
