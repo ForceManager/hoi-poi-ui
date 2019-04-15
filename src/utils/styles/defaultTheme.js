@@ -26,11 +26,14 @@ const danger = '#f04540';
 const dangerDark = '#C43833';
 const dangerLight = '#FF544F';
 
+const link = '#216db3';
+const linkDark = '#174a79';
 //Text
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
 const fontSizeBase = 13;
 const fontSizeSmall = 11;
+const fontSizeBig = 16;
 
 // Others
 const boxShadow = `0 3px 9px 0 ${shadow}`;
@@ -53,6 +56,8 @@ export default {
         danger,
         dangerDark,
         dangerLight,
+        link,
+        linkDark,
         text: {
             default: grey,
             black: textBlack,
@@ -84,6 +89,11 @@ export default {
         smallText: {
             letterSpacing: 0.5,
             fontSize: fontSizeSmall,
+            fontFamily,
+        },
+        bigText: {
+            letterSpacing: 0.5,
+            fontSize: fontSizeBig,
             fontFamily,
         },
     },

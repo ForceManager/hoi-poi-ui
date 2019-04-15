@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Drawer is rendering closed 1`] = `
+exports[`Link is disabled 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -9,7 +9,6 @@ exports[`Drawer is rendering closed 1`] = `
           "black": "#262B34",
           "danger": "#f04540",
           "dangerDark": "#C43833",
-          "dangerLight": "#FF544F",
           "disabledGrey": "#ced4d9",
           "grey": "#697782",
           "lightBlack": "#5f656b",
@@ -22,9 +21,9 @@ exports[`Drawer is rendering closed 1`] = `
           "placeholdersHover": "#d0d4d8",
           "primary": "#FF8C00",
           "primaryDark": "#C87600",
-          "primaryLight": "#ff9d26",
+          "primaryLight": "#FEF4E6",
           "secundary": "#00A8Be",
-          "secundarySoft": "#D6EEF2",
+          "secundaryLight": "#D6EEF2",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "softGrey": "#788590",
           "text": Object {
@@ -39,7 +38,7 @@ exports[`Drawer is rendering closed 1`] = `
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
           "buttonActive": Object {
-            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+            "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
           },
         },
         "typography": Object {
@@ -214,12 +213,13 @@ exports[`Drawer is rendering closed 1`] = `
       }
     >
       <JssContextSubscriber
-        isOpen={false}
+        isDisabled={true}
+        onClick={[Function]}
+        size="big"
       >
-        <WithStyles(Drawer)
-          closeTimeout={500}
+        <WithStyles(Link)
           innerRef={null}
-          isOpen={false}
+          isDisabled={true}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -366,21 +366,19 @@ exports[`Drawer is rendering closed 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-",
+                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
                 "generateId": [Function],
               },
             }
           }
-          shouldCloseOnEsc={true}
-          shouldCloseOnOverlayClick={true}
-          side="right"
+          onClick={[Function]}
+          size="big"
           theme={
             Object {
               "colors": Object {
                 "black": "#262B34",
                 "danger": "#f04540",
                 "dangerDark": "#C43833",
-                "dangerLight": "#FF544F",
                 "disabledGrey": "#ced4d9",
                 "grey": "#697782",
                 "lightBlack": "#5f656b",
@@ -393,9 +391,9 @@ exports[`Drawer is rendering closed 1`] = `
                 "placeholdersHover": "#d0d4d8",
                 "primary": "#FF8C00",
                 "primaryDark": "#C87600",
-                "primaryLight": "#ff9d26",
+                "primaryLight": "#FEF4E6",
                 "secundary": "#00A8Be",
-                "secundarySoft": "#D6EEF2",
+                "secundaryLight": "#D6EEF2",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "softGrey": "#788590",
                 "text": Object {
@@ -410,7 +408,7 @@ exports[`Drawer is rendering closed 1`] = `
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
                 "buttonActive": Object {
-                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
                 },
               },
               "typography": Object {
@@ -442,113 +440,36 @@ exports[`Drawer is rendering closed 1`] = `
               },
             }
           }
-          width="500px"
         >
-          <Drawer
+          <Link
             classes={
               Object {
-                "content": "HoiPoi-Drawer-content-0-2-2",
-                "left": "HoiPoi-Drawer-left-0-2-5",
-                "overlay": "HoiPoi-Drawer-overlay-0-2-3",
-                "right": "HoiPoi-Drawer-right-0-2-4",
-                "root": "HoiPoi-Drawer-root-0-2-1",
+                "big": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-big-0-2-18",
+                "isDisabled": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-isDisabled-0-2-17",
+                "medium": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-medium-0-2-19",
+                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-16",
+                "small": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-small-0-2-20",
               }
             }
-            closeTimeout={500}
-            isOpen={false}
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
-            side="right"
-            width="500px"
+            isDisabled={true}
+            onClick={[Function]}
+            size="big"
           >
-            <Modal
-              ariaHideApp={false}
-              bodyOpenClassName="ReactModal__Body--open"
-              className="HoiPoi-Drawer-root-0-2-1 HoiPoi-Drawer-right-0-2-4"
-              closeTimeoutMS={500}
-              isOpen={false}
-              overlayClassName="HoiPoi-Drawer-overlay-0-2-3"
-              parentSelector={[Function]}
-              portalClassName="ReactModalPortal"
-              role="dialog"
-              shouldCloseOnEsc={false}
-              shouldCloseOnOverlayClick={false}
-              shouldFocusAfterRender={true}
-              shouldReturnFocusAfterClose={true}
-              style={
-                Object {
-                  "content": Object {
-                    "width": "500px",
-                  },
-                }
-              }
+            <button
+              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-16 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-isDisabled-0-2-17 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Link-big-0-2-18"
+              onClick={null}
             >
-              <Portal
-                containerInfo={
-                  <div
-                    class="ReactModalPortal"
-                  />
-                }
-              >
-                <ModalPortal
-                  ariaHideApp={false}
-                  bodyOpenClassName="ReactModal__Body--open"
-                  className="HoiPoi-Drawer-root-0-2-1 HoiPoi-Drawer-right-0-2-4"
-                  closeTimeoutMS={500}
-                  defaultStyles={
-                    Object {
-                      "content": Object {
-                        "WebkitOverflowScrolling": "touch",
-                        "background": "#fff",
-                        "border": "1px solid #ccc",
-                        "borderRadius": "4px",
-                        "bottom": "40px",
-                        "left": "40px",
-                        "outline": "none",
-                        "overflow": "auto",
-                        "padding": "20px",
-                        "position": "absolute",
-                        "right": "40px",
-                        "top": "40px",
-                      },
-                      "overlay": Object {
-                        "backgroundColor": "rgba(255, 255, 255, 0.75)",
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "fixed",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    }
-                  }
-                  isOpen={false}
-                  overlayClassName="HoiPoi-Drawer-overlay-0-2-3"
-                  parentSelector={[Function]}
-                  portalClassName="ReactModalPortal"
-                  role="dialog"
-                  shouldCloseOnEsc={false}
-                  shouldCloseOnOverlayClick={false}
-                  shouldFocusAfterRender={true}
-                  shouldReturnFocusAfterClose={true}
-                  style={
-                    Object {
-                      "content": Object {
-                        "width": "500px",
-                      },
-                    }
-                  }
-                />
-              </Portal>
-            </Modal>
-          </Drawer>
-        </WithStyles(Drawer)>
+              ACTION
+            </button>
+          </Link>
+        </WithStyles(Link)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>
 </Component>
 `;
 
-exports[`Drawer is rendering opened with content 1`] = `
+exports[`Link is rendered as a link 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -557,7 +478,6 @@ exports[`Drawer is rendering opened with content 1`] = `
           "black": "#262B34",
           "danger": "#f04540",
           "dangerDark": "#C43833",
-          "dangerLight": "#FF544F",
           "disabledGrey": "#ced4d9",
           "grey": "#697782",
           "lightBlack": "#5f656b",
@@ -570,9 +490,9 @@ exports[`Drawer is rendering opened with content 1`] = `
           "placeholdersHover": "#d0d4d8",
           "primary": "#FF8C00",
           "primaryDark": "#C87600",
-          "primaryLight": "#ff9d26",
+          "primaryLight": "#FEF4E6",
           "secundary": "#00A8Be",
-          "secundarySoft": "#D6EEF2",
+          "secundaryLight": "#D6EEF2",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "softGrey": "#788590",
           "text": Object {
@@ -587,7 +507,7 @@ exports[`Drawer is rendering opened with content 1`] = `
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
           "buttonActive": Object {
-            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+            "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
           },
         },
         "typography": Object {
@@ -762,12 +682,11 @@ exports[`Drawer is rendering opened with content 1`] = `
       }
     >
       <JssContextSubscriber
-        isOpen={true}
+        href="https://github.com/ForceManager/hoi-poi-ui"
       >
-        <WithStyles(Drawer)
-          closeTimeout={500}
+        <WithStyles(Link)
+          href="https://github.com/ForceManager/hoi-poi-ui"
           innerRef={null}
-          isOpen={true}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -919,16 +838,13 @@ exports[`Drawer is rendering opened with content 1`] = `
               },
             }
           }
-          shouldCloseOnEsc={true}
-          shouldCloseOnOverlayClick={true}
-          side="right"
+          size="medium"
           theme={
             Object {
               "colors": Object {
                 "black": "#262B34",
                 "danger": "#f04540",
                 "dangerDark": "#C43833",
-                "dangerLight": "#FF544F",
                 "disabledGrey": "#ced4d9",
                 "grey": "#697782",
                 "lightBlack": "#5f656b",
@@ -941,9 +857,9 @@ exports[`Drawer is rendering opened with content 1`] = `
                 "placeholdersHover": "#d0d4d8",
                 "primary": "#FF8C00",
                 "primaryDark": "#C87600",
-                "primaryLight": "#ff9d26",
+                "primaryLight": "#FEF4E6",
                 "secundary": "#00A8Be",
-                "secundarySoft": "#D6EEF2",
+                "secundaryLight": "#D6EEF2",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "softGrey": "#788590",
                 "text": Object {
@@ -958,7 +874,7 @@ exports[`Drawer is rendering opened with content 1`] = `
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
                 "buttonActive": Object {
-                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
                 },
               },
               "typography": Object {
@@ -990,162 +906,35 @@ exports[`Drawer is rendering opened with content 1`] = `
               },
             }
           }
-          width="500px"
         >
-          <Drawer
+          <Link
             classes={
               Object {
-                "content": "HoiPoi-HoiPoi-Drawer-content-0-2-7",
-                "left": "HoiPoi-HoiPoi-Drawer-left-0-2-10",
-                "overlay": "HoiPoi-HoiPoi-Drawer-overlay-0-2-8",
-                "right": "HoiPoi-HoiPoi-Drawer-right-0-2-9",
-                "root": "HoiPoi-HoiPoi-Drawer-root-0-2-6",
+                "big": "HoiPoi-HoiPoi-Link-big-0-2-8",
+                "isDisabled": "HoiPoi-HoiPoi-Link-isDisabled-0-2-7",
+                "medium": "HoiPoi-HoiPoi-Link-medium-0-2-9",
+                "root": "HoiPoi-HoiPoi-Link-root-0-2-6",
+                "small": "HoiPoi-HoiPoi-Link-small-0-2-10",
               }
             }
-            closeTimeout={500}
-            isOpen={true}
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
-            side="right"
-            width="500px"
+            href="https://github.com/ForceManager/hoi-poi-ui"
+            size="medium"
           >
-            <Modal
-              ariaHideApp={false}
-              bodyOpenClassName="ReactModal__Body--open"
-              className="HoiPoi-HoiPoi-Drawer-root-0-2-6 HoiPoi-HoiPoi-Drawer-right-0-2-9"
-              closeTimeoutMS={500}
-              isOpen={true}
-              overlayClassName="HoiPoi-HoiPoi-Drawer-overlay-0-2-8"
-              parentSelector={[Function]}
-              portalClassName="ReactModalPortal"
-              role="dialog"
-              shouldCloseOnEsc={false}
-              shouldCloseOnOverlayClick={false}
-              shouldFocusAfterRender={true}
-              shouldReturnFocusAfterClose={true}
-              style={
-                Object {
-                  "content": Object {
-                    "width": "500px",
-                  },
-                }
-              }
+            <a
+              className="HoiPoi-HoiPoi-Link-root-0-2-6 HoiPoi-HoiPoi-Link-medium-0-2-9"
+              href="https://github.com/ForceManager/hoi-poi-ui"
             >
-              <Portal
-                containerInfo={
-                  <div
-                    class="ReactModalPortal"
-                  >
-                    <div
-                      class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi-HoiPoi-Drawer-overlay-0-2-8"
-                    >
-                      <div
-                        class="ReactModal__Content ReactModal__Content--after-open HoiPoi-HoiPoi-Drawer-root-0-2-6 HoiPoi-HoiPoi-Drawer-right-0-2-9"
-                        role="dialog"
-                        style="width: 500px;"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="HoiPoi-HoiPoi-Drawer-content-0-2-7"
-                        >
-                          <span>
-                            Lorem Ipsum
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                }
-              >
-                <ModalPortal
-                  ariaHideApp={false}
-                  bodyOpenClassName="ReactModal__Body--open"
-                  className="HoiPoi-HoiPoi-Drawer-root-0-2-6 HoiPoi-HoiPoi-Drawer-right-0-2-9"
-                  closeTimeoutMS={500}
-                  defaultStyles={
-                    Object {
-                      "content": Object {
-                        "WebkitOverflowScrolling": "touch",
-                        "background": "#fff",
-                        "border": "1px solid #ccc",
-                        "borderRadius": "4px",
-                        "bottom": "40px",
-                        "left": "40px",
-                        "outline": "none",
-                        "overflow": "auto",
-                        "padding": "20px",
-                        "position": "absolute",
-                        "right": "40px",
-                        "top": "40px",
-                      },
-                      "overlay": Object {
-                        "backgroundColor": "rgba(255, 255, 255, 0.75)",
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "fixed",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    }
-                  }
-                  isOpen={true}
-                  overlayClassName="HoiPoi-HoiPoi-Drawer-overlay-0-2-8"
-                  parentSelector={[Function]}
-                  portalClassName="ReactModalPortal"
-                  role="dialog"
-                  shouldCloseOnEsc={false}
-                  shouldCloseOnOverlayClick={false}
-                  shouldFocusAfterRender={true}
-                  shouldReturnFocusAfterClose={true}
-                  style={
-                    Object {
-                      "content": Object {
-                        "width": "500px",
-                      },
-                    }
-                  }
-                >
-                  <div
-                    className="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi-HoiPoi-Drawer-overlay-0-2-8"
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    style={Object {}}
-                  >
-                    <div
-                      className="ReactModal__Content ReactModal__Content--after-open HoiPoi-HoiPoi-Drawer-root-0-2-6 HoiPoi-HoiPoi-Drawer-right-0-2-9"
-                      onClick={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseUp={[Function]}
-                      role="dialog"
-                      style={
-                        Object {
-                          "width": "500px",
-                        }
-                      }
-                      tabIndex="-1"
-                    >
-                      <div
-                        className="HoiPoi-HoiPoi-Drawer-content-0-2-7"
-                      >
-                        <span>
-                          Lorem Ipsum
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </ModalPortal>
-              </Portal>
-            </Modal>
-          </Drawer>
-        </WithStyles(Drawer)>
+              Hello
+            </a>
+          </Link>
+        </WithStyles(Link)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>
 </Component>
 `;
 
-exports[`Drawer pass width and classnames to modal 1`] = `
+exports[`Link is rendered with different props 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -1154,7 +943,6 @@ exports[`Drawer pass width and classnames to modal 1`] = `
           "black": "#262B34",
           "danger": "#f04540",
           "dangerDark": "#C43833",
-          "dangerLight": "#FF544F",
           "disabledGrey": "#ced4d9",
           "grey": "#697782",
           "lightBlack": "#5f656b",
@@ -1167,9 +955,9 @@ exports[`Drawer pass width and classnames to modal 1`] = `
           "placeholdersHover": "#d0d4d8",
           "primary": "#FF8C00",
           "primaryDark": "#C87600",
-          "primaryLight": "#ff9d26",
+          "primaryLight": "#FEF4E6",
           "secundary": "#00A8Be",
-          "secundarySoft": "#D6EEF2",
+          "secundaryLight": "#D6EEF2",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "softGrey": "#788590",
           "text": Object {
@@ -1184,7 +972,7 @@ exports[`Drawer pass width and classnames to modal 1`] = `
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
           "buttonActive": Object {
-            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+            "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
           },
         },
         "typography": Object {
@@ -1359,25 +1147,10 @@ exports[`Drawer pass width and classnames to modal 1`] = `
       }
     >
       <JssContextSubscriber
-        className="className-ipsum"
-        classes={
-          Object {
-            "overlay": "overlay-ipsum",
-          }
-        }
-        isOpen={true}
-        width="400px"
+        size="big"
       >
-        <WithStyles(Drawer)
-          className="className-ipsum"
-          classes={
-            Object {
-              "overlay": "overlay-ipsum",
-            }
-          }
-          closeTimeout={500}
+        <WithStyles(Link)
           innerRef={null}
-          isOpen={true}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -1529,16 +1302,13 @@ exports[`Drawer pass width and classnames to modal 1`] = `
               },
             }
           }
-          shouldCloseOnEsc={true}
-          shouldCloseOnOverlayClick={true}
-          side="right"
+          size="big"
           theme={
             Object {
               "colors": Object {
                 "black": "#262B34",
                 "danger": "#f04540",
                 "dangerDark": "#C43833",
-                "dangerLight": "#FF544F",
                 "disabledGrey": "#ced4d9",
                 "grey": "#697782",
                 "lightBlack": "#5f656b",
@@ -1551,9 +1321,9 @@ exports[`Drawer pass width and classnames to modal 1`] = `
                 "placeholdersHover": "#d0d4d8",
                 "primary": "#FF8C00",
                 "primaryDark": "#C87600",
-                "primaryLight": "#ff9d26",
+                "primaryLight": "#FEF4E6",
                 "secundary": "#00A8Be",
-                "secundarySoft": "#D6EEF2",
+                "secundaryLight": "#D6EEF2",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "softGrey": "#788590",
                 "text": Object {
@@ -1568,7 +1338,7 @@ exports[`Drawer pass width and classnames to modal 1`] = `
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
                 "buttonActive": Object {
-                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
                 },
               },
               "typography": Object {
@@ -1600,156 +1370,976 @@ exports[`Drawer pass width and classnames to modal 1`] = `
               },
             }
           }
-          width="400px"
         >
-          <Drawer
-            className="className-ipsum"
+          <Link
             classes={
               Object {
-                "content": "HoiPoi-HoiPoi-HoiPoi-Drawer-content-0-2-12",
-                "left": "HoiPoi-HoiPoi-HoiPoi-Drawer-left-0-2-15",
-                "overlay": "HoiPoi-HoiPoi-HoiPoi-Drawer-overlay-0-2-13 overlay-ipsum",
-                "right": "HoiPoi-HoiPoi-HoiPoi-Drawer-right-0-2-14",
-                "root": "HoiPoi-HoiPoi-HoiPoi-Drawer-root-0-2-11",
+                "big": "HoiPoi-HoiPoi-HoiPoi-Link-big-0-2-13",
+                "isDisabled": "HoiPoi-HoiPoi-HoiPoi-Link-isDisabled-0-2-12",
+                "medium": "HoiPoi-HoiPoi-HoiPoi-Link-medium-0-2-14",
+                "root": "HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-11",
+                "small": "HoiPoi-HoiPoi-HoiPoi-Link-small-0-2-15",
               }
             }
-            closeTimeout={500}
-            isOpen={true}
-            shouldCloseOnEsc={true}
-            shouldCloseOnOverlayClick={true}
-            side="right"
-            width="400px"
+            size="big"
           >
-            <Modal
-              ariaHideApp={false}
-              bodyOpenClassName="ReactModal__Body--open"
-              className="HoiPoi-HoiPoi-HoiPoi-Drawer-root-0-2-11 HoiPoi-HoiPoi-HoiPoi-Drawer-right-0-2-14 className-ipsum"
-              closeTimeoutMS={500}
-              isOpen={true}
-              overlayClassName="HoiPoi-HoiPoi-HoiPoi-Drawer-overlay-0-2-13 overlay-ipsum"
-              parentSelector={[Function]}
-              portalClassName="ReactModalPortal"
-              role="dialog"
-              shouldCloseOnEsc={false}
-              shouldCloseOnOverlayClick={false}
-              shouldFocusAfterRender={true}
-              shouldReturnFocusAfterClose={true}
-              style={
-                Object {
-                  "content": Object {
-                    "width": "400px",
-                  },
-                }
-              }
+            <button
+              className="HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-11 HoiPoi-HoiPoi-HoiPoi-Link-big-0-2-13"
             >
-              <Portal
-                containerInfo={
-                  <div
-                    class="ReactModalPortal"
-                  >
-                    <div
-                      class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi-HoiPoi-HoiPoi-Drawer-overlay-0-2-13 overlay-ipsum"
-                    >
-                      <div
-                        class="ReactModal__Content ReactModal__Content--after-open HoiPoi-HoiPoi-HoiPoi-Drawer-root-0-2-11 HoiPoi-HoiPoi-HoiPoi-Drawer-right-0-2-14 className-ipsum"
-                        role="dialog"
-                        style="width: 400px;"
-                        tabindex="-1"
-                      >
-                        <div
-                          class="HoiPoi-HoiPoi-HoiPoi-Drawer-content-0-2-12"
-                        >
-                          <span>
-                            Lorem Ipsum
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                }
-              >
-                <ModalPortal
-                  ariaHideApp={false}
-                  bodyOpenClassName="ReactModal__Body--open"
-                  className="HoiPoi-HoiPoi-HoiPoi-Drawer-root-0-2-11 HoiPoi-HoiPoi-HoiPoi-Drawer-right-0-2-14 className-ipsum"
-                  closeTimeoutMS={500}
-                  defaultStyles={
-                    Object {
-                      "content": Object {
-                        "WebkitOverflowScrolling": "touch",
-                        "background": "#fff",
-                        "border": "1px solid #ccc",
-                        "borderRadius": "4px",
-                        "bottom": "40px",
-                        "left": "40px",
-                        "outline": "none",
-                        "overflow": "auto",
-                        "padding": "20px",
-                        "position": "absolute",
-                        "right": "40px",
-                        "top": "40px",
+              ACTION
+            </button>
+          </Link>
+        </WithStyles(Link)>
+      </JssContextSubscriber>
+      <JssContextSubscriber
+        size="medium"
+      >
+        <WithStyles(Link)
+          innerRef={null}
+          jssContext={
+            Object {
+              "disableStylesGeneration": false,
+              "jss": Jss {
+                "generateId": [Function],
+                "id": 2,
+                "options": Object {
+                  "Renderer": [Function],
+                  "createGenerateId": [Function],
+                  "plugins": Array [],
+                },
+                "plugins": PluginsRegistry {
+                  "plugins": Object {
+                    "external": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                        "onUpdate": [Function],
                       },
-                      "overlay": Object {
-                        "backgroundColor": "rgba(255, 255, 255, 0.75)",
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "fixed",
-                        "right": 0,
-                        "top": 0,
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
                       },
-                    }
-                  }
-                  isOpen={true}
-                  overlayClassName="HoiPoi-HoiPoi-HoiPoi-Drawer-overlay-0-2-13 overlay-ipsum"
-                  parentSelector={[Function]}
-                  portalClassName="ReactModalPortal"
-                  role="dialog"
-                  shouldCloseOnEsc={false}
-                  shouldCloseOnOverlayClick={false}
-                  shouldFocusAfterRender={true}
-                  shouldReturnFocusAfterClose={true}
-                  style={
-                    Object {
-                      "content": Object {
-                        "width": "400px",
+                      Object {
+                        "onProcessRule": [Function],
                       },
-                    }
-                  }
-                >
-                  <div
-                    className="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi-HoiPoi-HoiPoi-Drawer-overlay-0-2-13 overlay-ipsum"
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    style={Object {}}
-                  >
-                    <div
-                      className="ReactModal__Content ReactModal__Content--after-open HoiPoi-HoiPoi-HoiPoi-Drawer-root-0-2-11 HoiPoi-HoiPoi-HoiPoi-Drawer-right-0-2-14 className-ipsum"
-                      onClick={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseDown={[Function]}
-                      onMouseUp={[Function]}
-                      role="dialog"
-                      style={
-                        Object {
-                          "width": "400px",
-                        }
-                      }
-                      tabIndex="-1"
-                    >
-                      <div
-                        className="HoiPoi-HoiPoi-HoiPoi-Drawer-content-0-2-12"
-                      >
-                        <span>
-                          Lorem Ipsum
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </ModalPortal>
-              </Portal>
-            </Modal>
-          </Drawer>
-        </WithStyles(Drawer)>
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessRule": [Function],
+                        "onProcessSheet": [Function],
+                      },
+                    ],
+                    "internal": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                    ],
+                  },
+                  "registry": Object {
+                    "onChangeValue": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onCreateRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessSheet": Array [
+                      [Function],
+                    ],
+                    "onProcessStyle": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onUpdate": Array [
+                      [Function],
+                    ],
+                  },
+                },
+                "version": "10.0.0-alpha.16",
+              },
+              "managers": Object {
+                "0": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+              },
+              "sheetOptions": Object {
+                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                "generateId": [Function],
+              },
+            }
+          }
+          size="medium"
+          theme={
+            Object {
+              "colors": Object {
+                "black": "#262B34",
+                "danger": "#f04540",
+                "dangerDark": "#C43833",
+                "disabledGrey": "#ced4d9",
+                "grey": "#697782",
+                "lightBlack": "#5f656b",
+                "lightGrey": "#f0f3f5",
+                "lines": "#dce3eb",
+                "link": "#216db3",
+                "linkDark": "#174a79",
+                "overlay": "rgba(33,33,33,0.55)",
+                "placeholders": "#e1e4e7",
+                "placeholdersHover": "#d0d4d8",
+                "primary": "#FF8C00",
+                "primaryDark": "#C87600",
+                "primaryLight": "#FEF4E6",
+                "secundary": "#00A8Be",
+                "secundaryLight": "#D6EEF2",
+                "shadow": "rgba(0, 0, 0, 0.25)",
+                "softGrey": "#788590",
+                "text": Object {
+                  "black": "#3c4248",
+                  "danger": "white",
+                  "default": "#697782",
+                  "primary": "white",
+                },
+                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                "white": "#FFFFFF",
+              },
+              "effects": Object {
+                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                "buttonActive": Object {
+                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
+                },
+              },
+              "typography": Object {
+                "bigText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
+                "button": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "lineHeight": 1.5,
+                },
+                "defaultText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 13,
+                  "letterSpacing": 0.5,
+                },
+                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                "fontSizeBase": 13,
+                "fontSizeSmall": 11,
+                "letterSpacing": 0.5,
+                "lineHeightBase": 1.5,
+                "smallText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "letterSpacing": 0.5,
+                },
+              },
+            }
+          }
+        >
+          <Link
+            classes={
+              Object {
+                "big": "HoiPoi-HoiPoi-HoiPoi-Link-big-0-2-13",
+                "isDisabled": "HoiPoi-HoiPoi-HoiPoi-Link-isDisabled-0-2-12",
+                "medium": "HoiPoi-HoiPoi-HoiPoi-Link-medium-0-2-14",
+                "root": "HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-11",
+                "small": "HoiPoi-HoiPoi-HoiPoi-Link-small-0-2-15",
+              }
+            }
+            size="medium"
+          >
+            <button
+              className="HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-11 HoiPoi-HoiPoi-HoiPoi-Link-medium-0-2-14"
+            >
+              ACTION
+            </button>
+          </Link>
+        </WithStyles(Link)>
+      </JssContextSubscriber>
+      <JssContextSubscriber
+        size="small"
+      >
+        <WithStyles(Link)
+          innerRef={null}
+          jssContext={
+            Object {
+              "disableStylesGeneration": false,
+              "jss": Jss {
+                "generateId": [Function],
+                "id": 2,
+                "options": Object {
+                  "Renderer": [Function],
+                  "createGenerateId": [Function],
+                  "plugins": Array [],
+                },
+                "plugins": PluginsRegistry {
+                  "plugins": Object {
+                    "external": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                        "onUpdate": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessRule": [Function],
+                        "onProcessSheet": [Function],
+                      },
+                    ],
+                    "internal": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                    ],
+                  },
+                  "registry": Object {
+                    "onChangeValue": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onCreateRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessSheet": Array [
+                      [Function],
+                    ],
+                    "onProcessStyle": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onUpdate": Array [
+                      [Function],
+                    ],
+                  },
+                },
+                "version": "10.0.0-alpha.16",
+              },
+              "managers": Object {
+                "0": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+              },
+              "sheetOptions": Object {
+                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                "generateId": [Function],
+              },
+            }
+          }
+          size="small"
+          theme={
+            Object {
+              "colors": Object {
+                "black": "#262B34",
+                "danger": "#f04540",
+                "dangerDark": "#C43833",
+                "disabledGrey": "#ced4d9",
+                "grey": "#697782",
+                "lightBlack": "#5f656b",
+                "lightGrey": "#f0f3f5",
+                "lines": "#dce3eb",
+                "link": "#216db3",
+                "linkDark": "#174a79",
+                "overlay": "rgba(33,33,33,0.55)",
+                "placeholders": "#e1e4e7",
+                "placeholdersHover": "#d0d4d8",
+                "primary": "#FF8C00",
+                "primaryDark": "#C87600",
+                "primaryLight": "#FEF4E6",
+                "secundary": "#00A8Be",
+                "secundaryLight": "#D6EEF2",
+                "shadow": "rgba(0, 0, 0, 0.25)",
+                "softGrey": "#788590",
+                "text": Object {
+                  "black": "#3c4248",
+                  "danger": "white",
+                  "default": "#697782",
+                  "primary": "white",
+                },
+                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                "white": "#FFFFFF",
+              },
+              "effects": Object {
+                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                "buttonActive": Object {
+                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
+                },
+              },
+              "typography": Object {
+                "bigText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
+                "button": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "lineHeight": 1.5,
+                },
+                "defaultText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 13,
+                  "letterSpacing": 0.5,
+                },
+                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                "fontSizeBase": 13,
+                "fontSizeSmall": 11,
+                "letterSpacing": 0.5,
+                "lineHeightBase": 1.5,
+                "smallText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "letterSpacing": 0.5,
+                },
+              },
+            }
+          }
+        >
+          <Link
+            classes={
+              Object {
+                "big": "HoiPoi-HoiPoi-HoiPoi-Link-big-0-2-13",
+                "isDisabled": "HoiPoi-HoiPoi-HoiPoi-Link-isDisabled-0-2-12",
+                "medium": "HoiPoi-HoiPoi-HoiPoi-Link-medium-0-2-14",
+                "root": "HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-11",
+                "small": "HoiPoi-HoiPoi-HoiPoi-Link-small-0-2-15",
+              }
+            }
+            size="small"
+          >
+            <button
+              className="HoiPoi-HoiPoi-HoiPoi-Link-root-0-2-11 HoiPoi-HoiPoi-HoiPoi-Link-small-0-2-15"
+            >
+              ACTION
+            </button>
+          </Link>
+        </WithStyles(Link)>
+      </JssContextSubscriber>
+    </JssProvider>
+  </ThemeProvider>
+</Component>
+`;
+
+exports[`Link is rendered without crashes 1`] = `
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "colors": Object {
+          "black": "#262B34",
+          "danger": "#f04540",
+          "dangerDark": "#C43833",
+          "disabledGrey": "#ced4d9",
+          "grey": "#697782",
+          "lightBlack": "#5f656b",
+          "lightGrey": "#f0f3f5",
+          "lines": "#dce3eb",
+          "link": "#216db3",
+          "linkDark": "#174a79",
+          "overlay": "rgba(33,33,33,0.55)",
+          "placeholders": "#e1e4e7",
+          "placeholdersHover": "#d0d4d8",
+          "primary": "#FF8C00",
+          "primaryDark": "#C87600",
+          "primaryLight": "#FEF4E6",
+          "secundary": "#00A8Be",
+          "secundaryLight": "#D6EEF2",
+          "shadow": "rgba(0, 0, 0, 0.25)",
+          "softGrey": "#788590",
+          "text": Object {
+            "black": "#3c4248",
+            "danger": "white",
+            "default": "#697782",
+            "primary": "white",
+          },
+          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "white": "#FFFFFF",
+        },
+        "effects": Object {
+          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "buttonActive": Object {
+            "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
+          },
+        },
+        "typography": Object {
+          "bigText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
+          "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "lineHeight": 1.5,
+          },
+          "defaultText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 13,
+            "letterSpacing": 0.5,
+          },
+          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "fontSizeBase": 13,
+          "fontSizeSmall": 11,
+          "letterSpacing": 0.5,
+          "lineHeightBase": 1.5,
+          "smallText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "letterSpacing": 0.5,
+          },
+        },
+      }
+    }
+  >
+    <JssProvider
+      classNamePrefix="HoiPoi-"
+      jss={
+        Jss {
+          "generateId": [Function],
+          "id": 2,
+          "options": Object {
+            "Renderer": [Function],
+            "createGenerateId": [Function],
+            "plugins": Array [],
+          },
+          "plugins": PluginsRegistry {
+            "plugins": Object {
+              "external": Array [
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                  "onUpdate": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessRule": [Function],
+                  "onProcessSheet": [Function],
+                },
+              ],
+              "internal": Array [
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+              ],
+            },
+            "registry": Object {
+              "onChangeValue": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onCreateRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessSheet": Array [
+                [Function],
+              ],
+              "onProcessStyle": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onUpdate": Array [
+                [Function],
+              ],
+            },
+          },
+          "version": "10.0.0-alpha.16",
+        }
+      }
+    >
+      <JssContextSubscriber>
+        <WithStyles(Link)
+          innerRef={null}
+          jssContext={
+            Object {
+              "disableStylesGeneration": false,
+              "jss": Jss {
+                "generateId": [Function],
+                "id": 2,
+                "options": Object {
+                  "Renderer": [Function],
+                  "createGenerateId": [Function],
+                  "plugins": Array [],
+                },
+                "plugins": PluginsRegistry {
+                  "plugins": Object {
+                    "external": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                        "onUpdate": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                        "onProcessRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onProcessRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onProcessRule": [Function],
+                        "onProcessSheet": [Function],
+                      },
+                    ],
+                    "internal": Array [
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onChangeValue": [Function],
+                        "onCreateRule": [Function],
+                        "onProcessStyle": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                      Object {
+                        "onCreateRule": [Function],
+                      },
+                    ],
+                  },
+                  "registry": Object {
+                    "onChangeValue": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onCreateRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessRule": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onProcessSheet": Array [
+                      [Function],
+                    ],
+                    "onProcessStyle": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "onUpdate": Array [
+                      [Function],
+                    ],
+                  },
+                },
+                "version": "10.0.0-alpha.16",
+              },
+              "managers": Object {
+                "0": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+              },
+              "sheetOptions": Object {
+                "classNamePrefix": "HoiPoi-",
+                "generateId": [Function],
+              },
+            }
+          }
+          size="medium"
+          theme={
+            Object {
+              "colors": Object {
+                "black": "#262B34",
+                "danger": "#f04540",
+                "dangerDark": "#C43833",
+                "disabledGrey": "#ced4d9",
+                "grey": "#697782",
+                "lightBlack": "#5f656b",
+                "lightGrey": "#f0f3f5",
+                "lines": "#dce3eb",
+                "link": "#216db3",
+                "linkDark": "#174a79",
+                "overlay": "rgba(33,33,33,0.55)",
+                "placeholders": "#e1e4e7",
+                "placeholdersHover": "#d0d4d8",
+                "primary": "#FF8C00",
+                "primaryDark": "#C87600",
+                "primaryLight": "#FEF4E6",
+                "secundary": "#00A8Be",
+                "secundaryLight": "#D6EEF2",
+                "shadow": "rgba(0, 0, 0, 0.25)",
+                "softGrey": "#788590",
+                "text": Object {
+                  "black": "#3c4248",
+                  "danger": "white",
+                  "default": "#697782",
+                  "primary": "white",
+                },
+                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                "white": "#FFFFFF",
+              },
+              "effects": Object {
+                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                "buttonActive": Object {
+                  "boxShadow": "inset 0 -2px 4px 0 rgba(122,122,122,0.23)",
+                },
+              },
+              "typography": Object {
+                "bigText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
+                "button": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "lineHeight": 1.5,
+                },
+                "defaultText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 13,
+                  "letterSpacing": 0.5,
+                },
+                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                "fontSizeBase": 13,
+                "fontSizeSmall": 11,
+                "letterSpacing": 0.5,
+                "lineHeightBase": 1.5,
+                "smallText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 11,
+                  "letterSpacing": 0.5,
+                },
+              },
+            }
+          }
+        >
+          <Link
+            classes={
+              Object {
+                "big": "HoiPoi-Link-big-0-2-3",
+                "isDisabled": "HoiPoi-Link-isDisabled-0-2-2",
+                "medium": "HoiPoi-Link-medium-0-2-4",
+                "root": "HoiPoi-Link-root-0-2-1",
+                "small": "HoiPoi-Link-small-0-2-5",
+              }
+            }
+            size="medium"
+          >
+            <button
+              className="HoiPoi-Link-root-0-2-1 HoiPoi-Link-medium-0-2-4"
+            >
+              Hello
+            </button>
+          </Link>
+        </WithStyles(Link)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>

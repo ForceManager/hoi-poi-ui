@@ -25,6 +25,7 @@ function Button({
     isFullWidth,
     isLoading,
     href,
+    target,
     ...props
 }) {
     // Overrides
@@ -75,7 +76,7 @@ function Button({
 
     if (href) {
         return (
-            <a href={href} {...rootProps}>
+            <a href={href} target={target} {...rootProps}>
                 {content}
             </a>
         );
@@ -103,6 +104,8 @@ Button.propTypes = {
     isLoading: PropTypes.bool,
     /** Render the component as a tag <a/> with href */
     href: PropTypes.string,
+    /** native <a/> target */
+    target: PropTypes.string,
 };
 
 export default React.memo(withStyles(styles, { name: 'Button' })(Button));
