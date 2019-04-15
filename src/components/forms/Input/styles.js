@@ -3,12 +3,13 @@ export default (theme) => ({
     Label: {
         width: 153,
         marginRight: 17,
-        padding: '6px 0',
+        padding: '0 0 5px 0',
     },
     error: {
         ...theme.typography.defaultText,
         position: 'absolute',
-        bottom: -15,
+        lineHeight: '20px',
+        bottom: -29,
         color: theme.colors.danger,
     },
     formControl: {
@@ -45,14 +46,15 @@ export default (theme) => ({
         ...theme.typography.defaultText,
         color: theme.colors.softGrey,
         width: '100%',
-        padding: '6px 0',
+        lineHeight: '20px',
+        padding: '0 0 5px 0',
         flexGrow: 1,
         '&::placeholder': {
             color: theme.colors.disabledGrey,
         },
     },
     errored: {
-        paddingBottom: '20px !important',
+        paddingBottom: '30px !important',
         '& $formControl': {
             '&::before': {
                 borderBottom: `1px solid ${theme.colors.danger}`,
@@ -76,6 +78,11 @@ export default (theme) => ({
                 cursor: 'default',
             },
         },
+        '&$focused': {
+            '& $formControl::after': {
+                transform: 'scaleX(0)',
+            },
+        },
     },
     focused: {
         '& $formControl::after': {
@@ -84,7 +91,7 @@ export default (theme) => ({
     },
     vertical: {
         display: 'block',
-        padding: '12px 0 11px 0',
+        padding: '15px 0 10px 0',
         '& $formControl': {
             marginTop: 10,
         },
@@ -92,7 +99,7 @@ export default (theme) => ({
     horizontal: {
         display: 'flex',
         alignItems: 'center',
-        padding: '12px 0 11px 0',
+        padding: '15px 0 10px 0',
         '& $error': {},
     },
     isFullWidth: {

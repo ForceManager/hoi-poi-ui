@@ -1,6 +1,7 @@
 export default (theme) => ({
     root: {
         ...theme.typography.defaultText,
+        lineHeight: '20px',
         fontWeight: 500,
         color: theme.colors.text.black,
         display: 'flex',
