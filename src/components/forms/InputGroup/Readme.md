@@ -1,7 +1,7 @@
 Default
 
 ```jsx
-let options = [
+let inputs = [
     {
         label: 'Lorem ipsum',
         name: 'lorem',
@@ -17,13 +17,20 @@ let options = [
 ];
 
 let onChange = (value) => setState({ value });
-<CheckboxGroup label="Lorem ipsum" options={options} onChange={onChange} value={state.value} />;
+<InputGroup
+    label="Lorem ipsum"
+    placeholder="Type here"
+    inputs={inputs}
+    onChange={onChange}
+    value={state.value}
+    isRequired
+/>;
 ```
 
 Disabled
 
 ```jsx
-let options = [
+let inputs = [
     {
         label: 'Lorem ipsum',
         name: 'lorem',
@@ -39,9 +46,9 @@ let options = [
 ];
 
 let onChange = (value) => setState({ value });
-<CheckboxGroup
+<InputGroup
     label="Lorem ipsum"
-    options={options}
+    inputs={inputs}
     onChange={onChange}
     value={state.value}
     isReadOnly
@@ -51,7 +58,7 @@ let onChange = (value) => setState({ value });
 Default vertical label
 
 ```jsx
-let options = [
+let inputs = [
     {
         label: 'Lorem ipsum',
         name: 'lorem',
@@ -67,10 +74,10 @@ let options = [
 ];
 
 let onChange = (value) => setState({ value });
-<CheckboxGroup
+<InputGroup
     label="Lorem ipsum"
     labelMode="vertical"
-    options={options}
+    inputs={inputs}
     onChange={onChange}
     value={state.value}
 />;
@@ -80,8 +87,8 @@ let onChange = (value) => setState({ value });
 
 ---
 
--   [Checkbox](#/Forms?id=checkbox)
--   checkboxLabel - label related to one checkbox
--   checkboxControl - wrapper with checkbox label and checkbox
--   formControl - Input wrapper excluding label
+-   [Input](#/Forms?id=input): Affect all inputs
+-   [Link](/#/General?id=link)
+-   formControl - wrapper with principal input and toggle inputs button
+-   inputsControl - wrapper with inputs
 -   [Label](#/Forms?id=label)

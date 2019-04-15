@@ -2,11 +2,11 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from 'utils/styles';
-import CheckboxGroup from 'components/forms/CheckboxGroup';
+import InputGroup from 'components/forms/InputGroup';
 
-describe('CheckboxGroup', () => {
+describe('InputGroup', () => {
     test('default match', () => {
-        const options = [
+        const inputs = [
             {
                 label: 'Lorem ipsum',
                 name: 'lorem',
@@ -22,13 +22,35 @@ describe('CheckboxGroup', () => {
         ];
         const wrapper = mount(
             <HoiPoiProvider>
-                <CheckboxGroup label="Lorem ipsum" options={options} onChange={() => {}} />
+                <InputGroup label="Lorem ipsum" inputs={inputs} onChange={() => {}} />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('is disabled match', () => {
+        const inputs = [
+            {
+                label: 'Lorem ipsum',
+                name: 'lorem',
+            },
+            {
+                label: 'Lorem ipsum 2',
+                name: 'lorem2',
+            },
+            {
+                label: 'Lorem ipsum 3',
+                name: 'lorem3',
+            },
+        ];
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <InputGroup label="Lorem ipsum" inputs={inputs} onChange={() => {}} isDisabled />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
     test('with values match', () => {
-        const options = [
+        const inputs = [
             {
                 label: 'Lorem ipsum',
                 name: 'lorem',
@@ -50,12 +72,7 @@ describe('CheckboxGroup', () => {
 
         const wrapper = mount(
             <HoiPoiProvider>
-                <CheckboxGroup
-                    label="Lorem ipsum"
-                    options={options}
-                    onChange={() => {}}
-                    value={value}
-                />
+                <InputGroup label="Lorem ipsum" inputs={inputs} onChange={() => {}} value={value} />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();

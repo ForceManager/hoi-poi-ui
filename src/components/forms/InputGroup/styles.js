@@ -1,48 +1,28 @@
 export default (theme) => ({
     root: {},
-    Label: {
-        width: 153,
-        marginRight: 17,
-        padding: '6px 0',
+    hiddenInputLabel: {
+        color: theme.colors.softGrey,
+        fontWeight: 400,
     },
     formControl: {
-        isolate: true,
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        width: 290,
-        padding: '5px 0',
+        textAlign: 'right',
     },
-    checkboxControl: {
-        display: 'flex',
-        alignItems: 'center',
-        marginBottom: 20,
+    inputsControl: {
+        display: 'block',
     },
-    checkboxLabel: {
-        marginLeft: 2,
-        ...theme.typography.defaultText,
-        color: theme.colors.softGrey,
-    },
-    isReadOnly: {
+    isFullWidth: {
         '& $formControl': {
-            '&::before': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
-            },
-            '&::after': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
-            },
+            width: '100%',
         },
     },
     vertical: {
-        display: 'block',
-        padding: '12px 0 11px 0',
         '& $formControl': {
-            marginTop: 10,
+            width: '290px',
         },
     },
     horizontal: {
-        display: 'flex',
-        alignItems: 'flex-start',
-        padding: '12px 0 11px 0',
+        '& $formControl': {
+            width: '460px',
+        },
     },
 });

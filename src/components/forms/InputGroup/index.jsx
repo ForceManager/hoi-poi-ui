@@ -1,105 +1,164 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from 'utils/overrides';
-import Checkbox from 'components/forms/Checkbox';
-import Label from '../Label';
+import Input from 'components/forms/Input';
+import Link from 'components/general/Link';
 import styles from './styles';
 
-function CheckboxGroup({
+function InputGroup({
     children,
     overrides: overridesProp,
     className: classNameProp,
     classes,
-    options,
+    id,
+    name,
+    type,
+    onChange,
     value,
-    label,
     labelMode,
+    isFullWidth,
+    placeholder,
     hint,
+    error,
+    isRequired,
     isReadOnly,
+    preComponent,
+    postComponent,
+    inputs,
+    showInputsLabel,
+    hideInputsLabel,
     ...props
 }) {
     // Overrides
-    const override = getOverrides(overridesProp, CheckboxGroup.overrides);
+    const override = getOverrides(overridesProp, InputGroup.overrides);
 
     // Classes
     const rootClassName = classnames(
         classes.root,
         {
-            [classes.isReadOnly]: isReadOnly,
+            [classes.isFullWidth]: isFullWidth,
             [classes[labelMode]]: labelMode,
         },
         classNameProp,
     );
 
-    const rootProps = {
-        className: rootClassName,
-    };
+    const rootProps = { className: rootClassName };
 
-    const labelProps = {
-        className: classes.Label,
+    // State && Callbacks
+    const [showInputs, setShowInputs] = useState(false);
+    const onLinkClick = useCallback(() => setShowInputs(!showInputs), [showInputs]);
+
+    // Creating all onChange callbacks
+    const onChanges = inputs.reduce((callbacks, input) => {
+        callbacks[input.name] = useCallback(
+            (e) =>
+                onChange({
+                    ...value,
+                    [input.name]: e && e.target ? e.target.value : '',
+                }),
+            [value],
+        );
+        return callbacks;
+    }, {});
+
+    // Principal inputs
+    const inputProps = {
+        id,
+        name,
+        type,
+        labelMode,
+        isFullWidth,
+        placeholder,
         hint,
-        ...override.Label,
+        error,
+        isRequired,
+        isReadOnly,
+        label: inputs[0].label,
+        value: value[inputs[0].name],
+        onChange: onChanges[inputs[0].name],
+        className: classes.Input,
+        ...override.Input,
     };
 
-    const onChange = (name) =>
-        useCallback(() => {
-            props.onChange({
-                ...value,
-                [name]: !value[name],
-            });
-        }, [value]);
+    // Hidden inputs
+    const inputsProps = {
+        type,
+        labelMode,
+        isFullWidth,
+        placeholder,
+        isReadOnly,
+        className: classes.Input,
+        ...override.Input,
+    };
+
+    const hiddenInputs = inputs.slice(1);
 
     return (
         <div {...rootProps}>
-            {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
-                {options.map((option) => (
-                    <div
-                        key={option.name}
-                        className={classes.checkboxControl}
-                        {...override.checkboxControl}
-                    >
-                        <Checkbox
-                            onChange={onChange(option.name)}
-                            checked={value[option.name]}
-                            isDisabled={isReadOnly}
-                        />
-                        <span className={classes.checkboxLabel} {...override.checkboxLabel}>
-                            {option.label}
-                        </span>
-                    </div>
-                ))}
+                <Input {...inputProps} />
+                <Link size="small" onClick={onLinkClick} {...override.Link}>
+                    {showInputs ? hideInputsLabel : showInputsLabel}
+                </Link>
             </div>
+            {showInputs && (
+                <div className={classes.inputsControl} {...override.inputsControl}>
+                    {hiddenInputs.map((input) => (
+                        <Input
+                            key={input.name}
+                            id={`${id}-${input.name}`}
+                            name={`${name}-${input.name}`}
+                            label={input.label}
+                            value={value[input.name]}
+                            onChange={onChanges[input.name]}
+                            overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
+                            {...inputsProps}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     );
 }
 
-CheckboxGroup.overrides = ['Checkbox', 'checkboxLabel', 'checkboxControl', 'formControl', 'Label'];
+InputGroup.overrides = ['Input', 'formControl', 'inputsControl', 'Link'];
 
-CheckboxGroup.defaultProps = {
+InputGroup.defaultProps = {
     labelMode: 'horizontal',
     onChange: () => {},
     value: {},
-    options: [],
+    inputs: [],
     isReadOnly: false,
+    showInputsLabel: 'Show inputs',
+    hideInputsLabel: 'Hide inputs',
 };
 
-CheckboxGroup.propTypes = {
+InputGroup.propTypes = {
     onChange: PropTypes.func,
-    options: PropTypes.arrayOf(
+    inputs: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
             name: PropTypes.string,
         }),
-    ),
-    value: PropTypes.object,
-    label: PropTypes.string,
+    ).isRequired,
+    /** Navite input id */
+    id: PropTypes.string,
+    /** Navite input name */
+    name: PropTypes.string,
+    /** Native input type */
+    type: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Info popover */
     hint: PropTypes.string,
+    /** Error will be displayed below the component with style changes */
+    error: PropTypes.string,
+    isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
+    /** toggle button text for show/hide inputs */
+    showInputsLabel: PropTypes.string,
+    hideInputsLabel: PropTypes.string,
 };
 
-export default React.memo(withStyles(styles, { name: 'CheckboxGroup' })(CheckboxGroup));
+export default React.memo(withStyles(styles, { name: 'InputGroup' })(InputGroup));

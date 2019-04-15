@@ -11,6 +11,7 @@ module.exports = {
             sectionDepth: 0,
             components: [
                 './src/components/general/Button/index.jsx',
+                './src/components/general/Link/index.jsx',
                 './src/components/general/Loader/index.jsx',
                 './src/components/general/Drawer/index.jsx',
                 './src/components/general/Icon/index.jsx',
@@ -26,6 +27,7 @@ module.exports = {
                 './src/components/forms/CheckboxGroup/index.jsx',
                 './src/components/forms/Label/index.jsx',
                 './src/components/forms/Input/index.jsx',
+                './src/components/forms/InputGroup/index.jsx',
                 './src/components/forms/Slider/index.jsx',
             ],
         },
