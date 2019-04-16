@@ -34,9 +34,8 @@ yarn install
 yarn start
 ```
 
-For styling our components we use [css-in-js JSS](https://github.com/cssinjs/jss) with (jss-preset-default)[https://github.com/cssinjs/jss-preset-default] and the isolate plugin, here is the complete list with plugins we actually use:
+For styling our components we use [css-in-js JSS](https://github.com/cssinjs/jss) with (jss-preset-default)[https://github.com/cssinjs/jss-preset-default], here is the complete list with plugins we actually use:
 
--   [jss-isolate](https://github.com/cssinjs/jss-isolate): automatic properties reset.
 -   [jss-camel-case](https://github.com/cssinjs/jss-camel-case): converts everything back to dash separated names.
 -   [jss-compose](https://github.com/cssinjs/jss-compose): reuse rules more granylarly.
 -   [jss-expand](https://github.com/cssinjs/jss-expand): better js syntax with objects and arrays.

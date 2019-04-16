@@ -6,7 +6,6 @@ export default (theme) => ({
         padding: '6px 0',
     },
     formControl: {
-        isolate: true,
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',

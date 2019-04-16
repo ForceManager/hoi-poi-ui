@@ -16,7 +16,6 @@ export default (theme) => ({
         width: 10,
     },
     icon: {
-        isolate: true,
         display: 'block',
         width: 10,
         height: 10,

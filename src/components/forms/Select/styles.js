@@ -13,7 +13,6 @@ export default (theme) => ({
         color: theme.colors.danger,
     },
     formControl: {
-        isolate: true,
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
@@ -91,7 +90,6 @@ export default (theme) => ({
         },
     },
     select: {
-        isolate: true,
         width: '100%',
         flexGrow: 1,
         '& .hoi-poi-select__control': {
@@ -125,11 +123,11 @@ export default (theme) => ({
                 display: 'none',
                 margin: '5px 10px',
             },
-            '& .hoi-poi-select__clear-indicator': {
+            '& .hoi-poi-select__clear-indicator span': {
                 width: 8,
                 height: 8,
             },
-            '& .hoi-poi-select__dropdown-indicator': {
+            '& .hoi-poi-select__dropdown-indicator span': {
                 width: 10,
                 height: 10,
             },

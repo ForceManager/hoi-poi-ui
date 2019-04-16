@@ -1,5 +1,7 @@
 export default (theme) => ({
-    root: {},
+    root: {
+        outline: 'none',
+    },
     Label: {
         width: 153,
         marginRight: 17,
@@ -13,7 +15,6 @@ export default (theme) => ({
         color: theme.colors.danger,
     },
     formControl: {
-        isolate: true,
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
@@ -42,13 +43,14 @@ export default (theme) => ({
         },
     },
     input: {
-        isolate: true,
         ...theme.typography.defaultText,
         color: theme.colors.softGrey,
         width: '100%',
         lineHeight: '20px',
         padding: '0 0 5px 0',
         flexGrow: 1,
+        outline: 'none',
+        border: 'none',
         '&::placeholder': {
             color: theme.colors.disabledGrey,
         },

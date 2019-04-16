@@ -6,7 +6,7 @@ export default React.memo((props) => {
     return (
         components.ClearIndicator && (
             <components.ClearIndicator {...props}>
-                <Icon name="close" />
+                <Icon name="close" size="small" />
             </components.ClearIndicator>
         )
     );

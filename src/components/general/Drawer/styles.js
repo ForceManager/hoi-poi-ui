@@ -7,17 +7,16 @@ export default (theme) => ({
         boxShadow: theme.effects.boxShadow,
         transition: 'transform 0.5s',
         willChange: 'transform',
+        outline: 'none',
         '&:active': {
             outlineStyle: 'none',
         },
     },
     content: {
-        isolate: true,
         position: 'relative',
         height: '100%',
     },
     overlay: {
-        isolate: true,
         position: 'fixed',
         width: '100%',
         zIndex: 1000,

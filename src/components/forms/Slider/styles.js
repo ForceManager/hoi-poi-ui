@@ -12,7 +12,6 @@ export default (theme) => ({
         color: theme.colors.danger,
     },
     formControl: {
-        isolate: true,
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
@@ -51,7 +50,6 @@ export default (theme) => ({
         touchAction: 'none',
         boxSizing: 'border-box',
         '& .rc-slider-rail': {
-            isolate: true,
             boxSizing: 'border-box',
             position: 'absolute',
             width: '100%',
@@ -60,7 +58,6 @@ export default (theme) => ({
             borderRadius: 6,
         },
         '& .rc-slider-track': {
-            isolate: true,
             boxSizing: 'border-box',
             position: 'absolute',
             left: '0',
@@ -69,7 +66,6 @@ export default (theme) => ({
             backgroundColor: theme.colors.primary,
         },
         '& .rc-slider-step': {
-            isolate: true,
             boxSizing: 'border-box',
             position: 'absolute',
             width: '100%',
@@ -98,7 +94,6 @@ export default (theme) => ({
         },
     },
     overlayLabel: {
-        isolate: true,
         position: 'absolute',
         minWidth: 15,
         top: 4,

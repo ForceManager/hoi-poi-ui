@@ -68,9 +68,11 @@ module.exports = {
     getComponentPathLine(componentPath) {
         const name = path
             .dirname(componentPath)
-            .replace('src/components/', '')
-            .replace('src\\components\\', '');
-        return `import ${name} from 'hoi-poi-ui';`;
+            .split(path.sep)
+            .slice(-1)
+            .pop();
+
+        return `import { ${name} } from 'hoi-poi-ui';`;
     },
     styleguideComponents: {
         Wrapper: path.join(__dirname, 'src/utils/styles/HoiPoiProvider'),

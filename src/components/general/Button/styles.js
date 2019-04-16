@@ -4,9 +4,11 @@ export default (theme) => ({
         boxSizing: 'border-box',
         display: 'inline-block',
         padding: '5px 20px',
+        textAlign: 'center',
         lineHeight: 0,
         borderRadius: '100px',
-        textAlign: 'center',
+        border: 'none',
+        outline: 'none',
         cursor: 'pointer !important',
         '&:active': {
             ...theme.effects.buttonActive,
@@ -32,7 +34,6 @@ export default (theme) => ({
         },
     },
     label: {
-        isolate: true,
         display: 'inherit',
         alignItems: 'inherit',
         justifyContent: 'inherit',
