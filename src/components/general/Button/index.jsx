@@ -93,6 +93,8 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['big', 'medium', 'small']),

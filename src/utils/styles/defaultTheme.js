@@ -18,6 +18,7 @@ const transparentBlack = 'rgba(38, 43, 52, 0.8)';
 const primary = '#FF8C00';
 const primaryDark = '#C87600';
 const primaryLight = '#ff9d26';
+const primarySoft = '#fef4e6';
 
 const secundary = '#00A8Be';
 const secundarySoft = '#D6EEF2';
@@ -51,6 +52,7 @@ export default {
         primary,
         primaryDark,
         primaryLight,
+        primarySoft,
         secundary,
         secundarySoft,
         danger,

@@ -1,13 +1,21 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
+import { default as RSelect } from 'react-select';
+
 import { getOverrides } from 'utils/overrides';
-import Icon from 'components/general/Icon';
+import { createFilter } from './utils'; // Local utils
+
+import ClearIndicator from './ClearIndicator';
+import DropdownIndicator from './DropdownIndicator';
+import MenuList from './MenuList';
+import Menu from './Menu';
+
 import Label from '../Label';
 import styles from './styles';
 
-function Input({
+function Select({
     children,
     overrides: overridesProp,
     className: classNameProp,
@@ -15,25 +23,27 @@ function Input({
     onChange,
     id,
     name,
-    type,
+    options,
     value,
     label,
     labelMode,
     isFullWidth,
     placeholder,
+    noOptionsPlaceholder,
     hint,
     error,
     isRequired,
     isReadOnly,
-    preComponent,
-    postComponent,
+    isClearable,
+    components,
+    hideSelectedOptions,
     ...props
 }) {
     // State
     const [focused, setFocused] = useState(false);
 
     // Overrides
-    const override = getOverrides(overridesProp, Input.overrides);
+    const override = getOverrides(overridesProp, Select.overrides);
 
     // Classes
     const rootClassName = classnames(
@@ -59,59 +69,50 @@ function Input({
         ...override.Label,
     };
 
-    const inputProps = {
+    const selectProps = {
         id,
         name,
-        className: classes.input,
-        type,
+        className: classes.select,
+        classNamePrefix: 'hoi-poi-select',
         placeholder,
+        options,
         value,
         onChange,
-        readOnly: isReadOnly,
+        isDisabled: isReadOnly,
+        isClearable,
+        hideSelectedOptions,
+        noOptionsMessage: useCallback(() => noOptionsPlaceholder, []),
+        getOptionValue: useCallback(({ value }) => value, []),
+        menuPlacement: 'auto',
+        menuPortalTarget: document.body,
+        styles: {
+            menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+        },
+        components: {
+            ClearIndicator,
+            DropdownIndicator,
+            MenuList: useMemo(() => MenuList(classes.menuList), []),
+            Menu: useMemo(() => Menu(classes.menu), []),
+            ...components,
+        },
+        filterOption: createFilter,
         onFocus: useCallback((e) => {
             setFocused(true);
         }, []),
         onBlur: useCallback((e) => {
             setFocused(false);
         }, []),
-        ...override.input,
+        ...override['react-select'],
     };
 
-    // Remove content post component
-    const postComponentClick = useCallback(() => onChange(), []);
-    let renderedPostComponent = postComponent;
-
-    if (value && !isReadOnly) {
-        renderedPostComponent = (
-            <span onClick={postComponentClick} className={classes.postCloseComponent}>
-                <Icon name="close" />
-            </span>
-        );
-    }
-
-    if (isReadOnly) {
-        renderedPostComponent = (
-            <span onClick={postComponentClick} className={classes.postCloseComponent}>
-                <Icon name="lock" />
-            </span>
-        );
-    }
+    // Async/sync
+    let SelectComponent = RSelect;
 
     return (
         <div {...rootProps}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
-                {preComponent && (
-                    <div className={classes.preComponent} {...override.postComponent}>
-                        {preComponent}
-                    </div>
-                )}
-                <input {...inputProps} />
-                {renderedPostComponent && (
-                    <div className={classes.postComponent} {...override.postComponent}>
-                        {renderedPostComponent}
-                    </div>
-                )}
+                <SelectComponent {...selectProps} />
                 {error && (
                     <div className={classes.error} {...override.error}>
                         {error}
@@ -122,17 +123,18 @@ function Input({
     );
 }
 
-Input.overrides = ['input', 'error', 'preComponent', 'postComponent', 'formControl', 'Label'];
+Select.overrides = ['react-select', 'error', 'formControl', 'Label'];
 
-Input.defaultProps = {
+Select.defaultProps = {
     labelMode: 'horizontal',
-    type: 'text',
     onChange: () => {},
     value: '',
     isReadOnly: false,
+    hideSelectedOptions: true,
+    isClearable: true,
 };
 
-Input.propTypes = {
+Select.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     onChange: PropTypes.func,
@@ -140,12 +142,18 @@ Input.propTypes = {
     id: PropTypes.string,
     /** Navite input name */
     name: PropTypes.string,
-    /** Native input type */
-    type: PropTypes.string,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            value: PropTypes.any,
+            isDisabled: PropTypes.bool,
+        }),
+    ),
     value: PropTypes.any,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     placeholder: PropTypes.string,
+    noOptionsPlaceholder: PropTypes.string,
     isFullWidth: PropTypes.bool,
     /** Info popover */
     hint: PropTypes.string,
@@ -153,10 +161,14 @@ Input.propTypes = {
     error: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
-    /** Component rendered at the input beginning */
-    preComponent: PropTypes.any,
-    /** Component rendered at the input ending */
-    postComponent: PropTypes.any,
+    /** Formats option labels in the menu and control as React components */
+    formatOption: PropTypes.func,
+    /** Hide the selected option from the menu */
+    hideSelectedOptions: PropTypes.bool,
+    /** Is the select value clearable */
+    isClearable: PropTypes.bool,
+    /** React select component customization */
+    components: PropTypes.array,
 };
 
-export default React.memo(withStyles(styles, { name: 'Input' })(Input));
+export default React.memo(withStyles(styles, { name: 'Select' })(Select));

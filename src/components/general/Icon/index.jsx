@@ -51,6 +51,8 @@ Icon.defaultProps = {
 };
 
 Icon.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
     name: PropTypes.string,
     color: PropTypes.string,

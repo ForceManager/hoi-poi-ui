@@ -51,6 +51,8 @@ function Section({
 Section.overrides = ['header', 'title', 'react-animate-height'];
 
 Section.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     title: PropTypes.string,
 };
 

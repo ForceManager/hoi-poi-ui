@@ -137,6 +137,8 @@ Slider.defaultProps = {
 };
 
 Slider.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     value: PropTypes.any,

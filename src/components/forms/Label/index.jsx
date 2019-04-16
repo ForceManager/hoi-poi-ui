@@ -54,6 +54,8 @@ Text.overrides = ['Popover', 'text'];
 Text.defaultProps = {};
 
 Text.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     isRequired: PropTypes.bool,
     hint: PropTypes.string,
 };
