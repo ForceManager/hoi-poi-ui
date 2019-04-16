@@ -45,6 +45,8 @@ Tooltip.defaultProps = {
 };
 
 Tooltip.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     content: PropTypes.any,
     placement: PropTypes.oneOf([
         'top',

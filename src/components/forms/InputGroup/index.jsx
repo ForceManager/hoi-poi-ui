@@ -136,6 +136,8 @@ InputGroup.defaultProps = {
 };
 
 InputGroup.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     onChange: PropTypes.func,
     inputs: PropTypes.arrayOf(
         PropTypes.shape({

@@ -47,6 +47,8 @@ Popover.defaultProps = {
 };
 
 Popover.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     content: PropTypes.any,
     trigger: PropTypes.arrayOf(PropTypes.string),
     placement: PropTypes.oneOf([

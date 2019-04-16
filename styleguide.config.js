@@ -29,6 +29,7 @@ module.exports = {
                 './src/components/forms/Input/index.jsx',
                 './src/components/forms/InputGroup/index.jsx',
                 './src/components/forms/Slider/index.jsx',
+                './src/components/forms/Select/index.jsx',
             ],
         },
         {

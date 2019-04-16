@@ -65,11 +65,12 @@ Drawer.defaultProps = {
 };
 
 Drawer.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     children: PropTypes.any,
     isOpen: PropTypes.bool.isRequired,
     width: PropTypes.string,
     side: PropTypes.oneOf(['right', 'left']),
-    className: PropTypes.string,
     /**Milliseconds to wait before closing the drawer */
     closeTimeout: PropTypes.number,
     /** Function that will be called after the drawer has opened */

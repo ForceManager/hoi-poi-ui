@@ -52,6 +52,8 @@ ScrollBar.defaultProps = {
 };
 
 ScrollBar.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     autoHide: PropTypes.bool,

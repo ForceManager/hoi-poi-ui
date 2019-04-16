@@ -87,6 +87,8 @@ CheckboxGroup.defaultProps = {
 };
 
 CheckboxGroup.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     onChange: PropTypes.func,
     options: PropTypes.arrayOf(
         PropTypes.shape({

@@ -48,6 +48,8 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
+    className: PropTypes.string,
+    overrides: PropTypes.object,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['small', 'medium', 'big']),
