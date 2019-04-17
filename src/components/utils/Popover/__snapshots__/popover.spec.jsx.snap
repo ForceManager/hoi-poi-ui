@@ -464,10 +464,10 @@ exports[`Popover match snapshot 1`] = `
           >
             <div
               className="HoiPoi-Section-root-0-2-1"
-              onClick={[Function]}
             >
               <div
                 className="HoiPoi-Section-header-0-2-2"
+                onClick={[Function]}
               >
                 <span
                   className="HoiPoi-Section-title-0-2-3"
@@ -1600,16 +1600,16 @@ exports[`Popover visible match snapshot 1`] = `
           >
             <div
               className="HoiPoi-HoiPoi-Section-root-0-2-24"
-              onClick={[Function]}
             >
               <div
                 className="HoiPoi-HoiPoi-Section-header-0-2-25"
+                onClick={[Function]}
               >
                 <span
                   className="HoiPoi-HoiPoi-Section-title-0-2-26"
                 />
                 <div
-                  className="HoiPoi-HoiPoi-Section-icon-0-2-27 HoiPoi-HoiPoi-Section-collapsed-0-2-28"
+                  className="HoiPoi-HoiPoi-Section-icon-0-2-27"
                 >
                   <JssContextSubscriber
                     name="chevron"
@@ -1980,16 +1980,16 @@ exports[`Popover visible match snapshot 1`] = `
                 delay={0}
                 duration={250}
                 easing="ease"
-                height={0}
+                height="auto"
                 style={Object {}}
               >
                 <div
-                  aria-hidden={true}
-                  className="rah-animating rah-animating--up rah-animating--to-height-zero"
+                  aria-hidden={false}
+                  className="rah-static rah-static--height-auto"
                   style={
                     Object {
-                      "height": 0,
-                      "overflow": "hidden",
+                      "height": "auto",
+                      "overflow": "visible",
                     }
                   }
                 >
