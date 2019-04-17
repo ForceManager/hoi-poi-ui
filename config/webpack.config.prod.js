@@ -108,6 +108,8 @@ module.exports = {
       'hoi-poi-ui': path.resolve(__dirname, '../src/components'),
       'components': path.resolve(__dirname, '../src/components'),
       'utils': path.resolve(__dirname, '../src/utils'),
+      'react': path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
     },
     modules: ['node_modules'].concat(
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
@@ -116,6 +118,20 @@ module.exports = {
     plugins: [
       new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
     ],
+  },
+  externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'React',
+      root: 'React'
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'ReactDOM',
+      root: 'ReactDOM'
+    }
   },
   module: {
     strictExportPresence: true,

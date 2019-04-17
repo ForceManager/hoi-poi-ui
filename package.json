@@ -3,8 +3,9 @@
     "version": "0.0.1-alpha.14",
     "main": "dist/index.js",
     "scripts": {
-        "lint": "eslint --config .eslintrc --ext .js,.jsx src/**",
+        "prepublish": "rm -rf ./dist && yarn build",
         "precommit": "cross-env NODE_ENV=production lint-staged",
+        "lint": "eslint --config .eslintrc --ext .js,.jsx src/**",
         "start": "styleguidist server",
         "build": "cross-env NODE_ENV=production webpack --mode production --config config/webpack.config.prod.js",
         "test": "jest",
@@ -44,8 +45,8 @@
     "license": "MIT",
     "sideEffects": false,
     "peerDependencies": {
-        "react": "*",
-        "react-dom": "*"
+        "react": ">=16.8.0",
+        "react-dom": ">=16.8.0"
     },
     "devDependencies": {
         "@babel/core": "7.4.3",
@@ -97,12 +98,12 @@
         "pretty-quick": "^1.10.0",
         "rc-slider": "^8.6.9",
         "rc-tooltip": "^3.7.3",
-        "react": "^16.8.6",
+        "react": ">=16.8.0",
         "react-animate-height": "^2.0.8",
         "react-app-polyfill": "^0.2.2",
         "react-custom-scrollbars": "^4.2.1",
         "react-dev-utils": "^8.0.0",
-        "react-dom": "^16.8.6",
+        "react-dom": ">=16.8.0",
         "react-jss": "^10.0.0-alpha.16",
         "react-modal": "^3.8.1",
         "react-select": "^2.4.2",
