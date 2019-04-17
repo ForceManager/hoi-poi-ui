@@ -18,10 +18,6 @@ function Section({
 }) {
     const [isOpen, open] = useState(true);
 
-    const rootProps = {
-        onClick: useCallback(() => open(!isOpen), [isOpen]),
-    };
-
     // Overrides
     const override = getOverrides(overridesProp, Section.overrides);
 
@@ -31,9 +27,11 @@ function Section({
         [classes.collapsed]: !isOpen,
     });
 
+    const onToggle = useCallback(() => open(!isOpen), [isOpen]);
+
     return (
-        <div className={rootClassName} {...rootProps}>
-            <div className={classes.header} {...override.header}>
+        <div className={rootClassName}>
+            <div className={classes.header} onClick={onToggle} {...override.header}>
                 <span className={classes.title} {...override.title}>
                     {title}
                 </span>
