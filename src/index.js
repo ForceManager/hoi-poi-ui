@@ -1,4 +1,5 @@
 // Utils
+export { default as withStyles } from 'react-jss';
 export { HoiPoiProvider, createHoiPoiTheme } from './utils/styles';
 
 // Components
