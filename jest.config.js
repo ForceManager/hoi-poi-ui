@@ -4,8 +4,7 @@ module.exports = {
     testEnvironment: 'jsdom',
     testURL: 'http://localhost',
     transform: {
-        '^.+\\.(js|jsx)$': '<rootDir>/node_modules/babel-jest',
-        '^(?!.*\\.(js|jsx|css|json)$)': '<rootDir>/config/jest/fileTransform.js',
+        '^.+\\.(js|jsx)$': '<rootDir>/config/jest/fileTransform.js',
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
     moduleFileExtensions: ['js', 'json', 'jsx', 'node'],
