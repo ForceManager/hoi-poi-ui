@@ -1,13 +1,8 @@
 'use strict';
 
-const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
-const resolve = require('resolve');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
@@ -15,9 +10,7 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const getPackageJson = require('./getPackageJson');
 
 const publicPath = paths.servedPath;
-const shouldUseRelativeAssetPaths = publicPath === './';
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
-const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
 const publicUrl = publicPath.slice(0, -1);
 const env = getClientEnvironment(publicUrl);
 
@@ -51,9 +44,7 @@ module.exports = {
   output: {
     path: paths.appBuild,
     filename: 'index.js',
-    chunkFilename: 'index.[chunkhash:8].chunk.js',
-    publicPath: publicPath,
-    library: "HoiPoiUI",
+    library: name,
     libraryTarget: 'umd',
     umdNamedDefine: true,
     devtoolModuleFilenameTemplate: info =>
@@ -154,14 +145,6 @@ module.exports = {
       {
         oneOf: [
           {
-            test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-            loader: require.resolve('url-loader'),
-            options: {
-              limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
-            },
-          },
-          {
             test: /\.(js|jsx)$/,
             include: paths.appSrc,
 
@@ -170,18 +153,6 @@ module.exports = {
               customize: require.resolve(
                 'babel-preset-react-app/webpack-overrides'
               ),
-              plugins: [
-                [
-                  require.resolve('babel-plugin-named-asset-import'),
-                  {
-                    loaderMap: {
-                      svg: {
-                        ReactComponent: '@svgr/webpack?-prettier,-svgo![path]',
-                      },
-                    },
-                  },
-                ],
-              ],
               cacheDirectory: true,
               cacheCompression: true,
               compact: true,
@@ -206,20 +177,11 @@ module.exports = {
               sourceMaps: false,
             },
           },
-          {
-            loader: require.resolve('file-loader'),
-            exclude: [/\.(js|mjs|jsx)$/, /\.html$/, /\.json$/],
-            options: {
-              name: 'static/media/[name].[hash:8].[ext]',
-            },
-          },
         ],
       },
     ],
   },
   plugins: [
-    shouldInlineRuntimeChunk &&
-      new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime~.+[.]js/]),
     new ModuleNotFoundPlugin(paths.appPath),
     new webpack.DefinePlugin(env.stringified),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)

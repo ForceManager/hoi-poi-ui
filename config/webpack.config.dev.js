@@ -49,14 +49,13 @@ module.exports = {
     rules: [
       { parser: { requireEnsure: false } },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|mjs|jsx)$/,
         enforce: 'pre',
         use: [
           {
             options: {
               formatter: require.resolve('react-dev-utils/eslintFormatter'),
               eslintPath: require.resolve('eslint'),
-
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -68,30 +67,19 @@ module.exports = {
           {
             test: /\.(js|jsx)$/,
             include: paths.appSrc,
+
             loader: require.resolve('babel-loader'),
             options: {
               customize: require.resolve(
                 'babel-preset-react-app/webpack-overrides'
               ),
-
-              plugins: [
-                [
-                  require.resolve('babel-plugin-named-asset-import'),
-                  {
-                    loaderMap: {
-                      svg: {
-                        ReactComponent: '@svgr/webpack?-prettier,-svgo![path]',
-                      },
-                    },
-                  },
-                ],
-              ],
               cacheDirectory: true,
-              cacheCompression: false,
+              cacheCompression: true,
+              compact: true,
             },
           },
           {
-            test: /\.(js)$/,
+            test: /\.(js|mjs)$/,
             exclude: /@babel(?:\/|\\{1,2})runtime/,
             loader: require.resolve('babel-loader'),
             options: {
@@ -105,15 +93,8 @@ module.exports = {
                 ],
               ],
               cacheDirectory: true,
-              cacheCompression: false,
+              cacheCompression: true,
               sourceMaps: false,
-            },
-          },
-          {
-            exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
-            loader: require.resolve('file-loader'),
-            options: {
-              name: 'static/media/[name].[hash:8].[ext]',
             },
           },
         ],
