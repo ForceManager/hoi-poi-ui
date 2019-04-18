@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
-const publicPath = '/';
 const publicUrl = '';
 const env = getClientEnvironment(publicUrl);
 
@@ -19,18 +18,8 @@ module.exports = {
   output: {
     pathinfo: true,
     filename: 'static/js/bundle.js',
-    chunkFilename: 'static/js/[name].chunk.js',
-    publicPath: publicPath,
     devtoolModuleFilenameTemplate: info =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        default: false,
-      }
-    },
-    runtimeChunk: false,
   },
   resolve: {
     alias: {
@@ -104,7 +93,6 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin(env.stringified),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ].filter(Boolean),
   node: {
     dgram: 'empty',

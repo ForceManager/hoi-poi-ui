@@ -2,7 +2,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
@@ -19,22 +18,8 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
 }
 
 const {
-  version,
   name,
-  license,
-  repository,
-  author,
 } = getPackageJson('version', 'name', 'license', 'repository', 'author');
-
-const banner = `
-  ${name} v${version}
-  ${repository.url}
-
-  Copyright (c) ${author.replace(/ *\<[^)]*\> */g, " ")}
-
-  This source code is licensed under the ${license} license found in the
-  LICENSE file in the root directory of this source tree.
-  `;
 
 module.exports = {
   mode: 'production',
@@ -51,48 +36,6 @@ module.exports = {
       path
         .relative(paths.appSrc, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
-  },
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          parse: {
-            ecma: 8,
-          },
-          compress: {
-            ecma: 5,
-            warnings: false,
-            comparisons: false,
-            inline: 2,
-          },
-          mangle: {
-            safari10: true,
-            keep_classnames: true,
-            keep_fnames: true,
-            module: true
-          },
-          output: {
-            ecma: 5,
-            comments: false,
-            ascii_only: true,
-          },
-        },
-        parallel: true,
-        cache: true,
-        sourceMap: shouldUseSourceMap,
-      }),
-      new webpack.BannerPlugin({
-        banner: banner,
-        entryOnly: true
-      }),
-    ],
-    splitChunks: {
-      //chunks: 'all',
-      cacheGroups: {
-        default: false,
-      }
-    },
-    runtimeChunk: false,
   },
   resolve: {
     alias: {
@@ -184,7 +127,6 @@ module.exports = {
   plugins: [
     new ModuleNotFoundPlugin(paths.appPath),
     new webpack.DefinePlugin(env.stringified),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ],
   node: {
     dgram: 'empty',
