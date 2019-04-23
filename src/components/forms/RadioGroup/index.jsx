@@ -2,8 +2,8 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from 'utils/overrides';
-import Radio from 'components/forms/Radio';
+import { getOverrides } from '../../../utils/overrides';
+import Radio from '../Radio';
 import Label from '../Label';
 import styles from './styles';
 
