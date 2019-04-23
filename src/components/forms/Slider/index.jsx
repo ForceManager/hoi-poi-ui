@@ -4,7 +4,7 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import RCSlider from 'rc-slider';
 
-import { getOverrides } from 'utils/overrides';
+import { getOverrides } from '../../../utils/overrides';
 import Label from '../Label';
 import styles from './styles';
 

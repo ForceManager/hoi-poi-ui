@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Icon from 'components/general/Icon';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Icon from '../../general/Icon';
 
 describe('Icon', () => {
     test('default match snapshot', () => {

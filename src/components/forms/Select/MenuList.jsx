@@ -1,6 +1,6 @@
 import React from 'react';
 import { components } from 'react-select';
-import ScrollBar from 'components/utils/ScrollBar';
+import ScrollBar from '../../utils/ScrollBar';
 
 export default (className) => {
     return React.memo(({ children, ...props }) => {

@@ -62,7 +62,7 @@ module.exports = {
             ],
         },
     },
-    webpackConfig: require('./config/webpack.config.dev.js'),
+    webpackConfig: require('./webpack.config.dev.js'),
     components: 'src/components/**/index.jsx',
     usageMode: 'expand',
     getComponentPathLine(componentPath) {

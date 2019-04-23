@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Label from 'components/forms/Label';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Label from '../../forms/Label';
 
 describe('Label', () => {
     test('default match', () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Drawer from 'components/general/Drawer';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Drawer from '../../general/Drawer';
 
 describe('Drawer', () => {
     test('is rendering closed', () => {

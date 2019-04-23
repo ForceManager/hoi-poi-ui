@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import Modal from 'react-modal';
-import { getOverrides } from 'utils/overrides';
+import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
 function Drawer({
