@@ -1,6 +1,6 @@
 import React from 'react';
 import { components } from 'react-select';
-import Icon from 'components/general/Icon';
+import Icon from '../../general/Icon';
 
 export default React.memo((props) => {
     return (

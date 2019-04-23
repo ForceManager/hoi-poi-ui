@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Checkbox from 'components/forms/Checkbox';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Checkbox from '../../forms/Checkbox';
 
 describe('Checkbox', () => {
     test('unchecked match snapshot', () => {

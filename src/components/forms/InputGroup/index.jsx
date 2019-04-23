@@ -2,9 +2,9 @@ import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from 'utils/overrides';
-import Input from 'components/forms/Input';
-import Link from 'components/general/Link';
+import { getOverrides } from '../../../utils/overrides';
+import Input from '../../forms/Input';
+import Link from '../../general/Link';
 import styles from './styles';
 
 function InputGroup({

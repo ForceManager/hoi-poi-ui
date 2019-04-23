@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Input from 'components/forms/Input';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Input from '../../forms/Input';
 
 describe('Input', () => {
     test('default match', () => {
