@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Button from 'components/general/Button';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Button from '../../general/Button';
 
 describe('Button', () => {
     test('is rendered without crashes', () => {

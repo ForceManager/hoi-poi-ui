@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Link from 'components/general/Link';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Link from '../../general/Link';
 
 describe('Link', () => {
     test('is rendered without crashes', () => {

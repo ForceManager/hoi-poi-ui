@@ -2,8 +2,8 @@ import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from 'utils/overrides';
-import Icon from 'components/general/Icon';
+import { getOverrides } from '../../../utils/overrides';
+import Icon from '../../general/Icon';
 import Label from '../Label';
 import styles from './styles';
 

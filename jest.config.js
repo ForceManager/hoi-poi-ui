@@ -1,16 +1,12 @@
 module.exports = {
-    setupFilesAfterEnv: ['react-app-polyfill/jsdom', '<rootDir>/config/jest/setupTests.js'],
+    setupFilesAfterEnv: ['react-app-polyfill/jsdom', '<rootDir>/jest/setupTests.js'],
     testMatch: ['**/**.spec.jsx'],
     testEnvironment: 'jsdom',
     testURL: 'http://localhost',
     transform: {
-        '^.+\\.(js|jsx)$': '<rootDir>/config/jest/fileTransform.js',
+        '^.+\\.(js|jsx)$': '<rootDir>/jest/fileTransform.js',
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-    moduleFileExtensions: ['js', 'json', 'jsx', 'node'],
+    moduleFileExtensions: ['js', 'json', 'jsx'],
     snapshotSerializers: ['enzyme-to-json/serializer'],
-    moduleNameMapper: {
-        '^utils(.*)$': '<rootDir>/src/utils$1',
-        '^components(.*)$': '<rootDir>/src/components$1',
-    },
 };

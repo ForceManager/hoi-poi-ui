@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import InputGroup from 'components/forms/InputGroup';
+import { HoiPoiProvider } from '../../../utils/styles';
+import InputGroup from '../../forms/InputGroup';
 
 describe('InputGroup', () => {
     test('default match', () => {

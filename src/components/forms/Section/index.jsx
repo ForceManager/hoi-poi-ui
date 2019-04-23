@@ -4,8 +4,8 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
-import Icon from 'components/general/Icon';
-import { getOverrides } from 'utils/overrides';
+import Icon from '../../general/Icon';
+import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
 function Section({

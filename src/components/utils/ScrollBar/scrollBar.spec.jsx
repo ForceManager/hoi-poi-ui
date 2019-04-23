@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import ScrollBar from 'components/utils/ScrollBar';
+import { HoiPoiProvider } from '../../../utils/styles';
+import ScrollBar from '../../utils/ScrollBar';
 
 describe('ScrollBar', () => {
     test('match snapshot', () => {
