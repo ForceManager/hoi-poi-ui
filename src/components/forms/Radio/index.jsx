@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from 'utils/overrides';
+import { getOverrides } from '../../../utils/overrides';
 import CheckedIcon from './CheckedIcon';
 import UncheckedIcon from './UncheckedIcon';
 
