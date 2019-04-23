@@ -19,6 +19,7 @@ export { default as InputGroup } from './components/forms/InputGroup';
 export { default as Select } from './components/forms/Select';
 export { default as Slider } from './components/forms/Slider';
 export { default as Radio } from './components/forms/Radio';
+export { default as RadioGroup } from './components/forms/RadioGroup';
 
 export { default as ScrollBar } from './components/utils/ScrollBar';
 export { default as Tooltip } from './components/utils/Tooltip';
