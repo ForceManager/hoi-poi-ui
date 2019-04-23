@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Radio from './Radio';
+import Radio from './index';
 
 describe('Radio', () => {
     test('unchecked match snapshot', () => {
