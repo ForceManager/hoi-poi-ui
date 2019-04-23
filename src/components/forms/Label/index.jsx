@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from 'utils/overrides';
-import Popover from 'components/utils/Popover';
-import Icon from 'components/general/Icon';
+import { getOverrides } from '../../../utils/overrides';
+import Popover from '../../utils/Popover';
+import Icon from '../../general/Icon';
 import styles from './styles';
 
 function Label({

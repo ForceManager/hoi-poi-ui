@@ -4,7 +4,7 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { default as RSelect } from 'react-select';
 
-import { getOverrides } from 'utils/overrides';
+import { getOverrides } from '../../../utils/overrides';
 import { createFilter } from './utils'; // Local utils
 
 import ClearIndicator from './ClearIndicator';

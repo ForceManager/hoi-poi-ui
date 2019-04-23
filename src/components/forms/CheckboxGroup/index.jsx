@@ -2,8 +2,8 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from 'utils/overrides';
-import Checkbox from 'components/forms/Checkbox';
+import { getOverrides } from '../../../utils/overrides';
+import Checkbox from '../../forms/Checkbox';
 import Label from '../Label';
 import styles from './styles';
 

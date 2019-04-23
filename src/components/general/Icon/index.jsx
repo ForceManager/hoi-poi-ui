@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles, { withTheme } from 'react-jss';
 import classnames from 'classnames';
 
-import { getOverrides } from 'utils/overrides';
+import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
 import Chevron from './icons/Chevron';

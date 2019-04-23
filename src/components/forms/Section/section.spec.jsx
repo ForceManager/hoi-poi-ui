@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Section from 'components/forms/Section';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Section from '../../forms/Section';
 
 describe('Section', () => {
     test('match snapshot', () => {

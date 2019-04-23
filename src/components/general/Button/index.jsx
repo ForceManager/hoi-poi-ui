@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from 'utils/overrides';
-import Loader from 'components/general/Loader';
+import { getOverrides } from '../../../utils/overrides';
+import Loader from '../../general/Loader';
 import styles from './styles';
 
 const LOADER_SIZES = {
