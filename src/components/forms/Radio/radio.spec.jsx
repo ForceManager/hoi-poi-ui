@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { HoiPoiProvider } from 'utils/styles';
-import Radio from 'components/forms/Radio';
+import { HoiPoiProvider } from '../../../utils/styles';
+import Radio from './Radio';
 
 describe('Radio', () => {
     test('unchecked match snapshot', () => {
