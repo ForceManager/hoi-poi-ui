@@ -17,7 +17,7 @@ let options = [
 ];
 
 let onChange = (value) => setState({ value });
-<CheckboxGroup label="Lorem ipsum" options={options} onChange={onChange} value={state.value} />;
+<RadioGroup label="Lorem ipsum" options={options} onChange={onChange} value={state.value} />;
 ```
 
 Disabled
@@ -39,7 +39,7 @@ let options = [
 ];
 
 let onChange = (value) => setState({ value });
-<CheckboxGroup
+<RadioGroup
     label="Lorem ipsum"
     options={options}
     onChange={onChange}
@@ -67,7 +67,7 @@ let options = [
 ];
 
 let onChange = (value) => setState({ value });
-<CheckboxGroup
+<RadioGroup
     label="Lorem ipsum"
     labelMode="vertical"
     options={options}
@@ -80,8 +80,8 @@ let onChange = (value) => setState({ value });
 
 ---
 
--   [Checkbox](#/Forms?id=checkbox)
--   checkboxLabel - label related to one checkbox
--   checkboxControl - wrapper with checkbox label and checkbox
+-   [Radio](#/Forms?id=radio)
+-   radioLabel - label related to one radio
+-   radioControl - wrapper with radio label and radio
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)

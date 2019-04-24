@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
-import Checkbox from '../../forms/Checkbox';
+import Radio from '../Radio';
 import Label from '../Label';
 import styles from './styles';
 
-function CheckboxGroup({
+function RadioGroup({
     children,
     overrides: overridesProp,
     className: classNameProp,
@@ -21,7 +21,7 @@ function CheckboxGroup({
     ...props
 }) {
     // Overrides
-    const override = getOverrides(overridesProp, CheckboxGroup.overrides);
+    const override = getOverrides(overridesProp, RadioGroup.overrides);
 
     // Classes
     const rootClassName = classnames(
@@ -43,12 +43,9 @@ function CheckboxGroup({
         ...override.Label,
     };
 
-    const onChange = (v) =>
+    const onChange = (value) =>
         useCallback(() => {
-            props.onChange({
-                ...value,
-                [v]: !value[v],
-            });
+            props.onChange(value);
         }, [value]);
 
     return (
@@ -58,12 +55,12 @@ function CheckboxGroup({
                 {options.map((option) => (
                     <div
                         key={option.value}
-                        className={classes.checkboxControl}
+                        className={classes.radioControl}
                         onClick={isReadOnly ? undefined : onChange(option.value)}
-                        {...override.checkboxControl}
+                        {...override.radioControl}
                     >
-                        <Checkbox checked={value[option.value]} isDisabled={isReadOnly} />
-                        <span className={classes.checkboxLabel} {...override.checkboxLabel}>
+                        <Radio checked={value === option.value} isDisabled={isReadOnly} />
+                        <span className={classes.radioLabel} {...override.radioLabel}>
                             {option.label}
                         </span>
                     </div>
@@ -73,17 +70,17 @@ function CheckboxGroup({
     );
 }
 
-CheckboxGroup.overrides = ['Checkbox', 'checkboxLabel', 'checkboxControl', 'formControl', 'Label'];
+RadioGroup.overrides = ['Radio', 'radioLabel', 'radioControl', 'formControl', 'Label'];
 
-CheckboxGroup.defaultProps = {
+RadioGroup.defaultProps = {
     labelMode: 'horizontal',
     onChange: () => {},
-    value: {},
+    value: null,
     options: [],
     isReadOnly: false,
 };
 
-CheckboxGroup.propTypes = {
+RadioGroup.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     onChange: PropTypes.func,
@@ -93,7 +90,7 @@ CheckboxGroup.propTypes = {
             value: PropTypes.string,
         }),
     ),
-    value: PropTypes.object,
+    value: PropTypes.string,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Info popover */
@@ -101,4 +98,4 @@ CheckboxGroup.propTypes = {
     isReadOnly: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'CheckboxGroup' })(CheckboxGroup));
+export default React.memo(withStyles(styles, { name: 'RadioGroup' })(RadioGroup));

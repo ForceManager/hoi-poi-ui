@@ -13,13 +13,13 @@ export default (theme) => ({
         padding: '5px 0',
         cursor: 'pointer',
     },
-    checkboxControl: {
+    radioControl: {
         display: 'flex',
         alignItems: 'center',
         lineHeight: '20px',
         marginBottom: 14,
     },
-    checkboxLabel: {
+    radioLabel: {
         marginLeft: 2,
         ...theme.typography.defaultText,
         color: theme.colors.softGrey,

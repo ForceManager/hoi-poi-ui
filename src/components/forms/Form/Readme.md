@@ -1,132 +1,51 @@
+**Schema:**
+
 ```jsx
-let schema = [
+const schema = [
     {
-        title: 'General',
+        title: 'General', // Section title
         fields: [
-            {
-                label: 'Name',
-                name: 'name',
-                type: 'text',
-                placeholder: 'Your name',
-                isRequired: true,
-            },
             {
                 label: 'Email',
+                labelMode: 'horizontal', // Override general labelMode
+                isFullWidth: false, // Override general isFullwidth
                 name: 'email',
-                type: 'text',
+                type: 'text', // text|inputGroup|checkboxGroup|radioGroup|select|slider
                 placeholder: 'Your email',
                 hint: 'No spam!',
+                isReadOnly: true,
                 isRequired: true,
-                attrs: {
-                    type: 'email',
-                },
-            },
-            {
-                label: 'Password',
-                name: 'password',
-                type: 'text',
-                placeholder: 'Your password',
-                isRequired: true,
-                attrs: {
-                    type: 'password',
-                },
-            },
-            {
-                label: 'Gender',
-                name: 'gender',
-                type: 'select',
-                placeholder: 'Select your gender',
-                attrs: {
-                    options: [
-                        {
-                            label: 'Male',
-                            value: 'male',
-                        },
-                        {
-                            label: 'Female',
-                            value: 'female',
-                        },
-                        {
-                            label: 'Other',
-                            value: 'other',
-                        },
-                    ],
-                },
-            },
-            {
-                label: 'Interest',
-                name: 'interest',
-                type: 'slider',
-            },
-        ],
-    },
-    {
-        title: 'Contact details',
-        fields: [
-            {
-                label: 'Address',
-                name: 'address',
-                type: 'text',
-                placeholder: 'Write an address',
-            },
-            {
-                label: 'Phone',
-                name: 'phone',
-                type: 'text',
-                placeholder: 'Write a phone',
-            },
-            {
-                label: 'Prefered way',
-                name: 'prefered-way',
-                type: 'checkboxGroup',
-                attrs: {
-                    options: [
-                        {
-                            label: 'Email',
-                            name: 'email',
-                        },
-                        {
-                            label: 'Phone',
-                            name: 'phone',
-                        },
-                    ],
-                },
-            },
-        ],
-    },
-    {
-        title: 'Extra',
-        fields: [
-            {
-                name: 'biography',
-                type: 'inputGroup',
-                attrs: {
-                    showInputsLabel: 'Show translations',
-                    hideInputsLabel: 'Hide translations',
-                    inputs: [
-                        {
-                            label: 'Biography',
-                            name: 'english',
-                        },
-                        {
-                            label: 'Spanish',
-                            name: 'spanish',
-                        },
-                        {
-                            label: 'French',
-                            name: 'french',
-                        },
-                        {
-                            label: 'Germany',
-                            name: 'germany',
-                        },
-                    ],
-                },
+                attrs: {}, // Rest of props passed directly to field
             },
         ],
     },
 ];
 
-let onChange = (values, field) => setState({ values });
-<Form onChange={onChange} values={state.values} schema={schema} />;
+return <pre>{JSON.stringify(schema, null, 4)}</pre>;
 ```
+
+**Types:**
+
+```jsx
+const types = ['text', 'inputGroup', 'checkboxGroup', 'radioGroup', 'select', 'slider'];
+
+return <pre>{JSON.stringify(types, null, 4)}</pre>;
+```
+
+```jsx
+import schema from './example.json';
+
+const errors = {
+    phone: 'Invalid phone',
+};
+
+let onChange = (values, field) => setState({ values });
+<Form onChange={onChange} values={state.values} errors={errors} schema={schema} />;
+```
+
+### Component tree
+
+---
+
+-   form - native form element
+-   [Section](#/Forms?id=Section)

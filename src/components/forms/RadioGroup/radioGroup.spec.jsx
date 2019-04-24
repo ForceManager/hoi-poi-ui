@@ -2,9 +2,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import CheckboxGroup from '../../forms/CheckboxGroup';
+import RadioGroup from './index';
 
-describe('CheckboxGroup', () => {
+describe('RadioGroup', () => {
     test('default match', () => {
         const options = [
             {
@@ -22,7 +22,7 @@ describe('CheckboxGroup', () => {
         ];
         const wrapper = mount(
             <HoiPoiProvider>
-                <CheckboxGroup label="Lorem ipsum" options={options} onChange={() => {}} />
+                <RadioGroup label="Lorem ipsum" options={options} onChange={() => {}} />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -43,19 +43,39 @@ describe('CheckboxGroup', () => {
             },
         ];
 
-        const value = {
-            lorem: true,
-            lorem3: true,
-        };
+        const value = 'lorem2';
 
         const wrapper = mount(
             <HoiPoiProvider>
-                <CheckboxGroup
+                <RadioGroup
                     label="Lorem ipsum"
                     options={options}
                     onChange={() => {}}
                     value={value}
                 />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('disabled match', () => {
+        const options = [
+            {
+                label: 'Lorem ipsum',
+                name: 'lorem',
+            },
+            {
+                label: 'Lorem ipsum 2',
+                name: 'lorem2',
+            },
+            {
+                label: 'Lorem ipsum 3',
+                name: 'lorem3',
+            },
+        ];
+
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <RadioGroup label="Lorem ipsum" options={options} onChange={() => {}} isReadOnly />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();

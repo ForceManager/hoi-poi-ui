@@ -1,35 +1,61 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, Section, Input, InputGroup, CheckboxGroup, Select, Slider } from 'hoi-poi-ui';
+import { getOverrides } from '../../../utils/overrides';
+import {
+    withStyles,
+    Section,
+    Input,
+    InputGroup,
+    RadioGroup,
+    CheckboxGroup,
+    Select,
+    Slider,
+} from 'hoi-poi-ui';
 import styles from './styles';
 
 const FIELD_MAP = {
     text: Input,
     inputGroup: InputGroup,
     checkboxGroup: CheckboxGroup,
+    radioGroup: RadioGroup,
     select: Select,
     slider: Slider,
 };
 
-function Form({ labelMode, isFullwidth, schema, values, errors, ...props }) {
+function Form({
+    overrides: overridesProp,
+    className: classNameProp,
+    labelMode,
+    isFullwidth,
+    schema,
+    values,
+    errors,
+    ...props
+}) {
+    // Overrides
+    const override = getOverrides(overridesProp, Form.overrides);
+
     const onChange = (field) =>
-        useCallback((input) => {
-            const value = input && input.target ? input.target.value : input;
-            props.onChange &&
-                props.onChange(
-                    {
-                        ...values,
-                        [field.name]: value,
-                    },
-                    field,
-                    value,
-                );
-        }, []);
+        useCallback(
+            (input) => {
+                const value = input && input.target ? input.target.value : input;
+                props.onChange &&
+                    props.onChange(
+                        {
+                            ...values,
+                            [field.name]: value,
+                        },
+                        field,
+                        value,
+                    );
+            },
+            [field],
+        );
 
     return (
-        <form action="" autoComplete="off">
+        <form className={classNameProp} action="" autoComplete="off" {...override.form}>
             {schema.map((section, index) => (
-                <Section key={index} title={section.title}>
+                <Section key={index} title={section.title} {...override.Section}>
                     {section.fields.map((field) => {
                         if (!field || !field.type || !FIELD_MAP[field.type]) return null;
                         const Field = FIELD_MAP[field.type];
@@ -51,6 +77,8 @@ function Form({ labelMode, isFullwidth, schema, values, errors, ...props }) {
     );
 }
 
+Form.overrides = ['form', 'Section'];
+
 Form.defaultProps = {
     labelMode: 'horizontal',
     isFullWidth: false,
@@ -60,6 +88,8 @@ Form.defaultProps = {
 };
 
 Form.propTypes = {
+    /** Native form class */
+    className: PropTypes.string,
     labelMode: PropTypes.string,
     isFullWidth: PropTypes.bool,
     values: PropTypes.object,
@@ -78,7 +108,6 @@ Form.propTypes = {
                     hint: PropTypes.string,
                     isRequired: PropTypes.bool,
                     isReadOnly: PropTypes.bool,
-                    error: PropTypes.string,
                     attrs: PropTypes.object,
                 }),
             ),
