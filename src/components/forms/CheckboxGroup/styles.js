@@ -15,7 +15,8 @@ export default (theme) => ({
     checkboxControl: {
         display: 'flex',
         alignItems: 'center',
-        marginBottom: 20,
+        lineHeight: '20px',
+        marginBottom: 14,
     },
     checkboxLabel: {
         marginLeft: 2,
