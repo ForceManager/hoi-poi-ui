@@ -81,7 +81,11 @@ function Button({
             </a>
         );
     } else {
-        return <button {...rootProps}>{content}</button>;
+        return (
+            <button {...rootProps} type="button">
+                {content}
+            </button>
+        );
     }
 }
 

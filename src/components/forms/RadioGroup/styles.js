@@ -16,7 +16,8 @@ export default (theme) => ({
     radioControl: {
         display: 'flex',
         alignItems: 'center',
-        marginBottom: 20,
+        lineHeight: '20px',
+        marginBottom: 14,
     },
     radioLabel: {
         marginLeft: 2,

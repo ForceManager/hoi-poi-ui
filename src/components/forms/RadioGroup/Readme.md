@@ -4,15 +4,15 @@ Default
 let options = [
     {
         label: 'Lorem ipsum',
-        name: 'lorem',
+        value: 'lorem',
     },
     {
         label: 'Lorem ipsum 2',
-        name: 'lorem2',
+        value: 'lorem2',
     },
     {
         label: 'Lorem ipsum 3',
-        name: 'lorem3',
+        value: 'lorem3',
     },
 ];
 
@@ -26,15 +26,15 @@ Disabled
 let options = [
     {
         label: 'Lorem ipsum',
-        name: 'lorem',
+        value: 'lorem',
     },
     {
         label: 'Lorem ipsum 2',
-        name: 'lorem2',
+        value: 'lorem2',
     },
     {
         label: 'Lorem ipsum 3',
-        name: 'lorem3',
+        value: 'lorem3',
     },
 ];
 
@@ -54,15 +54,15 @@ Default vertical label
 let options = [
     {
         label: 'Lorem ipsum',
-        name: 'lorem',
+        value: 'lorem',
     },
     {
         label: 'Lorem ipsum 2',
-        name: 'lorem2',
+        value: 'lorem2',
     },
     {
         label: 'Lorem ipsum 3',
-        name: 'lorem3',
+        value: 'lorem3',
     },
 ];
 

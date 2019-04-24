@@ -43,11 +43,11 @@ function CheckboxGroup({
         ...override.Label,
     };
 
-    const onChange = (name) =>
+    const onChange = (v) =>
         useCallback(() => {
             props.onChange({
                 ...value,
-                [name]: !value[name],
+                [v]: !value[v],
             });
         }, [value]);
 
@@ -57,15 +57,12 @@ function CheckboxGroup({
             <div className={classes.formControl} {...override.formControl}>
                 {options.map((option) => (
                     <div
-                        key={option.name}
+                        key={option.value}
                         className={classes.checkboxControl}
+                        onClick={isReadOnly ? undefined : onChange(option.value)}
                         {...override.checkboxControl}
                     >
-                        <Checkbox
-                            onChange={onChange(option.name)}
-                            checked={value[option.name]}
-                            isDisabled={isReadOnly}
-                        />
+                        <Checkbox checked={value[option.value]} isDisabled={isReadOnly} />
                         <span className={classes.checkboxLabel} {...override.checkboxLabel}>
                             {option.label}
                         </span>
@@ -93,7 +90,7 @@ CheckboxGroup.propTypes = {
     options: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
-            name: PropTypes.string,
+            value: PropTypes.string,
         }),
     ),
     value: PropTypes.object,

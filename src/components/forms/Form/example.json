@@ -1,0 +1,148 @@
+[
+    {
+        "title": "General",
+        "fields": [
+            {
+                "label": "Name",
+                "name": "name",
+                "type": "text",
+                "placeholder": "Your name",
+                "isRequired": true
+            },
+            {
+                "label": "Email",
+                "name": "email",
+                "type": "text",
+                "placeholder": "Your email",
+                "hint": "No spam!",
+                "isReadOnly": true,
+                "attrs": {
+                    "type": "email"
+                }
+            },
+            {
+                "label": "Password",
+                "name": "password",
+                "type": "text",
+                "placeholder": "Your password",
+                "isRequired": true,
+                "attrs": {
+                    "type": "password"
+                }
+            },
+            {
+                "label": "Gender",
+                "name": "gender",
+                "type": "select",
+                "placeholder": "Select your gender",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Male",
+                            "value": "male"
+                        },
+                        {
+                            "label": "Female",
+                            "value": "female"
+                        },
+                        {
+                            "label": "Other",
+                            "value": "other"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Employment status",
+                "name": "employmentStatus",
+                "type": "radioGroup",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Employee",
+                            "value": "employee"
+                        },
+                        {
+                            "label": "Worker",
+                            "value": "worker"
+                        },
+                        {
+                            "label": "Self-employed",
+                            "value": "self-employed"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Interest",
+                "name": "interest",
+                "type": "slider"
+            }
+        ]
+    },
+    {
+        "title": "Contact details",
+        "fields": [
+            {
+                "label": "Address",
+                "name": "address",
+                "type": "text",
+                "placeholder": "Write an address"
+            },
+            {
+                "label": "Phone",
+                "name": "phone",
+                "type": "text",
+                "placeholder": "Write a phone"
+            },
+            {
+                "label": "Prefered way",
+                "name": "prefered-way",
+                "type": "checkboxGroup",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Email",
+                            "value": "email"
+                        },
+                        {
+                            "label": "Phone",
+                            "value": "phone"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "title": "Extra",
+        "fields": [
+            {
+                "name": "biography",
+                "type": "inputGroup",
+                "attrs": {
+                    "showInputsLabel": "Show translations",
+                    "hideInputsLabel": "Hide translations",
+                    "inputs": [
+                        {
+                            "label": "Biography",
+                            "value": "english"
+                        },
+                        {
+                            "label": "Spanish",
+                            "value": "spanish"
+                        },
+                        {
+                            "label": "French",
+                            "value": "french"
+                        },
+                        {
+                            "label": "Germany",
+                            "value": "germany"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
