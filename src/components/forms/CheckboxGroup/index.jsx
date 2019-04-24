@@ -13,6 +13,7 @@ function CheckboxGroup({
     className: classNameProp,
     classes,
     options,
+    onChange,
     value,
     label,
     labelMode,
@@ -43,13 +44,14 @@ function CheckboxGroup({
         ...override.Label,
     };
 
-    const onChange = (v) =>
+    const onChangeCheckbox = (v) =>
         useCallback(() => {
-            props.onChange({
-                ...value,
-                [v]: !value[v],
-            });
-        }, [value]);
+            onChange &&
+                onChange({
+                    ...value,
+                    [v]: !value[v],
+                });
+        }, [onChange, value]);
 
     return (
         <div {...rootProps}>
@@ -59,7 +61,7 @@ function CheckboxGroup({
                     <div
                         key={option.value}
                         className={classes.checkboxControl}
-                        onClick={isReadOnly ? undefined : onChange(option.value)}
+                        onClick={isReadOnly ? undefined : onChangeCheckbox(option.value)}
                         {...override.checkboxControl}
                     >
                         <Checkbox checked={value[option.value]} isDisabled={isReadOnly} />

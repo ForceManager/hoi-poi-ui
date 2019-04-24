@@ -1,16 +1,15 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import withStyles from 'react-jss';
 import { getOverrides } from '../../../utils/overrides';
-import {
-    withStyles,
-    Section,
-    Input,
-    InputGroup,
-    RadioGroup,
-    CheckboxGroup,
-    Select,
-    Slider,
-} from '../../../index';
+
+import Section from '../Section';
+import Input from '../Input';
+import InputGroup from '../InputGroup';
+import CheckboxGroup from '../CheckboxGroup';
+import RadioGroup from '../RadioGroup';
+import Select from '../Select';
+import Slider from '../Slider';
 
 import styles from './styles';
 
@@ -29,6 +28,7 @@ function Form({
     labelMode,
     isFullwidth,
     schema,
+    onChange,
     values,
     errors,
     ...props
@@ -36,12 +36,12 @@ function Form({
     // Overrides
     const override = getOverrides(overridesProp, Form.overrides);
 
-    const onChange = (field) =>
+    const onChangeField = (field) =>
         useCallback(
             (input) => {
                 const value = input && input.target ? input.target.value : input;
-                props.onChange &&
-                    props.onChange(
+                onChange &&
+                    onChange(
                         {
                             ...values,
                             [field.name]: value,
@@ -50,7 +50,7 @@ function Form({
                         value,
                     );
             },
-            [field],
+            [values, onChange],
         );
 
     return (
@@ -65,7 +65,7 @@ function Form({
                             key: field.name,
                             labelMode: field.labelMode || labelMode,
                             isFullwidth: field.isFullwidth || isFullwidth,
-                            onChange: onChange(field),
+                            onChange: onChangeField(field),
                             value: values[field.name],
                             error: errors[field.name],
                         };

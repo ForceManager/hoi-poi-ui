@@ -118,8 +118,8 @@ export default (theme) => ({
     postCloseComponent: {
         '& span': {
             cursor: 'pointer',
-            width: 10,
-            height: 10,
+            width: 8,
+            height: 8,
         },
     },
 });

@@ -78,7 +78,7 @@ function Input({
     };
 
     // Remove content post component
-    const postComponentClick = useCallback(() => onChange(), []);
+    const postComponentClick = useCallback(() => onChange(), [onChange]);
     let renderedPostComponent = postComponent;
 
     if (value && !isReadOnly) {
