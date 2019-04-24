@@ -10,7 +10,8 @@ import {
     CheckboxGroup,
     Select,
     Slider,
-} from 'hoi-poi-ui';
+} from '../../../index';
+
 import styles from './styles';
 
 const FIELD_MAP = {
