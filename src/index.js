@@ -3,7 +3,7 @@ export { default as withStyles } from 'react-jss';
 export { HoiPoiProvider, createHoiPoiTheme } from './utils/styles';
 
 // Components
-
+export { default as Badge } from './components/general/Badge';
 export { default as Button } from './components/general/Button';
 export { default as Loader } from './components/general/Loader';
 export { default as Drawer } from './components/general/Drawer';
