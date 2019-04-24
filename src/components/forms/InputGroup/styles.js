@@ -25,4 +25,7 @@ export default (theme) => ({
             width: '460px',
         },
     },
+    hidden: {
+        display: 'none',
+    },
 });

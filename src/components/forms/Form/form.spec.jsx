@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Form from './index.jsx';
+import Form from './index';
 import schema from './example.json';
 
 describe('Form', () => {

@@ -13,6 +13,7 @@ function RadioGroup({
     className: classNameProp,
     classes,
     options,
+    onChange,
     value,
     label,
     labelMode,
@@ -43,10 +44,10 @@ function RadioGroup({
         ...override.Label,
     };
 
-    const onChange = (value) =>
+    const onChangeRadio = (value) =>
         useCallback(() => {
-            props.onChange(value);
-        }, [value]);
+            onChange(value);
+        }, [onChange, value]);
 
     return (
         <div {...rootProps}>
@@ -56,7 +57,7 @@ function RadioGroup({
                     <div
                         key={option.value}
                         className={classes.radioControl}
-                        onClick={isReadOnly ? undefined : onChange(option.value)}
+                        onClick={isReadOnly ? undefined : onChangeRadio(option.value)}
                         {...override.radioControl}
                     >
                         <Radio checked={value === option.value} isDisabled={isReadOnly} />

@@ -31,6 +31,10 @@ function InputGroup({
     hideInputsLabel,
     ...props
 }) {
+    // State && Callbacks
+    const [showInputs, setShowInputs] = useState(false);
+    const onLinkClick = useCallback(() => setShowInputs(!showInputs), [showInputs]);
+
     // Overrides
     const override = getOverrides(overridesProp, InputGroup.overrides);
 
@@ -44,24 +48,23 @@ function InputGroup({
         classNameProp,
     );
 
+    const inputsControlClassName = classnames(classes.inputsControl, {
+        [classes.hidden]: !showInputs,
+    });
+
     const rootProps = { className: rootClassName };
 
-    // State && Callbacks
-    const [showInputs, setShowInputs] = useState(false);
-    const onLinkClick = useCallback(() => setShowInputs(!showInputs), [showInputs]);
-
-    // Creating all onChange callbacks
-    const onChanges = inputs.reduce((callbacks, input) => {
-        callbacks[input.name] = useCallback(
-            (e) =>
-                onChange({
-                    ...value,
-                    [input.name]: e && e.target ? e.target.value : '',
-                }),
-            [value],
+    const onChangeInput = (input) =>
+        useCallback(
+            (e) => {
+                onChange &&
+                    onChange({
+                        ...value,
+                        [input.name]: e && e.target ? e.target.value : '',
+                    });
+            },
+            [value, onChange],
         );
-        return callbacks;
-    }, {});
 
     // Principal inputs
     const inputProps = {
@@ -77,7 +80,7 @@ function InputGroup({
         isReadOnly,
         label: inputs[0].label,
         value: value[inputs[0].name],
-        onChange: onChanges[inputs[0].name],
+        onChange: onChangeInput(inputs[0]),
         className: classes.Input,
         ...override.Input,
     };
@@ -103,22 +106,19 @@ function InputGroup({
                     {showInputs ? hideInputsLabel : showInputsLabel}
                 </Link>
             </div>
-            {showInputs && (
-                <div className={classes.inputsControl} {...override.inputsControl}>
-                    {hiddenInputs.map((input) => (
-                        <Input
-                            key={input.name}
-                            id={`${id}-${input.name}`}
-                            name={`${name}-${input.name}`}
-                            label={input.label}
-                            value={value[input.name]}
-                            onChange={onChanges[input.name]}
-                            overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
-                            {...inputsProps}
-                        />
-                    ))}
-                </div>
-            )}
+            <div className={inputsControlClassName} {...override.inputsControl}>
+                {hiddenInputs.map((input) => (
+                    <Input
+                        key={input.name}
+                        name={input.name}
+                        label={input.label}
+                        value={value[input.name]}
+                        onChange={onChangeInput(input)}
+                        overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
+                        {...inputsProps}
+                    />
+                ))}
+            </div>
         </div>
     );
 }

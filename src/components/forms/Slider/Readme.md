@@ -1,10 +1,7 @@
 Default:
 
 ```jsx
-const onChange = (value) => {
-    console.log(value);
-    setState({ value });
-};
+const onChange = (value) => setState({ value });
 <div>
     <Slider label="Lorem ipsum" onChange={onChange} value={state.value} />
     <Slider label="Lorem ipsum" onChange={onChange} value={state.value} isReadOnly />
