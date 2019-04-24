@@ -39,7 +39,11 @@ function Link({
             </a>
         );
     } else {
-        return <button {...rootProps}>{children}</button>;
+        return (
+            <button {...rootProps} type="button">
+                {children}
+            </button>
+        );
     }
 }
 

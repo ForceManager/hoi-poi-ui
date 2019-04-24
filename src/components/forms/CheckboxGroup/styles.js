@@ -11,11 +11,13 @@ export default (theme) => ({
         flexDirection: 'column',
         width: 290,
         padding: '5px 0',
+        cursor: 'pointer',
     },
     checkboxControl: {
         display: 'flex',
         alignItems: 'center',
-        marginBottom: 20,
+        lineHeight: '20px',
+        marginBottom: 14,
     },
     checkboxLabel: {
         marginLeft: 2,
@@ -24,6 +26,7 @@ export default (theme) => ({
     },
     isReadOnly: {
         '& $formControl': {
+            cursor: 'not-allowed',
             '&::before': {
                 borderBottom: `1px solid ${theme.colors.lines}`,
             },

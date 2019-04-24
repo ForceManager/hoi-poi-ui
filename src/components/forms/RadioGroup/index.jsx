@@ -43,9 +43,9 @@ function RadioGroup({
         ...override.Label,
     };
 
-    const onChange = (name) =>
+    const onChange = (value) =>
         useCallback(() => {
-            props.onChange(name);
+            props.onChange(value);
         }, [value]);
 
     return (
@@ -54,12 +54,12 @@ function RadioGroup({
             <div className={classes.formControl} {...override.formControl}>
                 {options.map((option) => (
                     <div
-                        key={option.name}
+                        key={option.value}
                         className={classes.radioControl}
-                        onClick={isReadOnly ? undefined : onChange(option.name)}
+                        onClick={isReadOnly ? undefined : onChange(option.value)}
                         {...override.radioControl}
                     >
-                        <Radio checked={value === option.name} isDisabled={isReadOnly} />
+                        <Radio checked={value === option.value} isDisabled={isReadOnly} />
                         <span className={classes.radioLabel} {...override.radioLabel}>
                             {option.label}
                         </span>
@@ -87,7 +87,7 @@ RadioGroup.propTypes = {
     options: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
-            name: PropTypes.string,
+            value: PropTypes.string,
         }),
     ),
     value: PropTypes.string,

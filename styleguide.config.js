@@ -25,6 +25,7 @@ module.exports = {
             components: [
                 './src/components/forms/Checkbox/index.jsx',
                 './src/components/forms/CheckboxGroup/index.jsx',
+                './src/components/forms/Form/index.jsx',
                 './src/components/forms/Input/index.jsx',
                 './src/components/forms/InputGroup/index.jsx',
                 './src/components/forms/Label/index.jsx',
