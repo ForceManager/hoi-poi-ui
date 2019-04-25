@@ -10,12 +10,18 @@ import Chevron from './icons/Chevron';
 import Info from './icons/Info';
 import Close from './icons/Close';
 import Lock from './icons/Lock';
+import ThickEnabled from './icons/ThickEnabled';
+import Warning from './icons/Warning';
+import WarningRounded from './icons/WarningRounded';
 
 const ICONS = {
     chevron: Chevron,
     info: Info,
     close: Close,
     lock: Lock,
+    thickEnabled: ThickEnabled,
+    warning: Warning,
+    warningRounded: WarningRounded,
 };
 
 function Icon({

@@ -20,6 +20,11 @@ const softKiwi = '#e7f1d5';
 const kiwi = '#86AD20';
 const softRaspBerry = '#FAE7E7';
 const raspBerry = '#F04540';
+const lightIndonesia = '#AADFE7';
+const softIndonesia = '#D6EEF2';
+const indonesia = '#00A8Be';
+const softBanana = '#FFF9DD';
+const banana = '#E9B200';
 
 const primary = '#FF8C00';
 const primaryDark = '#C87600';
@@ -61,6 +66,11 @@ export default {
         raspBerry,
         stone,
         snow,
+        lightIndonesia,
+        softIndonesia,
+        indonesia,
+        softBanana,
+        banana,
         primary,
         primaryDark,
         primaryLight,
@@ -80,6 +90,8 @@ export default {
             kiwi,
             stone,
             raspBerry,
+            indonesia,
+            banana,
         },
         overlay,
         shadow,
