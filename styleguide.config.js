@@ -10,6 +10,7 @@ module.exports = {
             description: 'General and global components',
             sectionDepth: 0,
             components: [
+                './src/components/general/Advice/index.jsx',
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/Button/index.jsx',
                 './src/components/general/Drawer/index.jsx',
