@@ -9,6 +9,18 @@ Icons:
 <span> </span>
 <Icon name="lock" />
 <span> </span>
+<Icon name="thickEnabled" />
+<span> </span>
+<Icon name="warning" />
+<span> </span>
+<Icon name="warningRounded" />
+<span> </span>
+<Icon name="drag" />
+<span> </span>
+<Icon name="trash" />
+<span> </span>
+<Icon name="edit" />
+<span> </span>
 ```
 
 Sizes:

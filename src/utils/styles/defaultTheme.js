@@ -40,6 +40,9 @@ const dangerLight = '#FF544F';
 
 const link = '#216db3';
 const linkDark = '#174a79';
+
+const tableHeader = '#f6f7f9';
+const tableHover = '#FAFBFC';
 //Text
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
@@ -82,6 +85,8 @@ export default {
         dangerLight,
         link,
         linkDark,
+        tableHeader,
+        tableHover,
         text: {
             default: grey,
             black: textBlack,

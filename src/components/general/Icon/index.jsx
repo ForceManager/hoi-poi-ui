@@ -13,6 +13,9 @@ import Lock from './icons/Lock';
 import ThickEnabled from './icons/ThickEnabled';
 import Warning from './icons/Warning';
 import WarningRounded from './icons/WarningRounded';
+import Drag from './icons/Drag';
+import Edit from './icons/Edit';
+import Trash from './icons/Trash';
 
 const ICONS = {
     chevron: Chevron,
@@ -22,6 +25,9 @@ const ICONS = {
     thickEnabled: ThickEnabled,
     warning: Warning,
     warningRounded: WarningRounded,
+    drag: Drag,
+    edit: Edit,
+    trash: Trash,
 };
 
 function Icon({
