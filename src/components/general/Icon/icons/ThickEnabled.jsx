@@ -9,7 +9,7 @@ function ThickEnabled({ color, ...props }) {
                     id="icon-thick-enabled"
                 />
             </defs>
-            <g stroke="none" strokeWdth="1" fill="none" fillRule="evenodd">
+            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <mask id="mask-2" fill="white">
                     <use xlinkHref="#icon-thick-enabled" />
                 </mask>
