@@ -9,8 +9,8 @@ import { createFilter } from './utils'; // Local utils
 
 import ClearIndicator from './ClearIndicator';
 import DropdownIndicator from './DropdownIndicator';
-import MenuList from './MenuList';
 import Menu from './Menu';
+import MenuList from './MenuList';
 
 import Label from '../Label';
 import styles from './styles';
@@ -96,11 +96,8 @@ function Select({
         components: {
             ClearIndicator,
             DropdownIndicator,
-            MenuList: useMemo(
-                () => MenuList(menuListClassName, classes.action, actions, onClickAction),
-                [],
-            ),
-            Menu: useMemo(() => Menu(menuClassName), []),
+            MenuList: useMemo(() => MenuList(menuListClassName), []),
+            Menu: useMemo(() => Menu(menuClassName, classes.action, actions, onClickAction), []),
             ...components,
         },
         filterOption: createFilter,

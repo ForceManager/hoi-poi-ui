@@ -153,6 +153,7 @@ export default (theme) => ({
         borderRadius: 0,
         paddingTop: '0 !important',
         paddingBottom: '0 !important',
+        overflow: 'hidden',
         '& .hoi-poi-select__group': {
             padding: '10px 0',
             borderTop: '1px solid',
@@ -210,6 +211,9 @@ export default (theme) => ({
     action: {
         borderTop: '1px solid',
         borderTopColor: theme.colors.lines,
+        '& .hoi-poi-select__action': {
+            width: '100%',
+        },
         '& button': {
             padding: '15px 20px',
         },
