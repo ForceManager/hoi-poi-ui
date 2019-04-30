@@ -5675,10 +5675,12 @@ exports[`Form complete match 1`] = `
                                   classes={
                                     Object {
                                       "Label": "HoiPoi-Select-Label-0-2-31",
+                                      "action": "HoiPoi-Select-action-0-2-44",
                                       "error": "HoiPoi-Select-error-0-2-32",
                                       "errored": "HoiPoi-Select-errored-0-2-34",
                                       "focused": "HoiPoi-Select-focused-0-2-36",
                                       "formControl": "HoiPoi-Select-formControl-0-2-33",
+                                      "group": "HoiPoi-Select-group-0-2-43",
                                       "horizontal": "HoiPoi-Select-horizontal-0-2-38",
                                       "isFullWidth": "HoiPoi-Select-isFullWidth-0-2-39",
                                       "isReadOnly": "HoiPoi-Select-isReadOnly-0-2-35",
@@ -6050,6 +6052,7 @@ exports[`Form complete match 1`] = `
                                         defaultMenuIsOpen={false}
                                         defaultValue={null}
                                         filterOption={[Function]}
+                                        formatGroupLabel={[Function]}
                                         getOptionValue={[Function]}
                                         hideSelectedOptions={true}
                                         isClearable={true}
@@ -6304,7 +6307,7 @@ exports[`Form complete match 1`] = `
                                             }
                                           >
                                             <div
-                                              className="css-10nd86i HoiPoi-Select-select-0-2-40"
+                                              className="css-1pcexqc-container HoiPoi-Select-select-0-2-40"
                                               onKeyDown={[Function]}
                                             >
                                               <Control
@@ -6449,7 +6452,7 @@ exports[`Form complete match 1`] = `
                                                 }
                                               >
                                                 <div
-                                                  className="css-vj8t7z hoi-poi-select__control"
+                                                  className="css-bg1rzq-control hoi-poi-select__control"
                                                   onMouseDown={[Function]}
                                                   onTouchEnd={[Function]}
                                                 >
@@ -6723,7 +6726,7 @@ exports[`Form complete match 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="css-1492t68 hoi-poi-select__placeholder"
+                                                          className="css-151xaom-placeholder hoi-poi-select__placeholder"
                                                         >
                                                           Select your gender
                                                         </div>
@@ -6870,6 +6873,7 @@ exports[`Form complete match 1`] = `
                                                                 "border": 0,
                                                                 "color": "inherit",
                                                                 "fontSize": "inherit",
+                                                                "label": "input",
                                                                 "opacity": 1,
                                                                 "outline": 0,
                                                                 "padding": 0,
@@ -6910,6 +6914,7 @@ exports[`Form complete match 1`] = `
                                                                     "boxSizing": "content-box",
                                                                     "color": "inherit",
                                                                     "fontSize": "inherit",
+                                                                    "label": "input",
                                                                     "opacity": 1,
                                                                     "outline": 0,
                                                                     "padding": 0,
@@ -7208,7 +7213,7 @@ exports[`Form complete match 1`] = `
                                                         }
                                                       >
                                                         <span
-                                                          className="css-d8oujb hoi-poi-select__indicator-separator"
+                                                          className="css-bgvzuu-indicatorSeparator hoi-poi-select__indicator-separator"
                                                         />
                                                       </IndicatorSeparator>
                                                       <Component
@@ -7493,7 +7498,7 @@ exports[`Form complete match 1`] = `
                                                         >
                                                           <div
                                                             aria-hidden="true"
-                                                            className="css-1ep9fjw hoi-poi-select__indicator hoi-poi-select__dropdown-indicator"
+                                                            className="css-16pqwjk-indicatorContainer hoi-poi-select__indicator hoi-poi-select__dropdown-indicator"
                                                             onMouseDown={[Function]}
                                                             onTouchEnd={[Function]}
                                                           >
@@ -8335,14 +8340,14 @@ exports[`Form complete match 1`] = `
                                   }
                                   classes={
                                     Object {
-                                      "Label": "HoiPoi-RadioGroup-Label-0-2-44",
-                                      "formControl": "HoiPoi-RadioGroup-formControl-0-2-45",
-                                      "horizontal": "HoiPoi-RadioGroup-horizontal-0-2-50",
-                                      "isReadOnly": "HoiPoi-RadioGroup-isReadOnly-0-2-48",
-                                      "radioControl": "HoiPoi-RadioGroup-radioControl-0-2-46",
-                                      "radioLabel": "HoiPoi-RadioGroup-radioLabel-0-2-47",
-                                      "root": "HoiPoi-RadioGroup-root-0-2-43",
-                                      "vertical": "HoiPoi-RadioGroup-vertical-0-2-49",
+                                      "Label": "HoiPoi-RadioGroup-Label-0-2-46",
+                                      "formControl": "HoiPoi-RadioGroup-formControl-0-2-47",
+                                      "horizontal": "HoiPoi-RadioGroup-horizontal-0-2-52",
+                                      "isReadOnly": "HoiPoi-RadioGroup-isReadOnly-0-2-50",
+                                      "radioControl": "HoiPoi-RadioGroup-radioControl-0-2-48",
+                                      "radioLabel": "HoiPoi-RadioGroup-radioLabel-0-2-49",
+                                      "root": "HoiPoi-RadioGroup-root-0-2-45",
+                                      "vertical": "HoiPoi-RadioGroup-vertical-0-2-51",
                                     }
                                   }
                                   isReadOnly={false}
@@ -8370,13 +8375,13 @@ exports[`Form complete match 1`] = `
                                   value={null}
                                 >
                                   <div
-                                    className="HoiPoi-RadioGroup-root-0-2-43 HoiPoi-RadioGroup-horizontal-0-2-50"
+                                    className="HoiPoi-RadioGroup-root-0-2-45 HoiPoi-RadioGroup-horizontal-0-2-52"
                                   >
                                     <JssContextSubscriber
-                                      className="HoiPoi-RadioGroup-Label-0-2-44"
+                                      className="HoiPoi-RadioGroup-Label-0-2-46"
                                     >
                                       <WithStyles(Label)
-                                        className="HoiPoi-RadioGroup-Label-0-2-44"
+                                        className="HoiPoi-RadioGroup-Label-0-2-46"
                                         innerRef={null}
                                         jssContext={
                                           Object {
@@ -8663,7 +8668,7 @@ exports[`Form complete match 1`] = `
                                         }
                                       >
                                         <Label
-                                          className="HoiPoi-RadioGroup-Label-0-2-44"
+                                          className="HoiPoi-RadioGroup-Label-0-2-46"
                                           classes={
                                             Object {
                                               "icon": "HoiPoi-Label-icon-0-2-28",
@@ -8674,7 +8679,7 @@ exports[`Form complete match 1`] = `
                                           }
                                         >
                                           <span
-                                            className="HoiPoi-Label-root-0-2-25 HoiPoi-RadioGroup-Label-0-2-44"
+                                            className="HoiPoi-Label-root-0-2-25 HoiPoi-RadioGroup-Label-0-2-46"
                                           >
                                             <span
                                               className="HoiPoi-Label-text-0-2-26"
@@ -8686,10 +8691,10 @@ exports[`Form complete match 1`] = `
                                       </WithStyles(Label)>
                                     </JssContextSubscriber>
                                     <div
-                                      className="HoiPoi-RadioGroup-formControl-0-2-45"
+                                      className="HoiPoi-RadioGroup-formControl-0-2-47"
                                     >
                                       <div
-                                        className="HoiPoi-RadioGroup-radioControl-0-2-46"
+                                        className="HoiPoi-RadioGroup-radioControl-0-2-48"
                                         key="employee"
                                         onClick={[Function]}
                                       >
@@ -8990,16 +8995,16 @@ exports[`Form complete match 1`] = `
                                               checked={false}
                                               classes={
                                                 Object {
-                                                  "disabled": "HoiPoi-Radio-disabled-0-2-53",
-                                                  "input": "HoiPoi-Radio-input-0-2-52",
-                                                  "root": "HoiPoi-Radio-root-0-2-51",
+                                                  "disabled": "HoiPoi-Radio-disabled-0-2-55",
+                                                  "input": "HoiPoi-Radio-input-0-2-54",
+                                                  "root": "HoiPoi-Radio-root-0-2-53",
                                                 }
                                               }
                                               isDisabled={false}
                                               onChange={[Function]}
                                             >
                                               <div
-                                                className="HoiPoi-Radio-root-0-2-51"
+                                                className="HoiPoi-Radio-root-0-2-53"
                                                 onClick={[Function]}
                                               >
                                                 <WithTheme(Unknown)>
@@ -9127,7 +9132,7 @@ exports[`Form complete match 1`] = `
                                                 </WithTheme(Unknown)>
                                                 <input
                                                   checked=""
-                                                  className="HoiPoi-Radio-input-0-2-52"
+                                                  className="HoiPoi-Radio-input-0-2-54"
                                                   disabled=""
                                                   onChange={[Function]}
                                                   type="radio"
@@ -9137,13 +9142,13 @@ exports[`Form complete match 1`] = `
                                           </WithStyles(Radio)>
                                         </JssContextSubscriber>
                                         <span
-                                          className="HoiPoi-RadioGroup-radioLabel-0-2-47"
+                                          className="HoiPoi-RadioGroup-radioLabel-0-2-49"
                                         >
                                           Employee
                                         </span>
                                       </div>
                                       <div
-                                        className="HoiPoi-RadioGroup-radioControl-0-2-46"
+                                        className="HoiPoi-RadioGroup-radioControl-0-2-48"
                                         key="worker"
                                         onClick={[Function]}
                                       >
@@ -9444,16 +9449,16 @@ exports[`Form complete match 1`] = `
                                               checked={false}
                                               classes={
                                                 Object {
-                                                  "disabled": "HoiPoi-Radio-disabled-0-2-53",
-                                                  "input": "HoiPoi-Radio-input-0-2-52",
-                                                  "root": "HoiPoi-Radio-root-0-2-51",
+                                                  "disabled": "HoiPoi-Radio-disabled-0-2-55",
+                                                  "input": "HoiPoi-Radio-input-0-2-54",
+                                                  "root": "HoiPoi-Radio-root-0-2-53",
                                                 }
                                               }
                                               isDisabled={false}
                                               onChange={[Function]}
                                             >
                                               <div
-                                                className="HoiPoi-Radio-root-0-2-51"
+                                                className="HoiPoi-Radio-root-0-2-53"
                                                 onClick={[Function]}
                                               >
                                                 <WithTheme(Unknown)>
@@ -9581,7 +9586,7 @@ exports[`Form complete match 1`] = `
                                                 </WithTheme(Unknown)>
                                                 <input
                                                   checked=""
-                                                  className="HoiPoi-Radio-input-0-2-52"
+                                                  className="HoiPoi-Radio-input-0-2-54"
                                                   disabled=""
                                                   onChange={[Function]}
                                                   type="radio"
@@ -9591,13 +9596,13 @@ exports[`Form complete match 1`] = `
                                           </WithStyles(Radio)>
                                         </JssContextSubscriber>
                                         <span
-                                          className="HoiPoi-RadioGroup-radioLabel-0-2-47"
+                                          className="HoiPoi-RadioGroup-radioLabel-0-2-49"
                                         >
                                           Worker
                                         </span>
                                       </div>
                                       <div
-                                        className="HoiPoi-RadioGroup-radioControl-0-2-46"
+                                        className="HoiPoi-RadioGroup-radioControl-0-2-48"
                                         key="self-employed"
                                         onClick={[Function]}
                                       >
@@ -9898,16 +9903,16 @@ exports[`Form complete match 1`] = `
                                               checked={false}
                                               classes={
                                                 Object {
-                                                  "disabled": "HoiPoi-Radio-disabled-0-2-53",
-                                                  "input": "HoiPoi-Radio-input-0-2-52",
-                                                  "root": "HoiPoi-Radio-root-0-2-51",
+                                                  "disabled": "HoiPoi-Radio-disabled-0-2-55",
+                                                  "input": "HoiPoi-Radio-input-0-2-54",
+                                                  "root": "HoiPoi-Radio-root-0-2-53",
                                                 }
                                               }
                                               isDisabled={false}
                                               onChange={[Function]}
                                             >
                                               <div
-                                                className="HoiPoi-Radio-root-0-2-51"
+                                                className="HoiPoi-Radio-root-0-2-53"
                                                 onClick={[Function]}
                                               >
                                                 <WithTheme(Unknown)>
@@ -10035,7 +10040,7 @@ exports[`Form complete match 1`] = `
                                                 </WithTheme(Unknown)>
                                                 <input
                                                   checked=""
-                                                  className="HoiPoi-Radio-input-0-2-52"
+                                                  className="HoiPoi-Radio-input-0-2-54"
                                                   disabled=""
                                                   onChange={[Function]}
                                                   type="radio"
@@ -10045,7 +10050,7 @@ exports[`Form complete match 1`] = `
                                           </WithStyles(Radio)>
                                         </JssContextSubscriber>
                                         <span
-                                          className="HoiPoi-RadioGroup-radioLabel-0-2-47"
+                                          className="HoiPoi-RadioGroup-radioLabel-0-2-49"
                                         >
                                           Self-employed
                                         </span>
@@ -10362,19 +10367,19 @@ exports[`Form complete match 1`] = `
                                 <Slider
                                   classes={
                                     Object {
-                                      "Label": "HoiPoi-Slider-Label-0-2-55",
-                                      "error": "HoiPoi-Slider-error-0-2-56",
-                                      "errored": "HoiPoi-Slider-errored-0-2-58",
-                                      "formControl": "HoiPoi-Slider-formControl-0-2-57",
-                                      "horizontal": "HoiPoi-Slider-horizontal-0-2-60",
-                                      "isFullWidth": "HoiPoi-Slider-isFullWidth-0-2-61",
-                                      "isReadOnly": "HoiPoi-Slider-isReadOnly-0-2-66",
-                                      "overlay": "HoiPoi-Slider-overlay-0-2-63",
-                                      "overlayHandler": "HoiPoi-Slider-overlayHandler-0-2-64",
-                                      "overlayLabel": "HoiPoi-Slider-overlayLabel-0-2-65",
-                                      "root": "HoiPoi-Slider-root-0-2-54",
-                                      "slider": "HoiPoi-Slider-slider-0-2-62",
-                                      "vertical": "HoiPoi-Slider-vertical-0-2-59",
+                                      "Label": "HoiPoi-Slider-Label-0-2-57",
+                                      "error": "HoiPoi-Slider-error-0-2-58",
+                                      "errored": "HoiPoi-Slider-errored-0-2-60",
+                                      "formControl": "HoiPoi-Slider-formControl-0-2-59",
+                                      "horizontal": "HoiPoi-Slider-horizontal-0-2-62",
+                                      "isFullWidth": "HoiPoi-Slider-isFullWidth-0-2-63",
+                                      "isReadOnly": "HoiPoi-Slider-isReadOnly-0-2-68",
+                                      "overlay": "HoiPoi-Slider-overlay-0-2-65",
+                                      "overlayHandler": "HoiPoi-Slider-overlayHandler-0-2-66",
+                                      "overlayLabel": "HoiPoi-Slider-overlayLabel-0-2-67",
+                                      "root": "HoiPoi-Slider-root-0-2-56",
+                                      "slider": "HoiPoi-Slider-slider-0-2-64",
+                                      "vertical": "HoiPoi-Slider-vertical-0-2-61",
                                     }
                                   }
                                   isReadOnly={false}
@@ -10389,13 +10394,13 @@ exports[`Form complete match 1`] = `
                                   value={0}
                                 >
                                   <div
-                                    className="HoiPoi-Slider-root-0-2-54 HoiPoi-Slider-horizontal-0-2-60"
+                                    className="HoiPoi-Slider-root-0-2-56 HoiPoi-Slider-horizontal-0-2-62"
                                   >
                                     <JssContextSubscriber
-                                      className="HoiPoi-Slider-Label-0-2-55"
+                                      className="HoiPoi-Slider-Label-0-2-57"
                                     >
                                       <WithStyles(Label)
-                                        className="HoiPoi-Slider-Label-0-2-55"
+                                        className="HoiPoi-Slider-Label-0-2-57"
                                         innerRef={null}
                                         jssContext={
                                           Object {
@@ -10682,7 +10687,7 @@ exports[`Form complete match 1`] = `
                                         }
                                       >
                                         <Label
-                                          className="HoiPoi-Slider-Label-0-2-55"
+                                          className="HoiPoi-Slider-Label-0-2-57"
                                           classes={
                                             Object {
                                               "icon": "HoiPoi-Label-icon-0-2-28",
@@ -10693,7 +10698,7 @@ exports[`Form complete match 1`] = `
                                           }
                                         >
                                           <span
-                                            className="HoiPoi-Label-root-0-2-25 HoiPoi-Slider-Label-0-2-55"
+                                            className="HoiPoi-Label-root-0-2-25 HoiPoi-Slider-Label-0-2-57"
                                           >
                                             <span
                                               className="HoiPoi-Label-text-0-2-26"
@@ -10705,11 +10710,11 @@ exports[`Form complete match 1`] = `
                                       </WithStyles(Label)>
                                     </JssContextSubscriber>
                                     <div
-                                      className="HoiPoi-Slider-formControl-0-2-57"
+                                      className="HoiPoi-Slider-formControl-0-2-59"
                                     >
                                       <ComponentEnhancer(undefined)
                                         activeDotStyle={Object {}}
-                                        className="HoiPoi-Slider-slider-0-2-62"
+                                        className="HoiPoi-Slider-slider-0-2-64"
                                         defaultValue={0}
                                         disabled={false}
                                         dotStyle={Object {}}
@@ -10739,7 +10744,7 @@ exports[`Form complete match 1`] = `
                                         vertical={false}
                                       >
                                         <div
-                                          className="rc-slider HoiPoi-Slider-slider-0-2-62"
+                                          className="rc-slider HoiPoi-Slider-slider-0-2-64"
                                           onBlur={[Function]}
                                           onFocus={[Function]}
                                           onKeyDown={[Function]}
@@ -10788,10 +10793,10 @@ exports[`Form complete match 1`] = `
                                             />
                                           </Steps>
                                           <div
-                                            className="HoiPoi-Slider-overlay-0-2-63"
+                                            className="HoiPoi-Slider-overlay-0-2-65"
                                           >
                                             <span
-                                              className="HoiPoi-Slider-overlayLabel-0-2-65"
+                                              className="HoiPoi-Slider-overlayLabel-0-2-67"
                                               style={
                                                 Object {
                                                   "left": "0%",
@@ -10801,7 +10806,7 @@ exports[`Form complete match 1`] = `
                                               0
                                             </span>
                                             <Handle
-                                              className="HoiPoi-Slider-overlayHandler-0-2-64"
+                                              className="HoiPoi-Slider-overlayHandler-0-2-66"
                                               disabled={false}
                                               dragging="false"
                                               index={0}
@@ -10818,7 +10823,7 @@ exports[`Form complete match 1`] = `
                                                 aria-valuemax={100}
                                                 aria-valuemin={0}
                                                 aria-valuenow={0}
-                                                className="HoiPoi-Slider-overlayHandler-0-2-64"
+                                                className="HoiPoi-Slider-overlayHandler-0-2-66"
                                                 dragging="false"
                                                 index={0}
                                                 onBlur={[Function]}
@@ -13356,14 +13361,14 @@ exports[`Form complete match 1`] = `
                                   }
                                   classes={
                                     Object {
-                                      "Label": "HoiPoi-CheckboxGroup-Label-0-2-68",
-                                      "checkboxControl": "HoiPoi-CheckboxGroup-checkboxControl-0-2-70",
-                                      "checkboxLabel": "HoiPoi-CheckboxGroup-checkboxLabel-0-2-71",
-                                      "formControl": "HoiPoi-CheckboxGroup-formControl-0-2-69",
-                                      "horizontal": "HoiPoi-CheckboxGroup-horizontal-0-2-74",
-                                      "isReadOnly": "HoiPoi-CheckboxGroup-isReadOnly-0-2-72",
-                                      "root": "HoiPoi-CheckboxGroup-root-0-2-67",
-                                      "vertical": "HoiPoi-CheckboxGroup-vertical-0-2-73",
+                                      "Label": "HoiPoi-CheckboxGroup-Label-0-2-70",
+                                      "checkboxControl": "HoiPoi-CheckboxGroup-checkboxControl-0-2-72",
+                                      "checkboxLabel": "HoiPoi-CheckboxGroup-checkboxLabel-0-2-73",
+                                      "formControl": "HoiPoi-CheckboxGroup-formControl-0-2-71",
+                                      "horizontal": "HoiPoi-CheckboxGroup-horizontal-0-2-76",
+                                      "isReadOnly": "HoiPoi-CheckboxGroup-isReadOnly-0-2-74",
+                                      "root": "HoiPoi-CheckboxGroup-root-0-2-69",
+                                      "vertical": "HoiPoi-CheckboxGroup-vertical-0-2-75",
                                     }
                                   }
                                   isReadOnly={false}
@@ -13387,13 +13392,13 @@ exports[`Form complete match 1`] = `
                                   value={Object {}}
                                 >
                                   <div
-                                    className="HoiPoi-CheckboxGroup-root-0-2-67 HoiPoi-CheckboxGroup-horizontal-0-2-74"
+                                    className="HoiPoi-CheckboxGroup-root-0-2-69 HoiPoi-CheckboxGroup-horizontal-0-2-76"
                                   >
                                     <JssContextSubscriber
-                                      className="HoiPoi-CheckboxGroup-Label-0-2-68"
+                                      className="HoiPoi-CheckboxGroup-Label-0-2-70"
                                     >
                                       <WithStyles(Label)
-                                        className="HoiPoi-CheckboxGroup-Label-0-2-68"
+                                        className="HoiPoi-CheckboxGroup-Label-0-2-70"
                                         innerRef={null}
                                         jssContext={
                                           Object {
@@ -13680,7 +13685,7 @@ exports[`Form complete match 1`] = `
                                         }
                                       >
                                         <Label
-                                          className="HoiPoi-CheckboxGroup-Label-0-2-68"
+                                          className="HoiPoi-CheckboxGroup-Label-0-2-70"
                                           classes={
                                             Object {
                                               "icon": "HoiPoi-Label-icon-0-2-28",
@@ -13691,7 +13696,7 @@ exports[`Form complete match 1`] = `
                                           }
                                         >
                                           <span
-                                            className="HoiPoi-Label-root-0-2-25 HoiPoi-CheckboxGroup-Label-0-2-68"
+                                            className="HoiPoi-Label-root-0-2-25 HoiPoi-CheckboxGroup-Label-0-2-70"
                                           >
                                             <span
                                               className="HoiPoi-Label-text-0-2-26"
@@ -13703,10 +13708,10 @@ exports[`Form complete match 1`] = `
                                       </WithStyles(Label)>
                                     </JssContextSubscriber>
                                     <div
-                                      className="HoiPoi-CheckboxGroup-formControl-0-2-69"
+                                      className="HoiPoi-CheckboxGroup-formControl-0-2-71"
                                     >
                                       <div
-                                        className="HoiPoi-CheckboxGroup-checkboxControl-0-2-70"
+                                        className="HoiPoi-CheckboxGroup-checkboxControl-0-2-72"
                                         key="email"
                                         onClick={[Function]}
                                       >
@@ -14004,16 +14009,16 @@ exports[`Form complete match 1`] = `
                                             <Checkbox
                                               classes={
                                                 Object {
-                                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-77",
-                                                  "input": "HoiPoi-Checkbox-input-0-2-76",
-                                                  "root": "HoiPoi-Checkbox-root-0-2-75",
+                                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-79",
+                                                  "input": "HoiPoi-Checkbox-input-0-2-78",
+                                                  "root": "HoiPoi-Checkbox-root-0-2-77",
                                                 }
                                               }
                                               isDisabled={false}
                                               onChange={[Function]}
                                             >
                                               <div
-                                                className="HoiPoi-Checkbox-root-0-2-75"
+                                                className="HoiPoi-Checkbox-root-0-2-77"
                                                 onClick={[Function]}
                                               >
                                                 <WithTheme(Unknown)>
@@ -14126,7 +14131,7 @@ exports[`Form complete match 1`] = `
                                                 </WithTheme(Unknown)>
                                                 <input
                                                   checked=""
-                                                  className="HoiPoi-Checkbox-input-0-2-76"
+                                                  className="HoiPoi-Checkbox-input-0-2-78"
                                                   disabled=""
                                                   onChange={[Function]}
                                                   type="checkbox"
@@ -14136,13 +14141,13 @@ exports[`Form complete match 1`] = `
                                           </WithStyles(Checkbox)>
                                         </JssContextSubscriber>
                                         <span
-                                          className="HoiPoi-CheckboxGroup-checkboxLabel-0-2-71"
+                                          className="HoiPoi-CheckboxGroup-checkboxLabel-0-2-73"
                                         >
                                           Email
                                         </span>
                                       </div>
                                       <div
-                                        className="HoiPoi-CheckboxGroup-checkboxControl-0-2-70"
+                                        className="HoiPoi-CheckboxGroup-checkboxControl-0-2-72"
                                         key="phone"
                                         onClick={[Function]}
                                       >
@@ -14440,16 +14445,16 @@ exports[`Form complete match 1`] = `
                                             <Checkbox
                                               classes={
                                                 Object {
-                                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-77",
-                                                  "input": "HoiPoi-Checkbox-input-0-2-76",
-                                                  "root": "HoiPoi-Checkbox-root-0-2-75",
+                                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-79",
+                                                  "input": "HoiPoi-Checkbox-input-0-2-78",
+                                                  "root": "HoiPoi-Checkbox-root-0-2-77",
                                                 }
                                               }
                                               isDisabled={false}
                                               onChange={[Function]}
                                             >
                                               <div
-                                                className="HoiPoi-Checkbox-root-0-2-75"
+                                                className="HoiPoi-Checkbox-root-0-2-77"
                                                 onClick={[Function]}
                                               >
                                                 <WithTheme(Unknown)>
@@ -14562,7 +14567,7 @@ exports[`Form complete match 1`] = `
                                                 </WithTheme(Unknown)>
                                                 <input
                                                   checked=""
-                                                  className="HoiPoi-Checkbox-input-0-2-76"
+                                                  className="HoiPoi-Checkbox-input-0-2-78"
                                                   disabled=""
                                                   onChange={[Function]}
                                                   type="checkbox"
@@ -14572,7 +14577,7 @@ exports[`Form complete match 1`] = `
                                           </WithStyles(Checkbox)>
                                         </JssContextSubscriber>
                                         <span
-                                          className="HoiPoi-CheckboxGroup-checkboxLabel-0-2-71"
+                                          className="HoiPoi-CheckboxGroup-checkboxLabel-0-2-73"
                                         >
                                           Phone
                                         </span>
@@ -15790,14 +15795,14 @@ exports[`Form complete match 1`] = `
                                   }
                                   classes={
                                     Object {
-                                      "formControl": "HoiPoi-InputGroup-formControl-0-2-80",
-                                      "hidden": "HoiPoi-InputGroup-hidden-0-2-85",
-                                      "hiddenInputLabel": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
-                                      "horizontal": "HoiPoi-InputGroup-horizontal-0-2-84",
-                                      "inputsControl": "HoiPoi-InputGroup-inputsControl-0-2-81",
-                                      "isFullWidth": "HoiPoi-InputGroup-isFullWidth-0-2-82",
-                                      "root": "HoiPoi-InputGroup-root-0-2-78",
-                                      "vertical": "HoiPoi-InputGroup-vertical-0-2-83",
+                                      "formControl": "HoiPoi-InputGroup-formControl-0-2-82",
+                                      "hidden": "HoiPoi-InputGroup-hidden-0-2-87",
+                                      "hiddenInputLabel": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
+                                      "horizontal": "HoiPoi-InputGroup-horizontal-0-2-86",
+                                      "inputsControl": "HoiPoi-InputGroup-inputsControl-0-2-83",
+                                      "isFullWidth": "HoiPoi-InputGroup-isFullWidth-0-2-84",
+                                      "root": "HoiPoi-InputGroup-root-0-2-80",
+                                      "vertical": "HoiPoi-InputGroup-vertical-0-2-85",
                                     }
                                   }
                                   hideInputsLabel="Hide translations"
@@ -15830,10 +15835,10 @@ exports[`Form complete match 1`] = `
                                   value={Object {}}
                                 >
                                   <div
-                                    className="HoiPoi-InputGroup-root-0-2-78 HoiPoi-InputGroup-horizontal-0-2-84"
+                                    className="HoiPoi-InputGroup-root-0-2-80 HoiPoi-InputGroup-horizontal-0-2-86"
                                   >
                                     <div
-                                      className="HoiPoi-InputGroup-formControl-0-2-80"
+                                      className="HoiPoi-InputGroup-formControl-0-2-82"
                                     >
                                       <JssContextSubscriber
                                         isReadOnly={false}
@@ -16792,18 +16797,18 @@ exports[`Form complete match 1`] = `
                                           <Link
                                             classes={
                                               Object {
-                                                "big": "HoiPoi-Link-big-0-2-88",
-                                                "isDisabled": "HoiPoi-Link-isDisabled-0-2-87",
-                                                "medium": "HoiPoi-Link-medium-0-2-89",
-                                                "root": "HoiPoi-Link-root-0-2-86",
-                                                "small": "HoiPoi-Link-small-0-2-90",
+                                                "big": "HoiPoi-Link-big-0-2-90",
+                                                "isDisabled": "HoiPoi-Link-isDisabled-0-2-89",
+                                                "medium": "HoiPoi-Link-medium-0-2-91",
+                                                "root": "HoiPoi-Link-root-0-2-88",
+                                                "small": "HoiPoi-Link-small-0-2-92",
                                               }
                                             }
                                             onClick={[Function]}
                                             size="small"
                                           >
                                             <button
-                                              className="HoiPoi-Link-root-0-2-86 HoiPoi-Link-small-0-2-90"
+                                              className="HoiPoi-Link-root-0-2-88 HoiPoi-Link-small-0-2-92"
                                               onClick={[Function]}
                                               type="button"
                                             >
@@ -16814,7 +16819,7 @@ exports[`Form complete match 1`] = `
                                       </JssContextSubscriber>
                                     </div>
                                     <div
-                                      className="HoiPoi-InputGroup-inputsControl-0-2-81 HoiPoi-InputGroup-hidden-0-2-85"
+                                      className="HoiPoi-InputGroup-inputsControl-0-2-83 HoiPoi-InputGroup-hidden-0-2-87"
                                     >
                                       <JssContextSubscriber
                                         isReadOnly={false}
@@ -16827,7 +16832,7 @@ exports[`Form complete match 1`] = `
                                           Object {
                                             "Label": Object {
                                               "classes": Object {
-                                                "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                               },
                                             },
                                           }
@@ -17041,7 +17046,7 @@ exports[`Form complete match 1`] = `
                                             Object {
                                               "Label": Object {
                                                 "classes": Object {
-                                                  "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                  "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                 },
                                               },
                                             }
@@ -17164,7 +17169,7 @@ exports[`Form complete match 1`] = `
                                               Object {
                                                 "Label": Object {
                                                   "classes": Object {
-                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                   },
                                                 },
                                               }
@@ -17179,7 +17184,7 @@ exports[`Form complete match 1`] = `
                                                 className="HoiPoi-Input-Label-0-2-12"
                                                 classes={
                                                   Object {
-                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                   }
                                                 }
                                               >
@@ -17187,7 +17192,7 @@ exports[`Form complete match 1`] = `
                                                   className="HoiPoi-Input-Label-0-2-12"
                                                   classes={
                                                     Object {
-                                                      "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                      "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                     }
                                                   }
                                                   innerRef={null}
@@ -17482,7 +17487,7 @@ exports[`Form complete match 1`] = `
                                                         "icon": "HoiPoi-Label-icon-0-2-28",
                                                         "info": "HoiPoi-Label-info-0-2-27",
                                                         "root": "HoiPoi-Label-root-0-2-25",
-                                                        "text": "HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                        "text": "HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                       }
                                                     }
                                                   >
@@ -17490,7 +17495,7 @@ exports[`Form complete match 1`] = `
                                                       className="HoiPoi-Label-root-0-2-25 HoiPoi-Input-Label-0-2-12"
                                                     >
                                                       <span
-                                                        className="HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-79"
+                                                        className="HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-81"
                                                       >
                                                         Spanish
                                                       </span>
@@ -17527,7 +17532,7 @@ exports[`Form complete match 1`] = `
                                           Object {
                                             "Label": Object {
                                               "classes": Object {
-                                                "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                               },
                                             },
                                           }
@@ -17741,7 +17746,7 @@ exports[`Form complete match 1`] = `
                                             Object {
                                               "Label": Object {
                                                 "classes": Object {
-                                                  "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                  "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                 },
                                               },
                                             }
@@ -17864,7 +17869,7 @@ exports[`Form complete match 1`] = `
                                               Object {
                                                 "Label": Object {
                                                   "classes": Object {
-                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                   },
                                                 },
                                               }
@@ -17879,7 +17884,7 @@ exports[`Form complete match 1`] = `
                                                 className="HoiPoi-Input-Label-0-2-12"
                                                 classes={
                                                   Object {
-                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                   }
                                                 }
                                               >
@@ -17887,7 +17892,7 @@ exports[`Form complete match 1`] = `
                                                   className="HoiPoi-Input-Label-0-2-12"
                                                   classes={
                                                     Object {
-                                                      "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                      "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                     }
                                                   }
                                                   innerRef={null}
@@ -18182,7 +18187,7 @@ exports[`Form complete match 1`] = `
                                                         "icon": "HoiPoi-Label-icon-0-2-28",
                                                         "info": "HoiPoi-Label-info-0-2-27",
                                                         "root": "HoiPoi-Label-root-0-2-25",
-                                                        "text": "HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                        "text": "HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                       }
                                                     }
                                                   >
@@ -18190,7 +18195,7 @@ exports[`Form complete match 1`] = `
                                                       className="HoiPoi-Label-root-0-2-25 HoiPoi-Input-Label-0-2-12"
                                                     >
                                                       <span
-                                                        className="HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-79"
+                                                        className="HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-81"
                                                       >
                                                         French
                                                       </span>
@@ -18227,7 +18232,7 @@ exports[`Form complete match 1`] = `
                                           Object {
                                             "Label": Object {
                                               "classes": Object {
-                                                "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                               },
                                             },
                                           }
@@ -18441,7 +18446,7 @@ exports[`Form complete match 1`] = `
                                             Object {
                                               "Label": Object {
                                                 "classes": Object {
-                                                  "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                  "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                 },
                                               },
                                             }
@@ -18564,7 +18569,7 @@ exports[`Form complete match 1`] = `
                                               Object {
                                                 "Label": Object {
                                                   "classes": Object {
-                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                   },
                                                 },
                                               }
@@ -18579,7 +18584,7 @@ exports[`Form complete match 1`] = `
                                                 className="HoiPoi-Input-Label-0-2-12"
                                                 classes={
                                                   Object {
-                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                    "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                   }
                                                 }
                                               >
@@ -18587,7 +18592,7 @@ exports[`Form complete match 1`] = `
                                                   className="HoiPoi-Input-Label-0-2-12"
                                                   classes={
                                                     Object {
-                                                      "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                      "text": "HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                     }
                                                   }
                                                   innerRef={null}
@@ -18882,7 +18887,7 @@ exports[`Form complete match 1`] = `
                                                         "icon": "HoiPoi-Label-icon-0-2-28",
                                                         "info": "HoiPoi-Label-info-0-2-27",
                                                         "root": "HoiPoi-Label-root-0-2-25",
-                                                        "text": "HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-79",
+                                                        "text": "HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-81",
                                                       }
                                                     }
                                                   >
@@ -18890,7 +18895,7 @@ exports[`Form complete match 1`] = `
                                                       className="HoiPoi-Label-root-0-2-25 HoiPoi-Input-Label-0-2-12"
                                                     >
                                                       <span
-                                                        className="HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-79"
+                                                        className="HoiPoi-Label-text-0-2-26 HoiPoi-InputGroup-hiddenInputLabel-0-2-81"
                                                       >
                                                         Germany
                                                       </span>

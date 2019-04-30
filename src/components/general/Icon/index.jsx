@@ -16,6 +16,7 @@ import WarningRounded from './icons/WarningRounded';
 import Drag from './icons/Drag';
 import Edit from './icons/Edit';
 import Trash from './icons/Trash';
+import Magnifier from './icons/Magnifier';
 
 const ICONS = {
     chevron: Chevron,
@@ -28,6 +29,7 @@ const ICONS = {
     drag: Drag,
     edit: Edit,
     trash: Trash,
+    magnifier: Magnifier,
 };
 
 function Icon({

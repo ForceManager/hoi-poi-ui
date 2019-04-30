@@ -145,9 +145,9 @@ InputGroup.propTypes = {
             name: PropTypes.string,
         }),
     ).isRequired,
-    /** Navite input id */
+    /** Native input id */
     id: PropTypes.string,
-    /** Navite input name */
+    /** Native input name */
     name: PropTypes.string,
     /** Native input type */
     type: PropTypes.string,
