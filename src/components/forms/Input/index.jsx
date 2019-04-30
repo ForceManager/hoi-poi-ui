@@ -136,9 +136,9 @@ Input.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     onChange: PropTypes.func,
-    /** Navite input id */
+    /** Native input id */
     id: PropTypes.string,
-    /** Navite input name */
+    /** Native input name */
     name: PropTypes.string,
     /** Native input type */
     type: PropTypes.string,
