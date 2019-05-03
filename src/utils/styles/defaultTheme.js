@@ -97,6 +97,7 @@ export default {
             raspBerry,
             indonesia,
             banana,
+            white,
         },
         overlay,
         shadow,

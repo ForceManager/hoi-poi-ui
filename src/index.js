@@ -26,3 +26,4 @@ export { default as RadioGroup } from './components/forms/RadioGroup';
 export { default as ScrollBar } from './components/utils/ScrollBar';
 export { default as Tooltip } from './components/utils/Tooltip';
 export { default as Popover } from './components/utils/Popover';
+export { Toast, toast } from './components/utils/Toast';
