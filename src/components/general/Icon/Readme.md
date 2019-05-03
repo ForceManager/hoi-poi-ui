@@ -21,6 +21,8 @@ Icons:
 <span> </span>
 <Icon name="edit" />
 <span> </span>
+<Icon name="magnifier" />
+<span> </span>
 ```
 
 Sizes:

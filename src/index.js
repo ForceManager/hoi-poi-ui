@@ -19,6 +19,7 @@ export { default as Label } from './components/forms/Label';
 export { default as Input } from './components/forms/Input';
 export { default as InputGroup } from './components/forms/InputGroup';
 export { default as Select } from './components/forms/Select';
+export { default as SelectButton } from './components/forms/SelectButton';
 export { default as Slider } from './components/forms/Slider';
 export { default as Radio } from './components/forms/Radio';
 export { default as RadioGroup } from './components/forms/RadioGroup';

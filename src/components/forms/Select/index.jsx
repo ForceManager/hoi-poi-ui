@@ -9,8 +9,8 @@ import { createFilter } from './utils'; // Local utils
 
 import ClearIndicator from './ClearIndicator';
 import DropdownIndicator from './DropdownIndicator';
-import MenuList from './MenuList';
 import Menu from './Menu';
+import MenuList from './MenuList';
 
 import Label from '../Label';
 import styles from './styles';
@@ -37,6 +37,8 @@ function Select({
     isClearable,
     components,
     hideSelectedOptions,
+    actions,
+    onClickAction, // private props
     ...props
 }) {
     // State
@@ -57,6 +59,9 @@ function Select({
         },
         classNameProp,
     );
+
+    const menuListClassName = classnames(classes.menuList, props.menuListClassName);
+    const menuClassName = classnames(classes.menu, props.menuClassName);
 
     const rootProps = {
         className: rootClassName,
@@ -91,8 +96,8 @@ function Select({
         components: {
             ClearIndicator,
             DropdownIndicator,
-            MenuList: useMemo(() => MenuList(classes.menuList), []),
-            Menu: useMemo(() => Menu(classes.menu), []),
+            MenuList: useMemo(() => MenuList(menuListClassName), []),
+            Menu: useMemo(() => Menu(menuClassName, classes.action, actions, onClickAction), []),
             ...components,
         },
         filterOption: createFilter,
@@ -102,6 +107,10 @@ function Select({
         onBlur: useCallback((e) => {
             setFocused(false);
         }, []),
+        formatGroupLabel: useCallback(
+            (data) => <div className={classes.group}>{data.label}</div>,
+            [],
+        ),
         ...override['react-select'],
     };
 
@@ -123,7 +132,7 @@ function Select({
     );
 }
 
-Select.overrides = ['react-select', 'error', 'formControl', 'Label'];
+Select.overrides = ['react-select', 'menuListClassName', 'error', 'formControl', 'Label'];
 
 Select.defaultProps = {
     labelMode: 'horizontal',
@@ -136,11 +145,13 @@ Select.defaultProps = {
 
 Select.propTypes = {
     className: PropTypes.string,
+    menuListClassName: PropTypes.string,
+    menuClassName: PropTypes.string,
     overrides: PropTypes.object,
     onChange: PropTypes.func,
-    /** Navite input id */
+    /** Native input id */
     id: PropTypes.string,
-    /** Navite input name */
+    /** Native input name */
     name: PropTypes.string,
     options: PropTypes.arrayOf(
         PropTypes.shape({
@@ -161,14 +172,21 @@ Select.propTypes = {
     error: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
-    /** Formats option labels in the menu and control as React components */
-    formatOption: PropTypes.func,
     /** Hide the selected option from the menu */
     hideSelectedOptions: PropTypes.bool,
     /** Is the select value clearable */
     isClearable: PropTypes.bool,
     /** React select component customization */
-    components: PropTypes.array,
+    components: PropTypes.object,
+    /** multiple select support */
+    isMulti: PropTypes.bool,
+    /** Fixed actions added at the bottom con menu list */
+    actions: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            onClick: PropTypes.func,
+        }),
+    ),
 };
 
 export default React.memo(withStyles(styles, { name: 'Select' })(Select));

@@ -111,7 +111,15 @@ export default (theme) => ({
         '& .hoi-poi-select__input, & .hoi-poi-select__single-value': {
             color: theme.colors.softGrey,
         },
-        '& .hoi-poi-select__placeholder, & .hoi-poi-select__input, & .hoi-poi-select__single-value': {
+        '& .hoi-poi-select__input': {
+            ...theme.typography.defaultText,
+        },
+        '& .hoi-poi-select__input input': {
+            lineHeight: '20px',
+            padding: '0 0 4px 0 !important',
+            ...theme.typography.defaultText,
+        },
+        '& .hoi-poi-select__placeholder, & .hoi-poi-select__single-value': {
             margin: 0,
             padding: '0 0 5px 0 !important',
             lineHeight: '20px',
@@ -145,12 +153,30 @@ export default (theme) => ({
         borderRadius: 0,
         paddingTop: '0 !important',
         paddingBottom: '0 !important',
+        overflow: 'hidden',
+        '& .hoi-poi-select__group': {
+            padding: '10px 0',
+            borderTop: '1px solid',
+            borderTopColor: theme.colors.lines,
+            '&:first-child': {
+                paddingTop: 0,
+                borderTop: 0,
+            },
+            '&:last-child': {
+                paddingBottom: 0,
+            },
+        },
+        '& .hoi-poi-select__group-heading': {
+            margin: 0,
+            padding: 0,
+            textTransform: 'initial',
+        },
         '& .hoi-poi-select__option': {
             ...theme.typography.defaultText,
             color: theme.colors.grey,
             cursor: 'pointer',
             outline: 'none',
-            padding: '10px 12px',
+            padding: '10px 20px',
             '&.hoi-poi-select__option--is-disabled': {
                 color: theme.colors.disabledGrey,
                 backgroundColor: 'transparent !important',
@@ -175,5 +201,21 @@ export default (theme) => ({
     menu: {
         borderRadius: '0 !important',
         boxShadow: `${theme.effects.boxShadow} !important`,
+    },
+    group: {
+        ...theme.typography.defaultText,
+        color: theme.colors.text.black,
+        outline: 'none',
+        padding: '10px 20px',
+    },
+    action: {
+        borderTop: '1px solid',
+        borderTopColor: theme.colors.lines,
+        '& .hoi-poi-select__action': {
+            width: '100%',
+        },
+        '& button': {
+            padding: '15px 20px',
+        },
     },
 });

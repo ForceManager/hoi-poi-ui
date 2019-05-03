@@ -34,6 +34,7 @@ module.exports = {
                 './src/components/forms/RadioGroup/index.jsx',
                 './src/components/forms/Section/index.jsx',
                 './src/components/forms/Select/index.jsx',
+                './src/components/forms/SelectButton/index.jsx',
                 './src/components/forms/Slider/index.jsx',
             ],
         },
