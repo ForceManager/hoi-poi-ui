@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScrollBar match snapshot 1`] = `
+exports[`Toast default match 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -227,8 +227,8 @@ exports[`ScrollBar match snapshot 1`] = `
       }
     >
       <JssContextSubscriber>
-        <WithStyles(ScrollBar)
-          autoHide={true}
+        <WithStyles(Toast)
+          className=""
           innerRef={null}
           jssContext={
             Object {
@@ -374,6 +374,7 @@ exports[`ScrollBar match snapshot 1`] = `
               },
             }
           }
+          overrides={Object {}}
           theme={
             Object {
               "colors": Object {
@@ -463,120 +464,44 @@ exports[`ScrollBar match snapshot 1`] = `
             }
           }
         >
-          <ScrollBar
-            autoHide={true}
-            classes={Object {}}
+          <Toast
+            className=""
+            classes={
+              Object {
+                "@keyframes Toastify__bounceInRight": undefined,
+                "@keyframes Toastify__bounceOutRight": undefined,
+                "@keyframes Toastify__trackProgress": undefined,
+                "root": "HoiPoi-Toast-root-0-2-4",
+              }
+            }
+            overrides={Object {}}
           >
-            <Scrollbars
-              autoHeight={false}
-              autoHeightMax={200}
-              autoHeightMin={0}
-              autoHide={true}
-              autoHideDuration={200}
-              autoHideTimeout={1000}
-              className=""
-              hideTracksWhenNotNeeded={false}
-              renderThumbHorizontal={[Function]}
-              renderThumbVertical={[Function]}
-              renderTrackHorizontal={[Function]}
-              renderTrackVertical={[Function]}
-              renderView={[Function]}
-              style={Object {}}
-              tagName="div"
-              thumbMinSize={30}
-              universal={false}
+            <ToastContainer
+              autoClose={4000}
+              bodyClassName={null}
+              className="HoiPoi-Toast-root-0-2-4"
+              closeButton={false}
+              closeOnClick={true}
+              draggable={true}
+              draggablePercent={80}
+              hideProgressBar={true}
+              newestOnTop={false}
+              pauseOnFocusLoss={true}
+              pauseOnHover={true}
+              position="top-right"
+              progressClassName={null}
+              progressStyle={null}
+              rtl={false}
+              style={null}
+              toastClassName={null}
+              transition={[Function]}
             >
               <div
-                className=""
-                style={
-                  Object {
-                    "height": "100%",
-                    "overflow": "hidden",
-                    "position": "relative",
-                    "width": "100%",
-                  }
-                }
-              >
-                <div
-                  key="view"
-                  style={
-                    Object {
-                      "WebkitOverflowScrolling": "touch",
-                      "bottom": 0,
-                      "left": 0,
-                      "marginBottom": 0,
-                      "marginRight": 0,
-                      "overflow": "scroll",
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                >
-                  Lorem ipsum
-                </div>
-                <div
-                  key="trackHorizontal"
-                  style={
-                    Object {
-                      "borderRadius": 3,
-                      "bottom": 2,
-                      "display": "none",
-                      "height": 6,
-                      "left": 2,
-                      "opacity": 0,
-                      "position": "absolute",
-                      "right": 2,
-                      "transition": "opacity 200ms",
-                    }
-                  }
-                >
-                  <div
-                    style={
-                      Object {
-                        "backgroundColor": "rgba(0,0,0,.2)",
-                        "borderRadius": "inherit",
-                        "cursor": "pointer",
-                        "display": "block",
-                        "height": "100%",
-                        "position": "relative",
-                      }
-                    }
-                  />
-                </div>
-                <div
-                  key="trackVertical"
-                  style={
-                    Object {
-                      "borderRadius": 3,
-                      "bottom": 2,
-                      "display": "none",
-                      "opacity": 0,
-                      "position": "absolute",
-                      "right": 2,
-                      "top": 2,
-                      "transition": "opacity 200ms",
-                      "width": 6,
-                    }
-                  }
-                >
-                  <div
-                    style={
-                      Object {
-                        "backgroundColor": "rgba(0,0,0,.2)",
-                        "borderRadius": "inherit",
-                        "cursor": "pointer",
-                        "display": "block",
-                        "position": "relative",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </div>
-              </div>
-            </Scrollbars>
-          </ScrollBar>
-        </WithStyles(ScrollBar)>
+                className="Toastify"
+              />
+            </ToastContainer>
+          </Toast>
+        </WithStyles(Toast)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>
