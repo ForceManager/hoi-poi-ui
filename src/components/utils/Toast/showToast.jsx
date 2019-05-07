@@ -2,30 +2,24 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import ToastMessage from './ToastMessage';
 
+const TOAST_TYPES = {
+    success: toast.TYPE.SUCCESS,
+    info: toast.TYPE.INFO,
+    error: toast.TYPE.ERROR,
+};
+
 const showToast = (props) => {
     const { type = 'info', text = '', title = '' } = props;
-
-    const options = {};
-    switch (type) {
-        case 'success':
-            options.type = toast.TYPE.SUCCESS;
-            break;
-
-        case 'error':
-            options.type = toast.TYPE.ERROR;
-            break;
-        case 'info':
-        default:
-            options.type = toast.TYPE.INFO;
-    }
-
+    const toastType = TOAST_TYPES[type];
     const messageProps = {
         title,
         text,
         type,
     };
 
-    return toast(<ToastMessage {...messageProps} />, options);
+    return toast(<ToastMessage {...messageProps} />, {
+        type: toastType,
+    });
 };
 
 export default showToast;

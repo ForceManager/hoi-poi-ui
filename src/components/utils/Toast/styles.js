@@ -9,10 +9,10 @@ export default (theme) => ({
         },
         '60%': {
             opacity: 1,
-            transform: 'translate3d(-25px, 0, 0)',
+            transform: 'translate3d(-5px, 0, 0)',
         },
         '75%': {
-            transform: 'translate3d(10px, 0, 0)',
+            transform: 'translate3d(5px, 0, 0)',
         },
         '90%': {
             transform: 'translate3d(-5px, 0, 0)',
@@ -24,11 +24,11 @@ export default (theme) => ({
     '@keyframes Toastify__bounceOutRight': {
         '20%': {
             opacity: 1,
-            transform: 'translate3d(-20px, 0, 0)',
+            transform: 'translate3d(-5px, 0, 0)',
         },
         to: {
             opacity: 0,
-            transform: 'translate3d(2000px, 0, 0)',
+            transform: 'translate3d(3000px, 0, 0)',
         },
     },
     '@keyframes Toastify__trackProgress': {

@@ -14,8 +14,7 @@ const disabledGrey = '#ced4d9';
 const black = '#262B34';
 const textBlack = '#3c4248';
 const transparentBlack = 'rgba(38, 43, 52, 0.8)';
-const stone = '#788590';
-const snow = '#F0F3F5';
+
 const softKiwi = '#e7f1d5';
 const kiwi = '#86AD20';
 const softRaspBerry = '#FAE7E7';
@@ -67,8 +66,6 @@ export default {
         kiwi,
         softRaspBerry,
         raspBerry,
-        stone,
-        snow,
         lightIndonesia,
         softIndonesia,
         indonesia,
@@ -89,11 +86,11 @@ export default {
         tableHover,
         text: {
             default: grey,
+            softGrey,
             black: textBlack,
             primary: 'white',
             danger: 'white',
             kiwi,
-            stone,
             raspBerry,
             indonesia,
             banana,

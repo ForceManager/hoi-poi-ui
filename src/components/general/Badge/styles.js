@@ -17,8 +17,8 @@ export default (theme) => ({
         color: theme.colors.text.raspBerry,
     },
     info: {
-        backgroundColor: theme.colors.snow,
-        color: theme.colors.text.stone,
+        backgroundColor: theme.colors.lightGrey,
+        color: theme.colors.text.softGrey,
     },
     success: {
         backgroundColor: theme.colors.softKiwi,

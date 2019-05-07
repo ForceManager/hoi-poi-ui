@@ -22,7 +22,7 @@ function Toast({ classes, className: classNameProp, overrides: overridesProp, ..
         autoClose: 4000,
     };
 
-    return <ToastContainer {...rootProps} {...override} />;
+    return <ToastContainer {...rootProps} {...override['react-toastify']} />;
 }
 
 Toast.overrides = [];
