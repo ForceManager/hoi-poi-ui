@@ -83,7 +83,7 @@ export default (theme) => ({
                 color: theme.colors.primary,
             },
             '&:hover': {
-                backgroundColor: theme.colors.primaryLight,
+                backgroundColor: theme.colors.primarySoft,
                 '& $label': {
                     color: theme.colors.text.primary,
                 },
@@ -92,15 +92,15 @@ export default (theme) => ({
         '&$danger': {
             background: 'transparent',
             backgroundColor: 'transparent',
-            border: `1px solid ${theme.colors.danger}`,
+            border: `1px solid ${theme.colors.red}`,
             transition: `color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .1s ease-in-out`,
             '& $label': {
-                color: theme.colors.danger,
+                color: theme.colors.red,
             },
             '&:hover': {
-                backgroundColor: theme.colors.danger,
+                backgroundColor: theme.colors.red,
                 '& $label': {
-                    color: theme.colors.text.danger,
+                    color: theme.colors.text.white,
                 },
             },
         },
@@ -156,7 +156,7 @@ export default (theme) => ({
             background: 'transparent',
             backgroundColor: 'transparent',
             '& $label': {
-                color: theme.colors.danger,
+                color: theme.colors.red,
             },
         },
         '&$small': {
@@ -174,7 +174,7 @@ export default (theme) => ({
             color: theme.colors.text.default,
         },
         '&:hover': {
-            backgroundColor: theme.colors.lightGrey,
+            backgroundColor: theme.colors.greyLight,
         },
     },
     primary: {
@@ -184,17 +184,17 @@ export default (theme) => ({
             color: theme.colors.text.primary,
         },
         '&:hover': {
-            backgroundColor: theme.colors.primaryLight,
+            backgroundColor: theme.colors.primarySoft,
         },
     },
     danger: {
-        backgroundColor: theme.colors.danger,
+        backgroundColor: theme.colors.red,
         transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
         '& $label': {
-            color: theme.colors.text.danger,
+            color: theme.colors.text.white,
         },
         '&:hover': {
-            backgroundColor: theme.colors.dangerLight,
+            backgroundColor: theme.colors.redSoft,
         },
     },
     // Sizes

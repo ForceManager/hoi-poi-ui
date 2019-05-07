@@ -22,7 +22,7 @@ export default (theme) => ({
     radioLabel: {
         marginLeft: 2,
         ...theme.typography.defaultText,
-        color: theme.colors.softGrey,
+        color: theme.colors.greySoft,
     },
     isReadOnly: {
         '& $formControl': {

@@ -10,7 +10,7 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -29,
-        color: theme.colors.danger,
+        color: theme.colors.red,
     },
     formControl: {
         position: 'relative',
@@ -44,10 +44,10 @@ export default (theme) => ({
         paddingBottom: '30px !important',
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.danger}`,
+                borderBottom: `1px solid ${theme.colors.red}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.danger}`,
+                borderBottom: `1px solid ${theme.colors.red}`,
             },
         },
     },
@@ -109,7 +109,7 @@ export default (theme) => ({
             color: theme.colors.disabledGrey,
         },
         '& .hoi-poi-select__input, & .hoi-poi-select__single-value': {
-            color: theme.colors.softGrey,
+            color: theme.colors.greySoft,
         },
         '& .hoi-poi-select__input': {
             ...theme.typography.defaultText,
@@ -186,11 +186,11 @@ export default (theme) => ({
                 },
             },
             '&:hover, &:active': {
-                backgroundColor: `${theme.colors.primarySoft} !important`,
+                backgroundColor: `${theme.colors.primaryLight} !important`,
             },
         },
         '& .hoi-poi-select__option--is-focused, & .hoi-poi-select__option--is-selected': {
-            backgroundColor: `${theme.colors.primarySoft} !important`,
+            backgroundColor: `${theme.colors.primaryLight} !important`,
         },
         '& .hoi-poi-select__menu-notice--no-options': {
             ...theme.typography.defaultText,

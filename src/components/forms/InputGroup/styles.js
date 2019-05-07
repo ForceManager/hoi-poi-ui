@@ -1,7 +1,7 @@
 export default (theme) => ({
     root: {},
     hiddenInputLabel: {
-        color: theme.colors.softGrey,
+        color: theme.colors.greySoft,
         fontWeight: 400,
     },
     formControl: {

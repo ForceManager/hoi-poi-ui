@@ -12,7 +12,7 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -29,
-        color: theme.colors.danger,
+        color: theme.colors.red,
     },
     formControl: {
         position: 'relative',
@@ -44,7 +44,7 @@ export default (theme) => ({
     },
     input: {
         ...theme.typography.defaultText,
-        color: theme.colors.softGrey,
+        color: theme.colors.greySoft,
         width: '100%',
         lineHeight: '20px',
         padding: '0 0 5px 0',
@@ -59,10 +59,10 @@ export default (theme) => ({
         paddingBottom: '30px !important',
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.danger}`,
+                borderBottom: `1px solid ${theme.colors.red}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.danger}`,
+                borderBottom: `1px solid ${theme.colors.red}`,
             },
         },
     },

@@ -41,26 +41,26 @@ function Advice({
                 return {
                     ...properties,
                     name: 'warning',
-                    color: theme.colors.raspBerry,
+                    color: theme.colors.red,
                 };
             case 'success':
                 return {
                     ...properties,
                     name: 'thickEnabled',
-                    color: theme.colors.kiwi,
+                    color: theme.colors.green,
                 };
             case 'warning':
                 return {
                     ...properties,
                     name: 'warningRounded',
-                    color: theme.colors.banana,
+                    color: theme.colors.yellow,
                 };
             case 'info':
             default:
                 return {
                     ...properties,
                     name: 'info',
-                    color: theme.colors.indonesia,
+                    color: theme.colors.secundary,
                 };
         }
     }, [type]);

@@ -5,43 +5,42 @@ const lines = '#dce3eb';
 const placeholders = '#e1e4e7';
 const placeholdersHover = '#d0d4d8';
 
-const white = '#FFFFFF';
-const lightBlack = '#5f656b';
-const lightGrey = '#f0f3f5';
-const grey = '#697782';
-const softGrey = '#788590';
-const disabledGrey = '#ced4d9';
 const black = '#262B34';
+const blackLight = '#5f656b';
 const textBlack = '#3c4248';
+const grey = '#697782';
+const greySoft = '#788590';
+const greyLight = '#f0f3f5';
+const disabledGrey = '#ced4d9';
+const white = '#FFFFFF';
 const transparentBlack = 'rgba(38, 43, 52, 0.8)';
 
-const softKiwi = '#e7f1d5';
-const kiwi = '#86AD20';
-const softRaspBerry = '#FAE7E7';
-const raspBerry = '#F04540';
-const lightIndonesia = '#AADFE7';
-const softIndonesia = '#D6EEF2';
-const indonesia = '#00A8Be';
-const softBanana = '#FFF9DD';
-const banana = '#E9B200';
+const green = '#86AD20';
+const greenLight = '#e7f1d5';
+
+const red = '#f04540';
+const redSoft = '#FF544F';
+const redLight = '#FAE7E7';
+const redDark = '#C43833';
+
+const yellow = '#E9B200';
+const yellowLight = '#FFF9DD';
 
 const primary = '#FF8C00';
+const primarySoft = '#ff9d26';
+const primaryLight = '#fef4e6';
 const primaryDark = '#C87600';
-const primaryLight = '#ff9d26';
-const primarySoft = '#fef4e6';
 
 const secundary = '#00A8Be';
-const secundarySoft = '#D6EEF2';
-
-const danger = '#f04540';
-const dangerDark = '#C43833';
-const dangerLight = '#FF544F';
+const secundarySoft = '#AADFE7';
+const secundaryLight = '#D6EEF2';
 
 const link = '#216db3';
 const linkDark = '#174a79';
 
 const tableHeader = '#f6f7f9';
 const tableHover = '#FAFBFC';
+
 //Text
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
@@ -57,43 +56,40 @@ export default {
         white,
         black,
         transparentBlack,
-        lightBlack,
+        blackLight,
         grey,
+        greyLight,
         disabledGrey,
-        lightGrey,
-        softGrey,
-        softKiwi,
-        kiwi,
-        softRaspBerry,
-        raspBerry,
-        lightIndonesia,
-        softIndonesia,
-        indonesia,
-        softBanana,
-        banana,
+        greySoft,
+        greenLight,
+        green,
+        red,
+        redSoft,
+        redLight,
+        redDark,
+        yellow,
+        yellowLight,
         primary,
         primaryDark,
         primaryLight,
         primarySoft,
         secundary,
         secundarySoft,
-        danger,
-        dangerDark,
-        dangerLight,
+        secundaryLight,
         link,
         linkDark,
         tableHeader,
         tableHover,
         text: {
             default: grey,
-            softGrey,
+            greySoft,
             black: textBlack,
             primary: 'white',
             danger: 'white',
-            kiwi,
-            raspBerry,
-            indonesia,
-            banana,
+            green,
+            red,
+            secundary,
+            yellow,
             white,
         },
         overlay,

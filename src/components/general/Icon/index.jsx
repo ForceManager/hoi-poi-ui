@@ -53,7 +53,7 @@ function Icon({
 
     return (
         <span className={rootClassName} {...override.wrapper}>
-            <SelectedIcon color={color || theme.colors.softGrey} {...override.icon} />
+            <SelectedIcon color={color || theme.colors.greySoft} {...override.icon} />
         </span>
     );
 }

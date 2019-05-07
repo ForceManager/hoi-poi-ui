@@ -9,7 +9,7 @@ export default (theme) => ({
         ...theme.typography.defaultText,
         position: 'absolute',
         bottom: -15,
-        color: theme.colors.danger,
+        color: theme.colors.red,
     },
     formControl: {
         position: 'relative',
@@ -53,7 +53,7 @@ export default (theme) => ({
             boxSizing: 'border-box',
             position: 'absolute',
             width: '100%',
-            backgroundColor: theme.colors.lightGrey,
+            backgroundColor: theme.colors.greyLight,
             height: 2,
             borderRadius: 6,
         },
@@ -99,16 +99,16 @@ export default (theme) => ({
         top: 4,
         marginLeft: -7.5,
         textAlign: 'center',
-        color: theme.colors.softGrey,
+        color: theme.colors.greySoft,
         ...theme.typography.smallText,
     },
     isReadOnly: {
         '& $overlayHandler': {
-            backgroundColor: theme.colors.lightGrey,
+            backgroundColor: theme.colors.greyLight,
             cursor: 'default',
         },
         '& .rc-slider-track': {
-            backgroundColor: theme.colors.lightGrey,
+            backgroundColor: theme.colors.greyLight,
         },
     },
 });

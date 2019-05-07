@@ -7,7 +7,7 @@ const UnCheckedIcon = React.memo(({ theme, ...props }) => {
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <circle
                     id="Radio-Background"
-                    stroke={theme.colors.softGrey}
+                    stroke={theme.colors.greySoft}
                     fill="#FFFFFF"
                     cx="9"
                     cy="9"

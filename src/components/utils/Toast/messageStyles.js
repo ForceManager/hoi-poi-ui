@@ -14,12 +14,12 @@ export default (theme) => ({
     },
     success: {
         '&$title': {
-            color: theme.colors.text.kiwi,
+            color: theme.colors.text.green,
         },
     },
     error: {
         '&$title': {
-            color: theme.colors.text.raspBerry,
+            color: theme.colors.text.red,
         },
     },
 });
