@@ -28,8 +28,6 @@ function FieldControl({
     error,
     ...props
 }) {
-    if (!field || !field.type || !FIELD_MAP[field.type]) return null;
-
     const onChangeField = useCallback(
         (input) => {
             const value = input && input.target ? input.target.value : input;
@@ -37,6 +35,8 @@ function FieldControl({
         },
         [onChange, field],
     );
+
+    if (!field || !field.type || !FIELD_MAP[field.type]) return null;
 
     const Field = FIELD_MAP[field.type];
 

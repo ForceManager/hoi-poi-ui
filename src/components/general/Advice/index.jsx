@@ -63,7 +63,7 @@ function Advice({
                     color: theme.colors.secundary,
                 };
         }
-    }, [type]);
+    }, [theme.colors.green, theme.colors.red, theme.colors.secundary, theme.colors.yellow, type]);
 
     return (
         <div {...rootProps}>

@@ -8,7 +8,7 @@ function InputControl({ onChange, ...props }) {
             const value = e && e.target ? e.target.value : '';
             onChange && onChange(props.name, value);
         },
-        [onChange],
+        [onChange, props.name],
     );
 
     return <Input {...props} onChange={onChangeInput} />;
