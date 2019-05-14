@@ -111,9 +111,11 @@ export default (theme) => ({
     },
     preComponent: {
         marginRight: 5,
+        marginBottom: 3,
     },
     postComponent: {
         marginLeft: 5,
+        marginBottom: 3,
     },
     postCloseComponent: {
         '& span': {
