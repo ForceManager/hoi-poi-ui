@@ -8,10 +8,10 @@ export default (theme) => ({
         padding: '0 0 5px 0',
     },
     error: {
-        ...theme.typography.defaultText,
+        ...theme.typography.smallText,
         position: 'absolute',
         lineHeight: '20px',
-        bottom: -29,
+        bottom: -21,
         color: theme.colors.red,
     },
     formControl: {
