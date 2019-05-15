@@ -20,7 +20,7 @@ function onClose() {
 }
 
 <Chip
-    url="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"
+    url="https://images.pexels.com/photos/2116234/pexels-photo-2116234.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     onClose={onClose}
 >
     Lorena Smith
@@ -30,7 +30,7 @@ function onClose() {
 No dismissable Chip:
 
 ```jsx
-<Chip url="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg">
+<Chip url="https://images.pexels.com/photos/2116234/pexels-photo-2116234.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
     Lorena Smith
 </Chip>
 ```
@@ -38,7 +38,7 @@ No dismissable Chip:
 Shrinked Chip with/without picture:
 
 ```jsx
-<Chip url='https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg' isShrinked={true} >
+<Chip url='https://images.pexels.com/photos/2116234/pexels-photo-2116234.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' isShrinked={true} >
     Lorena Smith
 </Chip>
 

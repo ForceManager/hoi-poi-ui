@@ -4,7 +4,7 @@ Chips Group:
 let chipProps = [
     {
         label: 'Lorena Smith',
-        url: 'https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg',
+        url: 'https://images.pexels.com/photos/2092709/pexels-photo-2092709.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     },
     {
         label: 'Dani Balastegui',
@@ -12,12 +12,12 @@ let chipProps = [
     {
         label: 'Jordi Gandia',
         url:
-            'https://i0.wp.com/zblogged.com/wp-content/uploads/2019/02/FakeDP.jpeg?resize=567%2C580&ssl=1',
+            'https://images.pexels.com/photos/2169434/pexels-photo-2169434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     },
     {
         label: 'John Smith',
         url:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRp4kKC007NfgaXHB9WubLDpIS5DwEu-qbQkvjY5stXZFYo-dM',
+            'https://images.pexels.com/photos/2099225/pexels-photo-2099225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     },
     {
         label: 'Jordi Gandia',
