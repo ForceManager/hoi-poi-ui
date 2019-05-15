@@ -20,8 +20,8 @@ function ChipGroup({
 
     return (
         <div className={classes.root} {...override.root}>
-            {chips.map((chip) => (
-                <Chip url={chip.url} isShrinked={true}>
+            {chips.map((chip, index) => (
+                <Chip key={index} url={chip.url} isShrinked={true}>
                     {chip.label}
                 </Chip>
             ))}
