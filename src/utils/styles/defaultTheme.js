@@ -7,9 +7,10 @@ const placeholdersHover = '#d0d4d8';
 
 const white = '#FFFFFF';
 const lightBlack = '#5f656b';
-const lightGrey = '#f0f3f5';
 const grey = '#697782';
 const softGrey = '#788590';
+const secondaryGray = '#e4eeff';
+const lightGrey = '#f0f3f5';
 const disabledGrey = '#ced4d9';
 const black = '#262B34';
 const textBlack = '#3c4248';
@@ -25,6 +26,7 @@ const softIndonesia = '#D6EEF2';
 const indonesia = '#00A8Be';
 const softBanana = '#FFF9DD';
 const banana = '#E9B200';
+const fmDefaultIcons = '#788590';
 
 const primary = '#FF8C00';
 const primaryDark = '#C87600';
@@ -97,12 +99,14 @@ export default {
             raspBerry,
             indonesia,
             banana,
+            fmDefaultIcons,
         },
         overlay,
         shadow,
         lines,
         placeholders,
         placeholdersHover,
+        secondaryGray,
     },
     typography: {
         lineHeightBase,

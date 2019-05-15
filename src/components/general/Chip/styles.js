@@ -4,14 +4,16 @@ export default (theme) => ({
         lineHeight: '20px',
         borderRadius: '3px',
         display: 'inline-block',
+        verticalAlign: 'middle',
         padding: '0',
         height: '20px',
+        marginRight: '3px',
         backgroundColor: theme.colors.secondaryGray,
         color: theme.colors.text.stone,
     },
 
     wrapper: {
-        display: 'inline-flex',
+        display: 'flex',
         alignItems: 'center',
     },
 
@@ -41,14 +43,14 @@ export default (theme) => ({
 
     picture: {
         height: '20px',
-        weight: '20px',
+        width: '20px',
         borderTopLeftRadius: '3px',
         borderBottomLeftRadius: '3px',
     },
 
     shrinkedPicture: {
         height: '20px',
-        weight: '20px',
+        width: '20px',
         borderRadius: '3px',
     },
 });

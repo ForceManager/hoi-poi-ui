@@ -17,6 +17,8 @@ module.exports = {
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/Link/index.jsx',
                 './src/components/general/Loader/index.jsx',
+                './src/components/general/Chip/index.jsx',
+                './src/components/general/ChipGroup/index.jsx',
             ],
         },
         {
