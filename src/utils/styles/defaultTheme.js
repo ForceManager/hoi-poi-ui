@@ -9,6 +9,8 @@ const black = '#262B34';
 const blackLight = '#5f656b';
 const textBlack = '#3c4248';
 const grey = '#697782';
+const secondaryGrey = '#e4eeff';
+
 const greySoft = '#788590';
 const greyLight = '#f0f3f5';
 const disabledGrey = '#ced4d9';
@@ -58,6 +60,7 @@ export default {
         transparentBlack,
         blackLight,
         grey,
+        secondaryGrey,
         greyLight,
         disabledGrey,
         greySoft,
