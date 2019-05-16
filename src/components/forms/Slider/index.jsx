@@ -84,7 +84,15 @@ function Slider({
                 </div>
             );
         },
-        [innerValue],
+        [
+            classes.overlay,
+            classes.overlayHandler,
+            classes.overlayLabel,
+            innerValue,
+            override.overlay,
+            override.overlayLabel,
+            tipFormatter,
+        ],
     );
 
     // Avoiding re-renderings

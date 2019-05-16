@@ -1,9 +1,10 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
-import Radio from '../Radio';
+
+import RadioControl from './RadioControl';
 import Label from '../Label';
 import styles from './styles';
 
@@ -44,34 +45,27 @@ function RadioGroup({
         ...override.Label,
     };
 
-    const onChangeRadio = (value) =>
-        useCallback(() => {
-            onChange(value);
-        }, [onChange, value]);
-
     return (
         <div {...rootProps}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 {options.map((option) => (
-                    <div
+                    <RadioControl
                         key={option.value}
-                        className={classes.radioControl}
-                        onClick={isReadOnly ? undefined : onChangeRadio(option.value)}
-                        {...override.radioControl}
-                    >
-                        <Radio checked={value === option.value} isDisabled={isReadOnly} />
-                        <span className={classes.radioLabel} {...override.radioLabel}>
-                            {option.label}
-                        </span>
-                    </div>
+                        onClick={isReadOnly ? undefined : onChange}
+                        overrides={overridesProp}
+                        isReadOnly={isReadOnly}
+                        option={option}
+                        value={value}
+                        onChange={onChange}
+                    />
                 ))}
             </div>
         </div>
     );
 }
 
-RadioGroup.overrides = ['Radio', 'radioLabel', 'radioControl', 'formControl', 'Label'];
+RadioGroup.overrides = ['Radio', 'formControl', 'Label'];
 
 RadioGroup.defaultProps = {
     labelMode: 'horizontal',

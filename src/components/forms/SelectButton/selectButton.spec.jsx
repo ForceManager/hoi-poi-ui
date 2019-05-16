@@ -92,7 +92,6 @@ describe('Select Button', () => {
             </HoiPoiProvider>,
         );
 
-        console.log(wrapper.debug());
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('.HoiPoi-HoiPoi-SelectButton-button-0-2-27').simulate('click');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -136,7 +135,6 @@ describe('Select Button', () => {
             </HoiPoiProvider>,
         );
 
-        console.log(wrapper.debug());
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('.HoiPoi-HoiPoi-HoiPoi-SelectButton-button-0-2-52').simulate('click');
         expect(toJson(wrapper)).toMatchSnapshot();

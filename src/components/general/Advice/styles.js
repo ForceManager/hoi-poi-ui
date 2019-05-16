@@ -18,19 +18,19 @@ export default (theme) => ({
     },
     // Types
     error: {
-        backgroundColor: theme.colors.softRaspBerry,
-        color: theme.colors.text.raspBerry,
+        backgroundColor: theme.colors.redLight,
+        color: theme.colors.text.red,
     },
     info: {
-        backgroundColor: theme.colors.softIndonesia,
-        color: theme.colors.text.indonesia,
+        backgroundColor: theme.colors.secundaryLight,
+        color: theme.colors.text.secundary,
     },
     success: {
-        backgroundColor: theme.colors.softKiwi,
-        color: theme.colors.text.kiwi,
+        backgroundColor: theme.colors.greenLight,
+        color: theme.colors.text.green,
     },
     warning: {
-        backgroundColor: theme.colors.softBanana,
-        color: theme.colors.text.banana,
+        backgroundColor: theme.colors.yellowLight,
+        color: theme.colors.text.yellow,
     },
 });

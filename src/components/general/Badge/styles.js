@@ -13,15 +13,15 @@ export default (theme) => ({
     },
     // Types
     error: {
-        backgroundColor: theme.colors.softRaspBerry,
-        color: theme.colors.text.raspBerry,
+        backgroundColor: theme.colors.redLight,
+        color: theme.colors.text.red,
     },
     info: {
-        backgroundColor: theme.colors.snow,
-        color: theme.colors.text.stone,
+        backgroundColor: theme.colors.greyLight,
+        color: theme.colors.text.greySoft,
     },
     success: {
-        backgroundColor: theme.colors.softKiwi,
-        color: theme.colors.text.kiwi,
+        backgroundColor: theme.colors.greenLight,
+        color: theme.colors.text.green,
     },
 });

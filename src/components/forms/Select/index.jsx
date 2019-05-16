@@ -86,7 +86,7 @@ function Select({
         isDisabled: isReadOnly,
         isClearable,
         hideSelectedOptions,
-        noOptionsMessage: useCallback(() => noOptionsPlaceholder, []),
+        noOptionsMessage: useCallback(() => noOptionsPlaceholder, [noOptionsPlaceholder]),
         getOptionValue: useCallback(({ value }) => value, []),
         menuPlacement: 'auto',
         menuPortalTarget: document.body,
@@ -96,8 +96,13 @@ function Select({
         components: {
             ClearIndicator,
             DropdownIndicator,
-            MenuList: useMemo(() => MenuList(menuListClassName), []),
-            Menu: useMemo(() => Menu(menuClassName, classes.action, actions, onClickAction), []),
+            MenuList: useMemo(() => MenuList(menuListClassName), [menuListClassName]),
+            Menu: useMemo(() => Menu(menuClassName, classes.action, actions, onClickAction), [
+                actions,
+                classes.action,
+                menuClassName,
+                onClickAction,
+            ]),
             ...components,
         },
         filterOption: createFilter,
@@ -107,10 +112,9 @@ function Select({
         onBlur: useCallback((e) => {
             setFocused(false);
         }, []),
-        formatGroupLabel: useCallback(
-            (data) => <div className={classes.group}>{data.label}</div>,
-            [],
-        ),
+        formatGroupLabel: useCallback((data) => <div className={classes.group}>{data.label}</div>, [
+            classes.group,
+        ]),
         ...override['react-select'],
     };
 

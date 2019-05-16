@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
-import Input from '../../forms/Input';
+
 import Link from '../../general/Link';
+import Inputcontrol from './InputControl';
+
 import styles from './styles';
 
 function InputGroup({
@@ -54,22 +56,20 @@ function InputGroup({
 
     const rootProps = { className: rootClassName };
 
-    const onChangeInput = (input) =>
-        useCallback(
-            (e) => {
-                onChange &&
-                    onChange({
-                        ...value,
-                        [input.name]: e && e.target ? e.target.value : '',
-                    });
-            },
-            [value, onChange],
-        );
+    const onChangeInput = useCallback(
+        (name, inputValue) => {
+            onChange &&
+                onChange({
+                    ...value,
+                    [name]: inputValue ? inputValue : '',
+                });
+        },
+        [onChange, value],
+    );
 
     // Principal inputs
     const inputProps = {
         id,
-        name,
         type,
         labelMode,
         isFullWidth,
@@ -78,9 +78,10 @@ function InputGroup({
         error,
         isRequired,
         isReadOnly,
+        name: inputs[0].name,
         label: inputs[0].label,
         value: value[inputs[0].name],
-        onChange: onChangeInput(inputs[0]),
+        onChange: onChangeInput,
         className: classes.Input,
         ...override.Input,
     };
@@ -101,19 +102,19 @@ function InputGroup({
     return (
         <div {...rootProps}>
             <div className={classes.formControl} {...override.formControl}>
-                <Input {...inputProps} />
+                <Inputcontrol {...inputProps} />
                 <Link size="small" onClick={onLinkClick} {...override.Link}>
                     {showInputs ? hideInputsLabel : showInputsLabel}
                 </Link>
             </div>
             <div className={inputsControlClassName} {...override.inputsControl}>
                 {hiddenInputs.map((input) => (
-                    <Input
+                    <Inputcontrol
                         key={input.name}
                         name={input.name}
                         label={input.label}
                         value={value[input.name]}
-                        onChange={onChangeInput(input)}
+                        onChange={onChangeInput}
                         overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
                         {...inputsProps}
                     />
@@ -126,6 +127,7 @@ function InputGroup({
 InputGroup.overrides = ['Input', 'formControl', 'inputsControl', 'Link'];
 
 InputGroup.defaultProps = {
+    overrides: {},
     labelMode: 'horizontal',
     onChange: () => {},
     value: {},

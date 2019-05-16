@@ -3,24 +3,9 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import { getOverrides } from '../../../utils/overrides';
 
+import FieldControl from './FieldControl';
 import Section from '../Section';
-import Input from '../Input';
-import InputGroup from '../InputGroup';
-import CheckboxGroup from '../CheckboxGroup';
-import RadioGroup from '../RadioGroup';
-import Select from '../Select';
-import Slider from '../Slider';
-
 import styles from './styles';
-
-const FIELD_MAP = {
-    text: Input,
-    inputGroup: InputGroup,
-    checkboxGroup: CheckboxGroup,
-    radioGroup: RadioGroup,
-    select: Select,
-    slider: Slider,
-};
 
 function Form({
     overrides: overridesProp,
@@ -36,42 +21,42 @@ function Form({
     // Overrides
     const override = getOverrides(overridesProp, Form.overrides);
 
-    const onChangeField = (field) =>
-        useCallback(
-            (input) => {
-                const value = input && input.target ? input.target.value : input;
-                onChange &&
-                    onChange(
-                        {
-                            ...values,
-                            [field.name]: value,
-                        },
-                        field,
-                        value,
-                    );
-            },
-            [values, onChange],
-        );
+    const onChangeField = useCallback(
+        (value, field) => {
+            onChange &&
+                onChange(
+                    {
+                        ...values,
+                        [field.name]: value,
+                    },
+                    field,
+                    value,
+                );
+        },
+        [values, onChange],
+    );
 
     return (
         <form className={classNameProp} action="" autoComplete="off" {...override.form}>
             {schema.map((section, index) => (
-                <Section key={index} title={section.title} {...override.Section}>
-                    {section.fields.map((field) => {
-                        if (!field || !field.type || !FIELD_MAP[field.type]) return null;
-                        const Field = FIELD_MAP[field.type];
-                        const props = {
-                            ...field,
-                            key: field.name,
-                            labelMode: field.labelMode || labelMode,
-                            isFullwidth: field.isFullwidth || isFullwidth,
-                            onChange: onChangeField(field),
-                            value: values[field.name],
-                            error: errors[field.name],
-                        };
-                        let attrs = field.attrs || {};
-                        return <Field {...props} {...attrs} />;
-                    })}
+                <Section
+                    key={index}
+                    title={section.title}
+                    className={section.className}
+                    {...override.Section}
+                >
+                    {section.fields.map((field) => (
+                        <FieldControl
+                            key={field.name}
+                            labelMode={field.labelMode || labelMode}
+                            isFullWidth={field.isFullwidth || isFullwidth}
+                            field={field}
+                            value={values[field.name]}
+                            error={errors[field.name]}
+                            onChange={onChangeField}
+                            className={field.className}
+                        />
+                    ))}
                 </Section>
             ))}
         </form>
@@ -98,6 +83,7 @@ Form.propTypes = {
     schema: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string,
+            className: PropTypes.string,
             fields: PropTypes.arrayOf(
                 PropTypes.shape({
                     label: PropTypes.string,
@@ -110,6 +96,7 @@ Form.propTypes = {
                     isRequired: PropTypes.bool,
                     isReadOnly: PropTypes.bool,
                     attrs: PropTypes.object,
+                    className: PropTypes.string,
                 }),
             ),
         }),

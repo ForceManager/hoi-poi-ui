@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
-import Checkbox from '../../forms/Checkbox';
 import Label from '../Label';
+import CheckboxControl from './CheckboxControl';
 import styles from './styles';
 
 function CheckboxGroup({
@@ -44,31 +44,30 @@ function CheckboxGroup({
         ...override.Label,
     };
 
-    const onChangeCheckbox = (v) =>
-        useCallback(() => {
+    const onChangeCheckbox = useCallback(
+        (option) => {
             onChange &&
                 onChange({
                     ...value,
-                    [v]: !value[v],
+                    [option]: !value[option],
                 });
-        }, [onChange, value]);
+        },
+        [onChange, value],
+    );
 
     return (
         <div {...rootProps}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 {options.map((option) => (
-                    <div
+                    <CheckboxControl
                         key={option.value}
-                        className={classes.checkboxControl}
-                        onClick={isReadOnly ? undefined : onChangeCheckbox(option.value)}
-                        {...override.checkboxControl}
-                    >
-                        <Checkbox checked={value[option.value]} isDisabled={isReadOnly} />
-                        <span className={classes.checkboxLabel} {...override.checkboxLabel}>
-                            {option.label}
-                        </span>
-                    </div>
+                        option={option}
+                        value={value[option.value]}
+                        isReadOnly={isReadOnly}
+                        onChange={onChangeCheckbox}
+                        overrides={overridesProp}
+                    />
                 ))}
             </div>
         </div>
