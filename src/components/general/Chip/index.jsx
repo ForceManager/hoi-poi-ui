@@ -34,10 +34,9 @@ function Chip({
             <div className={classes.wrapper} {...override.wrapper}>
                 {url && (
                     <img
-                        {...override.img}
                         className={isShrinked ? classes.shrinkedPicture : classes.picture}
-                        {...override.picture}
                         src={url}
+                        {...override.img}
                     />
                 )}
                 {isShrinked && !url && (
@@ -52,13 +51,12 @@ function Chip({
                         </div>
                         {onClose && (
                             <Icon
-                                {...override.Icon}
                                 onClick={onClose}
-                                {...override.onClose}
                                 className={classes.close}
                                 name="close"
                                 size="small"
                                 color={theme.colors.text.greySoft}
+                                {...override.Icon}
                             />
                         )}
                     </Fragment>
@@ -68,7 +66,7 @@ function Chip({
     );
 }
 
-Chip.overrides = ['wrapper', 'img', 'picture', 'shrinked', 'text', 'Icon', 'onClose'];
+Chip.overrides = ['wrapper', 'img', 'shrinked', 'text', 'Icon', 'onClose'];
 
 Chip.defaultProps = {
     className: '',
