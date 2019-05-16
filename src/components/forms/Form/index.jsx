@@ -39,7 +39,12 @@ function Form({
     return (
         <form className={classNameProp} action="" autoComplete="off" {...override.form}>
             {schema.map((section, index) => (
-                <Section key={index} title={section.title} {...override.Section}>
+                <Section
+                    key={index}
+                    title={section.title}
+                    className={section.className}
+                    {...override.Section}
+                >
                     {section.fields.map((field) => (
                         <FieldControl
                             key={field.name}
@@ -49,6 +54,7 @@ function Form({
                             value={values[field.name]}
                             error={errors[field.name]}
                             onChange={onChangeField}
+                            className={field.className}
                         />
                     ))}
                 </Section>
@@ -77,6 +83,7 @@ Form.propTypes = {
     schema: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string,
+            className: PropTypes.string,
             fields: PropTypes.arrayOf(
                 PropTypes.shape({
                     label: PropTypes.string,
@@ -89,6 +96,7 @@ Form.propTypes = {
                     isRequired: PropTypes.bool,
                     isReadOnly: PropTypes.bool,
                     attrs: PropTypes.object,
+                    className: PropTypes.string,
                 }),
             ),
         }),

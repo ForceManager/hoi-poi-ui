@@ -45,6 +45,7 @@ function FieldControl({
         labelMode: labelMode,
         isFullwidth: isFullwidth,
         onChange: onChangeField,
+        className: classNameProp,
         value,
         error,
     };
@@ -65,6 +66,7 @@ FieldControl.propTypes = {
     isFullWidth: PropTypes.bool,
     value: PropTypes.any,
     error: PropTypes.string,
+    className: PropTypes.string,
     field: PropTypes.shape({
         label: PropTypes.string,
         labelMode: PropTypes.string,
@@ -75,6 +77,7 @@ FieldControl.propTypes = {
         hint: PropTypes.string,
         isRequired: PropTypes.bool,
         isReadOnly: PropTypes.bool,
+        className: PropTypes.string,
         attrs: PropTypes.object,
     }).isRequired,
 };
