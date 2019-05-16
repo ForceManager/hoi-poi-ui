@@ -230,8 +230,10 @@ exports[`Form complete match 1`] = `
         schema={
           Array [
             Object {
+              "className": "tab-general",
               "fields": Array [
                 Object {
+                  "className": "field-name",
                   "isRequired": true,
                   "label": "Name",
                   "name": "name",
@@ -594,8 +596,10 @@ exports[`Form complete match 1`] = `
           schema={
             Array [
               Object {
+                "className": "tab-general",
                 "fields": Array [
                   Object {
+                    "className": "field-name",
                     "isRequired": true,
                     "label": "Name",
                     "name": "name",
@@ -838,8 +842,10 @@ exports[`Form complete match 1`] = `
             schema={
               Array [
                 Object {
+                  "className": "tab-general",
                   "fields": Array [
                     Object {
+                      "className": "field-name",
                       "isRequired": true,
                       "label": "Name",
                       "name": "name",
@@ -992,10 +998,12 @@ exports[`Form complete match 1`] = `
               autoComplete="off"
             >
               <JssContextSubscriber
+                className="tab-general"
                 key="0"
                 title="General"
               >
                 <WithStyles(Section)
+                  className="tab-general"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -1287,6 +1295,7 @@ exports[`Form complete match 1`] = `
                   title="General"
                 >
                   <Section
+                    className="tab-general"
                     classes={
                       Object {
                         "collapsed": "HoiPoi-Section-collapsed-0-2-5",
@@ -1299,7 +1308,7 @@ exports[`Form complete match 1`] = `
                     title="General"
                   >
                     <div
-                      className="HoiPoi-Section-root-0-2-1"
+                      className="HoiPoi-Section-root-0-2-1 tab-general"
                     >
                       <div
                         className="HoiPoi-Section-header-0-2-2"
@@ -1779,9 +1788,11 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
+                              className="field-name"
                               error=""
                               field={
                                 Object {
+                                  "className": "field-name",
                                   "isRequired": true,
                                   "label": "Name",
                                   "name": "name",
@@ -1795,6 +1806,7 @@ exports[`Form complete match 1`] = `
                               onChange={[Function]}
                             >
                               <JssContextSubscriber
+                                className="field-name"
                                 error=""
                                 isRequired={true}
                                 label="Name"
@@ -1805,6 +1817,7 @@ exports[`Form complete match 1`] = `
                                 type="text"
                               >
                                 <WithStyles(Input)
+                                  className="field-name"
                                   error=""
                                   innerRef={null}
                                   isReadOnly={false}
@@ -2105,6 +2118,7 @@ exports[`Form complete match 1`] = `
                                   value=""
                                 >
                                   <Input
+                                    className="field-name"
                                     classes={
                                       Object {
                                         "Label": "HoiPoi-Input-Label-0-2-12",
@@ -2135,7 +2149,7 @@ exports[`Form complete match 1`] = `
                                     value=""
                                   >
                                     <div
-                                      className="HoiPoi-Input-root-0-2-11 HoiPoi-Input-horizontal-0-2-20"
+                                      className="HoiPoi-Input-root-0-2-11 HoiPoi-Input-horizontal-0-2-20 field-name"
                                     >
                                       <JssContextSubscriber
                                         className="HoiPoi-Input-Label-0-2-12"
