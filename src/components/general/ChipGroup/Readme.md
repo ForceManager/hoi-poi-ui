@@ -4,7 +4,8 @@ Chips Group:
 let chipProps = [
     {
         label: 'Lorena Smith',
-        url: 'https://images.pexels.com/photos/2092709/pexels-photo-2092709.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
+        url:
+            'https://images.pexels.com/photos/2092709/pexels-photo-2092709.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     },
     {
         label: 'Dani Balastegui',
@@ -32,5 +33,6 @@ let chipProps = [
 ---
 
 -   [Chip](#/General?id=chip)
+-   root - `Chip` wrapper
 -   label - inner content
 -   url - string with direct link to the picture

@@ -8,8 +8,8 @@ export default (theme) => ({
         padding: '0',
         height: '20px',
         marginRight: '3px',
-        backgroundColor: theme.colors.secondaryGray,
-        color: theme.colors.text.stone,
+        backgroundColor: theme.colors.secondaryGrey,
+        color: theme.colors.text.greySoft,
     },
 
     wrapper: {
@@ -23,7 +23,7 @@ export default (theme) => ({
         lineHeight: '20px',
         letterSpacing: '0.5px',
         padding: '0 5px',
-        color: theme.colors.text.fmDefaultIcons,
+        color: theme.colors.text.greySoft,
     },
 
     shrinked: {
@@ -33,7 +33,7 @@ export default (theme) => ({
         lineHeight: '20px',
         letterSpacing: '0.5px',
         textAlign: 'center',
-        color: theme.colors.text.fmDefaultIcons,
+        color: theme.colors.text.greySoft,
     },
 
     close: {

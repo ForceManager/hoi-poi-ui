@@ -51,5 +51,10 @@ Shrinked Chip with/without picture:
 
 ---
 
--   [Icon](#/General?id=icon) : It will be shown if property onClose is true
+-   wrapper - component wrapper
+-   img - `picture` wrapper
+-   picture - image attributes
+-   shrinked - children wrapper
 -   text - inner content and `children` wrapper
+-   [Icon](#/General?id=icon) : It will be shown if property onClose is set up
+-   onClose: `onClick` function

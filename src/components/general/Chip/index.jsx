@@ -38,7 +38,6 @@ function Chip({
                         className={isShrinked ? classes.shrinkedPicture : classes.picture}
                         {...override.picture}
                         src={url}
-                        alt={'Profile'}
                     />
                 )}
                 {isShrinked && !url && (
@@ -59,7 +58,7 @@ function Chip({
                                 className={classes.close}
                                 name="close"
                                 size="small"
-                                color={theme.colors.text.fmDefaultIcons}
+                                color={theme.colors.text.greySoft}
                             />
                         )}
                     </Fragment>
