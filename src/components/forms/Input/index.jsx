@@ -13,6 +13,8 @@ function Input({
     className: classNameProp,
     classes,
     onChange,
+    onFocus,
+    onBlur,
     id,
     name,
     type,
@@ -68,12 +70,20 @@ function Input({
         value,
         onChange,
         readOnly: isReadOnly,
-        onFocus: useCallback((e) => {
-            setFocused(true);
-        }, []),
-        onBlur: useCallback((e) => {
-            setFocused(false);
-        }, []),
+        onFocus: useCallback(
+            (e) => {
+                setFocused(true);
+                onFocus && onFocus();
+            },
+            [onFocus],
+        ),
+        onBlur: useCallback(
+            (e) => {
+                setFocused(false);
+                onBlur && onBlur();
+            },
+            [onBlur],
+        ),
         ...override.input,
     };
 
@@ -136,6 +146,8 @@ Input.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
     /** Native input name */

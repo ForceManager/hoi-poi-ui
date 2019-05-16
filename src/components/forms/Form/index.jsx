@@ -14,6 +14,8 @@ function Form({
     isFullwidth,
     schema,
     onChange,
+    onFocus,
+    onBlur,
     values,
     errors,
     ...props
@@ -36,6 +38,36 @@ function Form({
         [values, onChange],
     );
 
+    const onFocusField = useCallback(
+        (value, field) => {
+            onFocus &&
+                onFocus(
+                    {
+                        ...values,
+                        [field.name]: value,
+                    },
+                    field,
+                    value,
+                );
+        },
+        [onFocus, values],
+    );
+
+    const onBlurField = useCallback(
+        (value, field) => {
+            onBlur &&
+                onBlur(
+                    {
+                        ...values,
+                        [field.name]: value,
+                    },
+                    field,
+                    value,
+                );
+        },
+        [onBlur, values],
+    );
+
     return (
         <form className={classNameProp} action="" autoComplete="off" {...override.form}>
             {schema.map((section, index) => (
@@ -49,6 +81,8 @@ function Form({
                             value={values[field.name]}
                             error={errors[field.name]}
                             onChange={onChangeField}
+                            onFocus={onFocusField}
+                            onBlur={onBlurField}
                         />
                     ))}
                 </Section>
