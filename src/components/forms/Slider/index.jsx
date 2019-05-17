@@ -118,7 +118,7 @@ function Slider({
     useEffect(() => setInnerValue(value), [value]);
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 <RCSlider {...sliderProps} />
@@ -132,9 +132,18 @@ function Slider({
     );
 }
 
-Slider.overrides = ['rc-slider', 'error', 'formControl', 'Label', 'overlay', 'overlayLabel'];
+Slider.overrides = [
+    'root',
+    'rc-slider',
+    'error',
+    'formControl',
+    'Label',
+    'overlay',
+    'overlayLabel',
+];
 
 Slider.defaultProps = {
+    overrides: {},
     labelMode: 'horizontal',
     onChange: () => {},
     isReadOnly: false,

@@ -108,7 +108,7 @@ function Input({
     }
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 {preComponent && (
@@ -132,7 +132,15 @@ function Input({
     );
 }
 
-Input.overrides = ['input', 'error', 'preComponent', 'postComponent', 'formControl', 'Label'];
+Input.overrides = [
+    'root',
+    'input',
+    'error',
+    'preComponent',
+    'postComponent',
+    'formControl',
+    'Label',
+];
 
 Input.defaultProps = {
     labelMode: 'horizontal',
@@ -140,6 +148,7 @@ Input.defaultProps = {
     onChange: () => {},
     value: '',
     isReadOnly: false,
+    override: {},
 };
 
 Input.propTypes = {

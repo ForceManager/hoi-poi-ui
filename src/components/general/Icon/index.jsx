@@ -52,16 +52,17 @@ function Icon({
     const rootClassName = classnames(classes.root, classes[size], classNameProp);
 
     return (
-        <span className={rootClassName} {...override.wrapper}>
+        <span className={rootClassName} {...override.root}>
             <SelectedIcon color={color || theme.colors.greySoft} {...override.icon} />
         </span>
     );
 }
 
-Icon.overrides = ['wrapper', 'icon'];
+Icon.overrides = ['root', 'icon'];
 
 Icon.defaultProps = {
     size: 'medium',
+    overrides: {},
 };
 
 Icon.propTypes = {

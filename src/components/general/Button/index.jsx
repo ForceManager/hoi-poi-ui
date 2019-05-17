@@ -76,22 +76,23 @@ function Button({
 
     if (href) {
         return (
-            <a href={href} target={target} {...rootProps}>
+            <a href={href} target={target} {...rootProps} {...override.root}>
                 {content}
             </a>
         );
     } else {
         return (
-            <button {...rootProps} type="button">
+            <button {...rootProps} {...override.root} type="button">
                 {content}
             </button>
         );
     }
 }
 
-Button.overrides = ['label', 'Loader'];
+Button.overrides = ['root', 'label', 'Loader'];
 
 Button.defaultProps = {
+    overrides: {},
     size: 'medium',
     type: 'filled',
 };
