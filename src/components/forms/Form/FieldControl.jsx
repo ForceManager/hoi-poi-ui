@@ -40,16 +40,14 @@ function FieldControl({
 
     const onFocusField = useCallback(
         (input) => {
-            const value = input && input.target ? input.target.value : input;
-            onFocus && onFocus(value, field);
+            onFocus && onFocus(field);
         },
         [onFocus, field],
     );
 
     const onBlurField = useCallback(
         (input) => {
-            const value = input && input.target ? input.target.value : input;
-            onBlur && onBlur(value, field);
+            onBlur && onBlur(field);
         },
         [onBlur, field],
     );
