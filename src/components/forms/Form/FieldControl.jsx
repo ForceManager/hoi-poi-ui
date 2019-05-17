@@ -24,6 +24,8 @@ function FieldControl({
     isFullwidth,
     field,
     onChange,
+    onFocus,
+    onBlur,
     value,
     error,
     ...props
@@ -36,6 +38,20 @@ function FieldControl({
         [onChange, field],
     );
 
+    const onFocusField = useCallback(
+        (input) => {
+            onFocus && onFocus(field);
+        },
+        [onFocus, field],
+    );
+
+    const onBlurField = useCallback(
+        (input) => {
+            onBlur && onBlur(field);
+        },
+        [onBlur, field],
+    );
+
     if (!field || !field.type || !FIELD_MAP[field.type]) return null;
 
     const Field = FIELD_MAP[field.type];
@@ -45,6 +61,8 @@ function FieldControl({
         labelMode: labelMode,
         isFullwidth: isFullwidth,
         onChange: onChangeField,
+        onFocus: onFocusField,
+        onBlur: onBlurField,
         className: classNameProp,
         value,
         error,

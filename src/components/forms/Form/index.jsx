@@ -14,6 +14,8 @@ function Form({
     isFullwidth,
     schema,
     onChange,
+    onFocus,
+    onBlur,
     values,
     errors,
     ...props
@@ -54,6 +56,8 @@ function Form({
                             value={values[field.name]}
                             error={errors[field.name]}
                             onChange={onChangeField}
+                            onFocus={onFocus}
+                            onBlur={onBlur}
                             className={field.className}
                         />
                     ))}
