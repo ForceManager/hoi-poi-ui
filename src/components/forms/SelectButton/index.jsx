@@ -87,7 +87,7 @@ function SelectButton({
     };
 
     return (
-        <div {...rootProps} {...override.root} ref={ref}>
+        <div {...rootProps} ref={ref} {...override.root}>
             <div className={classes.button} {...override.button} onClick={toggleOpen}>
                 {children}
             </div>

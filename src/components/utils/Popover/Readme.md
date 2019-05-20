@@ -24,4 +24,4 @@ import { Button } from 'hoi-poi-ui';
 
 ---
 
--   [rc-tooltip](https://github.com/react-component/Tooltip)
+-   [root](https://github.com/react-component/Tooltip)

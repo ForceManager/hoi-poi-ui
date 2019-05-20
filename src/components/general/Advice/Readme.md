@@ -46,5 +46,6 @@ Warning:
 
 ---
 
+-   root - root element
 -   text - inner content and `children` wrapper.
 -   [Icon](#/General?id=icon)

@@ -60,10 +60,10 @@ function Advice({
                 return {
                     ...properties,
                     name: 'info',
-                    color: theme.colors.secundary,
+                    color: theme.colors.secondary,
                 };
         }
-    }, [theme.colors.green, theme.colors.red, theme.colors.secundary, theme.colors.yellow, type]);
+    }, [theme.colors.green, theme.colors.red, theme.colors.secondary, theme.colors.yellow, type]);
 
     return (
         <div {...rootProps} {...override.root}>

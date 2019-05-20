@@ -87,6 +87,7 @@ let onChange = (value) => setState({ value });
 
 ---
 
+-   root - root element
 -   [Input](#/Forms?id=input): Affect all inputs
 -   [Link](/#/General?id=link)
 -   formControl - wrapper with principal input and toggle inputs button

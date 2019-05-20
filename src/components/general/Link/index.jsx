@@ -45,7 +45,7 @@ function Link({
         );
     } else {
         return (
-            <button {...rootProps} {...override.root} type="button">
+            <button {...rootProps} type="button" {...override.root}>
                 {children}
             </button>
         );

@@ -52,6 +52,7 @@ const onChange = (value) => setState({ value });
 
 ---
 
+-   root - root element
 -   [rc-slider](https://github.com/react-component/slider/)
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label

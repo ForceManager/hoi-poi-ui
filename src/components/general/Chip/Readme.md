@@ -51,6 +51,7 @@ Shrinked Chip with/without picture:
 
 ---
 
+-   root - root element
 -   wrapper - component wrapper
 -   img - `picture` wrapper
 -   shrinked - children wrapper
