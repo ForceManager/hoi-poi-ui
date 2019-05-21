@@ -16,6 +16,8 @@ function Form({
     onChange,
     onFocus,
     onBlur,
+    onRemoveSection,
+    removeSection,
     values,
     errors,
     ...props
@@ -45,6 +47,9 @@ function Form({
                     key={index}
                     title={section.title}
                     className={section.className}
+                    isExpandable={section.isExpandable}
+                    remove={removeSection}
+                    onRemove={onRemoveSection}
                     {...override.Section}
                 >
                     {section.fields.map((field) => (
@@ -88,6 +93,8 @@ Form.propTypes = {
         PropTypes.shape({
             title: PropTypes.string,
             className: PropTypes.string,
+            isExpandable: PropTypes.bool,
+            withRemove: PropTypes.bool,
             fields: PropTypes.arrayOf(
                 PropTypes.shape({
                     label: PropTypes.string,

@@ -14,6 +14,9 @@ function Section({
     className: classNameProp,
     classes,
     title,
+    isExpandable,
+    remove,
+    onRemove,
     ...props
 }) {
     const [isOpen, open] = useState(true);
@@ -29,29 +32,61 @@ function Section({
 
     const onToggle = useCallback(() => open(!isOpen), [isOpen]);
 
+    const removeIcon = remove ? (
+        <span onClick={onRemove} className={classes.remove}>
+            <Icon name="close" />
+        </span>
+    ) : null;
+
+    if (title && isExpandable) {
+        return (
+            <div className={rootClassName}>
+                <div className={classes.header} onClick={onToggle} {...override.header}>
+                    <span className={classes.title} {...override.title}>
+                        {title}
+                    </span>
+                    <div className={iconClasses} {...override.icon}>
+                        <Icon name="chevron" size="small" />
+                    </div>
+                </div>
+                <AnimateHeight height={isOpen ? 'auto' : 0} {...override['react-animate-height']}>
+                    {children}
+                </AnimateHeight>
+            </div>
+        );
+    } else if (title && !isExpandable) {
+        return (
+            <div className={rootClassName}>
+                <div className={classes.header} {...override.header}>
+                    <span className={classes.title} {...override.title}>
+                        {title}
+                    </span>
+                </div>
+                {children}
+            </div>
+        );
+    }
     return (
         <div className={rootClassName}>
-            <div className={classes.header} onClick={onToggle} {...override.header}>
-                <span className={classes.title} {...override.title}>
-                    {title}
-                </span>
-                <div className={iconClasses} {...override.icon}>
-                    <Icon name="chevron" size="small" />
-                </div>
-            </div>
-            <AnimateHeight height={isOpen ? 'auto' : 0} {...override['react-animate-height']}>
-                {children}
-            </AnimateHeight>
+            {removeIcon}
+            {children}
         </div>
     );
 }
 
 Section.overrides = ['header', 'title', 'react-animate-height'];
 
+Section.defaultProps = {
+    isExpandable: true,
+    withRemove: false,
+};
+
 Section.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     title: PropTypes.string,
+    isExpandable: PropTypes.bool,
+    withRemove: PropTypes.bool,
 };
 
 export default React.memo(withStyles(styles, { name: 'Section' })(Section));

@@ -1,5 +1,7 @@
 export default (theme) => ({
-    root: {},
+    root: {
+        position: 'relative',
+    },
     header: {
         display: 'flex',
         justifyContent: 'space-between',
@@ -24,6 +26,22 @@ export default (theme) => ({
         cursor: 'pointer',
         '&$collapsed': {
             transform: 'rotate(0) translateY(1px)',
+        },
+    },
+    remove: {
+        position: 'absolute',
+        cursor: 'pointer',
+        top: '5px',
+        right: '5px',
+        height: '10px',
+        width: '10px',
+        '& span': {
+            height: '100%',
+            width: '100%',
+        },
+        '& svg': {
+            height: '100%',
+            width: '100%',
         },
     },
     collapsed: {},

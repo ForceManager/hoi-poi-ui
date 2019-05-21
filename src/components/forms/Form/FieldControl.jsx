@@ -7,6 +7,7 @@ import CheckboxGroup from '../CheckboxGroup';
 import RadioGroup from '../RadioGroup';
 import Select from '../Select';
 import Slider from '../Slider';
+import Repeater from '../Repeater';
 
 const FIELD_MAP = {
     text: Input,
@@ -15,6 +16,7 @@ const FIELD_MAP = {
     radioGroup: RadioGroup,
     select: Select,
     slider: Slider,
+    repeater: Repeater,
 };
 
 function FieldControl({
