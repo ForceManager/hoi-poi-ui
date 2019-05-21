@@ -2,13 +2,13 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Repeater from './index';
+import Multiplier from './index';
 import schema from './example.json';
 
-describe('Repeater', () => {
+describe('Multiplier', () => {
     test('complete match', () => {
         const errors = {
-            phone: 'Invalid phone',
+            email: 'Invalid email',
         };
 
         const max = 10;
@@ -19,7 +19,7 @@ describe('Repeater', () => {
 
         const wrapper = mount(
             <HoiPoiProvider>
-                <Repeater
+                <Multiplier
                     errors={errors}
                     schema={schema}
                     max={10}

@@ -3,9 +3,9 @@ export default (theme) => ({
         display: 'flex',
         flexDirection: 'column',
     },
-    repeater: {},
-    repeaterContainer: {},
-    repeaterItem: {
+    multiplier: {},
+    multiplierContainer: {},
+    multiplierItem: {
         paddingTop: '10px',
     },
     separator: {
@@ -18,7 +18,7 @@ export default (theme) => ({
         },
         paddingBottom: '20px',
     },
-    repeaterButtonContainer: {
+    multiplierButtonContainer: {
         display: 'flex',
         justifyContent: 'flex-end',
     },
@@ -28,5 +28,5 @@ export default (theme) => ({
             marginLeft: '0',
         },
     },
-    repeaterButton: {},
+    multiplierButton: {},
 });

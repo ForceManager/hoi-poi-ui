@@ -39,7 +39,7 @@ let onChange = (value, index) => {
     setState({ values: newValues });
 };
 
-<Repeater
+<Multiplier
     name="timeAllocationLine"
     buttonLabel="ADD"
     buttonClassName="time-allocation-add-button"
@@ -118,7 +118,7 @@ let onRemove = (index) => {
     setState({ values: newValues });
 };
 
-<Repeater
+<Multiplier
     name="timeAllocationLine"
     buttonLabel="+ Add"
     buttonClassName="time-allocation-add-button"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Repeater complete match 1`] = `
+exports[`Multiplier complete match 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -227,7 +227,7 @@ exports[`Repeater complete match 1`] = `
         buttonLabel="Add"
         errors={
           Object {
-            "phone": "Invalid phone",
+            "email": "Invalid email",
           }
         }
         max={10}
@@ -273,12 +273,12 @@ exports[`Repeater complete match 1`] = `
           ]
         }
       >
-        <WithStyles(Repeater)
+        <WithStyles(Multiplier)
           buttonClassName="addButton"
           buttonLabel="Add"
           errors={
             Object {
-              "phone": "Invalid phone",
+              "email": "Invalid email",
             }
           }
           fields={Array []}
@@ -587,24 +587,24 @@ exports[`Repeater complete match 1`] = `
           }
           values={Array []}
         >
-          <Repeater
+          <Multiplier
             buttonClassName="addButton"
             buttonLabel="Add"
             classes={
               Object {
-                "repeater": "HoiPoi-Repeater-repeater-0-2-2",
-                "repeaterButton": "HoiPoi-Repeater-repeaterButton-0-2-8",
-                "repeaterButtonContainer": "HoiPoi-Repeater-repeaterButtonContainer-0-2-6",
-                "repeaterContainer": "HoiPoi-Repeater-repeaterContainer-0-2-3",
-                "repeaterItem": "HoiPoi-Repeater-repeaterItem-0-2-4",
-                "root": "HoiPoi-Repeater-root-0-2-1",
-                "separator": "HoiPoi-Repeater-separator-0-2-5",
-                "singleItem": "HoiPoi-Repeater-singleItem-0-2-7",
+                "multiplier": "HoiPoi-Multiplier-multiplier-0-2-2",
+                "multiplierButton": "HoiPoi-Multiplier-multiplierButton-0-2-8",
+                "multiplierButtonContainer": "HoiPoi-Multiplier-multiplierButtonContainer-0-2-6",
+                "multiplierContainer": "HoiPoi-Multiplier-multiplierContainer-0-2-3",
+                "multiplierItem": "HoiPoi-Multiplier-multiplierItem-0-2-4",
+                "root": "HoiPoi-Multiplier-root-0-2-1",
+                "separator": "HoiPoi-Multiplier-separator-0-2-5",
+                "singleItem": "HoiPoi-Multiplier-singleItem-0-2-7",
               }
             }
             errors={
               Object {
-                "phone": "Invalid phone",
+                "email": "Invalid email",
               }
             }
             fields={Array []}
@@ -657,19 +657,19 @@ exports[`Repeater complete match 1`] = `
             values={Array []}
           >
             <div
-              className="HoiPoi-Repeater-root-0-2-1"
+              className="HoiPoi-Multiplier-root-0-2-1"
             >
               <div
-                className="HoiPoi-Repeater-repeaterContainer-0-2-3"
+                className="HoiPoi-Multiplier-multiplierContainer-0-2-3"
               >
                 <div
-                  className="HoiPoi-Repeater-repeaterItem-0-2-4"
+                  className="HoiPoi-Multiplier-multiplierItem-0-2-4"
                   key="0"
                 >
                   <JssContextSubscriber
                     error={
                       Object {
-                        "phone": "Invalid phone",
+                        "email": "Invalid email",
                       }
                     }
                     onChange={[Function]}
@@ -720,7 +720,7 @@ exports[`Repeater complete match 1`] = `
                     <WithStyles(Form)
                       error={
                         Object {
-                          "phone": "Invalid phone",
+                          "email": "Invalid email",
                         }
                       }
                       errors={Object {}}
@@ -1033,7 +1033,7 @@ exports[`Repeater complete match 1`] = `
                         classes={Object {}}
                         error={
                           Object {
-                            "phone": "Invalid phone",
+                            "email": "Invalid email",
                           }
                         }
                         errors={Object {}}
@@ -5680,16 +5680,16 @@ exports[`Repeater complete match 1`] = `
                 </div>
               </div>
               <div
-                className="HoiPoi-Repeater-repeaterButtonContainer-0-2-6"
+                className="HoiPoi-Multiplier-multiplierButtonContainer-0-2-6"
               >
                 <JssContextSubscriber
-                  className="HoiPoi-Repeater-repeaterButton-0-2-8 addButton"
+                  className="HoiPoi-Multiplier-multiplierButton-0-2-8 addButton"
                   color="primary"
                   onClick={[Function]}
                   type="squared"
                 >
                   <WithStyles(Button)
-                    className="HoiPoi-Repeater-repeaterButton-0-2-8 addButton"
+                    className="HoiPoi-Multiplier-multiplierButton-0-2-8 addButton"
                     color="primary"
                     innerRef={null}
                     jssContext={
@@ -5953,7 +5953,7 @@ exports[`Repeater complete match 1`] = `
                     type="squared"
                   >
                     <Button
-                      className="HoiPoi-Repeater-repeaterButton-0-2-8 addButton"
+                      className="HoiPoi-Multiplier-multiplierButton-0-2-8 addButton"
                       classes={
                         Object {
                           "big": "HoiPoi-Button-big-0-2-63",
@@ -5977,7 +5977,7 @@ exports[`Repeater complete match 1`] = `
                       type="squared"
                     >
                       <button
-                        className="HoiPoi-Button-root-0-2-53 HoiPoi-Button-squared-0-2-58 HoiPoi-Button-primary-0-2-60 HoiPoi-Repeater-repeaterButton-0-2-8 addButton"
+                        className="HoiPoi-Button-root-0-2-53 HoiPoi-Button-squared-0-2-58 HoiPoi-Button-primary-0-2-60 HoiPoi-Multiplier-multiplierButton-0-2-8 addButton"
                         onClick={[Function]}
                         type="button"
                       >
@@ -5996,8 +5996,8 @@ exports[`Repeater complete match 1`] = `
                 </JssContextSubscriber>
               </div>
             </div>
-          </Repeater>
-        </WithStyles(Repeater)>
+          </Multiplier>
+        </WithStyles(Multiplier)>
       </JssContextSubscriber>
     </JssProvider>
   </ThemeProvider>

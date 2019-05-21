@@ -8,7 +8,7 @@ import Button from '../../general/Button';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
-function Repeater({
+function Multiplier({
     overrides: overridesProp,
     className: classNameProp,
     classes,
@@ -34,12 +34,12 @@ function Repeater({
     const [size, setSize] = useState(1);
 
     // Overrides
-    const override = getOverrides(overridesProp, Repeater.overrides);
+    const override = getOverrides(overridesProp, Multiplier.overrides);
 
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
-    const buttonClassNames = classnames(classes.repeaterButton, buttonClassName);
-    const RepeaterItemClassNames = classnames(classes.repeaterItem, {
+    const buttonClassNames = classnames(classes.multiplierButton, buttonClassName);
+    const MultiplierItemClassNames = classnames(classes.multiplierItem, {
         [classes.separator]: separator,
         [classes.singleItem]: !Array.isArray(schema),
     });
@@ -60,7 +60,7 @@ function Repeater({
         [size, onRemove],
     );
 
-    const onChangeRepeater = useCallback(
+    const onChangeMultiplier = useCallback(
         (value, index) => {
             onChange && onChange(value, index);
         },
@@ -72,13 +72,13 @@ function Repeater({
     for (let index = 0; index < size; index++) {
         if (Array.isArray(schema)) {
             items.push(
-                <div key={index} className={RepeaterItemClassNames} {...override.RepeaterItem}>
+                <div key={index} className={MultiplierItemClassNames} {...override.MultiplierItem}>
                     <Form
                         overrides={overridesProp}
                         schema={schema}
                         values={values[index]}
                         error={errors}
-                        onChange={(value) => onChangeRepeater(value, index)}
+                        onChange={(value) => onChangeMultiplier(value, index)}
                         onFocus={onFocus}
                         onBlur={onBlur}
                         removeSection={remove}
@@ -90,14 +90,14 @@ function Repeater({
             let field = { ...schema };
             field.label = index === 0 ? field.label : '';
             items.push(
-                <div key={index} className={RepeaterItemClassNames} {...override.RepeaterItem}>
+                <div key={index} className={MultiplierItemClassNames} {...override.MultiplierItem}>
                     <FieldControl
                         labelMode={schema.labelMode || labelMode}
                         isFullWidth={schema.isFullwidth || isFullwidth}
                         field={field}
                         value={values[index]}
                         error={null}
-                        onChange={(value) => onChangeRepeater(value, index)}
+                        onChange={(value) => onChangeMultiplier(value, index)}
                         onFocus={onFocus}
                         onBlur={onBlur}
                         className={schema.className}
@@ -110,13 +110,13 @@ function Repeater({
     function renderButton() {
         if (max && size >= max) return;
         return (
-            <div className={classes.repeaterButtonContainer}>
+            <div className={classes.multiplierButtonContainer}>
                 <Button
                     color="primary"
                     type="squared"
                     className={buttonClassNames}
                     onClick={onClickAdd}
-                    {...override.RepeaterButton}
+                    {...override.MultiplierButton}
                 >
                     {buttonLabel}
                 </Button>
@@ -126,15 +126,15 @@ function Repeater({
 
     return (
         <div {...rootProps}>
-            <div className={classes.repeaterContainer}>{items}</div>
+            <div className={classes.multiplierContainer}>{items}</div>
             {renderButton()}
         </div>
     );
 }
 
-Repeater.overrides = ['RepeaterItem', 'RepeaterButton'];
+Multiplier.overrides = ['MultiplierItem', 'MultiplierButton'];
 
-Repeater.defaultProps = {
+Multiplier.defaultProps = {
     errors: {},
     values: [],
     fields: [],
@@ -144,7 +144,7 @@ Repeater.defaultProps = {
     isFullWidth: false,
 };
 
-Repeater.propTypes = {
+Multiplier.propTypes = {
     /** Native form class */
     schema: PropTypes.any,
     className: PropTypes.string,
@@ -177,4 +177,4 @@ Repeater.propTypes = {
     isFullWidth: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'Repeater' })(Repeater));
+export default React.memo(withStyles(styles, { name: 'Multiplier' })(Multiplier));
