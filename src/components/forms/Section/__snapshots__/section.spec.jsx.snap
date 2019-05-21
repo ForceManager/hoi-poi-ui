@@ -227,6 +227,7 @@ exports[`Section match snapshot 1`] = `
       >
         <WithStyles(Section)
           innerRef={null}
+          isExpandable={true}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -460,18 +461,22 @@ exports[`Section match snapshot 1`] = `
             }
           }
           title="Title here"
+          withRemove={false}
         >
           <Section
             classes={
               Object {
-                "collapsed": "HoiPoi-Section-collapsed-0-2-5",
+                "collapsed": "HoiPoi-Section-collapsed-0-2-6",
                 "header": "HoiPoi-Section-header-0-2-2",
                 "icon": "HoiPoi-Section-icon-0-2-4",
+                "remove": "HoiPoi-Section-remove-0-2-5",
                 "root": "HoiPoi-Section-root-0-2-1",
                 "title": "HoiPoi-Section-title-0-2-3",
               }
             }
+            isExpandable={true}
             title="Title here"
+            withRemove={false}
           >
             <div
               className="HoiPoi-Section-root-0-2-1"
@@ -732,11 +737,11 @@ exports[`Section match snapshot 1`] = `
                       <WithTheme(Icon)
                         classes={
                           Object {
-                            "big": "HoiPoi-WithTheme(Icon)-big-0-2-10",
-                            "large": "HoiPoi-WithTheme(Icon)-large-0-2-9",
-                            "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-8",
-                            "root": "HoiPoi-WithTheme(Icon)-root-0-2-6",
-                            "small": "HoiPoi-WithTheme(Icon)-small-0-2-7",
+                            "big": "HoiPoi-WithTheme(Icon)-big-0-2-11",
+                            "large": "HoiPoi-WithTheme(Icon)-large-0-2-10",
+                            "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-9",
+                            "root": "HoiPoi-WithTheme(Icon)-root-0-2-7",
+                            "small": "HoiPoi-WithTheme(Icon)-small-0-2-8",
                           }
                         }
                         name="chevron"
@@ -745,11 +750,11 @@ exports[`Section match snapshot 1`] = `
                         <Icon
                           classes={
                             Object {
-                              "big": "HoiPoi-WithTheme(Icon)-big-0-2-10",
-                              "large": "HoiPoi-WithTheme(Icon)-large-0-2-9",
-                              "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-8",
-                              "root": "HoiPoi-WithTheme(Icon)-root-0-2-6",
-                              "small": "HoiPoi-WithTheme(Icon)-small-0-2-7",
+                              "big": "HoiPoi-WithTheme(Icon)-big-0-2-11",
+                              "large": "HoiPoi-WithTheme(Icon)-large-0-2-10",
+                              "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-9",
+                              "root": "HoiPoi-WithTheme(Icon)-root-0-2-7",
+                              "small": "HoiPoi-WithTheme(Icon)-small-0-2-8",
                             }
                           }
                           name="chevron"
@@ -840,7 +845,7 @@ exports[`Section match snapshot 1`] = `
                           }
                         >
                           <span
-                            className="HoiPoi-WithTheme(Icon)-root-0-2-6 HoiPoi-WithTheme(Icon)-small-0-2-7"
+                            className="HoiPoi-WithTheme(Icon)-root-0-2-7 HoiPoi-WithTheme(Icon)-small-0-2-8"
                           >
                             <Chevron
                               color="#788590"
@@ -1139,6 +1144,7 @@ exports[`Section open and close 1`] = `
       >
         <WithStyles(Section)
           innerRef={null}
+          isExpandable={true}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -1372,33 +1378,37 @@ exports[`Section open and close 1`] = `
             }
           }
           title="Title here"
+          withRemove={false}
         >
           <Section
             classes={
               Object {
-                "collapsed": "HoiPoi-HoiPoi-Section-collapsed-0-2-15",
-                "header": "HoiPoi-HoiPoi-Section-header-0-2-12",
-                "icon": "HoiPoi-HoiPoi-Section-icon-0-2-14",
-                "root": "HoiPoi-HoiPoi-Section-root-0-2-11",
-                "title": "HoiPoi-HoiPoi-Section-title-0-2-13",
+                "collapsed": "HoiPoi-HoiPoi-Section-collapsed-0-2-17",
+                "header": "HoiPoi-HoiPoi-Section-header-0-2-13",
+                "icon": "HoiPoi-HoiPoi-Section-icon-0-2-15",
+                "remove": "HoiPoi-HoiPoi-Section-remove-0-2-16",
+                "root": "HoiPoi-HoiPoi-Section-root-0-2-12",
+                "title": "HoiPoi-HoiPoi-Section-title-0-2-14",
               }
             }
+            isExpandable={true}
             title="Title here"
+            withRemove={false}
           >
             <div
-              className="HoiPoi-HoiPoi-Section-root-0-2-11"
+              className="HoiPoi-HoiPoi-Section-root-0-2-12"
             >
               <div
-                className="HoiPoi-HoiPoi-Section-header-0-2-12"
+                className="HoiPoi-HoiPoi-Section-header-0-2-13"
                 onClick={[Function]}
               >
                 <span
-                  className="HoiPoi-HoiPoi-Section-title-0-2-13"
+                  className="HoiPoi-HoiPoi-Section-title-0-2-14"
                 >
                   Title here
                 </span>
                 <div
-                  className="HoiPoi-HoiPoi-Section-icon-0-2-14"
+                  className="HoiPoi-HoiPoi-Section-icon-0-2-15"
                 >
                   <JssContextSubscriber
                     name="chevron"
@@ -1644,11 +1654,11 @@ exports[`Section open and close 1`] = `
                       <WithTheme(Icon)
                         classes={
                           Object {
-                            "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-20",
-                            "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-19",
-                            "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-18",
-                            "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-16",
-                            "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-17",
+                            "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-22",
+                            "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-21",
+                            "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-20",
+                            "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-18",
+                            "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-19",
                           }
                         }
                         name="chevron"
@@ -1657,11 +1667,11 @@ exports[`Section open and close 1`] = `
                         <Icon
                           classes={
                             Object {
-                              "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-20",
-                              "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-19",
-                              "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-18",
-                              "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-16",
-                              "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-17",
+                              "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-22",
+                              "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-21",
+                              "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-20",
+                              "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-18",
+                              "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-19",
                             }
                           }
                           name="chevron"
@@ -1752,7 +1762,7 @@ exports[`Section open and close 1`] = `
                           }
                         >
                           <span
-                            className="HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-16 HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-17"
+                            className="HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-18 HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-19"
                           >
                             <Chevron
                               color="#788590"
@@ -2051,6 +2061,7 @@ exports[`Section open and close 2`] = `
       >
         <WithStyles(Section)
           innerRef={null}
+          isExpandable={true}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -2284,33 +2295,37 @@ exports[`Section open and close 2`] = `
             }
           }
           title="Title here"
+          withRemove={false}
         >
           <Section
             classes={
               Object {
-                "collapsed": "HoiPoi-HoiPoi-Section-collapsed-0-2-15",
-                "header": "HoiPoi-HoiPoi-Section-header-0-2-12",
-                "icon": "HoiPoi-HoiPoi-Section-icon-0-2-14",
-                "root": "HoiPoi-HoiPoi-Section-root-0-2-11",
-                "title": "HoiPoi-HoiPoi-Section-title-0-2-13",
+                "collapsed": "HoiPoi-HoiPoi-Section-collapsed-0-2-17",
+                "header": "HoiPoi-HoiPoi-Section-header-0-2-13",
+                "icon": "HoiPoi-HoiPoi-Section-icon-0-2-15",
+                "remove": "HoiPoi-HoiPoi-Section-remove-0-2-16",
+                "root": "HoiPoi-HoiPoi-Section-root-0-2-12",
+                "title": "HoiPoi-HoiPoi-Section-title-0-2-14",
               }
             }
+            isExpandable={true}
             title="Title here"
+            withRemove={false}
           >
             <div
-              className="HoiPoi-HoiPoi-Section-root-0-2-11"
+              className="HoiPoi-HoiPoi-Section-root-0-2-12"
             >
               <div
-                className="HoiPoi-HoiPoi-Section-header-0-2-12"
+                className="HoiPoi-HoiPoi-Section-header-0-2-13"
                 onClick={[Function]}
               >
                 <span
-                  className="HoiPoi-HoiPoi-Section-title-0-2-13"
+                  className="HoiPoi-HoiPoi-Section-title-0-2-14"
                 >
                   Title here
                 </span>
                 <div
-                  className="HoiPoi-HoiPoi-Section-icon-0-2-14"
+                  className="HoiPoi-HoiPoi-Section-icon-0-2-15"
                 >
                   <JssContextSubscriber
                     name="chevron"
@@ -2556,11 +2571,11 @@ exports[`Section open and close 2`] = `
                       <WithTheme(Icon)
                         classes={
                           Object {
-                            "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-20",
-                            "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-19",
-                            "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-18",
-                            "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-16",
-                            "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-17",
+                            "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-22",
+                            "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-21",
+                            "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-20",
+                            "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-18",
+                            "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-19",
                           }
                         }
                         name="chevron"
@@ -2569,11 +2584,11 @@ exports[`Section open and close 2`] = `
                         <Icon
                           classes={
                             Object {
-                              "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-20",
-                              "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-19",
-                              "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-18",
-                              "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-16",
-                              "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-17",
+                              "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-22",
+                              "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-21",
+                              "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-20",
+                              "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-18",
+                              "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-19",
                             }
                           }
                           name="chevron"
@@ -2664,7 +2679,7 @@ exports[`Section open and close 2`] = `
                           }
                         >
                           <span
-                            className="HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-16 HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-17"
+                            className="HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-18 HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-19"
                           >
                             <Chevron
                               color="#788590"
