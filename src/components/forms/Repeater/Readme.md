@@ -47,7 +47,7 @@ let onRemove = (index) => {
 
 <Repeater
     name="timeAllocationLine"
-    buttonLabel="+ Add"
+    buttonLabel="ADD"
     buttonClassName="time-allocation-add-button"
     values={state.values}
     errors={errors}

@@ -53,7 +53,6 @@ function Repeater({
     const onClickAdd = () => setSize(size + 1);
 
     const onClickRemove = (index) => {
-        console.log('values', values);
         onRemove(index);
         setSize(size - 1);
     };
@@ -65,7 +64,7 @@ function Repeater({
     for (let index = 0; index < size; index++) {
         if (Array.isArray(schema)) {
             items.push(
-                <div key={index} className={RepeaterItemClassNames}>
+                <div key={index} className={RepeaterItemClassNames} {...override.RepeaterItem}>
                     <Form
                         overrides={overridesProp}
                         schema={schema}
@@ -83,7 +82,7 @@ function Repeater({
             let field = { ...schema };
             field.label = index === 0 ? field.label : '';
             items.push(
-                <div key={index} className={RepeaterItemClassNames}>
+                <div key={index} className={RepeaterItemClassNames} {...override.RepeaterItem}>
                     <FieldControl
                         labelMode={schema.labelMode || labelMode}
                         isFullWidth={schema.isFullwidth || isFullwidth}
@@ -101,7 +100,7 @@ function Repeater({
     }
 
     return (
-        <div {...rootProps} {...override.repeter}>
+        <div {...rootProps} {...override.Repeater}>
             <div className={classes.repeaterContainer}>{items}</div>
             <div className={classes.repeaterButtonContainer}>
                 {!max || (max && size < max) ? (
@@ -110,6 +109,7 @@ function Repeater({
                         type="squared"
                         className={buttonClassNames}
                         onClick={onClickAdd}
+                        {...override.RepeaterButton}
                     >
                         {buttonLabel}
                     </Button>
@@ -119,7 +119,7 @@ function Repeater({
     );
 }
 
-Repeater.overrides = ['Repeater', 'RepeaterItem'];
+Repeater.overrides = ['Repeater', 'RepeaterItem', 'RepeaterButton'];
 
 Repeater.defaultProps = {
     errors: {},
