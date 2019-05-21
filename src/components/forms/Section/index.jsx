@@ -15,7 +15,6 @@ function Section({
     classes,
     title,
     isExpandable,
-    remove,
     onRemove,
     ...props
 }) {
@@ -32,7 +31,7 @@ function Section({
 
     const onToggle = useCallback(() => open(!isOpen), [isOpen]);
 
-    const removeIcon = remove ? (
+    const removeIcon = onRemove ? (
         <span onClick={onRemove} className={classes.remove}>
             <Icon name="close" />
         </span>
@@ -78,7 +77,6 @@ Section.overrides = ['header', 'title', 'react-animate-height'];
 
 Section.defaultProps = {
     isExpandable: true,
-    withRemove: false,
 };
 
 Section.propTypes = {
@@ -86,7 +84,6 @@ Section.propTypes = {
     overrides: PropTypes.object,
     title: PropTypes.string,
     isExpandable: PropTypes.bool,
-    withRemove: PropTypes.bool,
 };
 
 export default React.memo(withStyles(styles, { name: 'Section' })(Section));

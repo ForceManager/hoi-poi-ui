@@ -39,12 +39,6 @@ let onChange = (value, index) => {
     setState({ values: newValues });
 };
 
-let onRemove = (index) => {
-    let newValues = [...state.values];
-    newValues.splice(index, 1);
-    setState({ values: newValues });
-};
-
 <Repeater
     name="timeAllocationLine"
     buttonLabel="ADD"
@@ -56,7 +50,6 @@ let onRemove = (index) => {
     separator={false}
     remove={false}
     onChange={onChange}
-    onRemove={onRemove}
 />;
 ```
 

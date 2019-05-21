@@ -17,7 +17,6 @@ function Form({
     onFocus,
     onBlur,
     onRemoveSection,
-    removeSection,
     values,
     errors,
     ...props
@@ -48,7 +47,6 @@ function Form({
                     title={section.title}
                     className={section.className}
                     isExpandable={section.isExpandable}
-                    remove={removeSection}
                     onRemove={onRemoveSection}
                     {...override.Section}
                 >

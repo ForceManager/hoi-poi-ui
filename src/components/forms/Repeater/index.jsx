@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
@@ -31,7 +31,7 @@ function Repeater({
     ...props
 }) {
     // State
-    const [size, setSize] = useState(2);
+    const [size, setSize] = useState(1);
 
     // Overrides
     const override = getOverrides(overridesProp, Repeater.overrides);
@@ -48,18 +48,26 @@ function Repeater({
         className: rootClassName,
     };
 
+    const onClickAdd = useCallback(() => {
+        setSize(size + 1);
+    }, [size]);
+
+    const onClickRemove = useCallback(
+        (index) => {
+            onRemove && onRemove(index);
+            setSize(size - 1);
+        },
+        [size, onRemove],
+    );
+
+    const onChangeRepeater = useCallback(
+        (value, index) => {
+            onChange && onChange(value, index);
+        },
+        [onChange],
+    );
+
     const items = [];
-
-    const onClickAdd = () => setSize(size + 1);
-
-    const onClickRemove = (index) => {
-        onRemove(index);
-        setSize(size - 1);
-    };
-
-    const onChangeRepeater = (value, index) => {
-        onChange(value, index);
-    };
 
     for (let index = 0; index < size; index++) {
         if (Array.isArray(schema)) {
@@ -99,27 +107,32 @@ function Repeater({
         }
     }
 
-    return (
-        <div {...rootProps} {...override.Repeater}>
-            <div className={classes.repeaterContainer}>{items}</div>
+    function renderButton() {
+        if (max && size >= max) return;
+        return (
             <div className={classes.repeaterButtonContainer}>
-                {!max || (max && size < max) ? (
-                    <Button
-                        color="primary"
-                        type="squared"
-                        className={buttonClassNames}
-                        onClick={onClickAdd}
-                        {...override.RepeaterButton}
-                    >
-                        {buttonLabel}
-                    </Button>
-                ) : null}
+                <Button
+                    color="primary"
+                    type="squared"
+                    className={buttonClassNames}
+                    onClick={onClickAdd}
+                    {...override.RepeaterButton}
+                >
+                    {buttonLabel}
+                </Button>
             </div>
+        );
+    }
+
+    return (
+        <div {...rootProps}>
+            <div className={classes.repeaterContainer}>{items}</div>
+            {renderButton()}
         </div>
     );
 }
 
-Repeater.overrides = ['Repeater', 'RepeaterItem', 'RepeaterButton'];
+Repeater.overrides = ['RepeaterItem', 'RepeaterButton'];
 
 Repeater.defaultProps = {
     errors: {},
