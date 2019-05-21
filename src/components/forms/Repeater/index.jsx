@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import Form from '../../forms/Form';
+import FieldControl from '../Form/FieldControl';
 import Button from '../../general/Button';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
@@ -26,6 +27,7 @@ function Repeater({
     onFocus,
     onBlur,
     onRemove,
+    labelMode,
     ...props
 }) {
     // State
@@ -39,6 +41,7 @@ function Repeater({
     const buttonClassNames = classnames(classes.repeaterButton, buttonClassName);
     const RepeaterItemClassNames = classnames(classes.repeaterItem, {
         [classes.separator]: separator,
+        [classes.singleItem]: !Array.isArray(schema),
     });
 
     const rootProps = {
@@ -59,24 +62,42 @@ function Repeater({
         onChange(value, index);
     };
 
-    console.log('values', values);
-
     for (let index = 0; index < size; index++) {
-        items.push(
-            <div key={index} className={RepeaterItemClassNames}>
-                <Form
-                    overrides={overridesProp}
-                    schema={schema}
-                    values={values[index]}
-                    error={errors}
-                    onChange={(value) => onChangeRepeater(value, index)}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    removeSection={remove}
-                    onRemoveSection={() => onClickRemove(index)}
-                />
-            </div>,
-        );
+        if (Array.isArray(schema)) {
+            items.push(
+                <div key={index} className={RepeaterItemClassNames}>
+                    <Form
+                        overrides={overridesProp}
+                        schema={schema}
+                        values={values[index]}
+                        error={errors}
+                        onChange={(value) => onChangeRepeater(value, index)}
+                        onFocus={onFocus}
+                        onBlur={onBlur}
+                        removeSection={remove}
+                        onRemoveSection={() => onClickRemove(index)}
+                    />
+                </div>,
+            );
+        } else if (typeof schema === 'object') {
+            let field = { ...schema };
+            field.label = index === 0 ? field.label : '';
+            items.push(
+                <div key={index} className={RepeaterItemClassNames}>
+                    <FieldControl
+                        labelMode={schema.labelMode || labelMode}
+                        isFullWidth={schema.isFullwidth || isFullwidth}
+                        field={field}
+                        value={values[index]}
+                        error={null}
+                        onChange={(value) => onChangeRepeater(value, index)}
+                        onFocus={onFocus}
+                        onBlur={onBlur}
+                        className={schema.className}
+                    />
+                </div>,
+            );
+        }
     }
 
     return (
@@ -106,10 +127,13 @@ Repeater.defaultProps = {
     fields: [],
     separator: false,
     remove: false,
+    labelMode: 'horizontal',
+    isFullWidth: false,
 };
 
 Repeater.propTypes = {
     /** Native form class */
+    schema: PropTypes.any,
     className: PropTypes.string,
     type: PropTypes.string,
     name: PropTypes.string,

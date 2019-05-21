@@ -22,5 +22,11 @@ export default (theme) => ({
         display: 'flex',
         justifyContent: 'flex-end',
     },
+    singleItem: {
+        marginLeft: '170px',
+        '&:first-child': {
+            marginLeft: '0',
+        },
+    },
     repeaterButton: {},
 });

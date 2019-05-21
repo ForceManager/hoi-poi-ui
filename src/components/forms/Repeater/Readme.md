@@ -1,6 +1,68 @@
 **Schema:**
 
 ```jsx
+const schema = {
+    label: 'Activity',
+    name: 'activity',
+    type: 'select',
+    attrs: {
+        options: [
+            {
+                label: 'A',
+                value: 'a',
+            },
+            {
+                label: 'B',
+                value: 'b',
+            },
+            {
+                label: 'C',
+                value: 'c',
+            },
+        ],
+    },
+};
+
+return <pre>{JSON.stringify(schema, null, 4)}</pre>;
+```
+
+```jsx
+import schema from './example.1.json';
+
+const errors = {
+    email: 'Invalid email',
+};
+
+let onChange = (value, index) => {
+    let newValues = [...state.values];
+    newValues[index] = value;
+    setState({ values: newValues });
+};
+
+let onRemove = (index) => {
+    let newValues = [...state.values];
+    newValues.splice(index, 1);
+    setState({ values: newValues });
+};
+
+<Repeater
+    name="timeAllocationLine"
+    buttonLabel="+ Add"
+    buttonClassName="time-allocation-add-button"
+    values={state.values}
+    errors={errors}
+    schema={schema}
+    max={5}
+    separator={false}
+    remove={false}
+    onChange={onChange}
+    onRemove={onRemove}
+/>;
+```
+
+**Schema:**
+
+```jsx
 const schema = [
     {
         fields: [
@@ -45,10 +107,10 @@ return <pre>{JSON.stringify(schema, null, 4)}</pre>;
 ```
 
 ```jsx
-import schema from './example.1.json';
+import schema from './example.json';
 
 const errors = {
-    phone: 'Invalid phone',
+    email: 'Invalid email',
 };
 
 let onChange = (value, index) => {
@@ -71,8 +133,8 @@ let onRemove = (index) => {
     errors={errors}
     schema={schema}
     max={5}
-    separator={false}
-    remove={false}
+    separator={true}
+    remove={true}
     onChange={onChange}
     onRemove={onRemove}
 />;
