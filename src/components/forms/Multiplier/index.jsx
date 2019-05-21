@@ -72,37 +72,38 @@ function Multiplier({
     for (let index = 0; index < size; index++) {
         if (Array.isArray(schema)) {
             items.push(
-                <div key={index} className={MultiplierItemClassNames} {...override.MultiplierItem}>
-                    <Form
-                        overrides={overridesProp}
-                        schema={schema}
-                        values={values[index]}
-                        error={errors}
-                        onChange={(value) => onChangeMultiplier(value, index)}
-                        onFocus={onFocus}
-                        onBlur={onBlur}
-                        removeSection={remove}
-                        onRemoveSection={() => onClickRemove(index)}
-                    />
-                </div>,
+                <Form
+                    key={index}
+                    overrides={overridesProp}
+                    schema={schema}
+                    values={values[index]}
+                    error={errors}
+                    onChange={(value) => onChangeMultiplier(value, index)}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    removeSection={remove}
+                    onRemoveSection={() => onClickRemove(index)}
+                    className={MultiplierItemClassNames}
+                    {...override.MultiplierItem}
+                />,
             );
         } else if (typeof schema === 'object') {
             let field = { ...schema };
             field.label = index === 0 ? field.label : '';
             items.push(
-                <div key={index} className={MultiplierItemClassNames} {...override.MultiplierItem}>
-                    <FieldControl
-                        labelMode={schema.labelMode || labelMode}
-                        isFullWidth={schema.isFullwidth || isFullwidth}
-                        field={field}
-                        value={values[index]}
-                        error={null}
-                        onChange={(value) => onChangeMultiplier(value, index)}
-                        onFocus={onFocus}
-                        onBlur={onBlur}
-                        className={schema.className}
-                    />
-                </div>,
+                <FieldControl
+                    key={index}
+                    labelMode={schema.labelMode || labelMode}
+                    isFullWidth={schema.isFullwidth || isFullwidth}
+                    field={field}
+                    value={values[index]}
+                    error={null}
+                    onChange={(value) => onChangeMultiplier(value, index)}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    className={MultiplierItemClassNames}
+                    {...override.MultiplierItem}
+                />,
             );
         }
     }
