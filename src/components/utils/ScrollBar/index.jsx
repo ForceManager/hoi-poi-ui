@@ -35,7 +35,7 @@ function ScrollBar({
         autoHeight,
         autoHeightMin,
         autoHeightMax,
-        ...override['react-custom-scrollbars'],
+        ...override.root,
     };
 
     return (
@@ -45,9 +45,10 @@ function ScrollBar({
     );
 }
 
-ScrollBar.overrides = ['react-custom-scrollbars'];
+ScrollBar.overrides = ['root'];
 
 ScrollBar.defaultProps = {
+    overrides: {},
     autoHide: true,
 };
 

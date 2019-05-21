@@ -22,8 +22,8 @@ export default (theme) => ({
         color: theme.colors.text.red,
     },
     info: {
-        backgroundColor: theme.colors.secundaryLight,
-        color: theme.colors.text.secundary,
+        backgroundColor: theme.colors.secondaryLight,
+        color: theme.colors.text.secondary,
     },
     success: {
         backgroundColor: theme.colors.greenLight,

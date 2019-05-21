@@ -47,5 +47,6 @@ function toggleState() {
 
 ---
 
+-   root - root element
 -   input - Hidden native input
 -   svg - icon determined by the checkbox state

@@ -122,7 +122,7 @@ function Select({
     let SelectComponent = RSelect;
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 <SelectComponent {...selectProps} />
@@ -136,7 +136,7 @@ function Select({
     );
 }
 
-Select.overrides = ['react-select', 'menuListClassName', 'error', 'formControl', 'Label'];
+Select.overrides = ['root', 'react-select', 'menuListClassName', 'error', 'formControl', 'Label'];
 
 Select.defaultProps = {
     labelMode: 'horizontal',
@@ -145,6 +145,7 @@ Select.defaultProps = {
     isReadOnly: false,
     hideSelectedOptions: true,
     isClearable: true,
+    overrides: {},
 };
 
 Select.propTypes = {

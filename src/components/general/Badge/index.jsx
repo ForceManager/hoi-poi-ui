@@ -32,7 +32,7 @@ function Badge({
     };
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             <span className={classes.text} {...override.text}>
                 {children}
             </span>
@@ -40,7 +40,7 @@ function Badge({
     );
 }
 
-Badge.overrides = ['text'];
+Badge.overrides = ['root', 'text'];
 
 Badge.defaultProps = {
     className: '',

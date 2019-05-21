@@ -42,7 +42,7 @@ function Checkbox({
     else if (checked) checkState = 'checked';
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             {checkState === 'checked' && <CheckedIcon {...override.svg} />}
             {checkState === 'unchecked' && <UnCheckedIcon {...override.svg} />}
             {checkState === 'indeterminate' && <IndeterminateIcon {...override.svg} />}
@@ -58,10 +58,11 @@ function Checkbox({
     );
 }
 
-Checkbox.overrides = ['input', 'svg'];
+Checkbox.overrides = ['root', 'input', 'svg'];
 
 Checkbox.defaultProps = {
     onChange: () => {},
+    overrides: {},
 };
 
 Checkbox.propTypes = {

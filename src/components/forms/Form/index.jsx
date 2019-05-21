@@ -39,7 +39,7 @@ function Form({
     );
 
     return (
-        <form className={classNameProp} action="" autoComplete="off" {...override.form}>
+        <form className={classNameProp} action="" autoComplete="off" {...override.root}>
             {schema.map((section, index) => (
                 <Section
                     key={index}
@@ -67,7 +67,7 @@ function Form({
     );
 }
 
-Form.overrides = ['form', 'Section'];
+Form.overrides = ['root', 'Section'];
 
 Form.defaultProps = {
     labelMode: 'horizontal',
@@ -75,6 +75,7 @@ Form.defaultProps = {
     errors: {},
     values: {},
     schema: [],
+    override: {},
 };
 
 Form.propTypes = {

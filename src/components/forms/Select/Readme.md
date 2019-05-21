@@ -135,6 +135,7 @@ const onChange = (value) => setState({ value });
 
 ---
 
+-   root - root element
 -   [react-select](https://react-select.com)
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label

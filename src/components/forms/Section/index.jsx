@@ -30,7 +30,7 @@ function Section({
     const onToggle = useCallback(() => open(!isOpen), [isOpen]);
 
     return (
-        <div className={rootClassName}>
+        <div className={rootClassName} {...override.root}>
             <div className={classes.header} onClick={onToggle} {...override.header}>
                 <span className={classes.title} {...override.title}>
                     {title}
@@ -46,7 +46,11 @@ function Section({
     );
 }
 
-Section.overrides = ['header', 'title', 'react-animate-height'];
+Section.overrides = ['root', 'header', 'title', 'react-animate-height'];
+
+Section.defaultProps = {
+    overrides: {},
+};
 
 Section.propTypes = {
     className: PropTypes.string,

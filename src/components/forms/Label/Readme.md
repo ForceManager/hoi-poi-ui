@@ -22,5 +22,6 @@ With hint:
 
 ---
 
+-   root - root element
 -   [Popover](#/Utils?id=popover)
 -   text - text part, without info popover

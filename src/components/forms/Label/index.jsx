@@ -27,7 +27,7 @@ function Label({
     };
 
     return (
-        <span {...rootProps}>
+        <span {...rootProps} {...override.root}>
             <span className={classes.text} {...override.text}>
                 {children}
                 {isRequired && '*'}
@@ -49,9 +49,11 @@ function Label({
     );
 }
 
-Text.overrides = ['Popover', 'text'];
+Text.overrides = ['root', 'Popover', 'text'];
 
-Text.defaultProps = {};
+Text.defaultProps = {
+    overrides: {},
+};
 
 Text.propTypes = {
     className: PropTypes.string,

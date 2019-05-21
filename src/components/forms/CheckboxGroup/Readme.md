@@ -80,6 +80,7 @@ let onChange = (value) => setState({ value });
 
 ---
 
+-   root - root element
 -   [Checkbox](#/Forms?id=checkbox)
 -   checkboxLabel - label related to one checkbox
 -   checkboxControl - wrapper with checkbox label and checkbox

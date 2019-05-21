@@ -67,6 +67,7 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 
 ---
 
+-   root - root element
 -   input - Native input
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label
