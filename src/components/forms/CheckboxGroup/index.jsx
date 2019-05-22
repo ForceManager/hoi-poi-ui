@@ -56,7 +56,7 @@ function CheckboxGroup({
     );
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 {options.map((option) => (
@@ -74,7 +74,14 @@ function CheckboxGroup({
     );
 }
 
-CheckboxGroup.overrides = ['Checkbox', 'checkboxLabel', 'checkboxControl', 'formControl', 'Label'];
+CheckboxGroup.overrides = [
+    'root',
+    'Checkbox',
+    'checkboxLabel',
+    'checkboxControl',
+    'formControl',
+    'Label',
+];
 
 CheckboxGroup.defaultProps = {
     labelMode: 'horizontal',
@@ -82,6 +89,7 @@ CheckboxGroup.defaultProps = {
     value: {},
     options: [],
     isReadOnly: false,
+    overrides: {},
 };
 
 CheckboxGroup.propTypes = {

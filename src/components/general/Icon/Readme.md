@@ -50,5 +50,6 @@ Color:
 
 ---
 
+-   root - root element
 -   wrapper - Icon wrapper
 -   icon - Specific icon

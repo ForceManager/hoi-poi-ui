@@ -46,7 +46,7 @@ function RadioGroup({
     };
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
                 {options.map((option) => (
@@ -65,7 +65,7 @@ function RadioGroup({
     );
 }
 
-RadioGroup.overrides = ['Radio', 'formControl', 'Label'];
+RadioGroup.overrides = ['root', 'Radio', 'formControl', 'Label'];
 
 RadioGroup.defaultProps = {
     labelMode: 'horizontal',
@@ -73,6 +73,7 @@ RadioGroup.defaultProps = {
     value: null,
     options: [],
     isReadOnly: false,
+    overrides: {},
 };
 
 RadioGroup.propTypes = {

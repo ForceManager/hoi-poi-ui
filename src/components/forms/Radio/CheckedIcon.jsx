@@ -7,12 +7,12 @@ const CheckedIcon = React.memo(({ theme, ...props }) => {
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <circle
                     id="Radio-Background"
-                    stroke={theme.colors.secundary}
+                    stroke={theme.colors.secondary}
                     cx="9"
                     cy="9"
                     r="7.5"
                 />
-                <circle id="Radio-Circle" fill={theme.colors.secundary} cx="9" cy="9" r="4" />
+                <circle id="Radio-Circle" fill={theme.colors.secondary} cx="9" cy="9" r="4" />
                 <rect
                     id="Radio-Bounds"
                     fillOpacity="0.1"

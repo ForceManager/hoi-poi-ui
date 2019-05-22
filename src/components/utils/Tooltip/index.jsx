@@ -32,15 +32,16 @@ function Tooltip({
     };
 
     return (
-        <RCTooltip {...rootProps} {...override['rc-tooltip']}>
+        <RCTooltip {...rootProps} {...override.root}>
             {children}
         </RCTooltip>
     );
 }
 
-Tooltip.overrides = ['rc-tooltip'];
+Tooltip.overrides = ['root'];
 
 Tooltip.defaultProps = {
+    overrides: {},
     placement: 'top',
 };
 

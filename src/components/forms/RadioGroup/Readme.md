@@ -80,6 +80,7 @@ let onChange = (value) => setState({ value });
 
 ---
 
+-   root - root element
 -   [Radio](#/Forms?id=radio)
 -   radioLabel - label related to one radio
 -   radioControl - wrapper with radio label and radio

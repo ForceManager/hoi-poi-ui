@@ -51,4 +51,4 @@ Auto height min
 
 ---
 
--   [react-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars/blob/master/docs/API.md)
+-   [root](https://github.com/malte-wessel/react-custom-scrollbars/blob/master/docs/API.md)

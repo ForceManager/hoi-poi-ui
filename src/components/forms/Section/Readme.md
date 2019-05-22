@@ -8,4 +8,5 @@
 
 ---
 
+-   root - root element
 -   [react-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars/blob/master/docs/API.md)

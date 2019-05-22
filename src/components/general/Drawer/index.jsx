@@ -42,7 +42,7 @@ function Drawer({
         onRequestClose,
         shouldCloseOnOverlayClick: false,
         shouldCloseOnEsc: false,
-        ...override.modal,
+        ...override.root,
     };
 
     return (
@@ -54,7 +54,7 @@ function Drawer({
     );
 }
 
-Drawer.overrides = ['modal', 'content'];
+Drawer.overrides = ['root', 'content'];
 
 Drawer.defaultProps = {
     width: '500px',

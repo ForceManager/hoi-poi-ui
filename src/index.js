@@ -10,6 +10,7 @@ export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
 export { default as Link } from './components/general/Link';
 export { default as Advice } from './components/general/Advice';
+export { default as Chip } from './components/general/Chip';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';

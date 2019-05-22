@@ -100,7 +100,7 @@ function InputGroup({
     const hiddenInputs = inputs.slice(1);
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             <div className={classes.formControl} {...override.formControl}>
                 <Inputcontrol {...inputProps} />
                 <Link size="small" onClick={onLinkClick} {...override.Link}>
@@ -124,7 +124,7 @@ function InputGroup({
     );
 }
 
-InputGroup.overrides = ['Input', 'formControl', 'inputsControl', 'Link'];
+InputGroup.overrides = ['root', 'Input', 'formControl', 'inputsControl', 'Link'];
 
 InputGroup.defaultProps = {
     overrides: {},

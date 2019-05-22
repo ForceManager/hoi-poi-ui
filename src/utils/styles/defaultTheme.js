@@ -9,6 +9,8 @@ const black = '#262B34';
 const blackLight = '#5f656b';
 const textBlack = '#3c4248';
 const grey = '#697782';
+const secondaryGrey = '#e4eeff';
+
 const greySoft = '#788590';
 const greyLight = '#f0f3f5';
 const disabledGrey = '#ced4d9';
@@ -31,9 +33,9 @@ const primarySoft = '#ff9d26';
 const primaryLight = '#fef4e6';
 const primaryDark = '#C87600';
 
-const secundary = '#00A8Be';
-const secundarySoft = '#AADFE7';
-const secundaryLight = '#D6EEF2';
+const secondary = '#00A8Be';
+const secondarySoft = '#AADFE7';
+const secondaryLight = '#D6EEF2';
 
 const link = '#216db3';
 const linkDark = '#174a79';
@@ -58,6 +60,7 @@ export default {
         transparentBlack,
         blackLight,
         grey,
+        secondaryGrey,
         greyLight,
         disabledGrey,
         greySoft,
@@ -73,9 +76,9 @@ export default {
         primaryDark,
         primaryLight,
         primarySoft,
-        secundary,
-        secundarySoft,
-        secundaryLight,
+        secondary,
+        secondarySoft,
+        secondaryLight,
         link,
         linkDark,
         tableHeader,
@@ -88,7 +91,7 @@ export default {
             danger: 'white',
             green,
             red,
-            secundary,
+            secondary,
             yellow,
             white,
         },
