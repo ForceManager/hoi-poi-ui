@@ -2,10 +2,9 @@ import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
-import Form from '../../forms/Form';
-import FieldControl from '../Form/FieldControl';
 import Button from '../../general/Button';
 import { getOverrides } from '../../../utils/overrides';
+import MultiplierControl from './MultiplierControl';
 import styles from './styles';
 
 function Multiplier({
@@ -13,11 +12,10 @@ function Multiplier({
     className: classNameProp,
     classes,
     schema,
-    type,
     name,
     buttonLabel,
     buttonClassName,
-    isFullwidth,
+    isFullWidth,
     max,
     separator,
     remove,
@@ -39,7 +37,7 @@ function Multiplier({
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
     const buttonClassNames = classnames(classes.multiplierButton, buttonClassName);
-    const MultiplierItemClassNames = classnames(classes.multiplierItem, {
+    const multiplierItemClassNames = classnames(classes.multiplierItem, {
         [classes.separator]: separator,
         [classes.singleItem]: !Array.isArray(schema),
     });
@@ -67,45 +65,29 @@ function Multiplier({
         [onChange],
     );
 
+    const type = Array.isArray(schema) ? 'form' : 'field';
     const items = [];
 
     for (let index = 0; index < size; index++) {
-        if (Array.isArray(schema)) {
-            items.push(
-                <Form
-                    key={index}
-                    overrides={overridesProp}
-                    schema={schema}
-                    values={values[index]}
-                    error={errors}
-                    onChange={(value) => onChangeMultiplier(value, index)}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    removeSection={remove}
-                    onRemoveSection={() => onClickRemove(index)}
-                    className={MultiplierItemClassNames}
-                    {...override.MultiplierItem}
-                />,
-            );
-        } else if (typeof schema === 'object') {
-            let field = { ...schema };
-            field.label = index === 0 ? field.label : '';
-            items.push(
-                <FieldControl
-                    key={index}
-                    labelMode={schema.labelMode || labelMode}
-                    isFullWidth={schema.isFullwidth || isFullwidth}
-                    field={field}
-                    value={values[index]}
-                    error={null}
-                    onChange={(value) => onChangeMultiplier(value, index)}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    className={MultiplierItemClassNames}
-                    {...override.MultiplierItem}
-                />,
-            );
-        }
+        items.push(
+            <MultiplierControl
+                key={index}
+                index={index}
+                type={type}
+                overrides={overridesProp}
+                schema={schema}
+                labelMode={schema.labelMode || labelMode}
+                isFullWidth={schema.isFullWidth || isFullWidth}
+                values={values[index]}
+                errors={errors}
+                onChange={onChangeMultiplier}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onClickRemove={onClickRemove}
+                className={multiplierItemClassNames}
+                {...override.MultiplierItem}
+            />,
+        );
     }
 
     function renderButton() {
@@ -149,7 +131,6 @@ Multiplier.propTypes = {
     /** Native form class */
     schema: PropTypes.any,
     className: PropTypes.string,
-    type: PropTypes.string,
     name: PropTypes.string,
     labelMode: PropTypes.string,
     label: PropTypes.string,

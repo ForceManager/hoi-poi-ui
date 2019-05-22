@@ -34,6 +34,7 @@ const errors = {
 };
 
 let onChange = (value, index) => {
+    console.log('onChange', value, index);
     let newValues = [...state.values];
     newValues[index] = value;
     setState({ values: newValues });

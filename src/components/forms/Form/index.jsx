@@ -11,7 +11,7 @@ function Form({
     overrides: overridesProp,
     className: classNameProp,
     labelMode,
-    isFullwidth,
+    isFullWidth,
     schema,
     onChange,
     onFocus,
@@ -54,7 +54,7 @@ function Form({
                         <FieldControl
                             key={field.name}
                             labelMode={field.labelMode || labelMode}
-                            isFullWidth={field.isFullwidth || isFullwidth}
+                            isFullWidth={field.isFullWidth || isFullWidth}
                             field={field}
                             value={values[field.name]}
                             error={errors[field.name]}

@@ -23,7 +23,7 @@ function FieldControl({
     overrides: overridesProp,
     className: classNameProp,
     labelMode,
-    isFullwidth,
+    isFullWidth,
     field,
     onChange,
     onFocus,
@@ -61,7 +61,7 @@ function FieldControl({
     const fieldProps = {
         ...field,
         labelMode: labelMode,
-        isFullwidth: isFullwidth,
+        isFullWidth: isFullWidth,
         onChange: onChangeField,
         onFocus: onFocusField,
         onBlur: onBlurField,

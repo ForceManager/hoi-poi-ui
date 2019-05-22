@@ -8,7 +8,7 @@ const schema = [
             {
                 label: 'Email',
                 labelMode: 'horizontal', // Override general labelMode
-                isFullWidth: false, // Override general isFullwidth
+                isFullWidth: false, // Override general isFullWidth
                 name: 'email',
                 type: 'text', // text|inputGroup|checkboxGroup|radioGroup|select|slider
                 placeholder: 'Your email',
