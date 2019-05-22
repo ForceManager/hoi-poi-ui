@@ -71,12 +71,12 @@ function Section({
     );
 }
 
-Section.overrides = ['header', 'title', 'react-animate-height'];
+Section.overrides = ['root', 'header', 'title', 'react-animate-height'];
 
 Section.defaultProps = {
     isExpandable: true,
+    overrides: {},
 };
-
 Section.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,

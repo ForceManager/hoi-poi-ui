@@ -33,15 +33,16 @@ function Popover({
     };
 
     return (
-        <RCTooltip {...rootProps} {...override['rc-tooltip']}>
+        <RCTooltip {...rootProps} {...override.root}>
             {children}
         </RCTooltip>
     );
 }
 
-Popover.overrides = ['rc-tooltip'];
+Popover.overrides = ['root'];
 
 Popover.defaultProps = {
+    overrides: {},
     placement: 'top',
     trigger: ['click'],
 };

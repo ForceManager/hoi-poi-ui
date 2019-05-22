@@ -35,7 +35,7 @@ function Radio({
     };
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             {checked === true && <CheckedIcon {...override.svg} />}
             {checked === false && <UncheckedIcon {...override.svg} />}
             <input
@@ -50,11 +50,12 @@ function Radio({
     );
 }
 
-Radio.overrides = ['input', 'svg'];
+Radio.overrides = ['root', 'input', 'svg'];
 
 Radio.defaultProps = {
     checked: false,
     onChange: () => {},
+    overrides: {},
 };
 
 Radio.propTypes = {

@@ -30,7 +30,7 @@ function Chip({
     const matches = useMemo(() => children && children.match(/\b(\w)/g), [children]);
 
     return (
-        <div {...rootProps}>
+        <div {...rootProps} {...override.root}>
             <div className={classes.wrapper} {...override.wrapper}>
                 {url && (
                     <img
@@ -66,7 +66,7 @@ function Chip({
     );
 }
 
-Chip.overrides = ['wrapper', 'img', 'shrinked', 'text', 'Icon', 'onClose'];
+Chip.overrides = ['root', 'wrapper', 'img', 'shrinked', 'text', 'Icon', 'onClose'];
 
 Chip.defaultProps = {
     className: '',

@@ -4,6 +4,8 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import styles from './styles';
 
+import { getOverrides } from '../../../utils/overrides';
+
 function Link({
     children,
     overrides: overridesProp,
@@ -16,6 +18,9 @@ function Link({
     target,
     ...props
 }) {
+    //Overrides
+    const override = getOverrides(overridesProp, Link.overrides);
+
     // Classes
     const rootClassName = classnames(
         classes.root,
@@ -34,20 +39,23 @@ function Link({
 
     if (href) {
         return (
-            <a href={href} target={target} {...rootProps}>
+            <a href={href} target={target} {...rootProps} {...override.root}>
                 {children}
             </a>
         );
     } else {
         return (
-            <button {...rootProps} type="button">
+            <button {...rootProps} type="button" {...override.root}>
                 {children}
             </button>
         );
     }
 }
 
+Link.overrides = ['root'];
+
 Link.defaultProps = {
+    overrides: {},
     size: 'medium',
 };
 
