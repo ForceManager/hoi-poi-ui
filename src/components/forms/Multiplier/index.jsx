@@ -90,7 +90,7 @@ function Multiplier({
         );
     }
 
-    const showButton = max && size >= max;
+    const showButton = !(max && size >= max);
 
     return (
         <div {...rootProps}>
