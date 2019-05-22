@@ -17,7 +17,7 @@ function MultiplierControl({
     onChange,
     onFocus,
     onBlur,
-    onClickRemove,
+    onRemove,
     ...props
 }) {
     const onChangeMultiplier = useCallback(
@@ -27,9 +27,9 @@ function MultiplierControl({
         [onChange, index],
     );
 
-    const onRemoveSection = useCallback(() => {
-        onClickRemove && onClickRemove(index);
-    }, [onClickRemove, index]);
+    const onClickRemove = useCallback(() => {
+        onRemove && onRemove(index);
+    }, [onRemove, index]);
 
     if (type === 'form') {
         return (
@@ -41,7 +41,7 @@ function MultiplierControl({
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                onRemoveSection={onRemoveSection}
+                onRemoveSection={onClickRemove}
                 className={classNameProp}
             />
         );

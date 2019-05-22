@@ -92,7 +92,6 @@ Form.propTypes = {
             title: PropTypes.string,
             className: PropTypes.string,
             isExpandable: PropTypes.bool,
-            withRemove: PropTypes.bool,
             fields: PropTypes.arrayOf(
                 PropTypes.shape({
                     label: PropTypes.string,

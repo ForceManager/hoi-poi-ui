@@ -36,8 +36,8 @@ function Multiplier({
 
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
-    const buttonClassNames = classnames(classes.multiplierButton, buttonClassName);
-    const multiplierItemClassNames = classnames(classes.multiplierItem, {
+    const buttonClassNames = classnames(classes.button, buttonClassName);
+    const multiplierItemClassNames = classnames(classes.item, {
         [classes.separator]: separator,
         [classes.singleItem]: !Array.isArray(schema),
     });
@@ -83,39 +83,38 @@ function Multiplier({
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                onClickRemove={onClickRemove}
+                onRemove={onClickRemove}
                 className={multiplierItemClassNames}
-                {...override.MultiplierItem}
+                {...override.item}
             />,
         );
     }
 
-    function renderButton() {
-        if (max && size >= max) return;
-        return (
-            <div className={classes.multiplierButtonContainer}>
-                <Button
-                    color="primary"
-                    type="squared"
-                    className={buttonClassNames}
-                    onClick={onClickAdd}
-                    {...override.MultiplierButton}
-                >
-                    {buttonLabel}
-                </Button>
-            </div>
-        );
-    }
+    const showButton = max && size >= max;
 
     return (
         <div {...rootProps}>
-            <div className={classes.multiplierContainer}>{items}</div>
-            {renderButton()}
+            <div className={classes.container} {...override.container}>
+                {items}
+            </div>
+            {showButton && (
+                <div className={classes.buttonContainer} {...override.buttonContainer}>
+                    <Button
+                        color="primary"
+                        type="squared"
+                        className={buttonClassNames}
+                        onClick={onClickAdd}
+                        {...override.button}
+                    >
+                        {buttonLabel}
+                    </Button>
+                </div>
+            )}
         </div>
     );
 }
 
-Multiplier.overrides = ['MultiplierItem', 'MultiplierButton'];
+Multiplier.overrides = ['item', 'button'];
 
 Multiplier.defaultProps = {
     errors: {},

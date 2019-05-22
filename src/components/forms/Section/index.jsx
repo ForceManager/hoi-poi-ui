@@ -31,12 +31,6 @@ function Section({
 
     const onToggle = useCallback(() => open(!isOpen), [isOpen]);
 
-    const removeIcon = onRemove ? (
-        <span onClick={onRemove} className={classes.remove}>
-            <Icon name="close" />
-        </span>
-    ) : null;
-
     if (title && isExpandable) {
         return (
             <div className={rootClassName}>
@@ -67,7 +61,11 @@ function Section({
     }
     return (
         <div className={rootClassName}>
-            {removeIcon}
+            {onRemove && (
+                <span onClick={onRemove} className={classes.remove}>
+                    <Icon name="close" />
+                </span>
+            )}
             {children}
         </div>
     );

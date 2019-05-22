@@ -3,10 +3,15 @@ export default (theme) => ({
         display: 'flex',
         flexDirection: 'column',
     },
-    multiplier: {},
-    multiplierContainer: {},
-    multiplierItem: {
+    container: {},
+    item: {
         paddingTop: '10px',
+    },
+    singleItem: {
+        marginLeft: '170px',
+        '&:first-child': {
+            marginLeft: '0',
+        },
     },
     separator: {
         borderBottom: `1px solid ${theme.colors.greyLight}`,
@@ -18,15 +23,9 @@ export default (theme) => ({
         },
         paddingBottom: '20px',
     },
-    multiplierButtonContainer: {
+    buttonContainer: {
         display: 'flex',
         justifyContent: 'flex-end',
     },
-    singleItem: {
-        marginLeft: '170px',
-        '&:first-child': {
-            marginLeft: '0',
-        },
-    },
-    multiplierButton: {},
+    button: {},
 });
