@@ -7,6 +7,7 @@ import CheckboxGroup from '../CheckboxGroup';
 import RadioGroup from '../RadioGroup';
 import Select from '../Select';
 import Slider from '../Slider';
+import Multiplier from '../Multiplier';
 
 const FIELD_MAP = {
     text: Input,
@@ -15,13 +16,14 @@ const FIELD_MAP = {
     radioGroup: RadioGroup,
     select: Select,
     slider: Slider,
+    multiplier: Multiplier,
 };
 
 function FieldControl({
     overrides: overridesProp,
     className: classNameProp,
     labelMode,
-    isFullwidth,
+    isFullWidth,
     field,
     onChange,
     onFocus,
@@ -40,14 +42,16 @@ function FieldControl({
 
     const onFocusField = useCallback(
         (input) => {
-            onFocus && onFocus(field);
+            const value = input && input.target ? input.target.value : input;
+            onFocus && onFocus(value, field);
         },
         [onFocus, field],
     );
 
     const onBlurField = useCallback(
         (input) => {
-            onBlur && onBlur(field);
+            const value = input && input.target ? input.target.value : input;
+            onBlur && onBlur(value, field);
         },
         [onBlur, field],
     );
@@ -59,7 +63,7 @@ function FieldControl({
     const fieldProps = {
         ...field,
         labelMode: labelMode,
-        isFullwidth: isFullwidth,
+        isFullWidth: isFullWidth,
         onChange: onChangeField,
         onFocus: onFocusField,
         onBlur: onBlurField,

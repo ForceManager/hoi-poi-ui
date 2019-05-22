@@ -11,11 +11,12 @@ function Form({
     overrides: overridesProp,
     className: classNameProp,
     labelMode,
-    isFullwidth,
+    isFullWidth,
     schema,
     onChange,
     onFocus,
     onBlur,
+    onRemoveSection,
     values,
     errors,
     ...props
@@ -38,6 +39,36 @@ function Form({
         [values, onChange],
     );
 
+    const onFocusField = useCallback(
+        (value, field) => {
+            onFocus &&
+                onFocus(
+                    {
+                        ...values,
+                        [field.name]: value,
+                    },
+                    field,
+                    value,
+                );
+        },
+        [onFocus, values],
+    );
+
+    const onBlurField = useCallback(
+        (value, field) => {
+            onBlur &&
+                onBlur(
+                    {
+                        ...values,
+                        [field.name]: value,
+                    },
+                    field,
+                    value,
+                );
+        },
+        [onBlur, values],
+    );
+
     return (
         <form className={classNameProp} action="" autoComplete="off" {...override.root}>
             {schema.map((section, index) => (
@@ -45,19 +76,21 @@ function Form({
                     key={index}
                     title={section.title}
                     className={section.className}
+                    isExpandable={section.isExpandable}
+                    onRemove={onRemoveSection}
                     {...override.Section}
                 >
                     {section.fields.map((field) => (
                         <FieldControl
                             key={field.name}
                             labelMode={field.labelMode || labelMode}
-                            isFullWidth={field.isFullwidth || isFullwidth}
+                            isFullWidth={field.isFullWidth || isFullWidth}
                             field={field}
                             value={values[field.name]}
                             error={errors[field.name]}
                             onChange={onChangeField}
-                            onFocus={onFocus}
-                            onBlur={onBlur}
+                            onFocus={onFocusField}
+                            onBlur={onBlurField}
                             className={field.className}
                         />
                     ))}
@@ -89,6 +122,7 @@ Form.propTypes = {
         PropTypes.shape({
             title: PropTypes.string,
             className: PropTypes.string,
+            isExpandable: PropTypes.bool,
             fields: PropTypes.arrayOf(
                 PropTypes.shape({
                     label: PropTypes.string,
