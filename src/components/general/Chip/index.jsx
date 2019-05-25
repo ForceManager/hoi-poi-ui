@@ -36,6 +36,7 @@ function Chip({
                     <img
                         className={isShrinked ? classes.shrinkedPicture : classes.picture}
                         src={url}
+                        alt=""
                         {...override.img}
                     />
                 )}
