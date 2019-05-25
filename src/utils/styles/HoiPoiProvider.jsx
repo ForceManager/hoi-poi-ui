@@ -5,20 +5,31 @@ import jss from './jss';
 import defaultTheme from './defaultTheme';
 
 const CLASS_NAME_PREFIX = 'HoiPoi__';
+
+let providerCounter = 0;
 const customCreateGenerateId = () => {
     let counter = 0;
     return (rule, sheet) => {
-        return `${CLASS_NAME_PREFIX}${sheet.options.name}__${rule.key}-${counter++}`;
+        return `${CLASS_NAME_PREFIX}${sheet.options.name}__${
+            rule.key
+        }-${providerCounter}-${counter++}`;
     };
 };
 
-const generateId =
-    process.env.NODE_ENV === 'development' ? customCreateGenerateId() : createGenerateId();
+export default React.memo(({ children, theme = defaultTheme }) => {
+    let generateId;
+    if (['development', 'test'].includes(process.env.NODE_ENV)) {
+        generateId = customCreateGenerateId();
+        providerCounter++;
+    } else {
+        generateId = createGenerateId();
+    }
 
-export default React.memo(({ children, theme = defaultTheme }) => (
-    <ThemeProvider theme={theme}>
-        <JssProvider jss={jss} generateId={generateId} classNamePrefix={CLASS_NAME_PREFIX}>
-            {children}
-        </JssProvider>
-    </ThemeProvider>
-));
+    return (
+        <ThemeProvider theme={theme}>
+            <JssProvider jss={jss} generateId={generateId} classNamePrefix={CLASS_NAME_PREFIX}>
+                {children}
+            </JssProvider>
+        </ThemeProvider>
+    );
+});

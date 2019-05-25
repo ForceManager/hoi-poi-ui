@@ -89,7 +89,8 @@ exports[`Select default match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -399,7 +400,7 @@ exports[`Select default match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-",
+                "classNamePrefix": "HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -518,21 +519,21 @@ exports[`Select default match 1`] = `
           <Select
             classes={
               Object {
-                "Label": "HoiPoi-Select-Label-0-2-2",
-                "action": "HoiPoi-Select-action-0-2-15",
-                "error": "HoiPoi-Select-error-0-2-3",
-                "errored": "HoiPoi-Select-errored-0-2-5",
-                "focused": "HoiPoi-Select-focused-0-2-7",
-                "formControl": "HoiPoi-Select-formControl-0-2-4",
-                "group": "HoiPoi-Select-group-0-2-14",
-                "horizontal": "HoiPoi-Select-horizontal-0-2-9",
-                "isFullWidth": "HoiPoi-Select-isFullWidth-0-2-10",
-                "isReadOnly": "HoiPoi-Select-isReadOnly-0-2-6",
-                "menu": "HoiPoi-Select-menu-0-2-13",
-                "menuList": "HoiPoi-Select-menuList-0-2-12",
-                "root": "HoiPoi-Select-root-0-2-1",
-                "select": "HoiPoi-Select-select-0-2-11",
-                "vertical": "HoiPoi-Select-vertical-0-2-8",
+                "Label": "HoiPoi__Select__Label-1-1",
+                "action": "HoiPoi__Select__action-1-14",
+                "error": "HoiPoi__Select__error-1-2",
+                "errored": "HoiPoi__Select__errored-1-4",
+                "focused": "HoiPoi__Select__focused-1-6",
+                "formControl": "HoiPoi__Select__formControl-1-3",
+                "group": "HoiPoi__Select__group-1-13",
+                "horizontal": "HoiPoi__Select__horizontal-1-8",
+                "isFullWidth": "HoiPoi__Select__isFullWidth-1-9",
+                "isReadOnly": "HoiPoi__Select__isReadOnly-1-5",
+                "menu": "HoiPoi__Select__menu-1-12",
+                "menuList": "HoiPoi__Select__menuList-1-11",
+                "root": "HoiPoi__Select__root-1-0",
+                "select": "HoiPoi__Select__select-1-10",
+                "vertical": "HoiPoi__Select__vertical-1-7",
               }
             }
             hideSelectedOptions={true}
@@ -566,13 +567,13 @@ exports[`Select default match 1`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-Select-root-0-2-1 HoiPoi-Select-horizontal-0-2-9"
+              className="HoiPoi__Select__root-1-0 HoiPoi__Select__horizontal-1-8"
             >
               <JssContextSubscriber
-                className="HoiPoi-Select-Label-0-2-2"
+                className="HoiPoi__Select__Label-1-1"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-Select-Label-0-2-2"
+                  className="HoiPoi__Select__Label-1-1"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -721,7 +722,7 @@ exports[`Select default match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-",
+                        "classNamePrefix": "HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -812,21 +813,21 @@ exports[`Select default match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-Select-Label-0-2-2"
+                    className="HoiPoi__Select__Label-1-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-Label-icon-0-2-19",
-                        "info": "HoiPoi-Label-info-0-2-18",
-                        "root": "HoiPoi-Label-root-0-2-16",
-                        "text": "HoiPoi-Label-text-0-2-17",
+                        "icon": "HoiPoi__Label__icon-1-18",
+                        "info": "HoiPoi__Label__info-1-17",
+                        "root": "HoiPoi__Label__root-1-15",
+                        "text": "HoiPoi__Label__text-1-16",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-Label-root-0-2-16 HoiPoi-Select-Label-0-2-2"
+                      className="HoiPoi__Label__root-1-15 HoiPoi__Select__Label-1-1"
                     >
                       <span
-                        className="HoiPoi-Label-text-0-2-17"
+                        className="HoiPoi__Label__text-1-16"
                       >
                         Lorem ipsum
                       </span>
@@ -835,10 +836,10 @@ exports[`Select default match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-Select-formControl-0-2-4"
+                className="HoiPoi__Select__formControl-1-3"
               >
                 <StateManager
-                  className="HoiPoi-Select-select-0-2-11"
+                  className="HoiPoi__Select__select-1-10"
                   classNamePrefix="hoi-poi-select"
                   components={
                     Object {
@@ -895,7 +896,7 @@ exports[`Select default match 1`] = `
                     backspaceRemovesValue={true}
                     blurInputOnSelect={true}
                     captureMenuScroll={false}
-                    className="HoiPoi-Select-select-0-2-11"
+                    className="HoiPoi__Select__select-1-10"
                     classNamePrefix="hoi-poi-select"
                     closeMenuOnScroll={false}
                     closeMenuOnSelect={true}
@@ -973,7 +974,7 @@ exports[`Select default match 1`] = `
                     value="lorem-ipsum-2"
                   >
                     <SelectContainer
-                      className="HoiPoi-Select-select-0-2-11"
+                      className="HoiPoi__Select__select-1-10"
                       clearValue={[Function]}
                       cx={[Function]}
                       getStyles={[Function]}
@@ -1015,7 +1016,7 @@ exports[`Select default match 1`] = `
                           "backspaceRemovesValue": true,
                           "blurInputOnSelect": true,
                           "captureMenuScroll": false,
-                          "className": "HoiPoi-Select-select-0-2-11",
+                          "className": "HoiPoi__Select__select-1-10",
                           "classNamePrefix": "hoi-poi-select",
                           "closeMenuOnScroll": false,
                           "closeMenuOnSelect": true,
@@ -1121,7 +1122,7 @@ exports[`Select default match 1`] = `
                       }
                     >
                       <div
-                        className="css-1pcexqc-container HoiPoi-Select-select-0-2-11"
+                        className="css-1pcexqc-container HoiPoi__Select__select-1-10"
                         onKeyDown={[Function]}
                       >
                         <Control
@@ -1168,7 +1169,7 @@ exports[`Select default match 1`] = `
                               "backspaceRemovesValue": true,
                               "blurInputOnSelect": true,
                               "captureMenuScroll": false,
-                              "className": "HoiPoi-Select-select-0-2-11",
+                              "className": "HoiPoi__Select__select-1-10",
                               "classNamePrefix": "hoi-poi-select",
                               "closeMenuOnScroll": false,
                               "closeMenuOnSelect": true,
@@ -1313,7 +1314,7 @@ exports[`Select default match 1`] = `
                                   "backspaceRemovesValue": true,
                                   "blurInputOnSelect": true,
                                   "captureMenuScroll": false,
-                                  "className": "HoiPoi-Select-select-0-2-11",
+                                  "className": "HoiPoi__Select__select-1-10",
                                   "classNamePrefix": "hoi-poi-select",
                                   "closeMenuOnScroll": false,
                                   "closeMenuOnSelect": true,
@@ -1458,7 +1459,7 @@ exports[`Select default match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-Select-select-0-2-11",
+                                      "className": "HoiPoi__Select__select-1-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -1588,7 +1589,7 @@ exports[`Select default match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-Select-select-0-2-11",
+                                      "className": "HoiPoi__Select__select-1-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -1821,7 +1822,7 @@ exports[`Select default match 1`] = `
                                   "backspaceRemovesValue": true,
                                   "blurInputOnSelect": true,
                                   "captureMenuScroll": false,
-                                  "className": "HoiPoi-Select-select-0-2-11",
+                                  "className": "HoiPoi__Select__select-1-10",
                                   "classNamePrefix": "hoi-poi-select",
                                   "closeMenuOnScroll": false,
                                   "closeMenuOnSelect": true,
@@ -1965,7 +1966,7 @@ exports[`Select default match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-Select-select-0-2-11",
+                                      "className": "HoiPoi__Select__select-1-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -2117,7 +2118,7 @@ exports[`Select default match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-Select-select-0-2-11",
+                                      "className": "HoiPoi__Select__select-1-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -2265,7 +2266,7 @@ exports[`Select default match 1`] = `
                                         "backspaceRemovesValue": true,
                                         "blurInputOnSelect": true,
                                         "captureMenuScroll": false,
-                                        "className": "HoiPoi-Select-select-0-2-11",
+                                        "className": "HoiPoi__Select__select-1-10",
                                         "classNamePrefix": "hoi-poi-select",
                                         "closeMenuOnScroll": false,
                                         "closeMenuOnSelect": true,
@@ -2529,7 +2530,7 @@ exports[`Select default match 1`] = `
                                                 },
                                               },
                                               "sheetOptions": Object {
-                                                "classNamePrefix": "HoiPoi-",
+                                                "classNamePrefix": "HoiPoi__",
                                                 "generateId": [Function],
                                               },
                                             }
@@ -2624,11 +2625,11 @@ exports[`Select default match 1`] = `
                                           <WithTheme(Icon)
                                             classes={
                                               Object {
-                                                "big": "HoiPoi-WithTheme(Icon)-big-0-2-24",
-                                                "large": "HoiPoi-WithTheme(Icon)-large-0-2-23",
-                                                "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-22",
-                                                "root": "HoiPoi-WithTheme(Icon)-root-0-2-20",
-                                                "small": "HoiPoi-WithTheme(Icon)-small-0-2-21",
+                                                "big": "HoiPoi__Icon__big-1-23",
+                                                "large": "HoiPoi__Icon__large-1-22",
+                                                "medium": "HoiPoi__Icon__medium-1-21",
+                                                "root": "HoiPoi__Icon__root-1-19",
+                                                "small": "HoiPoi__Icon__small-1-20",
                                               }
                                             }
                                             name="chevron"
@@ -2637,11 +2638,11 @@ exports[`Select default match 1`] = `
                                             <Icon
                                               classes={
                                                 Object {
-                                                  "big": "HoiPoi-WithTheme(Icon)-big-0-2-24",
-                                                  "large": "HoiPoi-WithTheme(Icon)-large-0-2-23",
-                                                  "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-22",
-                                                  "root": "HoiPoi-WithTheme(Icon)-root-0-2-20",
-                                                  "small": "HoiPoi-WithTheme(Icon)-small-0-2-21",
+                                                  "big": "HoiPoi__Icon__big-1-23",
+                                                  "large": "HoiPoi__Icon__large-1-22",
+                                                  "medium": "HoiPoi__Icon__medium-1-21",
+                                                  "root": "HoiPoi__Icon__root-1-19",
+                                                  "small": "HoiPoi__Icon__small-1-20",
                                                 }
                                               }
                                               name="chevron"
@@ -2733,7 +2734,7 @@ exports[`Select default match 1`] = `
                                               }
                                             >
                                               <span
-                                                className="HoiPoi-WithTheme(Icon)-root-0-2-20 HoiPoi-WithTheme(Icon)-small-0-2-21"
+                                                className="HoiPoi__Icon__root-1-19 HoiPoi__Icon__small-1-20"
                                               >
                                                 <Chevron
                                                   color="#788590"
@@ -2864,7 +2865,8 @@ exports[`Select with disabled options match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -3176,7 +3178,7 @@ exports[`Select with disabled options match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -3297,21 +3299,21 @@ exports[`Select with disabled options match 1`] = `
           <Select
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-Select-Label-0-2-26",
-                "action": "HoiPoi-HoiPoi-Select-action-0-2-39",
-                "error": "HoiPoi-HoiPoi-Select-error-0-2-27",
-                "errored": "HoiPoi-HoiPoi-Select-errored-0-2-29",
-                "focused": "HoiPoi-HoiPoi-Select-focused-0-2-31",
-                "formControl": "HoiPoi-HoiPoi-Select-formControl-0-2-28",
-                "group": "HoiPoi-HoiPoi-Select-group-0-2-38",
-                "horizontal": "HoiPoi-HoiPoi-Select-horizontal-0-2-33",
-                "isFullWidth": "HoiPoi-HoiPoi-Select-isFullWidth-0-2-34",
-                "isReadOnly": "HoiPoi-HoiPoi-Select-isReadOnly-0-2-30",
-                "menu": "HoiPoi-HoiPoi-Select-menu-0-2-37",
-                "menuList": "HoiPoi-HoiPoi-Select-menuList-0-2-36",
-                "root": "HoiPoi-HoiPoi-Select-root-0-2-25",
-                "select": "HoiPoi-HoiPoi-Select-select-0-2-35",
-                "vertical": "HoiPoi-HoiPoi-Select-vertical-0-2-32",
+                "Label": "HoiPoi__Select__Label-2-1",
+                "action": "HoiPoi__Select__action-2-14",
+                "error": "HoiPoi__Select__error-2-2",
+                "errored": "HoiPoi__Select__errored-2-4",
+                "focused": "HoiPoi__Select__focused-2-6",
+                "formControl": "HoiPoi__Select__formControl-2-3",
+                "group": "HoiPoi__Select__group-2-13",
+                "horizontal": "HoiPoi__Select__horizontal-2-8",
+                "isFullWidth": "HoiPoi__Select__isFullWidth-2-9",
+                "isReadOnly": "HoiPoi__Select__isReadOnly-2-5",
+                "menu": "HoiPoi__Select__menu-2-12",
+                "menuList": "HoiPoi__Select__menuList-2-11",
+                "root": "HoiPoi__Select__root-2-0",
+                "select": "HoiPoi__Select__select-2-10",
+                "vertical": "HoiPoi__Select__vertical-2-7",
               }
             }
             hideSelectedOptions={true}
@@ -3347,13 +3349,13 @@ exports[`Select with disabled options match 1`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-HoiPoi-Select-root-0-2-25 HoiPoi-HoiPoi-Select-horizontal-0-2-33"
+              className="HoiPoi__Select__root-2-0 HoiPoi__Select__horizontal-2-8"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-Select-Label-0-2-26"
+                className="HoiPoi__Select__Label-2-1"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-Select-Label-0-2-26"
+                  className="HoiPoi__Select__Label-2-1"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -3502,7 +3504,7 @@ exports[`Select with disabled options match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -3593,21 +3595,21 @@ exports[`Select with disabled options match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-Select-Label-0-2-26"
+                    className="HoiPoi__Select__Label-2-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-Label-icon-0-2-43",
-                        "info": "HoiPoi-HoiPoi-Label-info-0-2-42",
-                        "root": "HoiPoi-HoiPoi-Label-root-0-2-40",
-                        "text": "HoiPoi-HoiPoi-Label-text-0-2-41",
+                        "icon": "HoiPoi__Label__icon-2-18",
+                        "info": "HoiPoi__Label__info-2-17",
+                        "root": "HoiPoi__Label__root-2-15",
+                        "text": "HoiPoi__Label__text-2-16",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-HoiPoi-Label-root-0-2-40 HoiPoi-HoiPoi-Select-Label-0-2-26"
+                      className="HoiPoi__Label__root-2-15 HoiPoi__Select__Label-2-1"
                     >
                       <span
-                        className="HoiPoi-HoiPoi-Label-text-0-2-41"
+                        className="HoiPoi__Label__text-2-16"
                       >
                         Lorem ipsum
                       </span>
@@ -3616,10 +3618,10 @@ exports[`Select with disabled options match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-Select-formControl-0-2-28"
+                className="HoiPoi__Select__formControl-2-3"
               >
                 <StateManager
-                  className="HoiPoi-HoiPoi-Select-select-0-2-35"
+                  className="HoiPoi__Select__select-2-10"
                   classNamePrefix="hoi-poi-select"
                   components={
                     Object {
@@ -3678,7 +3680,7 @@ exports[`Select with disabled options match 1`] = `
                     backspaceRemovesValue={true}
                     blurInputOnSelect={true}
                     captureMenuScroll={false}
-                    className="HoiPoi-HoiPoi-Select-select-0-2-35"
+                    className="HoiPoi__Select__select-2-10"
                     classNamePrefix="hoi-poi-select"
                     closeMenuOnScroll={false}
                     closeMenuOnSelect={true}
@@ -3758,7 +3760,7 @@ exports[`Select with disabled options match 1`] = `
                     value="lorem-ipsum-2"
                   >
                     <SelectContainer
-                      className="HoiPoi-HoiPoi-Select-select-0-2-35"
+                      className="HoiPoi__Select__select-2-10"
                       clearValue={[Function]}
                       cx={[Function]}
                       getStyles={[Function]}
@@ -3802,7 +3804,7 @@ exports[`Select with disabled options match 1`] = `
                           "backspaceRemovesValue": true,
                           "blurInputOnSelect": true,
                           "captureMenuScroll": false,
-                          "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                          "className": "HoiPoi__Select__select-2-10",
                           "classNamePrefix": "hoi-poi-select",
                           "closeMenuOnScroll": false,
                           "closeMenuOnSelect": true,
@@ -3910,7 +3912,7 @@ exports[`Select with disabled options match 1`] = `
                       }
                     >
                       <div
-                        className="css-1pcexqc-container HoiPoi-HoiPoi-Select-select-0-2-35"
+                        className="css-1pcexqc-container HoiPoi__Select__select-2-10"
                         onKeyDown={[Function]}
                       >
                         <Control
@@ -3959,7 +3961,7 @@ exports[`Select with disabled options match 1`] = `
                               "backspaceRemovesValue": true,
                               "blurInputOnSelect": true,
                               "captureMenuScroll": false,
-                              "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                              "className": "HoiPoi__Select__select-2-10",
                               "classNamePrefix": "hoi-poi-select",
                               "closeMenuOnScroll": false,
                               "closeMenuOnSelect": true,
@@ -4108,7 +4110,7 @@ exports[`Select with disabled options match 1`] = `
                                   "backspaceRemovesValue": true,
                                   "blurInputOnSelect": true,
                                   "captureMenuScroll": false,
-                                  "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                                  "className": "HoiPoi__Select__select-2-10",
                                   "classNamePrefix": "hoi-poi-select",
                                   "closeMenuOnScroll": false,
                                   "closeMenuOnSelect": true,
@@ -4257,7 +4259,7 @@ exports[`Select with disabled options match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                                      "className": "HoiPoi__Select__select-2-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -4389,7 +4391,7 @@ exports[`Select with disabled options match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                                      "className": "HoiPoi__Select__select-2-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -4626,7 +4628,7 @@ exports[`Select with disabled options match 1`] = `
                                   "backspaceRemovesValue": true,
                                   "blurInputOnSelect": true,
                                   "captureMenuScroll": false,
-                                  "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                                  "className": "HoiPoi__Select__select-2-10",
                                   "classNamePrefix": "hoi-poi-select",
                                   "closeMenuOnScroll": false,
                                   "closeMenuOnSelect": true,
@@ -4774,7 +4776,7 @@ exports[`Select with disabled options match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                                      "className": "HoiPoi__Select__select-2-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -4930,7 +4932,7 @@ exports[`Select with disabled options match 1`] = `
                                       "backspaceRemovesValue": true,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                                      "className": "HoiPoi__Select__select-2-10",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -5082,7 +5084,7 @@ exports[`Select with disabled options match 1`] = `
                                         "backspaceRemovesValue": true,
                                         "blurInputOnSelect": true,
                                         "captureMenuScroll": false,
-                                        "className": "HoiPoi-HoiPoi-Select-select-0-2-35",
+                                        "className": "HoiPoi__Select__select-2-10",
                                         "classNamePrefix": "hoi-poi-select",
                                         "closeMenuOnScroll": false,
                                         "closeMenuOnSelect": true,
@@ -5348,7 +5350,7 @@ exports[`Select with disabled options match 1`] = `
                                                 },
                                               },
                                               "sheetOptions": Object {
-                                                "classNamePrefix": "HoiPoi-HoiPoi-",
+                                                "classNamePrefix": "HoiPoi__HoiPoi__",
                                                 "generateId": [Function],
                                               },
                                             }
@@ -5443,11 +5445,11 @@ exports[`Select with disabled options match 1`] = `
                                           <WithTheme(Icon)
                                             classes={
                                               Object {
-                                                "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-48",
-                                                "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-47",
-                                                "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-46",
-                                                "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-44",
-                                                "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-45",
+                                                "big": "HoiPoi__Icon__big-2-23",
+                                                "large": "HoiPoi__Icon__large-2-22",
+                                                "medium": "HoiPoi__Icon__medium-2-21",
+                                                "root": "HoiPoi__Icon__root-2-19",
+                                                "small": "HoiPoi__Icon__small-2-20",
                                               }
                                             }
                                             name="chevron"
@@ -5456,11 +5458,11 @@ exports[`Select with disabled options match 1`] = `
                                             <Icon
                                               classes={
                                                 Object {
-                                                  "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-48",
-                                                  "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-47",
-                                                  "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-46",
-                                                  "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-44",
-                                                  "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-45",
+                                                  "big": "HoiPoi__Icon__big-2-23",
+                                                  "large": "HoiPoi__Icon__large-2-22",
+                                                  "medium": "HoiPoi__Icon__medium-2-21",
+                                                  "root": "HoiPoi__Icon__root-2-19",
+                                                  "small": "HoiPoi__Icon__small-2-20",
                                                 }
                                               }
                                               name="chevron"
@@ -5552,7 +5554,7 @@ exports[`Select with disabled options match 1`] = `
                                               }
                                             >
                                               <span
-                                                className="HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-44 HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-45"
+                                                className="HoiPoi__Icon__root-2-19 HoiPoi__Icon__small-2-20"
                                               >
                                                 <Chevron
                                                   color="#788590"

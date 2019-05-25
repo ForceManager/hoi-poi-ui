@@ -34,7 +34,7 @@ describe('Select Button', () => {
         );
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('.HoiPoi-SelectButton-button-0-2-2').simulate('click');
+        wrapper.find('.HoiPoi__SelectButton__button-1-1').simulate('click');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -93,7 +93,8 @@ describe('Select Button', () => {
         );
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('.HoiPoi-HoiPoi-SelectButton-button-0-2-27').simulate('click');
+
+        wrapper.find('.HoiPoi__SelectButton__button-2-1').simulate('click');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -136,7 +137,7 @@ describe('Select Button', () => {
         );
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('.HoiPoi-HoiPoi-HoiPoi-SelectButton-button-0-2-52').simulate('click');
+        wrapper.find('.HoiPoi__SelectButton__button-3-1').simulate('click');
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -89,7 +89,8 @@ exports[`Input default match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -378,7 +379,7 @@ exports[`Input default match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-",
+                "classNamePrefix": "HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -478,20 +479,20 @@ exports[`Input default match 1`] = `
           <Input
             classes={
               Object {
-                "Label": "HoiPoi-Input-Label-0-2-2",
-                "error": "HoiPoi-Input-error-0-2-3",
-                "errored": "HoiPoi-Input-errored-0-2-6",
-                "focused": "HoiPoi-Input-focused-0-2-8",
-                "formControl": "HoiPoi-Input-formControl-0-2-4",
-                "horizontal": "HoiPoi-Input-horizontal-0-2-10",
-                "input": "HoiPoi-Input-input-0-2-5",
-                "isFullWidth": "HoiPoi-Input-isFullWidth-0-2-11",
-                "isReadOnly": "HoiPoi-Input-isReadOnly-0-2-7",
-                "postCloseComponent": "HoiPoi-Input-postCloseComponent-0-2-14",
-                "postComponent": "HoiPoi-Input-postComponent-0-2-13",
-                "preComponent": "HoiPoi-Input-preComponent-0-2-12",
-                "root": "HoiPoi-Input-root-0-2-1",
-                "vertical": "HoiPoi-Input-vertical-0-2-9",
+                "Label": "HoiPoi__Input__Label-1-1",
+                "error": "HoiPoi__Input__error-1-2",
+                "errored": "HoiPoi__Input__errored-1-5",
+                "focused": "HoiPoi__Input__focused-1-7",
+                "formControl": "HoiPoi__Input__formControl-1-3",
+                "horizontal": "HoiPoi__Input__horizontal-1-9",
+                "input": "HoiPoi__Input__input-1-4",
+                "isFullWidth": "HoiPoi__Input__isFullWidth-1-10",
+                "isReadOnly": "HoiPoi__Input__isReadOnly-1-6",
+                "postCloseComponent": "HoiPoi__Input__postCloseComponent-1-13",
+                "postComponent": "HoiPoi__Input__postComponent-1-12",
+                "preComponent": "HoiPoi__Input__preComponent-1-11",
+                "root": "HoiPoi__Input__root-1-0",
+                "vertical": "HoiPoi__Input__vertical-1-8",
               }
             }
             isReadOnly={false}
@@ -504,13 +505,13 @@ exports[`Input default match 1`] = `
             value="Hello"
           >
             <div
-              className="HoiPoi-Input-root-0-2-1 HoiPoi-Input-horizontal-0-2-10"
+              className="HoiPoi__Input__root-1-0 HoiPoi__Input__horizontal-1-9"
             >
               <JssContextSubscriber
-                className="HoiPoi-Input-Label-0-2-2"
+                className="HoiPoi__Input__Label-1-1"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-Input-Label-0-2-2"
+                  className="HoiPoi__Input__Label-1-1"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -659,7 +660,7 @@ exports[`Input default match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-",
+                        "classNamePrefix": "HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -750,21 +751,21 @@ exports[`Input default match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-Input-Label-0-2-2"
+                    className="HoiPoi__Input__Label-1-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-Label-icon-0-2-18",
-                        "info": "HoiPoi-Label-info-0-2-17",
-                        "root": "HoiPoi-Label-root-0-2-15",
-                        "text": "HoiPoi-Label-text-0-2-16",
+                        "icon": "HoiPoi__Label__icon-1-17",
+                        "info": "HoiPoi__Label__info-1-16",
+                        "root": "HoiPoi__Label__root-1-14",
+                        "text": "HoiPoi__Label__text-1-15",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-Label-root-0-2-15 HoiPoi-Input-Label-0-2-2"
+                      className="HoiPoi__Label__root-1-14 HoiPoi__Input__Label-1-1"
                     >
                       <span
-                        className="HoiPoi-Label-text-0-2-16"
+                        className="HoiPoi__Label__text-1-15"
                       >
                         Lorem ipsum
                       </span>
@@ -773,10 +774,10 @@ exports[`Input default match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-Input-formControl-0-2-4"
+                className="HoiPoi__Input__formControl-1-3"
               >
                 <input
-                  className="HoiPoi-Input-input-0-2-5"
+                  className="HoiPoi__Input__input-1-4"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -786,10 +787,10 @@ exports[`Input default match 1`] = `
                   value="Hello"
                 />
                 <div
-                  className="HoiPoi-Input-postComponent-0-2-13"
+                  className="HoiPoi__Input__postComponent-1-12"
                 >
                   <span
-                    className="HoiPoi-Input-postCloseComponent-0-2-14"
+                    className="HoiPoi__Input__postCloseComponent-1-13"
                     onClick={[Function]}
                   >
                     <JssContextSubscriber
@@ -944,7 +945,7 @@ exports[`Input default match 1`] = `
                               },
                             },
                             "sheetOptions": Object {
-                              "classNamePrefix": "HoiPoi-",
+                              "classNamePrefix": "HoiPoi__",
                               "generateId": [Function],
                             },
                           }
@@ -1038,11 +1039,11 @@ exports[`Input default match 1`] = `
                         <WithTheme(Icon)
                           classes={
                             Object {
-                              "big": "HoiPoi-WithTheme(Icon)-big-0-2-23",
-                              "large": "HoiPoi-WithTheme(Icon)-large-0-2-22",
-                              "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-21",
-                              "root": "HoiPoi-WithTheme(Icon)-root-0-2-19",
-                              "small": "HoiPoi-WithTheme(Icon)-small-0-2-20",
+                              "big": "HoiPoi__Icon__big-1-22",
+                              "large": "HoiPoi__Icon__large-1-21",
+                              "medium": "HoiPoi__Icon__medium-1-20",
+                              "root": "HoiPoi__Icon__root-1-18",
+                              "small": "HoiPoi__Icon__small-1-19",
                             }
                           }
                           name="close"
@@ -1050,11 +1051,11 @@ exports[`Input default match 1`] = `
                           <Icon
                             classes={
                               Object {
-                                "big": "HoiPoi-WithTheme(Icon)-big-0-2-23",
-                                "large": "HoiPoi-WithTheme(Icon)-large-0-2-22",
-                                "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-21",
-                                "root": "HoiPoi-WithTheme(Icon)-root-0-2-19",
-                                "small": "HoiPoi-WithTheme(Icon)-small-0-2-20",
+                                "big": "HoiPoi__Icon__big-1-22",
+                                "large": "HoiPoi__Icon__large-1-21",
+                                "medium": "HoiPoi__Icon__medium-1-20",
+                                "root": "HoiPoi__Icon__root-1-18",
+                                "small": "HoiPoi__Icon__small-1-19",
                               }
                             }
                             name="close"
@@ -1146,7 +1147,7 @@ exports[`Input default match 1`] = `
                             }
                           >
                             <span
-                              className="HoiPoi-WithTheme(Icon)-root-0-2-19 HoiPoi-WithTheme(Icon)-medium-0-2-21"
+                              className="HoiPoi__Icon__root-1-18 HoiPoi__Icon__medium-1-20"
                             >
                               <Close
                                 color="#788590"
@@ -1268,7 +1269,8 @@ exports[`Input is read only match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -1557,7 +1559,7 @@ exports[`Input is read only match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -1657,20 +1659,20 @@ exports[`Input is read only match 1`] = `
           <Input
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-85",
-                "error": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-error-0-2-86",
-                "errored": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-errored-0-2-89",
-                "focused": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-focused-0-2-91",
-                "formControl": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-87",
-                "horizontal": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-93",
-                "input": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-88",
-                "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isFullWidth-0-2-94",
-                "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isReadOnly-0-2-90",
-                "postCloseComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postCloseComponent-0-2-97",
-                "postComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postComponent-0-2-96",
-                "preComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-preComponent-0-2-95",
-                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-84",
-                "vertical": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-vertical-0-2-92",
+                "Label": "HoiPoi__Input__Label-5-1",
+                "error": "HoiPoi__Input__error-5-2",
+                "errored": "HoiPoi__Input__errored-5-5",
+                "focused": "HoiPoi__Input__focused-5-7",
+                "formControl": "HoiPoi__Input__formControl-5-3",
+                "horizontal": "HoiPoi__Input__horizontal-5-9",
+                "input": "HoiPoi__Input__input-5-4",
+                "isFullWidth": "HoiPoi__Input__isFullWidth-5-10",
+                "isReadOnly": "HoiPoi__Input__isReadOnly-5-6",
+                "postCloseComponent": "HoiPoi__Input__postCloseComponent-5-13",
+                "postComponent": "HoiPoi__Input__postComponent-5-12",
+                "preComponent": "HoiPoi__Input__preComponent-5-11",
+                "root": "HoiPoi__Input__root-5-0",
+                "vertical": "HoiPoi__Input__vertical-5-8",
               }
             }
             isReadOnly={true}
@@ -1683,13 +1685,13 @@ exports[`Input is read only match 1`] = `
             value=""
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-84 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isReadOnly-0-2-90 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-93"
+              className="HoiPoi__Input__root-5-0 HoiPoi__Input__isReadOnly-5-6 HoiPoi__Input__horizontal-5-9"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-85"
+                className="HoiPoi__Input__Label-5-1"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-85"
+                  className="HoiPoi__Input__Label-5-1"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -1838,7 +1840,7 @@ exports[`Input is read only match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -1929,21 +1931,21 @@ exports[`Input is read only match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-85"
+                    className="HoiPoi__Input__Label-5-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-101",
-                        "info": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-100",
-                        "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-98",
-                        "text": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-99",
+                        "icon": "HoiPoi__Label__icon-5-17",
+                        "info": "HoiPoi__Label__info-5-16",
+                        "root": "HoiPoi__Label__root-5-14",
+                        "text": "HoiPoi__Label__text-5-15",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-98 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-85"
+                      className="HoiPoi__Label__root-5-14 HoiPoi__Input__Label-5-1"
                     >
                       <span
-                        className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-99"
+                        className="HoiPoi__Label__text-5-15"
                       >
                         Lorem ipsum
                       </span>
@@ -1952,10 +1954,10 @@ exports[`Input is read only match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-87"
+                className="HoiPoi__Input__formControl-5-3"
               >
                 <input
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-88"
+                  className="HoiPoi__Input__input-5-4"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -1965,10 +1967,10 @@ exports[`Input is read only match 1`] = `
                   value=""
                 />
                 <div
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postComponent-0-2-96"
+                  className="HoiPoi__Input__postComponent-5-12"
                 >
                   <span
-                    className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postCloseComponent-0-2-97"
+                    className="HoiPoi__Input__postCloseComponent-5-13"
                     onClick={[Function]}
                   >
                     <JssContextSubscriber
@@ -2123,7 +2125,7 @@ exports[`Input is read only match 1`] = `
                               },
                             },
                             "sheetOptions": Object {
-                              "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                              "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                               "generateId": [Function],
                             },
                           }
@@ -2217,11 +2219,11 @@ exports[`Input is read only match 1`] = `
                         <WithTheme(Icon)
                           classes={
                             Object {
-                              "big": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-106",
-                              "large": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-105",
-                              "medium": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-104",
-                              "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-102",
-                              "small": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-103",
+                              "big": "HoiPoi__Icon__big-5-22",
+                              "large": "HoiPoi__Icon__large-5-21",
+                              "medium": "HoiPoi__Icon__medium-5-20",
+                              "root": "HoiPoi__Icon__root-5-18",
+                              "small": "HoiPoi__Icon__small-5-19",
                             }
                           }
                           name="lock"
@@ -2229,11 +2231,11 @@ exports[`Input is read only match 1`] = `
                           <Icon
                             classes={
                               Object {
-                                "big": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-106",
-                                "large": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-105",
-                                "medium": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-104",
-                                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-102",
-                                "small": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-103",
+                                "big": "HoiPoi__Icon__big-5-22",
+                                "large": "HoiPoi__Icon__large-5-21",
+                                "medium": "HoiPoi__Icon__medium-5-20",
+                                "root": "HoiPoi__Icon__root-5-18",
+                                "small": "HoiPoi__Icon__small-5-19",
                               }
                             }
                             name="lock"
@@ -2325,7 +2327,7 @@ exports[`Input is read only match 1`] = `
                             }
                           >
                             <span
-                              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-102 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-104"
+                              className="HoiPoi__Icon__root-5-18 HoiPoi__Icon__medium-5-20"
                             >
                               <Lock
                                 color="#788590"
@@ -2447,7 +2449,8 @@ exports[`Input is required match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -2733,7 +2736,7 @@ exports[`Input is required match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -2833,20 +2836,20 @@ exports[`Input is required match 1`] = `
           <Input
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-49",
-                "error": "HoiPoi-HoiPoi-HoiPoi-Input-error-0-2-50",
-                "errored": "HoiPoi-HoiPoi-HoiPoi-Input-errored-0-2-53",
-                "focused": "HoiPoi-HoiPoi-HoiPoi-Input-focused-0-2-55",
-                "formControl": "HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-51",
-                "horizontal": "HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-57",
-                "input": "HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-52",
-                "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-Input-isFullWidth-0-2-58",
-                "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-Input-isReadOnly-0-2-54",
-                "postCloseComponent": "HoiPoi-HoiPoi-HoiPoi-Input-postCloseComponent-0-2-61",
-                "postComponent": "HoiPoi-HoiPoi-HoiPoi-Input-postComponent-0-2-60",
-                "preComponent": "HoiPoi-HoiPoi-HoiPoi-Input-preComponent-0-2-59",
-                "root": "HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-48",
-                "vertical": "HoiPoi-HoiPoi-HoiPoi-Input-vertical-0-2-56",
+                "Label": "HoiPoi__Input__Label-3-1",
+                "error": "HoiPoi__Input__error-3-2",
+                "errored": "HoiPoi__Input__errored-3-5",
+                "focused": "HoiPoi__Input__focused-3-7",
+                "formControl": "HoiPoi__Input__formControl-3-3",
+                "horizontal": "HoiPoi__Input__horizontal-3-9",
+                "input": "HoiPoi__Input__input-3-4",
+                "isFullWidth": "HoiPoi__Input__isFullWidth-3-10",
+                "isReadOnly": "HoiPoi__Input__isReadOnly-3-6",
+                "postCloseComponent": "HoiPoi__Input__postCloseComponent-3-13",
+                "postComponent": "HoiPoi__Input__postComponent-3-12",
+                "preComponent": "HoiPoi__Input__preComponent-3-11",
+                "root": "HoiPoi__Input__root-3-0",
+                "vertical": "HoiPoi__Input__vertical-3-8",
               }
             }
             isReadOnly={false}
@@ -2860,14 +2863,14 @@ exports[`Input is required match 1`] = `
             value=""
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-48 HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-57"
+              className="HoiPoi__Input__root-3-0 HoiPoi__Input__horizontal-3-9"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-49"
+                className="HoiPoi__Input__Label-3-1"
                 isRequired={true}
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-49"
+                  className="HoiPoi__Input__Label-3-1"
                   innerRef={null}
                   isRequired={true}
                   jssContext={
@@ -3013,7 +3016,7 @@ exports[`Input is required match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -3104,22 +3107,22 @@ exports[`Input is required match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-49"
+                    className="HoiPoi__Input__Label-3-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-65",
-                        "info": "HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-64",
-                        "root": "HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-62",
-                        "text": "HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-63",
+                        "icon": "HoiPoi__Label__icon-3-17",
+                        "info": "HoiPoi__Label__info-3-16",
+                        "root": "HoiPoi__Label__root-3-14",
+                        "text": "HoiPoi__Label__text-3-15",
                       }
                     }
                     isRequired={true}
                   >
                     <span
-                      className="HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-62 HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-49"
+                      className="HoiPoi__Label__root-3-14 HoiPoi__Input__Label-3-1"
                     >
                       <span
-                        className="HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-63"
+                        className="HoiPoi__Label__text-3-15"
                       >
                         Lorem ipsum
                         *
@@ -3129,10 +3132,10 @@ exports[`Input is required match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-51"
+                className="HoiPoi__Input__formControl-3-3"
               >
                 <input
-                  className="HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-52"
+                  className="HoiPoi__Input__input-3-4"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -3240,7 +3243,8 @@ exports[`Input vertical label mode match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -3525,7 +3529,7 @@ exports[`Input vertical label mode match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -3625,20 +3629,20 @@ exports[`Input vertical label mode match 1`] = `
           <Input
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-108",
-                "error": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-error-0-2-109",
-                "errored": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-errored-0-2-112",
-                "focused": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-focused-0-2-114",
-                "formControl": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-110",
-                "horizontal": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-116",
-                "input": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-111",
-                "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isFullWidth-0-2-117",
-                "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isReadOnly-0-2-113",
-                "postCloseComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postCloseComponent-0-2-120",
-                "postComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postComponent-0-2-119",
-                "preComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-preComponent-0-2-118",
-                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-107",
-                "vertical": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-vertical-0-2-115",
+                "Label": "HoiPoi__Input__Label-6-1",
+                "error": "HoiPoi__Input__error-6-2",
+                "errored": "HoiPoi__Input__errored-6-5",
+                "focused": "HoiPoi__Input__focused-6-7",
+                "formControl": "HoiPoi__Input__formControl-6-3",
+                "horizontal": "HoiPoi__Input__horizontal-6-9",
+                "input": "HoiPoi__Input__input-6-4",
+                "isFullWidth": "HoiPoi__Input__isFullWidth-6-10",
+                "isReadOnly": "HoiPoi__Input__isReadOnly-6-6",
+                "postCloseComponent": "HoiPoi__Input__postCloseComponent-6-13",
+                "postComponent": "HoiPoi__Input__postComponent-6-12",
+                "preComponent": "HoiPoi__Input__preComponent-6-11",
+                "root": "HoiPoi__Input__root-6-0",
+                "vertical": "HoiPoi__Input__vertical-6-8",
               }
             }
             isReadOnly={false}
@@ -3651,13 +3655,13 @@ exports[`Input vertical label mode match 1`] = `
             value=""
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-107 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-vertical-0-2-115"
+              className="HoiPoi__Input__root-6-0 HoiPoi__Input__vertical-6-8"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-108"
+                className="HoiPoi__Input__Label-6-1"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-108"
+                  className="HoiPoi__Input__Label-6-1"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -3802,7 +3806,7 @@ exports[`Input vertical label mode match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -3893,21 +3897,21 @@ exports[`Input vertical label mode match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-108"
+                    className="HoiPoi__Input__Label-6-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-124",
-                        "info": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-123",
-                        "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-121",
-                        "text": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-122",
+                        "icon": "HoiPoi__Label__icon-6-17",
+                        "info": "HoiPoi__Label__info-6-16",
+                        "root": "HoiPoi__Label__root-6-14",
+                        "text": "HoiPoi__Label__text-6-15",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-121 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-108"
+                      className="HoiPoi__Label__root-6-14 HoiPoi__Input__Label-6-1"
                     >
                       <span
-                        className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-122"
+                        className="HoiPoi__Label__text-6-15"
                       >
                         Lorem ipsum
                       </span>
@@ -3916,10 +3920,10 @@ exports[`Input vertical label mode match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-110"
+                className="HoiPoi__Input__formControl-6-3"
               >
                 <input
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-111"
+                  className="HoiPoi__Input__input-6-4"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -4027,7 +4031,8 @@ exports[`Input with error match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -4313,7 +4318,7 @@ exports[`Input with error match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -4413,20 +4418,20 @@ exports[`Input with error match 1`] = `
           <Input
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-67",
-                "error": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-error-0-2-68",
-                "errored": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-errored-0-2-71",
-                "focused": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-focused-0-2-73",
-                "formControl": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-69",
-                "horizontal": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-75",
-                "input": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-70",
-                "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isFullWidth-0-2-76",
-                "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isReadOnly-0-2-72",
-                "postCloseComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postCloseComponent-0-2-79",
-                "postComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postComponent-0-2-78",
-                "preComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-preComponent-0-2-77",
-                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-66",
-                "vertical": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-vertical-0-2-74",
+                "Label": "HoiPoi__Input__Label-4-1",
+                "error": "HoiPoi__Input__error-4-2",
+                "errored": "HoiPoi__Input__errored-4-5",
+                "focused": "HoiPoi__Input__focused-4-7",
+                "formControl": "HoiPoi__Input__formControl-4-3",
+                "horizontal": "HoiPoi__Input__horizontal-4-9",
+                "input": "HoiPoi__Input__input-4-4",
+                "isFullWidth": "HoiPoi__Input__isFullWidth-4-10",
+                "isReadOnly": "HoiPoi__Input__isReadOnly-4-6",
+                "postCloseComponent": "HoiPoi__Input__postCloseComponent-4-13",
+                "postComponent": "HoiPoi__Input__postComponent-4-12",
+                "preComponent": "HoiPoi__Input__preComponent-4-11",
+                "root": "HoiPoi__Input__root-4-0",
+                "vertical": "HoiPoi__Input__vertical-4-8",
               }
             }
             error="I am an error"
@@ -4440,13 +4445,13 @@ exports[`Input with error match 1`] = `
             value=""
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-66 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-75 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-errored-0-2-71"
+              className="HoiPoi__Input__root-4-0 HoiPoi__Input__horizontal-4-9 HoiPoi__Input__errored-4-5"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-67"
+                className="HoiPoi__Input__Label-4-1"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-67"
+                  className="HoiPoi__Input__Label-4-1"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -4591,7 +4596,7 @@ exports[`Input with error match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -4682,21 +4687,21 @@ exports[`Input with error match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-67"
+                    className="HoiPoi__Input__Label-4-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-83",
-                        "info": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-82",
-                        "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-80",
-                        "text": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-81",
+                        "icon": "HoiPoi__Label__icon-4-17",
+                        "info": "HoiPoi__Label__info-4-16",
+                        "root": "HoiPoi__Label__root-4-14",
+                        "text": "HoiPoi__Label__text-4-15",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-80 HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-67"
+                      className="HoiPoi__Label__root-4-14 HoiPoi__Input__Label-4-1"
                     >
                       <span
-                        className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-81"
+                        className="HoiPoi__Label__text-4-15"
                       >
                         Lorem ipsum
                       </span>
@@ -4705,10 +4710,10 @@ exports[`Input with error match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-69"
+                className="HoiPoi__Input__formControl-4-3"
               >
                 <input
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-70"
+                  className="HoiPoi__Input__input-4-4"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -4718,7 +4723,7 @@ exports[`Input with error match 1`] = `
                   value=""
                 />
                 <div
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-error-0-2-68"
+                  className="HoiPoi__Input__error-4-2"
                 >
                   I am an error
                 </div>
@@ -4821,7 +4826,8 @@ exports[`Input with hint match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -5115,7 +5121,7 @@ exports[`Input with hint match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -5215,20 +5221,20 @@ exports[`Input with hint match 1`] = `
           <Input
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-Input-Label-0-2-25",
-                "error": "HoiPoi-HoiPoi-Input-error-0-2-26",
-                "errored": "HoiPoi-HoiPoi-Input-errored-0-2-29",
-                "focused": "HoiPoi-HoiPoi-Input-focused-0-2-31",
-                "formControl": "HoiPoi-HoiPoi-Input-formControl-0-2-27",
-                "horizontal": "HoiPoi-HoiPoi-Input-horizontal-0-2-33",
-                "input": "HoiPoi-HoiPoi-Input-input-0-2-28",
-                "isFullWidth": "HoiPoi-HoiPoi-Input-isFullWidth-0-2-34",
-                "isReadOnly": "HoiPoi-HoiPoi-Input-isReadOnly-0-2-30",
-                "postCloseComponent": "HoiPoi-HoiPoi-Input-postCloseComponent-0-2-37",
-                "postComponent": "HoiPoi-HoiPoi-Input-postComponent-0-2-36",
-                "preComponent": "HoiPoi-HoiPoi-Input-preComponent-0-2-35",
-                "root": "HoiPoi-HoiPoi-Input-root-0-2-24",
-                "vertical": "HoiPoi-HoiPoi-Input-vertical-0-2-32",
+                "Label": "HoiPoi__Input__Label-2-1",
+                "error": "HoiPoi__Input__error-2-2",
+                "errored": "HoiPoi__Input__errored-2-5",
+                "focused": "HoiPoi__Input__focused-2-7",
+                "formControl": "HoiPoi__Input__formControl-2-3",
+                "horizontal": "HoiPoi__Input__horizontal-2-9",
+                "input": "HoiPoi__Input__input-2-4",
+                "isFullWidth": "HoiPoi__Input__isFullWidth-2-10",
+                "isReadOnly": "HoiPoi__Input__isReadOnly-2-6",
+                "postCloseComponent": "HoiPoi__Input__postCloseComponent-2-13",
+                "postComponent": "HoiPoi__Input__postComponent-2-12",
+                "preComponent": "HoiPoi__Input__preComponent-2-11",
+                "root": "HoiPoi__Input__root-2-0",
+                "vertical": "HoiPoi__Input__vertical-2-8",
               }
             }
             hint="Hello"
@@ -5242,14 +5248,14 @@ exports[`Input with hint match 1`] = `
             value=""
           >
             <div
-              className="HoiPoi-HoiPoi-Input-root-0-2-24 HoiPoi-HoiPoi-Input-horizontal-0-2-33"
+              className="HoiPoi__Input__root-2-0 HoiPoi__Input__horizontal-2-9"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-Input-Label-0-2-25"
+                className="HoiPoi__Input__Label-2-1"
                 hint="Hello"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-Input-Label-0-2-25"
+                  className="HoiPoi__Input__Label-2-1"
                   hint="Hello"
                   innerRef={null}
                   jssContext={
@@ -5403,7 +5409,7 @@ exports[`Input with hint match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -5494,22 +5500,22 @@ exports[`Input with hint match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-Input-Label-0-2-25"
+                    className="HoiPoi__Input__Label-2-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-Label-icon-0-2-41",
-                        "info": "HoiPoi-HoiPoi-Label-info-0-2-40",
-                        "root": "HoiPoi-HoiPoi-Label-root-0-2-38",
-                        "text": "HoiPoi-HoiPoi-Label-text-0-2-39",
+                        "icon": "HoiPoi__Label__icon-2-17",
+                        "info": "HoiPoi__Label__info-2-16",
+                        "root": "HoiPoi__Label__root-2-14",
+                        "text": "HoiPoi__Label__text-2-15",
                       }
                     }
                     hint="Hello"
                   >
                     <span
-                      className="HoiPoi-HoiPoi-Label-root-0-2-38 HoiPoi-HoiPoi-Input-Label-0-2-25"
+                      className="HoiPoi__Label__root-2-14 HoiPoi__Input__Label-2-1"
                     >
                       <span
-                        className="HoiPoi-HoiPoi-Label-text-0-2-39"
+                        className="HoiPoi__Label__text-2-15"
                       >
                         Lorem ipsum
                       </span>
@@ -5676,7 +5682,7 @@ exports[`Input with hint match 1`] = `
                                 },
                               },
                               "sheetOptions": Object {
-                                "classNamePrefix": "HoiPoi-HoiPoi-",
+                                "classNamePrefix": "HoiPoi__HoiPoi__",
                                 "generateId": [Function],
                               },
                             }
@@ -5776,7 +5782,7 @@ exports[`Input with hint match 1`] = `
                           <Popover
                             classes={
                               Object {
-                                "root": "HoiPoi-HoiPoi-Popover-root-0-2-42",
+                                "root": "HoiPoi__Tooltip__root-2-18",
                               }
                             }
                             content="Hello"
@@ -5795,7 +5801,7 @@ exports[`Input with hint match 1`] = `
                               mouseEnterDelay={0}
                               mouseLeaveDelay={0.1}
                               overlay="Hello"
-                              overlayClassName="HoiPoi-HoiPoi-Popover-root-0-2-42"
+                              overlayClassName="HoiPoi__Tooltip__root-2-18"
                               placement="top"
                               prefixCls="hoi-poi-popover"
                               transitionName="hoi-poi-popover--fade"
@@ -6049,7 +6055,7 @@ exports[`Input with hint match 1`] = `
                                 overlay="Hello"
                                 popup={[Function]}
                                 popupAlign={Object {}}
-                                popupClassName="HoiPoi-HoiPoi-Popover-root-0-2-42"
+                                popupClassName="HoiPoi__Tooltip__root-2-18"
                                 popupPlacement="top"
                                 popupStyle={Object {}}
                                 popupTransitionName="hoi-poi-popover--fade"
@@ -6057,17 +6063,17 @@ exports[`Input with hint match 1`] = `
                                 showAction={Array []}
                               >
                                 <span
-                                  className="HoiPoi-HoiPoi-Label-info-0-2-40"
+                                  className="HoiPoi__Label__info-2-16"
                                   key="trigger"
                                   onMouseEnter={[Function]}
                                   onMouseLeave={[Function]}
                                 >
                                   <JssContextSubscriber
-                                    className="HoiPoi-HoiPoi-Label-icon-0-2-41"
+                                    className="HoiPoi__Label__icon-2-17"
                                     name="info"
                                   >
                                     <WithStyles(WithTheme(Icon))
-                                      className="HoiPoi-HoiPoi-Label-icon-0-2-41"
+                                      className="HoiPoi__Label__icon-2-17"
                                       innerRef={null}
                                       jssContext={
                                         Object {
@@ -6220,7 +6226,7 @@ exports[`Input with hint match 1`] = `
                                             },
                                           },
                                           "sheetOptions": Object {
-                                            "classNamePrefix": "HoiPoi-HoiPoi-",
+                                            "classNamePrefix": "HoiPoi__HoiPoi__",
                                             "generateId": [Function],
                                           },
                                         }
@@ -6312,27 +6318,27 @@ exports[`Input with hint match 1`] = `
                                       }
                                     >
                                       <WithTheme(Icon)
-                                        className="HoiPoi-HoiPoi-Label-icon-0-2-41"
+                                        className="HoiPoi__Label__icon-2-17"
                                         classes={
                                           Object {
-                                            "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-47",
-                                            "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-46",
-                                            "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-45",
-                                            "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-43",
-                                            "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-44",
+                                            "big": "HoiPoi__Icon__big-2-23",
+                                            "large": "HoiPoi__Icon__large-2-22",
+                                            "medium": "HoiPoi__Icon__medium-2-21",
+                                            "root": "HoiPoi__Icon__root-2-19",
+                                            "small": "HoiPoi__Icon__small-2-20",
                                           }
                                         }
                                         name="info"
                                       >
                                         <Icon
-                                          className="HoiPoi-HoiPoi-Label-icon-0-2-41"
+                                          className="HoiPoi__Label__icon-2-17"
                                           classes={
                                             Object {
-                                              "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-47",
-                                              "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-46",
-                                              "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-45",
-                                              "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-43",
-                                              "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-44",
+                                              "big": "HoiPoi__Icon__big-2-23",
+                                              "large": "HoiPoi__Icon__large-2-22",
+                                              "medium": "HoiPoi__Icon__medium-2-21",
+                                              "root": "HoiPoi__Icon__root-2-19",
+                                              "small": "HoiPoi__Icon__small-2-20",
                                             }
                                           }
                                           name="info"
@@ -6424,7 +6430,7 @@ exports[`Input with hint match 1`] = `
                                           }
                                         >
                                           <span
-                                            className="HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-43 HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-45 HoiPoi-HoiPoi-Label-icon-0-2-41"
+                                            className="HoiPoi__Icon__root-2-19 HoiPoi__Icon__medium-2-21 HoiPoi__Label__icon-2-17"
                                           >
                                             <Info
                                               color="#788590"
@@ -6456,10 +6462,10 @@ exports[`Input with hint match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-Input-formControl-0-2-27"
+                className="HoiPoi__Input__formControl-2-3"
               >
                 <input
-                  className="HoiPoi-HoiPoi-Input-input-0-2-28"
+                  className="HoiPoi__Input__input-2-4"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -6567,7 +6573,8 @@ exports[`Input with pre/post component match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -6861,7 +6868,7 @@ exports[`Input with pre/post component match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -6971,20 +6978,20 @@ exports[`Input with pre/post component match 1`] = `
           <Input
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-126",
-                "error": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-error-0-2-127",
-                "errored": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-errored-0-2-130",
-                "focused": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-focused-0-2-132",
-                "formControl": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-128",
-                "horizontal": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-134",
-                "input": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-129",
-                "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isFullWidth-0-2-135",
-                "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-isReadOnly-0-2-131",
-                "postCloseComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postCloseComponent-0-2-138",
-                "postComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postComponent-0-2-137",
-                "preComponent": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-preComponent-0-2-136",
-                "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-125",
-                "vertical": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-vertical-0-2-133",
+                "Label": "HoiPoi__Input__Label-7-1",
+                "error": "HoiPoi__Input__error-7-2",
+                "errored": "HoiPoi__Input__errored-7-5",
+                "focused": "HoiPoi__Input__focused-7-7",
+                "formControl": "HoiPoi__Input__formControl-7-3",
+                "horizontal": "HoiPoi__Input__horizontal-7-9",
+                "input": "HoiPoi__Input__input-7-4",
+                "isFullWidth": "HoiPoi__Input__isFullWidth-7-10",
+                "isReadOnly": "HoiPoi__Input__isReadOnly-7-6",
+                "postCloseComponent": "HoiPoi__Input__postCloseComponent-7-13",
+                "postComponent": "HoiPoi__Input__postComponent-7-12",
+                "preComponent": "HoiPoi__Input__preComponent-7-11",
+                "root": "HoiPoi__Input__root-7-0",
+                "vertical": "HoiPoi__Input__vertical-7-8",
               }
             }
             isReadOnly={false}
@@ -7007,13 +7014,13 @@ exports[`Input with pre/post component match 1`] = `
             value=""
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-root-0-2-125 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-horizontal-0-2-134"
+              className="HoiPoi__Input__root-7-0 HoiPoi__Input__horizontal-7-9"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-126"
+                className="HoiPoi__Input__Label-7-1"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-126"
+                  className="HoiPoi__Input__Label-7-1"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -7158,7 +7165,7 @@ exports[`Input with pre/post component match 1`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
@@ -7249,21 +7256,21 @@ exports[`Input with pre/post component match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-126"
+                    className="HoiPoi__Input__Label-7-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-142",
-                        "info": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-141",
-                        "root": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-139",
-                        "text": "HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-140",
+                        "icon": "HoiPoi__Label__icon-7-17",
+                        "info": "HoiPoi__Label__info-7-16",
+                        "root": "HoiPoi__Label__root-7-14",
+                        "text": "HoiPoi__Label__text-7-15",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-139 HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-Label-0-2-126"
+                      className="HoiPoi__Label__root-7-14 HoiPoi__Input__Label-7-1"
                     >
                       <span
-                        className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-140"
+                        className="HoiPoi__Label__text-7-15"
                       >
                         Lorem ipsum
                       </span>
@@ -7272,17 +7279,17 @@ exports[`Input with pre/post component match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-formControl-0-2-128"
+                className="HoiPoi__Input__formControl-7-3"
               >
                 <div
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-preComponent-0-2-136"
+                  className="HoiPoi__Input__preComponent-7-11"
                 >
                   <span>
                     $
                   </span>
                 </div>
                 <input
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-input-0-2-129"
+                  className="HoiPoi__Input__input-7-4"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -7292,7 +7299,7 @@ exports[`Input with pre/post component match 1`] = `
                   value=""
                 />
                 <div
-                  className="HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-HoiPoi-Input-postComponent-0-2-137"
+                  className="HoiPoi__Input__postComponent-7-12"
                 >
                   <span>
                     $

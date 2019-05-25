@@ -89,7 +89,8 @@ exports[`Toast default match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -365,7 +366,7 @@ exports[`Toast default match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-",
+                "classNamePrefix": "HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -463,7 +464,7 @@ exports[`Toast default match 1`] = `
                 "@keyframes Toastify__bounceInRight": undefined,
                 "@keyframes Toastify__bounceOutRight": undefined,
                 "@keyframes Toastify__trackProgress": undefined,
-                "root": "HoiPoi-Toast-root-0-2-4",
+                "root": "HoiPoi__Toast__root-1-3",
               }
             }
             overrides={Object {}}
@@ -471,7 +472,7 @@ exports[`Toast default match 1`] = `
             <ToastContainer
               autoClose={4000}
               bodyClassName={null}
-              className="HoiPoi-Toast-root-0-2-4"
+              className="HoiPoi__Toast__root-1-3"
               closeButton={false}
               closeOnClick={true}
               draggable={true}

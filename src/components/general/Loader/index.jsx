@@ -21,4 +21,4 @@ Loader.propTypes = {
     color: PropTypes.oneOf(['primary', 'danger', 'white']),
 };
 
-export default React.memo(withStyles(styles)(Loader));
+export default React.memo(withStyles(styles, { name: 'Loader' })(Loader));

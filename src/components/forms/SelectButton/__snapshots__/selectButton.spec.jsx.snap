@@ -89,7 +89,8 @@ exports[`Select Button default match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -391,7 +392,7 @@ exports[`Select Button default match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-",
+                "classNamePrefix": "HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -508,11 +509,11 @@ exports[`Select Button default match 1`] = `
           <SelectButton
             classes={
               Object {
-                "button": "HoiPoi-SelectButton-button-0-2-2",
-                "menu": "HoiPoi-SelectButton-menu-0-2-4",
-                "menuList": "HoiPoi-SelectButton-menuList-0-2-5",
-                "root": "HoiPoi-SelectButton-root-0-2-1",
-                "select": "HoiPoi-SelectButton-select-0-2-3",
+                "button": "HoiPoi__SelectButton__button-1-1",
+                "menu": "HoiPoi__SelectButton__menu-1-3",
+                "menuList": "HoiPoi__SelectButton__menuList-1-4",
+                "root": "HoiPoi__SelectButton__root-1-0",
+                "select": "HoiPoi__SelectButton__select-1-2",
               }
             }
             hideSelectedOptions={true}
@@ -545,10 +546,10 @@ exports[`Select Button default match 1`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-SelectButton-root-0-2-1"
+              className="HoiPoi__SelectButton__root-1-0"
             >
               <div
-                className="HoiPoi-SelectButton-button-0-2-2"
+                className="HoiPoi__SelectButton__button-1-1"
                 onClick={[Function]}
               >
                 <button>
@@ -653,7 +654,8 @@ exports[`Select Button default match 2`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -963,7 +965,7 @@ exports[`Select Button default match 2`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-",
+                "classNamePrefix": "HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -1080,11 +1082,11 @@ exports[`Select Button default match 2`] = `
           <SelectButton
             classes={
               Object {
-                "button": "HoiPoi-SelectButton-button-0-2-2",
-                "menu": "HoiPoi-SelectButton-menu-0-2-4",
-                "menuList": "HoiPoi-SelectButton-menuList-0-2-5",
-                "root": "HoiPoi-SelectButton-root-0-2-1",
-                "select": "HoiPoi-SelectButton-select-0-2-3",
+                "button": "HoiPoi__SelectButton__button-1-1",
+                "menu": "HoiPoi__SelectButton__menu-1-3",
+                "menuList": "HoiPoi__SelectButton__menuList-1-4",
+                "root": "HoiPoi__SelectButton__root-1-0",
+                "select": "HoiPoi__SelectButton__select-1-2",
               }
             }
             hideSelectedOptions={true}
@@ -1117,10 +1119,10 @@ exports[`Select Button default match 2`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-SelectButton-root-0-2-1"
+              className="HoiPoi__SelectButton__root-1-0"
             >
               <div
-                className="HoiPoi-SelectButton-button-0-2-2"
+                className="HoiPoi__SelectButton__button-1-1"
                 onClick={[Function]}
               >
                 <button>
@@ -1128,7 +1130,7 @@ exports[`Select Button default match 2`] = `
                 </button>
               </div>
               <JssContextSubscriber
-                className="HoiPoi-SelectButton-select-0-2-3"
+                className="HoiPoi__SelectButton__select-1-2"
                 components={
                   Object {
                     "DropdownIndicator": null,
@@ -1137,8 +1139,8 @@ exports[`Select Button default match 2`] = `
                 }
                 hideSelectedOptions={true}
                 isMulti={false}
-                menuClassName="HoiPoi-SelectButton-menu-0-2-4"
-                menuListClassName="HoiPoi-SelectButton-menuList-0-2-5"
+                menuClassName="HoiPoi__SelectButton__menu-1-3"
+                menuListClassName="HoiPoi__SelectButton__menuList-1-4"
                 onChange={[Function]}
                 onClickAction={[Function]}
                 options={
@@ -1177,7 +1179,7 @@ exports[`Select Button default match 2`] = `
                 value="lorem-ipsum-2"
               >
                 <WithStyles(Select)
-                  className="HoiPoi-SelectButton-select-0-2-3"
+                  className="HoiPoi__SelectButton__select-1-2"
                   components={
                     Object {
                       "DropdownIndicator": null,
@@ -1336,14 +1338,14 @@ exports[`Select Button default match 2`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-",
+                        "classNamePrefix": "HoiPoi__",
                         "generateId": [Function],
                       },
                     }
                   }
                   labelMode="horizontal"
-                  menuClassName="HoiPoi-SelectButton-menu-0-2-4"
-                  menuListClassName="HoiPoi-SelectButton-menuList-0-2-5"
+                  menuClassName="HoiPoi__SelectButton__menu-1-3"
+                  menuListClassName="HoiPoi__SelectButton__menuList-1-4"
                   onChange={[Function]}
                   onClickAction={[Function]}
                   options={
@@ -1466,24 +1468,24 @@ exports[`Select Button default match 2`] = `
                   value="lorem-ipsum-2"
                 >
                   <Select
-                    className="HoiPoi-SelectButton-select-0-2-3"
+                    className="HoiPoi__SelectButton__select-1-2"
                     classes={
                       Object {
-                        "Label": "HoiPoi-Select-Label-0-2-7",
-                        "action": "HoiPoi-Select-action-0-2-20",
-                        "error": "HoiPoi-Select-error-0-2-8",
-                        "errored": "HoiPoi-Select-errored-0-2-10",
-                        "focused": "HoiPoi-Select-focused-0-2-12",
-                        "formControl": "HoiPoi-Select-formControl-0-2-9",
-                        "group": "HoiPoi-Select-group-0-2-19",
-                        "horizontal": "HoiPoi-Select-horizontal-0-2-14",
-                        "isFullWidth": "HoiPoi-Select-isFullWidth-0-2-15",
-                        "isReadOnly": "HoiPoi-Select-isReadOnly-0-2-11",
-                        "menu": "HoiPoi-Select-menu-0-2-18",
-                        "menuList": "HoiPoi-Select-menuList-0-2-17",
-                        "root": "HoiPoi-Select-root-0-2-6",
-                        "select": "HoiPoi-Select-select-0-2-16",
-                        "vertical": "HoiPoi-Select-vertical-0-2-13",
+                        "Label": "HoiPoi__Select__Label-1-6",
+                        "action": "HoiPoi__Select__action-1-19",
+                        "error": "HoiPoi__Select__error-1-7",
+                        "errored": "HoiPoi__Select__errored-1-9",
+                        "focused": "HoiPoi__Select__focused-1-11",
+                        "formControl": "HoiPoi__Select__formControl-1-8",
+                        "group": "HoiPoi__Select__group-1-18",
+                        "horizontal": "HoiPoi__Select__horizontal-1-13",
+                        "isFullWidth": "HoiPoi__Select__isFullWidth-1-14",
+                        "isReadOnly": "HoiPoi__Select__isReadOnly-1-10",
+                        "menu": "HoiPoi__Select__menu-1-17",
+                        "menuList": "HoiPoi__Select__menuList-1-16",
+                        "root": "HoiPoi__Select__root-1-5",
+                        "select": "HoiPoi__Select__select-1-15",
+                        "vertical": "HoiPoi__Select__vertical-1-12",
                       }
                     }
                     components={
@@ -1497,8 +1499,8 @@ exports[`Select Button default match 2`] = `
                     isMulti={false}
                     isReadOnly={false}
                     labelMode="horizontal"
-                    menuClassName="HoiPoi-SelectButton-menu-0-2-4"
-                    menuListClassName="HoiPoi-SelectButton-menuList-0-2-5"
+                    menuClassName="HoiPoi__SelectButton__menu-1-3"
+                    menuListClassName="HoiPoi__SelectButton__menuList-1-4"
                     onChange={[Function]}
                     onClickAction={[Function]}
                     options={
@@ -1537,15 +1539,15 @@ exports[`Select Button default match 2`] = `
                     value="lorem-ipsum-2"
                   >
                     <div
-                      className="HoiPoi-Select-root-0-2-6 HoiPoi-Select-horizontal-0-2-14 HoiPoi-SelectButton-select-0-2-3"
+                      className="HoiPoi__Select__root-1-5 HoiPoi__Select__horizontal-1-13 HoiPoi__SelectButton__select-1-2"
                     >
                       <div
-                        className="HoiPoi-Select-formControl-0-2-9"
+                        className="HoiPoi__Select__formControl-1-8"
                       >
                         <StateManager
                           autoFocus={true}
                           backspaceRemovesValue={false}
-                          className="HoiPoi-Select-select-0-2-16"
+                          className="HoiPoi__Select__select-1-15"
                           classNamePrefix="hoi-poi-select"
                           components={
                             Object {
@@ -1607,7 +1609,7 @@ exports[`Select Button default match 2`] = `
                             backspaceRemovesValue={false}
                             blurInputOnSelect={true}
                             captureMenuScroll={false}
-                            className="HoiPoi-Select-select-0-2-16"
+                            className="HoiPoi__Select__select-1-15"
                             classNamePrefix="hoi-poi-select"
                             closeMenuOnScroll={false}
                             closeMenuOnSelect={true}
@@ -1686,7 +1688,7 @@ exports[`Select Button default match 2`] = `
                             value="lorem-ipsum-2"
                           >
                             <SelectContainer
-                              className="HoiPoi-Select-select-0-2-16"
+                              className="HoiPoi__Select__select-1-15"
                               clearValue={[Function]}
                               cx={[Function]}
                               getStyles={[Function]}
@@ -1729,7 +1731,7 @@ exports[`Select Button default match 2`] = `
                                   "backspaceRemovesValue": false,
                                   "blurInputOnSelect": true,
                                   "captureMenuScroll": false,
-                                  "className": "HoiPoi-Select-select-0-2-16",
+                                  "className": "HoiPoi__Select__select-1-15",
                                   "classNamePrefix": "hoi-poi-select",
                                   "closeMenuOnScroll": false,
                                   "closeMenuOnSelect": true,
@@ -1836,7 +1838,7 @@ exports[`Select Button default match 2`] = `
                               }
                             >
                               <div
-                                className="css-1pcexqc-container HoiPoi-Select-select-0-2-16"
+                                className="css-1pcexqc-container HoiPoi__Select__select-1-15"
                                 onKeyDown={[Function]}
                               >
                                 <Control
@@ -1884,7 +1886,7 @@ exports[`Select Button default match 2`] = `
                                       "backspaceRemovesValue": false,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-Select-select-0-2-16",
+                                      "className": "HoiPoi__Select__select-1-15",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -2031,7 +2033,7 @@ exports[`Select Button default match 2`] = `
                                           "backspaceRemovesValue": false,
                                           "blurInputOnSelect": true,
                                           "captureMenuScroll": false,
-                                          "className": "HoiPoi-Select-select-0-2-16",
+                                          "className": "HoiPoi__Select__select-1-15",
                                           "classNamePrefix": "hoi-poi-select",
                                           "closeMenuOnScroll": false,
                                           "closeMenuOnSelect": true,
@@ -2173,7 +2175,7 @@ exports[`Select Button default match 2`] = `
                                             "backspaceRemovesValue": false,
                                             "blurInputOnSelect": true,
                                             "captureMenuScroll": false,
-                                            "className": "HoiPoi-Select-select-0-2-16",
+                                            "className": "HoiPoi__Select__select-1-15",
                                             "classNamePrefix": "hoi-poi-select",
                                             "closeMenuOnScroll": false,
                                             "closeMenuOnSelect": true,
@@ -2436,7 +2438,7 @@ exports[`Select Button default match 2`] = `
                                                     },
                                                   },
                                                   "sheetOptions": Object {
-                                                    "classNamePrefix": "HoiPoi-",
+                                                    "classNamePrefix": "HoiPoi__",
                                                     "generateId": [Function],
                                                   },
                                                 }
@@ -2531,11 +2533,11 @@ exports[`Select Button default match 2`] = `
                                                 className="hoi-poi-select__search"
                                                 classes={
                                                   Object {
-                                                    "big": "HoiPoi-WithTheme(Icon)-big-0-2-25",
-                                                    "large": "HoiPoi-WithTheme(Icon)-large-0-2-24",
-                                                    "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-23",
-                                                    "root": "HoiPoi-WithTheme(Icon)-root-0-2-21",
-                                                    "small": "HoiPoi-WithTheme(Icon)-small-0-2-22",
+                                                    "big": "HoiPoi__Icon__big-1-24",
+                                                    "large": "HoiPoi__Icon__large-1-23",
+                                                    "medium": "HoiPoi__Icon__medium-1-22",
+                                                    "root": "HoiPoi__Icon__root-1-20",
+                                                    "small": "HoiPoi__Icon__small-1-21",
                                                   }
                                                 }
                                                 name="magnifier"
@@ -2544,11 +2546,11 @@ exports[`Select Button default match 2`] = `
                                                   className="hoi-poi-select__search"
                                                   classes={
                                                     Object {
-                                                      "big": "HoiPoi-WithTheme(Icon)-big-0-2-25",
-                                                      "large": "HoiPoi-WithTheme(Icon)-large-0-2-24",
-                                                      "medium": "HoiPoi-WithTheme(Icon)-medium-0-2-23",
-                                                      "root": "HoiPoi-WithTheme(Icon)-root-0-2-21",
-                                                      "small": "HoiPoi-WithTheme(Icon)-small-0-2-22",
+                                                      "big": "HoiPoi__Icon__big-1-24",
+                                                      "large": "HoiPoi__Icon__large-1-23",
+                                                      "medium": "HoiPoi__Icon__medium-1-22",
+                                                      "root": "HoiPoi__Icon__root-1-20",
+                                                      "small": "HoiPoi__Icon__small-1-21",
                                                     }
                                                   }
                                                   name="magnifier"
@@ -2640,7 +2642,7 @@ exports[`Select Button default match 2`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="HoiPoi-WithTheme(Icon)-root-0-2-21 HoiPoi-WithTheme(Icon)-medium-0-2-23 hoi-poi-select__search"
+                                                    className="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 hoi-poi-select__search"
                                                   >
                                                     <Magnifier
                                                       color="#788590"
@@ -2699,7 +2701,7 @@ exports[`Select Button default match 2`] = `
                                                 "backspaceRemovesValue": false,
                                                 "blurInputOnSelect": true,
                                                 "captureMenuScroll": false,
-                                                "className": "HoiPoi-Select-select-0-2-16",
+                                                "className": "HoiPoi__Select__select-1-15",
                                                 "classNamePrefix": "hoi-poi-select",
                                                 "closeMenuOnScroll": false,
                                                 "closeMenuOnSelect": true,
@@ -2831,7 +2833,7 @@ exports[`Select Button default match 2`] = `
                                                 "backspaceRemovesValue": false,
                                                 "blurInputOnSelect": true,
                                                 "captureMenuScroll": false,
-                                                "className": "HoiPoi-Select-select-0-2-16",
+                                                "className": "HoiPoi__Select__select-1-15",
                                                 "classNamePrefix": "hoi-poi-select",
                                                 "closeMenuOnScroll": false,
                                                 "closeMenuOnSelect": true,
@@ -3067,7 +3069,7 @@ exports[`Select Button default match 2`] = `
                                           "backspaceRemovesValue": false,
                                           "blurInputOnSelect": true,
                                           "captureMenuScroll": false,
-                                          "className": "HoiPoi-Select-select-0-2-16",
+                                          "className": "HoiPoi__Select__select-1-15",
                                           "classNamePrefix": "hoi-poi-select",
                                           "closeMenuOnScroll": false,
                                           "closeMenuOnSelect": true,
@@ -3218,7 +3220,7 @@ exports[`Select Button default match 2`] = `
                                       "backspaceRemovesValue": false,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-Select-select-0-2-16",
+                                      "className": "HoiPoi__Select__select-1-15",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -3431,7 +3433,8 @@ exports[`Select Button with actions match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -3749,7 +3752,7 @@ exports[`Select Button with actions match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -3874,11 +3877,11 @@ exports[`Select Button with actions match 1`] = `
             }
             classes={
               Object {
-                "button": "HoiPoi-HoiPoi-HoiPoi-SelectButton-button-0-2-52",
-                "menu": "HoiPoi-HoiPoi-HoiPoi-SelectButton-menu-0-2-54",
-                "menuList": "HoiPoi-HoiPoi-HoiPoi-SelectButton-menuList-0-2-55",
-                "root": "HoiPoi-HoiPoi-HoiPoi-SelectButton-root-0-2-51",
-                "select": "HoiPoi-HoiPoi-HoiPoi-SelectButton-select-0-2-53",
+                "button": "HoiPoi__SelectButton__button-3-1",
+                "menu": "HoiPoi__SelectButton__menu-3-3",
+                "menuList": "HoiPoi__SelectButton__menuList-3-4",
+                "root": "HoiPoi__SelectButton__root-3-0",
+                "select": "HoiPoi__SelectButton__select-3-2",
               }
             }
             hideSelectedOptions={true}
@@ -3911,10 +3914,10 @@ exports[`Select Button with actions match 1`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-SelectButton-root-0-2-51"
+              className="HoiPoi__SelectButton__root-3-0"
             >
               <div
-                className="HoiPoi-HoiPoi-HoiPoi-SelectButton-button-0-2-52"
+                className="HoiPoi__SelectButton__button-3-1"
                 onClick={[Function]}
               >
                 <button>
@@ -4019,7 +4022,8 @@ exports[`Select Button with actions match 2`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -4345,7 +4349,7 @@ exports[`Select Button with actions match 2`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -4470,11 +4474,11 @@ exports[`Select Button with actions match 2`] = `
             }
             classes={
               Object {
-                "button": "HoiPoi-HoiPoi-HoiPoi-SelectButton-button-0-2-52",
-                "menu": "HoiPoi-HoiPoi-HoiPoi-SelectButton-menu-0-2-54",
-                "menuList": "HoiPoi-HoiPoi-HoiPoi-SelectButton-menuList-0-2-55",
-                "root": "HoiPoi-HoiPoi-HoiPoi-SelectButton-root-0-2-51",
-                "select": "HoiPoi-HoiPoi-HoiPoi-SelectButton-select-0-2-53",
+                "button": "HoiPoi__SelectButton__button-3-1",
+                "menu": "HoiPoi__SelectButton__menu-3-3",
+                "menuList": "HoiPoi__SelectButton__menuList-3-4",
+                "root": "HoiPoi__SelectButton__root-3-0",
+                "select": "HoiPoi__SelectButton__select-3-2",
               }
             }
             hideSelectedOptions={true}
@@ -4507,10 +4511,10 @@ exports[`Select Button with actions match 2`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-HoiPoi-HoiPoi-SelectButton-root-0-2-51"
+              className="HoiPoi__SelectButton__root-3-0"
             >
               <div
-                className="HoiPoi-HoiPoi-HoiPoi-SelectButton-button-0-2-52"
+                className="HoiPoi__SelectButton__button-3-1"
                 onClick={[Function]}
               >
                 <button>
@@ -4526,7 +4530,7 @@ exports[`Select Button with actions match 2`] = `
                     },
                   ]
                 }
-                className="HoiPoi-HoiPoi-HoiPoi-SelectButton-select-0-2-53"
+                className="HoiPoi__SelectButton__select-3-2"
                 components={
                   Object {
                     "DropdownIndicator": null,
@@ -4535,8 +4539,8 @@ exports[`Select Button with actions match 2`] = `
                 }
                 hideSelectedOptions={true}
                 isMulti={false}
-                menuClassName="HoiPoi-HoiPoi-HoiPoi-SelectButton-menu-0-2-54"
-                menuListClassName="HoiPoi-HoiPoi-HoiPoi-SelectButton-menuList-0-2-55"
+                menuClassName="HoiPoi__SelectButton__menu-3-3"
+                menuListClassName="HoiPoi__SelectButton__menuList-3-4"
                 onChange={[Function]}
                 onClickAction={[Function]}
                 options={
@@ -4583,7 +4587,7 @@ exports[`Select Button with actions match 2`] = `
                       },
                     ]
                   }
-                  className="HoiPoi-HoiPoi-HoiPoi-SelectButton-select-0-2-53"
+                  className="HoiPoi__SelectButton__select-3-2"
                   components={
                     Object {
                       "DropdownIndicator": null,
@@ -4742,14 +4746,14 @@ exports[`Select Button with actions match 2`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
                   }
                   labelMode="horizontal"
-                  menuClassName="HoiPoi-HoiPoi-HoiPoi-SelectButton-menu-0-2-54"
-                  menuListClassName="HoiPoi-HoiPoi-HoiPoi-SelectButton-menuList-0-2-55"
+                  menuClassName="HoiPoi__SelectButton__menu-3-3"
+                  menuListClassName="HoiPoi__SelectButton__menuList-3-4"
                   onChange={[Function]}
                   onClickAction={[Function]}
                   options={
@@ -4880,24 +4884,24 @@ exports[`Select Button with actions match 2`] = `
                         },
                       ]
                     }
-                    className="HoiPoi-HoiPoi-HoiPoi-SelectButton-select-0-2-53"
+                    className="HoiPoi__SelectButton__select-3-2"
                     classes={
                       Object {
-                        "Label": "HoiPoi-HoiPoi-HoiPoi-Select-Label-0-2-57",
-                        "action": "HoiPoi-HoiPoi-HoiPoi-Select-action-0-2-70",
-                        "error": "HoiPoi-HoiPoi-HoiPoi-Select-error-0-2-58",
-                        "errored": "HoiPoi-HoiPoi-HoiPoi-Select-errored-0-2-60",
-                        "focused": "HoiPoi-HoiPoi-HoiPoi-Select-focused-0-2-62",
-                        "formControl": "HoiPoi-HoiPoi-HoiPoi-Select-formControl-0-2-59",
-                        "group": "HoiPoi-HoiPoi-HoiPoi-Select-group-0-2-69",
-                        "horizontal": "HoiPoi-HoiPoi-HoiPoi-Select-horizontal-0-2-64",
-                        "isFullWidth": "HoiPoi-HoiPoi-HoiPoi-Select-isFullWidth-0-2-65",
-                        "isReadOnly": "HoiPoi-HoiPoi-HoiPoi-Select-isReadOnly-0-2-61",
-                        "menu": "HoiPoi-HoiPoi-HoiPoi-Select-menu-0-2-68",
-                        "menuList": "HoiPoi-HoiPoi-HoiPoi-Select-menuList-0-2-67",
-                        "root": "HoiPoi-HoiPoi-HoiPoi-Select-root-0-2-56",
-                        "select": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
-                        "vertical": "HoiPoi-HoiPoi-HoiPoi-Select-vertical-0-2-63",
+                        "Label": "HoiPoi__Select__Label-3-6",
+                        "action": "HoiPoi__Select__action-3-19",
+                        "error": "HoiPoi__Select__error-3-7",
+                        "errored": "HoiPoi__Select__errored-3-9",
+                        "focused": "HoiPoi__Select__focused-3-11",
+                        "formControl": "HoiPoi__Select__formControl-3-8",
+                        "group": "HoiPoi__Select__group-3-18",
+                        "horizontal": "HoiPoi__Select__horizontal-3-13",
+                        "isFullWidth": "HoiPoi__Select__isFullWidth-3-14",
+                        "isReadOnly": "HoiPoi__Select__isReadOnly-3-10",
+                        "menu": "HoiPoi__Select__menu-3-17",
+                        "menuList": "HoiPoi__Select__menuList-3-16",
+                        "root": "HoiPoi__Select__root-3-5",
+                        "select": "HoiPoi__Select__select-3-15",
+                        "vertical": "HoiPoi__Select__vertical-3-12",
                       }
                     }
                     components={
@@ -4911,8 +4915,8 @@ exports[`Select Button with actions match 2`] = `
                     isMulti={false}
                     isReadOnly={false}
                     labelMode="horizontal"
-                    menuClassName="HoiPoi-HoiPoi-HoiPoi-SelectButton-menu-0-2-54"
-                    menuListClassName="HoiPoi-HoiPoi-HoiPoi-SelectButton-menuList-0-2-55"
+                    menuClassName="HoiPoi__SelectButton__menu-3-3"
+                    menuListClassName="HoiPoi__SelectButton__menuList-3-4"
                     onChange={[Function]}
                     onClickAction={[Function]}
                     options={
@@ -4951,15 +4955,15 @@ exports[`Select Button with actions match 2`] = `
                     value="lorem-ipsum-2"
                   >
                     <div
-                      className="HoiPoi-HoiPoi-HoiPoi-Select-root-0-2-56 HoiPoi-HoiPoi-HoiPoi-Select-horizontal-0-2-64 HoiPoi-HoiPoi-HoiPoi-SelectButton-select-0-2-53"
+                      className="HoiPoi__Select__root-3-5 HoiPoi__Select__horizontal-3-13 HoiPoi__SelectButton__select-3-2"
                     >
                       <div
-                        className="HoiPoi-HoiPoi-HoiPoi-Select-formControl-0-2-59"
+                        className="HoiPoi__Select__formControl-3-8"
                       >
                         <StateManager
                           autoFocus={true}
                           backspaceRemovesValue={false}
-                          className="HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66"
+                          className="HoiPoi__Select__select-3-15"
                           classNamePrefix="hoi-poi-select"
                           components={
                             Object {
@@ -5021,7 +5025,7 @@ exports[`Select Button with actions match 2`] = `
                             backspaceRemovesValue={false}
                             blurInputOnSelect={true}
                             captureMenuScroll={false}
-                            className="HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66"
+                            className="HoiPoi__Select__select-3-15"
                             classNamePrefix="hoi-poi-select"
                             closeMenuOnScroll={false}
                             closeMenuOnSelect={true}
@@ -5100,7 +5104,7 @@ exports[`Select Button with actions match 2`] = `
                             value="lorem-ipsum-2"
                           >
                             <SelectContainer
-                              className="HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66"
+                              className="HoiPoi__Select__select-3-15"
                               clearValue={[Function]}
                               cx={[Function]}
                               getStyles={[Function]}
@@ -5143,7 +5147,7 @@ exports[`Select Button with actions match 2`] = `
                                   "backspaceRemovesValue": false,
                                   "blurInputOnSelect": true,
                                   "captureMenuScroll": false,
-                                  "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                  "className": "HoiPoi__Select__select-3-15",
                                   "classNamePrefix": "hoi-poi-select",
                                   "closeMenuOnScroll": false,
                                   "closeMenuOnSelect": true,
@@ -5250,7 +5254,7 @@ exports[`Select Button with actions match 2`] = `
                               }
                             >
                               <div
-                                className="css-1pcexqc-container HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66"
+                                className="css-1pcexqc-container HoiPoi__Select__select-3-15"
                                 onKeyDown={[Function]}
                               >
                                 <Control
@@ -5298,7 +5302,7 @@ exports[`Select Button with actions match 2`] = `
                                       "backspaceRemovesValue": false,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                      "className": "HoiPoi__Select__select-3-15",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -5445,7 +5449,7 @@ exports[`Select Button with actions match 2`] = `
                                           "backspaceRemovesValue": false,
                                           "blurInputOnSelect": true,
                                           "captureMenuScroll": false,
-                                          "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                          "className": "HoiPoi__Select__select-3-15",
                                           "classNamePrefix": "hoi-poi-select",
                                           "closeMenuOnScroll": false,
                                           "closeMenuOnSelect": true,
@@ -5587,7 +5591,7 @@ exports[`Select Button with actions match 2`] = `
                                             "backspaceRemovesValue": false,
                                             "blurInputOnSelect": true,
                                             "captureMenuScroll": false,
-                                            "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                            "className": "HoiPoi__Select__select-3-15",
                                             "classNamePrefix": "hoi-poi-select",
                                             "closeMenuOnScroll": false,
                                             "closeMenuOnSelect": true,
@@ -5850,7 +5854,7 @@ exports[`Select Button with actions match 2`] = `
                                                     },
                                                   },
                                                   "sheetOptions": Object {
-                                                    "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                                                    "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
                                                     "generateId": [Function],
                                                   },
                                                 }
@@ -5945,11 +5949,11 @@ exports[`Select Button with actions match 2`] = `
                                                 className="hoi-poi-select__search"
                                                 classes={
                                                   Object {
-                                                    "big": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-75",
-                                                    "large": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-74",
-                                                    "medium": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-73",
-                                                    "root": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-71",
-                                                    "small": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-72",
+                                                    "big": "HoiPoi__Icon__big-3-24",
+                                                    "large": "HoiPoi__Icon__large-3-23",
+                                                    "medium": "HoiPoi__Icon__medium-3-22",
+                                                    "root": "HoiPoi__Icon__root-3-20",
+                                                    "small": "HoiPoi__Icon__small-3-21",
                                                   }
                                                 }
                                                 name="magnifier"
@@ -5958,11 +5962,11 @@ exports[`Select Button with actions match 2`] = `
                                                   className="hoi-poi-select__search"
                                                   classes={
                                                     Object {
-                                                      "big": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-75",
-                                                      "large": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-74",
-                                                      "medium": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-73",
-                                                      "root": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-71",
-                                                      "small": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-72",
+                                                      "big": "HoiPoi__Icon__big-3-24",
+                                                      "large": "HoiPoi__Icon__large-3-23",
+                                                      "medium": "HoiPoi__Icon__medium-3-22",
+                                                      "root": "HoiPoi__Icon__root-3-20",
+                                                      "small": "HoiPoi__Icon__small-3-21",
                                                     }
                                                   }
                                                   name="magnifier"
@@ -6054,7 +6058,7 @@ exports[`Select Button with actions match 2`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-71 HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-73 hoi-poi-select__search"
+                                                    className="HoiPoi__Icon__root-3-20 HoiPoi__Icon__medium-3-22 hoi-poi-select__search"
                                                   >
                                                     <Magnifier
                                                       color="#788590"
@@ -6113,7 +6117,7 @@ exports[`Select Button with actions match 2`] = `
                                                 "backspaceRemovesValue": false,
                                                 "blurInputOnSelect": true,
                                                 "captureMenuScroll": false,
-                                                "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                                "className": "HoiPoi__Select__select-3-15",
                                                 "classNamePrefix": "hoi-poi-select",
                                                 "closeMenuOnScroll": false,
                                                 "closeMenuOnSelect": true,
@@ -6245,7 +6249,7 @@ exports[`Select Button with actions match 2`] = `
                                                 "backspaceRemovesValue": false,
                                                 "blurInputOnSelect": true,
                                                 "captureMenuScroll": false,
-                                                "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                                "className": "HoiPoi__Select__select-3-15",
                                                 "classNamePrefix": "hoi-poi-select",
                                                 "closeMenuOnScroll": false,
                                                 "closeMenuOnSelect": true,
@@ -6481,7 +6485,7 @@ exports[`Select Button with actions match 2`] = `
                                           "backspaceRemovesValue": false,
                                           "blurInputOnSelect": true,
                                           "captureMenuScroll": false,
-                                          "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                          "className": "HoiPoi__Select__select-3-15",
                                           "classNamePrefix": "hoi-poi-select",
                                           "closeMenuOnScroll": false,
                                           "closeMenuOnSelect": true,
@@ -6632,7 +6636,7 @@ exports[`Select Button with actions match 2`] = `
                                       "backspaceRemovesValue": false,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-HoiPoi-Select-select-0-2-66",
+                                      "className": "HoiPoi__Select__select-3-15",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -6845,7 +6849,8 @@ exports[`Select Button with grouped options match 1`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -7173,7 +7178,7 @@ exports[`Select Button with grouped options match 1`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -7316,11 +7321,11 @@ exports[`Select Button with grouped options match 1`] = `
           <SelectButton
             classes={
               Object {
-                "button": "HoiPoi-HoiPoi-SelectButton-button-0-2-27",
-                "menu": "HoiPoi-HoiPoi-SelectButton-menu-0-2-29",
-                "menuList": "HoiPoi-HoiPoi-SelectButton-menuList-0-2-30",
-                "root": "HoiPoi-HoiPoi-SelectButton-root-0-2-26",
-                "select": "HoiPoi-HoiPoi-SelectButton-select-0-2-28",
+                "button": "HoiPoi__SelectButton__button-2-1",
+                "menu": "HoiPoi__SelectButton__menu-2-3",
+                "menuList": "HoiPoi__SelectButton__menuList-2-4",
+                "root": "HoiPoi__SelectButton__root-2-0",
+                "select": "HoiPoi__SelectButton__select-2-2",
               }
             }
             hideSelectedOptions={true}
@@ -7379,10 +7384,10 @@ exports[`Select Button with grouped options match 1`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-HoiPoi-SelectButton-root-0-2-26"
+              className="HoiPoi__SelectButton__root-2-0"
             >
               <div
-                className="HoiPoi-HoiPoi-SelectButton-button-0-2-27"
+                className="HoiPoi__SelectButton__button-2-1"
                 onClick={[Function]}
               >
                 <button>
@@ -7487,7 +7492,8 @@ exports[`Select Button with grouped options match 2`] = `
     }
   >
     <JssProvider
-      classNamePrefix="HoiPoi-"
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
       jss={
         Jss {
           "generateId": [Function],
@@ -7823,7 +7829,7 @@ exports[`Select Button with grouped options match 2`] = `
                 },
               },
               "sheetOptions": Object {
-                "classNamePrefix": "HoiPoi-HoiPoi-",
+                "classNamePrefix": "HoiPoi__HoiPoi__",
                 "generateId": [Function],
               },
             }
@@ -7966,11 +7972,11 @@ exports[`Select Button with grouped options match 2`] = `
           <SelectButton
             classes={
               Object {
-                "button": "HoiPoi-HoiPoi-SelectButton-button-0-2-27",
-                "menu": "HoiPoi-HoiPoi-SelectButton-menu-0-2-29",
-                "menuList": "HoiPoi-HoiPoi-SelectButton-menuList-0-2-30",
-                "root": "HoiPoi-HoiPoi-SelectButton-root-0-2-26",
-                "select": "HoiPoi-HoiPoi-SelectButton-select-0-2-28",
+                "button": "HoiPoi__SelectButton__button-2-1",
+                "menu": "HoiPoi__SelectButton__menu-2-3",
+                "menuList": "HoiPoi__SelectButton__menuList-2-4",
+                "root": "HoiPoi__SelectButton__root-2-0",
+                "select": "HoiPoi__SelectButton__select-2-2",
               }
             }
             hideSelectedOptions={true}
@@ -8029,10 +8035,10 @@ exports[`Select Button with grouped options match 2`] = `
             value="lorem-ipsum-2"
           >
             <div
-              className="HoiPoi-HoiPoi-SelectButton-root-0-2-26"
+              className="HoiPoi__SelectButton__root-2-0"
             >
               <div
-                className="HoiPoi-HoiPoi-SelectButton-button-0-2-27"
+                className="HoiPoi__SelectButton__button-2-1"
                 onClick={[Function]}
               >
                 <button>
@@ -8040,7 +8046,7 @@ exports[`Select Button with grouped options match 2`] = `
                 </button>
               </div>
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-SelectButton-select-0-2-28"
+                className="HoiPoi__SelectButton__select-2-2"
                 components={
                   Object {
                     "DropdownIndicator": null,
@@ -8049,8 +8055,8 @@ exports[`Select Button with grouped options match 2`] = `
                 }
                 hideSelectedOptions={true}
                 isMulti={false}
-                menuClassName="HoiPoi-HoiPoi-SelectButton-menu-0-2-29"
-                menuListClassName="HoiPoi-HoiPoi-SelectButton-menuList-0-2-30"
+                menuClassName="HoiPoi__SelectButton__menu-2-3"
+                menuListClassName="HoiPoi__SelectButton__menuList-2-4"
                 onChange={[Function]}
                 onClickAction={[Function]}
                 options={
@@ -8115,7 +8121,7 @@ exports[`Select Button with grouped options match 2`] = `
                 value="lorem-ipsum-2"
               >
                 <WithStyles(Select)
-                  className="HoiPoi-HoiPoi-SelectButton-select-0-2-28"
+                  className="HoiPoi__SelectButton__select-2-2"
                   components={
                     Object {
                       "DropdownIndicator": null,
@@ -8274,14 +8280,14 @@ exports[`Select Button with grouped options match 2`] = `
                         },
                       },
                       "sheetOptions": Object {
-                        "classNamePrefix": "HoiPoi-HoiPoi-",
+                        "classNamePrefix": "HoiPoi__HoiPoi__",
                         "generateId": [Function],
                       },
                     }
                   }
                   labelMode="horizontal"
-                  menuClassName="HoiPoi-HoiPoi-SelectButton-menu-0-2-29"
-                  menuListClassName="HoiPoi-HoiPoi-SelectButton-menuList-0-2-30"
+                  menuClassName="HoiPoi__SelectButton__menu-2-3"
+                  menuListClassName="HoiPoi__SelectButton__menuList-2-4"
                   onChange={[Function]}
                   onClickAction={[Function]}
                   options={
@@ -8430,24 +8436,24 @@ exports[`Select Button with grouped options match 2`] = `
                   value="lorem-ipsum-2"
                 >
                   <Select
-                    className="HoiPoi-HoiPoi-SelectButton-select-0-2-28"
+                    className="HoiPoi__SelectButton__select-2-2"
                     classes={
                       Object {
-                        "Label": "HoiPoi-HoiPoi-Select-Label-0-2-32",
-                        "action": "HoiPoi-HoiPoi-Select-action-0-2-45",
-                        "error": "HoiPoi-HoiPoi-Select-error-0-2-33",
-                        "errored": "HoiPoi-HoiPoi-Select-errored-0-2-35",
-                        "focused": "HoiPoi-HoiPoi-Select-focused-0-2-37",
-                        "formControl": "HoiPoi-HoiPoi-Select-formControl-0-2-34",
-                        "group": "HoiPoi-HoiPoi-Select-group-0-2-44",
-                        "horizontal": "HoiPoi-HoiPoi-Select-horizontal-0-2-39",
-                        "isFullWidth": "HoiPoi-HoiPoi-Select-isFullWidth-0-2-40",
-                        "isReadOnly": "HoiPoi-HoiPoi-Select-isReadOnly-0-2-36",
-                        "menu": "HoiPoi-HoiPoi-Select-menu-0-2-43",
-                        "menuList": "HoiPoi-HoiPoi-Select-menuList-0-2-42",
-                        "root": "HoiPoi-HoiPoi-Select-root-0-2-31",
-                        "select": "HoiPoi-HoiPoi-Select-select-0-2-41",
-                        "vertical": "HoiPoi-HoiPoi-Select-vertical-0-2-38",
+                        "Label": "HoiPoi__Select__Label-2-6",
+                        "action": "HoiPoi__Select__action-2-19",
+                        "error": "HoiPoi__Select__error-2-7",
+                        "errored": "HoiPoi__Select__errored-2-9",
+                        "focused": "HoiPoi__Select__focused-2-11",
+                        "formControl": "HoiPoi__Select__formControl-2-8",
+                        "group": "HoiPoi__Select__group-2-18",
+                        "horizontal": "HoiPoi__Select__horizontal-2-13",
+                        "isFullWidth": "HoiPoi__Select__isFullWidth-2-14",
+                        "isReadOnly": "HoiPoi__Select__isReadOnly-2-10",
+                        "menu": "HoiPoi__Select__menu-2-17",
+                        "menuList": "HoiPoi__Select__menuList-2-16",
+                        "root": "HoiPoi__Select__root-2-5",
+                        "select": "HoiPoi__Select__select-2-15",
+                        "vertical": "HoiPoi__Select__vertical-2-12",
                       }
                     }
                     components={
@@ -8461,8 +8467,8 @@ exports[`Select Button with grouped options match 2`] = `
                     isMulti={false}
                     isReadOnly={false}
                     labelMode="horizontal"
-                    menuClassName="HoiPoi-HoiPoi-SelectButton-menu-0-2-29"
-                    menuListClassName="HoiPoi-HoiPoi-SelectButton-menuList-0-2-30"
+                    menuClassName="HoiPoi__SelectButton__menu-2-3"
+                    menuListClassName="HoiPoi__SelectButton__menuList-2-4"
                     onChange={[Function]}
                     onClickAction={[Function]}
                     options={
@@ -8527,15 +8533,15 @@ exports[`Select Button with grouped options match 2`] = `
                     value="lorem-ipsum-2"
                   >
                     <div
-                      className="HoiPoi-HoiPoi-Select-root-0-2-31 HoiPoi-HoiPoi-Select-horizontal-0-2-39 HoiPoi-HoiPoi-SelectButton-select-0-2-28"
+                      className="HoiPoi__Select__root-2-5 HoiPoi__Select__horizontal-2-13 HoiPoi__SelectButton__select-2-2"
                     >
                       <div
-                        className="HoiPoi-HoiPoi-Select-formControl-0-2-34"
+                        className="HoiPoi__Select__formControl-2-8"
                       >
                         <StateManager
                           autoFocus={true}
                           backspaceRemovesValue={false}
-                          className="HoiPoi-HoiPoi-Select-select-0-2-41"
+                          className="HoiPoi__Select__select-2-15"
                           classNamePrefix="hoi-poi-select"
                           components={
                             Object {
@@ -8623,7 +8629,7 @@ exports[`Select Button with grouped options match 2`] = `
                             backspaceRemovesValue={false}
                             blurInputOnSelect={true}
                             captureMenuScroll={false}
-                            className="HoiPoi-HoiPoi-Select-select-0-2-41"
+                            className="HoiPoi__Select__select-2-15"
                             classNamePrefix="hoi-poi-select"
                             closeMenuOnScroll={false}
                             closeMenuOnSelect={true}
@@ -8728,7 +8734,7 @@ exports[`Select Button with grouped options match 2`] = `
                             value="lorem-ipsum-2"
                           >
                             <SelectContainer
-                              className="HoiPoi-HoiPoi-Select-select-0-2-41"
+                              className="HoiPoi__Select__select-2-15"
                               clearValue={[Function]}
                               cx={[Function]}
                               getStyles={[Function]}
@@ -8797,7 +8803,7 @@ exports[`Select Button with grouped options match 2`] = `
                                   "backspaceRemovesValue": false,
                                   "blurInputOnSelect": true,
                                   "captureMenuScroll": false,
-                                  "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                  "className": "HoiPoi__Select__select-2-15",
                                   "classNamePrefix": "hoi-poi-select",
                                   "closeMenuOnScroll": false,
                                   "closeMenuOnSelect": true,
@@ -8930,7 +8936,7 @@ exports[`Select Button with grouped options match 2`] = `
                               }
                             >
                               <div
-                                className="css-1pcexqc-container HoiPoi-HoiPoi-Select-select-0-2-41"
+                                className="css-1pcexqc-container HoiPoi__Select__select-2-15"
                                 onKeyDown={[Function]}
                               >
                                 <Control
@@ -9004,7 +9010,7 @@ exports[`Select Button with grouped options match 2`] = `
                                       "backspaceRemovesValue": false,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                      "className": "HoiPoi__Select__select-2-15",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,
@@ -9203,7 +9209,7 @@ exports[`Select Button with grouped options match 2`] = `
                                           "backspaceRemovesValue": false,
                                           "blurInputOnSelect": true,
                                           "captureMenuScroll": false,
-                                          "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                          "className": "HoiPoi__Select__select-2-15",
                                           "classNamePrefix": "hoi-poi-select",
                                           "closeMenuOnScroll": false,
                                           "closeMenuOnSelect": true,
@@ -9397,7 +9403,7 @@ exports[`Select Button with grouped options match 2`] = `
                                             "backspaceRemovesValue": false,
                                             "blurInputOnSelect": true,
                                             "captureMenuScroll": false,
-                                            "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                            "className": "HoiPoi__Select__select-2-15",
                                             "classNamePrefix": "hoi-poi-select",
                                             "closeMenuOnScroll": false,
                                             "closeMenuOnSelect": true,
@@ -9686,7 +9692,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                     },
                                                   },
                                                   "sheetOptions": Object {
-                                                    "classNamePrefix": "HoiPoi-HoiPoi-",
+                                                    "classNamePrefix": "HoiPoi__HoiPoi__",
                                                     "generateId": [Function],
                                                   },
                                                 }
@@ -9781,11 +9787,11 @@ exports[`Select Button with grouped options match 2`] = `
                                                 className="hoi-poi-select__search"
                                                 classes={
                                                   Object {
-                                                    "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-50",
-                                                    "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-49",
-                                                    "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-48",
-                                                    "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-46",
-                                                    "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-47",
+                                                    "big": "HoiPoi__Icon__big-2-24",
+                                                    "large": "HoiPoi__Icon__large-2-23",
+                                                    "medium": "HoiPoi__Icon__medium-2-22",
+                                                    "root": "HoiPoi__Icon__root-2-20",
+                                                    "small": "HoiPoi__Icon__small-2-21",
                                                   }
                                                 }
                                                 name="magnifier"
@@ -9794,11 +9800,11 @@ exports[`Select Button with grouped options match 2`] = `
                                                   className="hoi-poi-select__search"
                                                   classes={
                                                     Object {
-                                                      "big": "HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-50",
-                                                      "large": "HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-49",
-                                                      "medium": "HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-48",
-                                                      "root": "HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-46",
-                                                      "small": "HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-47",
+                                                      "big": "HoiPoi__Icon__big-2-24",
+                                                      "large": "HoiPoi__Icon__large-2-23",
+                                                      "medium": "HoiPoi__Icon__medium-2-22",
+                                                      "root": "HoiPoi__Icon__root-2-20",
+                                                      "small": "HoiPoi__Icon__small-2-21",
                                                     }
                                                   }
                                                   name="magnifier"
@@ -9890,7 +9896,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                   }
                                                 >
                                                   <span
-                                                    className="HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-46 HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-48 hoi-poi-select__search"
+                                                    className="HoiPoi__Icon__root-2-20 HoiPoi__Icon__medium-2-22 hoi-poi-select__search"
                                                   >
                                                     <Magnifier
                                                       color="#788590"
@@ -9975,7 +9981,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                 "backspaceRemovesValue": false,
                                                 "blurInputOnSelect": true,
                                                 "captureMenuScroll": false,
-                                                "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                                "className": "HoiPoi__Select__select-2-15",
                                                 "classNamePrefix": "hoi-poi-select",
                                                 "closeMenuOnScroll": false,
                                                 "closeMenuOnSelect": true,
@@ -10133,7 +10139,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                 "backspaceRemovesValue": false,
                                                 "blurInputOnSelect": true,
                                                 "captureMenuScroll": false,
-                                                "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                                "className": "HoiPoi__Select__select-2-15",
                                                 "classNamePrefix": "hoi-poi-select",
                                                 "closeMenuOnScroll": false,
                                                 "closeMenuOnSelect": true,
@@ -10421,7 +10427,7 @@ exports[`Select Button with grouped options match 2`] = `
                                           "backspaceRemovesValue": false,
                                           "blurInputOnSelect": true,
                                           "captureMenuScroll": false,
-                                          "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                          "className": "HoiPoi__Select__select-2-15",
                                           "classNamePrefix": "hoi-poi-select",
                                           "closeMenuOnScroll": false,
                                           "closeMenuOnSelect": true,
@@ -10624,7 +10630,7 @@ exports[`Select Button with grouped options match 2`] = `
                                       "backspaceRemovesValue": false,
                                       "blurInputOnSelect": true,
                                       "captureMenuScroll": false,
-                                      "className": "HoiPoi-HoiPoi-Select-select-0-2-41",
+                                      "className": "HoiPoi__Select__select-2-15",
                                       "classNamePrefix": "hoi-poi-select",
                                       "closeMenuOnScroll": false,
                                       "closeMenuOnSelect": true,

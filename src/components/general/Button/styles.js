@@ -166,6 +166,7 @@ export default (theme) => ({
             padding: '9px 9px',
         },
     },
+    filled: {},
     //Colors
     white: {
         backgroundColor: 'transparent',
