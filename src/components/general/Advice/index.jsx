@@ -6,7 +6,6 @@ import classnames from 'classnames';
 import Icon from '../../general/Icon';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
-import Text from '../../Typography/Text';
 
 function Advice({
     children,
@@ -61,26 +60,26 @@ function Advice({
                 return {
                     ...properties,
                     name: 'info',
-                    color: theme.colors.secondary,
+                    color: theme.colors.secundary,
                 };
         }
-    }, [theme.colors.green, theme.colors.red, theme.colors.secondary, theme.colors.yellow, type]);
+    }, [theme.colors.green, theme.colors.red, theme.colors.secundary, theme.colors.yellow, type]);
 
     return (
-        <div {...rootProps} {...override.root}>
+        <div {...rootProps}>
             {showIcon && (
                 <div className={classes.icon} {...override.icon}>
                     <Icon {...iconProps} />
                 </div>
             )}
-            <Text className={classes.Text} {...override.Text}>
+            <span className={classes.text} {...override.text}>
                 {children}
-            </Text>
+            </span>
         </div>
     );
 }
 
-Advice.overrides = ['root', 'icon', 'Text'];
+Advice.overrides = ['icon', 'text'];
 
 Advice.defaultProps = {
     className: '',
