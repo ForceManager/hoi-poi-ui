@@ -10,6 +10,7 @@ import { checkPathTarget } from './utils';
 
 import Select from '../Select';
 import styles from './styles';
+import Text from '../../Typography/Text';
 
 function SelectButton({
     children,
@@ -88,9 +89,9 @@ function SelectButton({
 
     return (
         <div {...rootProps} ref={ref} {...override.root}>
-            <div className={classes.button} {...override.button} onClick={toggleOpen}>
+            <Text className={classes.button} {...override.button} onClick={toggleOpen}>
                 {children}
-            </div>
+            </Text>
             {isOpen && (
                 <Select
                     className={classes.select}

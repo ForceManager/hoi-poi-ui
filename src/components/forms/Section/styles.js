@@ -9,7 +9,8 @@ export default (theme) => ({
         borderBottom: `1px solid ${theme.colors.greyLight}`,
         cursor: 'pointer',
     },
-    title: {
+    Text: {
+        fontWeight: 'normal',
         lineHeight: theme.typography.lineHeightBase,
         ...theme.typography.defaultText,
         color: theme.colors.blackLight,

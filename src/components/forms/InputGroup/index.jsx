@@ -4,7 +4,7 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 
-import Link from '../../general/Link';
+import Link from '../../typography/Link';
 import Inputcontrol from './InputControl';
 
 import styles from './styles';

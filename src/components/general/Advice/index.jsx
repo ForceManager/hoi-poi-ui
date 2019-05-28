@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import Icon from '../../general/Icon';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
+import Text from '../../Typography/Text';
 
 function Advice({
     children,
@@ -72,14 +73,14 @@ function Advice({
                     <Icon {...iconProps} />
                 </div>
             )}
-            <span className={classes.text} {...override.text}>
+            <Text className={classes.Text} {...override.Text}>
                 {children}
-            </span>
+            </Text>
         </div>
     );
 }
 
-Advice.overrides = ['root', 'icon', 'text'];
+Advice.overrides = ['root', 'icon', 'Text'];
 
 Advice.defaultProps = {
     className: '',

@@ -12,7 +12,7 @@ export default (theme) => ({
             outlineStyle: 'none',
         },
     },
-    content: {
+    Text: {
         position: 'relative',
         height: '100%',
     },

@@ -33,7 +33,7 @@ export default (theme) => ({
             cursor: 'pointer',
         },
     },
-    label: {
+    Text: {
         display: 'inherit',
         alignItems: 'inherit',
         justifyContent: 'inherit',
@@ -41,11 +41,12 @@ export default (theme) => ({
         transition: 'opacity .2s ease-in-out',
         ...theme.typography.button,
         lineHeight: '20px',
+        letterSpacing: 0,
     },
     labelLoading: {
         top: 1,
         position: 'relative',
-        '& $label': {
+        '& $Text': {
             opacity: 0,
         },
         '& $loader': {
@@ -74,17 +75,17 @@ export default (theme) => ({
             '&$disabled': {
                 '&:hover': {
                     backgroundColor: 'transparent',
-                    '& $label': {
+                    '& $Text': {
                         color: theme.colors.primary,
                     },
                 },
             },
-            '& $label': {
+            '& $Text': {
                 color: theme.colors.primary,
             },
             '&:hover': {
                 backgroundColor: theme.colors.primarySoft,
-                '& $label': {
+                '& $Text': {
                     color: theme.colors.text.primary,
                 },
             },
@@ -94,12 +95,12 @@ export default (theme) => ({
             backgroundColor: 'transparent',
             border: `1px solid ${theme.colors.red}`,
             transition: `color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .1s ease-in-out`,
-            '& $label': {
+            '& $Text': {
                 color: theme.colors.red,
             },
             '&:hover': {
                 backgroundColor: theme.colors.red,
-                '& $label': {
+                '& $Text': {
                     color: theme.colors.text.white,
                 },
             },
@@ -129,6 +130,7 @@ export default (theme) => ({
         },
         '&$white': {
             backgroundColor: 'transparent',
+
             '&$disabled': {
                 '&:hover': {
                     backgroundColor: 'transparent',
@@ -143,19 +145,19 @@ export default (theme) => ({
             '&$disabled': {
                 '&:hover': {
                     backgroundColor: 'transparent',
-                    '& $label': {
+                    '& $Text': {
                         color: theme.colors.primary,
                     },
                 },
             },
-            '& $label': {
+            '& $Text': {
                 color: theme.colors.primary,
             },
         },
         '&$danger': {
             background: 'transparent',
             backgroundColor: 'transparent',
-            '& $label': {
+            '& $Text': {
                 color: theme.colors.red,
             },
         },
@@ -170,7 +172,7 @@ export default (theme) => ({
     white: {
         backgroundColor: 'transparent',
         transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
-        '& $label': {
+        '& $Text': {
             color: theme.colors.text.default,
         },
         '&:hover': {
@@ -180,7 +182,7 @@ export default (theme) => ({
     primary: {
         backgroundColor: theme.colors.primary,
         transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
-        '& $label': {
+        '& $Text': {
             color: theme.colors.text.primary,
         },
         '&:hover': {
@@ -190,7 +192,7 @@ export default (theme) => ({
     danger: {
         backgroundColor: theme.colors.red,
         transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
-        '& $label': {
+        '& $Text': {
             color: theme.colors.text.white,
         },
         '&:hover': {

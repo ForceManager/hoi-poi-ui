@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 import Loader from '../../general/Loader';
 import styles from './styles';
+import Text from '../../typography/Text';
 
 const LOADER_SIZES = {
     big: 'small',
@@ -68,9 +69,9 @@ function Button({
                     />
                 </div>
             )}
-            <span className={classes.label} {...override.label}>
+            <Text className={classes.Text} {...override.Text}>
                 {children}
-            </span>
+            </Text>
         </span>
     );
 
@@ -89,7 +90,7 @@ function Button({
     }
 }
 
-Button.overrides = ['root', 'label', 'Loader'];
+Button.overrides = ['root', 'Text', 'Loader'];
 
 Button.defaultProps = {
     overrides: {},

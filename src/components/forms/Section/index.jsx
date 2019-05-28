@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
 import Icon from '../../general/Icon';
+import Text from '../../typography/Text';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
@@ -32,9 +33,9 @@ function Section({
     return (
         <div className={rootClassName} {...override.root}>
             <div className={classes.header} onClick={onToggle} {...override.header}>
-                <span className={classes.title} {...override.title}>
+                <Text type="bold" className={classes.Text} {...override.Text}>
                     {title}
-                </span>
+                </Text>
                 <div className={iconClasses} {...override.icon}>
                     <Icon name="chevron" size="small" />
                 </div>
@@ -46,7 +47,7 @@ function Section({
     );
 }
 
-Section.overrides = ['root', 'header', 'title', 'react-animate-height'];
+Section.overrides = ['root', 'header', 'Text', 'react-animate-height'];
 
 Section.defaultProps = {
     overrides: {},

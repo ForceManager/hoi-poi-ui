@@ -21,7 +21,7 @@ export default (theme) => ({
         alignItems: 'center',
     },
 
-    text: {
+    Text: {
         color: theme.colors.text.greySoft,
 
         fontSize: '13px',

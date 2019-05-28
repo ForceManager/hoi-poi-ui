@@ -11,26 +11,32 @@ export default (theme) => ({
         display: 'flex',
         marginRight: 10,
     },
-    text: {
-        fontWeight: 400,
+    Text: {
         display: 'flex',
-        lineHeight: 1.54,
     },
     // Types
     error: {
         backgroundColor: theme.colors.redLight,
-        color: theme.colors.text.red,
+        '& $text': {
+            color: theme.colors.text.red,
+        },
     },
     info: {
         backgroundColor: theme.colors.secondaryLight,
-        color: theme.colors.text.secondary,
+        '& $text': {
+            color: theme.colors.text.secondary,
+        },
     },
     success: {
         backgroundColor: theme.colors.greenLight,
-        color: theme.colors.text.green,
+        '& $text': {
+            color: theme.colors.text.green,
+        },
     },
     warning: {
         backgroundColor: theme.colors.yellowLight,
-        color: theme.colors.text.yellow,
+        '& $text': {
+            color: theme.colors.text.yellow,
+        },
     },
 });
