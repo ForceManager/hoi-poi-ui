@@ -61,7 +61,7 @@ exports[`CheckboxGroup default match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -77,6 +77,11 @@ exports[`CheckboxGroup default match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -394,6 +399,10 @@ exports[`CheckboxGroup default match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "6": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi-",
@@ -479,7 +488,7 @@ exports[`CheckboxGroup default match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -495,6 +504,11 @@ exports[`CheckboxGroup default match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -701,6 +715,10 @@ exports[`CheckboxGroup default match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
+                        "6": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
                       },
                       "sheetOptions": Object {
                         "classNamePrefix": "HoiPoi-",
@@ -766,7 +784,7 @@ exports[`CheckboxGroup default match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -782,6 +800,11 @@ exports[`CheckboxGroup default match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -797,21 +820,305 @@ exports[`CheckboxGroup default match 1`] = `
                     className="HoiPoi-CheckboxGroup-Label-0-2-2"
                     classes={
                       Object {
+                        "Text": "HoiPoi-Label-Text-0-2-10",
                         "icon": "HoiPoi-Label-icon-0-2-12",
                         "info": "HoiPoi-Label-info-0-2-11",
                         "root": "HoiPoi-Label-root-0-2-9",
-                        "text": "HoiPoi-Label-text-0-2-10",
                       }
                     }
                   >
                     <span
                       className="HoiPoi-Label-root-0-2-9 HoiPoi-CheckboxGroup-Label-0-2-2"
                     >
-                      <span
-                        className="HoiPoi-Label-text-0-2-10"
+                      <JssContextSubscriber
+                        className="HoiPoi-Label-Text-0-2-10"
+                        overrides={Object {}}
+                        type="bold"
                       >
-                        Lorem ipsum
-                      </span>
+                        <WithStyles(Text)
+                          className="HoiPoi-Label-Text-0-2-10"
+                          innerRef={null}
+                          jssContext={
+                            Object {
+                              "disableStylesGeneration": false,
+                              "jss": Jss {
+                                "generateId": [Function],
+                                "id": 2,
+                                "options": Object {
+                                  "Renderer": [Function],
+                                  "createGenerateId": [Function],
+                                  "plugins": Array [],
+                                },
+                                "plugins": PluginsRegistry {
+                                  "plugins": Object {
+                                    "external": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                        "onUpdate": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                    ],
+                                    "internal": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                    ],
+                                  },
+                                  "registry": Object {
+                                    "onChangeValue": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onCreateRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessSheet": Array [],
+                                    "onProcessStyle": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onUpdate": Array [
+                                      [Function],
+                                    ],
+                                  },
+                                },
+                                "version": "10.0.0-alpha.16",
+                              },
+                              "managers": Object {
+                                "2": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "3": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "4": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "5": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "6": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                              },
+                              "sheetOptions": Object {
+                                "classNamePrefix": "HoiPoi-",
+                                "generateId": [Function],
+                              },
+                            }
+                          }
+                          overrides={Object {}}
+                          size="medium"
+                          theme={
+                            Object {
+                              "colors": Object {
+                                "black": "#262B34",
+                                "blackLight": "#5f656b",
+                                "disabledGrey": "#ced4d9",
+                                "green": "#86AD20",
+                                "greenLight": "#e7f1d5",
+                                "grey": "#697782",
+                                "greyLight": "#f0f3f5",
+                                "greySoft": "#788590",
+                                "lines": "#dce3eb",
+                                "link": "#216db3",
+                                "linkDark": "#174a79",
+                                "overlay": "rgba(33,33,33,0.55)",
+                                "placeholders": "#e1e4e7",
+                                "placeholdersHover": "#d0d4d8",
+                                "primary": "#FF8C00",
+                                "primaryDark": "#C87600",
+                                "primaryLight": "#fef4e6",
+                                "primarySoft": "#ff9d26",
+                                "red": "#f04540",
+                                "redDark": "#C43833",
+                                "redLight": "#FAE7E7",
+                                "redSoft": "#FF544F",
+                                "secondary": "#00A8Be",
+                                "secondaryGrey": "#e4eeff",
+                                "secondaryLight": "#D6EEF2",
+                                "secondarySoft": "#AADFE7",
+                                "shadow": "rgba(0, 0, 0, 0.25)",
+                                "tableHeader": "#f6f7f9",
+                                "tableHover": "#FAFBFC",
+                                "text": Object {
+                                  "black": "#3c4248",
+                                  "danger": "white",
+                                  "default": "#697782",
+                                  "green": "#86AD20",
+                                  "greySoft": "#788590",
+                                  "primary": "white",
+                                  "red": "#f04540",
+                                  "secondary": "#00A8Be",
+                                  "white": "#FFFFFF",
+                                  "yellow": "#E9B200",
+                                },
+                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                                "white": "#FFFFFF",
+                                "yellow": "#E9B200",
+                                "yellowLight": "#FFF9DD",
+                              },
+                              "effects": Object {
+                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                                "buttonActive": Object {
+                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                                },
+                              },
+                              "typography": Object {
+                                "bigText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 20,
+                                  "letterSpacing": 0.5,
+                                },
+                                "button": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "lineHeight": 1.5,
+                                },
+                                "defaultText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 13,
+                                  "letterSpacing": 0.5,
+                                },
+                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                "fontSizeBase": 13,
+                                "fontSizeSmall": 11,
+                                "largeText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 16,
+                                  "letterSpacing": 0.5,
+                                },
+                                "letterSpacing": 0.5,
+                                "lineHeightBase": 1.5,
+                                "smallText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "letterSpacing": 0.5,
+                                },
+                              },
+                            }
+                          }
+                          type="bold"
+                        >
+                          <Text
+                            className="HoiPoi-Label-Text-0-2-10"
+                            classes={
+                              Object {
+                                "big": "HoiPoi-Text-big-0-2-19",
+                                "bold": "HoiPoi-Text-bold-0-2-20",
+                                "large": "HoiPoi-Text-large-0-2-18",
+                                "light": "HoiPoi-Text-light-0-2-22",
+                                "medium": "HoiPoi-Text-medium-0-2-17",
+                                "normal": "HoiPoi-Text-normal-0-2-21",
+                                "root": "HoiPoi-Text-root-0-2-13",
+                                "small": "HoiPoi-Text-small-0-2-16",
+                                "truncate": "HoiPoi-Text-truncate-0-2-15",
+                                "truncateHeight": "HoiPoi-Text-truncateHeight-0-2-14",
+                              }
+                            }
+                            overrides={Object {}}
+                            size="medium"
+                            type="bold"
+                          >
+                            <span
+                              className="HoiPoi-Text-root-0-2-13 HoiPoi-Text-bold-0-2-20 HoiPoi-Text-medium-0-2-17 HoiPoi-Label-Text-0-2-10"
+                            >
+                              Lorem ipsum
+                            </span>
+                          </Text>
+                        </WithStyles(Text)>
+                      </JssContextSubscriber>
                     </span>
                   </Label>
                 </WithStyles(Label)>
@@ -983,6 +1290,10 @@ exports[`CheckboxGroup default match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi-",
@@ -1056,7 +1367,7 @@ exports[`CheckboxGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -1072,6 +1383,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -1087,14 +1403,14 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi-CheckboxControl-Label-0-2-14",
-                          "checkboxControl": "HoiPoi-CheckboxControl-checkboxControl-0-2-16",
-                          "checkboxLabel": "HoiPoi-CheckboxControl-checkboxLabel-0-2-17",
-                          "formControl": "HoiPoi-CheckboxControl-formControl-0-2-15",
-                          "horizontal": "HoiPoi-CheckboxControl-horizontal-0-2-20",
-                          "isReadOnly": "HoiPoi-CheckboxControl-isReadOnly-0-2-18",
-                          "root": "HoiPoi-CheckboxControl-root-0-2-13",
-                          "vertical": "HoiPoi-CheckboxControl-vertical-0-2-19",
+                          "Label": "HoiPoi-CheckboxControl-Label-0-2-24",
+                          "checkboxControl": "HoiPoi-CheckboxControl-checkboxControl-0-2-26",
+                          "checkboxLabel": "HoiPoi-CheckboxControl-checkboxLabel-0-2-27",
+                          "formControl": "HoiPoi-CheckboxControl-formControl-0-2-25",
+                          "horizontal": "HoiPoi-CheckboxControl-horizontal-0-2-30",
+                          "isReadOnly": "HoiPoi-CheckboxControl-isReadOnly-0-2-28",
+                          "root": "HoiPoi-CheckboxControl-root-0-2-23",
+                          "vertical": "HoiPoi-CheckboxControl-vertical-0-2-29",
                         }
                       }
                       isReadOnly={false}
@@ -1109,7 +1425,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi-CheckboxControl-checkboxControl-0-2-16"
+                        className="HoiPoi-CheckboxControl-checkboxControl-0-2-26"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -1270,6 +1586,10 @@ exports[`CheckboxGroup default match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi-",
@@ -1337,7 +1657,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -1353,6 +1673,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -1368,9 +1693,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-23",
-                                  "input": "HoiPoi-Checkbox-input-0-2-22",
-                                  "root": "HoiPoi-Checkbox-root-0-2-21",
+                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-33",
+                                  "input": "HoiPoi-Checkbox-input-0-2-32",
+                                  "root": "HoiPoi-Checkbox-root-0-2-31",
                                 }
                               }
                               isDisabled={false}
@@ -1378,7 +1703,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi-Checkbox-root-0-2-21"
+                                className="HoiPoi-Checkbox-root-0-2-31"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -1441,7 +1766,7 @@ exports[`CheckboxGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -1457,6 +1782,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -1488,7 +1818,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi-Checkbox-input-0-2-22"
+                                  className="HoiPoi-Checkbox-input-0-2-32"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1498,7 +1828,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi-CheckboxControl-checkboxLabel-0-2-17"
+                          className="HoiPoi-CheckboxControl-checkboxLabel-0-2-27"
                         >
                           Lorem ipsum
                         </span>
@@ -1670,6 +2000,10 @@ exports[`CheckboxGroup default match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi-",
@@ -1743,7 +2077,7 @@ exports[`CheckboxGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -1759,6 +2093,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -1774,14 +2113,14 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi-CheckboxControl-Label-0-2-14",
-                          "checkboxControl": "HoiPoi-CheckboxControl-checkboxControl-0-2-16",
-                          "checkboxLabel": "HoiPoi-CheckboxControl-checkboxLabel-0-2-17",
-                          "formControl": "HoiPoi-CheckboxControl-formControl-0-2-15",
-                          "horizontal": "HoiPoi-CheckboxControl-horizontal-0-2-20",
-                          "isReadOnly": "HoiPoi-CheckboxControl-isReadOnly-0-2-18",
-                          "root": "HoiPoi-CheckboxControl-root-0-2-13",
-                          "vertical": "HoiPoi-CheckboxControl-vertical-0-2-19",
+                          "Label": "HoiPoi-CheckboxControl-Label-0-2-24",
+                          "checkboxControl": "HoiPoi-CheckboxControl-checkboxControl-0-2-26",
+                          "checkboxLabel": "HoiPoi-CheckboxControl-checkboxLabel-0-2-27",
+                          "formControl": "HoiPoi-CheckboxControl-formControl-0-2-25",
+                          "horizontal": "HoiPoi-CheckboxControl-horizontal-0-2-30",
+                          "isReadOnly": "HoiPoi-CheckboxControl-isReadOnly-0-2-28",
+                          "root": "HoiPoi-CheckboxControl-root-0-2-23",
+                          "vertical": "HoiPoi-CheckboxControl-vertical-0-2-29",
                         }
                       }
                       isReadOnly={false}
@@ -1796,7 +2135,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi-CheckboxControl-checkboxControl-0-2-16"
+                        className="HoiPoi-CheckboxControl-checkboxControl-0-2-26"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -1957,6 +2296,10 @@ exports[`CheckboxGroup default match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi-",
@@ -2024,7 +2367,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -2040,6 +2383,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -2055,9 +2403,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-23",
-                                  "input": "HoiPoi-Checkbox-input-0-2-22",
-                                  "root": "HoiPoi-Checkbox-root-0-2-21",
+                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-33",
+                                  "input": "HoiPoi-Checkbox-input-0-2-32",
+                                  "root": "HoiPoi-Checkbox-root-0-2-31",
                                 }
                               }
                               isDisabled={false}
@@ -2065,7 +2413,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi-Checkbox-root-0-2-21"
+                                className="HoiPoi-Checkbox-root-0-2-31"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2128,7 +2476,7 @@ exports[`CheckboxGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -2144,6 +2492,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -2175,7 +2528,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi-Checkbox-input-0-2-22"
+                                  className="HoiPoi-Checkbox-input-0-2-32"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2185,7 +2538,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi-CheckboxControl-checkboxLabel-0-2-17"
+                          className="HoiPoi-CheckboxControl-checkboxLabel-0-2-27"
                         >
                           Lorem ipsum 2
                         </span>
@@ -2357,6 +2710,10 @@ exports[`CheckboxGroup default match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi-",
@@ -2430,7 +2787,7 @@ exports[`CheckboxGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -2446,6 +2803,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -2461,14 +2823,14 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi-CheckboxControl-Label-0-2-14",
-                          "checkboxControl": "HoiPoi-CheckboxControl-checkboxControl-0-2-16",
-                          "checkboxLabel": "HoiPoi-CheckboxControl-checkboxLabel-0-2-17",
-                          "formControl": "HoiPoi-CheckboxControl-formControl-0-2-15",
-                          "horizontal": "HoiPoi-CheckboxControl-horizontal-0-2-20",
-                          "isReadOnly": "HoiPoi-CheckboxControl-isReadOnly-0-2-18",
-                          "root": "HoiPoi-CheckboxControl-root-0-2-13",
-                          "vertical": "HoiPoi-CheckboxControl-vertical-0-2-19",
+                          "Label": "HoiPoi-CheckboxControl-Label-0-2-24",
+                          "checkboxControl": "HoiPoi-CheckboxControl-checkboxControl-0-2-26",
+                          "checkboxLabel": "HoiPoi-CheckboxControl-checkboxLabel-0-2-27",
+                          "formControl": "HoiPoi-CheckboxControl-formControl-0-2-25",
+                          "horizontal": "HoiPoi-CheckboxControl-horizontal-0-2-30",
+                          "isReadOnly": "HoiPoi-CheckboxControl-isReadOnly-0-2-28",
+                          "root": "HoiPoi-CheckboxControl-root-0-2-23",
+                          "vertical": "HoiPoi-CheckboxControl-vertical-0-2-29",
                         }
                       }
                       isReadOnly={false}
@@ -2483,7 +2845,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi-CheckboxControl-checkboxControl-0-2-16"
+                        className="HoiPoi-CheckboxControl-checkboxControl-0-2-26"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -2644,6 +3006,10 @@ exports[`CheckboxGroup default match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi-",
@@ -2711,7 +3077,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -2727,6 +3093,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -2742,9 +3113,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-23",
-                                  "input": "HoiPoi-Checkbox-input-0-2-22",
-                                  "root": "HoiPoi-Checkbox-root-0-2-21",
+                                  "disabled": "HoiPoi-Checkbox-disabled-0-2-33",
+                                  "input": "HoiPoi-Checkbox-input-0-2-32",
+                                  "root": "HoiPoi-Checkbox-root-0-2-31",
                                 }
                               }
                               isDisabled={false}
@@ -2752,7 +3123,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi-Checkbox-root-0-2-21"
+                                className="HoiPoi-Checkbox-root-0-2-31"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2815,7 +3186,7 @@ exports[`CheckboxGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -2831,6 +3202,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -2862,7 +3238,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi-Checkbox-input-0-2-22"
+                                  className="HoiPoi-Checkbox-input-0-2-32"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2872,7 +3248,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi-CheckboxControl-checkboxLabel-0-2-17"
+                          className="HoiPoi-CheckboxControl-checkboxLabel-0-2-27"
                         >
                           Lorem ipsum 3
                         </span>
@@ -2951,7 +3327,7 @@ exports[`CheckboxGroup with values match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -2967,6 +3343,11 @@ exports[`CheckboxGroup with values match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -3290,6 +3671,10 @@ exports[`CheckboxGroup with values match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "6": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -3375,7 +3760,7 @@ exports[`CheckboxGroup with values match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -3391,6 +3776,11 @@ exports[`CheckboxGroup with values match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -3411,14 +3801,14 @@ exports[`CheckboxGroup with values match 1`] = `
           <CheckboxGroup
             classes={
               Object {
-                "Label": "HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-25",
-                "checkboxControl": "HoiPoi-HoiPoi-CheckboxGroup-checkboxControl-0-2-27",
-                "checkboxLabel": "HoiPoi-HoiPoi-CheckboxGroup-checkboxLabel-0-2-28",
-                "formControl": "HoiPoi-HoiPoi-CheckboxGroup-formControl-0-2-26",
-                "horizontal": "HoiPoi-HoiPoi-CheckboxGroup-horizontal-0-2-31",
-                "isReadOnly": "HoiPoi-HoiPoi-CheckboxGroup-isReadOnly-0-2-29",
-                "root": "HoiPoi-HoiPoi-CheckboxGroup-root-0-2-24",
-                "vertical": "HoiPoi-HoiPoi-CheckboxGroup-vertical-0-2-30",
+                "Label": "HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-35",
+                "checkboxControl": "HoiPoi-HoiPoi-CheckboxGroup-checkboxControl-0-2-37",
+                "checkboxLabel": "HoiPoi-HoiPoi-CheckboxGroup-checkboxLabel-0-2-38",
+                "formControl": "HoiPoi-HoiPoi-CheckboxGroup-formControl-0-2-36",
+                "horizontal": "HoiPoi-HoiPoi-CheckboxGroup-horizontal-0-2-41",
+                "isReadOnly": "HoiPoi-HoiPoi-CheckboxGroup-isReadOnly-0-2-39",
+                "root": "HoiPoi-HoiPoi-CheckboxGroup-root-0-2-34",
+                "vertical": "HoiPoi-HoiPoi-CheckboxGroup-vertical-0-2-40",
               }
             }
             isReadOnly={false}
@@ -3450,13 +3840,13 @@ exports[`CheckboxGroup with values match 1`] = `
             }
           >
             <div
-              className="HoiPoi-HoiPoi-CheckboxGroup-root-0-2-24 HoiPoi-HoiPoi-CheckboxGroup-horizontal-0-2-31"
+              className="HoiPoi-HoiPoi-CheckboxGroup-root-0-2-34 HoiPoi-HoiPoi-CheckboxGroup-horizontal-0-2-41"
             >
               <JssContextSubscriber
-                className="HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-25"
+                className="HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-35"
               >
                 <WithStyles(Label)
-                  className="HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-25"
+                  className="HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-35"
                   innerRef={null}
                   jssContext={
                     Object {
@@ -3607,6 +3997,10 @@ exports[`CheckboxGroup with values match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
+                        "6": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
                       },
                       "sheetOptions": Object {
                         "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -3672,7 +4066,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -3688,6 +4082,11 @@ exports[`CheckboxGroup with values match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -3700,30 +4099,314 @@ exports[`CheckboxGroup with values match 1`] = `
                   }
                 >
                   <Label
-                    className="HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-25"
+                    className="HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-35"
                     classes={
                       Object {
-                        "icon": "HoiPoi-HoiPoi-Label-icon-0-2-35",
-                        "info": "HoiPoi-HoiPoi-Label-info-0-2-34",
-                        "root": "HoiPoi-HoiPoi-Label-root-0-2-32",
-                        "text": "HoiPoi-HoiPoi-Label-text-0-2-33",
+                        "Text": "HoiPoi-HoiPoi-Label-Text-0-2-43",
+                        "icon": "HoiPoi-HoiPoi-Label-icon-0-2-45",
+                        "info": "HoiPoi-HoiPoi-Label-info-0-2-44",
+                        "root": "HoiPoi-HoiPoi-Label-root-0-2-42",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi-HoiPoi-Label-root-0-2-32 HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-25"
+                      className="HoiPoi-HoiPoi-Label-root-0-2-42 HoiPoi-HoiPoi-CheckboxGroup-Label-0-2-35"
                     >
-                      <span
-                        className="HoiPoi-HoiPoi-Label-text-0-2-33"
+                      <JssContextSubscriber
+                        className="HoiPoi-HoiPoi-Label-Text-0-2-43"
+                        overrides={Object {}}
+                        type="bold"
                       >
-                        Lorem ipsum
-                      </span>
+                        <WithStyles(Text)
+                          className="HoiPoi-HoiPoi-Label-Text-0-2-43"
+                          innerRef={null}
+                          jssContext={
+                            Object {
+                              "disableStylesGeneration": false,
+                              "jss": Jss {
+                                "generateId": [Function],
+                                "id": 2,
+                                "options": Object {
+                                  "Renderer": [Function],
+                                  "createGenerateId": [Function],
+                                  "plugins": Array [],
+                                },
+                                "plugins": PluginsRegistry {
+                                  "plugins": Object {
+                                    "external": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                        "onUpdate": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                    ],
+                                    "internal": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                    ],
+                                  },
+                                  "registry": Object {
+                                    "onChangeValue": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onCreateRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessSheet": Array [],
+                                    "onProcessStyle": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onUpdate": Array [
+                                      [Function],
+                                    ],
+                                  },
+                                },
+                                "version": "10.0.0-alpha.16",
+                              },
+                              "managers": Object {
+                                "2": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "3": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "4": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "5": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "6": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                              },
+                              "sheetOptions": Object {
+                                "classNamePrefix": "HoiPoi-HoiPoi-",
+                                "generateId": [Function],
+                              },
+                            }
+                          }
+                          overrides={Object {}}
+                          size="medium"
+                          theme={
+                            Object {
+                              "colors": Object {
+                                "black": "#262B34",
+                                "blackLight": "#5f656b",
+                                "disabledGrey": "#ced4d9",
+                                "green": "#86AD20",
+                                "greenLight": "#e7f1d5",
+                                "grey": "#697782",
+                                "greyLight": "#f0f3f5",
+                                "greySoft": "#788590",
+                                "lines": "#dce3eb",
+                                "link": "#216db3",
+                                "linkDark": "#174a79",
+                                "overlay": "rgba(33,33,33,0.55)",
+                                "placeholders": "#e1e4e7",
+                                "placeholdersHover": "#d0d4d8",
+                                "primary": "#FF8C00",
+                                "primaryDark": "#C87600",
+                                "primaryLight": "#fef4e6",
+                                "primarySoft": "#ff9d26",
+                                "red": "#f04540",
+                                "redDark": "#C43833",
+                                "redLight": "#FAE7E7",
+                                "redSoft": "#FF544F",
+                                "secondary": "#00A8Be",
+                                "secondaryGrey": "#e4eeff",
+                                "secondaryLight": "#D6EEF2",
+                                "secondarySoft": "#AADFE7",
+                                "shadow": "rgba(0, 0, 0, 0.25)",
+                                "tableHeader": "#f6f7f9",
+                                "tableHover": "#FAFBFC",
+                                "text": Object {
+                                  "black": "#3c4248",
+                                  "danger": "white",
+                                  "default": "#697782",
+                                  "green": "#86AD20",
+                                  "greySoft": "#788590",
+                                  "primary": "white",
+                                  "red": "#f04540",
+                                  "secondary": "#00A8Be",
+                                  "white": "#FFFFFF",
+                                  "yellow": "#E9B200",
+                                },
+                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                                "white": "#FFFFFF",
+                                "yellow": "#E9B200",
+                                "yellowLight": "#FFF9DD",
+                              },
+                              "effects": Object {
+                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                                "buttonActive": Object {
+                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                                },
+                              },
+                              "typography": Object {
+                                "bigText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 20,
+                                  "letterSpacing": 0.5,
+                                },
+                                "button": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "lineHeight": 1.5,
+                                },
+                                "defaultText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 13,
+                                  "letterSpacing": 0.5,
+                                },
+                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                "fontSizeBase": 13,
+                                "fontSizeSmall": 11,
+                                "largeText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 16,
+                                  "letterSpacing": 0.5,
+                                },
+                                "letterSpacing": 0.5,
+                                "lineHeightBase": 1.5,
+                                "smallText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "letterSpacing": 0.5,
+                                },
+                              },
+                            }
+                          }
+                          type="bold"
+                        >
+                          <Text
+                            className="HoiPoi-HoiPoi-Label-Text-0-2-43"
+                            classes={
+                              Object {
+                                "big": "HoiPoi-HoiPoi-Text-big-0-2-52",
+                                "bold": "HoiPoi-HoiPoi-Text-bold-0-2-53",
+                                "large": "HoiPoi-HoiPoi-Text-large-0-2-51",
+                                "light": "HoiPoi-HoiPoi-Text-light-0-2-55",
+                                "medium": "HoiPoi-HoiPoi-Text-medium-0-2-50",
+                                "normal": "HoiPoi-HoiPoi-Text-normal-0-2-54",
+                                "root": "HoiPoi-HoiPoi-Text-root-0-2-46",
+                                "small": "HoiPoi-HoiPoi-Text-small-0-2-49",
+                                "truncate": "HoiPoi-HoiPoi-Text-truncate-0-2-48",
+                                "truncateHeight": "HoiPoi-HoiPoi-Text-truncateHeight-0-2-47",
+                              }
+                            }
+                            overrides={Object {}}
+                            size="medium"
+                            type="bold"
+                          >
+                            <span
+                              className="HoiPoi-HoiPoi-Text-root-0-2-46 HoiPoi-HoiPoi-Text-bold-0-2-53 HoiPoi-HoiPoi-Text-medium-0-2-50 HoiPoi-HoiPoi-Label-Text-0-2-43"
+                            >
+                              Lorem ipsum
+                            </span>
+                          </Text>
+                        </WithStyles(Text)>
+                      </JssContextSubscriber>
                     </span>
                   </Label>
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi-HoiPoi-CheckboxGroup-formControl-0-2-26"
+                className="HoiPoi-HoiPoi-CheckboxGroup-formControl-0-2-36"
               >
                 <JssContextSubscriber
                   isReadOnly={false}
@@ -3890,6 +4573,10 @@ exports[`CheckboxGroup with values match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -3963,7 +4650,7 @@ exports[`CheckboxGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -3979,6 +4666,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -3994,14 +4686,14 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi-HoiPoi-CheckboxControl-Label-0-2-37",
-                          "checkboxControl": "HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-39",
-                          "checkboxLabel": "HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-40",
-                          "formControl": "HoiPoi-HoiPoi-CheckboxControl-formControl-0-2-38",
-                          "horizontal": "HoiPoi-HoiPoi-CheckboxControl-horizontal-0-2-43",
-                          "isReadOnly": "HoiPoi-HoiPoi-CheckboxControl-isReadOnly-0-2-41",
-                          "root": "HoiPoi-HoiPoi-CheckboxControl-root-0-2-36",
-                          "vertical": "HoiPoi-HoiPoi-CheckboxControl-vertical-0-2-42",
+                          "Label": "HoiPoi-HoiPoi-CheckboxControl-Label-0-2-57",
+                          "checkboxControl": "HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-59",
+                          "checkboxLabel": "HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-60",
+                          "formControl": "HoiPoi-HoiPoi-CheckboxControl-formControl-0-2-58",
+                          "horizontal": "HoiPoi-HoiPoi-CheckboxControl-horizontal-0-2-63",
+                          "isReadOnly": "HoiPoi-HoiPoi-CheckboxControl-isReadOnly-0-2-61",
+                          "root": "HoiPoi-HoiPoi-CheckboxControl-root-0-2-56",
+                          "vertical": "HoiPoi-HoiPoi-CheckboxControl-vertical-0-2-62",
                         }
                       }
                       isReadOnly={false}
@@ -4016,7 +4708,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-39"
+                        className="HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-59"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -4177,6 +4869,10 @@ exports[`CheckboxGroup with values match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -4244,7 +4940,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -4260,6 +4956,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -4275,9 +4976,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi-HoiPoi-Checkbox-disabled-0-2-46",
-                                  "input": "HoiPoi-HoiPoi-Checkbox-input-0-2-45",
-                                  "root": "HoiPoi-HoiPoi-Checkbox-root-0-2-44",
+                                  "disabled": "HoiPoi-HoiPoi-Checkbox-disabled-0-2-66",
+                                  "input": "HoiPoi-HoiPoi-Checkbox-input-0-2-65",
+                                  "root": "HoiPoi-HoiPoi-Checkbox-root-0-2-64",
                                 }
                               }
                               isDisabled={false}
@@ -4285,7 +4986,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi-HoiPoi-Checkbox-root-0-2-44"
+                                className="HoiPoi-HoiPoi-Checkbox-root-0-2-64"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -4348,7 +5049,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -4364,6 +5065,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -4404,7 +5110,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi-HoiPoi-Checkbox-input-0-2-45"
+                                  className="HoiPoi-HoiPoi-Checkbox-input-0-2-65"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -4414,7 +5120,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-40"
+                          className="HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-60"
                         >
                           Lorem ipsum
                         </span>
@@ -4586,6 +5292,10 @@ exports[`CheckboxGroup with values match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -4659,7 +5369,7 @@ exports[`CheckboxGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -4675,6 +5385,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -4690,14 +5405,14 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi-HoiPoi-CheckboxControl-Label-0-2-37",
-                          "checkboxControl": "HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-39",
-                          "checkboxLabel": "HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-40",
-                          "formControl": "HoiPoi-HoiPoi-CheckboxControl-formControl-0-2-38",
-                          "horizontal": "HoiPoi-HoiPoi-CheckboxControl-horizontal-0-2-43",
-                          "isReadOnly": "HoiPoi-HoiPoi-CheckboxControl-isReadOnly-0-2-41",
-                          "root": "HoiPoi-HoiPoi-CheckboxControl-root-0-2-36",
-                          "vertical": "HoiPoi-HoiPoi-CheckboxControl-vertical-0-2-42",
+                          "Label": "HoiPoi-HoiPoi-CheckboxControl-Label-0-2-57",
+                          "checkboxControl": "HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-59",
+                          "checkboxLabel": "HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-60",
+                          "formControl": "HoiPoi-HoiPoi-CheckboxControl-formControl-0-2-58",
+                          "horizontal": "HoiPoi-HoiPoi-CheckboxControl-horizontal-0-2-63",
+                          "isReadOnly": "HoiPoi-HoiPoi-CheckboxControl-isReadOnly-0-2-61",
+                          "root": "HoiPoi-HoiPoi-CheckboxControl-root-0-2-56",
+                          "vertical": "HoiPoi-HoiPoi-CheckboxControl-vertical-0-2-62",
                         }
                       }
                       isReadOnly={false}
@@ -4712,7 +5427,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-39"
+                        className="HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-59"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -4873,6 +5588,10 @@ exports[`CheckboxGroup with values match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -4940,7 +5659,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -4956,6 +5675,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -4971,9 +5695,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi-HoiPoi-Checkbox-disabled-0-2-46",
-                                  "input": "HoiPoi-HoiPoi-Checkbox-input-0-2-45",
-                                  "root": "HoiPoi-HoiPoi-Checkbox-root-0-2-44",
+                                  "disabled": "HoiPoi-HoiPoi-Checkbox-disabled-0-2-66",
+                                  "input": "HoiPoi-HoiPoi-Checkbox-input-0-2-65",
+                                  "root": "HoiPoi-HoiPoi-Checkbox-root-0-2-64",
                                 }
                               }
                               isDisabled={false}
@@ -4981,7 +5705,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi-HoiPoi-Checkbox-root-0-2-44"
+                                className="HoiPoi-HoiPoi-Checkbox-root-0-2-64"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -5044,7 +5768,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -5060,6 +5784,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -5091,7 +5820,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi-HoiPoi-Checkbox-input-0-2-45"
+                                  className="HoiPoi-HoiPoi-Checkbox-input-0-2-65"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -5101,7 +5830,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-40"
+                          className="HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-60"
                         >
                           Lorem ipsum 2
                         </span>
@@ -5274,6 +6003,10 @@ exports[`CheckboxGroup with values match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -5347,7 +6080,7 @@ exports[`CheckboxGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -5363,6 +6096,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -5378,14 +6116,14 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi-HoiPoi-CheckboxControl-Label-0-2-37",
-                          "checkboxControl": "HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-39",
-                          "checkboxLabel": "HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-40",
-                          "formControl": "HoiPoi-HoiPoi-CheckboxControl-formControl-0-2-38",
-                          "horizontal": "HoiPoi-HoiPoi-CheckboxControl-horizontal-0-2-43",
-                          "isReadOnly": "HoiPoi-HoiPoi-CheckboxControl-isReadOnly-0-2-41",
-                          "root": "HoiPoi-HoiPoi-CheckboxControl-root-0-2-36",
-                          "vertical": "HoiPoi-HoiPoi-CheckboxControl-vertical-0-2-42",
+                          "Label": "HoiPoi-HoiPoi-CheckboxControl-Label-0-2-57",
+                          "checkboxControl": "HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-59",
+                          "checkboxLabel": "HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-60",
+                          "formControl": "HoiPoi-HoiPoi-CheckboxControl-formControl-0-2-58",
+                          "horizontal": "HoiPoi-HoiPoi-CheckboxControl-horizontal-0-2-63",
+                          "isReadOnly": "HoiPoi-HoiPoi-CheckboxControl-isReadOnly-0-2-61",
+                          "root": "HoiPoi-HoiPoi-CheckboxControl-root-0-2-56",
+                          "vertical": "HoiPoi-HoiPoi-CheckboxControl-vertical-0-2-62",
                         }
                       }
                       isReadOnly={false}
@@ -5400,7 +6138,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-39"
+                        className="HoiPoi-HoiPoi-CheckboxControl-checkboxControl-0-2-59"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -5561,6 +6299,10 @@ exports[`CheckboxGroup with values match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -5628,7 +6370,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -5644,6 +6386,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -5659,9 +6406,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi-HoiPoi-Checkbox-disabled-0-2-46",
-                                  "input": "HoiPoi-HoiPoi-Checkbox-input-0-2-45",
-                                  "root": "HoiPoi-HoiPoi-Checkbox-root-0-2-44",
+                                  "disabled": "HoiPoi-HoiPoi-Checkbox-disabled-0-2-66",
+                                  "input": "HoiPoi-HoiPoi-Checkbox-input-0-2-65",
+                                  "root": "HoiPoi-HoiPoi-Checkbox-root-0-2-64",
                                 }
                               }
                               isDisabled={false}
@@ -5669,7 +6416,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi-HoiPoi-Checkbox-root-0-2-44"
+                                className="HoiPoi-HoiPoi-Checkbox-root-0-2-64"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -5732,7 +6479,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -5748,6 +6495,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -5788,7 +6540,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi-HoiPoi-Checkbox-input-0-2-45"
+                                  className="HoiPoi-HoiPoi-Checkbox-input-0-2-65"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -5798,7 +6550,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-40"
+                          className="HoiPoi-HoiPoi-CheckboxControl-checkboxLabel-0-2-60"
                         >
                           Lorem ipsum 3
                         </span>

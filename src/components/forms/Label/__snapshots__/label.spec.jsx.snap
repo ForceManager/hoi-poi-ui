@@ -61,7 +61,7 @@ exports[`Label default match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -77,6 +77,11 @@ exports[`Label default match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -362,6 +367,10 @@ exports[`Label default match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "3": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi-",
@@ -427,7 +436,7 @@ exports[`Label default match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -443,6 +452,11 @@ exports[`Label default match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -457,21 +471,293 @@ exports[`Label default match 1`] = `
           <Label
             classes={
               Object {
+                "Text": "HoiPoi-Label-Text-0-2-2",
                 "icon": "HoiPoi-Label-icon-0-2-4",
                 "info": "HoiPoi-Label-info-0-2-3",
                 "root": "HoiPoi-Label-root-0-2-1",
-                "text": "HoiPoi-Label-text-0-2-2",
               }
             }
           >
             <span
               className="HoiPoi-Label-root-0-2-1"
             >
-              <span
-                className="HoiPoi-Label-text-0-2-2"
+              <JssContextSubscriber
+                className="HoiPoi-Label-Text-0-2-2"
+                overrides={Object {}}
+                type="bold"
               >
-                Lorem ipsum
-              </span>
+                <WithStyles(Text)
+                  className="HoiPoi-Label-Text-0-2-2"
+                  innerRef={null}
+                  jssContext={
+                    Object {
+                      "disableStylesGeneration": false,
+                      "jss": Jss {
+                        "generateId": [Function],
+                        "id": 2,
+                        "options": Object {
+                          "Renderer": [Function],
+                          "createGenerateId": [Function],
+                          "plugins": Array [],
+                        },
+                        "plugins": PluginsRegistry {
+                          "plugins": Object {
+                            "external": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                                "onUpdate": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                            ],
+                            "internal": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                            ],
+                          },
+                          "registry": Object {
+                            "onChangeValue": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onCreateRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessSheet": Array [],
+                            "onProcessStyle": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onUpdate": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "version": "10.0.0-alpha.16",
+                      },
+                      "managers": Object {
+                        "2": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                      },
+                      "sheetOptions": Object {
+                        "classNamePrefix": "HoiPoi-",
+                        "generateId": [Function],
+                      },
+                    }
+                  }
+                  overrides={Object {}}
+                  size="medium"
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "black": "#262B34",
+                        "blackLight": "#5f656b",
+                        "disabledGrey": "#ced4d9",
+                        "green": "#86AD20",
+                        "greenLight": "#e7f1d5",
+                        "grey": "#697782",
+                        "greyLight": "#f0f3f5",
+                        "greySoft": "#788590",
+                        "lines": "#dce3eb",
+                        "link": "#216db3",
+                        "linkDark": "#174a79",
+                        "overlay": "rgba(33,33,33,0.55)",
+                        "placeholders": "#e1e4e7",
+                        "placeholdersHover": "#d0d4d8",
+                        "primary": "#FF8C00",
+                        "primaryDark": "#C87600",
+                        "primaryLight": "#fef4e6",
+                        "primarySoft": "#ff9d26",
+                        "red": "#f04540",
+                        "redDark": "#C43833",
+                        "redLight": "#FAE7E7",
+                        "redSoft": "#FF544F",
+                        "secondary": "#00A8Be",
+                        "secondaryGrey": "#e4eeff",
+                        "secondaryLight": "#D6EEF2",
+                        "secondarySoft": "#AADFE7",
+                        "shadow": "rgba(0, 0, 0, 0.25)",
+                        "tableHeader": "#f6f7f9",
+                        "tableHover": "#FAFBFC",
+                        "text": Object {
+                          "black": "#3c4248",
+                          "danger": "white",
+                          "default": "#697782",
+                          "green": "#86AD20",
+                          "greySoft": "#788590",
+                          "primary": "white",
+                          "red": "#f04540",
+                          "secondary": "#00A8Be",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                        },
+                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                        "white": "#FFFFFF",
+                        "yellow": "#E9B200",
+                        "yellowLight": "#FFF9DD",
+                      },
+                      "effects": Object {
+                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                        "buttonActive": Object {
+                          "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                        },
+                      },
+                      "typography": Object {
+                        "bigText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 20,
+                          "letterSpacing": 0.5,
+                        },
+                        "button": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "lineHeight": 1.5,
+                        },
+                        "defaultText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 13,
+                          "letterSpacing": 0.5,
+                        },
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                        "fontSizeBase": 13,
+                        "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
+                        "letterSpacing": 0.5,
+                        "lineHeightBase": 1.5,
+                        "smallText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "letterSpacing": 0.5,
+                        },
+                      },
+                    }
+                  }
+                  type="bold"
+                >
+                  <Text
+                    className="HoiPoi-Label-Text-0-2-2"
+                    classes={
+                      Object {
+                        "big": "HoiPoi-Text-big-0-2-11",
+                        "bold": "HoiPoi-Text-bold-0-2-12",
+                        "large": "HoiPoi-Text-large-0-2-10",
+                        "light": "HoiPoi-Text-light-0-2-14",
+                        "medium": "HoiPoi-Text-medium-0-2-9",
+                        "normal": "HoiPoi-Text-normal-0-2-13",
+                        "root": "HoiPoi-Text-root-0-2-5",
+                        "small": "HoiPoi-Text-small-0-2-8",
+                        "truncate": "HoiPoi-Text-truncate-0-2-7",
+                        "truncateHeight": "HoiPoi-Text-truncateHeight-0-2-6",
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    type="bold"
+                  >
+                    <span
+                      className="HoiPoi-Text-root-0-2-5 HoiPoi-Text-bold-0-2-12 HoiPoi-Text-medium-0-2-9 HoiPoi-Label-Text-0-2-2"
+                    >
+                      Lorem ipsum
+                    </span>
+                  </Text>
+                </WithStyles(Text)>
+              </JssContextSubscriber>
             </span>
           </Label>
         </WithStyles(Label)>
@@ -542,7 +828,7 @@ exports[`Label is required match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -558,6 +844,11 @@ exports[`Label is required match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -846,6 +1137,10 @@ exports[`Label is required match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "3": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi-HoiPoi-",
@@ -911,7 +1206,7 @@ exports[`Label is required match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -927,6 +1222,11 @@ exports[`Label is required match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -941,23 +1241,295 @@ exports[`Label is required match 1`] = `
           <Label
             classes={
               Object {
-                "icon": "HoiPoi-HoiPoi-Label-icon-0-2-8",
-                "info": "HoiPoi-HoiPoi-Label-info-0-2-7",
-                "root": "HoiPoi-HoiPoi-Label-root-0-2-5",
-                "text": "HoiPoi-HoiPoi-Label-text-0-2-6",
+                "Text": "HoiPoi-HoiPoi-Label-Text-0-2-16",
+                "icon": "HoiPoi-HoiPoi-Label-icon-0-2-18",
+                "info": "HoiPoi-HoiPoi-Label-info-0-2-17",
+                "root": "HoiPoi-HoiPoi-Label-root-0-2-15",
               }
             }
             isRequired={true}
           >
             <span
-              className="HoiPoi-HoiPoi-Label-root-0-2-5"
+              className="HoiPoi-HoiPoi-Label-root-0-2-15"
             >
-              <span
-                className="HoiPoi-HoiPoi-Label-text-0-2-6"
+              <JssContextSubscriber
+                className="HoiPoi-HoiPoi-Label-Text-0-2-16"
+                overrides={Object {}}
+                type="bold"
               >
-                Lorem ipsum
-                *
-              </span>
+                <WithStyles(Text)
+                  className="HoiPoi-HoiPoi-Label-Text-0-2-16"
+                  innerRef={null}
+                  jssContext={
+                    Object {
+                      "disableStylesGeneration": false,
+                      "jss": Jss {
+                        "generateId": [Function],
+                        "id": 2,
+                        "options": Object {
+                          "Renderer": [Function],
+                          "createGenerateId": [Function],
+                          "plugins": Array [],
+                        },
+                        "plugins": PluginsRegistry {
+                          "plugins": Object {
+                            "external": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                                "onUpdate": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                            ],
+                            "internal": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                            ],
+                          },
+                          "registry": Object {
+                            "onChangeValue": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onCreateRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessSheet": Array [],
+                            "onProcessStyle": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onUpdate": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "version": "10.0.0-alpha.16",
+                      },
+                      "managers": Object {
+                        "2": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                      },
+                      "sheetOptions": Object {
+                        "classNamePrefix": "HoiPoi-HoiPoi-",
+                        "generateId": [Function],
+                      },
+                    }
+                  }
+                  overrides={Object {}}
+                  size="medium"
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "black": "#262B34",
+                        "blackLight": "#5f656b",
+                        "disabledGrey": "#ced4d9",
+                        "green": "#86AD20",
+                        "greenLight": "#e7f1d5",
+                        "grey": "#697782",
+                        "greyLight": "#f0f3f5",
+                        "greySoft": "#788590",
+                        "lines": "#dce3eb",
+                        "link": "#216db3",
+                        "linkDark": "#174a79",
+                        "overlay": "rgba(33,33,33,0.55)",
+                        "placeholders": "#e1e4e7",
+                        "placeholdersHover": "#d0d4d8",
+                        "primary": "#FF8C00",
+                        "primaryDark": "#C87600",
+                        "primaryLight": "#fef4e6",
+                        "primarySoft": "#ff9d26",
+                        "red": "#f04540",
+                        "redDark": "#C43833",
+                        "redLight": "#FAE7E7",
+                        "redSoft": "#FF544F",
+                        "secondary": "#00A8Be",
+                        "secondaryGrey": "#e4eeff",
+                        "secondaryLight": "#D6EEF2",
+                        "secondarySoft": "#AADFE7",
+                        "shadow": "rgba(0, 0, 0, 0.25)",
+                        "tableHeader": "#f6f7f9",
+                        "tableHover": "#FAFBFC",
+                        "text": Object {
+                          "black": "#3c4248",
+                          "danger": "white",
+                          "default": "#697782",
+                          "green": "#86AD20",
+                          "greySoft": "#788590",
+                          "primary": "white",
+                          "red": "#f04540",
+                          "secondary": "#00A8Be",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                        },
+                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                        "white": "#FFFFFF",
+                        "yellow": "#E9B200",
+                        "yellowLight": "#FFF9DD",
+                      },
+                      "effects": Object {
+                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                        "buttonActive": Object {
+                          "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                        },
+                      },
+                      "typography": Object {
+                        "bigText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 20,
+                          "letterSpacing": 0.5,
+                        },
+                        "button": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "lineHeight": 1.5,
+                        },
+                        "defaultText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 13,
+                          "letterSpacing": 0.5,
+                        },
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                        "fontSizeBase": 13,
+                        "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
+                        "letterSpacing": 0.5,
+                        "lineHeightBase": 1.5,
+                        "smallText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "letterSpacing": 0.5,
+                        },
+                      },
+                    }
+                  }
+                  type="bold"
+                >
+                  <Text
+                    className="HoiPoi-HoiPoi-Label-Text-0-2-16"
+                    classes={
+                      Object {
+                        "big": "HoiPoi-HoiPoi-Text-big-0-2-25",
+                        "bold": "HoiPoi-HoiPoi-Text-bold-0-2-26",
+                        "large": "HoiPoi-HoiPoi-Text-large-0-2-24",
+                        "light": "HoiPoi-HoiPoi-Text-light-0-2-28",
+                        "medium": "HoiPoi-HoiPoi-Text-medium-0-2-23",
+                        "normal": "HoiPoi-HoiPoi-Text-normal-0-2-27",
+                        "root": "HoiPoi-HoiPoi-Text-root-0-2-19",
+                        "small": "HoiPoi-HoiPoi-Text-small-0-2-22",
+                        "truncate": "HoiPoi-HoiPoi-Text-truncate-0-2-21",
+                        "truncateHeight": "HoiPoi-HoiPoi-Text-truncateHeight-0-2-20",
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    type="bold"
+                  >
+                    <span
+                      className="HoiPoi-HoiPoi-Text-root-0-2-19 HoiPoi-HoiPoi-Text-bold-0-2-26 HoiPoi-HoiPoi-Text-medium-0-2-23 HoiPoi-HoiPoi-Label-Text-0-2-16"
+                    >
+                      Lorem ipsum
+                      *
+                    </span>
+                  </Text>
+                </WithStyles(Text)>
+              </JssContextSubscriber>
             </span>
           </Label>
         </WithStyles(Label)>
@@ -1028,7 +1600,7 @@ exports[`Label with hint match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -1044,6 +1616,11 @@ exports[`Label with hint match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -1340,6 +1917,10 @@ exports[`Label with hint match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "3": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
@@ -1405,7 +1986,7 @@ exports[`Label with hint match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -1421,6 +2002,11 @@ exports[`Label with hint match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -1435,22 +2021,302 @@ exports[`Label with hint match 1`] = `
           <Label
             classes={
               Object {
-                "icon": "HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-12",
-                "info": "HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-11",
-                "root": "HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-9",
-                "text": "HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-10",
+                "Text": "HoiPoi-HoiPoi-HoiPoi-Label-Text-0-2-30",
+                "icon": "HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-32",
+                "info": "HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-31",
+                "root": "HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-29",
               }
             }
             hint="I am a hint"
           >
             <span
-              className="HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-9"
+              className="HoiPoi-HoiPoi-HoiPoi-Label-root-0-2-29"
             >
-              <span
-                className="HoiPoi-HoiPoi-HoiPoi-Label-text-0-2-10"
+              <JssContextSubscriber
+                className="HoiPoi-HoiPoi-HoiPoi-Label-Text-0-2-30"
+                overrides={Object {}}
+                type="bold"
               >
-                Lorem ipsum
-              </span>
+                <WithStyles(Text)
+                  className="HoiPoi-HoiPoi-HoiPoi-Label-Text-0-2-30"
+                  innerRef={null}
+                  jssContext={
+                    Object {
+                      "disableStylesGeneration": false,
+                      "jss": Jss {
+                        "generateId": [Function],
+                        "id": 2,
+                        "options": Object {
+                          "Renderer": [Function],
+                          "createGenerateId": [Function],
+                          "plugins": Array [],
+                        },
+                        "plugins": PluginsRegistry {
+                          "plugins": Object {
+                            "external": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                                "onUpdate": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                                "onProcessRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onProcessRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onProcessStyle": [Function],
+                              },
+                            ],
+                            "internal": Array [
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onChangeValue": [Function],
+                                "onCreateRule": [Function],
+                                "onProcessStyle": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                              Object {
+                                "onCreateRule": [Function],
+                              },
+                            ],
+                          },
+                          "registry": Object {
+                            "onChangeValue": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onCreateRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessRule": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onProcessSheet": Array [],
+                            "onProcessStyle": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "onUpdate": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "version": "10.0.0-alpha.16",
+                      },
+                      "managers": Object {
+                        "0": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "1": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "2": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                      },
+                      "sheetOptions": Object {
+                        "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
+                        "generateId": [Function],
+                      },
+                    }
+                  }
+                  overrides={Object {}}
+                  size="medium"
+                  theme={
+                    Object {
+                      "colors": Object {
+                        "black": "#262B34",
+                        "blackLight": "#5f656b",
+                        "disabledGrey": "#ced4d9",
+                        "green": "#86AD20",
+                        "greenLight": "#e7f1d5",
+                        "grey": "#697782",
+                        "greyLight": "#f0f3f5",
+                        "greySoft": "#788590",
+                        "lines": "#dce3eb",
+                        "link": "#216db3",
+                        "linkDark": "#174a79",
+                        "overlay": "rgba(33,33,33,0.55)",
+                        "placeholders": "#e1e4e7",
+                        "placeholdersHover": "#d0d4d8",
+                        "primary": "#FF8C00",
+                        "primaryDark": "#C87600",
+                        "primaryLight": "#fef4e6",
+                        "primarySoft": "#ff9d26",
+                        "red": "#f04540",
+                        "redDark": "#C43833",
+                        "redLight": "#FAE7E7",
+                        "redSoft": "#FF544F",
+                        "secondary": "#00A8Be",
+                        "secondaryGrey": "#e4eeff",
+                        "secondaryLight": "#D6EEF2",
+                        "secondarySoft": "#AADFE7",
+                        "shadow": "rgba(0, 0, 0, 0.25)",
+                        "tableHeader": "#f6f7f9",
+                        "tableHover": "#FAFBFC",
+                        "text": Object {
+                          "black": "#3c4248",
+                          "danger": "white",
+                          "default": "#697782",
+                          "green": "#86AD20",
+                          "greySoft": "#788590",
+                          "primary": "white",
+                          "red": "#f04540",
+                          "secondary": "#00A8Be",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                        },
+                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                        "white": "#FFFFFF",
+                        "yellow": "#E9B200",
+                        "yellowLight": "#FFF9DD",
+                      },
+                      "effects": Object {
+                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                        "buttonActive": Object {
+                          "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                        },
+                      },
+                      "typography": Object {
+                        "bigText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 20,
+                          "letterSpacing": 0.5,
+                        },
+                        "button": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "lineHeight": 1.5,
+                        },
+                        "defaultText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 13,
+                          "letterSpacing": 0.5,
+                        },
+                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                        "fontSizeBase": 13,
+                        "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
+                        "letterSpacing": 0.5,
+                        "lineHeightBase": 1.5,
+                        "smallText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 11,
+                          "letterSpacing": 0.5,
+                        },
+                      },
+                    }
+                  }
+                  type="bold"
+                >
+                  <Text
+                    className="HoiPoi-HoiPoi-HoiPoi-Label-Text-0-2-30"
+                    classes={
+                      Object {
+                        "big": "HoiPoi-HoiPoi-HoiPoi-Text-big-0-2-39",
+                        "bold": "HoiPoi-HoiPoi-HoiPoi-Text-bold-0-2-40",
+                        "large": "HoiPoi-HoiPoi-HoiPoi-Text-large-0-2-38",
+                        "light": "HoiPoi-HoiPoi-HoiPoi-Text-light-0-2-42",
+                        "medium": "HoiPoi-HoiPoi-HoiPoi-Text-medium-0-2-37",
+                        "normal": "HoiPoi-HoiPoi-HoiPoi-Text-normal-0-2-41",
+                        "root": "HoiPoi-HoiPoi-HoiPoi-Text-root-0-2-33",
+                        "small": "HoiPoi-HoiPoi-HoiPoi-Text-small-0-2-36",
+                        "truncate": "HoiPoi-HoiPoi-HoiPoi-Text-truncate-0-2-35",
+                        "truncateHeight": "HoiPoi-HoiPoi-HoiPoi-Text-truncateHeight-0-2-34",
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    type="bold"
+                  >
+                    <span
+                      className="HoiPoi-HoiPoi-HoiPoi-Text-root-0-2-33 HoiPoi-HoiPoi-HoiPoi-Text-bold-0-2-40 HoiPoi-HoiPoi-HoiPoi-Text-medium-0-2-37 HoiPoi-HoiPoi-HoiPoi-Label-Text-0-2-30"
+                    >
+                      Lorem ipsum
+                    </span>
+                  </Text>
+                </WithStyles(Text)>
+              </JssContextSubscriber>
               <JssContextSubscriber
                 content="I am a hint"
                 placement="top"
@@ -1608,6 +2474,10 @@ exports[`Label with hint match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
+                        "3": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
                       },
                       "sheetOptions": Object {
                         "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
@@ -1675,7 +2545,7 @@ exports[`Label with hint match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -1691,6 +2561,11 @@ exports[`Label with hint match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -1710,7 +2585,7 @@ exports[`Label with hint match 1`] = `
                   <Popover
                     classes={
                       Object {
-                        "root": "HoiPoi-HoiPoi-HoiPoi-Popover-root-0-2-13",
+                        "root": "HoiPoi-HoiPoi-HoiPoi-Popover-root-0-2-43",
                       }
                     }
                     content="I am a hint"
@@ -1729,7 +2604,7 @@ exports[`Label with hint match 1`] = `
                       mouseEnterDelay={0}
                       mouseLeaveDelay={0.1}
                       overlay="I am a hint"
-                      overlayClassName="HoiPoi-HoiPoi-HoiPoi-Popover-root-0-2-13"
+                      overlayClassName="HoiPoi-HoiPoi-HoiPoi-Popover-root-0-2-43"
                       placement="top"
                       prefixCls="hoi-poi-popover"
                       transitionName="hoi-poi-popover--fade"
@@ -1983,7 +2858,7 @@ exports[`Label with hint match 1`] = `
                         overlay="I am a hint"
                         popup={[Function]}
                         popupAlign={Object {}}
-                        popupClassName="HoiPoi-HoiPoi-HoiPoi-Popover-root-0-2-13"
+                        popupClassName="HoiPoi-HoiPoi-HoiPoi-Popover-root-0-2-43"
                         popupPlacement="top"
                         popupStyle={Object {}}
                         popupTransitionName="hoi-poi-popover--fade"
@@ -1991,17 +2866,17 @@ exports[`Label with hint match 1`] = `
                         showAction={Array []}
                       >
                         <span
-                          className="HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-11"
+                          className="HoiPoi-HoiPoi-HoiPoi-Label-info-0-2-31"
                           key="trigger"
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                         >
                           <JssContextSubscriber
-                            className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-12"
+                            className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-32"
                             name="info"
                           >
                             <WithStyles(WithTheme(Icon))
-                              className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-12"
+                              className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-32"
                               innerRef={null}
                               jssContext={
                                 Object {
@@ -2148,6 +3023,10 @@ exports[`Label with hint match 1`] = `
                                       "length": 1,
                                       "sheets": WeakMap {},
                                     },
+                                    "3": SheetsManager {
+                                      "length": 1,
+                                      "sheets": WeakMap {},
+                                    },
                                   },
                                   "sheetOptions": Object {
                                     "classNamePrefix": "HoiPoi-HoiPoi-HoiPoi-",
@@ -2214,7 +3093,7 @@ exports[`Label with hint match 1`] = `
                                   "typography": Object {
                                     "bigText": Object {
                                       "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                      "fontSize": 16,
+                                      "fontSize": 20,
                                       "letterSpacing": 0.5,
                                     },
                                     "button": Object {
@@ -2230,6 +3109,11 @@ exports[`Label with hint match 1`] = `
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                     "fontSizeBase": 13,
                                     "fontSizeSmall": 11,
+                                    "largeText": Object {
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                      "fontSize": 16,
+                                      "letterSpacing": 0.5,
+                                    },
                                     "letterSpacing": 0.5,
                                     "lineHeightBase": 1.5,
                                     "smallText": Object {
@@ -2242,27 +3126,27 @@ exports[`Label with hint match 1`] = `
                               }
                             >
                               <WithTheme(Icon)
-                                className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-12"
+                                className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-32"
                                 classes={
                                   Object {
-                                    "big": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-18",
-                                    "large": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-17",
-                                    "medium": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-16",
-                                    "root": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-14",
-                                    "small": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-15",
+                                    "big": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-48",
+                                    "large": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-47",
+                                    "medium": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-46",
+                                    "root": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-44",
+                                    "small": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-45",
                                   }
                                 }
                                 name="info"
                               >
                                 <Icon
-                                  className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-12"
+                                  className="HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-32"
                                   classes={
                                     Object {
-                                      "big": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-18",
-                                      "large": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-17",
-                                      "medium": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-16",
-                                      "root": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-14",
-                                      "small": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-15",
+                                      "big": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-big-0-2-48",
+                                      "large": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-large-0-2-47",
+                                      "medium": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-46",
+                                      "root": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-44",
+                                      "small": "HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-small-0-2-45",
                                     }
                                   }
                                   name="info"
@@ -2326,7 +3210,7 @@ exports[`Label with hint match 1`] = `
                                       "typography": Object {
                                         "bigText": Object {
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 16,
+                                          "fontSize": 20,
                                           "letterSpacing": 0.5,
                                         },
                                         "button": Object {
@@ -2342,6 +3226,11 @@ exports[`Label with hint match 1`] = `
                                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                         "fontSizeBase": 13,
                                         "fontSizeSmall": 11,
+                                        "largeText": Object {
+                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                          "fontSize": 16,
+                                          "letterSpacing": 0.5,
+                                        },
                                         "letterSpacing": 0.5,
                                         "lineHeightBase": 1.5,
                                         "smallText": Object {
@@ -2354,7 +3243,7 @@ exports[`Label with hint match 1`] = `
                                   }
                                 >
                                   <span
-                                    className="HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-14 HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-16 HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-12"
+                                    className="HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-root-0-2-44 HoiPoi-HoiPoi-HoiPoi-WithTheme(Icon)-medium-0-2-46 HoiPoi-HoiPoi-HoiPoi-Label-icon-0-2-32"
                                   >
                                     <Info
                                       color="#788590"
