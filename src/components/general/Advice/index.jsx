@@ -4,6 +4,7 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 
 import Icon from '../../general/Icon';
+import Text from '../../typography/Text';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
@@ -72,14 +73,14 @@ function Advice({
                     <Icon {...iconProps} />
                 </div>
             )}
-            <span className={classes.text} {...override.text}>
+            <Text className={classes.Text} {...override.Text}>
                 {children}
-            </span>
+            </Text>
         </div>
     );
 }
 
-Advice.overrides = ['icon', 'text'];
+Advice.overrides = ['icon', 'Text'];
 
 Advice.defaultProps = {
     className: '',

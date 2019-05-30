@@ -11,7 +11,7 @@ export default (theme) => ({
         display: 'flex',
         marginRight: 10,
     },
-    text: {
+    Text: {
         fontWeight: 400,
         display: 'flex',
         lineHeight: 1.54,

@@ -4,6 +4,7 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 import Loader from '../../general/Loader';
+import Text from '../../typography/Text';
 import styles from './styles';
 
 const LOADER_SIZES = {
@@ -68,9 +69,9 @@ function Button({
                     />
                 </div>
             )}
-            <span className={classes.label} {...override.label}>
+            <Text className={classes.Text} {...override.Text}>
                 {children}
-            </span>
+            </Text>
         </span>
     );
 
@@ -89,7 +90,7 @@ function Button({
     }
 }
 
-Button.overrides = ['label', 'Loader'];
+Button.overrides = ['Text', 'Loader'];
 
 Button.defaultProps = {
     size: 'medium',
