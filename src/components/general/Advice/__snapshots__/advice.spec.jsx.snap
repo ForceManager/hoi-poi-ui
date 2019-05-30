@@ -463,12 +463,15 @@ exports[`Badge default match 1`] = `
             className=""
             classes={
               Object {
+                "dropdownIcon": "HoiPoi__Advice__dropdownIcon-1-8",
                 "error": "HoiPoi__Advice__error-1-3",
                 "icon": "HoiPoi__Advice__icon-1-1",
                 "info": "HoiPoi__Advice__info-1-4",
+                "isCollapsed": "HoiPoi__Advice__isCollapsed-1-9",
                 "root": "HoiPoi__Advice__root-1-0",
                 "success": "HoiPoi__Advice__success-1-5",
                 "text": "HoiPoi__Advice__text-1-2",
+                "textContainer": "HoiPoi__Advice__textContainer-1-7",
                 "warning": "HoiPoi__Advice__warning-1-6",
               }
             }
@@ -561,13 +564,56 @@ exports[`Badge default match 1`] = `
             type="info"
           >
             <div
-              className="HoiPoi__Advice__root-1-0 HoiPoi__Advice__info-1-4"
+              className="HoiPoi__Advice__root-1-0 HoiPoi__Advice__info-1-4 HoiPoi__Advice__isCollapsed-1-9"
             >
-              <span
-                className="HoiPoi__Advice__text-1-2"
+              <AnimateHeight
+                animateOpacity={false}
+                animationStateClasses={
+                  Object {
+                    "animating": "rah-animating",
+                    "animatingDown": "rah-animating--down",
+                    "animatingToHeightAuto": "rah-animating--to-height-auto",
+                    "animatingToHeightSpecific": "rah-animating--to-height-specific",
+                    "animatingToHeightZero": "rah-animating--to-height-zero",
+                    "animatingUp": "rah-animating--up",
+                    "static": "rah-static",
+                    "staticHeightAuto": "rah-static--height-auto",
+                    "staticHeightSpecific": "rah-static--height-specific",
+                    "staticHeightZero": "rah-static--height-zero",
+                  }
+                }
+                applyInlineTransitions={true}
+                delay={0}
+                duration={250}
+                easing="ease"
+                height={null}
+                style={Object {}}
               >
-                Lorem ipsum
-              </span>
+                <div
+                  aria-hidden={false}
+                  className="rah-static rah-static--height-auto"
+                  style={
+                    Object {
+                      "height": "auto",
+                      "overflow": "visible",
+                    }
+                  }
+                >
+                  <div
+                    style={Object {}}
+                  >
+                    <div
+                      className="HoiPoi__Advice__textContainer-1-7"
+                    >
+                      <span
+                        className="HoiPoi__Advice__text-1-2"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AnimateHeight>
             </div>
           </Advice>
         </WithStyles(Advice)>
@@ -1047,12 +1093,15 @@ exports[`Badge with icon and type match 1`] = `
             className=""
             classes={
               Object {
+                "dropdownIcon": "HoiPoi__Advice__dropdownIcon-4-8",
                 "error": "HoiPoi__Advice__error-4-3",
                 "icon": "HoiPoi__Advice__icon-4-1",
                 "info": "HoiPoi__Advice__info-4-4",
+                "isCollapsed": "HoiPoi__Advice__isCollapsed-4-9",
                 "root": "HoiPoi__Advice__root-4-0",
                 "success": "HoiPoi__Advice__success-4-5",
                 "text": "HoiPoi__Advice__text-4-2",
+                "textContainer": "HoiPoi__Advice__textContainer-4-7",
                 "warning": "HoiPoi__Advice__warning-4-6",
               }
             }
@@ -1145,7 +1194,7 @@ exports[`Badge with icon and type match 1`] = `
             type="error"
           >
             <div
-              className="HoiPoi__Advice__root-4-0 HoiPoi__Advice__error-4-3"
+              className="HoiPoi__Advice__root-4-0 HoiPoi__Advice__error-4-3 HoiPoi__Advice__isCollapsed-4-9"
             >
               <div
                 className="HoiPoi__Advice__icon-4-1"
@@ -1396,11 +1445,11 @@ exports[`Badge with icon and type match 1`] = `
                     <WithTheme(Icon)
                       classes={
                         Object {
-                          "big": "HoiPoi__Icon__big-4-11",
-                          "large": "HoiPoi__Icon__large-4-10",
-                          "medium": "HoiPoi__Icon__medium-4-9",
-                          "root": "HoiPoi__Icon__root-4-7",
-                          "small": "HoiPoi__Icon__small-4-8",
+                          "big": "HoiPoi__Icon__big-4-14",
+                          "large": "HoiPoi__Icon__large-4-13",
+                          "medium": "HoiPoi__Icon__medium-4-12",
+                          "root": "HoiPoi__Icon__root-4-10",
+                          "small": "HoiPoi__Icon__small-4-11",
                         }
                       }
                       color="#f04540"
@@ -1410,11 +1459,11 @@ exports[`Badge with icon and type match 1`] = `
                       <Icon
                         classes={
                           Object {
-                            "big": "HoiPoi__Icon__big-4-11",
-                            "large": "HoiPoi__Icon__large-4-10",
-                            "medium": "HoiPoi__Icon__medium-4-9",
-                            "root": "HoiPoi__Icon__root-4-7",
-                            "small": "HoiPoi__Icon__small-4-8",
+                            "big": "HoiPoi__Icon__big-4-14",
+                            "large": "HoiPoi__Icon__large-4-13",
+                            "medium": "HoiPoi__Icon__medium-4-12",
+                            "root": "HoiPoi__Icon__root-4-10",
+                            "small": "HoiPoi__Icon__small-4-11",
                           }
                         }
                         color="#f04540"
@@ -1507,7 +1556,7 @@ exports[`Badge with icon and type match 1`] = `
                         }
                       >
                         <span
-                          className="HoiPoi__Icon__root-4-7 HoiPoi__Icon__medium-4-9"
+                          className="HoiPoi__Icon__root-4-10 HoiPoi__Icon__medium-4-12"
                         >
                           <Warning
                             color="#f04540"
@@ -1535,11 +1584,54 @@ exports[`Badge with icon and type match 1`] = `
                   </WithStyles(WithTheme(Icon))>
                 </JssContextSubscriber>
               </div>
-              <span
-                className="HoiPoi__Advice__text-4-2"
+              <AnimateHeight
+                animateOpacity={false}
+                animationStateClasses={
+                  Object {
+                    "animating": "rah-animating",
+                    "animatingDown": "rah-animating--down",
+                    "animatingToHeightAuto": "rah-animating--to-height-auto",
+                    "animatingToHeightSpecific": "rah-animating--to-height-specific",
+                    "animatingToHeightZero": "rah-animating--to-height-zero",
+                    "animatingUp": "rah-animating--up",
+                    "static": "rah-static",
+                    "staticHeightAuto": "rah-static--height-auto",
+                    "staticHeightSpecific": "rah-static--height-specific",
+                    "staticHeightZero": "rah-static--height-zero",
+                  }
+                }
+                applyInlineTransitions={true}
+                delay={0}
+                duration={250}
+                easing="ease"
+                height={null}
+                style={Object {}}
               >
-                Lorem ipsum
-              </span>
+                <div
+                  aria-hidden={false}
+                  className="rah-static rah-static--height-auto"
+                  style={
+                    Object {
+                      "height": "auto",
+                      "overflow": "visible",
+                    }
+                  }
+                >
+                  <div
+                    style={Object {}}
+                  >
+                    <div
+                      className="HoiPoi__Advice__textContainer-4-7"
+                    >
+                      <span
+                        className="HoiPoi__Advice__text-4-2"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AnimateHeight>
             </div>
           </Advice>
         </WithStyles(Advice)>
@@ -2018,12 +2110,15 @@ exports[`Badge with icon match 1`] = `
             className=""
             classes={
               Object {
+                "dropdownIcon": "HoiPoi__Advice__dropdownIcon-3-8",
                 "error": "HoiPoi__Advice__error-3-3",
                 "icon": "HoiPoi__Advice__icon-3-1",
                 "info": "HoiPoi__Advice__info-3-4",
+                "isCollapsed": "HoiPoi__Advice__isCollapsed-3-9",
                 "root": "HoiPoi__Advice__root-3-0",
                 "success": "HoiPoi__Advice__success-3-5",
                 "text": "HoiPoi__Advice__text-3-2",
+                "textContainer": "HoiPoi__Advice__textContainer-3-7",
                 "warning": "HoiPoi__Advice__warning-3-6",
               }
             }
@@ -2116,7 +2211,7 @@ exports[`Badge with icon match 1`] = `
             type="info"
           >
             <div
-              className="HoiPoi__Advice__root-3-0 HoiPoi__Advice__info-3-4"
+              className="HoiPoi__Advice__root-3-0 HoiPoi__Advice__info-3-4 HoiPoi__Advice__isCollapsed-3-9"
             >
               <div
                 className="HoiPoi__Advice__icon-3-1"
@@ -2367,11 +2462,11 @@ exports[`Badge with icon match 1`] = `
                     <WithTheme(Icon)
                       classes={
                         Object {
-                          "big": "HoiPoi__Icon__big-3-11",
-                          "large": "HoiPoi__Icon__large-3-10",
-                          "medium": "HoiPoi__Icon__medium-3-9",
-                          "root": "HoiPoi__Icon__root-3-7",
-                          "small": "HoiPoi__Icon__small-3-8",
+                          "big": "HoiPoi__Icon__big-3-14",
+                          "large": "HoiPoi__Icon__large-3-13",
+                          "medium": "HoiPoi__Icon__medium-3-12",
+                          "root": "HoiPoi__Icon__root-3-10",
+                          "small": "HoiPoi__Icon__small-3-11",
                         }
                       }
                       color="#00A8Be"
@@ -2381,11 +2476,11 @@ exports[`Badge with icon match 1`] = `
                       <Icon
                         classes={
                           Object {
-                            "big": "HoiPoi__Icon__big-3-11",
-                            "large": "HoiPoi__Icon__large-3-10",
-                            "medium": "HoiPoi__Icon__medium-3-9",
-                            "root": "HoiPoi__Icon__root-3-7",
-                            "small": "HoiPoi__Icon__small-3-8",
+                            "big": "HoiPoi__Icon__big-3-14",
+                            "large": "HoiPoi__Icon__large-3-13",
+                            "medium": "HoiPoi__Icon__medium-3-12",
+                            "root": "HoiPoi__Icon__root-3-10",
+                            "small": "HoiPoi__Icon__small-3-11",
                           }
                         }
                         color="#00A8Be"
@@ -2478,7 +2573,7 @@ exports[`Badge with icon match 1`] = `
                         }
                       >
                         <span
-                          className="HoiPoi__Icon__root-3-7 HoiPoi__Icon__medium-3-9"
+                          className="HoiPoi__Icon__root-3-10 HoiPoi__Icon__medium-3-12"
                         >
                           <Info
                             color="#00A8Be"
@@ -2500,11 +2595,54 @@ exports[`Badge with icon match 1`] = `
                   </WithStyles(WithTheme(Icon))>
                 </JssContextSubscriber>
               </div>
-              <span
-                className="HoiPoi__Advice__text-3-2"
+              <AnimateHeight
+                animateOpacity={false}
+                animationStateClasses={
+                  Object {
+                    "animating": "rah-animating",
+                    "animatingDown": "rah-animating--down",
+                    "animatingToHeightAuto": "rah-animating--to-height-auto",
+                    "animatingToHeightSpecific": "rah-animating--to-height-specific",
+                    "animatingToHeightZero": "rah-animating--to-height-zero",
+                    "animatingUp": "rah-animating--up",
+                    "static": "rah-static",
+                    "staticHeightAuto": "rah-static--height-auto",
+                    "staticHeightSpecific": "rah-static--height-specific",
+                    "staticHeightZero": "rah-static--height-zero",
+                  }
+                }
+                applyInlineTransitions={true}
+                delay={0}
+                duration={250}
+                easing="ease"
+                height={null}
+                style={Object {}}
               >
-                Lorem ipsum
-              </span>
+                <div
+                  aria-hidden={false}
+                  className="rah-static rah-static--height-auto"
+                  style={
+                    Object {
+                      "height": "auto",
+                      "overflow": "visible",
+                    }
+                  }
+                >
+                  <div
+                    style={Object {}}
+                  >
+                    <div
+                      className="HoiPoi__Advice__textContainer-3-7"
+                    >
+                      <span
+                        className="HoiPoi__Advice__text-3-2"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AnimateHeight>
             </div>
           </Advice>
         </WithStyles(Advice)>
@@ -2979,12 +3117,15 @@ exports[`Badge with type match 1`] = `
             className=""
             classes={
               Object {
+                "dropdownIcon": "HoiPoi__Advice__dropdownIcon-2-8",
                 "error": "HoiPoi__Advice__error-2-3",
                 "icon": "HoiPoi__Advice__icon-2-1",
                 "info": "HoiPoi__Advice__info-2-4",
+                "isCollapsed": "HoiPoi__Advice__isCollapsed-2-9",
                 "root": "HoiPoi__Advice__root-2-0",
                 "success": "HoiPoi__Advice__success-2-5",
                 "text": "HoiPoi__Advice__text-2-2",
+                "textContainer": "HoiPoi__Advice__textContainer-2-7",
                 "warning": "HoiPoi__Advice__warning-2-6",
               }
             }
@@ -3077,13 +3218,56 @@ exports[`Badge with type match 1`] = `
             type="success"
           >
             <div
-              className="HoiPoi__Advice__root-2-0 HoiPoi__Advice__success-2-5"
+              className="HoiPoi__Advice__root-2-0 HoiPoi__Advice__success-2-5 HoiPoi__Advice__isCollapsed-2-9"
             >
-              <span
-                className="HoiPoi__Advice__text-2-2"
+              <AnimateHeight
+                animateOpacity={false}
+                animationStateClasses={
+                  Object {
+                    "animating": "rah-animating",
+                    "animatingDown": "rah-animating--down",
+                    "animatingToHeightAuto": "rah-animating--to-height-auto",
+                    "animatingToHeightSpecific": "rah-animating--to-height-specific",
+                    "animatingToHeightZero": "rah-animating--to-height-zero",
+                    "animatingUp": "rah-animating--up",
+                    "static": "rah-static",
+                    "staticHeightAuto": "rah-static--height-auto",
+                    "staticHeightSpecific": "rah-static--height-specific",
+                    "staticHeightZero": "rah-static--height-zero",
+                  }
+                }
+                applyInlineTransitions={true}
+                delay={0}
+                duration={250}
+                easing="ease"
+                height={null}
+                style={Object {}}
               >
-                Lorem ipsum
-              </span>
+                <div
+                  aria-hidden={false}
+                  className="rah-static rah-static--height-auto"
+                  style={
+                    Object {
+                      "height": "auto",
+                      "overflow": "visible",
+                    }
+                  }
+                >
+                  <div
+                    style={Object {}}
+                  >
+                    <div
+                      className="HoiPoi__Advice__textContainer-2-7"
+                    >
+                      <span
+                        className="HoiPoi__Advice__text-2-2"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AnimateHeight>
             </div>
           </Advice>
         </WithStyles(Advice)>

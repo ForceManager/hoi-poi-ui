@@ -593,9 +593,10 @@ exports[`Multiplier complete match 1`] = `
             buttonLabel="Add"
             classes={
               Object {
-                "button": "HoiPoi__Multiplier__button-1-6",
-                "buttonContainer": "HoiPoi__Multiplier__buttonContainer-1-5",
+                "button": "HoiPoi__Multiplier__button-1-7",
+                "buttonContainer": "HoiPoi__Multiplier__buttonContainer-1-6",
                 "container": "HoiPoi__Multiplier__container-1-1",
+                "isFullWidth": "HoiPoi__Multiplier__isFullWidth-1-5",
                 "item": "HoiPoi__Multiplier__item-1-2",
                 "root": "HoiPoi__Multiplier__root-1-0",
                 "separator": "HoiPoi__Multiplier__separator-1-4",
@@ -675,6 +676,13 @@ exports[`Multiplier complete match 1`] = `
                   labelMode="horizontal"
                   onChange={[Function]}
                   onRemove={[Function]}
+                  overrides={
+                    Object {
+                      "button": Object {},
+                      "multiplierControl": Object {},
+                      "root": Object {},
+                    }
+                  }
                   schema={
                     Array [
                       Object {
@@ -725,8 +733,17 @@ exports[`Multiplier complete match 1`] = `
                         "email": "Invalid email",
                       }
                     }
+                    isFullWidth={false}
                     onChange={[Function]}
                     onRemoveSection={[Function]}
+                    override={Object {}}
+                    overrides={
+                      Object {
+                        "button": Object {},
+                        "multiplierControl": Object {},
+                        "root": Object {},
+                      }
+                    }
                     schema={
                       Array [
                         Object {
@@ -954,6 +971,13 @@ exports[`Multiplier complete match 1`] = `
                       onChange={[Function]}
                       onRemoveSection={[Function]}
                       override={Object {}}
+                      overrides={
+                        Object {
+                          "button": Object {},
+                          "multiplierControl": Object {},
+                          "root": Object {},
+                        }
+                      }
                       schema={
                         Array [
                           Object {
@@ -1094,6 +1118,13 @@ exports[`Multiplier complete match 1`] = `
                         onChange={[Function]}
                         onRemoveSection={[Function]}
                         override={Object {}}
+                        overrides={
+                          Object {
+                            "button": Object {},
+                            "multiplierControl": Object {},
+                            "root": Object {},
+                          }
+                        }
                         schema={
                           Array [
                             Object {
@@ -1411,12 +1442,12 @@ exports[`Multiplier complete match 1`] = `
                               <Section
                                 classes={
                                   Object {
-                                    "collapsed": "HoiPoi__Section__collapsed-1-12",
-                                    "header": "HoiPoi__Section__header-1-8",
-                                    "icon": "HoiPoi__Section__icon-1-10",
-                                    "remove": "HoiPoi__Section__remove-1-11",
-                                    "root": "HoiPoi__Section__root-1-7",
-                                    "title": "HoiPoi__Section__title-1-9",
+                                    "collapsed": "HoiPoi__Section__collapsed-1-13",
+                                    "header": "HoiPoi__Section__header-1-9",
+                                    "icon": "HoiPoi__Section__icon-1-11",
+                                    "removeIcon": "HoiPoi__Section__removeIcon-1-12",
+                                    "root": "HoiPoi__Section__root-1-8",
+                                    "title": "HoiPoi__Section__title-1-10",
                                   }
                                 }
                                 isExpandable={true}
@@ -1424,10 +1455,10 @@ exports[`Multiplier complete match 1`] = `
                                 overrides={Object {}}
                               >
                                 <div
-                                  className="HoiPoi__Section__root-1-7"
+                                  className="HoiPoi__Section__root-1-8"
                                 >
                                   <span
-                                    className="HoiPoi__Section__remove-1-11"
+                                    className="HoiPoi__Section__removeIcon-1-12"
                                     onClick={[Function]}
                                   >
                                     <JssContextSubscriber
@@ -1696,11 +1727,11 @@ exports[`Multiplier complete match 1`] = `
                                         <WithTheme(Icon)
                                           classes={
                                             Object {
-                                              "big": "HoiPoi__Icon__big-1-17",
-                                              "large": "HoiPoi__Icon__large-1-16",
-                                              "medium": "HoiPoi__Icon__medium-1-15",
-                                              "root": "HoiPoi__Icon__root-1-13",
-                                              "small": "HoiPoi__Icon__small-1-14",
+                                              "big": "HoiPoi__Icon__big-1-18",
+                                              "large": "HoiPoi__Icon__large-1-17",
+                                              "medium": "HoiPoi__Icon__medium-1-16",
+                                              "root": "HoiPoi__Icon__root-1-14",
+                                              "small": "HoiPoi__Icon__small-1-15",
                                             }
                                           }
                                           name="close"
@@ -1708,11 +1739,11 @@ exports[`Multiplier complete match 1`] = `
                                           <Icon
                                             classes={
                                               Object {
-                                                "big": "HoiPoi__Icon__big-1-17",
-                                                "large": "HoiPoi__Icon__large-1-16",
-                                                "medium": "HoiPoi__Icon__medium-1-15",
-                                                "root": "HoiPoi__Icon__root-1-13",
-                                                "small": "HoiPoi__Icon__small-1-14",
+                                                "big": "HoiPoi__Icon__big-1-18",
+                                                "large": "HoiPoi__Icon__large-1-17",
+                                                "medium": "HoiPoi__Icon__medium-1-16",
+                                                "root": "HoiPoi__Icon__root-1-14",
+                                                "small": "HoiPoi__Icon__small-1-15",
                                               }
                                             }
                                             name="close"
@@ -1804,7 +1835,7 @@ exports[`Multiplier complete match 1`] = `
                                             }
                                           >
                                             <span
-                                              className="HoiPoi__Icon__root-1-13 HoiPoi__Icon__medium-1-15"
+                                              className="HoiPoi__Icon__root-1-14 HoiPoi__Icon__medium-1-16"
                                             >
                                               <Close
                                                 color="#788590"
@@ -2231,21 +2262,21 @@ exports[`Multiplier complete match 1`] = `
                                           }
                                           classes={
                                             Object {
-                                              "Label": "HoiPoi__Select__Label-1-19",
-                                              "action": "HoiPoi__Select__action-1-32",
-                                              "error": "HoiPoi__Select__error-1-20",
-                                              "errored": "HoiPoi__Select__errored-1-22",
-                                              "focused": "HoiPoi__Select__focused-1-24",
-                                              "formControl": "HoiPoi__Select__formControl-1-21",
-                                              "group": "HoiPoi__Select__group-1-31",
-                                              "horizontal": "HoiPoi__Select__horizontal-1-26",
-                                              "isFullWidth": "HoiPoi__Select__isFullWidth-1-27",
-                                              "isReadOnly": "HoiPoi__Select__isReadOnly-1-23",
-                                              "menu": "HoiPoi__Select__menu-1-30",
-                                              "menuList": "HoiPoi__Select__menuList-1-29",
-                                              "root": "HoiPoi__Select__root-1-18",
-                                              "select": "HoiPoi__Select__select-1-28",
-                                              "vertical": "HoiPoi__Select__vertical-1-25",
+                                              "Label": "HoiPoi__Select__Label-1-20",
+                                              "action": "HoiPoi__Select__action-1-33",
+                                              "error": "HoiPoi__Select__error-1-21",
+                                              "errored": "HoiPoi__Select__errored-1-23",
+                                              "focused": "HoiPoi__Select__focused-1-25",
+                                              "formControl": "HoiPoi__Select__formControl-1-22",
+                                              "group": "HoiPoi__Select__group-1-32",
+                                              "horizontal": "HoiPoi__Select__horizontal-1-27",
+                                              "isFullWidth": "HoiPoi__Select__isFullWidth-1-28",
+                                              "isReadOnly": "HoiPoi__Select__isReadOnly-1-24",
+                                              "menu": "HoiPoi__Select__menu-1-31",
+                                              "menuList": "HoiPoi__Select__menuList-1-30",
+                                              "root": "HoiPoi__Select__root-1-19",
+                                              "select": "HoiPoi__Select__select-1-29",
+                                              "vertical": "HoiPoi__Select__vertical-1-26",
                                             }
                                           }
                                           error=""
@@ -2280,13 +2311,13 @@ exports[`Multiplier complete match 1`] = `
                                           value=""
                                         >
                                           <div
-                                            className="HoiPoi__Select__root-1-18 HoiPoi__Select__horizontal-1-26"
+                                            className="HoiPoi__Select__root-1-19 HoiPoi__Select__horizontal-1-27"
                                           >
                                             <JssContextSubscriber
-                                              className="HoiPoi__Select__Label-1-19"
+                                              className="HoiPoi__Select__Label-1-20"
                                             >
                                               <WithStyles(Label)
-                                                className="HoiPoi__Select__Label-1-19"
+                                                className="HoiPoi__Select__Label-1-20"
                                                 innerRef={null}
                                                 jssContext={
                                                   Object {
@@ -2546,21 +2577,21 @@ exports[`Multiplier complete match 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="HoiPoi__Select__Label-1-19"
+                                                  className="HoiPoi__Select__Label-1-20"
                                                   classes={
                                                     Object {
-                                                      "icon": "HoiPoi__Label__icon-1-36",
-                                                      "info": "HoiPoi__Label__info-1-35",
-                                                      "root": "HoiPoi__Label__root-1-33",
-                                                      "text": "HoiPoi__Label__text-1-34",
+                                                      "icon": "HoiPoi__Label__icon-1-37",
+                                                      "info": "HoiPoi__Label__info-1-36",
+                                                      "root": "HoiPoi__Label__root-1-34",
+                                                      "text": "HoiPoi__Label__text-1-35",
                                                     }
                                                   }
                                                 >
                                                   <span
-                                                    className="HoiPoi__Label__root-1-33 HoiPoi__Select__Label-1-19"
+                                                    className="HoiPoi__Label__root-1-34 HoiPoi__Select__Label-1-20"
                                                   >
                                                     <span
-                                                      className="HoiPoi__Label__text-1-34"
+                                                      className="HoiPoi__Label__text-1-35"
                                                     >
                                                       Activity
                                                     </span>
@@ -2569,10 +2600,10 @@ exports[`Multiplier complete match 1`] = `
                                               </WithStyles(Label)>
                                             </JssContextSubscriber>
                                             <div
-                                              className="HoiPoi__Select__formControl-1-21"
+                                              className="HoiPoi__Select__formControl-1-22"
                                             >
                                               <StateManager
-                                                className="HoiPoi__Select__select-1-28"
+                                                className="HoiPoi__Select__select-1-29"
                                                 classNamePrefix="hoi-poi-select"
                                                 components={
                                                   Object {
@@ -2625,7 +2656,7 @@ exports[`Multiplier complete match 1`] = `
                                                   backspaceRemovesValue={true}
                                                   blurInputOnSelect={true}
                                                   captureMenuScroll={false}
-                                                  className="HoiPoi__Select__select-1-28"
+                                                  className="HoiPoi__Select__select-1-29"
                                                   classNamePrefix="hoi-poi-select"
                                                   closeMenuOnScroll={false}
                                                   closeMenuOnSelect={true}
@@ -2700,7 +2731,7 @@ exports[`Multiplier complete match 1`] = `
                                                   value=""
                                                 >
                                                   <SelectContainer
-                                                    className="HoiPoi__Select__select-1-28"
+                                                    className="HoiPoi__Select__select-1-29"
                                                     clearValue={[Function]}
                                                     cx={[Function]}
                                                     getStyles={[Function]}
@@ -2738,7 +2769,7 @@ exports[`Multiplier complete match 1`] = `
                                                         "backspaceRemovesValue": true,
                                                         "blurInputOnSelect": true,
                                                         "captureMenuScroll": false,
-                                                        "className": "HoiPoi__Select__select-1-28",
+                                                        "className": "HoiPoi__Select__select-1-29",
                                                         "classNamePrefix": "hoi-poi-select",
                                                         "closeMenuOnScroll": false,
                                                         "closeMenuOnSelect": true,
@@ -2840,7 +2871,7 @@ exports[`Multiplier complete match 1`] = `
                                                     }
                                                   >
                                                     <div
-                                                      className="css-1pcexqc-container HoiPoi__Select__select-1-28"
+                                                      className="css-1pcexqc-container HoiPoi__Select__select-1-29"
                                                       onKeyDown={[Function]}
                                                     >
                                                       <Control
@@ -2883,7 +2914,7 @@ exports[`Multiplier complete match 1`] = `
                                                             "backspaceRemovesValue": true,
                                                             "blurInputOnSelect": true,
                                                             "captureMenuScroll": false,
-                                                            "className": "HoiPoi__Select__select-1-28",
+                                                            "className": "HoiPoi__Select__select-1-29",
                                                             "classNamePrefix": "hoi-poi-select",
                                                             "closeMenuOnScroll": false,
                                                             "closeMenuOnSelect": true,
@@ -3020,7 +3051,7 @@ exports[`Multiplier complete match 1`] = `
                                                                 "backspaceRemovesValue": true,
                                                                 "blurInputOnSelect": true,
                                                                 "captureMenuScroll": false,
-                                                                "className": "HoiPoi__Select__select-1-28",
+                                                                "className": "HoiPoi__Select__select-1-29",
                                                                 "classNamePrefix": "hoi-poi-select",
                                                                 "closeMenuOnScroll": false,
                                                                 "closeMenuOnSelect": true,
@@ -3157,7 +3188,7 @@ exports[`Multiplier complete match 1`] = `
                                                                     "backspaceRemovesValue": true,
                                                                     "blurInputOnSelect": true,
                                                                     "captureMenuScroll": false,
-                                                                    "className": "HoiPoi__Select__select-1-28",
+                                                                    "className": "HoiPoi__Select__select-1-29",
                                                                     "classNamePrefix": "hoi-poi-select",
                                                                     "closeMenuOnScroll": false,
                                                                     "closeMenuOnSelect": true,
@@ -3283,7 +3314,7 @@ exports[`Multiplier complete match 1`] = `
                                                                     "backspaceRemovesValue": true,
                                                                     "blurInputOnSelect": true,
                                                                     "captureMenuScroll": false,
-                                                                    "className": "HoiPoi__Select__select-1-28",
+                                                                    "className": "HoiPoi__Select__select-1-29",
                                                                     "classNamePrefix": "hoi-poi-select",
                                                                     "closeMenuOnScroll": false,
                                                                     "closeMenuOnSelect": true,
@@ -3508,7 +3539,7 @@ exports[`Multiplier complete match 1`] = `
                                                                 "backspaceRemovesValue": true,
                                                                 "blurInputOnSelect": true,
                                                                 "captureMenuScroll": false,
-                                                                "className": "HoiPoi__Select__select-1-28",
+                                                                "className": "HoiPoi__Select__select-1-29",
                                                                 "classNamePrefix": "hoi-poi-select",
                                                                 "closeMenuOnScroll": false,
                                                                 "closeMenuOnSelect": true,
@@ -3644,7 +3675,7 @@ exports[`Multiplier complete match 1`] = `
                                                                     "backspaceRemovesValue": true,
                                                                     "blurInputOnSelect": true,
                                                                     "captureMenuScroll": false,
-                                                                    "className": "HoiPoi__Select__select-1-28",
+                                                                    "className": "HoiPoi__Select__select-1-29",
                                                                     "classNamePrefix": "hoi-poi-select",
                                                                     "closeMenuOnScroll": false,
                                                                     "closeMenuOnSelect": true,
@@ -3788,7 +3819,7 @@ exports[`Multiplier complete match 1`] = `
                                                                     "backspaceRemovesValue": true,
                                                                     "blurInputOnSelect": true,
                                                                     "captureMenuScroll": false,
-                                                                    "className": "HoiPoi__Select__select-1-28",
+                                                                    "className": "HoiPoi__Select__select-1-29",
                                                                     "classNamePrefix": "hoi-poi-select",
                                                                     "closeMenuOnScroll": false,
                                                                     "closeMenuOnSelect": true,
@@ -3928,7 +3959,7 @@ exports[`Multiplier complete match 1`] = `
                                                                       "backspaceRemovesValue": true,
                                                                       "blurInputOnSelect": true,
                                                                       "captureMenuScroll": false,
-                                                                      "className": "HoiPoi__Select__select-1-28",
+                                                                      "className": "HoiPoi__Select__select-1-29",
                                                                       "classNamePrefix": "hoi-poi-select",
                                                                       "closeMenuOnScroll": false,
                                                                       "closeMenuOnSelect": true,
@@ -4303,11 +4334,11 @@ exports[`Multiplier complete match 1`] = `
                                                                         <WithTheme(Icon)
                                                                           classes={
                                                                             Object {
-                                                                              "big": "HoiPoi__Icon__big-1-17",
-                                                                              "large": "HoiPoi__Icon__large-1-16",
-                                                                              "medium": "HoiPoi__Icon__medium-1-15",
-                                                                              "root": "HoiPoi__Icon__root-1-13",
-                                                                              "small": "HoiPoi__Icon__small-1-14",
+                                                                              "big": "HoiPoi__Icon__big-1-18",
+                                                                              "large": "HoiPoi__Icon__large-1-17",
+                                                                              "medium": "HoiPoi__Icon__medium-1-16",
+                                                                              "root": "HoiPoi__Icon__root-1-14",
+                                                                              "small": "HoiPoi__Icon__small-1-15",
                                                                             }
                                                                           }
                                                                           name="chevron"
@@ -4316,11 +4347,11 @@ exports[`Multiplier complete match 1`] = `
                                                                           <Icon
                                                                             classes={
                                                                               Object {
-                                                                                "big": "HoiPoi__Icon__big-1-17",
-                                                                                "large": "HoiPoi__Icon__large-1-16",
-                                                                                "medium": "HoiPoi__Icon__medium-1-15",
-                                                                                "root": "HoiPoi__Icon__root-1-13",
-                                                                                "small": "HoiPoi__Icon__small-1-14",
+                                                                                "big": "HoiPoi__Icon__big-1-18",
+                                                                                "large": "HoiPoi__Icon__large-1-17",
+                                                                                "medium": "HoiPoi__Icon__medium-1-16",
+                                                                                "root": "HoiPoi__Icon__root-1-14",
+                                                                                "small": "HoiPoi__Icon__small-1-15",
                                                                               }
                                                                             }
                                                                             name="chevron"
@@ -4412,7 +4443,7 @@ exports[`Multiplier complete match 1`] = `
                                                                             }
                                                                           >
                                                                             <span
-                                                                              className="HoiPoi__Icon__root-1-13 HoiPoi__Icon__small-1-14"
+                                                                              className="HoiPoi__Icon__root-1-14 HoiPoi__Icon__small-1-15"
                                                                             >
                                                                               <Chevron
                                                                                 color="#788590"
@@ -4759,20 +4790,20 @@ exports[`Multiplier complete match 1`] = `
                                         <Input
                                           classes={
                                             Object {
-                                              "Label": "HoiPoi__Input__Label-1-38",
-                                              "error": "HoiPoi__Input__error-1-39",
-                                              "errored": "HoiPoi__Input__errored-1-42",
-                                              "focused": "HoiPoi__Input__focused-1-44",
-                                              "formControl": "HoiPoi__Input__formControl-1-40",
-                                              "horizontal": "HoiPoi__Input__horizontal-1-46",
-                                              "input": "HoiPoi__Input__input-1-41",
-                                              "isFullWidth": "HoiPoi__Input__isFullWidth-1-47",
-                                              "isReadOnly": "HoiPoi__Input__isReadOnly-1-43",
-                                              "postCloseComponent": "HoiPoi__Input__postCloseComponent-1-50",
-                                              "postComponent": "HoiPoi__Input__postComponent-1-49",
-                                              "preComponent": "HoiPoi__Input__preComponent-1-48",
-                                              "root": "HoiPoi__Input__root-1-37",
-                                              "vertical": "HoiPoi__Input__vertical-1-45",
+                                              "Label": "HoiPoi__Input__Label-1-39",
+                                              "error": "HoiPoi__Input__error-1-40",
+                                              "errored": "HoiPoi__Input__errored-1-43",
+                                              "focused": "HoiPoi__Input__focused-1-45",
+                                              "formControl": "HoiPoi__Input__formControl-1-41",
+                                              "horizontal": "HoiPoi__Input__horizontal-1-47",
+                                              "input": "HoiPoi__Input__input-1-42",
+                                              "isFullWidth": "HoiPoi__Input__isFullWidth-1-48",
+                                              "isReadOnly": "HoiPoi__Input__isReadOnly-1-44",
+                                              "postCloseComponent": "HoiPoi__Input__postCloseComponent-1-51",
+                                              "postComponent": "HoiPoi__Input__postComponent-1-50",
+                                              "preComponent": "HoiPoi__Input__preComponent-1-49",
+                                              "root": "HoiPoi__Input__root-1-38",
+                                              "vertical": "HoiPoi__Input__vertical-1-46",
                                             }
                                           }
                                           error=""
@@ -4790,14 +4821,14 @@ exports[`Multiplier complete match 1`] = `
                                           value=""
                                         >
                                           <div
-                                            className="HoiPoi__Input__root-1-37 HoiPoi__Input__horizontal-1-46"
+                                            className="HoiPoi__Input__root-1-38 HoiPoi__Input__horizontal-1-47"
                                           >
                                             <JssContextSubscriber
-                                              className="HoiPoi__Input__Label-1-38"
+                                              className="HoiPoi__Input__Label-1-39"
                                               isRequired={true}
                                             >
                                               <WithStyles(Label)
-                                                className="HoiPoi__Input__Label-1-38"
+                                                className="HoiPoi__Input__Label-1-39"
                                                 innerRef={null}
                                                 isRequired={true}
                                                 jssContext={
@@ -5058,22 +5089,22 @@ exports[`Multiplier complete match 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="HoiPoi__Input__Label-1-38"
+                                                  className="HoiPoi__Input__Label-1-39"
                                                   classes={
                                                     Object {
-                                                      "icon": "HoiPoi__Label__icon-1-36",
-                                                      "info": "HoiPoi__Label__info-1-35",
-                                                      "root": "HoiPoi__Label__root-1-33",
-                                                      "text": "HoiPoi__Label__text-1-34",
+                                                      "icon": "HoiPoi__Label__icon-1-37",
+                                                      "info": "HoiPoi__Label__info-1-36",
+                                                      "root": "HoiPoi__Label__root-1-34",
+                                                      "text": "HoiPoi__Label__text-1-35",
                                                     }
                                                   }
                                                   isRequired={true}
                                                 >
                                                   <span
-                                                    className="HoiPoi__Label__root-1-33 HoiPoi__Input__Label-1-38"
+                                                    className="HoiPoi__Label__root-1-34 HoiPoi__Input__Label-1-39"
                                                   >
                                                     <span
-                                                      className="HoiPoi__Label__text-1-34"
+                                                      className="HoiPoi__Label__text-1-35"
                                                     >
                                                       Name
                                                       *
@@ -5083,10 +5114,10 @@ exports[`Multiplier complete match 1`] = `
                                               </WithStyles(Label)>
                                             </JssContextSubscriber>
                                             <div
-                                              className="HoiPoi__Input__formControl-1-40"
+                                              className="HoiPoi__Input__formControl-1-41"
                                             >
                                               <input
-                                                className="HoiPoi__Input__input-1-41"
+                                                className="HoiPoi__Input__input-1-42"
                                                 name="name"
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
@@ -5405,20 +5436,20 @@ exports[`Multiplier complete match 1`] = `
                                         <Input
                                           classes={
                                             Object {
-                                              "Label": "HoiPoi__Input__Label-1-38",
-                                              "error": "HoiPoi__Input__error-1-39",
-                                              "errored": "HoiPoi__Input__errored-1-42",
-                                              "focused": "HoiPoi__Input__focused-1-44",
-                                              "formControl": "HoiPoi__Input__formControl-1-40",
-                                              "horizontal": "HoiPoi__Input__horizontal-1-46",
-                                              "input": "HoiPoi__Input__input-1-41",
-                                              "isFullWidth": "HoiPoi__Input__isFullWidth-1-47",
-                                              "isReadOnly": "HoiPoi__Input__isReadOnly-1-43",
-                                              "postCloseComponent": "HoiPoi__Input__postCloseComponent-1-50",
-                                              "postComponent": "HoiPoi__Input__postComponent-1-49",
-                                              "preComponent": "HoiPoi__Input__preComponent-1-48",
-                                              "root": "HoiPoi__Input__root-1-37",
-                                              "vertical": "HoiPoi__Input__vertical-1-45",
+                                              "Label": "HoiPoi__Input__Label-1-39",
+                                              "error": "HoiPoi__Input__error-1-40",
+                                              "errored": "HoiPoi__Input__errored-1-43",
+                                              "focused": "HoiPoi__Input__focused-1-45",
+                                              "formControl": "HoiPoi__Input__formControl-1-41",
+                                              "horizontal": "HoiPoi__Input__horizontal-1-47",
+                                              "input": "HoiPoi__Input__input-1-42",
+                                              "isFullWidth": "HoiPoi__Input__isFullWidth-1-48",
+                                              "isReadOnly": "HoiPoi__Input__isReadOnly-1-44",
+                                              "postCloseComponent": "HoiPoi__Input__postCloseComponent-1-51",
+                                              "postComponent": "HoiPoi__Input__postComponent-1-50",
+                                              "preComponent": "HoiPoi__Input__preComponent-1-49",
+                                              "root": "HoiPoi__Input__root-1-38",
+                                              "vertical": "HoiPoi__Input__vertical-1-46",
                                             }
                                           }
                                           error="Invalid email"
@@ -5436,14 +5467,14 @@ exports[`Multiplier complete match 1`] = `
                                           value=""
                                         >
                                           <div
-                                            className="HoiPoi__Input__root-1-37 HoiPoi__Input__horizontal-1-46 HoiPoi__Input__errored-1-42"
+                                            className="HoiPoi__Input__root-1-38 HoiPoi__Input__horizontal-1-47 HoiPoi__Input__errored-1-43"
                                           >
                                             <JssContextSubscriber
-                                              className="HoiPoi__Input__Label-1-38"
+                                              className="HoiPoi__Input__Label-1-39"
                                               isRequired={true}
                                             >
                                               <WithStyles(Label)
-                                                className="HoiPoi__Input__Label-1-38"
+                                                className="HoiPoi__Input__Label-1-39"
                                                 innerRef={null}
                                                 isRequired={true}
                                                 jssContext={
@@ -5704,22 +5735,22 @@ exports[`Multiplier complete match 1`] = `
                                                 }
                                               >
                                                 <Label
-                                                  className="HoiPoi__Input__Label-1-38"
+                                                  className="HoiPoi__Input__Label-1-39"
                                                   classes={
                                                     Object {
-                                                      "icon": "HoiPoi__Label__icon-1-36",
-                                                      "info": "HoiPoi__Label__info-1-35",
-                                                      "root": "HoiPoi__Label__root-1-33",
-                                                      "text": "HoiPoi__Label__text-1-34",
+                                                      "icon": "HoiPoi__Label__icon-1-37",
+                                                      "info": "HoiPoi__Label__info-1-36",
+                                                      "root": "HoiPoi__Label__root-1-34",
+                                                      "text": "HoiPoi__Label__text-1-35",
                                                     }
                                                   }
                                                   isRequired={true}
                                                 >
                                                   <span
-                                                    className="HoiPoi__Label__root-1-33 HoiPoi__Input__Label-1-38"
+                                                    className="HoiPoi__Label__root-1-34 HoiPoi__Input__Label-1-39"
                                                   >
                                                     <span
-                                                      className="HoiPoi__Label__text-1-34"
+                                                      className="HoiPoi__Label__text-1-35"
                                                     >
                                                       Email
                                                       *
@@ -5729,10 +5760,10 @@ exports[`Multiplier complete match 1`] = `
                                               </WithStyles(Label)>
                                             </JssContextSubscriber>
                                             <div
-                                              className="HoiPoi__Input__formControl-1-40"
+                                              className="HoiPoi__Input__formControl-1-41"
                                             >
                                               <input
-                                                className="HoiPoi__Input__input-1-41"
+                                                className="HoiPoi__Input__input-1-42"
                                                 name="email"
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
@@ -5742,7 +5773,7 @@ exports[`Multiplier complete match 1`] = `
                                                 value=""
                                               />
                                               <div
-                                                className="HoiPoi__Input__error-1-39"
+                                                className="HoiPoi__Input__error-1-40"
                                               >
                                                 Invalid email
                                               </div>
@@ -5763,16 +5794,17 @@ exports[`Multiplier complete match 1`] = `
                 </MultiplierControl>
               </div>
               <div
-                className="HoiPoi__Multiplier__buttonContainer-1-5"
+                className="HoiPoi__Multiplier__buttonContainer-1-6"
               >
                 <JssContextSubscriber
-                  className="HoiPoi__Multiplier__button-1-6 addButton"
+                  className="HoiPoi__Multiplier__button-1-7 addButton"
                   color="primary"
                   onClick={[Function]}
+                  overrides={Object {}}
                   type="squared"
                 >
                   <WithStyles(Button)
-                    className="HoiPoi__Multiplier__button-1-6 addButton"
+                    className="HoiPoi__Multiplier__button-1-7 addButton"
                     color="primary"
                     innerRef={null}
                     jssContext={
@@ -6037,23 +6069,23 @@ exports[`Multiplier complete match 1`] = `
                     type="squared"
                   >
                     <Button
-                      className="HoiPoi__Multiplier__button-1-6 addButton"
+                      className="HoiPoi__Multiplier__button-1-7 addButton"
                       classes={
                         Object {
-                          "big": "HoiPoi__Button__big-1-62",
-                          "danger": "HoiPoi__Button__danger-1-60",
-                          "disabled": "HoiPoi__Button__disabled-1-63",
-                          "filled": "HoiPoi__Button__filled-1-57",
-                          "fullWidth": "HoiPoi__Button__fullWidth-1-64",
-                          "label": "HoiPoi__Button__label-1-52",
-                          "labelLoading": "HoiPoi__Button__labelLoading-1-53",
-                          "loader": "HoiPoi__Button__loader-1-54",
-                          "outlined": "HoiPoi__Button__outlined-1-55",
-                          "primary": "HoiPoi__Button__primary-1-59",
-                          "root": "HoiPoi__Button__root-1-51",
-                          "small": "HoiPoi__Button__small-1-61",
-                          "squared": "HoiPoi__Button__squared-1-56",
-                          "white": "HoiPoi__Button__white-1-58",
+                          "big": "HoiPoi__Button__big-1-63",
+                          "danger": "HoiPoi__Button__danger-1-61",
+                          "disabled": "HoiPoi__Button__disabled-1-64",
+                          "filled": "HoiPoi__Button__filled-1-58",
+                          "fullWidth": "HoiPoi__Button__fullWidth-1-65",
+                          "label": "HoiPoi__Button__label-1-53",
+                          "labelLoading": "HoiPoi__Button__labelLoading-1-54",
+                          "loader": "HoiPoi__Button__loader-1-55",
+                          "outlined": "HoiPoi__Button__outlined-1-56",
+                          "primary": "HoiPoi__Button__primary-1-60",
+                          "root": "HoiPoi__Button__root-1-52",
+                          "small": "HoiPoi__Button__small-1-62",
+                          "squared": "HoiPoi__Button__squared-1-57",
+                          "white": "HoiPoi__Button__white-1-59",
                         }
                       }
                       color="primary"
@@ -6063,7 +6095,7 @@ exports[`Multiplier complete match 1`] = `
                       type="squared"
                     >
                       <button
-                        className="HoiPoi__Button__root-1-51 HoiPoi__Button__squared-1-56 HoiPoi__Button__primary-1-59 HoiPoi__Multiplier__button-1-6 addButton"
+                        className="HoiPoi__Button__root-1-52 HoiPoi__Button__squared-1-57 HoiPoi__Button__primary-1-60 HoiPoi__Multiplier__button-1-7 addButton"
                         onClick={[Function]}
                         type="button"
                       >
@@ -6071,7 +6103,7 @@ exports[`Multiplier complete match 1`] = `
                           className=""
                         >
                           <span
-                            className="HoiPoi__Button__label-1-52"
+                            className="HoiPoi__Button__label-1-53"
                           >
                             Add
                           </span>
