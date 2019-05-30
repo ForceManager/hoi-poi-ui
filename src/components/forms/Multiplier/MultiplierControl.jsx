@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-
+import { getOverrides } from '../../../utils/overrides';
 import Form from '../../forms/Form';
 import FieldControl from '../Form/FieldControl';
 
@@ -20,6 +20,9 @@ function MultiplierControl({
     onRemove,
     ...props
 }) {
+    // Overrides
+    const override = getOverrides(overridesProp, MultiplierControl.overrides);
+
     const onChangeMultiplier = useCallback(
         (value) => {
             onChange && onChange(value, index);
@@ -43,6 +46,9 @@ function MultiplierControl({
                 onBlur={onBlur}
                 onRemoveSection={onClickRemove}
                 className={classNameProp}
+                isFullWidth={isFullWidth}
+                {...override.Form}
+                override={override.Form}
             />
         );
     } else if (type === 'field') {
@@ -59,11 +65,14 @@ function MultiplierControl({
                 onFocus={onFocus}
                 onBlur={onBlur}
                 className={classNameProp}
+                {...override.fieldControl}
             />
         );
     }
     return;
 }
+
+MultiplierControl.overrides = ['Form', 'fieldControl'];
 
 MultiplierControl.defaultProps = {
     labelMode: 'horizontal',

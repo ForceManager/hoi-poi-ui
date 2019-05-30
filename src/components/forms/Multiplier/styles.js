@@ -23,7 +23,14 @@ export default (theme) => ({
         },
         paddingBottom: '20px',
     },
+    isFullWidth: {
+        '& $buttonContainer': {
+            width: '100%',
+        },
+    },
     buttonContainer: {
+        position: 'relative',
+        width: 465,
         display: 'flex',
         justifyContent: 'flex-end',
     },

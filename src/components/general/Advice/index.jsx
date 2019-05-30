@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef, useLayoutEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
+import AnimateHeight from 'react-animate-height';
 
 import Icon from '../../general/Icon';
 import { getOverrides } from '../../../utils/overrides';
@@ -17,6 +18,17 @@ function Advice({
     type,
     ...props
 }) {
+    const [isEllipsisActive, setEllipsisActive] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState(true);
+    const textEl = useRef(null);
+    const textHeight = useRef(null);
+
+    useLayoutEffect(() => {
+        const el = textEl.current;
+        setEllipsisActive(el.offsetWidth < el.scrollWidth);
+        textHeight.current = el.offsetHeight;
+    }, [textEl, children, setEllipsisActive]);
+
     // Overrides
     const override = getOverrides(overridesProp, Advice.overrides);
 
@@ -25,6 +37,7 @@ function Advice({
         classes.root,
         {
             [classes[type]]: type,
+            [classes.isCollapsed]: isCollapsed,
         },
         classNameProp,
     );
@@ -65,6 +78,10 @@ function Advice({
         }
     }, [theme.colors.green, theme.colors.red, theme.colors.secondary, theme.colors.yellow, type]);
 
+    const toggleCollapsing = useCallback(() => {
+        setIsCollapsed(!isCollapsed);
+    }, [isCollapsed]);
+
     return (
         <div {...rootProps} {...override.root}>
             {showIcon && (
@@ -72,14 +89,37 @@ function Advice({
                     <Icon {...iconProps} />
                 </div>
             )}
-            <span className={classes.text} {...override.text}>
-                {children}
-            </span>
+            <AnimateHeight
+                height={isCollapsed ? textHeight.current : 'auto'}
+                {...override['react-animate-height']}
+            >
+                <div className={classes.textContainer} {...override.textContainer}>
+                    <span ref={textEl} className={classes.text} {...override.text}>
+                        {children}
+                    </span>
+                    {isEllipsisActive && (
+                        <span
+                            onClick={toggleCollapsing}
+                            className={classes.dropdownIcon}
+                            {...override.dropdownIcon}
+                        >
+                            <Icon name="chevron" size="small" />
+                        </span>
+                    )}
+                </div>
+            </AnimateHeight>
         </div>
     );
 }
 
-Advice.overrides = ['root', 'icon', 'text'];
+Advice.overrides = [
+    'root',
+    'icon',
+    'textContainer',
+    'text',
+    'dropdownIcon',
+    'react-animate-height',
+];
 
 Advice.defaultProps = {
     className: '',

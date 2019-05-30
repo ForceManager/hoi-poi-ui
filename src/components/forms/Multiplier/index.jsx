@@ -35,7 +35,9 @@ function Multiplier({
     const override = getOverrides(overridesProp, Multiplier.overrides);
 
     // Classes
-    const rootClassName = classnames(classes.root, classNameProp);
+    const rootClassName = classnames(classes.root, classNameProp, {
+        [classes.isFullWidth]: isFullWidth,
+    });
     const buttonClassNames = classnames(classes.button, buttonClassName);
     const multiplierItemClassNames = classnames(classes.item, {
         [classes.separator]: separator,
@@ -44,6 +46,7 @@ function Multiplier({
 
     const rootProps = {
         className: rootClassName,
+        ...override.root,
     };
 
     const onClickAdd = useCallback(() => {
@@ -74,7 +77,6 @@ function Multiplier({
                 key={index}
                 index={index}
                 type={type}
-                overrides={overridesProp}
                 schema={schema}
                 labelMode={schema.labelMode || labelMode}
                 isFullWidth={schema.isFullWidth || isFullWidth}
@@ -85,7 +87,8 @@ function Multiplier({
                 onBlur={onBlur}
                 onRemove={onClickRemove}
                 className={multiplierItemClassNames}
-                {...override.item}
+                {...override.multiplierControl}
+                overrides={override}
             />,
         );
     }
@@ -105,6 +108,7 @@ function Multiplier({
                         className={buttonClassNames}
                         onClick={onClickAdd}
                         {...override.button}
+                        overrides={override.button}
                     >
                         {buttonLabel}
                     </Button>
@@ -114,7 +118,7 @@ function Multiplier({
     );
 }
 
-Multiplier.overrides = ['item', 'button'];
+Multiplier.overrides = ['root', 'multiplierControl', 'button'];
 
 Multiplier.defaultProps = {
     errors: {},

@@ -62,7 +62,7 @@ function Section({
     return (
         <div className={rootClassName}>
             {onRemove && (
-                <span onClick={onRemove} className={classes.remove}>
+                <span onClick={onRemove} className={classes.removeIcon} {...override.removeIcon}>
                     <Icon name="close" />
                 </span>
             )}
@@ -71,13 +71,14 @@ function Section({
     );
 }
 
-Section.overrides = ['root', 'header', 'title', 'react-animate-height'];
+Section.overrides = ['root', 'header', 'title', 'react-animate-height', 'removeIcon'];
 
 Section.defaultProps = {
     isExpandable: true,
     overrides: {},
 };
 Section.propTypes = {
+    onRemove: PropTypes.func,
     className: PropTypes.string,
     overrides: PropTypes.object,
     title: PropTypes.string,

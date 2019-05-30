@@ -97,6 +97,9 @@ export default (theme) => ({
         '& $formControl': {
             marginTop: 10,
         },
+        '& $Label': {
+            width: '100%',
+        },
     },
     horizontal: {
         display: 'flex',
@@ -106,6 +109,9 @@ export default (theme) => ({
     },
     isFullWidth: {
         '& $formControl': {
+            width: '100%',
+        },
+        '&$vertical $Label': {
             width: '100%',
         },
     },

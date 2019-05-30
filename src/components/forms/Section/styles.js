@@ -28,20 +28,15 @@ export default (theme) => ({
             transform: 'rotate(0) translateY(1px)',
         },
     },
-    remove: {
-        position: 'absolute',
-        cursor: 'pointer',
-        top: '5px',
-        right: '5px',
-        height: '10px',
-        width: '10px',
+    removeIcon: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        top: 0,
+        right: 0,
         '& span': {
-            height: '100%',
-            width: '100%',
-        },
-        '& svg': {
-            height: '100%',
-            width: '100%',
+            width: '10px',
+            height: '10px',
+            cursor: 'pointer',
         },
     },
     collapsed: {},

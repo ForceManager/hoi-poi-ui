@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 
 import Link from '../../general/Link';
-import Inputcontrol from './InputControl';
+import InputControl from './InputControl';
 
 import styles from './styles';
 
@@ -102,14 +102,14 @@ function InputGroup({
     return (
         <div {...rootProps} {...override.root}>
             <div className={classes.formControl} {...override.formControl}>
-                <Inputcontrol {...inputProps} />
+                <InputControl {...inputProps} />
                 <Link size="small" onClick={onLinkClick} {...override.Link}>
                     {showInputs ? hideInputsLabel : showInputsLabel}
                 </Link>
             </div>
             <div className={inputsControlClassName} {...override.inputsControl}>
                 {hiddenInputs.map((input) => (
-                    <Inputcontrol
+                    <InputControl
                         key={input.name}
                         name={input.name}
                         label={input.label}

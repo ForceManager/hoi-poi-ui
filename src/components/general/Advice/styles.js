@@ -5,6 +5,9 @@ export default (theme) => ({
         borderRadius: '2px',
         display: 'flex',
         padding: '15px 20px',
+        '& > div.rah-static': {
+            overflow: 'hidden !important',
+        },
     },
     icon: {
         lineHeight: '0',
@@ -13,7 +16,7 @@ export default (theme) => ({
     },
     text: {
         fontWeight: 400,
-        display: 'flex',
+        display: 'block',
         lineHeight: 1.54,
     },
     // Types
@@ -32,5 +35,31 @@ export default (theme) => ({
     warning: {
         backgroundColor: theme.colors.yellowLight,
         color: theme.colors.text.yellow,
+    },
+    textContainer: {
+        display: 'flex',
+        overflow: 'hidden',
+        alignItems: 'flex-start',
+    },
+    dropdownIcon: {
+        margin: '5px 0 5px 20px',
+        lineHeight: '0',
+        transition: 'transform 0.3s ease-out',
+        willChange: 'transform',
+        transform: 'rotate(-180deg) translateY(1px)',
+        cursor: 'pointer',
+    },
+    isCollapsed: {
+        '& $textContainer': {
+            alignItems: 'center',
+        },
+        '& $dropdownIcon': {
+            transform: 'rotate(0) translateY(1px)',
+        },
+        '& $text': {
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+        },
     },
 });

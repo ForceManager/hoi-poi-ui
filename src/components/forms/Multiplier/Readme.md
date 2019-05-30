@@ -134,9 +134,51 @@ let onRemove = (index) => {
 />;
 ```
 
+Full-width
+
+```jsx
+import schema from './example.json';
+
+const errors = {
+    email: 'Invalid email',
+};
+
+let onChange = (value, index) => {
+    let newValues = [...state.values];
+    newValues[index] = value;
+    setState({ values: newValues });
+};
+
+let onRemove = (index) => {
+    let newValues = [...state.values];
+    newValues.splice(index, 1);
+    setState({ values: newValues });
+};
+
+<Multiplier
+    name="full-width-example"
+    isFullWidth={true}
+    buttonLabel="Add"
+    values={state.values}
+    errors={errors}
+    schema={schema}
+    max={5}
+    separator={true}
+    remove={true}
+    onChange={onChange}
+    onRemove={onRemove}
+/>;
+```
+
 ### Component tree
 
 ---
 
--   form - native form element
+-   root
+-   multiplierControl - every item container
+-   container - items and button container
+-   buttonContainer
+-   button
 -   [Section](#/Forms?id=Section)
+-   [Form](#/Forms?id=Form) - component for render a group of inputs
+-   fieldControl - internal component for render individual inputs
