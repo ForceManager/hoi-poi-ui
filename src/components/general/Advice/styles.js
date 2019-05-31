@@ -14,7 +14,7 @@ export default (theme) => ({
         display: 'flex',
         marginRight: 10,
     },
-    text: {
+    Text: {
         fontWeight: 400,
         display: 'block',
         lineHeight: 1.54,
@@ -56,7 +56,7 @@ export default (theme) => ({
         '& $dropdownIcon': {
             transform: 'rotate(0) translateY(1px)',
         },
-        '& $text': {
+        '& $Text': {
             whiteSpace: 'nowrap',
             overflow: 'hidden',
             textOverflow: 'ellipsis',

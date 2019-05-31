@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 
 import Icon from '../../general/Icon';
+import Text from '../../Typography/Text';
 import styles from './styles';
 
 function Chip({
@@ -41,15 +42,15 @@ function Chip({
                     />
                 )}
                 {isShrinked && !url && (
-                    <span className={classes.shrinked} {...override.shrinked}>
+                    <Text className={classes.shrinked} {...override.shrinked}>
                         {matches}
-                    </span>
+                    </Text>
                 )}
                 {!isShrinked && (
                     <Fragment>
-                        <div className={classes.text} {...override.text}>
+                        <Text className={classes.Text} {...override.Text}>
                             {children}
-                        </div>
+                        </Text>
                         {onClose && (
                             <Icon
                                 onClick={onClose}
@@ -67,7 +68,7 @@ function Chip({
     );
 }
 
-Chip.overrides = ['root', 'wrapper', 'img', 'shrinked', 'text', 'Icon', 'onClose'];
+Chip.overrides = ['root', 'wrapper', 'img', 'shrinked', 'Text', 'Icon', 'onClose'];
 
 Chip.defaultProps = {
     className: '',

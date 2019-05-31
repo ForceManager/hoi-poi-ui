@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
 import Icon from '../../general/Icon';
+import Text from '../../typography/Text';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
@@ -73,30 +74,36 @@ function Advice({
                 return {
                     ...properties,
                     name: 'info',
-                    color: theme.colors.secondary,
+                    color: theme.colors.secundary,
                 };
         }
-    }, [theme.colors.green, theme.colors.red, theme.colors.secondary, theme.colors.yellow, type]);
+    }, [theme.colors.green, theme.colors.red, theme.colors.secundary, theme.colors.yellow, type]);
 
     const toggleCollapsing = useCallback(() => {
         setIsCollapsed(!isCollapsed);
     }, [isCollapsed]);
 
     return (
-        <div {...rootProps} {...override.root}>
+        <div {...rootProps}>
             {showIcon && (
                 <div className={classes.icon} {...override.icon}>
                     <Icon {...iconProps} />
                 </div>
             )}
+
             <AnimateHeight
                 height={isCollapsed ? textHeight.current : 'auto'}
                 {...override['react-animate-height']}
             >
                 <div className={classes.textContainer} {...override.textContainer}>
-                    <span ref={textEl} className={classes.text} {...override.text}>
+                    <Text
+                        type="bold"
+                        className={classes.Text}
+                        {...override.Text}
+                        overrides={{ root: { ref: textEl } }}
+                    >
                         {children}
-                    </span>
+                    </Text>
                     {isEllipsisActive && (
                         <span
                             onClick={toggleCollapsing}
@@ -116,7 +123,7 @@ Advice.overrides = [
     'root',
     'icon',
     'textContainer',
-    'text',
+    'Text',
     'dropdownIcon',
     'react-animate-height',
 ];
