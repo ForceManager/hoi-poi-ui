@@ -8380,10 +8380,10 @@ react-simple-code-editor@^0.9.7:
   resolved "https://registry.yarnpkg.com/react-simple-code-editor/-/react-simple-code-editor-0.9.10.tgz#1ab5ea7215687ed918c6d0dae90736cf01890905"
   integrity sha512-80LJwRQS7Wi9Ugh/e6FRHWdcg4oQOpMBDFxyDpORILffrHdV3EIQ1IeX5x7488r05iFgLbVDV4nQ1LRKjgCm0g==
 
-react-styleguidist@^9.0.9:
-  version "9.0.9"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.0.9.tgz#e8078e188a1c2c4a03cf70441a7b17bbd489a985"
-  integrity sha512-Vh/hFugGxATjrO6H9PQux5tR/qyqG1U2gcz7t0lR9fbR9C1XhnOSxMoVJoNrVE3epCGDH6pN590P675QfIX/sw==
+react-styleguidist@^9.1.2:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-9.1.2.tgz#611786accb2bc446145518ef906c23f037847401"
+  integrity sha512-Hk2h87mVF2RrVunP1893zxX8Cfuzfbg+C7IbQ/vau4mZsmPko+o9gGkXpLLuYDsWlvIchI99uFbrCwCOVqlE5w==
   dependencies:
     "@vxna/mini-html-webpack-template" "^0.1.7"
     acorn "^6.1.1"
@@ -8439,6 +8439,7 @@ react-styleguidist@^9.0.9:
     recast "^0.17.4"
     remark "^10.0.1"
     rewrite-imports "1.2.0"
+    strip-html-comments "^1.0.0"
     terser-webpack-plugin "^1.2.3"
     to-ast "^1.0.0"
     type-detect "^4.0.8"
@@ -9651,6 +9652,11 @@ strip-eof@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-eof/-/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
   integrity sha1-u0P/VZim6wXYm1n80SnJgzE2Br8=
+
+strip-html-comments@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/strip-html-comments/-/strip-html-comments-1.0.0.tgz#0ae7dff0300a6075a4c293fb6111b4cb1d0cb7b7"
+  integrity sha1-Cuff8DAKYHWkwpP7YRG0yx0Mt7c=
 
 strip-json-comments@^2.0.1, strip-json-comments@~2.0.1:
   version "2.0.1"
