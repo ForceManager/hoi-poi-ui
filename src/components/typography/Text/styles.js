@@ -1,0 +1,47 @@
+export default (theme) => ({
+    root: {
+        display: 'flex',
+        textAlign: 'flex-start',
+        lineHeight: 0,
+    },
+    truncated: {
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: 'flex',
+        textAlign: 'flex-start',
+        lineHeight: 0,
+    },
+    small: {
+        fontStyle: 'normal',
+        lineHeight: 'normal',
+        ...theme.typography.smallText,
+    },
+    medium: {
+        fontStyle: 'normal',
+        lineHeight: 1.54,
+        ...theme.typography.defaultText,
+    },
+    large: {
+        fontStyle: 'normal',
+        lineHeight: 1.25,
+        ...theme.typography.largeText,
+    },
+    big: {
+        fontStyle: 'normal',
+        lineHeight: 'normal',
+        ...theme.typography.bigText,
+    },
+    bold: {
+        fontWeight: 500,
+        color: theme.colors.textBlack,
+    },
+    normal: {
+        fontWeight: 'normal',
+        color: theme.colors.greySoft,
+    },
+    light: {
+        fontWeight: 'normal',
+        color: theme.colors.disabledGrey,
+    },
+});

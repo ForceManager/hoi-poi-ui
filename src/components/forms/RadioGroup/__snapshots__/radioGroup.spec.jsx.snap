@@ -61,7 +61,7 @@ exports[`RadioGroup default match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -77,6 +77,11 @@ exports[`RadioGroup default match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -395,6 +400,10 @@ exports[`RadioGroup default match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "6": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi__",
@@ -480,7 +489,7 @@ exports[`RadioGroup default match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -496,6 +505,11 @@ exports[`RadioGroup default match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -702,6 +716,10 @@ exports[`RadioGroup default match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
+                        "6": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
                       },
                       "sheetOptions": Object {
                         "classNamePrefix": "HoiPoi__",
@@ -767,7 +785,7 @@ exports[`RadioGroup default match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -783,6 +801,11 @@ exports[`RadioGroup default match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -798,21 +821,306 @@ exports[`RadioGroup default match 1`] = `
                     className="HoiPoi__RadioGroup__Label-1-1"
                     classes={
                       Object {
+                        "Text": "HoiPoi__Label__Text-1-9",
                         "icon": "HoiPoi__Label__icon-1-11",
                         "info": "HoiPoi__Label__info-1-10",
                         "root": "HoiPoi__Label__root-1-8",
-                        "text": "HoiPoi__Label__text-1-9",
                       }
                     }
                   >
                     <span
                       className="HoiPoi__Label__root-1-8 HoiPoi__RadioGroup__Label-1-1"
                     >
-                      <span
-                        className="HoiPoi__Label__text-1-9"
+                      <JssContextSubscriber
+                        className="HoiPoi__Label__Text-1-9"
+                        overrides={Object {}}
+                        type="bold"
                       >
-                        Lorem ipsum
-                      </span>
+                        <WithStyles(Text)
+                          className="HoiPoi__Label__Text-1-9"
+                          innerRef={null}
+                          isTruncated={false}
+                          jssContext={
+                            Object {
+                              "disableStylesGeneration": false,
+                              "jss": Jss {
+                                "generateId": [Function],
+                                "id": 2,
+                                "options": Object {
+                                  "Renderer": [Function],
+                                  "createGenerateId": [Function],
+                                  "plugins": Array [],
+                                },
+                                "plugins": PluginsRegistry {
+                                  "plugins": Object {
+                                    "external": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                        "onUpdate": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                    ],
+                                    "internal": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                    ],
+                                  },
+                                  "registry": Object {
+                                    "onChangeValue": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onCreateRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessSheet": Array [],
+                                    "onProcessStyle": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onUpdate": Array [
+                                      [Function],
+                                    ],
+                                  },
+                                },
+                                "version": "10.0.0-alpha.16",
+                              },
+                              "managers": Object {
+                                "0": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "1": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "4": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "5": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "6": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                              },
+                              "sheetOptions": Object {
+                                "classNamePrefix": "HoiPoi__",
+                                "generateId": [Function],
+                              },
+                            }
+                          }
+                          overrides={Object {}}
+                          size="medium"
+                          theme={
+                            Object {
+                              "colors": Object {
+                                "black": "#262B34",
+                                "blackLight": "#5f656b",
+                                "disabledGrey": "#ced4d9",
+                                "green": "#86AD20",
+                                "greenLight": "#e7f1d5",
+                                "grey": "#697782",
+                                "greyLight": "#f0f3f5",
+                                "greySoft": "#788590",
+                                "lines": "#dce3eb",
+                                "link": "#216db3",
+                                "linkDark": "#174a79",
+                                "overlay": "rgba(33,33,33,0.55)",
+                                "placeholders": "#e1e4e7",
+                                "placeholdersHover": "#d0d4d8",
+                                "primary": "#FF8C00",
+                                "primaryDark": "#C87600",
+                                "primaryLight": "#fef4e6",
+                                "primarySoft": "#ff9d26",
+                                "red": "#f04540",
+                                "redDark": "#C43833",
+                                "redLight": "#FAE7E7",
+                                "redSoft": "#FF544F",
+                                "secondary": "#00A8Be",
+                                "secondaryGrey": "#e4eeff",
+                                "secondaryLight": "#D6EEF2",
+                                "secondarySoft": "#AADFE7",
+                                "shadow": "rgba(0, 0, 0, 0.25)",
+                                "tableHeader": "#f6f7f9",
+                                "tableHover": "#FAFBFC",
+                                "text": Object {
+                                  "black": "#3c4248",
+                                  "danger": "white",
+                                  "default": "#697782",
+                                  "green": "#86AD20",
+                                  "greySoft": "#788590",
+                                  "primary": "white",
+                                  "red": "#f04540",
+                                  "secondary": "#00A8Be",
+                                  "white": "#FFFFFF",
+                                  "yellow": "#E9B200",
+                                },
+                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                                "white": "#FFFFFF",
+                                "yellow": "#E9B200",
+                                "yellowLight": "#FFF9DD",
+                              },
+                              "effects": Object {
+                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                                "buttonActive": Object {
+                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                                },
+                              },
+                              "typography": Object {
+                                "bigText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 20,
+                                  "letterSpacing": 0.5,
+                                },
+                                "button": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "lineHeight": 1.5,
+                                },
+                                "defaultText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 13,
+                                  "letterSpacing": 0.5,
+                                },
+                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                "fontSizeBase": 13,
+                                "fontSizeSmall": 11,
+                                "largeText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 16,
+                                  "letterSpacing": 0.5,
+                                },
+                                "letterSpacing": 0.5,
+                                "lineHeightBase": 1.5,
+                                "smallText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "letterSpacing": 0.5,
+                                },
+                              },
+                            }
+                          }
+                          type="bold"
+                        >
+                          <Text
+                            className="HoiPoi__Label__Text-1-9"
+                            classes={
+                              Object {
+                                "big": "HoiPoi__Text__big-1-17",
+                                "bold": "HoiPoi__Text__bold-1-18",
+                                "large": "HoiPoi__Text__large-1-16",
+                                "light": "HoiPoi__Text__light-1-20",
+                                "medium": "HoiPoi__Text__medium-1-15",
+                                "normal": "HoiPoi__Text__normal-1-19",
+                                "root": "HoiPoi__Text__root-1-12",
+                                "small": "HoiPoi__Text__small-1-14",
+                                "truncated": "HoiPoi__Text__truncated-1-13",
+                              }
+                            }
+                            isTruncated={false}
+                            overrides={Object {}}
+                            size="medium"
+                            type="bold"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-1-12 HoiPoi__Text__bold-1-18 HoiPoi__Text__medium-1-15 HoiPoi__Label__Text-1-9"
+                            >
+                              Lorem ipsum
+                            </span>
+                          </Text>
+                        </WithStyles(Text)>
+                      </JssContextSubscriber>
                     </span>
                   </Label>
                 </WithStyles(Label)>
@@ -986,6 +1294,10 @@ exports[`RadioGroup default match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__",
@@ -1060,7 +1372,7 @@ exports[`RadioGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -1076,6 +1388,11 @@ exports[`RadioGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -1091,14 +1408,14 @@ exports[`RadioGroup default match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-1-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-1-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-1-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-1-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-16",
-                          "root": "HoiPoi__RadioControl__root-1-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-1-18",
+                          "Label": "HoiPoi__RadioControl__Label-1-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-1-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-1-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-1-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-25",
+                          "root": "HoiPoi__RadioControl__root-1-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-1-27",
                         }
                       }
                       isReadOnly={false}
@@ -1114,7 +1431,7 @@ exports[`RadioGroup default match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-1-15"
+                        className="HoiPoi__RadioControl__radioControl-1-24"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -1274,6 +1591,10 @@ exports[`RadioGroup default match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__",
@@ -1341,7 +1662,7 @@ exports[`RadioGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -1357,6 +1678,11 @@ exports[`RadioGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -1372,9 +1698,9 @@ exports[`RadioGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-1-22",
-                                  "input": "HoiPoi__Radio__input-1-21",
-                                  "root": "HoiPoi__Radio__root-1-20",
+                                  "disabled": "HoiPoi__Radio__disabled-1-31",
+                                  "input": "HoiPoi__Radio__input-1-30",
+                                  "root": "HoiPoi__Radio__root-1-29",
                                 }
                               }
                               isDisabled={false}
@@ -1382,7 +1708,7 @@ exports[`RadioGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-1-20"
+                                className="HoiPoi__Radio__root-1-29"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -1445,7 +1771,7 @@ exports[`RadioGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -1461,6 +1787,11 @@ exports[`RadioGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -1507,7 +1838,7 @@ exports[`RadioGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-1-21"
+                                  className="HoiPoi__Radio__input-1-30"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -1517,7 +1848,7 @@ exports[`RadioGroup default match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-1-16"
+                          className="HoiPoi__RadioControl__radioLabel-1-25"
                         >
                           Lorem ipsum
                         </span>
@@ -1691,6 +2022,10 @@ exports[`RadioGroup default match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__",
@@ -1765,7 +2100,7 @@ exports[`RadioGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -1781,6 +2116,11 @@ exports[`RadioGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -1796,14 +2136,14 @@ exports[`RadioGroup default match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-1-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-1-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-1-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-1-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-16",
-                          "root": "HoiPoi__RadioControl__root-1-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-1-18",
+                          "Label": "HoiPoi__RadioControl__Label-1-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-1-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-1-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-1-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-25",
+                          "root": "HoiPoi__RadioControl__root-1-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-1-27",
                         }
                       }
                       isReadOnly={false}
@@ -1819,7 +2159,7 @@ exports[`RadioGroup default match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-1-15"
+                        className="HoiPoi__RadioControl__radioControl-1-24"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -1979,6 +2319,10 @@ exports[`RadioGroup default match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__",
@@ -2046,7 +2390,7 @@ exports[`RadioGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -2062,6 +2406,11 @@ exports[`RadioGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -2077,9 +2426,9 @@ exports[`RadioGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-1-22",
-                                  "input": "HoiPoi__Radio__input-1-21",
-                                  "root": "HoiPoi__Radio__root-1-20",
+                                  "disabled": "HoiPoi__Radio__disabled-1-31",
+                                  "input": "HoiPoi__Radio__input-1-30",
+                                  "root": "HoiPoi__Radio__root-1-29",
                                 }
                               }
                               isDisabled={false}
@@ -2087,7 +2436,7 @@ exports[`RadioGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-1-20"
+                                className="HoiPoi__Radio__root-1-29"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2150,7 +2499,7 @@ exports[`RadioGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -2166,6 +2515,11 @@ exports[`RadioGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -2212,7 +2566,7 @@ exports[`RadioGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-1-21"
+                                  className="HoiPoi__Radio__input-1-30"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -2222,7 +2576,7 @@ exports[`RadioGroup default match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-1-16"
+                          className="HoiPoi__RadioControl__radioLabel-1-25"
                         >
                           Lorem ipsum 2
                         </span>
@@ -2396,6 +2750,10 @@ exports[`RadioGroup default match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__",
@@ -2470,7 +2828,7 @@ exports[`RadioGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -2486,6 +2844,11 @@ exports[`RadioGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -2501,14 +2864,14 @@ exports[`RadioGroup default match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-1-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-1-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-1-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-1-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-16",
-                          "root": "HoiPoi__RadioControl__root-1-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-1-18",
+                          "Label": "HoiPoi__RadioControl__Label-1-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-1-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-1-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-1-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-25",
+                          "root": "HoiPoi__RadioControl__root-1-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-1-27",
                         }
                       }
                       isReadOnly={false}
@@ -2524,7 +2887,7 @@ exports[`RadioGroup default match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-1-15"
+                        className="HoiPoi__RadioControl__radioControl-1-24"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -2684,6 +3047,10 @@ exports[`RadioGroup default match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__",
@@ -2751,7 +3118,7 @@ exports[`RadioGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -2767,6 +3134,11 @@ exports[`RadioGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -2782,9 +3154,9 @@ exports[`RadioGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-1-22",
-                                  "input": "HoiPoi__Radio__input-1-21",
-                                  "root": "HoiPoi__Radio__root-1-20",
+                                  "disabled": "HoiPoi__Radio__disabled-1-31",
+                                  "input": "HoiPoi__Radio__input-1-30",
+                                  "root": "HoiPoi__Radio__root-1-29",
                                 }
                               }
                               isDisabled={false}
@@ -2792,7 +3164,7 @@ exports[`RadioGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-1-20"
+                                className="HoiPoi__Radio__root-1-29"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2855,7 +3227,7 @@ exports[`RadioGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -2871,6 +3243,11 @@ exports[`RadioGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -2917,7 +3294,7 @@ exports[`RadioGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-1-21"
+                                  className="HoiPoi__Radio__input-1-30"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -2927,7 +3304,7 @@ exports[`RadioGroup default match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-1-16"
+                          className="HoiPoi__RadioControl__radioLabel-1-25"
                         >
                           Lorem ipsum 3
                         </span>
@@ -3006,7 +3383,7 @@ exports[`RadioGroup disabled match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -3022,6 +3399,11 @@ exports[`RadioGroup disabled match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -3341,6 +3723,10 @@ exports[`RadioGroup disabled match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "6": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -3426,7 +3812,7 @@ exports[`RadioGroup disabled match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -3442,6 +3828,11 @@ exports[`RadioGroup disabled match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -3648,6 +4039,10 @@ exports[`RadioGroup disabled match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
+                        "6": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
                       },
                       "sheetOptions": Object {
                         "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -3713,7 +4108,7 @@ exports[`RadioGroup disabled match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -3729,6 +4124,11 @@ exports[`RadioGroup disabled match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -3744,21 +4144,306 @@ exports[`RadioGroup disabled match 1`] = `
                     className="HoiPoi__RadioGroup__Label-3-1"
                     classes={
                       Object {
+                        "Text": "HoiPoi__Label__Text-3-9",
                         "icon": "HoiPoi__Label__icon-3-11",
                         "info": "HoiPoi__Label__info-3-10",
                         "root": "HoiPoi__Label__root-3-8",
-                        "text": "HoiPoi__Label__text-3-9",
                       }
                     }
                   >
                     <span
                       className="HoiPoi__Label__root-3-8 HoiPoi__RadioGroup__Label-3-1"
                     >
-                      <span
-                        className="HoiPoi__Label__text-3-9"
+                      <JssContextSubscriber
+                        className="HoiPoi__Label__Text-3-9"
+                        overrides={Object {}}
+                        type="bold"
                       >
-                        Lorem ipsum
-                      </span>
+                        <WithStyles(Text)
+                          className="HoiPoi__Label__Text-3-9"
+                          innerRef={null}
+                          isTruncated={false}
+                          jssContext={
+                            Object {
+                              "disableStylesGeneration": false,
+                              "jss": Jss {
+                                "generateId": [Function],
+                                "id": 2,
+                                "options": Object {
+                                  "Renderer": [Function],
+                                  "createGenerateId": [Function],
+                                  "plugins": Array [],
+                                },
+                                "plugins": PluginsRegistry {
+                                  "plugins": Object {
+                                    "external": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                        "onUpdate": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                    ],
+                                    "internal": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                    ],
+                                  },
+                                  "registry": Object {
+                                    "onChangeValue": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onCreateRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessSheet": Array [],
+                                    "onProcessStyle": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onUpdate": Array [
+                                      [Function],
+                                    ],
+                                  },
+                                },
+                                "version": "10.0.0-alpha.16",
+                              },
+                              "managers": Object {
+                                "0": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "1": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "4": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "5": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "6": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                              },
+                              "sheetOptions": Object {
+                                "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
+                                "generateId": [Function],
+                              },
+                            }
+                          }
+                          overrides={Object {}}
+                          size="medium"
+                          theme={
+                            Object {
+                              "colors": Object {
+                                "black": "#262B34",
+                                "blackLight": "#5f656b",
+                                "disabledGrey": "#ced4d9",
+                                "green": "#86AD20",
+                                "greenLight": "#e7f1d5",
+                                "grey": "#697782",
+                                "greyLight": "#f0f3f5",
+                                "greySoft": "#788590",
+                                "lines": "#dce3eb",
+                                "link": "#216db3",
+                                "linkDark": "#174a79",
+                                "overlay": "rgba(33,33,33,0.55)",
+                                "placeholders": "#e1e4e7",
+                                "placeholdersHover": "#d0d4d8",
+                                "primary": "#FF8C00",
+                                "primaryDark": "#C87600",
+                                "primaryLight": "#fef4e6",
+                                "primarySoft": "#ff9d26",
+                                "red": "#f04540",
+                                "redDark": "#C43833",
+                                "redLight": "#FAE7E7",
+                                "redSoft": "#FF544F",
+                                "secondary": "#00A8Be",
+                                "secondaryGrey": "#e4eeff",
+                                "secondaryLight": "#D6EEF2",
+                                "secondarySoft": "#AADFE7",
+                                "shadow": "rgba(0, 0, 0, 0.25)",
+                                "tableHeader": "#f6f7f9",
+                                "tableHover": "#FAFBFC",
+                                "text": Object {
+                                  "black": "#3c4248",
+                                  "danger": "white",
+                                  "default": "#697782",
+                                  "green": "#86AD20",
+                                  "greySoft": "#788590",
+                                  "primary": "white",
+                                  "red": "#f04540",
+                                  "secondary": "#00A8Be",
+                                  "white": "#FFFFFF",
+                                  "yellow": "#E9B200",
+                                },
+                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                                "white": "#FFFFFF",
+                                "yellow": "#E9B200",
+                                "yellowLight": "#FFF9DD",
+                              },
+                              "effects": Object {
+                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                                "buttonActive": Object {
+                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                                },
+                              },
+                              "typography": Object {
+                                "bigText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 20,
+                                  "letterSpacing": 0.5,
+                                },
+                                "button": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "lineHeight": 1.5,
+                                },
+                                "defaultText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 13,
+                                  "letterSpacing": 0.5,
+                                },
+                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                "fontSizeBase": 13,
+                                "fontSizeSmall": 11,
+                                "largeText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 16,
+                                  "letterSpacing": 0.5,
+                                },
+                                "letterSpacing": 0.5,
+                                "lineHeightBase": 1.5,
+                                "smallText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "letterSpacing": 0.5,
+                                },
+                              },
+                            }
+                          }
+                          type="bold"
+                        >
+                          <Text
+                            className="HoiPoi__Label__Text-3-9"
+                            classes={
+                              Object {
+                                "big": "HoiPoi__Text__big-3-17",
+                                "bold": "HoiPoi__Text__bold-3-18",
+                                "large": "HoiPoi__Text__large-3-16",
+                                "light": "HoiPoi__Text__light-3-20",
+                                "medium": "HoiPoi__Text__medium-3-15",
+                                "normal": "HoiPoi__Text__normal-3-19",
+                                "root": "HoiPoi__Text__root-3-12",
+                                "small": "HoiPoi__Text__small-3-14",
+                                "truncated": "HoiPoi__Text__truncated-3-13",
+                              }
+                            }
+                            isTruncated={false}
+                            overrides={Object {}}
+                            size="medium"
+                            type="bold"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-3-12 HoiPoi__Text__bold-3-18 HoiPoi__Text__medium-3-15 HoiPoi__Label__Text-3-9"
+                            >
+                              Lorem ipsum
+                            </span>
+                          </Text>
+                        </WithStyles(Text)>
+                      </JssContextSubscriber>
                     </span>
                   </Label>
                 </WithStyles(Label)>
@@ -3931,6 +4616,10 @@ exports[`RadioGroup disabled match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -4004,7 +4693,7 @@ exports[`RadioGroup disabled match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -4020,6 +4709,11 @@ exports[`RadioGroup disabled match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -4035,14 +4729,14 @@ exports[`RadioGroup disabled match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-3-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-3-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-3-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-3-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-16",
-                          "root": "HoiPoi__RadioControl__root-3-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-3-18",
+                          "Label": "HoiPoi__RadioControl__Label-3-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-3-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-3-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-3-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-25",
+                          "root": "HoiPoi__RadioControl__root-3-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-3-27",
                         }
                       }
                       isReadOnly={true}
@@ -4057,7 +4751,7 @@ exports[`RadioGroup disabled match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-3-15"
+                        className="HoiPoi__RadioControl__radioControl-3-24"
                       >
                         <JssContextSubscriber
                           checked={false}
@@ -4216,6 +4910,10 @@ exports[`RadioGroup disabled match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -4283,7 +4981,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -4299,6 +4997,11 @@ exports[`RadioGroup disabled match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -4314,9 +5017,9 @@ exports[`RadioGroup disabled match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-3-22",
-                                  "input": "HoiPoi__Radio__input-3-21",
-                                  "root": "HoiPoi__Radio__root-3-20",
+                                  "disabled": "HoiPoi__Radio__disabled-3-31",
+                                  "input": "HoiPoi__Radio__input-3-30",
+                                  "root": "HoiPoi__Radio__root-3-29",
                                 }
                               }
                               isDisabled={true}
@@ -4324,7 +5027,7 @@ exports[`RadioGroup disabled match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-3-20 HoiPoi__Radio__disabled-3-22"
+                                className="HoiPoi__Radio__root-3-29 HoiPoi__Radio__disabled-3-31"
                               >
                                 <WithTheme(Unknown)>
                                   <Component
@@ -4386,7 +5089,7 @@ exports[`RadioGroup disabled match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -4402,6 +5105,11 @@ exports[`RadioGroup disabled match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -4448,7 +5156,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-3-21"
+                                  className="HoiPoi__Radio__input-3-30"
                                   disabled="disabled"
                                   type="radio"
                                 />
@@ -4457,7 +5165,7 @@ exports[`RadioGroup disabled match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-3-16"
+                          className="HoiPoi__RadioControl__radioLabel-3-25"
                         >
                           Lorem ipsum
                         </span>
@@ -4630,6 +5338,10 @@ exports[`RadioGroup disabled match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -4703,7 +5415,7 @@ exports[`RadioGroup disabled match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -4719,6 +5431,11 @@ exports[`RadioGroup disabled match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -4734,14 +5451,14 @@ exports[`RadioGroup disabled match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-3-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-3-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-3-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-3-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-16",
-                          "root": "HoiPoi__RadioControl__root-3-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-3-18",
+                          "Label": "HoiPoi__RadioControl__Label-3-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-3-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-3-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-3-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-25",
+                          "root": "HoiPoi__RadioControl__root-3-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-3-27",
                         }
                       }
                       isReadOnly={true}
@@ -4756,7 +5473,7 @@ exports[`RadioGroup disabled match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-3-15"
+                        className="HoiPoi__RadioControl__radioControl-3-24"
                       >
                         <JssContextSubscriber
                           checked={false}
@@ -4915,6 +5632,10 @@ exports[`RadioGroup disabled match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -4982,7 +5703,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -4998,6 +5719,11 @@ exports[`RadioGroup disabled match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -5013,9 +5739,9 @@ exports[`RadioGroup disabled match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-3-22",
-                                  "input": "HoiPoi__Radio__input-3-21",
-                                  "root": "HoiPoi__Radio__root-3-20",
+                                  "disabled": "HoiPoi__Radio__disabled-3-31",
+                                  "input": "HoiPoi__Radio__input-3-30",
+                                  "root": "HoiPoi__Radio__root-3-29",
                                 }
                               }
                               isDisabled={true}
@@ -5023,7 +5749,7 @@ exports[`RadioGroup disabled match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-3-20 HoiPoi__Radio__disabled-3-22"
+                                className="HoiPoi__Radio__root-3-29 HoiPoi__Radio__disabled-3-31"
                               >
                                 <WithTheme(Unknown)>
                                   <Component
@@ -5085,7 +5811,7 @@ exports[`RadioGroup disabled match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -5101,6 +5827,11 @@ exports[`RadioGroup disabled match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -5147,7 +5878,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-3-21"
+                                  className="HoiPoi__Radio__input-3-30"
                                   disabled="disabled"
                                   type="radio"
                                 />
@@ -5156,7 +5887,7 @@ exports[`RadioGroup disabled match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-3-16"
+                          className="HoiPoi__RadioControl__radioLabel-3-25"
                         >
                           Lorem ipsum 2
                         </span>
@@ -5329,6 +6060,10 @@ exports[`RadioGroup disabled match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -5402,7 +6137,7 @@ exports[`RadioGroup disabled match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -5418,6 +6153,11 @@ exports[`RadioGroup disabled match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -5433,14 +6173,14 @@ exports[`RadioGroup disabled match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-3-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-3-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-3-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-3-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-16",
-                          "root": "HoiPoi__RadioControl__root-3-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-3-18",
+                          "Label": "HoiPoi__RadioControl__Label-3-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-3-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-3-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-3-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-25",
+                          "root": "HoiPoi__RadioControl__root-3-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-3-27",
                         }
                       }
                       isReadOnly={true}
@@ -5455,7 +6195,7 @@ exports[`RadioGroup disabled match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-3-15"
+                        className="HoiPoi__RadioControl__radioControl-3-24"
                       >
                         <JssContextSubscriber
                           checked={false}
@@ -5614,6 +6354,10 @@ exports[`RadioGroup disabled match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
@@ -5681,7 +6425,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -5697,6 +6441,11 @@ exports[`RadioGroup disabled match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -5712,9 +6461,9 @@ exports[`RadioGroup disabled match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-3-22",
-                                  "input": "HoiPoi__Radio__input-3-21",
-                                  "root": "HoiPoi__Radio__root-3-20",
+                                  "disabled": "HoiPoi__Radio__disabled-3-31",
+                                  "input": "HoiPoi__Radio__input-3-30",
+                                  "root": "HoiPoi__Radio__root-3-29",
                                 }
                               }
                               isDisabled={true}
@@ -5722,7 +6471,7 @@ exports[`RadioGroup disabled match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-3-20 HoiPoi__Radio__disabled-3-22"
+                                className="HoiPoi__Radio__root-3-29 HoiPoi__Radio__disabled-3-31"
                               >
                                 <WithTheme(Unknown)>
                                   <Component
@@ -5784,7 +6533,7 @@ exports[`RadioGroup disabled match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -5800,6 +6549,11 @@ exports[`RadioGroup disabled match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -5846,7 +6600,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-3-21"
+                                  className="HoiPoi__Radio__input-3-30"
                                   disabled="disabled"
                                   type="radio"
                                 />
@@ -5855,7 +6609,7 @@ exports[`RadioGroup disabled match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-3-16"
+                          className="HoiPoi__RadioControl__radioLabel-3-25"
                         >
                           Lorem ipsum 3
                         </span>
@@ -5934,7 +6688,7 @@ exports[`RadioGroup with values match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -5950,6 +6704,11 @@ exports[`RadioGroup with values match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -6269,6 +7028,10 @@ exports[`RadioGroup with values match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
+                "6": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
               },
               "sheetOptions": Object {
                 "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -6354,7 +7117,7 @@ exports[`RadioGroup with values match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -6370,6 +7133,11 @@ exports[`RadioGroup with values match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -6576,6 +7344,10 @@ exports[`RadioGroup with values match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
+                        "6": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
                       },
                       "sheetOptions": Object {
                         "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -6641,7 +7413,7 @@ exports[`RadioGroup with values match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -6657,6 +7429,11 @@ exports[`RadioGroup with values match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -6672,21 +7449,306 @@ exports[`RadioGroup with values match 1`] = `
                     className="HoiPoi__RadioGroup__Label-2-1"
                     classes={
                       Object {
+                        "Text": "HoiPoi__Label__Text-2-9",
                         "icon": "HoiPoi__Label__icon-2-11",
                         "info": "HoiPoi__Label__info-2-10",
                         "root": "HoiPoi__Label__root-2-8",
-                        "text": "HoiPoi__Label__text-2-9",
                       }
                     }
                   >
                     <span
                       className="HoiPoi__Label__root-2-8 HoiPoi__RadioGroup__Label-2-1"
                     >
-                      <span
-                        className="HoiPoi__Label__text-2-9"
+                      <JssContextSubscriber
+                        className="HoiPoi__Label__Text-2-9"
+                        overrides={Object {}}
+                        type="bold"
                       >
-                        Lorem ipsum
-                      </span>
+                        <WithStyles(Text)
+                          className="HoiPoi__Label__Text-2-9"
+                          innerRef={null}
+                          isTruncated={false}
+                          jssContext={
+                            Object {
+                              "disableStylesGeneration": false,
+                              "jss": Jss {
+                                "generateId": [Function],
+                                "id": 2,
+                                "options": Object {
+                                  "Renderer": [Function],
+                                  "createGenerateId": [Function],
+                                  "plugins": Array [],
+                                },
+                                "plugins": PluginsRegistry {
+                                  "plugins": Object {
+                                    "external": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                        "onUpdate": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                    ],
+                                    "internal": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                    ],
+                                  },
+                                  "registry": Object {
+                                    "onChangeValue": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onCreateRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessSheet": Array [],
+                                    "onProcessStyle": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onUpdate": Array [
+                                      [Function],
+                                    ],
+                                  },
+                                },
+                                "version": "10.0.0-alpha.16",
+                              },
+                              "managers": Object {
+                                "0": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "1": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "4": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "5": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "6": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                              },
+                              "sheetOptions": Object {
+                                "classNamePrefix": "HoiPoi__HoiPoi__",
+                                "generateId": [Function],
+                              },
+                            }
+                          }
+                          overrides={Object {}}
+                          size="medium"
+                          theme={
+                            Object {
+                              "colors": Object {
+                                "black": "#262B34",
+                                "blackLight": "#5f656b",
+                                "disabledGrey": "#ced4d9",
+                                "green": "#86AD20",
+                                "greenLight": "#e7f1d5",
+                                "grey": "#697782",
+                                "greyLight": "#f0f3f5",
+                                "greySoft": "#788590",
+                                "lines": "#dce3eb",
+                                "link": "#216db3",
+                                "linkDark": "#174a79",
+                                "overlay": "rgba(33,33,33,0.55)",
+                                "placeholders": "#e1e4e7",
+                                "placeholdersHover": "#d0d4d8",
+                                "primary": "#FF8C00",
+                                "primaryDark": "#C87600",
+                                "primaryLight": "#fef4e6",
+                                "primarySoft": "#ff9d26",
+                                "red": "#f04540",
+                                "redDark": "#C43833",
+                                "redLight": "#FAE7E7",
+                                "redSoft": "#FF544F",
+                                "secondary": "#00A8Be",
+                                "secondaryGrey": "#e4eeff",
+                                "secondaryLight": "#D6EEF2",
+                                "secondarySoft": "#AADFE7",
+                                "shadow": "rgba(0, 0, 0, 0.25)",
+                                "tableHeader": "#f6f7f9",
+                                "tableHover": "#FAFBFC",
+                                "text": Object {
+                                  "black": "#3c4248",
+                                  "danger": "white",
+                                  "default": "#697782",
+                                  "green": "#86AD20",
+                                  "greySoft": "#788590",
+                                  "primary": "white",
+                                  "red": "#f04540",
+                                  "secondary": "#00A8Be",
+                                  "white": "#FFFFFF",
+                                  "yellow": "#E9B200",
+                                },
+                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                                "white": "#FFFFFF",
+                                "yellow": "#E9B200",
+                                "yellowLight": "#FFF9DD",
+                              },
+                              "effects": Object {
+                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                                "buttonActive": Object {
+                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                                },
+                              },
+                              "typography": Object {
+                                "bigText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 20,
+                                  "letterSpacing": 0.5,
+                                },
+                                "button": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "lineHeight": 1.5,
+                                },
+                                "defaultText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 13,
+                                  "letterSpacing": 0.5,
+                                },
+                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                "fontSizeBase": 13,
+                                "fontSizeSmall": 11,
+                                "largeText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 16,
+                                  "letterSpacing": 0.5,
+                                },
+                                "letterSpacing": 0.5,
+                                "lineHeightBase": 1.5,
+                                "smallText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "letterSpacing": 0.5,
+                                },
+                              },
+                            }
+                          }
+                          type="bold"
+                        >
+                          <Text
+                            className="HoiPoi__Label__Text-2-9"
+                            classes={
+                              Object {
+                                "big": "HoiPoi__Text__big-2-17",
+                                "bold": "HoiPoi__Text__bold-2-18",
+                                "large": "HoiPoi__Text__large-2-16",
+                                "light": "HoiPoi__Text__light-2-20",
+                                "medium": "HoiPoi__Text__medium-2-15",
+                                "normal": "HoiPoi__Text__normal-2-19",
+                                "root": "HoiPoi__Text__root-2-12",
+                                "small": "HoiPoi__Text__small-2-14",
+                                "truncated": "HoiPoi__Text__truncated-2-13",
+                              }
+                            }
+                            isTruncated={false}
+                            overrides={Object {}}
+                            size="medium"
+                            type="bold"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-2-12 HoiPoi__Text__bold-2-18 HoiPoi__Text__medium-2-15 HoiPoi__Label__Text-2-9"
+                            >
+                              Lorem ipsum
+                            </span>
+                          </Text>
+                        </WithStyles(Text)>
+                      </JssContextSubscriber>
                     </span>
                   </Label>
                 </WithStyles(Label)>
@@ -6860,6 +7922,10 @@ exports[`RadioGroup with values match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -6934,7 +8000,7 @@ exports[`RadioGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -6950,6 +8016,11 @@ exports[`RadioGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -6965,14 +8036,14 @@ exports[`RadioGroup with values match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-2-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-2-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-2-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-2-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-16",
-                          "root": "HoiPoi__RadioControl__root-2-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-2-18",
+                          "Label": "HoiPoi__RadioControl__Label-2-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-2-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-2-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-2-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-25",
+                          "root": "HoiPoi__RadioControl__root-2-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-2-27",
                         }
                       }
                       isReadOnly={false}
@@ -6988,7 +8059,7 @@ exports[`RadioGroup with values match 1`] = `
                       value="lorem2"
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-2-15"
+                        className="HoiPoi__RadioControl__radioControl-2-24"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -7148,6 +8219,10 @@ exports[`RadioGroup with values match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -7215,7 +8290,7 @@ exports[`RadioGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -7231,6 +8306,11 @@ exports[`RadioGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -7246,9 +8326,9 @@ exports[`RadioGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-2-22",
-                                  "input": "HoiPoi__Radio__input-2-21",
-                                  "root": "HoiPoi__Radio__root-2-20",
+                                  "disabled": "HoiPoi__Radio__disabled-2-31",
+                                  "input": "HoiPoi__Radio__input-2-30",
+                                  "root": "HoiPoi__Radio__root-2-29",
                                 }
                               }
                               isDisabled={false}
@@ -7256,7 +8336,7 @@ exports[`RadioGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-2-20"
+                                className="HoiPoi__Radio__root-2-29"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -7319,7 +8399,7 @@ exports[`RadioGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -7335,6 +8415,11 @@ exports[`RadioGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -7381,7 +8466,7 @@ exports[`RadioGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-2-21"
+                                  className="HoiPoi__Radio__input-2-30"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -7391,7 +8476,7 @@ exports[`RadioGroup with values match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-2-16"
+                          className="HoiPoi__RadioControl__radioLabel-2-25"
                         >
                           Lorem ipsum
                         </span>
@@ -7565,6 +8650,10 @@ exports[`RadioGroup with values match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -7639,7 +8728,7 @@ exports[`RadioGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -7655,6 +8744,11 @@ exports[`RadioGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -7670,14 +8764,14 @@ exports[`RadioGroup with values match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-2-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-2-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-2-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-2-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-16",
-                          "root": "HoiPoi__RadioControl__root-2-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-2-18",
+                          "Label": "HoiPoi__RadioControl__Label-2-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-2-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-2-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-2-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-25",
+                          "root": "HoiPoi__RadioControl__root-2-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-2-27",
                         }
                       }
                       isReadOnly={false}
@@ -7693,7 +8787,7 @@ exports[`RadioGroup with values match 1`] = `
                       value="lorem2"
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-2-15"
+                        className="HoiPoi__RadioControl__radioControl-2-24"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -7853,6 +8947,10 @@ exports[`RadioGroup with values match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -7920,7 +9018,7 @@ exports[`RadioGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -7936,6 +9034,11 @@ exports[`RadioGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -7951,9 +9054,9 @@ exports[`RadioGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-2-22",
-                                  "input": "HoiPoi__Radio__input-2-21",
-                                  "root": "HoiPoi__Radio__root-2-20",
+                                  "disabled": "HoiPoi__Radio__disabled-2-31",
+                                  "input": "HoiPoi__Radio__input-2-30",
+                                  "root": "HoiPoi__Radio__root-2-29",
                                 }
                               }
                               isDisabled={false}
@@ -7961,7 +9064,7 @@ exports[`RadioGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-2-20"
+                                className="HoiPoi__Radio__root-2-29"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -8024,7 +9127,7 @@ exports[`RadioGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -8040,6 +9143,11 @@ exports[`RadioGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -8092,7 +9200,7 @@ exports[`RadioGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Radio__input-2-21"
+                                  className="HoiPoi__Radio__input-2-30"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -8102,7 +9210,7 @@ exports[`RadioGroup with values match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-2-16"
+                          className="HoiPoi__RadioControl__radioLabel-2-25"
                         >
                           Lorem ipsum 2
                         </span>
@@ -8276,6 +9384,10 @@ exports[`RadioGroup with values match 1`] = `
                             "length": 1,
                             "sheets": WeakMap {},
                           },
+                          "6": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
                         },
                         "sheetOptions": Object {
                           "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -8350,7 +9462,7 @@ exports[`RadioGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -8366,6 +9478,11 @@ exports[`RadioGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -8381,14 +9498,14 @@ exports[`RadioGroup with values match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-2-13",
-                          "formControl": "HoiPoi__RadioControl__formControl-2-14",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-2-19",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-17",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-2-15",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-16",
-                          "root": "HoiPoi__RadioControl__root-2-12",
-                          "vertical": "HoiPoi__RadioControl__vertical-2-18",
+                          "Label": "HoiPoi__RadioControl__Label-2-22",
+                          "formControl": "HoiPoi__RadioControl__formControl-2-23",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-2-28",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-26",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-2-24",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-25",
+                          "root": "HoiPoi__RadioControl__root-2-21",
+                          "vertical": "HoiPoi__RadioControl__vertical-2-27",
                         }
                       }
                       isReadOnly={false}
@@ -8404,7 +9521,7 @@ exports[`RadioGroup with values match 1`] = `
                       value="lorem2"
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-2-15"
+                        className="HoiPoi__RadioControl__radioControl-2-24"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -8564,6 +9681,10 @@ exports[`RadioGroup with values match 1`] = `
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
+                                  "6": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
                                 },
                                 "sheetOptions": Object {
                                   "classNamePrefix": "HoiPoi__HoiPoi__",
@@ -8631,7 +9752,7 @@ exports[`RadioGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -8647,6 +9768,11 @@ exports[`RadioGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -8662,9 +9788,9 @@ exports[`RadioGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-2-22",
-                                  "input": "HoiPoi__Radio__input-2-21",
-                                  "root": "HoiPoi__Radio__root-2-20",
+                                  "disabled": "HoiPoi__Radio__disabled-2-31",
+                                  "input": "HoiPoi__Radio__input-2-30",
+                                  "root": "HoiPoi__Radio__root-2-29",
                                 }
                               }
                               isDisabled={false}
@@ -8672,7 +9798,7 @@ exports[`RadioGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-2-20"
+                                className="HoiPoi__Radio__root-2-29"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -8735,7 +9861,7 @@ exports[`RadioGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -8751,6 +9877,11 @@ exports[`RadioGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -8797,7 +9928,7 @@ exports[`RadioGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-2-21"
+                                  className="HoiPoi__Radio__input-2-30"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -8807,7 +9938,7 @@ exports[`RadioGroup with values match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-2-16"
+                          className="HoiPoi__RadioControl__radioLabel-2-25"
                         >
                           Lorem ipsum 3
                         </span>

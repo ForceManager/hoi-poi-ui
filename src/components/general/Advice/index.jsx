@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
 import Icon from '../../general/Icon';
+import Text from '../../typography/Text';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
@@ -83,7 +84,7 @@ function Advice({
     }, [isCollapsed]);
 
     return (
-        <div {...rootProps} {...override.root}>
+        <div {...rootProps}>
             {showIcon && (
                 <div className={classes.icon} {...override.icon}>
                     <Icon {...iconProps} />
@@ -94,9 +95,15 @@ function Advice({
                 {...override['react-animate-height']}
             >
                 <div className={classes.textContainer} {...override.textContainer}>
-                    <span ref={textEl} className={classes.text} {...override.text}>
+                    <Text
+                        isTruncated={true}
+                        className={classes.Text}
+                        {...override.Text}
+                        overrides={{ root: { ref: textEl } }}
+                    >
                         {children}
-                    </span>
+                    </Text>
+
                     {isEllipsisActive && (
                         <span
                             onClick={toggleCollapsing}
@@ -116,7 +123,7 @@ Advice.overrides = [
     'root',
     'icon',
     'textContainer',
-    'text',
+    'Text',
     'dropdownIcon',
     'react-animate-height',
 ];

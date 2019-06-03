@@ -1,6 +1,6 @@
 import React from 'react';
 import { components } from 'react-select';
-import Link from '../../general/Link';
+import Link from '../../typography/Link';
 
 export default (className, actionClassName, actions, onClickAction) => {
     return React.memo(({ children, ...props }) => {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import Modal from 'react-modal';
+import Text from '../../typography/Text';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
@@ -47,14 +48,14 @@ function Drawer({
 
     return (
         <Modal className={rootClassName} {...rootProps}>
-            <div className={classes.content} {...override.content}>
+            <Text className={classes.Text} {...override.Text}>
                 {children}
-            </div>
+            </Text>
         </Modal>
     );
 }
 
-Drawer.overrides = ['root', 'content'];
+Drawer.overrides = ['root', 'Text'];
 
 Drawer.defaultProps = {
     width: '500px',

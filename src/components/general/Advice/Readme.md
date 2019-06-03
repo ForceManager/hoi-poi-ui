@@ -60,7 +60,7 @@ const text =
 
 -   root - root element
 -   textContainer - text and dropdown icon container
--   text - inner content and `children` wrapper
 -   [Icon](#/General?id=icon)
 -   [DropdownIcon](#/General?id=icon)
 -   [react-animate-height](https://github.com/Stanko/react-animate-height)
+-   [Text](#/Typography?=text)
