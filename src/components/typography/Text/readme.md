@@ -15,7 +15,7 @@ Titles & Table headers:
 Sizes:
 
 ```jsx
-<Text size='big' type='bold'>big-text-big</Text>
+<Text size='big' type='bold' isTruncated={true}>big-text-big</Text>
 <br />
 <Text size='large' type='bold'>big-text-lg</Text>
 <br />

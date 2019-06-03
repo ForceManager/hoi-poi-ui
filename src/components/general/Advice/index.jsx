@@ -74,10 +74,10 @@ function Advice({
                 return {
                     ...properties,
                     name: 'info',
-                    color: theme.colors.secundary,
+                    color: theme.colors.secondary,
                 };
         }
-    }, [theme.colors.green, theme.colors.red, theme.colors.secundary, theme.colors.yellow, type]);
+    }, [theme.colors.green, theme.colors.red, theme.colors.secondary, theme.colors.yellow, type]);
 
     const toggleCollapsing = useCallback(() => {
         setIsCollapsed(!isCollapsed);
@@ -97,13 +97,14 @@ function Advice({
             >
                 <div className={classes.textContainer} {...override.textContainer}>
                     <Text
-                        type="bold"
+                        isTruncated={true}
                         className={classes.Text}
                         {...override.Text}
                         overrides={{ root: { ref: textEl } }}
                     >
                         {children}
                     </Text>
+
                     {isEllipsisActive && (
                         <span
                             onClick={toggleCollapsing}

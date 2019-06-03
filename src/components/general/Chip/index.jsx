@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 
 import Icon from '../../general/Icon';
-import Text from '../../Typography/Text';
+import Text from '../../typography/Text';
 import styles from './styles';
 
 function Chip({

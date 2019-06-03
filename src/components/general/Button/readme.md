@@ -87,4 +87,4 @@ Full-width
 -   root - root element
 -   label - Button inner content and `children` wrapper.
 -   [Loader](#/Loader)
--   [Text](#/Typography/Text)
+-   [Text](#/typography/Text)

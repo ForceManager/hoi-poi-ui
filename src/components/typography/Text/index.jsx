@@ -8,12 +8,9 @@ import { getOverrides } from '../../../utils/overrides';
 
 function Text({
     children,
+    isTruncated,
     size,
-    line,
-    length,
-    ending,
     type,
-    truncate,
     overrides: overridesProp,
     className: classNameProp,
     classes,
@@ -22,15 +19,25 @@ function Text({
     //Overrides
     const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProp);
 
+    const truncatedClassName = classnames(
+        classes.truncated,
+        classes[type],
+        classes[size],
+        classNameProp,
+    );
+
     const override = getOverrides(overridesProp, Text.overrides);
 
     const rootProps = {
         ...props,
-        className: rootClassName,
         ...override.root,
     };
 
-    return <span {...rootProps}>{children}</span>;
+    return (
+        <span className={isTruncated ? truncatedClassName : rootClassName} {...rootProps}>
+            {children}
+        </span>
+    );
 }
 
 Text.overrides = ['root'];

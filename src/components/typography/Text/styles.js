@@ -1,11 +1,16 @@
 export default (theme) => ({
     root: {
-        display: 'inline-block',
-        textAlign: 'center',
+        display: 'flex',
+        textAlign: 'flex-start',
         lineHeight: 0,
     },
-    truncateHeight: {
-        height: '2em',
+    truncated: {
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: 'flex',
+        textAlign: 'flex-start',
+        lineHeight: 0,
     },
     small: {
         fontStyle: 'normal',

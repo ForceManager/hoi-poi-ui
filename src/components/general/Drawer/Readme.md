@@ -54,4 +54,4 @@ let side = state.side || 'right';
 -   root - root element
 -   [modal](https://github.com/reactjs/react-modal)
 -   content - inner content and `children` wrapper.
--   [Text](#/Typography/Text)
+-   [Text](#/typography/Text)
