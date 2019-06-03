@@ -47,6 +47,7 @@ Text.defaultProps = {
     size: 'medium',
     className: '',
     overrides: {},
+    isTruncated: false,
 };
 
 Text.propTypes = {
@@ -55,6 +56,7 @@ Text.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
     overrides: PropTypes.object,
     children: PropTypes.node,
+    isTruncated: PropTypes.bool,
 };
 
 export default React.memo(withStyles(styles, { name: 'Text' })(Text));

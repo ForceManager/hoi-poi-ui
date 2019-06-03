@@ -8,6 +8,7 @@ export default (theme) => ({
         padding: '0 10px',
     },
     Text: {
+        lineHeight: '20px',
         fontWeight: 400,
         textTransform: 'uppercase',
     },

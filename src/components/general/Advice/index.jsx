@@ -90,7 +90,6 @@ function Advice({
                     <Icon {...iconProps} />
                 </div>
             )}
-
             <AnimateHeight
                 height={isCollapsed ? textHeight.current : 'auto'}
                 {...override['react-animate-height']}

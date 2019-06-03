@@ -232,6 +232,7 @@ exports[`Text is rendered without crashes 1`] = `
         <WithStyles(Text)
           className=""
           innerRef={null}
+          isTruncated={false}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -484,6 +485,7 @@ exports[`Text is rendered without crashes 1`] = `
                 "truncated": "HoiPoi__Text__truncated-1-1",
               }
             }
+            isTruncated={false}
             overrides={Object {}}
             size="medium"
             type="normal"
@@ -735,6 +737,7 @@ exports[`Text type bold 1`] = `
         <WithStyles(Text)
           className=""
           innerRef={null}
+          isTruncated={false}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -987,6 +990,7 @@ exports[`Text type bold 1`] = `
                 "truncated": "HoiPoi__Text__truncated-2-1",
               }
             }
+            isTruncated={false}
             overrides={Object {}}
             size="medium"
             type="bold"
@@ -1238,6 +1242,7 @@ exports[`Text type light 1`] = `
         <WithStyles(Text)
           className=""
           innerRef={null}
+          isTruncated={false}
           jssContext={
             Object {
               "disableStylesGeneration": false,
@@ -1490,6 +1495,7 @@ exports[`Text type light 1`] = `
                 "truncated": "HoiPoi__Text__truncated-3-1",
               }
             }
+            isTruncated={false}
             overrides={Object {}}
             size="medium"
             type="light"
