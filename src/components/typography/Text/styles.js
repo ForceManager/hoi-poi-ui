@@ -8,9 +8,6 @@ export default (theme) => ({
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
-        display: 'flex',
-        textAlign: 'flex-start',
-        lineHeight: 0,
     },
     small: {
         fontStyle: 'normal',

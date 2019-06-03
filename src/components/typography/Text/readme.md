@@ -3,11 +3,11 @@ Default:
 Sizes:
 
 ```jsx
-<Text size='large'>text-lg-light</Text>
+<Text size='large'>Large Lorem Ipsum</Text>
 <br />
-<Text size='medium'>text-md-light</Text>
+<Text size='medium'>Medium Lorem Ipsum</Text>
 <br />
-<Text size='small'>text-xs-light</Text>
+<Text size='small'>Small Lorem Ipsum</Text>
 ```
 
 Titles & Table headers:
@@ -15,13 +15,13 @@ Titles & Table headers:
 Sizes:
 
 ```jsx
-<Text size='big' type='bold' isTruncated={true}>big-text-big</Text>
+<Text size='big' type='bold' isTruncated={true}>Big Lorem Ipsum</Text>
 <br />
-<Text size='large' type='bold'>big-text-lg</Text>
+<Text size='large' type='bold'>Large Lorem Ipsum</Text>
 <br />
-<Text size='medium' type='bold'>big-text-md</Text>
+<Text size='medium' type='bold'>Medium Lorem Ipsum</Text>
 <br />
-<Text size='small' type='bold'>big-text-xs</Text>
+<Text size='small' type='bold'>Small Lorem Ipsum</Text>
 ```
 
 Hints:
@@ -29,16 +29,15 @@ Hints:
 Sizes:
 
 ```jsx
-<Text size='large' type='light'>text-lg-hint</Text>
+<Text size='large' type='light'>Large Lorem Ipsum</Text>
 <br />
-<Text size='medium' type='light'>text-md-hint</Text>
+<Text size='medium' type='light'>Medium Lorem Ipsum</Text>
 <br />
-<Text size='small' type='light'>text-xs-hint</Text>
+<Text size='small' type='light'>Small Lorem Ipsum</Text>
 ```
 
 ### Component tree
 
 ---
 
--   root - root element
--   size - Size of the text (small, medium, big or large)
+-   root - root span element

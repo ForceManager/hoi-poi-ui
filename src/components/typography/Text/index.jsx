@@ -17,14 +17,9 @@ function Text({
     ...props
 }) {
     //Overrides
-    const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProp);
-
-    const truncatedClassName = classnames(
-        classes.truncated,
-        classes[type],
-        classes[size],
-        classNameProp,
-    );
+    const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProp, {
+        [classes.truncated]: isTruncated,
+    });
 
     const override = getOverrides(overridesProp, Text.overrides);
 
@@ -34,7 +29,7 @@ function Text({
     };
 
     return (
-        <span className={isTruncated ? truncatedClassName : rootClassName} {...rootProps}>
+        <span className={rootClassName} {...rootProps}>
             {children}
         </span>
     );

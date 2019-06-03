@@ -28,6 +28,13 @@ function Advice({
         const el = textEl.current;
         setEllipsisActive(el.offsetWidth < el.scrollWidth);
         textHeight.current = el.offsetHeight;
+
+        // Handling resize windows
+        const handleResize = () => setEllipsisActive(el.offsetWidth < el.scrollWidth);
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, [textEl, children, setEllipsisActive]);
 
     // Overrides
@@ -96,7 +103,7 @@ function Advice({
             >
                 <div className={classes.textContainer} {...override.textContainer}>
                     <Text
-                        isTruncated={true}
+                        isTruncated={isCollapsed}
                         className={classes.Text}
                         {...override.Text}
                         overrides={{ root: { ref: textEl } }}

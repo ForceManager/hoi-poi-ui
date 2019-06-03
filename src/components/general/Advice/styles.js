@@ -15,9 +15,7 @@ export default (theme) => ({
         marginRight: 10,
     },
     Text: {
-        fontWeight: 400,
         display: 'block',
-        lineHeight: 1.54,
     },
     // Types
     error: {
