@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 
 import styles from './styles';
+import Text from '../../typography/Text';
 
 function Badge({
     children,
@@ -33,14 +34,14 @@ function Badge({
 
     return (
         <div {...rootProps} {...override.root}>
-            <span className={classes.text} {...override.text}>
+            <Text size="small" className={classes.Text} {...override.Text}>
                 {children}
-            </span>
+            </Text>
         </div>
     );
 }
 
-Badge.overrides = ['root', 'text'];
+Badge.overrides = ['root', 'Text'];
 
 Badge.defaultProps = {
     className: '',

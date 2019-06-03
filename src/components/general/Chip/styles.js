@@ -21,7 +21,7 @@ export default (theme) => ({
         alignItems: 'center',
     },
 
-    text: {
+    Text: {
         color: theme.colors.text.greySoft,
 
         fontSize: '13px',
@@ -38,10 +38,9 @@ export default (theme) => ({
         fontSize: '11px',
         lineHeight: '20px',
         letterSpacing: '0.5px',
-        textAlign: 'center',
 
-        height: '20px',
-        width: '20px',
+        display: 'flex',
+        padding: '0 5px',
     },
 
     close: {

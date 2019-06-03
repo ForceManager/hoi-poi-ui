@@ -57,3 +57,4 @@ Shrinked Chip with/without picture:
 -   shrinked - children wrapper
 -   text - inner content and `children` wrapper
 -   [Icon](#/General?id=icon) : It will be shown if property onClose is set up
+-   [Text](#/typography/Text)
