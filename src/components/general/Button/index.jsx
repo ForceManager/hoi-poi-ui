@@ -77,24 +77,25 @@ function Button({
 
     if (href) {
         return (
-            <a href={href} target={target} {...rootProps}>
+            <a href={href} target={target} {...rootProps} {...override.root}>
                 {content}
             </a>
         );
     } else {
         return (
-            <button {...rootProps} type="button">
+            <button {...rootProps} type="button" {...override.root}>
                 {content}
             </button>
         );
     }
 }
 
-Button.overrides = ['Text', 'Loader'];
+Button.overrides = ['root', 'Text', 'Loader'];
 
 Button.defaultProps = {
     size: 'medium',
     type: 'filled',
+    overrides: {},
 };
 
 Button.propTypes = {

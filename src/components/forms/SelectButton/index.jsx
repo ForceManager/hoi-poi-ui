@@ -68,6 +68,7 @@ function SelectButton({
 
     const rootProps = {
         className: rootClassName,
+        ...override.root,
     };
 
     const selectProps = {
@@ -117,7 +118,7 @@ function SelectButton({
     );
 }
 
-SelectButton.overrides = ['Select', 'button'];
+SelectButton.overrides = ['root', 'Select', 'button'];
 
 SelectButton.defaultProps = {
     onChange: () => {},
