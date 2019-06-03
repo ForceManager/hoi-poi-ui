@@ -14,27 +14,33 @@ export default (theme) => ({
         display: 'flex',
         marginRight: 10,
     },
-    text: {
-        fontWeight: 400,
+    Text: {
         display: 'block',
-        lineHeight: 1.54,
     },
     // Types
     error: {
         backgroundColor: theme.colors.redLight,
-        color: theme.colors.text.red,
+        '& $Text': {
+            color: theme.colors.text.red,
+        },
     },
     info: {
         backgroundColor: theme.colors.secondaryLight,
-        color: theme.colors.text.secondary,
+        '& $Text': {
+            color: theme.colors.text.secondary,
+        },
     },
     success: {
         backgroundColor: theme.colors.greenLight,
-        color: theme.colors.text.green,
+        '& $Text': {
+            color: theme.colors.text.green,
+        },
     },
     warning: {
         backgroundColor: theme.colors.yellowLight,
-        color: theme.colors.text.yellow,
+        '& $Text': {
+            color: theme.colors.text.yellow,
+        },
     },
     textContainer: {
         display: 'flex',
@@ -55,11 +61,6 @@ export default (theme) => ({
         },
         '& $dropdownIcon': {
             transform: 'rotate(0) translateY(1px)',
-        },
-        '& $text': {
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
         },
     },
 });

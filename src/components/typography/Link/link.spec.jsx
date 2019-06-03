@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Link from '../../general/Link';
+import Link from '../../typography/Link';
 
 describe('Link', () => {
     test('is rendered without crashes', () => {

@@ -8,7 +8,6 @@ export { default as Button } from './components/general/Button';
 export { default as Loader } from './components/general/Loader';
 export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
-export { default as Link } from './components/general/Link';
 export { default as Advice } from './components/general/Advice';
 export { default as Chip } from './components/general/Chip';
 
@@ -29,3 +28,7 @@ export { default as ScrollBar } from './components/utils/ScrollBar';
 export { default as Tooltip } from './components/utils/Tooltip';
 export { default as Popover } from './components/utils/Popover';
 export { Toast, toast } from './components/utils/Toast';
+
+export { default as Link } from './components/typography/Link';
+export { default as Title } from './components/typography/Title';
+export { default as Text } from './components/typography/Text';

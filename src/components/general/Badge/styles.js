@@ -7,21 +7,28 @@ export default (theme) => ({
         display: 'inline-block',
         padding: '0 10px',
     },
-    text: {
+    Text: {
+        lineHeight: '20px',
         fontWeight: 400,
         textTransform: 'uppercase',
     },
     // Types
     error: {
         backgroundColor: theme.colors.redLight,
-        color: theme.colors.text.red,
+        '& $Text': {
+            color: theme.colors.text.red,
+        },
     },
     info: {
         backgroundColor: theme.colors.greyLight,
-        color: theme.colors.text.greySoft,
+        '& $Text': {
+            color: theme.colors.text.greySoft,
+        },
     },
     success: {
         backgroundColor: theme.colors.greenLight,
-        color: theme.colors.text.green,
+        '& $Text': {
+            color: theme.colors.text.green,
+        },
     },
 });
