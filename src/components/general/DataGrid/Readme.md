@@ -44,4 +44,5 @@ const rows = [
 
 ---
 
--   root - root element
+-   root - root element container
+-   [react-data-grid](https://github.com/adazzle/react-data-grid)
