@@ -41,12 +41,13 @@ function DataGrid({
                 rowsCount={count}
                 headerRowHeight={headerRowHeight}
                 rowHeight={rowHeight}
+                {...override['react-data-grid']}
             />
         </div>
     );
 }
 
-DataGrid.overrides = ['root'];
+DataGrid.overrides = ['root', 'react-data-grid'];
 
 DataGrid.defaultProps = {
     className: '',
