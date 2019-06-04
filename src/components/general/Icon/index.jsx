@@ -40,6 +40,7 @@ function Icon({
     overrides: overridesProp,
     className: classNameProp,
     classes,
+    onClick,
     ...props
 }) {
     let SelectedIcon = ICONS[name];
@@ -49,10 +50,17 @@ function Icon({
     const override = getOverrides(overridesProp, Icon.overrides);
 
     // Classes
-    const rootClassName = classnames(classes.root, classes[size], classNameProp);
+    const rootClassName = classnames(
+        classes.root,
+        classes[size],
+        {
+            [classes.clickable]: !!onClick,
+        },
+        classNameProp,
+    );
 
     return (
-        <span className={rootClassName} {...override.root}>
+        <span onClick={onClick} className={rootClassName} {...override.root}>
             <SelectedIcon color={color || theme.colors.greySoft} {...override.icon} />
         </span>
     );
@@ -71,6 +79,7 @@ Icon.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
     name: PropTypes.string,
     color: PropTypes.string,
+    onClick: PropTypes.func,
 };
 
 export default React.memo(withStyles(styles, { name: 'Icon' })(withTheme(Icon)));
