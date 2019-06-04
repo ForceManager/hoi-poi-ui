@@ -8,6 +8,7 @@ import RadioGroup from '../RadioGroup';
 import Select from '../Select';
 import Slider from '../Slider';
 import Multiplier from '../Multiplier';
+import Custom from '../Custom';
 
 const FIELD_MAP = {
     text: Input,
@@ -17,6 +18,7 @@ const FIELD_MAP = {
     select: Select,
     slider: Slider,
     multiplier: Multiplier,
+    custom: Custom,
 };
 
 function FieldControl({
