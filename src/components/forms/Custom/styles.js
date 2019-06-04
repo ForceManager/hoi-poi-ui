@@ -42,7 +42,7 @@ export default (theme) => ({
             pointerEvents: 'none',
         },
     },
-    input: {
+    component: {
         ...theme.typography.defaultText,
         color: theme.colors.greySoft,
         width: '100%',

@@ -8,7 +8,6 @@ import Label from '../Label';
 import styles from './styles';
 
 function Custom({
-    children,
     overrides: overridesProp,
     className: classNameProp,
     classes,
@@ -62,10 +61,10 @@ function Custom({
         ...override.Label,
     };
 
-    const inputProps = {
+    const componentProps = {
         id,
         name,
-        className: classes.input,
+        className: classes.component,
         type,
         placeholder,
         value,
@@ -107,7 +106,6 @@ function Custom({
             </span>
         );
     }
-
     const Component = component;
 
     return (
@@ -119,7 +117,7 @@ function Custom({
                         {preComponent}
                     </div>
                 )}
-                <Component {...inputProps} />
+                {component && <Component {...componentProps} />}
                 {renderedPostComponent && (
                     <div className={classes.postComponent} {...override.postComponent}>
                         {renderedPostComponent}

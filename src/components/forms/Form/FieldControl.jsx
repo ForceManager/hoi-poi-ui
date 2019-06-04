@@ -32,6 +32,7 @@ function FieldControl({
     onBlur,
     value,
     error,
+    component,
     ...props
 }) {
     const onChangeField = useCallback(
@@ -72,6 +73,7 @@ function FieldControl({
         className: classNameProp,
         value,
         error,
+        component,
     };
     let attrs = field.attrs || {};
     return <Field {...fieldProps} {...attrs} />;
@@ -91,6 +93,7 @@ FieldControl.propTypes = {
     value: PropTypes.any,
     error: PropTypes.string,
     className: PropTypes.string,
+    component: PropTypes.any,
     field: PropTypes.shape({
         label: PropTypes.string,
         labelMode: PropTypes.string,

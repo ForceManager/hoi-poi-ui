@@ -19,6 +19,7 @@ function Form({
     onRemoveSection,
     values,
     errors,
+    customFields,
     ...props
 }) {
     // Overrides
@@ -92,6 +93,7 @@ function Form({
                             onFocus={onFocusField}
                             onBlur={onBlurField}
                             className={field.className}
+                            component={(customFields && customFields[field.name]) || null}
                         />
                     ))}
                 </Section>
@@ -118,6 +120,7 @@ Form.propTypes = {
     isFullWidth: PropTypes.bool,
     values: PropTypes.object,
     errors: PropTypes.object,
+    customFields: PropTypes.object,
     schema: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string,
