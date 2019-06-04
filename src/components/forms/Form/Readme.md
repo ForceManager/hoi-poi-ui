@@ -53,9 +53,6 @@ const customFields = {
 };
 
 let onChange = (values, field) => setState({ values });
-let onFocus = (values, field) => {
-    console.log('onFocus', values, field);
-};
 
 <Form
     onChange={onChange}
