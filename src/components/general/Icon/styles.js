@@ -20,4 +20,7 @@ export default (theme) => ({
         width: 64,
         height: 64,
     },
+    clickable: {
+        cursor: 'pointer',
+    },
 });
