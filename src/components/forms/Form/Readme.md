@@ -56,7 +56,6 @@ let onChange = (values, field) => setState({ values });
 
 <Form
     onChange={onChange}
-    onFocus={onFocus}
     values={state.values}
     errors={errors}
     schema={schema}
