@@ -13,6 +13,7 @@ module.exports = {
                 './src/components/general/Advice/index.jsx',
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/Button/index.jsx',
+                './src/components/general/DataGrid/index.jsx',
                 './src/components/general/Drawer/index.jsx',
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/Loader/index.jsx',

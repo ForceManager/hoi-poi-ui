@@ -41,6 +41,7 @@ const link = '#216db3';
 const linkDark = '#174a79';
 
 const tableHeader = '#f6f7f9';
+const tableHeaderHover = '#EBECEF';
 const tableHover = '#FAFBFC';
 
 //Text
@@ -83,6 +84,7 @@ export default {
         link,
         linkDark,
         tableHeader,
+        tableHeaderHover,
         tableHover,
         text: {
             default: grey,
