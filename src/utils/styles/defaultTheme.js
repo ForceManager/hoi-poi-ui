@@ -48,7 +48,8 @@ const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
 const fontSizeBase = 13;
 const fontSizeSmall = 11;
-const fontSizeBig = 16;
+const fontSizeLarge = 16;
+const fontSizeBig = 20;
 
 // Others
 const boxShadow = `0 3px 9px 0 ${shadow}`;
@@ -120,6 +121,11 @@ export default {
         smallText: {
             letterSpacing: 0.5,
             fontSize: fontSizeSmall,
+            fontFamily,
+        },
+        largeText: {
+            letterSpacing: 0.5,
+            fontSize: fontSizeLarge,
             fontFamily,
         },
         bigText: {

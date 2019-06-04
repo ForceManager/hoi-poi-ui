@@ -36,8 +36,8 @@ function Radio({
 
     return (
         <div {...rootProps} {...override.root}>
-            {checked === true && <CheckedIcon {...override.svg} />}
-            {checked === false && <UncheckedIcon {...override.svg} />}
+            {checked && <CheckedIcon {...override.svg} />}
+            {!checked && <UncheckedIcon {...override.svg} />}
             <input
                 className={classes.input}
                 onChange={!isDisabled ? onChange : undefined}
