@@ -98,7 +98,7 @@ function Advice({
                 </div>
             )}
             <AnimateHeight
-                height={isCollapsed ? textHeight.current : 'auto'}
+                height={isCollapsed ? textHeight.current || 20 : 'auto'}
                 {...override['react-animate-height']}
             >
                 <div className={classes.textContainer} {...override.textContainer}>
