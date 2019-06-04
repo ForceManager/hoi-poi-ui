@@ -130,4 +130,11 @@ export default (theme) => ({
             height: 8,
         },
     },
+    custom: {
+        '& $formControl': {
+            '&::before': {
+                borderBottom: 'none',
+            },
+        },
+    },
 });
