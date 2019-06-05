@@ -41,4 +41,9 @@ export default (theme) => ({
         fontWeight: 'normal',
         color: theme.colors.disabledGrey,
     },
+    isLoading: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    Loader: { marginRight: 10 },
 });

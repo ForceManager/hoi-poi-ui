@@ -104,7 +104,7 @@ Button.propTypes = {
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['big', 'medium', 'small']),
-    type: PropTypes.oneOf(['filled', 'outlined', 'squared']),
+    type: PropTypes.oneOf(['filled', 'outlined', 'squared', 'squared-outlined']),
     color: PropTypes.oneOf(['primary', 'danger', 'white']),
     isDisabled: PropTypes.bool,
     /** Use the whole container */

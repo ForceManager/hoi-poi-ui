@@ -114,6 +114,59 @@ export default (theme) => ({
     squared: {
         borderRadius: 2,
         padding: '4px 10px',
+        '&$white': {
+            backgroundColor: 'transparent',
+            transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
+            '&$disabled': {
+                '&:hover': {
+                    backgroundColor: 'transparent',
+                },
+            },
+            '& $Text': {
+                color: theme.colors.text.default,
+            },
+            '&:hover': {
+                backgroundColor: theme.colors.greyLight,
+            },
+        },
+        '&$primary': {
+            backgroundColor: theme.colors.primary,
+            '&$disabled': {
+                '&:hover': {
+                    backgroundColor: theme.colors.primary,
+                },
+            },
+            '&:hover': {
+                backgroundColor: theme.colors.primarySoft,
+            },
+            '& $Text': {
+                color: theme.colors.text.white,
+            },
+        },
+        '&$danger': {
+            backgroundColor: theme.colors.red,
+            '&$disabled': {
+                '&:hover': {
+                    backgroundColor: `${theme.colors.red} !important`,
+                },
+            },
+            '&:hover': {
+                backgroundColor: theme.colors.redsoft,
+            },
+            '& $Text': {
+                color: theme.colors.text.white,
+            },
+        },
+        '&$small': {
+            padding: '0 9px',
+        },
+        '&$big': {
+            padding: '9px 9px',
+        },
+    },
+    'squared-outlined': {
+        borderRadius: 2,
+        padding: '4px 10px',
         backgroundColor: 'transparent',
         border: `1px solid ${theme.colors.placeholders}`,
         transition: `border-color .2s ease-in-out`,

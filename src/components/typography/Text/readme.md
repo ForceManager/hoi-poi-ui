@@ -36,8 +36,19 @@ Sizes:
 <Text size='small' type='light'>Small Lorem Ipsum</Text>
 ```
 
+Loading:
+
+```jsx
+<Text size='large' type='light' isLoading>Large Lorem Ipsum</Text>
+<br />
+<Text size='medium' type='light' isLoading>Medium Lorem Ipsum</Text>
+<br />
+<Text size='small' type='light' isLoading>Small Lorem Ipsum</Text>
+```
+
 ### Component tree
 
 ---
 
 -   root - root span element
+-   [Loader](/#/General/Loader)
