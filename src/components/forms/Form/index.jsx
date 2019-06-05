@@ -19,6 +19,7 @@ function Form({
     onRemoveSection,
     values,
     errors,
+    customFields,
     ...props
 }) {
     // Overrides
@@ -80,20 +81,24 @@ function Form({
                     onRemove={onRemoveSection}
                     {...override.Section}
                 >
-                    {section.fields.map((field) => (
-                        <FieldControl
-                            key={field.name}
-                            labelMode={field.labelMode || labelMode}
-                            isFullWidth={field.isFullWidth || isFullWidth}
-                            field={field}
-                            value={values[field.name]}
-                            error={errors[field.name]}
-                            onChange={onChangeField}
-                            onFocus={onFocusField}
-                            onBlur={onBlurField}
-                            className={field.className}
-                        />
-                    ))}
+                    {section.fields.map((field) => {
+                        let component = customFields ? customFields[field.type] : null;
+                        return (
+                            <FieldControl
+                                key={field.name}
+                                labelMode={field.labelMode || labelMode}
+                                isFullWidth={field.isFullWidth || isFullWidth}
+                                field={field}
+                                value={values[field.name]}
+                                error={errors[field.name]}
+                                onChange={onChangeField}
+                                onFocus={onFocusField}
+                                onBlur={onBlurField}
+                                className={field.className}
+                                component={component}
+                            />
+                        );
+                    })}
                 </Section>
             ))}
         </form>
@@ -118,6 +123,7 @@ Form.propTypes = {
     isFullWidth: PropTypes.bool,
     values: PropTypes.object,
     errors: PropTypes.object,
+    customFields: PropTypes.object,
     schema: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string,

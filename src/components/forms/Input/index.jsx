@@ -29,6 +29,7 @@ function Input({
     isReadOnly,
     preComponent,
     postComponent,
+    component,
     ...props
 }) {
     // State
@@ -46,6 +47,7 @@ function Input({
             [classes.isFullWidth]: isFullWidth,
             [classes.focused]: focused,
             [classes.errored]: error,
+            [classes.custom]: component,
         },
         classNameProp,
     );
@@ -107,6 +109,8 @@ function Input({
         );
     }
 
+    const Component = component;
+
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
@@ -116,7 +120,8 @@ function Input({
                         {preComponent}
                     </div>
                 )}
-                <input {...inputProps} />
+                {!component && <input {...inputProps} />}
+                {component && <Component {...inputProps} />}
                 {renderedPostComponent && (
                     <div className={classes.postComponent} {...override.postComponent}>
                         {renderedPostComponent}
@@ -178,6 +183,8 @@ Input.propTypes = {
     preComponent: PropTypes.any,
     /** Component rendered at the input ending */
     postComponent: PropTypes.any,
+    /** Custom input component */
+    component: PropTypes.any,
 };
 
 export default React.memo(withStyles(styles, { name: 'Input' })(Input));
