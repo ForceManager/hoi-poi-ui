@@ -10,6 +10,10 @@ export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
 export { default as Advice } from './components/general/Advice';
 export { default as Chip } from './components/general/Chip';
+export { default as ChipGroup } from './components/general/ChipGroup';
+export { default as Tabs } from './components/general/Tabs';
+export { default as DataGrid } from './components/general/DataGrid';
+export { default as Modal } from './components/general/Modal';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
@@ -23,6 +27,7 @@ export { default as SelectButton } from './components/forms/SelectButton';
 export { default as Slider } from './components/forms/Slider';
 export { default as Radio } from './components/forms/Radio';
 export { default as RadioGroup } from './components/forms/RadioGroup';
+export { default as Multiplier } from './components/forms/Multiplier';
 
 export { default as ScrollBar } from './components/utils/ScrollBar';
 export { default as Tooltip } from './components/utils/Tooltip';
