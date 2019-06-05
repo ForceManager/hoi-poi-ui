@@ -133,10 +133,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.primary,
             '&$disabled': {
                 '&:hover': {
-                    backgroundColor: theme.colors.primarySoft,
-                    '& $Text': {
-                        color: theme.colors.text.white,
-                    },
+                    backgroundColor: theme.colors.primary,
                 },
             },
             '&:hover': {
@@ -147,7 +144,15 @@ export default (theme) => ({
             },
         },
         '&$danger': {
-            backgroundColor: theme.colors.danger,
+            backgroundColor: theme.colors.red,
+            '&$disabled': {
+                '&:hover': {
+                    backgroundColor: `${theme.colors.red} !important`,
+                },
+            },
+            '&:hover': {
+                backgroundColor: theme.colors.redsoft,
+            },
             '& $Text': {
                 color: theme.colors.text.white,
             },
