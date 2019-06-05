@@ -448,12 +448,12 @@ exports[`Form complete match 1`] = `
                 Object {
                   "label": "Custom Field 1",
                   "name": "myField",
-                  "type": "custom",
+                  "type": "customInput",
                 },
                 Object {
                   "label": "Custom Field 2",
                   "name": "myOtherField",
-                  "type": "custom",
+                  "type": "customText",
                 },
               ],
               "title": "Custom Fields",
@@ -900,12 +900,12 @@ exports[`Form complete match 1`] = `
                   Object {
                     "label": "Custom Field 1",
                     "name": "myField",
-                    "type": "custom",
+                    "type": "customInput",
                   },
                   Object {
                     "label": "Custom Field 2",
                     "name": "myOtherField",
-                    "type": "custom",
+                    "type": "customText",
                   },
                 ],
                 "title": "Custom Fields",
@@ -1227,12 +1227,12 @@ exports[`Form complete match 1`] = `
                     Object {
                       "label": "Custom Field 1",
                       "name": "myField",
-                      "type": "custom",
+                      "type": "customInput",
                     },
                     Object {
                       "label": "Custom Field 2",
                       "name": "myOtherField",
-                      "type": "custom",
+                      "type": "customText",
                     },
                   ],
                   "title": "Custom Fields",
@@ -2432,7 +2432,6 @@ exports[`Form complete match 1`] = `
                           >
                             <FieldControl
                               className="field-name"
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -2453,7 +2452,6 @@ exports[`Form complete match 1`] = `
                             >
                               <JssContextSubscriber
                                 className="field-name"
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 isRequired={true}
@@ -2468,7 +2466,6 @@ exports[`Form complete match 1`] = `
                               >
                                 <WithStyles(Input)
                                   className="field-name"
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -2812,7 +2809,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-29",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -3534,7 +3530,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -3562,7 +3557,6 @@ exports[`Form complete match 1`] = `
                                     "type": "email",
                                   }
                                 }
-                                component={null}
                                 error=""
                                 hint="No spam!"
                                 isFullWidth={false}
@@ -3582,7 +3576,6 @@ exports[`Form complete match 1`] = `
                                       "type": "email",
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   hint="No spam!"
                                   innerRef={null}
@@ -3930,7 +3923,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-29",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     hint="No spam!"
                                     isFullWidth={false}
@@ -6191,7 +6183,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -6218,7 +6209,6 @@ exports[`Form complete match 1`] = `
                                     "type": "password",
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 isRequired={true}
@@ -6237,7 +6227,6 @@ exports[`Form complete match 1`] = `
                                       "type": "password",
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -6585,7 +6574,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-29",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -7307,7 +7295,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -7359,7 +7346,6 @@ exports[`Form complete match 1`] = `
                                     ],
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Gender"
@@ -7406,7 +7392,6 @@ exports[`Form complete match 1`] = `
                                       ],
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   hideSelectedOptions={true}
                                   innerRef={null}
@@ -7784,7 +7769,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Select__vertical-1-48",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     hideSelectedOptions={true}
                                     isClearable={true}
@@ -10591,7 +10575,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -10642,7 +10625,6 @@ exports[`Form complete match 1`] = `
                                     ],
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Employment status"
@@ -10688,7 +10670,6 @@ exports[`Form complete match 1`] = `
                                       ],
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -11056,7 +11037,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__RadioGroup__vertical-1-62",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -14306,7 +14286,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -14323,7 +14302,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Interest"
@@ -14335,7 +14313,6 @@ exports[`Form complete match 1`] = `
                                 type="slider"
                               >
                                 <WithStyles(Slider)
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -14677,7 +14654,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Slider__vertical-1-80",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -16718,7 +16694,6 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -16736,7 +16711,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Address"
@@ -16749,7 +16723,6 @@ exports[`Form complete match 1`] = `
                                 type="text"
                               >
                                 <WithStyles(Input)
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -17091,7 +17064,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-29",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -17808,7 +17780,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error="Invalid phone"
                               field={
                                 Object {
@@ -17826,7 +17797,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error="Invalid phone"
                                 isFullWidth={false}
                                 label="Phone"
@@ -17839,7 +17809,6 @@ exports[`Form complete match 1`] = `
                                 type="text"
                               >
                                 <WithStyles(Input)
-                                  component={null}
                                   error="Invalid phone"
                                   innerRef={null}
                                   isFullWidth={false}
@@ -18181,7 +18150,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-29",
                                       }
                                     }
-                                    component={null}
                                     error="Invalid phone"
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -18903,7 +18871,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -18946,7 +18913,6 @@ exports[`Form complete match 1`] = `
                                     ],
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Prefered way"
@@ -18984,7 +18950,6 @@ exports[`Form complete match 1`] = `
                                       ],
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -19344,7 +19309,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__CheckboxGroup__vertical-1-94",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -22900,7 +22864,6 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -22962,7 +22925,6 @@ exports[`Form complete match 1`] = `
                                     "showInputsLabel": "Show translations",
                                   }
                                 }
-                                component={null}
                                 error=""
                                 hideInputsLabel="Hide translations"
                                 inputs={
@@ -23019,7 +22981,6 @@ exports[`Form complete match 1`] = `
                                       "showInputsLabel": "Show translations",
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   hideInputsLabel="Hide translations"
                                   innerRef={null}
@@ -23398,7 +23359,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__InputGroup__vertical-1-112",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     hideInputsLabel="Hide translations"
                                     inputs={
@@ -29391,7 +29351,6 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -29409,7 +29368,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Address"
@@ -29422,7 +29380,6 @@ exports[`Form complete match 1`] = `
                                 type="text"
                               >
                                 <WithStyles(Input)
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -29764,7 +29721,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-29",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -30481,7 +30437,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -30541,7 +30496,6 @@ exports[`Form complete match 1`] = `
                             >
                               <JssContextSubscriber
                                 buttonLabel="+ Add"
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Multiplier"
@@ -30597,7 +30551,6 @@ exports[`Form complete match 1`] = `
                               >
                                 <WithStyles(Multiplier)
                                   buttonLabel="+ Add"
-                                  component={null}
                                   error=""
                                   errors={Object {}}
                                   fields={Array []}
@@ -30977,7 +30930,6 @@ exports[`Form complete match 1`] = `
                                         "singleItem": "HoiPoi__Multiplier__singleItem-1-123",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     errors={Object {}}
                                     fields={Array []}
@@ -32398,7 +32350,6 @@ exports[`Form complete match 1`] = `
                                                             </JssContextSubscriber>
                                                           </span>
                                                           <FieldControl
-                                                            component={null}
                                                             error=""
                                                             field={
                                                               Object {
@@ -32449,7 +32400,6 @@ exports[`Form complete match 1`] = `
                                                                   ],
                                                                 }
                                                               }
-                                                              component={null}
                                                               error=""
                                                               isFullWidth={false}
                                                               label="Activity"
@@ -32495,7 +32445,6 @@ exports[`Form complete match 1`] = `
                                                                     ],
                                                                   }
                                                                 }
-                                                                component={null}
                                                                 error=""
                                                                 hideSelectedOptions={true}
                                                                 innerRef={null}
@@ -32872,7 +32821,6 @@ exports[`Form complete match 1`] = `
                                                                       "vertical": "HoiPoi__Select__vertical-1-48",
                                                                     }
                                                                   }
-                                                                  component={null}
                                                                   error=""
                                                                   hideSelectedOptions={true}
                                                                   isClearable={true}
@@ -35677,7 +35625,6 @@ exports[`Form complete match 1`] = `
                                                             </JssContextSubscriber>
                                                           </FieldControl>
                                                           <FieldControl
-                                                            component={null}
                                                             error=""
                                                             field={
                                                               Object {
@@ -35695,7 +35642,6 @@ exports[`Form complete match 1`] = `
                                                             onFocus={[Function]}
                                                           >
                                                             <JssContextSubscriber
-                                                              component={null}
                                                               error=""
                                                               isFullWidth={false}
                                                               isRequired={true}
@@ -35708,7 +35654,6 @@ exports[`Form complete match 1`] = `
                                                               type="text"
                                                             >
                                                               <WithStyles(Input)
-                                                                component={null}
                                                                 error=""
                                                                 innerRef={null}
                                                                 isFullWidth={false}
@@ -36050,7 +35995,6 @@ exports[`Form complete match 1`] = `
                                                                       "vertical": "HoiPoi__Input__vertical-1-29",
                                                                     }
                                                                   }
-                                                                  component={null}
                                                                   error=""
                                                                   isFullWidth={false}
                                                                   isReadOnly={false}
@@ -36770,7 +36714,6 @@ exports[`Form complete match 1`] = `
                                                             </JssContextSubscriber>
                                                           </FieldControl>
                                                           <FieldControl
-                                                            component={null}
                                                             error=""
                                                             field={
                                                               Object {
@@ -36788,7 +36731,6 @@ exports[`Form complete match 1`] = `
                                                             onFocus={[Function]}
                                                           >
                                                             <JssContextSubscriber
-                                                              component={null}
                                                               error=""
                                                               isFullWidth={false}
                                                               isRequired={true}
@@ -36801,7 +36743,6 @@ exports[`Form complete match 1`] = `
                                                               type="text"
                                                             >
                                                               <WithStyles(Input)
-                                                                component={null}
                                                                 error=""
                                                                 innerRef={null}
                                                                 isFullWidth={false}
@@ -37143,7 +37084,6 @@ exports[`Form complete match 1`] = `
                                                                       "vertical": "HoiPoi__Input__vertical-1-29",
                                                                     }
                                                                   }
-                                                                  component={null}
                                                                   error=""
                                                                   isFullWidth={false}
                                                                   isReadOnly={false}
@@ -39778,13 +39718,12 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
                                   "label": "Custom Field 1",
                                   "name": "myField",
-                                  "type": "custom",
+                                  "type": "customInput",
                                 }
                               }
                               isFullWidth={false}
@@ -39793,1083 +39732,14 @@ exports[`Form complete match 1`] = `
                               onBlur={[Function]}
                               onChange={[Function]}
                               onFocus={[Function]}
-                            >
-                              <JssContextSubscriber
-                                component={null}
-                                error=""
-                                isFullWidth={false}
-                                label="Custom Field 1"
-                                labelMode="horizontal"
-                                name="myField"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                type="custom"
-                              >
-                                <WithStyles(Input)
-                                  component={null}
-                                  error=""
-                                  innerRef={null}
-                                  isFullWidth={false}
-                                  isReadOnly={false}
-                                  jssContext={
-                                    Object {
-                                      "disableStylesGeneration": false,
-                                      "jss": Jss {
-                                        "generateId": [Function],
-                                        "id": 2,
-                                        "options": Object {
-                                          "Renderer": [Function],
-                                          "createGenerateId": [Function],
-                                          "plugins": Array [],
-                                        },
-                                        "plugins": PluginsRegistry {
-                                          "plugins": Object {
-                                            "external": Array [
-                                              Object {
-                                                "onCreateRule": [Function],
-                                                "onProcessStyle": [Function],
-                                                "onUpdate": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                                "onProcessRule": [Function],
-                                              },
-                                              Object {
-                                                "onProcessRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                                "onProcessRule": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessRule": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                            ],
-                                            "internal": Array [
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onCreateRule": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                            ],
-                                          },
-                                          "registry": Object {
-                                            "onChangeValue": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onCreateRule": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onProcessRule": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onProcessSheet": Array [],
-                                            "onProcessStyle": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onUpdate": Array [
-                                              [Function],
-                                            ],
-                                          },
-                                        },
-                                        "version": "10.0.0-alpha.16",
-                                      },
-                                      "managers": Object {
-                                        "0": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "1": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "10": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "11": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "12": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "14": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "15": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "17": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "18": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "19": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "2": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "20": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "3": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "4": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "5": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "6": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "7": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "8": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "9": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                      },
-                                      "sheetOptions": Object {
-                                        "classNamePrefix": "HoiPoi__",
-                                        "generateId": [Function],
-                                      },
-                                    }
-                                  }
-                                  label="Custom Field 1"
-                                  labelMode="horizontal"
-                                  name="myField"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  override={Object {}}
-                                  theme={
-                                    Object {
-                                      "colors": Object {
-                                        "black": "#262B34",
-                                        "blackLight": "#5f656b",
-                                        "disabledGrey": "#ced4d9",
-                                        "green": "#86AD20",
-                                        "greenLight": "#e7f1d5",
-                                        "grey": "#697782",
-                                        "greyLight": "#f0f3f5",
-                                        "greySoft": "#788590",
-                                        "lines": "#dce3eb",
-                                        "link": "#216db3",
-                                        "linkDark": "#174a79",
-                                        "overlay": "rgba(33,33,33,0.55)",
-                                        "placeholders": "#e1e4e7",
-                                        "placeholdersHover": "#d0d4d8",
-                                        "primary": "#FF8C00",
-                                        "primaryDark": "#C87600",
-                                        "primaryLight": "#fef4e6",
-                                        "primarySoft": "#ff9d26",
-                                        "red": "#f04540",
-                                        "redDark": "#C43833",
-                                        "redLight": "#FAE7E7",
-                                        "redSoft": "#FF544F",
-                                        "secondary": "#00A8Be",
-                                        "secondaryGrey": "#e4eeff",
-                                        "secondaryLight": "#D6EEF2",
-                                        "secondarySoft": "#AADFE7",
-                                        "shadow": "rgba(0, 0, 0, 0.25)",
-                                        "tableHeader": "#f6f7f9",
-                                        "tableHeaderHover": "#EBECEF",
-                                        "tableHover": "#FAFBFC",
-                                        "text": Object {
-                                          "black": "#3c4248",
-                                          "danger": "white",
-                                          "default": "#697782",
-                                          "green": "#86AD20",
-                                          "greySoft": "#788590",
-                                          "primary": "white",
-                                          "red": "#f04540",
-                                          "secondary": "#00A8Be",
-                                          "white": "#FFFFFF",
-                                          "yellow": "#E9B200",
-                                        },
-                                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                                        "white": "#FFFFFF",
-                                        "yellow": "#E9B200",
-                                        "yellowLight": "#FFF9DD",
-                                      },
-                                      "effects": Object {
-                                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                                        "buttonActive": Object {
-                                          "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
-                                        },
-                                      },
-                                      "typography": Object {
-                                        "bigText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 20,
-                                          "letterSpacing": 0.5,
-                                        },
-                                        "button": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 11,
-                                          "lineHeight": 1.5,
-                                        },
-                                        "defaultText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 13,
-                                          "letterSpacing": 0.5,
-                                        },
-                                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                        "fontSizeBase": 13,
-                                        "fontSizeSmall": 11,
-                                        "largeText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 16,
-                                          "letterSpacing": 0.5,
-                                        },
-                                        "letterSpacing": 0.5,
-                                        "lineHeightBase": 1.5,
-                                        "smallText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 11,
-                                          "letterSpacing": 0.5,
-                                        },
-                                      },
-                                    }
-                                  }
-                                  type="custom"
-                                  value=""
-                                >
-                                  <Input
-                                    classes={
-                                      Object {
-                                        "Label": "HoiPoi__Input__Label-1-22",
-                                        "custom": "HoiPoi__Input__custom-1-35",
-                                        "error": "HoiPoi__Input__error-1-23",
-                                        "errored": "HoiPoi__Input__errored-1-26",
-                                        "focused": "HoiPoi__Input__focused-1-28",
-                                        "formControl": "HoiPoi__Input__formControl-1-24",
-                                        "horizontal": "HoiPoi__Input__horizontal-1-30",
-                                        "input": "HoiPoi__Input__input-1-25",
-                                        "isFullWidth": "HoiPoi__Input__isFullWidth-1-31",
-                                        "isReadOnly": "HoiPoi__Input__isReadOnly-1-27",
-                                        "postCloseComponent": "HoiPoi__Input__postCloseComponent-1-34",
-                                        "postComponent": "HoiPoi__Input__postComponent-1-33",
-                                        "preComponent": "HoiPoi__Input__preComponent-1-32",
-                                        "root": "HoiPoi__Input__root-1-21",
-                                        "vertical": "HoiPoi__Input__vertical-1-29",
-                                      }
-                                    }
-                                    component={null}
-                                    error=""
-                                    isFullWidth={false}
-                                    isReadOnly={false}
-                                    label="Custom Field 1"
-                                    labelMode="horizontal"
-                                    name="myField"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                    override={Object {}}
-                                    type="custom"
-                                    value=""
-                                  >
-                                    <div
-                                      className="HoiPoi__Input__root-1-21 HoiPoi__Input__horizontal-1-30"
-                                    >
-                                      <JssContextSubscriber
-                                        className="HoiPoi__Input__Label-1-22"
-                                      >
-                                        <WithStyles(Label)
-                                          className="HoiPoi__Input__Label-1-22"
-                                          innerRef={null}
-                                          jssContext={
-                                            Object {
-                                              "disableStylesGeneration": false,
-                                              "jss": Jss {
-                                                "generateId": [Function],
-                                                "id": 2,
-                                                "options": Object {
-                                                  "Renderer": [Function],
-                                                  "createGenerateId": [Function],
-                                                  "plugins": Array [],
-                                                },
-                                                "plugins": PluginsRegistry {
-                                                  "plugins": Object {
-                                                    "external": Array [
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                        "onProcessStyle": [Function],
-                                                        "onUpdate": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                        "onProcessRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                        "onProcessRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessRule": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                    ],
-                                                    "internal": Array [
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onCreateRule": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                    ],
-                                                  },
-                                                  "registry": Object {
-                                                    "onChangeValue": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onCreateRule": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onProcessRule": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onProcessSheet": Array [],
-                                                    "onProcessStyle": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onUpdate": Array [
-                                                      [Function],
-                                                    ],
-                                                  },
-                                                },
-                                                "version": "10.0.0-alpha.16",
-                                              },
-                                              "managers": Object {
-                                                "0": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "1": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "10": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "11": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "12": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "14": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "15": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "17": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "18": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "19": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "2": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "20": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "3": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "4": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "5": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "6": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "7": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "8": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "9": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                              },
-                                              "sheetOptions": Object {
-                                                "classNamePrefix": "HoiPoi__",
-                                                "generateId": [Function],
-                                              },
-                                            }
-                                          }
-                                          theme={
-                                            Object {
-                                              "colors": Object {
-                                                "black": "#262B34",
-                                                "blackLight": "#5f656b",
-                                                "disabledGrey": "#ced4d9",
-                                                "green": "#86AD20",
-                                                "greenLight": "#e7f1d5",
-                                                "grey": "#697782",
-                                                "greyLight": "#f0f3f5",
-                                                "greySoft": "#788590",
-                                                "lines": "#dce3eb",
-                                                "link": "#216db3",
-                                                "linkDark": "#174a79",
-                                                "overlay": "rgba(33,33,33,0.55)",
-                                                "placeholders": "#e1e4e7",
-                                                "placeholdersHover": "#d0d4d8",
-                                                "primary": "#FF8C00",
-                                                "primaryDark": "#C87600",
-                                                "primaryLight": "#fef4e6",
-                                                "primarySoft": "#ff9d26",
-                                                "red": "#f04540",
-                                                "redDark": "#C43833",
-                                                "redLight": "#FAE7E7",
-                                                "redSoft": "#FF544F",
-                                                "secondary": "#00A8Be",
-                                                "secondaryGrey": "#e4eeff",
-                                                "secondaryLight": "#D6EEF2",
-                                                "secondarySoft": "#AADFE7",
-                                                "shadow": "rgba(0, 0, 0, 0.25)",
-                                                "tableHeader": "#f6f7f9",
-                                                "tableHeaderHover": "#EBECEF",
-                                                "tableHover": "#FAFBFC",
-                                                "text": Object {
-                                                  "black": "#3c4248",
-                                                  "danger": "white",
-                                                  "default": "#697782",
-                                                  "green": "#86AD20",
-                                                  "greySoft": "#788590",
-                                                  "primary": "white",
-                                                  "red": "#f04540",
-                                                  "secondary": "#00A8Be",
-                                                  "white": "#FFFFFF",
-                                                  "yellow": "#E9B200",
-                                                },
-                                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                                                "white": "#FFFFFF",
-                                                "yellow": "#E9B200",
-                                                "yellowLight": "#FFF9DD",
-                                              },
-                                              "effects": Object {
-                                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                                                "buttonActive": Object {
-                                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
-                                                },
-                                              },
-                                              "typography": Object {
-                                                "bigText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 20,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                                "button": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 11,
-                                                  "lineHeight": 1.5,
-                                                },
-                                                "defaultText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 13,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                "fontSizeBase": 13,
-                                                "fontSizeSmall": 11,
-                                                "largeText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 16,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                                "letterSpacing": 0.5,
-                                                "lineHeightBase": 1.5,
-                                                "smallText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 11,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                              },
-                                            }
-                                          }
-                                        >
-                                          <Label
-                                            className="HoiPoi__Input__Label-1-22"
-                                            classes={
-                                              Object {
-                                                "Text": "HoiPoi__Label__Text-1-37",
-                                                "icon": "HoiPoi__Label__icon-1-39",
-                                                "info": "HoiPoi__Label__info-1-38",
-                                                "root": "HoiPoi__Label__root-1-36",
-                                              }
-                                            }
-                                          >
-                                            <span
-                                              className="HoiPoi__Label__root-1-36 HoiPoi__Input__Label-1-22"
-                                            >
-                                              <JssContextSubscriber
-                                                className="HoiPoi__Label__Text-1-37"
-                                                overrides={Object {}}
-                                                type="bold"
-                                              >
-                                                <WithStyles(Text)
-                                                  className="HoiPoi__Label__Text-1-37"
-                                                  innerRef={null}
-                                                  isTruncated={false}
-                                                  jssContext={
-                                                    Object {
-                                                      "disableStylesGeneration": false,
-                                                      "jss": Jss {
-                                                        "generateId": [Function],
-                                                        "id": 2,
-                                                        "options": Object {
-                                                          "Renderer": [Function],
-                                                          "createGenerateId": [Function],
-                                                          "plugins": Array [],
-                                                        },
-                                                        "plugins": PluginsRegistry {
-                                                          "plugins": Object {
-                                                            "external": Array [
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                                "onProcessStyle": [Function],
-                                                                "onUpdate": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                                "onProcessRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                                "onProcessRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessRule": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                            ],
-                                                            "internal": Array [
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onCreateRule": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                            ],
-                                                          },
-                                                          "registry": Object {
-                                                            "onChangeValue": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onCreateRule": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onProcessRule": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onProcessSheet": Array [],
-                                                            "onProcessStyle": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onUpdate": Array [
-                                                              [Function],
-                                                            ],
-                                                          },
-                                                        },
-                                                        "version": "10.0.0-alpha.16",
-                                                      },
-                                                      "managers": Object {
-                                                        "0": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "1": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "10": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "11": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "12": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "14": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "15": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "17": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "18": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "19": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "2": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "20": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "3": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "4": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "5": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "6": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "7": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "8": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "9": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                      },
-                                                      "sheetOptions": Object {
-                                                        "classNamePrefix": "HoiPoi__",
-                                                        "generateId": [Function],
-                                                      },
-                                                    }
-                                                  }
-                                                  overrides={Object {}}
-                                                  size="medium"
-                                                  theme={
-                                                    Object {
-                                                      "colors": Object {
-                                                        "black": "#262B34",
-                                                        "blackLight": "#5f656b",
-                                                        "disabledGrey": "#ced4d9",
-                                                        "green": "#86AD20",
-                                                        "greenLight": "#e7f1d5",
-                                                        "grey": "#697782",
-                                                        "greyLight": "#f0f3f5",
-                                                        "greySoft": "#788590",
-                                                        "lines": "#dce3eb",
-                                                        "link": "#216db3",
-                                                        "linkDark": "#174a79",
-                                                        "overlay": "rgba(33,33,33,0.55)",
-                                                        "placeholders": "#e1e4e7",
-                                                        "placeholdersHover": "#d0d4d8",
-                                                        "primary": "#FF8C00",
-                                                        "primaryDark": "#C87600",
-                                                        "primaryLight": "#fef4e6",
-                                                        "primarySoft": "#ff9d26",
-                                                        "red": "#f04540",
-                                                        "redDark": "#C43833",
-                                                        "redLight": "#FAE7E7",
-                                                        "redSoft": "#FF544F",
-                                                        "secondary": "#00A8Be",
-                                                        "secondaryGrey": "#e4eeff",
-                                                        "secondaryLight": "#D6EEF2",
-                                                        "secondarySoft": "#AADFE7",
-                                                        "shadow": "rgba(0, 0, 0, 0.25)",
-                                                        "tableHeader": "#f6f7f9",
-                                                        "tableHeaderHover": "#EBECEF",
-                                                        "tableHover": "#FAFBFC",
-                                                        "text": Object {
-                                                          "black": "#3c4248",
-                                                          "danger": "white",
-                                                          "default": "#697782",
-                                                          "green": "#86AD20",
-                                                          "greySoft": "#788590",
-                                                          "primary": "white",
-                                                          "red": "#f04540",
-                                                          "secondary": "#00A8Be",
-                                                          "white": "#FFFFFF",
-                                                          "yellow": "#E9B200",
-                                                        },
-                                                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                                                        "white": "#FFFFFF",
-                                                        "yellow": "#E9B200",
-                                                        "yellowLight": "#FFF9DD",
-                                                      },
-                                                      "effects": Object {
-                                                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                                                        "buttonActive": Object {
-                                                          "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
-                                                        },
-                                                      },
-                                                      "typography": Object {
-                                                        "bigText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 20,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                        "button": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 11,
-                                                          "lineHeight": 1.5,
-                                                        },
-                                                        "defaultText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 13,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                        "fontSizeBase": 13,
-                                                        "fontSizeSmall": 11,
-                                                        "largeText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 16,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                        "letterSpacing": 0.5,
-                                                        "lineHeightBase": 1.5,
-                                                        "smallText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 11,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                      },
-                                                    }
-                                                  }
-                                                  type="bold"
-                                                >
-                                                  <Text
-                                                    className="HoiPoi__Label__Text-1-37"
-                                                    classes={
-                                                      Object {
-                                                        "big": "HoiPoi__Text__big-1-11",
-                                                        "bold": "HoiPoi__Text__bold-1-12",
-                                                        "large": "HoiPoi__Text__large-1-10",
-                                                        "light": "HoiPoi__Text__light-1-14",
-                                                        "medium": "HoiPoi__Text__medium-1-9",
-                                                        "normal": "HoiPoi__Text__normal-1-13",
-                                                        "root": "HoiPoi__Text__root-1-6",
-                                                        "small": "HoiPoi__Text__small-1-8",
-                                                        "truncated": "HoiPoi__Text__truncated-1-7",
-                                                      }
-                                                    }
-                                                    isTruncated={false}
-                                                    overrides={Object {}}
-                                                    size="medium"
-                                                    type="bold"
-                                                  >
-                                                    <span
-                                                      className="HoiPoi__Text__root-1-6 HoiPoi__Text__bold-1-12 HoiPoi__Text__medium-1-9 HoiPoi__Label__Text-1-37"
-                                                    >
-                                                      Custom Field 1
-                                                    </span>
-                                                  </Text>
-                                                </WithStyles(Text)>
-                                              </JssContextSubscriber>
-                                            </span>
-                                          </Label>
-                                        </WithStyles(Label)>
-                                      </JssContextSubscriber>
-                                      <div
-                                        className="HoiPoi__Input__formControl-1-24"
-                                      >
-                                        <input
-                                          className="HoiPoi__Input__input-1-25"
-                                          name="myField"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          readOnly={false}
-                                          type="custom"
-                                          value=""
-                                        />
-                                      </div>
-                                    </div>
-                                  </Input>
-                                </WithStyles(Input)>
-                              </JssContextSubscriber>
-                            </FieldControl>
+                            />
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
                                   "label": "Custom Field 2",
                                   "name": "myOtherField",
-                                  "type": "custom",
+                                  "type": "customText",
                                 }
                               }
                               isFullWidth={false}
@@ -40878,1075 +39748,7 @@ exports[`Form complete match 1`] = `
                               onBlur={[Function]}
                               onChange={[Function]}
                               onFocus={[Function]}
-                            >
-                              <JssContextSubscriber
-                                component={null}
-                                error=""
-                                isFullWidth={false}
-                                label="Custom Field 2"
-                                labelMode="horizontal"
-                                name="myOtherField"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                type="custom"
-                              >
-                                <WithStyles(Input)
-                                  component={null}
-                                  error=""
-                                  innerRef={null}
-                                  isFullWidth={false}
-                                  isReadOnly={false}
-                                  jssContext={
-                                    Object {
-                                      "disableStylesGeneration": false,
-                                      "jss": Jss {
-                                        "generateId": [Function],
-                                        "id": 2,
-                                        "options": Object {
-                                          "Renderer": [Function],
-                                          "createGenerateId": [Function],
-                                          "plugins": Array [],
-                                        },
-                                        "plugins": PluginsRegistry {
-                                          "plugins": Object {
-                                            "external": Array [
-                                              Object {
-                                                "onCreateRule": [Function],
-                                                "onProcessStyle": [Function],
-                                                "onUpdate": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                                "onProcessRule": [Function],
-                                              },
-                                              Object {
-                                                "onProcessRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                                "onProcessRule": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onProcessRule": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onProcessStyle": [Function],
-                                              },
-                                            ],
-                                            "internal": Array [
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onChangeValue": [Function],
-                                                "onCreateRule": [Function],
-                                                "onProcessStyle": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                              Object {
-                                                "onCreateRule": [Function],
-                                              },
-                                            ],
-                                          },
-                                          "registry": Object {
-                                            "onChangeValue": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onCreateRule": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onProcessRule": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onProcessSheet": Array [],
-                                            "onProcessStyle": Array [
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                              [Function],
-                                            ],
-                                            "onUpdate": Array [
-                                              [Function],
-                                            ],
-                                          },
-                                        },
-                                        "version": "10.0.0-alpha.16",
-                                      },
-                                      "managers": Object {
-                                        "0": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "1": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "10": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "11": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "12": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "14": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "15": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "17": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "18": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "19": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "2": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "20": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "3": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "4": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "5": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "6": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "7": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "8": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                        "9": SheetsManager {
-                                          "length": 1,
-                                          "sheets": WeakMap {},
-                                        },
-                                      },
-                                      "sheetOptions": Object {
-                                        "classNamePrefix": "HoiPoi__",
-                                        "generateId": [Function],
-                                      },
-                                    }
-                                  }
-                                  label="Custom Field 2"
-                                  labelMode="horizontal"
-                                  name="myOtherField"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  override={Object {}}
-                                  theme={
-                                    Object {
-                                      "colors": Object {
-                                        "black": "#262B34",
-                                        "blackLight": "#5f656b",
-                                        "disabledGrey": "#ced4d9",
-                                        "green": "#86AD20",
-                                        "greenLight": "#e7f1d5",
-                                        "grey": "#697782",
-                                        "greyLight": "#f0f3f5",
-                                        "greySoft": "#788590",
-                                        "lines": "#dce3eb",
-                                        "link": "#216db3",
-                                        "linkDark": "#174a79",
-                                        "overlay": "rgba(33,33,33,0.55)",
-                                        "placeholders": "#e1e4e7",
-                                        "placeholdersHover": "#d0d4d8",
-                                        "primary": "#FF8C00",
-                                        "primaryDark": "#C87600",
-                                        "primaryLight": "#fef4e6",
-                                        "primarySoft": "#ff9d26",
-                                        "red": "#f04540",
-                                        "redDark": "#C43833",
-                                        "redLight": "#FAE7E7",
-                                        "redSoft": "#FF544F",
-                                        "secondary": "#00A8Be",
-                                        "secondaryGrey": "#e4eeff",
-                                        "secondaryLight": "#D6EEF2",
-                                        "secondarySoft": "#AADFE7",
-                                        "shadow": "rgba(0, 0, 0, 0.25)",
-                                        "tableHeader": "#f6f7f9",
-                                        "tableHeaderHover": "#EBECEF",
-                                        "tableHover": "#FAFBFC",
-                                        "text": Object {
-                                          "black": "#3c4248",
-                                          "danger": "white",
-                                          "default": "#697782",
-                                          "green": "#86AD20",
-                                          "greySoft": "#788590",
-                                          "primary": "white",
-                                          "red": "#f04540",
-                                          "secondary": "#00A8Be",
-                                          "white": "#FFFFFF",
-                                          "yellow": "#E9B200",
-                                        },
-                                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                                        "white": "#FFFFFF",
-                                        "yellow": "#E9B200",
-                                        "yellowLight": "#FFF9DD",
-                                      },
-                                      "effects": Object {
-                                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                                        "buttonActive": Object {
-                                          "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
-                                        },
-                                      },
-                                      "typography": Object {
-                                        "bigText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 20,
-                                          "letterSpacing": 0.5,
-                                        },
-                                        "button": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 11,
-                                          "lineHeight": 1.5,
-                                        },
-                                        "defaultText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 13,
-                                          "letterSpacing": 0.5,
-                                        },
-                                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                        "fontSizeBase": 13,
-                                        "fontSizeSmall": 11,
-                                        "largeText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 16,
-                                          "letterSpacing": 0.5,
-                                        },
-                                        "letterSpacing": 0.5,
-                                        "lineHeightBase": 1.5,
-                                        "smallText": Object {
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                          "fontSize": 11,
-                                          "letterSpacing": 0.5,
-                                        },
-                                      },
-                                    }
-                                  }
-                                  type="custom"
-                                  value=""
-                                >
-                                  <Input
-                                    classes={
-                                      Object {
-                                        "Label": "HoiPoi__Input__Label-1-22",
-                                        "custom": "HoiPoi__Input__custom-1-35",
-                                        "error": "HoiPoi__Input__error-1-23",
-                                        "errored": "HoiPoi__Input__errored-1-26",
-                                        "focused": "HoiPoi__Input__focused-1-28",
-                                        "formControl": "HoiPoi__Input__formControl-1-24",
-                                        "horizontal": "HoiPoi__Input__horizontal-1-30",
-                                        "input": "HoiPoi__Input__input-1-25",
-                                        "isFullWidth": "HoiPoi__Input__isFullWidth-1-31",
-                                        "isReadOnly": "HoiPoi__Input__isReadOnly-1-27",
-                                        "postCloseComponent": "HoiPoi__Input__postCloseComponent-1-34",
-                                        "postComponent": "HoiPoi__Input__postComponent-1-33",
-                                        "preComponent": "HoiPoi__Input__preComponent-1-32",
-                                        "root": "HoiPoi__Input__root-1-21",
-                                        "vertical": "HoiPoi__Input__vertical-1-29",
-                                      }
-                                    }
-                                    component={null}
-                                    error=""
-                                    isFullWidth={false}
-                                    isReadOnly={false}
-                                    label="Custom Field 2"
-                                    labelMode="horizontal"
-                                    name="myOtherField"
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                    override={Object {}}
-                                    type="custom"
-                                    value=""
-                                  >
-                                    <div
-                                      className="HoiPoi__Input__root-1-21 HoiPoi__Input__horizontal-1-30"
-                                    >
-                                      <JssContextSubscriber
-                                        className="HoiPoi__Input__Label-1-22"
-                                      >
-                                        <WithStyles(Label)
-                                          className="HoiPoi__Input__Label-1-22"
-                                          innerRef={null}
-                                          jssContext={
-                                            Object {
-                                              "disableStylesGeneration": false,
-                                              "jss": Jss {
-                                                "generateId": [Function],
-                                                "id": 2,
-                                                "options": Object {
-                                                  "Renderer": [Function],
-                                                  "createGenerateId": [Function],
-                                                  "plugins": Array [],
-                                                },
-                                                "plugins": PluginsRegistry {
-                                                  "plugins": Object {
-                                                    "external": Array [
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                        "onProcessStyle": [Function],
-                                                        "onUpdate": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                        "onProcessRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                        "onProcessRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onProcessRule": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                    ],
-                                                    "internal": Array [
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onChangeValue": [Function],
-                                                        "onCreateRule": [Function],
-                                                        "onProcessStyle": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                      Object {
-                                                        "onCreateRule": [Function],
-                                                      },
-                                                    ],
-                                                  },
-                                                  "registry": Object {
-                                                    "onChangeValue": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onCreateRule": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onProcessRule": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onProcessSheet": Array [],
-                                                    "onProcessStyle": Array [
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                      [Function],
-                                                    ],
-                                                    "onUpdate": Array [
-                                                      [Function],
-                                                    ],
-                                                  },
-                                                },
-                                                "version": "10.0.0-alpha.16",
-                                              },
-                                              "managers": Object {
-                                                "0": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "1": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "10": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "11": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "12": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "14": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "15": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "17": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "18": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "19": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "2": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "20": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "3": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "4": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "5": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "6": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "7": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "8": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                                "9": SheetsManager {
-                                                  "length": 1,
-                                                  "sheets": WeakMap {},
-                                                },
-                                              },
-                                              "sheetOptions": Object {
-                                                "classNamePrefix": "HoiPoi__",
-                                                "generateId": [Function],
-                                              },
-                                            }
-                                          }
-                                          theme={
-                                            Object {
-                                              "colors": Object {
-                                                "black": "#262B34",
-                                                "blackLight": "#5f656b",
-                                                "disabledGrey": "#ced4d9",
-                                                "green": "#86AD20",
-                                                "greenLight": "#e7f1d5",
-                                                "grey": "#697782",
-                                                "greyLight": "#f0f3f5",
-                                                "greySoft": "#788590",
-                                                "lines": "#dce3eb",
-                                                "link": "#216db3",
-                                                "linkDark": "#174a79",
-                                                "overlay": "rgba(33,33,33,0.55)",
-                                                "placeholders": "#e1e4e7",
-                                                "placeholdersHover": "#d0d4d8",
-                                                "primary": "#FF8C00",
-                                                "primaryDark": "#C87600",
-                                                "primaryLight": "#fef4e6",
-                                                "primarySoft": "#ff9d26",
-                                                "red": "#f04540",
-                                                "redDark": "#C43833",
-                                                "redLight": "#FAE7E7",
-                                                "redSoft": "#FF544F",
-                                                "secondary": "#00A8Be",
-                                                "secondaryGrey": "#e4eeff",
-                                                "secondaryLight": "#D6EEF2",
-                                                "secondarySoft": "#AADFE7",
-                                                "shadow": "rgba(0, 0, 0, 0.25)",
-                                                "tableHeader": "#f6f7f9",
-                                                "tableHeaderHover": "#EBECEF",
-                                                "tableHover": "#FAFBFC",
-                                                "text": Object {
-                                                  "black": "#3c4248",
-                                                  "danger": "white",
-                                                  "default": "#697782",
-                                                  "green": "#86AD20",
-                                                  "greySoft": "#788590",
-                                                  "primary": "white",
-                                                  "red": "#f04540",
-                                                  "secondary": "#00A8Be",
-                                                  "white": "#FFFFFF",
-                                                  "yellow": "#E9B200",
-                                                },
-                                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                                                "white": "#FFFFFF",
-                                                "yellow": "#E9B200",
-                                                "yellowLight": "#FFF9DD",
-                                              },
-                                              "effects": Object {
-                                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                                                "buttonActive": Object {
-                                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
-                                                },
-                                              },
-                                              "typography": Object {
-                                                "bigText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 20,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                                "button": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 11,
-                                                  "lineHeight": 1.5,
-                                                },
-                                                "defaultText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 13,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                "fontSizeBase": 13,
-                                                "fontSizeSmall": 11,
-                                                "largeText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 16,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                                "letterSpacing": 0.5,
-                                                "lineHeightBase": 1.5,
-                                                "smallText": Object {
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                  "fontSize": 11,
-                                                  "letterSpacing": 0.5,
-                                                },
-                                              },
-                                            }
-                                          }
-                                        >
-                                          <Label
-                                            className="HoiPoi__Input__Label-1-22"
-                                            classes={
-                                              Object {
-                                                "Text": "HoiPoi__Label__Text-1-37",
-                                                "icon": "HoiPoi__Label__icon-1-39",
-                                                "info": "HoiPoi__Label__info-1-38",
-                                                "root": "HoiPoi__Label__root-1-36",
-                                              }
-                                            }
-                                          >
-                                            <span
-                                              className="HoiPoi__Label__root-1-36 HoiPoi__Input__Label-1-22"
-                                            >
-                                              <JssContextSubscriber
-                                                className="HoiPoi__Label__Text-1-37"
-                                                overrides={Object {}}
-                                                type="bold"
-                                              >
-                                                <WithStyles(Text)
-                                                  className="HoiPoi__Label__Text-1-37"
-                                                  innerRef={null}
-                                                  isTruncated={false}
-                                                  jssContext={
-                                                    Object {
-                                                      "disableStylesGeneration": false,
-                                                      "jss": Jss {
-                                                        "generateId": [Function],
-                                                        "id": 2,
-                                                        "options": Object {
-                                                          "Renderer": [Function],
-                                                          "createGenerateId": [Function],
-                                                          "plugins": Array [],
-                                                        },
-                                                        "plugins": PluginsRegistry {
-                                                          "plugins": Object {
-                                                            "external": Array [
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                                "onProcessStyle": [Function],
-                                                                "onUpdate": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                                "onProcessRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                                "onProcessRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onProcessRule": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                            ],
-                                                            "internal": Array [
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onChangeValue": [Function],
-                                                                "onCreateRule": [Function],
-                                                                "onProcessStyle": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                              Object {
-                                                                "onCreateRule": [Function],
-                                                              },
-                                                            ],
-                                                          },
-                                                          "registry": Object {
-                                                            "onChangeValue": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onCreateRule": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onProcessRule": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onProcessSheet": Array [],
-                                                            "onProcessStyle": Array [
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                              [Function],
-                                                            ],
-                                                            "onUpdate": Array [
-                                                              [Function],
-                                                            ],
-                                                          },
-                                                        },
-                                                        "version": "10.0.0-alpha.16",
-                                                      },
-                                                      "managers": Object {
-                                                        "0": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "1": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "10": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "11": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "12": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "14": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "15": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "17": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "18": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "19": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "2": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "20": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "3": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "4": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "5": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "6": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "7": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "8": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                        "9": SheetsManager {
-                                                          "length": 1,
-                                                          "sheets": WeakMap {},
-                                                        },
-                                                      },
-                                                      "sheetOptions": Object {
-                                                        "classNamePrefix": "HoiPoi__",
-                                                        "generateId": [Function],
-                                                      },
-                                                    }
-                                                  }
-                                                  overrides={Object {}}
-                                                  size="medium"
-                                                  theme={
-                                                    Object {
-                                                      "colors": Object {
-                                                        "black": "#262B34",
-                                                        "blackLight": "#5f656b",
-                                                        "disabledGrey": "#ced4d9",
-                                                        "green": "#86AD20",
-                                                        "greenLight": "#e7f1d5",
-                                                        "grey": "#697782",
-                                                        "greyLight": "#f0f3f5",
-                                                        "greySoft": "#788590",
-                                                        "lines": "#dce3eb",
-                                                        "link": "#216db3",
-                                                        "linkDark": "#174a79",
-                                                        "overlay": "rgba(33,33,33,0.55)",
-                                                        "placeholders": "#e1e4e7",
-                                                        "placeholdersHover": "#d0d4d8",
-                                                        "primary": "#FF8C00",
-                                                        "primaryDark": "#C87600",
-                                                        "primaryLight": "#fef4e6",
-                                                        "primarySoft": "#ff9d26",
-                                                        "red": "#f04540",
-                                                        "redDark": "#C43833",
-                                                        "redLight": "#FAE7E7",
-                                                        "redSoft": "#FF544F",
-                                                        "secondary": "#00A8Be",
-                                                        "secondaryGrey": "#e4eeff",
-                                                        "secondaryLight": "#D6EEF2",
-                                                        "secondarySoft": "#AADFE7",
-                                                        "shadow": "rgba(0, 0, 0, 0.25)",
-                                                        "tableHeader": "#f6f7f9",
-                                                        "tableHeaderHover": "#EBECEF",
-                                                        "tableHover": "#FAFBFC",
-                                                        "text": Object {
-                                                          "black": "#3c4248",
-                                                          "danger": "white",
-                                                          "default": "#697782",
-                                                          "green": "#86AD20",
-                                                          "greySoft": "#788590",
-                                                          "primary": "white",
-                                                          "red": "#f04540",
-                                                          "secondary": "#00A8Be",
-                                                          "white": "#FFFFFF",
-                                                          "yellow": "#E9B200",
-                                                        },
-                                                        "transparentBlack": "rgba(38, 43, 52, 0.8)",
-                                                        "white": "#FFFFFF",
-                                                        "yellow": "#E9B200",
-                                                        "yellowLight": "#FFF9DD",
-                                                      },
-                                                      "effects": Object {
-                                                        "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-                                                        "buttonActive": Object {
-                                                          "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
-                                                        },
-                                                      },
-                                                      "typography": Object {
-                                                        "bigText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 20,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                        "button": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 11,
-                                                          "lineHeight": 1.5,
-                                                        },
-                                                        "defaultText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 13,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                        "fontSizeBase": 13,
-                                                        "fontSizeSmall": 11,
-                                                        "largeText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 16,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                        "letterSpacing": 0.5,
-                                                        "lineHeightBase": 1.5,
-                                                        "smallText": Object {
-                                                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                                          "fontSize": 11,
-                                                          "letterSpacing": 0.5,
-                                                        },
-                                                      },
-                                                    }
-                                                  }
-                                                  type="bold"
-                                                >
-                                                  <Text
-                                                    className="HoiPoi__Label__Text-1-37"
-                                                    classes={
-                                                      Object {
-                                                        "big": "HoiPoi__Text__big-1-11",
-                                                        "bold": "HoiPoi__Text__bold-1-12",
-                                                        "large": "HoiPoi__Text__large-1-10",
-                                                        "light": "HoiPoi__Text__light-1-14",
-                                                        "medium": "HoiPoi__Text__medium-1-9",
-                                                        "normal": "HoiPoi__Text__normal-1-13",
-                                                        "root": "HoiPoi__Text__root-1-6",
-                                                        "small": "HoiPoi__Text__small-1-8",
-                                                        "truncated": "HoiPoi__Text__truncated-1-7",
-                                                      }
-                                                    }
-                                                    isTruncated={false}
-                                                    overrides={Object {}}
-                                                    size="medium"
-                                                    type="bold"
-                                                  >
-                                                    <span
-                                                      className="HoiPoi__Text__root-1-6 HoiPoi__Text__bold-1-12 HoiPoi__Text__medium-1-9 HoiPoi__Label__Text-1-37"
-                                                    >
-                                                      Custom Field 2
-                                                    </span>
-                                                  </Text>
-                                                </WithStyles(Text)>
-                                              </JssContextSubscriber>
-                                            </span>
-                                          </Label>
-                                        </WithStyles(Label)>
-                                      </JssContextSubscriber>
-                                      <div
-                                        className="HoiPoi__Input__formControl-1-24"
-                                      >
-                                        <input
-                                          className="HoiPoi__Input__input-1-25"
-                                          name="myOtherField"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          readOnly={false}
-                                          type="custom"
-                                          value=""
-                                        />
-                                      </div>
-                                    </div>
-                                  </Input>
-                                </WithStyles(Input)>
-                              </JssContextSubscriber>
-                            </FieldControl>
+                            />
                           </div>
                         </div>
                       </AnimateHeight>

@@ -93,7 +93,7 @@ function Form({
                             onFocus={onFocusField}
                             onBlur={onBlurField}
                             className={field.className}
-                            component={(customFields && customFields[field.name]) || null}
+                            component={customFields && customFields[field.type]}
                         />
                     ))}
                 </Section>

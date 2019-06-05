@@ -48,8 +48,8 @@ function MyOtherField(props) {
 }
 
 const customFields = {
-    myField: MyField,
-    myOtherField: MyOtherField,
+    customInput: MyField,
+    customText: MyOtherField,
 };
 
 let onChange = (values, field) => setState({ values });

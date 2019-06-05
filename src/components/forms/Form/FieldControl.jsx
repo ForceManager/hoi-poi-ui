@@ -17,7 +17,6 @@ const FIELD_MAP = {
     select: Select,
     slider: Slider,
     multiplier: Multiplier,
-    custom: Input,
 };
 
 function FieldControl({
@@ -58,9 +57,13 @@ function FieldControl({
         [onBlur, field],
     );
 
-    if (!field || !field.type || !FIELD_MAP[field.type]) return null;
+    if (!field || !field.type) return null;
 
-    const Field = FIELD_MAP[field.type];
+    let Field = FIELD_MAP[field.type];
+
+    if (!Field && component) Field = Input;
+
+    if (!Field && !component) return null;
 
     const fieldProps = {
         ...field,
@@ -92,7 +95,7 @@ FieldControl.propTypes = {
     value: PropTypes.any,
     error: PropTypes.string,
     className: PropTypes.string,
-    component: PropTypes.any,
+    component: PropTypes.node,
     field: PropTypes.shape({
         label: PropTypes.string,
         labelMode: PropTypes.string,
