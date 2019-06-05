@@ -61,10 +61,9 @@ function FieldControl({
 
     let Field = FIELD_MAP[field.type] || null;
 
-    if (!Field) {
-        if (component) Field = Input;
-        else return null;
-    }
+    Field = Input;
+
+    if (!Field || (Field && !component)) return null;
 
     const fieldProps = {
         ...field,
