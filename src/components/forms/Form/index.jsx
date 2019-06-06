@@ -20,6 +20,7 @@ function Form({
     values,
     errors,
     customFields,
+    useNativeForm,
     ...props
 }) {
     // Overrides
@@ -70,39 +71,50 @@ function Form({
         [onBlur, values],
     );
 
-    return (
-        <div className={classNameProp} action="" autoComplete="off" {...override.root}>
-            {schema.map((section, index) => (
-                <Section
-                    key={index}
-                    title={section.title}
-                    className={section.className}
-                    isExpandable={section.isExpandable}
-                    onRemove={onRemoveSection}
-                    {...override.Section}
-                >
-                    {section.fields.map((field) => {
-                        let component = customFields ? customFields[field.type] : undefined;
-                        return (
-                            <FieldControl
-                                key={field.name}
-                                labelMode={field.labelMode || labelMode}
-                                isFullWidth={field.isFullWidth || isFullWidth}
-                                field={field}
-                                value={values[field.name]}
-                                error={errors[field.name]}
-                                onChange={onChangeField}
-                                onFocus={onFocusField}
-                                onBlur={onBlurField}
-                                className={field.className}
-                                component={component}
-                            />
-                        );
-                    })}
-                </Section>
-            ))}
+    const content = schema.map((section, index) => (
+        <Section
+            key={index}
+            title={section.title}
+            className={section.className}
+            isExpandable={section.isExpandable}
+            onRemove={onRemoveSection}
+            {...override.Section}
+        >
+            {section.fields.map((field) => {
+                let component = customFields ? customFields[field.type] : undefined;
+                return (
+                    <FieldControl
+                        key={field.name}
+                        labelMode={field.labelMode || labelMode}
+                        isFullWidth={field.isFullWidth || isFullWidth}
+                        field={field}
+                        value={values[field.name]}
+                        error={errors[field.name]}
+                        onChange={onChangeField}
+                        onFocus={onFocusField}
+                        onBlur={onBlurField}
+                        className={field.className}
+                        component={component}
+                    />
+                );
+            })}
+        </Section>
+    ));
+
+    const withForm = (children) => (
+        <form className={classNameProp} action="" autoComplete="off" {...override.root}>
+            {children}
+        </form>
+    );
+
+    const withDiv = (children) => (
+        <div className={classNameProp} {...override.root}>
+            {children}
         </div>
     );
+
+    if (useNativeForm) return withForm(content);
+    return withDiv(content);
 }
 
 Form.overrides = ['root', 'Section'];
@@ -114,6 +126,7 @@ Form.defaultProps = {
     values: {},
     schema: [],
     override: {},
+    useNativeForm: false,
 };
 
 Form.propTypes = {
@@ -124,6 +137,7 @@ Form.propTypes = {
     values: PropTypes.object,
     errors: PropTypes.object,
     customFields: PropTypes.object,
+    useNativeForm: PropTypes.bool,
     schema: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string,
