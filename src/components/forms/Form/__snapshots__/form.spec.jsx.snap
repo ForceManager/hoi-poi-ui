@@ -1002,6 +1002,7 @@ exports[`Form complete match 1`] = `
               },
             }
           }
+          useNativeForm={false}
           values={Object {}}
         >
           <Form
@@ -1239,12 +1240,10 @@ exports[`Form complete match 1`] = `
                 },
               ]
             }
+            useNativeForm={false}
             values={Object {}}
           >
-            <form
-              action=""
-              autoComplete="off"
-            >
+            <div>
               <JssContextSubscriber
                 className="tab-general"
                 key="0"
@@ -2434,7 +2433,6 @@ exports[`Form complete match 1`] = `
                           >
                             <FieldControl
                               className="field-name"
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -2455,7 +2453,6 @@ exports[`Form complete match 1`] = `
                             >
                               <JssContextSubscriber
                                 className="field-name"
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 isRequired={true}
@@ -2470,7 +2467,6 @@ exports[`Form complete match 1`] = `
                               >
                                 <WithStyles(Input)
                                   className="field-name"
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -2814,7 +2810,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-31",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -3538,7 +3533,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -3566,7 +3560,6 @@ exports[`Form complete match 1`] = `
                                     "type": "email",
                                   }
                                 }
-                                component={null}
                                 error=""
                                 hint="No spam!"
                                 isFullWidth={false}
@@ -3586,7 +3579,6 @@ exports[`Form complete match 1`] = `
                                       "type": "email",
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   hint="No spam!"
                                   innerRef={null}
@@ -3934,7 +3926,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-31",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     hint="No spam!"
                                     isFullWidth={false}
@@ -6197,7 +6188,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -6224,7 +6214,6 @@ exports[`Form complete match 1`] = `
                                     "type": "password",
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 isRequired={true}
@@ -6243,7 +6232,6 @@ exports[`Form complete match 1`] = `
                                       "type": "password",
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -6591,7 +6579,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-31",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -7315,7 +7302,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -7367,7 +7353,6 @@ exports[`Form complete match 1`] = `
                                     ],
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Gender"
@@ -7414,7 +7399,6 @@ exports[`Form complete match 1`] = `
                                       ],
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   hideSelectedOptions={true}
                                   innerRef={null}
@@ -7792,7 +7776,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Select__vertical-1-50",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     hideSelectedOptions={true}
                                     isClearable={true}
@@ -10601,7 +10584,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -10652,7 +10634,6 @@ exports[`Form complete match 1`] = `
                                     ],
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Employment status"
@@ -10698,7 +10679,6 @@ exports[`Form complete match 1`] = `
                                       ],
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -11066,7 +11046,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__RadioGroup__vertical-1-64",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -14318,7 +14297,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -14335,7 +14313,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Interest"
@@ -14347,7 +14324,6 @@ exports[`Form complete match 1`] = `
                                 type="slider"
                               >
                                 <WithStyles(Slider)
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -14689,7 +14665,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Slider__vertical-1-82",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -16734,7 +16709,6 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -16752,7 +16726,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Address"
@@ -16765,7 +16738,6 @@ exports[`Form complete match 1`] = `
                                 type="text"
                               >
                                 <WithStyles(Input)
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -17107,7 +17079,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-31",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -17826,7 +17797,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error="Invalid phone"
                               field={
                                 Object {
@@ -17844,7 +17814,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error="Invalid phone"
                                 isFullWidth={false}
                                 label="Phone"
@@ -17857,7 +17826,6 @@ exports[`Form complete match 1`] = `
                                 type="text"
                               >
                                 <WithStyles(Input)
-                                  component={null}
                                   error="Invalid phone"
                                   innerRef={null}
                                   isFullWidth={false}
@@ -18199,7 +18167,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-31",
                                       }
                                     }
-                                    component={null}
                                     error="Invalid phone"
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -18923,7 +18890,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -18966,7 +18932,6 @@ exports[`Form complete match 1`] = `
                                     ],
                                   }
                                 }
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Prefered way"
@@ -19004,7 +18969,6 @@ exports[`Form complete match 1`] = `
                                       ],
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -19364,7 +19328,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__CheckboxGroup__vertical-1-96",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -22924,7 +22887,6 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -22986,7 +22948,6 @@ exports[`Form complete match 1`] = `
                                     "showInputsLabel": "Show translations",
                                   }
                                 }
-                                component={null}
                                 error=""
                                 hideInputsLabel="Hide translations"
                                 inputs={
@@ -23043,7 +23004,6 @@ exports[`Form complete match 1`] = `
                                       "showInputsLabel": "Show translations",
                                     }
                                   }
-                                  component={null}
                                   error=""
                                   hideInputsLabel="Hide translations"
                                   innerRef={null}
@@ -23422,7 +23382,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__InputGroup__vertical-1-114",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     hideInputsLabel="Hide translations"
                                     inputs={
@@ -29425,7 +29384,6 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -29443,7 +29401,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             >
                               <JssContextSubscriber
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Address"
@@ -29456,7 +29413,6 @@ exports[`Form complete match 1`] = `
                                 type="text"
                               >
                                 <WithStyles(Input)
-                                  component={null}
                                   error=""
                                   innerRef={null}
                                   isFullWidth={false}
@@ -29798,7 +29754,6 @@ exports[`Form complete match 1`] = `
                                         "vertical": "HoiPoi__Input__vertical-1-31",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     isFullWidth={false}
                                     isReadOnly={false}
@@ -30517,7 +30472,6 @@ exports[`Form complete match 1`] = `
                               </JssContextSubscriber>
                             </FieldControl>
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -30577,7 +30531,6 @@ exports[`Form complete match 1`] = `
                             >
                               <JssContextSubscriber
                                 buttonLabel="+ Add"
-                                component={null}
                                 error=""
                                 isFullWidth={false}
                                 label="Multiplier"
@@ -30633,7 +30586,6 @@ exports[`Form complete match 1`] = `
                               >
                                 <WithStyles(Multiplier)
                                   buttonLabel="+ Add"
-                                  component={null}
                                   error=""
                                   errors={Object {}}
                                   fields={Array []}
@@ -31013,7 +30965,6 @@ exports[`Form complete match 1`] = `
                                         "singleItem": "HoiPoi__Multiplier__singleItem-1-125",
                                       }
                                     }
-                                    component={null}
                                     error=""
                                     errors={Object {}}
                                     fields={Array []}
@@ -31200,6 +31151,7 @@ exports[`Form complete match 1`] = `
                                                 },
                                               ]
                                             }
+                                            useNativeForm={false}
                                           >
                                             <WithStyles(Form)
                                               className="HoiPoi__Multiplier__item-1-124"
@@ -31568,6 +31520,7 @@ exports[`Form complete match 1`] = `
                                                   },
                                                 }
                                               }
+                                              useNativeForm={false}
                                               values={Object {}}
                                             >
                                               <Form
@@ -31631,11 +31584,10 @@ exports[`Form complete match 1`] = `
                                                     },
                                                   ]
                                                 }
+                                                useNativeForm={false}
                                                 values={Object {}}
                                               >
-                                                <form
-                                                  action=""
-                                                  autoComplete="off"
+                                                <div
                                                   className="HoiPoi__Multiplier__item-1-124"
                                                 >
                                                   <JssContextSubscriber
@@ -32434,7 +32386,6 @@ exports[`Form complete match 1`] = `
                                                             </JssContextSubscriber>
                                                           </span>
                                                           <FieldControl
-                                                            component={null}
                                                             error=""
                                                             field={
                                                               Object {
@@ -32485,7 +32436,6 @@ exports[`Form complete match 1`] = `
                                                                   ],
                                                                 }
                                                               }
-                                                              component={null}
                                                               error=""
                                                               isFullWidth={false}
                                                               label="Activity"
@@ -32531,7 +32481,6 @@ exports[`Form complete match 1`] = `
                                                                     ],
                                                                   }
                                                                 }
-                                                                component={null}
                                                                 error=""
                                                                 hideSelectedOptions={true}
                                                                 innerRef={null}
@@ -32908,7 +32857,6 @@ exports[`Form complete match 1`] = `
                                                                       "vertical": "HoiPoi__Select__vertical-1-50",
                                                                     }
                                                                   }
-                                                                  component={null}
                                                                   error=""
                                                                   hideSelectedOptions={true}
                                                                   isClearable={true}
@@ -35715,7 +35663,6 @@ exports[`Form complete match 1`] = `
                                                             </JssContextSubscriber>
                                                           </FieldControl>
                                                           <FieldControl
-                                                            component={null}
                                                             error=""
                                                             field={
                                                               Object {
@@ -35733,7 +35680,6 @@ exports[`Form complete match 1`] = `
                                                             onFocus={[Function]}
                                                           >
                                                             <JssContextSubscriber
-                                                              component={null}
                                                               error=""
                                                               isFullWidth={false}
                                                               isRequired={true}
@@ -35746,7 +35692,6 @@ exports[`Form complete match 1`] = `
                                                               type="text"
                                                             >
                                                               <WithStyles(Input)
-                                                                component={null}
                                                                 error=""
                                                                 innerRef={null}
                                                                 isFullWidth={false}
@@ -36088,7 +36033,6 @@ exports[`Form complete match 1`] = `
                                                                       "vertical": "HoiPoi__Input__vertical-1-31",
                                                                     }
                                                                   }
-                                                                  component={null}
                                                                   error=""
                                                                   isFullWidth={false}
                                                                   isReadOnly={false}
@@ -36810,7 +36754,6 @@ exports[`Form complete match 1`] = `
                                                             </JssContextSubscriber>
                                                           </FieldControl>
                                                           <FieldControl
-                                                            component={null}
                                                             error=""
                                                             field={
                                                               Object {
@@ -36828,7 +36771,6 @@ exports[`Form complete match 1`] = `
                                                             onFocus={[Function]}
                                                           >
                                                             <JssContextSubscriber
-                                                              component={null}
                                                               error=""
                                                               isFullWidth={false}
                                                               isRequired={true}
@@ -36841,7 +36783,6 @@ exports[`Form complete match 1`] = `
                                                               type="text"
                                                             >
                                                               <WithStyles(Input)
-                                                                component={null}
                                                                 error=""
                                                                 innerRef={null}
                                                                 isFullWidth={false}
@@ -37183,7 +37124,6 @@ exports[`Form complete match 1`] = `
                                                                       "vertical": "HoiPoi__Input__vertical-1-31",
                                                                     }
                                                                   }
-                                                                  component={null}
                                                                   error=""
                                                                   isFullWidth={false}
                                                                   isReadOnly={false}
@@ -37908,7 +37848,7 @@ exports[`Form complete match 1`] = `
                                                       </Section>
                                                     </WithStyles(Section)>
                                                   </JssContextSubscriber>
-                                                </form>
+                                                </div>
                                               </Form>
                                             </WithStyles(Form)>
                                           </JssContextSubscriber>
@@ -39825,7 +39765,6 @@ exports[`Form complete match 1`] = `
                             style={Object {}}
                           >
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -39842,7 +39781,6 @@ exports[`Form complete match 1`] = `
                               onFocus={[Function]}
                             />
                             <FieldControl
-                              component={null}
                               error=""
                               field={
                                 Object {
@@ -39865,7 +39803,7 @@ exports[`Form complete match 1`] = `
                   </Section>
                 </WithStyles(Section)>
               </JssContextSubscriber>
-            </form>
+            </div>
           </Form>
         </WithStyles(Form)>
       </JssContextSubscriber>

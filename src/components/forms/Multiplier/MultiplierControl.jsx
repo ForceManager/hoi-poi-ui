@@ -49,6 +49,7 @@ function MultiplierControl({
                 isFullWidth={isFullWidth}
                 {...override.Form}
                 override={override.Form}
+                useNativeForm={false}
             />
         );
     } else if (type === 'field') {
