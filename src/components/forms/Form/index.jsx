@@ -82,7 +82,7 @@ function Form({
                     {...override.Section}
                 >
                     {section.fields.map((field) => {
-                        let component = customFields ? customFields[field.type] : null;
+                        let component = customFields ? customFields[field.type] : undefined;
                         return (
                             <FieldControl
                                 key={field.name}
