@@ -71,7 +71,7 @@ function Form({
     );
 
     return (
-        <form className={classNameProp} action="" autoComplete="off" {...override.root}>
+        <div className={classNameProp} action="" autoComplete="off" {...override.root}>
             {schema.map((section, index) => (
                 <Section
                     key={index}
@@ -101,7 +101,7 @@ function Form({
                     })}
                 </Section>
             ))}
-        </form>
+        </div>
     );
 }
 
