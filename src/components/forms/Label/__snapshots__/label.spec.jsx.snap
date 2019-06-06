@@ -365,11 +365,11 @@ exports[`Label default match 1`] = `
                 "version": "10.0.0-alpha.16",
               },
               "managers": Object {
-                "2": SheetsManager {
+                "3": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "3": SheetsManager {
+                "4": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -626,11 +626,11 @@ exports[`Label default match 1`] = `
                         "version": "10.0.0-alpha.16",
                       },
                       "managers": Object {
-                        "2": SheetsManager {
+                        "3": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "3": SheetsManager {
+                        "4": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -739,8 +739,10 @@ exports[`Label default match 1`] = `
                     className="HoiPoi__Label__Text-1-1"
                     classes={
                       Object {
+                        "Loader": "HoiPoi__Text__Loader-1-14",
                         "big": "HoiPoi__Text__big-1-9",
                         "bold": "HoiPoi__Text__bold-1-10",
+                        "isLoading": "HoiPoi__Text__isLoading-1-13",
                         "large": "HoiPoi__Text__large-1-8",
                         "light": "HoiPoi__Text__light-1-12",
                         "medium": "HoiPoi__Text__medium-1-7",
@@ -1140,11 +1142,11 @@ exports[`Label is required match 1`] = `
                 "version": "10.0.0-alpha.16",
               },
               "managers": Object {
-                "2": SheetsManager {
+                "3": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "3": SheetsManager {
+                "4": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -1402,11 +1404,11 @@ exports[`Label is required match 1`] = `
                         "version": "10.0.0-alpha.16",
                       },
                       "managers": Object {
-                        "2": SheetsManager {
+                        "3": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "3": SheetsManager {
+                        "4": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -1515,8 +1517,10 @@ exports[`Label is required match 1`] = `
                     className="HoiPoi__Label__Text-2-1"
                     classes={
                       Object {
+                        "Loader": "HoiPoi__Text__Loader-2-14",
                         "big": "HoiPoi__Text__big-2-9",
                         "bold": "HoiPoi__Text__bold-2-10",
+                        "isLoading": "HoiPoi__Text__isLoading-2-13",
                         "large": "HoiPoi__Text__large-2-8",
                         "light": "HoiPoi__Text__light-2-12",
                         "medium": "HoiPoi__Text__medium-2-7",
@@ -1925,11 +1929,11 @@ exports[`Label with hint match 1`] = `
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "2": SheetsManager {
+                "3": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "3": SheetsManager {
+                "4": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -2195,11 +2199,11 @@ exports[`Label with hint match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "2": SheetsManager {
+                        "3": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "3": SheetsManager {
+                        "4": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -2308,8 +2312,10 @@ exports[`Label with hint match 1`] = `
                     className="HoiPoi__Label__Text-3-1"
                     classes={
                       Object {
+                        "Loader": "HoiPoi__Text__Loader-3-14",
                         "big": "HoiPoi__Text__big-3-9",
                         "bold": "HoiPoi__Text__bold-3-10",
+                        "isLoading": "HoiPoi__Text__isLoading-3-13",
                         "large": "HoiPoi__Text__large-3-8",
                         "light": "HoiPoi__Text__light-3-12",
                         "medium": "HoiPoi__Text__medium-3-7",
@@ -2485,11 +2491,11 @@ exports[`Label with hint match 1`] = `
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "2": SheetsManager {
+                        "3": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "3": SheetsManager {
+                        "4": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -2601,7 +2607,7 @@ exports[`Label with hint match 1`] = `
                   <Popover
                     classes={
                       Object {
-                        "root": "HoiPoi__Tooltip__root-3-13",
+                        "root": "HoiPoi__Tooltip__root-3-15",
                       }
                     }
                     content="I am a hint"
@@ -2620,7 +2626,7 @@ exports[`Label with hint match 1`] = `
                       mouseEnterDelay={0}
                       mouseLeaveDelay={0.1}
                       overlay="I am a hint"
-                      overlayClassName="HoiPoi__Tooltip__root-3-13"
+                      overlayClassName="HoiPoi__Tooltip__root-3-15"
                       placement="top"
                       prefixCls="hoi-poi-popover"
                       transitionName="hoi-poi-popover--fade"
@@ -2874,7 +2880,7 @@ exports[`Label with hint match 1`] = `
                         overlay="I am a hint"
                         popup={[Function]}
                         popupAlign={Object {}}
-                        popupClassName="HoiPoi__Tooltip__root-3-13"
+                        popupClassName="HoiPoi__Tooltip__root-3-15"
                         popupPlacement="top"
                         popupStyle={Object {}}
                         popupTransitionName="hoi-poi-popover--fade"
@@ -3035,11 +3041,11 @@ exports[`Label with hint match 1`] = `
                                       "length": 1,
                                       "sheets": WeakMap {},
                                     },
-                                    "2": SheetsManager {
+                                    "3": SheetsManager {
                                       "length": 1,
                                       "sheets": WeakMap {},
                                     },
-                                    "3": SheetsManager {
+                                    "4": SheetsManager {
                                       "length": 1,
                                       "sheets": WeakMap {},
                                     },
@@ -3146,12 +3152,12 @@ exports[`Label with hint match 1`] = `
                                 className="HoiPoi__Label__icon-3-3"
                                 classes={
                                   Object {
-                                    "big": "HoiPoi__Icon__big-3-18",
-                                    "clickable": "HoiPoi__Icon__clickable-3-19",
-                                    "large": "HoiPoi__Icon__large-3-17",
-                                    "medium": "HoiPoi__Icon__medium-3-16",
-                                    "root": "HoiPoi__Icon__root-3-14",
-                                    "small": "HoiPoi__Icon__small-3-15",
+                                    "big": "HoiPoi__Icon__big-3-20",
+                                    "clickable": "HoiPoi__Icon__clickable-3-21",
+                                    "large": "HoiPoi__Icon__large-3-19",
+                                    "medium": "HoiPoi__Icon__medium-3-18",
+                                    "root": "HoiPoi__Icon__root-3-16",
+                                    "small": "HoiPoi__Icon__small-3-17",
                                   }
                                 }
                                 name="info"
@@ -3160,12 +3166,12 @@ exports[`Label with hint match 1`] = `
                                   className="HoiPoi__Label__icon-3-3"
                                   classes={
                                     Object {
-                                      "big": "HoiPoi__Icon__big-3-18",
-                                      "clickable": "HoiPoi__Icon__clickable-3-19",
-                                      "large": "HoiPoi__Icon__large-3-17",
-                                      "medium": "HoiPoi__Icon__medium-3-16",
-                                      "root": "HoiPoi__Icon__root-3-14",
-                                      "small": "HoiPoi__Icon__small-3-15",
+                                      "big": "HoiPoi__Icon__big-3-20",
+                                      "clickable": "HoiPoi__Icon__clickable-3-21",
+                                      "large": "HoiPoi__Icon__large-3-19",
+                                      "medium": "HoiPoi__Icon__medium-3-18",
+                                      "root": "HoiPoi__Icon__root-3-16",
+                                      "small": "HoiPoi__Icon__small-3-17",
                                     }
                                   }
                                   name="info"
@@ -3263,7 +3269,7 @@ exports[`Label with hint match 1`] = `
                                   }
                                 >
                                   <span
-                                    className="HoiPoi__Icon__root-3-14 HoiPoi__Icon__medium-3-16 HoiPoi__Label__icon-3-3"
+                                    className="HoiPoi__Icon__root-3-16 HoiPoi__Icon__medium-3-18 HoiPoi__Label__icon-3-3"
                                   >
                                     <Info
                                       color="#788590"

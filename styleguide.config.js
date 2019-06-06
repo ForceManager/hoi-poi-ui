@@ -20,6 +20,7 @@ module.exports = {
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/Loader/index.jsx',
                 './src/components/general/Modal/index.jsx',
+                './src/components/general/Tabs/index.jsx',
             ],
         },
         {
@@ -40,7 +41,6 @@ module.exports = {
                 './src/components/forms/Select/index.jsx',
                 './src/components/forms/SelectButton/index.jsx',
                 './src/components/forms/Slider/index.jsx',
-                './src/components/forms/Custom/index.jsx',
             ],
         },
         {

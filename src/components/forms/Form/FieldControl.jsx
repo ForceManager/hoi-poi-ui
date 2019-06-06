@@ -8,7 +8,6 @@ import RadioGroup from '../RadioGroup';
 import Select from '../Select';
 import Slider from '../Slider';
 import Multiplier from '../Multiplier';
-import Custom from '../Custom';
 
 const FIELD_MAP = {
     text: Input,
@@ -18,7 +17,6 @@ const FIELD_MAP = {
     select: Select,
     slider: Slider,
     multiplier: Multiplier,
-    custom: Custom,
 };
 
 function FieldControl({
@@ -59,9 +57,10 @@ function FieldControl({
         [onBlur, field],
     );
 
-    if (!field || !field.type || !FIELD_MAP[field.type]) return null;
-
-    const Field = FIELD_MAP[field.type];
+    if (!field || !field.type) return null;
+    let Field = FIELD_MAP[field.type];
+    if (!Field && component) Field = Input;
+    if (!Field) return null;
 
     const fieldProps = {
         ...field,
@@ -93,7 +92,7 @@ FieldControl.propTypes = {
     value: PropTypes.any,
     error: PropTypes.string,
     className: PropTypes.string,
-    component: PropTypes.any,
+    component: PropTypes.node,
     field: PropTypes.shape({
         label: PropTypes.string,
         labelMode: PropTypes.string,
