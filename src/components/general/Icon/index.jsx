@@ -17,6 +17,7 @@ import Drag from './icons/Drag';
 import Edit from './icons/Edit';
 import Trash from './icons/Trash';
 import Magnifier from './icons/Magnifier';
+import Tick from './icons/Tick';
 
 const ICONS = {
     chevron: Chevron,
@@ -30,6 +31,7 @@ const ICONS = {
     edit: Edit,
     trash: Trash,
     magnifier: Magnifier,
+    tick: Tick,
 };
 
 function Icon({

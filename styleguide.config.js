@@ -21,6 +21,7 @@ module.exports = {
                 './src/components/general/Loader/index.jsx',
                 './src/components/general/Modal/index.jsx',
                 './src/components/general/Tabs/index.jsx',
+                './src/components/general/Stepper/index.jsx',
             ],
         },
         {
