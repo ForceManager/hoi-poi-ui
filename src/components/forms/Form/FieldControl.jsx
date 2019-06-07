@@ -92,7 +92,10 @@ FieldControl.propTypes = {
     value: PropTypes.any,
     error: PropTypes.string,
     className: PropTypes.string,
-    component: PropTypes.node,
+    component: PropTypes.any,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
     field: PropTypes.shape({
         label: PropTypes.string,
         labelMode: PropTypes.string,

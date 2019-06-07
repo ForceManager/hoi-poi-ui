@@ -3,12 +3,17 @@ export default (theme) => ({
         display: 'flex',
         flexDirection: 'column',
     },
-    container: {},
     item: {
-        paddingTop: '10px',
+        display: 'flex',
+        alignItems: 'flex-start',
+        justifyContent: 'space-between',
+        marginTop: '10px',
     },
     singleItem: {
+        marginTop: 0,
         marginLeft: '170px',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
         '&:first-child': {
             marginLeft: '0',
         },
@@ -19,9 +24,8 @@ export default (theme) => ({
             paddingTop: '0',
         },
         '&:last-child': {
-            borderBottom: 'none',
+            borderBottom: 'none !important',
         },
-        paddingBottom: '20px',
     },
     isFullWidth: {
         '& $buttonContainer': {
@@ -31,8 +35,37 @@ export default (theme) => ({
     buttonContainer: {
         position: 'relative',
         width: 465,
+        marginLeft: 170,
+        marginTop: 5,
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-start',
     },
     button: {},
+    removeIcon: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        cursor: 'pointer',
+        marginLeft: 20,
+        '& svg': {
+            width: 10,
+        },
+    },
+    vertical: {
+        '& $buttonContainer': {
+            marginLeft: 0,
+        },
+        '& $singleItem': {
+            marginLeft: 0,
+            '& > div': {
+                padding: 0,
+                margin: '10px 0',
+            },
+        },
+    },
+    removeIconVertical: {
+        marginTop: 3,
+    },
+    form: {
+        width: '100%',
+    },
 });

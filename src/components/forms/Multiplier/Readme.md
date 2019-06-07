@@ -49,7 +49,6 @@ let onChange = (value, index) => {
     schema={schema}
     max={5}
     separator={false}
-    remove={false}
     onChange={onChange}
 />;
 ```
@@ -128,7 +127,6 @@ let onRemove = (index) => {
     schema={schema}
     max={5}
     separator={true}
-    remove={true}
     onChange={onChange}
     onRemove={onRemove}
 />;
@@ -164,9 +162,43 @@ let onRemove = (index) => {
     schema={schema}
     max={5}
     separator={true}
-    remove={true}
     onChange={onChange}
     onRemove={onRemove}
+/>;
+```
+
+Vertical mode
+
+```jsx
+import schema from './example.json';
+
+const errors = {
+    email: 'Invalid email',
+};
+
+let onChange = (value, index) => {
+    let newValues = [...state.values];
+    newValues[index] = value;
+    setState({ values: newValues });
+};
+
+let onRemove = (index) => {
+    let newValues = [...state.values];
+    newValues.splice(index, 1);
+    setState({ values: newValues });
+};
+
+<Multiplier
+    name="vertical-example"
+    buttonLabel="Add"
+    values={state.values}
+    errors={errors}
+    schema={schema}
+    max={5}
+    separator={true}
+    onChange={onChange}
+    onRemove={onRemove}
+    labelMode="vertical"
 />;
 ```
 
@@ -179,6 +211,7 @@ let onRemove = (index) => {
 -   container - items and button container
 -   buttonContainer
 -   button
--   [Section](#/Forms?id=Section)
--   [Form](#/Forms?id=Form) - component for render a group of inputs
+-   [Section](#/Forms/Section)
+-   [Form](#/Forms/Form) - component for render a group of inputs
 -   fieldControl - internal component for render individual inputs
+-   [removeIcon](/#/General/Icon)

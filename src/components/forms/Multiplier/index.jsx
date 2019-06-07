@@ -18,7 +18,6 @@ function Multiplier({
     isFullWidth,
     max,
     separator,
-    remove,
     values,
     errors,
     onChange,
@@ -26,6 +25,7 @@ function Multiplier({
     onBlur,
     onRemove,
     labelMode,
+    customFields,
     ...props
 }) {
     // State
@@ -37,6 +37,7 @@ function Multiplier({
     // Classes
     const rootClassName = classnames(classes.root, classNameProp, {
         [classes.isFullWidth]: isFullWidth,
+        [classes.vertical]: labelMode === 'vertical',
     });
     const buttonClassNames = classnames(classes.button, buttonClassName);
     const multiplierItemClassNames = classnames(classes.item, {
@@ -85,8 +86,9 @@ function Multiplier({
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                onRemove={onClickRemove}
+                onRemove={size > 1 ? onClickRemove : undefined}
                 className={multiplierItemClassNames}
+                customFields={customFields}
                 {...override.multiplierControl}
                 overrides={override}
             />,
@@ -103,8 +105,7 @@ function Multiplier({
             {showButton && (
                 <div className={classes.buttonContainer} {...override.buttonContainer}>
                     <Button
-                        color="primary"
-                        type="squared"
+                        type="squared-outlined"
                         className={buttonClassNames}
                         onClick={onClickAdd}
                         {...override.button}
@@ -125,7 +126,6 @@ Multiplier.defaultProps = {
     values: [],
     fields: [],
     separator: false,
-    remove: false,
     labelMode: 'horizontal',
     isFullWidth: false,
 };
@@ -160,6 +160,7 @@ Multiplier.propTypes = {
     values: PropTypes.array,
     errors: PropTypes.object,
     isFullWidth: PropTypes.bool,
+    customFields: PropTypes.object,
 };
 
 export default React.memo(withStyles(styles, { name: 'Multiplier' })(Multiplier));

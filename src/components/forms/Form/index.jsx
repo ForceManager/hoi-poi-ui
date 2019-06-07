@@ -16,7 +16,6 @@ function Form({
     onChange,
     onFocus,
     onBlur,
-    onRemoveSection,
     values,
     errors,
     customFields,
@@ -77,7 +76,6 @@ function Form({
             title={section.title}
             className={section.className}
             isExpandable={section.isExpandable}
-            onRemove={onRemoveSection}
             {...override.Section}
         >
             {section.fields.map((field) => {
