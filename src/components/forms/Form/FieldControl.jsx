@@ -75,6 +75,7 @@ function FieldControl({
         error,
         customFields,
         component,
+        overrides: overridesProp,
     };
     let attrs = field.attrs || {};
     return <Field {...fieldProps} {...attrs} />;

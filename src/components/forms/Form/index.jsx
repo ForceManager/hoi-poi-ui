@@ -92,6 +92,7 @@ function Form({
                         onBlur={onBlurField}
                         className={field.className}
                         customFields={customFields}
+                        overrides={overridesProp}
                     />
                 );
             })}
