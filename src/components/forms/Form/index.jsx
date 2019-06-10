@@ -79,7 +79,6 @@ function Form({
             {...override.Section}
         >
             {section.fields.map((field) => {
-                let component = customFields ? customFields[field.type] : undefined;
                 return (
                     <FieldControl
                         key={field.name}
@@ -92,7 +91,8 @@ function Form({
                         onFocus={onFocusField}
                         onBlur={onBlurField}
                         className={field.className}
-                        component={component}
+                        customFields={customFields}
+                        overrides={overridesProp}
                     />
                 );
             })}

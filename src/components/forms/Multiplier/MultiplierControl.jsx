@@ -81,7 +81,7 @@ function MultiplierControl({
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                component={customFields ? customFields[field.type] : undefined}
+                customFields={customFields}
                 {...override.fieldControl}
             />
         );
