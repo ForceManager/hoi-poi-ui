@@ -32,7 +32,6 @@ function Input({
     component,
     ...props
 }) {
-    console.log('Input overrides', overridesProp);
     // State
     const [focused, setFocused] = useState(false);
 
