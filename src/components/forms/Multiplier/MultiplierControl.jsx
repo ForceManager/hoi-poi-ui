@@ -37,14 +37,14 @@ function MultiplierControl({
 
     const onChangeMultiplier = useCallback(
         (value) => {
-            onChange && onChange(value, index);
+            onChange && onChange(value, schema, index);
         },
-        [onChange, index],
+        [onChange, schema, index],
     );
 
     const onClickRemove = useCallback(() => {
-        onRemove(index);
-    }, [onRemove, index]);
+        onRemove(schema, index);
+    }, [onRemove, schema, index]);
 
     let component;
     if (type === 'form') {

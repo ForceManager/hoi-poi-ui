@@ -18,12 +18,11 @@ function Multiplier({
     isFullWidth,
     max,
     separator,
-    values,
+    value,
     errors,
     onChange,
     onFocus,
     onBlur,
-    onRemove,
     labelMode,
     customFields,
     ...props
@@ -55,18 +54,21 @@ function Multiplier({
     }, [size]);
 
     const onClickRemove = useCallback(
-        (index) => {
-            onRemove && onRemove(index);
+        (schema, index) => {
+            const newValues = [...value.slice(0, index), ...value.slice(index + 1)];
+            onChange && onChange(newValues, value[index], index, schema);
             setSize(size - 1);
         },
-        [size, onRemove],
+        [onChange, size, value],
     );
 
     const onChangeMultiplier = useCallback(
-        (value, index) => {
-            onChange && onChange(value, index);
+        (newValue, schema, index) => {
+            const newValues = [...value];
+            newValues[index] = newValue;
+            onChange && onChange(newValues, newValue, index, schema);
         },
-        [onChange],
+        [onChange, value],
     );
 
     const type = Array.isArray(schema) ? 'form' : 'field';
@@ -81,7 +83,7 @@ function Multiplier({
                 schema={schema}
                 labelMode={schema.labelMode || labelMode}
                 isFullWidth={schema.isFullWidth || isFullWidth}
-                values={values[index]}
+                values={value[index]}
                 errors={errors}
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
@@ -123,7 +125,7 @@ Multiplier.overrides = ['root', 'multiplierControl', 'button'];
 
 Multiplier.defaultProps = {
     errors: {},
-    values: [],
+    value: [],
     fields: [],
     separator: false,
     labelMode: 'horizontal',
@@ -137,6 +139,9 @@ Multiplier.propTypes = {
     name: PropTypes.string,
     labelMode: PropTypes.string,
     label: PropTypes.string,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
     buttonLabel: PropTypes.string,
     buttonClassName: PropTypes.string,
     fields: PropTypes.arrayOf(
@@ -157,7 +162,7 @@ Multiplier.propTypes = {
     max: PropTypes.number,
     separator: PropTypes.bool,
     remove: PropTypes.bool,
-    values: PropTypes.array,
+    value: PropTypes.array,
     errors: PropTypes.object,
     isFullWidth: PropTypes.bool,
     customFields: PropTypes.object,

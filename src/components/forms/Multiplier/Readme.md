@@ -33,18 +33,15 @@ const errors = {
     email: 'Invalid email',
 };
 
-let onChange = (value, index) => {
-    console.log('onChange', value, index);
-    let newValues = [...state.values];
-    newValues[index] = value;
-    setState({ values: newValues });
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
 };
 
 <Multiplier
     name="timeAllocationLine"
     buttonLabel="ADD"
     buttonClassName="time-allocation-add-button"
-    values={state.values}
+    value={state.value}
     errors={errors}
     schema={schema}
     max={5}
@@ -106,29 +103,20 @@ const errors = {
     email: 'Invalid email',
 };
 
-let onChange = (value, index) => {
-    let newValues = [...state.values];
-    newValues[index] = value;
-    setState({ values: newValues });
-};
-
-let onRemove = (index) => {
-    let newValues = [...state.values];
-    newValues.splice(index, 1);
-    setState({ values: newValues });
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
 };
 
 <Multiplier
     name="timeAllocationLine"
     buttonLabel="+ Add"
     buttonClassName="time-allocation-add-button"
-    values={state.values}
+    value={state.value}
     errors={errors}
     schema={schema}
     max={5}
     separator={true}
     onChange={onChange}
-    onRemove={onRemove}
 />;
 ```
 
@@ -141,29 +129,20 @@ const errors = {
     email: 'Invalid email',
 };
 
-let onChange = (value, index) => {
-    let newValues = [...state.values];
-    newValues[index] = value;
-    setState({ values: newValues });
-};
-
-let onRemove = (index) => {
-    let newValues = [...state.values];
-    newValues.splice(index, 1);
-    setState({ values: newValues });
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
 };
 
 <Multiplier
     name="full-width-example"
     isFullWidth={true}
     buttonLabel="Add"
-    values={state.values}
+    value={state.value}
     errors={errors}
     schema={schema}
     max={5}
     separator={true}
     onChange={onChange}
-    onRemove={onRemove}
 />;
 ```
 
@@ -176,28 +155,19 @@ const errors = {
     email: 'Invalid email',
 };
 
-let onChange = (value, index) => {
-    let newValues = [...state.values];
-    newValues[index] = value;
-    setState({ values: newValues });
-};
-
-let onRemove = (index) => {
-    let newValues = [...state.values];
-    newValues.splice(index, 1);
-    setState({ values: newValues });
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
 };
 
 <Multiplier
     name="vertical-example"
     buttonLabel="Add"
-    values={state.values}
+    value={state.value}
     errors={errors}
     schema={schema}
     max={5}
     separator={true}
     onChange={onChange}
-    onRemove={onRemove}
     labelMode="vertical"
 />;
 ```
