@@ -46,8 +46,6 @@ function MultiplierControl({
         onRemove(index);
     }, [onRemove, index]);
 
-    const showRemove = onRemove && index > 0;
-
     let component;
     if (type === 'form') {
         component = (
@@ -89,7 +87,7 @@ function MultiplierControl({
     return (
         <div className={classNameProp}>
             {component}
-            {showRemove && (
+            {onRemove && (
                 <Icon
                     onClick={onClickRemove}
                     className={removeIconClasses}
