@@ -28,7 +28,7 @@ function Multiplier({
     ...props
 }) {
     // State
-    const [size, setSize] = useState(1);
+    const [size, setSize] = useState(value.length + 1);
 
     // Overrides
     const override = getOverrides(overridesProp, Multiplier.overrides);
