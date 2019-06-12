@@ -33,6 +33,17 @@ const errors = {
     email: 'Invalid email',
 };
 
+const initialValues = [
+    {
+        label: 'B',
+        value: 'b',
+    },
+    {
+        label: 'C',
+        value: 'c',
+    },
+];
+
 let onChange = (value, newValue, index, schema) => {
     setState({ value });
 };
@@ -41,7 +52,7 @@ let onChange = (value, newValue, index, schema) => {
     name="timeAllocationLine"
     buttonLabel="ADD"
     buttonClassName="time-allocation-add-button"
-    value={state.value}
+    value={state.value || initialValues}
     errors={errors}
     schema={schema}
     max={5}

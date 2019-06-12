@@ -79,13 +79,14 @@ function Form({
             {...override.Section}
         >
             {section.fields.map((field) => {
+                const value = values && values[field.name] ? values[field.name] : undefined;
                 return (
                     <FieldControl
                         key={field.name}
                         labelMode={field.labelMode || labelMode}
                         isFullWidth={field.isFullWidth || isFullWidth}
                         field={field}
-                        value={values[field.name]}
+                        value={value}
                         error={errors[field.name]}
                         onChange={onChangeField}
                         onFocus={onFocusField}
