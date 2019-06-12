@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
@@ -28,7 +28,7 @@ function Multiplier({
     ...props
 }) {
     // State
-    const [size, setSize] = useState(1);
+    const size = value.length;
 
     // Overrides
     const override = getOverrides(overridesProp, Multiplier.overrides);
@@ -50,16 +50,17 @@ function Multiplier({
     };
 
     const onClickAdd = useCallback(() => {
-        setSize(size + 1);
-    }, [size]);
+        const newValues = [...value];
+        newValues.push(null);
+        onChange && onChange(newValues, null);
+    }, [onChange, value]);
 
     const onClickRemove = useCallback(
         (schema, index) => {
             const newValues = [...value.slice(0, index), ...value.slice(index + 1)];
             onChange && onChange(newValues, value[index], index, schema);
-            setSize(size - 1);
         },
-        [onChange, size, value],
+        [onChange, value],
     );
 
     const onChangeMultiplier = useCallback(
@@ -74,7 +75,7 @@ function Multiplier({
     const type = Array.isArray(schema) ? 'form' : 'field';
     const items = [];
 
-    for (let index = 0; index < size; index++) {
+    for (let index = 0; index < value.length; index++) {
         items.push(
             <MultiplierControl
                 key={index}
@@ -125,7 +126,7 @@ Multiplier.overrides = ['root', 'multiplierControl', 'button'];
 
 Multiplier.defaultProps = {
     errors: {},
-    value: [],
+    value: [null],
     fields: [],
     separator: false,
     labelMode: 'horizontal',
