@@ -21,7 +21,7 @@ const items = [
     },
 ];
 
-<Menus title="Menus" icon={<Icon name="info" />} items={items}></Menus>;
+<Menus title="Menus" icon={<Icon name="threeDots" />} items={items} />;
 ```
 
 Menus with hower:
@@ -47,5 +47,5 @@ const items = [
     },
 ];
 
-<Menus title="Hover me" items={items} triggerSubMenuAction="hover"></Menus>;
+<Menus title="Hover me" items={items} triggerSubMenuAction="hover" />;
 ```
