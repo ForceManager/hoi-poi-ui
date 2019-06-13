@@ -19,7 +19,7 @@ function Multiplier({
     max,
     separator,
     value,
-    errors,
+    error,
     onChange,
     onFocus,
     onBlur,
@@ -85,7 +85,7 @@ function Multiplier({
                 labelMode={schema.labelMode || labelMode}
                 isFullWidth={schema.isFullWidth || isFullWidth}
                 values={value[index]}
-                errors={errors}
+                errors={error[index]}
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
@@ -125,7 +125,7 @@ function Multiplier({
 Multiplier.overrides = ['root', 'multiplierControl', 'button'];
 
 Multiplier.defaultProps = {
-    errors: {},
+    error: {},
     value: [null],
     fields: [],
     separator: false,
@@ -164,7 +164,7 @@ Multiplier.propTypes = {
     separator: PropTypes.bool,
     remove: PropTypes.bool,
     value: PropTypes.array,
-    errors: PropTypes.object,
+    error: PropTypes.object,
     isFullWidth: PropTypes.bool,
     customFields: PropTypes.object,
 };

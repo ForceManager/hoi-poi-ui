@@ -283,6 +283,7 @@ exports[`Multiplier complete match 1`] = `
         <WithStyles(Multiplier)
           buttonClassName="addButton"
           buttonLabel="Add"
+          error={Object {}}
           errors={
             Object {
               "email": "Invalid email",
@@ -629,6 +630,7 @@ exports[`Multiplier complete match 1`] = `
                 "vertical": "HoiPoi__Multiplier__vertical-1-8",
               }
             }
+            error={Object {}}
             errors={
               Object {
                 "email": "Invalid email",
@@ -692,11 +694,6 @@ exports[`Multiplier complete match 1`] = `
               <div>
                 <JssContextSubscriber
                   className="HoiPoi__Multiplier__item-1-1"
-                  errors={
-                    Object {
-                      "email": "Invalid email",
-                    }
-                  }
                   index={0}
                   isFullWidth={false}
                   key="0"
@@ -755,11 +752,6 @@ exports[`Multiplier complete match 1`] = `
                 >
                   <WithStyles(MultiplierControl)
                     className="HoiPoi__Multiplier__item-1-1"
-                    errors={
-                      Object {
-                        "email": "Invalid email",
-                      }
-                    }
                     index={0}
                     innerRef={null}
                     isFullWidth={false}
@@ -1103,11 +1095,6 @@ exports[`Multiplier complete match 1`] = `
                           "vertical": "HoiPoi__MultiplierControl__vertical-1-19",
                         }
                       }
-                      errors={
-                        Object {
-                          "email": "Invalid email",
-                        }
-                      }
                       index={0}
                       isFullWidth={false}
                       labelMode="horizontal"
@@ -1168,11 +1155,6 @@ exports[`Multiplier complete match 1`] = `
                       >
                         <JssContextSubscriber
                           className="HoiPoi__MultiplierControl__form-1-21"
-                          errors={
-                            Object {
-                              "email": "Invalid email",
-                            }
-                          }
                           isFullWidth={false}
                           labelMode="horizontal"
                           onChange={[Function]}
@@ -1230,11 +1212,7 @@ exports[`Multiplier complete match 1`] = `
                         >
                           <WithStyles(Form)
                             className="HoiPoi__MultiplierControl__form-1-21"
-                            errors={
-                              Object {
-                                "email": "Invalid email",
-                              }
-                            }
+                            errors={Object {}}
                             innerRef={null}
                             isFullWidth={false}
                             jssContext={
@@ -1564,11 +1542,7 @@ exports[`Multiplier complete match 1`] = `
                             <Form
                               className="HoiPoi__MultiplierControl__form-1-21"
                               classes={Object {}}
-                              errors={
-                                Object {
-                                  "email": "Invalid email",
-                                }
-                              }
+                              errors={Object {}}
                               isFullWidth={false}
                               labelMode="horizontal"
                               onChange={[Function]}
@@ -6092,7 +6066,7 @@ exports[`Multiplier complete match 1`] = `
                                           </JssContextSubscriber>
                                         </FieldControl>
                                         <FieldControl
-                                          error="Invalid email"
+                                          error=""
                                           field={
                                             Object {
                                               "isRequired": true,
@@ -6116,7 +6090,7 @@ exports[`Multiplier complete match 1`] = `
                                           }
                                         >
                                           <JssContextSubscriber
-                                            error="Invalid email"
+                                            error=""
                                             isFullWidth={false}
                                             isRequired={true}
                                             label="Email"
@@ -6135,7 +6109,7 @@ exports[`Multiplier complete match 1`] = `
                                             type="text"
                                           >
                                             <WithStyles(Input)
-                                              error="Invalid email"
+                                              error=""
                                               innerRef={null}
                                               isFullWidth={false}
                                               isReadOnly={false}
@@ -6447,7 +6421,7 @@ exports[`Multiplier complete match 1`] = `
                                                     "vertical": "HoiPoi__Input__vertical-1-71",
                                                   }
                                                 }
-                                                error="Invalid email"
+                                                error=""
                                                 isFullWidth={false}
                                                 isReadOnly={false}
                                                 isRequired={true}
@@ -6469,7 +6443,7 @@ exports[`Multiplier complete match 1`] = `
                                                 value=""
                                               >
                                                 <div
-                                                  className="HoiPoi__Input__root-1-63 HoiPoi__Input__horizontal-1-72 HoiPoi__Input__errored-1-68"
+                                                  className="HoiPoi__Input__root-1-63 HoiPoi__Input__horizontal-1-72"
                                                 >
                                                   <JssContextSubscriber
                                                     className="HoiPoi__Input__Label-1-64"
@@ -7096,11 +7070,6 @@ exports[`Multiplier complete match 1`] = `
                                                       type="text"
                                                       value=""
                                                     />
-                                                    <div
-                                                      className="HoiPoi__Input__error-1-65"
-                                                    >
-                                                      Invalid email
-                                                    </div>
                                                   </div>
                                                 </div>
                                               </Input>

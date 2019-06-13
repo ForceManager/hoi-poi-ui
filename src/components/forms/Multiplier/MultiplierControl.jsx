@@ -75,7 +75,7 @@ function MultiplierControl({
                 isFullWidth={isFullWidth}
                 field={field}
                 value={values}
-                error={errors[field.name] || null}
+                error={errors}
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
