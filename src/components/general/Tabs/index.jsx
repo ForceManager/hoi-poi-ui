@@ -19,13 +19,16 @@ function Tabs({
     onChange,
     activeKey,
     position,
+    postComponent,
     ...props
 }) {
     // Overrides
     const override = getOverrides(overridesProp, Tabs.overrides);
 
     // Classes
-    const rootClassName = classnames(classes.root, classNameProp);
+    const rootClassName = classnames(classes.root, classNameProp, {
+        [classes.withPostComponent]: postComponent,
+    });
 
     return (
         <div className={rootClassName} {...override.root}>
@@ -44,6 +47,7 @@ function Tabs({
                     </TabPane>
                 ))}
             </RCTabs>
+            {postComponent && <div className={classes.postComponent}>{postComponent}</div>}
         </div>
     );
 }
@@ -68,6 +72,7 @@ Tabs.propTypes = {
     activeKey: PropTypes.string,
     onChange: PropTypes.func,
     position: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
+    postComponent: PropTypes.node,
 };
 
 export default React.memo(withStyles(styles, { name: 'Tabs' })(Tabs));
