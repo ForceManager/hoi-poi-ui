@@ -38,7 +38,6 @@ import schema from './example.json';
 const errors = {
     phone: 'Invalid phone',
     multiplier: [{}, { email: 'This field is mandatory' }],
-    // multiplier: [{ email: 'This field is mandatory' }],
 };
 
 function MyField(props) {
