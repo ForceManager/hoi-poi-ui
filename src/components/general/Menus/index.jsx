@@ -33,12 +33,8 @@ function Menus({
     const subMenuProps = {
         title: (
             <Fragment>
-                {icon && (
-                    icon
-                )} 
-                {title && (
-                    title
-                )}
+                {icon && icon}
+                {title && title}
             </Fragment>
         ),
         popupClassName: classes.subMenu,
@@ -76,13 +72,13 @@ Menus.defaultProps = {
 };
 
 Menus.propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.any,
     icon: PropTypes.object,
     className: PropTypes.string,
     overrides: PropTypes.object,
     items: PropTypes.arrayOf(
         PropTypes.shape({
-            title: PropTypes.string,
+            title: PropTypes.any,
             icon: PropTypes.object,
             onClick: PropTypes.func,
         }),
