@@ -15,7 +15,7 @@ function Menus({
     overrides: overridesProp,
     className: classNameProp,
     classes,
-    triggerSubMenuAction,
+    triggerAction,
 }) {
     // Overrides
     const override = getOverrides(overridesProp, Menus.overrides);
@@ -26,14 +26,19 @@ function Menus({
     const menuProps = {
         mode: 'horizontal',
         className: classes.menu,
-        triggerSubMenuAction: triggerSubMenuAction,
+        triggerSubMenuAction: triggerAction,
         ...override['rc-menu'],
     };
 
     const subMenuProps = {
         title: (
             <Fragment>
-                {icon} {title}
+                {icon && (
+                    icon
+                )} 
+                {title && (
+                    title
+                )}
             </Fragment>
         ),
         popupClassName: classes.subMenu,
@@ -67,9 +72,7 @@ function Menus({
 Menus.overrides = ['root', 'rc-menu'];
 
 Menus.defaultProps = {
-    title: '',
-    icon: '',
-    triggerSubMenuAction: 'click',
+    triggerAction: 'click',
 };
 
 Menus.propTypes = {
@@ -84,7 +87,7 @@ Menus.propTypes = {
             onClick: PropTypes.func,
         }),
     ),
-    triggerSubMenuAction: PropTypes.oneOf(['hover', 'click']),
+    triggerAction: PropTypes.oneOf(['hover', 'click']),
 };
 
 export default React.memo(withStyles(styles, { name: 'Menus' })(Menus));

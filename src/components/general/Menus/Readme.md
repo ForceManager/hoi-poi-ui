@@ -47,5 +47,5 @@ const items = [
     },
 ];
 
-<Menus title="Hover me" items={items} triggerSubMenuAction="hover" />;
+<Menus title="Hover me" items={items} triggerAction="hover" />;
 ```

@@ -57,7 +57,7 @@ describe('Menus', () => {
                     title="Menus"
                     icon={<Icon name="threeDots" />}
                     items={items}
-                    triggerSubMenuAction="hover"
+                    triggerAction="hover"
                 />
             </HoiPoiProvider>,
         );

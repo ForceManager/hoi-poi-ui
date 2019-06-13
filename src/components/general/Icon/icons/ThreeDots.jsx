@@ -12,13 +12,13 @@ function ThreeDots({ color, ...props }) {
             <g
                 id="Svg-Icons/18px-(All-icons)/UI/dots"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
             >
                 <rect
                     id="Bounds"
-                    fill-opacity="0.1"
+                    fillOpacity="0.1"
                     fill={color}
                     opacity="0"
                     x="0"

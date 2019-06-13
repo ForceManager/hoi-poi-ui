@@ -60,7 +60,7 @@ export default (theme) => ({
         userSelect: 'none',
 
         '&:hover': {
-            backgroundColor: theme.colors.cloud,
+            backgroundColor: theme.colors.tableHeader,
         },
 
         '& span': {
