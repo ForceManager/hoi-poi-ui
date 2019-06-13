@@ -15,6 +15,7 @@ const greySoft = '#788590';
 const greyLight = '#f0f3f5';
 const disabledGrey = '#ced4d9';
 const white = '#FFFFFF';
+const cloud = '#f6f7f9';
 const transparentBlack = 'rgba(38, 43, 52, 0.8)';
 
 const green = '#86AD20';
@@ -65,6 +66,7 @@ export default {
         secondaryGrey,
         greyLight,
         disabledGrey,
+        cloud,
         greySoft,
         greenLight,
         green,
