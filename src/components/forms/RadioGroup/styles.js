@@ -20,7 +20,7 @@ export default (theme) => ({
         marginBottom: 14,
     },
     radioLabel: {
-        marginLeft: 2,
+        marginLeft: 10,
         ...theme.typography.defaultText,
         color: theme.colors.greySoft,
     },
@@ -38,6 +38,7 @@ export default (theme) => ({
     vertical: {
         display: 'block',
         padding: '12px 0 11px 0',
+        marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
         },

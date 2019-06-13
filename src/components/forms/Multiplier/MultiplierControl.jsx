@@ -1,12 +1,18 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import withStyles from 'react-jss';
+import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
+
 import Form from '../../forms/Form';
 import FieldControl from '../Form/FieldControl';
+import Icon from '../../general/Icon';
+import styles from './styles';
 
 function MultiplierControl({
     overrides: overridesProp,
     className: classNameProp,
+    classes,
     index,
     type,
     schema,
@@ -14,6 +20,7 @@ function MultiplierControl({
     isFullWidth,
     values,
     errors,
+    customFields,
     onChange,
     onFocus,
     onBlur,
@@ -23,20 +30,27 @@ function MultiplierControl({
     // Overrides
     const override = getOverrides(overridesProp, MultiplierControl.overrides);
 
+    // Classes
+    const removeIconClasses = classnames(classes.removeIcon, {
+        [classes.removeIconVertical]: labelMode === 'vertical',
+    });
+
     const onChangeMultiplier = useCallback(
         (value) => {
-            onChange && onChange(value, index);
+            onChange && onChange(value, schema, index);
         },
-        [onChange, index],
+        [onChange, schema, index],
     );
 
     const onClickRemove = useCallback(() => {
-        onRemove && onRemove(index);
-    }, [onRemove, index]);
+        onRemove(schema, index);
+    }, [onRemove, schema, index]);
 
+    let component;
     if (type === 'form') {
-        return (
+        component = (
             <Form
+                className={classes.form}
                 overrides={overridesProp}
                 schema={schema}
                 values={values}
@@ -44,9 +58,9 @@ function MultiplierControl({
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                onRemoveSection={onClickRemove}
-                className={classNameProp}
                 isFullWidth={isFullWidth}
+                labelMode={labelMode}
+                customFields={customFields}
                 {...override.Form}
                 override={override.Form}
                 useNativeForm={false}
@@ -55,25 +69,38 @@ function MultiplierControl({
     } else if (type === 'field') {
         let field = { ...schema };
         field.label = index === 0 ? field.label : '';
-        return (
+        component = (
             <FieldControl
                 labelMode={labelMode}
                 isFullWidth={isFullWidth}
                 field={field}
                 value={values}
-                error={errors[field.name] || null}
+                error={errors}
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                className={classNameProp}
+                customFields={customFields}
                 {...override.fieldControl}
             />
         );
     }
-    return;
+    return (
+        <div className={classNameProp}>
+            {component}
+            {onRemove && (
+                <Icon
+                    onClick={onClickRemove}
+                    className={removeIconClasses}
+                    {...override.removeIcon}
+                    name="close"
+                    size="small"
+                />
+            )}
+        </div>
+    );
 }
 
-MultiplierControl.overrides = ['Form', 'fieldControl'];
+MultiplierControl.overrides = ['Form', 'fieldControl', 'removeIcon'];
 
 MultiplierControl.defaultProps = {
     labelMode: 'horizontal',
@@ -92,4 +119,4 @@ MultiplierControl.propTypes = {
     multiplierItemClassNames: PropTypes.any,
 };
 
-export default React.memo(MultiplierControl);
+export default React.memo(withStyles(styles, { name: 'MultiplierControl' })(MultiplierControl));

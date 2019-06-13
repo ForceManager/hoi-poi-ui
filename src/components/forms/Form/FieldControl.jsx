@@ -30,7 +30,7 @@ function FieldControl({
     onBlur,
     value,
     error,
-    component,
+    customFields,
     ...props
 }) {
     const onChangeField = useCallback(
@@ -59,6 +59,7 @@ function FieldControl({
 
     if (!field || !field.type) return null;
     let Field = FIELD_MAP[field.type];
+    let component = customFields && customFields[field.type];
     if (!Field && component) Field = Input;
     if (!Field) return null;
 
@@ -72,7 +73,9 @@ function FieldControl({
         className: classNameProp,
         value,
         error,
+        customFields,
         component,
+        overrides: overridesProp,
     };
     let attrs = field.attrs || {};
     return <Field {...fieldProps} {...attrs} />;
@@ -92,7 +95,10 @@ FieldControl.propTypes = {
     value: PropTypes.any,
     error: PropTypes.string,
     className: PropTypes.string,
-    component: PropTypes.node,
+    customFields: PropTypes.object,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
     field: PropTypes.shape({
         label: PropTypes.string,
         labelMode: PropTypes.string,

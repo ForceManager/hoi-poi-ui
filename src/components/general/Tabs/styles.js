@@ -1,5 +1,6 @@
 export default (theme) => ({
     root: {
+        borderBottom: `1px solid ${theme.colors.placeholders}`,
         '& .hoi-poi-ui__tabs': {
             boxSizing: 'border-box',
             position: 'relative',
@@ -26,10 +27,6 @@ export default (theme) => ({
             width: 0,
             height: 0,
         },
-        '& .hoi-poi-ui__tabs-ink-bar-animated': {
-            transition:
-                'transform 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1), top 0.3s cubic-bezier(0.35, 0, 0.25, 1), height 0.3s cubic-bezier(0.35, 0, 0.25, 1), width 0.3s cubic-bezier(0.35, 0, 0.25, 1)',
-        },
         '& .hoi-poi-ui__tabs-tab-prev, & .hoi-poi-ui__tabs-tab-next': {
             WebkitUserSelect: 'none',
             MozUserSelect: 'none',
@@ -44,6 +41,7 @@ export default (theme) => ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            overflow: 'hidden',
         },
         '& .hoi-poi-ui__tabs-tab-prev-icon, & .hoi-poi-ui__tabs-tab-next-icon': {
             position: 'relative',
@@ -151,7 +149,6 @@ export default (theme) => ({
             float: 'left',
             height: '100%',
             marginRight: '10px',
-            borderRight: `1px solid ${theme.colors.placeholders}`,
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-nav-container': {
             height: '100%',
@@ -249,7 +246,6 @@ export default (theme) => ({
             float: 'right',
             height: '100%',
             marginLeft: '10px',
-            borderLeft: `1px solid ${theme.colors.placeholders}`,
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-nav-container': {
             height: '100%',
@@ -325,9 +321,6 @@ export default (theme) => ({
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-content': {
             width: '100%',
         },
-        '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-bar': {
-            borderTop: `1px solid ${theme.colors.placeholders}`,
-        },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-nav-container-scrolling': {
             paddingLeft: '32px',
             paddingRight: '32px',
@@ -402,9 +395,6 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-content': {
             width: '100%',
-        },
-        '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-bar': {
-            borderBottom: `1px solid ${theme.colors.placeholders}`,
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-container-scrolling': {
             paddingLeft: '32px',
@@ -483,4 +473,9 @@ export default (theme) => ({
             overflow: 'visible',
         },
     },
+    withPostComponent: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    postComponent: {},
 });
