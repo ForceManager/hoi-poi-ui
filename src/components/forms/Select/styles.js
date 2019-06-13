@@ -74,6 +74,7 @@ export default (theme) => ({
     vertical: {
         display: 'block',
         padding: '15px 0 10px 0',
+        marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
         },
@@ -87,6 +88,7 @@ export default (theme) => ({
     isFullWidth: {
         '& $formControl': {
             width: '100%',
+            flex: 1,
         },
     },
     select: {

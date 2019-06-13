@@ -11,8 +11,6 @@ describe('Multiplier', () => {
             email: 'Invalid email',
         };
 
-        const max = 10;
-
         const buttonLabel = 'Add';
 
         const buttonClassName = 'addButton';

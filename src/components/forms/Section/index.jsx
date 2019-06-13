@@ -16,7 +16,6 @@ function Section({
     classes,
     title,
     isExpandable,
-    onRemove,
     ...props
 }) {
     const [isOpen, open] = useState(true);
@@ -60,26 +59,16 @@ function Section({
             </div>
         );
     }
-    return (
-        <div className={rootClassName}>
-            {onRemove && (
-                <span onClick={onRemove} className={classes.removeIcon} {...override.removeIcon}>
-                    <Icon name="close" />
-                </span>
-            )}
-            {children}
-        </div>
-    );
+    return <div className={rootClassName}>{children}</div>;
 }
 
-Section.overrides = ['root', 'header', 'Text', 'react-animate-height', 'removeIcon'];
+Section.overrides = ['root', 'header', 'Text', 'react-animate-height'];
 
 Section.defaultProps = {
     isExpandable: true,
     overrides: {},
 };
 Section.propTypes = {
-    onRemove: PropTypes.func,
     className: PropTypes.string,
     overrides: PropTypes.object,
     title: PropTypes.string,
