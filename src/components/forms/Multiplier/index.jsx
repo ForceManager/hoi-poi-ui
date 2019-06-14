@@ -164,7 +164,7 @@ Multiplier.propTypes = {
     separator: PropTypes.bool,
     remove: PropTypes.bool,
     value: PropTypes.array,
-    error: PropTypes.object,
+    error: PropTypes.any,
     isFullWidth: PropTypes.bool,
     customFields: PropTypes.object,
 };

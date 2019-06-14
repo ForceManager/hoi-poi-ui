@@ -5,7 +5,7 @@ import { HoiPoiProvider, Icon } from '../../../utils/styles';
 import Menus from '../../general/Menus';
 
 describe('Menus', () => {
-    test('default with click', () => {
+    /*test('default with click', () => {
         const items = [
             {
                 title: 'Create',
@@ -62,5 +62,5 @@ describe('Menus', () => {
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    });*/
 });
