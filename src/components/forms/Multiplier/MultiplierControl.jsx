@@ -18,6 +18,7 @@ function MultiplierControl({
     schema,
     labelMode,
     isFullWidth,
+    isReadOnly,
     values,
     errors,
     customFields,
@@ -59,6 +60,7 @@ function MultiplierControl({
                 onFocus={onFocus}
                 onBlur={onBlur}
                 isFullWidth={isFullWidth}
+                isReadOnly={isReadOnly}
                 labelMode={labelMode}
                 customFields={customFields}
                 {...override.Form}
@@ -73,6 +75,7 @@ function MultiplierControl({
             <FieldControl
                 labelMode={labelMode}
                 isFullWidth={isFullWidth}
+                isReadOnly={isReadOnly}
                 field={field}
                 value={values}
                 error={errors}
@@ -87,7 +90,7 @@ function MultiplierControl({
     return (
         <div className={classNameProp}>
             {component}
-            {onRemove && (
+            {isReadOnly !== true && onRemove && (
                 <Icon
                     onClick={onClickRemove}
                     className={removeIconClasses}
@@ -114,6 +117,7 @@ MultiplierControl.propTypes = {
     schema: PropTypes.any,
     labelMode: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
     values: PropTypes.any,
     errors: PropTypes.any,
     multiplierItemClassNames: PropTypes.any,

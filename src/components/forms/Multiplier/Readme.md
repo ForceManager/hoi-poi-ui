@@ -61,6 +61,39 @@ let onChange = (value, newValue, index, schema) => {
 />;
 ```
 
+Disabled
+
+```jsx
+import schema from './example.1.json';
+
+const initialValues = [
+    {
+        label: 'B',
+        value: 'b',
+    },
+    {
+        label: 'C',
+        value: 'c',
+    },
+];
+
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
+};
+
+<Multiplier
+    name="timeAllocationLine"
+    buttonLabel="ADD"
+    buttonClassName="time-allocation-add-button"
+    value={state.value || initialValues}
+    schema={schema}
+    max={5}
+    separator={false}
+    onChange={onChange}
+    isReadOnly={true}
+/>;
+```
+
 **Schema:**
 
 ```jsx
