@@ -1,5 +1,6 @@
 export default (theme) => ({
     root: {
+        position: 'relative',
         '& *': {
             boxSizing: 'border-box',
         },
@@ -78,6 +79,54 @@ export default (theme) => ({
             '&::-webkit-scrollbar-thumb': {
                 backgroundColor: theme.colors.tableHeader,
             },
+        },
+        '& .react-grid-Empty': {
+            position: 'relative',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflowY: 'auto',
+        },
+    },
+    loadingView: {
+        position: 'absolute',
+        overflow: 'visible',
+        margin: 0,
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 2,
+    },
+    emptyView: {},
+    emptyComponent: {
+        padding: 100,
+    },
+    rowRenderer: {
+        position: 'relative',
+        '&:hover $actions': {
+            display: 'flex',
+        },
+    },
+    actions: {
+        display: 'none',
+        justifyContent: 'flex-end',
+        minWidth: 200,
+        alignItems: 'center',
+        position: 'absolute',
+        height: '100%',
+        top: 0,
+        right: 0,
+        zIndex: 2,
+        backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0), rgba(250, 251, 252, 0.59) 48%, ${theme.colors.tableHover})`,
+        '& > *': {
+            margin: '0 10px',
         },
     },
 });
