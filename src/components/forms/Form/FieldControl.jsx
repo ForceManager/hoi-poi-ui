@@ -24,6 +24,7 @@ function FieldControl({
     className: classNameProp,
     labelMode,
     isFullWidth,
+    isReadOnly,
     field,
     onChange,
     onFocus,
@@ -65,8 +66,9 @@ function FieldControl({
 
     const fieldProps = {
         ...field,
-        labelMode: labelMode,
-        isFullWidth: isFullWidth,
+        labelMode,
+        isFullWidth,
+        isReadOnly,
         onChange: onChangeField,
         onFocus: onFocusField,
         onBlur: onBlurField,
@@ -92,6 +94,7 @@ FieldControl.propTypes = {
     /** Native form class */
     labelMode: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
     value: PropTypes.any,
     error: PropTypes.string,
     className: PropTypes.string,

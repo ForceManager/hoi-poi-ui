@@ -16,6 +16,7 @@ function Multiplier({
     buttonLabel,
     buttonClassName,
     isFullWidth,
+    isReadOnly,
     max,
     separator,
     value,
@@ -84,6 +85,7 @@ function Multiplier({
                 schema={schema}
                 labelMode={schema.labelMode || labelMode}
                 isFullWidth={schema.isFullWidth || isFullWidth}
+                isReadOnly={isReadOnly || schema.isReadOnly}
                 values={value[index]}
                 errors={error[index]}
                 onChange={onChangeMultiplier}
@@ -98,7 +100,7 @@ function Multiplier({
         );
     }
 
-    const showButton = !(max && size >= max);
+    const showButton = !(max && size >= max) && isReadOnly !== true;
 
     return (
         <div {...rootProps}>
@@ -166,6 +168,7 @@ Multiplier.propTypes = {
     value: PropTypes.array,
     error: PropTypes.any,
     isFullWidth: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
     customFields: PropTypes.object,
 };
 

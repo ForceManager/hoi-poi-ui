@@ -12,6 +12,7 @@ function Form({
     className: classNameProp,
     labelMode,
     isFullWidth,
+    isReadOnly,
     schema,
     onChange,
     onFocus,
@@ -85,6 +86,7 @@ function Form({
                         key={field.name}
                         labelMode={field.labelMode || labelMode}
                         isFullWidth={field.isFullWidth || isFullWidth}
+                        isReadOnly={isReadOnly || field.isReadOnly}
                         field={field}
                         value={value}
                         error={errors[field.name]}
@@ -133,6 +135,7 @@ Form.propTypes = {
     className: PropTypes.string,
     labelMode: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
     values: PropTypes.object,
     errors: PropTypes.object,
     customFields: PropTypes.object,
