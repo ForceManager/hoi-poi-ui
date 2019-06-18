@@ -5,6 +5,13 @@ export default (theme) => ({
         marginRight: 17,
         padding: '6px 0',
     },
+    error: {
+        ...theme.typography.smallText,
+        position: 'absolute',
+        lineHeight: '20px',
+        bottom: -21,
+        color: theme.colors.red,
+    },
     formControl: {
         position: 'relative',
         display: 'flex',
