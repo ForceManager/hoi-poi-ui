@@ -540,13 +540,14 @@ exports[`CheckboxGroup default match 1`] = `
             classes={
               Object {
                 "Label": "HoiPoi__CheckboxGroup__Label-1-1",
-                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-1-3",
-                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-1-4",
-                "formControl": "HoiPoi__CheckboxGroup__formControl-1-2",
-                "horizontal": "HoiPoi__CheckboxGroup__horizontal-1-7",
-                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-1-5",
+                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-1-4",
+                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-1-5",
+                "error": "HoiPoi__CheckboxGroup__error-1-2",
+                "formControl": "HoiPoi__CheckboxGroup__formControl-1-3",
+                "horizontal": "HoiPoi__CheckboxGroup__horizontal-1-8",
+                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-1-6",
                 "root": "HoiPoi__CheckboxGroup__root-1-0",
-                "vertical": "HoiPoi__CheckboxGroup__vertical-1-6",
+                "vertical": "HoiPoi__CheckboxGroup__vertical-1-7",
               }
             }
             isReadOnly={false}
@@ -573,7 +574,7 @@ exports[`CheckboxGroup default match 1`] = `
             value={Object {}}
           >
             <div
-              className="HoiPoi__CheckboxGroup__root-1-0 HoiPoi__CheckboxGroup__horizontal-1-7"
+              className="HoiPoi__CheckboxGroup__root-1-0 HoiPoi__CheckboxGroup__horizontal-1-8"
             >
               <JssContextSubscriber
                 className="HoiPoi__CheckboxGroup__Label-1-1"
@@ -842,23 +843,23 @@ exports[`CheckboxGroup default match 1`] = `
                     className="HoiPoi__CheckboxGroup__Label-1-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-1-9",
-                        "icon": "HoiPoi__Label__icon-1-11",
-                        "info": "HoiPoi__Label__info-1-10",
-                        "root": "HoiPoi__Label__root-1-8",
+                        "Text": "HoiPoi__Label__Text-1-10",
+                        "icon": "HoiPoi__Label__icon-1-12",
+                        "info": "HoiPoi__Label__info-1-11",
+                        "root": "HoiPoi__Label__root-1-9",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-1-8 HoiPoi__CheckboxGroup__Label-1-1"
+                      className="HoiPoi__Label__root-1-9 HoiPoi__CheckboxGroup__Label-1-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-1-9"
+                        className="HoiPoi__Label__Text-1-10"
                         overrides={Object {}}
                         type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-1-9"
+                          className="HoiPoi__Label__Text-1-10"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -1122,20 +1123,20 @@ exports[`CheckboxGroup default match 1`] = `
                           type="bold"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-1-9"
+                            className="HoiPoi__Label__Text-1-10"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-1-22",
-                                "big": "HoiPoi__Text__big-1-17",
-                                "bold": "HoiPoi__Text__bold-1-18",
-                                "isLoading": "HoiPoi__Text__isLoading-1-21",
-                                "large": "HoiPoi__Text__large-1-16",
-                                "light": "HoiPoi__Text__light-1-20",
-                                "medium": "HoiPoi__Text__medium-1-15",
-                                "normal": "HoiPoi__Text__normal-1-19",
-                                "root": "HoiPoi__Text__root-1-12",
-                                "small": "HoiPoi__Text__small-1-14",
-                                "truncated": "HoiPoi__Text__truncated-1-13",
+                                "Loader": "HoiPoi__Text__Loader-1-23",
+                                "big": "HoiPoi__Text__big-1-18",
+                                "bold": "HoiPoi__Text__bold-1-19",
+                                "isLoading": "HoiPoi__Text__isLoading-1-22",
+                                "large": "HoiPoi__Text__large-1-17",
+                                "light": "HoiPoi__Text__light-1-21",
+                                "medium": "HoiPoi__Text__medium-1-16",
+                                "normal": "HoiPoi__Text__normal-1-20",
+                                "root": "HoiPoi__Text__root-1-13",
+                                "small": "HoiPoi__Text__small-1-15",
+                                "truncated": "HoiPoi__Text__truncated-1-14",
                               }
                             }
                             isTruncated={false}
@@ -1144,7 +1145,7 @@ exports[`CheckboxGroup default match 1`] = `
                             type="bold"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-12 HoiPoi__Text__bold-1-18 HoiPoi__Text__medium-1-15 HoiPoi__Label__Text-1-9"
+                              className="HoiPoi__Text__root-1-13 HoiPoi__Text__bold-1-19 HoiPoi__Text__medium-1-16 HoiPoi__Label__Text-1-10"
                             >
                               Lorem ipsum
                             </span>
@@ -1156,7 +1157,7 @@ exports[`CheckboxGroup default match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi__CheckboxGroup__formControl-1-2"
+                className="HoiPoi__CheckboxGroup__formControl-1-3"
               >
                 <JssContextSubscriber
                   isReadOnly={false}
@@ -1442,14 +1443,15 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-24",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-26",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-27",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-25",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-30",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-28",
-                          "root": "HoiPoi__CheckboxControl__root-1-23",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-29",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-25",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-28",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-29",
+                          "error": "HoiPoi__CheckboxControl__error-1-26",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-27",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-32",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-30",
+                          "root": "HoiPoi__CheckboxControl__root-1-24",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-31",
                         }
                       }
                       isReadOnly={false}
@@ -1464,7 +1466,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-26"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-28"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -1739,9 +1741,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-33",
-                                  "input": "HoiPoi__Checkbox__input-1-32",
-                                  "root": "HoiPoi__Checkbox__root-1-31",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-35",
+                                  "input": "HoiPoi__Checkbox__input-1-34",
+                                  "root": "HoiPoi__Checkbox__root-1-33",
                                 }
                               }
                               isDisabled={false}
@@ -1749,7 +1751,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-31"
+                                className="HoiPoi__Checkbox__root-1-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -1871,7 +1873,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-32"
+                                  className="HoiPoi__Checkbox__input-1-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1881,7 +1883,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-27"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-29"
                         >
                           Lorem ipsum
                         </span>
@@ -2173,14 +2175,15 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-24",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-26",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-27",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-25",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-30",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-28",
-                          "root": "HoiPoi__CheckboxControl__root-1-23",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-29",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-25",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-28",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-29",
+                          "error": "HoiPoi__CheckboxControl__error-1-26",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-27",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-32",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-30",
+                          "root": "HoiPoi__CheckboxControl__root-1-24",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-31",
                         }
                       }
                       isReadOnly={false}
@@ -2195,7 +2198,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-26"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-28"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -2470,9 +2473,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-33",
-                                  "input": "HoiPoi__Checkbox__input-1-32",
-                                  "root": "HoiPoi__Checkbox__root-1-31",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-35",
+                                  "input": "HoiPoi__Checkbox__input-1-34",
+                                  "root": "HoiPoi__Checkbox__root-1-33",
                                 }
                               }
                               isDisabled={false}
@@ -2480,7 +2483,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-31"
+                                className="HoiPoi__Checkbox__root-1-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2602,7 +2605,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-32"
+                                  className="HoiPoi__Checkbox__input-1-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2612,7 +2615,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-27"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-29"
                         >
                           Lorem ipsum 2
                         </span>
@@ -2904,14 +2907,15 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-24",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-26",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-27",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-25",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-30",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-28",
-                          "root": "HoiPoi__CheckboxControl__root-1-23",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-29",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-25",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-28",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-29",
+                          "error": "HoiPoi__CheckboxControl__error-1-26",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-27",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-32",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-30",
+                          "root": "HoiPoi__CheckboxControl__root-1-24",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-31",
                         }
                       }
                       isReadOnly={false}
@@ -2926,7 +2930,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-26"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-28"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -3201,9 +3205,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-33",
-                                  "input": "HoiPoi__Checkbox__input-1-32",
-                                  "root": "HoiPoi__Checkbox__root-1-31",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-35",
+                                  "input": "HoiPoi__Checkbox__input-1-34",
+                                  "root": "HoiPoi__Checkbox__root-1-33",
                                 }
                               }
                               isDisabled={false}
@@ -3211,7 +3215,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-31"
+                                className="HoiPoi__Checkbox__root-1-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -3333,7 +3337,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-32"
+                                  className="HoiPoi__Checkbox__input-1-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -3343,7 +3347,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-27"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-29"
                         >
                           Lorem ipsum 3
                         </span>
@@ -3912,13 +3916,14 @@ exports[`CheckboxGroup with values match 1`] = `
             classes={
               Object {
                 "Label": "HoiPoi__CheckboxGroup__Label-2-1",
-                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-2-3",
-                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-2-4",
-                "formControl": "HoiPoi__CheckboxGroup__formControl-2-2",
-                "horizontal": "HoiPoi__CheckboxGroup__horizontal-2-7",
-                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-2-5",
+                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-2-4",
+                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-2-5",
+                "error": "HoiPoi__CheckboxGroup__error-2-2",
+                "formControl": "HoiPoi__CheckboxGroup__formControl-2-3",
+                "horizontal": "HoiPoi__CheckboxGroup__horizontal-2-8",
+                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-2-6",
                 "root": "HoiPoi__CheckboxGroup__root-2-0",
-                "vertical": "HoiPoi__CheckboxGroup__vertical-2-6",
+                "vertical": "HoiPoi__CheckboxGroup__vertical-2-7",
               }
             }
             isReadOnly={false}
@@ -3950,7 +3955,7 @@ exports[`CheckboxGroup with values match 1`] = `
             }
           >
             <div
-              className="HoiPoi__CheckboxGroup__root-2-0 HoiPoi__CheckboxGroup__horizontal-2-7"
+              className="HoiPoi__CheckboxGroup__root-2-0 HoiPoi__CheckboxGroup__horizontal-2-8"
             >
               <JssContextSubscriber
                 className="HoiPoi__CheckboxGroup__Label-2-1"
@@ -4219,23 +4224,23 @@ exports[`CheckboxGroup with values match 1`] = `
                     className="HoiPoi__CheckboxGroup__Label-2-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-2-9",
-                        "icon": "HoiPoi__Label__icon-2-11",
-                        "info": "HoiPoi__Label__info-2-10",
-                        "root": "HoiPoi__Label__root-2-8",
+                        "Text": "HoiPoi__Label__Text-2-10",
+                        "icon": "HoiPoi__Label__icon-2-12",
+                        "info": "HoiPoi__Label__info-2-11",
+                        "root": "HoiPoi__Label__root-2-9",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-2-8 HoiPoi__CheckboxGroup__Label-2-1"
+                      className="HoiPoi__Label__root-2-9 HoiPoi__CheckboxGroup__Label-2-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-2-9"
+                        className="HoiPoi__Label__Text-2-10"
                         overrides={Object {}}
                         type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-2-9"
+                          className="HoiPoi__Label__Text-2-10"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -4499,20 +4504,20 @@ exports[`CheckboxGroup with values match 1`] = `
                           type="bold"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-2-9"
+                            className="HoiPoi__Label__Text-2-10"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-2-22",
-                                "big": "HoiPoi__Text__big-2-17",
-                                "bold": "HoiPoi__Text__bold-2-18",
-                                "isLoading": "HoiPoi__Text__isLoading-2-21",
-                                "large": "HoiPoi__Text__large-2-16",
-                                "light": "HoiPoi__Text__light-2-20",
-                                "medium": "HoiPoi__Text__medium-2-15",
-                                "normal": "HoiPoi__Text__normal-2-19",
-                                "root": "HoiPoi__Text__root-2-12",
-                                "small": "HoiPoi__Text__small-2-14",
-                                "truncated": "HoiPoi__Text__truncated-2-13",
+                                "Loader": "HoiPoi__Text__Loader-2-23",
+                                "big": "HoiPoi__Text__big-2-18",
+                                "bold": "HoiPoi__Text__bold-2-19",
+                                "isLoading": "HoiPoi__Text__isLoading-2-22",
+                                "large": "HoiPoi__Text__large-2-17",
+                                "light": "HoiPoi__Text__light-2-21",
+                                "medium": "HoiPoi__Text__medium-2-16",
+                                "normal": "HoiPoi__Text__normal-2-20",
+                                "root": "HoiPoi__Text__root-2-13",
+                                "small": "HoiPoi__Text__small-2-15",
+                                "truncated": "HoiPoi__Text__truncated-2-14",
                               }
                             }
                             isTruncated={false}
@@ -4521,7 +4526,7 @@ exports[`CheckboxGroup with values match 1`] = `
                             type="bold"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-12 HoiPoi__Text__bold-2-18 HoiPoi__Text__medium-2-15 HoiPoi__Label__Text-2-9"
+                              className="HoiPoi__Text__root-2-13 HoiPoi__Text__bold-2-19 HoiPoi__Text__medium-2-16 HoiPoi__Label__Text-2-10"
                             >
                               Lorem ipsum
                             </span>
@@ -4533,7 +4538,7 @@ exports[`CheckboxGroup with values match 1`] = `
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi__CheckboxGroup__formControl-2-2"
+                className="HoiPoi__CheckboxGroup__formControl-2-3"
               >
                 <JssContextSubscriber
                   isReadOnly={false}
@@ -4820,14 +4825,15 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-24",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-26",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-27",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-25",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-30",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-28",
-                          "root": "HoiPoi__CheckboxControl__root-2-23",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-29",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-25",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-28",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-29",
+                          "error": "HoiPoi__CheckboxControl__error-2-26",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-27",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-32",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-30",
+                          "root": "HoiPoi__CheckboxControl__root-2-24",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-31",
                         }
                       }
                       isReadOnly={false}
@@ -4842,7 +4848,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-26"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-28"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -5117,9 +5123,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-33",
-                                  "input": "HoiPoi__Checkbox__input-2-32",
-                                  "root": "HoiPoi__Checkbox__root-2-31",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-35",
+                                  "input": "HoiPoi__Checkbox__input-2-34",
+                                  "root": "HoiPoi__Checkbox__root-2-33",
                                 }
                               }
                               isDisabled={false}
@@ -5127,7 +5133,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-31"
+                                className="HoiPoi__Checkbox__root-2-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -5259,7 +5265,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Checkbox__input-2-32"
+                                  className="HoiPoi__Checkbox__input-2-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -5269,7 +5275,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-27"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-29"
                         >
                           Lorem ipsum
                         </span>
@@ -5561,14 +5567,15 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-24",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-26",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-27",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-25",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-30",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-28",
-                          "root": "HoiPoi__CheckboxControl__root-2-23",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-29",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-25",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-28",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-29",
+                          "error": "HoiPoi__CheckboxControl__error-2-26",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-27",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-32",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-30",
+                          "root": "HoiPoi__CheckboxControl__root-2-24",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-31",
                         }
                       }
                       isReadOnly={false}
@@ -5583,7 +5590,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-26"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-28"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -5858,9 +5865,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-33",
-                                  "input": "HoiPoi__Checkbox__input-2-32",
-                                  "root": "HoiPoi__Checkbox__root-2-31",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-35",
+                                  "input": "HoiPoi__Checkbox__input-2-34",
+                                  "root": "HoiPoi__Checkbox__root-2-33",
                                 }
                               }
                               isDisabled={false}
@@ -5868,7 +5875,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-31"
+                                className="HoiPoi__Checkbox__root-2-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -5990,7 +5997,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-2-32"
+                                  className="HoiPoi__Checkbox__input-2-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -6000,7 +6007,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-27"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-29"
                         >
                           Lorem ipsum 2
                         </span>
@@ -6293,14 +6300,15 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-24",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-26",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-27",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-25",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-30",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-28",
-                          "root": "HoiPoi__CheckboxControl__root-2-23",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-29",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-25",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-28",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-29",
+                          "error": "HoiPoi__CheckboxControl__error-2-26",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-27",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-32",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-30",
+                          "root": "HoiPoi__CheckboxControl__root-2-24",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-31",
                         }
                       }
                       isReadOnly={false}
@@ -6315,7 +6323,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-26"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-28"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -6590,9 +6598,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-33",
-                                  "input": "HoiPoi__Checkbox__input-2-32",
-                                  "root": "HoiPoi__Checkbox__root-2-31",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-35",
+                                  "input": "HoiPoi__Checkbox__input-2-34",
+                                  "root": "HoiPoi__Checkbox__root-2-33",
                                 }
                               }
                               isDisabled={false}
@@ -6600,7 +6608,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-31"
+                                className="HoiPoi__Checkbox__root-2-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -6732,7 +6740,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Checkbox__input-2-32"
+                                  className="HoiPoi__Checkbox__input-2-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -6742,7 +6750,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-27"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-29"
                         >
                           Lorem ipsum 3
                         </span>
