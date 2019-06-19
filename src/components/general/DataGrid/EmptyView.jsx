@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import Text from '../../typography/Text';
-import Loader from '../Loader';
 
 import styles from './styles';
 
@@ -27,7 +26,7 @@ function EmptyView({
 
     let el = emptyComponent || <Text className={classes.emptyComponent}>No data available</Text>;
     if (hasError) el = errorComponent || <Text className={classes.emptyComponent}>Error</Text>;
-    if (isLoading) el = <Loader />;
+    if (isLoading) el = null;
     return <div {...rootProps}>{el}</div>;
 }
 

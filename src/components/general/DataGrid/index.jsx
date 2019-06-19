@@ -47,10 +47,11 @@ function DataGrid({
                 hasError={hasError}
                 emptyComponent={emptyComponent}
                 errorComponent={errorComponent}
+                isLoading={isLoading}
                 {...override.emptyView}
             />
         ),
-        [emptyComponent, errorComponent, hasError, override.emptyView],
+        [emptyComponent, errorComponent, hasError, isLoading, override.emptyView],
     );
 
     const rowRenderer = useMemo(
@@ -61,7 +62,7 @@ function DataGrid({
     const dataGridProps = {
         columns,
         rowGetter,
-        rowsCount: count,
+        rowsCount: hasError ? 0 : count,
         headerRowHeight,
         rowHeight,
         emptyRowsView,
