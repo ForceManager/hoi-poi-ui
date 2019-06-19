@@ -78,7 +78,7 @@ function DataGrid({
             <ReactDataGrid {...dataGridProps} />
             {isLoading && (
                 <div className={classes.loadingView} {...override.loadingView}>
-                    {emptyComponent || <Loader size="huge" />}
+                    <Loader size="huge" />
                 </div>
             )}
         </div>
