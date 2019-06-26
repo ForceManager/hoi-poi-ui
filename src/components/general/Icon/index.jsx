@@ -19,6 +19,7 @@ import Trash from './icons/Trash';
 import Magnifier from './icons/Magnifier';
 import Tick from './icons/Tick';
 import ThreeDots from './icons/ThreeDots';
+import Download from './icons/Download';
 
 const ICONS = {
     chevron: Chevron,
@@ -34,6 +35,7 @@ const ICONS = {
     magnifier: Magnifier,
     tick: Tick,
     threeDots: ThreeDots,
+    download: Download,
 };
 
 function Icon({
