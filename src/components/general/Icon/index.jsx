@@ -18,6 +18,8 @@ import Edit from './icons/Edit';
 import Trash from './icons/Trash';
 import Magnifier from './icons/Magnifier';
 import Tick from './icons/Tick';
+import VisibilityOff from './icons/VisibilityOff';
+import VisibilityOn from './icons/VisibilityOn';
 import ThreeDots from './icons/ThreeDots';
 import Download from './icons/Download';
 
@@ -34,6 +36,8 @@ const ICONS = {
     trash: Trash,
     magnifier: Magnifier,
     tick: Tick,
+    visibilityOff: VisibilityOff,
+    visibilityOn: VisibilityOn,
     threeDots: ThreeDots,
     download: Download,
 };
