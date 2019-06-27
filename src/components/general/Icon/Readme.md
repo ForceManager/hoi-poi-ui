@@ -23,6 +23,8 @@ Icons:
 <span> </span>
 <Icon name="magnifier" />
 <span> </span>
+<Icon name="duplicate" />
+<span> </span>
 ```
 
 Sizes:
