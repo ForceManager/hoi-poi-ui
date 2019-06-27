@@ -29,16 +29,5 @@ export default (theme) => ({
             transform: 'rotate(0) translateY(1px)',
         },
     },
-    removeIcon: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        top: 0,
-        right: 0,
-        '& span': {
-            width: '10px',
-            height: '10px',
-            cursor: 'pointer',
-        },
-    },
     collapsed: {},
 });

@@ -1,10 +1,13 @@
-import React, { memo, useCallback } from 'react';
+import React, { memo, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import ReactDataGrid from 'react-data-grid';
 
 import { getOverrides } from '../../../utils/overrides';
+import Loader from '../Loader';
+import EmptyView from './EmptyView';
+import RowRenderer from './RowRenderer';
 import styles from './styles';
 
 function DataGrid({
@@ -18,6 +21,11 @@ function DataGrid({
     rows,
     count,
     isLoading,
+    hasError,
+    loadingComponent,
+    emptyComponent,
+    errorComponent,
+    actions,
     ...props
 }) {
     const rowGetter = useCallback((i) => rows[i], [rows]);
@@ -33,21 +41,51 @@ function DataGrid({
         className: rootClassName,
     };
 
+    const emptyRowsView = useMemo(
+        () => () => (
+            <EmptyView
+                hasError={hasError}
+                emptyComponent={emptyComponent}
+                errorComponent={errorComponent}
+                isLoading={isLoading}
+                {...override.emptyView}
+            />
+        ),
+        [emptyComponent, errorComponent, hasError, isLoading, override.emptyView],
+    );
+
+    const rowRenderer = useMemo(
+        () => (props) => <RowRenderer actions={actions} {...props} {...override.rowRenderer} />,
+        [actions, override.rowRenderer],
+    );
+
+    const dataGridProps = {
+        columns,
+        rowGetter,
+        rowsCount: hasError ? 0 : count,
+        headerRowHeight,
+        rowHeight,
+        emptyRowsView,
+        ...override['react-data-grid'],
+    };
+
+    if (actions) {
+        dataGridProps.rowRenderer = rowRenderer;
+    }
+
     return (
         <div {...rootProps} {...override.root}>
-            <ReactDataGrid
-                columns={columns}
-                rowGetter={rowGetter}
-                rowsCount={count}
-                headerRowHeight={headerRowHeight}
-                rowHeight={rowHeight}
-                {...override['react-data-grid']}
-            />
+            <ReactDataGrid {...dataGridProps} />
+            {isLoading && (
+                <div className={classes.loadingView} {...override.loadingView}>
+                    <Loader size="huge" />
+                </div>
+            )}
         </div>
     );
 }
 
-DataGrid.overrides = ['root', 'react-data-grid'];
+DataGrid.overrides = ['root', 'react-data-grid', 'loadingView', 'emptyView', 'rowRenderer'];
 
 DataGrid.defaultProps = {
     className: '',
@@ -58,6 +96,7 @@ DataGrid.defaultProps = {
     headerRowHeight: 40,
     rowHeight: 40,
     isLoading: false,
+    hasError: false,
 };
 
 DataGrid.propTypes = {
@@ -67,6 +106,10 @@ DataGrid.propTypes = {
     headerRowHeight: PropTypes.number,
     rowHeight: PropTypes.number,
     isLoading: PropTypes.bool,
+    hasError: PropTypes.bool,
+    emptyComponent: PropTypes.node,
+    errorComponent: PropTypes.node,
+    loadingComponent: PropTypes.node,
     columns: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.node.isRequired,
@@ -86,6 +129,7 @@ DataGrid.propTypes = {
             id: PropTypes.number.isRequired,
         }),
     ),
+    actions: PropTypes.arrayOf(PropTypes.any),
     count: PropTypes.number.isRequired,
 };
 

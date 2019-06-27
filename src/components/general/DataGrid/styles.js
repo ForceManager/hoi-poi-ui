@@ -1,13 +1,20 @@
 export default (theme) => ({
     root: {
+        position: 'relative',
+        height: 350,
         '& *': {
             boxSizing: 'border-box',
         },
         '& .react-grid-Main': {
             outline: `1px solid ${theme.colors.greyLight}`,
+            height: '100%',
         },
         '& .react-grid-Grid': {
             border: 'none',
+            minHeight: '100% !important',
+        },
+        '& .react-grid-Container': {
+            height: '100%',
         },
         '& .react-grid-Header': {
             boxShadow: 'none',
@@ -66,6 +73,7 @@ export default (theme) => ({
             overflow: 'inherit !important',
         },
         '& .react-grid-Canvas': {
+            height: '100% !important',
             'scrollbar-color': `${theme.colors.tableHeader} white`,
             '&::-webkit-scrollbar-track': {
                 backgroundColor: theme.colors.white,
@@ -78,6 +86,54 @@ export default (theme) => ({
             '&::-webkit-scrollbar-thumb': {
                 backgroundColor: theme.colors.tableHeader,
             },
+        },
+        '& .react-grid-Empty': {
+            position: 'relative',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflowY: 'auto',
+        },
+    },
+    loadingView: {
+        position: 'absolute',
+        overflow: 'visible',
+        margin: 0,
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 2,
+    },
+    emptyView: {},
+    emptyComponent: {
+        padding: 100,
+    },
+    rowRenderer: {
+        position: 'relative',
+        '&:hover $actions': {
+            display: 'flex',
+        },
+    },
+    actions: {
+        display: 'none',
+        justifyContent: 'flex-end',
+        minWidth: 200,
+        height: 'calc(100% - 3px)',
+        alignItems: 'center',
+        position: 'absolute',
+        top: 2,
+        right: 0,
+        zIndex: 2,
+        backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0), rgba(250, 251, 252, 0.59) 48%, ${theme.colors.tableHover})`,
+        '& > *': {
+            margin: '0 10px',
         },
     },
 });
