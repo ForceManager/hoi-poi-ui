@@ -37,10 +37,11 @@ import schema from './example.json';
 
 const errors = {
     phone: 'Invalid phone',
+    multiplier: [{}, { email: 'This field is mandatory' }],
 };
 
 function MyField(props) {
-    return <input />;
+    return <input {...props} />;
 }
 
 function MyOtherField(props) {
@@ -52,11 +53,31 @@ const customFields = {
     customText: MyOtherField,
 };
 
+const initialValues = {
+    multiplier: [
+        {
+            activity: {
+                label: 'B',
+                value: 'b',
+            },
+            name: 'Carlos',
+            email: 'carlos@test.com',
+        },
+        {
+            activity: {
+                label: 'A',
+                value: 'a',
+            },
+            name: 'Juan',
+        },
+    ],
+};
+
 let onChange = (values, field) => setState({ values });
 
 <Form
     onChange={onChange}
-    values={state.values}
+    values={state.values || initialValues}
     errors={errors}
     schema={schema}
     customFields={customFields}

@@ -20,6 +20,8 @@ import Magnifier from './icons/Magnifier';
 import Tick from './icons/Tick';
 import VisibilityOff from './icons/VisibilityOff';
 import VisibilityOn from './icons/VisibilityOn';
+import ThreeDots from './icons/ThreeDots';
+import Download from './icons/Download';
 
 const ICONS = {
     chevron: Chevron,
@@ -36,6 +38,8 @@ const ICONS = {
     tick: Tick,
     visibilityOff: VisibilityOff,
     visibilityOn: VisibilityOn,
+    threeDots: ThreeDots,
+    download: Download,
 };
 
 function Icon({

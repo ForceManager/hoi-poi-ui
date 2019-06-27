@@ -4,13 +4,6 @@ import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
 import DataGrid from '.';
 
-const columns = [
-    { key: 'id', name: 'ID' },
-    { key: 'title', name: 'Title' },
-    { key: 'subtitle', name: 'Subtitle' },
-    { key: 'url', name: 'Url' },
-];
-
 const rows = [
     {
         id: 1,
@@ -106,6 +99,73 @@ describe('DataGrid', () => {
                     ]}
                     rows={rows}
                     count={rows.length}
+                />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('loading match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <DataGrid
+                    columns={[
+                        { key: 'id', name: 'ID' },
+                        { key: 'title', name: 'Title' },
+                        { key: 'subtitle', name: 'Subtitle' },
+                        { key: 'url', name: 'Url' },
+                    ]}
+                    rows={rows}
+                    count={rows.length}
+                    isLoading={true}
+                />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('error match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <DataGrid
+                    columns={[
+                        { key: 'id', name: 'ID' },
+                        { key: 'title', name: 'Title' },
+                        { key: 'subtitle', name: 'Subtitle' },
+                        { key: 'url', name: 'Url' },
+                    ]}
+                    rows={rows}
+                    count={rows.length}
+                    hasError={true}
+                />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('empty match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <DataGrid columns={[]} rows={rows} count={rows.length} />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('with actions match', () => {
+        const actions = [
+            () => <span onClick={() => console.log('Edit')}>Edit</span>,
+            () => <span onClick={() => console.log('Remove')}>Remove</span>,
+        ];
+
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <DataGrid
+                    columns={[
+                        { key: 'id', name: 'ID' },
+                        { key: 'title', name: 'Title' },
+                        { key: 'subtitle', name: 'Subtitle' },
+                        { key: 'url', name: 'Url' },
+                    ]}
+                    rows={rows}
+                    count={rows.length}
+                    actions={actions}
                 />
             </HoiPoiProvider>,
         );

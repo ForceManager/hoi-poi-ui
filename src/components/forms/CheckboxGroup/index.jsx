@@ -18,6 +18,7 @@ function CheckboxGroup({
     label,
     labelMode,
     hint,
+    error,
     isReadOnly,
     ...props
 }) {
@@ -30,6 +31,7 @@ function CheckboxGroup({
         {
             [classes.isReadOnly]: isReadOnly,
             [classes[labelMode]]: labelMode,
+            [classes.errored]: error,
         },
         classNameProp,
     );
@@ -69,6 +71,11 @@ function CheckboxGroup({
                         overrides={overridesProp}
                     />
                 ))}
+                {error && (
+                    <div className={classes.error} {...override.error}>
+                        {error}
+                    </div>
+                )}
             </div>
         </div>
     );
@@ -76,6 +83,7 @@ function CheckboxGroup({
 
 CheckboxGroup.overrides = [
     'root',
+    'error',
     'Checkbox',
     'checkboxLabel',
     'checkboxControl',
@@ -103,6 +111,7 @@ CheckboxGroup.propTypes = {
         }),
     ),
     value: PropTypes.object,
+    error: PropTypes.string,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Info popover */

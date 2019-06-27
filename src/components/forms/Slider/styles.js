@@ -24,6 +24,7 @@ export default (theme) => ({
     vertical: {
         display: 'block',
         padding: '12px 0 11px 0',
+        marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
         },
@@ -37,6 +38,7 @@ export default (theme) => ({
     isFullWidth: {
         '& $formControl': {
             width: '100%',
+            flex: 1,
         },
     },
     // Slider custom styles

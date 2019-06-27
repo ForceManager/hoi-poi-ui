@@ -27,6 +27,10 @@ Icons:
 <span> </span>
 <Icon name="visibilityOn" />
 <span> </span>
+<Icon name="threeDots" />
+<span> </span>
+<Icon name="download" />
+<span> </span>
 ```
 
 Sizes:

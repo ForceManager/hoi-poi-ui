@@ -12,11 +12,11 @@ function Form({
     className: classNameProp,
     labelMode,
     isFullWidth,
+    isReadOnly,
     schema,
     onChange,
     onFocus,
     onBlur,
-    onRemoveSection,
     values,
     errors,
     customFields,
@@ -77,24 +77,25 @@ function Form({
             title={section.title}
             className={section.className}
             isExpandable={section.isExpandable}
-            onRemove={onRemoveSection}
             {...override.Section}
         >
             {section.fields.map((field) => {
-                let component = customFields ? customFields[field.type] : undefined;
+                const value = values && values[field.name] ? values[field.name] : undefined;
                 return (
                     <FieldControl
                         key={field.name}
                         labelMode={field.labelMode || labelMode}
                         isFullWidth={field.isFullWidth || isFullWidth}
+                        isReadOnly={isReadOnly || field.isReadOnly}
                         field={field}
-                        value={values[field.name]}
+                        value={value}
                         error={errors[field.name]}
                         onChange={onChangeField}
                         onFocus={onFocusField}
                         onBlur={onBlurField}
                         className={field.className}
-                        component={component}
+                        customFields={customFields}
+                        overrides={overridesProp}
                     />
                 );
             })}
@@ -134,6 +135,7 @@ Form.propTypes = {
     className: PropTypes.string,
     labelMode: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
     values: PropTypes.object,
     errors: PropTypes.object,
     customFields: PropTypes.object,
