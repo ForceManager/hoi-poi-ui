@@ -18,6 +18,8 @@ import Edit from './icons/Edit';
 import Trash from './icons/Trash';
 import Magnifier from './icons/Magnifier';
 import Tick from './icons/Tick';
+import VisibilityOff from './icons/VisibilityOff';
+import VisibilityOn from './icons/VisibilityOn';
 
 const ICONS = {
     chevron: Chevron,
@@ -32,6 +34,8 @@ const ICONS = {
     trash: Trash,
     magnifier: Magnifier,
     tick: Tick,
+    visibilityOff: VisibilityOff,
+    visibilityOn: VisibilityOn,
 };
 
 function Icon({
