@@ -33,24 +33,64 @@ const errors = {
     email: 'Invalid email',
 };
 
-let onChange = (value, index) => {
-    console.log('onChange', value, index);
-    let newValues = [...state.values];
-    newValues[index] = value;
-    setState({ values: newValues });
+const initialValues = [
+    {
+        label: 'B',
+        value: 'b',
+    },
+    {
+        label: 'C',
+        value: 'c',
+    },
+];
+
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
 };
 
 <Multiplier
     name="timeAllocationLine"
     buttonLabel="ADD"
     buttonClassName="time-allocation-add-button"
-    values={state.values}
+    value={state.value || initialValues}
     errors={errors}
     schema={schema}
     max={5}
     separator={false}
-    remove={false}
     onChange={onChange}
+/>;
+```
+
+Disabled
+
+```jsx
+import schema from './example.1.json';
+
+const initialValues = [
+    {
+        label: 'B',
+        value: 'b',
+    },
+    {
+        label: 'C',
+        value: 'c',
+    },
+];
+
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
+};
+
+<Multiplier
+    name="timeAllocationLine"
+    buttonLabel="ADD"
+    buttonClassName="time-allocation-add-button"
+    value={state.value || initialValues}
+    schema={schema}
+    max={5}
+    separator={false}
+    onChange={onChange}
+    isReadOnly={true}
 />;
 ```
 
@@ -107,30 +147,20 @@ const errors = {
     email: 'Invalid email',
 };
 
-let onChange = (value, index) => {
-    let newValues = [...state.values];
-    newValues[index] = value;
-    setState({ values: newValues });
-};
-
-let onRemove = (index) => {
-    let newValues = [...state.values];
-    newValues.splice(index, 1);
-    setState({ values: newValues });
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
 };
 
 <Multiplier
     name="timeAllocationLine"
     buttonLabel="+ Add"
     buttonClassName="time-allocation-add-button"
-    values={state.values}
+    value={state.value}
     errors={errors}
     schema={schema}
     max={5}
     separator={true}
-    remove={true}
     onChange={onChange}
-    onRemove={onRemove}
 />;
 ```
 
@@ -143,30 +173,46 @@ const errors = {
     email: 'Invalid email',
 };
 
-let onChange = (value, index) => {
-    let newValues = [...state.values];
-    newValues[index] = value;
-    setState({ values: newValues });
-};
-
-let onRemove = (index) => {
-    let newValues = [...state.values];
-    newValues.splice(index, 1);
-    setState({ values: newValues });
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
 };
 
 <Multiplier
     name="full-width-example"
     isFullWidth={true}
     buttonLabel="Add"
-    values={state.values}
+    value={state.value}
     errors={errors}
     schema={schema}
     max={5}
     separator={true}
-    remove={true}
     onChange={onChange}
-    onRemove={onRemove}
+/>;
+```
+
+Vertical mode
+
+```jsx
+import schema from './example.json';
+
+const errors = {
+    email: 'Invalid email',
+};
+
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
+};
+
+<Multiplier
+    name="vertical-example"
+    buttonLabel="Add"
+    value={state.value}
+    errors={errors}
+    schema={schema}
+    max={5}
+    separator={true}
+    onChange={onChange}
+    labelMode="vertical"
 />;
 ```
 
@@ -179,6 +225,7 @@ let onRemove = (index) => {
 -   container - items and button container
 -   buttonContainer
 -   button
--   [Section](#/Forms?id=Section)
--   [Form](#/Forms?id=Form) - component for render a group of inputs
+-   [Section](#/Forms/Section)
+-   [Form](#/Forms/Form) - component for render a group of inputs
 -   fieldControl - internal component for render individual inputs
+-   [removeIcon](/#/General/Icon)

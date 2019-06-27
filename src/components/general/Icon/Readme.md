@@ -23,6 +23,14 @@ Icons:
 <span> </span>
 <Icon name="magnifier" />
 <span> </span>
+<Icon name="visibilityOff" />
+<span> </span>
+<Icon name="visibilityOn" />
+<span> </span>
+<Icon name="threeDots" />
+<span> </span>
+<Icon name="download" />
+<span> </span>
 <Icon name="duplicate" />
 <span> </span>
 ```

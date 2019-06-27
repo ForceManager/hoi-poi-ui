@@ -39,8 +39,11 @@ export default (theme) => ({
         lineHeight: '20px',
         letterSpacing: '0.5px',
 
-        display: 'flex',
-        padding: '0 5px',
+        display: 'inline',
+        textAlign: 'center',
+
+        height: '20px',
+        width: '20px',
     },
 
     close: {

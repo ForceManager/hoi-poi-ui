@@ -65,6 +65,20 @@ export default (theme) => ({
                 transform: 'scaleX(0)',
             },
         },
+        '& .hoi-poi-select__indicator-separator': {
+            display: 'none',
+        },
+        '& .hoi-poi-select__indicators': {
+            '& .hoi-poi-select__indicator-separator': {
+                display: 'none !important',
+            },
+            '& .hoi-poi-select__dropdown-indicator': {
+                '& span': {
+                    height: '8px !important',
+                    width: '8px !important',
+                },
+            },
+        },
     },
     focused: {
         '& $formControl::after': {
@@ -74,6 +88,7 @@ export default (theme) => ({
     vertical: {
         display: 'block',
         padding: '15px 0 10px 0',
+        marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
         },
@@ -87,6 +102,7 @@ export default (theme) => ({
     isFullWidth: {
         '& $formControl': {
             width: '100%',
+            flex: 1,
         },
     },
     select: {

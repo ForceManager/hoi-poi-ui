@@ -85,4 +85,5 @@ let onChange = (value) => setState({ value });
 -   checkboxLabel - label related to one checkbox
 -   checkboxControl - wrapper with checkbox label and checkbox
 -   formControl - Input wrapper excluding label
+-   error - Error wrapper
 -   [Label](#/Forms?id=label)

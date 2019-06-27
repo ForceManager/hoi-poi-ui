@@ -1,8 +1,6 @@
 export default (theme) => ({
     root: {
-        display: 'flex',
-        textAlign: 'flex-start',
-        lineHeight: 0,
+        display: 'inherit',
     },
     truncated: {
         whiteSpace: 'nowrap',

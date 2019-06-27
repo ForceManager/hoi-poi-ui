@@ -1,8 +1,8 @@
 {
     "name": "hoi-poi-ui",
-    "version": "0.0.1-alpha.33",
-    "main": "index.js",
-    "module": "esm/index.js",
+    "version": "0.0.1-alpha.44",
+    "main": "dist/index.js",
+    "module": "dist/esm/index.js",
     "scripts": {
         "prebuild": "rm -rf  dist",
         "precommit": "cross-env NODE_ENV=production lint-staged",
@@ -113,6 +113,7 @@
         "deepmerge": "^3.2.0",
         "jss": "^10.0.0-alpha.16",
         "prop-types": "^15.7.2",
+        "rc-menu": "^7.4.23",
         "rc-slider": "^8.6.12",
         "rc-steps": "^3.4.1",
         "rc-tabs": "^9.6.4",
