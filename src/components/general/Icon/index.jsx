@@ -22,6 +22,7 @@ import VisibilityOff from './icons/VisibilityOff';
 import VisibilityOn from './icons/VisibilityOn';
 import ThreeDots from './icons/ThreeDots';
 import Download from './icons/Download';
+import Duplicate from './icons/Duplicate';
 
 const ICONS = {
     chevron: Chevron,
@@ -36,8 +37,9 @@ const ICONS = {
     trash: Trash,
     magnifier: Magnifier,
     tick: Tick,
-    visibilityOff: VisibilityOff,
     visibilityOn: VisibilityOn,
+    visibilityOff: VisibilityOff,
+    duplicate: Duplicate,
     threeDots: ThreeDots,
     download: Download,
 };

@@ -31,6 +31,8 @@ Icons:
 <span> </span>
 <Icon name="download" />
 <span> </span>
+<Icon name="duplicate" />
+<span> </span>
 ```
 
 Sizes:
