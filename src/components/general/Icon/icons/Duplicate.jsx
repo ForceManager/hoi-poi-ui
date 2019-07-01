@@ -9,11 +9,11 @@ function Duplicate({ color, ...props }) {
                     id="a"
                 />
             </defs>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <mask id="b" fill={color}>
                     <use xlinkHref="#a" />
                 </mask>
-                <use fill="#8C949C" fill-rule="nonzero" xlinkHref="#a" />
+                <use fill="#8C949C" fillRule="nonzero" xlinkHref="#a" />
                 <g mask="url(#b)" fill={color}>
                     <path d="M0 0h10v10H0z" />
                 </g>
