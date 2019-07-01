@@ -6321,10 +6321,19 @@ jss-preset-default@10.0.0-alpha.16:
     jss-plugin-template "10.0.0-alpha.16"
     jss-plugin-vendor-prefixer "10.0.0-alpha.16"
 
-jss@10.0.0-alpha.16, jss@^10.0.0-alpha.16:
+jss@10.0.0-alpha.16:
   version "10.0.0-alpha.16"
   resolved "https://registry.yarnpkg.com/jss/-/jss-10.0.0-alpha.16.tgz#0555e8b667e08dbd2cc94f6125be5a8b8b022833"
   integrity sha512-HmKNNnr82TR5jkWjBcbrx/uim2ief588pWp7zsf4GQpL125zRkEaWYL1SXv5bR6bBvAoTtvJsTAOxDIlLxUNZg==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    is-in-browser "^1.1.3"
+    tiny-warning "^1.0.2"
+
+jss@^10.0.0-alpha.21:
+  version "10.0.0-alpha.21"
+  resolved "https://registry.yarnpkg.com/jss/-/jss-10.0.0-alpha.21.tgz#b7aae809b1ab6d4470233056a9894b26742e7a8f"
+  integrity sha512-7DPGcTF+SPrYKPlR4eak52CJo8XPVJzMPraR/JiafsXA5Xf4U65oTl1sjRizIWaTuUibPjBJgwERgON6emFzrw==
   dependencies:
     "@babel/runtime" "^7.3.1"
     is-in-browser "^1.1.3"
