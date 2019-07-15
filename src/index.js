@@ -13,7 +13,6 @@ export { default as Advice } from './components/general/Advice';
 export { default as Chip } from './components/general/Chip';
 export { default as ChipGroup } from './components/general/ChipGroup';
 export { default as Tabs } from './components/general/Tabs';
-export { default as DataGrid } from './components/general/DataGrid';
 export { default as Modal } from './components/general/Modal';
 export { default as Menus } from './components/general/Menus';
 export { default as Stepper } from './components/general/Stepper';
