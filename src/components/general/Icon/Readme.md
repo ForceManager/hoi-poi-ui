@@ -33,6 +33,14 @@ Icons:
 <span> </span>
 <Icon name="duplicate" />
 <span> </span>
+<Icon name="arrowRight" />
+<span> </span>
+<Icon name="arrowLeft" />
+<span> </span>
+<Icon name="arrowTop" />
+<span> </span>
+<Icon name="arrowBottom" />
+<span> </span>
 ```
 
 Sizes:

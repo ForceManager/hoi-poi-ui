@@ -2,7 +2,7 @@ import React from 'react';
 
 function VisibilityOff({ color, ...props }) {
     return (
-        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fillRule="evenodd">
                 <path d="M0 0h10v10H0V0zm0 0h10v10H0V0zm0 0h10v10H0V0zm0 0h10v10H0V0z" />
                 <path

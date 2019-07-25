@@ -23,6 +23,10 @@ import VisibilityOn from './icons/VisibilityOn';
 import ThreeDots from './icons/ThreeDots';
 import Download from './icons/Download';
 import Duplicate from './icons/Duplicate';
+import ArrowRight from './icons/ArrowRight';
+import ArrowLeft from './icons/ArrowLeft';
+import ArrowTop from './icons/ArrowTop';
+import ArrowBottom from './icons/ArrowBottom';
 
 const ICONS = {
     chevron: Chevron,
@@ -42,6 +46,10 @@ const ICONS = {
     duplicate: Duplicate,
     threeDots: ThreeDots,
     download: Download,
+    arrowRight: ArrowRight,
+    arrowLeft: ArrowLeft,
+    arrowTop: ArrowTop,
+    arrowBottom: ArrowBottom,
 };
 
 function Icon({
