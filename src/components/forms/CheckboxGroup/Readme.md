@@ -76,6 +76,31 @@ let onChange = (value) => setState({ value });
 />;
 ```
 
+Full width
+
+```jsx
+let options = [
+    {
+        label:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat. ',
+        value: 'lorem',
+    },
+    {
+        label:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  2',
+        value: 'lorem2',
+    },
+    {
+        label:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  3',
+        value: 'lorem3',
+    },
+];
+
+let onChange = (value) => setState({ value });
+<CheckboxGroup options={options} onChange={onChange} value={state.value} isFullWidth />;
+```
+
 ### Component tree
 
 ---
