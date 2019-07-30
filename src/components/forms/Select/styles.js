@@ -231,6 +231,7 @@ export default (theme) => ({
             width: '100%',
         },
         '& button': {
+            textAlign: 'left',
             padding: '15px 20px',
         },
     },

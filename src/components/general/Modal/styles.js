@@ -1,6 +1,7 @@
 export default (theme) => ({
     root: {
         position: 'relative',
+        boxSizing: 'border-box',
         display: 'block',
         background: '#fff',
         boxShadow: theme.effects.boxShadow,
