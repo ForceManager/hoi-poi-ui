@@ -43,5 +43,5 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
     },
-    Loader: { marginRight: 10 },
+    Loader: { marginTop: -2, marginRight: 10 },
 });
