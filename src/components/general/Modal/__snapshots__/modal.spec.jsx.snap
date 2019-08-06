@@ -525,14 +525,15 @@ exports[`Modal like a confirm modal 1`] = `
             cancelText="Cancel"
             classes={
               Object {
-                "cancelButton": "HoiPoi__Modal__cancelButton-3-7",
-                "closeIcon": "HoiPoi__Modal__closeIcon-3-5",
-                "confirmButton": "HoiPoi__Modal__confirmButton-3-6",
-                "content": "HoiPoi__Modal__content-3-4",
-                "footer": "HoiPoi__Modal__footer-3-3",
+                "cancelButton": "HoiPoi__Modal__cancelButton-3-8",
+                "closeIcon": "HoiPoi__Modal__closeIcon-3-6",
+                "confirmButton": "HoiPoi__Modal__confirmButton-3-7",
+                "content": "HoiPoi__Modal__content-3-5",
+                "footer": "HoiPoi__Modal__footer-3-4",
                 "header": "HoiPoi__Modal__header-3-2",
                 "overlay": "HoiPoi__Modal__overlay-3-1",
                 "root": "HoiPoi__Modal__root-3-0",
+                "title": "HoiPoi__Modal__title-3-3",
               }
             }
             closeTimeoutMS={300}
@@ -593,12 +594,12 @@ exports[`Modal like a confirm modal 1`] = `
                           class="HoiPoi__Modal__header-3-2"
                         >
                           <span
-                            class="HoiPoi__Text__root-3-8 HoiPoi__Text__normal-3-15 HoiPoi__Text__big-3-13"
+                            class="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__big-3-14 HoiPoi__Modal__title-3-3"
                           >
                             Lorem modal
                           </span>
                           <span
-                            class="HoiPoi__Icon__root-3-19 HoiPoi__Icon__medium-3-21 HoiPoi__Modal__closeIcon-3-5"
+                            class="HoiPoi__Icon__root-3-20 HoiPoi__Icon__medium-3-22 HoiPoi__Modal__closeIcon-3-6"
                           >
                             <svg
                               viewBox="0 0 18 18"
@@ -613,36 +614,36 @@ exports[`Modal like a confirm modal 1`] = `
                           </span>
                         </div>
                         <div
-                          class="HoiPoi__Modal__content-3-4"
+                          class="HoiPoi__Modal__content-3-5"
                         >
                           Lorem Ipsum
                         </div>
                         <div
-                          class="HoiPoi__Modal__footer-3-3"
+                          class="HoiPoi__Modal__footer-3-4"
                         >
                           <button
-                            class="HoiPoi__Button__root-3-25 HoiPoi__Button__filled-3-32 HoiPoi__Button__white-3-33 HoiPoi__Modal__cancelButton-3-7"
+                            class="HoiPoi__Button__root-3-26 HoiPoi__Button__filled-3-33 HoiPoi__Button__white-3-34 HoiPoi__Modal__cancelButton-3-8"
                             type="button"
                           >
                             <span
                               class=""
                             >
                               <span
-                                class="HoiPoi__Text__root-3-8 HoiPoi__Text__normal-3-15 HoiPoi__Text__medium-3-11 HoiPoi__Button__Text-3-26"
+                                class="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-27"
                               >
                                 Cancel
                               </span>
                             </span>
                           </button>
                           <button
-                            class="HoiPoi__Button__root-3-25 HoiPoi__Button__filled-3-32 HoiPoi__Button__primary-3-34 HoiPoi__Modal__confirmButton-3-6"
+                            class="HoiPoi__Button__root-3-26 HoiPoi__Button__filled-3-33 HoiPoi__Button__primary-3-35 HoiPoi__Modal__confirmButton-3-7"
                             type="button"
                           >
                             <span
                               class=""
                             >
                               <span
-                                class="HoiPoi__Text__root-3-8 HoiPoi__Text__normal-3-15 HoiPoi__Text__medium-3-11 HoiPoi__Button__Text-3-26"
+                                class="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-27"
                               >
                                 Confirm
                               </span>
@@ -738,10 +739,11 @@ exports[`Modal like a confirm modal 1`] = `
                         className="HoiPoi__Modal__header-3-2"
                       >
                         <JssContextSubscriber
+                          className="HoiPoi__Modal__title-3-3"
                           size="big"
                         >
                           <WithStyles(Text)
-                            className=""
+                            className="HoiPoi__Modal__title-3-3"
                             innerRef={null}
                             isTruncated={false}
                             jssContext={
@@ -1004,20 +1006,20 @@ exports[`Modal like a confirm modal 1`] = `
                             type="normal"
                           >
                             <Text
-                              className=""
+                              className="HoiPoi__Modal__title-3-3"
                               classes={
                                 Object {
-                                  "Loader": "HoiPoi__Text__Loader-3-18",
-                                  "big": "HoiPoi__Text__big-3-13",
-                                  "bold": "HoiPoi__Text__bold-3-14",
-                                  "isLoading": "HoiPoi__Text__isLoading-3-17",
-                                  "large": "HoiPoi__Text__large-3-12",
-                                  "light": "HoiPoi__Text__light-3-16",
-                                  "medium": "HoiPoi__Text__medium-3-11",
-                                  "normal": "HoiPoi__Text__normal-3-15",
-                                  "root": "HoiPoi__Text__root-3-8",
-                                  "small": "HoiPoi__Text__small-3-10",
-                                  "truncated": "HoiPoi__Text__truncated-3-9",
+                                  "Loader": "HoiPoi__Text__Loader-3-19",
+                                  "big": "HoiPoi__Text__big-3-14",
+                                  "bold": "HoiPoi__Text__bold-3-15",
+                                  "isLoading": "HoiPoi__Text__isLoading-3-18",
+                                  "large": "HoiPoi__Text__large-3-13",
+                                  "light": "HoiPoi__Text__light-3-17",
+                                  "medium": "HoiPoi__Text__medium-3-12",
+                                  "normal": "HoiPoi__Text__normal-3-16",
+                                  "root": "HoiPoi__Text__root-3-9",
+                                  "small": "HoiPoi__Text__small-3-11",
+                                  "truncated": "HoiPoi__Text__truncated-3-10",
                                 }
                               }
                               isTruncated={false}
@@ -1026,7 +1028,7 @@ exports[`Modal like a confirm modal 1`] = `
                               type="normal"
                             >
                               <span
-                                className="HoiPoi__Text__root-3-8 HoiPoi__Text__normal-3-15 HoiPoi__Text__big-3-13"
+                                className="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__big-3-14 HoiPoi__Modal__title-3-3"
                               >
                                 Lorem modal
                               </span>
@@ -1034,12 +1036,12 @@ exports[`Modal like a confirm modal 1`] = `
                           </WithStyles(Text)>
                         </JssContextSubscriber>
                         <JssContextSubscriber
-                          className="HoiPoi__Modal__closeIcon-3-5"
+                          className="HoiPoi__Modal__closeIcon-3-6"
                           name="close"
                           size="medium"
                         >
                           <WithStyles(WithTheme(Icon))
-                            className="HoiPoi__Modal__closeIcon-3-5"
+                            className="HoiPoi__Modal__closeIcon-3-6"
                             innerRef={null}
                             jssContext={
                               Object {
@@ -1300,30 +1302,30 @@ exports[`Modal like a confirm modal 1`] = `
                             }
                           >
                             <WithTheme(Icon)
-                              className="HoiPoi__Modal__closeIcon-3-5"
+                              className="HoiPoi__Modal__closeIcon-3-6"
                               classes={
                                 Object {
-                                  "big": "HoiPoi__Icon__big-3-23",
-                                  "clickable": "HoiPoi__Icon__clickable-3-24",
-                                  "large": "HoiPoi__Icon__large-3-22",
-                                  "medium": "HoiPoi__Icon__medium-3-21",
-                                  "root": "HoiPoi__Icon__root-3-19",
-                                  "small": "HoiPoi__Icon__small-3-20",
+                                  "big": "HoiPoi__Icon__big-3-24",
+                                  "clickable": "HoiPoi__Icon__clickable-3-25",
+                                  "large": "HoiPoi__Icon__large-3-23",
+                                  "medium": "HoiPoi__Icon__medium-3-22",
+                                  "root": "HoiPoi__Icon__root-3-20",
+                                  "small": "HoiPoi__Icon__small-3-21",
                                 }
                               }
                               name="close"
                               size="medium"
                             >
                               <Icon
-                                className="HoiPoi__Modal__closeIcon-3-5"
+                                className="HoiPoi__Modal__closeIcon-3-6"
                                 classes={
                                   Object {
-                                    "big": "HoiPoi__Icon__big-3-23",
-                                    "clickable": "HoiPoi__Icon__clickable-3-24",
-                                    "large": "HoiPoi__Icon__large-3-22",
-                                    "medium": "HoiPoi__Icon__medium-3-21",
-                                    "root": "HoiPoi__Icon__root-3-19",
-                                    "small": "HoiPoi__Icon__small-3-20",
+                                    "big": "HoiPoi__Icon__big-3-24",
+                                    "clickable": "HoiPoi__Icon__clickable-3-25",
+                                    "large": "HoiPoi__Icon__large-3-23",
+                                    "medium": "HoiPoi__Icon__medium-3-22",
+                                    "root": "HoiPoi__Icon__root-3-20",
+                                    "small": "HoiPoi__Icon__small-3-21",
                                   }
                                 }
                                 name="close"
@@ -1427,7 +1429,7 @@ exports[`Modal like a confirm modal 1`] = `
                                 }
                               >
                                 <span
-                                  className="HoiPoi__Icon__root-3-19 HoiPoi__Icon__medium-3-21 HoiPoi__Modal__closeIcon-3-5"
+                                  className="HoiPoi__Icon__root-3-20 HoiPoi__Icon__medium-3-22 HoiPoi__Modal__closeIcon-3-6"
                                 >
                                   <Close
                                     color="#788590"
@@ -1450,19 +1452,19 @@ exports[`Modal like a confirm modal 1`] = `
                         </JssContextSubscriber>
                       </div>
                       <div
-                        className="HoiPoi__Modal__content-3-4"
+                        className="HoiPoi__Modal__content-3-5"
                       >
                         Lorem Ipsum
                       </div>
                       <div
-                        className="HoiPoi__Modal__footer-3-3"
+                        className="HoiPoi__Modal__footer-3-4"
                       >
                         <JssContextSubscriber
-                          className="HoiPoi__Modal__cancelButton-3-7"
+                          className="HoiPoi__Modal__cancelButton-3-8"
                           onClick={[Function]}
                         >
                           <WithStyles(Button)
-                            className="HoiPoi__Modal__cancelButton-3-7"
+                            className="HoiPoi__Modal__cancelButton-3-8"
                             innerRef={null}
                             jssContext={
                               Object {
@@ -1725,24 +1727,24 @@ exports[`Modal like a confirm modal 1`] = `
                             type="filled"
                           >
                             <Button
-                              className="HoiPoi__Modal__cancelButton-3-7"
+                              className="HoiPoi__Modal__cancelButton-3-8"
                               classes={
                                 Object {
-                                  "Text": "HoiPoi__Button__Text-3-26",
-                                  "big": "HoiPoi__Button__big-3-37",
-                                  "danger": "HoiPoi__Button__danger-3-35",
-                                  "disabled": "HoiPoi__Button__disabled-3-38",
-                                  "filled": "HoiPoi__Button__filled-3-32",
-                                  "fullWidth": "HoiPoi__Button__fullWidth-3-39",
-                                  "labelLoading": "HoiPoi__Button__labelLoading-3-27",
-                                  "loader": "HoiPoi__Button__loader-3-28",
-                                  "outlined": "HoiPoi__Button__outlined-3-29",
-                                  "primary": "HoiPoi__Button__primary-3-34",
-                                  "root": "HoiPoi__Button__root-3-25",
-                                  "small": "HoiPoi__Button__small-3-36",
-                                  "squared": "HoiPoi__Button__squared-3-30",
-                                  "squared-outlined": "HoiPoi__Button__squared-outlined-3-31",
-                                  "white": "HoiPoi__Button__white-3-33",
+                                  "Text": "HoiPoi__Button__Text-3-27",
+                                  "big": "HoiPoi__Button__big-3-38",
+                                  "danger": "HoiPoi__Button__danger-3-36",
+                                  "disabled": "HoiPoi__Button__disabled-3-39",
+                                  "filled": "HoiPoi__Button__filled-3-33",
+                                  "fullWidth": "HoiPoi__Button__fullWidth-3-40",
+                                  "labelLoading": "HoiPoi__Button__labelLoading-3-28",
+                                  "loader": "HoiPoi__Button__loader-3-29",
+                                  "outlined": "HoiPoi__Button__outlined-3-30",
+                                  "primary": "HoiPoi__Button__primary-3-35",
+                                  "root": "HoiPoi__Button__root-3-26",
+                                  "small": "HoiPoi__Button__small-3-37",
+                                  "squared": "HoiPoi__Button__squared-3-31",
+                                  "squared-outlined": "HoiPoi__Button__squared-outlined-3-32",
+                                  "white": "HoiPoi__Button__white-3-34",
                                 }
                               }
                               onClick={[Function]}
@@ -1751,7 +1753,7 @@ exports[`Modal like a confirm modal 1`] = `
                               type="filled"
                             >
                               <button
-                                className="HoiPoi__Button__root-3-25 HoiPoi__Button__filled-3-32 HoiPoi__Button__white-3-33 HoiPoi__Modal__cancelButton-3-7"
+                                className="HoiPoi__Button__root-3-26 HoiPoi__Button__filled-3-33 HoiPoi__Button__white-3-34 HoiPoi__Modal__cancelButton-3-8"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -1759,10 +1761,10 @@ exports[`Modal like a confirm modal 1`] = `
                                   className=""
                                 >
                                   <JssContextSubscriber
-                                    className="HoiPoi__Button__Text-3-26"
+                                    className="HoiPoi__Button__Text-3-27"
                                   >
                                     <WithStyles(Text)
-                                      className="HoiPoi__Button__Text-3-26"
+                                      className="HoiPoi__Button__Text-3-27"
                                       innerRef={null}
                                       isTruncated={false}
                                       jssContext={
@@ -2025,20 +2027,20 @@ exports[`Modal like a confirm modal 1`] = `
                                       type="normal"
                                     >
                                       <Text
-                                        className="HoiPoi__Button__Text-3-26"
+                                        className="HoiPoi__Button__Text-3-27"
                                         classes={
                                           Object {
-                                            "Loader": "HoiPoi__Text__Loader-3-18",
-                                            "big": "HoiPoi__Text__big-3-13",
-                                            "bold": "HoiPoi__Text__bold-3-14",
-                                            "isLoading": "HoiPoi__Text__isLoading-3-17",
-                                            "large": "HoiPoi__Text__large-3-12",
-                                            "light": "HoiPoi__Text__light-3-16",
-                                            "medium": "HoiPoi__Text__medium-3-11",
-                                            "normal": "HoiPoi__Text__normal-3-15",
-                                            "root": "HoiPoi__Text__root-3-8",
-                                            "small": "HoiPoi__Text__small-3-10",
-                                            "truncated": "HoiPoi__Text__truncated-3-9",
+                                            "Loader": "HoiPoi__Text__Loader-3-19",
+                                            "big": "HoiPoi__Text__big-3-14",
+                                            "bold": "HoiPoi__Text__bold-3-15",
+                                            "isLoading": "HoiPoi__Text__isLoading-3-18",
+                                            "large": "HoiPoi__Text__large-3-13",
+                                            "light": "HoiPoi__Text__light-3-17",
+                                            "medium": "HoiPoi__Text__medium-3-12",
+                                            "normal": "HoiPoi__Text__normal-3-16",
+                                            "root": "HoiPoi__Text__root-3-9",
+                                            "small": "HoiPoi__Text__small-3-11",
+                                            "truncated": "HoiPoi__Text__truncated-3-10",
                                           }
                                         }
                                         isTruncated={false}
@@ -2047,7 +2049,7 @@ exports[`Modal like a confirm modal 1`] = `
                                         type="normal"
                                       >
                                         <span
-                                          className="HoiPoi__Text__root-3-8 HoiPoi__Text__normal-3-15 HoiPoi__Text__medium-3-11 HoiPoi__Button__Text-3-26"
+                                          className="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-27"
                                         >
                                           Cancel
                                         </span>
@@ -2060,12 +2062,12 @@ exports[`Modal like a confirm modal 1`] = `
                           </WithStyles(Button)>
                         </JssContextSubscriber>
                         <JssContextSubscriber
-                          className="HoiPoi__Modal__confirmButton-3-6"
+                          className="HoiPoi__Modal__confirmButton-3-7"
                           color="primary"
                           onClick={[Function]}
                         >
                           <WithStyles(Button)
-                            className="HoiPoi__Modal__confirmButton-3-6"
+                            className="HoiPoi__Modal__confirmButton-3-7"
                             color="primary"
                             innerRef={null}
                             jssContext={
@@ -2329,24 +2331,24 @@ exports[`Modal like a confirm modal 1`] = `
                             type="filled"
                           >
                             <Button
-                              className="HoiPoi__Modal__confirmButton-3-6"
+                              className="HoiPoi__Modal__confirmButton-3-7"
                               classes={
                                 Object {
-                                  "Text": "HoiPoi__Button__Text-3-26",
-                                  "big": "HoiPoi__Button__big-3-37",
-                                  "danger": "HoiPoi__Button__danger-3-35",
-                                  "disabled": "HoiPoi__Button__disabled-3-38",
-                                  "filled": "HoiPoi__Button__filled-3-32",
-                                  "fullWidth": "HoiPoi__Button__fullWidth-3-39",
-                                  "labelLoading": "HoiPoi__Button__labelLoading-3-27",
-                                  "loader": "HoiPoi__Button__loader-3-28",
-                                  "outlined": "HoiPoi__Button__outlined-3-29",
-                                  "primary": "HoiPoi__Button__primary-3-34",
-                                  "root": "HoiPoi__Button__root-3-25",
-                                  "small": "HoiPoi__Button__small-3-36",
-                                  "squared": "HoiPoi__Button__squared-3-30",
-                                  "squared-outlined": "HoiPoi__Button__squared-outlined-3-31",
-                                  "white": "HoiPoi__Button__white-3-33",
+                                  "Text": "HoiPoi__Button__Text-3-27",
+                                  "big": "HoiPoi__Button__big-3-38",
+                                  "danger": "HoiPoi__Button__danger-3-36",
+                                  "disabled": "HoiPoi__Button__disabled-3-39",
+                                  "filled": "HoiPoi__Button__filled-3-33",
+                                  "fullWidth": "HoiPoi__Button__fullWidth-3-40",
+                                  "labelLoading": "HoiPoi__Button__labelLoading-3-28",
+                                  "loader": "HoiPoi__Button__loader-3-29",
+                                  "outlined": "HoiPoi__Button__outlined-3-30",
+                                  "primary": "HoiPoi__Button__primary-3-35",
+                                  "root": "HoiPoi__Button__root-3-26",
+                                  "small": "HoiPoi__Button__small-3-37",
+                                  "squared": "HoiPoi__Button__squared-3-31",
+                                  "squared-outlined": "HoiPoi__Button__squared-outlined-3-32",
+                                  "white": "HoiPoi__Button__white-3-34",
                                 }
                               }
                               color="primary"
@@ -2356,7 +2358,7 @@ exports[`Modal like a confirm modal 1`] = `
                               type="filled"
                             >
                               <button
-                                className="HoiPoi__Button__root-3-25 HoiPoi__Button__filled-3-32 HoiPoi__Button__primary-3-34 HoiPoi__Modal__confirmButton-3-6"
+                                className="HoiPoi__Button__root-3-26 HoiPoi__Button__filled-3-33 HoiPoi__Button__primary-3-35 HoiPoi__Modal__confirmButton-3-7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -2364,10 +2366,10 @@ exports[`Modal like a confirm modal 1`] = `
                                   className=""
                                 >
                                   <JssContextSubscriber
-                                    className="HoiPoi__Button__Text-3-26"
+                                    className="HoiPoi__Button__Text-3-27"
                                   >
                                     <WithStyles(Text)
-                                      className="HoiPoi__Button__Text-3-26"
+                                      className="HoiPoi__Button__Text-3-27"
                                       innerRef={null}
                                       isTruncated={false}
                                       jssContext={
@@ -2630,20 +2632,20 @@ exports[`Modal like a confirm modal 1`] = `
                                       type="normal"
                                     >
                                       <Text
-                                        className="HoiPoi__Button__Text-3-26"
+                                        className="HoiPoi__Button__Text-3-27"
                                         classes={
                                           Object {
-                                            "Loader": "HoiPoi__Text__Loader-3-18",
-                                            "big": "HoiPoi__Text__big-3-13",
-                                            "bold": "HoiPoi__Text__bold-3-14",
-                                            "isLoading": "HoiPoi__Text__isLoading-3-17",
-                                            "large": "HoiPoi__Text__large-3-12",
-                                            "light": "HoiPoi__Text__light-3-16",
-                                            "medium": "HoiPoi__Text__medium-3-11",
-                                            "normal": "HoiPoi__Text__normal-3-15",
-                                            "root": "HoiPoi__Text__root-3-8",
-                                            "small": "HoiPoi__Text__small-3-10",
-                                            "truncated": "HoiPoi__Text__truncated-3-9",
+                                            "Loader": "HoiPoi__Text__Loader-3-19",
+                                            "big": "HoiPoi__Text__big-3-14",
+                                            "bold": "HoiPoi__Text__bold-3-15",
+                                            "isLoading": "HoiPoi__Text__isLoading-3-18",
+                                            "large": "HoiPoi__Text__large-3-13",
+                                            "light": "HoiPoi__Text__light-3-17",
+                                            "medium": "HoiPoi__Text__medium-3-12",
+                                            "normal": "HoiPoi__Text__normal-3-16",
+                                            "root": "HoiPoi__Text__root-3-9",
+                                            "small": "HoiPoi__Text__small-3-11",
+                                            "truncated": "HoiPoi__Text__truncated-3-10",
                                           }
                                         }
                                         isTruncated={false}
@@ -2652,7 +2654,7 @@ exports[`Modal like a confirm modal 1`] = `
                                         type="normal"
                                       >
                                         <span
-                                          className="HoiPoi__Text__root-3-8 HoiPoi__Text__normal-3-15 HoiPoi__Text__medium-3-11 HoiPoi__Button__Text-3-26"
+                                          className="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-27"
                                         >
                                           Confirm
                                         </span>
@@ -3190,14 +3192,15 @@ exports[`Modal with different sizes 1`] = `
           <Modal
             classes={
               Object {
-                "cancelButton": "HoiPoi__Modal__cancelButton-1-7",
-                "closeIcon": "HoiPoi__Modal__closeIcon-1-5",
-                "confirmButton": "HoiPoi__Modal__confirmButton-1-6",
-                "content": "HoiPoi__Modal__content-1-4",
-                "footer": "HoiPoi__Modal__footer-1-3",
+                "cancelButton": "HoiPoi__Modal__cancelButton-1-8",
+                "closeIcon": "HoiPoi__Modal__closeIcon-1-6",
+                "confirmButton": "HoiPoi__Modal__confirmButton-1-7",
+                "content": "HoiPoi__Modal__content-1-5",
+                "footer": "HoiPoi__Modal__footer-1-4",
                 "header": "HoiPoi__Modal__header-1-2",
                 "overlay": "HoiPoi__Modal__overlay-1-1",
                 "root": "HoiPoi__Modal__root-1-0",
+                "title": "HoiPoi__Modal__title-1-3",
               }
             }
             closeTimeoutMS={300}
@@ -3255,12 +3258,12 @@ exports[`Modal with different sizes 1`] = `
                           class="HoiPoi__Modal__header-1-2"
                         >
                           <span
-                            class="HoiPoi__Text__root-1-8 HoiPoi__Text__normal-1-15 HoiPoi__Text__big-1-13"
+                            class="HoiPoi__Text__root-1-9 HoiPoi__Text__normal-1-16 HoiPoi__Text__big-1-14 HoiPoi__Modal__title-1-3"
                           >
                             Lorem modal
                           </span>
                           <span
-                            class="HoiPoi__Icon__root-1-19 HoiPoi__Icon__medium-1-21 HoiPoi__Modal__closeIcon-1-5"
+                            class="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 HoiPoi__Modal__closeIcon-1-6"
                           >
                             <svg
                               viewBox="0 0 18 18"
@@ -3275,7 +3278,7 @@ exports[`Modal with different sizes 1`] = `
                           </span>
                         </div>
                         <div
-                          class="HoiPoi__Modal__content-1-4"
+                          class="HoiPoi__Modal__content-1-5"
                         >
                           Lorem ipsum
                         </div>
@@ -3368,10 +3371,11 @@ exports[`Modal with different sizes 1`] = `
                         className="HoiPoi__Modal__header-1-2"
                       >
                         <JssContextSubscriber
+                          className="HoiPoi__Modal__title-1-3"
                           size="big"
                         >
                           <WithStyles(Text)
-                            className=""
+                            className="HoiPoi__Modal__title-1-3"
                             innerRef={null}
                             isTruncated={false}
                             jssContext={
@@ -3630,20 +3634,20 @@ exports[`Modal with different sizes 1`] = `
                             type="normal"
                           >
                             <Text
-                              className=""
+                              className="HoiPoi__Modal__title-1-3"
                               classes={
                                 Object {
-                                  "Loader": "HoiPoi__Text__Loader-1-18",
-                                  "big": "HoiPoi__Text__big-1-13",
-                                  "bold": "HoiPoi__Text__bold-1-14",
-                                  "isLoading": "HoiPoi__Text__isLoading-1-17",
-                                  "large": "HoiPoi__Text__large-1-12",
-                                  "light": "HoiPoi__Text__light-1-16",
-                                  "medium": "HoiPoi__Text__medium-1-11",
-                                  "normal": "HoiPoi__Text__normal-1-15",
-                                  "root": "HoiPoi__Text__root-1-8",
-                                  "small": "HoiPoi__Text__small-1-10",
-                                  "truncated": "HoiPoi__Text__truncated-1-9",
+                                  "Loader": "HoiPoi__Text__Loader-1-19",
+                                  "big": "HoiPoi__Text__big-1-14",
+                                  "bold": "HoiPoi__Text__bold-1-15",
+                                  "isLoading": "HoiPoi__Text__isLoading-1-18",
+                                  "large": "HoiPoi__Text__large-1-13",
+                                  "light": "HoiPoi__Text__light-1-17",
+                                  "medium": "HoiPoi__Text__medium-1-12",
+                                  "normal": "HoiPoi__Text__normal-1-16",
+                                  "root": "HoiPoi__Text__root-1-9",
+                                  "small": "HoiPoi__Text__small-1-11",
+                                  "truncated": "HoiPoi__Text__truncated-1-10",
                                 }
                               }
                               isTruncated={false}
@@ -3652,7 +3656,7 @@ exports[`Modal with different sizes 1`] = `
                               type="normal"
                             >
                               <span
-                                className="HoiPoi__Text__root-1-8 HoiPoi__Text__normal-1-15 HoiPoi__Text__big-1-13"
+                                className="HoiPoi__Text__root-1-9 HoiPoi__Text__normal-1-16 HoiPoi__Text__big-1-14 HoiPoi__Modal__title-1-3"
                               >
                                 Lorem modal
                               </span>
@@ -3660,12 +3664,12 @@ exports[`Modal with different sizes 1`] = `
                           </WithStyles(Text)>
                         </JssContextSubscriber>
                         <JssContextSubscriber
-                          className="HoiPoi__Modal__closeIcon-1-5"
+                          className="HoiPoi__Modal__closeIcon-1-6"
                           name="close"
                           size="medium"
                         >
                           <WithStyles(WithTheme(Icon))
-                            className="HoiPoi__Modal__closeIcon-1-5"
+                            className="HoiPoi__Modal__closeIcon-1-6"
                             innerRef={null}
                             jssContext={
                               Object {
@@ -3922,30 +3926,30 @@ exports[`Modal with different sizes 1`] = `
                             }
                           >
                             <WithTheme(Icon)
-                              className="HoiPoi__Modal__closeIcon-1-5"
+                              className="HoiPoi__Modal__closeIcon-1-6"
                               classes={
                                 Object {
-                                  "big": "HoiPoi__Icon__big-1-23",
-                                  "clickable": "HoiPoi__Icon__clickable-1-24",
-                                  "large": "HoiPoi__Icon__large-1-22",
-                                  "medium": "HoiPoi__Icon__medium-1-21",
-                                  "root": "HoiPoi__Icon__root-1-19",
-                                  "small": "HoiPoi__Icon__small-1-20",
+                                  "big": "HoiPoi__Icon__big-1-24",
+                                  "clickable": "HoiPoi__Icon__clickable-1-25",
+                                  "large": "HoiPoi__Icon__large-1-23",
+                                  "medium": "HoiPoi__Icon__medium-1-22",
+                                  "root": "HoiPoi__Icon__root-1-20",
+                                  "small": "HoiPoi__Icon__small-1-21",
                                 }
                               }
                               name="close"
                               size="medium"
                             >
                               <Icon
-                                className="HoiPoi__Modal__closeIcon-1-5"
+                                className="HoiPoi__Modal__closeIcon-1-6"
                                 classes={
                                   Object {
-                                    "big": "HoiPoi__Icon__big-1-23",
-                                    "clickable": "HoiPoi__Icon__clickable-1-24",
-                                    "large": "HoiPoi__Icon__large-1-22",
-                                    "medium": "HoiPoi__Icon__medium-1-21",
-                                    "root": "HoiPoi__Icon__root-1-19",
-                                    "small": "HoiPoi__Icon__small-1-20",
+                                    "big": "HoiPoi__Icon__big-1-24",
+                                    "clickable": "HoiPoi__Icon__clickable-1-25",
+                                    "large": "HoiPoi__Icon__large-1-23",
+                                    "medium": "HoiPoi__Icon__medium-1-22",
+                                    "root": "HoiPoi__Icon__root-1-20",
+                                    "small": "HoiPoi__Icon__small-1-21",
                                   }
                                 }
                                 name="close"
@@ -4049,7 +4053,7 @@ exports[`Modal with different sizes 1`] = `
                                 }
                               >
                                 <span
-                                  className="HoiPoi__Icon__root-1-19 HoiPoi__Icon__medium-1-21 HoiPoi__Modal__closeIcon-1-5"
+                                  className="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 HoiPoi__Modal__closeIcon-1-6"
                                 >
                                   <Close
                                     color="#788590"
@@ -4072,7 +4076,7 @@ exports[`Modal with different sizes 1`] = `
                         </JssContextSubscriber>
                       </div>
                       <div
-                        className="HoiPoi__Modal__content-1-4"
+                        className="HoiPoi__Modal__content-1-5"
                       >
                         Lorem ipsum
                       </div>
@@ -4354,14 +4358,15 @@ exports[`Modal with different sizes 1`] = `
           <Modal
             classes={
               Object {
-                "cancelButton": "HoiPoi__Modal__cancelButton-1-7",
-                "closeIcon": "HoiPoi__Modal__closeIcon-1-5",
-                "confirmButton": "HoiPoi__Modal__confirmButton-1-6",
-                "content": "HoiPoi__Modal__content-1-4",
-                "footer": "HoiPoi__Modal__footer-1-3",
+                "cancelButton": "HoiPoi__Modal__cancelButton-1-8",
+                "closeIcon": "HoiPoi__Modal__closeIcon-1-6",
+                "confirmButton": "HoiPoi__Modal__confirmButton-1-7",
+                "content": "HoiPoi__Modal__content-1-5",
+                "footer": "HoiPoi__Modal__footer-1-4",
                 "header": "HoiPoi__Modal__header-1-2",
                 "overlay": "HoiPoi__Modal__overlay-1-1",
                 "root": "HoiPoi__Modal__root-1-0",
+                "title": "HoiPoi__Modal__title-1-3",
               }
             }
             closeTimeoutMS={300}
@@ -4419,12 +4424,12 @@ exports[`Modal with different sizes 1`] = `
                           class="HoiPoi__Modal__header-1-2"
                         >
                           <span
-                            class="HoiPoi__Text__root-1-8 HoiPoi__Text__normal-1-15 HoiPoi__Text__big-1-13"
+                            class="HoiPoi__Text__root-1-9 HoiPoi__Text__normal-1-16 HoiPoi__Text__big-1-14 HoiPoi__Modal__title-1-3"
                           >
                             Lorem modal
                           </span>
                           <span
-                            class="HoiPoi__Icon__root-1-19 HoiPoi__Icon__medium-1-21 HoiPoi__Modal__closeIcon-1-5"
+                            class="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 HoiPoi__Modal__closeIcon-1-6"
                           >
                             <svg
                               viewBox="0 0 18 18"
@@ -4439,7 +4444,7 @@ exports[`Modal with different sizes 1`] = `
                           </span>
                         </div>
                         <div
-                          class="HoiPoi__Modal__content-1-4"
+                          class="HoiPoi__Modal__content-1-5"
                         >
                           Lorem ipsum
                         </div>
@@ -4532,10 +4537,11 @@ exports[`Modal with different sizes 1`] = `
                         className="HoiPoi__Modal__header-1-2"
                       >
                         <JssContextSubscriber
+                          className="HoiPoi__Modal__title-1-3"
                           size="big"
                         >
                           <WithStyles(Text)
-                            className=""
+                            className="HoiPoi__Modal__title-1-3"
                             innerRef={null}
                             isTruncated={false}
                             jssContext={
@@ -4794,20 +4800,20 @@ exports[`Modal with different sizes 1`] = `
                             type="normal"
                           >
                             <Text
-                              className=""
+                              className="HoiPoi__Modal__title-1-3"
                               classes={
                                 Object {
-                                  "Loader": "HoiPoi__Text__Loader-1-18",
-                                  "big": "HoiPoi__Text__big-1-13",
-                                  "bold": "HoiPoi__Text__bold-1-14",
-                                  "isLoading": "HoiPoi__Text__isLoading-1-17",
-                                  "large": "HoiPoi__Text__large-1-12",
-                                  "light": "HoiPoi__Text__light-1-16",
-                                  "medium": "HoiPoi__Text__medium-1-11",
-                                  "normal": "HoiPoi__Text__normal-1-15",
-                                  "root": "HoiPoi__Text__root-1-8",
-                                  "small": "HoiPoi__Text__small-1-10",
-                                  "truncated": "HoiPoi__Text__truncated-1-9",
+                                  "Loader": "HoiPoi__Text__Loader-1-19",
+                                  "big": "HoiPoi__Text__big-1-14",
+                                  "bold": "HoiPoi__Text__bold-1-15",
+                                  "isLoading": "HoiPoi__Text__isLoading-1-18",
+                                  "large": "HoiPoi__Text__large-1-13",
+                                  "light": "HoiPoi__Text__light-1-17",
+                                  "medium": "HoiPoi__Text__medium-1-12",
+                                  "normal": "HoiPoi__Text__normal-1-16",
+                                  "root": "HoiPoi__Text__root-1-9",
+                                  "small": "HoiPoi__Text__small-1-11",
+                                  "truncated": "HoiPoi__Text__truncated-1-10",
                                 }
                               }
                               isTruncated={false}
@@ -4816,7 +4822,7 @@ exports[`Modal with different sizes 1`] = `
                               type="normal"
                             >
                               <span
-                                className="HoiPoi__Text__root-1-8 HoiPoi__Text__normal-1-15 HoiPoi__Text__big-1-13"
+                                className="HoiPoi__Text__root-1-9 HoiPoi__Text__normal-1-16 HoiPoi__Text__big-1-14 HoiPoi__Modal__title-1-3"
                               >
                                 Lorem modal
                               </span>
@@ -4824,12 +4830,12 @@ exports[`Modal with different sizes 1`] = `
                           </WithStyles(Text)>
                         </JssContextSubscriber>
                         <JssContextSubscriber
-                          className="HoiPoi__Modal__closeIcon-1-5"
+                          className="HoiPoi__Modal__closeIcon-1-6"
                           name="close"
                           size="medium"
                         >
                           <WithStyles(WithTheme(Icon))
-                            className="HoiPoi__Modal__closeIcon-1-5"
+                            className="HoiPoi__Modal__closeIcon-1-6"
                             innerRef={null}
                             jssContext={
                               Object {
@@ -5086,30 +5092,30 @@ exports[`Modal with different sizes 1`] = `
                             }
                           >
                             <WithTheme(Icon)
-                              className="HoiPoi__Modal__closeIcon-1-5"
+                              className="HoiPoi__Modal__closeIcon-1-6"
                               classes={
                                 Object {
-                                  "big": "HoiPoi__Icon__big-1-23",
-                                  "clickable": "HoiPoi__Icon__clickable-1-24",
-                                  "large": "HoiPoi__Icon__large-1-22",
-                                  "medium": "HoiPoi__Icon__medium-1-21",
-                                  "root": "HoiPoi__Icon__root-1-19",
-                                  "small": "HoiPoi__Icon__small-1-20",
+                                  "big": "HoiPoi__Icon__big-1-24",
+                                  "clickable": "HoiPoi__Icon__clickable-1-25",
+                                  "large": "HoiPoi__Icon__large-1-23",
+                                  "medium": "HoiPoi__Icon__medium-1-22",
+                                  "root": "HoiPoi__Icon__root-1-20",
+                                  "small": "HoiPoi__Icon__small-1-21",
                                 }
                               }
                               name="close"
                               size="medium"
                             >
                               <Icon
-                                className="HoiPoi__Modal__closeIcon-1-5"
+                                className="HoiPoi__Modal__closeIcon-1-6"
                                 classes={
                                   Object {
-                                    "big": "HoiPoi__Icon__big-1-23",
-                                    "clickable": "HoiPoi__Icon__clickable-1-24",
-                                    "large": "HoiPoi__Icon__large-1-22",
-                                    "medium": "HoiPoi__Icon__medium-1-21",
-                                    "root": "HoiPoi__Icon__root-1-19",
-                                    "small": "HoiPoi__Icon__small-1-20",
+                                    "big": "HoiPoi__Icon__big-1-24",
+                                    "clickable": "HoiPoi__Icon__clickable-1-25",
+                                    "large": "HoiPoi__Icon__large-1-23",
+                                    "medium": "HoiPoi__Icon__medium-1-22",
+                                    "root": "HoiPoi__Icon__root-1-20",
+                                    "small": "HoiPoi__Icon__small-1-21",
                                   }
                                 }
                                 name="close"
@@ -5213,7 +5219,7 @@ exports[`Modal with different sizes 1`] = `
                                 }
                               >
                                 <span
-                                  className="HoiPoi__Icon__root-1-19 HoiPoi__Icon__medium-1-21 HoiPoi__Modal__closeIcon-1-5"
+                                  className="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 HoiPoi__Modal__closeIcon-1-6"
                                 >
                                   <Close
                                     color="#788590"
@@ -5236,7 +5242,7 @@ exports[`Modal with different sizes 1`] = `
                         </JssContextSubscriber>
                       </div>
                       <div
-                        className="HoiPoi__Modal__content-1-4"
+                        className="HoiPoi__Modal__content-1-5"
                       >
                         Lorem ipsum
                       </div>
@@ -5518,14 +5524,15 @@ exports[`Modal with different sizes 1`] = `
           <Modal
             classes={
               Object {
-                "cancelButton": "HoiPoi__Modal__cancelButton-1-7",
-                "closeIcon": "HoiPoi__Modal__closeIcon-1-5",
-                "confirmButton": "HoiPoi__Modal__confirmButton-1-6",
-                "content": "HoiPoi__Modal__content-1-4",
-                "footer": "HoiPoi__Modal__footer-1-3",
+                "cancelButton": "HoiPoi__Modal__cancelButton-1-8",
+                "closeIcon": "HoiPoi__Modal__closeIcon-1-6",
+                "confirmButton": "HoiPoi__Modal__confirmButton-1-7",
+                "content": "HoiPoi__Modal__content-1-5",
+                "footer": "HoiPoi__Modal__footer-1-4",
                 "header": "HoiPoi__Modal__header-1-2",
                 "overlay": "HoiPoi__Modal__overlay-1-1",
                 "root": "HoiPoi__Modal__root-1-0",
+                "title": "HoiPoi__Modal__title-1-3",
               }
             }
             closeTimeoutMS={300}
@@ -5583,12 +5590,12 @@ exports[`Modal with different sizes 1`] = `
                           class="HoiPoi__Modal__header-1-2"
                         >
                           <span
-                            class="HoiPoi__Text__root-1-8 HoiPoi__Text__normal-1-15 HoiPoi__Text__big-1-13"
+                            class="HoiPoi__Text__root-1-9 HoiPoi__Text__normal-1-16 HoiPoi__Text__big-1-14 HoiPoi__Modal__title-1-3"
                           >
                             Lorem modal
                           </span>
                           <span
-                            class="HoiPoi__Icon__root-1-19 HoiPoi__Icon__medium-1-21 HoiPoi__Modal__closeIcon-1-5"
+                            class="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 HoiPoi__Modal__closeIcon-1-6"
                           >
                             <svg
                               viewBox="0 0 18 18"
@@ -5603,7 +5610,7 @@ exports[`Modal with different sizes 1`] = `
                           </span>
                         </div>
                         <div
-                          class="HoiPoi__Modal__content-1-4"
+                          class="HoiPoi__Modal__content-1-5"
                         >
                           Lorem ipsum
                         </div>
@@ -5696,10 +5703,11 @@ exports[`Modal with different sizes 1`] = `
                         className="HoiPoi__Modal__header-1-2"
                       >
                         <JssContextSubscriber
+                          className="HoiPoi__Modal__title-1-3"
                           size="big"
                         >
                           <WithStyles(Text)
-                            className=""
+                            className="HoiPoi__Modal__title-1-3"
                             innerRef={null}
                             isTruncated={false}
                             jssContext={
@@ -5958,20 +5966,20 @@ exports[`Modal with different sizes 1`] = `
                             type="normal"
                           >
                             <Text
-                              className=""
+                              className="HoiPoi__Modal__title-1-3"
                               classes={
                                 Object {
-                                  "Loader": "HoiPoi__Text__Loader-1-18",
-                                  "big": "HoiPoi__Text__big-1-13",
-                                  "bold": "HoiPoi__Text__bold-1-14",
-                                  "isLoading": "HoiPoi__Text__isLoading-1-17",
-                                  "large": "HoiPoi__Text__large-1-12",
-                                  "light": "HoiPoi__Text__light-1-16",
-                                  "medium": "HoiPoi__Text__medium-1-11",
-                                  "normal": "HoiPoi__Text__normal-1-15",
-                                  "root": "HoiPoi__Text__root-1-8",
-                                  "small": "HoiPoi__Text__small-1-10",
-                                  "truncated": "HoiPoi__Text__truncated-1-9",
+                                  "Loader": "HoiPoi__Text__Loader-1-19",
+                                  "big": "HoiPoi__Text__big-1-14",
+                                  "bold": "HoiPoi__Text__bold-1-15",
+                                  "isLoading": "HoiPoi__Text__isLoading-1-18",
+                                  "large": "HoiPoi__Text__large-1-13",
+                                  "light": "HoiPoi__Text__light-1-17",
+                                  "medium": "HoiPoi__Text__medium-1-12",
+                                  "normal": "HoiPoi__Text__normal-1-16",
+                                  "root": "HoiPoi__Text__root-1-9",
+                                  "small": "HoiPoi__Text__small-1-11",
+                                  "truncated": "HoiPoi__Text__truncated-1-10",
                                 }
                               }
                               isTruncated={false}
@@ -5980,7 +5988,7 @@ exports[`Modal with different sizes 1`] = `
                               type="normal"
                             >
                               <span
-                                className="HoiPoi__Text__root-1-8 HoiPoi__Text__normal-1-15 HoiPoi__Text__big-1-13"
+                                className="HoiPoi__Text__root-1-9 HoiPoi__Text__normal-1-16 HoiPoi__Text__big-1-14 HoiPoi__Modal__title-1-3"
                               >
                                 Lorem modal
                               </span>
@@ -5988,12 +5996,12 @@ exports[`Modal with different sizes 1`] = `
                           </WithStyles(Text)>
                         </JssContextSubscriber>
                         <JssContextSubscriber
-                          className="HoiPoi__Modal__closeIcon-1-5"
+                          className="HoiPoi__Modal__closeIcon-1-6"
                           name="close"
                           size="medium"
                         >
                           <WithStyles(WithTheme(Icon))
-                            className="HoiPoi__Modal__closeIcon-1-5"
+                            className="HoiPoi__Modal__closeIcon-1-6"
                             innerRef={null}
                             jssContext={
                               Object {
@@ -6250,30 +6258,30 @@ exports[`Modal with different sizes 1`] = `
                             }
                           >
                             <WithTheme(Icon)
-                              className="HoiPoi__Modal__closeIcon-1-5"
+                              className="HoiPoi__Modal__closeIcon-1-6"
                               classes={
                                 Object {
-                                  "big": "HoiPoi__Icon__big-1-23",
-                                  "clickable": "HoiPoi__Icon__clickable-1-24",
-                                  "large": "HoiPoi__Icon__large-1-22",
-                                  "medium": "HoiPoi__Icon__medium-1-21",
-                                  "root": "HoiPoi__Icon__root-1-19",
-                                  "small": "HoiPoi__Icon__small-1-20",
+                                  "big": "HoiPoi__Icon__big-1-24",
+                                  "clickable": "HoiPoi__Icon__clickable-1-25",
+                                  "large": "HoiPoi__Icon__large-1-23",
+                                  "medium": "HoiPoi__Icon__medium-1-22",
+                                  "root": "HoiPoi__Icon__root-1-20",
+                                  "small": "HoiPoi__Icon__small-1-21",
                                 }
                               }
                               name="close"
                               size="medium"
                             >
                               <Icon
-                                className="HoiPoi__Modal__closeIcon-1-5"
+                                className="HoiPoi__Modal__closeIcon-1-6"
                                 classes={
                                   Object {
-                                    "big": "HoiPoi__Icon__big-1-23",
-                                    "clickable": "HoiPoi__Icon__clickable-1-24",
-                                    "large": "HoiPoi__Icon__large-1-22",
-                                    "medium": "HoiPoi__Icon__medium-1-21",
-                                    "root": "HoiPoi__Icon__root-1-19",
-                                    "small": "HoiPoi__Icon__small-1-20",
+                                    "big": "HoiPoi__Icon__big-1-24",
+                                    "clickable": "HoiPoi__Icon__clickable-1-25",
+                                    "large": "HoiPoi__Icon__large-1-23",
+                                    "medium": "HoiPoi__Icon__medium-1-22",
+                                    "root": "HoiPoi__Icon__root-1-20",
+                                    "small": "HoiPoi__Icon__small-1-21",
                                   }
                                 }
                                 name="close"
@@ -6377,7 +6385,7 @@ exports[`Modal with different sizes 1`] = `
                                 }
                               >
                                 <span
-                                  className="HoiPoi__Icon__root-1-19 HoiPoi__Icon__medium-1-21 HoiPoi__Modal__closeIcon-1-5"
+                                  className="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 HoiPoi__Modal__closeIcon-1-6"
                                 >
                                   <Close
                                     color="#788590"
@@ -6400,7 +6408,7 @@ exports[`Modal with different sizes 1`] = `
                         </JssContextSubscriber>
                       </div>
                       <div
-                        className="HoiPoi__Modal__content-1-4"
+                        className="HoiPoi__Modal__content-1-5"
                       >
                         Lorem ipsum
                       </div>
@@ -6922,14 +6930,15 @@ exports[`Modal without header 1`] = `
           <Modal
             classes={
               Object {
-                "cancelButton": "HoiPoi__Modal__cancelButton-2-7",
-                "closeIcon": "HoiPoi__Modal__closeIcon-2-5",
-                "confirmButton": "HoiPoi__Modal__confirmButton-2-6",
-                "content": "HoiPoi__Modal__content-2-4",
-                "footer": "HoiPoi__Modal__footer-2-3",
+                "cancelButton": "HoiPoi__Modal__cancelButton-2-8",
+                "closeIcon": "HoiPoi__Modal__closeIcon-2-6",
+                "confirmButton": "HoiPoi__Modal__confirmButton-2-7",
+                "content": "HoiPoi__Modal__content-2-5",
+                "footer": "HoiPoi__Modal__footer-2-4",
                 "header": "HoiPoi__Modal__header-2-2",
                 "overlay": "HoiPoi__Modal__overlay-2-1",
                 "root": "HoiPoi__Modal__root-2-0",
+                "title": "HoiPoi__Modal__title-2-3",
               }
             }
             closeTimeoutMS={300}
@@ -6984,7 +6993,7 @@ exports[`Modal without header 1`] = `
                         tabindex="-1"
                       >
                         <div
-                          class="HoiPoi__Modal__content-2-4"
+                          class="HoiPoi__Modal__content-2-5"
                         >
                           Lorem Ipsum
                         </div>
@@ -7074,7 +7083,7 @@ exports[`Modal without header 1`] = `
                       tabIndex="-1"
                     >
                       <div
-                        className="HoiPoi__Modal__content-2-4"
+                        className="HoiPoi__Modal__content-2-5"
                       >
                         Lorem Ipsum
                       </div>
