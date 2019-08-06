@@ -29,7 +29,7 @@ export default (theme) => ({
     },
     bold: {
         fontWeight: 500,
-        color: theme.colors.textBlack,
+        color: theme.colors.text.black,
     },
     normal: {
         fontWeight: 'normal',

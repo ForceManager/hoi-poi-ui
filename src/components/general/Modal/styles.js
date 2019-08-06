@@ -34,6 +34,9 @@ export default (theme) => ({
         justifyContent: 'space-between',
         paddingBottom: 30,
     },
+    title: {
+        color: theme.colors.blackLight,
+    },
     footer: {
         display: 'flex',
         alignItems: 'center',
@@ -42,7 +45,9 @@ export default (theme) => ({
     },
     content: {},
     closeIcon: {},
-    confirmButton: {},
+    confirmButton: {
+        textTransform: 'uppercase',
+    },
     cancelButton: {
         marginRight: 20,
     },

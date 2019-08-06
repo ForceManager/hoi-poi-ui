@@ -167,8 +167,8 @@ export default (theme) => ({
     },
     menuList: {
         borderRadius: 0,
-        paddingTop: '0 !important',
-        paddingBottom: '0 !important',
+        paddingTop: '10px !important',
+        paddingBottom: '10px !important',
         overflow: 'hidden',
         '& .hoi-poi-select__group': {
             padding: '10px 0',

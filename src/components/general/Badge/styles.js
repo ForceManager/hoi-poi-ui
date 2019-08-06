@@ -6,10 +6,11 @@ export default (theme) => ({
         borderRadius: '3px',
         display: 'inline-block',
         padding: '0 10px',
+        minWidth: 70,
     },
     Text: {
         lineHeight: '20px',
-        fontWeight: 400,
+        fontWeight: 500,
         textTransform: 'uppercase',
     },
     // Types
