@@ -26,6 +26,7 @@ function Toast({
         closeButton: false,
         hideProgressBar: true,
         autoClose: 4000,
+        enableMultiContainer: true,
         containerId,
     };
 
