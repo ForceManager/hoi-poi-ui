@@ -7,6 +7,7 @@ export default (theme) => ({
         display: 'inline-block',
         padding: '0 10px',
         minWidth: 70,
+        textAlign: 'center',
     },
     Text: {
         lineHeight: '20px',
