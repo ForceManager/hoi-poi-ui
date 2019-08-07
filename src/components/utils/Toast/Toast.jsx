@@ -7,7 +7,13 @@ import { ToastContainer } from 'react-toastify';
 import { getOverrides } from '../../../utils/overrides';
 import styles from './styles';
 
-function Toast({ classes, className: classNameProp, overrides: overridesProp, ...props }) {
+function Toast({
+    classes,
+    className: classNameProp,
+    overrides: overridesProp,
+    containerId = 'hoi-poi-ui',
+    ...props
+}) {
     // Overrides
     const override = getOverrides(overridesProp, Toast.overrides);
 
@@ -20,6 +26,7 @@ function Toast({ classes, className: classNameProp, overrides: overridesProp, ..
         closeButton: false,
         hideProgressBar: true,
         autoClose: 4000,
+        containerId,
     };
 
     return <ToastContainer {...rootProps} {...override['react-toastify']} />;
@@ -35,6 +42,7 @@ Toast.defaultProps = {
 Toast.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
+    containerId: PropTypes.any,
 };
 
 export default React.memo(withStyles(styles, { name: 'Toast' })(Toast));

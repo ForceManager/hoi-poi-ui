@@ -9,7 +9,7 @@ const TOAST_TYPES = {
 };
 
 const showToast = (props) => {
-    const { type = 'info', text = '', title = '' } = props;
+    const { type = 'info', text = '', title = '', containerId = 'hoi-poi-ui' } = props;
     const toastType = TOAST_TYPES[type];
     const messageProps = {
         title,
@@ -19,6 +19,7 @@ const showToast = (props) => {
 
     return toast(<ToastMessage {...messageProps} />, {
         type: toastType,
+        containerId,
     });
 };
 
