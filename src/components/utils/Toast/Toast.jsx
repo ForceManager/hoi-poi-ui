@@ -11,7 +11,7 @@ function Toast({
     classes,
     className: classNameProp,
     overrides: overridesProp,
-    containerId = 'hoi-poi-ui',
+    containerId,
     ...props
 }) {
     // Overrides
@@ -26,11 +26,10 @@ function Toast({
         closeButton: false,
         hideProgressBar: true,
         autoClose: 4000,
-        enableMultiContainer: true,
-        containerId,
+        containerId: containerId || 'hoi-poi-ui',
     };
 
-    return <ToastContainer {...rootProps} {...override['react-toastify']} />;
+    return <ToastContainer {...rootProps} enableMultiContainer {...override['react-toastify']} />;
 }
 
 Toast.overrides = [];
