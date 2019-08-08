@@ -39,7 +39,7 @@ function Label({
                     placement="top"
                     trigger={['hover']}
                     content={hint}
-                    {...override.popover}
+                    {...override.Popover}
                 >
                     <span className={classes.info}>
                         <Icon className={classes.icon} name="info" />
