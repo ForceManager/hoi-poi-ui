@@ -5,7 +5,6 @@ import jss from './jss';
 import defaultTheme from './defaultTheme';
 
 const CLASS_NAME_PREFIX = 'HoiPoi__';
-const isDev = ['development', 'test'].includes(process.env.NODE_ENV);
 let providerCounter = 0;
 const customCreateGenerateId = () => {
     let counter = 0;
@@ -16,22 +15,17 @@ const customCreateGenerateId = () => {
     };
 };
 
-export default React.memo(({ children, theme = defaultTheme }) => {
-    let generateId;
-    if (isDev) {
-        generateId = customCreateGenerateId();
-        providerCounter++;
-    } else {
-        generateId = createGenerateId();
-    }
+export default React.memo(({ children, theme = defaultTheme, jssProvider = {} }) => {
+    const generateId = customCreateGenerateId();
+    providerCounter++;
 
     return (
         <ThemeProvider theme={theme}>
             <JssProvider
-                id={{ minify: !isDev }}
                 jss={jss}
                 generateId={generateId}
                 classNamePrefix={CLASS_NAME_PREFIX}
+                {...jssProvider}
             >
                 {children}
             </JssProvider>
