@@ -3,6 +3,7 @@ export default (theme) => ({
         display: 'inline-block',
         cursor: 'pointer !important',
         lineHeight: '20px',
+        padding: 0,
         color: theme.colors.link,
         transition: 'color .1s ease-in-out',
         border: 'none',

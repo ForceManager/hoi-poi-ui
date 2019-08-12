@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider, JssProvider, createGenerateId } from 'react-jss';
+import { ThemeProvider, JssProvider } from 'react-jss';
 
 import jss from './jss';
 import defaultTheme from './defaultTheme';

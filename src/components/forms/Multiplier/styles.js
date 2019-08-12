@@ -47,7 +47,7 @@ export default (theme) => ({
         cursor: 'pointer',
         marginLeft: 20,
         '& svg': {
-            width: 10,
+            width: 18,
         },
     },
     vertical: {

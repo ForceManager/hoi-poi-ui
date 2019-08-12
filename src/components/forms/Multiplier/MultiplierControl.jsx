@@ -95,8 +95,7 @@ function MultiplierControl({
                     onClick={onClickRemove}
                     className={removeIconClasses}
                     {...override.removeIcon}
-                    name="close"
-                    size="small"
+                    name="trash"
                 />
             )}
         </div>

@@ -35,7 +35,7 @@ export default (theme) => ({
         paddingBottom: 30,
     },
     title: {
-        color: theme.colors.blackLight,
+        color: theme.colors.text.black,
     },
     footer: {
         display: 'flex',

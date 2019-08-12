@@ -11,6 +11,8 @@ Icons:
 <span> </span>
 <Icon name="thickEnabled" />
 <span> </span>
+<Icon name="thickDisabled" />
+<span></span>
 <Icon name="warning" />
 <span> </span>
 <Icon name="warningRounded" />

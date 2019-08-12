@@ -27,6 +27,7 @@ import ArrowRight from './icons/ArrowRight';
 import ArrowLeft from './icons/ArrowLeft';
 import ArrowTop from './icons/ArrowTop';
 import ArrowBottom from './icons/ArrowBottom';
+import ThickDisabled from './icons/ThickDisabled';
 
 const ICONS = {
     chevron: Chevron,
@@ -34,6 +35,7 @@ const ICONS = {
     close: Close,
     lock: Lock,
     thickEnabled: ThickEnabled,
+    thickDisabled: ThickDisabled,
     warning: Warning,
     warningRounded: WarningRounded,
     drag: Drag,
