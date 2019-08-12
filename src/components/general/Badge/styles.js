@@ -33,4 +33,10 @@ export default (theme) => ({
             color: theme.colors.text.green,
         },
     },
+    warn: {
+        backgroundColor: theme.colors.yellowLight,
+        '& $Text': {
+            color: theme.colors.text.yellow,
+        },
+    },
 });
