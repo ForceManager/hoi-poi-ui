@@ -125,7 +125,7 @@ export default (theme) => ({
         },
         '& .rc-steps-item-custom .rc-steps-item-icon > .rc-steps-icon': {
             fontSize: '20px',
-            top: '2px',
+            top: '3px',
             width: '20px',
             height: '20px',
         },

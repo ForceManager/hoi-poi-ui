@@ -53,7 +53,7 @@ Badge.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    type: PropTypes.oneOf(['error', 'info', 'success']),
+    type: PropTypes.oneOf(['error', 'info', 'success', 'warn']),
 };
 
 export default React.memo(withStyles(styles, { name: 'Badge' })(Badge));
