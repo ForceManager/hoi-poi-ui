@@ -26,13 +26,14 @@ function MultiplierControl({
     onFocus,
     onBlur,
     onRemove,
+    removeIconClassName,
     ...props
 }) {
     // Overrides
     const override = getOverrides(overridesProp, MultiplierControl.overrides);
 
     // Classes
-    const removeIconClasses = classnames(classes.removeIcon, {
+    const removeIconClasses = classnames(removeIconClassName, {
         [classes.removeIconVertical]: labelMode === 'vertical',
     });
 

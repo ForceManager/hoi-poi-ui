@@ -26,6 +26,7 @@ export default (theme) => ({
         marginLeft: 10,
         ...theme.typography.defaultText,
         color: theme.colors.greySoft,
+        fontWeight: 400,
     },
     isReadOnly: {
         '& $formControl': {

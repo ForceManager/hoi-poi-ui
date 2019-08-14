@@ -8,6 +8,9 @@ export default (theme) => ({
         alignItems: 'flex-start',
         justifyContent: 'space-between',
         marginTop: '10px',
+        '&:hover $removeIcon': {
+            display: 'flex !important',
+        },
     },
     singleItem: {
         marginTop: 0,
@@ -42,7 +45,7 @@ export default (theme) => ({
     },
     button: {},
     removeIcon: {
-        display: 'flex',
+        display: 'none',
         justifyContent: 'flex-end',
         cursor: 'pointer',
         marginLeft: 20,

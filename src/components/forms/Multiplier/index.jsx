@@ -96,6 +96,7 @@ function Multiplier({
                 customFields={customFields}
                 {...override.multiplierControl}
                 overrides={override}
+                removeIconClassName={classes.removeIcon}
             />,
         );
     }

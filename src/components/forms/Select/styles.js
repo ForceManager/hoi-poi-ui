@@ -140,6 +140,7 @@ export default (theme) => ({
             padding: '0 0 5px 0 !important',
             lineHeight: '20px',
             ...theme.typography.defaultText,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__indicators': {
             padding: '0 0 5px 0 !important',

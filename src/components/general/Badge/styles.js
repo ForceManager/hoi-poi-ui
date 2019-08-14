@@ -13,6 +13,7 @@ export default (theme) => ({
         lineHeight: '20px',
         fontWeight: 500,
         textTransform: 'uppercase',
+        fontSize: 12,
     },
     // Types
     error: {
