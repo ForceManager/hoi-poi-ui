@@ -126,14 +126,17 @@ export default (theme) => ({
         },
         '& .hoi-poi-select__input, & .hoi-poi-select__single-value': {
             color: theme.colors.text.black,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__input': {
             ...theme.typography.defaultText,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__input input': {
             lineHeight: '20px',
             padding: '0 0 4px 0 !important',
             ...theme.typography.defaultText,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__placeholder, & .hoi-poi-select__single-value': {
             margin: 0,
