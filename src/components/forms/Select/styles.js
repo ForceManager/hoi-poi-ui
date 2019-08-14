@@ -125,7 +125,7 @@ export default (theme) => ({
             color: theme.colors.disabledGrey,
         },
         '& .hoi-poi-select__input, & .hoi-poi-select__single-value': {
-            color: theme.colors.greySoft,
+            color: theme.colors.text.black,
         },
         '& .hoi-poi-select__input': {
             ...theme.typography.defaultText,
