@@ -47,11 +47,12 @@ let onChangeText = (e) => {
     <Button
         color="primary"
         onClick={() =>
-            toast({
-                type: state.type,
-                text: state.text,
-                title: state.title,
-            })
+            // toast({
+            //     type: state.type,
+            //     text: state.text,
+            //     title: state.title,
+            // })
+            toast({ content: <div>mandunguilla</div>, position: 'bottom-right' })
         }
     >
         Show Toast

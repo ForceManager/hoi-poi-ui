@@ -9,7 +9,10 @@ const TOAST_TYPES = {
 };
 
 const showToast = (props) => {
-    const { type = 'info', text = '', title = '' } = props;
+    const { type = 'info', text = '', title = '', content, ...newProps } = props;
+
+    if (content) return toast(content, { ...newProps });
+
     const toastType = TOAST_TYPES[type];
     const messageProps = {
         title,
