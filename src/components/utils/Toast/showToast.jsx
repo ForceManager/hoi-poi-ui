@@ -24,6 +24,4 @@ const showToast = (props) => {
     });
 };
 
-export const dismiss = toast.dismiss;
-
 export default showToast;
