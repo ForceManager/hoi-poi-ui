@@ -9,7 +9,7 @@ const TOAST_TYPES = {
 };
 
 const showToast = (props) => {
-    const { type = 'info', text = '', title = '', containerId } = props;
+    const { type = 'info', text = '', title = '', containerId, ...rest } = props;
     const toastType = TOAST_TYPES[type];
     const messageProps = {
         title,
@@ -20,7 +20,10 @@ const showToast = (props) => {
     return toast(<ToastMessage {...messageProps} />, {
         type: toastType,
         containerId: containerId || 'hoi-poi-ui',
+        ...rest,
     });
 };
+
+export const dismiss = toast.dismiss;
 
 export default showToast;
