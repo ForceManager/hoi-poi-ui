@@ -34,7 +34,7 @@ export { default as Multiplier } from './components/forms/Multiplier';
 export { default as ScrollBar } from './components/utils/ScrollBar';
 export { default as Tooltip } from './components/utils/Tooltip';
 export { default as Popover } from './components/utils/Popover';
-export { Toast, toast } from './components/utils/Toast';
+export { Toast, toast, dismiss as dismissToast } from './components/utils/Toast';
 
 export { default as Link } from './components/typography/Link';
 export { default as Title } from './components/typography/Title';
