@@ -26,6 +26,7 @@ const showToast = (props) => {
             closeButton,
             closeButtonClassName,
         };
+
         return toast(content, {
             containerId: containerId || 'hoi-poi-ui',
             closeButton: <CustomCloseButton properties={properties} />,
