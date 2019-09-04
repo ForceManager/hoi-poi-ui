@@ -12,7 +12,8 @@ export default (theme) => ({
     },
     isFullWidth: {
         '& $formControl': {
-            width: '100%',
+            width: '100% !important',
+            flex: 1,
         },
     },
     vertical: {

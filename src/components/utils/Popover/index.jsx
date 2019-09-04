@@ -68,4 +68,4 @@ Popover.propTypes = {
     ]),
 };
 
-export default React.memo(withStyles(styles, { name: 'Tooltip' })(Popover));
+export default React.memo(withStyles(styles, { name: 'Popover' })(Popover));

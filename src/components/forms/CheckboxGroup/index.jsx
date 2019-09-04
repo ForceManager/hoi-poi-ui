@@ -18,7 +18,9 @@ function CheckboxGroup({
     label,
     labelMode,
     hint,
+    error,
     isReadOnly,
+    isFullWidth,
     ...props
 }) {
     // Overrides
@@ -30,9 +32,14 @@ function CheckboxGroup({
         {
             [classes.isReadOnly]: isReadOnly,
             [classes[labelMode]]: labelMode,
+            [classes.errored]: error,
         },
         classNameProp,
     );
+
+    const formControlClassName = classnames(classes.formControl, {
+        [classes.isFullWidth]: isFullWidth,
+    });
 
     const rootProps = {
         className: rootClassName,
@@ -58,7 +65,7 @@ function CheckboxGroup({
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
-            <div className={classes.formControl} {...override.formControl}>
+            <div className={formControlClassName} {...override.formControl}>
                 {options.map((option) => (
                     <CheckboxControl
                         key={option.value}
@@ -69,6 +76,11 @@ function CheckboxGroup({
                         overrides={overridesProp}
                     />
                 ))}
+                {error && (
+                    <div className={classes.error} {...override.error}>
+                        {error}
+                    </div>
+                )}
             </div>
         </div>
     );
@@ -76,6 +88,7 @@ function CheckboxGroup({
 
 CheckboxGroup.overrides = [
     'root',
+    'error',
     'Checkbox',
     'checkboxLabel',
     'checkboxControl',
@@ -103,11 +116,13 @@ CheckboxGroup.propTypes = {
         }),
     ),
     value: PropTypes.object,
+    error: PropTypes.string,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Info popover */
     hint: PropTypes.string,
     isReadOnly: PropTypes.bool,
+    isFullWidth: PropTypes.bool,
 };
 
 export default React.memo(withStyles(styles, { name: 'CheckboxGroup' })(CheckboxGroup));

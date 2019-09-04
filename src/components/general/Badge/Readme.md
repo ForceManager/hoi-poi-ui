@@ -22,8 +22,15 @@ Success:
 <Badge type="success">Lorem ipsum</Badge>
 ```
 
+Warning:
+
+```jsx
+<Badge type="warn">Lorem ipsum</Badge>
+```
+
 ### Component tree
 
 ---
 
 -   root - root element
+-   [Text](#/Typography?id=text)

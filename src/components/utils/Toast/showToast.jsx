@@ -1,6 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import ToastMessage from './ToastMessage';
+import CustomCloseButton from './CustomCloseButton';
 
 const TOAST_TYPES = {
     success: toast.TYPE.SUCCESS,
@@ -8,19 +9,29 @@ const TOAST_TYPES = {
     error: toast.TYPE.ERROR,
 };
 
-const CustomCloseButton = ({ customCloseButton, closeToast }) => {
-    if (!customCloseButton) return null;
-    return <div onClick={closeToast}>{customCloseButton}</div>;
-};
-
 const showToast = (props) => {
-    const { type = 'info', text = '', title = '', content, closeButton, ...newProps } = props;
+    const {
+        type = 'info',
+        text = '',
+        title = '',
+        containerId,
+        content,
+        closeButton,
+        closeButtonClassName,
+        ...newProps
+    } = props;
 
-    if (content)
+    if (content) {
+        const properties = {
+            closeButton,
+            closeButtonClassName,
+        };
         return toast(content, {
-            closeButton: <CustomCloseButton customCloseButton={closeButton} />,
+            containerId: containerId || 'hoi-poi-ui',
+            closeButton: <CustomCloseButton properties={properties} />,
             ...newProps,
         });
+    }
 
     const toastType = TOAST_TYPES[type];
     const messageProps = {
@@ -31,6 +42,8 @@ const showToast = (props) => {
 
     return toast(<ToastMessage {...messageProps} />, {
         type: toastType,
+        containerId: containerId || 'hoi-poi-ui',
+        ...newProps,
     });
 };
 

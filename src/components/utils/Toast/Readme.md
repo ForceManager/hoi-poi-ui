@@ -14,8 +14,6 @@ const state = {
     ...state,
 };
 
-const content = () => <div className="custom-content">Component as content</div>;
-
 let radioOptions = [
     {
         label: 'Info',
@@ -103,14 +101,6 @@ let onChangeAutoClose = (value) => setState({ autoClose: value });
 let onChangeNewestOnTop = (value) => setState({ newestOnTop: !state.newestOnTop });
 let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnClick });
 
-const customCloseButton = ({ someProp, closeToast }) => {
-    return (
-        <div className="custom-close-button" style={{ color: 'white' }} onClick={closeToast}>
-            Close
-        </div>
-    );
-};
-
 <div>
     <RadioGroup label="Toast type" options={radioOptions} onChange={onChange} value={state.type} />
     <Input
@@ -164,8 +154,9 @@ const customCloseButton = ({ someProp, closeToast }) => {
         color="primary"
         onClick={() =>
             toast({
-                content: content,
+                content: <div className="custom-content">Component as content</div>,
                 closeButton: <div style={{ color: 'white' }}>close</div>,
+                closeButtonClassName: 'custom-closeButton-className',
                 position: state.position,
                 autoClose: state.autoClose,
                 closeOnClick: state.closeOnClick,

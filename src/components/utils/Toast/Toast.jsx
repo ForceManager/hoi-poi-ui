@@ -13,6 +13,7 @@ function Toast({
     overrides: overridesProp,
     containerId,
     closeButton,
+    closeButtonClassName,
     newestOnTop,
     position,
     autoClose,
@@ -28,6 +29,7 @@ function Toast({
         ...props,
         className: rootClassName,
         closeButton: closeButton || false,
+        closeButtonClassName: closeButtonClassName || '',
         hideProgressBar: true,
         autoClose: autoClose,
         containerId: containerId || 'hoi-poi-ui',
@@ -35,7 +37,7 @@ function Toast({
         position: position,
     };
 
-    return <ToastContainer {...rootProps} {...override['react-toastify']} />;
+    return <ToastContainer {...rootProps} enableMultiContainer {...override['react-toastify']} />;
 }
 
 Toast.overrides = [];
@@ -52,6 +54,7 @@ Toast.propTypes = {
     containerId: PropTypes.any,
     content: PropTypes.element,
     closeButton: PropTypes.element,
+    closeButtonClassName: PropTypes.string,
     closeOnClick: PropTypes.bool,
     newestOnTop: PropTypes.bool,
     position: PropTypes.oneOf(['top-right', 'top-left', 'bottom-right', 'bottom-left']),

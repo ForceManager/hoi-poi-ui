@@ -38,6 +38,20 @@ Squared buttons:
 <Button size="medium" color="primary" type="squared">PUSH ME</Button>
 <span> </span>
 <Button size="big" color="danger" type="squared">PUSH ME</Button>
+<span> </span>
+<Button size="medium" color="primary" type="squared" isDisabled>PUSH ME</Button>
+```
+
+Squared outlined buttons:
+
+```jsx
+<Button size="small" type="squared-outlined">PUSH ME</Button>
+<span> </span>
+<Button size="medium" color="primary" type="squared-outlined">PUSH ME</Button>
+<span> </span>
+<Button size="big" color="danger" type="squared-outlined">PUSH ME</Button>
+<span> </span>
+<Button size="big" color="danger" type="squared-outlined" isDisabled>PUSH ME</Button>
 ```
 
 Disabled buttons:
@@ -87,3 +101,4 @@ Full-width
 -   root - root element
 -   label - Button inner content and `children` wrapper.
 -   [Loader](#/Loader)
+-   [Text](#/typography/Text)

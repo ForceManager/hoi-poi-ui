@@ -6,22 +6,38 @@ export default (theme) => ({
         borderRadius: '3px',
         display: 'inline-block',
         padding: '0 10px',
+        minWidth: 70,
+        textAlign: 'center',
     },
-    text: {
-        fontWeight: 400,
+    Text: {
+        lineHeight: '20px',
+        fontWeight: 500,
         textTransform: 'uppercase',
+        fontSize: 9,
     },
     // Types
     error: {
         backgroundColor: theme.colors.redLight,
-        color: theme.colors.text.red,
+        '& $Text': {
+            color: theme.colors.text.red,
+        },
     },
     info: {
         backgroundColor: theme.colors.greyLight,
-        color: theme.colors.text.greySoft,
+        '& $Text': {
+            color: theme.colors.text.greySoft,
+        },
     },
     success: {
         backgroundColor: theme.colors.greenLight,
-        color: theme.colors.text.green,
+        '& $Text': {
+            color: theme.colors.text.green,
+        },
+    },
+    warn: {
+        backgroundColor: theme.colors.yellowLight,
+        '& $Text': {
+            color: theme.colors.text.yellow,
+        },
     },
 });

@@ -94,8 +94,12 @@ export default (theme) => ({
     vertical: {
         display: 'block',
         padding: '15px 0 10px 0',
+        marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
+        },
+        '& $Label': {
+            width: '100%',
         },
     },
     horizontal: {
@@ -106,6 +110,10 @@ export default (theme) => ({
     },
     isFullWidth: {
         '& $formControl': {
+            width: '100%',
+            flex: 1,
+        },
+        '&$vertical $Label': {
             width: '100%',
         },
     },
@@ -122,6 +130,13 @@ export default (theme) => ({
             cursor: 'pointer',
             width: 8,
             height: 8,
+        },
+    },
+    custom: {
+        '& $formControl': {
+            '&::before': {
+                borderBottom: 'none',
+            },
         },
     },
 });

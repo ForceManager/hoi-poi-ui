@@ -8,6 +8,8 @@ exports[`CheckboxGroup default match 1`] = `
         "colors": Object {
           "black": "#262B34",
           "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "greenLight": "#e7f1d5",
@@ -24,6 +26,8 @@ exports[`CheckboxGroup default match 1`] = `
           "primaryDark": "#C87600",
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
           "red": "#f04540",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -31,9 +35,11 @@ exports[`CheckboxGroup default match 1`] = `
           "secondary": "#00A8Be",
           "secondaryGrey": "#e4eeff",
           "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
           "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
           "tableHover": "#FAFBFC",
           "text": Object {
             "black": "#3c4248",
@@ -50,7 +56,8 @@ exports[`CheckboxGroup default match 1`] = `
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
-          "yellowLight": "#FFF9DD",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -61,7 +68,7 @@ exports[`CheckboxGroup default match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -77,6 +84,11 @@ exports[`CheckboxGroup default match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -91,13 +103,21 @@ exports[`CheckboxGroup default match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -219,7 +239,7 @@ exports[`CheckboxGroup default match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -251,10 +271,13 @@ exports[`CheckboxGroup default match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -376,22 +399,26 @@ exports[`CheckboxGroup default match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "2": SheetsManager {
+                "-9007199254740984": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "3": SheetsManager {
+                "-9007199254740985": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "4": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740987": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "-9007199254740988": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -427,6 +454,8 @@ exports[`CheckboxGroup default match 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -443,6 +472,8 @@ exports[`CheckboxGroup default match 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -450,9 +481,11 @@ exports[`CheckboxGroup default match 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -469,7 +502,8 @@ exports[`CheckboxGroup default match 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -480,7 +514,7 @@ exports[`CheckboxGroup default match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -496,6 +530,11 @@ exports[`CheckboxGroup default match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -512,13 +551,15 @@ exports[`CheckboxGroup default match 1`] = `
             classes={
               Object {
                 "Label": "HoiPoi__CheckboxGroup__Label-1-1",
-                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-1-3",
-                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-1-4",
-                "formControl": "HoiPoi__CheckboxGroup__formControl-1-2",
-                "horizontal": "HoiPoi__CheckboxGroup__horizontal-1-7",
-                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-1-5",
+                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-1-5",
+                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-1-6",
+                "error": "HoiPoi__CheckboxGroup__error-1-2",
+                "formControl": "HoiPoi__CheckboxGroup__formControl-1-3",
+                "horizontal": "HoiPoi__CheckboxGroup__horizontal-1-9",
+                "isFullWidth": "HoiPoi__CheckboxGroup__isFullWidth-1-4",
+                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-1-7",
                 "root": "HoiPoi__CheckboxGroup__root-1-0",
-                "vertical": "HoiPoi__CheckboxGroup__vertical-1-6",
+                "vertical": "HoiPoi__CheckboxGroup__vertical-1-8",
               }
             }
             isReadOnly={false}
@@ -545,7 +586,7 @@ exports[`CheckboxGroup default match 1`] = `
             value={Object {}}
           >
             <div
-              className="HoiPoi__CheckboxGroup__root-1-0 HoiPoi__CheckboxGroup__horizontal-1-7"
+              className="HoiPoi__CheckboxGroup__root-1-0 HoiPoi__CheckboxGroup__horizontal-1-9"
             >
               <JssContextSubscriber
                 className="HoiPoi__CheckboxGroup__Label-1-1"
@@ -558,10 +599,13 @@ exports[`CheckboxGroup default match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -683,22 +727,26 @@ exports[`CheckboxGroup default match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "2": SheetsManager {
+                        "-9007199254740984": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "3": SheetsManager {
+                        "-9007199254740985": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "4": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740987": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "-9007199254740988": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -714,6 +762,8 @@ exports[`CheckboxGroup default match 1`] = `
                       "colors": Object {
                         "black": "#262B34",
                         "blackLight": "#5f656b",
+                        "blackberry": "#2e2d4c",
+                        "blackberryDark": "#24243C",
                         "disabledGrey": "#ced4d9",
                         "green": "#86AD20",
                         "greenLight": "#e7f1d5",
@@ -730,6 +780,8 @@ exports[`CheckboxGroup default match 1`] = `
                         "primaryDark": "#C87600",
                         "primaryLight": "#fef4e6",
                         "primarySoft": "#ff9d26",
+                        "purple": "#AA5B9C",
+                        "purpleLight": "#EEDEEB",
                         "red": "#f04540",
                         "redDark": "#C43833",
                         "redLight": "#FAE7E7",
@@ -737,9 +789,11 @@ exports[`CheckboxGroup default match 1`] = `
                         "secondary": "#00A8Be",
                         "secondaryGrey": "#e4eeff",
                         "secondaryLight": "#D6EEF2",
+                        "secondaryOverlay": "rgba(2,168,189,0.10)",
                         "secondarySoft": "#AADFE7",
                         "shadow": "rgba(0, 0, 0, 0.25)",
                         "tableHeader": "#f6f7f9",
+                        "tableHeaderHover": "#EBECEF",
                         "tableHover": "#FAFBFC",
                         "text": Object {
                           "black": "#3c4248",
@@ -756,7 +810,8 @@ exports[`CheckboxGroup default match 1`] = `
                         "transparentBlack": "rgba(38, 43, 52, 0.8)",
                         "white": "#FFFFFF",
                         "yellow": "#E9B200",
-                        "yellowLight": "#FFF9DD",
+                        "yellowDark": "#BE9100",
+                        "yellowLight": "#FCF7E5",
                       },
                       "effects": Object {
                         "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -767,7 +822,7 @@ exports[`CheckboxGroup default match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -783,6 +838,11 @@ exports[`CheckboxGroup default match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -798,27 +858,324 @@ exports[`CheckboxGroup default match 1`] = `
                     className="HoiPoi__CheckboxGroup__Label-1-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi__Label__icon-1-11",
-                        "info": "HoiPoi__Label__info-1-10",
-                        "root": "HoiPoi__Label__root-1-8",
-                        "text": "HoiPoi__Label__text-1-9",
+                        "Text": "HoiPoi__Label__Text-1-11",
+                        "icon": "HoiPoi__Label__icon-1-13",
+                        "info": "HoiPoi__Label__info-1-12",
+                        "root": "HoiPoi__Label__root-1-10",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-1-8 HoiPoi__CheckboxGroup__Label-1-1"
+                      className="HoiPoi__Label__root-1-10 HoiPoi__CheckboxGroup__Label-1-1"
                     >
-                      <span
-                        className="HoiPoi__Label__text-1-9"
+                      <JssContextSubscriber
+                        className="HoiPoi__Label__Text-1-11"
+                        overrides={Object {}}
+                        type="bold"
                       >
-                        Lorem ipsum
-                      </span>
+                        <WithStyles(Text)
+                          className="HoiPoi__Label__Text-1-11"
+                          innerRef={null}
+                          isTruncated={false}
+                          jssContext={
+                            Object {
+                              "disableStylesGeneration": false,
+                              "jss": Jss {
+                                "generateId": [Function],
+                                "id": 3,
+                                "options": Object {
+                                  "Renderer": [Function],
+                                  "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
+                                  "plugins": Array [],
+                                },
+                                "plugins": PluginsRegistry {
+                                  "plugins": Object {
+                                    "external": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                        "onUpdate": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                    ],
+                                    "internal": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                    ],
+                                  },
+                                  "registry": Object {
+                                    "onChangeValue": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onCreateRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessSheet": Array [],
+                                    "onProcessStyle": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onUpdate": Array [
+                                      [Function],
+                                    ],
+                                  },
+                                },
+                                "version": "10.0.0-alpha.21",
+                              },
+                              "managers": Object {
+                                "-9007199254740984": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740985": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740986": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740987": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740988": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                              },
+                              "sheetOptions": Object {
+                                "classNamePrefix": "HoiPoi__",
+                                "generateId": [Function],
+                              },
+                            }
+                          }
+                          overrides={Object {}}
+                          size="medium"
+                          theme={
+                            Object {
+                              "colors": Object {
+                                "black": "#262B34",
+                                "blackLight": "#5f656b",
+                                "blackberry": "#2e2d4c",
+                                "blackberryDark": "#24243C",
+                                "disabledGrey": "#ced4d9",
+                                "green": "#86AD20",
+                                "greenLight": "#e7f1d5",
+                                "grey": "#697782",
+                                "greyLight": "#f0f3f5",
+                                "greySoft": "#788590",
+                                "lines": "#dce3eb",
+                                "link": "#216db3",
+                                "linkDark": "#174a79",
+                                "overlay": "rgba(33,33,33,0.55)",
+                                "placeholders": "#e1e4e7",
+                                "placeholdersHover": "#d0d4d8",
+                                "primary": "#FF8C00",
+                                "primaryDark": "#C87600",
+                                "primaryLight": "#fef4e6",
+                                "primarySoft": "#ff9d26",
+                                "purple": "#AA5B9C",
+                                "purpleLight": "#EEDEEB",
+                                "red": "#f04540",
+                                "redDark": "#C43833",
+                                "redLight": "#FAE7E7",
+                                "redSoft": "#FF544F",
+                                "secondary": "#00A8Be",
+                                "secondaryGrey": "#e4eeff",
+                                "secondaryLight": "#D6EEF2",
+                                "secondaryOverlay": "rgba(2,168,189,0.10)",
+                                "secondarySoft": "#AADFE7",
+                                "shadow": "rgba(0, 0, 0, 0.25)",
+                                "tableHeader": "#f6f7f9",
+                                "tableHeaderHover": "#EBECEF",
+                                "tableHover": "#FAFBFC",
+                                "text": Object {
+                                  "black": "#3c4248",
+                                  "danger": "white",
+                                  "default": "#697782",
+                                  "green": "#86AD20",
+                                  "greySoft": "#788590",
+                                  "primary": "white",
+                                  "red": "#f04540",
+                                  "secondary": "#00A8Be",
+                                  "white": "#FFFFFF",
+                                  "yellow": "#E9B200",
+                                },
+                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                                "white": "#FFFFFF",
+                                "yellow": "#E9B200",
+                                "yellowDark": "#BE9100",
+                                "yellowLight": "#FCF7E5",
+                              },
+                              "effects": Object {
+                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                                "buttonActive": Object {
+                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                                },
+                              },
+                              "typography": Object {
+                                "bigText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 20,
+                                  "letterSpacing": 0.5,
+                                },
+                                "button": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "lineHeight": 1.5,
+                                },
+                                "defaultText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 13,
+                                  "letterSpacing": 0.5,
+                                },
+                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                "fontSizeBase": 13,
+                                "fontSizeSmall": 11,
+                                "largeText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 16,
+                                  "letterSpacing": 0.5,
+                                },
+                                "letterSpacing": 0.5,
+                                "lineHeightBase": 1.5,
+                                "smallText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "letterSpacing": 0.5,
+                                },
+                              },
+                            }
+                          }
+                          type="bold"
+                        >
+                          <Text
+                            className="HoiPoi__Label__Text-1-11"
+                            classes={
+                              Object {
+                                "Loader": "HoiPoi__Text__Loader-1-24",
+                                "big": "HoiPoi__Text__big-1-19",
+                                "bold": "HoiPoi__Text__bold-1-20",
+                                "isLoading": "HoiPoi__Text__isLoading-1-23",
+                                "large": "HoiPoi__Text__large-1-18",
+                                "light": "HoiPoi__Text__light-1-22",
+                                "medium": "HoiPoi__Text__medium-1-17",
+                                "normal": "HoiPoi__Text__normal-1-21",
+                                "root": "HoiPoi__Text__root-1-14",
+                                "small": "HoiPoi__Text__small-1-16",
+                                "truncated": "HoiPoi__Text__truncated-1-15",
+                              }
+                            }
+                            isTruncated={false}
+                            overrides={Object {}}
+                            size="medium"
+                            type="bold"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-1-14 HoiPoi__Text__bold-1-20 HoiPoi__Text__medium-1-17 HoiPoi__Label__Text-1-11"
+                            >
+                              Lorem ipsum
+                            </span>
+                          </Text>
+                        </WithStyles(Text)>
+                      </JssContextSubscriber>
                     </span>
                   </Label>
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi__CheckboxGroup__formControl-1-2"
+                className="HoiPoi__CheckboxGroup__formControl-1-3"
               >
                 <JssContextSubscriber
                   isReadOnly={false}
@@ -840,10 +1197,13 @@ exports[`CheckboxGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -965,22 +1325,26 @@ exports[`CheckboxGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "2": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "3": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740987": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -1004,6 +1368,8 @@ exports[`CheckboxGroup default match 1`] = `
                         "colors": Object {
                           "black": "#262B34",
                           "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
                           "disabledGrey": "#ced4d9",
                           "green": "#86AD20",
                           "greenLight": "#e7f1d5",
@@ -1020,6 +1386,8 @@ exports[`CheckboxGroup default match 1`] = `
                           "primaryDark": "#C87600",
                           "primaryLight": "#fef4e6",
                           "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
                           "red": "#f04540",
                           "redDark": "#C43833",
                           "redLight": "#FAE7E7",
@@ -1027,9 +1395,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "secondary": "#00A8Be",
                           "secondaryGrey": "#e4eeff",
                           "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                           "secondarySoft": "#AADFE7",
                           "shadow": "rgba(0, 0, 0, 0.25)",
                           "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
                           "tableHover": "#FAFBFC",
                           "text": Object {
                             "black": "#3c4248",
@@ -1046,7 +1416,8 @@ exports[`CheckboxGroup default match 1`] = `
                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                           "white": "#FFFFFF",
                           "yellow": "#E9B200",
-                          "yellowLight": "#FFF9DD",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
                         },
                         "effects": Object {
                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1057,7 +1428,7 @@ exports[`CheckboxGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -1073,6 +1444,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -1088,14 +1464,16 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-13",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-15",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-16",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-14",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-19",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-17",
-                          "root": "HoiPoi__CheckboxControl__root-1-12",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-18",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-31",
+                          "error": "HoiPoi__CheckboxControl__error-1-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-1-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-32",
+                          "root": "HoiPoi__CheckboxControl__root-1-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-33",
                         }
                       }
                       isReadOnly={false}
@@ -1110,7 +1488,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-15"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-30"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -1127,10 +1505,13 @@ exports[`CheckboxGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -1252,22 +1633,26 @@ exports[`CheckboxGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "2": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "3": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -1285,6 +1670,8 @@ exports[`CheckboxGroup default match 1`] = `
                                 "colors": Object {
                                   "black": "#262B34",
                                   "blackLight": "#5f656b",
+                                  "blackberry": "#2e2d4c",
+                                  "blackberryDark": "#24243C",
                                   "disabledGrey": "#ced4d9",
                                   "green": "#86AD20",
                                   "greenLight": "#e7f1d5",
@@ -1301,6 +1688,8 @@ exports[`CheckboxGroup default match 1`] = `
                                   "primaryDark": "#C87600",
                                   "primaryLight": "#fef4e6",
                                   "primarySoft": "#ff9d26",
+                                  "purple": "#AA5B9C",
+                                  "purpleLight": "#EEDEEB",
                                   "red": "#f04540",
                                   "redDark": "#C43833",
                                   "redLight": "#FAE7E7",
@@ -1308,9 +1697,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "secondary": "#00A8Be",
                                   "secondaryGrey": "#e4eeff",
                                   "secondaryLight": "#D6EEF2",
+                                  "secondaryOverlay": "rgba(2,168,189,0.10)",
                                   "secondarySoft": "#AADFE7",
                                   "shadow": "rgba(0, 0, 0, 0.25)",
                                   "tableHeader": "#f6f7f9",
+                                  "tableHeaderHover": "#EBECEF",
                                   "tableHover": "#FAFBFC",
                                   "text": Object {
                                     "black": "#3c4248",
@@ -1327,7 +1718,8 @@ exports[`CheckboxGroup default match 1`] = `
                                   "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                   "white": "#FFFFFF",
                                   "yellow": "#E9B200",
-                                  "yellowLight": "#FFF9DD",
+                                  "yellowDark": "#BE9100",
+                                  "yellowLight": "#FCF7E5",
                                 },
                                 "effects": Object {
                                   "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1338,7 +1730,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -1354,6 +1746,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -1369,9 +1766,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-22",
-                                  "input": "HoiPoi__Checkbox__input-1-21",
-                                  "root": "HoiPoi__Checkbox__root-1-20",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-37",
+                                  "input": "HoiPoi__Checkbox__input-1-36",
+                                  "root": "HoiPoi__Checkbox__root-1-35",
                                 }
                               }
                               isDisabled={false}
@@ -1379,7 +1776,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-20"
+                                className="HoiPoi__Checkbox__root-1-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -1389,6 +1786,8 @@ exports[`CheckboxGroup default match 1`] = `
                                         "colors": Object {
                                           "black": "#262B34",
                                           "blackLight": "#5f656b",
+                                          "blackberry": "#2e2d4c",
+                                          "blackberryDark": "#24243C",
                                           "disabledGrey": "#ced4d9",
                                           "green": "#86AD20",
                                           "greenLight": "#e7f1d5",
@@ -1405,6 +1804,8 @@ exports[`CheckboxGroup default match 1`] = `
                                           "primaryDark": "#C87600",
                                           "primaryLight": "#fef4e6",
                                           "primarySoft": "#ff9d26",
+                                          "purple": "#AA5B9C",
+                                          "purpleLight": "#EEDEEB",
                                           "red": "#f04540",
                                           "redDark": "#C43833",
                                           "redLight": "#FAE7E7",
@@ -1412,9 +1813,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "secondary": "#00A8Be",
                                           "secondaryGrey": "#e4eeff",
                                           "secondaryLight": "#D6EEF2",
+                                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                                           "secondarySoft": "#AADFE7",
                                           "shadow": "rgba(0, 0, 0, 0.25)",
                                           "tableHeader": "#f6f7f9",
+                                          "tableHeaderHover": "#EBECEF",
                                           "tableHover": "#FAFBFC",
                                           "text": Object {
                                             "black": "#3c4248",
@@ -1431,7 +1834,8 @@ exports[`CheckboxGroup default match 1`] = `
                                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                           "white": "#FFFFFF",
                                           "yellow": "#E9B200",
-                                          "yellowLight": "#FFF9DD",
+                                          "yellowDark": "#BE9100",
+                                          "yellowLight": "#FCF7E5",
                                         },
                                         "effects": Object {
                                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1442,7 +1846,7 @@ exports[`CheckboxGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -1458,6 +1862,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -1489,7 +1898,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-21"
+                                  className="HoiPoi__Checkbox__input-1-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1499,7 +1908,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-16"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-31"
                         >
                           Lorem ipsum
                         </span>
@@ -1527,10 +1936,13 @@ exports[`CheckboxGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -1652,22 +2064,26 @@ exports[`CheckboxGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "2": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "3": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740987": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -1691,6 +2107,8 @@ exports[`CheckboxGroup default match 1`] = `
                         "colors": Object {
                           "black": "#262B34",
                           "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
                           "disabledGrey": "#ced4d9",
                           "green": "#86AD20",
                           "greenLight": "#e7f1d5",
@@ -1707,6 +2125,8 @@ exports[`CheckboxGroup default match 1`] = `
                           "primaryDark": "#C87600",
                           "primaryLight": "#fef4e6",
                           "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
                           "red": "#f04540",
                           "redDark": "#C43833",
                           "redLight": "#FAE7E7",
@@ -1714,9 +2134,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "secondary": "#00A8Be",
                           "secondaryGrey": "#e4eeff",
                           "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                           "secondarySoft": "#AADFE7",
                           "shadow": "rgba(0, 0, 0, 0.25)",
                           "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
                           "tableHover": "#FAFBFC",
                           "text": Object {
                             "black": "#3c4248",
@@ -1733,7 +2155,8 @@ exports[`CheckboxGroup default match 1`] = `
                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                           "white": "#FFFFFF",
                           "yellow": "#E9B200",
-                          "yellowLight": "#FFF9DD",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
                         },
                         "effects": Object {
                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1744,7 +2167,7 @@ exports[`CheckboxGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -1760,6 +2183,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -1775,14 +2203,16 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-13",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-15",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-16",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-14",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-19",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-17",
-                          "root": "HoiPoi__CheckboxControl__root-1-12",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-18",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-31",
+                          "error": "HoiPoi__CheckboxControl__error-1-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-1-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-32",
+                          "root": "HoiPoi__CheckboxControl__root-1-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-33",
                         }
                       }
                       isReadOnly={false}
@@ -1797,7 +2227,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-15"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-30"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -1814,10 +2244,13 @@ exports[`CheckboxGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -1939,22 +2372,26 @@ exports[`CheckboxGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "2": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "3": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -1972,6 +2409,8 @@ exports[`CheckboxGroup default match 1`] = `
                                 "colors": Object {
                                   "black": "#262B34",
                                   "blackLight": "#5f656b",
+                                  "blackberry": "#2e2d4c",
+                                  "blackberryDark": "#24243C",
                                   "disabledGrey": "#ced4d9",
                                   "green": "#86AD20",
                                   "greenLight": "#e7f1d5",
@@ -1988,6 +2427,8 @@ exports[`CheckboxGroup default match 1`] = `
                                   "primaryDark": "#C87600",
                                   "primaryLight": "#fef4e6",
                                   "primarySoft": "#ff9d26",
+                                  "purple": "#AA5B9C",
+                                  "purpleLight": "#EEDEEB",
                                   "red": "#f04540",
                                   "redDark": "#C43833",
                                   "redLight": "#FAE7E7",
@@ -1995,9 +2436,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "secondary": "#00A8Be",
                                   "secondaryGrey": "#e4eeff",
                                   "secondaryLight": "#D6EEF2",
+                                  "secondaryOverlay": "rgba(2,168,189,0.10)",
                                   "secondarySoft": "#AADFE7",
                                   "shadow": "rgba(0, 0, 0, 0.25)",
                                   "tableHeader": "#f6f7f9",
+                                  "tableHeaderHover": "#EBECEF",
                                   "tableHover": "#FAFBFC",
                                   "text": Object {
                                     "black": "#3c4248",
@@ -2014,7 +2457,8 @@ exports[`CheckboxGroup default match 1`] = `
                                   "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                   "white": "#FFFFFF",
                                   "yellow": "#E9B200",
-                                  "yellowLight": "#FFF9DD",
+                                  "yellowDark": "#BE9100",
+                                  "yellowLight": "#FCF7E5",
                                 },
                                 "effects": Object {
                                   "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -2025,7 +2469,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -2041,6 +2485,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -2056,9 +2505,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-22",
-                                  "input": "HoiPoi__Checkbox__input-1-21",
-                                  "root": "HoiPoi__Checkbox__root-1-20",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-37",
+                                  "input": "HoiPoi__Checkbox__input-1-36",
+                                  "root": "HoiPoi__Checkbox__root-1-35",
                                 }
                               }
                               isDisabled={false}
@@ -2066,7 +2515,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-20"
+                                className="HoiPoi__Checkbox__root-1-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2076,6 +2525,8 @@ exports[`CheckboxGroup default match 1`] = `
                                         "colors": Object {
                                           "black": "#262B34",
                                           "blackLight": "#5f656b",
+                                          "blackberry": "#2e2d4c",
+                                          "blackberryDark": "#24243C",
                                           "disabledGrey": "#ced4d9",
                                           "green": "#86AD20",
                                           "greenLight": "#e7f1d5",
@@ -2092,6 +2543,8 @@ exports[`CheckboxGroup default match 1`] = `
                                           "primaryDark": "#C87600",
                                           "primaryLight": "#fef4e6",
                                           "primarySoft": "#ff9d26",
+                                          "purple": "#AA5B9C",
+                                          "purpleLight": "#EEDEEB",
                                           "red": "#f04540",
                                           "redDark": "#C43833",
                                           "redLight": "#FAE7E7",
@@ -2099,9 +2552,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "secondary": "#00A8Be",
                                           "secondaryGrey": "#e4eeff",
                                           "secondaryLight": "#D6EEF2",
+                                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                                           "secondarySoft": "#AADFE7",
                                           "shadow": "rgba(0, 0, 0, 0.25)",
                                           "tableHeader": "#f6f7f9",
+                                          "tableHeaderHover": "#EBECEF",
                                           "tableHover": "#FAFBFC",
                                           "text": Object {
                                             "black": "#3c4248",
@@ -2118,7 +2573,8 @@ exports[`CheckboxGroup default match 1`] = `
                                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                           "white": "#FFFFFF",
                                           "yellow": "#E9B200",
-                                          "yellowLight": "#FFF9DD",
+                                          "yellowDark": "#BE9100",
+                                          "yellowLight": "#FCF7E5",
                                         },
                                         "effects": Object {
                                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -2129,7 +2585,7 @@ exports[`CheckboxGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -2145,6 +2601,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -2176,7 +2637,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-21"
+                                  className="HoiPoi__Checkbox__input-1-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2186,7 +2647,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-16"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-31"
                         >
                           Lorem ipsum 2
                         </span>
@@ -2214,10 +2675,13 @@ exports[`CheckboxGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -2339,22 +2803,26 @@ exports[`CheckboxGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "2": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "3": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740987": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -2378,6 +2846,8 @@ exports[`CheckboxGroup default match 1`] = `
                         "colors": Object {
                           "black": "#262B34",
                           "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
                           "disabledGrey": "#ced4d9",
                           "green": "#86AD20",
                           "greenLight": "#e7f1d5",
@@ -2394,6 +2864,8 @@ exports[`CheckboxGroup default match 1`] = `
                           "primaryDark": "#C87600",
                           "primaryLight": "#fef4e6",
                           "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
                           "red": "#f04540",
                           "redDark": "#C43833",
                           "redLight": "#FAE7E7",
@@ -2401,9 +2873,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "secondary": "#00A8Be",
                           "secondaryGrey": "#e4eeff",
                           "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                           "secondarySoft": "#AADFE7",
                           "shadow": "rgba(0, 0, 0, 0.25)",
                           "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
                           "tableHover": "#FAFBFC",
                           "text": Object {
                             "black": "#3c4248",
@@ -2420,7 +2894,8 @@ exports[`CheckboxGroup default match 1`] = `
                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                           "white": "#FFFFFF",
                           "yellow": "#E9B200",
-                          "yellowLight": "#FFF9DD",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
                         },
                         "effects": Object {
                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -2431,7 +2906,7 @@ exports[`CheckboxGroup default match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -2447,6 +2922,11 @@ exports[`CheckboxGroup default match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -2462,14 +2942,16 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-13",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-15",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-16",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-14",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-19",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-17",
-                          "root": "HoiPoi__CheckboxControl__root-1-12",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-18",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-31",
+                          "error": "HoiPoi__CheckboxControl__error-1-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-1-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-32",
+                          "root": "HoiPoi__CheckboxControl__root-1-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-33",
                         }
                       }
                       isReadOnly={false}
@@ -2484,7 +2966,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-15"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-30"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -2501,10 +2983,13 @@ exports[`CheckboxGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -2626,22 +3111,26 @@ exports[`CheckboxGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "2": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "3": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -2659,6 +3148,8 @@ exports[`CheckboxGroup default match 1`] = `
                                 "colors": Object {
                                   "black": "#262B34",
                                   "blackLight": "#5f656b",
+                                  "blackberry": "#2e2d4c",
+                                  "blackberryDark": "#24243C",
                                   "disabledGrey": "#ced4d9",
                                   "green": "#86AD20",
                                   "greenLight": "#e7f1d5",
@@ -2675,6 +3166,8 @@ exports[`CheckboxGroup default match 1`] = `
                                   "primaryDark": "#C87600",
                                   "primaryLight": "#fef4e6",
                                   "primarySoft": "#ff9d26",
+                                  "purple": "#AA5B9C",
+                                  "purpleLight": "#EEDEEB",
                                   "red": "#f04540",
                                   "redDark": "#C43833",
                                   "redLight": "#FAE7E7",
@@ -2682,9 +3175,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "secondary": "#00A8Be",
                                   "secondaryGrey": "#e4eeff",
                                   "secondaryLight": "#D6EEF2",
+                                  "secondaryOverlay": "rgba(2,168,189,0.10)",
                                   "secondarySoft": "#AADFE7",
                                   "shadow": "rgba(0, 0, 0, 0.25)",
                                   "tableHeader": "#f6f7f9",
+                                  "tableHeaderHover": "#EBECEF",
                                   "tableHover": "#FAFBFC",
                                   "text": Object {
                                     "black": "#3c4248",
@@ -2701,7 +3196,8 @@ exports[`CheckboxGroup default match 1`] = `
                                   "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                   "white": "#FFFFFF",
                                   "yellow": "#E9B200",
-                                  "yellowLight": "#FFF9DD",
+                                  "yellowDark": "#BE9100",
+                                  "yellowLight": "#FCF7E5",
                                 },
                                 "effects": Object {
                                   "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -2712,7 +3208,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -2728,6 +3224,11 @@ exports[`CheckboxGroup default match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -2743,9 +3244,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-22",
-                                  "input": "HoiPoi__Checkbox__input-1-21",
-                                  "root": "HoiPoi__Checkbox__root-1-20",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-37",
+                                  "input": "HoiPoi__Checkbox__input-1-36",
+                                  "root": "HoiPoi__Checkbox__root-1-35",
                                 }
                               }
                               isDisabled={false}
@@ -2753,7 +3254,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-20"
+                                className="HoiPoi__Checkbox__root-1-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2763,6 +3264,8 @@ exports[`CheckboxGroup default match 1`] = `
                                         "colors": Object {
                                           "black": "#262B34",
                                           "blackLight": "#5f656b",
+                                          "blackberry": "#2e2d4c",
+                                          "blackberryDark": "#24243C",
                                           "disabledGrey": "#ced4d9",
                                           "green": "#86AD20",
                                           "greenLight": "#e7f1d5",
@@ -2779,6 +3282,8 @@ exports[`CheckboxGroup default match 1`] = `
                                           "primaryDark": "#C87600",
                                           "primaryLight": "#fef4e6",
                                           "primarySoft": "#ff9d26",
+                                          "purple": "#AA5B9C",
+                                          "purpleLight": "#EEDEEB",
                                           "red": "#f04540",
                                           "redDark": "#C43833",
                                           "redLight": "#FAE7E7",
@@ -2786,9 +3291,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "secondary": "#00A8Be",
                                           "secondaryGrey": "#e4eeff",
                                           "secondaryLight": "#D6EEF2",
+                                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                                           "secondarySoft": "#AADFE7",
                                           "shadow": "rgba(0, 0, 0, 0.25)",
                                           "tableHeader": "#f6f7f9",
+                                          "tableHeaderHover": "#EBECEF",
                                           "tableHover": "#FAFBFC",
                                           "text": Object {
                                             "black": "#3c4248",
@@ -2805,7 +3312,8 @@ exports[`CheckboxGroup default match 1`] = `
                                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                           "white": "#FFFFFF",
                                           "yellow": "#E9B200",
-                                          "yellowLight": "#FFF9DD",
+                                          "yellowDark": "#BE9100",
+                                          "yellowLight": "#FCF7E5",
                                         },
                                         "effects": Object {
                                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -2816,7 +3324,7 @@ exports[`CheckboxGroup default match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -2832,6 +3340,11 @@ exports[`CheckboxGroup default match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -2863,7 +3376,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-21"
+                                  className="HoiPoi__Checkbox__input-1-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2873,7 +3386,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-16"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-31"
                         >
                           Lorem ipsum 3
                         </span>
@@ -2899,6 +3412,8 @@ exports[`CheckboxGroup with values match 1`] = `
         "colors": Object {
           "black": "#262B34",
           "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "greenLight": "#e7f1d5",
@@ -2915,6 +3430,8 @@ exports[`CheckboxGroup with values match 1`] = `
           "primaryDark": "#C87600",
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
           "red": "#f04540",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -2922,9 +3439,11 @@ exports[`CheckboxGroup with values match 1`] = `
           "secondary": "#00A8Be",
           "secondaryGrey": "#e4eeff",
           "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
           "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
           "tableHover": "#FAFBFC",
           "text": Object {
             "black": "#3c4248",
@@ -2941,7 +3460,8 @@ exports[`CheckboxGroup with values match 1`] = `
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
-          "yellowLight": "#FFF9DD",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -2952,7 +3472,7 @@ exports[`CheckboxGroup with values match 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -2968,6 +3488,11 @@ exports[`CheckboxGroup with values match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -2982,13 +3507,21 @@ exports[`CheckboxGroup with values match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -3110,7 +3643,7 @@ exports[`CheckboxGroup with values match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -3148,10 +3681,13 @@ exports[`CheckboxGroup with values match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -3273,22 +3809,26 @@ exports[`CheckboxGroup with values match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "2": SheetsManager {
+                "-9007199254740984": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "3": SheetsManager {
+                "-9007199254740985": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "4": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740987": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "-9007199254740988": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -3324,6 +3864,8 @@ exports[`CheckboxGroup with values match 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -3340,6 +3882,8 @@ exports[`CheckboxGroup with values match 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -3347,9 +3891,11 @@ exports[`CheckboxGroup with values match 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -3366,7 +3912,8 @@ exports[`CheckboxGroup with values match 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -3377,7 +3924,7 @@ exports[`CheckboxGroup with values match 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -3393,6 +3940,11 @@ exports[`CheckboxGroup with values match 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -3414,13 +3966,15 @@ exports[`CheckboxGroup with values match 1`] = `
             classes={
               Object {
                 "Label": "HoiPoi__CheckboxGroup__Label-2-1",
-                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-2-3",
-                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-2-4",
-                "formControl": "HoiPoi__CheckboxGroup__formControl-2-2",
-                "horizontal": "HoiPoi__CheckboxGroup__horizontal-2-7",
-                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-2-5",
+                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-2-5",
+                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-2-6",
+                "error": "HoiPoi__CheckboxGroup__error-2-2",
+                "formControl": "HoiPoi__CheckboxGroup__formControl-2-3",
+                "horizontal": "HoiPoi__CheckboxGroup__horizontal-2-9",
+                "isFullWidth": "HoiPoi__CheckboxGroup__isFullWidth-2-4",
+                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-2-7",
                 "root": "HoiPoi__CheckboxGroup__root-2-0",
-                "vertical": "HoiPoi__CheckboxGroup__vertical-2-6",
+                "vertical": "HoiPoi__CheckboxGroup__vertical-2-8",
               }
             }
             isReadOnly={false}
@@ -3452,7 +4006,7 @@ exports[`CheckboxGroup with values match 1`] = `
             }
           >
             <div
-              className="HoiPoi__CheckboxGroup__root-2-0 HoiPoi__CheckboxGroup__horizontal-2-7"
+              className="HoiPoi__CheckboxGroup__root-2-0 HoiPoi__CheckboxGroup__horizontal-2-9"
             >
               <JssContextSubscriber
                 className="HoiPoi__CheckboxGroup__Label-2-1"
@@ -3465,10 +4019,13 @@ exports[`CheckboxGroup with values match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -3590,22 +4147,26 @@ exports[`CheckboxGroup with values match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "2": SheetsManager {
+                        "-9007199254740984": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "3": SheetsManager {
+                        "-9007199254740985": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "4": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740987": SheetsManager {
+                          "length": 1,
+                          "sheets": WeakMap {},
+                        },
+                        "-9007199254740988": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -3621,6 +4182,8 @@ exports[`CheckboxGroup with values match 1`] = `
                       "colors": Object {
                         "black": "#262B34",
                         "blackLight": "#5f656b",
+                        "blackberry": "#2e2d4c",
+                        "blackberryDark": "#24243C",
                         "disabledGrey": "#ced4d9",
                         "green": "#86AD20",
                         "greenLight": "#e7f1d5",
@@ -3637,6 +4200,8 @@ exports[`CheckboxGroup with values match 1`] = `
                         "primaryDark": "#C87600",
                         "primaryLight": "#fef4e6",
                         "primarySoft": "#ff9d26",
+                        "purple": "#AA5B9C",
+                        "purpleLight": "#EEDEEB",
                         "red": "#f04540",
                         "redDark": "#C43833",
                         "redLight": "#FAE7E7",
@@ -3644,9 +4209,11 @@ exports[`CheckboxGroup with values match 1`] = `
                         "secondary": "#00A8Be",
                         "secondaryGrey": "#e4eeff",
                         "secondaryLight": "#D6EEF2",
+                        "secondaryOverlay": "rgba(2,168,189,0.10)",
                         "secondarySoft": "#AADFE7",
                         "shadow": "rgba(0, 0, 0, 0.25)",
                         "tableHeader": "#f6f7f9",
+                        "tableHeaderHover": "#EBECEF",
                         "tableHover": "#FAFBFC",
                         "text": Object {
                           "black": "#3c4248",
@@ -3663,7 +4230,8 @@ exports[`CheckboxGroup with values match 1`] = `
                         "transparentBlack": "rgba(38, 43, 52, 0.8)",
                         "white": "#FFFFFF",
                         "yellow": "#E9B200",
-                        "yellowLight": "#FFF9DD",
+                        "yellowDark": "#BE9100",
+                        "yellowLight": "#FCF7E5",
                       },
                       "effects": Object {
                         "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -3674,7 +4242,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       "typography": Object {
                         "bigText": Object {
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                          "fontSize": 16,
+                          "fontSize": 20,
                           "letterSpacing": 0.5,
                         },
                         "button": Object {
@@ -3690,6 +4258,11 @@ exports[`CheckboxGroup with values match 1`] = `
                         "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                         "fontSizeBase": 13,
                         "fontSizeSmall": 11,
+                        "largeText": Object {
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSize": 16,
+                          "letterSpacing": 0.5,
+                        },
                         "letterSpacing": 0.5,
                         "lineHeightBase": 1.5,
                         "smallText": Object {
@@ -3705,27 +4278,324 @@ exports[`CheckboxGroup with values match 1`] = `
                     className="HoiPoi__CheckboxGroup__Label-2-1"
                     classes={
                       Object {
-                        "icon": "HoiPoi__Label__icon-2-11",
-                        "info": "HoiPoi__Label__info-2-10",
-                        "root": "HoiPoi__Label__root-2-8",
-                        "text": "HoiPoi__Label__text-2-9",
+                        "Text": "HoiPoi__Label__Text-2-11",
+                        "icon": "HoiPoi__Label__icon-2-13",
+                        "info": "HoiPoi__Label__info-2-12",
+                        "root": "HoiPoi__Label__root-2-10",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-2-8 HoiPoi__CheckboxGroup__Label-2-1"
+                      className="HoiPoi__Label__root-2-10 HoiPoi__CheckboxGroup__Label-2-1"
                     >
-                      <span
-                        className="HoiPoi__Label__text-2-9"
+                      <JssContextSubscriber
+                        className="HoiPoi__Label__Text-2-11"
+                        overrides={Object {}}
+                        type="bold"
                       >
-                        Lorem ipsum
-                      </span>
+                        <WithStyles(Text)
+                          className="HoiPoi__Label__Text-2-11"
+                          innerRef={null}
+                          isTruncated={false}
+                          jssContext={
+                            Object {
+                              "disableStylesGeneration": false,
+                              "jss": Jss {
+                                "generateId": [Function],
+                                "id": 3,
+                                "options": Object {
+                                  "Renderer": [Function],
+                                  "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
+                                  "plugins": Array [],
+                                },
+                                "plugins": PluginsRegistry {
+                                  "plugins": Object {
+                                    "external": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                        "onUpdate": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                        "onProcessRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onProcessRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onProcessStyle": [Function],
+                                      },
+                                    ],
+                                    "internal": Array [
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onChangeValue": [Function],
+                                        "onCreateRule": [Function],
+                                        "onProcessStyle": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                      Object {
+                                        "onCreateRule": [Function],
+                                      },
+                                    ],
+                                  },
+                                  "registry": Object {
+                                    "onChangeValue": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onCreateRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessRule": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onProcessSheet": Array [],
+                                    "onProcessStyle": Array [
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                      [Function],
+                                    ],
+                                    "onUpdate": Array [
+                                      [Function],
+                                    ],
+                                  },
+                                },
+                                "version": "10.0.0-alpha.21",
+                              },
+                              "managers": Object {
+                                "-9007199254740984": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740985": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740986": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740987": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                                "-9007199254740988": SheetsManager {
+                                  "length": 1,
+                                  "sheets": WeakMap {},
+                                },
+                              },
+                              "sheetOptions": Object {
+                                "classNamePrefix": "HoiPoi__HoiPoi__",
+                                "generateId": [Function],
+                              },
+                            }
+                          }
+                          overrides={Object {}}
+                          size="medium"
+                          theme={
+                            Object {
+                              "colors": Object {
+                                "black": "#262B34",
+                                "blackLight": "#5f656b",
+                                "blackberry": "#2e2d4c",
+                                "blackberryDark": "#24243C",
+                                "disabledGrey": "#ced4d9",
+                                "green": "#86AD20",
+                                "greenLight": "#e7f1d5",
+                                "grey": "#697782",
+                                "greyLight": "#f0f3f5",
+                                "greySoft": "#788590",
+                                "lines": "#dce3eb",
+                                "link": "#216db3",
+                                "linkDark": "#174a79",
+                                "overlay": "rgba(33,33,33,0.55)",
+                                "placeholders": "#e1e4e7",
+                                "placeholdersHover": "#d0d4d8",
+                                "primary": "#FF8C00",
+                                "primaryDark": "#C87600",
+                                "primaryLight": "#fef4e6",
+                                "primarySoft": "#ff9d26",
+                                "purple": "#AA5B9C",
+                                "purpleLight": "#EEDEEB",
+                                "red": "#f04540",
+                                "redDark": "#C43833",
+                                "redLight": "#FAE7E7",
+                                "redSoft": "#FF544F",
+                                "secondary": "#00A8Be",
+                                "secondaryGrey": "#e4eeff",
+                                "secondaryLight": "#D6EEF2",
+                                "secondaryOverlay": "rgba(2,168,189,0.10)",
+                                "secondarySoft": "#AADFE7",
+                                "shadow": "rgba(0, 0, 0, 0.25)",
+                                "tableHeader": "#f6f7f9",
+                                "tableHeaderHover": "#EBECEF",
+                                "tableHover": "#FAFBFC",
+                                "text": Object {
+                                  "black": "#3c4248",
+                                  "danger": "white",
+                                  "default": "#697782",
+                                  "green": "#86AD20",
+                                  "greySoft": "#788590",
+                                  "primary": "white",
+                                  "red": "#f04540",
+                                  "secondary": "#00A8Be",
+                                  "white": "#FFFFFF",
+                                  "yellow": "#E9B200",
+                                },
+                                "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                                "white": "#FFFFFF",
+                                "yellow": "#E9B200",
+                                "yellowDark": "#BE9100",
+                                "yellowLight": "#FCF7E5",
+                              },
+                              "effects": Object {
+                                "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                                "buttonActive": Object {
+                                  "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                                },
+                              },
+                              "typography": Object {
+                                "bigText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 20,
+                                  "letterSpacing": 0.5,
+                                },
+                                "button": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "lineHeight": 1.5,
+                                },
+                                "defaultText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 13,
+                                  "letterSpacing": 0.5,
+                                },
+                                "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                "fontSizeBase": 13,
+                                "fontSizeSmall": 11,
+                                "largeText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 16,
+                                  "letterSpacing": 0.5,
+                                },
+                                "letterSpacing": 0.5,
+                                "lineHeightBase": 1.5,
+                                "smallText": Object {
+                                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                  "fontSize": 11,
+                                  "letterSpacing": 0.5,
+                                },
+                              },
+                            }
+                          }
+                          type="bold"
+                        >
+                          <Text
+                            className="HoiPoi__Label__Text-2-11"
+                            classes={
+                              Object {
+                                "Loader": "HoiPoi__Text__Loader-2-24",
+                                "big": "HoiPoi__Text__big-2-19",
+                                "bold": "HoiPoi__Text__bold-2-20",
+                                "isLoading": "HoiPoi__Text__isLoading-2-23",
+                                "large": "HoiPoi__Text__large-2-18",
+                                "light": "HoiPoi__Text__light-2-22",
+                                "medium": "HoiPoi__Text__medium-2-17",
+                                "normal": "HoiPoi__Text__normal-2-21",
+                                "root": "HoiPoi__Text__root-2-14",
+                                "small": "HoiPoi__Text__small-2-16",
+                                "truncated": "HoiPoi__Text__truncated-2-15",
+                              }
+                            }
+                            isTruncated={false}
+                            overrides={Object {}}
+                            size="medium"
+                            type="bold"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-2-14 HoiPoi__Text__bold-2-20 HoiPoi__Text__medium-2-17 HoiPoi__Label__Text-2-11"
+                            >
+                              Lorem ipsum
+                            </span>
+                          </Text>
+                        </WithStyles(Text)>
+                      </JssContextSubscriber>
                     </span>
                   </Label>
                 </WithStyles(Label)>
               </JssContextSubscriber>
               <div
-                className="HoiPoi__CheckboxGroup__formControl-2-2"
+                className="HoiPoi__CheckboxGroup__formControl-2-3"
               >
                 <JssContextSubscriber
                   isReadOnly={false}
@@ -3748,10 +4618,13 @@ exports[`CheckboxGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -3873,22 +4746,26 @@ exports[`CheckboxGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "2": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "3": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740987": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -3912,6 +4789,8 @@ exports[`CheckboxGroup with values match 1`] = `
                         "colors": Object {
                           "black": "#262B34",
                           "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
                           "disabledGrey": "#ced4d9",
                           "green": "#86AD20",
                           "greenLight": "#e7f1d5",
@@ -3928,6 +4807,8 @@ exports[`CheckboxGroup with values match 1`] = `
                           "primaryDark": "#C87600",
                           "primaryLight": "#fef4e6",
                           "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
                           "red": "#f04540",
                           "redDark": "#C43833",
                           "redLight": "#FAE7E7",
@@ -3935,9 +4816,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "secondary": "#00A8Be",
                           "secondaryGrey": "#e4eeff",
                           "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                           "secondarySoft": "#AADFE7",
                           "shadow": "rgba(0, 0, 0, 0.25)",
                           "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
                           "tableHover": "#FAFBFC",
                           "text": Object {
                             "black": "#3c4248",
@@ -3954,7 +4837,8 @@ exports[`CheckboxGroup with values match 1`] = `
                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                           "white": "#FFFFFF",
                           "yellow": "#E9B200",
-                          "yellowLight": "#FFF9DD",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
                         },
                         "effects": Object {
                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -3965,7 +4849,7 @@ exports[`CheckboxGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -3981,6 +4865,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -3996,14 +4885,16 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-13",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-15",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-16",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-14",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-19",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-17",
-                          "root": "HoiPoi__CheckboxControl__root-2-12",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-18",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-31",
+                          "error": "HoiPoi__CheckboxControl__error-2-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-2-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-32",
+                          "root": "HoiPoi__CheckboxControl__root-2-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-33",
                         }
                       }
                       isReadOnly={false}
@@ -4018,7 +4909,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-15"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-30"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -4035,10 +4926,13 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -4160,22 +5054,26 @@ exports[`CheckboxGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "2": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "3": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -4193,6 +5091,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "colors": Object {
                                   "black": "#262B34",
                                   "blackLight": "#5f656b",
+                                  "blackberry": "#2e2d4c",
+                                  "blackberryDark": "#24243C",
                                   "disabledGrey": "#ced4d9",
                                   "green": "#86AD20",
                                   "greenLight": "#e7f1d5",
@@ -4209,6 +5109,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "primaryDark": "#C87600",
                                   "primaryLight": "#fef4e6",
                                   "primarySoft": "#ff9d26",
+                                  "purple": "#AA5B9C",
+                                  "purpleLight": "#EEDEEB",
                                   "red": "#f04540",
                                   "redDark": "#C43833",
                                   "redLight": "#FAE7E7",
@@ -4216,9 +5118,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "secondary": "#00A8Be",
                                   "secondaryGrey": "#e4eeff",
                                   "secondaryLight": "#D6EEF2",
+                                  "secondaryOverlay": "rgba(2,168,189,0.10)",
                                   "secondarySoft": "#AADFE7",
                                   "shadow": "rgba(0, 0, 0, 0.25)",
                                   "tableHeader": "#f6f7f9",
+                                  "tableHeaderHover": "#EBECEF",
                                   "tableHover": "#FAFBFC",
                                   "text": Object {
                                     "black": "#3c4248",
@@ -4235,7 +5139,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                   "white": "#FFFFFF",
                                   "yellow": "#E9B200",
-                                  "yellowLight": "#FFF9DD",
+                                  "yellowDark": "#BE9100",
+                                  "yellowLight": "#FCF7E5",
                                 },
                                 "effects": Object {
                                   "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -4246,7 +5151,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -4262,6 +5167,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -4277,9 +5187,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-22",
-                                  "input": "HoiPoi__Checkbox__input-2-21",
-                                  "root": "HoiPoi__Checkbox__root-2-20",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-37",
+                                  "input": "HoiPoi__Checkbox__input-2-36",
+                                  "root": "HoiPoi__Checkbox__root-2-35",
                                 }
                               }
                               isDisabled={false}
@@ -4287,7 +5197,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-20"
+                                className="HoiPoi__Checkbox__root-2-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -4297,6 +5207,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "colors": Object {
                                           "black": "#262B34",
                                           "blackLight": "#5f656b",
+                                          "blackberry": "#2e2d4c",
+                                          "blackberryDark": "#24243C",
                                           "disabledGrey": "#ced4d9",
                                           "green": "#86AD20",
                                           "greenLight": "#e7f1d5",
@@ -4313,6 +5225,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "primaryDark": "#C87600",
                                           "primaryLight": "#fef4e6",
                                           "primarySoft": "#ff9d26",
+                                          "purple": "#AA5B9C",
+                                          "purpleLight": "#EEDEEB",
                                           "red": "#f04540",
                                           "redDark": "#C43833",
                                           "redLight": "#FAE7E7",
@@ -4320,9 +5234,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "secondary": "#00A8Be",
                                           "secondaryGrey": "#e4eeff",
                                           "secondaryLight": "#D6EEF2",
+                                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                                           "secondarySoft": "#AADFE7",
                                           "shadow": "rgba(0, 0, 0, 0.25)",
                                           "tableHeader": "#f6f7f9",
+                                          "tableHeaderHover": "#EBECEF",
                                           "tableHover": "#FAFBFC",
                                           "text": Object {
                                             "black": "#3c4248",
@@ -4339,7 +5255,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                           "white": "#FFFFFF",
                                           "yellow": "#E9B200",
-                                          "yellowLight": "#FFF9DD",
+                                          "yellowDark": "#BE9100",
+                                          "yellowLight": "#FCF7E5",
                                         },
                                         "effects": Object {
                                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -4350,7 +5267,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -4366,6 +5283,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -4387,6 +5309,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         fillRule="evenodd"
                                       >
                                         <rect
+                                          fill="#00A8Be"
                                           height="14"
                                           rx="3"
                                           width="14"
@@ -4406,7 +5329,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Checkbox__input-2-21"
+                                  className="HoiPoi__Checkbox__input-2-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -4416,7 +5339,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-16"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-31"
                         >
                           Lorem ipsum
                         </span>
@@ -4444,10 +5367,13 @@ exports[`CheckboxGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -4569,22 +5495,26 @@ exports[`CheckboxGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "2": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "3": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740987": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -4608,6 +5538,8 @@ exports[`CheckboxGroup with values match 1`] = `
                         "colors": Object {
                           "black": "#262B34",
                           "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
                           "disabledGrey": "#ced4d9",
                           "green": "#86AD20",
                           "greenLight": "#e7f1d5",
@@ -4624,6 +5556,8 @@ exports[`CheckboxGroup with values match 1`] = `
                           "primaryDark": "#C87600",
                           "primaryLight": "#fef4e6",
                           "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
                           "red": "#f04540",
                           "redDark": "#C43833",
                           "redLight": "#FAE7E7",
@@ -4631,9 +5565,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "secondary": "#00A8Be",
                           "secondaryGrey": "#e4eeff",
                           "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                           "secondarySoft": "#AADFE7",
                           "shadow": "rgba(0, 0, 0, 0.25)",
                           "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
                           "tableHover": "#FAFBFC",
                           "text": Object {
                             "black": "#3c4248",
@@ -4650,7 +5586,8 @@ exports[`CheckboxGroup with values match 1`] = `
                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                           "white": "#FFFFFF",
                           "yellow": "#E9B200",
-                          "yellowLight": "#FFF9DD",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
                         },
                         "effects": Object {
                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -4661,7 +5598,7 @@ exports[`CheckboxGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -4677,6 +5614,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -4692,14 +5634,16 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-13",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-15",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-16",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-14",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-19",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-17",
-                          "root": "HoiPoi__CheckboxControl__root-2-12",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-18",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-31",
+                          "error": "HoiPoi__CheckboxControl__error-2-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-2-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-32",
+                          "root": "HoiPoi__CheckboxControl__root-2-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-33",
                         }
                       }
                       isReadOnly={false}
@@ -4714,7 +5658,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-15"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-30"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -4731,10 +5675,13 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -4856,22 +5803,26 @@ exports[`CheckboxGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "2": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "3": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -4889,6 +5840,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "colors": Object {
                                   "black": "#262B34",
                                   "blackLight": "#5f656b",
+                                  "blackberry": "#2e2d4c",
+                                  "blackberryDark": "#24243C",
                                   "disabledGrey": "#ced4d9",
                                   "green": "#86AD20",
                                   "greenLight": "#e7f1d5",
@@ -4905,6 +5858,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "primaryDark": "#C87600",
                                   "primaryLight": "#fef4e6",
                                   "primarySoft": "#ff9d26",
+                                  "purple": "#AA5B9C",
+                                  "purpleLight": "#EEDEEB",
                                   "red": "#f04540",
                                   "redDark": "#C43833",
                                   "redLight": "#FAE7E7",
@@ -4912,9 +5867,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "secondary": "#00A8Be",
                                   "secondaryGrey": "#e4eeff",
                                   "secondaryLight": "#D6EEF2",
+                                  "secondaryOverlay": "rgba(2,168,189,0.10)",
                                   "secondarySoft": "#AADFE7",
                                   "shadow": "rgba(0, 0, 0, 0.25)",
                                   "tableHeader": "#f6f7f9",
+                                  "tableHeaderHover": "#EBECEF",
                                   "tableHover": "#FAFBFC",
                                   "text": Object {
                                     "black": "#3c4248",
@@ -4931,7 +5888,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                   "white": "#FFFFFF",
                                   "yellow": "#E9B200",
-                                  "yellowLight": "#FFF9DD",
+                                  "yellowDark": "#BE9100",
+                                  "yellowLight": "#FCF7E5",
                                 },
                                 "effects": Object {
                                   "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -4942,7 +5900,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -4958,6 +5916,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -4973,9 +5936,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-22",
-                                  "input": "HoiPoi__Checkbox__input-2-21",
-                                  "root": "HoiPoi__Checkbox__root-2-20",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-37",
+                                  "input": "HoiPoi__Checkbox__input-2-36",
+                                  "root": "HoiPoi__Checkbox__root-2-35",
                                 }
                               }
                               isDisabled={false}
@@ -4983,7 +5946,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-20"
+                                className="HoiPoi__Checkbox__root-2-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -4993,6 +5956,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "colors": Object {
                                           "black": "#262B34",
                                           "blackLight": "#5f656b",
+                                          "blackberry": "#2e2d4c",
+                                          "blackberryDark": "#24243C",
                                           "disabledGrey": "#ced4d9",
                                           "green": "#86AD20",
                                           "greenLight": "#e7f1d5",
@@ -5009,6 +5974,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "primaryDark": "#C87600",
                                           "primaryLight": "#fef4e6",
                                           "primarySoft": "#ff9d26",
+                                          "purple": "#AA5B9C",
+                                          "purpleLight": "#EEDEEB",
                                           "red": "#f04540",
                                           "redDark": "#C43833",
                                           "redLight": "#FAE7E7",
@@ -5016,9 +5983,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "secondary": "#00A8Be",
                                           "secondaryGrey": "#e4eeff",
                                           "secondaryLight": "#D6EEF2",
+                                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                                           "secondarySoft": "#AADFE7",
                                           "shadow": "rgba(0, 0, 0, 0.25)",
                                           "tableHeader": "#f6f7f9",
+                                          "tableHeaderHover": "#EBECEF",
                                           "tableHover": "#FAFBFC",
                                           "text": Object {
                                             "black": "#3c4248",
@@ -5035,7 +6004,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                           "white": "#FFFFFF",
                                           "yellow": "#E9B200",
-                                          "yellowLight": "#FFF9DD",
+                                          "yellowDark": "#BE9100",
+                                          "yellowLight": "#FCF7E5",
                                         },
                                         "effects": Object {
                                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -5046,7 +6016,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -5062,6 +6032,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -5093,7 +6068,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-2-21"
+                                  className="HoiPoi__Checkbox__input-2-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -5103,7 +6078,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-16"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-31"
                         >
                           Lorem ipsum 2
                         </span>
@@ -5132,10 +6107,13 @@ exports[`CheckboxGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -5257,22 +6235,26 @@ exports[`CheckboxGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "2": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "3": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740987": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -5296,6 +6278,8 @@ exports[`CheckboxGroup with values match 1`] = `
                         "colors": Object {
                           "black": "#262B34",
                           "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
                           "disabledGrey": "#ced4d9",
                           "green": "#86AD20",
                           "greenLight": "#e7f1d5",
@@ -5312,6 +6296,8 @@ exports[`CheckboxGroup with values match 1`] = `
                           "primaryDark": "#C87600",
                           "primaryLight": "#fef4e6",
                           "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
                           "red": "#f04540",
                           "redDark": "#C43833",
                           "redLight": "#FAE7E7",
@@ -5319,9 +6305,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "secondary": "#00A8Be",
                           "secondaryGrey": "#e4eeff",
                           "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                           "secondarySoft": "#AADFE7",
                           "shadow": "rgba(0, 0, 0, 0.25)",
                           "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
                           "tableHover": "#FAFBFC",
                           "text": Object {
                             "black": "#3c4248",
@@ -5338,7 +6326,8 @@ exports[`CheckboxGroup with values match 1`] = `
                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                           "white": "#FFFFFF",
                           "yellow": "#E9B200",
-                          "yellowLight": "#FFF9DD",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
                         },
                         "effects": Object {
                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -5349,7 +6338,7 @@ exports[`CheckboxGroup with values match 1`] = `
                         "typography": Object {
                           "bigText": Object {
                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                            "fontSize": 16,
+                            "fontSize": 20,
                             "letterSpacing": 0.5,
                           },
                           "button": Object {
@@ -5365,6 +6354,11 @@ exports[`CheckboxGroup with values match 1`] = `
                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                           "fontSizeBase": 13,
                           "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
                           "letterSpacing": 0.5,
                           "lineHeightBase": 1.5,
                           "smallText": Object {
@@ -5380,14 +6374,16 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-13",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-15",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-16",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-14",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-19",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-17",
-                          "root": "HoiPoi__CheckboxControl__root-2-12",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-18",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-31",
+                          "error": "HoiPoi__CheckboxControl__error-2-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-2-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-32",
+                          "root": "HoiPoi__CheckboxControl__root-2-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-33",
                         }
                       }
                       isReadOnly={false}
@@ -5402,7 +6398,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-15"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-30"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -5419,10 +6415,13 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -5544,22 +6543,26 @@ exports[`CheckboxGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "2": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "3": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
+                                    "length": 1,
+                                    "sheets": WeakMap {},
+                                  },
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -5577,6 +6580,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "colors": Object {
                                   "black": "#262B34",
                                   "blackLight": "#5f656b",
+                                  "blackberry": "#2e2d4c",
+                                  "blackberryDark": "#24243C",
                                   "disabledGrey": "#ced4d9",
                                   "green": "#86AD20",
                                   "greenLight": "#e7f1d5",
@@ -5593,6 +6598,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "primaryDark": "#C87600",
                                   "primaryLight": "#fef4e6",
                                   "primarySoft": "#ff9d26",
+                                  "purple": "#AA5B9C",
+                                  "purpleLight": "#EEDEEB",
                                   "red": "#f04540",
                                   "redDark": "#C43833",
                                   "redLight": "#FAE7E7",
@@ -5600,9 +6607,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "secondary": "#00A8Be",
                                   "secondaryGrey": "#e4eeff",
                                   "secondaryLight": "#D6EEF2",
+                                  "secondaryOverlay": "rgba(2,168,189,0.10)",
                                   "secondarySoft": "#AADFE7",
                                   "shadow": "rgba(0, 0, 0, 0.25)",
                                   "tableHeader": "#f6f7f9",
+                                  "tableHeaderHover": "#EBECEF",
                                   "tableHover": "#FAFBFC",
                                   "text": Object {
                                     "black": "#3c4248",
@@ -5619,7 +6628,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                   "white": "#FFFFFF",
                                   "yellow": "#E9B200",
-                                  "yellowLight": "#FFF9DD",
+                                  "yellowDark": "#BE9100",
+                                  "yellowLight": "#FCF7E5",
                                 },
                                 "effects": Object {
                                   "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -5630,7 +6640,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "typography": Object {
                                   "bigText": Object {
                                     "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                    "fontSize": 16,
+                                    "fontSize": 20,
                                     "letterSpacing": 0.5,
                                   },
                                   "button": Object {
@@ -5646,6 +6656,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                   "fontSizeBase": 13,
                                   "fontSizeSmall": 11,
+                                  "largeText": Object {
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                    "fontSize": 16,
+                                    "letterSpacing": 0.5,
+                                  },
                                   "letterSpacing": 0.5,
                                   "lineHeightBase": 1.5,
                                   "smallText": Object {
@@ -5661,9 +6676,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-22",
-                                  "input": "HoiPoi__Checkbox__input-2-21",
-                                  "root": "HoiPoi__Checkbox__root-2-20",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-37",
+                                  "input": "HoiPoi__Checkbox__input-2-36",
+                                  "root": "HoiPoi__Checkbox__root-2-35",
                                 }
                               }
                               isDisabled={false}
@@ -5671,7 +6686,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-20"
+                                className="HoiPoi__Checkbox__root-2-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -5681,6 +6696,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "colors": Object {
                                           "black": "#262B34",
                                           "blackLight": "#5f656b",
+                                          "blackberry": "#2e2d4c",
+                                          "blackberryDark": "#24243C",
                                           "disabledGrey": "#ced4d9",
                                           "green": "#86AD20",
                                           "greenLight": "#e7f1d5",
@@ -5697,6 +6714,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "primaryDark": "#C87600",
                                           "primaryLight": "#fef4e6",
                                           "primarySoft": "#ff9d26",
+                                          "purple": "#AA5B9C",
+                                          "purpleLight": "#EEDEEB",
                                           "red": "#f04540",
                                           "redDark": "#C43833",
                                           "redLight": "#FAE7E7",
@@ -5704,9 +6723,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "secondary": "#00A8Be",
                                           "secondaryGrey": "#e4eeff",
                                           "secondaryLight": "#D6EEF2",
+                                          "secondaryOverlay": "rgba(2,168,189,0.10)",
                                           "secondarySoft": "#AADFE7",
                                           "shadow": "rgba(0, 0, 0, 0.25)",
                                           "tableHeader": "#f6f7f9",
+                                          "tableHeaderHover": "#EBECEF",
                                           "tableHover": "#FAFBFC",
                                           "text": Object {
                                             "black": "#3c4248",
@@ -5723,7 +6744,8 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "transparentBlack": "rgba(38, 43, 52, 0.8)",
                                           "white": "#FFFFFF",
                                           "yellow": "#E9B200",
-                                          "yellowLight": "#FFF9DD",
+                                          "yellowDark": "#BE9100",
+                                          "yellowLight": "#FCF7E5",
                                         },
                                         "effects": Object {
                                           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -5734,7 +6756,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         "typography": Object {
                                           "bigText": Object {
                                             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                                            "fontSize": 16,
+                                            "fontSize": 20,
                                             "letterSpacing": 0.5,
                                           },
                                           "button": Object {
@@ -5750,6 +6772,11 @@ exports[`CheckboxGroup with values match 1`] = `
                                           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                                           "fontSizeBase": 13,
                                           "fontSizeSmall": 11,
+                                          "largeText": Object {
+                                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                                            "fontSize": 16,
+                                            "letterSpacing": 0.5,
+                                          },
                                           "letterSpacing": 0.5,
                                           "lineHeightBase": 1.5,
                                           "smallText": Object {
@@ -5771,6 +6798,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                         fillRule="evenodd"
                                       >
                                         <rect
+                                          fill="#00A8Be"
                                           height="14"
                                           rx="3"
                                           width="14"
@@ -5790,7 +6818,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Checkbox__input-2-21"
+                                  className="HoiPoi__Checkbox__input-2-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -5800,7 +6828,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-16"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-31"
                         >
                           Lorem ipsum 3
                         </span>

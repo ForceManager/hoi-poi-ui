@@ -37,10 +37,51 @@ import schema from './example.json';
 
 const errors = {
     phone: 'Invalid phone',
+    multiplier: [{}, { email: 'This field is mandatory' }],
+};
+
+function MyField(props) {
+    return <input {...props} />;
+}
+
+function MyOtherField(props) {
+    return <div>Custom Component 2</div>;
+}
+
+const customFields = {
+    customInput: MyField,
+    customText: MyOtherField,
+};
+
+const initialValues = {
+    multiplier: [
+        {
+            activity: {
+                label: 'B',
+                value: 'b',
+            },
+            name: 'Carlos',
+            email: 'carlos@test.com',
+        },
+        {
+            activity: {
+                label: 'A',
+                value: 'a',
+            },
+            name: 'Juan',
+        },
+    ],
 };
 
 let onChange = (values, field) => setState({ values });
-<Form onChange={onChange} values={state.values} errors={errors} schema={schema} />;
+
+<Form
+    onChange={onChange}
+    values={state.values || initialValues}
+    errors={errors}
+    schema={schema}
+    customFields={customFields}
+/>;
 ```
 
 **Check the example schema <a href="https://raw.githubusercontent.com/ForceManager/hoi-poi-ui/master/src/components/forms/Form/example.json" target="_blank">here</a>.**

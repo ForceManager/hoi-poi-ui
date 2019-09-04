@@ -11,6 +11,8 @@ Icons:
 <span> </span>
 <Icon name="thickEnabled" />
 <span> </span>
+<Icon name="thickDisabled" />
+<span></span>
 <Icon name="warning" />
 <span> </span>
 <Icon name="warningRounded" />
@@ -22,6 +24,24 @@ Icons:
 <Icon name="edit" />
 <span> </span>
 <Icon name="magnifier" />
+<span> </span>
+<Icon name="visibilityOff" />
+<span> </span>
+<Icon name="visibilityOn" />
+<span> </span>
+<Icon name="threeDots" />
+<span> </span>
+<Icon name="download" />
+<span> </span>
+<Icon name="duplicate" />
+<span> </span>
+<Icon name="arrowRight" />
+<span> </span>
+<Icon name="arrowLeft" />
+<span> </span>
+<Icon name="arrowTop" />
+<span> </span>
+<Icon name="arrowBottom" />
 <span> </span>
 ```
 

@@ -39,4 +39,14 @@ describe('Badge', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('with with icon and disabled collapase', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Advice showCollapse={false} showIcon>
+                    Lorem ipsum
+                </Advice>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

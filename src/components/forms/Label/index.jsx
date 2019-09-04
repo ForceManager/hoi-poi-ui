@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 import Popover from '../../utils/Popover';
 import Icon from '../../general/Icon';
+import Text from '../../typography/Text';
 import styles from './styles';
 
 function Label({
@@ -28,17 +29,17 @@ function Label({
 
     return (
         <span {...rootProps} {...override.root}>
-            <span className={classes.text} {...override.text}>
+            <Text type="bold" className={classes.Text} {...override.Text}>
                 {children}
                 {isRequired && '*'}
-            </span>
+            </Text>
             {hint && (
                 <Popover
                     className={classes.Popover}
                     placement="top"
                     trigger={['hover']}
                     content={hint}
-                    {...override.popover}
+                    {...override.Popover}
                 >
                     <span className={classes.info}>
                         <Icon className={classes.icon} name="info" />
@@ -49,7 +50,7 @@ function Label({
     );
 }
 
-Text.overrides = ['root', 'Popover', 'text'];
+Text.overrides = ['root', 'Popover', 'Text'];
 
 Text.defaultProps = {
     overrides: {},

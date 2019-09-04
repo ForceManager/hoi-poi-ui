@@ -5,6 +5,13 @@ export default (theme) => ({
         marginRight: 17,
         padding: '6px 0',
     },
+    error: {
+        ...theme.typography.smallText,
+        position: 'absolute',
+        lineHeight: '20px',
+        bottom: -21,
+        color: theme.colors.red,
+    },
     formControl: {
         position: 'relative',
         display: 'flex',
@@ -13,6 +20,9 @@ export default (theme) => ({
         padding: '5px 0',
         cursor: 'pointer',
     },
+    isFullWidth: {
+        width: '100%',
+    },
     checkboxControl: {
         display: 'flex',
         alignItems: 'center',
@@ -20,7 +30,7 @@ export default (theme) => ({
         marginBottom: 14,
     },
     checkboxLabel: {
-        marginLeft: 2,
+        marginLeft: 10,
         ...theme.typography.defaultText,
         color: theme.colors.greySoft,
     },
@@ -38,6 +48,7 @@ export default (theme) => ({
     vertical: {
         display: 'block',
         padding: '12px 0 11px 0',
+        marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
         },

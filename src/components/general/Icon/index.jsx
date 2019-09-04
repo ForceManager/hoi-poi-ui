@@ -17,6 +17,17 @@ import Drag from './icons/Drag';
 import Edit from './icons/Edit';
 import Trash from './icons/Trash';
 import Magnifier from './icons/Magnifier';
+import Tick from './icons/Tick';
+import VisibilityOff from './icons/VisibilityOff';
+import VisibilityOn from './icons/VisibilityOn';
+import ThreeDots from './icons/ThreeDots';
+import Download from './icons/Download';
+import Duplicate from './icons/Duplicate';
+import ArrowRight from './icons/ArrowRight';
+import ArrowLeft from './icons/ArrowLeft';
+import ArrowTop from './icons/ArrowTop';
+import ArrowBottom from './icons/ArrowBottom';
+import ThickDisabled from './icons/ThickDisabled';
 
 const ICONS = {
     chevron: Chevron,
@@ -24,12 +35,23 @@ const ICONS = {
     close: Close,
     lock: Lock,
     thickEnabled: ThickEnabled,
+    thickDisabled: ThickDisabled,
     warning: Warning,
     warningRounded: WarningRounded,
     drag: Drag,
     edit: Edit,
     trash: Trash,
     magnifier: Magnifier,
+    tick: Tick,
+    visibilityOn: VisibilityOn,
+    visibilityOff: VisibilityOff,
+    duplicate: Duplicate,
+    threeDots: ThreeDots,
+    download: Download,
+    arrowRight: ArrowRight,
+    arrowLeft: ArrowLeft,
+    arrowTop: ArrowTop,
+    arrowBottom: ArrowBottom,
 };
 
 function Icon({
@@ -40,6 +62,7 @@ function Icon({
     overrides: overridesProp,
     className: classNameProp,
     classes,
+    onClick,
     ...props
 }) {
     let SelectedIcon = ICONS[name];
@@ -49,10 +72,17 @@ function Icon({
     const override = getOverrides(overridesProp, Icon.overrides);
 
     // Classes
-    const rootClassName = classnames(classes.root, classes[size], classNameProp);
+    const rootClassName = classnames(
+        classes.root,
+        classes[size],
+        {
+            [classes.clickable]: !!onClick,
+        },
+        classNameProp,
+    );
 
     return (
-        <span className={rootClassName} {...override.root}>
+        <span onClick={onClick} className={rootClassName} {...override.root}>
             <SelectedIcon color={color || theme.colors.greySoft} {...override.icon} />
         </span>
     );
@@ -71,6 +101,7 @@ Icon.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
     name: PropTypes.string,
     color: PropTypes.string,
+    onClick: PropTypes.func,
 };
 
 export default React.memo(withStyles(styles, { name: 'Icon' })(withTheme(Icon)));
