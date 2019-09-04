@@ -8,7 +8,7 @@ export default (theme) => ({
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
-    text: {
+    Text: {
         paddingRight: 5,
     },
     info: {

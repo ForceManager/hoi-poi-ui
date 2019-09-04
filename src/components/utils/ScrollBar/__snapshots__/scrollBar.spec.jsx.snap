@@ -8,6 +8,8 @@ exports[`ScrollBar match snapshot 1`] = `
         "colors": Object {
           "black": "#262B34",
           "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "greenLight": "#e7f1d5",
@@ -24,6 +26,8 @@ exports[`ScrollBar match snapshot 1`] = `
           "primaryDark": "#C87600",
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
           "red": "#f04540",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -31,9 +35,11 @@ exports[`ScrollBar match snapshot 1`] = `
           "secondary": "#00A8Be",
           "secondaryGrey": "#e4eeff",
           "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
           "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
           "tableHover": "#FAFBFC",
           "text": Object {
             "black": "#3c4248",
@@ -50,7 +56,8 @@ exports[`ScrollBar match snapshot 1`] = `
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
-          "yellowLight": "#FFF9DD",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -61,7 +68,7 @@ exports[`ScrollBar match snapshot 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -77,6 +84,11 @@ exports[`ScrollBar match snapshot 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -91,13 +103,21 @@ exports[`ScrollBar match snapshot 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -219,7 +239,7 @@ exports[`ScrollBar match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -232,10 +252,13 @@ exports[`ScrollBar match snapshot 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -357,10 +380,10 @@ exports[`ScrollBar match snapshot 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -377,6 +400,8 @@ exports[`ScrollBar match snapshot 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -393,6 +418,8 @@ exports[`ScrollBar match snapshot 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -400,9 +427,11 @@ exports[`ScrollBar match snapshot 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -419,7 +448,8 @@ exports[`ScrollBar match snapshot 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -430,7 +460,7 @@ exports[`ScrollBar match snapshot 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -446,6 +476,11 @@ exports[`ScrollBar match snapshot 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {

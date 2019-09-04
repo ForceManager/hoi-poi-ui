@@ -9,4 +9,9 @@
 ---
 
 -   root - root element
+-   header - header wrapper
+-   title - header title text
 -   [react-custom-scrollbars](https://github.com/malte-wessel/react-custom-scrollbars/blob/master/docs/API.md)
+-   [Text](#/Typography?id=text)
+
+'root', 'header', 'title', 'react-animate-height', 'removeIcon'

@@ -1,5 +1,6 @@
 // Colors
 const overlay = 'rgba(33,33,33,0.55)';
+const secondaryOverlay = 'rgba(2,168,189,0.10)';
 const shadow = 'rgba(0, 0, 0, 0.25)';
 const lines = '#dce3eb';
 const placeholders = '#e1e4e7';
@@ -26,7 +27,8 @@ const redLight = '#FAE7E7';
 const redDark = '#C43833';
 
 const yellow = '#E9B200';
-const yellowLight = '#FFF9DD';
+const yellowLight = '#FCF7E5';
+const yellowDark = '#BE9100';
 
 const primary = '#FF8C00';
 const primarySoft = '#ff9d26';
@@ -41,14 +43,22 @@ const link = '#216db3';
 const linkDark = '#174a79';
 
 const tableHeader = '#f6f7f9';
+const tableHeaderHover = '#EBECEF';
 const tableHover = '#FAFBFC';
+
+const blackberry = '#2e2d4c';
+const blackberryDark = '#24243C';
+
+const purple = '#AA5B9C';
+const purpleLight = '#EEDEEB';
 
 //Text
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
 const fontSizeBase = 13;
 const fontSizeSmall = 11;
-const fontSizeBig = 16;
+const fontSizeLarge = 16;
+const fontSizeBig = 20;
 
 // Others
 const boxShadow = `0 3px 9px 0 ${shadow}`;
@@ -72,6 +82,7 @@ export default {
         redDark,
         yellow,
         yellowLight,
+        yellowDark,
         primary,
         primaryDark,
         primaryLight,
@@ -82,7 +93,12 @@ export default {
         link,
         linkDark,
         tableHeader,
+        tableHeaderHover,
         tableHover,
+        blackberry,
+        blackberryDark,
+        purple,
+        purpleLight,
         text: {
             default: grey,
             greySoft,
@@ -96,6 +112,7 @@ export default {
             white,
         },
         overlay,
+        secondaryOverlay,
         shadow,
         lines,
         placeholders,
@@ -120,6 +137,11 @@ export default {
         smallText: {
             letterSpacing: 0.5,
             fontSize: fontSizeSmall,
+            fontFamily,
+        },
+        largeText: {
+            letterSpacing: 0.5,
+            fontSize: fontSizeLarge,
             fontFamily,
         },
         bigText: {

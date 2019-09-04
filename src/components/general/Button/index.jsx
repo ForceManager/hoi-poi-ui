@@ -4,6 +4,7 @@ import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 import Loader from '../../general/Loader';
+import Text from '../../typography/Text';
 import styles from './styles';
 
 const LOADER_SIZES = {
@@ -68,9 +69,9 @@ function Button({
                     />
                 </div>
             )}
-            <span className={classes.label} {...override.label}>
+            <Text className={classes.Text} {...override.Text}>
                 {children}
-            </span>
+            </Text>
         </span>
     );
 
@@ -89,12 +90,12 @@ function Button({
     }
 }
 
-Button.overrides = ['root', 'label', 'Loader'];
+Button.overrides = ['root', 'Text', 'Loader'];
 
 Button.defaultProps = {
-    overrides: {},
     size: 'medium',
     type: 'filled',
+    overrides: {},
 };
 
 Button.propTypes = {
@@ -103,7 +104,7 @@ Button.propTypes = {
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['big', 'medium', 'small']),
-    type: PropTypes.oneOf(['filled', 'outlined', 'squared']),
+    type: PropTypes.oneOf(['filled', 'outlined', 'squared', 'squared-outlined']),
     color: PropTypes.oneOf(['primary', 'danger', 'white']),
     isDisabled: PropTypes.bool,
     /** Use the whole container */

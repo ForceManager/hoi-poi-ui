@@ -35,7 +35,7 @@ function Toast({
         position: position,
     };
 
-    return <ToastContainer {...rootProps} {...override['react-toastify']} />;
+    return <ToastContainer {...rootProps} enableMultiContainer {...override['react-toastify']} />;
 }
 
 Toast.overrides = [];

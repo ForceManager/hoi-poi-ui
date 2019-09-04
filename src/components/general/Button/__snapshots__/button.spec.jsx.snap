@@ -8,6 +8,8 @@ exports[`Button is disabled 1`] = `
         "colors": Object {
           "black": "#262B34",
           "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "greenLight": "#e7f1d5",
@@ -24,6 +26,8 @@ exports[`Button is disabled 1`] = `
           "primaryDark": "#C87600",
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
           "red": "#f04540",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -31,9 +35,11 @@ exports[`Button is disabled 1`] = `
           "secondary": "#00A8Be",
           "secondaryGrey": "#e4eeff",
           "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
           "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
           "tableHover": "#FAFBFC",
           "text": Object {
             "black": "#3c4248",
@@ -50,7 +56,8 @@ exports[`Button is disabled 1`] = `
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
-          "yellowLight": "#FFF9DD",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -61,7 +68,7 @@ exports[`Button is disabled 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -77,6 +84,11 @@ exports[`Button is disabled 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -91,13 +103,21 @@ exports[`Button is disabled 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -219,7 +239,7 @@ exports[`Button is disabled 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -235,10 +255,13 @@ exports[`Button is disabled 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -360,10 +383,14 @@ exports[`Button is disabled 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "1": SheetsManager {
+                "-9007199254740989": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -382,6 +409,8 @@ exports[`Button is disabled 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -398,6 +427,8 @@ exports[`Button is disabled 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -405,9 +436,11 @@ exports[`Button is disabled 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -424,7 +457,8 @@ exports[`Button is disabled 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -435,7 +469,7 @@ exports[`Button is disabled 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -451,6 +485,11 @@ exports[`Button is disabled 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -466,20 +505,21 @@ exports[`Button is disabled 1`] = `
           <Button
             classes={
               Object {
-                "big": "HoiPoi__Button__big-4-11",
-                "danger": "HoiPoi__Button__danger-4-9",
-                "disabled": "HoiPoi__Button__disabled-4-12",
-                "filled": "HoiPoi__Button__filled-4-6",
-                "fullWidth": "HoiPoi__Button__fullWidth-4-13",
-                "label": "HoiPoi__Button__label-4-1",
+                "Text": "HoiPoi__Button__Text-4-1",
+                "big": "HoiPoi__Button__big-4-12",
+                "danger": "HoiPoi__Button__danger-4-10",
+                "disabled": "HoiPoi__Button__disabled-4-13",
+                "filled": "HoiPoi__Button__filled-4-7",
+                "fullWidth": "HoiPoi__Button__fullWidth-4-14",
                 "labelLoading": "HoiPoi__Button__labelLoading-4-2",
                 "loader": "HoiPoi__Button__loader-4-3",
                 "outlined": "HoiPoi__Button__outlined-4-4",
-                "primary": "HoiPoi__Button__primary-4-8",
+                "primary": "HoiPoi__Button__primary-4-9",
                 "root": "HoiPoi__Button__root-4-0",
-                "small": "HoiPoi__Button__small-4-10",
+                "small": "HoiPoi__Button__small-4-11",
                 "squared": "HoiPoi__Button__squared-4-5",
-                "white": "HoiPoi__Button__white-4-7",
+                "squared-outlined": "HoiPoi__Button__squared-outlined-4-6",
+                "white": "HoiPoi__Button__white-4-8",
               }
             }
             isDisabled={true}
@@ -489,18 +529,301 @@ exports[`Button is disabled 1`] = `
             type="filled"
           >
             <button
-              className="HoiPoi__Button__root-4-0 HoiPoi__Button__filled-4-6 HoiPoi__Button__white-4-7 HoiPoi__Button__disabled-4-12"
+              className="HoiPoi__Button__root-4-0 HoiPoi__Button__filled-4-7 HoiPoi__Button__white-4-8 HoiPoi__Button__disabled-4-13"
               onClick={null}
               type="button"
             >
               <span
                 className=""
               >
-                <span
-                  className="HoiPoi__Button__label-4-1"
+                <JssContextSubscriber
+                  className="HoiPoi__Button__Text-4-1"
                 >
-                  Hello
-                </span>
+                  <WithStyles(Text)
+                    className="HoiPoi__Button__Text-4-1"
+                    innerRef={null}
+                    isTruncated={false}
+                    jssContext={
+                      Object {
+                        "disableStylesGeneration": false,
+                        "jss": Jss {
+                          "generateId": [Function],
+                          "id": 3,
+                          "options": Object {
+                            "Renderer": [Function],
+                            "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
+                            "plugins": Array [],
+                          },
+                          "plugins": PluginsRegistry {
+                            "plugins": Object {
+                              "external": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                  "onUpdate": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                              ],
+                              "internal": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                              ],
+                            },
+                            "registry": Object {
+                              "onChangeValue": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onCreateRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessSheet": Array [],
+                              "onProcessStyle": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onUpdate": Array [
+                                [Function],
+                              ],
+                            },
+                          },
+                          "version": "10.0.0-alpha.21",
+                        },
+                        "managers": Object {
+                          "-9007199254740989": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740990": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                        },
+                        "sheetOptions": Object {
+                          "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__HoiPoi__",
+                          "generateId": [Function],
+                        },
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    theme={
+                      Object {
+                        "colors": Object {
+                          "black": "#262B34",
+                          "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
+                          "disabledGrey": "#ced4d9",
+                          "green": "#86AD20",
+                          "greenLight": "#e7f1d5",
+                          "grey": "#697782",
+                          "greyLight": "#f0f3f5",
+                          "greySoft": "#788590",
+                          "lines": "#dce3eb",
+                          "link": "#216db3",
+                          "linkDark": "#174a79",
+                          "overlay": "rgba(33,33,33,0.55)",
+                          "placeholders": "#e1e4e7",
+                          "placeholdersHover": "#d0d4d8",
+                          "primary": "#FF8C00",
+                          "primaryDark": "#C87600",
+                          "primaryLight": "#fef4e6",
+                          "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
+                          "red": "#f04540",
+                          "redDark": "#C43833",
+                          "redLight": "#FAE7E7",
+                          "redSoft": "#FF544F",
+                          "secondary": "#00A8Be",
+                          "secondaryGrey": "#e4eeff",
+                          "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
+                          "secondarySoft": "#AADFE7",
+                          "shadow": "rgba(0, 0, 0, 0.25)",
+                          "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
+                          "tableHover": "#FAFBFC",
+                          "text": Object {
+                            "black": "#3c4248",
+                            "danger": "white",
+                            "default": "#697782",
+                            "green": "#86AD20",
+                            "greySoft": "#788590",
+                            "primary": "white",
+                            "red": "#f04540",
+                            "secondary": "#00A8Be",
+                            "white": "#FFFFFF",
+                            "yellow": "#E9B200",
+                          },
+                          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
+                        },
+                        "effects": Object {
+                          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                          "buttonActive": Object {
+                            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                          },
+                        },
+                        "typography": Object {
+                          "bigText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 20,
+                            "letterSpacing": 0.5,
+                          },
+                          "button": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "lineHeight": 1.5,
+                          },
+                          "defaultText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 13,
+                            "letterSpacing": 0.5,
+                          },
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSizeBase": 13,
+                          "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
+                          "letterSpacing": 0.5,
+                          "lineHeightBase": 1.5,
+                          "smallText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "letterSpacing": 0.5,
+                          },
+                        },
+                      }
+                    }
+                    type="normal"
+                  >
+                    <Text
+                      className="HoiPoi__Button__Text-4-1"
+                      classes={
+                        Object {
+                          "Loader": "HoiPoi__Text__Loader-4-25",
+                          "big": "HoiPoi__Text__big-4-20",
+                          "bold": "HoiPoi__Text__bold-4-21",
+                          "isLoading": "HoiPoi__Text__isLoading-4-24",
+                          "large": "HoiPoi__Text__large-4-19",
+                          "light": "HoiPoi__Text__light-4-23",
+                          "medium": "HoiPoi__Text__medium-4-18",
+                          "normal": "HoiPoi__Text__normal-4-22",
+                          "root": "HoiPoi__Text__root-4-15",
+                          "small": "HoiPoi__Text__small-4-17",
+                          "truncated": "HoiPoi__Text__truncated-4-16",
+                        }
+                      }
+                      isTruncated={false}
+                      overrides={Object {}}
+                      size="medium"
+                      type="normal"
+                    >
+                      <span
+                        className="HoiPoi__Text__root-4-15 HoiPoi__Text__normal-4-22 HoiPoi__Text__medium-4-18 HoiPoi__Button__Text-4-1"
+                      >
+                        Hello
+                      </span>
+                    </Text>
+                  </WithStyles(Text)>
+                </JssContextSubscriber>
               </span>
             </button>
           </Button>
@@ -519,6 +842,8 @@ exports[`Button is rendered as a link 1`] = `
         "colors": Object {
           "black": "#262B34",
           "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "greenLight": "#e7f1d5",
@@ -535,6 +860,8 @@ exports[`Button is rendered as a link 1`] = `
           "primaryDark": "#C87600",
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
           "red": "#f04540",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -542,9 +869,11 @@ exports[`Button is rendered as a link 1`] = `
           "secondary": "#00A8Be",
           "secondaryGrey": "#e4eeff",
           "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
           "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
           "tableHover": "#FAFBFC",
           "text": Object {
             "black": "#3c4248",
@@ -561,7 +890,8 @@ exports[`Button is rendered as a link 1`] = `
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
-          "yellowLight": "#FFF9DD",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -572,7 +902,7 @@ exports[`Button is rendered as a link 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -588,6 +918,11 @@ exports[`Button is rendered as a link 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -602,13 +937,21 @@ exports[`Button is rendered as a link 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -730,7 +1073,7 @@ exports[`Button is rendered as a link 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -745,10 +1088,13 @@ exports[`Button is rendered as a link 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -870,10 +1216,14 @@ exports[`Button is rendered as a link 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "1": SheetsManager {
+                "-9007199254740989": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -891,6 +1241,8 @@ exports[`Button is rendered as a link 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -907,6 +1259,8 @@ exports[`Button is rendered as a link 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -914,9 +1268,11 @@ exports[`Button is rendered as a link 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -933,7 +1289,8 @@ exports[`Button is rendered as a link 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -944,7 +1301,7 @@ exports[`Button is rendered as a link 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -960,6 +1317,11 @@ exports[`Button is rendered as a link 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -975,20 +1337,21 @@ exports[`Button is rendered as a link 1`] = `
           <Button
             classes={
               Object {
-                "big": "HoiPoi__Button__big-3-11",
-                "danger": "HoiPoi__Button__danger-3-9",
-                "disabled": "HoiPoi__Button__disabled-3-12",
-                "filled": "HoiPoi__Button__filled-3-6",
-                "fullWidth": "HoiPoi__Button__fullWidth-3-13",
-                "label": "HoiPoi__Button__label-3-1",
+                "Text": "HoiPoi__Button__Text-3-1",
+                "big": "HoiPoi__Button__big-3-12",
+                "danger": "HoiPoi__Button__danger-3-10",
+                "disabled": "HoiPoi__Button__disabled-3-13",
+                "filled": "HoiPoi__Button__filled-3-7",
+                "fullWidth": "HoiPoi__Button__fullWidth-3-14",
                 "labelLoading": "HoiPoi__Button__labelLoading-3-2",
                 "loader": "HoiPoi__Button__loader-3-3",
                 "outlined": "HoiPoi__Button__outlined-3-4",
-                "primary": "HoiPoi__Button__primary-3-8",
+                "primary": "HoiPoi__Button__primary-3-9",
                 "root": "HoiPoi__Button__root-3-0",
-                "small": "HoiPoi__Button__small-3-10",
+                "small": "HoiPoi__Button__small-3-11",
                 "squared": "HoiPoi__Button__squared-3-5",
-                "white": "HoiPoi__Button__white-3-7",
+                "squared-outlined": "HoiPoi__Button__squared-outlined-3-6",
+                "white": "HoiPoi__Button__white-3-8",
               }
             }
             href="https://hello.com"
@@ -997,17 +1360,300 @@ exports[`Button is rendered as a link 1`] = `
             type="filled"
           >
             <a
-              className="HoiPoi__Button__root-3-0 HoiPoi__Button__filled-3-6 HoiPoi__Button__white-3-7"
+              className="HoiPoi__Button__root-3-0 HoiPoi__Button__filled-3-7 HoiPoi__Button__white-3-8"
               href="https://hello.com"
             >
               <span
                 className=""
               >
-                <span
-                  className="HoiPoi__Button__label-3-1"
+                <JssContextSubscriber
+                  className="HoiPoi__Button__Text-3-1"
                 >
-                  Hello
-                </span>
+                  <WithStyles(Text)
+                    className="HoiPoi__Button__Text-3-1"
+                    innerRef={null}
+                    isTruncated={false}
+                    jssContext={
+                      Object {
+                        "disableStylesGeneration": false,
+                        "jss": Jss {
+                          "generateId": [Function],
+                          "id": 3,
+                          "options": Object {
+                            "Renderer": [Function],
+                            "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
+                            "plugins": Array [],
+                          },
+                          "plugins": PluginsRegistry {
+                            "plugins": Object {
+                              "external": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                  "onUpdate": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                              ],
+                              "internal": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                              ],
+                            },
+                            "registry": Object {
+                              "onChangeValue": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onCreateRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessSheet": Array [],
+                              "onProcessStyle": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onUpdate": Array [
+                                [Function],
+                              ],
+                            },
+                          },
+                          "version": "10.0.0-alpha.21",
+                        },
+                        "managers": Object {
+                          "-9007199254740989": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740990": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                        },
+                        "sheetOptions": Object {
+                          "classNamePrefix": "HoiPoi__HoiPoi__HoiPoi__",
+                          "generateId": [Function],
+                        },
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    theme={
+                      Object {
+                        "colors": Object {
+                          "black": "#262B34",
+                          "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
+                          "disabledGrey": "#ced4d9",
+                          "green": "#86AD20",
+                          "greenLight": "#e7f1d5",
+                          "grey": "#697782",
+                          "greyLight": "#f0f3f5",
+                          "greySoft": "#788590",
+                          "lines": "#dce3eb",
+                          "link": "#216db3",
+                          "linkDark": "#174a79",
+                          "overlay": "rgba(33,33,33,0.55)",
+                          "placeholders": "#e1e4e7",
+                          "placeholdersHover": "#d0d4d8",
+                          "primary": "#FF8C00",
+                          "primaryDark": "#C87600",
+                          "primaryLight": "#fef4e6",
+                          "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
+                          "red": "#f04540",
+                          "redDark": "#C43833",
+                          "redLight": "#FAE7E7",
+                          "redSoft": "#FF544F",
+                          "secondary": "#00A8Be",
+                          "secondaryGrey": "#e4eeff",
+                          "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
+                          "secondarySoft": "#AADFE7",
+                          "shadow": "rgba(0, 0, 0, 0.25)",
+                          "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
+                          "tableHover": "#FAFBFC",
+                          "text": Object {
+                            "black": "#3c4248",
+                            "danger": "white",
+                            "default": "#697782",
+                            "green": "#86AD20",
+                            "greySoft": "#788590",
+                            "primary": "white",
+                            "red": "#f04540",
+                            "secondary": "#00A8Be",
+                            "white": "#FFFFFF",
+                            "yellow": "#E9B200",
+                          },
+                          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
+                        },
+                        "effects": Object {
+                          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                          "buttonActive": Object {
+                            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                          },
+                        },
+                        "typography": Object {
+                          "bigText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 20,
+                            "letterSpacing": 0.5,
+                          },
+                          "button": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "lineHeight": 1.5,
+                          },
+                          "defaultText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 13,
+                            "letterSpacing": 0.5,
+                          },
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSizeBase": 13,
+                          "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
+                          "letterSpacing": 0.5,
+                          "lineHeightBase": 1.5,
+                          "smallText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "letterSpacing": 0.5,
+                          },
+                        },
+                      }
+                    }
+                    type="normal"
+                  >
+                    <Text
+                      className="HoiPoi__Button__Text-3-1"
+                      classes={
+                        Object {
+                          "Loader": "HoiPoi__Text__Loader-3-25",
+                          "big": "HoiPoi__Text__big-3-20",
+                          "bold": "HoiPoi__Text__bold-3-21",
+                          "isLoading": "HoiPoi__Text__isLoading-3-24",
+                          "large": "HoiPoi__Text__large-3-19",
+                          "light": "HoiPoi__Text__light-3-23",
+                          "medium": "HoiPoi__Text__medium-3-18",
+                          "normal": "HoiPoi__Text__normal-3-22",
+                          "root": "HoiPoi__Text__root-3-15",
+                          "small": "HoiPoi__Text__small-3-17",
+                          "truncated": "HoiPoi__Text__truncated-3-16",
+                        }
+                      }
+                      isTruncated={false}
+                      overrides={Object {}}
+                      size="medium"
+                      type="normal"
+                    >
+                      <span
+                        className="HoiPoi__Text__root-3-15 HoiPoi__Text__normal-3-22 HoiPoi__Text__medium-3-18 HoiPoi__Button__Text-3-1"
+                      >
+                        Hello
+                      </span>
+                    </Text>
+                  </WithStyles(Text)>
+                </JssContextSubscriber>
               </span>
             </a>
           </Button>
@@ -1026,6 +1672,8 @@ exports[`Button is rendered combining props 1`] = `
         "colors": Object {
           "black": "#262B34",
           "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "greenLight": "#e7f1d5",
@@ -1042,6 +1690,8 @@ exports[`Button is rendered combining props 1`] = `
           "primaryDark": "#C87600",
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
           "red": "#f04540",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -1049,9 +1699,11 @@ exports[`Button is rendered combining props 1`] = `
           "secondary": "#00A8Be",
           "secondaryGrey": "#e4eeff",
           "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
           "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
           "tableHover": "#FAFBFC",
           "text": Object {
             "black": "#3c4248",
@@ -1068,7 +1720,8 @@ exports[`Button is rendered combining props 1`] = `
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
-          "yellowLight": "#FFF9DD",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1079,7 +1732,7 @@ exports[`Button is rendered combining props 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -1095,6 +1748,11 @@ exports[`Button is rendered combining props 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -1109,13 +1767,21 @@ exports[`Button is rendered combining props 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -1237,7 +1903,7 @@ exports[`Button is rendered combining props 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -1254,10 +1920,13 @@ exports[`Button is rendered combining props 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -1379,10 +2048,14 @@ exports[`Button is rendered combining props 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "1": SheetsManager {
+                "-9007199254740989": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -1400,6 +2073,8 @@ exports[`Button is rendered combining props 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -1416,6 +2091,8 @@ exports[`Button is rendered combining props 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -1423,9 +2100,11 @@ exports[`Button is rendered combining props 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -1442,7 +2121,8 @@ exports[`Button is rendered combining props 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1453,7 +2133,7 @@ exports[`Button is rendered combining props 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -1469,6 +2149,11 @@ exports[`Button is rendered combining props 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -1484,20 +2169,21 @@ exports[`Button is rendered combining props 1`] = `
           <Button
             classes={
               Object {
-                "big": "HoiPoi__Button__big-2-11",
-                "danger": "HoiPoi__Button__danger-2-9",
-                "disabled": "HoiPoi__Button__disabled-2-12",
-                "filled": "HoiPoi__Button__filled-2-6",
-                "fullWidth": "HoiPoi__Button__fullWidth-2-13",
-                "label": "HoiPoi__Button__label-2-1",
+                "Text": "HoiPoi__Button__Text-2-1",
+                "big": "HoiPoi__Button__big-2-12",
+                "danger": "HoiPoi__Button__danger-2-10",
+                "disabled": "HoiPoi__Button__disabled-2-13",
+                "filled": "HoiPoi__Button__filled-2-7",
+                "fullWidth": "HoiPoi__Button__fullWidth-2-14",
                 "labelLoading": "HoiPoi__Button__labelLoading-2-2",
                 "loader": "HoiPoi__Button__loader-2-3",
                 "outlined": "HoiPoi__Button__outlined-2-4",
-                "primary": "HoiPoi__Button__primary-2-8",
+                "primary": "HoiPoi__Button__primary-2-9",
                 "root": "HoiPoi__Button__root-2-0",
-                "small": "HoiPoi__Button__small-2-10",
+                "small": "HoiPoi__Button__small-2-11",
                 "squared": "HoiPoi__Button__squared-2-5",
-                "white": "HoiPoi__Button__white-2-7",
+                "squared-outlined": "HoiPoi__Button__squared-outlined-2-6",
+                "white": "HoiPoi__Button__white-2-8",
               }
             }
             color="danger"
@@ -1506,17 +2192,300 @@ exports[`Button is rendered combining props 1`] = `
             type="outlined"
           >
             <button
-              className="HoiPoi__Button__root-2-0 HoiPoi__Button__outlined-2-4 HoiPoi__Button__danger-2-9 HoiPoi__Button__big-2-11"
+              className="HoiPoi__Button__root-2-0 HoiPoi__Button__outlined-2-4 HoiPoi__Button__danger-2-10 HoiPoi__Button__big-2-12"
               type="button"
             >
               <span
                 className=""
               >
-                <span
-                  className="HoiPoi__Button__label-2-1"
+                <JssContextSubscriber
+                  className="HoiPoi__Button__Text-2-1"
                 >
-                  ACTION
-                </span>
+                  <WithStyles(Text)
+                    className="HoiPoi__Button__Text-2-1"
+                    innerRef={null}
+                    isTruncated={false}
+                    jssContext={
+                      Object {
+                        "disableStylesGeneration": false,
+                        "jss": Jss {
+                          "generateId": [Function],
+                          "id": 3,
+                          "options": Object {
+                            "Renderer": [Function],
+                            "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
+                            "plugins": Array [],
+                          },
+                          "plugins": PluginsRegistry {
+                            "plugins": Object {
+                              "external": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                  "onUpdate": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                              ],
+                              "internal": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                              ],
+                            },
+                            "registry": Object {
+                              "onChangeValue": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onCreateRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessSheet": Array [],
+                              "onProcessStyle": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onUpdate": Array [
+                                [Function],
+                              ],
+                            },
+                          },
+                          "version": "10.0.0-alpha.21",
+                        },
+                        "managers": Object {
+                          "-9007199254740989": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740990": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                        },
+                        "sheetOptions": Object {
+                          "classNamePrefix": "HoiPoi__HoiPoi__",
+                          "generateId": [Function],
+                        },
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    theme={
+                      Object {
+                        "colors": Object {
+                          "black": "#262B34",
+                          "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
+                          "disabledGrey": "#ced4d9",
+                          "green": "#86AD20",
+                          "greenLight": "#e7f1d5",
+                          "grey": "#697782",
+                          "greyLight": "#f0f3f5",
+                          "greySoft": "#788590",
+                          "lines": "#dce3eb",
+                          "link": "#216db3",
+                          "linkDark": "#174a79",
+                          "overlay": "rgba(33,33,33,0.55)",
+                          "placeholders": "#e1e4e7",
+                          "placeholdersHover": "#d0d4d8",
+                          "primary": "#FF8C00",
+                          "primaryDark": "#C87600",
+                          "primaryLight": "#fef4e6",
+                          "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
+                          "red": "#f04540",
+                          "redDark": "#C43833",
+                          "redLight": "#FAE7E7",
+                          "redSoft": "#FF544F",
+                          "secondary": "#00A8Be",
+                          "secondaryGrey": "#e4eeff",
+                          "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
+                          "secondarySoft": "#AADFE7",
+                          "shadow": "rgba(0, 0, 0, 0.25)",
+                          "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
+                          "tableHover": "#FAFBFC",
+                          "text": Object {
+                            "black": "#3c4248",
+                            "danger": "white",
+                            "default": "#697782",
+                            "green": "#86AD20",
+                            "greySoft": "#788590",
+                            "primary": "white",
+                            "red": "#f04540",
+                            "secondary": "#00A8Be",
+                            "white": "#FFFFFF",
+                            "yellow": "#E9B200",
+                          },
+                          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
+                        },
+                        "effects": Object {
+                          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                          "buttonActive": Object {
+                            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                          },
+                        },
+                        "typography": Object {
+                          "bigText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 20,
+                            "letterSpacing": 0.5,
+                          },
+                          "button": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "lineHeight": 1.5,
+                          },
+                          "defaultText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 13,
+                            "letterSpacing": 0.5,
+                          },
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSizeBase": 13,
+                          "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
+                          "letterSpacing": 0.5,
+                          "lineHeightBase": 1.5,
+                          "smallText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "letterSpacing": 0.5,
+                          },
+                        },
+                      }
+                    }
+                    type="normal"
+                  >
+                    <Text
+                      className="HoiPoi__Button__Text-2-1"
+                      classes={
+                        Object {
+                          "Loader": "HoiPoi__Text__Loader-2-25",
+                          "big": "HoiPoi__Text__big-2-20",
+                          "bold": "HoiPoi__Text__bold-2-21",
+                          "isLoading": "HoiPoi__Text__isLoading-2-24",
+                          "large": "HoiPoi__Text__large-2-19",
+                          "light": "HoiPoi__Text__light-2-23",
+                          "medium": "HoiPoi__Text__medium-2-18",
+                          "normal": "HoiPoi__Text__normal-2-22",
+                          "root": "HoiPoi__Text__root-2-15",
+                          "small": "HoiPoi__Text__small-2-17",
+                          "truncated": "HoiPoi__Text__truncated-2-16",
+                        }
+                      }
+                      isTruncated={false}
+                      overrides={Object {}}
+                      size="medium"
+                      type="normal"
+                    >
+                      <span
+                        className="HoiPoi__Text__root-2-15 HoiPoi__Text__normal-2-22 HoiPoi__Text__medium-2-18 HoiPoi__Button__Text-2-1"
+                      >
+                        ACTION
+                      </span>
+                    </Text>
+                  </WithStyles(Text)>
+                </JssContextSubscriber>
               </span>
             </button>
           </Button>
@@ -1533,10 +2502,13 @@ exports[`Button is rendered combining props 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -1658,10 +2630,14 @@ exports[`Button is rendered combining props 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "1": SheetsManager {
+                "-9007199254740989": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -1679,6 +2655,8 @@ exports[`Button is rendered combining props 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -1695,6 +2673,8 @@ exports[`Button is rendered combining props 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -1702,9 +2682,11 @@ exports[`Button is rendered combining props 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -1721,7 +2703,8 @@ exports[`Button is rendered combining props 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1732,7 +2715,7 @@ exports[`Button is rendered combining props 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -1748,6 +2731,11 @@ exports[`Button is rendered combining props 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -1763,20 +2751,21 @@ exports[`Button is rendered combining props 1`] = `
           <Button
             classes={
               Object {
-                "big": "HoiPoi__Button__big-2-11",
-                "danger": "HoiPoi__Button__danger-2-9",
-                "disabled": "HoiPoi__Button__disabled-2-12",
-                "filled": "HoiPoi__Button__filled-2-6",
-                "fullWidth": "HoiPoi__Button__fullWidth-2-13",
-                "label": "HoiPoi__Button__label-2-1",
+                "Text": "HoiPoi__Button__Text-2-1",
+                "big": "HoiPoi__Button__big-2-12",
+                "danger": "HoiPoi__Button__danger-2-10",
+                "disabled": "HoiPoi__Button__disabled-2-13",
+                "filled": "HoiPoi__Button__filled-2-7",
+                "fullWidth": "HoiPoi__Button__fullWidth-2-14",
                 "labelLoading": "HoiPoi__Button__labelLoading-2-2",
                 "loader": "HoiPoi__Button__loader-2-3",
                 "outlined": "HoiPoi__Button__outlined-2-4",
-                "primary": "HoiPoi__Button__primary-2-8",
+                "primary": "HoiPoi__Button__primary-2-9",
                 "root": "HoiPoi__Button__root-2-0",
-                "small": "HoiPoi__Button__small-2-10",
+                "small": "HoiPoi__Button__small-2-11",
                 "squared": "HoiPoi__Button__squared-2-5",
-                "white": "HoiPoi__Button__white-2-7",
+                "squared-outlined": "HoiPoi__Button__squared-outlined-2-6",
+                "white": "HoiPoi__Button__white-2-8",
               }
             }
             overrides={Object {}}
@@ -1784,17 +2773,300 @@ exports[`Button is rendered combining props 1`] = `
             type="squared"
           >
             <button
-              className="HoiPoi__Button__root-2-0 HoiPoi__Button__squared-2-5 HoiPoi__Button__white-2-7 HoiPoi__Button__big-2-11"
+              className="HoiPoi__Button__root-2-0 HoiPoi__Button__squared-2-5 HoiPoi__Button__white-2-8 HoiPoi__Button__big-2-12"
               type="button"
             >
               <span
                 className=""
               >
-                <span
-                  className="HoiPoi__Button__label-2-1"
+                <JssContextSubscriber
+                  className="HoiPoi__Button__Text-2-1"
                 >
-                  ACTION
-                </span>
+                  <WithStyles(Text)
+                    className="HoiPoi__Button__Text-2-1"
+                    innerRef={null}
+                    isTruncated={false}
+                    jssContext={
+                      Object {
+                        "disableStylesGeneration": false,
+                        "jss": Jss {
+                          "generateId": [Function],
+                          "id": 3,
+                          "options": Object {
+                            "Renderer": [Function],
+                            "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
+                            "plugins": Array [],
+                          },
+                          "plugins": PluginsRegistry {
+                            "plugins": Object {
+                              "external": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                  "onUpdate": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                              ],
+                              "internal": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                              ],
+                            },
+                            "registry": Object {
+                              "onChangeValue": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onCreateRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessSheet": Array [],
+                              "onProcessStyle": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onUpdate": Array [
+                                [Function],
+                              ],
+                            },
+                          },
+                          "version": "10.0.0-alpha.21",
+                        },
+                        "managers": Object {
+                          "-9007199254740989": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740990": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                        },
+                        "sheetOptions": Object {
+                          "classNamePrefix": "HoiPoi__HoiPoi__",
+                          "generateId": [Function],
+                        },
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    theme={
+                      Object {
+                        "colors": Object {
+                          "black": "#262B34",
+                          "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
+                          "disabledGrey": "#ced4d9",
+                          "green": "#86AD20",
+                          "greenLight": "#e7f1d5",
+                          "grey": "#697782",
+                          "greyLight": "#f0f3f5",
+                          "greySoft": "#788590",
+                          "lines": "#dce3eb",
+                          "link": "#216db3",
+                          "linkDark": "#174a79",
+                          "overlay": "rgba(33,33,33,0.55)",
+                          "placeholders": "#e1e4e7",
+                          "placeholdersHover": "#d0d4d8",
+                          "primary": "#FF8C00",
+                          "primaryDark": "#C87600",
+                          "primaryLight": "#fef4e6",
+                          "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
+                          "red": "#f04540",
+                          "redDark": "#C43833",
+                          "redLight": "#FAE7E7",
+                          "redSoft": "#FF544F",
+                          "secondary": "#00A8Be",
+                          "secondaryGrey": "#e4eeff",
+                          "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
+                          "secondarySoft": "#AADFE7",
+                          "shadow": "rgba(0, 0, 0, 0.25)",
+                          "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
+                          "tableHover": "#FAFBFC",
+                          "text": Object {
+                            "black": "#3c4248",
+                            "danger": "white",
+                            "default": "#697782",
+                            "green": "#86AD20",
+                            "greySoft": "#788590",
+                            "primary": "white",
+                            "red": "#f04540",
+                            "secondary": "#00A8Be",
+                            "white": "#FFFFFF",
+                            "yellow": "#E9B200",
+                          },
+                          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
+                        },
+                        "effects": Object {
+                          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                          "buttonActive": Object {
+                            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                          },
+                        },
+                        "typography": Object {
+                          "bigText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 20,
+                            "letterSpacing": 0.5,
+                          },
+                          "button": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "lineHeight": 1.5,
+                          },
+                          "defaultText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 13,
+                            "letterSpacing": 0.5,
+                          },
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSizeBase": 13,
+                          "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
+                          "letterSpacing": 0.5,
+                          "lineHeightBase": 1.5,
+                          "smallText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "letterSpacing": 0.5,
+                          },
+                        },
+                      }
+                    }
+                    type="normal"
+                  >
+                    <Text
+                      className="HoiPoi__Button__Text-2-1"
+                      classes={
+                        Object {
+                          "Loader": "HoiPoi__Text__Loader-2-25",
+                          "big": "HoiPoi__Text__big-2-20",
+                          "bold": "HoiPoi__Text__bold-2-21",
+                          "isLoading": "HoiPoi__Text__isLoading-2-24",
+                          "large": "HoiPoi__Text__large-2-19",
+                          "light": "HoiPoi__Text__light-2-23",
+                          "medium": "HoiPoi__Text__medium-2-18",
+                          "normal": "HoiPoi__Text__normal-2-22",
+                          "root": "HoiPoi__Text__root-2-15",
+                          "small": "HoiPoi__Text__small-2-17",
+                          "truncated": "HoiPoi__Text__truncated-2-16",
+                        }
+                      }
+                      isTruncated={false}
+                      overrides={Object {}}
+                      size="medium"
+                      type="normal"
+                    >
+                      <span
+                        className="HoiPoi__Text__root-2-15 HoiPoi__Text__normal-2-22 HoiPoi__Text__medium-2-18 HoiPoi__Button__Text-2-1"
+                      >
+                        ACTION
+                      </span>
+                    </Text>
+                  </WithStyles(Text)>
+                </JssContextSubscriber>
               </span>
             </button>
           </Button>
@@ -1813,6 +3085,8 @@ exports[`Button is rendered without crashes 1`] = `
         "colors": Object {
           "black": "#262B34",
           "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "greenLight": "#e7f1d5",
@@ -1829,6 +3103,8 @@ exports[`Button is rendered without crashes 1`] = `
           "primaryDark": "#C87600",
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
           "red": "#f04540",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -1836,9 +3112,11 @@ exports[`Button is rendered without crashes 1`] = `
           "secondary": "#00A8Be",
           "secondaryGrey": "#e4eeff",
           "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
           "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
           "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
           "tableHover": "#FAFBFC",
           "text": Object {
             "black": "#3c4248",
@@ -1855,7 +3133,8 @@ exports[`Button is rendered without crashes 1`] = `
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
-          "yellowLight": "#FFF9DD",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -1866,7 +3145,7 @@ exports[`Button is rendered without crashes 1`] = `
         "typography": Object {
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 16,
+            "fontSize": 20,
             "letterSpacing": 0.5,
           },
           "button": Object {
@@ -1882,6 +3161,11 @@ exports[`Button is rendered without crashes 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
           "smallText": Object {
@@ -1896,13 +3180,21 @@ exports[`Button is rendered without crashes 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -2024,7 +3316,7 @@ exports[`Button is rendered without crashes 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -2036,10 +3328,13 @@ exports[`Button is rendered without crashes 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -2161,10 +3456,14 @@ exports[`Button is rendered without crashes 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "1": SheetsManager {
+                "-9007199254740989": SheetsManager {
+                  "length": 1,
+                  "sheets": WeakMap {},
+                },
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -2182,6 +3481,8 @@ exports[`Button is rendered without crashes 1`] = `
               "colors": Object {
                 "black": "#262B34",
                 "blackLight": "#5f656b",
+                "blackberry": "#2e2d4c",
+                "blackberryDark": "#24243C",
                 "disabledGrey": "#ced4d9",
                 "green": "#86AD20",
                 "greenLight": "#e7f1d5",
@@ -2198,6 +3499,8 @@ exports[`Button is rendered without crashes 1`] = `
                 "primaryDark": "#C87600",
                 "primaryLight": "#fef4e6",
                 "primarySoft": "#ff9d26",
+                "purple": "#AA5B9C",
+                "purpleLight": "#EEDEEB",
                 "red": "#f04540",
                 "redDark": "#C43833",
                 "redLight": "#FAE7E7",
@@ -2205,9 +3508,11 @@ exports[`Button is rendered without crashes 1`] = `
                 "secondary": "#00A8Be",
                 "secondaryGrey": "#e4eeff",
                 "secondaryLight": "#D6EEF2",
+                "secondaryOverlay": "rgba(2,168,189,0.10)",
                 "secondarySoft": "#AADFE7",
                 "shadow": "rgba(0, 0, 0, 0.25)",
                 "tableHeader": "#f6f7f9",
+                "tableHeaderHover": "#EBECEF",
                 "tableHover": "#FAFBFC",
                 "text": Object {
                   "black": "#3c4248",
@@ -2224,7 +3529,8 @@ exports[`Button is rendered without crashes 1`] = `
                 "transparentBlack": "rgba(38, 43, 52, 0.8)",
                 "white": "#FFFFFF",
                 "yellow": "#E9B200",
-                "yellowLight": "#FFF9DD",
+                "yellowDark": "#BE9100",
+                "yellowLight": "#FCF7E5",
               },
               "effects": Object {
                 "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
@@ -2235,7 +3541,7 @@ exports[`Button is rendered without crashes 1`] = `
               "typography": Object {
                 "bigText": Object {
                   "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-                  "fontSize": 16,
+                  "fontSize": 20,
                   "letterSpacing": 0.5,
                 },
                 "button": Object {
@@ -2251,6 +3557,11 @@ exports[`Button is rendered without crashes 1`] = `
                 "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
                 "fontSizeBase": 13,
                 "fontSizeSmall": 11,
+                "largeText": Object {
+                  "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                  "fontSize": 16,
+                  "letterSpacing": 0.5,
+                },
                 "letterSpacing": 0.5,
                 "lineHeightBase": 1.5,
                 "smallText": Object {
@@ -2266,20 +3577,21 @@ exports[`Button is rendered without crashes 1`] = `
           <Button
             classes={
               Object {
-                "big": "HoiPoi__Button__big-1-11",
-                "danger": "HoiPoi__Button__danger-1-9",
-                "disabled": "HoiPoi__Button__disabled-1-12",
-                "filled": "HoiPoi__Button__filled-1-6",
-                "fullWidth": "HoiPoi__Button__fullWidth-1-13",
-                "label": "HoiPoi__Button__label-1-1",
+                "Text": "HoiPoi__Button__Text-1-1",
+                "big": "HoiPoi__Button__big-1-12",
+                "danger": "HoiPoi__Button__danger-1-10",
+                "disabled": "HoiPoi__Button__disabled-1-13",
+                "filled": "HoiPoi__Button__filled-1-7",
+                "fullWidth": "HoiPoi__Button__fullWidth-1-14",
                 "labelLoading": "HoiPoi__Button__labelLoading-1-2",
                 "loader": "HoiPoi__Button__loader-1-3",
                 "outlined": "HoiPoi__Button__outlined-1-4",
-                "primary": "HoiPoi__Button__primary-1-8",
+                "primary": "HoiPoi__Button__primary-1-9",
                 "root": "HoiPoi__Button__root-1-0",
-                "small": "HoiPoi__Button__small-1-10",
+                "small": "HoiPoi__Button__small-1-11",
                 "squared": "HoiPoi__Button__squared-1-5",
-                "white": "HoiPoi__Button__white-1-7",
+                "squared-outlined": "HoiPoi__Button__squared-outlined-1-6",
+                "white": "HoiPoi__Button__white-1-8",
               }
             }
             overrides={Object {}}
@@ -2287,17 +3599,300 @@ exports[`Button is rendered without crashes 1`] = `
             type="filled"
           >
             <button
-              className="HoiPoi__Button__root-1-0 HoiPoi__Button__filled-1-6 HoiPoi__Button__white-1-7"
+              className="HoiPoi__Button__root-1-0 HoiPoi__Button__filled-1-7 HoiPoi__Button__white-1-8"
               type="button"
             >
               <span
                 className=""
               >
-                <span
-                  className="HoiPoi__Button__label-1-1"
+                <JssContextSubscriber
+                  className="HoiPoi__Button__Text-1-1"
                 >
-                  Hello
-                </span>
+                  <WithStyles(Text)
+                    className="HoiPoi__Button__Text-1-1"
+                    innerRef={null}
+                    isTruncated={false}
+                    jssContext={
+                      Object {
+                        "disableStylesGeneration": false,
+                        "jss": Jss {
+                          "generateId": [Function],
+                          "id": 3,
+                          "options": Object {
+                            "Renderer": [Function],
+                            "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
+                            "plugins": Array [],
+                          },
+                          "plugins": PluginsRegistry {
+                            "plugins": Object {
+                              "external": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                  "onUpdate": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                  "onProcessRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onProcessRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onProcessStyle": [Function],
+                                },
+                              ],
+                              "internal": Array [
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onChangeValue": [Function],
+                                  "onCreateRule": [Function],
+                                  "onProcessStyle": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                                Object {
+                                  "onCreateRule": [Function],
+                                },
+                              ],
+                            },
+                            "registry": Object {
+                              "onChangeValue": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onCreateRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessRule": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onProcessSheet": Array [],
+                              "onProcessStyle": Array [
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                                [Function],
+                              ],
+                              "onUpdate": Array [
+                                [Function],
+                              ],
+                            },
+                          },
+                          "version": "10.0.0-alpha.21",
+                        },
+                        "managers": Object {
+                          "-9007199254740989": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                          "-9007199254740990": SheetsManager {
+                            "length": 1,
+                            "sheets": WeakMap {},
+                          },
+                        },
+                        "sheetOptions": Object {
+                          "classNamePrefix": "HoiPoi__",
+                          "generateId": [Function],
+                        },
+                      }
+                    }
+                    overrides={Object {}}
+                    size="medium"
+                    theme={
+                      Object {
+                        "colors": Object {
+                          "black": "#262B34",
+                          "blackLight": "#5f656b",
+                          "blackberry": "#2e2d4c",
+                          "blackberryDark": "#24243C",
+                          "disabledGrey": "#ced4d9",
+                          "green": "#86AD20",
+                          "greenLight": "#e7f1d5",
+                          "grey": "#697782",
+                          "greyLight": "#f0f3f5",
+                          "greySoft": "#788590",
+                          "lines": "#dce3eb",
+                          "link": "#216db3",
+                          "linkDark": "#174a79",
+                          "overlay": "rgba(33,33,33,0.55)",
+                          "placeholders": "#e1e4e7",
+                          "placeholdersHover": "#d0d4d8",
+                          "primary": "#FF8C00",
+                          "primaryDark": "#C87600",
+                          "primaryLight": "#fef4e6",
+                          "primarySoft": "#ff9d26",
+                          "purple": "#AA5B9C",
+                          "purpleLight": "#EEDEEB",
+                          "red": "#f04540",
+                          "redDark": "#C43833",
+                          "redLight": "#FAE7E7",
+                          "redSoft": "#FF544F",
+                          "secondary": "#00A8Be",
+                          "secondaryGrey": "#e4eeff",
+                          "secondaryLight": "#D6EEF2",
+                          "secondaryOverlay": "rgba(2,168,189,0.10)",
+                          "secondarySoft": "#AADFE7",
+                          "shadow": "rgba(0, 0, 0, 0.25)",
+                          "tableHeader": "#f6f7f9",
+                          "tableHeaderHover": "#EBECEF",
+                          "tableHover": "#FAFBFC",
+                          "text": Object {
+                            "black": "#3c4248",
+                            "danger": "white",
+                            "default": "#697782",
+                            "green": "#86AD20",
+                            "greySoft": "#788590",
+                            "primary": "white",
+                            "red": "#f04540",
+                            "secondary": "#00A8Be",
+                            "white": "#FFFFFF",
+                            "yellow": "#E9B200",
+                          },
+                          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+                          "white": "#FFFFFF",
+                          "yellow": "#E9B200",
+                          "yellowDark": "#BE9100",
+                          "yellowLight": "#FCF7E5",
+                        },
+                        "effects": Object {
+                          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+                          "buttonActive": Object {
+                            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+                          },
+                        },
+                        "typography": Object {
+                          "bigText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 20,
+                            "letterSpacing": 0.5,
+                          },
+                          "button": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "lineHeight": 1.5,
+                          },
+                          "defaultText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 13,
+                            "letterSpacing": 0.5,
+                          },
+                          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                          "fontSizeBase": 13,
+                          "fontSizeSmall": 11,
+                          "largeText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 16,
+                            "letterSpacing": 0.5,
+                          },
+                          "letterSpacing": 0.5,
+                          "lineHeightBase": 1.5,
+                          "smallText": Object {
+                            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+                            "fontSize": 11,
+                            "letterSpacing": 0.5,
+                          },
+                        },
+                      }
+                    }
+                    type="normal"
+                  >
+                    <Text
+                      className="HoiPoi__Button__Text-1-1"
+                      classes={
+                        Object {
+                          "Loader": "HoiPoi__Text__Loader-1-25",
+                          "big": "HoiPoi__Text__big-1-20",
+                          "bold": "HoiPoi__Text__bold-1-21",
+                          "isLoading": "HoiPoi__Text__isLoading-1-24",
+                          "large": "HoiPoi__Text__large-1-19",
+                          "light": "HoiPoi__Text__light-1-23",
+                          "medium": "HoiPoi__Text__medium-1-18",
+                          "normal": "HoiPoi__Text__normal-1-22",
+                          "root": "HoiPoi__Text__root-1-15",
+                          "small": "HoiPoi__Text__small-1-17",
+                          "truncated": "HoiPoi__Text__truncated-1-16",
+                        }
+                      }
+                      isTruncated={false}
+                      overrides={Object {}}
+                      size="medium"
+                      type="normal"
+                    >
+                      <span
+                        className="HoiPoi__Text__root-1-15 HoiPoi__Text__normal-1-22 HoiPoi__Text__medium-1-18 HoiPoi__Button__Text-1-1"
+                      >
+                        Hello
+                      </span>
+                    </Text>
+                  </WithStyles(Text)>
+                </JssContextSubscriber>
               </span>
             </button>
           </Button>

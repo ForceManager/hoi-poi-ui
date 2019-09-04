@@ -11,7 +11,8 @@ export default (theme) => ({
         borderBottom: `1px solid ${theme.colors.greyLight}`,
         cursor: 'pointer',
     },
-    title: {
+    Text: {
+        fontWeight: 'normal',
         lineHeight: theme.typography.lineHeightBase,
         ...theme.typography.defaultText,
         color: theme.colors.blackLight,
@@ -26,22 +27,6 @@ export default (theme) => ({
         cursor: 'pointer',
         '&$collapsed': {
             transform: 'rotate(0) translateY(1px)',
-        },
-    },
-    remove: {
-        position: 'absolute',
-        cursor: 'pointer',
-        top: '5px',
-        right: '5px',
-        height: '10px',
-        width: '10px',
-        '& span': {
-            height: '100%',
-            width: '100%',
-        },
-        '& svg': {
-            height: '100%',
-            width: '100%',
         },
     },
     collapsed: {},

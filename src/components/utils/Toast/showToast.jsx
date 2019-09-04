@@ -14,14 +14,14 @@ const CustomCloseButton = ({ customCloseButton, closeToast }) => {
 };
 
 const showToast = (props) => {
-    const { type = 'info', text = '', title = '', content, closeButton, ...newProps } = props;
+    const { type = 'info', text = '', title = '', containerId, content, closeButton, ...newProps } = props;
 
-    if (content)
+    if (content) {
         return toast(content, {
             closeButton: <CustomCloseButton customCloseButton={closeButton} />,
             ...newProps,
         });
-
+    }
     const toastType = TOAST_TYPES[type];
     const messageProps = {
         title,
@@ -31,6 +31,8 @@ const showToast = (props) => {
 
     return toast(<ToastMessage {...messageProps} />, {
         type: toastType,
+        containerId: containerId || 'hoi-poi-ui',
+        ...newProps,
     });
 };
 

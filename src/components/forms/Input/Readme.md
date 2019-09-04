@@ -63,6 +63,25 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 </div>;
 ```
 
+Custom component:
+
+```jsx
+let state = state || {};
+const onChange = (field) => {
+    return (e) => {
+        setState({ [field]: e && e.target ? e.target.value : '' });
+    };
+};
+
+function CustomComponent(props) {
+    return <input />;
+}
+
+<div>
+    <Input label="Lorem ipsum" component={CustomComponent} onChange={onChange(1)} />
+</div>;
+```
+
 ### Component tree
 
 ---

@@ -68,6 +68,7 @@ function SelectButton({
 
     const rootProps = {
         className: rootClassName,
+        ...override.root,
     };
 
     const selectProps = {
@@ -87,7 +88,7 @@ function SelectButton({
     };
 
     return (
-        <div {...rootProps} ref={ref} {...override.root}>
+        <div {...rootProps} ref={ref}>
             <div className={classes.button} {...override.button} onClick={toggleOpen}>
                 {children}
             </div>
@@ -126,7 +127,6 @@ SelectButton.defaultProps = {
     hideSelectedOptions: true,
     isClearable: true,
     isMulti: false,
-    overrides: {},
 };
 
 SelectButton.propTypes = {

@@ -83,6 +83,35 @@ let onChange = (value) => setState({ value });
 />;
 ```
 
+Full width
+
+```jsx
+let inputs = [
+    {
+        label: 'Lorem ipsum',
+        name: 'lorem',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        name: 'lorem2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        name: 'lorem3',
+    },
+];
+
+let onChange = (value) => setState({ value });
+<InputGroup
+    label="Lorem ipsum"
+    labelMode="vertical"
+    inputs={inputs}
+    onChange={onChange}
+    value={state.value}
+    isFullWidth={true}
+/>;
+```
+
 ### Component tree
 
 ---

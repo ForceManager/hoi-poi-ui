@@ -12,13 +12,15 @@ function Form({
     className: classNameProp,
     labelMode,
     isFullWidth,
+    isReadOnly,
     schema,
     onChange,
     onFocus,
     onBlur,
-    onRemoveSection,
     values,
     errors,
+    customFields,
+    useNativeForm,
     ...props
 }) {
     // Overrides
@@ -69,35 +71,51 @@ function Form({
         [onBlur, values],
     );
 
-    return (
+    const content = schema.map((section, index) => (
+        <Section
+            key={index}
+            title={section.title}
+            className={section.className}
+            isExpandable={section.isExpandable}
+            {...override.Section}
+        >
+            {section.fields.map((field) => {
+                const value = values && values[field.name] ? values[field.name] : undefined;
+                return (
+                    <FieldControl
+                        key={field.name}
+                        labelMode={field.labelMode || labelMode}
+                        isFullWidth={field.isFullWidth || isFullWidth}
+                        isReadOnly={isReadOnly || field.isReadOnly}
+                        field={field}
+                        value={value}
+                        error={errors[field.name]}
+                        onChange={onChangeField}
+                        onFocus={onFocusField}
+                        onBlur={onBlurField}
+                        className={field.className}
+                        customFields={customFields}
+                        overrides={overridesProp}
+                    />
+                );
+            })}
+        </Section>
+    ));
+
+    const withForm = (children) => (
         <form className={classNameProp} action="" autoComplete="off" {...override.root}>
-            {schema.map((section, index) => (
-                <Section
-                    key={index}
-                    title={section.title}
-                    className={section.className}
-                    isExpandable={section.isExpandable}
-                    onRemove={onRemoveSection}
-                    {...override.Section}
-                >
-                    {section.fields.map((field) => (
-                        <FieldControl
-                            key={field.name}
-                            labelMode={field.labelMode || labelMode}
-                            isFullWidth={field.isFullWidth || isFullWidth}
-                            field={field}
-                            value={values[field.name]}
-                            error={errors[field.name]}
-                            onChange={onChangeField}
-                            onFocus={onFocusField}
-                            onBlur={onBlurField}
-                            className={field.className}
-                        />
-                    ))}
-                </Section>
-            ))}
+            {children}
         </form>
     );
+
+    const withDiv = (children) => (
+        <div className={classNameProp} {...override.root}>
+            {children}
+        </div>
+    );
+
+    if (useNativeForm) return withForm(content);
+    return withDiv(content);
 }
 
 Form.overrides = ['root', 'Section'];
@@ -109,6 +127,7 @@ Form.defaultProps = {
     values: {},
     schema: [],
     override: {},
+    useNativeForm: false,
 };
 
 Form.propTypes = {
@@ -116,8 +135,11 @@ Form.propTypes = {
     className: PropTypes.string,
     labelMode: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
     values: PropTypes.object,
     errors: PropTypes.object,
+    customFields: PropTypes.object,
+    useNativeForm: PropTypes.bool,
     schema: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string,

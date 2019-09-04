@@ -65,6 +65,20 @@ export default (theme) => ({
                 transform: 'scaleX(0)',
             },
         },
+        '& .hoi-poi-select__indicator-separator': {
+            display: 'none',
+        },
+        '& .hoi-poi-select__indicators': {
+            '& .hoi-poi-select__indicator-separator': {
+                display: 'none !important',
+            },
+            '& .hoi-poi-select__dropdown-indicator': {
+                '& span': {
+                    height: '8px !important',
+                    width: '8px !important',
+                },
+            },
+        },
     },
     focused: {
         '& $formControl::after': {
@@ -74,6 +88,7 @@ export default (theme) => ({
     vertical: {
         display: 'block',
         padding: '15px 0 10px 0',
+        marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
         },
@@ -87,6 +102,7 @@ export default (theme) => ({
     isFullWidth: {
         '& $formControl': {
             width: '100%',
+            flex: 1,
         },
     },
     select: {
@@ -109,21 +125,25 @@ export default (theme) => ({
             color: theme.colors.disabledGrey,
         },
         '& .hoi-poi-select__input, & .hoi-poi-select__single-value': {
-            color: theme.colors.greySoft,
+            color: theme.colors.text.black,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__input': {
             ...theme.typography.defaultText,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__input input': {
             lineHeight: '20px',
             padding: '0 0 4px 0 !important',
             ...theme.typography.defaultText,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__placeholder, & .hoi-poi-select__single-value': {
             margin: 0,
             padding: '0 0 5px 0 !important',
             lineHeight: '20px',
             ...theme.typography.defaultText,
+            fontWeight: 400,
         },
         '& .hoi-poi-select__indicators': {
             padding: '0 0 5px 0 !important',
@@ -151,8 +171,8 @@ export default (theme) => ({
     },
     menuList: {
         borderRadius: 0,
-        paddingTop: '0 !important',
-        paddingBottom: '0 !important',
+        paddingTop: '10px !important',
+        paddingBottom: '10px !important',
         overflow: 'hidden',
         '& .hoi-poi-select__group': {
             padding: '10px 0',
@@ -215,6 +235,7 @@ export default (theme) => ({
             width: '100%',
         },
         '& button': {
+            textAlign: 'left',
             padding: '15px 20px',
         },
     },
