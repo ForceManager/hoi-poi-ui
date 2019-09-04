@@ -121,25 +121,25 @@ const customCloseButton = ({ someProp, closeToast }) => {
     />
     <Input label="Toast test" placeholder="Type here" value={state.text} onChange={onChangeText} />
     <RadioGroup
-        label="Toast position"
+        label="position"
         options={positionOptions}
         onChange={onChangePosition}
         value={state.position}
     />
     <RadioGroup
-        label="Toast autoclose"
+        label="autoClose"
         options={autoCloseOptions}
         onChange={onChangeAutoClose}
         value={state.autoClose}
     />
     <RadioGroup
-        label="Toast closeOnClick"
+        label="closeOnClick"
         options={closeOnClickOptions}
         onChange={onChangeCloseOnClick}
         value={state.closeOnClick}
     />
     <RadioGroup
-        label="NewestOnTop"
+        label="newestOnTop"
         options={newestOnTopOptions}
         onChange={onChangeNewestOnTop}
         value={state.newestOnTop}
