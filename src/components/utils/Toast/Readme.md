@@ -7,8 +7,14 @@ const state = {
     title: 'Lorem',
     text: 'Lorem ipsum',
     type: 'info',
+    position: 'top-right',
+    autoClose: 2000,
+    newestOnTop: false,
+    closeOnClick: true,
     ...state,
 };
+
+const content = () => <div className="custom-content">Component as content</div>;
 
 let radioOptions = [
     {
@@ -25,53 +31,7 @@ let radioOptions = [
     },
 ];
 
-let onChange = (value) => setState({ type: value });
-let onChangeTitle = (e) => {
-    setState({ title: e && e.target ? e.target.value : '' });
-};
-let onChangeText = (e) => {
-    setState({ text: e && e.target ? e.target.value : '' });
-};
-
-<div>
-    <RadioGroup label="Toast type" options={radioOptions} onChange={onChange} value={state.type} />
-    <Input
-        label="Toast title"
-        placeholder="Type here"
-        value={state.title}
-        onChange={onChangeTitle}
-    />
-    <Input label="Toast test" placeholder="Type here" value={state.text} onChange={onChangeText} />
-    <Toast />
-    <br />
-    <Button
-        color="primary"
-        onClick={() =>
-            toast({
-                type: state.type,
-                text: state.text,
-                title: state.title,
-            })
-        }
-    >
-        Show Toast
-    </Button>
-</div>;
-```
-
-Custom Toast
-
-```jsx
-import { Button, Input, RadioGroup, toast } from 'hoi-poi-ui';
-
-const state = {
-    content: <div className="custom-content">Component as content</div>,
-    position: 'top-right',
-    autoClose: false,
-    ...state,
-};
-
-let radioOptions = [
+let positionOptions = [
     {
         label: 'top-left',
         value: 'top-left',
@@ -109,13 +69,60 @@ let autoCloseOptions = [
     },
 ];
 
+let newestOnTopOptions = [
+    {
+        label: 'false',
+        value: false,
+    },
+    {
+        label: 'true',
+        value: true,
+    },
+];
+
+let closeOnClickOptions = [
+    {
+        label: 'false',
+        value: false,
+    },
+    {
+        label: 'true',
+        value: true,
+    },
+];
+
+let onChange = (value) => setState({ type: value });
+let onChangeTitle = (e) => {
+    setState({ title: e && e.target ? e.target.value : '' });
+};
+let onChangeText = (e) => {
+    setState({ text: e && e.target ? e.target.value : '' });
+};
 let onChangePosition = (value) => setState({ position: value });
 let onChangeAutoClose = (value) => setState({ autoClose: value });
+let onChangeNewestOnTop = (value) => setState({ newestOnTop: !state.newestOnTop });
+let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnClick });
+
+const customCloseButton = ({ someProp, closeToast }) => {
+    return (
+        <div className="custom-close-button" style={{ color: 'white' }} onClick={closeToast}>
+            Close
+        </div>
+    );
+};
 
 <div>
+    <RadioGroup label="Toast type" options={radioOptions} onChange={onChange} value={state.type} />
+    <Input
+        label="Toast title"
+        placeholder="Type here"
+        value={state.title}
+        onChange={onChangeTitle}
+    />
+    <Input label="Toast test" placeholder="Type here" value={state.text} onChange={onChangeText} />
     <RadioGroup
         label="Toast position"
-        options={radioOptions}
+        options={positionOptions}
         onChange={onChangePosition}
         value={state.position}
     />
@@ -125,18 +132,48 @@ let onChangeAutoClose = (value) => setState({ autoClose: value });
         onChange={onChangeAutoClose}
         value={state.autoClose}
     />
+    <RadioGroup
+        label="Toast closeOnClick"
+        options={closeOnClickOptions}
+        onChange={onChangeCloseOnClick}
+        value={state.closeOnClick}
+    />
+    <RadioGroup
+        label="NewestOnTop"
+        options={newestOnTopOptions}
+        onChange={onChangeNewestOnTop}
+        value={state.newestOnTop}
+    />
+    <Toast position={state.position} autoClose={state.autoClose} newestOnTop={state.newestOnTop} />
     <br />
     <Button
         color="primary"
         onClick={() =>
             toast({
-                content: state.content,
-                position: state.position,
-                autoClose: state.autoClose,
+                type: state.type,
+                text: state.text,
+                title: state.title,
             })
         }
     >
         Show Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        color="primary"
+        onClick={() =>
+            toast({
+                content: content,
+                closeButton: <div style={{ color: 'white' }}>close</div>,
+                position: state.position,
+                autoClose: state.autoClose,
+                closeOnClick: state.closeOnClick,
+                className: 'custom-one',
+            })
+        }
+    >
+        Show Custom Toast
     </Button>
 </div>;
 ```

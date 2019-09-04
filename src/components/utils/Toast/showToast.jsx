@@ -8,10 +8,19 @@ const TOAST_TYPES = {
     error: toast.TYPE.ERROR,
 };
 
-const showToast = (props) => {
-    const { type = 'info', text = '', title = '', content, ...newProps } = props;
+const CustomCloseButton = ({ customCloseButton, closeToast }) => {
+    if (!customCloseButton) return null;
+    return <div onClick={closeToast}>{customCloseButton}</div>;
+};
 
-    if (content) return toast(content, { ...newProps });
+const showToast = (props) => {
+    const { type = 'info', text = '', title = '', content, closeButton, ...newProps } = props;
+
+    if (content)
+        return toast(content, {
+            closeButton: <CustomCloseButton customCloseButton={closeButton} />,
+            ...newProps,
+        });
 
     const toastType = TOAST_TYPES[type];
     const messageProps = {
