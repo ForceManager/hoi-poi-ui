@@ -1140,6 +1140,7 @@ exports[`Input custom max/min/step match 1`] = `
                   onChange={[Function]}
                   prefixCls="rc-slider"
                   railStyle={Object {}}
+                  reverse={false}
                   step={100}
                   trackStyle={
                     Array [
@@ -1167,6 +1168,7 @@ exports[`Input custom max/min/step match 1`] = `
                       included={true}
                       length={0}
                       offset={0}
+                      reverse={false}
                       style={Object {}}
                       vertical={false}
                     >
@@ -1175,6 +1177,7 @@ exports[`Input custom max/min/step match 1`] = `
                         style={
                           Object {
                             "left": "0%",
+                            "right": "auto",
                             "width": "0%",
                           }
                         }
@@ -1190,6 +1193,7 @@ exports[`Input custom max/min/step match 1`] = `
                       max={10000}
                       min={5000}
                       prefixCls="rc-slider"
+                      reverse={false}
                       step={100}
                       upperBound={5000}
                       vertical={false}
@@ -1220,6 +1224,7 @@ exports[`Input custom max/min/step match 1`] = `
                         min={5000}
                         offset={0}
                         prefixCls="hoi-poi-slider"
+                        reverse={false}
                         style={Object {}}
                         value={5000}
                         vertical={false}
@@ -1239,6 +1244,8 @@ exports[`Input custom max/min/step match 1`] = `
                           style={
                             Object {
                               "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
                             }
                           }
                           tabIndex={0}
@@ -1253,6 +1260,7 @@ exports[`Input custom max/min/step match 1`] = `
                       max={10000}
                       min={5000}
                       onClickLabel={[Function]}
+                      reverse={false}
                       upperBound={5000}
                       vertical={false}
                     >
@@ -2412,6 +2420,7 @@ exports[`Input custom tip match 1`] = `
                   onChange={[Function]}
                   prefixCls="rc-slider"
                   railStyle={Object {}}
+                  reverse={false}
                   step={1}
                   trackStyle={
                     Array [
@@ -2439,6 +2448,7 @@ exports[`Input custom tip match 1`] = `
                       included={true}
                       length={0}
                       offset={0}
+                      reverse={false}
                       style={Object {}}
                       vertical={false}
                     >
@@ -2447,6 +2457,7 @@ exports[`Input custom tip match 1`] = `
                         style={
                           Object {
                             "left": "0%",
+                            "right": "auto",
                             "width": "0%",
                           }
                         }
@@ -2462,6 +2473,7 @@ exports[`Input custom tip match 1`] = `
                       max={100}
                       min={0}
                       prefixCls="rc-slider"
+                      reverse={false}
                       step={1}
                       upperBound={0}
                       vertical={false}
@@ -2492,6 +2504,7 @@ exports[`Input custom tip match 1`] = `
                         min={0}
                         offset={0}
                         prefixCls="hoi-poi-slider"
+                        reverse={false}
                         style={Object {}}
                         value={0}
                         vertical={false}
@@ -2511,6 +2524,8 @@ exports[`Input custom tip match 1`] = `
                           style={
                             Object {
                               "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
                             }
                           }
                           tabIndex={0}
@@ -2525,6 +2540,7 @@ exports[`Input custom tip match 1`] = `
                       max={100}
                       min={0}
                       onClickLabel={[Function]}
+                      reverse={false}
                       upperBound={0}
                       vertical={false}
                     >
@@ -3681,6 +3697,7 @@ exports[`Input default match 1`] = `
                   onChange={[Function]}
                   prefixCls="rc-slider"
                   railStyle={Object {}}
+                  reverse={false}
                   step={1}
                   trackStyle={
                     Array [
@@ -3708,6 +3725,7 @@ exports[`Input default match 1`] = `
                       included={true}
                       length={0}
                       offset={0}
+                      reverse={false}
                       style={Object {}}
                       vertical={false}
                     >
@@ -3716,6 +3734,7 @@ exports[`Input default match 1`] = `
                         style={
                           Object {
                             "left": "0%",
+                            "right": "auto",
                             "width": "0%",
                           }
                         }
@@ -3731,6 +3750,7 @@ exports[`Input default match 1`] = `
                       max={100}
                       min={0}
                       prefixCls="rc-slider"
+                      reverse={false}
                       step={1}
                       upperBound={0}
                       vertical={false}
@@ -3761,6 +3781,7 @@ exports[`Input default match 1`] = `
                         min={0}
                         offset={0}
                         prefixCls="hoi-poi-slider"
+                        reverse={false}
                         style={Object {}}
                         value={0}
                         vertical={false}
@@ -3780,6 +3801,8 @@ exports[`Input default match 1`] = `
                           style={
                             Object {
                               "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
                             }
                           }
                           tabIndex={0}
@@ -3794,6 +3817,7 @@ exports[`Input default match 1`] = `
                       max={100}
                       min={0}
                       onClickLabel={[Function]}
+                      reverse={false}
                       upperBound={0}
                       vertical={false}
                     >
@@ -4951,6 +4975,7 @@ exports[`Input disabled match 1`] = `
                   onChange={[Function]}
                   prefixCls="rc-slider"
                   railStyle={Object {}}
+                  reverse={false}
                   step={1}
                   trackStyle={
                     Array [
@@ -4978,6 +5003,7 @@ exports[`Input disabled match 1`] = `
                       included={true}
                       length={0}
                       offset={0}
+                      reverse={false}
                       style={Object {}}
                       vertical={false}
                     >
@@ -4986,6 +5012,7 @@ exports[`Input disabled match 1`] = `
                         style={
                           Object {
                             "left": "0%",
+                            "right": "auto",
                             "width": "0%",
                           }
                         }
@@ -5001,6 +5028,7 @@ exports[`Input disabled match 1`] = `
                       max={100}
                       min={0}
                       prefixCls="rc-slider"
+                      reverse={false}
                       step={1}
                       upperBound={0}
                       vertical={false}
@@ -5031,6 +5059,7 @@ exports[`Input disabled match 1`] = `
                         min={0}
                         offset={0}
                         prefixCls="hoi-poi-slider"
+                        reverse={false}
                         style={Object {}}
                         value={0}
                         vertical={false}
@@ -5050,6 +5079,8 @@ exports[`Input disabled match 1`] = `
                           style={
                             Object {
                               "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
                             }
                           }
                           tabIndex={null}
@@ -5064,6 +5095,7 @@ exports[`Input disabled match 1`] = `
                       max={100}
                       min={0}
                       onClickLabel={[Function]}
+                      reverse={false}
                       upperBound={0}
                       vertical={false}
                     >
