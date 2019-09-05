@@ -12,6 +12,11 @@ function Toast({
     className: classNameProp,
     overrides: overridesProp,
     containerId,
+    closeButton,
+    closeButtonClassName,
+    newestOnTop,
+    position,
+    autoClose,
     ...props
 }) {
     // Overrides
@@ -23,10 +28,13 @@ function Toast({
     const rootProps = {
         ...props,
         className: rootClassName,
-        closeButton: false,
+        closeButton: closeButton || false,
+        closeButtonClassName: closeButtonClassName || '',
         hideProgressBar: true,
-        autoClose: 4000,
+        autoClose: autoClose,
         containerId: containerId || 'hoi-poi-ui',
+        newestOnTop: newestOnTop || false,
+        position: position,
     };
 
     return <ToastContainer {...rootProps} enableMultiContainer {...override['react-toastify']} />;
@@ -37,12 +45,20 @@ Toast.overrides = [];
 Toast.defaultProps = {
     className: '',
     overrides: {},
+    autoClose: 4000,
 };
 
 Toast.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     containerId: PropTypes.any,
+    content: PropTypes.element,
+    closeButton: PropTypes.element,
+    closeButtonClassName: PropTypes.string,
+    closeOnClick: PropTypes.bool,
+    newestOnTop: PropTypes.bool,
+    position: PropTypes.oneOf(['top-right', 'top-left', 'bottom-right', 'bottom-left']),
+    autoClose: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
 };
 
 export default React.memo(withStyles(styles, { name: 'Toast' })(Toast));

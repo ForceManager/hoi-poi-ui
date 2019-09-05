@@ -245,6 +245,7 @@ exports[`Toast default match 1`] = `
     >
       <JssContextSubscriber>
         <WithStyles(Toast)
+          autoClose={4000}
           className=""
           innerRef={null}
           jssContext={
@@ -493,13 +494,20 @@ exports[`Toast default match 1`] = `
           }
         >
           <Toast
+            autoClose={4000}
             className=""
             classes={
               Object {
+                "@keyframes Toastify__bounceInDown": undefined,
+                "@keyframes Toastify__bounceInLeft": undefined,
                 "@keyframes Toastify__bounceInRight": undefined,
+                "@keyframes Toastify__bounceInUp": undefined,
+                "@keyframes Toastify__bounceOutDown": undefined,
+                "@keyframes Toastify__bounceOutLeft": undefined,
                 "@keyframes Toastify__bounceOutRight": undefined,
+                "@keyframes Toastify__bounceOutUp": undefined,
                 "@keyframes Toastify__trackProgress": undefined,
-                "root": "HoiPoi__Toast__root-1-3",
+                "root": "HoiPoi__Toast__root-1-9",
               }
             }
             overrides={Object {}}
@@ -507,8 +515,9 @@ exports[`Toast default match 1`] = `
             <ToastContainer
               autoClose={4000}
               bodyClassName={null}
-              className="HoiPoi__Toast__root-1-3"
+              className="HoiPoi__Toast__root-1-9"
               closeButton={false}
+              closeButtonClassName=""
               closeOnClick={true}
               containerId="hoi-poi-ui"
               draggable={true}
