@@ -14,7 +14,7 @@ function Duplicate({ color, ...props }) {
                     <use xlinkHref="#a" />
                 </mask>
                 <use fill="#8C949C" fillRule="nonzero" xlinkHref="#a" />
-                <g mask="url(#b)" fill={color}>
+                <g>
                     <path d="M0 0h10v10H0z" />
                 </g>
             </g>
