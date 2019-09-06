@@ -1,6 +1,5 @@
-import { toast } from 'react-toastify';
 import Toast from './Toast';
 import showToast from './showToast';
+import dismissToast from './dismissToast';
 
-const dismiss = toast.dismiss;
-export { Toast, showToast as toast, dismiss };
+export { Toast, showToast as toast, dismissToast };

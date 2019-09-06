@@ -1,7 +1,7 @@
 Default Toast:
 
 ```jsx
-import { Button, Input, RadioGroup, toast } from 'hoi-poi-ui';
+import { Button, Input, RadioGroup, toast, dismissToast } from 'hoi-poi-ui';
 
 const state = {
     title: 'Lorem',
@@ -11,6 +11,7 @@ const state = {
     autoClose: 2000,
     newestOnTop: false,
     closeOnClick: true,
+    toastId: '',
     ...state,
 };
 
@@ -153,18 +154,40 @@ let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnCli
     <Button
         color="primary"
         onClick={() =>
-            toast({
-                content: <div className="custom-content">Component as content</div>,
-                closeButton: <div style={{ color: 'white' }}>close</div>,
-                closeButtonClassName: 'custom-closeButton-className',
-                position: state.position,
-                autoClose: state.autoClose,
-                closeOnClick: state.closeOnClick,
-                className: 'custom-one',
+            setState({
+                toastId: toast({
+                    content: <div className="custom-content">Component as content</div>,
+                    closeButton: <div style={{ color: 'white' }}>close</div>,
+                    closeButtonClassName: 'custom-closeButton-className',
+                    position: state.position,
+                    autoClose: state.autoClose,
+                    closeOnClick: state.closeOnClick,
+                    className: 'custom-one',
+                }),
             })
         }
     >
         Show Custom Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        color="secondary"
+        onClick={() => {
+            dismissToast(state.toastId);
+        }}
+    >
+        Dismiss Toast Via Id
+    </Button>
+    <br />
+    <br />
+    <Button
+        color="secondary"
+        onClick={() => {
+            dismissToast();
+        }}
+    >
+        Dismiss All Toast
     </Button>
 </div>;
 ```
