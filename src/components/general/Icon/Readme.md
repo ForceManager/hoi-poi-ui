@@ -43,6 +43,8 @@ Icons:
 <span> </span>
 <Icon name="arrowBottom" />
 <span> </span>
+<Icon name="funnel" />
+<span> </span>
 ```
 
 Sizes:
