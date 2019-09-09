@@ -15,6 +15,7 @@ function RadioGroup({
     classes,
     options,
     onChange,
+    onBlur,
     value,
     label,
     labelMode,
@@ -63,6 +64,7 @@ function RadioGroup({
                         option={option}
                         value={value}
                         onChange={onChange}
+                        onBlur={onBlur}
                     />
                 ))}
             </div>

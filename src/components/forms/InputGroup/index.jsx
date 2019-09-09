@@ -18,6 +18,7 @@ function InputGroup({
     name,
     type,
     onChange,
+    onBlur,
     value,
     labelMode,
     isFullWidth,
@@ -67,6 +68,17 @@ function InputGroup({
         [onChange, value],
     );
 
+    const onBlurInput = useCallback(
+        (name, inputValue) => {
+            onBlur &&
+                onBlur({
+                    ...value,
+                    [name]: inputValue ? inputValue : '',
+                });
+        },
+        [onBlur, value],
+    );
+
     // Principal inputs
     const inputProps = {
         id,
@@ -82,6 +94,7 @@ function InputGroup({
         label: inputs[0].label,
         value: value[inputs[0].name],
         onChange: onChangeInput,
+        onBlur: onBlurInput,
         className: classes.Input,
         ...override.Input,
     };

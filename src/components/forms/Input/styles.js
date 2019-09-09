@@ -59,10 +59,10 @@ export default (theme) => ({
         paddingBottom: '30px !important',
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.red}`,
+                borderBottom: `1px solid ${theme.colors.red} !important`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.red}`,
+                borderBottom: `1px solid ${theme.colors.red} !important`,
             },
         },
     },

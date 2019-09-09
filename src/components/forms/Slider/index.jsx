@@ -104,7 +104,13 @@ function Slider({
         className: classes.slider,
         value: innerValue,
         onChange: onChange,
-        onAfterChange: props.onChange,
+        onAfterChange: useCallback(
+            (...args) => {
+                props.onChange && props.onChange(...args);
+                props.onBlur && props.onBlur(...args);
+            },
+            [props],
+        ),
         disabled: isReadOnly,
         max,
         min,

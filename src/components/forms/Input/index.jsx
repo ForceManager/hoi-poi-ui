@@ -75,14 +75,14 @@ function Input({
         onFocus: useCallback(
             (e) => {
                 setFocused(true);
-                onFocus && onFocus();
+                onFocus && onFocus(e);
             },
             [onFocus],
         ),
         onBlur: useCallback(
             (e) => {
                 setFocused(false);
-                onBlur && onBlur();
+                onBlur && onBlur(e);
             },
             [onBlur],
         ),

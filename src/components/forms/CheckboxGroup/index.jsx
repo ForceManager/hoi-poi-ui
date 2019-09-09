@@ -14,6 +14,7 @@ function CheckboxGroup({
     classes,
     options,
     onChange,
+    onBlur,
     value,
     label,
     labelMode,
@@ -58,8 +59,13 @@ function CheckboxGroup({
                     ...value,
                     [option]: !value[option],
                 });
+            onBlur &&
+                onBlur({
+                    ...value,
+                    [option]: !value[option],
+                });
         },
-        [onChange, value],
+        [onBlur, onChange, value],
     );
 
     return (

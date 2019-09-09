@@ -21,6 +21,7 @@ function Select({
     className: classNameProp,
     classes,
     onChange,
+    onBlur,
     id,
     name,
     options,
@@ -82,7 +83,13 @@ function Select({
         placeholder,
         options,
         value,
-        onChange,
+        onChange: useCallback(
+            (...args) => {
+                onchange && onChange(...args);
+                onBlur && onBlur(...args);
+            },
+            [onBlur, onChange],
+        ),
         isDisabled: isReadOnly,
         isClearable,
         hideSelectedOptions,
