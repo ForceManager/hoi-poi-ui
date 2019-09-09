@@ -72,6 +72,21 @@ function Form({
         [onBlur, values],
     );
 
+    const onEnterField = useCallback(
+        (value, field) => {
+            onSubmit &&
+                onSubmit(
+                    {
+                        ...values,
+                        [field.name]: value,
+                    },
+                    field,
+                    value,
+                );
+        },
+        [onSubmit, values],
+    );
+
     const content = schema.map((section, index) => (
         <Section
             key={index}
@@ -91,6 +106,7 @@ function Form({
                         field={field}
                         value={value}
                         error={errors[field.name]}
+                        onEnter={onEnterField}
                         onChange={onChangeField}
                         onFocus={onFocusField}
                         onBlur={onBlurField}
@@ -104,13 +120,7 @@ function Form({
     ));
 
     const withForm = (children) => (
-        <form
-            onSubmit={onSubmit}
-            className={classNameProp}
-            action=""
-            autoComplete="off"
-            {...override.root}
-        >
+        <form className={classNameProp} action="" autoComplete="off" {...override.root}>
             {children}
         </form>
     );
@@ -159,7 +169,7 @@ Form.propTypes = {
                 PropTypes.shape({
                     label: PropTypes.string,
                     labelMode: PropTypes.string,
-                    isFullWidth: PropTypes.string,
+                    isFullWidth: PropTypes.bool,
                     name: PropTypes.string,
                     type: PropTypes.string,
                     placeholder: PropTypes.string,

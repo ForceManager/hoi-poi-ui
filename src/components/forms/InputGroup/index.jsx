@@ -19,6 +19,8 @@ function InputGroup({
     type,
     onChange,
     onBlur,
+    onFocus,
+    onEnter,
     value,
     labelMode,
     isFullWidth,
@@ -79,6 +81,28 @@ function InputGroup({
         [onBlur, value],
     );
 
+    const onEnterInput = useCallback(
+        (name, inputValue) => {
+            onEnter &&
+                onEnter({
+                    ...value,
+                    [name]: inputValue ? inputValue : '',
+                });
+        },
+        [onEnter, value],
+    );
+
+    const onFocusInput = useCallback(
+        (name, inputValue) => {
+            onFocus &&
+                onFocus({
+                    ...value,
+                    [name]: inputValue ? inputValue : '',
+                });
+        },
+        [onFocus, value],
+    );
+
     // Principal inputs
     const inputProps = {
         id,
@@ -94,7 +118,9 @@ function InputGroup({
         label: inputs[0].label,
         value: value[inputs[0].name],
         onChange: onChangeInput,
+        onFocus: onFocusInput,
         onBlur: onBlurInput,
+        onEnter: onEnterInput,
         className: classes.Input,
         ...override.Input,
     };

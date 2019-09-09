@@ -15,6 +15,7 @@ function Input({
     onChange,
     onFocus,
     onBlur,
+    onEnter,
     id,
     name,
     type,
@@ -85,6 +86,14 @@ function Input({
                 onBlur && onBlur(e);
             },
             [onBlur],
+        ),
+        onKeyDown: useCallback(
+            (e) => {
+                if (e.key === 'Enter') {
+                    onEnter && onEnter(e);
+                }
+            },
+            [onEnter],
         ),
         ...override.input,
     };
@@ -162,6 +171,7 @@ Input.propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
+    onEnter: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
     /** Native input name */
