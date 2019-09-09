@@ -14,6 +14,7 @@ function Form({
     isFullWidth,
     isReadOnly,
     schema,
+    onSubmit,
     onChange,
     onFocus,
     onBlur,
@@ -103,7 +104,13 @@ function Form({
     ));
 
     const withForm = (children) => (
-        <form className={classNameProp} action="" autoComplete="off" {...override.root}>
+        <form
+            onSubmit={onSubmit}
+            className={classNameProp}
+            action=""
+            autoComplete="off"
+            {...override.root}
+        >
             {children}
         </form>
     );
@@ -138,6 +145,9 @@ Form.propTypes = {
     isReadOnly: PropTypes.bool,
     values: PropTypes.object,
     errors: PropTypes.object,
+    onChange: PropTypes.func,
+    onBlur: PropTypes.func,
+    onSubmit: PropTypes.func,
     customFields: PropTypes.object,
     useNativeForm: PropTypes.bool,
     schema: PropTypes.arrayOf(
