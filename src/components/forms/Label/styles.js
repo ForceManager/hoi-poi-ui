@@ -2,8 +2,7 @@ export default (theme) => ({
     root: {
         ...theme.typography.defaultText,
         lineHeight: '20px',
-        fontWeight: 500,
-        color: theme.colors.text.black,
+        color: theme.colors.text.greySoft,
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',

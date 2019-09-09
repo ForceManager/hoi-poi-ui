@@ -1,0 +1,89 @@
+[
+    {
+        "fields": [
+            {
+                "label": "Name",
+                "labelMode": "vertical",
+                "name": "name",
+                "type": "text",
+                "placeholder": "Your name",
+                "className": "field-name",
+                "isRequired": true
+            },
+            {
+                "label": "Email",
+                "labelMode": "vertical",
+                "name": "email",
+                "type": "text",
+                "placeholder": "Your email",
+                "hint": "No spam!",
+                "isReadOnly": true,
+                "attrs": {
+                    "type": "email"
+                }
+            },
+            {
+                "label": "Password",
+                "labelMode": "vertical",
+                "name": "password",
+                "type": "text",
+                "placeholder": "Your password",
+                "isRequired": true,
+                "attrs": {
+                    "type": "password"
+                }
+            },
+            {
+                "label": "Gender",
+                "labelMode": "vertical",
+                "name": "gender",
+                "type": "select",
+                "placeholder": "Select your gender",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Male",
+                            "value": "male"
+                        },
+                        {
+                            "label": "Female",
+                            "value": "female"
+                        },
+                        {
+                            "label": "Other",
+                            "value": "other"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Employment status",
+                "labelMode": "vertical",
+                "name": "employmentStatus",
+                "type": "radioGroup",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Employee",
+                            "value": "employee"
+                        },
+                        {
+                            "label": "Worker",
+                            "value": "worker"
+                        },
+                        {
+                            "label": "Self-employed",
+                            "value": "self-employed"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Interest",
+                "labelMode": "vertical",
+                "name": "interest",
+                "type": "slider"
+            }
+        ]
+    }
+]
