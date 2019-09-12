@@ -27,7 +27,16 @@ return <pre>{JSON.stringify(schema, null, 4)}</pre>;
 **Types:**
 
 ```jsx
-const types = ['text', 'inputGroup', 'checkboxGroup', 'radioGroup', 'select', 'slider'];
+const types = [
+    'text',
+    'inputGroup',
+    'checkbox',
+    'checkboxGroup',
+    'radioGroup',
+    'select',
+    'slider',
+    'multiplier',
+];
 
 return <pre>{JSON.stringify(types, null, 4)}</pre>;
 ```

@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import { getOverrides } from '../../../utils/overrides';
-import Checkbox from '../../forms/Checkbox';
+import Checkbox from '../../general/Checkbox';
 import styles from './styles';
 
 function CheckboxControl({

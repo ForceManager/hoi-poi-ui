@@ -8,10 +8,12 @@ import RadioGroup from '../RadioGroup';
 import Select from '../Select';
 import Slider from '../Slider';
 import Multiplier from '../Multiplier';
+import CheckboxInput from '../CheckboxInput';
 
 const FIELD_MAP = {
     text: Input,
     inputGroup: InputGroup,
+    checkbox: CheckboxInput,
     checkboxGroup: CheckboxGroup,
     radioGroup: RadioGroup,
     select: Select,
@@ -106,7 +108,7 @@ FieldControl.propTypes = {
     isFullWidth: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     value: PropTypes.any,
-    error: PropTypes.string,
+    error: PropTypes.any,
     className: PropTypes.string,
     customFields: PropTypes.object,
     onChange: PropTypes.func,

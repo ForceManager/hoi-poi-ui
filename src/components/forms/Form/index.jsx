@@ -29,15 +29,19 @@ function Form({
 
     const onChangeField = useCallback(
         (value, field) => {
-            onChange &&
-                onChange(
-                    {
-                        ...values,
-                        [field.name]: value,
-                    },
-                    field,
-                    value,
-                );
+            let newValues = {
+                ...values,
+                [field.name]: value,
+            };
+
+            if (field.type === 'inputGroup') {
+                newValues = {
+                    ...values,
+                    ...value,
+                };
+            }
+
+            onChange && onChange(newValues, field, value);
         },
         [values, onChange],
     );
@@ -96,7 +100,10 @@ function Form({
             {...override.Section}
         >
             {section.fields.map((field) => {
-                const value = values && values[field.name] ? values[field.name] : undefined;
+                let value = values && values[field.name] ? values[field.name] : undefined;
+                if (field.type === 'inputGroup') {
+                    value = values;
+                }
                 return (
                     <FieldControl
                         key={field.name}

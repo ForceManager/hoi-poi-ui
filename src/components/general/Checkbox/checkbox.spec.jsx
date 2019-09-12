@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Checkbox from '../../forms/Checkbox';
+import Checkbox from '../../general/Checkbox';
 
 describe('Checkbox', () => {
     test('unchecked match snapshot', () => {

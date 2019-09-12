@@ -141,7 +141,10 @@ function InputGroup({
     return (
         <div {...rootProps} {...override.root}>
             <div className={classes.formControl} {...override.formControl}>
-                <InputControl {...inputProps} />
+                <InputControl
+                    {...inputProps}
+                    placeholder={inputsProps.placeholder || inputs[0].placeholder}
+                />
                 <Link size="small" onClick={onLinkClick} {...override.Link}>
                     {showInputs ? hideInputsLabel : showInputsLabel}
                 </Link>
@@ -156,6 +159,7 @@ function InputGroup({
                         onChange={onChangeInput}
                         overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
                         {...inputsProps}
+                        placeholder={input.placeholder || inputsProps.placeholder}
                     />
                 ))}
             </div>

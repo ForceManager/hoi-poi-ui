@@ -16,10 +16,11 @@ export { default as Tabs } from './components/general/Tabs';
 export { default as Modal } from './components/general/Modal';
 export { default as Menus } from './components/general/Menus';
 export { default as Stepper } from './components/general/Stepper';
+export { default as Checkbox } from './components/general/Checkbox';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
-export { default as Checkbox } from './components/forms/Checkbox';
+export { default as CheckboxInput } from './components/forms/CheckboxInput';
 export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
 export { default as Label } from './components/forms/Label';
 export { default as Input } from './components/forms/Input';
