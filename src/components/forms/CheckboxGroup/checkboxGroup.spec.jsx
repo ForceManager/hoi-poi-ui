@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import CheckboxGroup from '../../general/CheckboxGroup';
+import CheckboxGroup from '../../forms/CheckboxGroup';
 
 describe('CheckboxGroup', () => {
     test('default match', () => {
