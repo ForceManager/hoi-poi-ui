@@ -71,7 +71,7 @@ function Input({
         placeholder,
         value,
         onChange,
-        readOnly: isReadOnly,
+        isReadOnly,
         onFocus: useCallback(
             (e) => {
                 setFocused(true);
@@ -103,7 +103,7 @@ function Input({
 
     if (isReadOnly) {
         renderedPostComponent = (
-            <span onClick={postComponentClick} className={classes.postCloseComponent}>
+            <span className={classes.postCloseComponent}>
                 <Icon name="lock" />
             </span>
         );
