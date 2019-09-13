@@ -14,6 +14,7 @@ function Form({
     isFullWidth,
     isReadOnly,
     schema,
+    onSubmit,
     onChange,
     onFocus,
     onBlur,
@@ -28,15 +29,19 @@ function Form({
 
     const onChangeField = useCallback(
         (value, field) => {
-            onChange &&
-                onChange(
-                    {
-                        ...values,
-                        [field.name]: value,
-                    },
-                    field,
-                    value,
-                );
+            let newValues = {
+                ...values,
+                [field.name]: value,
+            };
+
+            if (field.type === 'inputGroup') {
+                newValues = {
+                    ...values,
+                    ...value,
+                };
+            }
+
+            onChange && onChange(newValues, field, value);
         },
         [values, onChange],
     );
@@ -71,6 +76,21 @@ function Form({
         [onBlur, values],
     );
 
+    const onEnterField = useCallback(
+        (value, field) => {
+            onSubmit &&
+                onSubmit(
+                    {
+                        ...values,
+                        [field.name]: value,
+                    },
+                    field,
+                    value,
+                );
+        },
+        [onSubmit, values],
+    );
+
     const content = schema.map((section, index) => (
         <Section
             key={index}
@@ -80,7 +100,10 @@ function Form({
             {...override.Section}
         >
             {section.fields.map((field) => {
-                const value = values && values[field.name] ? values[field.name] : undefined;
+                let value = values && values[field.name] ? values[field.name] : undefined;
+                if (field.type === 'inputGroup') {
+                    value = values;
+                }
                 return (
                     <FieldControl
                         key={field.name}
@@ -90,6 +113,7 @@ function Form({
                         field={field}
                         value={value}
                         error={errors[field.name]}
+                        onEnter={onEnterField}
                         onChange={onChangeField}
                         onFocus={onFocusField}
                         onBlur={onBlurField}
@@ -138,6 +162,9 @@ Form.propTypes = {
     isReadOnly: PropTypes.bool,
     values: PropTypes.object,
     errors: PropTypes.object,
+    onChange: PropTypes.func,
+    onBlur: PropTypes.func,
+    onSubmit: PropTypes.func,
     customFields: PropTypes.object,
     useNativeForm: PropTypes.bool,
     schema: PropTypes.arrayOf(
@@ -149,7 +176,7 @@ Form.propTypes = {
                 PropTypes.shape({
                     label: PropTypes.string,
                     labelMode: PropTypes.string,
-                    isFullWidth: PropTypes.string,
+                    isFullWidth: PropTypes.bool,
                     name: PropTypes.string,
                     type: PropTypes.string,
                     placeholder: PropTypes.string,

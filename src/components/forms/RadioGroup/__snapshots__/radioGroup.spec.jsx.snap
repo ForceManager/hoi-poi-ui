@@ -103,13 +103,21 @@ exports[`RadioGroup default match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -231,7 +239,7 @@ exports[`RadioGroup default match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -263,10 +271,13 @@ exports[`RadioGroup default match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -388,26 +399,26 @@ exports[`RadioGroup default match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740984": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "1": SheetsManager {
+                "-9007199254740985": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "6": SheetsManager {
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -541,12 +552,13 @@ exports[`RadioGroup default match 1`] = `
               Object {
                 "Label": "HoiPoi__RadioGroup__Label-1-1",
                 "formControl": "HoiPoi__RadioGroup__formControl-1-2",
-                "horizontal": "HoiPoi__RadioGroup__horizontal-1-7",
-                "isReadOnly": "HoiPoi__RadioGroup__isReadOnly-1-5",
-                "radioControl": "HoiPoi__RadioGroup__radioControl-1-3",
-                "radioLabel": "HoiPoi__RadioGroup__radioLabel-1-4",
+                "horizontal": "HoiPoi__RadioGroup__horizontal-1-8",
+                "isFullWidth": "HoiPoi__RadioGroup__isFullWidth-1-3",
+                "isReadOnly": "HoiPoi__RadioGroup__isReadOnly-1-6",
+                "radioControl": "HoiPoi__RadioGroup__radioControl-1-4",
+                "radioLabel": "HoiPoi__RadioGroup__radioLabel-1-5",
                 "root": "HoiPoi__RadioGroup__root-1-0",
-                "vertical": "HoiPoi__RadioGroup__vertical-1-6",
+                "vertical": "HoiPoi__RadioGroup__vertical-1-7",
               }
             }
             isReadOnly={false}
@@ -573,7 +585,7 @@ exports[`RadioGroup default match 1`] = `
             value={null}
           >
             <div
-              className="HoiPoi__RadioGroup__root-1-0 HoiPoi__RadioGroup__horizontal-1-7"
+              className="HoiPoi__RadioGroup__root-1-0 HoiPoi__RadioGroup__horizontal-1-8"
             >
               <JssContextSubscriber
                 className="HoiPoi__RadioGroup__Label-1-1"
@@ -586,10 +598,13 @@ exports[`RadioGroup default match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -711,26 +726,26 @@ exports[`RadioGroup default match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740984": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "1": SheetsManager {
+                        "-9007199254740985": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "6": SheetsManager {
+                        "-9007199254740990": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -842,23 +857,22 @@ exports[`RadioGroup default match 1`] = `
                     className="HoiPoi__RadioGroup__Label-1-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-1-9",
-                        "icon": "HoiPoi__Label__icon-1-11",
-                        "info": "HoiPoi__Label__info-1-10",
-                        "root": "HoiPoi__Label__root-1-8",
+                        "Text": "HoiPoi__Label__Text-1-10",
+                        "icon": "HoiPoi__Label__icon-1-12",
+                        "info": "HoiPoi__Label__info-1-11",
+                        "root": "HoiPoi__Label__root-1-9",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-1-8 HoiPoi__RadioGroup__Label-1-1"
+                      className="HoiPoi__Label__root-1-9 HoiPoi__RadioGroup__Label-1-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-1-9"
+                        className="HoiPoi__Label__Text-1-10"
                         overrides={Object {}}
-                        type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-1-9"
+                          className="HoiPoi__Label__Text-1-10"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -866,10 +880,13 @@ exports[`RadioGroup default match 1`] = `
                               "disableStylesGeneration": false,
                               "jss": Jss {
                                 "generateId": [Function],
-                                "id": 2,
+                                "id": 3,
                                 "options": Object {
                                   "Renderer": [Function],
                                   "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
                                   "plugins": Array [],
                                 },
                                 "plugins": PluginsRegistry {
@@ -991,26 +1008,26 @@ exports[`RadioGroup default match 1`] = `
                                     ],
                                   },
                                 },
-                                "version": "10.0.0-alpha.16",
+                                "version": "10.0.0-alpha.21",
                               },
                               "managers": Object {
-                                "0": SheetsManager {
+                                "-9007199254740984": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "1": SheetsManager {
+                                "-9007199254740985": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "5": SheetsManager {
+                                "-9007199254740986": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "6": SheetsManager {
+                                "-9007199254740990": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "7": SheetsManager {
+                                "-9007199254740991": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
@@ -1119,32 +1136,32 @@ exports[`RadioGroup default match 1`] = `
                               },
                             }
                           }
-                          type="bold"
+                          type="normal"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-1-9"
+                            className="HoiPoi__Label__Text-1-10"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-1-22",
-                                "big": "HoiPoi__Text__big-1-17",
-                                "bold": "HoiPoi__Text__bold-1-18",
-                                "isLoading": "HoiPoi__Text__isLoading-1-21",
-                                "large": "HoiPoi__Text__large-1-16",
-                                "light": "HoiPoi__Text__light-1-20",
-                                "medium": "HoiPoi__Text__medium-1-15",
-                                "normal": "HoiPoi__Text__normal-1-19",
-                                "root": "HoiPoi__Text__root-1-12",
-                                "small": "HoiPoi__Text__small-1-14",
-                                "truncated": "HoiPoi__Text__truncated-1-13",
+                                "Loader": "HoiPoi__Text__Loader-1-23",
+                                "big": "HoiPoi__Text__big-1-18",
+                                "bold": "HoiPoi__Text__bold-1-19",
+                                "isLoading": "HoiPoi__Text__isLoading-1-22",
+                                "large": "HoiPoi__Text__large-1-17",
+                                "light": "HoiPoi__Text__light-1-21",
+                                "medium": "HoiPoi__Text__medium-1-16",
+                                "normal": "HoiPoi__Text__normal-1-20",
+                                "root": "HoiPoi__Text__root-1-13",
+                                "small": "HoiPoi__Text__small-1-15",
+                                "truncated": "HoiPoi__Text__truncated-1-14",
                               }
                             }
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
-                            type="bold"
+                            type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-12 HoiPoi__Text__bold-1-18 HoiPoi__Text__medium-1-15 HoiPoi__Label__Text-1-9"
+                              className="HoiPoi__Text__root-1-13 HoiPoi__Text__normal-1-20 HoiPoi__Text__medium-1-16 HoiPoi__Label__Text-1-10"
                             >
                               Lorem ipsum
                             </span>
@@ -1180,10 +1197,13 @@ exports[`RadioGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -1305,26 +1325,26 @@ exports[`RadioGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -1445,14 +1465,15 @@ exports[`RadioGroup default match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-1-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-1-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-1-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-1-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-27",
-                          "root": "HoiPoi__RadioControl__root-1-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-1-29",
+                          "Label": "HoiPoi__RadioControl__Label-1-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-1-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-1-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-1-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-1-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-29",
+                          "root": "HoiPoi__RadioControl__root-1-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-1-31",
                         }
                       }
                       isReadOnly={false}
@@ -1468,7 +1489,7 @@ exports[`RadioGroup default match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-1-26"
+                        className="HoiPoi__RadioControl__radioControl-1-28"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -1484,10 +1505,13 @@ exports[`RadioGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -1609,26 +1633,26 @@ exports[`RadioGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -1742,9 +1766,9 @@ exports[`RadioGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-1-33",
-                                  "input": "HoiPoi__Radio__input-1-32",
-                                  "root": "HoiPoi__Radio__root-1-31",
+                                  "disabled": "HoiPoi__Radio__disabled-1-35",
+                                  "input": "HoiPoi__Radio__input-1-34",
+                                  "root": "HoiPoi__Radio__root-1-33",
                                 }
                               }
                               isDisabled={false}
@@ -1752,7 +1776,7 @@ exports[`RadioGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-1-31"
+                                className="HoiPoi__Radio__root-1-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -1889,7 +1913,7 @@ exports[`RadioGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-1-32"
+                                  className="HoiPoi__Radio__input-1-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -1899,7 +1923,7 @@ exports[`RadioGroup default match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-1-27"
+                          className="HoiPoi__RadioControl__radioLabel-1-29"
                         >
                           Lorem ipsum
                         </span>
@@ -1929,10 +1953,13 @@ exports[`RadioGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -2054,26 +2081,26 @@ exports[`RadioGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -2194,14 +2221,15 @@ exports[`RadioGroup default match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-1-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-1-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-1-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-1-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-27",
-                          "root": "HoiPoi__RadioControl__root-1-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-1-29",
+                          "Label": "HoiPoi__RadioControl__Label-1-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-1-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-1-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-1-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-1-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-29",
+                          "root": "HoiPoi__RadioControl__root-1-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-1-31",
                         }
                       }
                       isReadOnly={false}
@@ -2217,7 +2245,7 @@ exports[`RadioGroup default match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-1-26"
+                        className="HoiPoi__RadioControl__radioControl-1-28"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -2233,10 +2261,13 @@ exports[`RadioGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -2358,26 +2389,26 @@ exports[`RadioGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -2491,9 +2522,9 @@ exports[`RadioGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-1-33",
-                                  "input": "HoiPoi__Radio__input-1-32",
-                                  "root": "HoiPoi__Radio__root-1-31",
+                                  "disabled": "HoiPoi__Radio__disabled-1-35",
+                                  "input": "HoiPoi__Radio__input-1-34",
+                                  "root": "HoiPoi__Radio__root-1-33",
                                 }
                               }
                               isDisabled={false}
@@ -2501,7 +2532,7 @@ exports[`RadioGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-1-31"
+                                className="HoiPoi__Radio__root-1-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2638,7 +2669,7 @@ exports[`RadioGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-1-32"
+                                  className="HoiPoi__Radio__input-1-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -2648,7 +2679,7 @@ exports[`RadioGroup default match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-1-27"
+                          className="HoiPoi__RadioControl__radioLabel-1-29"
                         >
                           Lorem ipsum 2
                         </span>
@@ -2678,10 +2709,13 @@ exports[`RadioGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -2803,26 +2837,26 @@ exports[`RadioGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -2943,14 +2977,15 @@ exports[`RadioGroup default match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-1-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-1-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-1-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-1-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-27",
-                          "root": "HoiPoi__RadioControl__root-1-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-1-29",
+                          "Label": "HoiPoi__RadioControl__Label-1-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-1-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-1-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-1-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-1-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-1-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-1-29",
+                          "root": "HoiPoi__RadioControl__root-1-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-1-31",
                         }
                       }
                       isReadOnly={false}
@@ -2966,7 +3001,7 @@ exports[`RadioGroup default match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-1-26"
+                        className="HoiPoi__RadioControl__radioControl-1-28"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -2982,10 +3017,13 @@ exports[`RadioGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -3107,26 +3145,26 @@ exports[`RadioGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -3240,9 +3278,9 @@ exports[`RadioGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-1-33",
-                                  "input": "HoiPoi__Radio__input-1-32",
-                                  "root": "HoiPoi__Radio__root-1-31",
+                                  "disabled": "HoiPoi__Radio__disabled-1-35",
+                                  "input": "HoiPoi__Radio__input-1-34",
+                                  "root": "HoiPoi__Radio__root-1-33",
                                 }
                               }
                               isDisabled={false}
@@ -3250,7 +3288,7 @@ exports[`RadioGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-1-31"
+                                className="HoiPoi__Radio__root-1-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -3387,7 +3425,7 @@ exports[`RadioGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-1-32"
+                                  className="HoiPoi__Radio__input-1-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -3397,7 +3435,7 @@ exports[`RadioGroup default match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-1-27"
+                          className="HoiPoi__RadioControl__radioLabel-1-29"
                         >
                           Lorem ipsum 3
                         </span>
@@ -3518,13 +3556,21 @@ exports[`RadioGroup disabled match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -3646,7 +3692,7 @@ exports[`RadioGroup disabled match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -3679,10 +3725,13 @@ exports[`RadioGroup disabled match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -3804,26 +3853,26 @@ exports[`RadioGroup disabled match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740984": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "1": SheetsManager {
+                "-9007199254740985": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "6": SheetsManager {
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -3957,12 +4006,13 @@ exports[`RadioGroup disabled match 1`] = `
               Object {
                 "Label": "HoiPoi__RadioGroup__Label-3-1",
                 "formControl": "HoiPoi__RadioGroup__formControl-3-2",
-                "horizontal": "HoiPoi__RadioGroup__horizontal-3-7",
-                "isReadOnly": "HoiPoi__RadioGroup__isReadOnly-3-5",
-                "radioControl": "HoiPoi__RadioGroup__radioControl-3-3",
-                "radioLabel": "HoiPoi__RadioGroup__radioLabel-3-4",
+                "horizontal": "HoiPoi__RadioGroup__horizontal-3-8",
+                "isFullWidth": "HoiPoi__RadioGroup__isFullWidth-3-3",
+                "isReadOnly": "HoiPoi__RadioGroup__isReadOnly-3-6",
+                "radioControl": "HoiPoi__RadioGroup__radioControl-3-4",
+                "radioLabel": "HoiPoi__RadioGroup__radioLabel-3-5",
                 "root": "HoiPoi__RadioGroup__root-3-0",
-                "vertical": "HoiPoi__RadioGroup__vertical-3-6",
+                "vertical": "HoiPoi__RadioGroup__vertical-3-7",
               }
             }
             isReadOnly={true}
@@ -3989,7 +4039,7 @@ exports[`RadioGroup disabled match 1`] = `
             value={null}
           >
             <div
-              className="HoiPoi__RadioGroup__root-3-0 HoiPoi__RadioGroup__isReadOnly-3-5 HoiPoi__RadioGroup__horizontal-3-7"
+              className="HoiPoi__RadioGroup__root-3-0 HoiPoi__RadioGroup__isReadOnly-3-6 HoiPoi__RadioGroup__horizontal-3-8"
             >
               <JssContextSubscriber
                 className="HoiPoi__RadioGroup__Label-3-1"
@@ -4002,10 +4052,13 @@ exports[`RadioGroup disabled match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -4127,26 +4180,26 @@ exports[`RadioGroup disabled match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740984": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "1": SheetsManager {
+                        "-9007199254740985": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "6": SheetsManager {
+                        "-9007199254740990": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -4258,23 +4311,22 @@ exports[`RadioGroup disabled match 1`] = `
                     className="HoiPoi__RadioGroup__Label-3-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-3-9",
-                        "icon": "HoiPoi__Label__icon-3-11",
-                        "info": "HoiPoi__Label__info-3-10",
-                        "root": "HoiPoi__Label__root-3-8",
+                        "Text": "HoiPoi__Label__Text-3-10",
+                        "icon": "HoiPoi__Label__icon-3-12",
+                        "info": "HoiPoi__Label__info-3-11",
+                        "root": "HoiPoi__Label__root-3-9",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-3-8 HoiPoi__RadioGroup__Label-3-1"
+                      className="HoiPoi__Label__root-3-9 HoiPoi__RadioGroup__Label-3-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-3-9"
+                        className="HoiPoi__Label__Text-3-10"
                         overrides={Object {}}
-                        type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-3-9"
+                          className="HoiPoi__Label__Text-3-10"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -4282,10 +4334,13 @@ exports[`RadioGroup disabled match 1`] = `
                               "disableStylesGeneration": false,
                               "jss": Jss {
                                 "generateId": [Function],
-                                "id": 2,
+                                "id": 3,
                                 "options": Object {
                                   "Renderer": [Function],
                                   "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
                                   "plugins": Array [],
                                 },
                                 "plugins": PluginsRegistry {
@@ -4407,26 +4462,26 @@ exports[`RadioGroup disabled match 1`] = `
                                     ],
                                   },
                                 },
-                                "version": "10.0.0-alpha.16",
+                                "version": "10.0.0-alpha.21",
                               },
                               "managers": Object {
-                                "0": SheetsManager {
+                                "-9007199254740984": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "1": SheetsManager {
+                                "-9007199254740985": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "5": SheetsManager {
+                                "-9007199254740986": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "6": SheetsManager {
+                                "-9007199254740990": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "7": SheetsManager {
+                                "-9007199254740991": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
@@ -4535,32 +4590,32 @@ exports[`RadioGroup disabled match 1`] = `
                               },
                             }
                           }
-                          type="bold"
+                          type="normal"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-3-9"
+                            className="HoiPoi__Label__Text-3-10"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-3-22",
-                                "big": "HoiPoi__Text__big-3-17",
-                                "bold": "HoiPoi__Text__bold-3-18",
-                                "isLoading": "HoiPoi__Text__isLoading-3-21",
-                                "large": "HoiPoi__Text__large-3-16",
-                                "light": "HoiPoi__Text__light-3-20",
-                                "medium": "HoiPoi__Text__medium-3-15",
-                                "normal": "HoiPoi__Text__normal-3-19",
-                                "root": "HoiPoi__Text__root-3-12",
-                                "small": "HoiPoi__Text__small-3-14",
-                                "truncated": "HoiPoi__Text__truncated-3-13",
+                                "Loader": "HoiPoi__Text__Loader-3-23",
+                                "big": "HoiPoi__Text__big-3-18",
+                                "bold": "HoiPoi__Text__bold-3-19",
+                                "isLoading": "HoiPoi__Text__isLoading-3-22",
+                                "large": "HoiPoi__Text__large-3-17",
+                                "light": "HoiPoi__Text__light-3-21",
+                                "medium": "HoiPoi__Text__medium-3-16",
+                                "normal": "HoiPoi__Text__normal-3-20",
+                                "root": "HoiPoi__Text__root-3-13",
+                                "small": "HoiPoi__Text__small-3-15",
+                                "truncated": "HoiPoi__Text__truncated-3-14",
                               }
                             }
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
-                            type="bold"
+                            type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-3-12 HoiPoi__Text__bold-3-18 HoiPoi__Text__medium-3-15 HoiPoi__Label__Text-3-9"
+                              className="HoiPoi__Text__root-3-13 HoiPoi__Text__normal-3-20 HoiPoi__Text__medium-3-16 HoiPoi__Label__Text-3-10"
                             >
                               Lorem ipsum
                             </span>
@@ -4595,10 +4650,13 @@ exports[`RadioGroup disabled match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -4720,26 +4778,26 @@ exports[`RadioGroup disabled match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -4859,14 +4917,15 @@ exports[`RadioGroup disabled match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-3-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-3-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-3-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-3-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-27",
-                          "root": "HoiPoi__RadioControl__root-3-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-3-29",
+                          "Label": "HoiPoi__RadioControl__Label-3-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-3-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-3-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-3-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-3-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-29",
+                          "root": "HoiPoi__RadioControl__root-3-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-3-31",
                         }
                       }
                       isReadOnly={true}
@@ -4881,7 +4940,7 @@ exports[`RadioGroup disabled match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-3-26"
+                        className="HoiPoi__RadioControl__radioControl-3-28"
                       >
                         <JssContextSubscriber
                           checked={false}
@@ -4896,10 +4955,13 @@ exports[`RadioGroup disabled match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -5021,26 +5083,26 @@ exports[`RadioGroup disabled match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -5154,9 +5216,9 @@ exports[`RadioGroup disabled match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-3-33",
-                                  "input": "HoiPoi__Radio__input-3-32",
-                                  "root": "HoiPoi__Radio__root-3-31",
+                                  "disabled": "HoiPoi__Radio__disabled-3-35",
+                                  "input": "HoiPoi__Radio__input-3-34",
+                                  "root": "HoiPoi__Radio__root-3-33",
                                 }
                               }
                               isDisabled={true}
@@ -5164,7 +5226,7 @@ exports[`RadioGroup disabled match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-3-31 HoiPoi__Radio__disabled-3-33"
+                                className="HoiPoi__Radio__root-3-33 HoiPoi__Radio__disabled-3-35"
                               >
                                 <WithTheme(Unknown)>
                                   <Component
@@ -5300,7 +5362,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-3-32"
+                                  className="HoiPoi__Radio__input-3-34"
                                   disabled="disabled"
                                   type="radio"
                                 />
@@ -5309,7 +5371,7 @@ exports[`RadioGroup disabled match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-3-27"
+                          className="HoiPoi__RadioControl__radioLabel-3-29"
                         >
                           Lorem ipsum
                         </span>
@@ -5338,10 +5400,13 @@ exports[`RadioGroup disabled match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -5463,26 +5528,26 @@ exports[`RadioGroup disabled match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -5602,14 +5667,15 @@ exports[`RadioGroup disabled match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-3-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-3-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-3-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-3-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-27",
-                          "root": "HoiPoi__RadioControl__root-3-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-3-29",
+                          "Label": "HoiPoi__RadioControl__Label-3-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-3-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-3-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-3-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-3-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-29",
+                          "root": "HoiPoi__RadioControl__root-3-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-3-31",
                         }
                       }
                       isReadOnly={true}
@@ -5624,7 +5690,7 @@ exports[`RadioGroup disabled match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-3-26"
+                        className="HoiPoi__RadioControl__radioControl-3-28"
                       >
                         <JssContextSubscriber
                           checked={false}
@@ -5639,10 +5705,13 @@ exports[`RadioGroup disabled match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -5764,26 +5833,26 @@ exports[`RadioGroup disabled match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -5897,9 +5966,9 @@ exports[`RadioGroup disabled match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-3-33",
-                                  "input": "HoiPoi__Radio__input-3-32",
-                                  "root": "HoiPoi__Radio__root-3-31",
+                                  "disabled": "HoiPoi__Radio__disabled-3-35",
+                                  "input": "HoiPoi__Radio__input-3-34",
+                                  "root": "HoiPoi__Radio__root-3-33",
                                 }
                               }
                               isDisabled={true}
@@ -5907,7 +5976,7 @@ exports[`RadioGroup disabled match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-3-31 HoiPoi__Radio__disabled-3-33"
+                                className="HoiPoi__Radio__root-3-33 HoiPoi__Radio__disabled-3-35"
                               >
                                 <WithTheme(Unknown)>
                                   <Component
@@ -6043,7 +6112,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-3-32"
+                                  className="HoiPoi__Radio__input-3-34"
                                   disabled="disabled"
                                   type="radio"
                                 />
@@ -6052,7 +6121,7 @@ exports[`RadioGroup disabled match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-3-27"
+                          className="HoiPoi__RadioControl__radioLabel-3-29"
                         >
                           Lorem ipsum 2
                         </span>
@@ -6081,10 +6150,13 @@ exports[`RadioGroup disabled match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -6206,26 +6278,26 @@ exports[`RadioGroup disabled match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -6345,14 +6417,15 @@ exports[`RadioGroup disabled match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-3-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-3-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-3-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-3-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-27",
-                          "root": "HoiPoi__RadioControl__root-3-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-3-29",
+                          "Label": "HoiPoi__RadioControl__Label-3-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-3-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-3-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-3-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-3-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-3-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-3-29",
+                          "root": "HoiPoi__RadioControl__root-3-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-3-31",
                         }
                       }
                       isReadOnly={true}
@@ -6367,7 +6440,7 @@ exports[`RadioGroup disabled match 1`] = `
                       value={null}
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-3-26"
+                        className="HoiPoi__RadioControl__radioControl-3-28"
                       >
                         <JssContextSubscriber
                           checked={false}
@@ -6382,10 +6455,13 @@ exports[`RadioGroup disabled match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -6507,26 +6583,26 @@ exports[`RadioGroup disabled match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -6640,9 +6716,9 @@ exports[`RadioGroup disabled match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-3-33",
-                                  "input": "HoiPoi__Radio__input-3-32",
-                                  "root": "HoiPoi__Radio__root-3-31",
+                                  "disabled": "HoiPoi__Radio__disabled-3-35",
+                                  "input": "HoiPoi__Radio__input-3-34",
+                                  "root": "HoiPoi__Radio__root-3-33",
                                 }
                               }
                               isDisabled={true}
@@ -6650,7 +6726,7 @@ exports[`RadioGroup disabled match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-3-31 HoiPoi__Radio__disabled-3-33"
+                                className="HoiPoi__Radio__root-3-33 HoiPoi__Radio__disabled-3-35"
                               >
                                 <WithTheme(Unknown)>
                                   <Component
@@ -6786,7 +6862,7 @@ exports[`RadioGroup disabled match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-3-32"
+                                  className="HoiPoi__Radio__input-3-34"
                                   disabled="disabled"
                                   type="radio"
                                 />
@@ -6795,7 +6871,7 @@ exports[`RadioGroup disabled match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-3-27"
+                          className="HoiPoi__RadioControl__radioLabel-3-29"
                         >
                           Lorem ipsum 3
                         </span>
@@ -6916,13 +6992,21 @@ exports[`RadioGroup with values match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -7044,7 +7128,7 @@ exports[`RadioGroup with values match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -7077,10 +7161,13 @@ exports[`RadioGroup with values match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -7202,26 +7289,26 @@ exports[`RadioGroup with values match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740984": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "1": SheetsManager {
+                "-9007199254740985": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "6": SheetsManager {
+                "-9007199254740990": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -7355,12 +7442,13 @@ exports[`RadioGroup with values match 1`] = `
               Object {
                 "Label": "HoiPoi__RadioGroup__Label-2-1",
                 "formControl": "HoiPoi__RadioGroup__formControl-2-2",
-                "horizontal": "HoiPoi__RadioGroup__horizontal-2-7",
-                "isReadOnly": "HoiPoi__RadioGroup__isReadOnly-2-5",
-                "radioControl": "HoiPoi__RadioGroup__radioControl-2-3",
-                "radioLabel": "HoiPoi__RadioGroup__radioLabel-2-4",
+                "horizontal": "HoiPoi__RadioGroup__horizontal-2-8",
+                "isFullWidth": "HoiPoi__RadioGroup__isFullWidth-2-3",
+                "isReadOnly": "HoiPoi__RadioGroup__isReadOnly-2-6",
+                "radioControl": "HoiPoi__RadioGroup__radioControl-2-4",
+                "radioLabel": "HoiPoi__RadioGroup__radioLabel-2-5",
                 "root": "HoiPoi__RadioGroup__root-2-0",
-                "vertical": "HoiPoi__RadioGroup__vertical-2-6",
+                "vertical": "HoiPoi__RadioGroup__vertical-2-7",
               }
             }
             isReadOnly={false}
@@ -7387,7 +7475,7 @@ exports[`RadioGroup with values match 1`] = `
             value="lorem2"
           >
             <div
-              className="HoiPoi__RadioGroup__root-2-0 HoiPoi__RadioGroup__horizontal-2-7"
+              className="HoiPoi__RadioGroup__root-2-0 HoiPoi__RadioGroup__horizontal-2-8"
             >
               <JssContextSubscriber
                 className="HoiPoi__RadioGroup__Label-2-1"
@@ -7400,10 +7488,13 @@ exports[`RadioGroup with values match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -7525,26 +7616,26 @@ exports[`RadioGroup with values match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740984": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "1": SheetsManager {
+                        "-9007199254740985": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "6": SheetsManager {
+                        "-9007199254740990": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -7656,23 +7747,22 @@ exports[`RadioGroup with values match 1`] = `
                     className="HoiPoi__RadioGroup__Label-2-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-2-9",
-                        "icon": "HoiPoi__Label__icon-2-11",
-                        "info": "HoiPoi__Label__info-2-10",
-                        "root": "HoiPoi__Label__root-2-8",
+                        "Text": "HoiPoi__Label__Text-2-10",
+                        "icon": "HoiPoi__Label__icon-2-12",
+                        "info": "HoiPoi__Label__info-2-11",
+                        "root": "HoiPoi__Label__root-2-9",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-2-8 HoiPoi__RadioGroup__Label-2-1"
+                      className="HoiPoi__Label__root-2-9 HoiPoi__RadioGroup__Label-2-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-2-9"
+                        className="HoiPoi__Label__Text-2-10"
                         overrides={Object {}}
-                        type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-2-9"
+                          className="HoiPoi__Label__Text-2-10"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -7680,10 +7770,13 @@ exports[`RadioGroup with values match 1`] = `
                               "disableStylesGeneration": false,
                               "jss": Jss {
                                 "generateId": [Function],
-                                "id": 2,
+                                "id": 3,
                                 "options": Object {
                                   "Renderer": [Function],
                                   "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
                                   "plugins": Array [],
                                 },
                                 "plugins": PluginsRegistry {
@@ -7805,26 +7898,26 @@ exports[`RadioGroup with values match 1`] = `
                                     ],
                                   },
                                 },
-                                "version": "10.0.0-alpha.16",
+                                "version": "10.0.0-alpha.21",
                               },
                               "managers": Object {
-                                "0": SheetsManager {
+                                "-9007199254740984": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "1": SheetsManager {
+                                "-9007199254740985": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "5": SheetsManager {
+                                "-9007199254740986": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "6": SheetsManager {
+                                "-9007199254740990": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "7": SheetsManager {
+                                "-9007199254740991": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
@@ -7933,32 +8026,32 @@ exports[`RadioGroup with values match 1`] = `
                               },
                             }
                           }
-                          type="bold"
+                          type="normal"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-2-9"
+                            className="HoiPoi__Label__Text-2-10"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-2-22",
-                                "big": "HoiPoi__Text__big-2-17",
-                                "bold": "HoiPoi__Text__bold-2-18",
-                                "isLoading": "HoiPoi__Text__isLoading-2-21",
-                                "large": "HoiPoi__Text__large-2-16",
-                                "light": "HoiPoi__Text__light-2-20",
-                                "medium": "HoiPoi__Text__medium-2-15",
-                                "normal": "HoiPoi__Text__normal-2-19",
-                                "root": "HoiPoi__Text__root-2-12",
-                                "small": "HoiPoi__Text__small-2-14",
-                                "truncated": "HoiPoi__Text__truncated-2-13",
+                                "Loader": "HoiPoi__Text__Loader-2-23",
+                                "big": "HoiPoi__Text__big-2-18",
+                                "bold": "HoiPoi__Text__bold-2-19",
+                                "isLoading": "HoiPoi__Text__isLoading-2-22",
+                                "large": "HoiPoi__Text__large-2-17",
+                                "light": "HoiPoi__Text__light-2-21",
+                                "medium": "HoiPoi__Text__medium-2-16",
+                                "normal": "HoiPoi__Text__normal-2-20",
+                                "root": "HoiPoi__Text__root-2-13",
+                                "small": "HoiPoi__Text__small-2-15",
+                                "truncated": "HoiPoi__Text__truncated-2-14",
                               }
                             }
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
-                            type="bold"
+                            type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-12 HoiPoi__Text__bold-2-18 HoiPoi__Text__medium-2-15 HoiPoi__Label__Text-2-9"
+                              className="HoiPoi__Text__root-2-13 HoiPoi__Text__normal-2-20 HoiPoi__Text__medium-2-16 HoiPoi__Label__Text-2-10"
                             >
                               Lorem ipsum
                             </span>
@@ -7994,10 +8087,13 @@ exports[`RadioGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -8119,26 +8215,26 @@ exports[`RadioGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -8259,14 +8355,15 @@ exports[`RadioGroup with values match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-2-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-2-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-2-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-2-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-27",
-                          "root": "HoiPoi__RadioControl__root-2-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-2-29",
+                          "Label": "HoiPoi__RadioControl__Label-2-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-2-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-2-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-2-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-2-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-29",
+                          "root": "HoiPoi__RadioControl__root-2-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-2-31",
                         }
                       }
                       isReadOnly={false}
@@ -8282,7 +8379,7 @@ exports[`RadioGroup with values match 1`] = `
                       value="lorem2"
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-2-26"
+                        className="HoiPoi__RadioControl__radioControl-2-28"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -8298,10 +8395,13 @@ exports[`RadioGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -8423,26 +8523,26 @@ exports[`RadioGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -8556,9 +8656,9 @@ exports[`RadioGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-2-33",
-                                  "input": "HoiPoi__Radio__input-2-32",
-                                  "root": "HoiPoi__Radio__root-2-31",
+                                  "disabled": "HoiPoi__Radio__disabled-2-35",
+                                  "input": "HoiPoi__Radio__input-2-34",
+                                  "root": "HoiPoi__Radio__root-2-33",
                                 }
                               }
                               isDisabled={false}
@@ -8566,7 +8666,7 @@ exports[`RadioGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-2-31"
+                                className="HoiPoi__Radio__root-2-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -8703,7 +8803,7 @@ exports[`RadioGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-2-32"
+                                  className="HoiPoi__Radio__input-2-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -8713,7 +8813,7 @@ exports[`RadioGroup with values match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-2-27"
+                          className="HoiPoi__RadioControl__radioLabel-2-29"
                         >
                           Lorem ipsum
                         </span>
@@ -8743,10 +8843,13 @@ exports[`RadioGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -8868,26 +8971,26 @@ exports[`RadioGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -9008,14 +9111,15 @@ exports[`RadioGroup with values match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-2-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-2-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-2-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-2-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-27",
-                          "root": "HoiPoi__RadioControl__root-2-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-2-29",
+                          "Label": "HoiPoi__RadioControl__Label-2-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-2-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-2-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-2-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-2-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-29",
+                          "root": "HoiPoi__RadioControl__root-2-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-2-31",
                         }
                       }
                       isReadOnly={false}
@@ -9031,7 +9135,7 @@ exports[`RadioGroup with values match 1`] = `
                       value="lorem2"
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-2-26"
+                        className="HoiPoi__RadioControl__radioControl-2-28"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -9047,10 +9151,13 @@ exports[`RadioGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -9172,26 +9279,26 @@ exports[`RadioGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -9305,9 +9412,9 @@ exports[`RadioGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-2-33",
-                                  "input": "HoiPoi__Radio__input-2-32",
-                                  "root": "HoiPoi__Radio__root-2-31",
+                                  "disabled": "HoiPoi__Radio__disabled-2-35",
+                                  "input": "HoiPoi__Radio__input-2-34",
+                                  "root": "HoiPoi__Radio__root-2-33",
                                 }
                               }
                               isDisabled={false}
@@ -9315,7 +9422,7 @@ exports[`RadioGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-2-31"
+                                className="HoiPoi__Radio__root-2-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -9458,7 +9565,7 @@ exports[`RadioGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Radio__input-2-32"
+                                  className="HoiPoi__Radio__input-2-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -9468,7 +9575,7 @@ exports[`RadioGroup with values match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-2-27"
+                          className="HoiPoi__RadioControl__radioLabel-2-29"
                         >
                           Lorem ipsum 2
                         </span>
@@ -9498,10 +9605,13 @@ exports[`RadioGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -9623,26 +9733,26 @@ exports[`RadioGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "0": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "1": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740990": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740991": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -9763,14 +9873,15 @@ exports[`RadioGroup with values match 1`] = `
                     <RadioControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__RadioControl__Label-2-24",
-                          "formControl": "HoiPoi__RadioControl__formControl-2-25",
-                          "horizontal": "HoiPoi__RadioControl__horizontal-2-30",
-                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-28",
-                          "radioControl": "HoiPoi__RadioControl__radioControl-2-26",
-                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-27",
-                          "root": "HoiPoi__RadioControl__root-2-23",
-                          "vertical": "HoiPoi__RadioControl__vertical-2-29",
+                          "Label": "HoiPoi__RadioControl__Label-2-25",
+                          "formControl": "HoiPoi__RadioControl__formControl-2-26",
+                          "horizontal": "HoiPoi__RadioControl__horizontal-2-32",
+                          "isFullWidth": "HoiPoi__RadioControl__isFullWidth-2-27",
+                          "isReadOnly": "HoiPoi__RadioControl__isReadOnly-2-30",
+                          "radioControl": "HoiPoi__RadioControl__radioControl-2-28",
+                          "radioLabel": "HoiPoi__RadioControl__radioLabel-2-29",
+                          "root": "HoiPoi__RadioControl__root-2-24",
+                          "vertical": "HoiPoi__RadioControl__vertical-2-31",
                         }
                       }
                       isReadOnly={false}
@@ -9786,7 +9897,7 @@ exports[`RadioGroup with values match 1`] = `
                       value="lorem2"
                     >
                       <div
-                        className="HoiPoi__RadioControl__radioControl-2-26"
+                        className="HoiPoi__RadioControl__radioControl-2-28"
                         onClick={[Function]}
                       >
                         <JssContextSubscriber
@@ -9802,10 +9913,13 @@ exports[`RadioGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -9927,26 +10041,26 @@ exports[`RadioGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "0": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "1": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740990": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740991": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -10060,9 +10174,9 @@ exports[`RadioGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Radio__disabled-2-33",
-                                  "input": "HoiPoi__Radio__input-2-32",
-                                  "root": "HoiPoi__Radio__root-2-31",
+                                  "disabled": "HoiPoi__Radio__disabled-2-35",
+                                  "input": "HoiPoi__Radio__input-2-34",
+                                  "root": "HoiPoi__Radio__root-2-33",
                                 }
                               }
                               isDisabled={false}
@@ -10070,7 +10184,7 @@ exports[`RadioGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Radio__root-2-31"
+                                className="HoiPoi__Radio__root-2-33"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -10207,7 +10321,7 @@ exports[`RadioGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Radio__input-2-32"
+                                  className="HoiPoi__Radio__input-2-34"
                                   disabled=""
                                   onChange={[Function]}
                                   type="radio"
@@ -10217,7 +10331,7 @@ exports[`RadioGroup with values match 1`] = `
                           </WithStyles(Radio)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__RadioControl__radioLabel-2-27"
+                          className="HoiPoi__RadioControl__radioLabel-2-29"
                         >
                           Lorem ipsum 3
                         </span>

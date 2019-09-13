@@ -2,12 +2,18 @@ import React from 'react';
 
 function Tick({ color, ...props }) {
     return (
-        <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M.912 4.496l-.86.704 3.276 4.004L9.949 1.32 9.1.606l-5.76 6.857z"
-                fill={color}
-                fillRule="nonzero"
-            />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 10 10"
+        >
+            <defs>
+                <path
+                    id="a"
+                    d="M3.475 6.61l-2.32-2.415L0 5.397 3.464 9 10 2.201 8.845 1l-5.37 5.61z"
+                />
+            </defs>
+            <use fill={color} fillRule="evenodd" xlinkHref="#a" />
         </svg>
     );
 }

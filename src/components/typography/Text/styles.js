@@ -1,8 +1,6 @@
 export default (theme) => ({
     root: {
-        display: 'flex',
-        textAlign: 'flex-start',
-        lineHeight: 0,
+        display: 'inherit',
     },
     truncated: {
         whiteSpace: 'nowrap',
@@ -31,7 +29,7 @@ export default (theme) => ({
     },
     bold: {
         fontWeight: 500,
-        color: theme.colors.textBlack,
+        color: theme.colors.text.black,
     },
     normal: {
         fontWeight: 'normal',
@@ -45,5 +43,5 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
     },
-    Loader: { marginRight: 10 },
+    Loader: { marginTop: -2, marginRight: 10 },
 });

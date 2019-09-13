@@ -96,6 +96,7 @@ function Multiplier({
                 customFields={customFields}
                 {...override.multiplierControl}
                 overrides={override}
+                removeIconClassName={classes.removeIcon}
             />,
         );
     }
@@ -151,7 +152,7 @@ Multiplier.propTypes = {
         PropTypes.shape({
             label: PropTypes.string,
             labelMode: PropTypes.string,
-            isFullWidth: PropTypes.string,
+            isFullWidth: PropTypes.bool,
             name: PropTypes.string,
             type: PropTypes.string,
             placeholder: PropTypes.string,

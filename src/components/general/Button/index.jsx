@@ -64,7 +64,7 @@ function Button({
                 <div className={classes.loader}>
                     <Loader
                         size={LOADER_SIZES[size]}
-                        color={['outlined', 'squared'].includes(type) ? color : 'white'}
+                        color={['outlined', 'squared-outlined'].includes(type) ? color : 'white'}
                         {...override.Loader}
                     />
                 </div>

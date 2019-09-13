@@ -103,13 +103,21 @@ exports[`CheckboxGroup default match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -231,7 +239,7 @@ exports[`CheckboxGroup default match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -263,10 +271,13 @@ exports[`CheckboxGroup default match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -388,26 +399,26 @@ exports[`CheckboxGroup default match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "3": SheetsManager {
+                "-9007199254740984": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "4": SheetsManager {
+                "-9007199254740985": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "6": SheetsManager {
+                "-9007199254740987": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740988": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -540,14 +551,15 @@ exports[`CheckboxGroup default match 1`] = `
             classes={
               Object {
                 "Label": "HoiPoi__CheckboxGroup__Label-1-1",
-                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-1-4",
-                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-1-5",
+                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-1-5",
+                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-1-6",
                 "error": "HoiPoi__CheckboxGroup__error-1-2",
                 "formControl": "HoiPoi__CheckboxGroup__formControl-1-3",
-                "horizontal": "HoiPoi__CheckboxGroup__horizontal-1-8",
-                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-1-6",
+                "horizontal": "HoiPoi__CheckboxGroup__horizontal-1-9",
+                "isFullWidth": "HoiPoi__CheckboxGroup__isFullWidth-1-4",
+                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-1-7",
                 "root": "HoiPoi__CheckboxGroup__root-1-0",
-                "vertical": "HoiPoi__CheckboxGroup__vertical-1-7",
+                "vertical": "HoiPoi__CheckboxGroup__vertical-1-8",
               }
             }
             isReadOnly={false}
@@ -574,7 +586,7 @@ exports[`CheckboxGroup default match 1`] = `
             value={Object {}}
           >
             <div
-              className="HoiPoi__CheckboxGroup__root-1-0 HoiPoi__CheckboxGroup__horizontal-1-8"
+              className="HoiPoi__CheckboxGroup__root-1-0 HoiPoi__CheckboxGroup__horizontal-1-9"
             >
               <JssContextSubscriber
                 className="HoiPoi__CheckboxGroup__Label-1-1"
@@ -587,10 +599,13 @@ exports[`CheckboxGroup default match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -712,26 +727,26 @@ exports[`CheckboxGroup default match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "3": SheetsManager {
+                        "-9007199254740984": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "4": SheetsManager {
+                        "-9007199254740985": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "6": SheetsManager {
+                        "-9007199254740987": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740988": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -843,23 +858,22 @@ exports[`CheckboxGroup default match 1`] = `
                     className="HoiPoi__CheckboxGroup__Label-1-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-1-10",
-                        "icon": "HoiPoi__Label__icon-1-12",
-                        "info": "HoiPoi__Label__info-1-11",
-                        "root": "HoiPoi__Label__root-1-9",
+                        "Text": "HoiPoi__Label__Text-1-11",
+                        "icon": "HoiPoi__Label__icon-1-13",
+                        "info": "HoiPoi__Label__info-1-12",
+                        "root": "HoiPoi__Label__root-1-10",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-1-9 HoiPoi__CheckboxGroup__Label-1-1"
+                      className="HoiPoi__Label__root-1-10 HoiPoi__CheckboxGroup__Label-1-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-1-10"
+                        className="HoiPoi__Label__Text-1-11"
                         overrides={Object {}}
-                        type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-1-10"
+                          className="HoiPoi__Label__Text-1-11"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -867,10 +881,13 @@ exports[`CheckboxGroup default match 1`] = `
                               "disableStylesGeneration": false,
                               "jss": Jss {
                                 "generateId": [Function],
-                                "id": 2,
+                                "id": 3,
                                 "options": Object {
                                   "Renderer": [Function],
                                   "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
                                   "plugins": Array [],
                                 },
                                 "plugins": PluginsRegistry {
@@ -992,26 +1009,26 @@ exports[`CheckboxGroup default match 1`] = `
                                     ],
                                   },
                                 },
-                                "version": "10.0.0-alpha.16",
+                                "version": "10.0.0-alpha.21",
                               },
                               "managers": Object {
-                                "3": SheetsManager {
+                                "-9007199254740984": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "4": SheetsManager {
+                                "-9007199254740985": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "5": SheetsManager {
+                                "-9007199254740986": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "6": SheetsManager {
+                                "-9007199254740987": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "7": SheetsManager {
+                                "-9007199254740988": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
@@ -1120,32 +1137,32 @@ exports[`CheckboxGroup default match 1`] = `
                               },
                             }
                           }
-                          type="bold"
+                          type="normal"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-1-10"
+                            className="HoiPoi__Label__Text-1-11"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-1-23",
-                                "big": "HoiPoi__Text__big-1-18",
-                                "bold": "HoiPoi__Text__bold-1-19",
-                                "isLoading": "HoiPoi__Text__isLoading-1-22",
-                                "large": "HoiPoi__Text__large-1-17",
-                                "light": "HoiPoi__Text__light-1-21",
-                                "medium": "HoiPoi__Text__medium-1-16",
-                                "normal": "HoiPoi__Text__normal-1-20",
-                                "root": "HoiPoi__Text__root-1-13",
-                                "small": "HoiPoi__Text__small-1-15",
-                                "truncated": "HoiPoi__Text__truncated-1-14",
+                                "Loader": "HoiPoi__Text__Loader-1-24",
+                                "big": "HoiPoi__Text__big-1-19",
+                                "bold": "HoiPoi__Text__bold-1-20",
+                                "isLoading": "HoiPoi__Text__isLoading-1-23",
+                                "large": "HoiPoi__Text__large-1-18",
+                                "light": "HoiPoi__Text__light-1-22",
+                                "medium": "HoiPoi__Text__medium-1-17",
+                                "normal": "HoiPoi__Text__normal-1-21",
+                                "root": "HoiPoi__Text__root-1-14",
+                                "small": "HoiPoi__Text__small-1-16",
+                                "truncated": "HoiPoi__Text__truncated-1-15",
                               }
                             }
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
-                            type="bold"
+                            type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-13 HoiPoi__Text__bold-1-19 HoiPoi__Text__medium-1-16 HoiPoi__Label__Text-1-10"
+                              className="HoiPoi__Text__root-1-14 HoiPoi__Text__normal-1-21 HoiPoi__Text__medium-1-17 HoiPoi__Label__Text-1-11"
                             >
                               Lorem ipsum
                             </span>
@@ -1179,10 +1196,13 @@ exports[`CheckboxGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -1304,26 +1324,26 @@ exports[`CheckboxGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "3": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740987": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -1443,15 +1463,16 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-25",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-28",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-29",
-                          "error": "HoiPoi__CheckboxControl__error-1-26",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-27",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-32",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-30",
-                          "root": "HoiPoi__CheckboxControl__root-1-24",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-31",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-31",
+                          "error": "HoiPoi__CheckboxControl__error-1-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-1-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-32",
+                          "root": "HoiPoi__CheckboxControl__root-1-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-33",
                         }
                       }
                       isReadOnly={false}
@@ -1466,7 +1487,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-28"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-30"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -1483,10 +1504,13 @@ exports[`CheckboxGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -1608,26 +1632,26 @@ exports[`CheckboxGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "3": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -1741,9 +1765,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-35",
-                                  "input": "HoiPoi__Checkbox__input-1-34",
-                                  "root": "HoiPoi__Checkbox__root-1-33",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-37",
+                                  "input": "HoiPoi__Checkbox__input-1-36",
+                                  "root": "HoiPoi__Checkbox__root-1-35",
                                 }
                               }
                               isDisabled={false}
@@ -1751,7 +1775,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-33"
+                                className="HoiPoi__Checkbox__root-1-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -1873,7 +1897,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-34"
+                                  className="HoiPoi__Checkbox__input-1-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1883,7 +1907,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-29"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-31"
                         >
                           Lorem ipsum
                         </span>
@@ -1911,10 +1935,13 @@ exports[`CheckboxGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -2036,26 +2063,26 @@ exports[`CheckboxGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "3": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740987": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -2175,15 +2202,16 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-25",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-28",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-29",
-                          "error": "HoiPoi__CheckboxControl__error-1-26",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-27",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-32",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-30",
-                          "root": "HoiPoi__CheckboxControl__root-1-24",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-31",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-31",
+                          "error": "HoiPoi__CheckboxControl__error-1-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-1-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-32",
+                          "root": "HoiPoi__CheckboxControl__root-1-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-33",
                         }
                       }
                       isReadOnly={false}
@@ -2198,7 +2226,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-28"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-30"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -2215,10 +2243,13 @@ exports[`CheckboxGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -2340,26 +2371,26 @@ exports[`CheckboxGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "3": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -2473,9 +2504,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-35",
-                                  "input": "HoiPoi__Checkbox__input-1-34",
-                                  "root": "HoiPoi__Checkbox__root-1-33",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-37",
+                                  "input": "HoiPoi__Checkbox__input-1-36",
+                                  "root": "HoiPoi__Checkbox__root-1-35",
                                 }
                               }
                               isDisabled={false}
@@ -2483,7 +2514,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-33"
+                                className="HoiPoi__Checkbox__root-1-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -2605,7 +2636,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-34"
+                                  className="HoiPoi__Checkbox__input-1-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2615,7 +2646,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-29"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-31"
                         >
                           Lorem ipsum 2
                         </span>
@@ -2643,10 +2674,13 @@ exports[`CheckboxGroup default match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -2768,26 +2802,26 @@ exports[`CheckboxGroup default match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "3": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740987": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -2907,15 +2941,16 @@ exports[`CheckboxGroup default match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-1-25",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-28",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-29",
-                          "error": "HoiPoi__CheckboxControl__error-1-26",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-1-27",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-32",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-30",
-                          "root": "HoiPoi__CheckboxControl__root-1-24",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-1-31",
+                          "Label": "HoiPoi__CheckboxControl__Label-1-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-1-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-1-31",
+                          "error": "HoiPoi__CheckboxControl__error-1-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-1-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-1-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-1-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-1-32",
+                          "root": "HoiPoi__CheckboxControl__root-1-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-1-33",
                         }
                       }
                       isReadOnly={false}
@@ -2930,7 +2965,7 @@ exports[`CheckboxGroup default match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-1-28"
+                        className="HoiPoi__CheckboxControl__checkboxControl-1-30"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -2947,10 +2982,13 @@ exports[`CheckboxGroup default match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -3072,26 +3110,26 @@ exports[`CheckboxGroup default match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "3": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -3205,9 +3243,9 @@ exports[`CheckboxGroup default match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-1-35",
-                                  "input": "HoiPoi__Checkbox__input-1-34",
-                                  "root": "HoiPoi__Checkbox__root-1-33",
+                                  "disabled": "HoiPoi__Checkbox__disabled-1-37",
+                                  "input": "HoiPoi__Checkbox__input-1-36",
+                                  "root": "HoiPoi__Checkbox__root-1-35",
                                 }
                               }
                               isDisabled={false}
@@ -3215,7 +3253,7 @@ exports[`CheckboxGroup default match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-1-33"
+                                className="HoiPoi__Checkbox__root-1-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -3337,7 +3375,7 @@ exports[`CheckboxGroup default match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-1-34"
+                                  className="HoiPoi__Checkbox__input-1-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -3347,7 +3385,7 @@ exports[`CheckboxGroup default match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-1-29"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-1-31"
                         >
                           Lorem ipsum 3
                         </span>
@@ -3468,13 +3506,21 @@ exports[`CheckboxGroup with values match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -3596,7 +3642,7 @@ exports[`CheckboxGroup with values match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -3634,10 +3680,13 @@ exports[`CheckboxGroup with values match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -3759,26 +3808,26 @@ exports[`CheckboxGroup with values match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "3": SheetsManager {
+                "-9007199254740984": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "4": SheetsManager {
+                "-9007199254740985": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "6": SheetsManager {
+                "-9007199254740987": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740988": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -3916,14 +3965,15 @@ exports[`CheckboxGroup with values match 1`] = `
             classes={
               Object {
                 "Label": "HoiPoi__CheckboxGroup__Label-2-1",
-                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-2-4",
-                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-2-5",
+                "checkboxControl": "HoiPoi__CheckboxGroup__checkboxControl-2-5",
+                "checkboxLabel": "HoiPoi__CheckboxGroup__checkboxLabel-2-6",
                 "error": "HoiPoi__CheckboxGroup__error-2-2",
                 "formControl": "HoiPoi__CheckboxGroup__formControl-2-3",
-                "horizontal": "HoiPoi__CheckboxGroup__horizontal-2-8",
-                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-2-6",
+                "horizontal": "HoiPoi__CheckboxGroup__horizontal-2-9",
+                "isFullWidth": "HoiPoi__CheckboxGroup__isFullWidth-2-4",
+                "isReadOnly": "HoiPoi__CheckboxGroup__isReadOnly-2-7",
                 "root": "HoiPoi__CheckboxGroup__root-2-0",
-                "vertical": "HoiPoi__CheckboxGroup__vertical-2-7",
+                "vertical": "HoiPoi__CheckboxGroup__vertical-2-8",
               }
             }
             isReadOnly={false}
@@ -3955,7 +4005,7 @@ exports[`CheckboxGroup with values match 1`] = `
             }
           >
             <div
-              className="HoiPoi__CheckboxGroup__root-2-0 HoiPoi__CheckboxGroup__horizontal-2-8"
+              className="HoiPoi__CheckboxGroup__root-2-0 HoiPoi__CheckboxGroup__horizontal-2-9"
             >
               <JssContextSubscriber
                 className="HoiPoi__CheckboxGroup__Label-2-1"
@@ -3968,10 +4018,13 @@ exports[`CheckboxGroup with values match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -4093,26 +4146,26 @@ exports[`CheckboxGroup with values match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "3": SheetsManager {
+                        "-9007199254740984": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "4": SheetsManager {
+                        "-9007199254740985": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "6": SheetsManager {
+                        "-9007199254740987": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740988": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -4224,23 +4277,22 @@ exports[`CheckboxGroup with values match 1`] = `
                     className="HoiPoi__CheckboxGroup__Label-2-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-2-10",
-                        "icon": "HoiPoi__Label__icon-2-12",
-                        "info": "HoiPoi__Label__info-2-11",
-                        "root": "HoiPoi__Label__root-2-9",
+                        "Text": "HoiPoi__Label__Text-2-11",
+                        "icon": "HoiPoi__Label__icon-2-13",
+                        "info": "HoiPoi__Label__info-2-12",
+                        "root": "HoiPoi__Label__root-2-10",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-2-9 HoiPoi__CheckboxGroup__Label-2-1"
+                      className="HoiPoi__Label__root-2-10 HoiPoi__CheckboxGroup__Label-2-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-2-10"
+                        className="HoiPoi__Label__Text-2-11"
                         overrides={Object {}}
-                        type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-2-10"
+                          className="HoiPoi__Label__Text-2-11"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -4248,10 +4300,13 @@ exports[`CheckboxGroup with values match 1`] = `
                               "disableStylesGeneration": false,
                               "jss": Jss {
                                 "generateId": [Function],
-                                "id": 2,
+                                "id": 3,
                                 "options": Object {
                                   "Renderer": [Function],
                                   "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
                                   "plugins": Array [],
                                 },
                                 "plugins": PluginsRegistry {
@@ -4373,26 +4428,26 @@ exports[`CheckboxGroup with values match 1`] = `
                                     ],
                                   },
                                 },
-                                "version": "10.0.0-alpha.16",
+                                "version": "10.0.0-alpha.21",
                               },
                               "managers": Object {
-                                "3": SheetsManager {
+                                "-9007199254740984": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "4": SheetsManager {
+                                "-9007199254740985": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "5": SheetsManager {
+                                "-9007199254740986": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "6": SheetsManager {
+                                "-9007199254740987": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "7": SheetsManager {
+                                "-9007199254740988": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
@@ -4501,32 +4556,32 @@ exports[`CheckboxGroup with values match 1`] = `
                               },
                             }
                           }
-                          type="bold"
+                          type="normal"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-2-10"
+                            className="HoiPoi__Label__Text-2-11"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-2-23",
-                                "big": "HoiPoi__Text__big-2-18",
-                                "bold": "HoiPoi__Text__bold-2-19",
-                                "isLoading": "HoiPoi__Text__isLoading-2-22",
-                                "large": "HoiPoi__Text__large-2-17",
-                                "light": "HoiPoi__Text__light-2-21",
-                                "medium": "HoiPoi__Text__medium-2-16",
-                                "normal": "HoiPoi__Text__normal-2-20",
-                                "root": "HoiPoi__Text__root-2-13",
-                                "small": "HoiPoi__Text__small-2-15",
-                                "truncated": "HoiPoi__Text__truncated-2-14",
+                                "Loader": "HoiPoi__Text__Loader-2-24",
+                                "big": "HoiPoi__Text__big-2-19",
+                                "bold": "HoiPoi__Text__bold-2-20",
+                                "isLoading": "HoiPoi__Text__isLoading-2-23",
+                                "large": "HoiPoi__Text__large-2-18",
+                                "light": "HoiPoi__Text__light-2-22",
+                                "medium": "HoiPoi__Text__medium-2-17",
+                                "normal": "HoiPoi__Text__normal-2-21",
+                                "root": "HoiPoi__Text__root-2-14",
+                                "small": "HoiPoi__Text__small-2-16",
+                                "truncated": "HoiPoi__Text__truncated-2-15",
                               }
                             }
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
-                            type="bold"
+                            type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-13 HoiPoi__Text__bold-2-19 HoiPoi__Text__medium-2-16 HoiPoi__Label__Text-2-10"
+                              className="HoiPoi__Text__root-2-14 HoiPoi__Text__normal-2-21 HoiPoi__Text__medium-2-17 HoiPoi__Label__Text-2-11"
                             >
                               Lorem ipsum
                             </span>
@@ -4561,10 +4616,13 @@ exports[`CheckboxGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -4686,26 +4744,26 @@ exports[`CheckboxGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "3": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740987": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -4825,15 +4883,16 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-25",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-28",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-29",
-                          "error": "HoiPoi__CheckboxControl__error-2-26",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-27",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-32",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-30",
-                          "root": "HoiPoi__CheckboxControl__root-2-24",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-31",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-31",
+                          "error": "HoiPoi__CheckboxControl__error-2-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-2-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-32",
+                          "root": "HoiPoi__CheckboxControl__root-2-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-33",
                         }
                       }
                       isReadOnly={false}
@@ -4848,7 +4907,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-28"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-30"
                         key="lorem"
                         onClick={[Function]}
                       >
@@ -4865,10 +4924,13 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -4990,26 +5052,26 @@ exports[`CheckboxGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "3": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -5123,9 +5185,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-35",
-                                  "input": "HoiPoi__Checkbox__input-2-34",
-                                  "root": "HoiPoi__Checkbox__root-2-33",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-37",
+                                  "input": "HoiPoi__Checkbox__input-2-36",
+                                  "root": "HoiPoi__Checkbox__root-2-35",
                                 }
                               }
                               isDisabled={false}
@@ -5133,7 +5195,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-33"
+                                className="HoiPoi__Checkbox__root-2-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -5265,7 +5327,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Checkbox__input-2-34"
+                                  className="HoiPoi__Checkbox__input-2-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -5275,7 +5337,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-29"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-31"
                         >
                           Lorem ipsum
                         </span>
@@ -5303,10 +5365,13 @@ exports[`CheckboxGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -5428,26 +5493,26 @@ exports[`CheckboxGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "3": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740987": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -5567,15 +5632,16 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-25",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-28",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-29",
-                          "error": "HoiPoi__CheckboxControl__error-2-26",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-27",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-32",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-30",
-                          "root": "HoiPoi__CheckboxControl__root-2-24",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-31",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-31",
+                          "error": "HoiPoi__CheckboxControl__error-2-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-2-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-32",
+                          "root": "HoiPoi__CheckboxControl__root-2-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-33",
                         }
                       }
                       isReadOnly={false}
@@ -5590,7 +5656,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={false}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-28"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-30"
                         key="lorem2"
                         onClick={[Function]}
                       >
@@ -5607,10 +5673,13 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -5732,26 +5801,26 @@ exports[`CheckboxGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "3": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -5865,9 +5934,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={false}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-35",
-                                  "input": "HoiPoi__Checkbox__input-2-34",
-                                  "root": "HoiPoi__Checkbox__root-2-33",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-37",
+                                  "input": "HoiPoi__Checkbox__input-2-36",
+                                  "root": "HoiPoi__Checkbox__root-2-35",
                                 }
                               }
                               isDisabled={false}
@@ -5875,7 +5944,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-33"
+                                className="HoiPoi__Checkbox__root-2-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -5997,7 +6066,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked=""
-                                  className="HoiPoi__Checkbox__input-2-34"
+                                  className="HoiPoi__Checkbox__input-2-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -6007,7 +6076,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-29"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-31"
                         >
                           Lorem ipsum 2
                         </span>
@@ -6036,10 +6105,13 @@ exports[`CheckboxGroup with values match 1`] = `
                         "disableStylesGeneration": false,
                         "jss": Jss {
                           "generateId": [Function],
-                          "id": 2,
+                          "id": 3,
                           "options": Object {
                             "Renderer": [Function],
                             "createGenerateId": [Function],
+                            "id": Object {
+                              "minify": false,
+                            },
                             "plugins": Array [],
                           },
                           "plugins": PluginsRegistry {
@@ -6161,26 +6233,26 @@ exports[`CheckboxGroup with values match 1`] = `
                               ],
                             },
                           },
-                          "version": "10.0.0-alpha.16",
+                          "version": "10.0.0-alpha.21",
                         },
                         "managers": Object {
-                          "3": SheetsManager {
+                          "-9007199254740984": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "4": SheetsManager {
+                          "-9007199254740985": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "5": SheetsManager {
+                          "-9007199254740986": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "6": SheetsManager {
+                          "-9007199254740987": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
-                          "7": SheetsManager {
+                          "-9007199254740988": SheetsManager {
                             "length": 1,
                             "sheets": WeakMap {},
                           },
@@ -6300,15 +6372,16 @@ exports[`CheckboxGroup with values match 1`] = `
                     <CheckboxControl
                       classes={
                         Object {
-                          "Label": "HoiPoi__CheckboxControl__Label-2-25",
-                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-28",
-                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-29",
-                          "error": "HoiPoi__CheckboxControl__error-2-26",
-                          "formControl": "HoiPoi__CheckboxControl__formControl-2-27",
-                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-32",
-                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-30",
-                          "root": "HoiPoi__CheckboxControl__root-2-24",
-                          "vertical": "HoiPoi__CheckboxControl__vertical-2-31",
+                          "Label": "HoiPoi__CheckboxControl__Label-2-26",
+                          "checkboxControl": "HoiPoi__CheckboxControl__checkboxControl-2-30",
+                          "checkboxLabel": "HoiPoi__CheckboxControl__checkboxLabel-2-31",
+                          "error": "HoiPoi__CheckboxControl__error-2-27",
+                          "formControl": "HoiPoi__CheckboxControl__formControl-2-28",
+                          "horizontal": "HoiPoi__CheckboxControl__horizontal-2-34",
+                          "isFullWidth": "HoiPoi__CheckboxControl__isFullWidth-2-29",
+                          "isReadOnly": "HoiPoi__CheckboxControl__isReadOnly-2-32",
+                          "root": "HoiPoi__CheckboxControl__root-2-25",
+                          "vertical": "HoiPoi__CheckboxControl__vertical-2-33",
                         }
                       }
                       isReadOnly={false}
@@ -6323,7 +6396,7 @@ exports[`CheckboxGroup with values match 1`] = `
                       value={true}
                     >
                       <div
-                        className="HoiPoi__CheckboxControl__checkboxControl-2-28"
+                        className="HoiPoi__CheckboxControl__checkboxControl-2-30"
                         key="lorem3"
                         onClick={[Function]}
                       >
@@ -6340,10 +6413,13 @@ exports[`CheckboxGroup with values match 1`] = `
                                 "disableStylesGeneration": false,
                                 "jss": Jss {
                                   "generateId": [Function],
-                                  "id": 2,
+                                  "id": 3,
                                   "options": Object {
                                     "Renderer": [Function],
                                     "createGenerateId": [Function],
+                                    "id": Object {
+                                      "minify": false,
+                                    },
                                     "plugins": Array [],
                                   },
                                   "plugins": PluginsRegistry {
@@ -6465,26 +6541,26 @@ exports[`CheckboxGroup with values match 1`] = `
                                       ],
                                     },
                                   },
-                                  "version": "10.0.0-alpha.16",
+                                  "version": "10.0.0-alpha.21",
                                 },
                                 "managers": Object {
-                                  "3": SheetsManager {
+                                  "-9007199254740984": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "4": SheetsManager {
+                                  "-9007199254740985": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "5": SheetsManager {
+                                  "-9007199254740986": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "6": SheetsManager {
+                                  "-9007199254740987": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
-                                  "7": SheetsManager {
+                                  "-9007199254740988": SheetsManager {
                                     "length": 1,
                                     "sheets": WeakMap {},
                                   },
@@ -6598,9 +6674,9 @@ exports[`CheckboxGroup with values match 1`] = `
                               checked={true}
                               classes={
                                 Object {
-                                  "disabled": "HoiPoi__Checkbox__disabled-2-35",
-                                  "input": "HoiPoi__Checkbox__input-2-34",
-                                  "root": "HoiPoi__Checkbox__root-2-33",
+                                  "disabled": "HoiPoi__Checkbox__disabled-2-37",
+                                  "input": "HoiPoi__Checkbox__input-2-36",
+                                  "root": "HoiPoi__Checkbox__root-2-35",
                                 }
                               }
                               isDisabled={false}
@@ -6608,7 +6684,7 @@ exports[`CheckboxGroup with values match 1`] = `
                               overrides={Object {}}
                             >
                               <div
-                                className="HoiPoi__Checkbox__root-2-33"
+                                className="HoiPoi__Checkbox__root-2-35"
                                 onClick={[Function]}
                               >
                                 <WithTheme(Unknown)>
@@ -6740,7 +6816,7 @@ exports[`CheckboxGroup with values match 1`] = `
                                 </WithTheme(Unknown)>
                                 <input
                                   checked="checked"
-                                  className="HoiPoi__Checkbox__input-2-34"
+                                  className="HoiPoi__Checkbox__input-2-36"
                                   disabled=""
                                   onChange={[Function]}
                                   type="checkbox"
@@ -6750,7 +6826,7 @@ exports[`CheckboxGroup with values match 1`] = `
                           </WithStyles(Checkbox)>
                         </JssContextSubscriber>
                         <span
-                          className="HoiPoi__CheckboxControl__checkboxLabel-2-29"
+                          className="HoiPoi__CheckboxControl__checkboxLabel-2-31"
                         >
                           Lorem ipsum 3
                         </span>

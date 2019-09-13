@@ -5,6 +5,6 @@ export default (theme) => ({
         fontSize: '18px',
         fontWeight: 'normal',
         letterSpacing: '1.5px',
-        color: theme.colors.textBlack,
+        color: theme.colors.text.black,
     },
 });

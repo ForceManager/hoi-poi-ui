@@ -18,7 +18,17 @@ import Edit from './icons/Edit';
 import Trash from './icons/Trash';
 import Magnifier from './icons/Magnifier';
 import Tick from './icons/Tick';
+import VisibilityOff from './icons/VisibilityOff';
+import VisibilityOn from './icons/VisibilityOn';
 import ThreeDots from './icons/ThreeDots';
+import Download from './icons/Download';
+import Duplicate from './icons/Duplicate';
+import ArrowRight from './icons/ArrowRight';
+import ArrowLeft from './icons/ArrowLeft';
+import ArrowTop from './icons/ArrowTop';
+import ArrowBottom from './icons/ArrowBottom';
+import ThickDisabled from './icons/ThickDisabled';
+import Funnel from './icons/Funnel';
 
 const ICONS = {
     chevron: Chevron,
@@ -26,6 +36,7 @@ const ICONS = {
     close: Close,
     lock: Lock,
     thickEnabled: ThickEnabled,
+    thickDisabled: ThickDisabled,
     warning: Warning,
     warningRounded: WarningRounded,
     drag: Drag,
@@ -33,7 +44,16 @@ const ICONS = {
     trash: Trash,
     magnifier: Magnifier,
     tick: Tick,
+    visibilityOn: VisibilityOn,
+    visibilityOff: VisibilityOff,
+    duplicate: Duplicate,
     threeDots: ThreeDots,
+    download: Download,
+    arrowRight: ArrowRight,
+    arrowLeft: ArrowLeft,
+    arrowTop: ArrowTop,
+    arrowBottom: ArrowBottom,
+    funnel: Funnel,
 };
 
 function Icon({

@@ -15,6 +15,7 @@ function Input({
     onChange,
     onFocus,
     onBlur,
+    onEnter,
     id,
     name,
     type,
@@ -75,22 +76,33 @@ function Input({
         onFocus: useCallback(
             (e) => {
                 setFocused(true);
-                onFocus && onFocus();
+                onFocus && onFocus(e);
             },
             [onFocus],
         ),
         onBlur: useCallback(
             (e) => {
                 setFocused(false);
-                onBlur && onBlur();
+                onBlur && onBlur(e);
             },
             [onBlur],
+        ),
+        onKeyDown: useCallback(
+            (e) => {
+                if (e.key === 'Enter') {
+                    onEnter && onEnter(e);
+                }
+            },
+            [onEnter],
         ),
         ...override.input,
     };
 
     // Remove content post component
-    const postComponentClick = useCallback(() => onChange(), [onChange]);
+    const postComponentClick = useCallback(() => {
+        onChange && onChange();
+        onBlur && onBlur();
+    }, [onBlur, onChange]);
     let renderedPostComponent = postComponent;
 
     if (value && !isReadOnly) {
@@ -162,6 +174,7 @@ Input.propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
+    onEnter: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
     /** Native input name */

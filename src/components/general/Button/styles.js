@@ -3,6 +3,7 @@ export default (theme) => ({
         position: 'relative',
         boxSizing: 'border-box',
         display: 'inline-block',
+        'min-width': '100px',
         padding: '5px 20px',
         textAlign: 'center',
         lineHeight: 0,
@@ -19,9 +20,6 @@ export default (theme) => ({
         '&$disabled': {
             opacity: 0.5,
             cursor: 'not-allowed !important',
-            '&:hover': {
-                backgroundColor: theme.colors.primary,
-            },
             '&:active': {
                 boxShadow: 'none',
             },
@@ -119,7 +117,7 @@ export default (theme) => ({
             transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
             '&$disabled': {
                 '&:hover': {
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'transparent !important',
                 },
             },
             '& $Text': {
@@ -133,7 +131,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.primary,
             '&$disabled': {
                 '&:hover': {
-                    backgroundColor: theme.colors.primary,
+                    backgroundColor: `${theme.colors.primary} !important`,
                 },
             },
             '&:hover': {
@@ -227,6 +225,11 @@ export default (theme) => ({
         '& $Text': {
             color: theme.colors.text.default,
         },
+        '&$disabled': {
+            '&:hover': {
+                backgroundColor: 'transparent',
+            },
+        },
         '&:hover': {
             backgroundColor: theme.colors.greyLight,
         },
@@ -237,6 +240,11 @@ export default (theme) => ({
         '& $Text': {
             color: theme.colors.text.primary,
         },
+        '&$disabled': {
+            '&:hover': {
+                backgroundColor: theme.colors.primary,
+            },
+        },
         '&:hover': {
             backgroundColor: theme.colors.primarySoft,
         },
@@ -246,6 +254,11 @@ export default (theme) => ({
         transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
         '& $Text': {
             color: theme.colors.text.white,
+        },
+        '&$disabled': {
+            '&:hover': {
+                backgroundColor: theme.colors.red,
+            },
         },
         '&:hover': {
             backgroundColor: theme.colors.redSoft,

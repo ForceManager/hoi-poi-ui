@@ -103,13 +103,21 @@ exports[`Select Button default match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -231,7 +239,7 @@ exports[`Select Button default match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -270,10 +278,13 @@ exports[`Select Button default match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -395,10 +406,10 @@ exports[`Select Button default match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "8": SheetsManager {
+                "-9007199254740981": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -690,13 +701,21 @@ exports[`Select Button default match 2`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -818,7 +837,7 @@ exports[`Select Button default match 2`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -857,10 +876,13 @@ exports[`Select Button default match 2`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -982,18 +1004,18 @@ exports[`Select Button default match 2`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740981": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740982": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "8": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -1240,10 +1262,13 @@ exports[`Select Button default match 2`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -1365,18 +1390,18 @@ exports[`Select Button default match 2`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740981": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740982": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "8": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -1539,8 +1564,10 @@ exports[`Select Button default match 2`] = `
                         "isReadOnly": "HoiPoi__Select__isReadOnly-1-10",
                         "menu": "HoiPoi__Select__menu-1-17",
                         "menuList": "HoiPoi__Select__menuList-1-16",
+                        "optionLabel": "HoiPoi__Select__optionLabel-1-20",
                         "root": "HoiPoi__Select__root-1-5",
                         "select": "HoiPoi__Select__select-1-15",
+                        "selectedOptions": "HoiPoi__Select__selectedOptions-1-21",
                         "vertical": "HoiPoi__Select__vertical-1-12",
                       }
                     }
@@ -1605,6 +1632,7 @@ exports[`Select Button default match 2`] = `
                           backspaceRemovesValue={false}
                           className="HoiPoi__Select__select-1-15"
                           classNamePrefix="hoi-poi-select"
+                          closeMenuOnSelect={true}
                           components={
                             Object {
                               "ClearIndicator": [Function],
@@ -1620,10 +1648,12 @@ exports[`Select Button default match 2`] = `
                           defaultValue={null}
                           filterOption={[Function]}
                           formatGroupLabel={[Function]}
+                          formatOptionLabel={[Function]}
                           getOptionValue={[Function]}
                           hideSelectedOptions={true}
                           isClearable={false}
                           isDisabled={false}
+                          isMulti={false}
                           menuIsOpen={true}
                           menuPlacement="auto"
                           menuPortalTarget={<body />}
@@ -1682,6 +1712,7 @@ exports[`Select Button default match 2`] = `
                             escapeClearsValue={false}
                             filterOption={[Function]}
                             formatGroupLabel={[Function]}
+                            formatOptionLabel={[Function]}
                             getOptionLabel={[Function]}
                             getOptionValue={[Function]}
                             hideSelectedOptions={true}
@@ -1802,6 +1833,7 @@ exports[`Select Button default match 2`] = `
                                   "escapeClearsValue": false,
                                   "filterOption": [Function],
                                   "formatGroupLabel": [Function],
+                                  "formatOptionLabel": [Function],
                                   "getOptionLabel": [Function],
                                   "getOptionValue": [Function],
                                   "hideSelectedOptions": true,
@@ -1971,6 +2003,7 @@ exports[`Select Button default match 2`] = `
                                         "escapeClearsValue": false,
                                         "filterOption": [Function],
                                         "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
                                         "getOptionLabel": [Function],
                                         "getOptionValue": [Function],
                                         "hideSelectedOptions": true,
@@ -2148,6 +2181,7 @@ exports[`Select Button default match 2`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -2290,6 +2324,7 @@ exports[`Select Button default match 2`] = `
                                                 "escapeClearsValue": false,
                                                 "filterOption": [Function],
                                                 "formatGroupLabel": [Function],
+                                                "formatOptionLabel": [Function],
                                                 "getOptionLabel": [Function],
                                                 "getOptionValue": [Function],
                                                 "hideSelectedOptions": true,
@@ -2413,10 +2448,13 @@ exports[`Select Button default match 2`] = `
                                                         "disableStylesGeneration": false,
                                                         "jss": Jss {
                                                           "generateId": [Function],
-                                                          "id": 2,
+                                                          "id": 3,
                                                           "options": Object {
                                                             "Renderer": [Function],
                                                             "createGenerateId": [Function],
+                                                            "id": Object {
+                                                              "minify": false,
+                                                            },
                                                             "plugins": Array [],
                                                           },
                                                           "plugins": PluginsRegistry {
@@ -2538,18 +2576,18 @@ exports[`Select Button default match 2`] = `
                                                               ],
                                                             },
                                                           },
-                                                          "version": "10.0.0-alpha.16",
+                                                          "version": "10.0.0-alpha.21",
                                                         },
                                                         "managers": Object {
-                                                          "0": SheetsManager {
+                                                          "-9007199254740981": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
-                                                          "7": SheetsManager {
+                                                          "-9007199254740982": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
-                                                          "8": SheetsManager {
+                                                          "-9007199254740991": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
@@ -2662,12 +2700,12 @@ exports[`Select Button default match 2`] = `
                                                       className="hoi-poi-select__search"
                                                       classes={
                                                         Object {
-                                                          "big": "HoiPoi__Icon__big-1-24",
-                                                          "clickable": "HoiPoi__Icon__clickable-1-25",
-                                                          "large": "HoiPoi__Icon__large-1-23",
-                                                          "medium": "HoiPoi__Icon__medium-1-22",
-                                                          "root": "HoiPoi__Icon__root-1-20",
-                                                          "small": "HoiPoi__Icon__small-1-21",
+                                                          "big": "HoiPoi__Icon__big-1-26",
+                                                          "clickable": "HoiPoi__Icon__clickable-1-27",
+                                                          "large": "HoiPoi__Icon__large-1-25",
+                                                          "medium": "HoiPoi__Icon__medium-1-24",
+                                                          "root": "HoiPoi__Icon__root-1-22",
+                                                          "small": "HoiPoi__Icon__small-1-23",
                                                         }
                                                       }
                                                       name="magnifier"
@@ -2676,12 +2714,12 @@ exports[`Select Button default match 2`] = `
                                                         className="hoi-poi-select__search"
                                                         classes={
                                                           Object {
-                                                            "big": "HoiPoi__Icon__big-1-24",
-                                                            "clickable": "HoiPoi__Icon__clickable-1-25",
-                                                            "large": "HoiPoi__Icon__large-1-23",
-                                                            "medium": "HoiPoi__Icon__medium-1-22",
-                                                            "root": "HoiPoi__Icon__root-1-20",
-                                                            "small": "HoiPoi__Icon__small-1-21",
+                                                            "big": "HoiPoi__Icon__big-1-26",
+                                                            "clickable": "HoiPoi__Icon__clickable-1-27",
+                                                            "large": "HoiPoi__Icon__large-1-25",
+                                                            "medium": "HoiPoi__Icon__medium-1-24",
+                                                            "root": "HoiPoi__Icon__root-1-22",
+                                                            "small": "HoiPoi__Icon__small-1-23",
                                                           }
                                                         }
                                                         name="magnifier"
@@ -2785,7 +2823,7 @@ exports[`Select Button default match 2`] = `
                                                         }
                                                       >
                                                         <span
-                                                          className="HoiPoi__Icon__root-1-20 HoiPoi__Icon__medium-1-22 hoi-poi-select__search"
+                                                          className="HoiPoi__Icon__root-1-22 HoiPoi__Icon__medium-1-24 hoi-poi-select__search"
                                                         >
                                                           <Magnifier
                                                             color="#788590"
@@ -2859,6 +2897,7 @@ exports[`Select Button default match 2`] = `
                                                       "escapeClearsValue": false,
                                                       "filterOption": [Function],
                                                       "formatGroupLabel": [Function],
+                                                      "formatOptionLabel": [Function],
                                                       "getOptionLabel": [Function],
                                                       "getOptionValue": [Function],
                                                       "hideSelectedOptions": true,
@@ -3008,6 +3047,7 @@ exports[`Select Button default match 2`] = `
                                                       "escapeClearsValue": false,
                                                       "filterOption": [Function],
                                                       "formatGroupLabel": [Function],
+                                                      "formatOptionLabel": [Function],
                                                       "getOptionLabel": [Function],
                                                       "getOptionValue": [Function],
                                                       "hideSelectedOptions": true,
@@ -3259,6 +3299,7 @@ exports[`Select Button default match 2`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -3425,6 +3466,7 @@ exports[`Select Button default match 2`] = `
                                         "escapeClearsValue": false,
                                         "filterOption": [Function],
                                         "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
                                         "getOptionLabel": [Function],
                                         "getOptionValue": [Function],
                                         "hideSelectedOptions": true,
@@ -3638,13 +3680,21 @@ exports[`Select Button with actions match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -3766,7 +3816,7 @@ exports[`Select Button with actions match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -3821,10 +3871,13 @@ exports[`Select Button with actions match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -3946,10 +3999,10 @@ exports[`Select Button with actions match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "8": SheetsManager {
+                "-9007199254740981": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -4249,13 +4302,21 @@ exports[`Select Button with actions match 2`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -4377,7 +4438,7 @@ exports[`Select Button with actions match 2`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -4432,10 +4493,13 @@ exports[`Select Button with actions match 2`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -4557,18 +4621,18 @@ exports[`Select Button with actions match 2`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740981": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740982": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "8": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -4839,10 +4903,13 @@ exports[`Select Button with actions match 2`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -4964,18 +5031,18 @@ exports[`Select Button with actions match 2`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740981": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740982": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "8": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -5146,8 +5213,10 @@ exports[`Select Button with actions match 2`] = `
                         "isReadOnly": "HoiPoi__Select__isReadOnly-3-10",
                         "menu": "HoiPoi__Select__menu-3-17",
                         "menuList": "HoiPoi__Select__menuList-3-16",
+                        "optionLabel": "HoiPoi__Select__optionLabel-3-20",
                         "root": "HoiPoi__Select__root-3-5",
                         "select": "HoiPoi__Select__select-3-15",
+                        "selectedOptions": "HoiPoi__Select__selectedOptions-3-21",
                         "vertical": "HoiPoi__Select__vertical-3-12",
                       }
                     }
@@ -5212,6 +5281,7 @@ exports[`Select Button with actions match 2`] = `
                           backspaceRemovesValue={false}
                           className="HoiPoi__Select__select-3-15"
                           classNamePrefix="hoi-poi-select"
+                          closeMenuOnSelect={true}
                           components={
                             Object {
                               "ClearIndicator": [Function],
@@ -5227,10 +5297,12 @@ exports[`Select Button with actions match 2`] = `
                           defaultValue={null}
                           filterOption={[Function]}
                           formatGroupLabel={[Function]}
+                          formatOptionLabel={[Function]}
                           getOptionValue={[Function]}
                           hideSelectedOptions={true}
                           isClearable={false}
                           isDisabled={false}
+                          isMulti={false}
                           menuIsOpen={true}
                           menuPlacement="auto"
                           menuPortalTarget={<body />}
@@ -5289,6 +5361,7 @@ exports[`Select Button with actions match 2`] = `
                             escapeClearsValue={false}
                             filterOption={[Function]}
                             formatGroupLabel={[Function]}
+                            formatOptionLabel={[Function]}
                             getOptionLabel={[Function]}
                             getOptionValue={[Function]}
                             hideSelectedOptions={true}
@@ -5409,6 +5482,7 @@ exports[`Select Button with actions match 2`] = `
                                   "escapeClearsValue": false,
                                   "filterOption": [Function],
                                   "formatGroupLabel": [Function],
+                                  "formatOptionLabel": [Function],
                                   "getOptionLabel": [Function],
                                   "getOptionValue": [Function],
                                   "hideSelectedOptions": true,
@@ -5578,6 +5652,7 @@ exports[`Select Button with actions match 2`] = `
                                         "escapeClearsValue": false,
                                         "filterOption": [Function],
                                         "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
                                         "getOptionLabel": [Function],
                                         "getOptionValue": [Function],
                                         "hideSelectedOptions": true,
@@ -5755,6 +5830,7 @@ exports[`Select Button with actions match 2`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -5897,6 +5973,7 @@ exports[`Select Button with actions match 2`] = `
                                                 "escapeClearsValue": false,
                                                 "filterOption": [Function],
                                                 "formatGroupLabel": [Function],
+                                                "formatOptionLabel": [Function],
                                                 "getOptionLabel": [Function],
                                                 "getOptionValue": [Function],
                                                 "hideSelectedOptions": true,
@@ -6020,10 +6097,13 @@ exports[`Select Button with actions match 2`] = `
                                                         "disableStylesGeneration": false,
                                                         "jss": Jss {
                                                           "generateId": [Function],
-                                                          "id": 2,
+                                                          "id": 3,
                                                           "options": Object {
                                                             "Renderer": [Function],
                                                             "createGenerateId": [Function],
+                                                            "id": Object {
+                                                              "minify": false,
+                                                            },
                                                             "plugins": Array [],
                                                           },
                                                           "plugins": PluginsRegistry {
@@ -6145,18 +6225,18 @@ exports[`Select Button with actions match 2`] = `
                                                               ],
                                                             },
                                                           },
-                                                          "version": "10.0.0-alpha.16",
+                                                          "version": "10.0.0-alpha.21",
                                                         },
                                                         "managers": Object {
-                                                          "0": SheetsManager {
+                                                          "-9007199254740981": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
-                                                          "7": SheetsManager {
+                                                          "-9007199254740982": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
-                                                          "8": SheetsManager {
+                                                          "-9007199254740991": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
@@ -6269,12 +6349,12 @@ exports[`Select Button with actions match 2`] = `
                                                       className="hoi-poi-select__search"
                                                       classes={
                                                         Object {
-                                                          "big": "HoiPoi__Icon__big-3-24",
-                                                          "clickable": "HoiPoi__Icon__clickable-3-25",
-                                                          "large": "HoiPoi__Icon__large-3-23",
-                                                          "medium": "HoiPoi__Icon__medium-3-22",
-                                                          "root": "HoiPoi__Icon__root-3-20",
-                                                          "small": "HoiPoi__Icon__small-3-21",
+                                                          "big": "HoiPoi__Icon__big-3-26",
+                                                          "clickable": "HoiPoi__Icon__clickable-3-27",
+                                                          "large": "HoiPoi__Icon__large-3-25",
+                                                          "medium": "HoiPoi__Icon__medium-3-24",
+                                                          "root": "HoiPoi__Icon__root-3-22",
+                                                          "small": "HoiPoi__Icon__small-3-23",
                                                         }
                                                       }
                                                       name="magnifier"
@@ -6283,12 +6363,12 @@ exports[`Select Button with actions match 2`] = `
                                                         className="hoi-poi-select__search"
                                                         classes={
                                                           Object {
-                                                            "big": "HoiPoi__Icon__big-3-24",
-                                                            "clickable": "HoiPoi__Icon__clickable-3-25",
-                                                            "large": "HoiPoi__Icon__large-3-23",
-                                                            "medium": "HoiPoi__Icon__medium-3-22",
-                                                            "root": "HoiPoi__Icon__root-3-20",
-                                                            "small": "HoiPoi__Icon__small-3-21",
+                                                            "big": "HoiPoi__Icon__big-3-26",
+                                                            "clickable": "HoiPoi__Icon__clickable-3-27",
+                                                            "large": "HoiPoi__Icon__large-3-25",
+                                                            "medium": "HoiPoi__Icon__medium-3-24",
+                                                            "root": "HoiPoi__Icon__root-3-22",
+                                                            "small": "HoiPoi__Icon__small-3-23",
                                                           }
                                                         }
                                                         name="magnifier"
@@ -6392,7 +6472,7 @@ exports[`Select Button with actions match 2`] = `
                                                         }
                                                       >
                                                         <span
-                                                          className="HoiPoi__Icon__root-3-20 HoiPoi__Icon__medium-3-22 hoi-poi-select__search"
+                                                          className="HoiPoi__Icon__root-3-22 HoiPoi__Icon__medium-3-24 hoi-poi-select__search"
                                                         >
                                                           <Magnifier
                                                             color="#788590"
@@ -6466,6 +6546,7 @@ exports[`Select Button with actions match 2`] = `
                                                       "escapeClearsValue": false,
                                                       "filterOption": [Function],
                                                       "formatGroupLabel": [Function],
+                                                      "formatOptionLabel": [Function],
                                                       "getOptionLabel": [Function],
                                                       "getOptionValue": [Function],
                                                       "hideSelectedOptions": true,
@@ -6615,6 +6696,7 @@ exports[`Select Button with actions match 2`] = `
                                                       "escapeClearsValue": false,
                                                       "filterOption": [Function],
                                                       "formatGroupLabel": [Function],
+                                                      "formatOptionLabel": [Function],
                                                       "getOptionLabel": [Function],
                                                       "getOptionValue": [Function],
                                                       "hideSelectedOptions": true,
@@ -6866,6 +6948,7 @@ exports[`Select Button with actions match 2`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -7032,6 +7115,7 @@ exports[`Select Button with actions match 2`] = `
                                         "escapeClearsValue": false,
                                         "filterOption": [Function],
                                         "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
                                         "getOptionLabel": [Function],
                                         "getOptionValue": [Function],
                                         "hideSelectedOptions": true,
@@ -7245,13 +7329,21 @@ exports[`Select Button with grouped options match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -7373,7 +7465,7 @@ exports[`Select Button with grouped options match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -7438,10 +7530,13 @@ exports[`Select Button with grouped options match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -7563,10 +7658,10 @@ exports[`Select Button with grouped options match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "8": SheetsManager {
+                "-9007199254740981": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -7910,13 +8005,21 @@ exports[`Select Button with grouped options match 2`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -8038,7 +8141,7 @@ exports[`Select Button with grouped options match 2`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -8103,10 +8206,13 @@ exports[`Select Button with grouped options match 2`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -8228,18 +8334,18 @@ exports[`Select Button with grouped options match 2`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740981": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740982": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "8": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -8564,10 +8670,13 @@ exports[`Select Button with grouped options match 2`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -8689,18 +8798,18 @@ exports[`Select Button with grouped options match 2`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740981": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740982": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "8": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -8889,8 +8998,10 @@ exports[`Select Button with grouped options match 2`] = `
                         "isReadOnly": "HoiPoi__Select__isReadOnly-2-10",
                         "menu": "HoiPoi__Select__menu-2-17",
                         "menuList": "HoiPoi__Select__menuList-2-16",
+                        "optionLabel": "HoiPoi__Select__optionLabel-2-20",
                         "root": "HoiPoi__Select__root-2-5",
                         "select": "HoiPoi__Select__select-2-15",
+                        "selectedOptions": "HoiPoi__Select__selectedOptions-2-21",
                         "vertical": "HoiPoi__Select__vertical-2-12",
                       }
                     }
@@ -8981,6 +9092,7 @@ exports[`Select Button with grouped options match 2`] = `
                           backspaceRemovesValue={false}
                           className="HoiPoi__Select__select-2-15"
                           classNamePrefix="hoi-poi-select"
+                          closeMenuOnSelect={true}
                           components={
                             Object {
                               "ClearIndicator": [Function],
@@ -8996,10 +9108,12 @@ exports[`Select Button with grouped options match 2`] = `
                           defaultValue={null}
                           filterOption={[Function]}
                           formatGroupLabel={[Function]}
+                          formatOptionLabel={[Function]}
                           getOptionValue={[Function]}
                           hideSelectedOptions={true}
                           isClearable={false}
                           isDisabled={false}
+                          isMulti={false}
                           menuIsOpen={true}
                           menuPlacement="auto"
                           menuPortalTarget={<body />}
@@ -9084,6 +9198,7 @@ exports[`Select Button with grouped options match 2`] = `
                             escapeClearsValue={false}
                             filterOption={[Function]}
                             formatGroupLabel={[Function]}
+                            formatOptionLabel={[Function]}
                             getOptionLabel={[Function]}
                             getOptionValue={[Function]}
                             hideSelectedOptions={true}
@@ -9256,6 +9371,7 @@ exports[`Select Button with grouped options match 2`] = `
                                   "escapeClearsValue": false,
                                   "filterOption": [Function],
                                   "formatGroupLabel": [Function],
+                                  "formatOptionLabel": [Function],
                                   "getOptionLabel": [Function],
                                   "getOptionValue": [Function],
                                   "hideSelectedOptions": true,
@@ -9477,6 +9593,7 @@ exports[`Select Button with grouped options match 2`] = `
                                         "escapeClearsValue": false,
                                         "filterOption": [Function],
                                         "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
                                         "getOptionLabel": [Function],
                                         "getOptionValue": [Function],
                                         "hideSelectedOptions": true,
@@ -9706,6 +9823,7 @@ exports[`Select Button with grouped options match 2`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -9900,6 +10018,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                 "escapeClearsValue": false,
                                                 "filterOption": [Function],
                                                 "formatGroupLabel": [Function],
+                                                "formatOptionLabel": [Function],
                                                 "getOptionLabel": [Function],
                                                 "getOptionValue": [Function],
                                                 "hideSelectedOptions": true,
@@ -10049,10 +10168,13 @@ exports[`Select Button with grouped options match 2`] = `
                                                         "disableStylesGeneration": false,
                                                         "jss": Jss {
                                                           "generateId": [Function],
-                                                          "id": 2,
+                                                          "id": 3,
                                                           "options": Object {
                                                             "Renderer": [Function],
                                                             "createGenerateId": [Function],
+                                                            "id": Object {
+                                                              "minify": false,
+                                                            },
                                                             "plugins": Array [],
                                                           },
                                                           "plugins": PluginsRegistry {
@@ -10174,18 +10296,18 @@ exports[`Select Button with grouped options match 2`] = `
                                                               ],
                                                             },
                                                           },
-                                                          "version": "10.0.0-alpha.16",
+                                                          "version": "10.0.0-alpha.21",
                                                         },
                                                         "managers": Object {
-                                                          "0": SheetsManager {
+                                                          "-9007199254740981": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
-                                                          "7": SheetsManager {
+                                                          "-9007199254740982": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
-                                                          "8": SheetsManager {
+                                                          "-9007199254740991": SheetsManager {
                                                             "length": 1,
                                                             "sheets": WeakMap {},
                                                           },
@@ -10298,12 +10420,12 @@ exports[`Select Button with grouped options match 2`] = `
                                                       className="hoi-poi-select__search"
                                                       classes={
                                                         Object {
-                                                          "big": "HoiPoi__Icon__big-2-24",
-                                                          "clickable": "HoiPoi__Icon__clickable-2-25",
-                                                          "large": "HoiPoi__Icon__large-2-23",
-                                                          "medium": "HoiPoi__Icon__medium-2-22",
-                                                          "root": "HoiPoi__Icon__root-2-20",
-                                                          "small": "HoiPoi__Icon__small-2-21",
+                                                          "big": "HoiPoi__Icon__big-2-26",
+                                                          "clickable": "HoiPoi__Icon__clickable-2-27",
+                                                          "large": "HoiPoi__Icon__large-2-25",
+                                                          "medium": "HoiPoi__Icon__medium-2-24",
+                                                          "root": "HoiPoi__Icon__root-2-22",
+                                                          "small": "HoiPoi__Icon__small-2-23",
                                                         }
                                                       }
                                                       name="magnifier"
@@ -10312,12 +10434,12 @@ exports[`Select Button with grouped options match 2`] = `
                                                         className="hoi-poi-select__search"
                                                         classes={
                                                           Object {
-                                                            "big": "HoiPoi__Icon__big-2-24",
-                                                            "clickable": "HoiPoi__Icon__clickable-2-25",
-                                                            "large": "HoiPoi__Icon__large-2-23",
-                                                            "medium": "HoiPoi__Icon__medium-2-22",
-                                                            "root": "HoiPoi__Icon__root-2-20",
-                                                            "small": "HoiPoi__Icon__small-2-21",
+                                                            "big": "HoiPoi__Icon__big-2-26",
+                                                            "clickable": "HoiPoi__Icon__clickable-2-27",
+                                                            "large": "HoiPoi__Icon__large-2-25",
+                                                            "medium": "HoiPoi__Icon__medium-2-24",
+                                                            "root": "HoiPoi__Icon__root-2-22",
+                                                            "small": "HoiPoi__Icon__small-2-23",
                                                           }
                                                         }
                                                         name="magnifier"
@@ -10421,7 +10543,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                         }
                                                       >
                                                         <span
-                                                          className="HoiPoi__Icon__root-2-20 HoiPoi__Icon__medium-2-22 hoi-poi-select__search"
+                                                          className="HoiPoi__Icon__root-2-22 HoiPoi__Icon__medium-2-24 hoi-poi-select__search"
                                                         >
                                                           <Magnifier
                                                             color="#788590"
@@ -10521,6 +10643,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                       "escapeClearsValue": false,
                                                       "filterOption": [Function],
                                                       "formatGroupLabel": [Function],
+                                                      "formatOptionLabel": [Function],
                                                       "getOptionLabel": [Function],
                                                       "getOptionValue": [Function],
                                                       "hideSelectedOptions": true,
@@ -10696,6 +10819,7 @@ exports[`Select Button with grouped options match 2`] = `
                                                       "escapeClearsValue": false,
                                                       "filterOption": [Function],
                                                       "formatGroupLabel": [Function],
+                                                      "formatOptionLabel": [Function],
                                                       "getOptionLabel": [Function],
                                                       "getOptionValue": [Function],
                                                       "hideSelectedOptions": true,
@@ -10999,6 +11123,7 @@ exports[`Select Button with grouped options match 2`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -11217,6 +11342,7 @@ exports[`Select Button with grouped options match 2`] = `
                                         "escapeClearsValue": false,
                                         "filterOption": [Function],
                                         "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
                                         "getOptionLabel": [Function],
                                         "getOptionValue": [Function],
                                         "hideSelectedOptions": true,

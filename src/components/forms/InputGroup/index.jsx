@@ -18,6 +18,9 @@ function InputGroup({
     name,
     type,
     onChange,
+    onBlur,
+    onFocus,
+    onEnter,
     value,
     labelMode,
     isFullWidth,
@@ -67,6 +70,39 @@ function InputGroup({
         [onChange, value],
     );
 
+    const onBlurInput = useCallback(
+        (name, inputValue) => {
+            onBlur &&
+                onBlur({
+                    ...value,
+                    [name]: inputValue ? inputValue : '',
+                });
+        },
+        [onBlur, value],
+    );
+
+    const onEnterInput = useCallback(
+        (name, inputValue) => {
+            onEnter &&
+                onEnter({
+                    ...value,
+                    [name]: inputValue ? inputValue : '',
+                });
+        },
+        [onEnter, value],
+    );
+
+    const onFocusInput = useCallback(
+        (name, inputValue) => {
+            onFocus &&
+                onFocus({
+                    ...value,
+                    [name]: inputValue ? inputValue : '',
+                });
+        },
+        [onFocus, value],
+    );
+
     // Principal inputs
     const inputProps = {
         id,
@@ -82,6 +118,9 @@ function InputGroup({
         label: inputs[0].label,
         value: value[inputs[0].name],
         onChange: onChangeInput,
+        onFocus: onFocusInput,
+        onBlur: onBlurInput,
+        onEnter: onEnterInput,
         className: classes.Input,
         ...override.Input,
     };
@@ -102,7 +141,10 @@ function InputGroup({
     return (
         <div {...rootProps} {...override.root}>
             <div className={classes.formControl} {...override.formControl}>
-                <InputControl {...inputProps} />
+                <InputControl
+                    {...inputProps}
+                    placeholder={inputsProps.placeholder || inputs[0].placeholder}
+                />
                 <Link size="small" onClick={onLinkClick} {...override.Link}>
                     {showInputs ? hideInputsLabel : showInputsLabel}
                 </Link>
@@ -117,6 +159,7 @@ function InputGroup({
                         onChange={onChangeInput}
                         overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
                         {...inputsProps}
+                        placeholder={input.placeholder || inputsProps.placeholder}
                     />
                 ))}
             </div>

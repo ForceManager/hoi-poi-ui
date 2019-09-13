@@ -6,11 +6,14 @@ export default (theme) => ({
         borderRadius: '3px',
         display: 'inline-block',
         padding: '0 10px',
+        minWidth: 70,
+        textAlign: 'center',
     },
     Text: {
         lineHeight: '20px',
-        fontWeight: 400,
+        fontWeight: 500,
         textTransform: 'uppercase',
+        fontSize: 9,
     },
     // Types
     error: {
@@ -29,6 +32,12 @@ export default (theme) => ({
         backgroundColor: theme.colors.greenLight,
         '& $Text': {
             color: theme.colors.text.green,
+        },
+    },
+    warn: {
+        backgroundColor: theme.colors.yellowLight,
+        '& $Text': {
+            color: theme.colors.text.yellow,
         },
     },
 });

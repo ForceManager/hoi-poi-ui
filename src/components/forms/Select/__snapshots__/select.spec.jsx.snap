@@ -103,13 +103,21 @@ exports[`Select default match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -231,7 +239,7 @@ exports[`Select default match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -270,10 +278,13 @@ exports[`Select default match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -395,22 +406,22 @@ exports[`Select default match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740982": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740983": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "6": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -559,8 +570,10 @@ exports[`Select default match 1`] = `
                 "isReadOnly": "HoiPoi__Select__isReadOnly-1-5",
                 "menu": "HoiPoi__Select__menu-1-12",
                 "menuList": "HoiPoi__Select__menuList-1-11",
+                "optionLabel": "HoiPoi__Select__optionLabel-1-15",
                 "root": "HoiPoi__Select__root-1-0",
                 "select": "HoiPoi__Select__select-1-10",
+                "selectedOptions": "HoiPoi__Select__selectedOptions-1-16",
                 "vertical": "HoiPoi__Select__vertical-1-7",
               }
             }
@@ -608,10 +621,13 @@ exports[`Select default match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -733,22 +749,22 @@ exports[`Select default match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740982": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740983": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "6": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -860,23 +876,22 @@ exports[`Select default match 1`] = `
                     className="HoiPoi__Select__Label-1-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-1-16",
-                        "icon": "HoiPoi__Label__icon-1-18",
-                        "info": "HoiPoi__Label__info-1-17",
-                        "root": "HoiPoi__Label__root-1-15",
+                        "Text": "HoiPoi__Label__Text-1-18",
+                        "icon": "HoiPoi__Label__icon-1-20",
+                        "info": "HoiPoi__Label__info-1-19",
+                        "root": "HoiPoi__Label__root-1-17",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-1-15 HoiPoi__Select__Label-1-1"
+                      className="HoiPoi__Label__root-1-17 HoiPoi__Select__Label-1-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-1-16"
+                        className="HoiPoi__Label__Text-1-18"
                         overrides={Object {}}
-                        type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-1-16"
+                          className="HoiPoi__Label__Text-1-18"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -884,10 +899,13 @@ exports[`Select default match 1`] = `
                               "disableStylesGeneration": false,
                               "jss": Jss {
                                 "generateId": [Function],
-                                "id": 2,
+                                "id": 3,
                                 "options": Object {
                                   "Renderer": [Function],
                                   "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
                                   "plugins": Array [],
                                 },
                                 "plugins": PluginsRegistry {
@@ -1009,22 +1027,22 @@ exports[`Select default match 1`] = `
                                     ],
                                   },
                                 },
-                                "version": "10.0.0-alpha.16",
+                                "version": "10.0.0-alpha.21",
                               },
                               "managers": Object {
-                                "0": SheetsManager {
+                                "-9007199254740982": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "5": SheetsManager {
+                                "-9007199254740983": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "6": SheetsManager {
+                                "-9007199254740986": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "7": SheetsManager {
+                                "-9007199254740991": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
@@ -1133,32 +1151,32 @@ exports[`Select default match 1`] = `
                               },
                             }
                           }
-                          type="bold"
+                          type="normal"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-1-16"
+                            className="HoiPoi__Label__Text-1-18"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-1-29",
-                                "big": "HoiPoi__Text__big-1-24",
-                                "bold": "HoiPoi__Text__bold-1-25",
-                                "isLoading": "HoiPoi__Text__isLoading-1-28",
-                                "large": "HoiPoi__Text__large-1-23",
-                                "light": "HoiPoi__Text__light-1-27",
-                                "medium": "HoiPoi__Text__medium-1-22",
-                                "normal": "HoiPoi__Text__normal-1-26",
-                                "root": "HoiPoi__Text__root-1-19",
-                                "small": "HoiPoi__Text__small-1-21",
-                                "truncated": "HoiPoi__Text__truncated-1-20",
+                                "Loader": "HoiPoi__Text__Loader-1-31",
+                                "big": "HoiPoi__Text__big-1-26",
+                                "bold": "HoiPoi__Text__bold-1-27",
+                                "isLoading": "HoiPoi__Text__isLoading-1-30",
+                                "large": "HoiPoi__Text__large-1-25",
+                                "light": "HoiPoi__Text__light-1-29",
+                                "medium": "HoiPoi__Text__medium-1-24",
+                                "normal": "HoiPoi__Text__normal-1-28",
+                                "root": "HoiPoi__Text__root-1-21",
+                                "small": "HoiPoi__Text__small-1-23",
+                                "truncated": "HoiPoi__Text__truncated-1-22",
                               }
                             }
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
-                            type="bold"
+                            type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-19 HoiPoi__Text__bold-1-25 HoiPoi__Text__medium-1-22 HoiPoi__Label__Text-1-16"
+                              className="HoiPoi__Text__root-1-21 HoiPoi__Text__normal-1-28 HoiPoi__Text__medium-1-24 HoiPoi__Label__Text-1-18"
                             >
                               Lorem ipsum
                             </span>
@@ -1175,6 +1193,7 @@ exports[`Select default match 1`] = `
                 <StateManager
                   className="HoiPoi__Select__select-1-10"
                   classNamePrefix="hoi-poi-select"
+                  closeMenuOnSelect={true}
                   components={
                     Object {
                       "ClearIndicator": [Function],
@@ -1188,6 +1207,7 @@ exports[`Select default match 1`] = `
                   defaultValue={null}
                   filterOption={[Function]}
                   formatGroupLabel={[Function]}
+                  formatOptionLabel={[Function]}
                   getOptionValue={[Function]}
                   hideSelectedOptions={true}
                   isClearable={true}
@@ -1246,6 +1266,7 @@ exports[`Select default match 1`] = `
                     escapeClearsValue={false}
                     filterOption={[Function]}
                     formatGroupLabel={[Function]}
+                    formatOptionLabel={[Function]}
                     getOptionLabel={[Function]}
                     getOptionValue={[Function]}
                     hideSelectedOptions={true}
@@ -1364,6 +1385,7 @@ exports[`Select default match 1`] = `
                           "escapeClearsValue": false,
                           "filterOption": [Function],
                           "formatGroupLabel": [Function],
+                          "formatOptionLabel": [Function],
                           "getOptionLabel": [Function],
                           "getOptionValue": [Function],
                           "hideSelectedOptions": true,
@@ -1531,6 +1553,7 @@ exports[`Select default match 1`] = `
                                 "escapeClearsValue": false,
                                 "filterOption": [Function],
                                 "formatGroupLabel": [Function],
+                                "formatOptionLabel": [Function],
                                 "getOptionLabel": [Function],
                                 "getOptionValue": [Function],
                                 "hideSelectedOptions": true,
@@ -1706,6 +1729,7 @@ exports[`Select default match 1`] = `
                                       "escapeClearsValue": false,
                                       "filterOption": [Function],
                                       "formatGroupLabel": [Function],
+                                      "formatOptionLabel": [Function],
                                       "getOptionLabel": [Function],
                                       "getOptionValue": [Function],
                                       "hideSelectedOptions": true,
@@ -1868,6 +1892,7 @@ exports[`Select default match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -2015,6 +2040,7 @@ exports[`Select default match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -2263,6 +2289,7 @@ exports[`Select default match 1`] = `
                                       "escapeClearsValue": false,
                                       "filterOption": [Function],
                                       "formatGroupLabel": [Function],
+                                      "formatOptionLabel": [Function],
                                       "getOptionLabel": [Function],
                                       "getOptionValue": [Function],
                                       "hideSelectedOptions": true,
@@ -2420,6 +2447,7 @@ exports[`Select default match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -2588,6 +2616,7 @@ exports[`Select default match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -2736,6 +2765,7 @@ exports[`Select default match 1`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -2864,10 +2894,13 @@ exports[`Select default match 1`] = `
                                                       "disableStylesGeneration": false,
                                                       "jss": Jss {
                                                         "generateId": [Function],
-                                                        "id": 2,
+                                                        "id": 3,
                                                         "options": Object {
                                                           "Renderer": [Function],
                                                           "createGenerateId": [Function],
+                                                          "id": Object {
+                                                            "minify": false,
+                                                          },
                                                           "plugins": Array [],
                                                         },
                                                         "plugins": PluginsRegistry {
@@ -2989,22 +3022,22 @@ exports[`Select default match 1`] = `
                                                             ],
                                                           },
                                                         },
-                                                        "version": "10.0.0-alpha.16",
+                                                        "version": "10.0.0-alpha.21",
                                                       },
                                                       "managers": Object {
-                                                        "0": SheetsManager {
+                                                        "-9007199254740982": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
-                                                        "5": SheetsManager {
+                                                        "-9007199254740983": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
-                                                        "6": SheetsManager {
+                                                        "-9007199254740986": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
-                                                        "7": SheetsManager {
+                                                        "-9007199254740991": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
@@ -3117,12 +3150,12 @@ exports[`Select default match 1`] = `
                                                   <WithTheme(Icon)
                                                     classes={
                                                       Object {
-                                                        "big": "HoiPoi__Icon__big-1-34",
-                                                        "clickable": "HoiPoi__Icon__clickable-1-35",
-                                                        "large": "HoiPoi__Icon__large-1-33",
-                                                        "medium": "HoiPoi__Icon__medium-1-32",
-                                                        "root": "HoiPoi__Icon__root-1-30",
-                                                        "small": "HoiPoi__Icon__small-1-31",
+                                                        "big": "HoiPoi__Icon__big-1-36",
+                                                        "clickable": "HoiPoi__Icon__clickable-1-37",
+                                                        "large": "HoiPoi__Icon__large-1-35",
+                                                        "medium": "HoiPoi__Icon__medium-1-34",
+                                                        "root": "HoiPoi__Icon__root-1-32",
+                                                        "small": "HoiPoi__Icon__small-1-33",
                                                       }
                                                     }
                                                     name="chevron"
@@ -3131,12 +3164,12 @@ exports[`Select default match 1`] = `
                                                     <Icon
                                                       classes={
                                                         Object {
-                                                          "big": "HoiPoi__Icon__big-1-34",
-                                                          "clickable": "HoiPoi__Icon__clickable-1-35",
-                                                          "large": "HoiPoi__Icon__large-1-33",
-                                                          "medium": "HoiPoi__Icon__medium-1-32",
-                                                          "root": "HoiPoi__Icon__root-1-30",
-                                                          "small": "HoiPoi__Icon__small-1-31",
+                                                          "big": "HoiPoi__Icon__big-1-36",
+                                                          "clickable": "HoiPoi__Icon__clickable-1-37",
+                                                          "large": "HoiPoi__Icon__large-1-35",
+                                                          "medium": "HoiPoi__Icon__medium-1-34",
+                                                          "root": "HoiPoi__Icon__root-1-32",
+                                                          "small": "HoiPoi__Icon__small-1-33",
                                                         }
                                                       }
                                                       name="chevron"
@@ -3240,7 +3273,7 @@ exports[`Select default match 1`] = `
                                                       }
                                                     >
                                                       <span
-                                                        className="HoiPoi__Icon__root-1-30 HoiPoi__Icon__small-1-31"
+                                                        className="HoiPoi__Icon__root-1-32 HoiPoi__Icon__small-1-33"
                                                       >
                                                         <Chevron
                                                           color="#788590"
@@ -3389,13 +3422,21 @@ exports[`Select with disabled options match 1`] = `
     <JssProvider
       classNamePrefix="HoiPoi__"
       generateId={[Function]}
+      id={
+        Object {
+          "minify": false,
+        }
+      }
       jss={
         Jss {
           "generateId": [Function],
-          "id": 2,
+          "id": 3,
           "options": Object {
             "Renderer": [Function],
             "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
             "plugins": Array [],
           },
           "plugins": PluginsRegistry {
@@ -3517,7 +3558,7 @@ exports[`Select with disabled options match 1`] = `
               ],
             },
           },
-          "version": "10.0.0-alpha.16",
+          "version": "10.0.0-alpha.21",
         }
       }
     >
@@ -3558,10 +3599,13 @@ exports[`Select with disabled options match 1`] = `
               "disableStylesGeneration": false,
               "jss": Jss {
                 "generateId": [Function],
-                "id": 2,
+                "id": 3,
                 "options": Object {
                   "Renderer": [Function],
                   "createGenerateId": [Function],
+                  "id": Object {
+                    "minify": false,
+                  },
                   "plugins": Array [],
                 },
                 "plugins": PluginsRegistry {
@@ -3683,22 +3727,22 @@ exports[`Select with disabled options match 1`] = `
                     ],
                   },
                 },
-                "version": "10.0.0-alpha.16",
+                "version": "10.0.0-alpha.21",
               },
               "managers": Object {
-                "0": SheetsManager {
+                "-9007199254740982": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "5": SheetsManager {
+                "-9007199254740983": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "6": SheetsManager {
+                "-9007199254740986": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
-                "7": SheetsManager {
+                "-9007199254740991": SheetsManager {
                   "length": 1,
                   "sheets": WeakMap {},
                 },
@@ -3849,8 +3893,10 @@ exports[`Select with disabled options match 1`] = `
                 "isReadOnly": "HoiPoi__Select__isReadOnly-2-5",
                 "menu": "HoiPoi__Select__menu-2-12",
                 "menuList": "HoiPoi__Select__menuList-2-11",
+                "optionLabel": "HoiPoi__Select__optionLabel-2-15",
                 "root": "HoiPoi__Select__root-2-0",
                 "select": "HoiPoi__Select__select-2-10",
+                "selectedOptions": "HoiPoi__Select__selectedOptions-2-16",
                 "vertical": "HoiPoi__Select__vertical-2-7",
               }
             }
@@ -3900,10 +3946,13 @@ exports[`Select with disabled options match 1`] = `
                       "disableStylesGeneration": false,
                       "jss": Jss {
                         "generateId": [Function],
-                        "id": 2,
+                        "id": 3,
                         "options": Object {
                           "Renderer": [Function],
                           "createGenerateId": [Function],
+                          "id": Object {
+                            "minify": false,
+                          },
                           "plugins": Array [],
                         },
                         "plugins": PluginsRegistry {
@@ -4025,22 +4074,22 @@ exports[`Select with disabled options match 1`] = `
                             ],
                           },
                         },
-                        "version": "10.0.0-alpha.16",
+                        "version": "10.0.0-alpha.21",
                       },
                       "managers": Object {
-                        "0": SheetsManager {
+                        "-9007199254740982": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "5": SheetsManager {
+                        "-9007199254740983": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "6": SheetsManager {
+                        "-9007199254740986": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
-                        "7": SheetsManager {
+                        "-9007199254740991": SheetsManager {
                           "length": 1,
                           "sheets": WeakMap {},
                         },
@@ -4152,23 +4201,22 @@ exports[`Select with disabled options match 1`] = `
                     className="HoiPoi__Select__Label-2-1"
                     classes={
                       Object {
-                        "Text": "HoiPoi__Label__Text-2-16",
-                        "icon": "HoiPoi__Label__icon-2-18",
-                        "info": "HoiPoi__Label__info-2-17",
-                        "root": "HoiPoi__Label__root-2-15",
+                        "Text": "HoiPoi__Label__Text-2-18",
+                        "icon": "HoiPoi__Label__icon-2-20",
+                        "info": "HoiPoi__Label__info-2-19",
+                        "root": "HoiPoi__Label__root-2-17",
                       }
                     }
                   >
                     <span
-                      className="HoiPoi__Label__root-2-15 HoiPoi__Select__Label-2-1"
+                      className="HoiPoi__Label__root-2-17 HoiPoi__Select__Label-2-1"
                     >
                       <JssContextSubscriber
-                        className="HoiPoi__Label__Text-2-16"
+                        className="HoiPoi__Label__Text-2-18"
                         overrides={Object {}}
-                        type="bold"
                       >
                         <WithStyles(Text)
-                          className="HoiPoi__Label__Text-2-16"
+                          className="HoiPoi__Label__Text-2-18"
                           innerRef={null}
                           isTruncated={false}
                           jssContext={
@@ -4176,10 +4224,13 @@ exports[`Select with disabled options match 1`] = `
                               "disableStylesGeneration": false,
                               "jss": Jss {
                                 "generateId": [Function],
-                                "id": 2,
+                                "id": 3,
                                 "options": Object {
                                   "Renderer": [Function],
                                   "createGenerateId": [Function],
+                                  "id": Object {
+                                    "minify": false,
+                                  },
                                   "plugins": Array [],
                                 },
                                 "plugins": PluginsRegistry {
@@ -4301,22 +4352,22 @@ exports[`Select with disabled options match 1`] = `
                                     ],
                                   },
                                 },
-                                "version": "10.0.0-alpha.16",
+                                "version": "10.0.0-alpha.21",
                               },
                               "managers": Object {
-                                "0": SheetsManager {
+                                "-9007199254740982": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "5": SheetsManager {
+                                "-9007199254740983": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "6": SheetsManager {
+                                "-9007199254740986": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
-                                "7": SheetsManager {
+                                "-9007199254740991": SheetsManager {
                                   "length": 1,
                                   "sheets": WeakMap {},
                                 },
@@ -4425,32 +4476,32 @@ exports[`Select with disabled options match 1`] = `
                               },
                             }
                           }
-                          type="bold"
+                          type="normal"
                         >
                           <Text
-                            className="HoiPoi__Label__Text-2-16"
+                            className="HoiPoi__Label__Text-2-18"
                             classes={
                               Object {
-                                "Loader": "HoiPoi__Text__Loader-2-29",
-                                "big": "HoiPoi__Text__big-2-24",
-                                "bold": "HoiPoi__Text__bold-2-25",
-                                "isLoading": "HoiPoi__Text__isLoading-2-28",
-                                "large": "HoiPoi__Text__large-2-23",
-                                "light": "HoiPoi__Text__light-2-27",
-                                "medium": "HoiPoi__Text__medium-2-22",
-                                "normal": "HoiPoi__Text__normal-2-26",
-                                "root": "HoiPoi__Text__root-2-19",
-                                "small": "HoiPoi__Text__small-2-21",
-                                "truncated": "HoiPoi__Text__truncated-2-20",
+                                "Loader": "HoiPoi__Text__Loader-2-31",
+                                "big": "HoiPoi__Text__big-2-26",
+                                "bold": "HoiPoi__Text__bold-2-27",
+                                "isLoading": "HoiPoi__Text__isLoading-2-30",
+                                "large": "HoiPoi__Text__large-2-25",
+                                "light": "HoiPoi__Text__light-2-29",
+                                "medium": "HoiPoi__Text__medium-2-24",
+                                "normal": "HoiPoi__Text__normal-2-28",
+                                "root": "HoiPoi__Text__root-2-21",
+                                "small": "HoiPoi__Text__small-2-23",
+                                "truncated": "HoiPoi__Text__truncated-2-22",
                               }
                             }
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
-                            type="bold"
+                            type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-19 HoiPoi__Text__bold-2-25 HoiPoi__Text__medium-2-22 HoiPoi__Label__Text-2-16"
+                              className="HoiPoi__Text__root-2-21 HoiPoi__Text__normal-2-28 HoiPoi__Text__medium-2-24 HoiPoi__Label__Text-2-18"
                             >
                               Lorem ipsum
                             </span>
@@ -4467,6 +4518,7 @@ exports[`Select with disabled options match 1`] = `
                 <StateManager
                   className="HoiPoi__Select__select-2-10"
                   classNamePrefix="hoi-poi-select"
+                  closeMenuOnSelect={true}
                   components={
                     Object {
                       "ClearIndicator": [Function],
@@ -4480,6 +4532,7 @@ exports[`Select with disabled options match 1`] = `
                   defaultValue={null}
                   filterOption={[Function]}
                   formatGroupLabel={[Function]}
+                  formatOptionLabel={[Function]}
                   getOptionValue={[Function]}
                   hideSelectedOptions={true}
                   isClearable={true}
@@ -4540,6 +4593,7 @@ exports[`Select with disabled options match 1`] = `
                     escapeClearsValue={false}
                     filterOption={[Function]}
                     formatGroupLabel={[Function]}
+                    formatOptionLabel={[Function]}
                     getOptionLabel={[Function]}
                     getOptionValue={[Function]}
                     hideSelectedOptions={true}
@@ -4662,6 +4716,7 @@ exports[`Select with disabled options match 1`] = `
                           "escapeClearsValue": false,
                           "filterOption": [Function],
                           "formatGroupLabel": [Function],
+                          "formatOptionLabel": [Function],
                           "getOptionLabel": [Function],
                           "getOptionValue": [Function],
                           "hideSelectedOptions": true,
@@ -4833,6 +4888,7 @@ exports[`Select with disabled options match 1`] = `
                                 "escapeClearsValue": false,
                                 "filterOption": [Function],
                                 "formatGroupLabel": [Function],
+                                "formatOptionLabel": [Function],
                                 "getOptionLabel": [Function],
                                 "getOptionValue": [Function],
                                 "hideSelectedOptions": true,
@@ -5012,6 +5068,7 @@ exports[`Select with disabled options match 1`] = `
                                       "escapeClearsValue": false,
                                       "filterOption": [Function],
                                       "formatGroupLabel": [Function],
+                                      "formatOptionLabel": [Function],
                                       "getOptionLabel": [Function],
                                       "getOptionValue": [Function],
                                       "hideSelectedOptions": true,
@@ -5178,6 +5235,7 @@ exports[`Select with disabled options match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -5327,6 +5385,7 @@ exports[`Select with disabled options match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -5579,6 +5638,7 @@ exports[`Select with disabled options match 1`] = `
                                       "escapeClearsValue": false,
                                       "filterOption": [Function],
                                       "formatGroupLabel": [Function],
+                                      "formatOptionLabel": [Function],
                                       "getOptionLabel": [Function],
                                       "getOptionValue": [Function],
                                       "hideSelectedOptions": true,
@@ -5740,6 +5800,7 @@ exports[`Select with disabled options match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -5912,6 +5973,7 @@ exports[`Select with disabled options match 1`] = `
                                             "escapeClearsValue": false,
                                             "filterOption": [Function],
                                             "formatGroupLabel": [Function],
+                                            "formatOptionLabel": [Function],
                                             "getOptionLabel": [Function],
                                             "getOptionValue": [Function],
                                             "hideSelectedOptions": true,
@@ -6064,6 +6126,7 @@ exports[`Select with disabled options match 1`] = `
                                               "escapeClearsValue": false,
                                               "filterOption": [Function],
                                               "formatGroupLabel": [Function],
+                                              "formatOptionLabel": [Function],
                                               "getOptionLabel": [Function],
                                               "getOptionValue": [Function],
                                               "hideSelectedOptions": true,
@@ -6194,10 +6257,13 @@ exports[`Select with disabled options match 1`] = `
                                                       "disableStylesGeneration": false,
                                                       "jss": Jss {
                                                         "generateId": [Function],
-                                                        "id": 2,
+                                                        "id": 3,
                                                         "options": Object {
                                                           "Renderer": [Function],
                                                           "createGenerateId": [Function],
+                                                          "id": Object {
+                                                            "minify": false,
+                                                          },
                                                           "plugins": Array [],
                                                         },
                                                         "plugins": PluginsRegistry {
@@ -6319,22 +6385,22 @@ exports[`Select with disabled options match 1`] = `
                                                             ],
                                                           },
                                                         },
-                                                        "version": "10.0.0-alpha.16",
+                                                        "version": "10.0.0-alpha.21",
                                                       },
                                                       "managers": Object {
-                                                        "0": SheetsManager {
+                                                        "-9007199254740982": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
-                                                        "5": SheetsManager {
+                                                        "-9007199254740983": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
-                                                        "6": SheetsManager {
+                                                        "-9007199254740986": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
-                                                        "7": SheetsManager {
+                                                        "-9007199254740991": SheetsManager {
                                                           "length": 1,
                                                           "sheets": WeakMap {},
                                                         },
@@ -6447,12 +6513,12 @@ exports[`Select with disabled options match 1`] = `
                                                   <WithTheme(Icon)
                                                     classes={
                                                       Object {
-                                                        "big": "HoiPoi__Icon__big-2-34",
-                                                        "clickable": "HoiPoi__Icon__clickable-2-35",
-                                                        "large": "HoiPoi__Icon__large-2-33",
-                                                        "medium": "HoiPoi__Icon__medium-2-32",
-                                                        "root": "HoiPoi__Icon__root-2-30",
-                                                        "small": "HoiPoi__Icon__small-2-31",
+                                                        "big": "HoiPoi__Icon__big-2-36",
+                                                        "clickable": "HoiPoi__Icon__clickable-2-37",
+                                                        "large": "HoiPoi__Icon__large-2-35",
+                                                        "medium": "HoiPoi__Icon__medium-2-34",
+                                                        "root": "HoiPoi__Icon__root-2-32",
+                                                        "small": "HoiPoi__Icon__small-2-33",
                                                       }
                                                     }
                                                     name="chevron"
@@ -6461,12 +6527,12 @@ exports[`Select with disabled options match 1`] = `
                                                     <Icon
                                                       classes={
                                                         Object {
-                                                          "big": "HoiPoi__Icon__big-2-34",
-                                                          "clickable": "HoiPoi__Icon__clickable-2-35",
-                                                          "large": "HoiPoi__Icon__large-2-33",
-                                                          "medium": "HoiPoi__Icon__medium-2-32",
-                                                          "root": "HoiPoi__Icon__root-2-30",
-                                                          "small": "HoiPoi__Icon__small-2-31",
+                                                          "big": "HoiPoi__Icon__big-2-36",
+                                                          "clickable": "HoiPoi__Icon__clickable-2-37",
+                                                          "large": "HoiPoi__Icon__large-2-35",
+                                                          "medium": "HoiPoi__Icon__medium-2-34",
+                                                          "root": "HoiPoi__Icon__root-2-32",
+                                                          "small": "HoiPoi__Icon__small-2-33",
                                                         }
                                                       }
                                                       name="chevron"
@@ -6570,7 +6636,7 @@ exports[`Select with disabled options match 1`] = `
                                                       }
                                                     >
                                                       <span
-                                                        className="HoiPoi__Icon__root-2-30 HoiPoi__Icon__small-2-31"
+                                                        className="HoiPoi__Icon__root-2-32 HoiPoi__Icon__small-2-33"
                                                       >
                                                         <Chevron
                                                           color="#788590"

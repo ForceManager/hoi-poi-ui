@@ -11,6 +11,8 @@ import ClearIndicator from './ClearIndicator';
 import DropdownIndicator from './DropdownIndicator';
 import Menu from './Menu';
 import MenuList from './MenuList';
+import Checkbox from '../../general/Checkbox';
+import Chip from '../../general/Chip';
 
 import Label from '../Label';
 import styles from './styles';
@@ -21,6 +23,7 @@ function Select({
     className: classNameProp,
     classes,
     onChange,
+    onBlur,
     id,
     name,
     options,
@@ -39,6 +42,7 @@ function Select({
     hideSelectedOptions,
     actions,
     onClickAction, // private props
+    isMulti,
     ...props
 }) {
     // State
@@ -62,6 +66,9 @@ function Select({
 
     const menuListClassName = classnames(classes.menuList, props.menuListClassName);
     const menuClassName = classnames(classes.menu, props.menuClassName);
+    const selectClassName = classnames(classes.select, {
+        [classes.isMulti]: isMulti,
+    });
 
     const rootProps = {
         className: rootClassName,
@@ -74,18 +81,43 @@ function Select({
         ...override.Label,
     };
 
+    const onRemove = useCallback(
+        (itemForRemove) => {
+            const result = value.filter((item) => item.value !== itemForRemove.value);
+            onChange && onChange(result, options);
+            onBlur && onBlur(result, options);
+        },
+        [onBlur, onChange, options, value],
+    );
+
     const selectProps = {
         id,
         name,
-        className: classes.select,
+        className: selectClassName,
         classNamePrefix: 'hoi-poi-select',
         placeholder,
         options,
-        value,
-        onChange,
+        value: isMulti ? [] : value,
+        isMulti,
+        onChange: useCallback(
+            (data, action) => {
+                if (isMulti) {
+                    let hasValue = !!(value || []).find((item) => item.value === data[0].value);
+                    if (hasValue) {
+                        data = value.filter((item) => item.value !== data[0].value);
+                    } else {
+                        data = [...value, ...data];
+                    }
+                }
+                onChange && onChange(data, options);
+                onBlur && onBlur(data, options);
+            },
+            [isMulti, onBlur, onChange, options, value],
+        ),
         isDisabled: isReadOnly,
-        isClearable,
-        hideSelectedOptions,
+        isClearable: isMulti ? false : isClearable,
+        hideSelectedOptions: isMulti ? true : hideSelectedOptions,
+        closeMenuOnSelect: isMulti ? false : true,
         noOptionsMessage: useCallback(() => noOptionsPlaceholder, [noOptionsPlaceholder]),
         getOptionValue: useCallback(({ value }) => value, []),
         menuPlacement: 'auto',
@@ -112,11 +144,40 @@ function Select({
         onBlur: useCallback((e) => {
             setFocused(false);
         }, []),
-        formatGroupLabel: useCallback((data) => <div className={classes.group}>{data.label}</div>, [
-            classes.group,
-        ]),
+        formatOptionLabel: useCallback(
+            (data) => {
+                return (
+                    <div className={classes.optionLabel}>
+                        {isMulti && (
+                            <Checkbox
+                                checked={
+                                    value
+                                        ? !!value.find((item) => item.value === data.value)
+                                        : false
+                                }
+                            />
+                        )}
+                        <span>{data.label}</span>
+                    </div>
+                );
+            },
+            [classes.optionLabel, isMulti, value],
+        ),
+        formatGroupLabel: useCallback(
+            (data) => (
+                <div key={data.value} className={classes.group}>
+                    {data.label}
+                </div>
+            ),
+            [classes.group],
+        ),
         ...override['react-select'],
     };
+
+    const selectedOptions = useMemo(() => {
+        if (!isMulti || !value) return null;
+        return value.map((item) => <Chip onClose={() => onRemove(item)}>{item.label}</Chip>);
+    }, [isMulti, onRemove, value]);
 
     // Async/sync
     let SelectComponent = RSelect;
@@ -132,6 +193,7 @@ function Select({
                     </div>
                 )}
             </div>
+            {selectedOptions && <div className={classes.selectedOptions}>{selectedOptions}</div>}
         </div>
     );
 }

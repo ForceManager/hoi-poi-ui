@@ -20,6 +20,9 @@ export default (theme) => ({
         padding: '5px 0',
         cursor: 'pointer',
     },
+    isFullWidth: {
+        width: '100%',
+    },
     checkboxControl: {
         display: 'flex',
         alignItems: 'center',

@@ -2,13 +2,7 @@ import React from 'react';
 
 function ThreeDots({ color, ...props }) {
     return (
-        <svg
-            width="18px"
-            height="18px"
-            viewBox="0 0 18 18"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g
                 id="Svg-Icons/18px-(All-icons)/UI/dots"
                 stroke="none"

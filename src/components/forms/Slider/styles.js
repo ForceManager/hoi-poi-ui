@@ -99,7 +99,7 @@ export default (theme) => ({
         position: 'absolute',
         minWidth: 15,
         top: 4,
-        marginLeft: -7.5,
+        marginLeft: -15,
         textAlign: 'center',
         color: theme.colors.greySoft,
         ...theme.typography.smallText,

@@ -16,8 +16,7 @@ Error:
 
 Info:
 
-```jsx
-<Advice type="info">
+```jsx <Advice type="info">
     This is an important information that will help you out in this process.
 </Advice>
 <br />
@@ -51,6 +50,20 @@ const text =
     <Advice>{text}</Advice>
     <br />
     <Advice showIcon>{text}</Advice>
+</div>;
+```
+
+Long text without expand
+
+```jsx
+const text =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec massa quis eros ultrices ullamcorper. Vestibulum vulputate vestibulum orci, vel mattis felis vehicula euismod. Vivamus vulputate ligula quis turpis consectetur posuere quis eu massa. Vivamus sit amet facilisis orci. Nulla nec orci ut diam semper bibendum. Donec sed arcu vitae justo tincidunt varius eu ac erat. Phasellus sit amet facilisis erat, gravida vestibulum enim. Praesent at mattis tortor, vel faucibus erat. Aliquam erat volutpat. In in dolor est. Ut sit amet dignissim risus.';
+<div>
+    <Advice showCollapse={false}>{text}</Advice>
+    <br />
+    <Advice showCollapse={false} showIcon>
+        {text}
+    </Advice>
 </div>;
 ```
 

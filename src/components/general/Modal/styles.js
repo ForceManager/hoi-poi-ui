@@ -1,6 +1,7 @@
 export default (theme) => ({
     root: {
         position: 'relative',
+        boxSizing: 'border-box',
         display: 'block',
         background: '#fff',
         boxShadow: theme.effects.boxShadow,
@@ -33,6 +34,9 @@ export default (theme) => ({
         justifyContent: 'space-between',
         paddingBottom: 30,
     },
+    title: {
+        color: theme.colors.text.black,
+    },
     footer: {
         display: 'flex',
         alignItems: 'center',
@@ -41,7 +45,9 @@ export default (theme) => ({
     },
     content: {},
     closeIcon: {},
-    confirmButton: {},
+    confirmButton: {
+        textTransform: 'uppercase',
+    },
     cancelButton: {
         marginRight: 20,
     },

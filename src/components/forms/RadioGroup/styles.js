@@ -13,6 +13,9 @@ export default (theme) => ({
         padding: '5px 0',
         cursor: 'pointer',
     },
+    isFullWidth: {
+        width: '100%',
+    },
     radioControl: {
         display: 'flex',
         alignItems: 'center',
@@ -23,6 +26,7 @@ export default (theme) => ({
         marginLeft: 10,
         ...theme.typography.defaultText,
         color: theme.colors.greySoft,
+        fontWeight: 400,
     },
     isReadOnly: {
         '& $formControl': {

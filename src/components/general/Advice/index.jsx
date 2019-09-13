@@ -15,6 +15,7 @@ function Advice({
     className: classNameProp,
     overrides: overridesProp,
     showIcon,
+    showCollapse,
     theme,
     type,
     ...props
@@ -97,31 +98,44 @@ function Advice({
                     <Icon {...iconProps} />
                 </div>
             )}
-            <AnimateHeight
-                height={isCollapsed ? textHeight.current || 20 : 'auto'}
-                {...override['react-animate-height']}
-            >
-                <div className={classes.textContainer} {...override.textContainer}>
-                    <Text
-                        isTruncated={isCollapsed}
-                        className={classes.Text}
-                        {...override.Text}
-                        overrides={{ root: { ref: textEl } }}
-                    >
-                        {children}
-                    </Text>
 
-                    {isEllipsisActive && (
-                        <span
-                            onClick={toggleCollapsing}
-                            className={classes.dropdownIcon}
-                            {...override.dropdownIcon}
+            {!showCollapse && (
+                <Text
+                    className={classes.Text}
+                    {...override.Text}
+                    overrides={{ root: { ref: textEl } }}
+                >
+                    {children}
+                </Text>
+            )}
+
+            {showCollapse && (
+                <AnimateHeight
+                    height={isCollapsed ? textHeight.current || 20 : 'auto'}
+                    {...override['react-animate-height']}
+                >
+                    <div className={classes.textContainer} {...override.textContainer}>
+                        <Text
+                            isTruncated={isCollapsed}
+                            className={classes.Text}
+                            {...override.Text}
+                            overrides={{ root: { ref: textEl } }}
                         >
-                            <Icon name="chevron" size="small" />
-                        </span>
-                    )}
-                </div>
-            </AnimateHeight>
+                            {children}
+                        </Text>
+
+                        {isEllipsisActive && (
+                            <span
+                                onClick={toggleCollapsing}
+                                className={classes.dropdownIcon}
+                                {...override.dropdownIcon}
+                            >
+                                <Icon name="chevron" size="small" />
+                            </span>
+                        )}
+                    </div>
+                </AnimateHeight>
+            )}
         </div>
     );
 }
@@ -139,6 +153,7 @@ Advice.defaultProps = {
     className: '',
     overrides: {},
     showIcon: false,
+    showCollapse: true,
     type: 'info',
 };
 
@@ -147,6 +162,7 @@ Advice.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     showIcon: PropTypes.bool,
+    showCollapse: PropTypes.bool,
     type: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
 };
 

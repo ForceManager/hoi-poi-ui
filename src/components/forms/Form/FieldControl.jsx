@@ -8,10 +8,12 @@ import RadioGroup from '../RadioGroup';
 import Select from '../Select';
 import Slider from '../Slider';
 import Multiplier from '../Multiplier';
+import CheckboxInput from '../CheckboxInput';
 
 const FIELD_MAP = {
     text: Input,
     inputGroup: InputGroup,
+    checkbox: CheckboxInput,
     checkboxGroup: CheckboxGroup,
     radioGroup: RadioGroup,
     select: Select,
@@ -29,6 +31,7 @@ function FieldControl({
     onChange,
     onFocus,
     onBlur,
+    onEnter,
     value,
     error,
     customFields,
@@ -58,6 +61,14 @@ function FieldControl({
         [onBlur, field],
     );
 
+    const onEnterField = useCallback(
+        (input) => {
+            const value = input && input.target ? input.target.value : input;
+            onEnter && onEnter(value, field);
+        },
+        [onEnter, field],
+    );
+
     if (!field || !field.type) return null;
     let Field = FIELD_MAP[field.type];
     let component = customFields && customFields[field.type];
@@ -69,6 +80,7 @@ function FieldControl({
         labelMode,
         isFullWidth,
         isReadOnly,
+        onEnter: onEnterField,
         onChange: onChangeField,
         onFocus: onFocusField,
         onBlur: onBlurField,
@@ -96,16 +108,17 @@ FieldControl.propTypes = {
     isFullWidth: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     value: PropTypes.any,
-    error: PropTypes.string,
+    error: PropTypes.any,
     className: PropTypes.string,
     customFields: PropTypes.object,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
+    onEnter: PropTypes.func,
     field: PropTypes.shape({
         label: PropTypes.string,
         labelMode: PropTypes.string,
-        isFullWidth: PropTypes.string,
+        isFullWidth: PropTypes.bool,
         name: PropTypes.string,
         type: PropTypes.string,
         placeholder: PropTypes.string,
