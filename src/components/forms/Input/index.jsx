@@ -64,7 +64,7 @@ function Input({
         ...override.Label,
     };
 
-    const inputProps = {
+    let inputProps = {
         id,
         name,
         className: classes.input,
@@ -72,8 +72,6 @@ function Input({
         placeholder,
         value,
         onChange: isReadOnly ? undefined : onChange,
-        readonly: isReadOnly,
-        isReadOnly,
         onFocus: useCallback(
             (e) => {
                 setFocused(true);
@@ -98,6 +96,12 @@ function Input({
         ),
         ...override.input,
     };
+
+    if (component) {
+        inputProps.isReadOnly = isReadOnly;
+    } else {
+        inputProps.readOnly = isReadOnly;
+    }
 
     // Remove content post component
     const postComponentClick = useCallback(() => {
