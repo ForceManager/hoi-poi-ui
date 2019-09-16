@@ -69,6 +69,34 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Disabled:
+
+```jsx
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+];
+
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value || options[1]}
+        isReadOnly={true}
+    />
+</div>;
+```
+
 Disabled options:
 
 ```jsx
