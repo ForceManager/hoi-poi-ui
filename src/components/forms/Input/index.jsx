@@ -72,6 +72,7 @@ function Input({
         placeholder,
         value,
         onChange,
+        readonly: isReadOnly,
         isReadOnly,
         onFocus: useCallback(
             (e) => {
