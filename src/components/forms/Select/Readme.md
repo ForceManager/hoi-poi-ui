@@ -254,7 +254,13 @@ const options = [
     },
 ];
 const loadOptions = () =>
-    new Promise((resolve, reject) => setTimeout(() => resolve(options), 2000), []);
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 2000),
+        [],
+    );
 
 <div>
     <Select

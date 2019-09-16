@@ -71,7 +71,7 @@ function Input({
         type,
         placeholder,
         value,
-        onChange,
+        onChange: isReadOnly ? undefined : onChange,
         readonly: isReadOnly,
         isReadOnly,
         onFocus: useCallback(

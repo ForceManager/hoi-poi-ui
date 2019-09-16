@@ -123,7 +123,6 @@ function Select({
         ),
         isDisabled: isReadOnly,
         isClearable: isMulti ? false : isClearable,
-        menuIsOpen: focused,
         autoFocus: focused,
         hideSelectedOptions: isMulti ? true : hideSelectedOptions,
         closeMenuOnSelect: isMulti ? false : true,
@@ -184,6 +183,7 @@ function Select({
         ),
         loadOptions: focused ? loadOptions : null,
         defaultOptions: !!loadOptions,
+        openMenuOnClick: false,
         ...override['react-select'],
     };
 
