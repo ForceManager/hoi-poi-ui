@@ -106,6 +106,7 @@ let onChange = (value) => setState({ value });
 ---
 
 -   root - root element
+-   error - Error wrapper
 -   [Checkbox](#/Forms?id=checkbox)
 -   checkboxLabel - label related to one checkbox
 -   checkboxControl - wrapper with checkbox label and checkbox
