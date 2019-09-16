@@ -5,7 +5,8 @@ export default (theme) => ({
         borderRadius: '2px',
         display: 'flex',
         padding: '15px 20px',
-        '& > div.rah-static': {
+        '& > div.rah-static, & > div.rah-animating': {
+            width: '100%',
             overflow: 'hidden !important',
         },
     },
@@ -16,6 +17,7 @@ export default (theme) => ({
     },
     Text: {
         display: 'block',
+        width: '100%',
     },
     // Types
     error: {
@@ -62,5 +64,8 @@ export default (theme) => ({
         '& $dropdownIcon': {
             transform: 'rotate(0) translateY(1px)',
         },
+    },
+    withTitleContainer: {
+        marginTop: 15,
     },
 });

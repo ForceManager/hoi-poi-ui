@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { default as RSelect } from 'react-select';
+import AsyncSelect from 'react-select/async';
 
 import { getOverrides } from '../../../utils/overrides';
 import { createFilter } from './utils'; // Local utils
 
 import ClearIndicator from './ClearIndicator';
 import DropdownIndicator from './DropdownIndicator';
+import SearchIndicator from './SearchIndicator';
+import LoadingIndicator from './LoadingIndicator';
 import Menu from './Menu';
 import MenuList from './MenuList';
 import Checkbox from '../../general/Checkbox';
@@ -43,6 +46,9 @@ function Select({
     actions,
     onClickAction, // private props
     isMulti,
+    loadOptions,
+    loadingMessage,
+    loadingPlaceholder,
     ...props
 }) {
     // State
@@ -60,6 +66,7 @@ function Select({
             [classes.isFullWidth]: isFullWidth,
             [classes.focused]: focused,
             [classes.errored]: error,
+            [classes.async]: loadOptions,
         },
         classNameProp,
     );
@@ -116,9 +123,12 @@ function Select({
         ),
         isDisabled: isReadOnly,
         isClearable: isMulti ? false : isClearable,
+        menuIsOpen: focused,
+        autoFocus: focused,
         hideSelectedOptions: isMulti ? true : hideSelectedOptions,
         closeMenuOnSelect: isMulti ? false : true,
         noOptionsMessage: useCallback(() => noOptionsPlaceholder, [noOptionsPlaceholder]),
+        loadingMessage: useCallback(() => loadingPlaceholder, [loadingPlaceholder]),
         getOptionValue: useCallback(({ value }) => value, []),
         menuPlacement: 'auto',
         menuPortalTarget: document.body,
@@ -126,8 +136,9 @@ function Select({
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
         },
         components: {
-            ClearIndicator,
-            DropdownIndicator,
+            ClearIndicator: loadOptions ? null : ClearIndicator,
+            DropdownIndicator: loadOptions ? SearchIndicator : DropdownIndicator,
+            LoadingIndicator,
             MenuList: useMemo(() => MenuList(menuListClassName), [menuListClassName]),
             Menu: useMemo(() => Menu(menuClassName, classes.action, actions, onClickAction), [
                 actions,
@@ -171,6 +182,8 @@ function Select({
             ),
             [classes.group],
         ),
+        loadOptions: focused ? loadOptions : null,
+        defaultOptions: !!loadOptions,
         ...override['react-select'],
     };
 
@@ -181,6 +194,9 @@ function Select({
 
     // Async/sync
     let SelectComponent = RSelect;
+    if (loadOptions) {
+        SelectComponent = AsyncSelect;
+    }
 
     return (
         <div {...rootProps} {...override.root}>
@@ -215,6 +231,8 @@ Select.propTypes = {
     menuListClassName: PropTypes.string,
     menuClassName: PropTypes.string,
     overrides: PropTypes.object,
+    /** Async mode */
+    loadOptions: PropTypes.func,
     onChange: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
@@ -232,6 +250,7 @@ Select.propTypes = {
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     placeholder: PropTypes.string,
     noOptionsPlaceholder: PropTypes.string,
+    loadingPlaceholder: PropTypes.string,
     isFullWidth: PropTypes.bool,
     /** Info popover */
     hint: PropTypes.string,

@@ -14,6 +14,29 @@ export default (theme) => ({
         bottom: -21,
         color: theme.colors.red,
     },
+    async: {
+        '& .hoi-poi-select__control': {
+            flexDirection: 'row-reverse',
+        },
+        '& div.hoi-poi-select__indicators': {
+            padding: '0 10px 4px 0 !important',
+            '& svg path': {
+                fill: theme.colors.placeholders,
+            },
+            '& .hoi-poi-select__dropdown-indicator span': {
+                width: 16,
+                height: 16,
+            },
+            '& .hoi-poi-select__loading-indicator': {
+                position: 'absolute',
+                right: 0,
+                margin: 0,
+            },
+            '& .hoi-poi-select__indicator-separator': {
+                display: 'none !important',
+            },
+        },
+    },
     formControl: {
         position: 'relative',
         display: 'flex',
@@ -230,7 +253,7 @@ export default (theme) => ({
         '& .hoi-poi-select__option--is-selected': {
             backgroundColor: `${theme.colors.primaryLight}`,
         },
-        '& .hoi-poi-select__menu-notice--no-options': {
+        '& .hoi-poi-select__menu-notice--no-options, & .hoi-poi-select__menu-notice--loading': {
             ...theme.typography.defaultText,
             color: theme.colors.grey,
             padding: '10px 12px',
