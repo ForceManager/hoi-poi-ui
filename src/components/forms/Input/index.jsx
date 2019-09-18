@@ -26,6 +26,7 @@ function Input({
     placeholder,
     hint,
     error,
+    info,
     isRequired,
     isReadOnly,
     preComponent,
@@ -49,6 +50,8 @@ function Input({
             [classes.focused]: focused,
             [classes.errored]: error,
             [classes.custom]: component,
+            [classes.withMessage]: (error || info) && !(error && info),
+            [classes.withTwoMessage]: error && info,
         },
         classNameProp,
     );
@@ -144,6 +147,11 @@ function Input({
                         {renderedPostComponent}
                     </div>
                 )}
+                {info && (
+                    <div className={classes.info} {...override.info}>
+                        {info}
+                    </div>
+                )}
                 {error && (
                     <div className={classes.error} {...override.error}>
                         {error}
@@ -158,6 +166,7 @@ Input.overrides = [
     'root',
     'input',
     'error',
+    'info',
     'preComponent',
     'postComponent',
     'formControl',
@@ -195,6 +204,8 @@ Input.propTypes = {
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
+    /** Info will be displayed below the component with style changes */
+    info: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     /** Component rendered at the input beginning */

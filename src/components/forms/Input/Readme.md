@@ -27,6 +27,13 @@ const onChange = (field) => {
         value={state[3]}
     />
     <Input label="Lorem ipsum" placeholder="Write here" error="I am an error" />
+    <Input label="Lorem ipsum" placeholder="Write here" info="I am an info message" />
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        info="I am an info message"
+        error="I am an error"
+    />
     <Input label="Lorem ipsum" placeholder="Write here" value="I am disabled" isReadOnly={true} />
 </div>;
 ```

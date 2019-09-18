@@ -7,6 +7,13 @@ export default (theme) => ({
         marginRight: 17,
         padding: '0 0 5px 0',
     },
+    info: {
+        ...theme.typography.smallText,
+        position: 'absolute',
+        lineHeight: '20px',
+        bottom: -21,
+        color: theme.colors.greySoft,
+    },
     error: {
         ...theme.typography.smallText,
         position: 'absolute',
@@ -55,8 +62,16 @@ export default (theme) => ({
             color: theme.colors.disabledGrey,
         },
     },
-    errored: {
+    withMessage: {
         paddingBottom: '30px !important',
+    },
+    withTwoMessage: {
+        paddingBottom: '45px !important',
+        '& $error': {
+            bottom: -39,
+        },
+    },
+    errored: {
         '& $formControl': {
             '&::before': {
                 borderBottom: `1px solid ${theme.colors.red} !important`,

@@ -21,6 +21,7 @@ function Drawer({
     shouldCloseOnOverlayClick,
     shouldCloseOnEsc,
     contentStyles,
+    style,
     ...props
 }) {
     // Overrides
@@ -41,6 +42,7 @@ function Drawer({
                 ...contentStyle,
                 ...contentStyles,
             },
+            ...style,
         },
         overlayClassName: classes.overlay,
         onAfterOpen,

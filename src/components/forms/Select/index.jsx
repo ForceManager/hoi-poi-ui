@@ -183,7 +183,7 @@ function Select({
         ),
         loadOptions: focused ? loadOptions : null,
         defaultOptions: !!loadOptions,
-        openMenuOnClick: false,
+        openMenuOnClick: !loadOptions,
         ...override['react-select'],
     };
 
