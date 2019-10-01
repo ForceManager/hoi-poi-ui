@@ -16,7 +16,8 @@ Error:
 
 Info:
 
-```jsx <Advice type="info">
+```jsx
+<Advice type="info">
     This is an important information that will help you out in this process.
 </Advice>
 <br />
