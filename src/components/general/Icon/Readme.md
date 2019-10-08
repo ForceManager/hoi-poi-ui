@@ -58,6 +58,8 @@ Sizes:
 <span> </span>
 <Icon name="chevron" size="big" />
 <span> </span>
+<Icon name="chevron" size="huge" />
+<span> </span>
 ```
 
 Color:
