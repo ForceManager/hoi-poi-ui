@@ -32,7 +32,6 @@ function Switch({
 
     const rootProps = {
         className: rootClassName,
-        onClick: !isDisabled ? onChange : undefined,
     };
 
     return (
@@ -40,7 +39,7 @@ function Switch({
             <ReactSwitch
                 className={classes.Switch}
                 onChange={!isDisabled ? onChange : undefined}
-                checked={checked ? 'checked' : ''}
+                checked={checked}
                 disabled={isDisabled}
                 offColor={theme.colors.placeholders}
                 onColor={theme.colors.primaryDark}

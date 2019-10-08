@@ -15,7 +15,7 @@ States:
 Interactive:
 
 ```jsx
-function toggleState() {
+function toggleState(st) {
     if (state.checked) {
         setState({
             checked: false,
