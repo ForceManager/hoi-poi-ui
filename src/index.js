@@ -17,6 +17,7 @@ export { default as Modal } from './components/general/Modal';
 export { default as Menus } from './components/general/Menus';
 export { default as Stepper } from './components/general/Stepper';
 export { default as Checkbox } from './components/general/Checkbox';
+export { default as CircularProgress } from './components/general/CircularProgress';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
