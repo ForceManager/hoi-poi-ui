@@ -248,6 +248,7 @@ exports[`Input custom max/min/step match 1`] = `
       >
         <WithStyles(Slider)
           innerRef={null}
+          isRange={false}
           isReadOnly={false}
           jssContext={
             Object {
@@ -525,6 +526,7 @@ exports[`Input custom max/min/step match 1`] = `
                 "vertical": "HoiPoi__Slider__vertical-4-5",
               }
             }
+            isRange={false}
             isReadOnly={false}
             label="Lorem ipsum"
             labelMode="horizontal"
@@ -1192,6 +1194,7 @@ exports[`Input custom max/min/step match 1`] = `
                     </Steps>
                     <div
                       className="HoiPoi__Slider__overlay-4-9"
+                      key="0"
                     >
                       <span
                         className="HoiPoi__Slider__overlayLabel-4-11"
@@ -1207,7 +1210,6 @@ exports[`Input custom max/min/step match 1`] = `
                         className="HoiPoi__Slider__overlayHandler-4-10"
                         disabled={false}
                         dragging="false"
-                        index={0}
                         max={10000}
                         min={5000}
                         offset={0}
@@ -1224,7 +1226,6 @@ exports[`Input custom max/min/step match 1`] = `
                           aria-valuenow={5000}
                           className="HoiPoi__Slider__overlayHandler-4-10"
                           dragging="false"
-                          index={0}
                           onBlur={[Function]}
                           onKeyDown={[Function]}
                           onMouseDown={[Function]}
@@ -1514,6 +1515,7 @@ exports[`Input custom tip match 1`] = `
       >
         <WithStyles(Slider)
           innerRef={null}
+          isRange={false}
           isReadOnly={false}
           jssContext={
             Object {
@@ -1792,6 +1794,7 @@ exports[`Input custom tip match 1`] = `
                 "vertical": "HoiPoi__Slider__vertical-3-5",
               }
             }
+            isRange={false}
             isReadOnly={false}
             label="Lorem ipsum"
             labelMode="horizontal"
@@ -2460,6 +2463,7 @@ exports[`Input custom tip match 1`] = `
                     </Steps>
                     <div
                       className="HoiPoi__Slider__overlay-3-9"
+                      key="0"
                     >
                       <span
                         className="HoiPoi__Slider__overlayLabel-3-11"
@@ -2475,7 +2479,6 @@ exports[`Input custom tip match 1`] = `
                         className="HoiPoi__Slider__overlayHandler-3-10"
                         disabled={false}
                         dragging="false"
-                        index={0}
                         max={100}
                         min={0}
                         offset={0}
@@ -2492,7 +2495,6 @@ exports[`Input custom tip match 1`] = `
                           aria-valuenow={0}
                           className="HoiPoi__Slider__overlayHandler-3-10"
                           dragging="false"
-                          index={0}
                           onBlur={[Function]}
                           onKeyDown={[Function]}
                           onMouseDown={[Function]}
@@ -2781,6 +2783,7 @@ exports[`Input default match 1`] = `
       >
         <WithStyles(Slider)
           innerRef={null}
+          isRange={false}
           isReadOnly={false}
           jssContext={
             Object {
@@ -3058,6 +3061,7 @@ exports[`Input default match 1`] = `
                 "vertical": "HoiPoi__Slider__vertical-1-5",
               }
             }
+            isRange={false}
             isReadOnly={false}
             label="Lorem ipsum"
             labelMode="horizontal"
@@ -3725,6 +3729,7 @@ exports[`Input default match 1`] = `
                     </Steps>
                     <div
                       className="HoiPoi__Slider__overlay-1-9"
+                      key="0"
                     >
                       <span
                         className="HoiPoi__Slider__overlayLabel-1-11"
@@ -3740,7 +3745,6 @@ exports[`Input default match 1`] = `
                         className="HoiPoi__Slider__overlayHandler-1-10"
                         disabled={false}
                         dragging="false"
-                        index={0}
                         max={100}
                         min={0}
                         offset={0}
@@ -3757,7 +3761,6 @@ exports[`Input default match 1`] = `
                           aria-valuenow={0}
                           className="HoiPoi__Slider__overlayHandler-1-10"
                           dragging="false"
-                          index={0}
                           onBlur={[Function]}
                           onKeyDown={[Function]}
                           onMouseDown={[Function]}
@@ -4047,6 +4050,7 @@ exports[`Input disabled match 1`] = `
       >
         <WithStyles(Slider)
           innerRef={null}
+          isRange={false}
           isReadOnly={true}
           jssContext={
             Object {
@@ -4324,6 +4328,7 @@ exports[`Input disabled match 1`] = `
                 "vertical": "HoiPoi__Slider__vertical-2-5",
               }
             }
+            isRange={false}
             isReadOnly={true}
             label="Lorem ipsum"
             labelMode="horizontal"
@@ -4991,6 +4996,7 @@ exports[`Input disabled match 1`] = `
                     </Steps>
                     <div
                       className="HoiPoi__Slider__overlay-2-9"
+                      key="0"
                     >
                       <span
                         className="HoiPoi__Slider__overlayLabel-2-11"
@@ -5006,7 +5012,6 @@ exports[`Input disabled match 1`] = `
                         className="HoiPoi__Slider__overlayHandler-2-10"
                         disabled={true}
                         dragging="false"
-                        index={0}
                         max={100}
                         min={0}
                         offset={0}
@@ -5023,7 +5028,6 @@ exports[`Input disabled match 1`] = `
                           aria-valuenow={0}
                           className="HoiPoi__Slider__overlayHandler-2-10"
                           dragging="false"
-                          index={0}
                           onBlur={[Function]}
                           onKeyDown={[Function]}
                           onMouseDown={[Function]}
