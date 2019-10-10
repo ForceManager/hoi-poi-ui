@@ -48,6 +48,15 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Range handler:
+
+```jsx
+const onChange = (value) => setState({ value });
+<div>
+    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} isRange />
+</div>;
+```
+
 ### Component tree
 
 ---
