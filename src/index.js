@@ -16,6 +16,7 @@ export { default as Tabs } from './components/general/Tabs';
 export { default as Modal } from './components/general/Modal';
 export { default as Menus } from './components/general/Menus';
 export { default as Stepper } from './components/general/Stepper';
+export { default as Avatar } from './components/general/Avatar';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
