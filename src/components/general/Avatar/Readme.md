@@ -16,13 +16,6 @@ import { Avatar } from 'hoi-poi-ui';
 <div style={{ height: '100%', display: 'flex', alignItems: 'center' }}>
     <div>
         <Avatar
-            size={'huge'}
-            url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            alt="image"
-        />
-    </div>
-    <div>
-        <Avatar
             size={'big'}
             url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             alt="image"
@@ -45,13 +38,6 @@ import { Avatar } from 'hoi-poi-ui';
     <div>
         <Avatar
             size={'small'}
-            url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            alt="image"
-        />
-    </div>
-    <div>
-        <Avatar
-            size={'tiny'}
             url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             alt="image"
         />

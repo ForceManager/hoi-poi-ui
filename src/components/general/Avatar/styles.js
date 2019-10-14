@@ -11,28 +11,20 @@ export default (theme) => ({
             transform: 'translate(-50%, -50%)',
         },
     },
-    tiny: {
+    small: {
         height: '20px',
         width: '20px',
     },
-    small: {
+    medium: {
+        height: '25px',
+        width: '25px',
+    },
+    large: {
         height: '30px',
         width: '30px',
     },
-    medium: {
-        height: '35px',
-        width: '35px',
-    },
-    large: {
-        height: '40px',
-        width: '40px',
-    },
     big: {
-        height: '50px',
-        width: '50px',
-    },
-    huge: {
-        height: '100px',
-        width: '100px',
+        height: '32px',
+        width: '32px',
     },
 });
