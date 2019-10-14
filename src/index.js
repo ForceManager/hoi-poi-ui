@@ -17,10 +17,12 @@ export { default as Modal } from './components/general/Modal';
 export { default as Menus } from './components/general/Menus';
 export { default as Stepper } from './components/general/Stepper';
 export { default as Avatar } from './components/general/Avatar';
+export { default as Checkbox } from './components/general/Checkbox';
+export { default as CircularProgress } from './components/general/CircularProgress';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
-export { default as Checkbox } from './components/forms/Checkbox';
+export { default as CheckboxInput } from './components/forms/CheckboxInput';
 export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
 export { default as Label } from './components/forms/Label';
 export { default as Input } from './components/forms/Input';
@@ -31,11 +33,12 @@ export { default as Slider } from './components/forms/Slider';
 export { default as Radio } from './components/forms/Radio';
 export { default as RadioGroup } from './components/forms/RadioGroup';
 export { default as Multiplier } from './components/forms/Multiplier';
+export { default as Switch } from './components/forms/Switch';
 
 export { default as ScrollBar } from './components/utils/ScrollBar';
 export { default as Tooltip } from './components/utils/Tooltip';
 export { default as Popover } from './components/utils/Popover';
-export { Toast, toast, dismiss as dismissToast } from './components/utils/Toast';
+export { Toast, toast, dismissToast } from './components/utils/Toast';
 
 export { default as Link } from './components/typography/Link';
 export { default as Title } from './components/typography/Title';

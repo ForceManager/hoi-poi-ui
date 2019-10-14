@@ -1,5 +1,7 @@
 export default (theme) => ({
-    root: {},
+    root: {
+        flexFlow: 'row wrap',
+    },
     Label: {
         width: 153,
         marginRight: 17,
@@ -11,6 +13,29 @@ export default (theme) => ({
         lineHeight: '20px',
         bottom: -21,
         color: theme.colors.red,
+    },
+    async: {
+        '& .hoi-poi-select__control': {
+            flexDirection: 'row-reverse',
+        },
+        '& div.hoi-poi-select__indicators': {
+            padding: '0 10px 4px 0 !important',
+            '& svg path': {
+                fill: theme.colors.placeholders,
+            },
+            '& .hoi-poi-select__dropdown-indicator span': {
+                width: 16,
+                height: 16,
+            },
+            '& .hoi-poi-select__loading-indicator': {
+                position: 'absolute',
+                right: 0,
+                margin: 0,
+            },
+            '& .hoi-poi-select__indicator-separator': {
+                display: 'none !important',
+            },
+        },
     },
     formControl: {
         position: 'relative',
@@ -49,6 +74,9 @@ export default (theme) => ({
             '&::after': {
                 borderBottom: `1px solid ${theme.colors.red}`,
             },
+        },
+        '& $selectedOptions': {
+            marginTop: 15,
         },
     },
     isReadOnly: {
@@ -92,17 +120,27 @@ export default (theme) => ({
         '& $formControl': {
             marginTop: 10,
         },
+        '& $selectedOptions': {
+            width: 290,
+        },
     },
     horizontal: {
         display: 'flex',
         alignItems: 'center',
         padding: '15px 0 10px 0',
         '& $error': {},
+        '& $selectedOptions': {
+            width: 290,
+            marginLeft: 170,
+        },
     },
     isFullWidth: {
         '& $formControl': {
             width: '100%',
             flex: 1,
+        },
+        '& $selectedOptions': {
+            width: '100% !important',
         },
     },
     select: {
@@ -209,10 +247,13 @@ export default (theme) => ({
                 backgroundColor: `${theme.colors.primaryLight} !important`,
             },
         },
-        '& .hoi-poi-select__option--is-focused, & .hoi-poi-select__option--is-selected': {
-            backgroundColor: `${theme.colors.primaryLight} !important`,
+        '& .hoi-poi-select__option--is-focused': {
+            backgroundColor: `transparent`,
         },
-        '& .hoi-poi-select__menu-notice--no-options': {
+        '& .hoi-poi-select__option--is-selected': {
+            backgroundColor: `${theme.colors.primaryLight}`,
+        },
+        '& .hoi-poi-select__menu-notice--no-options, & .hoi-poi-select__menu-notice--loading': {
             ...theme.typography.defaultText,
             color: theme.colors.grey,
             padding: '10px 12px',
@@ -237,6 +278,19 @@ export default (theme) => ({
         '& button': {
             textAlign: 'left',
             padding: '15px 20px',
+        },
+    },
+    optionLabel: {
+        display: 'flex',
+        alignItems: 'center',
+        '& > div': {
+            marginRight: 10,
+        },
+    },
+    selectedOptions: {
+        width: '100%',
+        '& > div': {
+            marginTop: 5,
         },
     },
 });

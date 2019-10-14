@@ -33,6 +33,70 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Multi:
+
+```jsx
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        isMulti
+    />
+</div>;
+```
+
+Disabled:
+
+```jsx
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+];
+
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value || options[1]}
+        isReadOnly={true}
+    />
+</div>;
+```
+
 Disabled options:
 
 ```jsx
@@ -163,6 +227,48 @@ const onChange = (value) => setState({ value });
         options={options}
         value={state.value}
         labelMode="vertical"
+    />
+</div>;
+```
+
+Async load options:
+
+```jsx
+const onChange = (value) => setState({ value });
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 2000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
     />
 </div>;
 ```

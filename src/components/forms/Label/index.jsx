@@ -29,7 +29,7 @@ function Label({
 
     return (
         <span {...rootProps} {...override.root}>
-            <Text type="bold" className={classes.Text} {...override.Text}>
+            <Text className={classes.Text} {...override.Text}>
                 {children}
                 {isRequired && '*'}
             </Text>

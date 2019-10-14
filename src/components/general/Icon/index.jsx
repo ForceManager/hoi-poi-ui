@@ -28,6 +28,7 @@ import ArrowLeft from './icons/ArrowLeft';
 import ArrowTop from './icons/ArrowTop';
 import ArrowBottom from './icons/ArrowBottom';
 import ThickDisabled from './icons/ThickDisabled';
+import Funnel from './icons/Funnel';
 
 const ICONS = {
     chevron: Chevron,
@@ -52,6 +53,7 @@ const ICONS = {
     arrowLeft: ArrowLeft,
     arrowTop: ArrowTop,
     arrowBottom: ArrowBottom,
+    funnel: Funnel,
 };
 
 function Icon({
@@ -98,7 +100,7 @@ Icon.defaultProps = {
 Icon.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
     name: PropTypes.string,
     color: PropTypes.string,
     onClick: PropTypes.func,

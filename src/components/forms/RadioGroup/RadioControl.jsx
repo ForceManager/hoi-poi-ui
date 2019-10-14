@@ -12,6 +12,7 @@ function RadioControl({
     classes,
     option,
     onChange,
+    onBlur,
     value,
     isReadOnly,
     ...props
@@ -20,8 +21,9 @@ function RadioControl({
     const override = getOverrides(overridesProp, RadioControl.overrides);
 
     const onChangeRadio = useCallback(() => {
-        onChange(option.value);
-    }, [onChange, option]);
+        onChange && onChange(option.value);
+        onBlur && onBlur(option.value);
+    }, [onBlur, onChange, option.value]);
 
     return (
         <div

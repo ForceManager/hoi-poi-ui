@@ -15,6 +15,7 @@ function Input({
     onChange,
     onFocus,
     onBlur,
+    onEnter,
     id,
     name,
     type,
@@ -25,6 +26,7 @@ function Input({
     placeholder,
     hint,
     error,
+    info,
     isRequired,
     isReadOnly,
     preComponent,
@@ -48,6 +50,8 @@ function Input({
             [classes.focused]: focused,
             [classes.errored]: error,
             [classes.custom]: component,
+            [classes.withMessage]: (error || info) && !(error && info),
+            [classes.withTwoMessage]: error && info,
         },
         classNameProp,
     );
@@ -63,34 +67,50 @@ function Input({
         ...override.Label,
     };
 
-    const inputProps = {
+    let inputProps = {
         id,
         name,
         className: classes.input,
         type,
         placeholder,
         value,
-        onChange,
-        readOnly: isReadOnly,
+        onChange: isReadOnly ? undefined : onChange,
         onFocus: useCallback(
             (e) => {
                 setFocused(true);
-                onFocus && onFocus();
+                onFocus && onFocus(e);
             },
             [onFocus],
         ),
         onBlur: useCallback(
             (e) => {
                 setFocused(false);
-                onBlur && onBlur();
+                onBlur && onBlur(e);
             },
             [onBlur],
+        ),
+        onKeyDown: useCallback(
+            (e) => {
+                if (e.key === 'Enter') {
+                    onEnter && onEnter(e);
+                }
+            },
+            [onEnter],
         ),
         ...override.input,
     };
 
+    if (component) {
+        inputProps.isReadOnly = isReadOnly;
+    } else {
+        inputProps.readOnly = isReadOnly;
+    }
+
     // Remove content post component
-    const postComponentClick = useCallback(() => onChange(), [onChange]);
+    const postComponentClick = useCallback(() => {
+        onChange && onChange();
+        onBlur && onBlur();
+    }, [onBlur, onChange]);
     let renderedPostComponent = postComponent;
 
     if (value && !isReadOnly) {
@@ -103,7 +123,7 @@ function Input({
 
     if (isReadOnly) {
         renderedPostComponent = (
-            <span onClick={postComponentClick} className={classes.postCloseComponent}>
+            <span className={classes.postCloseComponent}>
                 <Icon name="lock" />
             </span>
         );
@@ -127,6 +147,11 @@ function Input({
                         {renderedPostComponent}
                     </div>
                 )}
+                {info && (
+                    <div className={classes.info} {...override.info}>
+                        {info}
+                    </div>
+                )}
                 {error && (
                     <div className={classes.error} {...override.error}>
                         {error}
@@ -141,6 +166,7 @@ Input.overrides = [
     'root',
     'input',
     'error',
+    'info',
     'preComponent',
     'postComponent',
     'formControl',
@@ -162,6 +188,7 @@ Input.propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
+    onEnter: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
     /** Native input name */
@@ -177,6 +204,8 @@ Input.propTypes = {
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
+    /** Info will be displayed below the component with style changes */
+    info: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     /** Component rendered at the input beginning */

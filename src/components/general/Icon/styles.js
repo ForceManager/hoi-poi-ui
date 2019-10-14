@@ -13,10 +13,14 @@ export default (theme) => ({
         height: 18,
     },
     large: {
+        width: 24,
+        height: 24,
+    },
+    big: {
         width: 32,
         height: 32,
     },
-    big: {
+    huge: {
         width: 64,
         height: 64,
     },

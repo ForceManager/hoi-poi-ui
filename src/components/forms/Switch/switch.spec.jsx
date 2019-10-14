@@ -2,13 +2,13 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Checkbox from '../../forms/Checkbox';
+import Switch from './index';
 
-describe('Checkbox', () => {
+describe('Switch', () => {
     test('unchecked match snapshot', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Checkbox />
+                <Switch />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -16,15 +16,7 @@ describe('Checkbox', () => {
     test('checked match snapshot', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Checkbox checked />
-            </HoiPoiProvider>,
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    test('indeterminate match snapshot', () => {
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <Checkbox checked indeterminate />
+                <Switch checked />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -32,7 +24,7 @@ describe('Checkbox', () => {
     test('disabled match snapshot', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Checkbox isDisabled />
+                <Switch isDisabled />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();

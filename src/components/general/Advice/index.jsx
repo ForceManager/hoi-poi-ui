@@ -14,6 +14,7 @@ function Advice({
     classes,
     className: classNameProp,
     overrides: overridesProp,
+    title,
     showIcon,
     showCollapse,
     theme,
@@ -26,6 +27,7 @@ function Advice({
     const textHeight = useRef(null);
 
     useLayoutEffect(() => {
+        if (title) return;
         const el = textEl.current;
         setEllipsisActive(el.offsetWidth < el.scrollWidth);
         textHeight.current = el.offsetHeight;
@@ -36,7 +38,7 @@ function Advice({
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [textEl, children, setEllipsisActive]);
+    }, [textEl, children, setEllipsisActive, title]);
 
     // Overrides
     const override = getOverrides(overridesProp, Advice.overrides);
@@ -91,6 +93,8 @@ function Advice({
         setIsCollapsed(!isCollapsed);
     }, [isCollapsed]);
 
+    const showCollapsingIcon = isEllipsisActive || title;
+
     return (
         <div {...rootProps}>
             {showIcon && (
@@ -121,10 +125,10 @@ function Advice({
                             {...override.Text}
                             overrides={{ root: { ref: textEl } }}
                         >
-                            {children}
+                            {!title && children}
+                            {title && title}
                         </Text>
-
-                        {isEllipsisActive && (
+                        {showCollapsingIcon && (
                             <span
                                 onClick={toggleCollapsing}
                                 className={classes.dropdownIcon}
@@ -134,6 +138,17 @@ function Advice({
                             </span>
                         )}
                     </div>
+                    {title && (
+                        <div className={classes.withTitleContainer}>
+                            <Text
+                                className={classes.Text}
+                                {...override.Text}
+                                overrides={{ root: { ref: textEl } }}
+                            >
+                                {children}
+                            </Text>
+                        </div>
+                    )}
                 </AnimateHeight>
             )}
         </div>
@@ -159,6 +174,7 @@ Advice.defaultProps = {
 
 Advice.propTypes = {
     children: PropTypes.node.isRequired,
+    title: PropTypes.any,
     className: PropTypes.string,
     overrides: PropTypes.object,
     showIcon: PropTypes.bool,

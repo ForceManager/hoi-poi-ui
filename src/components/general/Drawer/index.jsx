@@ -20,6 +20,8 @@ function Drawer({
     onRequestClose,
     shouldCloseOnOverlayClick,
     shouldCloseOnEsc,
+    contentStyles,
+    style,
     ...props
 }) {
     // Overrides
@@ -36,7 +38,11 @@ function Drawer({
         isOpen,
         closeTimeoutMS: closeTimeout,
         style: {
-            content: contentStyle,
+            content: {
+                ...contentStyle,
+                ...contentStyles,
+            },
+            ...style,
         },
         overlayClassName: classes.overlay,
         onAfterOpen,
@@ -70,7 +76,7 @@ Drawer.propTypes = {
     overrides: PropTypes.object,
     children: PropTypes.any,
     isOpen: PropTypes.bool.isRequired,
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     side: PropTypes.oneOf(['right', 'left']),
     /**Milliseconds to wait before closing the drawer */
     closeTimeout: PropTypes.number,
@@ -82,6 +88,7 @@ Drawer.propTypes = {
     shouldCloseOnOverlayClick: PropTypes.bool,
     /** Close on ESC, you must implement onRequestClose. */
     shouldCloseOnEsc: PropTypes.bool,
+    contentStyles: PropTypes.object,
 };
 
 export default React.memo(withStyles(styles, { name: 'Drawer' })(Drawer));

@@ -13,6 +13,7 @@ module.exports = {
                 './src/components/general/Advice/index.jsx',
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/Button/index.jsx',
+                './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Chip/index.jsx',
                 './src/components/general/ChipGroup/index.jsx',
                 './src/components/general/Drawer/index.jsx',
@@ -23,6 +24,7 @@ module.exports = {
                 './src/components/general/Stepper/index.jsx',
                 './src/components/general/Menus/index.jsx',
                 './src/components/general/Avatar/index.jsx',
+                './src/components/general/CircularProgress/index.jsx',
             ],
         },
         {
@@ -30,7 +32,7 @@ module.exports = {
             description: 'Components related (but not exclusively) to build forms.',
             sectionDepth: 0,
             components: [
-                './src/components/forms/Checkbox/index.jsx',
+                './src/components/forms/CheckboxInput/index.jsx',
                 './src/components/forms/CheckboxGroup/index.jsx',
                 './src/components/forms/Form/index.jsx',
                 './src/components/forms/Input/index.jsx',
@@ -43,6 +45,7 @@ module.exports = {
                 './src/components/forms/Select/index.jsx',
                 './src/components/forms/SelectButton/index.jsx',
                 './src/components/forms/Slider/index.jsx',
+                './src/components/forms/Switch/index.jsx',
             ],
         },
         {
