@@ -1,14 +1,14 @@
 export default (theme) => ({
     root: {
-        position: 'relative',
+        ...theme.typography.defaultText,
+        color: theme.colors.text.black,
         borderRadius: '50%',
         overflow: 'hidden',
         '& > img': {
-            position: 'absolute',
             height: '100%',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
+            width: '100%',
+            objectFit: 'cover',
+            textAlign: 'center',
         },
     },
     small: {

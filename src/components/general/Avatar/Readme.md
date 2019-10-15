@@ -4,7 +4,7 @@ Avatar only placeholder:
 import { Avatar } from 'hoi-poi-ui';
 
 <div>
-    <Avatar placeholder={'/public/placeholder.png'} url={'/public/placeholder.png'} alt="image" />
+    <Avatar placeholder="/public/placeholder.png" alt="image" />
 </div>;
 ```
 
@@ -16,29 +16,33 @@ import { Avatar } from 'hoi-poi-ui';
 <div style={{ height: '100%', display: 'flex', alignItems: 'center' }}>
     <div>
         <Avatar
-            size={'big'}
-            url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            size="big"
+            src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+            placeholder="/public/placeholder.png"
             alt="image"
         />
     </div>
     <div>
         <Avatar
-            size={'large'}
-            url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            size="large"
+            src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+            placeholder="/public/placeholder.png"
             alt="image"
         />
     </div>
     <div>
         <Avatar
-            size={'medium'}
-            url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            size="medium"
+            src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+            placeholder="/public/placeholder.png"
             alt="image"
         />
     </div>
     <div>
         <Avatar
-            size={'small'}
-            url="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            size="small"
+            src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+            placeholder="/public/placeholder.png"
             alt="image"
         />
     </div>

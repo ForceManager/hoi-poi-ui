@@ -1,20 +1,22 @@
-const getDataUri = (src) => {
+const getDataUri = (src, placeholder) => {
     return new Promise((resolve, reject) => {
         if (!src) resolve();
-        let img = new Image();
+        const img = new Image();
         img.crossOrigin = 'Anonymous';
-        let dataUri;
 
         img.onload = function() {
-            let canvas = document.createElement('canvas');
+            const canvas = document.createElement('canvas');
             canvas.width = this.naturalWidth;
             canvas.height = this.naturalHeight;
             canvas.getContext('2d').drawImage(this, 0, 0);
-            dataUri = canvas.toDataURL('image/png');
+            const dataUri = canvas.toDataURL('image/jpg');
             resolve(dataUri);
         };
 
-        img.onerror = reject;
+        img.onerror = function() {
+            reject();
+        };
+
         img.src = src;
     });
 };

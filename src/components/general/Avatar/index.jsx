@@ -1,68 +1,77 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
 import getDataUri from './getDataUri';
+import { getOverrides } from '../../../utils/overrides';
 
 import styles from './styles';
 
 function Avatar({
-    className,
+    overrides: overridesProps,
+    className: classNameProps,
     classes,
     size,
-    url,
+    src,
     alt,
     placeholder,
-    successCallback,
-    errorCallback,
     ...props
 }) {
-    const [src, setSrc] = useState(placeholder || url);
+    const [defaultSrc, setDefaultSrc] = useState(placeholder || src);
     const [isImageLoaded, setIsImageLoaded] = useState(false);
-    const initialUrl = url;
+    const [hadError, setHadError] = useState(false);
+    const initialSrc = useRef(src).current;
 
-    let img = new Image();
-    img.onload = () => {
-        successCallback && successCallback();
-    };
-
-    img.onerror = () => {
-        errorCallback && errorCallback();
-    };
-
-    img.src = src;
-    img.alt = alt;
-
-    useEffect(() => {
-        if (!isImageLoaded || initialUrl !== url) {
-            getDataUri(src).then((dataUri) => {
-                if (dataUri) setSrc(dataUri);
-                setIsImageLoaded(true);
-            });
-        }
-    }, [url, initialUrl, src, isImageLoaded]);
-
-    const rootClassName = classnames(classes.root, classes[size], className);
+    const rootClassName = classnames(classes.root, classes[size], classNameProps);
+    const override = getOverrides(overridesProps, Avatar.overrides);
     const rootProps = {
         ...props,
         className: rootClassName,
     };
 
-    const image = img.outerHTML;
+    useEffect(() => {
+        if (!isImageLoaded || initialSrc !== src) {
+            if (src && !hadError) {
+                getDataUri(src)
+                    .then((dataUri) => {
+                        if (dataUri) setDefaultSrc(dataUri);
+                        setIsImageLoaded(true);
+                    })
+                    .catch(() => {
+                        if (placeholder) {
+                            getDataUri(placeholder).then((dataUri) => {
+                                if (dataUri) setDefaultSrc(dataUri);
+                                setHadError(true);
+                                setIsImageLoaded(true);
+                            });
+                        }
+                    });
+            } else if (placeholder) {
+                getDataUri(placeholder).then((dataUri) => {
+                    if (dataUri) setDefaultSrc(dataUri);
+                    setIsImageLoaded(true);
+                });
+            }
+        }
+    }, [src, placeholder, initialSrc, defaultSrc, isImageLoaded, hadError]);
 
-    return <div {...rootProps} dangerouslySetInnerHTML={{ __html: image }}></div>;
+    return (
+        <div {...rootProps} {...override.root}>
+            <img src={defaultSrc} alt={alt} />
+        </div>
+    );
 }
+
+Avatar.overrides = ['root'];
 
 Avatar.defaultProps = {
     size: 'medium',
 };
 
 Avatar.propTypes = {
-    url: PropTypes.string,
+    src: PropTypes.string,
     placeholder: PropTypes.string,
     alt: PropTypes.string,
-    successCallback: PropTypes.func,
-    errorCallback: PropTypes.func,
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
 };
 
