@@ -1,6 +1,6 @@
 const getDataUri = (src, placeholder) => {
     return new Promise((resolve, reject) => {
-        if (!src) resolve();
+        if (!src) return resolve();
         const img = new Image();
         img.crossOrigin = 'Anonymous';
 
