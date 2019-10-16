@@ -39,18 +39,14 @@ function Avatar({
                     })
                     .catch(() => {
                         if (placeholder) {
-                            getDataUri(placeholder).then((dataUri) => {
-                                if (dataUri) setDefaultSrc(dataUri);
-                                setHadError(true);
-                                setIsImageLoaded(true);
-                            });
+                            setDefaultSrc(placeholder);
+                            setHadError(true);
+                            setIsImageLoaded(true);
                         }
                     });
             } else if (placeholder) {
-                getDataUri(placeholder).then((dataUri) => {
-                    if (dataUri) setDefaultSrc(dataUri);
-                    setIsImageLoaded(true);
-                });
+                setDefaultSrc(placeholder);
+                setIsImageLoaded(true);
             }
         }
     }, [src, placeholder, initialSrc, defaultSrc, isImageLoaded, hadError]);

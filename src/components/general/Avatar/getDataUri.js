@@ -13,9 +13,7 @@ const getDataUri = (src, placeholder) => {
             resolve(dataUri);
         };
 
-        img.onerror = function() {
-            reject();
-        };
+        img.onerror = reject;
 
         img.src = src;
     });
