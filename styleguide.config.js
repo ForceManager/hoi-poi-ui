@@ -23,6 +23,7 @@ module.exports = {
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/Stepper/index.jsx',
                 './src/components/general/Menus/index.jsx',
+                './src/components/general/Avatar/index.jsx',
                 './src/components/general/CircularProgress/index.jsx',
             ],
         },

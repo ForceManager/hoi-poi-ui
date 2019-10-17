@@ -16,6 +16,7 @@ export { default as Tabs } from './components/general/Tabs';
 export { default as Modal } from './components/general/Modal';
 export { default as Menus } from './components/general/Menus';
 export { default as Stepper } from './components/general/Stepper';
+export { default as Avatar } from './components/general/Avatar';
 export { default as Checkbox } from './components/general/Checkbox';
 export { default as CircularProgress } from './components/general/CircularProgress';
 
