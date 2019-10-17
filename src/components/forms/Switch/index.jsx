@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
@@ -34,11 +34,19 @@ function Switch({
         className: rootClassName,
     };
 
+    const onChangeSwitch = useCallback(
+        (...args) => {
+            if (isDisabled) return;
+            onChange && onChange(...args);
+        },
+        [isDisabled, onChange],
+    );
+
     return (
         <div {...rootProps} {...override.root}>
             <ReactSwitch
                 className={classes.Switch}
-                onChange={!isDisabled ? onChange : undefined}
+                onChange={onChangeSwitch}
                 checked={checked}
                 disabled={isDisabled}
                 offColor={theme.colors.placeholders}
