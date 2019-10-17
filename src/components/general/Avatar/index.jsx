@@ -68,7 +68,7 @@ Avatar.propTypes = {
     src: PropTypes.string,
     placeholder: PropTypes.string,
     alt: PropTypes.string,
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
 };
 
 export default React.memo(withStyles(styles, { name: 'Avatar' })(Avatar));
