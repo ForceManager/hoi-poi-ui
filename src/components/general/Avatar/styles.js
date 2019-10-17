@@ -27,4 +27,8 @@ export default (theme) => ({
         height: '32px',
         width: '32px',
     },
+    huge: {
+        height: '64px',
+        width: '64px',
+    },
 });

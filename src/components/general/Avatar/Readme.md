@@ -16,6 +16,14 @@ import { Avatar } from 'hoi-poi-ui';
 <div style={{ height: '100%', display: 'flex', alignItems: 'center' }}>
     <div>
         <Avatar
+            size="huge"
+            src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+            placeholder="/public/placeholder.png"
+            alt="image"
+        />
+    </div>
+    <div>
+        <Avatar
             size="big"
             src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
             placeholder="/public/placeholder.png"
