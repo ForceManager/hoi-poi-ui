@@ -4,7 +4,10 @@ Avatar only placeholder:
 import { Avatar } from 'hoi-poi-ui';
 
 <div>
-    <Avatar placeholder="/public/placeholder.png" alt="image" />
+    <Avatar
+        placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+        alt="image"
+    />
 </div>;
 ```
 
@@ -18,7 +21,7 @@ import { Avatar } from 'hoi-poi-ui';
         <Avatar
             size="big"
             src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
-            placeholder="/public/placeholder.png"
+            placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
             alt="image"
         />
     </div>
@@ -26,7 +29,7 @@ import { Avatar } from 'hoi-poi-ui';
         <Avatar
             size="large"
             src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
-            placeholder="/public/placeholder.png"
+            placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
             alt="image"
         />
     </div>
@@ -34,7 +37,7 @@ import { Avatar } from 'hoi-poi-ui';
         <Avatar
             size="medium"
             src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
-            placeholder="/public/placeholder.png"
+            placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
             alt="image"
         />
     </div>
@@ -42,7 +45,7 @@ import { Avatar } from 'hoi-poi-ui';
         <Avatar
             size="small"
             src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
-            placeholder="/public/placeholder.png"
+            placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
             alt="image"
         />
     </div>
