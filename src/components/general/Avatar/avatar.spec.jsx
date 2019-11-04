@@ -10,7 +10,7 @@ describe('Avatar', () => {
             <HoiPoiProvider>
                 <Avatar
                     size="medium"
-                    placeholder="/public/placeholder.png"
+                    placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
                     src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
                     alt="image"
                 />
@@ -23,7 +23,7 @@ describe('Avatar', () => {
             <HoiPoiProvider>
                 <Avatar
                     size="medium"
-                    placeholder="/public/placeholder.png"
+                    placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
                     src="https://live.staticflickr.com/2862/9899551176_b8c9c7"
                     alt="image"
                 />
@@ -34,7 +34,10 @@ describe('Avatar', () => {
     test('only placeholder', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Avatar placeholder="/public/placeholder.png" alt="image" />
+                <Avatar
+                    placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+                    alt="image"
+                />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
