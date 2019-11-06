@@ -29,6 +29,7 @@ const commonjsOptions = {
             'oneOfType',
             'element',
         ],
+        './node_modules/react-treebeard/index.js': ['Treebeard'],
     },
 };
 
