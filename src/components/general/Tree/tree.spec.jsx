@@ -25,9 +25,9 @@ const defaultNodes = {
             name: 'node_modules',
             children: [],
         },
-        { name: 'gulpfile.js' },
-        { name: 'index.js' },
-        { name: 'package.json' },
+        { id: 4, name: 'gulpfile.js' },
+        { id: 5, name: 'index.js' },
+        { id: 6, name: 'package.json' },
     ],
 };
 
@@ -53,9 +53,9 @@ const disabledNodes = {
             name: 'node_modules',
             children: [],
         },
-        { name: 'gulpfile.js', isDisabled: true },
-        { name: 'index.js' },
-        { name: 'package.json' },
+        { id: 4, name: 'gulpfile.js', isDisabled: true },
+        { id: 5, name: 'index.js' },
+        { id: 6, name: 'package.json' },
     ],
 };
 
