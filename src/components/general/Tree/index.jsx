@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'react-jss';
 import classnames from 'classnames';
@@ -21,6 +21,10 @@ const Tree = ({
 }) => {
     const [data, setData] = useState(nodes);
     const [cursor, setCursor] = useState(false);
+
+    useEffect(() => {
+        setData(nodes);
+    }, [nodes]);
 
     const override = getOverrides(overridesProp, Tree.overrides);
 
