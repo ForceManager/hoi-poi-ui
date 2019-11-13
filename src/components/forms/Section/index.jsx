@@ -25,6 +25,9 @@ function Section({
 
     // Classes
     const rootClassName = classnames(classes.root, {}, classNameProp);
+    const headerClassName = classnames(classes.header, {
+        [classes.isExpandable]: isExpandable,
+    });
     const iconClasses = classnames(classes.icon, {
         [classes.collapsed]: !isOpen,
     });
@@ -34,7 +37,7 @@ function Section({
     if (title && isExpandable) {
         return (
             <div className={rootClassName} {...override.root}>
-                <div className={classes.header} onClick={onToggle} {...override.header}>
+                <div className={headerClassName} onClick={onToggle} {...override.header}>
                     <Text type="bold" className={classes.Text} {...override.Text}>
                         {title}
                     </Text>
@@ -50,10 +53,10 @@ function Section({
     } else if (title && !isExpandable) {
         return (
             <div className={rootClassName}>
-                <div className={classes.header} {...override.header}>
-                    <span className={classes.title} {...override.title}>
+                <div className={headerClassName} {...override.header}>
+                    <Text type="bold" className={classes.Text} {...override.Text}>
                         {title}
-                    </span>
+                    </Text>
                 </div>
                 {children}
             </div>

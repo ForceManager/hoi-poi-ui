@@ -9,6 +9,8 @@ export default (theme) => ({
         height: 40,
         boxSizing: 'border-box',
         borderBottom: `1px solid ${theme.colors.placeholders}`,
+    },
+    isExpandable: {
         cursor: 'pointer',
     },
     Text: {
@@ -17,7 +19,6 @@ export default (theme) => ({
         ...theme.typography.defaultText,
         color: theme.colors.black,
         textTransform: 'uppercase',
-        cursor: 'pointer',
     },
     icon: {
         lineHeight: '0',
