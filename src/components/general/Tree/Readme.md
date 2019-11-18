@@ -10,11 +10,11 @@ const nodes = {
             id: 2,
             name: 'example',
             children: [
-                { name: 'app.js' },
-                { name: 'data.js' },
-                { name: 'index.html' },
-                { name: 'styles.js' },
-                { name: 'webpack.config.js' },
+                { id: 10, name: 'app.js' },
+                { id: 11, name: 'data.js' },
+                { id: 12, name: 'index.html' },
+                { id: 13, name: 'styles.js' },
+                { id: 14, name: 'webpack.config.js' },
             ],
         },
         {
@@ -29,19 +29,25 @@ const nodes = {
                 {
                     name: 'components',
                     id: 5,
-                    children: [{ name: 'decorators.js' }, { name: 'treebeard.js' }],
+                    children: [
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
+                    ],
                 },
-                { name: 'index.js' },
+                { id: 17, name: 'index.js' },
             ],
         },
         {
             id: 6,
             name: 'themes',
-            children: [{ name: 'animations.js' }, { name: 'default.js' }],
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
         },
-        { name: 'gulpfile.js' },
-        { name: 'index.js' },
-        { name: 'package.json' },
+        { id: 7, name: 'gulpfile.js' },
+        { id: 8, name: 'index.js' },
+        { id: 9, name: 'package.json' },
     ],
 };
 
@@ -62,64 +68,11 @@ const nodes = {
             id: 2,
             name: 'example',
             children: [
-                { name: 'app.js' },
-                { name: 'data.js' },
-                { name: 'index.html' },
-                { name: 'styles.js' },
-                { name: 'webpack.config.js' },
-            ],
-        },
-        {
-            id: 3,
-            name: 'node_modules',
-            children: [],
-        },
-        {
-            id: 4,
-            name: 'src',
-            children: [
-                {
-                    name: 'components',
-                    id: 5,
-                    children: [{ name: 'decorators.js' }, { name: 'treebeard.js' }],
-                },
-                { name: 'index.js' },
-            ],
-        },
-        {
-            id: 6,
-            name: 'themes',
-            children: [{ name: 'animations.js' }, { name: 'default.js' }],
-        },
-        { name: 'gulpfile.js' },
-        { name: 'index.js' },
-        { name: 'package.json' },
-    ],
-};
-
-<div style={{ height: '300px', overflow: 'auto' }}>
-    <Tree nodes={nodes} canSelectParents={true} />
-</div>;
-```
-
-Disabled nodes
-
-```jsx
-const nodes = {
-    name: 'react-treebeard',
-    id: 1,
-    toggled: true,
-    children: [
-        {
-            id: 2,
-            name: 'example',
-            isDisabled: true,
-            children: [
-                { name: 'app.js' },
-                { name: 'data.js' },
-                { name: 'index.html' },
-                { name: 'styles.js' },
-                { name: 'webpack.config.js' },
+                { id: 10, name: 'app.js' },
+                { id: 11, name: 'data.js' },
+                { id: 12, name: 'index.html' },
+                { id: 13, name: 'styles.js' },
+                { id: 14, name: 'webpack.config.js' },
             ],
         },
         {
@@ -135,21 +88,80 @@ const nodes = {
                     name: 'components',
                     id: 5,
                     children: [
-                        { name: 'decorators.js', isDisabled: true },
-                        { name: 'treebeard.js', isDisabled: true },
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
                     ],
                 },
-                { name: 'index.js' },
+                { id: 17, name: 'index.js' },
             ],
         },
         {
             id: 6,
             name: 'themes',
-            children: [{ name: 'animations.js' }, { name: 'default.js' }],
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
         },
-        { name: 'gulpfile.js', isDisabled: true },
-        { name: 'index.js' },
-        { name: 'package.json' },
+        { id: 7, name: 'gulpfile.js' },
+        { id: 8, name: 'index.js' },
+        { id: 9, name: 'package.json' },
+    ],
+};
+```
+
+Disabled nodes
+
+```jsx
+const nodes = {
+    name: 'react-treebeard',
+    id: 1,
+    toggled: true,
+    children: [
+        {
+            id: 2,
+            name: 'example',
+            isDisabled: true,
+            children: [
+                { id: 10, name: 'app.js' },
+                { id: 11, name: 'data.js' },
+                { id: 12, name: 'index.html' },
+                { id: 13, name: 'styles.js' },
+                { id: 14, name: 'webpack.config.js', isDisabled: true },
+            ],
+        },
+        {
+            id: 3,
+            name: 'node_modules',
+            children: [],
+        },
+        {
+            id: 4,
+            name: 'src',
+            children: [
+                {
+                    name: 'components',
+                    id: 5,
+                    children: [
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
+                    ],
+                },
+                { id: 17, name: 'index.js', isDisabled: true },
+            ],
+        },
+        {
+            id: 6,
+            name: 'themes',
+            isDisabled: true,
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
+        },
+        { id: 7, name: 'gulpfile.js' },
+        { id: 8, name: 'index.js' },
+        { id: 9, name: 'package.json' },
     ],
 };
 
@@ -170,11 +182,11 @@ const nodes = {
             id: 2,
             name: 'example',
             children: [
-                { name: 'app.js' },
-                { name: 'data.js' },
-                { name: 'index.html' },
-                { name: 'styles.js' },
-                { name: 'webpack.config.js' },
+                { id: 10, name: 'app.js' },
+                { id: 11, name: 'data.js' },
+                { id: 12, name: 'index.html' },
+                { id: 13, name: 'styles.js' },
+                { id: 14, name: 'webpack.config.js' },
             ],
         },
         {
@@ -189,19 +201,25 @@ const nodes = {
                 {
                     name: 'components',
                     id: 5,
-                    children: [{ name: 'decorators.js' }, { name: 'treebeard.js' }],
+                    children: [
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
+                    ],
                 },
-                { name: 'index.js' },
+                { id: 17, name: 'index.js' },
             ],
         },
         {
             id: 6,
             name: 'themes',
-            children: [{ name: 'animations.js' }, { name: 'default.js' }],
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
         },
-        { name: 'gulpfile.js' },
-        { name: 'index.js' },
-        { name: 'package.json' },
+        { id: 7, name: 'gulpfile.js' },
+        { id: 8, name: 'index.js' },
+        { id: 9, name: 'package.json' },
     ],
 };
 

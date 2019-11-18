@@ -17,6 +17,7 @@ export default (theme) => ({
     formControl: {
         position: 'relative',
         display: 'flex',
+        flex: 1,
         alignItems: 'center',
         width: 290,
         lineHeight: 0,

@@ -49,10 +49,16 @@ function Select({
     loadOptions,
     loadingMessage,
     loadingPlaceholder,
+    isFuzzy,
     ...props
 }) {
     // State
     const [focused, setFocused] = useState(false);
+    const [lazyOptions, setLazyOptions] = useState({
+        areLoaded: false,
+        options: null,
+        isLoading: false,
+    });
 
     // Overrides
     const override = getOverrides(overridesProp, Select.overrides);
@@ -66,7 +72,7 @@ function Select({
             [classes.isFullWidth]: isFullWidth,
             [classes.focused]: focused,
             [classes.errored]: error,
-            [classes.async]: loadOptions,
+            [classes.async]: loadOptions && isFuzzy,
         },
         classNameProp,
     );
@@ -103,7 +109,7 @@ function Select({
         className: selectClassName,
         classNamePrefix: 'hoi-poi-select',
         placeholder,
-        options,
+        options: lazyOptions.options || options,
         value: isMulti ? [] : value,
         isMulti,
         onChange: useCallback(
@@ -128,6 +134,7 @@ function Select({
         closeMenuOnSelect: isMulti ? false : true,
         noOptionsMessage: useCallback(() => noOptionsPlaceholder, [noOptionsPlaceholder]),
         loadingMessage: useCallback(() => loadingPlaceholder, [loadingPlaceholder]),
+        isLoading: lazyOptions.isLoading,
         getOptionValue: useCallback(({ value }) => value, []),
         menuPlacement: 'auto',
         menuPortalTarget: document.body,
@@ -135,8 +142,8 @@ function Select({
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
         },
         components: {
-            ClearIndicator: loadOptions ? null : ClearIndicator,
-            DropdownIndicator: loadOptions ? SearchIndicator : DropdownIndicator,
+            ClearIndicator: loadOptions && isFuzzy ? null : ClearIndicator,
+            DropdownIndicator: loadOptions && isFuzzy ? SearchIndicator : DropdownIndicator,
             LoadingIndicator,
             MenuList: useMemo(() => MenuList(menuListClassName), [menuListClassName]),
             Menu: useMemo(() => Menu(menuClassName, classes.action, actions, onClickAction), [
@@ -148,9 +155,25 @@ function Select({
             ...components,
         },
         filterOption: createFilter,
-        onFocus: useCallback((e) => {
-            setFocused(true);
-        }, []),
+        onFocus: useCallback(
+            (e) => {
+                setFocused(true);
+                if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
+                    setLazyOptions({
+                        ...lazyOptions,
+                        isLoading: true,
+                    });
+                    loadOptions().then((options) => {
+                        setLazyOptions({
+                            areLoaded: true,
+                            isLoading: false,
+                            options,
+                        });
+                    });
+                }
+            },
+            [isFuzzy, lazyOptions, loadOptions],
+        ),
         onBlur: useCallback((e) => {
             setFocused(false);
         }, []),
@@ -181,9 +204,8 @@ function Select({
             ),
             [classes.group],
         ),
-        loadOptions: focused ? loadOptions : null,
-        defaultOptions: !!loadOptions,
-        openMenuOnClick: !loadOptions,
+        loadOptions,
+        openMenuOnClick: !(loadOptions && isFuzzy),
         ...override['react-select'],
     };
 
@@ -194,7 +216,7 @@ function Select({
 
     // Async/sync
     let SelectComponent = RSelect;
-    if (loadOptions) {
+    if (loadOptions && isFuzzy) {
         SelectComponent = AsyncSelect;
     }
 
