@@ -12,6 +12,7 @@ import styles from './styles';
 const Tree = ({
     overrides: overridesProp,
     classes,
+    id,
     theme,
     onToggle,
     onSelect,
@@ -83,6 +84,7 @@ const Tree = ({
                     !props.node.isDisabled;
 
                 const nodeClasses = classnames(classes.node, {
+                    [`HoiPoi__Tree__${id}__node-id-${props.node.id}`]: id && props.node.id,
                     [classes.toggled]: props.node.toggled,
                     [classes.active]: props.node.active,
                     [classes.empty]: !props.node.children || !props.node.children.length,
@@ -129,23 +131,24 @@ const Tree = ({
             },
         }),
         [
-            canSelectParents,
-            classes.active,
-            classes.empty,
-            classes.isSelectable,
-            classes.isDisabled,
-            classes.node,
-            classes.nodeIcon,
-            classes.nodeItem,
-            classes.toggled,
             customs.Container,
-            customs.Node,
             customs.NodeIcon,
             customs.NodeItem,
-            onSelectNode,
-            override.node,
+            customs.Node,
+            canSelectParents,
+            classes.node,
+            classes.toggled,
+            classes.active,
+            classes.empty,
+            classes.isDisabled,
+            classes.isSelectable,
+            classes.nodeIcon,
+            classes.nodeItem,
+            id,
             override.nodeIcon,
             override.nodeItem,
+            override.node,
+            onSelectNode,
         ],
     );
 
@@ -168,6 +171,7 @@ Tree.defaultProps = {
 };
 
 Tree.propTypes = {
+    id: PropTypes.any,
     onToggle: PropTypes.func,
     onSelect: PropTypes.func,
     nodes: PropTypes.shape({
