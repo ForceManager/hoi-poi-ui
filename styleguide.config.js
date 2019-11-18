@@ -26,6 +26,7 @@ module.exports = {
                 './src/components/general/Avatar/index.jsx',
                 './src/components/general/CircularProgress/index.jsx',
                 './src/components/general/Tree/index.jsx',
+                './src/components/general/DataGrid/index.jsx',
             ],
         },
         {

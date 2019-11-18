@@ -29,7 +29,10 @@ const nodes = {
                 {
                     name: 'components',
                     id: 5,
-                    children: [{ id: 15, name: 'decorators.js' }, { id: 16, name: 'treebeard.js' }],
+                    children: [
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
+                    ],
                 },
                 { id: 17, name: 'index.js' },
             ],
@@ -37,7 +40,10 @@ const nodes = {
         {
             id: 6,
             name: 'themes',
-            children: [{ id: 17, name: 'animations.js' }, { id: 18, name: 'default.js' }],
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
         },
         { id: 7, name: 'gulpfile.js' },
         { id: 8, name: 'index.js' },
@@ -81,7 +87,10 @@ const nodes = {
                 {
                     name: 'components',
                     id: 5,
-                    children: [{ id: 15, name: 'decorators.js' }, { id: 16, name: 'treebeard.js' }],
+                    children: [
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
+                    ],
                 },
                 { id: 17, name: 'index.js' },
             ],
@@ -89,7 +98,10 @@ const nodes = {
         {
             id: 6,
             name: 'themes',
-            children: [{ id: 17, name: 'animations.js' }, { id: 18, name: 'default.js' }],
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
         },
         { id: 7, name: 'gulpfile.js' },
         { id: 8, name: 'index.js' },
@@ -130,7 +142,10 @@ const nodes = {
                 {
                     name: 'components',
                     id: 5,
-                    children: [{ id: 15, name: 'decorators.js' }, { id: 16, name: 'treebeard.js' }],
+                    children: [
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
+                    ],
                 },
                 { id: 17, name: 'index.js', isDisabled: true },
             ],
@@ -139,7 +154,10 @@ const nodes = {
             id: 6,
             name: 'themes',
             isDisabled: true,
-            children: [{ id: 17, name: 'animations.js' }, { id: 18, name: 'default.js' }],
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
         },
         { id: 7, name: 'gulpfile.js' },
         { id: 8, name: 'index.js' },
@@ -183,7 +201,10 @@ const nodes = {
                 {
                     name: 'components',
                     id: 5,
-                    children: [{ id: 15, name: 'decorators.js' }, { id: 16, name: 'treebeard.js' }],
+                    children: [
+                        { id: 15, name: 'decorators.js' },
+                        { id: 16, name: 'treebeard.js' },
+                    ],
                 },
                 { id: 17, name: 'index.js' },
             ],
@@ -191,7 +212,10 @@ const nodes = {
         {
             id: 6,
             name: 'themes',
-            children: [{ id: 17, name: 'animations.js' }, { id: 18, name: 'default.js' }],
+            children: [
+                { id: 17, name: 'animations.js' },
+                { id: 18, name: 'default.js' },
+            ],
         },
         { id: 7, name: 'gulpfile.js' },
         { id: 8, name: 'index.js' },

@@ -41,7 +41,7 @@ const Tree = ({
     const onSelectNode = useCallback(
         (node) => {
             if (cursor) cursor.active = false;
-            if (canSelectParents || (!node.children || !node.children.length)) node.active = true;
+            if (canSelectParents || !node.children || !node.children.length) node.active = true;
             else node.active = false;
             if (cursor && node && data.id !== node.id) data.active = false;
             setData({ ...data });
@@ -80,7 +80,7 @@ const Tree = ({
                 if (customs.Container) return <customs.Container {...props} />;
 
                 const isSelectable =
-                    (canSelectParents || (!props.node.children || !props.node.children.length)) &&
+                    (canSelectParents || !props.node.children || !props.node.children.length) &&
                     !props.node.isDisabled;
 
                 const nodeClasses = classnames(classes.node, {
