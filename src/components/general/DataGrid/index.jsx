@@ -2,7 +2,7 @@ import React, { useCallback, useRef, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AgGridReact } from 'ag-grid-react';
-import { withStyles } from 'hoi-poi-ui';
+import withStyles from 'react-jss';
 
 import LoadingOverlay from './LoadingOverlay';
 

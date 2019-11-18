@@ -1,5 +1,6 @@
 import React from 'react';
-import { withStyles, Loader } from 'hoi-poi-ui';
+import withStyles from 'react-jss';
+import { Loader } from 'hoi-poi-ui';
 
 import styles from './styles/loadingOverlay.styles';
 
