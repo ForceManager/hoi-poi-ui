@@ -22,6 +22,7 @@ function Modal({
     overrides: overridesProp,
     className: classNameProp,
     classes,
+    overlayClassName,
     title,
     isOpen,
     useCornerClose,
@@ -44,6 +45,7 @@ function Modal({
 
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
+    const overlayClassNames = classnames(classes.overlay, overlayClassName);
 
     let contentStyle = {
         width: width || SIZES[size],
@@ -61,7 +63,7 @@ function Modal({
         style: {
             content: contentStyle,
         },
-        overlayClassName: classes.overlay,
+        overlayClassName: overlayClassNames,
         onAfterOpen,
         onRequestClose,
         shouldCloseOnOverlayClick,
@@ -142,6 +144,7 @@ Modal.defaultProps = {
 
 Modal.propTypes = {
     className: PropTypes.string,
+    overlayClassName: PropTypes.string,
     overrides: PropTypes.object,
     children: PropTypes.any,
     title: PropTypes.string,
