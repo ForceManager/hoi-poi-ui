@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import Modal from 'react-modal';
 import Text from '../../typography/Text';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Drawer');
 
 function Drawer({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     isOpen,
     width,
     side,
@@ -24,6 +26,7 @@ function Drawer({
     style,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Drawer.overrides);
 
@@ -91,4 +94,4 @@ Drawer.propTypes = {
     contentStyles: PropTypes.object,
 };
 
-export default React.memo(withStyles(styles, { name: 'Drawer' })(Drawer));
+export default React.memo(Drawer);

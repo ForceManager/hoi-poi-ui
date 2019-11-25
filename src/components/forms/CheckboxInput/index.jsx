@@ -1,19 +1,20 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Label from '../Label';
 import Checkbox from '../../general/Checkbox';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'CheckboxInput');
 
 function CheckboxInput({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     onChange,
     id,
     name,
@@ -27,6 +28,7 @@ function CheckboxInput({
     isFullWidth,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, CheckboxInput.overrides);
 
@@ -113,4 +115,4 @@ CheckboxInput.propTypes = {
     isReadOnly: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'CheckboxInput' })(CheckboxInput));
+export default React.memo(CheckboxInput);

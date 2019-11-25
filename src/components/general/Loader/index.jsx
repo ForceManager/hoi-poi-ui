@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import styles from './styles';
 
-function Loader({ className, classes, size, color }) {
+import { useClasses } from '../../../utils/overrides';
+import { createUseStyles } from '../../../utils/styles';
+import styles from './styles';
+const useStyles = createUseStyles(styles, 'Loader');
+
+function Loader({ classes: classesProp, className, size, color }) {
+    const classes = useClasses(useStyles, classesProp);
     const rootClassName = classnames(className, classes.root, [classes[color]], [classes[size]]);
 
     return <div className={rootClassName} />;
@@ -21,4 +25,4 @@ Loader.propTypes = {
     color: PropTypes.oneOf(['primary', 'danger', 'white']),
 };
 
-export default React.memo(withStyles(styles, { name: 'Loader' })(Loader));
+export default React.memo(Loader);

@@ -1,21 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Chip from './../Chip';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'ChipGrou');
 
 function ChipGroup({
     className,
+    classes: classesProp,
     overrides: overridesProp,
-    classes,
     label,
     url,
     isShrinked,
     chips,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     const override = getOverrides(overridesProp, ChipGroup.overrides);
 
     return (
@@ -48,4 +51,4 @@ ChipGroup.propTypes = {
     ),
 };
 
-export default React.memo(withStyles(styles, { name: 'ChipGroup', injectTheme: true })(ChipGroup));
+export default React.memo(ChipGroup);

@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 
 import {
@@ -9,9 +8,11 @@ import {
     buildStyles,
 } from 'react-circular-progressbar';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'CircularProgress');
 
 const getColors = (type, colors) =>
     ({
@@ -47,10 +48,9 @@ const getSizes = (size, colors) =>
 
 function CircularProgress({
     children,
+    classes: classesProp,
     className: classNameProp,
     overrides: overridesProp,
-    classes,
-    theme,
     color,
     value,
     text,
@@ -61,6 +61,8 @@ function CircularProgress({
     maxValue = 100,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
+    const theme = useTheme();
     const rootClassName = classnames(
         classes.root,
         {
@@ -132,6 +134,4 @@ CircularProgress.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
-export default React.memo(
-    withStyles(styles, { name: 'CircularProgress', injectTheme: true })(CircularProgress),
-);
+export default React.memo(CircularProgress);

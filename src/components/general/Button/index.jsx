@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Loader from '../../general/Loader';
 import Text from '../../typography/Text';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Button');
 
 const LOADER_SIZES = {
     big: 'small',
@@ -15,9 +17,9 @@ const LOADER_SIZES = {
 
 function Button({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     onClick,
     size,
     type,
@@ -29,6 +31,7 @@ function Button({
     target,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Button.overrides);
 
@@ -116,4 +119,4 @@ Button.propTypes = {
     target: PropTypes.string,
 };
 
-export default React.memo(withStyles(styles, { name: 'Button' })(Button));
+export default React.memo(Button);

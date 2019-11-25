@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import RCTooltip from 'rc-tooltip';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Popover');
 
 function Popover({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     content,
     placement,
     trigger,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Popover.overrides);
 
@@ -68,4 +71,4 @@ Popover.propTypes = {
     ]),
 };
 
-export default React.memo(withStyles(styles, { name: 'Popover' })(Popover));
+export default React.memo(Popover);

@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 
+import { useClasses } from '../../../utils/overrides';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './messageStyles';
+const useStyles = createUseStyles(styles, 'ToatMessage');
 
-function ToastMessage({ classes, title, text, type }) {
+function ToastMessage({ classes: classesProp, title, text, type }) {
+    const classes = useClasses(useStyles, classesProp);
     const rootProps = {
         className: classes.root,
     };
@@ -36,4 +39,4 @@ ToastMessage.propTypes = {
     type: PropTypes.oneOf(['info', 'success', 'error']),
 };
 
-export default React.memo(withStyles(styles, { name: 'ToastMessage' })(ToastMessage));
+export default React.memo(ToastMessage);

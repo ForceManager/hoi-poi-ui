@@ -1,22 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import CheckedIcon from './CheckedIcon';
 import UncheckedIcon from './UncheckedIcon';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Radio');
 
 function Radio({
     checked,
-    classes,
+    classes: classesProp,
     className: classNameProp,
     isDisabled,
     onChange,
     overrides: overridesProp,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Radio.overrides);
 
@@ -66,4 +68,4 @@ Radio.propTypes = {
     overrides: PropTypes.object,
 };
 
-export default React.memo(withStyles(styles, { name: 'Radio' })(Radio));
+export default React.memo(Radio);

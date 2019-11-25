@@ -1,16 +1,18 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import Button from '../../general/Button';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import MultiplierControl from './MultiplierControl';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Multiplier');
 
 function Multiplier({
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     schema,
     name,
     buttonLabel,
@@ -28,6 +30,7 @@ function Multiplier({
     customFields,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // State
     const size = value.length;
 
@@ -173,4 +176,4 @@ Multiplier.propTypes = {
     customFields: PropTypes.object,
 };
 
-export default React.memo(withStyles(styles, { name: 'Multiplier' })(Multiplier));
+export default React.memo(Multiplier);

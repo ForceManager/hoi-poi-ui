@@ -1,11 +1,10 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { default as RSelect } from 'react-select';
 import AsyncSelect from 'react-select/async';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createFilter } from './utils'; // Local utils
 
 import ClearIndicator from './ClearIndicator';
@@ -18,13 +17,15 @@ import Checkbox from '../../general/Checkbox';
 import Chip from '../../general/Chip';
 
 import Label from '../Label';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Select');
 
 function Select({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     onChange,
     onBlur,
     id,
@@ -52,6 +53,7 @@ function Select({
     isFuzzy,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // State
     const [focused, setFocused] = useState(false);
     const [lazyOptions, setLazyOptions] = useState({
@@ -297,4 +299,4 @@ Select.propTypes = {
     ),
 };
 
-export default React.memo(withStyles(styles, { name: 'Select' })(Select));
+export default React.memo(Select);

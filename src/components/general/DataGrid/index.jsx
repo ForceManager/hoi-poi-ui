@@ -2,11 +2,12 @@ import React, { useCallback, useRef, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AgGridReact } from 'ag-grid-react';
-import withStyles from 'react-jss';
+import { useClasses } from '../../../utils/overrides';
+import { createUseStyles } from '../../../utils/styles';
+import styles from './styles';
 
 import LoadingOverlay from './LoadingOverlay';
-
-import styles from './styles/index';
+const useStyles = createUseStyles(styles, 'DataGrid');
 
 const defaultOptions = {
     rowHeight: 50,
@@ -32,8 +33,8 @@ const defaultOptions = {
 
 function DataGrid({
     id,
+    classes: classesProp,
     className,
-    classes,
     dataSource,
     isLoading,
     hasError,
@@ -43,6 +44,7 @@ function DataGrid({
     infiniteInitialRowCount,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     const rootClassName = classnames(classes.root, className, 'ag-theme-balham');
     const gridRef = useRef(null);
     const gridWidthRef = useRef(0);
@@ -126,8 +128,4 @@ DataGrid.propTypes = {
     className: PropTypes.string,
 };
 
-export default React.memo(
-    withStyles(styles, {
-        name: 'DataGrid',
-    })(DataGrid),
-);
+export default React.memo(DataGrid);

@@ -1,20 +1,22 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import RCSlider, { Range } from 'rc-slider';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Label from '../Label';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Slider');
 
 const Handle = RCSlider.Handle;
 
 function Slider({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     value,
     label,
     labelMode,
@@ -30,6 +32,7 @@ function Slider({
     tipFormatter,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // State
     const [innerValue, setInnerValue] = useState(
         isRange && value === undefined ? [min, max] : value || 0,
@@ -185,4 +188,4 @@ Slider.propTypes = {
     step: PropTypes.number,
 };
 
-export default React.memo(withStyles(styles, { name: 'Slider' })(Slider));
+export default React.memo(Slider);

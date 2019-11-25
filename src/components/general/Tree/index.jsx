@@ -1,25 +1,26 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { Treebeard } from 'react-treebeard';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../Icon';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Tree');
 
 const Tree = ({
     overrides: overridesProp,
-    classes,
     id,
-    theme,
+    classes: classesProp,
     onToggle,
     onSelect,
     nodes,
     customs,
     canSelectParents,
 }) => {
+    const classes = useClasses(useStyles, classesProp);
     const [data, setData] = useState(nodes);
     const [cursor, setCursor] = useState(false);
 
@@ -190,4 +191,4 @@ Tree.propTypes = {
     }),
 };
 
-export default React.memo(withStyles(styles, { name: 'Tree', injectTheme: true })(Tree));
+export default React.memo(Tree);

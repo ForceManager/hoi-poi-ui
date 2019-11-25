@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import RModal from 'react-modal';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Text from '../../typography/Text';
 import Icon from '../../general/Icon';
 import Button from '../../general/Button';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Modal');
 
 const SIZES = {
     small: 400,
@@ -19,9 +20,9 @@ const SIZES = {
 
 function Modal({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     overlayClassName,
     title,
     isOpen,
@@ -40,6 +41,7 @@ function Modal({
     closeTimeoutMS,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Modal.overrides);
 
@@ -170,4 +172,4 @@ Modal.propTypes = {
     closeTimeoutMS: PropTypes.number,
 };
 
-export default React.memo(withStyles(styles, { name: 'Modal' })(Modal));
+export default React.memo(Modal);

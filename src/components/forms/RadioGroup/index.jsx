@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import RadioControl from './RadioControl';
 import Label from '../Label';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'RadioGroup');
 
 function RadioGroup({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     options,
     onChange,
     onBlur,
@@ -24,6 +26,7 @@ function RadioGroup({
     isFullWidth,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, RadioGroup.overrides);
 
@@ -102,4 +105,4 @@ RadioGroup.propTypes = {
     isFullWidth: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'RadioGroup' })(RadioGroup));
+export default React.memo(RadioGroup);

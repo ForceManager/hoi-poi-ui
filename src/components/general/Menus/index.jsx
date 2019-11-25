@@ -1,22 +1,24 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import RCMenu, { SubMenu, MenuItem } from 'rc-menu';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Menus');
 
 function Menus({
     title,
     icon,
     items,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     triggerAction,
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Menus.overrides);
 
@@ -86,4 +88,4 @@ Menus.propTypes = {
     triggerAction: PropTypes.oneOf(['hover', 'click']),
 };
 
-export default React.memo(withStyles(styles, { name: 'Menus' })(Menus));
+export default React.memo(Menus);

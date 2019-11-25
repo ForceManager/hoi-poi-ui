@@ -1,7 +1,9 @@
 import React from 'react';
-import { withTheme } from 'react-jss';
 
-const IndeterminateIcon = React.memo(({ theme, ...props }) => {
+import { useTheme } from '../../../utils/styles';
+
+const IndeterminateIcon = React.memo(({ ...props }) => {
+    const theme = useTheme();
     return (
         <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" {...props}>
             <g fill="none" fillRule="evenodd">
@@ -18,4 +20,4 @@ const IndeterminateIcon = React.memo(({ theme, ...props }) => {
     );
 });
 
-export default withTheme(IndeterminateIcon);
+export default IndeterminateIcon;

@@ -1,7 +1,8 @@
 import React from 'react';
-import { withTheme } from 'react-jss';
+import { useTheme } from '../../../utils/styles';
 
-const UnCheckedIcon = React.memo(({ theme, ...props }) => {
+const UnCheckedIcon = React.memo(({ ...props }) => {
+    const theme = useTheme();
     return (
         <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" {...props}>
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -28,4 +29,4 @@ const UnCheckedIcon = React.memo(({ theme, ...props }) => {
     );
 });
 
-export default withTheme(UnCheckedIcon);
+export default UnCheckedIcon;

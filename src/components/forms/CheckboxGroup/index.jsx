@@ -1,17 +1,20 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Label from '../Label';
 import CheckboxControl from './CheckboxControl';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'CheckboxGroup');
 
 function CheckboxGroup({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     options,
     onChange,
     onBlur,
@@ -24,6 +27,7 @@ function CheckboxGroup({
     isFullWidth,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, CheckboxGroup.overrides);
 
@@ -131,4 +135,4 @@ CheckboxGroup.propTypes = {
     isFullWidth: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'CheckboxGroup' })(CheckboxGroup));
+export default React.memo(CheckboxGroup);

@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { getOverrides } from '../../../utils/overrides';
-import styles from './styles';
 
 function ScrollBar({
     children,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     width,
     height,
     autoHide,
@@ -63,4 +60,4 @@ ScrollBar.propTypes = {
     autoHeightMax: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-export default React.memo(withStyles(styles, { name: 'ScrollBar' })(ScrollBar));
+export default React.memo(ScrollBar);

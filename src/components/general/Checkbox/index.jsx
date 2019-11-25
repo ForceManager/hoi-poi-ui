@@ -1,25 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import CheckedIcon from './CheckedIcon';
 import UnCheckedIcon from './UnCheckedIcon';
 import IndeterminateIcon from './IndeterminateIcon';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Checkbox');
 
 function Checkbox({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     checked,
     indeterminate,
     isDisabled,
     onChange,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Checkbox.overrides);
 
@@ -74,4 +76,4 @@ Checkbox.propTypes = {
     isDisabled: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'Checkbox' })(Checkbox));
+export default React.memo(Checkbox);

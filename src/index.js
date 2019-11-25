@@ -1,7 +1,5 @@
 // Utils
-export { default as withStyles } from 'react-jss';
-export { withTheme } from 'react-jss';
-export { HoiPoiProvider, createHoiPoiTheme } from './utils/styles';
+export { HoiPoiProvider, createHoiPoiTheme, useTheme, createUseStyles } from './utils/styles';
 
 // Components
 export { default as Badge } from './components/general/Badge';

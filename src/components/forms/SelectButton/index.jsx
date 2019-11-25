@@ -1,21 +1,22 @@
 import React, { useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import useOnClickOutside from 'use-onclickoutside';
 import useOnPressEsc from '../../../utils/hooks/useOnPressEsc';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import ValueContainer from './ValueContainer';
 import { checkPathTarget } from './utils';
 
 import Select from '../Select';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'SelectButton');
 
 function SelectButton({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     onChange,
     button,
     id,
@@ -34,6 +35,7 @@ function SelectButton({
     actions,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // State
     const [isOpen, setIsOpen] = useState(false);
 
@@ -161,4 +163,4 @@ SelectButton.propTypes = {
     ),
 };
 
-export default React.memo(withStyles(styles, { name: 'SelectButton' })(SelectButton));
+export default React.memo(SelectButton);

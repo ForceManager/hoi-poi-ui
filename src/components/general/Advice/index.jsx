@@ -1,26 +1,29 @@
 import React, { useMemo, useRef, useLayoutEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
 import Icon from '../../general/Icon';
 import Text from '../../typography/Text';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Advice');
 
 function Advice({
     children,
-    classes,
+    classes: classesProp,
     className: classNameProp,
     overrides: overridesProp,
     title,
     showIcon,
     showCollapse,
-    theme,
     type,
     ...props
 }) {
+    const theme = useTheme();
+    const classes = useClasses(useStyles, classesProp);
     const [isEllipsisActive, setEllipsisActive] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(true);
     const textEl = useRef(null);
@@ -182,4 +185,4 @@ Advice.propTypes = {
     type: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
 };
 
-export default React.memo(withStyles(styles, { injectTheme: true, name: 'Advice' })(Advice));
+export default React.memo(Advice);

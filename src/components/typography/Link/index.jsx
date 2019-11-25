@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
-
-import { getOverrides } from '../../../utils/overrides';
+const useStyles = createUseStyles(styles, 'Link');
 
 function Link({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     onClick,
     isDisabled,
     href,
@@ -18,6 +18,7 @@ function Link({
     target,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     //Overrides
     const override = getOverrides(overridesProp, Link.overrides);
 
@@ -72,4 +73,4 @@ Link.propTypes = {
     target: PropTypes.string,
 };
 
-export default React.memo(withStyles(styles, { name: 'Link' })(Link));
+export default React.memo(Link);

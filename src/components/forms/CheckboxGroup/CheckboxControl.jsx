@@ -1,21 +1,24 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
-import { getOverrides } from '../../../utils/overrides';
+import { createUseStyles } from '../../../utils/styles';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Checkbox from '../../general/Checkbox';
+
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'CheckboxControl');
 
 function CheckboxControl({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     option,
     onChange,
     value,
     isReadOnly,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, CheckboxControl.overrides);
 
@@ -59,4 +62,4 @@ CheckboxControl.propTypes = {
     isReadOnly: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'CheckboxControl' })(CheckboxControl));
+export default React.memo(CheckboxControl);

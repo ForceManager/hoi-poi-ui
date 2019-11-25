@@ -1,25 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Steps from 'rc-steps';
 import Text from '../../typography/Text';
 import Icon from '../../general/Icon';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Stepper');
 
 function Stepper({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     currentStep,
     steps,
     onClick,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Stepper.overrides);
 
@@ -90,4 +92,4 @@ Stepper.propTypes = {
     onClick: PropTypes.func,
 };
 
-export default React.memo(withStyles(styles, { name: 'Stepper' })(Stepper));
+export default React.memo(Stepper);

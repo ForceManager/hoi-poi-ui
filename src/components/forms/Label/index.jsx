@@ -1,22 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
+
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Popover from '../../utils/Popover';
 import Icon from '../../general/Icon';
 import Text from '../../typography/Text';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Label');
 
 function Label({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     isRequired,
     hint,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Text.overrides);
 
@@ -63,4 +67,4 @@ Text.propTypes = {
     hint: PropTypes.string,
 };
 
-export default React.memo(withStyles(styles, { name: 'Label' })(Label));
+export default React.memo(Label);

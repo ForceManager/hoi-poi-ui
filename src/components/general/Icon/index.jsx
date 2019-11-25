@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles, { withTheme } from 'react-jss';
 import classnames from 'classnames';
 
-import { getOverrides } from '../../../utils/overrides';
-import styles from './styles';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Chevron from './icons/Chevron';
 import Info from './icons/Info';
@@ -29,6 +27,10 @@ import ArrowTop from './icons/ArrowTop';
 import ArrowBottom from './icons/ArrowBottom';
 import ThickDisabled from './icons/ThickDisabled';
 import Funnel from './icons/Funnel';
+
+import { createUseStyles, useTheme } from '../../../utils/styles';
+import styles from './styles';
+const useStyles = createUseStyles(styles, 'Icon');
 
 const ICONS = {
     chevron: Chevron,
@@ -59,14 +61,15 @@ const ICONS = {
 function Icon({
     name,
     color,
-    theme,
     size,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     onClick,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
+    const theme = useTheme();
     let SelectedIcon = ICONS[name];
     if (!SelectedIcon) return null;
 
@@ -106,4 +109,4 @@ Icon.propTypes = {
     onClick: PropTypes.func,
 };
 
-export default React.memo(withStyles(styles, { name: 'Icon' })(withTheme(Icon)));
+export default React.memo(Icon);

@@ -1,23 +1,26 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
 import Icon from '../../general/Icon';
 import Text from '../../typography/Text';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Section');
 
 function Section({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     title,
     isExpandable,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     const [isOpen, open] = useState(true);
 
     // Overrides
@@ -78,4 +81,4 @@ Section.propTypes = {
     isExpandable: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'Section' })(Section));
+export default React.memo(Section);

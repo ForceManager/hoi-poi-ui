@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import styles from './styles';
 
 import Text from '../Text';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+
+import { createUseStyles } from '../../../utils/styles';
+import styles from './styles';
+const useStyles = createUseStyles(styles, 'Title');
 
 function Title({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     //Overrides
     const rootClassName = classnames(classes.root, classNameProp);
 
@@ -45,4 +48,4 @@ Title.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default React.memo(withStyles(styles, { name: 'Title' })(Title));
+export default React.memo(Title);

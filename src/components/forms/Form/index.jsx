@@ -1,11 +1,9 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import { getOverrides } from '../../../utils/overrides';
 
 import FieldControl from './FieldControl';
 import Section from '../Section';
-import styles from './styles';
 
 function Form({
     overrides: overridesProp,
@@ -191,4 +189,4 @@ Form.propTypes = {
     ).isRequired,
 };
 
-export default React.memo(withStyles(styles, { name: 'Form' })(Form));
+export default React.memo(Form);

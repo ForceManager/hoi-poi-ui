@@ -1,18 +1,20 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Form from '../../forms/Form';
 import FieldControl from '../Form/FieldControl';
 import Icon from '../../general/Icon';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'MultiplierControl');
 
 function MultiplierControl({
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     index,
     type,
     schema,
@@ -29,6 +31,7 @@ function MultiplierControl({
     removeIconClassName,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, MultiplierControl.overrides);
 
@@ -123,4 +126,4 @@ MultiplierControl.propTypes = {
     multiplierItemClassNames: PropTypes.any,
 };
 
-export default React.memo(withStyles(styles, { name: 'MultiplierControl' })(MultiplierControl));
+export default React.memo(MultiplierControl);

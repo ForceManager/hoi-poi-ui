@@ -1,19 +1,20 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Link from '../../typography/Link';
 import InputControl from './InputControl';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'InputGroup');
 
 function InputGroup({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     id,
     name,
     type,
@@ -36,6 +37,7 @@ function InputGroup({
     hideInputsLabel,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // State && Callbacks
     const [showInputs, setShowInputs] = useState(false);
     const onLinkClick = useCallback(() => setShowInputs(!showInputs), [showInputs]);
@@ -208,4 +210,4 @@ InputGroup.propTypes = {
     hideInputsLabel: PropTypes.string,
 };
 
-export default React.memo(withStyles(styles, { name: 'InputGroup' })(InputGroup));
+export default React.memo(InputGroup);

@@ -1,10 +1,13 @@
 import React from 'react';
-import withStyles from 'react-jss';
 import { Loader } from 'hoi-poi-ui';
 
+import { useClasses } from '../../../utils/overrides';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles/loadingOverlay.styles';
+const useStyles = createUseStyles(styles, 'LoadingOverlay');
 
-function LoadingOverlay({ classes }) {
+function LoadingOverlay({ classes: classesProp }) {
+    const classes = useClasses(useStyles, classesProp);
     return (
         <div className={classes.root}>
             <Loader size="massive" />
@@ -12,8 +15,4 @@ function LoadingOverlay({ classes }) {
     );
 }
 
-export default React.memo(
-    withStyles(styles, {
-        name: 'LoadingOverlay',
-    })(LoadingOverlay),
-);
+export default React.memo(LoadingOverlay);

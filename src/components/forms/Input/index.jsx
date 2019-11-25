@@ -1,17 +1,19 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import Label from '../Label';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Input');
 
 function Input({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     onChange,
     onFocus,
     onBlur,
@@ -34,6 +36,7 @@ function Input({
     component,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // State
     const [focused, setFocused] = useState(false);
 
@@ -216,4 +219,4 @@ Input.propTypes = {
     component: PropTypes.any,
 };
 
-export default React.memo(withStyles(styles, { name: 'Input' })(Input));
+export default React.memo(Input);

@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import RCTabs, { TabPane } from 'rc-tabs';
 import TabContent from 'rc-tabs/lib/TabContent';
 import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Tabs');
 
 function Tabs({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     tabs,
     onChange,
     activeKey,
@@ -22,6 +23,7 @@ function Tabs({
     postComponent,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Tabs.overrides);
 
@@ -75,4 +77,4 @@ Tabs.propTypes = {
     postComponent: PropTypes.node,
 };
 
-export default React.memo(withStyles(styles, { name: 'Tabs' })(Tabs));
+export default React.memo(Tabs);

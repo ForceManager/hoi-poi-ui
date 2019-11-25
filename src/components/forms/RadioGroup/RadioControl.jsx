@@ -1,15 +1,17 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Radio from '../Radio';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'RadioControl');
 
 function RadioControl({
     children,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     option,
     onChange,
     onBlur,
@@ -17,6 +19,7 @@ function RadioControl({
     isReadOnly,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, RadioControl.overrides);
 
@@ -58,4 +61,4 @@ RadioControl.propTypes = {
     isReadOnly: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'RadioControl' })(RadioControl));
+export default React.memo(RadioControl);

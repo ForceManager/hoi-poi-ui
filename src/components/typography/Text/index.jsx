@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import styles from './styles';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import Loader from '../../general/Loader';
+
+import { createUseStyles } from '../../../utils/styles';
+import styles from './styles';
+const useStyles = createUseStyles(styles, 'Text');
 
 const LOADERS_SIZE = {
     small: 'mini',
@@ -19,12 +21,13 @@ function Text({
     isTruncated,
     size,
     type,
+    classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    classes,
     isLoading,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     //Overrides
     const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProp, {
         [classes.truncated]: isTruncated,
@@ -70,4 +73,4 @@ Text.propTypes = {
     isLoading: PropTypes.bool,
 };
 
-export default React.memo(withStyles(styles, { name: 'Text' })(Text));
+export default React.memo(Text);

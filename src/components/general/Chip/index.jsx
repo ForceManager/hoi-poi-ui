@@ -1,24 +1,27 @@
 import React, { Fragment, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Icon from '../../general/Icon';
 import Text from '../../typography/Text';
+
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Chip');
 
 function Chip({
     children,
+    classes: classesProp,
     className: classNameProp,
     overrides: overridesProp,
-    classes,
     onClose,
     url,
     isShrinked,
-    theme,
     ...props
 }) {
+    const theme = useTheme();
+    const classes = useClasses(useStyles, classesProp);
     const rootClassName = classnames(classes.root, classNameProp);
 
     const override = getOverrides(overridesProp, Chip.overrides);
@@ -86,4 +89,4 @@ Chip.propTypes = {
     url: PropTypes.string,
 };
 
-export default React.memo(withStyles(styles, { name: 'Chip', injectTheme: true })(Chip));
+export default React.memo(Chip);

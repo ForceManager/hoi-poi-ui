@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import { ToastContainer } from 'react-toastify';
-
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Toast');
 
 function Toast({
-    classes,
+    classes: classesProp,
     className: classNameProp,
     overrides: overridesProp,
     containerId,
@@ -19,6 +19,7 @@ function Toast({
     autoClose,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Toast.overrides);
 
@@ -61,4 +62,4 @@ Toast.propTypes = {
     autoClose: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
 };
 
-export default React.memo(withStyles(styles, { name: 'Toast' })(Toast));
+export default React.memo(Toast);

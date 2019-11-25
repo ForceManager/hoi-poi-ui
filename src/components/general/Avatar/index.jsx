@@ -1,22 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import getDataUri from './getDataUri';
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Avatar');
 
 function Avatar({
+    classes: classesProp,
     overrides: overridesProps,
     className: classNameProps,
-    classes,
     size,
     src,
     alt,
     placeholder,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
     const [defaultSrc, setDefaultSrc] = useState(placeholder || src);
     const [isImageLoaded, setIsImageLoaded] = useState(false);
     const [hadError, setHadError] = useState(false);
@@ -71,4 +73,4 @@ Avatar.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
 };
 
-export default React.memo(withStyles(styles, { name: 'Avatar' })(Avatar));
+export default React.memo(Avatar);

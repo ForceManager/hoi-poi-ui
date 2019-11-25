@@ -1,23 +1,25 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
 import classnames from 'classnames';
 import ReactSwitch from 'react-switch';
 
-import { getOverrides } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
+const useStyles = createUseStyles(styles, 'Switch');
 
 function Switch({
     checked,
-    classes,
-    theme,
+    classes: classesProp,
     className: classNameProp,
     isDisabled,
     onChange,
     overrides: overridesProp,
     ...props
 }) {
+    const classes = useClasses(useStyles, classesProp);
+    const theme = useTheme();
     // Overrides
     const override = getOverrides(overridesProp, Switch.overrides);
 
@@ -82,4 +84,4 @@ Switch.propTypes = {
     overrides: PropTypes.object,
 };
 
-export default React.memo(withStyles(styles, { name: 'Switch', injectTheme: true })(Switch));
+export default React.memo(Switch);
