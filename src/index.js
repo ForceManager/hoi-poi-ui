@@ -18,6 +18,7 @@ export { default as Avatar } from './components/general/Avatar';
 export { default as Checkbox } from './components/general/Checkbox';
 export { default as CircularProgress } from './components/general/CircularProgress';
 export { default as Tree } from './components/general/Tree';
+export { default as DataGrid } from './components/general/DataGrid';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
