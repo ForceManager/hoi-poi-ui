@@ -35,7 +35,7 @@ export default (theme) => ({
         },
     },
     empty: {
-        'margin-left': '20px',
+        marginLeft: 20,
         '& $nodeIcon': {
             display: 'none',
         },
