@@ -61,6 +61,7 @@ function Select({
         options: null,
         isLoading: false,
     });
+    const [debounce, setDebounce] = useState(null);
 
     // Overrides
     const override = getOverrides(overridesProp, Select.overrides);
@@ -103,6 +104,17 @@ function Select({
             onBlur && onBlur(result, options);
         },
         [onBlur, onChange, options, value],
+    );
+
+    const loadOptionsCb = useCallback(
+        (text, cb) => {
+            if (debounce) clearTimeout(debounce);
+            const newDebounce = setTimeout(() => {
+                loadOptions(text, cb);
+            }, 500);
+            setDebounce(newDebounce);
+        },
+        [loadOptions, debounce, setDebounce],
     );
 
     const selectProps = {
@@ -220,6 +232,7 @@ function Select({
     let SelectComponent = RSelect;
     if (loadOptions && isFuzzy) {
         SelectComponent = AsyncSelect;
+        selectProps.loadOptions = loadOptionsCb;
     }
 
     return (
