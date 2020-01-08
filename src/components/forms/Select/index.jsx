@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { default as RSelect } from 'react-select';
@@ -61,6 +61,7 @@ function Select({
         options: null,
         isLoading: false,
     });
+    const debounce = useRef(null);
 
     // Overrides
     const override = getOverrides(overridesProp, Select.overrides);
@@ -103,6 +104,17 @@ function Select({
             onBlur && onBlur(result, options);
         },
         [onBlur, onChange, options, value],
+    );
+
+    const loadOptionsCb = useCallback(
+        (text, cb) => {
+            if (debounce.current) clearTimeout(debounce.current);
+            debounce.current = setTimeout(() => {
+                console.log('aaa', 'hola');
+                loadOptions(text, cb);
+            }, 500);
+        },
+        [loadOptions, debounce],
     );
 
     const selectProps = {
@@ -220,6 +232,7 @@ function Select({
     let SelectComponent = RSelect;
     if (loadOptions && isFuzzy) {
         SelectComponent = AsyncSelect;
+        selectProps.loadOptions = loadOptionsCb;
     }
 
     return (
