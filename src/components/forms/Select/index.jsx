@@ -110,8 +110,11 @@ function Select({
         (text, cb) => {
             if (debounce.current) clearTimeout(debounce.current);
             debounce.current = setTimeout(() => {
-                console.log('aaa', 'hola');
-                loadOptions(text, cb);
+                if (!loadOptions) return cb();
+                const loader = loadOptions(text, cb);
+                if (loader && typeof loader.then === 'function') {
+                    loader.then(cb, () => cb());
+                }
             }, 500);
         },
         [loadOptions, debounce],
