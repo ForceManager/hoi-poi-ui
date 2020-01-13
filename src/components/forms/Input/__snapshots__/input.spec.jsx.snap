@@ -239,6 +239,7 @@ exports[`Input default match 1`] = `
       }
     >
       <Input
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -249,20 +250,20 @@ exports[`Input default match 1`] = `
         value="Hello"
       >
         <div
-          className="HoiPoi__Input__root-1-0 HoiPoi__Input__horizontal-1-12"
+          className="HoiPoi__Input__root-1-0 HoiPoi__Input__horizontal-1-14"
         >
           <Label
             className="HoiPoi__Input__Label-1-1"
           >
             <span
-              className="HoiPoi__Label__root-1-18 HoiPoi__Input__Label-1-1"
+              className="HoiPoi__Label__root-1-20 HoiPoi__Input__Label-1-1"
             >
               <Text
-                className="HoiPoi__Label__Text-1-19"
+                className="HoiPoi__Label__Text-1-21"
                 overrides={Object {}}
               >
                 <span
-                  className="HoiPoi__Text__root-1-22 HoiPoi__Label__Text-1-19"
+                  className="HoiPoi__Text__root-1-24 HoiPoi__Label__Text-1-21"
                 >
                   Lorem ipsum
                 </span>
@@ -284,10 +285,10 @@ exports[`Input default match 1`] = `
               value="Hello"
             />
             <div
-              className="HoiPoi__Input__postComponent-1-15"
+              className="HoiPoi__Input__postComponent-1-17"
             >
               <span
-                className="HoiPoi__Input__postCloseComponent-1-16"
+                className="HoiPoi__Input__postCloseComponent-1-18 HoiPoi__Input__isClickable-1-11"
                 onClick={[Function]}
               >
                 <Icon
@@ -296,7 +297,7 @@ exports[`Input default match 1`] = `
                   size="medium"
                 >
                   <span
-                    className="HoiPoi__Icon__root-1-33 HoiPoi__Icon__medium-1-35"
+                    className="HoiPoi__Icon__root-1-35 HoiPoi__Icon__medium-1-37"
                   >
                     <Close
                       color="#788590"
@@ -563,6 +564,7 @@ exports[`Input is read only match 1`] = `
       }
     >
       <Input
+        isCopyable={false}
         isReadOnly={true}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -573,20 +575,20 @@ exports[`Input is read only match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__Input__root-5-0 HoiPoi__Input__isReadOnly-5-9 HoiPoi__Input__horizontal-5-12"
+          className="HoiPoi__Input__root-5-0 HoiPoi__Input__isReadOnly-5-9 HoiPoi__Input__horizontal-5-14"
         >
           <Label
             className="HoiPoi__Input__Label-5-1"
           >
             <span
-              className="HoiPoi__Label__root-5-18 HoiPoi__Input__Label-5-1"
+              className="HoiPoi__Label__root-5-20 HoiPoi__Input__Label-5-1"
             >
               <Text
-                className="HoiPoi__Label__Text-5-19"
+                className="HoiPoi__Label__Text-5-21"
                 overrides={Object {}}
               >
                 <span
-                  className="HoiPoi__Text__root-5-22 HoiPoi__Label__Text-5-19"
+                  className="HoiPoi__Text__root-5-24 HoiPoi__Label__Text-5-21"
                 >
                   Lorem ipsum
                 </span>
@@ -607,10 +609,10 @@ exports[`Input is read only match 1`] = `
               value=""
             />
             <div
-              className="HoiPoi__Input__postComponent-5-15"
+              className="HoiPoi__Input__postComponent-5-17"
             >
               <span
-                className="HoiPoi__Input__postCloseComponent-5-16"
+                className="HoiPoi__Input__postCloseComponent-5-18"
               >
                 <Icon
                   name="lock"
@@ -618,7 +620,7 @@ exports[`Input is read only match 1`] = `
                   size="medium"
                 >
                   <span
-                    className="HoiPoi__Icon__root-5-33 HoiPoi__Icon__medium-5-35"
+                    className="HoiPoi__Icon__root-5-35 HoiPoi__Icon__medium-5-37"
                   >
                     <Lock
                       color="#788590"
@@ -885,6 +887,7 @@ exports[`Input is required match 1`] = `
       }
     >
       <Input
+        isCopyable={false}
         isReadOnly={false}
         isRequired={true}
         label="Lorem ipsum"
@@ -896,21 +899,21 @@ exports[`Input is required match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__Input__root-3-0 HoiPoi__Input__horizontal-3-12"
+          className="HoiPoi__Input__root-3-0 HoiPoi__Input__horizontal-3-14"
         >
           <Label
             className="HoiPoi__Input__Label-3-1"
             isRequired={true}
           >
             <span
-              className="HoiPoi__Label__root-3-18 HoiPoi__Input__Label-3-1"
+              className="HoiPoi__Label__root-3-20 HoiPoi__Input__Label-3-1"
             >
               <Text
-                className="HoiPoi__Label__Text-3-19"
+                className="HoiPoi__Label__Text-3-21"
                 overrides={Object {}}
               >
                 <span
-                  className="HoiPoi__Text__root-3-22 HoiPoi__Label__Text-3-19"
+                  className="HoiPoi__Text__root-3-24 HoiPoi__Label__Text-3-21"
                 >
                   Lorem ipsum
                   *
@@ -1179,6 +1182,7 @@ exports[`Input vertical label mode match 1`] = `
       }
     >
       <Input
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="vertical"
@@ -1189,20 +1193,20 @@ exports[`Input vertical label mode match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__Input__root-6-0 HoiPoi__Input__vertical-6-11"
+          className="HoiPoi__Input__root-6-0 HoiPoi__Input__vertical-6-13"
         >
           <Label
             className="HoiPoi__Input__Label-6-1"
           >
             <span
-              className="HoiPoi__Label__root-6-18 HoiPoi__Input__Label-6-1"
+              className="HoiPoi__Label__root-6-20 HoiPoi__Input__Label-6-1"
             >
               <Text
-                className="HoiPoi__Label__Text-6-19"
+                className="HoiPoi__Label__Text-6-21"
                 overrides={Object {}}
               >
                 <span
-                  className="HoiPoi__Text__root-6-22 HoiPoi__Label__Text-6-19"
+                  className="HoiPoi__Text__root-6-24 HoiPoi__Label__Text-6-21"
                 >
                   Lorem ipsum
                 </span>
@@ -1471,6 +1475,7 @@ exports[`Input with error match 1`] = `
     >
       <Input
         error="I am an error"
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -1481,20 +1486,20 @@ exports[`Input with error match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__Input__root-4-0 HoiPoi__Input__horizontal-4-12 HoiPoi__Input__errored-4-8 HoiPoi__Input__withMessage-4-6"
+          className="HoiPoi__Input__root-4-0 HoiPoi__Input__horizontal-4-14 HoiPoi__Input__errored-4-8 HoiPoi__Input__withMessage-4-6"
         >
           <Label
             className="HoiPoi__Input__Label-4-1"
           >
             <span
-              className="HoiPoi__Label__root-4-18 HoiPoi__Input__Label-4-1"
+              className="HoiPoi__Label__root-4-20 HoiPoi__Input__Label-4-1"
             >
               <Text
-                className="HoiPoi__Label__Text-4-19"
+                className="HoiPoi__Label__Text-4-21"
                 overrides={Object {}}
               >
                 <span
-                  className="HoiPoi__Text__root-4-22 HoiPoi__Label__Text-4-19"
+                  className="HoiPoi__Text__root-4-24 HoiPoi__Label__Text-4-21"
                 >
                   Lorem ipsum
                 </span>
@@ -1768,6 +1773,7 @@ exports[`Input with hint match 1`] = `
     >
       <Input
         hint="Hello"
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -1778,21 +1784,21 @@ exports[`Input with hint match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__Input__root-2-0 HoiPoi__Input__horizontal-2-12"
+          className="HoiPoi__Input__root-2-0 HoiPoi__Input__horizontal-2-14"
         >
           <Label
             className="HoiPoi__Input__Label-2-1"
             hint="Hello"
           >
             <span
-              className="HoiPoi__Label__root-2-18 HoiPoi__Input__Label-2-1"
+              className="HoiPoi__Label__root-2-20 HoiPoi__Input__Label-2-1"
             >
               <Text
-                className="HoiPoi__Label__Text-2-19"
+                className="HoiPoi__Label__Text-2-21"
                 overrides={Object {}}
               >
                 <span
-                  className="HoiPoi__Text__root-2-22 HoiPoi__Label__Text-2-19"
+                  className="HoiPoi__Text__root-2-24 HoiPoi__Label__Text-2-21"
                 >
                   Lorem ipsum
                 </span>
@@ -1814,7 +1820,7 @@ exports[`Input with hint match 1`] = `
                   mouseEnterDelay={0}
                   mouseLeaveDelay={0.1}
                   overlay="Hello"
-                  overlayClassName="HoiPoi__Popover__root-2-33"
+                  overlayClassName="HoiPoi__Popover__root-2-35"
                   placement="top"
                   prefixCls="hoi-poi-popover"
                   transitionName="hoi-poi-popover--fade"
@@ -2068,7 +2074,7 @@ exports[`Input with hint match 1`] = `
                     overlay="Hello"
                     popup={[Function]}
                     popupAlign={Object {}}
-                    popupClassName="HoiPoi__Popover__root-2-33"
+                    popupClassName="HoiPoi__Popover__root-2-35"
                     popupPlacement="top"
                     popupStyle={Object {}}
                     popupTransitionName="hoi-poi-popover--fade"
@@ -2076,19 +2082,19 @@ exports[`Input with hint match 1`] = `
                     showAction={Array []}
                   >
                     <span
-                      className="HoiPoi__Label__info-2-20"
+                      className="HoiPoi__Label__info-2-22"
                       key="trigger"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
                       <Icon
-                        className="HoiPoi__Label__icon-2-21"
+                        className="HoiPoi__Label__icon-2-23"
                         name="info"
                         overrides={Object {}}
                         size="medium"
                       >
                         <span
-                          className="HoiPoi__Icon__root-2-34 HoiPoi__Icon__medium-2-36 HoiPoi__Label__icon-2-21"
+                          className="HoiPoi__Icon__root-2-36 HoiPoi__Icon__medium-2-38 HoiPoi__Label__icon-2-23"
                         >
                           <Info
                             color="#788590"
@@ -2373,6 +2379,7 @@ exports[`Input with pre/post component match 1`] = `
       }
     >
       <Input
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -2393,20 +2400,20 @@ exports[`Input with pre/post component match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__Input__root-7-0 HoiPoi__Input__horizontal-7-12"
+          className="HoiPoi__Input__root-7-0 HoiPoi__Input__horizontal-7-14"
         >
           <Label
             className="HoiPoi__Input__Label-7-1"
           >
             <span
-              className="HoiPoi__Label__root-7-18 HoiPoi__Input__Label-7-1"
+              className="HoiPoi__Label__root-7-20 HoiPoi__Input__Label-7-1"
             >
               <Text
-                className="HoiPoi__Label__Text-7-19"
+                className="HoiPoi__Label__Text-7-21"
                 overrides={Object {}}
               >
                 <span
-                  className="HoiPoi__Text__root-7-22 HoiPoi__Label__Text-7-19"
+                  className="HoiPoi__Text__root-7-24 HoiPoi__Label__Text-7-21"
                 >
                   Lorem ipsum
                 </span>
@@ -2417,7 +2424,7 @@ exports[`Input with pre/post component match 1`] = `
             className="HoiPoi__Input__formControl-7-4"
           >
             <div
-              className="HoiPoi__Input__preComponent-7-14"
+              className="HoiPoi__Input__preComponent-7-16"
             >
               <span>
                 $
@@ -2435,7 +2442,7 @@ exports[`Input with pre/post component match 1`] = `
               value=""
             />
             <div
-              className="HoiPoi__Input__postComponent-7-15"
+              className="HoiPoi__Input__postComponent-7-17"
             >
               <span>
                 $

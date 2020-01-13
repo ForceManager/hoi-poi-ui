@@ -34,6 +34,7 @@ function Input({
     preComponent,
     postComponent,
     component,
+    isCopyable,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -48,6 +49,7 @@ function Input({
         classes.root,
         {
             [classes.isReadOnly]: isReadOnly,
+            [classes.isReadAndDuplicable]: isCopyable && isReadOnly,
             [classes[labelMode]]: labelMode,
             [classes.isFullWidth]: isFullWidth,
             [classes.focused]: focused,
@@ -114,11 +116,28 @@ function Input({
         onChange && onChange();
         onBlur && onBlur();
     }, [onBlur, onChange]);
+
     let renderedPostComponent = postComponent;
+
+    const copyValue = useCallback(() => {
+        const textField = document.createElement('textarea');
+        textField.innerText = value;
+        document.body.appendChild(textField);
+        textField.select();
+        document.execCommand('copy');
+        textField.remove();
+    }, [value]);
+
+    const compIsReadOnly = <Icon name="lock" />;
+
+    const compIsCopyable = <Icon name="duplicate" onClick={copyValue} />;
 
     if (value && !isReadOnly) {
         renderedPostComponent = (
-            <span onClick={postComponentClick} className={classes.postCloseComponent}>
+            <span
+                onClick={postComponentClick}
+                className={`${classes.postCloseComponent} ${classes.isClickable}`}
+            >
                 <Icon name="close" />
             </span>
         );
@@ -126,8 +145,21 @@ function Input({
 
     if (isReadOnly) {
         renderedPostComponent = (
-            <span className={classes.postCloseComponent}>
-                <Icon name="lock" />
+            <span className={classes.postCloseComponent}>{compIsReadOnly}</span>
+        );
+    }
+
+    if (isCopyable) {
+        renderedPostComponent = (
+            <span className={`${classes.postCloseComponent}`}>{compIsCopyable}</span>
+        );
+    }
+
+    if (isReadOnly && isCopyable) {
+        renderedPostComponent = (
+            <span className={`${classes.postCloseComponent}`}>
+                <span className={classes.isClickable}>{compIsCopyable}</span>
+                {compIsReadOnly}
             </span>
         );
     }
@@ -182,6 +214,7 @@ Input.defaultProps = {
     onChange: () => {},
     value: '',
     isReadOnly: false,
+    isCopyable: false,
     override: {},
 };
 
@@ -211,6 +244,7 @@ Input.propTypes = {
     info: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
+    isCopyable: PropTypes.bool,
     /** Component rendered at the input beginning */
     preComponent: PropTypes.any,
     /** Component rendered at the input ending */

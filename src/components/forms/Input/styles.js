@@ -90,16 +90,20 @@ export default (theme) => ({
                 borderBottom: `1px solid ${theme.colors.lines}`,
             },
         },
-        '& $postCloseComponent': {
-            '& span': {
-                cursor: 'default',
-            },
-        },
         '&$focused': {
             '& $formControl::after': {
                 transform: 'scaleX(0)',
             },
         },
+    },
+    isReadAndDuplicable: {
+        '& $postCloseComponent': {
+            display: 'inline-flex',
+        },
+    },
+    isClickable: {
+        cursor: 'pointer',
+        marginRight: '5px',
     },
     focused: {
         '& $formControl::after': {
@@ -142,7 +146,6 @@ export default (theme) => ({
     },
     postCloseComponent: {
         '& span': {
-            cursor: 'pointer',
             width: 8,
             height: 8,
         },

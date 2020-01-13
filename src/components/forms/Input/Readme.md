@@ -35,6 +35,20 @@ const onChange = (field) => {
         error="I am an error"
     />
     <Input label="Lorem ipsum" placeholder="Write here" value="I am disabled" isReadOnly={true} />
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        onChange={onChange(1)}
+        value={state[1]}
+        isCopyable={true}
+    />
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        value="You can Copy but typing is disabled"
+        isCopyable={true}
+        isReadOnly={true}
+    />
 </div>;
 ```
 
