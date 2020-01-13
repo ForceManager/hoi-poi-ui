@@ -239,7 +239,7 @@ exports[`Input default match 1`] = `
       }
     >
       <Input
-        isDuplicable={false}
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -564,7 +564,7 @@ exports[`Input is read only match 1`] = `
       }
     >
       <Input
-        isDuplicable={false}
+        isCopyable={false}
         isReadOnly={true}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -887,7 +887,7 @@ exports[`Input is required match 1`] = `
       }
     >
       <Input
-        isDuplicable={false}
+        isCopyable={false}
         isReadOnly={false}
         isRequired={true}
         label="Lorem ipsum"
@@ -1182,7 +1182,7 @@ exports[`Input vertical label mode match 1`] = `
       }
     >
       <Input
-        isDuplicable={false}
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="vertical"
@@ -1475,7 +1475,7 @@ exports[`Input with error match 1`] = `
     >
       <Input
         error="I am an error"
-        isDuplicable={false}
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -1773,7 +1773,7 @@ exports[`Input with hint match 1`] = `
     >
       <Input
         hint="Hello"
-        isDuplicable={false}
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
@@ -2379,7 +2379,7 @@ exports[`Input with pre/post component match 1`] = `
       }
     >
       <Input
-        isDuplicable={false}
+        isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"

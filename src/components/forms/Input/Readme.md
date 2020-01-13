@@ -40,13 +40,13 @@ const onChange = (field) => {
         placeholder="Write here"
         onChange={onChange(1)}
         value={state[1]}
-        isDuplicable={true}
+        isCopyable={true}
     />
     <Input
         label="Lorem ipsum"
         placeholder="Write here"
-        value="akgeqwir554(!"
-        isDuplicable={true}
+        value="You can Copy but typing is disabled"
+        isCopyable={true}
         isReadOnly={true}
     />
 </div>;
