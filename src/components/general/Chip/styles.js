@@ -48,7 +48,7 @@ export default (theme) => ({
 
     close: {
         cursor: 'pointer',
-        padding: '0 5px',
+        margin: '0 5px',
     },
 
     picture: {
