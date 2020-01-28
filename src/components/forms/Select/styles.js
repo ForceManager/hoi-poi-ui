@@ -211,7 +211,7 @@ export default (theme) => ({
         borderRadius: 0,
         paddingTop: '10px !important',
         paddingBottom: '10px !important',
-        overflow: 'hidden',
+        ...theme.utils.scrollbar,
         '& .hoi-poi-select__group': {
             padding: '10px 0',
             borderTop: '1px solid',

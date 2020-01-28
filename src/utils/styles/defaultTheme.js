@@ -156,4 +156,24 @@ export default {
             boxShadow: 'inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)',
         },
     },
+    utils: {
+        scrollbar: {
+            '&::-webkit-scrollbar': {
+                width: 17,
+                height: 17,
+            },
+            '&::-webkit-scrollbar-thumb': {
+                borderRadius: 10,
+                background: placeholders,
+                backgroundClip: 'content-box',
+                border: '4px solid rgba(0, 0, 0, 0)',
+            },
+            '&::-webkit-scrollbar-thumb:window-inactive': {
+                borderRadius: 10,
+                background: placeholders,
+                backgroundClip: 'content-box',
+                border: '4px solid rgba(0, 0, 0, 0)',
+            },
+        },
+    },
 };

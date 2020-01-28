@@ -316,6 +316,41 @@ const loadOptions = () =>
 </div>;
 ```
 
+Async load multiple options with fuzzy style:
+
+```jsx
+const onChange = (value) => setState({ value });
+let options = [];
+let total = 100;
+for (let i = 0; i < total; i++) {
+    options.push({
+        label: `Lorem ipsum ${i}`,
+        value: `lorem-ipsum-${i}`,
+    });
+}
+
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 2000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
+        isFuzzy
+        isMulti
+    />
+</div>;
+```
+
 ### Component tree
 
 ---

@@ -55,6 +55,7 @@ function Select({
 }) {
     const classes = useClasses(useStyles, classesProp);
     // State
+    const [defaultOptions, setDefaultOptions] = useState(null);
     const [focused, setFocused] = useState(false);
     const [lazyOptions, setLazyOptions] = useState({
         areLoaded: false,
@@ -113,11 +114,17 @@ function Select({
                 if (!loadOptions) return cb();
                 const loader = loadOptions(text, cb);
                 if (loader && typeof loader.then === 'function') {
-                    loader.then(cb, () => cb());
+                    loader.then(
+                        (results) => {
+                            if (isFuzzy && isMulti) setDefaultOptions(results);
+                            cb(results);
+                        },
+                        () => cb(),
+                    );
                 }
             }, 500);
         },
-        [loadOptions, debounce],
+        [loadOptions, isFuzzy, isMulti],
     );
 
     const selectProps = {
@@ -149,6 +156,7 @@ function Select({
         autoFocus: focused,
         hideSelectedOptions: isMulti ? true : hideSelectedOptions,
         closeMenuOnSelect: isMulti ? false : true,
+        defaultOptions: isMulti && isFuzzy ? defaultOptions : null,
         noOptionsMessage: useCallback(() => noOptionsPlaceholder, [noOptionsPlaceholder]),
         loadingMessage: useCallback(() => loadingPlaceholder, [loadingPlaceholder]),
         isLoading: lazyOptions.isLoading,
@@ -228,7 +236,11 @@ function Select({
 
     const selectedOptions = useMemo(() => {
         if (!isMulti || !value) return null;
-        return value.map((item) => <Chip onClose={() => onRemove(item)}>{item.label}</Chip>);
+        return value.map((item) => (
+            <Chip key={item.value} onClose={() => onRemove(item)}>
+                {item.label}
+            </Chip>
+        ));
     }, [isMulti, onRemove, value]);
 
     // Async/sync
@@ -273,6 +285,8 @@ Select.propTypes = {
     overrides: PropTypes.object,
     /** Async mode */
     loadOptions: PropTypes.func,
+    /* Autocomplete/Search UI */
+    isFuzzy: PropTypes.bool,
     onChange: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
