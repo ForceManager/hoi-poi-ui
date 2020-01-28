@@ -15,6 +15,7 @@ function Input({
     overrides: overridesProp,
     className: classNameProp,
     onChange,
+    onCopy,
     onFocus,
     onBlur,
     onEnter,
@@ -126,7 +127,8 @@ function Input({
         textField.select();
         document.execCommand('copy');
         textField.remove();
-    }, [value]);
+        onCopy && onCopy();
+    }, [onCopy, value]);
 
     const compIsReadOnly = <Icon name="lock" />;
 
@@ -212,6 +214,7 @@ Input.defaultProps = {
     labelMode: 'horizontal',
     type: 'text',
     onChange: () => {},
+    onCopy: () => {},
     value: '',
     isReadOnly: false,
     isCopyable: false,
@@ -240,6 +243,7 @@ Input.propTypes = {
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
+    onCopy: PropTypes.func,
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
     isRequired: PropTypes.bool,

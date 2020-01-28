@@ -1,12 +1,15 @@
 Horizontal label:
 
 ```jsx
+import Toast from '../../utils/Toast';
 let state = state || {};
 const onChange = (field) => {
     return (e) => {
         setState({ [field]: e && e.target ? e.target.value : '' });
     };
 };
+
+const onCopy = () => window.alert('Copied to Clipboard');
 
 <div>
     <Input label="Lorem ipsum" placeholder="Write here" onChange={onChange(1)} value={state[1]} />
@@ -41,12 +44,14 @@ const onChange = (field) => {
         onChange={onChange(1)}
         value={state[1]}
         isCopyable={true}
+        onCopy={onCopy}
     />
     <Input
         label="Lorem ipsum"
         placeholder="Write here"
         value="You can Copy but typing is disabled"
         isCopyable={true}
+        onCopy={onCopy}
         isReadOnly={true}
     />
 </div>;
