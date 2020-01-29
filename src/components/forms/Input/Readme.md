@@ -8,6 +8,8 @@ const onChange = (field) => {
     };
 };
 
+const onCopy = () => window.alert('Copied to Clipboard');
+
 <div>
     <Input label="Lorem ipsum" placeholder="Write here" onChange={onChange(1)} value={state[1]} />
     <Input
@@ -41,12 +43,14 @@ const onChange = (field) => {
         onChange={onChange(1)}
         value={state[1]}
         isCopyable={true}
+        onCopy={onCopy}
     />
     <Input
         label="Lorem ipsum"
         placeholder="Write here"
         value="You can Copy but typing is disabled"
         isCopyable={true}
+        onCopy={onCopy}
         isReadOnly={true}
     />
 </div>;
