@@ -3,7 +3,6 @@ export default (theme) => ({
         position: 'relative',
         boxSizing: 'border-box',
         display: 'inline-block',
-        'min-width': '100px',
         padding: '5px 20px',
         textAlign: 'center',
         lineHeight: 0,

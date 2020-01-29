@@ -47,6 +47,8 @@ Icons:
 <span> </span>
 <Icon name="funnel" />
 <span> </span>
+<Icon name="folder" />
+<span></span>
 ```
 
 Sizes:

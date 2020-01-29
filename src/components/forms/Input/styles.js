@@ -51,6 +51,7 @@ export default (theme) => ({
     },
     input: {
         ...theme.typography.defaultText,
+        background: 'transparent',
         color: theme.colors.greySoft,
         width: '100%',
         lineHeight: '20px',
