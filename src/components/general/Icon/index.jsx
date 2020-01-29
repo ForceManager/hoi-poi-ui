@@ -27,6 +27,7 @@ import ArrowTop from './icons/ArrowTop';
 import ArrowBottom from './icons/ArrowBottom';
 import ThickDisabled from './icons/ThickDisabled';
 import Funnel from './icons/Funnel';
+import ThickEnabledFilled from './icons/ThickEnabledFilled';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -37,6 +38,7 @@ const ICONS = {
     info: Info,
     close: Close,
     lock: Lock,
+    thickEnabledFilled: ThickEnabledFilled,
     thickEnabled: ThickEnabled,
     thickDisabled: ThickDisabled,
     warning: Warning,
