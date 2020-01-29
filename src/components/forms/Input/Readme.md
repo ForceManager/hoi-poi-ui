@@ -1,7 +1,6 @@
 Horizontal label:
 
 ```jsx
-import Toast from '../../utils/Toast';
 let state = state || {};
 const onChange = (field) => {
     return (e) => {

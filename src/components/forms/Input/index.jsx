@@ -214,7 +214,6 @@ Input.defaultProps = {
     labelMode: 'horizontal',
     type: 'text',
     onChange: () => {},
-    onCopy: () => {},
     value: '',
     isReadOnly: false,
     isCopyable: false,
