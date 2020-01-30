@@ -51,11 +51,12 @@ function Select({
     loadingMessage,
     loadingPlaceholder,
     isFuzzy,
+    isValueObject,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     // State
-    const [defaultOptions, setDefaultOptions] = useState(null);
+    const [innerOptions, setInnerOptions] = useState(options);
     const [focused, setFocused] = useState(false);
     const [lazyOptions, setLazyOptions] = useState({
         areLoaded: false,
@@ -116,7 +117,7 @@ function Select({
                 if (loader && typeof loader.then === 'function') {
                     loader.then(
                         (results) => {
-                            if (isFuzzy && isMulti) setDefaultOptions(results);
+                            setInnerOptions(results);
                             cb(results);
                         },
                         () => cb(),
@@ -124,8 +125,16 @@ function Select({
                 }
             }, 500);
         },
-        [loadOptions, isFuzzy, isMulti],
+        [loadOptions],
     );
+
+    const selectedValue = useMemo(() => {
+        if (isValueObject) return value;
+        if (!isMulti && innerOptions && innerOptions.length && value)
+            return innerOptions.find((op) => op.value === value);
+        if (isMulti && innerOptions && innerOptions.length && value)
+            return value.map((v) => innerOptions.find((op) => op.value === v));
+    }, [innerOptions, isMulti, isValueObject, value]);
 
     const selectProps = {
         id,
@@ -134,7 +143,7 @@ function Select({
         classNamePrefix: 'hoi-poi-select',
         placeholder,
         options: lazyOptions.options || options,
-        value: isMulti ? [] : value,
+        value: isMulti ? [] : selectedValue,
         isMulti,
         onChange: useCallback(
             (data, action) => {
@@ -146,17 +155,26 @@ function Select({
                         data = [...value, ...data];
                     }
                 }
+
+                if (!isValueObject && data) {
+                    if (isMulti) {
+                        data = data.map((d) => d.value);
+                    } else {
+                        data = data.value;
+                    }
+                }
+
                 onChange && onChange(data, options);
                 onBlur && onBlur(data, options);
             },
-            [isMulti, onBlur, onChange, options, value],
+            [isMulti, isValueObject, onBlur, onChange, options, value],
         ),
         isDisabled: isReadOnly,
         isClearable: isMulti ? false : isClearable,
         autoFocus: focused,
         hideSelectedOptions: isMulti ? true : hideSelectedOptions,
         closeMenuOnSelect: isMulti ? false : true,
-        defaultOptions: isMulti && isFuzzy ? defaultOptions : null,
+        defaultOptions: isMulti && isFuzzy ? innerOptions : null,
         noOptionsMessage: useCallback(() => noOptionsPlaceholder, [noOptionsPlaceholder]),
         loadingMessage: useCallback(() => loadingPlaceholder, [loadingPlaceholder]),
         isLoading: lazyOptions.isLoading,
@@ -235,13 +253,13 @@ function Select({
     };
 
     const selectedOptions = useMemo(() => {
-        if (!isMulti || !value) return null;
-        return value.map((item) => (
+        if (!isMulti || !selectedValue) return null;
+        return selectedValue.map((item) => (
             <Chip key={item.value} onClose={() => onRemove(item)}>
                 {item.label}
             </Chip>
         ));
-    }, [isMulti, onRemove, value]);
+    }, [isMulti, onRemove, selectedValue]);
 
     // Async/sync
     let SelectComponent = RSelect;
@@ -276,6 +294,7 @@ Select.defaultProps = {
     hideSelectedOptions: true,
     isClearable: true,
     overrides: {},
+    isValueObject: true,
 };
 
 Select.propTypes = {
@@ -320,6 +339,8 @@ Select.propTypes = {
     components: PropTypes.object,
     /** multiple select support */
     isMulti: PropTypes.bool,
+    /** Use value as a object { label, value } or as the value */
+    isValueObject: PropTypes.bool,
     /** Fixed actions added at the bottom con menu list */
     actions: PropTypes.arrayOf(
         PropTypes.shape({
