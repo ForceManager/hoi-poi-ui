@@ -6,7 +6,6 @@ import ButtonSwitch from '../../general/ButtonSwitch';
 
 describe('Button', () => {
     test('is rendered without crashes', () => {
-        const [value, setValue] = useState(false);
         const buttons = [
             {
                 label: 'ON',
@@ -20,7 +19,27 @@ describe('Button', () => {
 
         const wrapper = mount(
             <HoiPoiProvider>
-                <ButtonSwitch buttons={buttons} value={value} onChange={setValue}></ButtonSwitch>;
+                <ButtonSwitch buttons={buttons} value={true}></ButtonSwitch>;
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    test('is rendering with string values', () => {
+        const buttons = [
+            {
+                label: 'ON',
+                value: 'on',
+            },
+            {
+                label: 'OFF',
+                value: 'false',
+            },
+        ];
+
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <ButtonSwitch buttons={buttons} value={true}></ButtonSwitch>;
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
