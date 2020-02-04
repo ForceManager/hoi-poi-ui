@@ -37,6 +37,7 @@ module.exports = {
             components: [
                 './src/components/forms/CheckboxInput/index.jsx',
                 './src/components/forms/CheckboxGroup/index.jsx',
+                './src/components/forms/DatePicker/index.jsx',
                 './src/components/forms/Form/index.jsx',
                 './src/components/forms/Input/index.jsx',
                 './src/components/forms/InputGroup/index.jsx',
