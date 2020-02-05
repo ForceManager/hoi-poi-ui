@@ -9,6 +9,7 @@ import Select from '../Select';
 import Slider from '../Slider';
 import Multiplier from '../Multiplier';
 import CheckboxInput from '../CheckboxInput';
+import DatePicker from '../DatePicker';
 
 const FIELD_MAP = {
     text: Input,
@@ -19,6 +20,7 @@ const FIELD_MAP = {
     select: Select,
     slider: Slider,
     multiplier: Multiplier,
+    date: DatePicker,
 };
 
 function FieldControl({
