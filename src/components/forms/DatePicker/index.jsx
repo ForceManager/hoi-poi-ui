@@ -20,6 +20,7 @@ function DatePicker({
     className: classNameProp,
     name,
     dateFormat,
+    formatDate,
     onChange,
     value,
     type,
@@ -39,11 +40,12 @@ function DatePicker({
         () => ({
             enableTime: type === 'datetime',
             dateFormat: dateFormat || type === 'date' ? 'Y-m-d' : 'Y-m-d H:i:S',
+            formatDate,
             locale: flatpickrl10n[lang],
             clickOpens: !isReadOnly,
             ...override.flatpickrOptions,
         }),
-        [dateFormat, isReadOnly, lang, override.flatpickrOptions, type],
+        [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions, type],
     );
 
     const onReady = useCallback(
@@ -68,7 +70,9 @@ function DatePicker({
     const flatpickrRender = useCallback(
         ({ className, value }, ref) => {
             const formatValue = value
-                ? flatpickr.formatDate(value, flatpickrOptions.dateFormat)
+                ? formatDate
+                    ? formatDate(value, flatpickrOptions.dateFormat)
+                    : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
                 : value;
             return (
                 <Input
@@ -81,7 +85,7 @@ function DatePicker({
                 />
             );
         },
-        [flatpickrOptions.dateFormat, isReadOnly, onInputChange, props],
+        [flatpickrOptions.dateFormat, formatDate, isReadOnly, onInputChange, props],
     );
 
     return (
@@ -144,7 +148,10 @@ DatePicker.propTypes = {
     isReadOnly: PropTypes.bool,
     type: PropTypes.oneOf(['date', 'datetime']),
     lang: PropTypes.string,
+    /** default to flatpickr format tokens */
     dateFormat: PropTypes.string,
+    /** Custom formatDate function */
+    formatDate: PropTypes.func,
 };
 
 export default React.memo(DatePicker);

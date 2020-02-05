@@ -49,6 +49,23 @@ const onChange = (e) => setState({ value: e });
 </div>;
 ```
 
+Custom formatDate
+
+```jsx
+const onChange = (e) => setState({ value: e });
+const formatDate = (value, format) => {
+    return value;
+};
+<div>
+    <DatePicker
+        label="Lorem ipsum"
+        formatDate={formatDate}
+        onChange={onChange}
+        value={state.value}
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
