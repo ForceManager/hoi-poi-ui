@@ -112,10 +112,6 @@ function DatePicker({
 
     const key = `flatpickr-${name || 'anon'}--${isReadOnly ? 'read-only' : 'active'}`;
 
-    function onValueUpdate(...oargs) {
-        console.log(oargs);
-    }
-
     return (
         <Flatpickr
             ref={flatpickrRef}
@@ -126,7 +122,6 @@ function DatePicker({
             onReady={onReady}
             value={value}
             onChange={isReadOnly ? undefined : onChangeDate}
-            onValueUpdate={onValueUpdate}
             {...override.flatpickr}
         />
     );
