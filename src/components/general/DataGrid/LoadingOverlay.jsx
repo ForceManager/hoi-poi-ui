@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader } from 'hoi-poi-ui';
+import Loader from '../Loader';
 
 import { useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';

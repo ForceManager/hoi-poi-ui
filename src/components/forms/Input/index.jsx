@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { Fragment, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -136,12 +136,15 @@ function Input({
 
     if (value && !isReadOnly) {
         renderedPostComponent = (
-            <span
-                onClick={postComponentClick}
-                className={`${classes.postCloseComponent} ${classes.isClickable}`}
-            >
-                <Icon name="close" />
-            </span>
+            <Fragment>
+                <span
+                    onClick={postComponentClick}
+                    className={`${classes.postCloseComponent} ${classes.isClickable}`}
+                >
+                    <Icon name="close" />
+                </span>
+                {postComponent}
+            </Fragment>
         );
     }
 
@@ -153,7 +156,10 @@ function Input({
 
     if (isCopyable) {
         renderedPostComponent = (
-            <span className={`${classes.postCloseComponent}`}>{compIsCopyable}</span>
+            <Fragment>
+                <span className={`${classes.postCloseComponent}`}>{compIsCopyable}</span>
+                {postComponent}
+            </Fragment>
         );
     }
 

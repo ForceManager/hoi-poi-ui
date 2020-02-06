@@ -9,6 +9,15 @@ export default (theme) => ({
             transform: 'translate3d(0, 0, 0)',
         },
     },
+    calendarIcon: {
+        cursor: 'pointer',
+        width: 10,
+        height: 10,
+        padding: '0 0 0 5px',
+        '& path': {
+            fill: theme.colors.greySoft,
+        },
+    },
     root: {
         '& *, :after, :before': {
             boxSizing: 'inherit',
@@ -523,7 +532,7 @@ export default (theme) => ({
             outline: '0',
             display: 'flex',
             height: '0',
-            lineHeight: 40,
+            lineHeight: '40px',
             maxHeight: 40,
             boxSizing: 'border-box',
             overflow: 'hidden',

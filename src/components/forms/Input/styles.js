@@ -144,6 +144,8 @@ export default (theme) => ({
     postComponent: {
         marginLeft: 5,
         marginBottom: 3,
+        display: 'flex',
+        alignItems: 'center',
     },
     postCloseComponent: {
         '& span': {

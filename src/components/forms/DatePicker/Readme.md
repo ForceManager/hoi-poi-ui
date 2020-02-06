@@ -27,7 +27,9 @@ const onChange = (field) => {
     <DatePicker label="Lorem ipsum" error="I am an error" />
     <DatePicker label="Lorem ipsum" info="I am an info message" />
     <DatePicker label="Lorem ipsum" info="I am an info message" error="I am an error" />
-    <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isReadOnly={true} />
+    <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isReadOnly />
+    <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isCopyable />
+    <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isReadOnly isCopyable />
 </div>;
 ```
 
@@ -59,6 +61,24 @@ const formatDate = (value, format) => {
 <div>
     <DatePicker
         label="Lorem ipsum"
+        formatDate={formatDate}
+        onChange={onChange}
+        value={state.value}
+    />
+</div>;
+```
+
+Data time with custom format
+
+```jsx
+const onChange = (e) => setState({ value: e });
+const formatDate = (value, format) => {
+    return value;
+};
+<div>
+    <DatePicker
+        label="Lorem ipsum"
+        type="datetime"
         formatDate={formatDate}
         onChange={onChange}
         value={state.value}

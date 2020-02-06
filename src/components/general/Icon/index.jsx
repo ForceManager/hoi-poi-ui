@@ -29,6 +29,7 @@ import ThickDisabled from './icons/ThickDisabled';
 import Funnel from './icons/Funnel';
 import ThickEnabledFilled from './icons/ThickEnabledFilled';
 import Folder from './icons/Folder';
+import Calendar from './icons/Calendar';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -60,6 +61,7 @@ const ICONS = {
     arrowBottom: ArrowBottom,
     funnel: Funnel,
     folder: Folder,
+    calendar: Calendar,
 };
 
 function Icon({

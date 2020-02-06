@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useRef, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -8,6 +8,7 @@ import flatpickrl10n from 'flatpickr/dist/l10n';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Input from '../Input';
+import Icon from '../../general/Icon';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -28,6 +29,7 @@ function DatePicker({
     isReadOnly,
     ...props
 }) {
+    const flatpickrRef = useRef();
     const classes = useClasses(useStyles, classesProp);
 
     // Overrides
@@ -43,6 +45,7 @@ function DatePicker({
             formatDate,
             locale: flatpickrl10n[lang],
             clickOpens: !isReadOnly,
+            time_24hr: true,
             ...override.flatpickrOptions,
         }),
         [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions, type],
@@ -67,6 +70,10 @@ function DatePicker({
         onChange && onChange(undefined, name);
     }, [name, onChange]);
 
+    const onOpenCalendar = useCallback(() => {
+        flatpickrRef.current.flatpickr.open();
+    }, []);
+
     const flatpickrRender = useCallback(
         ({ className, value }, ref) => {
             const formatValue = value
@@ -82,20 +89,44 @@ function DatePicker({
                     isReadOnly={isReadOnly}
                     onChange={isReadOnly ? undefined : onInputChange}
                     overrides={{ input: { ref } }}
+                    postComponent={
+                        <Icon
+                            onClick={onOpenCalendar}
+                            className={classes.calendarIcon}
+                            name="calendar"
+                        />
+                    }
                 />
             );
         },
-        [flatpickrOptions.dateFormat, formatDate, isReadOnly, onInputChange, props],
+        [
+            classes.calendarIcon,
+            flatpickrOptions.dateFormat,
+            formatDate,
+            isReadOnly,
+            onInputChange,
+            onOpenCalendar,
+            props,
+        ],
     );
+
+    const key = `flatpickr-${name || 'anon'}--${isReadOnly ? 'read-only' : 'active'}`;
+
+    function onValueUpdate(...oargs) {
+        console.log(oargs);
+    }
 
     return (
         <Flatpickr
+            ref={flatpickrRef}
+            key={key}
             options={flatpickrOptions}
             render={flatpickrRender}
             overrides={overridesProp}
             onReady={onReady}
             value={value}
             onChange={isReadOnly ? undefined : onChangeDate}
+            onValueUpdate={onValueUpdate}
             {...override.flatpickr}
         />
     );
