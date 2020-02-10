@@ -8,6 +8,9 @@ module.exports = {
     mode: 'development',
     devtool: 'cheap-module-source-map',
     entry: [require.resolve('react-dev-utils/webpackHotDevClient'), indexPath],
+    devServer: {
+        host: '0.0.0.0',
+    },
     output: {
         pathinfo: true,
         filename: 'static/js/bundle.js',

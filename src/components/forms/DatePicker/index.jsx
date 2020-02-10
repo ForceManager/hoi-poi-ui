@@ -14,6 +14,17 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'DatePicker');
 
+// Safari fix
+(() => {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (!isSafari) return;
+    if (document.getElementById('flatpickr')) return;
+    const styleTag = document.createElement('style');
+    styleTag.id = 'flatpickr';
+    const headTag = document.getElementsByTagName('head')[0];
+    headTag.insertBefore(styleTag, headTag.childNodes[0]);
+})();
+
 function DatePicker({
     children,
     classes: classesProp,
@@ -111,7 +122,6 @@ function DatePicker({
     );
 
     const key = `flatpickr-${name || 'anon'}--${isReadOnly ? 'read-only' : 'active'}`;
-
     return (
         <Flatpickr
             ref={flatpickrRef}
