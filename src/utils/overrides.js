@@ -8,7 +8,7 @@ export function getOverrides(props = {}, keys = []) {
 }
 
 export function useClasses(useStyles, classes, ...props) {
-    const styleClasses = useStyles(props);
+    const styleClasses = useStyles(...props);
     return useMemo(() => {
         if (!classes) return styleClasses;
 

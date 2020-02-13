@@ -9,6 +9,12 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Menus');
 
+const SIZES = {
+    small: 140,
+    medium: 220,
+    large: 300,
+};
+
 function Menus({
     title,
     icon,
@@ -17,8 +23,10 @@ function Menus({
     overrides: overridesProp,
     className: classNameProp,
     triggerAction,
+    size,
 }) {
-    const classes = useClasses(useStyles, classesProp);
+    const popupSize = SIZES[size];
+    const classes = useClasses(useStyles, classesProp, { popupSize });
     // Overrides
     const override = getOverrides(overridesProp, Menus.overrides);
 
@@ -71,6 +79,7 @@ Menus.overrides = ['root', 'rc-menu'];
 
 Menus.defaultProps = {
     triggerAction: 'click',
+    size: 'large',
 };
 
 Menus.propTypes = {
@@ -86,6 +95,7 @@ Menus.propTypes = {
         }),
     ),
     triggerAction: PropTypes.oneOf(['hover', 'click']),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
 export default React.memo(Menus);
