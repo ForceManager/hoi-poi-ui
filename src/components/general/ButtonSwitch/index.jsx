@@ -35,7 +35,7 @@ function ButtonSwitch({
                         key={button.value}
                         type="squared-outlined"
                         className={buttonClassName}
-                        onClick={() => onChange(button.value)}
+                        onClick={() => onChange && onChange(button.value)}
                         {...override.Button}
                     >
                         {button.label}
