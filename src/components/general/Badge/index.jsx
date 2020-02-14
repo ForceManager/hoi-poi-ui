@@ -48,7 +48,7 @@ Badge.overrides = ['root', 'Text'];
 Badge.defaultProps = {
     className: '',
     overrides: {},
-    type: 'info',
+    type: 'default',
 };
 
 Badge.propTypes = {

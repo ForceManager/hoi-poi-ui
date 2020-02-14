@@ -22,10 +22,16 @@ export default (theme) => ({
             color: theme.colors.text.red,
         },
     },
-    info: {
+    default: {
         backgroundColor: theme.colors.greyLight,
         '& $Text': {
             color: theme.colors.text.greySoft,
+        },
+    },
+    info: {
+        backgroundColor: theme.colors.secondaryLight,
+        '& $Text': {
+            color: theme.colors.text.secondary,
         },
     },
     success: {
