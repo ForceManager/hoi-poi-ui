@@ -30,6 +30,7 @@ import Funnel from './icons/Funnel';
 import ThickEnabledFilled from './icons/ThickEnabledFilled';
 import Folder from './icons/Folder';
 import Calendar from './icons/Calendar';
+import VerticalDivider from './icons/VerticalDivider';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -62,6 +63,7 @@ const ICONS = {
     funnel: Funnel,
     folder: Folder,
     calendar: Calendar,
+    verticalDivider: VerticalDivider,
 };
 
 function Icon({
