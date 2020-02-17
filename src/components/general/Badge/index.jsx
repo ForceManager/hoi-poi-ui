@@ -48,14 +48,14 @@ Badge.overrides = ['root', 'Text'];
 Badge.defaultProps = {
     className: '',
     overrides: {},
-    type: 'info',
+    type: 'default',
 };
 
 Badge.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    type: PropTypes.oneOf(['error', 'info', 'success', 'warn']),
+    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warn']),
 };
 
 export default React.memo(Badge);
