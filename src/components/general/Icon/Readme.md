@@ -49,6 +49,8 @@ Icons:
 <span> </span>
 <Icon name="folder" />
 <span></span>
+<Icon name="verticalDivider" />
+<span></span>
 ```
 
 Sizes:
