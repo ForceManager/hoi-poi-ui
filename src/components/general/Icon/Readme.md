@@ -53,6 +53,8 @@ Icons:
 <span></span>
 <Icon name="cloudUpload" />
 <span></span>
+<Icon name="sync" />
+<span></span>
 ```
 
 Sizes:
