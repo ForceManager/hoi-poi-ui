@@ -21,6 +21,7 @@ module.exports = {
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/Loader/index.jsx',
                 './src/components/general/Modal/index.jsx',
+                './src/components/general/ProgressBar/index.jsx',
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/Stepper/index.jsx',
                 './src/components/general/Menus/index.jsx',
