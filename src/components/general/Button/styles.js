@@ -103,12 +103,12 @@ export default (theme) => ({
         },
         '&$small': {
             padding: '0 20px',
-        },
-        '&$big': {
-            padding: '9px 20px',
             '& $Text': {
                 lineHeight: '18px',
             },
+        },
+        '&$big': {
+            padding: '9px 20px',
         },
     },
     squared: {
