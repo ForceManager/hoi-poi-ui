@@ -106,6 +106,9 @@ export default (theme) => ({
         },
         '&$big': {
             padding: '9px 20px',
+            '& $Text': {
+                lineHeight: '18px',
+            },
         },
     },
     squared: {
