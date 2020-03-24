@@ -33,6 +33,7 @@ import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
 import Sync from './icons/Sync';
+import Asterisk from './icons/Asterisk';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -68,6 +69,7 @@ const ICONS = {
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
     sync: Sync,
+    asterisk: Asterisk,
 };
 
 function Icon({

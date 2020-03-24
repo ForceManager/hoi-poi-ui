@@ -55,6 +55,8 @@ Icons:
 <span></span>
 <Icon name="sync" />
 <span></span>
+<Icon name="asterisk" />
+<span></span>
 ```
 
 Sizes:
