@@ -1,3 +1,7 @@
+import 'core-js/es/array/includes';
+import 'core-js/es/array/fill';
+import 'core-js/es/function/name';
+
 // Utils
 export { HoiPoiProvider, createHoiPoiTheme, useTheme, createUseStyles } from './utils/styles';
 

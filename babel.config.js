@@ -29,5 +29,5 @@ module.exports = {
             },
         ],
     ],
-    ignore: [/@babel[\\|/]runtime/],
+    ignore: [/@babel[\\|/]runtime/, /node_modules\/(?!debug)/],
 };
