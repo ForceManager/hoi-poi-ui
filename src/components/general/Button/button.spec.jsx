@@ -55,6 +55,5 @@ describe('Button', () => {
             </HoiPoiProvider>,
         );
         expect(wrapper.find('button').props().onClick).toEqual(null);
-        expect(wrapper.find('.HoiPoi__Button__disabled-5-13').length).toBe(1);
     });
 });
