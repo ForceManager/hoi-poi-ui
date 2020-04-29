@@ -43,6 +43,7 @@ function Button({
             [classes.white]: !color,
             [classes.primary]: color === 'primary',
             [classes.danger]: color === 'danger',
+            [classes.grey]: color === 'grey',
             [classes.small]: size === 'small',
             [classes.big]: size === 'big',
             [classes.disabled]: isDisabled || isLoading,
@@ -108,7 +109,7 @@ Button.propTypes = {
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['big', 'medium', 'small']),
     type: PropTypes.oneOf(['filled', 'outlined', 'squared', 'squared-outlined']),
-    color: PropTypes.oneOf(['primary', 'danger', 'white']),
+    color: PropTypes.oneOf(['primary', 'danger', 'white', 'grey']),
     isDisabled: PropTypes.bool,
     /** Use the whole container */
     isFullWidth: PropTypes.bool,

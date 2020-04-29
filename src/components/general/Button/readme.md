@@ -7,7 +7,7 @@ Default buttons:
 <span> </span>
 <Button color="danger">PUSH ME</Button>
 <span> </span>
-<Button color="white">PUSH ME</Button>
+<Button color="grey">PUSH ME</Button>
 ```
 
 Sizes:
@@ -66,6 +66,7 @@ Disabled buttons:
 <Button size="big" color="primary" type="outlined" isDisabled>PUSH ME</Button>
 <span> </span>
 <Button type="squared" isDisabled>PUSH ME</Button>
+<Button type="squared" color="grey" isDisabled>PUSH ME</Button>
 ```
 
 Loading buttons:

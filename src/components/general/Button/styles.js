@@ -266,6 +266,21 @@ export default (theme) => ({
             backgroundColor: theme.colors.redSoft,
         },
     },
+    grey: {
+        backgroundColor: theme.colors.tableHover,
+        transition: `box-shadow .2s ease-in, background-color .1s ease-in-out`,
+        '& $Text': {
+            color: theme.colors.text.default,
+        },
+        '&$disabled': {
+            '&:hover': {
+                backgroundColor: theme.colors.tableHover,
+            },
+        },
+        '&:hover': {
+            backgroundColor: theme.colors.tableHeader,
+        },
+    },
     // Sizes
     small: {
         padding: '0px 20px',
