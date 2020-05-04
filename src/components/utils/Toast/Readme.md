@@ -172,7 +172,7 @@ let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnCli
     <br />
     <br />
     <Button
-        color="secondary"
+        color="danger"
         onClick={() => {
             dismissToast(state.toastId);
         }}
@@ -182,7 +182,7 @@ let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnCli
     <br />
     <br />
     <Button
-        color="secondary"
+        color="danger"
         onClick={() => {
             dismissToast();
         }}
