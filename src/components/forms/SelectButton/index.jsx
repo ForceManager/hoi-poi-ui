@@ -31,7 +31,7 @@ function SelectButton({
     isReadOnly,
     isMulti,
     components,
-    hideSelectedOptions,
+    hideOptions,
     actions,
     ...props
 }) {
@@ -80,7 +80,7 @@ function SelectButton({
         placeholder,
         options,
         value,
-        hideSelectedOptions,
+        hideOptions,
         noOptionsPlaceholder,
         onChange: onSelectChange,
         isMulti,
@@ -126,7 +126,7 @@ SelectButton.defaultProps = {
     onChange: () => {},
     value: '',
     isReadOnly: false,
-    hideSelectedOptions: true,
+    hideOptions: true,
     isClearable: true,
     isMulti: false,
 };

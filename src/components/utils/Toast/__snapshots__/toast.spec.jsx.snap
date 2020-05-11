@@ -254,7 +254,7 @@ exports[`Toast default match 1`] = `
               ],
             },
           },
-          "version": "10.0.4",
+          "version": "10.1.1",
         }
       }
     >
@@ -265,7 +265,6 @@ exports[`Toast default match 1`] = `
       >
         <ToastContainer
           autoClose={4000}
-          bodyClassName={null}
           className="HoiPoi__Toast__root-1-9"
           closeButton={false}
           closeButtonClassName=""
@@ -279,17 +278,19 @@ exports[`Toast default match 1`] = `
           pauseOnFocusLoss={true}
           pauseOnHover={true}
           position="top-right"
-          progressClassName={null}
-          progressStyle={null}
           role="alert"
           rtl={false}
-          style={null}
-          toastClassName={null}
           transition={[Function]}
         >
           <div
             className="Toastify"
-          />
+            id="hoi-poi-ui"
+          >
+            <TransitionGroup
+              childFactory={[Function]}
+              component={null}
+            />
+          </div>
         </ToastContainer>
       </Toast>
     </JssProvider>

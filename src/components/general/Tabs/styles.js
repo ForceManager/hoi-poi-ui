@@ -100,6 +100,7 @@ export default (theme) => ({
             textTransform: 'uppercase',
             fontWeight: '500',
             color: theme.colors.text.greySoft,
+            outline: 'none',
         },
         '& .hoi-poi-ui__tabs-tab:hover': {
             color: theme.colors.primary,

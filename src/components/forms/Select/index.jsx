@@ -43,7 +43,8 @@ function Select({
     isReadOnly,
     isClearable,
     components,
-    hideSelectedOptions,
+    hideSelectedOptions, // native react-select
+    hideOptions,
     actions,
     onClickAction, // private props
     isMulti,
@@ -148,9 +149,13 @@ function Select({
         onChange: useCallback(
             (data, action) => {
                 if (isMulti) {
-                    let hasValue = !!(value || []).find((item) => item.value === data[0].value);
+                    let hasValue = !!(value || []).find(
+                        (item) => item.value === data[0].value || item === data[0].value,
+                    );
                     if (hasValue) {
-                        data = value.filter((item) => item.value !== data[0].value);
+                        data = value.filter((item) =>
+                            isValueObject ? item.value !== data[0].value : item !== data[0].value,
+                        );
                     } else {
                         data = [...value, ...data];
                     }
@@ -158,7 +163,7 @@ function Select({
 
                 if (!isValueObject && data) {
                     if (isMulti) {
-                        data = data.map((d) => d.value);
+                        data = data.map((d) => d?.value ?? d);
                     } else {
                         data = data.value;
                     }
@@ -228,7 +233,10 @@ function Select({
                             <Checkbox
                                 checked={
                                     value
-                                        ? !!value.find((item) => item.value === data.value)
+                                        ? !!value.find(
+                                              (item) =>
+                                                  item.value === data.value || item === data.value,
+                                          )
                                         : false
                                 }
                             />
@@ -253,13 +261,13 @@ function Select({
     };
 
     const selectedOptions = useMemo(() => {
-        if (!isMulti || !selectedValue) return null;
+        if (!isMulti || !selectedValue || hideOptions) return null;
         return selectedValue.map((item) => (
             <Chip key={item.value} onClose={() => onRemove(item)}>
                 {item.label}
             </Chip>
         ));
-    }, [isMulti, onRemove, selectedValue]);
+    }, [isMulti, onRemove, selectedValue, hideOptions]);
 
     // Async/sync
     let SelectComponent = RSelect;
@@ -295,6 +303,7 @@ Select.defaultProps = {
     isClearable: true,
     overrides: {},
     isValueObject: true,
+    hideOptions: false,
 };
 
 Select.propTypes = {

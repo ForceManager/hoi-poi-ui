@@ -254,7 +254,7 @@ exports[`Tabs default 1`] = `
               ],
             },
           },
-          "version": "10.0.4",
+          "version": "10.1.1",
         }
       }
     >
@@ -293,6 +293,7 @@ exports[`Tabs default 1`] = `
             activeKey="tab-2"
             destroyInactiveTabPane={false}
             direction="ltr"
+            keyboard={true}
             navWrapper={[Function]}
             onChange={[Function]}
             prefixCls="hoi-poi-ui__tabs"
@@ -346,6 +347,7 @@ exports[`Tabs default 1`] = `
                     className=""
                     direction="ltr"
                     extraContent={null}
+                    getRef={[Function]}
                     navWrapper={[Function]}
                     onKeyDown={[Function]}
                     onTabClick={[Function]}
@@ -383,7 +385,7 @@ exports[`Tabs default 1`] = `
                       onKeyDown={[Function]}
                       role="tablist"
                       style={Object {}}
-                      tabIndex="0"
+                      tabIndex={-1}
                     >
                       <ScrollableTabBarNode
                         activeKey="tab-2"
@@ -492,9 +494,11 @@ exports[`Tabs default 1`] = `
                                 >
                                   <div>
                                     <div
+                                      aria-controls="tabpane-tab-0"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-0"
                                       key="tab-0"
                                       onClick={[Function]}
                                       role="tab"
@@ -503,13 +507,16 @@ exports[`Tabs default 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 0
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-1"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-1"
                                       key="tab-1"
                                       onClick={[Function]}
                                       role="tab"
@@ -518,13 +525,16 @@ exports[`Tabs default 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 1
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-2"
                                       aria-disabled="false"
                                       aria-selected="true"
                                       className="hoi-poi-ui__tabs-tab-active hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-2"
                                       key="tab-2"
                                       onClick={[Function]}
                                       role="tab"
@@ -533,13 +543,16 @@ exports[`Tabs default 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={0}
                                     >
                                       Tab 2
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-3"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-3"
                                       key="tab-3"
                                       onClick={[Function]}
                                       role="tab"
@@ -548,13 +561,16 @@ exports[`Tabs default 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 3
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-4"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-4"
                                       key="tab-4"
                                       onClick={[Function]}
                                       role="tab"
@@ -563,6 +579,7 @@ exports[`Tabs default 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 4
                                     </div>
@@ -619,24 +636,6 @@ exports[`Tabs default 1`] = `
                   </TabBarRootNode>
                 </SaveRef>
               </ScrollableInkTabBar>
-              <Sentinel
-                key="sentinelStart"
-                setRef={[Function]}
-              >
-                <div
-                  onKeyDown={[Function]}
-                  role="presentation"
-                  style={
-                    Object {
-                      "height": 0,
-                      "overflow": "hidden",
-                      "position": "absolute",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex={0}
-                />
-              </Sentinel>
               <TabContent
                 activeKey="tab-2"
                 animated={true}
@@ -669,6 +668,12 @@ exports[`Tabs default 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -683,6 +688,12 @@ exports[`Tabs default 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -697,42 +708,13 @@ exports[`Tabs default 1`] = `
                       aria-hidden="false"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-active"
                       role="tabpanel"
-                    >
-                      <Sentinel
-                        setRef={[Function]}
-                      >
-                        <div
-                          onKeyDown={[Function]}
-                          role="presentation"
-                          style={
-                            Object {
-                              "height": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "width": 0,
-                            }
-                          }
-                          tabIndex={0}
-                        />
-                      </Sentinel>
-                      <Sentinel
-                        setRef={[Function]}
-                      >
-                        <div
-                          onKeyDown={[Function]}
-                          role="presentation"
-                          style={
-                            Object {
-                              "height": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "width": 0,
-                            }
-                          }
-                          tabIndex={0}
-                        />
-                      </Sentinel>
-                    </div>
+                      style={
+                        Object {
+                          "visibility": "visible",
+                        }
+                      }
+                      tabIndex={0}
+                    />
                   </TabPane>
                   <TabPane
                     active={false}
@@ -746,6 +728,12 @@ exports[`Tabs default 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -760,28 +748,16 @@ exports[`Tabs default 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                 </div>
               </TabContent>
-              <Sentinel
-                key="sentinelEnd"
-                setRef={[Function]}
-              >
-                <div
-                  onKeyDown={[Function]}
-                  role="presentation"
-                  style={
-                    Object {
-                      "height": 0,
-                      "overflow": "hidden",
-                      "position": "absolute",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex={0}
-                />
-              </Sentinel>
             </div>
           </Tabs>
         </div>
@@ -1045,7 +1021,7 @@ exports[`Tabs with scrolling 1`] = `
               ],
             },
           },
-          "version": "10.0.4",
+          "version": "10.1.1",
         }
       }
     >
@@ -1464,6 +1440,7 @@ exports[`Tabs with scrolling 1`] = `
             activeKey="tab-2"
             destroyInactiveTabPane={false}
             direction="ltr"
+            keyboard={true}
             navWrapper={[Function]}
             onChange={[Function]}
             prefixCls="hoi-poi-ui__tabs"
@@ -1897,6 +1874,7 @@ exports[`Tabs with scrolling 1`] = `
                     className=""
                     direction="ltr"
                     extraContent={null}
+                    getRef={[Function]}
                     navWrapper={[Function]}
                     onKeyDown={[Function]}
                     onTabClick={[Function]}
@@ -2314,7 +2292,7 @@ exports[`Tabs with scrolling 1`] = `
                       onKeyDown={[Function]}
                       role="tablist"
                       style={Object {}}
-                      tabIndex="0"
+                      tabIndex={-1}
                     >
                       <ScrollableTabBarNode
                         activeKey="tab-2"
@@ -3183,9 +3161,11 @@ exports[`Tabs with scrolling 1`] = `
                                 >
                                   <div>
                                     <div
+                                      aria-controls="tabpane-tab-0"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-0"
                                       key="tab-0"
                                       onClick={[Function]}
                                       role="tab"
@@ -3194,13 +3174,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 0
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-1"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-1"
                                       key="tab-1"
                                       onClick={[Function]}
                                       role="tab"
@@ -3209,13 +3192,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 1
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-2"
                                       aria-disabled="false"
                                       aria-selected="true"
                                       className="hoi-poi-ui__tabs-tab-active hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-2"
                                       key="tab-2"
                                       onClick={[Function]}
                                       role="tab"
@@ -3224,13 +3210,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={0}
                                     >
                                       Tab 2
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-3"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-3"
                                       key="tab-3"
                                       onClick={[Function]}
                                       role="tab"
@@ -3239,13 +3228,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 3
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-4"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-4"
                                       key="tab-4"
                                       onClick={[Function]}
                                       role="tab"
@@ -3254,13 +3246,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 4
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-5"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-5"
                                       key="tab-5"
                                       onClick={[Function]}
                                       role="tab"
@@ -3269,13 +3264,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 5
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-6"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-6"
                                       key="tab-6"
                                       onClick={[Function]}
                                       role="tab"
@@ -3284,13 +3282,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 6
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-7"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-7"
                                       key="tab-7"
                                       onClick={[Function]}
                                       role="tab"
@@ -3299,13 +3300,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 7
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-8"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-8"
                                       key="tab-8"
                                       onClick={[Function]}
                                       role="tab"
@@ -3314,13 +3318,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 8
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-9"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-9"
                                       key="tab-9"
                                       onClick={[Function]}
                                       role="tab"
@@ -3329,13 +3336,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 9
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-10"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-10"
                                       key="tab-10"
                                       onClick={[Function]}
                                       role="tab"
@@ -3344,13 +3354,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 10
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-11"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-11"
                                       key="tab-11"
                                       onClick={[Function]}
                                       role="tab"
@@ -3359,13 +3372,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 11
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-12"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-12"
                                       key="tab-12"
                                       onClick={[Function]}
                                       role="tab"
@@ -3374,13 +3390,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 12
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-13"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-13"
                                       key="tab-13"
                                       onClick={[Function]}
                                       role="tab"
@@ -3389,13 +3408,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 13
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-14"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-14"
                                       key="tab-14"
                                       onClick={[Function]}
                                       role="tab"
@@ -3404,13 +3426,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 14
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-15"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-15"
                                       key="tab-15"
                                       onClick={[Function]}
                                       role="tab"
@@ -3419,13 +3444,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 15
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-16"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-16"
                                       key="tab-16"
                                       onClick={[Function]}
                                       role="tab"
@@ -3434,13 +3462,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 16
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-17"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-17"
                                       key="tab-17"
                                       onClick={[Function]}
                                       role="tab"
@@ -3449,13 +3480,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 17
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-18"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-18"
                                       key="tab-18"
                                       onClick={[Function]}
                                       role="tab"
@@ -3464,13 +3498,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 18
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-19"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-19"
                                       key="tab-19"
                                       onClick={[Function]}
                                       role="tab"
@@ -3479,13 +3516,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 19
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-20"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-20"
                                       key="tab-20"
                                       onClick={[Function]}
                                       role="tab"
@@ -3494,13 +3534,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 20
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-21"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-21"
                                       key="tab-21"
                                       onClick={[Function]}
                                       role="tab"
@@ -3509,13 +3552,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 21
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-22"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-22"
                                       key="tab-22"
                                       onClick={[Function]}
                                       role="tab"
@@ -3524,13 +3570,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 22
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-23"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-23"
                                       key="tab-23"
                                       onClick={[Function]}
                                       role="tab"
@@ -3539,13 +3588,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 23
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-24"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-24"
                                       key="tab-24"
                                       onClick={[Function]}
                                       role="tab"
@@ -3554,13 +3606,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 24
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-25"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-25"
                                       key="tab-25"
                                       onClick={[Function]}
                                       role="tab"
@@ -3569,13 +3624,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 25
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-26"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-26"
                                       key="tab-26"
                                       onClick={[Function]}
                                       role="tab"
@@ -3584,13 +3642,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 26
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-27"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-27"
                                       key="tab-27"
                                       onClick={[Function]}
                                       role="tab"
@@ -3599,13 +3660,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 27
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-28"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-28"
                                       key="tab-28"
                                       onClick={[Function]}
                                       role="tab"
@@ -3614,13 +3678,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 28
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-29"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-29"
                                       key="tab-29"
                                       onClick={[Function]}
                                       role="tab"
@@ -3629,13 +3696,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 29
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-30"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-30"
                                       key="tab-30"
                                       onClick={[Function]}
                                       role="tab"
@@ -3644,13 +3714,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 30
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-31"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-31"
                                       key="tab-31"
                                       onClick={[Function]}
                                       role="tab"
@@ -3659,13 +3732,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 31
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-32"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-32"
                                       key="tab-32"
                                       onClick={[Function]}
                                       role="tab"
@@ -3674,13 +3750,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 32
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-33"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-33"
                                       key="tab-33"
                                       onClick={[Function]}
                                       role="tab"
@@ -3689,13 +3768,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 33
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-34"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-34"
                                       key="tab-34"
                                       onClick={[Function]}
                                       role="tab"
@@ -3704,13 +3786,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 34
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-35"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-35"
                                       key="tab-35"
                                       onClick={[Function]}
                                       role="tab"
@@ -3719,13 +3804,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 35
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-36"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-36"
                                       key="tab-36"
                                       onClick={[Function]}
                                       role="tab"
@@ -3734,13 +3822,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 36
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-37"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-37"
                                       key="tab-37"
                                       onClick={[Function]}
                                       role="tab"
@@ -3749,13 +3840,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 37
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-38"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-38"
                                       key="tab-38"
                                       onClick={[Function]}
                                       role="tab"
@@ -3764,13 +3858,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 38
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-39"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-39"
                                       key="tab-39"
                                       onClick={[Function]}
                                       role="tab"
@@ -3779,13 +3876,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 39
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-40"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-40"
                                       key="tab-40"
                                       onClick={[Function]}
                                       role="tab"
@@ -3794,13 +3894,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 40
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-41"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-41"
                                       key="tab-41"
                                       onClick={[Function]}
                                       role="tab"
@@ -3809,13 +3912,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 41
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-42"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-42"
                                       key="tab-42"
                                       onClick={[Function]}
                                       role="tab"
@@ -3824,13 +3930,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 42
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-43"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-43"
                                       key="tab-43"
                                       onClick={[Function]}
                                       role="tab"
@@ -3839,13 +3948,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 43
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-44"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-44"
                                       key="tab-44"
                                       onClick={[Function]}
                                       role="tab"
@@ -3854,13 +3966,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 44
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-45"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-45"
                                       key="tab-45"
                                       onClick={[Function]}
                                       role="tab"
@@ -3869,13 +3984,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 45
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-46"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-46"
                                       key="tab-46"
                                       onClick={[Function]}
                                       role="tab"
@@ -3884,13 +4002,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 46
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-47"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-47"
                                       key="tab-47"
                                       onClick={[Function]}
                                       role="tab"
@@ -3899,13 +4020,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 47
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-48"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-48"
                                       key="tab-48"
                                       onClick={[Function]}
                                       role="tab"
@@ -3914,13 +4038,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 48
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-49"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-49"
                                       key="tab-49"
                                       onClick={[Function]}
                                       role="tab"
@@ -3929,13 +4056,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 49
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-50"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-50"
                                       key="tab-50"
                                       onClick={[Function]}
                                       role="tab"
@@ -3944,13 +4074,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 50
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-51"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-51"
                                       key="tab-51"
                                       onClick={[Function]}
                                       role="tab"
@@ -3959,13 +4092,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 51
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-52"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-52"
                                       key="tab-52"
                                       onClick={[Function]}
                                       role="tab"
@@ -3974,13 +4110,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 52
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-53"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-53"
                                       key="tab-53"
                                       onClick={[Function]}
                                       role="tab"
@@ -3989,13 +4128,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 53
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-54"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-54"
                                       key="tab-54"
                                       onClick={[Function]}
                                       role="tab"
@@ -4004,13 +4146,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 54
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-55"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-55"
                                       key="tab-55"
                                       onClick={[Function]}
                                       role="tab"
@@ -4019,13 +4164,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 55
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-56"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-56"
                                       key="tab-56"
                                       onClick={[Function]}
                                       role="tab"
@@ -4034,13 +4182,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 56
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-57"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-57"
                                       key="tab-57"
                                       onClick={[Function]}
                                       role="tab"
@@ -4049,13 +4200,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 57
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-58"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-58"
                                       key="tab-58"
                                       onClick={[Function]}
                                       role="tab"
@@ -4064,13 +4218,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 58
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-59"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-59"
                                       key="tab-59"
                                       onClick={[Function]}
                                       role="tab"
@@ -4079,13 +4236,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 59
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-60"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-60"
                                       key="tab-60"
                                       onClick={[Function]}
                                       role="tab"
@@ -4094,13 +4254,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 60
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-61"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-61"
                                       key="tab-61"
                                       onClick={[Function]}
                                       role="tab"
@@ -4109,13 +4272,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 61
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-62"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-62"
                                       key="tab-62"
                                       onClick={[Function]}
                                       role="tab"
@@ -4124,13 +4290,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 62
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-63"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-63"
                                       key="tab-63"
                                       onClick={[Function]}
                                       role="tab"
@@ -4139,13 +4308,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 63
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-64"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-64"
                                       key="tab-64"
                                       onClick={[Function]}
                                       role="tab"
@@ -4154,13 +4326,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 64
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-65"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-65"
                                       key="tab-65"
                                       onClick={[Function]}
                                       role="tab"
@@ -4169,13 +4344,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 65
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-66"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-66"
                                       key="tab-66"
                                       onClick={[Function]}
                                       role="tab"
@@ -4184,13 +4362,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 66
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-67"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-67"
                                       key="tab-67"
                                       onClick={[Function]}
                                       role="tab"
@@ -4199,13 +4380,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 67
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-68"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-68"
                                       key="tab-68"
                                       onClick={[Function]}
                                       role="tab"
@@ -4214,13 +4398,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 68
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-69"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-69"
                                       key="tab-69"
                                       onClick={[Function]}
                                       role="tab"
@@ -4229,13 +4416,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 69
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-70"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-70"
                                       key="tab-70"
                                       onClick={[Function]}
                                       role="tab"
@@ -4244,13 +4434,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 70
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-71"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-71"
                                       key="tab-71"
                                       onClick={[Function]}
                                       role="tab"
@@ -4259,13 +4452,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 71
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-72"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-72"
                                       key="tab-72"
                                       onClick={[Function]}
                                       role="tab"
@@ -4274,13 +4470,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 72
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-73"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-73"
                                       key="tab-73"
                                       onClick={[Function]}
                                       role="tab"
@@ -4289,13 +4488,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 73
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-74"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-74"
                                       key="tab-74"
                                       onClick={[Function]}
                                       role="tab"
@@ -4304,13 +4506,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 74
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-75"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-75"
                                       key="tab-75"
                                       onClick={[Function]}
                                       role="tab"
@@ -4319,13 +4524,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 75
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-76"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-76"
                                       key="tab-76"
                                       onClick={[Function]}
                                       role="tab"
@@ -4334,13 +4542,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 76
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-77"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-77"
                                       key="tab-77"
                                       onClick={[Function]}
                                       role="tab"
@@ -4349,13 +4560,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 77
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-78"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-78"
                                       key="tab-78"
                                       onClick={[Function]}
                                       role="tab"
@@ -4364,13 +4578,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 78
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-79"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-79"
                                       key="tab-79"
                                       onClick={[Function]}
                                       role="tab"
@@ -4379,13 +4596,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 79
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-80"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-80"
                                       key="tab-80"
                                       onClick={[Function]}
                                       role="tab"
@@ -4394,13 +4614,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 80
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-81"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-81"
                                       key="tab-81"
                                       onClick={[Function]}
                                       role="tab"
@@ -4409,13 +4632,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 81
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-82"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-82"
                                       key="tab-82"
                                       onClick={[Function]}
                                       role="tab"
@@ -4424,13 +4650,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 82
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-83"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-83"
                                       key="tab-83"
                                       onClick={[Function]}
                                       role="tab"
@@ -4439,13 +4668,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 83
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-84"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-84"
                                       key="tab-84"
                                       onClick={[Function]}
                                       role="tab"
@@ -4454,13 +4686,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 84
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-85"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-85"
                                       key="tab-85"
                                       onClick={[Function]}
                                       role="tab"
@@ -4469,13 +4704,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 85
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-86"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-86"
                                       key="tab-86"
                                       onClick={[Function]}
                                       role="tab"
@@ -4484,13 +4722,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 86
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-87"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-87"
                                       key="tab-87"
                                       onClick={[Function]}
                                       role="tab"
@@ -4499,13 +4740,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 87
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-88"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-88"
                                       key="tab-88"
                                       onClick={[Function]}
                                       role="tab"
@@ -4514,13 +4758,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 88
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-89"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-89"
                                       key="tab-89"
                                       onClick={[Function]}
                                       role="tab"
@@ -4529,13 +4776,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 89
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-90"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-90"
                                       key="tab-90"
                                       onClick={[Function]}
                                       role="tab"
@@ -4544,13 +4794,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 90
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-91"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-91"
                                       key="tab-91"
                                       onClick={[Function]}
                                       role="tab"
@@ -4559,13 +4812,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 91
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-92"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-92"
                                       key="tab-92"
                                       onClick={[Function]}
                                       role="tab"
@@ -4574,13 +4830,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 92
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-93"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-93"
                                       key="tab-93"
                                       onClick={[Function]}
                                       role="tab"
@@ -4589,13 +4848,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 93
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-94"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-94"
                                       key="tab-94"
                                       onClick={[Function]}
                                       role="tab"
@@ -4604,13 +4866,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 94
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-95"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-95"
                                       key="tab-95"
                                       onClick={[Function]}
                                       role="tab"
@@ -4619,13 +4884,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 95
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-96"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-96"
                                       key="tab-96"
                                       onClick={[Function]}
                                       role="tab"
@@ -4634,13 +4902,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 96
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-97"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-97"
                                       key="tab-97"
                                       onClick={[Function]}
                                       role="tab"
@@ -4649,13 +4920,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 97
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-98"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-98"
                                       key="tab-98"
                                       onClick={[Function]}
                                       role="tab"
@@ -4664,13 +4938,16 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 98
                                     </div>
                                     <div
+                                      aria-controls="tabpane-tab-99"
                                       aria-disabled="false"
                                       aria-selected="false"
                                       className=" hoi-poi-ui__tabs-tab"
+                                      id="tab-tab-99"
                                       key="tab-99"
                                       onClick={[Function]}
                                       role="tab"
@@ -4679,6 +4956,7 @@ exports[`Tabs with scrolling 1`] = `
                                           "marginRight": null,
                                         }
                                       }
+                                      tabIndex={-1}
                                     >
                                       Tab 99
                                     </div>
@@ -5115,24 +5393,6 @@ exports[`Tabs with scrolling 1`] = `
                   </TabBarRootNode>
                 </SaveRef>
               </ScrollableInkTabBar>
-              <Sentinel
-                key="sentinelStart"
-                setRef={[Function]}
-              >
-                <div
-                  onKeyDown={[Function]}
-                  role="presentation"
-                  style={
-                    Object {
-                      "height": 0,
-                      "overflow": "hidden",
-                      "position": "absolute",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex={0}
-                />
-              </Sentinel>
               <TabContent
                 activeKey="tab-2"
                 animated={true}
@@ -5165,6 +5425,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5179,6 +5445,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5193,42 +5465,13 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="false"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-active"
                       role="tabpanel"
-                    >
-                      <Sentinel
-                        setRef={[Function]}
-                      >
-                        <div
-                          onKeyDown={[Function]}
-                          role="presentation"
-                          style={
-                            Object {
-                              "height": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "width": 0,
-                            }
-                          }
-                          tabIndex={0}
-                        />
-                      </Sentinel>
-                      <Sentinel
-                        setRef={[Function]}
-                      >
-                        <div
-                          onKeyDown={[Function]}
-                          role="presentation"
-                          style={
-                            Object {
-                              "height": 0,
-                              "overflow": "hidden",
-                              "position": "absolute",
-                              "width": 0,
-                            }
-                          }
-                          tabIndex={0}
-                        />
-                      </Sentinel>
-                    </div>
+                      style={
+                        Object {
+                          "visibility": "visible",
+                        }
+                      }
+                      tabIndex={0}
+                    />
                   </TabPane>
                   <TabPane
                     active={false}
@@ -5242,6 +5485,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5256,6 +5505,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5270,6 +5525,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5284,6 +5545,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5298,6 +5565,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5312,6 +5585,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5326,6 +5605,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5340,6 +5625,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5354,6 +5645,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5368,6 +5665,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5382,6 +5685,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5396,6 +5705,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5410,6 +5725,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5424,6 +5745,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5438,6 +5765,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5452,6 +5785,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5466,6 +5805,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5480,6 +5825,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5494,6 +5845,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5508,6 +5865,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5522,6 +5885,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5536,6 +5905,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5550,6 +5925,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5564,6 +5945,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5578,6 +5965,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5592,6 +5985,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5606,6 +6005,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5620,6 +6025,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5634,6 +6045,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5648,6 +6065,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5662,6 +6085,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5676,6 +6105,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5690,6 +6125,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5704,6 +6145,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5718,6 +6165,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5732,6 +6185,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5746,6 +6205,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5760,6 +6225,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5774,6 +6245,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5788,6 +6265,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5802,6 +6285,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5816,6 +6305,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5830,6 +6325,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5844,6 +6345,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5858,6 +6365,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5872,6 +6385,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5886,6 +6405,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5900,6 +6425,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5914,6 +6445,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5928,6 +6465,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5942,6 +6485,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5956,6 +6505,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5970,6 +6525,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5984,6 +6545,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -5998,6 +6565,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6012,6 +6585,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6026,6 +6605,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6040,6 +6625,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6054,6 +6645,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6068,6 +6665,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6082,6 +6685,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6096,6 +6705,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6110,6 +6725,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6124,6 +6745,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6138,6 +6765,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6152,6 +6785,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6166,6 +6805,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6180,6 +6825,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6194,6 +6845,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6208,6 +6865,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6222,6 +6885,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6236,6 +6905,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6250,6 +6925,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6264,6 +6945,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6278,6 +6965,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6292,6 +6985,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6306,6 +7005,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6320,6 +7025,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6334,6 +7045,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6348,6 +7065,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6362,6 +7085,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6376,6 +7105,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6390,6 +7125,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6404,6 +7145,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6418,6 +7165,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6432,6 +7185,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6446,6 +7205,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6460,6 +7225,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6474,6 +7245,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6488,6 +7265,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6502,6 +7285,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6516,6 +7305,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6530,6 +7325,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6544,6 +7345,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6558,6 +7365,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6572,6 +7385,12 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                   <TabPane
@@ -6586,28 +7405,16 @@ exports[`Tabs with scrolling 1`] = `
                       aria-hidden="true"
                       className="hoi-poi-ui__tabs-tabpane hoi-poi-ui__tabs-tabpane-inactive"
                       role="tabpanel"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                      tabIndex={-1}
                     />
                   </TabPane>
                 </div>
               </TabContent>
-              <Sentinel
-                key="sentinelEnd"
-                setRef={[Function]}
-              >
-                <div
-                  onKeyDown={[Function]}
-                  role="presentation"
-                  style={
-                    Object {
-                      "height": 0,
-                      "overflow": "hidden",
-                      "position": "absolute",
-                      "width": 0,
-                    }
-                  }
-                  tabIndex={0}
-                />
-              </Sentinel>
             </div>
           </Tabs>
         </div>
