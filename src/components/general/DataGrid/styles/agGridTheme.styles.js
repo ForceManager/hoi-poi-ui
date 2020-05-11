@@ -652,6 +652,7 @@ export default (theme) => ({
         ...theme.typography.defaultText,
         color: theme.colors.text.greySoft,
         cursor: 'auto',
+        height: '100%',
     },
     '&.ag-theme-balham .ag-ltr .ag-row-group-leaf-indent': {
         marginLeft: 28,
