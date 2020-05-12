@@ -1,6 +1,9 @@
 Default:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let steps = [
     {
         title: 'Step 1',

@@ -15,6 +15,10 @@ States:
 Interactive:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 function toggleState(st) {
     if (state.checked) {
         setState({

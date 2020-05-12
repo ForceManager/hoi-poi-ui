@@ -1,6 +1,8 @@
 Default
 
 ```jsx
+import { useState } from 'react';
+
 let options = [
     {
         label: 'Lorem ipsum',
@@ -15,7 +17,7 @@ let options = [
         value: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <RadioGroup label="Lorem ipsum" options={options} onChange={onChange} value={state.value} />;
 ```
@@ -23,6 +25,9 @@ let onChange = (value) => setState({ value });
 Disabled
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let options = [
     {
         label: 'Lorem ipsum',
@@ -51,6 +56,8 @@ let onChange = (value) => setState({ value });
 Default vertical label
 
 ```jsx
+import { useState } from 'react';
+
 let options = [
     {
         label: 'Lorem ipsum',
@@ -65,7 +72,7 @@ let options = [
         value: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <RadioGroup
     label="Lorem ipsum"
@@ -79,6 +86,8 @@ let onChange = (value) => setState({ value });
 FullWidth
 
 ```jsx
+import { useState } from 'react';
+
 let options = [
     {
         label:
@@ -96,7 +105,7 @@ let options = [
         value: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <RadioGroup options={options} onChange={onChange} value={state.value} isFullWidth />;
 ```

@@ -2,8 +2,9 @@ Default Toast:
 
 ```jsx
 import { Button, Input, RadioGroup, toast, dismissToast } from 'hoi-poi-ui';
+import { useState } from 'react';
 
-const state = {
+const [state, setState] = useState({
     title: 'Lorem',
     text: 'Lorem ipsum',
     type: 'info',
@@ -12,8 +13,7 @@ const state = {
     newestOnTop: false,
     closeOnClick: true,
     toastId: '',
-    ...state,
-};
+});
 
 let radioOptions = [
     {

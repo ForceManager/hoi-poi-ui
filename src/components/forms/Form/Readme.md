@@ -42,6 +42,7 @@ return <pre>{JSON.stringify(types, null, 4)}</pre>;
 ```
 
 ```jsx
+import { useState } from 'react';
 import schema from './example.json';
 
 const errors = {
@@ -82,6 +83,7 @@ const initialValues = {
     ],
 };
 
+const [state, setState] = useState({});
 let onChange = (values, field) => setState({ values });
 
 <Form
@@ -97,12 +99,14 @@ let onChange = (values, field) => setState({ values });
 
 ```jsx
 import schema from './example.vertical.json';
+import { useState } from 'react';
 
 const errors = {
     phone: 'Invalid phone',
     multiplier: [{}, { email: 'This field is mandatory' }],
 };
 
+const [state, setState] = useState({});
 let onChange = (values, field) => setState({ values });
 
 <Form onChange={onChange} values={state.values} errors={errors} schema={schema} />;

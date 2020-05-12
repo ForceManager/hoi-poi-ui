@@ -1,6 +1,7 @@
 Default
 
 ```jsx
+import { useState } from 'react';
 let options = [
     {
         label: 'Lorem ipsum',
@@ -15,7 +16,7 @@ let options = [
         value: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <CheckboxGroup label="Lorem ipsum" options={options} onChange={onChange} value={state.value} />;
 ```
@@ -23,6 +24,7 @@ let onChange = (value) => setState({ value });
 Disabled
 
 ```jsx
+import { useState } from 'react';
 let options = [
     {
         label: 'Lorem ipsum',
@@ -38,6 +40,7 @@ let options = [
     },
 ];
 
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <CheckboxGroup
     label="Lorem ipsum"
@@ -51,6 +54,7 @@ let onChange = (value) => setState({ value });
 Default vertical label
 
 ```jsx
+import { useState } from 'react';
 let options = [
     {
         label: 'Lorem ipsum',
@@ -65,7 +69,7 @@ let options = [
         value: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <CheckboxGroup
     label="Lorem ipsum"
@@ -79,6 +83,7 @@ let onChange = (value) => setState({ value });
 Full width
 
 ```jsx
+import { useState } from 'react';
 let options = [
     {
         label:
@@ -96,7 +101,7 @@ let options = [
         value: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <CheckboxGroup options={options} onChange={onChange} value={state.value} isFullWidth />;
 ```

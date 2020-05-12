@@ -1,6 +1,8 @@
 Default
 
 ```jsx
+import { useState } from 'react';
+
 let inputs = [
     {
         label: 'Lorem ipsum',
@@ -16,6 +18,7 @@ let inputs = [
     },
 ];
 
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <InputGroup
     label="Lorem ipsum"
@@ -30,6 +33,8 @@ let onChange = (value) => setState({ value });
 Disabled
 
 ```jsx
+import { useState } from 'react';
+
 let inputs = [
     {
         label: 'Lorem ipsum',
@@ -44,7 +49,7 @@ let inputs = [
         name: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <InputGroup
     label="Lorem ipsum"
@@ -58,6 +63,8 @@ let onChange = (value) => setState({ value });
 Default vertical label
 
 ```jsx
+import { useState } from 'react';
+
 let inputs = [
     {
         label: 'Lorem ipsum',
@@ -72,7 +79,7 @@ let inputs = [
         name: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <InputGroup
     label="Lorem ipsum"
@@ -86,6 +93,8 @@ let onChange = (value) => setState({ value });
 Full width
 
 ```jsx
+import { useState } from 'react';
+
 let inputs = [
     {
         label: 'Lorem ipsum',
@@ -100,7 +109,7 @@ let inputs = [
         name: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <InputGroup
     label="Lorem ipsum"

@@ -1,6 +1,7 @@
 Default:
 
 ```jsx
+import { useState } from 'react';
 import Button from '../../general/Button';
 
 const options = [
@@ -22,6 +23,7 @@ const options = [
     },
 ];
 
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>
@@ -40,6 +42,7 @@ const onChange = (value) => setState({ value });
 Grouped options:
 
 ```jsx
+import { useState } from 'react';
 import Button from '../../general/Button';
 
 const options = [
@@ -87,6 +90,7 @@ const options = [
     },
 ];
 
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>

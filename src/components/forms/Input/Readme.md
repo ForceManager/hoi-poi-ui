@@ -1,10 +1,12 @@
 Horizontal label:
 
 ```jsx
-let state = state || {};
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 const onChange = (field) => {
     return (e) => {
-        setState({ [field]: e && e.target ? e.target.value : '' });
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
     };
 };
 
@@ -59,6 +61,9 @@ const onCopy = () => window.alert('Copied to Clipboard');
 Vertical label:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
 <div>
     <Input
@@ -74,7 +79,10 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 Pre/Post components
 
 ```jsx
+import { useState } from 'react';
+
 import { Icon } from 'hoi-poi-ui';
+const [state, setState] = useState({});
 const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
 <div>
     <Input
@@ -91,10 +99,11 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 Custom component:
 
 ```jsx
-let state = state || {};
+import { useState } from 'react';
+const [state, setState] = useState({});
 const onChange = (field) => {
     return (e) => {
-        setState({ [field]: e && e.target ? e.target.value : '' });
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
     };
 };
 

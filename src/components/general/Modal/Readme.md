@@ -2,6 +2,9 @@ Default:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
 
 <div>
@@ -19,6 +22,9 @@ Small:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
 
 <div>
@@ -41,6 +47,9 @@ Big:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
 
 <div>
@@ -63,6 +72,9 @@ Without close icon:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
 
 <div>
@@ -85,6 +97,9 @@ Without header:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
 
 <div>
@@ -102,6 +117,9 @@ Confirm modal:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
 
 <div>

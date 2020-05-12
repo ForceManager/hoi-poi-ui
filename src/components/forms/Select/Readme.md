@@ -1,6 +1,8 @@
 Default:
 
 ```jsx
+import { useState } from 'react';
+
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -19,7 +21,7 @@ const options = [
         value: 'lorem-ipsum-4',
     },
 ];
-
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>
@@ -36,6 +38,8 @@ const onChange = (value) => setState({ value });
 Multi:
 
 ```jsx
+import { useState } from 'react';
+
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -54,7 +58,7 @@ const options = [
         value: 'lorem-ipsum-4',
     },
 ];
-
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>
@@ -72,6 +76,8 @@ const onChange = (value) => setState({ value });
 Disabled:
 
 ```jsx
+import { useState } from 'react';
+
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -82,7 +88,7 @@ const options = [
         value: 'lorem-ipsum-2',
     },
 ];
-
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>
@@ -100,6 +106,8 @@ const onChange = (value) => setState({ value });
 Disabled options:
 
 ```jsx
+import { useState } from 'react';
+
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -120,7 +128,7 @@ const options = [
         value: 'lorem-ipsum-4',
     },
 ];
-
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>
@@ -137,6 +145,8 @@ const onChange = (value) => setState({ value });
 Grouped options:
 
 ```jsx
+import { useState } from 'react';
+
 const options = [
     {
         label: 'Lorem ipsum',
@@ -181,7 +191,7 @@ const options = [
         ],
     },
 ];
-
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>
@@ -198,6 +208,8 @@ const onChange = (value) => setState({ value });
 Vertical mode:
 
 ```jsx
+import { useState } from 'react';
+
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -216,7 +228,7 @@ const options = [
         value: 'lorem-ipsum-4',
     },
 ];
-
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
 <div>
@@ -234,6 +246,9 @@ const onChange = (value) => setState({ value });
 Async load options:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 const options = [
     {
@@ -276,6 +291,9 @@ const loadOptions = () =>
 Async load options with fuzzy style:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 const options = [
     {
@@ -319,6 +337,10 @@ const loadOptions = () =>
 Async load multiple options with fuzzy style:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 const onChange = (value) => setState({ value });
 let options = [];
 let total = 100;
@@ -354,6 +376,10 @@ const loadOptions = () =>
 isValueObject enabled
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 const onChange = (field) => (value) => setState({ [field]: value });
 const options = [
     {

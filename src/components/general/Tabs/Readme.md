@@ -1,6 +1,9 @@
 Default:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let tabs = [...Array(5)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` }));
 const activeKey = state.activeKey || 'tab-1';
 
@@ -16,6 +19,9 @@ function onChange(key) {
 Scrolling:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 let tabs = [...Array(100)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` }));
 const activeKey = state.activeKey || 'tab-1';
 
@@ -32,6 +38,9 @@ With postComponent:
 
 ```jsx
 import { Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
 
 let tabs = [...Array(100)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` }));
 const activeKey = state.activeKey || 'tab-1';

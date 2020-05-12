@@ -2,6 +2,10 @@ Default:
 
 ```jsx
 import { Button } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 let isOpen = state.isOpen || false;
 let side = state.side || 'right';
 
@@ -24,6 +28,10 @@ Custom width:
 
 ```jsx
 import { Button } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 let isOpen = state.isOpen || false;
 let side = state.side || 'right';
 

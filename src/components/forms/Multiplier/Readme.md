@@ -27,6 +27,7 @@ return <pre>{JSON.stringify(schema, null, 4)}</pre>;
 ```
 
 ```jsx
+import { useState } from 'react';
 import schema from './example.1.json';
 
 const errors = {
@@ -43,7 +44,7 @@ const initialValues = [
         value: 'c',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value, newValue, index, schema) => {
     setState({ value });
 };
@@ -64,6 +65,7 @@ let onChange = (value, newValue, index, schema) => {
 Disabled
 
 ```jsx
+import { useState } from 'react';
 import schema from './example.1.json';
 
 const initialValues = [
@@ -76,7 +78,7 @@ const initialValues = [
         value: 'c',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value, newValue, index, schema) => {
     setState({ value });
 };
@@ -141,12 +143,13 @@ return <pre>{JSON.stringify(schema, null, 4)}</pre>;
 ```
 
 ```jsx
+import { useState } from 'react';
 import schema from './example.json';
 
 const errors = {
     email: 'Invalid email',
 };
-
+const [state, setState] = useState({});
 let onChange = (value, newValue, index, schema) => {
     setState({ value });
 };
@@ -167,12 +170,13 @@ let onChange = (value, newValue, index, schema) => {
 Full-width
 
 ```jsx
+import { useState } from 'react';
 import schema from './example.json';
 
 const errors = {
     email: 'Invalid email',
 };
-
+const [state, setState] = useState({});
 let onChange = (value, newValue, index, schema) => {
     setState({ value });
 };
@@ -193,12 +197,13 @@ let onChange = (value, newValue, index, schema) => {
 Vertical mode
 
 ```jsx
+import { useState } from 'react';
 import schema from './example.json';
 
 const errors = {
     email: 'Invalid email',
 };
-
+const [state, setState] = useState({});
 let onChange = (value, newValue, index, schema) => {
     setState({ value });
 };

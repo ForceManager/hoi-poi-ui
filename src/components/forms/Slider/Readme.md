@@ -1,6 +1,10 @@
 Default:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 const onChange = (value) => setState({ value });
 <div>
     <Slider label="Lorem ipsum" onChange={onChange} value={state.value} />
@@ -11,13 +15,16 @@ const onChange = (value) => setState({ value });
 Custom max/min/step:
 
 ```jsx
-let value = state.value || 5000;
+import { useState } from 'react';
+
+const [state, setState] = useState(5000);
+
 const onChange = (value) => setState({ value });
 <div>
     <Slider
         label="Lorem ipsum"
         onChange={onChange}
-        value={value}
+        value={state.value}
         max={10000}
         min={5000}
         step={100}
@@ -28,6 +35,10 @@ const onChange = (value) => setState({ value });
 Custom tip:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 const onChange = (value) => setState({ value });
 <div>
     <Slider
@@ -42,6 +53,10 @@ const onChange = (value) => setState({ value });
 Vertical label:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 const onChange = (value) => setState({ value });
 <div>
     <Slider label="Lorem ipsum" labelMode="vertical" onChange={onChange} value={state.value} />
@@ -51,6 +66,10 @@ const onChange = (value) => setState({ value });
 Range handler:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
 const onChange = (value) => setState({ value });
 <div>
     <Slider label="Lorem ipsum" onChange={onChange} value={state.value} isRange />

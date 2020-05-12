@@ -1,7 +1,8 @@
 Horizontal label:
 
 ```jsx
-let state = state || {};
+import { useState } from 'react';
+const [state, setState] = useState({});
 const onChange = (field) => {
     return (e) => {
         setState({ [field]: e });
@@ -36,6 +37,8 @@ const onChange = (field) => {
 Vertical label:
 
 ```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
 const onChange = (e) => setState({ value: e });
 <div>
     <DatePicker label="Lorem ipsum" labelMode="vertical" onChange={onChange} value={state.value} />
@@ -45,6 +48,8 @@ const onChange = (e) => setState({ value: e });
 Type datetime
 
 ```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
 const onChange = (e) => setState({ value: e });
 <div>
     <DatePicker label="Lorem ipsum" type="datetime" onChange={onChange} value={state.value} />
@@ -54,6 +59,8 @@ const onChange = (e) => setState({ value: e });
 Custom formatDate
 
 ```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
 const onChange = (e) => setState({ value: e });
 const formatDate = (value, format) => {
     return value;
@@ -71,6 +78,8 @@ const formatDate = (value, format) => {
 Data time with custom format
 
 ```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
 const onChange = (e) => setState({ value: e });
 const formatDate = (value, format) => {
     return value;
