@@ -34,7 +34,6 @@ function TextArea({
     isReadOnly,
     preComponent,
     postComponent,
-    component,
     isCopyable,
     style,
     ...props
@@ -55,7 +54,6 @@ function TextArea({
             [classes[labelMode]]: labelMode,
             [classes.focused]: focused,
             [classes.errored]: error,
-            [classes.custom]: component,
             [classes.withMessage]: (error || info) && !(error && info),
             [classes.withTwoMessage]: error && info,
         },
@@ -95,22 +93,8 @@ function TextArea({
             },
             [onBlur],
         ),
-        onKeyDown: useCallback(
-            (e) => {
-                if (e.key === 'Enter') {
-                    onEnter && onEnter(e);
-                }
-            },
-            [onEnter],
-        ),
         ...override.textArea,
     };
-
-    if (component) {
-        textAreaProps.isReadOnly = isReadOnly;
-    } else {
-        textAreaProps.readOnly = isReadOnly;
-    }
 
     // Remove content post component
     const postComponentClick = useCallback(() => {
@@ -172,8 +156,6 @@ function TextArea({
         );
     }
 
-    const Component = component;
-
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
@@ -183,8 +165,7 @@ function TextArea({
                         {preComponent}
                     </div>
                 )}
-                {!component && <textarea {...textAreaProps} />}
-                {component && <Component {...textAreaProps} />}
+                <textarea {...textAreaProps} />
                 {renderedPostComponent && (
                     <div className={classes.postComponent} {...override.postComponent}>
                         {renderedPostComponent}
@@ -254,8 +235,6 @@ TextArea.propTypes = {
     preComponent: PropTypes.any,
     /** Component rendered at the textArea ending */
     postComponent: PropTypes.any,
-    /** Custom textArea component */
-    component: PropTypes.any,
 };
 
 export default React.memo(TextArea);
