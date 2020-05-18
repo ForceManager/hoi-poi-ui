@@ -33,6 +33,7 @@ export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
 export { default as Label } from './components/forms/Label';
 export { default as Input } from './components/forms/Input';
 export { default as InputGroup } from './components/forms/InputGroup';
+export { default as TextArea } from './components/forms/TextArea';
 export { default as Select } from './components/forms/Select';
 export { default as SelectButton } from './components/forms/SelectButton';
 export { default as Slider } from './components/forms/Slider';

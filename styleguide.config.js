@@ -51,6 +51,7 @@ module.exports = {
                 './src/components/forms/SelectButton/index.jsx',
                 './src/components/forms/Slider/index.jsx',
                 './src/components/forms/Switch/index.jsx',
+                './src/components/forms/TextArea/index.jsx',
             ],
         },
         {
@@ -98,11 +99,7 @@ module.exports = {
     components: 'src/components/**/index.jsx',
     usageMode: 'expand',
     getComponentPathLine(componentPath) {
-        const name = path
-            .dirname(componentPath)
-            .split(path.sep)
-            .slice(-1)
-            .pop();
+        const name = path.dirname(componentPath).split(path.sep).slice(-1).pop();
 
         return `import { ${name} } from 'hoi-poi-ui';`;
     },
