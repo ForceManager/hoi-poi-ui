@@ -349,6 +349,11 @@ exports[`Form complete match 1`] = `
                   "name": "interest",
                   "type": "slider",
                 },
+                Object {
+                  "label": "Interested",
+                  "name": "Interested",
+                  "type": "switch",
+                },
               ],
               "title": "General",
             },
@@ -3577,6 +3582,189 @@ exports[`Form complete match 1`] = `
                         </div>
                       </Slider>
                     </FieldControl>
+                    <FieldControl
+                      error=""
+                      field={
+                        Object {
+                          "label": "Interested",
+                          "name": "Interested",
+                          "type": "switch",
+                        }
+                      }
+                      isFullWidth={false}
+                      key="Interested"
+                      labelMode="horizontal"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onEnter={[Function]}
+                      onFocus={[Function]}
+                    >
+                      <SwitchInput
+                        error=""
+                        isFullWidth={false}
+                        isRange={false}
+                        isReadOnly={false}
+                        label="Interested"
+                        labelMode="horizontal"
+                        max={100}
+                        min={0}
+                        name="Interested"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onEnter={[Function]}
+                        onFocus={[Function]}
+                        overrides={Object {}}
+                        step={1}
+                        type="switch"
+                      >
+                        <div
+                          className="HoiPoi__SwitchInput__root-1-101 HoiPoi__SwitchInput__horizontal-1-108"
+                        >
+                          <Label
+                            className="HoiPoi__SwitchInput__Label-1-102"
+                          >
+                            <span
+                              className="HoiPoi__Label__root-1-44 HoiPoi__SwitchInput__Label-1-102"
+                            >
+                              <Text
+                                className="HoiPoi__Label__Text-1-45"
+                                overrides={Object {}}
+                              >
+                                <span
+                                  className="HoiPoi__Text__root-1-6 HoiPoi__Label__Text-1-45"
+                                >
+                                  Interested
+                                </span>
+                              </Text>
+                            </span>
+                          </Label>
+                          <div
+                            className="HoiPoi__SwitchInput__formControl-1-104"
+                          >
+                            <Switch
+                              checked={false}
+                              className="HoiPoi__SwitchInput__switchinput-1-105"
+                              isDisabled={false}
+                              onChange={[Function]}
+                              overrides={Object {}}
+                            >
+                              <div
+                                className="HoiPoi__Switch__root-1-110 HoiPoi__SwitchInput__switchinput-1-105"
+                              >
+                                <ReactSwitch
+                                  activeBoxShadow="none"
+                                  boxShadow="none"
+                                  checked={false}
+                                  checkedIcon={false}
+                                  disabled={false}
+                                  handleDiameter={20}
+                                  height={15}
+                                  offColor="#e1e4e7"
+                                  offHandleColor="#f0f3f5"
+                                  onChange={[Function]}
+                                  onColor="#C87600"
+                                  onHandleColor="#FF8C00"
+                                  uncheckedIcon={false}
+                                  width={32}
+                                >
+                                  <div
+                                    style={
+                                      Object {
+                                        "MozTransition": "opacity 0.25s",
+                                        "MozUserSelect": "none",
+                                        "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                                        "WebkitTransition": "opacity 0.25s",
+                                        "WebkitUserSelect": "none",
+                                        "borderRadius": 7.5,
+                                        "direction": "ltr",
+                                        "display": "inline-block",
+                                        "msUserSelect": "none",
+                                        "opacity": 1,
+                                        "position": "relative",
+                                        "textAlign": "left",
+                                        "touchAction": "none",
+                                        "transition": "opacity 0.25s",
+                                        "userSelect": "none",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="react-switch-bg"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      style={
+                                        Object {
+                                          "MozTransition": "background 0.25s",
+                                          "WebkitTransition": "background 0.25s",
+                                          "background": "#e1e4e7",
+                                          "borderRadius": 7.5,
+                                          "cursor": "pointer",
+                                          "height": 15,
+                                          "margin": 2.5,
+                                          "position": "relative",
+                                          "transition": "background 0.25s",
+                                          "width": 32,
+                                        }
+                                      }
+                                    />
+                                    <div
+                                      className="react-switch-handle"
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onTouchCancel={[Function]}
+                                      onTouchEnd={[Function]}
+                                      onTouchMove={[Function]}
+                                      onTouchStart={[Function]}
+                                      style={
+                                        Object {
+                                          "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                                          "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                                          "background": "#f0f3f5",
+                                          "border": 0,
+                                          "borderRadius": "50%",
+                                          "boxShadow": "none",
+                                          "cursor": "pointer",
+                                          "display": "inline-block",
+                                          "height": 20,
+                                          "outline": 0,
+                                          "position": "absolute",
+                                          "top": 0,
+                                          "transform": "translateX(0px)",
+                                          "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                                          "width": 20,
+                                        }
+                                      }
+                                    />
+                                    <input
+                                      checked={false}
+                                      disabled={false}
+                                      onBlur={[Function]}
+                                      onChange={[Function]}
+                                      onFocus={[Function]}
+                                      onKeyUp={[Function]}
+                                      role="switch"
+                                      style={
+                                        Object {
+                                          "border": 0,
+                                          "clip": "rect(0 0 0 0)",
+                                          "height": 1,
+                                          "margin": -1,
+                                          "overflow": "hidden",
+                                          "padding": 0,
+                                          "position": "absolute",
+                                          "width": 1,
+                                        }
+                                      }
+                                      type="checkbox"
+                                    />
+                                  </div>
+                                </ReactSwitch>
+                              </div>
+                            </Switch>
+                          </div>
+                        </div>
+                      </SwitchInput>
+                    </FieldControl>
                   </div>
                 </div>
               </AnimateHeight>
@@ -3897,13 +4085,13 @@ exports[`Form complete match 1`] = `
                         value={Object {}}
                       >
                         <div
-                          className="HoiPoi__CheckboxGroup__root-1-101 HoiPoi__CheckboxGroup__horizontal-1-110"
+                          className="HoiPoi__CheckboxGroup__root-1-111 HoiPoi__CheckboxGroup__horizontal-1-120"
                         >
                           <Label
-                            className="HoiPoi__CheckboxGroup__Label-1-102"
+                            className="HoiPoi__CheckboxGroup__Label-1-112"
                           >
                             <span
-                              className="HoiPoi__Label__root-1-44 HoiPoi__CheckboxGroup__Label-1-102"
+                              className="HoiPoi__Label__root-1-44 HoiPoi__CheckboxGroup__Label-1-112"
                             >
                               <Text
                                 className="HoiPoi__Label__Text-1-45"
@@ -3918,7 +4106,7 @@ exports[`Form complete match 1`] = `
                             </span>
                           </Label>
                           <div
-                            className="HoiPoi__CheckboxGroup__formControl-1-104"
+                            className="HoiPoi__CheckboxGroup__formControl-1-114"
                           >
                             <CheckboxControl
                               isReadOnly={false}
@@ -3934,7 +4122,7 @@ exports[`Form complete match 1`] = `
                               value={false}
                             >
                               <div
-                                className="HoiPoi__CheckboxControl__checkboxControl-1-116"
+                                className="HoiPoi__CheckboxControl__checkboxControl-1-126"
                                 key="email"
                                 onClick={[Function]}
                               >
@@ -3945,7 +4133,7 @@ exports[`Form complete match 1`] = `
                                   overrides={Object {}}
                                 >
                                   <div
-                                    className="HoiPoi__Checkbox__root-1-121"
+                                    className="HoiPoi__Checkbox__root-1-131"
                                     onClick={[Function]}
                                   >
                                     <Component>
@@ -3968,7 +4156,7 @@ exports[`Form complete match 1`] = `
                                     </Component>
                                     <input
                                       checked=""
-                                      className="HoiPoi__Checkbox__input-1-122"
+                                      className="HoiPoi__Checkbox__input-1-132"
                                       disabled=""
                                       onChange={[Function]}
                                       type="checkbox"
@@ -3976,7 +4164,7 @@ exports[`Form complete match 1`] = `
                                   </div>
                                 </Checkbox>
                                 <span
-                                  className="HoiPoi__CheckboxControl__checkboxLabel-1-117"
+                                  className="HoiPoi__CheckboxControl__checkboxLabel-1-127"
                                 >
                                   Email
                                 </span>
@@ -3996,7 +4184,7 @@ exports[`Form complete match 1`] = `
                               value={false}
                             >
                               <div
-                                className="HoiPoi__CheckboxControl__checkboxControl-1-116"
+                                className="HoiPoi__CheckboxControl__checkboxControl-1-126"
                                 key="phone"
                                 onClick={[Function]}
                               >
@@ -4007,7 +4195,7 @@ exports[`Form complete match 1`] = `
                                   overrides={Object {}}
                                 >
                                   <div
-                                    className="HoiPoi__Checkbox__root-1-121"
+                                    className="HoiPoi__Checkbox__root-1-131"
                                     onClick={[Function]}
                                   >
                                     <Component>
@@ -4030,7 +4218,7 @@ exports[`Form complete match 1`] = `
                                     </Component>
                                     <input
                                       checked=""
-                                      className="HoiPoi__Checkbox__input-1-122"
+                                      className="HoiPoi__Checkbox__input-1-132"
                                       disabled=""
                                       onChange={[Function]}
                                       type="checkbox"
@@ -4038,7 +4226,7 @@ exports[`Form complete match 1`] = `
                                   </div>
                                 </Checkbox>
                                 <span
-                                  className="HoiPoi__CheckboxControl__checkboxLabel-1-117"
+                                  className="HoiPoi__CheckboxControl__checkboxLabel-1-127"
                                 >
                                   Phone
                                 </span>
@@ -4242,10 +4430,10 @@ exports[`Form complete match 1`] = `
                         value={Object {}}
                       >
                         <div
-                          className="HoiPoi__InputGroup__root-1-124 HoiPoi__InputGroup__horizontal-1-130"
+                          className="HoiPoi__InputGroup__root-1-134 HoiPoi__InputGroup__horizontal-1-140"
                         >
                           <div
-                            className="HoiPoi__InputGroup__formControl-1-126"
+                            className="HoiPoi__InputGroup__formControl-1-136"
                           >
                             <InputControl
                               error=""
@@ -4321,7 +4509,7 @@ exports[`Form complete match 1`] = `
                               size="small"
                             >
                               <button
-                                className="HoiPoi__Link__root-1-132 HoiPoi__Link__small-1-136"
+                                className="HoiPoi__Link__root-1-142 HoiPoi__Link__small-1-146"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -4330,7 +4518,7 @@ exports[`Form complete match 1`] = `
                             </Link>
                           </div>
                           <div
-                            className="HoiPoi__InputGroup__inputsControl-1-127 HoiPoi__InputGroup__hidden-1-131"
+                            className="HoiPoi__InputGroup__inputsControl-1-137 HoiPoi__InputGroup__hidden-1-141"
                           >
                             <InputControl
                               isFullWidth={false}
@@ -4344,7 +4532,7 @@ exports[`Form complete match 1`] = `
                                 Object {
                                   "Label": Object {
                                     "classes": Object {
-                                      "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                      "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                     },
                                   },
                                 }
@@ -4365,7 +4553,7 @@ exports[`Form complete match 1`] = `
                                   Object {
                                     "Label": Object {
                                       "classes": Object {
-                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                       },
                                     },
                                   }
@@ -4380,7 +4568,7 @@ exports[`Form complete match 1`] = `
                                     className="HoiPoi__Input__Label-1-25"
                                     classes={
                                       Object {
-                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                       }
                                     }
                                   >
@@ -4429,7 +4617,7 @@ exports[`Form complete match 1`] = `
                                 Object {
                                   "Label": Object {
                                     "classes": Object {
-                                      "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                      "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                     },
                                   },
                                 }
@@ -4450,7 +4638,7 @@ exports[`Form complete match 1`] = `
                                   Object {
                                     "Label": Object {
                                       "classes": Object {
-                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                       },
                                     },
                                   }
@@ -4465,7 +4653,7 @@ exports[`Form complete match 1`] = `
                                     className="HoiPoi__Input__Label-1-25"
                                     classes={
                                       Object {
-                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                       }
                                     }
                                   >
@@ -4514,7 +4702,7 @@ exports[`Form complete match 1`] = `
                                 Object {
                                   "Label": Object {
                                     "classes": Object {
-                                      "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                      "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                     },
                                   },
                                 }
@@ -4535,7 +4723,7 @@ exports[`Form complete match 1`] = `
                                   Object {
                                     "Label": Object {
                                       "classes": Object {
-                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                       },
                                     },
                                   }
@@ -4550,7 +4738,7 @@ exports[`Form complete match 1`] = `
                                     className="HoiPoi__Input__Label-1-25"
                                     classes={
                                       Object {
-                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-125",
+                                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-135",
                                       }
                                     }
                                   >
@@ -4883,11 +5071,11 @@ exports[`Form complete match 1`] = `
                         }
                       >
                         <div
-                          className="HoiPoi__Multiplier__root-1-137"
+                          className="HoiPoi__Multiplier__root-1-147"
                         >
                           <div>
                             <MultiplierControl
-                              className="HoiPoi__Multiplier__item-1-138"
+                              className="HoiPoi__Multiplier__item-1-148"
                               index={0}
                               isFullWidth={false}
                               key="0"
@@ -4902,7 +5090,7 @@ exports[`Form complete match 1`] = `
                                   "root": Object {},
                                 }
                               }
-                              removeIconClassName="HoiPoi__Multiplier__removeIcon-1-144"
+                              removeIconClassName="HoiPoi__Multiplier__removeIcon-1-154"
                               schema={
                                 Array [
                                   Object {
@@ -4950,10 +5138,10 @@ exports[`Form complete match 1`] = `
                               values={null}
                             >
                               <div
-                                className="HoiPoi__Multiplier__item-1-138"
+                                className="HoiPoi__Multiplier__item-1-148"
                               >
                                 <Form
-                                  className="HoiPoi__MultiplierControl__form-1-158"
+                                  className="HoiPoi__MultiplierControl__form-1-168"
                                   errors={Object {}}
                                   isFullWidth={false}
                                   labelMode="horizontal"
@@ -5015,7 +5203,7 @@ exports[`Form complete match 1`] = `
                                   values={null}
                                 >
                                   <div
-                                    className="HoiPoi__MultiplierControl__form-1-158"
+                                    className="HoiPoi__MultiplierControl__form-1-168"
                                   >
                                     <Section
                                       className="general-info"
@@ -6991,17 +7179,17 @@ exports[`Form complete match 1`] = `
                             </MultiplierControl>
                           </div>
                           <div
-                            className="HoiPoi__Multiplier__buttonContainer-1-142"
+                            className="HoiPoi__Multiplier__buttonContainer-1-152"
                           >
                             <Button
-                              className="HoiPoi__Multiplier__button-1-143"
+                              className="HoiPoi__Multiplier__button-1-153"
                               onClick={[Function]}
                               overrides={Object {}}
                               size="medium"
                               type="squared-outlined"
                             >
                               <button
-                                className="HoiPoi__Button__root-1-159 HoiPoi__Button__squared-outlined-1-165 HoiPoi__Button__white-1-167 HoiPoi__Multiplier__button-1-143"
+                                className="HoiPoi__Button__root-1-169 HoiPoi__Button__squared-outlined-1-175 HoiPoi__Button__white-1-177 HoiPoi__Multiplier__button-1-153"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -7009,11 +7197,11 @@ exports[`Form complete match 1`] = `
                                   className=""
                                 >
                                   <Text
-                                    className="HoiPoi__Button__Text-1-160"
+                                    className="HoiPoi__Button__Text-1-170"
                                     overrides={Object {}}
                                   >
                                     <span
-                                      className="HoiPoi__Text__root-1-6 HoiPoi__Button__Text-1-160"
+                                      className="HoiPoi__Text__root-1-6 HoiPoi__Button__Text-1-170"
                                     >
                                       + Add
                                     </span>

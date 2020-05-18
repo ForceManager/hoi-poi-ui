@@ -41,6 +41,7 @@ export { default as Radio } from './components/forms/Radio';
 export { default as RadioGroup } from './components/forms/RadioGroup';
 export { default as Multiplier } from './components/forms/Multiplier';
 export { default as Switch } from './components/forms/Switch';
+export { default as SwitchInput } from './components/forms/SwitchInput';
 export { default as DatePicker } from './components/forms/DatePicker';
 
 export { default as ScrollBar } from './components/utils/ScrollBar';
