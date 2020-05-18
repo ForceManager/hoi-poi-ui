@@ -25,13 +25,17 @@ function TextArea({
     value,
     label,
     labelMode,
+    isFullWidth,
     placeholder,
+    hint,
     error,
     info,
     isRequired,
+    isReadOnly,
     preComponent,
     postComponent,
     component,
+    isCopyable,
     style,
     ...props
 }) {
@@ -46,6 +50,8 @@ function TextArea({
     const rootClassName = classnames(
         classes.root,
         {
+            [classes.isReadOnly]: isReadOnly,
+            [classes.isReadAndDuplicable]: isCopyable && isReadOnly,
             [classes[labelMode]]: labelMode,
             [classes.focused]: focused,
             [classes.errored]: error,
@@ -63,6 +69,7 @@ function TextArea({
     const labelProps = {
         className: classes.Label,
         isRequired,
+        hint,
         ...override.Label,
     };
 
@@ -73,7 +80,7 @@ function TextArea({
         placeholder,
         value,
         style,
-        onChange: onChange,
+        onChange: isReadOnly ? undefined : onChange,
         onFocus: useCallback(
             (e) => {
                 setFocused(true);
@@ -99,6 +106,12 @@ function TextArea({
         ...override.textArea,
     };
 
+    if (component) {
+        textAreaProps.isReadOnly = isReadOnly;
+    } else {
+        textAreaProps.readOnly = isReadOnly;
+    }
+
     // Remove content post component
     const postComponentClick = useCallback(() => {
         onChange && onChange();
@@ -107,7 +120,21 @@ function TextArea({
 
     let renderedPostComponent = postComponent;
 
-    if (value) {
+    const copyValue = useCallback(() => {
+        const textField = document.createElement('textarea');
+        textField.innerText = value;
+        document.body.appendChild(textField);
+        textField.select();
+        document.execCommand('copy');
+        textField.remove();
+        onCopy && onCopy();
+    }, [onCopy, value]);
+
+    const compIsReadOnly = <Icon name="lock" />;
+
+    const compIsCopyable = <Icon name="duplicate" onClick={copyValue} />;
+
+    if (value && !isReadOnly) {
         renderedPostComponent = (
             <Fragment>
                 <span
@@ -118,6 +145,30 @@ function TextArea({
                 </span>
                 {postComponent}
             </Fragment>
+        );
+    }
+
+    if (isReadOnly) {
+        renderedPostComponent = (
+            <span className={classes.postCloseComponent}>{compIsReadOnly}</span>
+        );
+    }
+
+    if (isCopyable) {
+        renderedPostComponent = (
+            <Fragment>
+                <span className={`${classes.postCloseComponent}`}>{compIsCopyable}</span>
+                {postComponent}
+            </Fragment>
+        );
+    }
+
+    if (isReadOnly && isCopyable) {
+        renderedPostComponent = (
+            <span className={`${classes.postCloseComponent}`}>
+                <span className={classes.isClickable}>{compIsCopyable}</span>
+                {compIsReadOnly}
+            </span>
         );
     }
 
@@ -169,6 +220,8 @@ TextArea.defaultProps = {
     labelMode: 'horizontal',
     onChange: () => {},
     value: '',
+    isReadOnly: false,
+    isCopyable: false,
     override: {},
 };
 
@@ -187,12 +240,16 @@ TextArea.propTypes = {
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     placeholder: PropTypes.string,
-    /** Info will be displayed below the component with style changes */
-    info: PropTypes.string,
+    /** Info popover */
+    hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
     onCopy: PropTypes.func,
+    /** Info will be displayed below the component with style changes */
+    info: PropTypes.string,
     isRequired: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
+    isCopyable: PropTypes.bool,
     /** Component rendered at the textArea beginning */
     preComponent: PropTypes.any,
     /** Component rendered at the textArea ending */

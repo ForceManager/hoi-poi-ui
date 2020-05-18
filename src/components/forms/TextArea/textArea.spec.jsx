@@ -44,6 +44,19 @@ describe('TextArea', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('is read only match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <TextArea
+                    label="Lorem ipsum"
+                    placeholder="Write here"
+                    onChange={() => {}}
+                    isReadOnly
+                />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
     test('vertical label mode match', () => {
         const wrapper = mount(
             <HoiPoiProvider>

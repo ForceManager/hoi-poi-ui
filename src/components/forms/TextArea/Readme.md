@@ -22,6 +22,13 @@ const onCopy = () => window.alert('Copied to Clipboard');
 
     <TextArea
         label="Lorem ipsum"
+        placeholder="Write here"
+        value="I am disabled!"
+        isReadOnly={true}
+    />
+
+    <TextArea
+        label="Lorem ipsum"
         placeholder="I am required"
         onChange={onChange(2)}
         value={state[2]}
@@ -32,10 +39,12 @@ const onCopy = () => window.alert('Copied to Clipboard');
     <TextArea
         label="Lorem ipsum"
         placeholder="Write here"
-        onChange={onChange(3)}
-        value={state[3]}
+        value="I am disabled but copyable!"
         error="I am an error"
         info="I am an info message"
+        isReadOnly={true}
+        isCopyable={true}
+        onCopy={onCopy}
     />
 </div>;
 ```
