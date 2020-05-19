@@ -36,6 +36,7 @@ const types = [
     'select',
     'slider',
     'multiplier',
+    'switch',
 ];
 
 return <pre>{JSON.stringify(types, null, 4)}</pre>;
