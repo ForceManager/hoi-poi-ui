@@ -34,6 +34,8 @@ import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
 import Sync from './icons/Sync';
 import Asterisk from './icons/Asterisk';
+import AddButton from './icons/AddButton';
+import LessButton from './icons/LessButton';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -70,6 +72,8 @@ const ICONS = {
     cloudUpload: CloudUpload,
     sync: Sync,
     asterisk: Asterisk,
+    add: AddButton,
+    less: LessButton,
 };
 
 function Icon({
