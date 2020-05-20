@@ -48,15 +48,18 @@ Icons:
 <Icon name="funnel" />
 <span> </span>
 <Icon name="folder" />
-<span></span>
+<span> </span>
 <Icon name="verticalDivider" />
-<span></span>
+<span> </span>
 <Icon name="cloudUpload" />
-<span></span>
+<span> </span>
 <Icon name="sync" />
-<span></span>
+<span> </span>
 <Icon name="asterisk" />
-<span></span>
+<span> </span>
+<Icon name="add" />
+<span> </span>
+<Icon name="less" />
 ```
 
 Sizes:
