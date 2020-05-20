@@ -99,10 +99,6 @@ SwitchInput.defaultProps = {
     labelMode: 'horizontal',
     onChange: () => {},
     isReadOnly: false,
-    max: 100,
-    min: 0,
-    step: 1,
-    isRange: false,
 };
 
 SwitchInput.propTypes = {
