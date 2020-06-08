@@ -5,6 +5,7 @@ export default (theme) => ({
     root: {
         position: 'absolute',
         zIndex: 9999,
+        maxWidth: 400,
         '&.hoi-poi-popover-hidden': {
             display: 'none',
         },
