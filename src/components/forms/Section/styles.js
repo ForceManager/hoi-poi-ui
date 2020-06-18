@@ -14,6 +14,7 @@ export default (theme) => ({
         cursor: 'pointer',
     },
     Text: {
+        width: '100%',
         fontWeight: 'normal',
         lineHeight: theme.typography.lineHeightBase,
         ...theme.typography.defaultText,
