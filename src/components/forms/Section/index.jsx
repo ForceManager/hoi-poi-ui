@@ -18,10 +18,11 @@ function Section({
     className: classNameProp,
     title,
     isExpandable,
+    initialOpen,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const [isOpen, open] = useState(true);
+    const [isOpen, open] = useState(initialOpen);
 
     // Overrides
     const override = getOverrides(overridesProp, Section.overrides);
@@ -72,12 +73,14 @@ Section.overrides = ['root', 'header', 'Text', 'react-animate-height'];
 
 Section.defaultProps = {
     isExpandable: true,
+    initialOpen: true,
     overrides: {},
 };
 Section.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     title: PropTypes.string,
+    initialOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
 };
 
