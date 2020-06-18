@@ -19,6 +19,7 @@ function Checkbox({
     indeterminate,
     isDisabled,
     onChange,
+    color,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -45,9 +46,11 @@ function Checkbox({
 
     return (
         <div {...rootProps} {...override.root}>
-            {checkState === 'checked' && <CheckedIcon {...override.svg} />}
-            {checkState === 'unchecked' && <UnCheckedIcon {...override.svg} />}
-            {checkState === 'indeterminate' && <IndeterminateIcon {...override.svg} />}
+            {checkState === 'checked' && <CheckedIcon color={color} {...override.svg} />}
+            {checkState === 'unchecked' && <UnCheckedIcon color={color} {...override.svg} />}
+            {checkState === 'indeterminate' && (
+                <IndeterminateIcon color={color} {...override.svg} />
+            )}
             <input
                 className={classes.input}
                 onChange={!isDisabled ? onChange : undefined}
@@ -74,6 +77,7 @@ Checkbox.propTypes = {
     indeterminate: PropTypes.bool,
     onChange: PropTypes.func,
     isDisabled: PropTypes.bool,
+    color: PropTypes.string,
 };
 
 export default React.memo(Checkbox);
