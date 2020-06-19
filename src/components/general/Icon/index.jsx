@@ -36,6 +36,10 @@ import Sync from './icons/Sync';
 import Asterisk from './icons/Asterisk';
 import AddButton from './icons/AddButton';
 import LessButton from './icons/LessButton';
+import Dash from './icons/Dash';
+import AddUser from './icons/AddUser';
+import SingleUser from './icons/SingleUser';
+import MultipleUsers from './icons/MultipleUsers';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -74,6 +78,10 @@ const ICONS = {
     asterisk: Asterisk,
     add: AddButton,
     less: LessButton,
+    dash: Dash,
+    addUser: AddUser,
+    singleUser: SingleUser,
+    multipleUsers: MultipleUsers,
 };
 
 function Icon({
