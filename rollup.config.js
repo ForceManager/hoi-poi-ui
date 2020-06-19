@@ -21,6 +21,7 @@ const commonjsOptions = {
     ignoreGlobal: true,
     include: /node_modules/,
     namedExports: {
+        'node_modules/react-is/index.js': ['isFragment', 'ForwardRef'],
         './node_modules/prop-types/index.js': [
             'elementType',
             'bool',
@@ -46,6 +47,7 @@ export default [
         plugins: [
             nodeResolve({
                 extensions: ['.jsx', '.js'],
+                preferBuiltins: true,
             }),
             babel(babelOptions),
             commonjs(commonjsOptions),
