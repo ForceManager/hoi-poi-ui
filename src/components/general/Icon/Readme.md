@@ -60,6 +60,14 @@ Icons:
 <Icon name="add" />
 <span> </span>
 <Icon name="less" />
+<span> </span>
+<Icon name="dash" />
+<span> </span>
+<Icon name="addUser" />
+<span> </span>
+<Icon name="singleUser" />
+<span> </span>
+<Icon name="multipleUsers" />
 ```
 
 Sizes:
