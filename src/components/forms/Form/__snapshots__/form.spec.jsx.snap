@@ -254,7 +254,7 @@ exports[`Form complete match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -751,12 +751,7 @@ exports[`Form complete match 1`] = `
                                   ]
                                 }
                               >
-                                <Tooltip
-                                  align={Object {}}
-                                  arrowContent={null}
-                                  destroyTooltipOnHide={false}
-                                  mouseEnterDelay={0}
-                                  mouseLeaveDelay={0.1}
+                                <ForwardRef(Tooltip)
                                   overlay="No spam!"
                                   overlayClassName="HoiPoi__Popover__root-1-48"
                                   placement="top"
@@ -775,7 +770,7 @@ exports[`Form complete match 1`] = `
                                       ]
                                     }
                                     afterPopupVisibleChange={[Function]}
-                                    arrowContent={null}
+                                    autoDestroy={false}
                                     blurDelay={0.15}
                                     builtinPlacements={
                                       Object {
@@ -1052,7 +1047,7 @@ exports[`Form complete match 1`] = `
                                       </Icon>
                                     </span>
                                   </Trigger>
-                                </Tooltip>
+                                </ForwardRef(Tooltip)>
                               </Popover>
                             </span>
                           </Label>

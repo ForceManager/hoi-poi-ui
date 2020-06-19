@@ -254,7 +254,7 @@ exports[`Input default match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -599,7 +599,7 @@ exports[`Input is read only match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -942,7 +942,7 @@ exports[`Input is required match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -1257,7 +1257,7 @@ exports[`Input vertical label mode match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -1569,7 +1569,7 @@ exports[`Input with error match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -1887,7 +1887,7 @@ exports[`Input with hint match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -1933,12 +1933,7 @@ exports[`Input with hint match 1`] = `
                   ]
                 }
               >
-                <Tooltip
-                  align={Object {}}
-                  arrowContent={null}
-                  destroyTooltipOnHide={false}
-                  mouseEnterDelay={0}
-                  mouseLeaveDelay={0.1}
+                <ForwardRef(Tooltip)
                   overlay="Hello"
                   overlayClassName="HoiPoi__Popover__root-2-35"
                   placement="top"
@@ -1957,7 +1952,7 @@ exports[`Input with hint match 1`] = `
                       ]
                     }
                     afterPopupVisibleChange={[Function]}
-                    arrowContent={null}
+                    autoDestroy={false}
                     blurDelay={0.15}
                     builtinPlacements={
                       Object {
@@ -2234,7 +2229,7 @@ exports[`Input with hint match 1`] = `
                       </Icon>
                     </span>
                   </Trigger>
-                </Tooltip>
+                </ForwardRef(Tooltip)>
               </Popover>
             </span>
           </Label>
@@ -2514,7 +2509,7 @@ exports[`Input with pre/post component match 1`] = `
               ],
             },
           },
-          "version": "10.1.1",
+          "version": "10.3.0",
         }
       }
     >
