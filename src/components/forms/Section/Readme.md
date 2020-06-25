@@ -4,6 +4,24 @@
 </Section>
 ```
 
+Custom title component
+
+```jsx
+import { Icon, Text } from 'hoi-poi-ui';
+const titleComponent = (
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <Icon name="thickEnabled" />
+        <Text type="bold" style={{ marginLeft: 10 }}>
+            Title here
+        </Text>
+    </div>
+);
+
+<Section title={titleComponent}>
+    <p styles={{ padding: 10 }}>Lorem ipsum</p>
+</Section>;
+```
+
 ### Component tree
 
 ---

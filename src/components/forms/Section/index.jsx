@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
@@ -38,13 +38,22 @@ function Section({
 
     const onToggle = useCallback(() => open(!isOpen), [isOpen]);
 
+    const renderTitle = useMemo(() => {
+        if (typeof title === 'string') {
+            return (
+                <Text type="bold" className={classes.Text} {...override.Text}>
+                    {title}
+                </Text>
+            );
+        }
+        return title;
+    }, [classes.Text, override.Text, title]);
+
     if (title && isExpandable) {
         return (
             <div className={rootClassName} {...override.root}>
                 <div className={headerClassName} onClick={onToggle} {...override.header}>
-                    <Text type="bold" className={classes.Text} {...override.Text}>
-                        {title}
-                    </Text>
+                    {renderTitle}
                     <div className={iconClasses} {...override.icon}>
                         <Icon name="chevron" size="small" />
                     </div>
@@ -58,9 +67,7 @@ function Section({
         return (
             <div className={rootClassName}>
                 <div className={headerClassName} {...override.header}>
-                    <Text type="bold" className={classes.Text} {...override.Text}>
-                        {title}
-                    </Text>
+                    {renderTitle}
                 </div>
                 {children}
             </div>
@@ -79,7 +86,7 @@ Section.defaultProps = {
 Section.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    title: PropTypes.string,
+    title: PropTypes.any,
     defaultOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
 };
