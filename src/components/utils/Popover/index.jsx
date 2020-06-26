@@ -28,7 +28,6 @@ function Popover({
 
     const rootProps = {
         prefixCls: 'hoi-poi-popover',
-        transitionName: 'hoi-poi-popover--fade',
         trigger,
         overlayClassName: rootClassName,
         overlay: content,
