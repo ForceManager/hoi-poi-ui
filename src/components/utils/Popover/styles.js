@@ -101,5 +101,30 @@ export default (theme) => ({
         '&.hoi-poi-popover-placement-bottomRight .hoi-poi-popover-arrow': {
             right: '15%',
         },
+        // Transition
+        '&.hoi-poi-popover--fade-appear': {
+            opacity: 0,
+        },
+        '&.hoi-poi-popover--fade-appear-active': {
+            opacity: 1,
+            transition: 'opacity 200ms',
+            willChange: 'opacity',
+        },
+        '&.hoi-poi-popover--fade-enter': {
+            opacity: 0,
+        },
+        '&.hoi-poi-popover--fade-enter.hoi-poi-popover--fade-enter-active': {
+            opacity: 1,
+            transition: 'opacity 200ms',
+            willChange: 'opacity',
+        },
+        '&.hoi-poi-popover--fade-leave': {
+            opacity: 1,
+        },
+        '&.hoi-poi-popover--fade-leave.hoi-poi-popover--fade-leave-active': {
+            opacity: 0,
+            transition: 'opacity 200ms',
+            willChange: 'opacity',
+        },
     },
 });
