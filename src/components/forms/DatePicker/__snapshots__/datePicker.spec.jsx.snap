@@ -3706,11 +3706,17 @@ exports[`Input with hint match 1`] = `
                       ]
                     }
                   >
-                    <ForwardRef(Tooltip)
+                    <Tooltip
+                      align={Object {}}
+                      arrowContent={null}
+                      destroyTooltipOnHide={false}
+                      mouseEnterDelay={0}
+                      mouseLeaveDelay={0.1}
                       overlay="Hello"
                       overlayClassName="HoiPoi__Popover__root-5-38"
                       placement="top"
                       prefixCls="hoi-poi-popover"
+                      transitionName="hoi-poi-popover--fade"
                       trigger={
                         Array [
                           "hover",
@@ -3724,7 +3730,7 @@ exports[`Input with hint match 1`] = `
                           ]
                         }
                         afterPopupVisibleChange={[Function]}
-                        autoDestroy={false}
+                        arrowContent={null}
                         blurDelay={0.15}
                         builtinPlacements={
                           Object {
@@ -3964,6 +3970,7 @@ exports[`Input with hint match 1`] = `
                         popupClassName="HoiPoi__Popover__root-5-38"
                         popupPlacement="top"
                         popupStyle={Object {}}
+                        popupTransitionName="hoi-poi-popover--fade"
                         prefixCls="hoi-poi-popover"
                         showAction={Array []}
                       >
@@ -4000,7 +4007,7 @@ exports[`Input with hint match 1`] = `
                           </Icon>
                         </span>
                       </Trigger>
-                    </ForwardRef(Tooltip)>
+                    </Tooltip>
                   </Popover>
                 </span>
               </Label>
