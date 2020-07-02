@@ -67,6 +67,8 @@ Icons:
 <span> </span>
 <Icon name="singleUser" />
 <span> </span>
+<Icon name="addMultipleUsers" />
+<span> </span>
 <Icon name="multipleUsers" />
 ```
 

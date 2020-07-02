@@ -40,6 +40,7 @@ import Dash from './icons/Dash';
 import AddUser from './icons/AddUser';
 import SingleUser from './icons/SingleUser';
 import MultipleUsers from './icons/MultipleUsers';
+import AddMultipleUsers from './icons/AddMultipleUsers';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -81,6 +82,7 @@ const ICONS = {
     dash: Dash,
     addUser: AddUser,
     singleUser: SingleUser,
+    addMultipleUsers: AddMultipleUsers,
     multipleUsers: MultipleUsers,
 };
 
