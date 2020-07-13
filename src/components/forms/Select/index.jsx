@@ -128,14 +128,17 @@ function Select({
         },
         [loadOptions],
     );
-
     const selectedValue = useMemo(() => {
-        if (isValueObject) return value;
-        if (!isMulti && innerOptions && innerOptions.length && value)
-            return innerOptions.find((op) => op.value === value);
-        if (isMulti && innerOptions && innerOptions.length && value)
-            return value.map((v) => innerOptions.find((op) => op.value === v));
-    }, [innerOptions, isMulti, isValueObject, value]);
+        const finalOptions = innerOptions && innerOptions.length ? innerOptions : options;
+        if (!isMulti && finalOptions && finalOptions.length && value) {
+            return finalOptions.find((op) => {
+                return op.value === value;
+            });
+        }
+        if (isMulti && finalOptions && finalOptions.length && value) {
+            return value.map((v) => finalOptions.find((op) => op.value === v));
+        }
+    }, [isMulti, options, value, innerOptions]);
 
     const selectProps = {
         id,
@@ -168,7 +171,6 @@ function Select({
                         data = data.value;
                     }
                 }
-
                 onChange && onChange(data, options);
                 onBlur && onBlur(data, options);
             },
