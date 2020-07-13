@@ -375,7 +375,12 @@ exports[`Select default match 1`] = `
                   "menuPortal": [Function],
                 }
               }
-              value="lorem-ipsum-2"
+              value={
+                Object {
+                  "label": "Lorem ipsum 2",
+                  "value": "lorem-ipsum-2",
+                }
+              }
             >
               <Select
                 autoFocus={false}
@@ -460,7 +465,12 @@ exports[`Select default match 1`] = `
                 }
                 tabIndex="0"
                 tabSelectsValue={true}
-                value="lorem-ipsum-2"
+                value={
+                  Object {
+                    "label": "Lorem ipsum 2",
+                    "value": "lorem-ipsum-2",
+                  }
+                }
               >
                 <SelectContainer
                   className="HoiPoi__Select__select-1-11"
@@ -468,7 +478,7 @@ exports[`Select default match 1`] = `
                   cx={[Function]}
                   getStyles={[Function]}
                   getValue={[Function]}
-                  hasValue={false}
+                  hasValue={true}
                   innerProps={
                     Object {
                       "id": undefined,
@@ -581,7 +591,10 @@ exports[`Select default match 1`] = `
                       },
                       "tabIndex": "0",
                       "tabSelectsValue": true,
-                      "value": "lorem-ipsum-2",
+                      "value": Object {
+                        "label": "Lorem ipsum 2",
+                        "value": "lorem-ipsum-2",
+                      },
                     }
                   }
                   setValue={[Function]}
@@ -639,7 +652,7 @@ exports[`Select default match 1`] = `
                         cx={[Function]}
                         getStyles={[Function]}
                         getValue={[Function]}
-                        hasValue={false}
+                        hasValue={true}
                         innerProps={
                           Object {
                             "onMouseDown": [Function],
@@ -754,7 +767,10 @@ exports[`Select default match 1`] = `
                             },
                             "tabIndex": "0",
                             "tabSelectsValue": true,
-                            "value": "lorem-ipsum-2",
+                            "value": Object {
+                              "label": "Lorem ipsum 2",
+                              "value": "lorem-ipsum-2",
+                            },
                           }
                         }
                         setValue={[Function]}
@@ -829,7 +845,7 @@ exports[`Select default match 1`] = `
                               cx={[Function]}
                               getStyles={[Function]}
                               getValue={[Function]}
-                              hasValue={false}
+                              hasValue={true}
                               isDisabled={false}
                               isMulti={false}
                               isRtl={false}
@@ -935,7 +951,10 @@ exports[`Select default match 1`] = `
                                   },
                                   "tabIndex": "0",
                                   "tabSelectsValue": true,
-                                  "value": "lorem-ipsum-2",
+                                  "value": Object {
+                                    "label": "Lorem ipsum 2",
+                                    "value": "lorem-ipsum-2",
+                                  },
                                 }
                               }
                               setValue={[Function]}
@@ -972,7 +991,7 @@ exports[`Select default match 1`] = `
                               <EmotionCssPropInternal
                                 __EMOTION_LABEL_PLEASE_DO_NOT_USE__="ValueContainer"
                                 __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                className="hoi-poi-select__value-container"
+                                className="hoi-poi-select__value-container hoi-poi-select__value-container--has-value"
                                 css={
                                   Object {
                                     "WebkitOverflowScrolling": "touch",
@@ -988,19 +1007,23 @@ exports[`Select default match 1`] = `
                                 }
                               >
                                 <div
-                                  className="hoi-poi-select__value-container css-g1d714-ValueContainer"
+                                  className="hoi-poi-select__value-container hoi-poi-select__value-container--has-value css-g1d714-ValueContainer"
                                 >
-                                  <Placeholder
+                                  <SingleValue
                                     clearValue={[Function]}
                                     cx={[Function]}
+                                    data={
+                                      Object {
+                                        "label": "Lorem ipsum 2",
+                                        "value": "lorem-ipsum-2",
+                                      }
+                                    }
                                     getStyles={[Function]}
                                     getValue={[Function]}
-                                    hasValue={false}
+                                    hasValue={true}
                                     isDisabled={false}
-                                    isFocused={false}
                                     isMulti={false}
                                     isRtl={false}
-                                    key="placeholder"
                                     options={
                                       Array [
                                         Object {
@@ -1103,7 +1126,10 @@ exports[`Select default match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     setValue={[Function]}
@@ -1138,29 +1164,39 @@ exports[`Select default match 1`] = `
                                     }
                                   >
                                     <EmotionCssPropInternal
-                                      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Placeholder"
+                                      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="SingleValue"
                                       __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                      className="hoi-poi-select__placeholder"
+                                      className="hoi-poi-select__single-value"
                                       css={
                                         Object {
                                           "boxSizing": "border-box",
-                                          "color": "hsl(0, 0%, 50%)",
-                                          "label": "placeholder",
+                                          "color": "hsl(0, 0%, 20%)",
+                                          "label": "singleValue",
                                           "marginLeft": 2,
                                           "marginRight": 2,
+                                          "maxWidth": "calc(100% - 8px)",
+                                          "overflow": "hidden",
                                           "position": "absolute",
+                                          "textOverflow": "ellipsis",
                                           "top": "50%",
                                           "transform": "translateY(-50%)",
+                                          "whiteSpace": "nowrap",
                                         }
                                       }
                                     >
                                       <div
-                                        className="hoi-poi-select__placeholder css-1wa3eu0-placeholder"
+                                        className="hoi-poi-select__single-value css-1uccc91-singleValue"
                                       >
-                                        Select one
+                                        <div
+                                          className="HoiPoi__Select__optionLabel-1-16"
+                                        >
+                                          <span>
+                                            Lorem ipsum 2
+                                          </span>
+                                        </div>
                                       </div>
                                     </EmotionCssPropInternal>
-                                  </Placeholder>
+                                  </SingleValue>
                                   <Input
                                     aria-autocomplete="list"
                                     autoCapitalize="none"
@@ -1256,7 +1292,10 @@ exports[`Select default match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     spellCheck="false"
@@ -1404,7 +1443,7 @@ exports[`Select default match 1`] = `
                               cx={[Function]}
                               getStyles={[Function]}
                               getValue={[Function]}
-                              hasValue={false}
+                              hasValue={true}
                               isDisabled={false}
                               isMulti={false}
                               isRtl={false}
@@ -1510,7 +1549,10 @@ exports[`Select default match 1`] = `
                                   },
                                   "tabIndex": "0",
                                   "tabSelectsValue": true,
-                                  "value": "lorem-ipsum-2",
+                                  "value": Object {
+                                    "label": "Lorem ipsum 2",
+                                    "value": "lorem-ipsum-2",
+                                  },
                                 }
                               }
                               setValue={[Function]}
@@ -1561,12 +1603,377 @@ exports[`Select default match 1`] = `
                                 <div
                                   className="hoi-poi-select__indicators css-1hb7zxy-IndicatorsContainer"
                                 >
+                                  <Component
+                                    clearValue={[Function]}
+                                    cx={[Function]}
+                                    getStyles={[Function]}
+                                    getValue={[Function]}
+                                    hasValue={true}
+                                    innerProps={
+                                      Object {
+                                        "aria-hidden": "true",
+                                        "onMouseDown": [Function],
+                                        "onTouchEnd": [Function],
+                                      }
+                                    }
+                                    isFocused={false}
+                                    isMulti={false}
+                                    isRtl={false}
+                                    options={
+                                      Array [
+                                        Object {
+                                          "label": "Lorem ipsum 1",
+                                          "value": "lorem-ipsum-1",
+                                        },
+                                        Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
+                                        Object {
+                                          "label": "Lorem ipsum 3",
+                                          "value": "lorem-ipsum-3",
+                                        },
+                                        Object {
+                                          "label": "Lorem ipsum 4",
+                                          "value": "lorem-ipsum-4",
+                                        },
+                                      ]
+                                    }
+                                    selectOption={[Function]}
+                                    selectProps={
+                                      Object {
+                                        "autoFocus": false,
+                                        "backspaceRemovesValue": true,
+                                        "blurInputOnSelect": true,
+                                        "captureMenuScroll": false,
+                                        "className": "HoiPoi__Select__select-1-11",
+                                        "classNamePrefix": "hoi-poi-select",
+                                        "closeMenuOnScroll": false,
+                                        "closeMenuOnSelect": true,
+                                        "components": Object {
+                                          "ClearIndicator": [Function],
+                                          "DropdownIndicator": [Function],
+                                          "LoadingIndicator": [Function],
+                                          "Menu": [Function],
+                                          "MenuList": [Function],
+                                        },
+                                        "controlShouldRenderValue": true,
+                                        "defaultOptions": null,
+                                        "escapeClearsValue": false,
+                                        "filterOption": [Function],
+                                        "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
+                                        "getOptionLabel": [Function],
+                                        "getOptionValue": [Function],
+                                        "hideSelectedOptions": true,
+                                        "id": undefined,
+                                        "inputValue": "",
+                                        "isClearable": true,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "isMulti": false,
+                                        "isOptionDisabled": [Function],
+                                        "isRtl": false,
+                                        "isSearchable": true,
+                                        "loadOptions": undefined,
+                                        "loadingMessage": [Function],
+                                        "maxMenuHeight": 300,
+                                        "menuIsOpen": false,
+                                        "menuPlacement": "auto",
+                                        "menuPortalTarget": <body />,
+                                        "menuPosition": "absolute",
+                                        "menuShouldBlockScroll": false,
+                                        "menuShouldScrollIntoView": true,
+                                        "minMenuHeight": 140,
+                                        "name": undefined,
+                                        "noOptionsMessage": [Function],
+                                        "onBlur": [Function],
+                                        "onChange": [Function],
+                                        "onFocus": [Function],
+                                        "onInputChange": [Function],
+                                        "onMenuClose": [Function],
+                                        "onMenuOpen": [Function],
+                                        "openMenuOnClick": true,
+                                        "openMenuOnFocus": false,
+                                        "options": Array [
+                                          Object {
+                                            "label": "Lorem ipsum 1",
+                                            "value": "lorem-ipsum-1",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 3",
+                                            "value": "lorem-ipsum-3",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 4",
+                                            "value": "lorem-ipsum-4",
+                                          },
+                                        ],
+                                        "pageSize": 5,
+                                        "placeholder": "Select one",
+                                        "screenReaderStatus": [Function],
+                                        "styles": Object {
+                                          "menuPortal": [Function],
+                                        },
+                                        "tabIndex": "0",
+                                        "tabSelectsValue": true,
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
+                                      }
+                                    }
+                                    setValue={[Function]}
+                                    theme={
+                                      Object {
+                                        "borderRadius": 4,
+                                        "colors": Object {
+                                          "danger": "#DE350B",
+                                          "dangerLight": "#FFBDAD",
+                                          "neutral0": "hsl(0, 0%, 100%)",
+                                          "neutral10": "hsl(0, 0%, 90%)",
+                                          "neutral20": "hsl(0, 0%, 80%)",
+                                          "neutral30": "hsl(0, 0%, 70%)",
+                                          "neutral40": "hsl(0, 0%, 60%)",
+                                          "neutral5": "hsl(0, 0%, 95%)",
+                                          "neutral50": "hsl(0, 0%, 50%)",
+                                          "neutral60": "hsl(0, 0%, 40%)",
+                                          "neutral70": "hsl(0, 0%, 30%)",
+                                          "neutral80": "hsl(0, 0%, 20%)",
+                                          "neutral90": "hsl(0, 0%, 10%)",
+                                          "primary": "#2684FF",
+                                          "primary25": "#DEEBFF",
+                                          "primary50": "#B2D4FF",
+                                          "primary75": "#4C9AFF",
+                                        },
+                                        "spacing": Object {
+                                          "baseUnit": 4,
+                                          "controlHeight": 38,
+                                          "menuGutter": 8,
+                                        },
+                                      }
+                                    }
+                                  >
+                                    <ClearIndicator
+                                      clearValue={[Function]}
+                                      cx={[Function]}
+                                      getStyles={[Function]}
+                                      getValue={[Function]}
+                                      hasValue={true}
+                                      innerProps={
+                                        Object {
+                                          "aria-hidden": "true",
+                                          "onMouseDown": [Function],
+                                          "onTouchEnd": [Function],
+                                        }
+                                      }
+                                      isFocused={false}
+                                      isMulti={false}
+                                      isRtl={false}
+                                      options={
+                                        Array [
+                                          Object {
+                                            "label": "Lorem ipsum 1",
+                                            "value": "lorem-ipsum-1",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 3",
+                                            "value": "lorem-ipsum-3",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 4",
+                                            "value": "lorem-ipsum-4",
+                                          },
+                                        ]
+                                      }
+                                      selectOption={[Function]}
+                                      selectProps={
+                                        Object {
+                                          "autoFocus": false,
+                                          "backspaceRemovesValue": true,
+                                          "blurInputOnSelect": true,
+                                          "captureMenuScroll": false,
+                                          "className": "HoiPoi__Select__select-1-11",
+                                          "classNamePrefix": "hoi-poi-select",
+                                          "closeMenuOnScroll": false,
+                                          "closeMenuOnSelect": true,
+                                          "components": Object {
+                                            "ClearIndicator": [Function],
+                                            "DropdownIndicator": [Function],
+                                            "LoadingIndicator": [Function],
+                                            "Menu": [Function],
+                                            "MenuList": [Function],
+                                          },
+                                          "controlShouldRenderValue": true,
+                                          "defaultOptions": null,
+                                          "escapeClearsValue": false,
+                                          "filterOption": [Function],
+                                          "formatGroupLabel": [Function],
+                                          "formatOptionLabel": [Function],
+                                          "getOptionLabel": [Function],
+                                          "getOptionValue": [Function],
+                                          "hideSelectedOptions": true,
+                                          "id": undefined,
+                                          "inputValue": "",
+                                          "isClearable": true,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "isMulti": false,
+                                          "isOptionDisabled": [Function],
+                                          "isRtl": false,
+                                          "isSearchable": true,
+                                          "loadOptions": undefined,
+                                          "loadingMessage": [Function],
+                                          "maxMenuHeight": 300,
+                                          "menuIsOpen": false,
+                                          "menuPlacement": "auto",
+                                          "menuPortalTarget": <body />,
+                                          "menuPosition": "absolute",
+                                          "menuShouldBlockScroll": false,
+                                          "menuShouldScrollIntoView": true,
+                                          "minMenuHeight": 140,
+                                          "name": undefined,
+                                          "noOptionsMessage": [Function],
+                                          "onBlur": [Function],
+                                          "onChange": [Function],
+                                          "onFocus": [Function],
+                                          "onInputChange": [Function],
+                                          "onMenuClose": [Function],
+                                          "onMenuOpen": [Function],
+                                          "openMenuOnClick": true,
+                                          "openMenuOnFocus": false,
+                                          "options": Array [
+                                            Object {
+                                              "label": "Lorem ipsum 1",
+                                              "value": "lorem-ipsum-1",
+                                            },
+                                            Object {
+                                              "label": "Lorem ipsum 2",
+                                              "value": "lorem-ipsum-2",
+                                            },
+                                            Object {
+                                              "label": "Lorem ipsum 3",
+                                              "value": "lorem-ipsum-3",
+                                            },
+                                            Object {
+                                              "label": "Lorem ipsum 4",
+                                              "value": "lorem-ipsum-4",
+                                            },
+                                          ],
+                                          "pageSize": 5,
+                                          "placeholder": "Select one",
+                                          "screenReaderStatus": [Function],
+                                          "styles": Object {
+                                            "menuPortal": [Function],
+                                          },
+                                          "tabIndex": "0",
+                                          "tabSelectsValue": true,
+                                          "value": Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
+                                        }
+                                      }
+                                      setValue={[Function]}
+                                      theme={
+                                        Object {
+                                          "borderRadius": 4,
+                                          "colors": Object {
+                                            "danger": "#DE350B",
+                                            "dangerLight": "#FFBDAD",
+                                            "neutral0": "hsl(0, 0%, 100%)",
+                                            "neutral10": "hsl(0, 0%, 90%)",
+                                            "neutral20": "hsl(0, 0%, 80%)",
+                                            "neutral30": "hsl(0, 0%, 70%)",
+                                            "neutral40": "hsl(0, 0%, 60%)",
+                                            "neutral5": "hsl(0, 0%, 95%)",
+                                            "neutral50": "hsl(0, 0%, 50%)",
+                                            "neutral60": "hsl(0, 0%, 40%)",
+                                            "neutral70": "hsl(0, 0%, 30%)",
+                                            "neutral80": "hsl(0, 0%, 20%)",
+                                            "neutral90": "hsl(0, 0%, 10%)",
+                                            "primary": "#2684FF",
+                                            "primary25": "#DEEBFF",
+                                            "primary50": "#B2D4FF",
+                                            "primary75": "#4C9AFF",
+                                          },
+                                          "spacing": Object {
+                                            "baseUnit": 4,
+                                            "controlHeight": 38,
+                                            "menuGutter": 8,
+                                          },
+                                        }
+                                      }
+                                    >
+                                      <EmotionCssPropInternal
+                                        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="ClearIndicator"
+                                        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
+                                        aria-hidden="true"
+                                        className="hoi-poi-select__indicator hoi-poi-select__clear-indicator"
+                                        css={
+                                          Object {
+                                            ":hover": Object {
+                                              "color": "hsl(0, 0%, 60%)",
+                                            },
+                                            "boxSizing": "border-box",
+                                            "color": "hsl(0, 0%, 80%)",
+                                            "display": "flex",
+                                            "label": "indicatorContainer",
+                                            "padding": 8,
+                                            "transition": "color 150ms",
+                                          }
+                                        }
+                                        onMouseDown={[Function]}
+                                        onTouchEnd={[Function]}
+                                      >
+                                        <div
+                                          aria-hidden="true"
+                                          className="hoi-poi-select__indicator hoi-poi-select__clear-indicator css-tlfecz-indicatorContainer"
+                                          onMouseDown={[Function]}
+                                          onTouchEnd={[Function]}
+                                        >
+                                          <Icon
+                                            name="close"
+                                            overrides={Object {}}
+                                            size="small"
+                                          >
+                                            <span
+                                              className="HoiPoi__Icon__root-1-33 HoiPoi__Icon__small-1-34"
+                                            >
+                                              <Close
+                                                color="#788590"
+                                              >
+                                                <svg
+                                                  viewBox="0 0 18 18"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M9 7.409l7.08-7.08a1.125 1.125 0 1 1 1.59 1.591L10.591 9l7.08 7.08a1.125 1.125 0 1 1-1.591 1.59L9 10.591l-7.08 7.08A1.125 1.125 0 1 1 .33 16.08L7.409 9 .329 1.92A1.125 1.125 0 0 1 1.92.33L9 7.409z"
+                                                    fill="#788590"
+                                                    fillRule="nonzero"
+                                                  />
+                                                </svg>
+                                              </Close>
+                                            </span>
+                                          </Icon>
+                                        </div>
+                                      </EmotionCssPropInternal>
+                                    </ClearIndicator>
+                                  </Component>
                                   <IndicatorSeparator
                                     clearValue={[Function]}
                                     cx={[Function]}
                                     getStyles={[Function]}
                                     getValue={[Function]}
-                                    hasValue={false}
+                                    hasValue={true}
                                     isDisabled={false}
                                     isFocused={false}
                                     isMulti={false}
@@ -1673,7 +2080,10 @@ exports[`Select default match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     setValue={[Function]}
@@ -1733,7 +2143,7 @@ exports[`Select default match 1`] = `
                                     cx={[Function]}
                                     getStyles={[Function]}
                                     getValue={[Function]}
-                                    hasValue={false}
+                                    hasValue={true}
                                     innerProps={
                                       Object {
                                         "aria-hidden": "true",
@@ -1847,7 +2257,10 @@ exports[`Select default match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     setValue={[Function]}
@@ -1886,7 +2299,7 @@ exports[`Select default match 1`] = `
                                       cx={[Function]}
                                       getStyles={[Function]}
                                       getValue={[Function]}
-                                      hasValue={false}
+                                      hasValue={true}
                                       innerProps={
                                         Object {
                                           "aria-hidden": "true",
@@ -2000,7 +2413,10 @@ exports[`Select default match 1`] = `
                                           },
                                           "tabIndex": "0",
                                           "tabSelectsValue": true,
-                                          "value": "lorem-ipsum-2",
+                                          "value": Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
                                         }
                                       }
                                       setValue={[Function]}
@@ -2487,7 +2903,12 @@ exports[`Select with disabled options match 1`] = `
                   "menuPortal": [Function],
                 }
               }
-              value="lorem-ipsum-2"
+              value={
+                Object {
+                  "label": "Lorem ipsum 2",
+                  "value": "lorem-ipsum-2",
+                }
+              }
             >
               <Select
                 autoFocus={false}
@@ -2574,7 +2995,12 @@ exports[`Select with disabled options match 1`] = `
                 }
                 tabIndex="0"
                 tabSelectsValue={true}
-                value="lorem-ipsum-2"
+                value={
+                  Object {
+                    "label": "Lorem ipsum 2",
+                    "value": "lorem-ipsum-2",
+                  }
+                }
               >
                 <SelectContainer
                   className="HoiPoi__Select__select-2-11"
@@ -2582,7 +3008,7 @@ exports[`Select with disabled options match 1`] = `
                   cx={[Function]}
                   getStyles={[Function]}
                   getValue={[Function]}
-                  hasValue={false}
+                  hasValue={true}
                   innerProps={
                     Object {
                       "id": undefined,
@@ -2699,7 +3125,10 @@ exports[`Select with disabled options match 1`] = `
                       },
                       "tabIndex": "0",
                       "tabSelectsValue": true,
-                      "value": "lorem-ipsum-2",
+                      "value": Object {
+                        "label": "Lorem ipsum 2",
+                        "value": "lorem-ipsum-2",
+                      },
                     }
                   }
                   setValue={[Function]}
@@ -2757,7 +3186,7 @@ exports[`Select with disabled options match 1`] = `
                         cx={[Function]}
                         getStyles={[Function]}
                         getValue={[Function]}
-                        hasValue={false}
+                        hasValue={true}
                         innerProps={
                           Object {
                             "onMouseDown": [Function],
@@ -2876,7 +3305,10 @@ exports[`Select with disabled options match 1`] = `
                             },
                             "tabIndex": "0",
                             "tabSelectsValue": true,
-                            "value": "lorem-ipsum-2",
+                            "value": Object {
+                              "label": "Lorem ipsum 2",
+                              "value": "lorem-ipsum-2",
+                            },
                           }
                         }
                         setValue={[Function]}
@@ -2951,7 +3383,7 @@ exports[`Select with disabled options match 1`] = `
                               cx={[Function]}
                               getStyles={[Function]}
                               getValue={[Function]}
-                              hasValue={false}
+                              hasValue={true}
                               isDisabled={false}
                               isMulti={false}
                               isRtl={false}
@@ -3061,7 +3493,10 @@ exports[`Select with disabled options match 1`] = `
                                   },
                                   "tabIndex": "0",
                                   "tabSelectsValue": true,
-                                  "value": "lorem-ipsum-2",
+                                  "value": Object {
+                                    "label": "Lorem ipsum 2",
+                                    "value": "lorem-ipsum-2",
+                                  },
                                 }
                               }
                               setValue={[Function]}
@@ -3098,7 +3533,7 @@ exports[`Select with disabled options match 1`] = `
                               <EmotionCssPropInternal
                                 __EMOTION_LABEL_PLEASE_DO_NOT_USE__="ValueContainer"
                                 __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                className="hoi-poi-select__value-container"
+                                className="hoi-poi-select__value-container hoi-poi-select__value-container--has-value"
                                 css={
                                   Object {
                                     "WebkitOverflowScrolling": "touch",
@@ -3114,19 +3549,23 @@ exports[`Select with disabled options match 1`] = `
                                 }
                               >
                                 <div
-                                  className="hoi-poi-select__value-container css-g1d714-ValueContainer"
+                                  className="hoi-poi-select__value-container hoi-poi-select__value-container--has-value css-g1d714-ValueContainer"
                                 >
-                                  <Placeholder
+                                  <SingleValue
                                     clearValue={[Function]}
                                     cx={[Function]}
+                                    data={
+                                      Object {
+                                        "label": "Lorem ipsum 2",
+                                        "value": "lorem-ipsum-2",
+                                      }
+                                    }
                                     getStyles={[Function]}
                                     getValue={[Function]}
-                                    hasValue={false}
+                                    hasValue={true}
                                     isDisabled={false}
-                                    isFocused={false}
                                     isMulti={false}
                                     isRtl={false}
-                                    key="placeholder"
                                     options={
                                       Array [
                                         Object {
@@ -3233,7 +3672,10 @@ exports[`Select with disabled options match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     setValue={[Function]}
@@ -3268,29 +3710,39 @@ exports[`Select with disabled options match 1`] = `
                                     }
                                   >
                                     <EmotionCssPropInternal
-                                      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Placeholder"
+                                      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="SingleValue"
                                       __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                      className="hoi-poi-select__placeholder"
+                                      className="hoi-poi-select__single-value"
                                       css={
                                         Object {
                                           "boxSizing": "border-box",
-                                          "color": "hsl(0, 0%, 50%)",
-                                          "label": "placeholder",
+                                          "color": "hsl(0, 0%, 20%)",
+                                          "label": "singleValue",
                                           "marginLeft": 2,
                                           "marginRight": 2,
+                                          "maxWidth": "calc(100% - 8px)",
+                                          "overflow": "hidden",
                                           "position": "absolute",
+                                          "textOverflow": "ellipsis",
                                           "top": "50%",
                                           "transform": "translateY(-50%)",
+                                          "whiteSpace": "nowrap",
                                         }
                                       }
                                     >
                                       <div
-                                        className="hoi-poi-select__placeholder css-1wa3eu0-placeholder"
+                                        className="hoi-poi-select__single-value css-1uccc91-singleValue"
                                       >
-                                        Select one
+                                        <div
+                                          className="HoiPoi__Select__optionLabel-2-16"
+                                        >
+                                          <span>
+                                            Lorem ipsum 2
+                                          </span>
+                                        </div>
                                       </div>
                                     </EmotionCssPropInternal>
-                                  </Placeholder>
+                                  </SingleValue>
                                   <Input
                                     aria-autocomplete="list"
                                     autoCapitalize="none"
@@ -3388,7 +3840,10 @@ exports[`Select with disabled options match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     spellCheck="false"
@@ -3536,7 +3991,7 @@ exports[`Select with disabled options match 1`] = `
                               cx={[Function]}
                               getStyles={[Function]}
                               getValue={[Function]}
-                              hasValue={false}
+                              hasValue={true}
                               isDisabled={false}
                               isMulti={false}
                               isRtl={false}
@@ -3646,7 +4101,10 @@ exports[`Select with disabled options match 1`] = `
                                   },
                                   "tabIndex": "0",
                                   "tabSelectsValue": true,
-                                  "value": "lorem-ipsum-2",
+                                  "value": Object {
+                                    "label": "Lorem ipsum 2",
+                                    "value": "lorem-ipsum-2",
+                                  },
                                 }
                               }
                               setValue={[Function]}
@@ -3697,12 +4155,385 @@ exports[`Select with disabled options match 1`] = `
                                 <div
                                   className="hoi-poi-select__indicators css-1hb7zxy-IndicatorsContainer"
                                 >
+                                  <Component
+                                    clearValue={[Function]}
+                                    cx={[Function]}
+                                    getStyles={[Function]}
+                                    getValue={[Function]}
+                                    hasValue={true}
+                                    innerProps={
+                                      Object {
+                                        "aria-hidden": "true",
+                                        "onMouseDown": [Function],
+                                        "onTouchEnd": [Function],
+                                      }
+                                    }
+                                    isFocused={false}
+                                    isMulti={false}
+                                    isRtl={false}
+                                    options={
+                                      Array [
+                                        Object {
+                                          "isDisabled": true,
+                                          "label": "Lorem ipsum 1",
+                                          "value": "lorem-ipsum-1",
+                                        },
+                                        Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
+                                        Object {
+                                          "isDisabled": true,
+                                          "label": "Lorem ipsum 3",
+                                          "value": "lorem-ipsum-3",
+                                        },
+                                        Object {
+                                          "label": "Lorem ipsum 4",
+                                          "value": "lorem-ipsum-4",
+                                        },
+                                      ]
+                                    }
+                                    selectOption={[Function]}
+                                    selectProps={
+                                      Object {
+                                        "autoFocus": false,
+                                        "backspaceRemovesValue": true,
+                                        "blurInputOnSelect": true,
+                                        "captureMenuScroll": false,
+                                        "className": "HoiPoi__Select__select-2-11",
+                                        "classNamePrefix": "hoi-poi-select",
+                                        "closeMenuOnScroll": false,
+                                        "closeMenuOnSelect": true,
+                                        "components": Object {
+                                          "ClearIndicator": [Function],
+                                          "DropdownIndicator": [Function],
+                                          "LoadingIndicator": [Function],
+                                          "Menu": [Function],
+                                          "MenuList": [Function],
+                                        },
+                                        "controlShouldRenderValue": true,
+                                        "defaultOptions": null,
+                                        "escapeClearsValue": false,
+                                        "filterOption": [Function],
+                                        "formatGroupLabel": [Function],
+                                        "formatOptionLabel": [Function],
+                                        "getOptionLabel": [Function],
+                                        "getOptionValue": [Function],
+                                        "hideSelectedOptions": true,
+                                        "id": undefined,
+                                        "inputValue": "",
+                                        "isClearable": true,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "isMulti": false,
+                                        "isOptionDisabled": [Function],
+                                        "isRtl": false,
+                                        "isSearchable": true,
+                                        "loadOptions": undefined,
+                                        "loadingMessage": [Function],
+                                        "maxMenuHeight": 300,
+                                        "menuIsOpen": false,
+                                        "menuPlacement": "auto",
+                                        "menuPortalTarget": <body />,
+                                        "menuPosition": "absolute",
+                                        "menuShouldBlockScroll": false,
+                                        "menuShouldScrollIntoView": true,
+                                        "minMenuHeight": 140,
+                                        "name": undefined,
+                                        "noOptionsMessage": [Function],
+                                        "onBlur": [Function],
+                                        "onChange": [Function],
+                                        "onFocus": [Function],
+                                        "onInputChange": [Function],
+                                        "onMenuClose": [Function],
+                                        "onMenuOpen": [Function],
+                                        "openMenuOnClick": true,
+                                        "openMenuOnFocus": false,
+                                        "options": Array [
+                                          Object {
+                                            "isDisabled": true,
+                                            "label": "Lorem ipsum 1",
+                                            "value": "lorem-ipsum-1",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
+                                          Object {
+                                            "isDisabled": true,
+                                            "label": "Lorem ipsum 3",
+                                            "value": "lorem-ipsum-3",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 4",
+                                            "value": "lorem-ipsum-4",
+                                          },
+                                        ],
+                                        "pageSize": 5,
+                                        "placeholder": "Select one",
+                                        "screenReaderStatus": [Function],
+                                        "styles": Object {
+                                          "menuPortal": [Function],
+                                        },
+                                        "tabIndex": "0",
+                                        "tabSelectsValue": true,
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
+                                      }
+                                    }
+                                    setValue={[Function]}
+                                    theme={
+                                      Object {
+                                        "borderRadius": 4,
+                                        "colors": Object {
+                                          "danger": "#DE350B",
+                                          "dangerLight": "#FFBDAD",
+                                          "neutral0": "hsl(0, 0%, 100%)",
+                                          "neutral10": "hsl(0, 0%, 90%)",
+                                          "neutral20": "hsl(0, 0%, 80%)",
+                                          "neutral30": "hsl(0, 0%, 70%)",
+                                          "neutral40": "hsl(0, 0%, 60%)",
+                                          "neutral5": "hsl(0, 0%, 95%)",
+                                          "neutral50": "hsl(0, 0%, 50%)",
+                                          "neutral60": "hsl(0, 0%, 40%)",
+                                          "neutral70": "hsl(0, 0%, 30%)",
+                                          "neutral80": "hsl(0, 0%, 20%)",
+                                          "neutral90": "hsl(0, 0%, 10%)",
+                                          "primary": "#2684FF",
+                                          "primary25": "#DEEBFF",
+                                          "primary50": "#B2D4FF",
+                                          "primary75": "#4C9AFF",
+                                        },
+                                        "spacing": Object {
+                                          "baseUnit": 4,
+                                          "controlHeight": 38,
+                                          "menuGutter": 8,
+                                        },
+                                      }
+                                    }
+                                  >
+                                    <ClearIndicator
+                                      clearValue={[Function]}
+                                      cx={[Function]}
+                                      getStyles={[Function]}
+                                      getValue={[Function]}
+                                      hasValue={true}
+                                      innerProps={
+                                        Object {
+                                          "aria-hidden": "true",
+                                          "onMouseDown": [Function],
+                                          "onTouchEnd": [Function],
+                                        }
+                                      }
+                                      isFocused={false}
+                                      isMulti={false}
+                                      isRtl={false}
+                                      options={
+                                        Array [
+                                          Object {
+                                            "isDisabled": true,
+                                            "label": "Lorem ipsum 1",
+                                            "value": "lorem-ipsum-1",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
+                                          Object {
+                                            "isDisabled": true,
+                                            "label": "Lorem ipsum 3",
+                                            "value": "lorem-ipsum-3",
+                                          },
+                                          Object {
+                                            "label": "Lorem ipsum 4",
+                                            "value": "lorem-ipsum-4",
+                                          },
+                                        ]
+                                      }
+                                      selectOption={[Function]}
+                                      selectProps={
+                                        Object {
+                                          "autoFocus": false,
+                                          "backspaceRemovesValue": true,
+                                          "blurInputOnSelect": true,
+                                          "captureMenuScroll": false,
+                                          "className": "HoiPoi__Select__select-2-11",
+                                          "classNamePrefix": "hoi-poi-select",
+                                          "closeMenuOnScroll": false,
+                                          "closeMenuOnSelect": true,
+                                          "components": Object {
+                                            "ClearIndicator": [Function],
+                                            "DropdownIndicator": [Function],
+                                            "LoadingIndicator": [Function],
+                                            "Menu": [Function],
+                                            "MenuList": [Function],
+                                          },
+                                          "controlShouldRenderValue": true,
+                                          "defaultOptions": null,
+                                          "escapeClearsValue": false,
+                                          "filterOption": [Function],
+                                          "formatGroupLabel": [Function],
+                                          "formatOptionLabel": [Function],
+                                          "getOptionLabel": [Function],
+                                          "getOptionValue": [Function],
+                                          "hideSelectedOptions": true,
+                                          "id": undefined,
+                                          "inputValue": "",
+                                          "isClearable": true,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "isMulti": false,
+                                          "isOptionDisabled": [Function],
+                                          "isRtl": false,
+                                          "isSearchable": true,
+                                          "loadOptions": undefined,
+                                          "loadingMessage": [Function],
+                                          "maxMenuHeight": 300,
+                                          "menuIsOpen": false,
+                                          "menuPlacement": "auto",
+                                          "menuPortalTarget": <body />,
+                                          "menuPosition": "absolute",
+                                          "menuShouldBlockScroll": false,
+                                          "menuShouldScrollIntoView": true,
+                                          "minMenuHeight": 140,
+                                          "name": undefined,
+                                          "noOptionsMessage": [Function],
+                                          "onBlur": [Function],
+                                          "onChange": [Function],
+                                          "onFocus": [Function],
+                                          "onInputChange": [Function],
+                                          "onMenuClose": [Function],
+                                          "onMenuOpen": [Function],
+                                          "openMenuOnClick": true,
+                                          "openMenuOnFocus": false,
+                                          "options": Array [
+                                            Object {
+                                              "isDisabled": true,
+                                              "label": "Lorem ipsum 1",
+                                              "value": "lorem-ipsum-1",
+                                            },
+                                            Object {
+                                              "label": "Lorem ipsum 2",
+                                              "value": "lorem-ipsum-2",
+                                            },
+                                            Object {
+                                              "isDisabled": true,
+                                              "label": "Lorem ipsum 3",
+                                              "value": "lorem-ipsum-3",
+                                            },
+                                            Object {
+                                              "label": "Lorem ipsum 4",
+                                              "value": "lorem-ipsum-4",
+                                            },
+                                          ],
+                                          "pageSize": 5,
+                                          "placeholder": "Select one",
+                                          "screenReaderStatus": [Function],
+                                          "styles": Object {
+                                            "menuPortal": [Function],
+                                          },
+                                          "tabIndex": "0",
+                                          "tabSelectsValue": true,
+                                          "value": Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
+                                        }
+                                      }
+                                      setValue={[Function]}
+                                      theme={
+                                        Object {
+                                          "borderRadius": 4,
+                                          "colors": Object {
+                                            "danger": "#DE350B",
+                                            "dangerLight": "#FFBDAD",
+                                            "neutral0": "hsl(0, 0%, 100%)",
+                                            "neutral10": "hsl(0, 0%, 90%)",
+                                            "neutral20": "hsl(0, 0%, 80%)",
+                                            "neutral30": "hsl(0, 0%, 70%)",
+                                            "neutral40": "hsl(0, 0%, 60%)",
+                                            "neutral5": "hsl(0, 0%, 95%)",
+                                            "neutral50": "hsl(0, 0%, 50%)",
+                                            "neutral60": "hsl(0, 0%, 40%)",
+                                            "neutral70": "hsl(0, 0%, 30%)",
+                                            "neutral80": "hsl(0, 0%, 20%)",
+                                            "neutral90": "hsl(0, 0%, 10%)",
+                                            "primary": "#2684FF",
+                                            "primary25": "#DEEBFF",
+                                            "primary50": "#B2D4FF",
+                                            "primary75": "#4C9AFF",
+                                          },
+                                          "spacing": Object {
+                                            "baseUnit": 4,
+                                            "controlHeight": 38,
+                                            "menuGutter": 8,
+                                          },
+                                        }
+                                      }
+                                    >
+                                      <EmotionCssPropInternal
+                                        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="ClearIndicator"
+                                        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
+                                        aria-hidden="true"
+                                        className="hoi-poi-select__indicator hoi-poi-select__clear-indicator"
+                                        css={
+                                          Object {
+                                            ":hover": Object {
+                                              "color": "hsl(0, 0%, 60%)",
+                                            },
+                                            "boxSizing": "border-box",
+                                            "color": "hsl(0, 0%, 80%)",
+                                            "display": "flex",
+                                            "label": "indicatorContainer",
+                                            "padding": 8,
+                                            "transition": "color 150ms",
+                                          }
+                                        }
+                                        onMouseDown={[Function]}
+                                        onTouchEnd={[Function]}
+                                      >
+                                        <div
+                                          aria-hidden="true"
+                                          className="hoi-poi-select__indicator hoi-poi-select__clear-indicator css-tlfecz-indicatorContainer"
+                                          onMouseDown={[Function]}
+                                          onTouchEnd={[Function]}
+                                        >
+                                          <Icon
+                                            name="close"
+                                            overrides={Object {}}
+                                            size="small"
+                                          >
+                                            <span
+                                              className="HoiPoi__Icon__root-2-33 HoiPoi__Icon__small-2-34"
+                                            >
+                                              <Close
+                                                color="#788590"
+                                              >
+                                                <svg
+                                                  viewBox="0 0 18 18"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M9 7.409l7.08-7.08a1.125 1.125 0 1 1 1.59 1.591L10.591 9l7.08 7.08a1.125 1.125 0 1 1-1.591 1.59L9 10.591l-7.08 7.08A1.125 1.125 0 1 1 .33 16.08L7.409 9 .329 1.92A1.125 1.125 0 0 1 1.92.33L9 7.409z"
+                                                    fill="#788590"
+                                                    fillRule="nonzero"
+                                                  />
+                                                </svg>
+                                              </Close>
+                                            </span>
+                                          </Icon>
+                                        </div>
+                                      </EmotionCssPropInternal>
+                                    </ClearIndicator>
+                                  </Component>
                                   <IndicatorSeparator
                                     clearValue={[Function]}
                                     cx={[Function]}
                                     getStyles={[Function]}
                                     getValue={[Function]}
-                                    hasValue={false}
+                                    hasValue={true}
                                     isDisabled={false}
                                     isFocused={false}
                                     isMulti={false}
@@ -3813,7 +4644,10 @@ exports[`Select with disabled options match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     setValue={[Function]}
@@ -3873,7 +4707,7 @@ exports[`Select with disabled options match 1`] = `
                                     cx={[Function]}
                                     getStyles={[Function]}
                                     getValue={[Function]}
-                                    hasValue={false}
+                                    hasValue={true}
                                     innerProps={
                                       Object {
                                         "aria-hidden": "true",
@@ -3991,7 +4825,10 @@ exports[`Select with disabled options match 1`] = `
                                         },
                                         "tabIndex": "0",
                                         "tabSelectsValue": true,
-                                        "value": "lorem-ipsum-2",
+                                        "value": Object {
+                                          "label": "Lorem ipsum 2",
+                                          "value": "lorem-ipsum-2",
+                                        },
                                       }
                                     }
                                     setValue={[Function]}
@@ -4030,7 +4867,7 @@ exports[`Select with disabled options match 1`] = `
                                       cx={[Function]}
                                       getStyles={[Function]}
                                       getValue={[Function]}
-                                      hasValue={false}
+                                      hasValue={true}
                                       innerProps={
                                         Object {
                                           "aria-hidden": "true",
@@ -4148,7 +4985,10 @@ exports[`Select with disabled options match 1`] = `
                                           },
                                           "tabIndex": "0",
                                           "tabSelectsValue": true,
-                                          "value": "lorem-ipsum-2",
+                                          "value": Object {
+                                            "label": "Lorem ipsum 2",
+                                            "value": "lorem-ipsum-2",
+                                          },
                                         }
                                       }
                                       setValue={[Function]}
