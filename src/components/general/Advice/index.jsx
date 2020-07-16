@@ -20,12 +20,13 @@ function Advice({
     showIcon,
     showCollapse,
     type,
+    defaultOpen,
     ...props
 }) {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
     const [isEllipsisActive, setEllipsisActive] = useState(false);
-    const [isCollapsed, setIsCollapsed] = useState(true);
+    const [isCollapsed, setIsCollapsed] = useState(defaultOpen);
     const textEl = useRef(null);
     const textHeight = useRef(null);
 
@@ -173,6 +174,7 @@ Advice.defaultProps = {
     showIcon: false,
     showCollapse: true,
     type: 'info',
+    defaultOpen: true,
 };
 
 Advice.propTypes = {
@@ -182,6 +184,7 @@ Advice.propTypes = {
     overrides: PropTypes.object,
     showIcon: PropTypes.bool,
     showCollapse: PropTypes.bool,
+    defaultOpen: PropTypes.bool,
     type: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
 };
 

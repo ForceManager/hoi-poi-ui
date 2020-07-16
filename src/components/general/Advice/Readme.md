@@ -71,7 +71,7 @@ const text =
 Title mode:
 
 ```jsx
-<Advice title="Advice" >This is an important information that will help you out in this process.</Advice>
+<Advice defaultOpen={false} title="Advice" >This is an important information that will help you out in this process.</Advice>
 <br />
 <Advice title="Advive" showIcon>This is an important information that will help you out in this process.</Advice>
 ```
