@@ -130,12 +130,24 @@ function Select({
     );
     const selectedValue = useMemo(() => {
         const finalOptions = innerOptions && innerOptions.length ? innerOptions : options;
-        if (!isMulti && finalOptions && finalOptions.length && value !== (null || undefined)) {
+        if (
+            !isMulti &&
+            finalOptions &&
+            finalOptions.length &&
+            value !== null &&
+            value !== undefined
+        ) {
             return finalOptions.find((op) => {
                 return op.value === value;
             });
         }
-        if (isMulti && finalOptions && finalOptions.length && value !== (null || undefined)) {
+        if (
+            isMulti &&
+            finalOptions &&
+            finalOptions.length &&
+            value !== null &&
+            value !== undefined
+        ) {
             return value.map((v) => finalOptions.find((op) => op.value === v));
         }
     }, [isMulti, options, value, innerOptions]);
