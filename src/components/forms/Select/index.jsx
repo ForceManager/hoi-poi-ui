@@ -141,13 +141,7 @@ function Select({
                 return op.value === value;
             });
         }
-        if (
-            isMulti &&
-            finalOptions &&
-            finalOptions.length &&
-            value !== null &&
-            value !== undefined
-        ) {
+        if (isMulti && finalOptions && finalOptions.length && value) {
             return value.map((v) => finalOptions.find((op) => op.value === v));
         }
     }, [isMulti, options, value, innerOptions]);
