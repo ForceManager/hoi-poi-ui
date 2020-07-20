@@ -129,6 +129,7 @@ function Select({
         [loadOptions],
     );
     const selectedValue = useMemo(() => {
+        if (isValueObject) return value;
         const finalOptions = innerOptions && innerOptions.length ? innerOptions : options;
         if (
             !isMulti &&
@@ -144,7 +145,7 @@ function Select({
         if (isMulti && finalOptions && finalOptions.length && value) {
             return value.map((v) => finalOptions.find((op) => op.value === v));
         }
-    }, [isMulti, options, value, innerOptions]);
+    }, [isMulti, options, value, innerOptions, isValueObject]);
 
     const selectProps = {
         id,
