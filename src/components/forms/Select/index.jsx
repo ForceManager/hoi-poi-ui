@@ -73,7 +73,7 @@ function Select({
     const rootClassName = classnames(
         classes.root,
         {
-            [classes.isReadOnly]: isReadOnly,
+            [classes.isReadOnly]: isReadOnly && !isFuzzy,
             [classes[labelMode]]: labelMode,
             [classes.isFullWidth]: isFullWidth,
             [classes.focused]: focused,
