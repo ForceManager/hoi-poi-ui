@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Modal from 'react-modal';
@@ -18,23 +18,50 @@ function Drawer({
     width,
     side,
     closeTimeout,
-    onAfterOpen,
+    onAfterOpenCustom,
     onRequestClose,
     shouldCloseOnOverlayClick,
     shouldCloseOnEsc,
     contentStyles,
     style,
+    onTransitionEnds,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Drawer.overrides);
+    const drawerRef = useRef(document);
 
     // Classes
     const rootClassName = classnames(classes.root, classes[side], classNameProp);
 
     let contentStyle = { width };
     if (side && ['top', 'bottom'].includes(side)) contentStyle = { height: width };
+
+    function getTransitionEndEventName() {
+        var transitions = {
+            transition: 'transitionend',
+            OTransition: 'oTransitionEnd',
+            MozTransition: 'transitionend',
+            WebkitTransition: 'webkitTransitionEnd',
+        };
+        let bodyStyle = document.body.style;
+        for (let transition in transitions) {
+            if (bodyStyle[transition] !== undefined) {
+                return transitions[transition];
+            }
+        }
+    }
+
+    const onAfterOpen = useCallback(() => {
+        if (!onTransitionEnds && !onAfterOpenCustom) return;
+        if (onAfterOpenCustom) return onAfterOpenCustom;
+        const transitionEndEventName = getTransitionEndEventName();
+        const drawerTransitionEl = drawerRef.current.querySelector(`.${classes.root}`);
+        drawerTransitionEl.addEventListener(transitionEndEventName, onTransitionEnds);
+        return () =>
+            drawerTransitionEl.removeEventListener(transitionEndEventName, onTransitionEnds);
+    }, [classes.root, onAfterOpenCustom, onTransitionEnds]);
 
     const rootProps = {
         ariaHideApp: false,
@@ -48,7 +75,6 @@ function Drawer({
             ...style,
         },
         overlayClassName: classes.overlay,
-        onAfterOpen,
         onRequestClose,
         shouldCloseOnOverlayClick: false,
         shouldCloseOnEsc: false,
@@ -56,7 +82,7 @@ function Drawer({
     };
 
     return (
-        <Modal className={rootClassName} {...rootProps}>
+        <Modal onAfterOpen={onAfterOpen} className={rootClassName} {...rootProps}>
             <Text className={classes.Text} {...override.Text}>
                 {children}
             </Text>
@@ -84,9 +110,11 @@ Drawer.propTypes = {
     /**Milliseconds to wait before closing the drawer */
     closeTimeout: PropTypes.number,
     /** Function that will be called after the drawer has opened */
-    onAfterOpen: PropTypes.func,
+    onAfterOpenCustom: PropTypes.func,
     /** Function that will be called when the drawer is requested to be closed (either by clicking on overlay or pressing ESC) */
     onRequestClose: PropTypes.func,
+    /** Function that will be called after the drawer has opened and transition has ended*/
+    onTransitionEnds: PropTypes.func,
     /** Close on overlay click, you must implement onRequestClose. */
     shouldCloseOnOverlayClick: PropTypes.bool,
     /** Close on ESC, you must implement onRequestClose. */
