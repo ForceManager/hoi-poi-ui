@@ -10,7 +10,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Drawer');
 
 function getTransitionEndEventName() {
-    var transitions = {
+    const transitions = {
         transition: 'transitionend',
         OTransition: 'oTransitionEnd',
         MozTransition: 'transitionend',
@@ -56,7 +56,7 @@ function Drawer({
 
     const onAfterOpenCb = useCallback(() => {
         if (!onTransitionEnds && !onAfterOpen) return;
-        if (onAfterOpen) return onAfterOpen;
+        if (onAfterOpen) return onAfterOpen();
 
         const drawerTransitionEl = drawerRef.current.querySelector(`.${classes.root}`);
         drawerTransitionEl.addEventListener(transitionEndEventName, onTransitionEnds);
