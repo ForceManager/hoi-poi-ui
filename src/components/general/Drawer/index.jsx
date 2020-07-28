@@ -9,6 +9,22 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Drawer');
 
+function getTransitionEndEventName() {
+    var transitions = {
+        transition: 'transitionend',
+        OTransition: 'oTransitionEnd',
+        MozTransition: 'transitionend',
+        WebkitTransition: 'webkitTransitionEnd',
+    };
+    let bodyStyle = document.body.style;
+    for (let transition in transitions) {
+        if (bodyStyle[transition] !== undefined) {
+            return transitions[transition];
+        }
+    }
+}
+const transitionEndEventName = getTransitionEndEventName();
+
 function Drawer({
     children,
     classes: classesProp,
@@ -18,7 +34,7 @@ function Drawer({
     width,
     side,
     closeTimeout,
-    onAfterOpenCustom,
+    onAfterOpen,
     onRequestClose,
     shouldCloseOnOverlayClick,
     shouldCloseOnEsc,
@@ -38,30 +54,15 @@ function Drawer({
     let contentStyle = { width };
     if (side && ['top', 'bottom'].includes(side)) contentStyle = { height: width };
 
-    function getTransitionEndEventName() {
-        var transitions = {
-            transition: 'transitionend',
-            OTransition: 'oTransitionEnd',
-            MozTransition: 'transitionend',
-            WebkitTransition: 'webkitTransitionEnd',
-        };
-        let bodyStyle = document.body.style;
-        for (let transition in transitions) {
-            if (bodyStyle[transition] !== undefined) {
-                return transitions[transition];
-            }
-        }
-    }
+    const onAfterOpenCb = useCallback(() => {
+        if (!onTransitionEnds && !onAfterOpen) return;
+        if (onAfterOpen) return onAfterOpen;
 
-    const onAfterOpen = useCallback(() => {
-        if (!onTransitionEnds && !onAfterOpenCustom) return;
-        if (onAfterOpenCustom) return onAfterOpenCustom;
-        const transitionEndEventName = getTransitionEndEventName();
         const drawerTransitionEl = drawerRef.current.querySelector(`.${classes.root}`);
         drawerTransitionEl.addEventListener(transitionEndEventName, onTransitionEnds);
         return () =>
             drawerTransitionEl.removeEventListener(transitionEndEventName, onTransitionEnds);
-    }, [classes.root, onAfterOpenCustom, onTransitionEnds]);
+    }, [classes.root, onAfterOpen, onTransitionEnds]);
 
     const rootProps = {
         ariaHideApp: false,
@@ -82,7 +83,7 @@ function Drawer({
     };
 
     return (
-        <Modal onAfterOpen={onAfterOpen} className={rootClassName} {...rootProps}>
+        <Modal onAfterOpen={onAfterOpenCb} className={rootClassName} {...rootProps}>
             <Text className={classes.Text} {...override.Text}>
                 {children}
             </Text>
@@ -110,7 +111,7 @@ Drawer.propTypes = {
     /**Milliseconds to wait before closing the drawer */
     closeTimeout: PropTypes.number,
     /** Function that will be called after the drawer has opened */
-    onAfterOpenCustom: PropTypes.func,
+    onAfterOpen: PropTypes.func,
     /** Function that will be called when the drawer is requested to be closed (either by clicking on overlay or pressing ESC) */
     onRequestClose: PropTypes.func,
     /** Function that will be called after the drawer has opened and transition has ended*/
