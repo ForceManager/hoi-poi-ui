@@ -9,6 +9,10 @@ const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
 let side = state.side || 'right';
 
+const onTransitionEnds = () => {
+    console.log('Transition is finished');
+};
+
 <div>
     <Button color="primary" onClick={() => setState({ side: 'left', isOpen: !isOpen })}>
         Left
@@ -18,7 +22,12 @@ let side = state.side || 'right';
         Right
     </Button>
     <span> </span>
-    <Drawer side={state.side} isOpen={isOpen} onRequestClose={() => setState({ isOpen: false })}>
+    <Drawer
+        onTransitionEnds={onTransitionEnds}
+        side={state.side}
+        isOpen={isOpen}
+        onRequestClose={() => setState({ isOpen: false })}
+    >
         <span onClick={() => setState({ isOpen: false })}>Close</span>
     </Drawer>
 </div>;
