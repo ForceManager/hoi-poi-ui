@@ -22,6 +22,25 @@ const titleComponent = (
 </Section>;
 ```
 
+Controlled
+
+```jsx
+import { useState } from 'react';
+import { Button } from 'hoi-poi-ui';
+
+const [isOpen, setIsOpen] = useState({});
+const onChange = (e) => setIsOpen(!isOpen);
+
+<div>
+    <Button color="primary" onClick={onChange}>
+        Toggle Section
+    </Button>
+    <Section title="Title here" isOpen={isOpen} onChange={onChange}>
+        <p styles={{ padding: 10 }}>Lorem ipsum</p>
+    </Section>
+</div>;
+```
+
 ### Component tree
 
 ---
