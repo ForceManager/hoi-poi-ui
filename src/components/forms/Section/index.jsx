@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
@@ -12,6 +12,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Section');
 
 function Section({
+    isOpen: isOpenProp,
     children,
     classes: classesProp,
     overrides: overridesProp,
@@ -19,10 +20,13 @@ function Section({
     title,
     isExpandable,
     defaultOpen,
+    onChange,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const [isOpen, open] = useState(defaultOpen);
+    const [isOpen, open] = useState(onChange ? isOpenProp : defaultOpen);
+
+    useEffect(() => open(isOpenProp), [isOpenProp]);
 
     // Overrides
     const override = getOverrides(overridesProp, Section.overrides);
@@ -36,7 +40,10 @@ function Section({
         [classes.collapsed]: !isOpen,
     });
 
-    const onToggle = useCallback(() => open(!isOpen), [isOpen]);
+    const onToggle = useCallback(() => {
+        onChange && onChange(!isOpen);
+        !onChange && open(!isOpen);
+    }, [isOpen, onChange]);
 
     const renderTitle = useMemo(() => {
         if (typeof title === 'string') {
