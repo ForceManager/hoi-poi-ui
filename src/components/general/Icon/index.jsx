@@ -41,6 +41,7 @@ import AddUser from './icons/AddUser';
 import SingleUser from './icons/SingleUser';
 import MultipleUsers from './icons/MultipleUsers';
 import AddMultipleUsers from './icons/AddMultipleUsers';
+import SmartPhone from './icons/SmartPhone';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -84,6 +85,7 @@ const ICONS = {
     singleUser: SingleUser,
     addMultipleUsers: AddMultipleUsers,
     multipleUsers: MultipleUsers,
+    smartPhone: SmartPhone,
 };
 
 function Icon({

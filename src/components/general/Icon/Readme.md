@@ -70,6 +70,8 @@ Icons:
 <Icon name="addMultipleUsers" />
 <span> </span>
 <Icon name="multipleUsers" />
+<span> </span>
+<Icon name="smartPhone" />
 ```
 
 Sizes:
