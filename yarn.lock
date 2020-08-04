@@ -5909,7 +5909,7 @@ flat-cache@^2.0.1:
     rimraf "2.6.3"
     write "1.0.3"
 
-flatpickr@^4.5.7:
+flatpickr@^4.6.2:
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.3.tgz#15a8b76b6e34e3a072861250503a5995b9d3bc60"
   integrity sha512-007VucCkqNOMMb9ggRLNuJowwaJcyOh4sKAFcdGfahfGc7JQbf94zSzjdBq/wVyHWUEs5o3+idhFZ0wbZMRmVQ==
@@ -6958,6 +6958,8 @@ is-fullwidth-code-point@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz#ef9e31386f031a7f0d643af82fde50c457ef00cb"
   integrity sha1-754xOG8DGn8NZDr4L95QxFfvAMs=
+  dependencies:
+    number-is-nan "^1.0.0"
 
 is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
@@ -9032,11 +9034,6 @@ nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-number-is-nan@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
-  integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
-
 nwsapi@^2.0.7, nwsapi@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.0.tgz#204879a9e3d068ff2a55139c2c772780681a38b7"
@@ -10312,12 +10309,12 @@ react-error-overlay@^6.0.7:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
 
-react-flatpickr@^3.10.1:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/react-flatpickr/-/react-flatpickr-3.10.1.tgz#1334c167062f5b1636c0fa965965db42a4c604d6"
-  integrity sha512-djNW+Ssy35ZZeJlRFYuT0Pw1BVL2WUfHqJ7RnZpek5k7eBSwfYaKQJsA5fN4pRdJuRz2lLdvYshhXzAVz7uIIg==
+react-flatpickr@^3.10.4:
+  version "3.10.4"
+  resolved "https://registry.yarnpkg.com/react-flatpickr/-/react-flatpickr-3.10.4.tgz#5a7a5f472571b5e767e19de0fa41e3bce4dabd9c"
+  integrity sha512-O8I4P8TtZQs2OfZSdIK8Dq+jzidy0CYWU1UQ3ScogRRlvXE+m4vNWFxk0fpgpgMRYzf4Bg6CvlvKfeNSmi+2uw==
   dependencies:
-    flatpickr "^4.5.7"
+    flatpickr "^4.6.2"
     prop-types "^15.5.10"
 
 react-group@^3.0.2:

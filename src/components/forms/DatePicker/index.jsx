@@ -64,9 +64,9 @@ function DatePicker({
 
     const onReady = useCallback(
         (_, __, fp) => {
-            fp.calendarContainer.classList.add(rootClassName);
+            fp.calendarContainer.classList.add(classes.container);
         },
-        [rootClassName],
+        [classes.container],
     );
 
     const onChangeDate = useCallback(
@@ -123,17 +123,19 @@ function DatePicker({
 
     const key = `flatpickr-${name || 'anon'}--${isReadOnly ? 'read-only' : 'active'}`;
     return (
-        <Flatpickr
-            ref={flatpickrRef}
-            key={key}
-            options={flatpickrOptions}
-            render={flatpickrRender}
-            overrides={overridesProp}
-            onReady={onReady}
-            value={value}
-            onChange={isReadOnly ? undefined : onChangeDate}
-            {...override.flatpickr}
-        />
+        <div className={rootClassName}>
+            <Flatpickr
+                ref={flatpickrRef}
+                key={key}
+                options={flatpickrOptions}
+                render={flatpickrRender}
+                overrides={overridesProp}
+                value={value}
+                onReady={onReady}
+                onChange={isReadOnly ? undefined : onChangeDate}
+                {...override.flatpickr}
+            />
+        </div>
     );
 }
 
