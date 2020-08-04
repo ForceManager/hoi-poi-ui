@@ -18,7 +18,8 @@ export default (theme) => ({
             fill: theme.colors.greySoft,
         },
     },
-    root: {
+    root: {},
+    container: {
         '& *, :after, :before': {
             boxSizing: 'inherit',
         },
