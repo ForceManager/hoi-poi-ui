@@ -28,7 +28,7 @@ Controlled
 import { useState } from 'react';
 import { Button } from 'hoi-poi-ui';
 
-const [isOpen, setIsOpen] = useState({});
+const [isOpen, setIsOpen] = useState(true);
 const onChange = (e) => setIsOpen(!isOpen);
 
 <div>
