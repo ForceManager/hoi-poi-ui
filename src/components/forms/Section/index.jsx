@@ -26,7 +26,9 @@ function Section({
     const classes = useClasses(useStyles, classesProp);
     const [isOpen, open] = useState(onChange ? isOpenProp : defaultOpen);
 
-    useEffect(() => open(isOpenProp), [isOpenProp]);
+    useEffect(() => {
+        if (onChange) open(isOpenProp);
+    }, [isOpenProp, onChange]);
 
     // Overrides
     const override = getOverrides(overridesProp, Section.overrides);
