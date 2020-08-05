@@ -13,6 +13,7 @@
         "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel --config-file ./babel.config.js ./src --out-dir ./dist/esm --ignore \"**/*.spec.jsx\"",
         "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./babel.config.js ./src --out-dir ./dist/es --ignore \"**/*.spec.jsx\"",
         "build:umd": "cross-env BABEL_ENV=umd rollup -c rollup.config.js",
+        "build:watch": "yarn build:esm --watch",
         "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f",
         "test": " cross-env NODE_ENV=test jest",
         "test:snapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
