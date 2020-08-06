@@ -42,6 +42,7 @@ import SingleUser from './icons/SingleUser';
 import MultipleUsers from './icons/MultipleUsers';
 import AddMultipleUsers from './icons/AddMultipleUsers';
 import SmartPhone from './icons/SmartPhone';
+import ExecuteIcon from './icons/ExecuteIcon';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -86,6 +87,7 @@ const ICONS = {
     addMultipleUsers: AddMultipleUsers,
     multipleUsers: MultipleUsers,
     smartPhone: SmartPhone,
+    execute: ExecuteIcon,
 };
 
 function Icon({
