@@ -72,6 +72,8 @@ Icons:
 <Icon name="multipleUsers" />
 <span> </span>
 <Icon name="smartPhone" />
+<span> </span>
+<Icon name="execute" />
 ```
 
 Sizes:
