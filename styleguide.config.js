@@ -29,6 +29,7 @@ module.exports = {
                 './src/components/general/CircularProgress/index.jsx',
                 './src/components/general/Tree/index.jsx',
                 './src/components/general/DataGrid/index.jsx',
+                './src/components/general/Carousel/index.jsx',
             ],
         },
         {

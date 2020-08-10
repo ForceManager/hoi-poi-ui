@@ -25,6 +25,7 @@ export { default as CircularProgress } from './components/general/CircularProgre
 export { default as Tree } from './components/general/Tree';
 export { default as DataGrid } from './components/general/DataGrid';
 export { default as ProgressBar } from './components/general/ProgressBar';
+export { default as Carousel } from './components/general/Carousel';
 
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
