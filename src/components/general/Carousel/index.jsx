@@ -52,7 +52,7 @@ function Carousel({
                 dotsClass={dotsClass}
                 prevArrow={<PreviousArrow />}
                 nextArrow={<NextArrow />}
-                {...override.slider}
+                {...override.Slider}
             >
                 {content.map((singleContent, index) => (
                     <div key={index} className={contentClass}>
@@ -64,7 +64,7 @@ function Carousel({
     );
 }
 
-Carousel.overrides = ['root', 'slider'];
+Carousel.overrides = ['root', 'Slider'];
 
 Carousel.defaultProps = {
     speed: 500,
