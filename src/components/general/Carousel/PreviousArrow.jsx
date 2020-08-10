@@ -9,9 +9,9 @@ const useStyles = createUseStyles(styles, 'CarouselPreviousArrow');
 
 function PreviousArrow({ className, style, onClick }) {
     const classes = useClasses(useStyles);
-    const rootClass = classnames(className, classes.arrow, 'arrow--left');
+    const rootClass = classnames(className, classes.arrow, classes.arrowLeft);
     return (
-        <div className={rootClass} style={{ ...style }}>
+        <div className={rootClass} style={style}>
             <Icon name="chevron" onClick={onClick} />
         </div>
     );

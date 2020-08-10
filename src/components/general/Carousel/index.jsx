@@ -1,9 +1,9 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Slider from 'react-slick';
 import { createUseStyles } from '../../../utils/styles';
-import { useClasses } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import PreviousArrow from './PreviousArrow';
 import NextArrow from './NextArrow';
 import styles from './styles';
@@ -18,13 +18,16 @@ function Carousel({
     dots,
     arrows,
     content,
+    overrides: overridesProp,
 }) {
     const classes = useClasses(useStyles);
+    // Overrides
+    const override = getOverrides(overridesProp, Carousel.overrides);
     const rootClass = classnames(classes.root, className, {
-        'carousel__with-dots': dots && content?.length > 1,
+        [classes.withDots]: dots && content?.length > 1,
     });
     const sliderClass = classnames(classes.slider, sliderClassName, {
-        'carousel__with-arrows': arrows,
+        [classes.withArrows]: arrows,
     });
     const contentClass = classnames(classes.content);
     const dotsClass = classnames(classes.dotsContainer, dotsClassName);
@@ -32,7 +35,7 @@ function Carousel({
     const sliderRef = useRef();
 
     return (
-        <div className={rootClass}>
+        <div className={rootClass} {...override.root}>
             <Slider
                 ref={sliderRef}
                 className={sliderClass}
@@ -49,6 +52,7 @@ function Carousel({
                 dotsClass={dotsClass}
                 prevArrow={<PreviousArrow />}
                 nextArrow={<NextArrow />}
+                {...override.slider}
             >
                 {content.map((singleContent, index) => (
                     <div key={index} className={contentClass}>
@@ -59,6 +63,8 @@ function Carousel({
         </div>
     );
 }
+
+Carousel.overrides = ['root', 'slider'];
 
 Carousel.defaultProps = {
     speed: 500,

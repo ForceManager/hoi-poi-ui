@@ -24,7 +24,6 @@ Other Content:
 const styles = {
     height: '100px',
     backgroundColor: '#FAE7E7',
-    borderRadius: '10px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -42,3 +41,4 @@ const content = [
 ---
 
 -   root - root element
+-   [Slider](https://react-slick.neostack.com/)

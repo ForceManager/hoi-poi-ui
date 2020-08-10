@@ -1,18 +1,15 @@
 export default (theme) => ({
     root: {
         position: 'relative',
-        '&.carousel__with-dots': {
-            paddingBottom: '25px',
-        },
+    },
+    withDots: {
+        paddingBottom: '25px',
     },
     slider: {
         position: 'relative',
         outline: 'none',
         width: '100%',
         margin: '0 auto',
-        '&.carousel__with-arrows': {
-            width: `calc(100% - 50px)`,
-        },
         '& .slick-list': {
             position: 'relative',
             textAlign: 'center',
@@ -26,21 +23,22 @@ export default (theme) => ({
             margin: '0 auto',
         },
     },
+    withArrows: {
+        width: `calc(100% - 50px)`,
+    },
     arrow: {
         position: 'absolute',
         top: '50%',
         transform: 'translateY(-50%)',
         width: '20px',
-        '&.arrow--left': {
-            left: '-25px',
-            transform: 'translateY(-50%) rotate(90deg)',
-            '& > svg': {},
-        },
-        '&.arrow--right': {
-            right: '-25px',
-            transform: 'translateY(-50%) rotate(-90deg)',
-            '& > svg': {},
-        },
+    },
+    arrowLeft: {
+        left: '-25px',
+        transform: 'translateY(-50%) rotate(90deg)',
+    },
+    arrowRight: {
+        right: '-25px',
+        transform: 'translateY(-50%) rotate(-90deg)',
     },
     content: {
         height: '100%',
