@@ -26,6 +26,32 @@ describe('Input', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('with type time', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <DatePicker
+                    label="Lorem ipsum"
+                    placeholder="Write here"
+                    onChange={() => {}}
+                    type="time"
+                />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('with outputType string', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <DatePicker
+                    label="Lorem ipsum"
+                    placeholder="Write here"
+                    onChange={() => {}}
+                    outputType="stringy"
+                />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
     test('with different format', () => {
         const wrapper = mount(
             <HoiPoiProvider>

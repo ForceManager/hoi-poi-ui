@@ -43,6 +43,7 @@ import MultipleUsers from './icons/MultipleUsers';
 import AddMultipleUsers from './icons/AddMultipleUsers';
 import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
+import Clock from './icons/Clock';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -88,6 +89,7 @@ const ICONS = {
     multipleUsers: MultipleUsers,
     smartPhone: SmartPhone,
     execute: ExecuteIcon,
+    clock: Clock,
 };
 
 function Icon({

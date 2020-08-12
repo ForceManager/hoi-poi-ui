@@ -19,6 +19,18 @@ export default (theme) => ({
         },
     },
     root: {},
+    close: {
+        position: 'relative',
+        marginRight: 16,
+        '&:before': {
+            position: 'absolute',
+            left: 18,
+            content: "''",
+            backgroundColor: '#CCC',
+            width: 1,
+            height: 9,
+        },
+    },
     container: {
         '& *, :after, :before': {
             boxSizing: 'inherit',
@@ -124,6 +136,13 @@ export default (theme) => ({
         },
         '&.flatpickr-calendar.arrowTop:after': {
             borderBottomColor: theme.colors.primary,
+        },
+        '&.flatpickr-calendar.noCalendar.arrowTop:after': {
+            borderBottomColor: theme.colors.white,
+            zIndex: 1000,
+            top: -9,
+            borderWidth: 5,
+            left: 21,
         },
         '&.flatpickr-calendar.arrowBottom:before, &.flatpickr-calendar.arrowBottom:after': {
             top: '100%',
