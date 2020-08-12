@@ -36,6 +36,7 @@ function DatePicker({
     onChange,
     value,
     type,
+    outputType,
     lang,
     isReadOnly,
     ...props
@@ -49,18 +50,19 @@ function DatePicker({
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
 
-    const flatpickrOptions = useMemo(
-        () => ({
-            enableTime: type === 'datetime',
-            dateFormat: dateFormat || type === 'date' ? 'Y-m-d' : 'Y-m-d H:i:S',
+    const flatpickrOptions = useMemo(() => {
+        const defaultDateFormats = { date: 'Y-m-d', datetime: 'Y-m-d H:i:S', time: 'H:i' };
+        return {
+            enableTime: type !== 'date',
+            noCalendar: type === 'time',
+            dateFormat: dateFormat || defaultDateFormats[type],
             formatDate,
             locale: flatpickrl10n[lang],
             clickOpens: !isReadOnly,
             time_24hr: true,
             ...override.flatpickrOptions,
-        }),
-        [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions, type],
-    );
+        };
+    }, [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions, type]);
 
     const onReady = useCallback(
         (_, __, fp) => {
@@ -71,9 +73,14 @@ function DatePicker({
 
     const onChangeDate = useCallback(
         (date) => {
-            onChange && onChange(date[0], name);
+            const formattedDate =
+                outputType === 'string'
+                    ? flatpickr.formatDate(date[0], flatpickrOptions.dateFormat)
+                    : date[0];
+
+            onChange && onChange(formattedDate, name);
         },
-        [name, onChange],
+        [flatpickrOptions.dateFormat, name, onChange, outputType],
     );
 
     // Remove handler
@@ -87,11 +94,14 @@ function DatePicker({
 
     const flatpickrRender = useCallback(
         ({ className, value }, ref) => {
-            const formatValue = value
-                ? formatDate
-                    ? formatDate(value, flatpickrOptions.dateFormat)
-                    : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
-                : value;
+            const formatValue =
+                value && outputType === 'object'
+                    ? formatDate
+                        ? formatDate(value, flatpickrOptions.dateFormat)
+                        : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
+                    : value;
+            const inputClasses =
+                value && !isReadOnly ? { postCloseComponent: classes.close } : null;
             return (
                 <Input
                     {...props}
@@ -99,12 +109,13 @@ function DatePicker({
                     className={className}
                     isReadOnly={isReadOnly}
                     onChange={isReadOnly ? undefined : onInputChange}
+                    classes={inputClasses}
                     overrides={{ input: { ref } }}
                     postComponent={
                         <Icon
                             onClick={onOpenCalendar}
                             className={classes.calendarIcon}
-                            name="calendar"
+                            name={type === 'time' ? 'clock' : 'calendar'}
                         />
                     }
                 />
@@ -112,12 +123,14 @@ function DatePicker({
         },
         [
             classes.calendarIcon,
+            classes.close,
             flatpickrOptions.dateFormat,
             formatDate,
             isReadOnly,
             onInputChange,
             onOpenCalendar,
             props,
+            type,
         ],
     );
 
@@ -153,6 +166,7 @@ DatePicker.overrides = [
 DatePicker.defaultProps = {
     labelMode: 'horizontal',
     type: 'date',
+    outputType: 'object',
     onChange: () => {},
     value: '',
     dateFormat: '',
@@ -184,7 +198,8 @@ DatePicker.propTypes = {
     info: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
-    type: PropTypes.oneOf(['date', 'datetime']),
+    type: PropTypes.oneOf(['date', 'datetime', 'time']),
+    outputType: PropTypes.oneOf(['object', 'string']),
     lang: PropTypes.string,
     /** default to flatpickr format tokens */
     dateFormat: PropTypes.string,

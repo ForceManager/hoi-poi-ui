@@ -56,6 +56,40 @@ const onChange = (e) => setState({ value: e });
 </div>;
 ```
 
+Type time
+
+```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
+const onChange = (e) => {
+    console.log(e);
+    setState({ value: e });
+};
+<div>
+    <DatePicker label="Lorem ipsum" type="time" onChange={onChange} value={state.value} />
+</div>;
+```
+
+Output string
+
+```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
+const onChange = (e) => {
+    console.log(e);
+    setState({ value: e });
+};
+<div>
+    <DatePicker
+        label="Lorem ipsum"
+        type="time"
+        onChange={onChange}
+        value={state.value}
+        outputType="string"
+    />
+</div>;
+```
+
 Custom formatDate
 
 ```jsx
