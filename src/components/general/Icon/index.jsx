@@ -44,6 +44,7 @@ import AddMultipleUsers from './icons/AddMultipleUsers';
 import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
 import Clock from './icons/Clock';
+import VideoCamera from './icons/VideoCamera';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -90,6 +91,7 @@ const ICONS = {
     smartPhone: SmartPhone,
     execute: ExecuteIcon,
     clock: Clock,
+    videoCamera: VideoCamera,
 };
 
 function Icon({

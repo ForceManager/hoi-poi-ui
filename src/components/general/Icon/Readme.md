@@ -76,6 +76,8 @@ Icons:
 <Icon name="execute" />
 <span> </span>
 <Icon name="clock" />
+<span> </span>
+<Icon name="videoCamera" />
 ```
 
 Sizes:
