@@ -144,6 +144,10 @@ export default (theme) => ({
             borderWidth: 5,
             left: 21,
         },
+        '&.flatpickr-calendar.noCalendar.rightMost:after': {
+            left: 'auto',
+            right: 21,
+        },
         '&.flatpickr-calendar.arrowBottom:before, &.flatpickr-calendar.arrowBottom:after': {
             top: '100%',
         },
