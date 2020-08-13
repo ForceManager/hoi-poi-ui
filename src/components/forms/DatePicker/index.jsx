@@ -129,6 +129,7 @@ function DatePicker({
             isReadOnly,
             onInputChange,
             onOpenCalendar,
+            outputType,
             props,
             type,
         ],
