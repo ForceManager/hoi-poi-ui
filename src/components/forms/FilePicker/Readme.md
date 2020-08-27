@@ -29,7 +29,6 @@ const onRemove = (deletedFile) => {
         onDrop={onDrop}
         onRemove={onRemove}
         files={state}
-        limit={3}
     />
 </div>;
 ```
@@ -58,7 +57,113 @@ const onRemove = (file) => {
         onDrop={onDrop}
         onRemove={onRemove}
         files={state}
-        limit={3}
+    />
+</div>;
+```
+
+Limit:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState([]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
+};
+
+<div>
+    <FilePicker
+        label="File"
+        placeholder="Drag and drop or click to upload"
+        placeholderActive="Drop file to upload"
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
+        limit={1}
+    />
+</div>;
+```
+
+Accept:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState([]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
+};
+
+<div>
+    <FilePicker
+        label="File"
+        placeholder="Drag and drop or click to upload"
+        placeholderActive="Drop file to upload"
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
+        accept={['application/zip', 'application/vnd.rar']}
+    />
+</div>;
+```
+
+Full Width:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState([]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
+};
+
+<div>
+    <FilePicker
+        label="File"
+        placeholder="Drag and drop or click to upload"
+        placeholderActive="Drop file to upload"
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
         isFullWidth={true}
     />
 </div>;
