@@ -83,11 +83,9 @@ Icons:
 File Icons:
 
 ```jsx
-<Icon fileType="application/pdf" />
+<Icon name="document" />
 <span> </span>
-<Icon fileType="application/zip" />
-<span> </span>
-<Icon fileType="application/vnd.rar" />
+<Icon name="zip" />
 <span> </span>
 ```
 

@@ -93,13 +93,20 @@ function FilePicker({
         ...props,
     });
 
+    const ICON_NAMES = {
+        document: 'document',
+        'application/zip': 'zip',
+        'application/vnd.rar': 'zip',
+        'application/x-7z-compressed': 'zip',
+    };
+
     const renderFiles = useMemo(() => {
         if (!files.length) return null;
         const filesList = files.map((file, i) => (
             <div key={i} className={classes.file}>
                 <div className={classes.iconNameContainer}>
                     <span className={classes.fileIcon}>
-                        <Icon fileType={file.type} />
+                        <Icon name={ICON_NAMES[file.type] || ICON_NAMES['document']} />
                     </span>
                     <Text>{file.name}</Text>
                 </div>
@@ -110,6 +117,7 @@ function FilePicker({
         ));
         return <div className={classes.files}>{filesList}</div>;
     }, [
+        ICON_NAMES,
         classes.clear,
         classes.file,
         classes.fileIcon,
