@@ -45,6 +45,9 @@ import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
 import Clock from './icons/Clock';
 import VideoCamera from './icons/VideoCamera';
+// File Icons
+import Document from './fileIcons/Document';
+import Zip from './fileIcons/Zip';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -94,10 +97,18 @@ const ICONS = {
     videoCamera: VideoCamera,
 };
 
+const FILE_ICONS = {
+    document: Document,
+    'application/zip': Zip,
+    'application/vnd.rar': Zip,
+    'application/x-7z-compressed': Zip,
+};
+
 function Icon({
     name,
     color,
     size,
+    fileType,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
@@ -106,7 +117,7 @@ function Icon({
 }) {
     const classes = useClasses(useStyles, classesProp);
     const theme = useTheme();
-    let SelectedIcon = ICONS[name];
+    let SelectedIcon = fileType ? FILE_ICONS[fileType] || FILE_ICONS['document'] : ICONS[name];
     if (!SelectedIcon) return null;
 
     // Overrides
@@ -141,6 +152,7 @@ Icon.propTypes = {
     overrides: PropTypes.object,
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
     name: PropTypes.string,
+    fileType: PropTypes.string,
     color: PropTypes.string,
     onClick: PropTypes.func,
 };

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { useDropzone } from 'react-dropzone';
@@ -19,7 +19,11 @@ function FilePicker({
     onDrop,
     onRemove,
     limit,
-    fileTypes,
+    accept,
+    disabled,
+    maxSize,
+    minSize,
+    multiple,
     id,
     name,
     files,
@@ -37,7 +41,6 @@ function FilePicker({
 }) {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
-    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
     // Overrides
     const override = getOverrides(overridesProp, FilePicker.overrides);
@@ -64,13 +67,39 @@ function FilePicker({
         ...override.Label,
     };
 
+    const handleOnDrop = useCallback(
+        (droppedFiles) =>
+            onDrop(
+                droppedFiles.filter(
+                    (droppedFile) =>
+                        !files.some(
+                            (file) =>
+                                file.name === droppedFile.name &&
+                                file.size === droppedFile.size &&
+                                file.type === droppedFile.type,
+                        ),
+                ),
+            ),
+        [files, onDrop],
+    );
+
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({
+        onDrop: handleOnDrop,
+        accept,
+        disabled,
+        maxSize,
+        minSize,
+        multiple,
+        ...props,
+    });
+
     const renderFiles = useMemo(() => {
         if (!files.length) return null;
         const filesList = files.map((file, i) => (
             <div key={i} className={classes.file}>
                 <div className={classes.iconNameContainer}>
                     <span className={classes.fileIcon}>
-                        <Icon name="cloudUpload" />
+                        <Icon fileType={file.type} />
                     </span>
                     <Text>{file.name}</Text>
                 </div>
@@ -98,8 +127,6 @@ function FilePicker({
         className: classes.input,
         ...override.input,
     };
-
-    console.log('files', files);
 
     return (
         <div {...rootProps} {...override.root}>

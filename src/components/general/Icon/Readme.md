@@ -80,6 +80,17 @@ Icons:
 <Icon name="videoCamera" />
 ```
 
+File Icons:
+
+```jsx
+<Icon fileType="application/pdf" />
+<span> </span>
+<Icon fileType="application/zip" />
+<span> </span>
+<Icon fileType="application/vnd.rar" />
+<span> </span>
+```
+
 Sizes:
 
 ```jsx

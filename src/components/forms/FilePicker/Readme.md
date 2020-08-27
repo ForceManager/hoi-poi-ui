@@ -4,13 +4,21 @@ Horizontal label:
 import { useState } from 'react';
 
 const [state, setState] = useState([]);
-const onDrop = (files) => {
-    setState([...state, ...files]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
 };
 
-const onRemove = (file) => {
-    console.log('onRemove', file);
-    setState(state.filter((el) => el.lastModified !== file.lastModified));
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
 };
 
 <div>
@@ -26,28 +34,34 @@ const onRemove = (file) => {
 </div>;
 ```
 
-<!-- Vertical label:
+Vertical label:
 
 ```jsx
 import { useState } from 'react';
 
-const [state, setState] = useState({});
-const onChange = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
-    };
+const [state, setState] = useState([]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onRemove = (file) => {
+    setState(state.filter((el) => el.lastModified !== file.lastModified));
 };
 
 <div>
     <FilePicker
+        label="File"
         labelMode="vertical"
-        label="Lorem ipsum"
-        placeholder="Write here"
-        onChange={onChange(3)}
-        value={state[3]}
+        multiple={false}
+        placeholder="Drag and drop or click to upload"
+        placeholderActive="Drop file to upload"
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
+        limit={3}
     />
 </div>;
-``` -->
+```
 
 ### Component tree
 

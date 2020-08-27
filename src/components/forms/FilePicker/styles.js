@@ -43,13 +43,8 @@ export default (theme) => ({
         width: '100%',
         height: '100%',
         borderRadius: 4,
-        border: `2px solid ${theme.colors.secondary}`,
+        border: `1px dashed ${theme.colors.secondary}`,
         backgroundColor: theme.colors.secondaryLight,
-        '& $dropText': {
-            color: theme.colors.white,
-            background: theme.colors.secondary,
-            marginTop: 40,
-        },
     },
     dropZoneInactive: {
         display: 'flex',
@@ -61,15 +56,20 @@ export default (theme) => ({
         borderRadius: 4,
         border: `1px dashed ${theme.colors.placeholders}`,
         backgroundColor: theme.colors.greyLight,
-        '& $dropText': {
-            color: theme.colors.greySoft,
-        },
+        cursor: 'pointer',
     },
     placeholder: {
         display: 'block',
         textAlign: 'center',
         lineHeight: '20px',
         width: '100%',
+    },
+    activePlaceholder: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: theme.colors.secondary,
     },
     cloudUploadIcon: {
         marginBottom: 2,
