@@ -59,6 +59,7 @@ const onRemove = (file) => {
         onRemove={onRemove}
         files={state}
         limit={3}
+        isFullWidth={true}
     />
 </div>;
 ```

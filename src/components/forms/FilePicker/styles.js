@@ -80,7 +80,7 @@ export default (theme) => ({
     file: {
         display: 'flex',
         justifyContent: 'space-between',
-        height: 30,
+        minHeight: 30,
     },
     iconNameContainer: {
         display: 'flex',
@@ -136,9 +136,8 @@ export default (theme) => ({
     },
     horizontal: {
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         padding: '15px 0 10px 0',
-        '& $error': {},
     },
     isFullWidth: {
         '& $formControl': {

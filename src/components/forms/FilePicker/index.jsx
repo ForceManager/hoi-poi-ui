@@ -51,6 +51,7 @@ function FilePicker({
         {
             [classes.isReadOnly]: isReadOnly,
             [classes[labelMode]]: labelMode,
+            [classes.isFullWidth]: isFullWidth,
             [classes.errored]: error,
         },
         classNameProp,
