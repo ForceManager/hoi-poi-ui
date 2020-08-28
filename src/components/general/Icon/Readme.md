@@ -83,9 +83,45 @@ Icons:
 File Icons:
 
 ```jsx
-<Icon name="document" />
+<Icon name="file" />
+<span> </span>
+<Icon name="img" />
+<span> </span>
+<Icon name="mov" />
+<span> </span>
+<Icon name="doc" />
+<span> </span>
+<Icon name="ppt" />
+<span> </span>
+<Icon name="xls" />
+<span> </span>
+<Icon name="mpp" />
+<span> </span>
+<Icon name="one" />
+<span> </span>
+<Icon name="pub" />
+<span> </span>
+<Icon name="vsd" />
+<span> </span>
+<Icon name="xsn" />
+<span> </span>
+<Icon name="pdf" />
+<span> </span>
+<Icon name="txt" />
+<span> </span>
+<Icon name="mp3" />
+<span> </span>
+<Icon name="app" />
+<span> </span>
+<Icon name="mdb" />
+<span> </span>
+<Icon name="bdd" />
+<span> </span>
+<Icon name="html" />
 <span> </span>
 <Icon name="zip" />
+<span> </span>
+<Icon name="link" />
 <span> </span>
 ```
 

@@ -95,10 +95,21 @@ function FilePicker({
     });
 
     const ICON_NAMES = {
-        document: 'document',
         'application/zip': 'zip',
         'application/vnd.rar': 'zip',
         'application/x-7z-compressed': 'zip',
+        'image/bmp': 'img',
+        'image/gif': 'img',
+        'image/jpeg': 'img',
+        'image/png': 'img',
+        'image/webp': 'img',
+        'application/pdf': 'pdf',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'doc',
+        'application/msword': 'doc',
+        'application/vnd.ms-excel': 'xls',
+        'text/csv': 'xls',
+        'application/vnd.ms-powerpoint': 'ppt',
+        'application/vnd.openxmlformats-officedocument.presentationml.presentation': 'ppt',
     };
 
     const renderFiles = useMemo(() => {
@@ -107,7 +118,7 @@ function FilePicker({
             <div key={i} className={classes.file}>
                 <div className={classes.iconNameContainer}>
                     <span className={classes.fileIcon}>
-                        <Icon name={ICON_NAMES[file.type] || ICON_NAMES['document']} />
+                        <Icon name={ICON_NAMES[file.type] || 'file'} />
                     </span>
                     <Text>{file.name}</Text>
                 </div>
