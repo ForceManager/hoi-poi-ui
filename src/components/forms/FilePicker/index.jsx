@@ -6,6 +6,7 @@ import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import Label from '../Label';
 import Text from '../../typography/Text';
+import FILE_TYPES from './FILE_TYPES';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -94,31 +95,13 @@ function FilePicker({
         ...props,
     });
 
-    const ICON_NAMES = {
-        'application/zip': 'zip',
-        'application/vnd.rar': 'zip',
-        'application/x-7z-compressed': 'zip',
-        'image/bmp': 'img',
-        'image/gif': 'img',
-        'image/jpeg': 'img',
-        'image/png': 'img',
-        'image/webp': 'img',
-        'application/pdf': 'pdf',
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'doc',
-        'application/msword': 'doc',
-        'application/vnd.ms-excel': 'xls',
-        'text/csv': 'xls',
-        'application/vnd.ms-powerpoint': 'ppt',
-        'application/vnd.openxmlformats-officedocument.presentationml.presentation': 'ppt',
-    };
-
     const renderFiles = useMemo(() => {
         if (!files.length) return null;
         const filesList = files.map((file, i) => (
             <div key={i} className={classes.file}>
                 <div className={classes.iconNameContainer}>
                     <span className={classes.fileIcon}>
-                        <Icon name={ICON_NAMES[file.type] || 'file'} />
+                        <Icon name={FILE_TYPES[file.type] || 'file'} />
                     </span>
                     <Text>{file.name}</Text>
                 </div>
@@ -129,7 +112,6 @@ function FilePicker({
         ));
         return <div className={classes.files}>{filesList}</div>;
     }, [
-        ICON_NAMES,
         classes.clear,
         classes.file,
         classes.fileIcon,

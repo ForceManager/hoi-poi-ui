@@ -91,6 +91,7 @@ export default (theme) => ({
         marginRight: 5,
     },
     clear: {
+        cursor: 'pointer',
         marginTop: 6,
         '& span': {
             width: 8,
