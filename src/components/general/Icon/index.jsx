@@ -45,6 +45,9 @@ import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
 import Clock from './icons/Clock';
 import VideoCamera from './icons/VideoCamera';
+import Chat from './icons/Chat';
+import ChatFilled from './icons/ChatFilled';
+
 //File Icons
 import File from './fileIcons/File';
 import Img from './fileIcons/Img';
@@ -113,6 +116,8 @@ const ICONS = {
     execute: ExecuteIcon,
     clock: Clock,
     videoCamera: VideoCamera,
+    chat: Chat,
+    chatFilled: ChatFilled,
     //File Icons
     file: File,
     img: Img,

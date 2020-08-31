@@ -80,6 +80,10 @@ Icons:
 <Icon name="clock" />
 <span> </span>
 <Icon name="videoCamera" />
+<span> </span>
+<Icon name="chat"/>
+<span> </span>
+<Icon name="chatFilled"/>
 ```
 
 File Icons:
