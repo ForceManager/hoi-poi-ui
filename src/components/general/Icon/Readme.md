@@ -9,6 +9,8 @@ Icons:
 <span> </span>
 <Icon name="lock" />
 <span> </span>
+<Icon name="tick"/>
+<span> </span>
 <Icon name="thickEnabledFilled" />
 <span> </span>
 <Icon name="thickEnabled" />
