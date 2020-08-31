@@ -45,6 +45,8 @@ import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
 import Clock from './icons/Clock';
 import VideoCamera from './icons/VideoCamera';
+import Chat from './icons/Chat';
+import ChatFilled from './icons/ChatFilled';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -92,6 +94,8 @@ const ICONS = {
     execute: ExecuteIcon,
     clock: Clock,
     videoCamera: VideoCamera,
+    chat: Chat,
+    chatFilled: ChatFilled,
 };
 
 function Icon({
