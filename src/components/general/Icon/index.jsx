@@ -48,6 +48,28 @@ import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
 
+//File Icons
+import File from './fileIcons/File';
+import Img from './fileIcons/Img';
+import Mov from './fileIcons/Mov';
+import Doc from './fileIcons/Doc';
+import Ppt from './fileIcons/Ppt';
+import Xls from './fileIcons/Xls';
+import Pdf from './fileIcons/Pdf';
+import Mdb from './fileIcons/Mdb';
+import Txt from './fileIcons/Txt';
+import Mp3 from './fileIcons/Mp3';
+import App from './fileIcons/App';
+import Mpp from './fileIcons/Mpp';
+import One from './fileIcons/One';
+import Pub from './fileIcons/Pub';
+import Vsd from './fileIcons/Vsd';
+import Xsn from './fileIcons/Xsn';
+import Bdd from './fileIcons/Bdd';
+import Html from './fileIcons/Html';
+import Zip from './fileIcons/Zip';
+import Link from './fileIcons/Link';
+
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Icon');
@@ -96,6 +118,27 @@ const ICONS = {
     videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,
+    //File Icons
+    file: File,
+    img: Img,
+    mov: Mov,
+    doc: Doc,
+    ppt: Ppt,
+    xls: Xls,
+    pdf: Pdf,
+    mdb: Mdb,
+    txt: Txt,
+    mp3: Mp3,
+    app: App,
+    mpp: Mpp,
+    one: One,
+    pub: Pub,
+    vsd: Vsd,
+    xsn: Xsn,
+    bdd: Bdd,
+    html: Html,
+    zip: Zip,
+    link: Link,
 };
 
 function Icon({
