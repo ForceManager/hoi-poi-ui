@@ -44,6 +44,7 @@ export { default as Multiplier } from './components/forms/Multiplier';
 export { default as Switch } from './components/forms/Switch';
 export { default as SwitchInput } from './components/forms/SwitchInput';
 export { default as DatePicker } from './components/forms/DatePicker';
+export { default as FilePicker } from './components/forms/FilePicker';
 
 export { default as ScrollBar } from './components/utils/ScrollBar';
 export { default as Tooltip } from './components/utils/Tooltip';

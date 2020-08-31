@@ -46,7 +46,7 @@ describe('Input', () => {
                     label="Lorem ipsum"
                     placeholder="Write here"
                     onChange={() => {}}
-                    outputType="stringy"
+                    outputType="string"
                 />
             </HoiPoiProvider>,
         );
