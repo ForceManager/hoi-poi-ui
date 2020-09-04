@@ -19,6 +19,7 @@ module.exports = {
                 './src/components/general/ChipGroup/index.jsx',
                 './src/components/general/Drawer/index.jsx',
                 './src/components/general/Icon/index.jsx',
+                './src/components/general/FileIcon/index.jsx',
                 './src/components/general/Loader/index.jsx',
                 './src/components/general/Modal/index.jsx',
                 './src/components/general/ProgressBar/index.jsx',

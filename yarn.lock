@@ -7354,6 +7354,10 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
+lodash.uniqueid@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.uniqueid/-/lodash.uniqueid-4.0.1.tgz#3268f26a7c88e4f4b1758d679271814e31fa5b26"
+
 lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.5:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
@@ -9023,6 +9027,14 @@ react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
 
+react-file-icon@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-file-icon/-/react-file-icon-1.0.0.tgz#bf7154bf6dcf96072986c673069647d2a330ad6b"
+  dependencies:
+    lodash.uniqueid "^4.0.1"
+    prop-types "^15.7.2"
+    tinycolor2 "^1.4.1"
+
 react-flatpickr@^3.10.4:
   version "3.10.4"
   resolved "https://registry.yarnpkg.com/react-flatpickr/-/react-flatpickr-3.10.4.tgz#5a7a5f472571b5e767e19de0fa41e3bce4dabd9c"
@@ -10625,6 +10637,10 @@ tiny-emitter@^2.0.0:
 tiny-warning@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
+
+tinycolor2@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
 
 tmp@^0.0.33:
   version "0.0.33"
