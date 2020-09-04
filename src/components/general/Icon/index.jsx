@@ -48,6 +48,61 @@ import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
 
+//Actions
+import AccountCheckin from './icons/actions/AccountCheckin';
+import AccountDetails from './icons/actions/AccountDetails';
+import AddAccount from './icons/actions/AddAccount';
+import AddActivity from './icons/actions/AddActivity';
+import AddEvent from './icons/actions/AddEvent';
+import Autorenew from './icons/actions/Autorenew';
+import Cached from './icons/actions/Cached';
+import Cognitive from './icons/actions/Cognitive';
+import CognitiveTwoToned from './icons/actions/CognitiveTwoToned';
+import CreditCard from './icons/actions/CreditCard';
+import Dashboard from './icons/actions/Dashboard';
+import DateRange from './icons/actions/DateRange';
+import Delete from './icons/actions/Delete';
+import Documents from './icons/actions/Documents';
+import Done from './icons/actions/Done';
+import DoneAll from './icons/actions/DoneAll';
+import EmailLate from './icons/actions/EmailLate';
+import EmailReceive from './icons/actions/EmailReceive';
+import Event from './icons/actions/Event';
+import EventDetail from './icons/actions/EventDetail';
+import ExitToApp from './icons/actions/ExitToApp';
+import Expand from './icons/actions/Expand';
+import FastCheckin from './icons/actions/FastCheckin';
+import Favorite from './icons/actions/Favorite';
+import FavoriteBorder from './icons/actions/FavoriteBorder';
+import FilterList from './icons/actions/FilterList';
+import FilterListActive from './icons/actions/FilterListActive';
+import Forms from './icons/actions/Forms';
+import Help from './icons/actions/Help';
+import HighlightOff from './icons/actions/HighlightOff';
+import HourglassEmpty from './icons/actions/HourglassEmpty';
+import HourglassFull from './icons/actions/HourglassFull';
+import Input from './icons/actions/Input';
+import Launch from './icons/actions/Launch';
+import LocationSearching from './icons/actions/LocationSearching';
+import LockOpen from './icons/actions/LockOpen';
+import LockOutline from './icons/actions/LockOutline';
+import OpportunityCheckin from './icons/actions/OpportunityCheckin';
+import OpportunityThumbsDown from './icons/actions/OpportunityThumbsDown';
+import OpportunityThumbsUp from './icons/actions/OpportunityThumbsUp';
+import RelatedContact from './icons/actions/RelatedContact';
+import Route from './icons/actions/Route';
+import Search from './icons/actions/Search';
+import ShoppingBasketThumbsDown from './icons/actions/ShoppingbasketThumbsDown';
+import ShoppingBasketThumbsUp from './icons/actions/ShoppingBasketThumbsUp';
+import ShoppingThumbsDown from './icons/actions/ShoppingThumbsDown';
+import ShoppingThumbsUp from './icons/actions/ShoppingThumbsUp';
+import Signature from './icons/actions/Signature';
+import SwitchOff from './icons/actions/SwitchOff';
+import ThumbDown from './icons/actions/ThumbDown';
+import ThumbUp from './icons/actions/ThumbUp';
+import Visibility from './icons/actions/Visibility';
+import Workflow from './icons/actions/Workflow';
+
 //File Icons
 import File from './fileIcons/File';
 import Img from './fileIcons/Img';
@@ -118,6 +173,60 @@ const ICONS = {
     videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,
+    //Actions
+    accountCheckin: AccountCheckin,
+    accountDetails: AccountDetails,
+    addAccount: AddAccount,
+    addActivity: AddActivity,
+    addEvent: AddEvent,
+    autorenew: Autorenew,
+    cached: Cached,
+    cognitive: Cognitive,
+    cognitiveTwoToned: CognitiveTwoToned,
+    creditCard: CreditCard,
+    dashboard: Dashboard,
+    dateRange: DateRange,
+    delete: Delete,
+    documents: Documents,
+    done: Done,
+    doneAll: DoneAll,
+    emailLate: EmailLate,
+    emailReceive: EmailReceive,
+    event: Event,
+    eventDetail: EventDetail,
+    exitToApp: ExitToApp,
+    expand: Expand,
+    fastCheckin: FastCheckin,
+    favorite: Favorite,
+    favoriteBorder: FavoriteBorder,
+    filterList: FilterList,
+    filterListActive: FilterListActive,
+    forms: Forms,
+    help: Help,
+    highlightOff: HighlightOff,
+    hourglassEmpty: HourglassEmpty,
+    hourglassFull: HourglassFull,
+    input: Input,
+    launch: Launch,
+    locationSearching: LocationSearching,
+    lockOpen: LockOpen,
+    lockOutline: LockOutline,
+    opportunityCheckin: OpportunityCheckin,
+    opportunityThumbsDown: OpportunityThumbsDown,
+    opportunityThumbsUp: OpportunityThumbsUp,
+    relatedContact: RelatedContact,
+    route: Route,
+    search: Search,
+    shoppingBasketThumbsDown: ShoppingBasketThumbsDown,
+    shoppingBasketThumbsUp: ShoppingBasketThumbsUp,
+    shoppingThumbsDown: ShoppingThumbsDown,
+    shoppingThumbsUp: ShoppingThumbsUp,
+    signature: Signature,
+    switchOff: SwitchOff,
+    thumbDown: ThumbDown,
+    thumbUp: ThumbUp,
+    visibility: Visibility,
+    workflow: Workflow,
     //File Icons
     file: File,
     img: Img,
