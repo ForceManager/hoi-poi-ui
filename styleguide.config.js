@@ -14,6 +14,7 @@ module.exports = {
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/Button/index.jsx',
                 './src/components/general/ButtonSwitch/index.jsx',
+                './src/components/general/ButtonTabGroup/index.jsx',
                 './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Chip/index.jsx',
                 './src/components/general/ChipGroup/index.jsx',
