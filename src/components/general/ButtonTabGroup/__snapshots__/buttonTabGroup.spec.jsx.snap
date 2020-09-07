@@ -1,0 +1,599 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonTabGroup is rendered without crashes 1`] = `
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "colors": Object {
+          "black": "#262B34",
+          "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
+          "disabledGrey": "#ced4d9",
+          "green": "#86AD20",
+          "greenLight": "#e7f1d5",
+          "grey": "#697782",
+          "greyLight": "#f0f3f5",
+          "greySoft": "#788590",
+          "lines": "#dce3eb",
+          "link": "#216db3",
+          "linkDark": "#174a79",
+          "overlay": "rgba(33,33,33,0.55)",
+          "placeholders": "#e1e4e7",
+          "placeholdersHover": "#d0d4d8",
+          "primary": "#FF8C00",
+          "primaryDark": "#C87600",
+          "primaryLight": "#fef4e6",
+          "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
+          "red": "#f04540",
+          "redDark": "#C43833",
+          "redLight": "#FAE7E7",
+          "redSoft": "#FF544F",
+          "secondary": "#00A8Be",
+          "secondaryGrey": "#e4eeff",
+          "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
+          "secondarySoft": "#AADFE7",
+          "shadow": "rgba(0, 0, 0, 0.25)",
+          "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
+          "tableHover": "#FAFBFC",
+          "text": Object {
+            "black": "#3c4248",
+            "danger": "white",
+            "default": "#697782",
+            "green": "#86AD20",
+            "greySoft": "#788590",
+            "primary": "white",
+            "red": "#f04540",
+            "secondary": "#00A8Be",
+            "white": "#FFFFFF",
+            "yellow": "#E9B200",
+          },
+          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "white": "#FFFFFF",
+          "yellow": "#E9B200",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
+        },
+        "effects": Object {
+          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "buttonActive": Object {
+            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+          },
+        },
+        "typography": Object {
+          "bigText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
+            "letterSpacing": 0.5,
+          },
+          "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "lineHeight": 1.5,
+          },
+          "defaultText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 13,
+            "letterSpacing": 0.5,
+          },
+          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "fontSizeBase": 13,
+          "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
+          "letterSpacing": 0.5,
+          "lineHeightBase": 1.5,
+          "smallText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "letterSpacing": 0.5,
+          },
+        },
+        "utils": Object {
+          "scrollbar": Object {
+            "&::-webkit-scrollbar": Object {
+              "height": 17,
+              "width": 17,
+            },
+            "&::-webkit-scrollbar-thumb": Object {
+              "background": "#e1e4e7",
+              "backgroundClip": "content-box",
+              "border": "4px solid rgba(0, 0, 0, 0)",
+              "borderRadius": 10,
+            },
+            "&::-webkit-scrollbar-thumb:window-inactive": Object {
+              "background": "#e1e4e7",
+              "backgroundClip": "content-box",
+              "border": "4px solid rgba(0, 0, 0, 0)",
+              "borderRadius": 10,
+            },
+          },
+        },
+      }
+    }
+  >
+    <JssProvider
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
+      jss={
+        Jss {
+          "generateId": [Function],
+          "id": 3,
+          "options": Object {
+            "Renderer": [Function],
+            "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
+            "plugins": Array [],
+          },
+          "plugins": PluginsRegistry {
+            "plugins": Object {
+              "external": Array [
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                  "onUpdate": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+              ],
+              "internal": Array [
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+              ],
+            },
+            "registry": Object {
+              "onChangeValue": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onCreateRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessSheet": Array [],
+              "onProcessStyle": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onUpdate": Array [
+                [Function],
+              ],
+            },
+          },
+          "version": "10.3.0",
+        }
+      }
+    >
+      <ButtonTabGroup
+        buttons={
+          Array [
+            Object {
+              "label": "ON",
+              "value": true,
+            },
+            Object {
+              "label": "OFF",
+              "value": false,
+            },
+          ]
+        }
+        overrides={Object {}}
+        value={true}
+      >
+        <div
+          className="HoiPoi__ButtonTabGroup__root-1-0"
+        >
+          <button
+            className="HoiPoi__ButtonTabGroup__button-1-1 HoiPoi__ButtonTabGroup__active-1-2"
+            key="true"
+            onClick={[Function]}
+          >
+            ON
+          </button>
+          <button
+            className="HoiPoi__ButtonTabGroup__button-1-1"
+            key="false"
+            onClick={[Function]}
+          >
+            OFF
+          </button>
+        </div>
+      </ButtonTabGroup>
+      ;
+    </JssProvider>
+  </ThemeProvider>
+</Component>
+`;
+
+exports[`ButtonTabGroup is rendering with string values 1`] = `
+<Component>
+  <ThemeProvider
+    theme={
+      Object {
+        "colors": Object {
+          "black": "#262B34",
+          "blackLight": "#5f656b",
+          "blackberry": "#2e2d4c",
+          "blackberryDark": "#24243C",
+          "disabledGrey": "#ced4d9",
+          "green": "#86AD20",
+          "greenLight": "#e7f1d5",
+          "grey": "#697782",
+          "greyLight": "#f0f3f5",
+          "greySoft": "#788590",
+          "lines": "#dce3eb",
+          "link": "#216db3",
+          "linkDark": "#174a79",
+          "overlay": "rgba(33,33,33,0.55)",
+          "placeholders": "#e1e4e7",
+          "placeholdersHover": "#d0d4d8",
+          "primary": "#FF8C00",
+          "primaryDark": "#C87600",
+          "primaryLight": "#fef4e6",
+          "primarySoft": "#ff9d26",
+          "purple": "#AA5B9C",
+          "purpleLight": "#EEDEEB",
+          "red": "#f04540",
+          "redDark": "#C43833",
+          "redLight": "#FAE7E7",
+          "redSoft": "#FF544F",
+          "secondary": "#00A8Be",
+          "secondaryGrey": "#e4eeff",
+          "secondaryLight": "#D6EEF2",
+          "secondaryOverlay": "rgba(2,168,189,0.10)",
+          "secondarySoft": "#AADFE7",
+          "shadow": "rgba(0, 0, 0, 0.25)",
+          "tableHeader": "#f6f7f9",
+          "tableHeaderHover": "#EBECEF",
+          "tableHover": "#FAFBFC",
+          "text": Object {
+            "black": "#3c4248",
+            "danger": "white",
+            "default": "#697782",
+            "green": "#86AD20",
+            "greySoft": "#788590",
+            "primary": "white",
+            "red": "#f04540",
+            "secondary": "#00A8Be",
+            "white": "#FFFFFF",
+            "yellow": "#E9B200",
+          },
+          "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "white": "#FFFFFF",
+          "yellow": "#E9B200",
+          "yellowDark": "#BE9100",
+          "yellowLight": "#FCF7E5",
+        },
+        "effects": Object {
+          "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "buttonActive": Object {
+            "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
+          },
+        },
+        "typography": Object {
+          "bigText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
+            "letterSpacing": 0.5,
+          },
+          "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "lineHeight": 1.5,
+          },
+          "defaultText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 13,
+            "letterSpacing": 0.5,
+          },
+          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "fontSizeBase": 13,
+          "fontSizeSmall": 11,
+          "largeText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "letterSpacing": 0.5,
+          },
+          "letterSpacing": 0.5,
+          "lineHeightBase": 1.5,
+          "smallText": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 11,
+            "letterSpacing": 0.5,
+          },
+        },
+        "utils": Object {
+          "scrollbar": Object {
+            "&::-webkit-scrollbar": Object {
+              "height": 17,
+              "width": 17,
+            },
+            "&::-webkit-scrollbar-thumb": Object {
+              "background": "#e1e4e7",
+              "backgroundClip": "content-box",
+              "border": "4px solid rgba(0, 0, 0, 0)",
+              "borderRadius": 10,
+            },
+            "&::-webkit-scrollbar-thumb:window-inactive": Object {
+              "background": "#e1e4e7",
+              "backgroundClip": "content-box",
+              "border": "4px solid rgba(0, 0, 0, 0)",
+              "borderRadius": 10,
+            },
+          },
+        },
+      }
+    }
+  >
+    <JssProvider
+      classNamePrefix="HoiPoi__"
+      generateId={[Function]}
+      jss={
+        Jss {
+          "generateId": [Function],
+          "id": 3,
+          "options": Object {
+            "Renderer": [Function],
+            "createGenerateId": [Function],
+            "id": Object {
+              "minify": false,
+            },
+            "plugins": Array [],
+          },
+          "plugins": PluginsRegistry {
+            "plugins": Object {
+              "external": Array [
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                  "onUpdate": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                  "onProcessRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onProcessRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onProcessStyle": [Function],
+                },
+              ],
+              "internal": Array [
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onChangeValue": [Function],
+                  "onCreateRule": [Function],
+                  "onProcessStyle": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+                Object {
+                  "onCreateRule": [Function],
+                },
+              ],
+            },
+            "registry": Object {
+              "onChangeValue": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onCreateRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessRule": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessSheet": Array [],
+              "onProcessStyle": Array [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onUpdate": Array [
+                [Function],
+              ],
+            },
+          },
+          "version": "10.3.0",
+        }
+      }
+    >
+      <ButtonTabGroup
+        buttons={
+          Array [
+            Object {
+              "label": "ON",
+              "value": "on",
+            },
+            Object {
+              "label": "OFF",
+              "value": "false",
+            },
+          ]
+        }
+        overrides={Object {}}
+        value={true}
+      >
+        <div
+          className="HoiPoi__ButtonTabGroup__root-2-0"
+        >
+          <button
+            className="HoiPoi__ButtonTabGroup__button-2-1"
+            key="on"
+            onClick={[Function]}
+          >
+            ON
+          </button>
+          <button
+            className="HoiPoi__ButtonTabGroup__button-2-1"
+            key="false"
+            onClick={[Function]}
+          >
+            OFF
+          </button>
+        </div>
+      </ButtonTabGroup>
+      ;
+    </JssProvider>
+  </ThemeProvider>
+</Component>
+`;
