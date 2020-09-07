@@ -31,6 +31,7 @@ const onChange = (value) => setState({ value });
         onChange={onChange}
         options={options}
         value={state.value}
+        filterByKey
     />
 </div>;
 ```
