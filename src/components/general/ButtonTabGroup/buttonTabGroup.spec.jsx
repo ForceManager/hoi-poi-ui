@@ -69,7 +69,7 @@ describe('ButtonTabGroup', () => {
         );
 
         expect(() => {
-            wrapper.find('ButtonTabGroup').find('Button').first().simulate('click');
+            wrapper.find('ButtonTabGroup').find('button').first().simulate('click');
         }).not.toThrow();
     });
 });
