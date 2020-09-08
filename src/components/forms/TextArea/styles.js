@@ -129,6 +129,7 @@ export default (theme) => ({
     postComponent: {
         margin: '22px 7px 12px 5px',
         display: 'flex',
+        flexShrink: 0,
     },
     postCloseComponent: {
         '& span': {
