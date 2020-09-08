@@ -114,7 +114,7 @@ function DatePicker({
                     postComponent={
                         <Icon
                             onClick={onOpenCalendar}
-                            className={classes.calendarIcon}
+                            className={type === 'time' ? classes.clockIcon : classes.calendarIcon}
                             name={type === 'time' ? 'clock' : 'calendar'}
                         />
                     }
@@ -123,6 +123,7 @@ function DatePicker({
         },
         [
             classes.calendarIcon,
+            classes.clockIcon,
             classes.close,
             flatpickrOptions.dateFormat,
             formatDate,

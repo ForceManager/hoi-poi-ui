@@ -18,6 +18,14 @@ export default (theme) => ({
             fill: theme.colors.greySoft,
         },
     },
+    clockIcon: {
+        cursor: 'pointer',
+        width: 12,
+        height: 12,
+        '& path': {
+            fill: theme.colors.greySoft,
+        },
+    },
     root: {},
     close: {
         position: 'relative',
