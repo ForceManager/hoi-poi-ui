@@ -9,6 +9,7 @@ export { HoiPoiProvider, createHoiPoiTheme, useTheme, createUseStyles } from './
 export { default as Badge } from './components/general/Badge';
 export { default as Button } from './components/general/Button';
 export { default as ButtonSwitch } from './components/general/ButtonSwitch';
+export { default as ButtonTabGroup } from './components/general/ButtonTabGroup';
 export { default as Loader } from './components/general/Loader';
 export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
