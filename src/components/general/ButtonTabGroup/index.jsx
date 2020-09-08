@@ -25,9 +25,11 @@ function ButtonTabGroup({
 
     const buttonsEl = useMemo(
         () =>
-            buttons.map((button) => {
+            buttons.map((button, index) => {
                 const buttonClassName = classnames(classes.button, {
                     [classes.active]: button.value === value,
+                    [classes.inactive]: button.value !== value,
+                    [classes.withoutBorder]: !index || buttons[index - 1].value === value,
                 });
                 return (
                     <button
@@ -40,7 +42,16 @@ function ButtonTabGroup({
                     </button>
                 );
             }),
-        [buttons, classes.active, classes.button, onChange, override.button, value],
+        [
+            buttons,
+            classes.active,
+            classes.button,
+            classes.inactive,
+            classes.withoutBorder,
+            onChange,
+            override.button,
+            value,
+        ],
     );
 
     return (

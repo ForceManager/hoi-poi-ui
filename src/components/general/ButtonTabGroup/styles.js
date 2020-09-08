@@ -1,25 +1,30 @@
 export default (theme) => ({
-    root: {},
+    root: {
+        display: 'inline-block',
+        border: `1px solid ${theme.colors.neutral400}`,
+        borderRadius: 4,
+    },
     button: {
         position: 'relative',
         boxSizing: 'border-box',
         display: 'inline-block',
-        padding: '5px 20px',
+        margin: 1,
+        padding: '2px 20px',
         textAlign: 'center',
-        borderRadius: '100px',
         border: 'none',
         outline: 'none',
         cursor: 'pointer !important',
         background: 'none',
         fontWeight: 500,
-        transition: 'opacity .2s ease-in-out',
         ...theme.typography.button,
         fontSize: 12,
         lineHeight: '16px',
         letterSpacing: '0.4px',
-        color: theme.colors.placeholdersHover,
+        color: theme.colors.neutral700,
+        transition: 'background .15s ease-in-out, border-radius .15s ease-in-out',
+        borderLeft: `1px solid transparent`,
         '&:hover': {
-            color: theme.colors.placeholders,
+            color: theme.colors.neutral900,
         },
         '&:active': {},
         '& *': {
@@ -27,6 +32,16 @@ export default (theme) => ({
         },
     },
     active: {
-        color: theme.colors.black,
+        color: theme.colors.neutral900,
+        borderRadius: '4px',
+        backgroundColor: theme.colors.neutral400,
+    },
+    inactive: {
+        padding: '0px 20px',
+        margin: '2px 1px',
+        borderLeft: `1px solid ${theme.colors.neutral400}`,
+    },
+    withoutBorder: {
+        borderLeftColor: 'transparent',
     },
 });
