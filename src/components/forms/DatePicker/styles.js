@@ -13,7 +13,7 @@ export default (theme) => ({
         cursor: 'pointer',
         width: 10,
         height: 10,
-        padding: '0 0 0 5px',
+        margin: '0 0 0 5px',
         '& path': {
             fill: theme.colors.greySoft,
         },
@@ -22,6 +22,7 @@ export default (theme) => ({
         cursor: 'pointer',
         width: 12,
         height: 12,
+        margin: '0 0 0 3px',
         '& path': {
             fill: theme.colors.greySoft,
         },
