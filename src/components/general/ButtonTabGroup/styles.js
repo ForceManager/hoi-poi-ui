@@ -1,6 +1,7 @@
 export default (theme) => ({
     root: {
         display: 'inline-block',
+        padding: 1,
         border: `1px solid ${theme.colors.neutral400}`,
         borderRadius: 4,
     },
@@ -8,10 +9,10 @@ export default (theme) => ({
         position: 'relative',
         boxSizing: 'border-box',
         display: 'inline-block',
-        margin: 1,
         padding: '2px 20px',
         textAlign: 'center',
         border: 'none',
+        borderRadius: '4px',
         outline: 'none',
         cursor: 'pointer !important',
         background: 'none',
@@ -22,26 +23,28 @@ export default (theme) => ({
         letterSpacing: '0.4px',
         color: theme.colors.neutral700,
         transition: 'background .15s ease-in-out, border-radius .15s ease-in-out',
-        borderLeft: `1px solid transparent`,
         '&:hover': {
-            color: theme.colors.neutral900,
+            color: theme.colors.neutral700,
+            background: theme.colors.neutral200,
         },
-        '&:active': {},
         '& *': {
             cursor: 'pointer',
         },
     },
     active: {
         color: theme.colors.neutral900,
-        borderRadius: '4px',
-        backgroundColor: theme.colors.neutral400,
+        backgroundColor: theme.colors.neutral300,
+        '&:hover': {
+            color: theme.colors.neutral900,
+            background: theme.colors.neutral300,
+        },
     },
-    inactive: {
-        padding: '0px 20px',
-        margin: '2px 1px',
-        borderLeft: `1px solid ${theme.colors.neutral400}`,
-    },
-    withoutBorder: {
-        borderLeftColor: 'transparent',
+    divider: {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        width: 1,
+        height: 15,
+        background: theme.colors.neutral400,
+        borderRadius: 10,
     },
 });

@@ -15,6 +15,7 @@ function ButtonTabGroup({
     buttons,
     onChange,
     value,
+    disabled,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -25,13 +26,15 @@ function ButtonTabGroup({
 
     const buttonsEl = useMemo(
         () =>
-            buttons.map((button, index) => {
+            buttons.reduce((array, button, idx) => {
                 const buttonClassName = classnames(classes.button, {
                     [classes.active]: button.value === value,
-                    [classes.inactive]: button.value !== value,
-                    [classes.withoutBorder]: !index || buttons[index - 1].value === value,
                 });
-                return (
+
+                // not first or last
+                if (idx && idx < buttons.length) array.push(<span className={classes.divider} />);
+
+                array.push(
                     <button
                         key={button.value}
                         className={buttonClassName}
@@ -39,15 +42,16 @@ function ButtonTabGroup({
                         {...override.button}
                     >
                         {button.label}
-                    </button>
+                    </button>,
                 );
-            }),
+
+                return array;
+            }, []),
         [
             buttons,
             classes.active,
             classes.button,
-            classes.inactive,
-            classes.withoutBorder,
+            classes.divider,
             onChange,
             override.button,
             value,
