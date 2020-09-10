@@ -10,7 +10,12 @@ const onChange = (field) => {
 };
 
 <div>
-    <DatePicker label="Lorem ipsum" onChange={onChange(1)} value={state[1]} />
+    <DatePicker
+        label="Lorem ipsum"
+        onChange={onChange(1)}
+        value={state[1]}
+        classes={{ clear: 'clear__custom-class', calendarIcon: 'calendar-icon__custom-class' }}
+    />
     <DatePicker
         label="Lorem ipsum"
         hint="Hello!"

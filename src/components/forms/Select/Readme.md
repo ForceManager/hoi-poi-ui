@@ -32,6 +32,7 @@ const onChange = (value) => setState({ value });
         options={options}
         value={state.value}
         filterByKey
+        classes={{ clear: 'clear__custom-class' }}
     />
 </div>;
 ```

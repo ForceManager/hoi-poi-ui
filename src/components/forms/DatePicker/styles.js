@@ -28,7 +28,7 @@ export default (theme) => ({
         },
     },
     root: {},
-    close: {
+    clear: {
         position: 'relative',
         marginRight: 16,
         '&:before': {
