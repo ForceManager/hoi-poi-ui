@@ -90,7 +90,7 @@ function DatePicker({
 
     const onOpenCalendar = useCallback((e) => {
         e.stopPropagation();
-        flatpickrRef.current.flatpickr.open();
+        flatpickrRef.current.flatpickr.input.focus();
     }, []);
 
     const flatpickrRender = useCallback(
