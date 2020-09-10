@@ -42,6 +42,7 @@ function DatePicker({
     ...props
 }) {
     const flatpickrRef = useRef();
+    const open = useRef(false);
     const classes = useClasses(useStyles, classesProp);
 
     // Overrides
@@ -88,8 +89,13 @@ function DatePicker({
         onChange && onChange(undefined, name);
     }, [name, onChange]);
 
-    const onOpenCalendar = useCallback(() => {
-        flatpickrRef.current.flatpickr.open();
+    const onClick = useCallback((e) => {
+        e.stopPropagation();
+        open.current && flatpickrRef.current.flatpickr.input.focus();
+    }, []);
+
+    const onMouseDown = useCallback((e) => {
+        open.current = !flatpickrRef.current.flatpickr.isOpen;
     }, []);
 
     const flatpickrRender = useCallback(
@@ -112,11 +118,14 @@ function DatePicker({
                     classes={inputClasses}
                     overrides={{ input: { ref } }}
                     postComponent={
-                        <Icon
-                            onClick={onOpenCalendar}
-                            className={type === 'time' ? classes.clockIcon : classes.calendarIcon}
-                            name={type === 'time' ? 'clock' : 'calendar'}
-                        />
+                        <div onClick={onClick} onMouseDown={onMouseDown}>
+                            <Icon
+                                className={
+                                    type === 'time' ? classes.clockIcon : classes.calendarIcon
+                                }
+                                name={type === 'time' ? 'clock' : 'calendar'}
+                            />
+                        </div>
                     }
                 />
             );
@@ -128,8 +137,9 @@ function DatePicker({
             flatpickrOptions.dateFormat,
             formatDate,
             isReadOnly,
+            onClick,
             onInputChange,
-            onOpenCalendar,
+            onMouseDown,
             outputType,
             props,
             type,
