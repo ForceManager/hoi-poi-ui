@@ -88,7 +88,8 @@ function DatePicker({
         onChange && onChange(undefined, name);
     }, [name, onChange]);
 
-    const onOpenCalendar = useCallback(() => {
+    const onOpenCalendar = useCallback((e) => {
+        e.stopPropagation();
         flatpickrRef.current.flatpickr.open();
     }, []);
 
