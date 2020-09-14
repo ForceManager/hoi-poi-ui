@@ -319,12 +319,10 @@ Select.defaultProps = {
     isValueObject: true,
     hideOptions: false,
     filterByKey: false,
-    classes: {},
 };
 
 Select.propTypes = {
     className: PropTypes.string,
-    classes: PropTypes.object,
     menuListClassName: PropTypes.string,
     menuClassName: PropTypes.string,
     overrides: PropTypes.object,
