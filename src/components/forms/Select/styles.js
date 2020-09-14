@@ -207,6 +207,7 @@ export default (theme) => ({
             },
         },
     },
+    clear: {},
     menuList: {
         borderRadius: 0,
         paddingTop: '10px !important',

@@ -66,6 +66,7 @@ function CheckboxInput({
         checked: !!value,
         onChange: onCheck,
         isDisabled: isReadOnly,
+        classes: classesProp,
         ...override.Checkbox,
     };
 

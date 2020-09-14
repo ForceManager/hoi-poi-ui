@@ -200,7 +200,11 @@ function Select({
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
         },
         components: {
-            ClearIndicator: loadOptions && isFuzzy ? null : ClearIndicator,
+            ClearIndicator: useMemo(() => ClearIndicator(loadOptions && isFuzzy, classes.clear), [
+                classes.clear,
+                isFuzzy,
+                loadOptions,
+            ]),
             DropdownIndicator: loadOptions && isFuzzy ? SearchIndicator : DropdownIndicator,
             LoadingIndicator,
             MenuList: useMemo(() => MenuList(menuListClassName), [menuListClassName]),
