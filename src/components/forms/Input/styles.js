@@ -106,6 +106,8 @@ export default (theme) => ({
         cursor: 'pointer',
         marginRight: '5px',
     },
+    clear: {},
+    copy: {},
     focused: {
         '& $formControl::after': {
             transform: 'scaleX(1)',

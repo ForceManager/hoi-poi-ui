@@ -13,7 +13,13 @@ const onChange = (field) => {
 const onCopy = () => window.alert('Copied to Clipboard');
 
 <div>
-    <Input label="Lorem ipsum" placeholder="Write here" onChange={onChange(1)} value={state[1]} />
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        onChange={onChange(1)}
+        value={state[1]}
+        classes={{ clear: 'clear__custom-class' }}
+    />
     <Input
         label="Lorem ipsum"
         placeholder="Write here"
