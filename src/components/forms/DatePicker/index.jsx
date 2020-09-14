@@ -107,7 +107,7 @@ function DatePicker({
                         : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
                     : value;
             const inputClasses =
-                value && !isReadOnly ? { postCloseComponent: classes.close } : null;
+                value && !isReadOnly ? { postCloseComponent: classes.clear } : null;
             return (
                 <Input
                     {...props}
@@ -132,8 +132,8 @@ function DatePicker({
         },
         [
             classes.calendarIcon,
+            classes.clear,
             classes.clockIcon,
-            classes.close,
             flatpickrOptions.dateFormat,
             formatDate,
             isReadOnly,

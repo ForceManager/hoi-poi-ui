@@ -139,7 +139,7 @@ function Input({
             <Fragment>
                 <span
                     onClick={postComponentClick}
-                    className={`${classes.postCloseComponent} ${classes.isClickable}`}
+                    className={`${classes.postCloseComponent} ${classes.isClickable} ${classes.clear}`}
                 >
                     <Icon name="close" />
                 </span>
@@ -166,7 +166,7 @@ function Input({
     if (isReadOnly && isCopyable) {
         renderedPostComponent = (
             <span className={`${classes.postCloseComponent}`}>
-                <span className={classes.isClickable}>{compIsCopyable}</span>
+                <span className={`${classes.isClickable} ${classes.copy}`}>{compIsCopyable}</span>
                 {compIsReadOnly}
             </span>
         );
