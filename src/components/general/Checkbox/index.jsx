@@ -56,6 +56,7 @@ function Checkbox({
                 onChange={!isDisabled ? onChange : undefined}
                 type="checkbox"
                 checked={checked ? 'checked' : ''}
+                value={checkState}
                 disabled={isDisabled ? 'disabled' : ''}
                 {...override.input}
             />
@@ -68,6 +69,7 @@ Checkbox.overrides = ['root', 'input', 'svg'];
 Checkbox.defaultProps = {
     onChange: () => {},
     overrides: {},
+    checked: false,
 };
 
 Checkbox.propTypes = {
