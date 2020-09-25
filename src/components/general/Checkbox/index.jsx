@@ -69,7 +69,6 @@ Checkbox.overrides = ['root', 'input', 'svg'];
 Checkbox.defaultProps = {
     onChange: () => {},
     overrides: {},
-    checked: false,
 };
 
 Checkbox.propTypes = {
