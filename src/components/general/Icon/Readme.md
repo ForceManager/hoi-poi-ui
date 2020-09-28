@@ -111,6 +111,47 @@ Actions:
 <span> </span>
 ```
 
+Alert:
+
+```jsx
+<Icon name="addAlert"/>
+<span> </span>
+<Icon name="asterisk"/>
+<span> </span>
+<Icon name="error"/>
+<span> </span>
+<Icon name="errorOutline"/>
+<span> </span>
+<Icon name="errorOutlineTwoToned"/>
+<span> </span>
+<Icon name="warning"/>
+<span> </span>
+<Icon name="warningOutline"/>
+<span> </span>
+<Icon name="warningOutlineTwoToned"/>
+<span> </span>
+```
+
+Logos:
+
+```jsx
+<Icon name="microsofTeams"/>
+<span> </span>
+<Icon name="zoomCam"/>
+<span> </span>
+<Icon name="zoomList"/>
+<span> </span>
+```
+
+Navigation:
+
+```jsx
+<Icon name="apps"/>
+<span> </span>
+<Icon name="arrowBack"/>
+<span> </span>
+```
+
 Icons:
 
 ```jsx

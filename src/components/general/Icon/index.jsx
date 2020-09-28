@@ -9,7 +9,6 @@ import Info from './icons/Info';
 import Close from './icons/Close';
 import Lock from './icons/Lock';
 import ThickEnabled from './icons/ThickEnabled';
-import Warning from './icons/Warning';
 import WarningRounded from './icons/WarningRounded';
 import Drag from './icons/Drag';
 import Edit from './icons/Edit';
@@ -33,7 +32,6 @@ import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
 import Sync from './icons/Sync';
-import Asterisk from './icons/Asterisk';
 import AddButton from './icons/AddButton';
 import LessButton from './icons/LessButton';
 import Dash from './icons/Dash';
@@ -103,6 +101,25 @@ import ThumbUp from './icons/actions/ThumbUp';
 import Visibility from './icons/actions/Visibility';
 import Workflow from './icons/actions/Workflow';
 
+//Alert
+import AddAlert from './icons/alert/AddAlert';
+import Asterisk from './icons/alert/Asterisk';
+import Error from './icons/alert/Error';
+import ErrorOutline from './icons/alert/ErrorOutline';
+import ErrorOutlineTwoToned from './icons/alert/ErrorOutlineTwoToned';
+import Warning from './icons/alert/Warning';
+import WarningOutline from './icons/alert/WarningOutline';
+import WarningOutlineTwoToned from './icons/alert/WarningOutlineTwoToned';
+
+//Logos
+import MicrosoftTeams from './icons/logos/MicrosofTeams';
+import ZoomCam from './icons/logos/ZoomCam';
+import ZoomList from './icons/logos/ZoomList';
+
+//Navigation
+import Apps from './icons/navigation/Apps';
+import ArrowBack from './icons/navigation/ArrowBack';
+
 //File Icons
 import File from './fileIcons/File';
 import Img from './fileIcons/Img';
@@ -137,7 +154,6 @@ const ICONS = {
     thickEnabledFilled: ThickEnabledFilled,
     thickEnabled: ThickEnabled,
     thickDisabled: ThickDisabled,
-    warning: Warning,
     warningRounded: WarningRounded,
     drag: Drag,
     edit: Edit,
@@ -159,7 +175,6 @@ const ICONS = {
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
     sync: Sync,
-    asterisk: Asterisk,
     add: AddButton,
     less: LessButton,
     dash: Dash,
@@ -227,6 +242,22 @@ const ICONS = {
     thumbUp: ThumbUp,
     visibility: Visibility,
     workflow: Workflow,
+    //Alert
+    addAlert: AddAlert,
+    asterisk: Asterisk,
+    error: Error,
+    errorOutline: ErrorOutline,
+    errorOutlineTwoToned: ErrorOutlineTwoToned,
+    warning: Warning,
+    warningOutline: WarningOutline,
+    warningOutlineTwoToned: WarningOutlineTwoToned,
+    //Logos
+    microsofTeams: MicrosoftTeams,
+    zoomCam: ZoomCam,
+    zoomList: ZoomList,
+    //Navigation
+    apps: Apps,
+    arrowBack: ArrowBack,
     //File Icons
     file: File,
     img: Img,
