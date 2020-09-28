@@ -5,7 +5,7 @@ import { default as RSelect } from 'react-select';
 import AsyncSelect from 'react-select/async';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import { createFilter } from './utils'; // Local utils
+import { createFilter, filterKeyValue } from './utils'; // Local utils
 
 import ClearIndicator from './ClearIndicator';
 import DropdownIndicator from './DropdownIndicator';
@@ -53,6 +53,7 @@ function Select({
     loadingPlaceholder,
     isFuzzy,
     isValueObject,
+    filterByKey,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -199,7 +200,11 @@ function Select({
             menuPortal: (base) => ({ ...base, zIndex: 9999 }),
         },
         components: {
-            ClearIndicator: loadOptions && isFuzzy ? null : ClearIndicator,
+            ClearIndicator: useMemo(() => ClearIndicator(loadOptions && isFuzzy, classes.clear), [
+                classes.clear,
+                isFuzzy,
+                loadOptions,
+            ]),
             DropdownIndicator: loadOptions && isFuzzy ? SearchIndicator : DropdownIndicator,
             LoadingIndicator,
             MenuList: useMemo(() => MenuList(menuListClassName), [menuListClassName]),
@@ -211,7 +216,7 @@ function Select({
             ]),
             ...components,
         },
-        filterOption: createFilter,
+        filterOption: filterByKey ? filterKeyValue : createFilter,
         onFocus: useCallback(
             (e) => {
                 setFocused(true);
@@ -313,6 +318,7 @@ Select.defaultProps = {
     overrides: {},
     isValueObject: true,
     hideOptions: false,
+    filterByKey: false,
 };
 
 Select.propTypes = {
@@ -366,6 +372,8 @@ Select.propTypes = {
             onClick: PropTypes.func,
         }),
     ),
+    /** Filter by keys as well */
+    filterByKey: PropTypes.bool,
 };
 
 export default React.memo(Select);

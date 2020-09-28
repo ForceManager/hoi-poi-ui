@@ -46,6 +46,14 @@ const onCopy = () => window.alert('Copied to Clipboard');
         isCopyable={true}
         onCopy={onCopy}
     />
+
+    <TextArea
+        label="Lorem ipsum"
+        placeholder="Full width"
+        onChange={onChange(1)}
+        value={state[1]}
+        isFullWidth
+    />
 </div>;
 ```
 

@@ -1,0 +1,50 @@
+export default (theme) => ({
+    root: {
+        display: 'inline-block',
+        padding: 1,
+        border: `1px solid ${theme.colors.neutral400}`,
+        borderRadius: 4,
+    },
+    button: {
+        position: 'relative',
+        boxSizing: 'border-box',
+        display: 'inline-block',
+        padding: '2px 20px',
+        textAlign: 'center',
+        border: 'none',
+        borderRadius: '4px',
+        outline: 'none',
+        cursor: 'pointer !important',
+        background: 'none',
+        fontWeight: 500,
+        ...theme.typography.button,
+        fontSize: 12,
+        lineHeight: '16px',
+        letterSpacing: '0.4px',
+        color: theme.colors.neutral700,
+        transition: 'background .15s ease-in-out, border-radius .15s ease-in-out',
+        '&:hover': {
+            color: theme.colors.neutral700,
+            background: theme.colors.neutral200,
+        },
+        '& *': {
+            cursor: 'pointer',
+        },
+    },
+    active: {
+        color: theme.colors.neutral900,
+        backgroundColor: theme.colors.neutral300,
+        '&:hover': {
+            color: theme.colors.neutral900,
+            background: theme.colors.neutral300,
+        },
+    },
+    divider: {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        width: 1,
+        height: 15,
+        background: theme.colors.neutral400,
+        borderRadius: 10,
+    },
+});

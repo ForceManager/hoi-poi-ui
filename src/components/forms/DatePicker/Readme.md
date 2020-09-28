@@ -31,6 +31,7 @@ const onChange = (field) => {
     <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isReadOnly />
     <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isCopyable />
     <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isReadOnly isCopyable />
+    <DatePicker label="Lorem ipsum" onChange={onChange(4)} value={state[4]} isFullWidth />
 </div>;
 ```
 

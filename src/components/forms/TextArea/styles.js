@@ -27,7 +27,7 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'start',
         lineHeight: 0,
-        width: 777,
+        width: 290,
         height: 190,
         backgroundColor: theme.colors.tableHover,
         '&::before': {
@@ -113,6 +113,15 @@ export default (theme) => ({
         padding: '15px 0 10px 0',
         '& $error': {},
     },
+    isFullWidth: {
+        '& $formControl': {
+            width: '100%',
+            flex: 1,
+        },
+        '&$vertical $Label': {
+            width: '100%',
+        },
+    },
     preComponent: {
         marginRight: 5,
         marginBottom: 3,
@@ -120,6 +129,7 @@ export default (theme) => ({
     postComponent: {
         margin: '22px 7px 12px 5px',
         display: 'flex',
+        flexShrink: 0,
     },
     postCloseComponent: {
         '& span': {

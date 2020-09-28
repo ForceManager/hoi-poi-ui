@@ -6,12 +6,27 @@ exports[`Input default match 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -19,6 +34,22 @@ exports[`Input default match 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -27,8 +58,17 @@ exports[`Input default match 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -54,8 +94,17 @@ exports[`Input default match 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -272,7 +321,7 @@ exports[`Input default match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-1-2"
+          className="HoiPoi__DatePicker__root-1-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -388,32 +437,36 @@ exports[`Input default match 1`] = `
               }
               placeholder="Write here"
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-1-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-1-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-1-5 HoiPoi__Input__horizontal-1-19"
+                className="HoiPoi__Input__root-1-6 HoiPoi__Input__horizontal-1-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-1-6"
+                  className="HoiPoi__Input__Label-1-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-1-25 HoiPoi__Input__Label-1-6"
+                    className="HoiPoi__Label__root-1-28 HoiPoi__Input__Label-1-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-1-26"
+                      className="HoiPoi__Label__Text-1-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-1-29 HoiPoi__Label__Text-1-26"
+                        className="HoiPoi__Text__root-1-32 HoiPoi__Label__Text-1-29"
                       >
                         Lorem ipsum
                       </span>
@@ -421,10 +474,10 @@ exports[`Input default match 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-1-9"
+                  className="HoiPoi__Input__formControl-1-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-1-10"
+                    className="HoiPoi__Input__input-1-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -435,35 +488,38 @@ exports[`Input default match 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-1-22"
+                    className="HoiPoi__Input__postComponent-1-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-1-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-1-40 HoiPoi__Icon__medium-1-42 HoiPoi__Icon__clickable-1-46 HoiPoi__DatePicker__calendarIcon-1-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-1-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-1-43 HoiPoi__Icon__medium-1-45 HoiPoi__DatePicker__calendarIcon-1-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -482,12 +538,27 @@ exports[`Input is read only match 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -495,6 +566,22 @@ exports[`Input is read only match 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -503,8 +590,17 @@ exports[`Input is read only match 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -530,8 +626,17 @@ exports[`Input is read only match 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -747,7 +852,7 @@ exports[`Input is read only match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-10-2"
+          className="HoiPoi__DatePicker__root-10-3"
         >
           <DateTimePicker
             key="flatpickr-anon--read-only"
@@ -861,32 +966,36 @@ exports[`Input is read only match 1`] = `
                 }
               }
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-10-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-10-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-10-5 HoiPoi__Input__isReadOnly-10-14 HoiPoi__Input__horizontal-10-19"
+                className="HoiPoi__Input__root-10-6 HoiPoi__Input__isReadOnly-10-15 HoiPoi__Input__horizontal-10-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-10-6"
+                  className="HoiPoi__Input__Label-10-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-10-25 HoiPoi__Input__Label-10-6"
+                    className="HoiPoi__Label__root-10-28 HoiPoi__Input__Label-10-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-10-26"
+                      className="HoiPoi__Label__Text-10-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-10-29 HoiPoi__Label__Text-10-26"
+                        className="HoiPoi__Text__root-10-32 HoiPoi__Label__Text-10-29"
                       >
                         Lorem ipsum
                       </span>
@@ -894,10 +1003,10 @@ exports[`Input is read only match 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-10-9"
+                  className="HoiPoi__Input__formControl-10-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-10-10"
+                    className="HoiPoi__Input__input-10-11"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
@@ -906,10 +1015,10 @@ exports[`Input is read only match 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-10-22"
+                    className="HoiPoi__Input__postComponent-10-25"
                   >
                     <span
-                      className="HoiPoi__Input__postCloseComponent-10-23"
+                      className="HoiPoi__Input__postCloseComponent-10-26"
                     >
                       <Icon
                         name="lock"
@@ -917,7 +1026,7 @@ exports[`Input is read only match 1`] = `
                         size="medium"
                       >
                         <span
-                          className="HoiPoi__Icon__root-10-40 HoiPoi__Icon__medium-10-42"
+                          className="HoiPoi__Icon__root-10-43 HoiPoi__Icon__medium-10-45"
                         >
                           <Lock
                             color="#788590"
@@ -954,12 +1063,27 @@ exports[`Input is required match 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -967,6 +1091,22 @@ exports[`Input is required match 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -975,8 +1115,17 @@ exports[`Input is required match 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -1002,8 +1151,17 @@ exports[`Input is required match 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -1220,7 +1378,7 @@ exports[`Input is required match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-8-2"
+          className="HoiPoi__DatePicker__root-8-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -1336,33 +1494,37 @@ exports[`Input is required match 1`] = `
                 }
               }
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-8-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-8-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-8-5 HoiPoi__Input__horizontal-8-19"
+                className="HoiPoi__Input__root-8-6 HoiPoi__Input__horizontal-8-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-8-6"
+                  className="HoiPoi__Input__Label-8-7"
                   isRequired={true}
                 >
                   <span
-                    className="HoiPoi__Label__root-8-25 HoiPoi__Input__Label-8-6"
+                    className="HoiPoi__Label__root-8-28 HoiPoi__Input__Label-8-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-8-26"
+                      className="HoiPoi__Label__Text-8-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-8-29 HoiPoi__Label__Text-8-26"
+                        className="HoiPoi__Text__root-8-32 HoiPoi__Label__Text-8-29"
                       >
                         Lorem ipsum
                         *
@@ -1371,10 +1533,10 @@ exports[`Input is required match 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-8-9"
+                  className="HoiPoi__Input__formControl-8-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-8-10"
+                    className="HoiPoi__Input__input-8-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1384,35 +1546,38 @@ exports[`Input is required match 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-8-22"
+                    className="HoiPoi__Input__postComponent-8-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-8-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-8-40 HoiPoi__Icon__medium-8-42 HoiPoi__Icon__clickable-8-46 HoiPoi__DatePicker__calendarIcon-8-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-8-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-8-43 HoiPoi__Icon__medium-8-45 HoiPoi__DatePicker__calendarIcon-8-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1431,12 +1596,27 @@ exports[`Input vertical label mode match 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -1444,6 +1624,22 @@ exports[`Input vertical label mode match 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -1452,8 +1648,17 @@ exports[`Input vertical label mode match 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -1479,8 +1684,17 @@ exports[`Input vertical label mode match 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -1696,7 +1910,7 @@ exports[`Input vertical label mode match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-11-2"
+          className="HoiPoi__DatePicker__root-11-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -1811,32 +2025,36 @@ exports[`Input vertical label mode match 1`] = `
                 }
               }
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-11-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-11-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-11-5 HoiPoi__Input__vertical-11-18"
+                className="HoiPoi__Input__root-11-6 HoiPoi__Input__vertical-11-21"
               >
                 <Label
-                  className="HoiPoi__Input__Label-11-6"
+                  className="HoiPoi__Input__Label-11-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-11-25 HoiPoi__Input__Label-11-6"
+                    className="HoiPoi__Label__root-11-28 HoiPoi__Input__Label-11-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-11-26"
+                      className="HoiPoi__Label__Text-11-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-11-29 HoiPoi__Label__Text-11-26"
+                        className="HoiPoi__Text__root-11-32 HoiPoi__Label__Text-11-29"
                       >
                         Lorem ipsum
                       </span>
@@ -1844,10 +2062,10 @@ exports[`Input vertical label mode match 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-11-9"
+                  className="HoiPoi__Input__formControl-11-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-11-10"
+                    className="HoiPoi__Input__input-11-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1857,35 +2075,38 @@ exports[`Input vertical label mode match 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-11-22"
+                    className="HoiPoi__Input__postComponent-11-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-11-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-11-40 HoiPoi__Icon__medium-11-42 HoiPoi__Icon__clickable-11-46 HoiPoi__DatePicker__calendarIcon-11-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-11-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-11-43 HoiPoi__Icon__medium-11-45 HoiPoi__DatePicker__calendarIcon-11-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1904,12 +2125,27 @@ exports[`Input with different format 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -1917,6 +2153,22 @@ exports[`Input with different format 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -1925,8 +2177,17 @@ exports[`Input with different format 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -1952,8 +2213,17 @@ exports[`Input with different format 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -2170,7 +2440,7 @@ exports[`Input with different format 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-5-2"
+          className="HoiPoi__DatePicker__root-5-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -2286,32 +2556,36 @@ exports[`Input with different format 1`] = `
               }
               placeholder="Write here"
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-5-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-5-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-5-5 HoiPoi__Input__horizontal-5-19"
+                className="HoiPoi__Input__root-5-6 HoiPoi__Input__horizontal-5-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-5-6"
+                  className="HoiPoi__Input__Label-5-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-5-25 HoiPoi__Input__Label-5-6"
+                    className="HoiPoi__Label__root-5-28 HoiPoi__Input__Label-5-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-5-26"
+                      className="HoiPoi__Label__Text-5-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-5-29 HoiPoi__Label__Text-5-26"
+                        className="HoiPoi__Text__root-5-32 HoiPoi__Label__Text-5-29"
                       >
                         Lorem ipsum
                       </span>
@@ -2319,10 +2593,10 @@ exports[`Input with different format 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-5-9"
+                  className="HoiPoi__Input__formControl-5-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-5-10"
+                    className="HoiPoi__Input__input-5-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -2333,35 +2607,38 @@ exports[`Input with different format 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-5-22"
+                    className="HoiPoi__Input__postComponent-5-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-5-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-5-40 HoiPoi__Icon__medium-5-42 HoiPoi__Icon__clickable-5-46 HoiPoi__DatePicker__calendarIcon-5-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-5-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-5-43 HoiPoi__Icon__medium-5-45 HoiPoi__DatePicker__calendarIcon-5-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2380,12 +2657,27 @@ exports[`Input with different locale 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -2393,6 +2685,22 @@ exports[`Input with different locale 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -2401,8 +2709,17 @@ exports[`Input with different locale 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -2428,8 +2745,17 @@ exports[`Input with different locale 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -2647,7 +2973,7 @@ exports[`Input with different locale 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-6-2"
+          className="HoiPoi__DatePicker__root-6-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -2764,32 +3090,36 @@ exports[`Input with different locale 1`] = `
               }
               placeholder="Write here"
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-6-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-6-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-6-5 HoiPoi__Input__horizontal-6-19"
+                className="HoiPoi__Input__root-6-6 HoiPoi__Input__horizontal-6-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-6-6"
+                  className="HoiPoi__Input__Label-6-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-6-25 HoiPoi__Input__Label-6-6"
+                    className="HoiPoi__Label__root-6-28 HoiPoi__Input__Label-6-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-6-26"
+                      className="HoiPoi__Label__Text-6-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-6-29 HoiPoi__Label__Text-6-26"
+                        className="HoiPoi__Text__root-6-32 HoiPoi__Label__Text-6-29"
                       >
                         Lorem ipsum
                       </span>
@@ -2797,10 +3127,10 @@ exports[`Input with different locale 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-6-9"
+                  className="HoiPoi__Input__formControl-6-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-6-10"
+                    className="HoiPoi__Input__input-6-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -2811,35 +3141,38 @@ exports[`Input with different locale 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-6-22"
+                    className="HoiPoi__Input__postComponent-6-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-6-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-6-40 HoiPoi__Icon__medium-6-42 HoiPoi__Icon__clickable-6-46 HoiPoi__DatePicker__calendarIcon-6-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-6-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-6-43 HoiPoi__Icon__medium-6-45 HoiPoi__DatePicker__calendarIcon-6-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2858,12 +3191,27 @@ exports[`Input with error match 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -2871,6 +3219,22 @@ exports[`Input with error match 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -2879,8 +3243,17 @@ exports[`Input with error match 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -2906,8 +3279,17 @@ exports[`Input with error match 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -3124,7 +3506,7 @@ exports[`Input with error match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-9-2"
+          className="HoiPoi__DatePicker__root-9-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -3240,32 +3622,36 @@ exports[`Input with error match 1`] = `
                 }
               }
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-9-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-9-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-9-5 HoiPoi__Input__horizontal-9-19 HoiPoi__Input__errored-9-13 HoiPoi__Input__withMessage-9-11"
+                className="HoiPoi__Input__root-9-6 HoiPoi__Input__horizontal-9-22 HoiPoi__Input__errored-9-14 HoiPoi__Input__withMessage-9-12"
               >
                 <Label
-                  className="HoiPoi__Input__Label-9-6"
+                  className="HoiPoi__Input__Label-9-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-9-25 HoiPoi__Input__Label-9-6"
+                    className="HoiPoi__Label__root-9-28 HoiPoi__Input__Label-9-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-9-26"
+                      className="HoiPoi__Label__Text-9-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-9-29 HoiPoi__Label__Text-9-26"
+                        className="HoiPoi__Text__root-9-32 HoiPoi__Label__Text-9-29"
                       >
                         Lorem ipsum
                       </span>
@@ -3273,10 +3659,10 @@ exports[`Input with error match 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-9-9"
+                  className="HoiPoi__Input__formControl-9-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-9-10"
+                    className="HoiPoi__Input__input-9-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -3286,38 +3672,41 @@ exports[`Input with error match 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-9-22"
+                    className="HoiPoi__Input__postComponent-9-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-9-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-9-40 HoiPoi__Icon__medium-9-42 HoiPoi__Icon__clickable-9-46 HoiPoi__DatePicker__calendarIcon-9-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-9-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-9-43 HoiPoi__Icon__medium-9-45 HoiPoi__DatePicker__calendarIcon-9-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                   <div
-                    className="HoiPoi__Input__error-9-8"
+                    className="HoiPoi__Input__error-9-9"
                   >
                     I am an error
                   </div>
@@ -3338,12 +3727,27 @@ exports[`Input with hint match 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -3351,6 +3755,22 @@ exports[`Input with hint match 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -3359,8 +3779,17 @@ exports[`Input with hint match 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -3386,8 +3815,17 @@ exports[`Input with hint match 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -3604,7 +4042,7 @@ exports[`Input with hint match 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-7-2"
+          className="HoiPoi__DatePicker__root-7-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -3720,33 +4158,37 @@ exports[`Input with hint match 1`] = `
                 }
               }
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-7-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-7-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-7-5 HoiPoi__Input__horizontal-7-19"
+                className="HoiPoi__Input__root-7-6 HoiPoi__Input__horizontal-7-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-7-6"
+                  className="HoiPoi__Input__Label-7-7"
                   hint="Hello"
                 >
                   <span
-                    className="HoiPoi__Label__root-7-25 HoiPoi__Input__Label-7-6"
+                    className="HoiPoi__Label__root-7-28 HoiPoi__Input__Label-7-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-7-26"
+                      className="HoiPoi__Label__Text-7-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-7-29 HoiPoi__Label__Text-7-26"
+                        className="HoiPoi__Text__root-7-32 HoiPoi__Label__Text-7-29"
                       >
                         Lorem ipsum
                       </span>
@@ -3768,7 +4210,7 @@ exports[`Input with hint match 1`] = `
                         mouseEnterDelay={0}
                         mouseLeaveDelay={0.1}
                         overlay="Hello"
-                        overlayClassName="HoiPoi__Popover__root-7-40"
+                        overlayClassName="HoiPoi__Popover__root-7-43"
                         placement="top"
                         prefixCls="hoi-poi-popover"
                         transitionName="hoi-poi-popover--fade"
@@ -4022,7 +4464,7 @@ exports[`Input with hint match 1`] = `
                           overlay="Hello"
                           popup={[Function]}
                           popupAlign={Object {}}
-                          popupClassName="HoiPoi__Popover__root-7-40"
+                          popupClassName="HoiPoi__Popover__root-7-43"
                           popupPlacement="top"
                           popupStyle={Object {}}
                           popupTransitionName="hoi-poi-popover--fade"
@@ -4030,19 +4472,19 @@ exports[`Input with hint match 1`] = `
                           showAction={Array []}
                         >
                           <span
-                            className="HoiPoi__Label__info-7-27"
+                            className="HoiPoi__Label__info-7-30"
                             key="trigger"
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
                           >
                             <Icon
-                              className="HoiPoi__Label__icon-7-28"
+                              className="HoiPoi__Label__icon-7-31"
                               name="info"
                               overrides={Object {}}
                               size="medium"
                             >
                               <span
-                                className="HoiPoi__Icon__root-7-41 HoiPoi__Icon__medium-7-43 HoiPoi__Label__icon-7-28"
+                                className="HoiPoi__Icon__root-7-44 HoiPoi__Icon__medium-7-46 HoiPoi__Label__icon-7-31"
                               >
                                 <Info
                                   color="#788590"
@@ -4067,10 +4509,10 @@ exports[`Input with hint match 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-7-9"
+                  className="HoiPoi__Input__formControl-7-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-7-10"
+                    className="HoiPoi__Input__input-7-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -4080,35 +4522,38 @@ exports[`Input with hint match 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-7-22"
+                    className="HoiPoi__Input__postComponent-7-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-7-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-7-41 HoiPoi__Icon__medium-7-43 HoiPoi__Icon__clickable-7-47 HoiPoi__DatePicker__calendarIcon-7-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-7-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-7-44 HoiPoi__Icon__medium-7-46 HoiPoi__DatePicker__calendarIcon-7-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4127,12 +4572,27 @@ exports[`Input with outputType string 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -4140,6 +4600,22 @@ exports[`Input with outputType string 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -4148,8 +4624,17 @@ exports[`Input with outputType string 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -4175,8 +4660,17 @@ exports[`Input with outputType string 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -4393,7 +4887,7 @@ exports[`Input with outputType string 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-4-2"
+          className="HoiPoi__DatePicker__root-4-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -4509,32 +5003,36 @@ exports[`Input with outputType string 1`] = `
               }
               placeholder="Write here"
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-4-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-4-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-4-5 HoiPoi__Input__horizontal-4-19"
+                className="HoiPoi__Input__root-4-6 HoiPoi__Input__horizontal-4-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-4-6"
+                  className="HoiPoi__Input__Label-4-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-4-25 HoiPoi__Input__Label-4-6"
+                    className="HoiPoi__Label__root-4-28 HoiPoi__Input__Label-4-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-4-26"
+                      className="HoiPoi__Label__Text-4-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-4-29 HoiPoi__Label__Text-4-26"
+                        className="HoiPoi__Text__root-4-32 HoiPoi__Label__Text-4-29"
                       >
                         Lorem ipsum
                       </span>
@@ -4542,10 +5040,10 @@ exports[`Input with outputType string 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-4-9"
+                  className="HoiPoi__Input__formControl-4-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-4-10"
+                    className="HoiPoi__Input__input-4-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -4556,35 +5054,38 @@ exports[`Input with outputType string 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-4-22"
+                    className="HoiPoi__Input__postComponent-4-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-4-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-4-40 HoiPoi__Icon__medium-4-42 HoiPoi__Icon__clickable-4-46 HoiPoi__DatePicker__calendarIcon-4-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-4-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-4-43 HoiPoi__Icon__medium-4-45 HoiPoi__DatePicker__calendarIcon-4-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4603,12 +5104,27 @@ exports[`Input with type datetime 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -4616,6 +5132,22 @@ exports[`Input with type datetime 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -4624,8 +5156,17 @@ exports[`Input with type datetime 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -4651,8 +5192,17 @@ exports[`Input with type datetime 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -4869,7 +5419,7 @@ exports[`Input with type datetime 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-2-2"
+          className="HoiPoi__DatePicker__root-2-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -4985,32 +5535,36 @@ exports[`Input with type datetime 1`] = `
               }
               placeholder="Write here"
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-2-1"
-                  name="calendar"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__calendarIcon-2-1"
+                    name="calendar"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-2-5 HoiPoi__Input__horizontal-2-19"
+                className="HoiPoi__Input__root-2-6 HoiPoi__Input__horizontal-2-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-2-6"
+                  className="HoiPoi__Input__Label-2-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-2-25 HoiPoi__Input__Label-2-6"
+                    className="HoiPoi__Label__root-2-28 HoiPoi__Input__Label-2-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-2-26"
+                      className="HoiPoi__Label__Text-2-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-2-29 HoiPoi__Label__Text-2-26"
+                        className="HoiPoi__Text__root-2-32 HoiPoi__Label__Text-2-29"
                       >
                         Lorem ipsum
                       </span>
@@ -5018,10 +5572,10 @@ exports[`Input with type datetime 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-2-9"
+                  className="HoiPoi__Input__formControl-2-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-2-10"
+                    className="HoiPoi__Input__input-2-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -5032,35 +5586,38 @@ exports[`Input with type datetime 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-2-22"
+                    className="HoiPoi__Input__postComponent-2-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-2-1"
-                      name="calendar"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-2-40 HoiPoi__Icon__medium-2-42 HoiPoi__Icon__clickable-2-46 HoiPoi__DatePicker__calendarIcon-2-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__calendarIcon-2-1"
+                        name="calendar"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Calendar
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-2-43 HoiPoi__Icon__medium-2-45 HoiPoi__DatePicker__calendarIcon-2-1"
                         >
-                          <svg
-                            viewBox="0 0 18 18"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <Calendar
+                            color="#788590"
                           >
-                            <path
-                              d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Calendar>
-                      </span>
-                    </Icon>
+                            <svg
+                              viewBox="0 0 18 18"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Calendar>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5079,12 +5636,27 @@ exports[`Input with type time 1`] = `
     theme={
       Object {
         "colors": Object {
+          "aqua100": "#e4fafd",
+          "aqua500": "#76bde8",
+          "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
+          "blue100": "#cceeff",
+          "blue200": "#99d8ff",
+          "blue400": "#3fa4ff",
+          "blue500": "#007aff",
+          "blue600": "#005edb",
+          "blue900": "#00237a",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
+          "green100": "#f4fad2",
+          "green200": "#e7f6a6",
+          "green400": "#aecd50",
+          "green500": "#86ad20",
+          "green600": "#6e9417",
+          "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
           "greyLight": "#f0f3f5",
@@ -5092,6 +5664,22 @@ exports[`Input with type time 1`] = `
           "lines": "#dce3eb",
           "link": "#216db3",
           "linkDark": "#174a79",
+          "neutral100": "#f9f9fa",
+          "neutral200": "#f4f5f6",
+          "neutral300": "#e9ecee",
+          "neutral400": "#dfe2e5",
+          "neutral500": "#d4d8dc",
+          "neutral600": "#a9b1b9",
+          "neutral700": "#7d8a96",
+          "neutral800": "#526373",
+          "neutral900": "#273c50",
+          "neutralBase": "#ffffff",
+          "orange100": "#fff1cc",
+          "orange200": "#ffde99",
+          "orange400": "#ffb13f",
+          "orange500": "#ff8c00",
+          "orange600": "#db6e00",
+          "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
           "placeholdersHover": "#d0d4d8",
@@ -5100,8 +5688,17 @@ exports[`Input with type time 1`] = `
           "primaryLight": "#fef4e6",
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
+          "purple100": "#fae3ed",
+          "purple500": "#aa5b9c",
+          "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
+          "red100": "#ffe5d5",
+          "red200": "#ffc5ac",
+          "red400": "#ff7863",
+          "red500": "#ff3b30",
+          "red600": "#db2328",
+          "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
           "redSoft": "#FF544F",
@@ -5127,8 +5724,17 @@ exports[`Input with type time 1`] = `
             "yellow": "#E9B200",
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
+          "turquoise100": "#c9fbf1",
+          "turquoise500": "#00a8be",
+          "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
+          "yellow100": "#fdf6cb",
+          "yellow200": "#fcec97",
+          "yellow400": "#f1cb3c",
+          "yellow500": "#e9b200",
+          "yellow600": "#c89400",
+          "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
         },
@@ -5345,7 +5951,7 @@ exports[`Input with type time 1`] = `
         value=""
       >
         <div
-          className="HoiPoi__DatePicker__root-3-2"
+          className="HoiPoi__DatePicker__root-3-3"
         >
           <DateTimePicker
             key="flatpickr-anon--active"
@@ -5461,32 +6067,36 @@ exports[`Input with type time 1`] = `
               }
               placeholder="Write here"
               postComponent={
-                <Icon
-                  className="HoiPoi__DatePicker__calendarIcon-3-1"
-                  name="clock"
+                <div
                   onClick={[Function]}
-                  overrides={Object {}}
-                  size="medium"
-                />
+                  onMouseDown={[Function]}
+                >
+                  <Icon
+                    className="HoiPoi__DatePicker__clockIcon-3-2"
+                    name="clock"
+                    overrides={Object {}}
+                    size="medium"
+                  />
+                </div>
               }
               type="text"
               value=""
             >
               <div
-                className="HoiPoi__Input__root-3-5 HoiPoi__Input__horizontal-3-19"
+                className="HoiPoi__Input__root-3-6 HoiPoi__Input__horizontal-3-22"
               >
                 <Label
-                  className="HoiPoi__Input__Label-3-6"
+                  className="HoiPoi__Input__Label-3-7"
                 >
                   <span
-                    className="HoiPoi__Label__root-3-25 HoiPoi__Input__Label-3-6"
+                    className="HoiPoi__Label__root-3-28 HoiPoi__Input__Label-3-7"
                   >
                     <Text
-                      className="HoiPoi__Label__Text-3-26"
+                      className="HoiPoi__Label__Text-3-29"
                       overrides={Object {}}
                     >
                       <span
-                        className="HoiPoi__Text__root-3-29 HoiPoi__Label__Text-3-26"
+                        className="HoiPoi__Text__root-3-32 HoiPoi__Label__Text-3-29"
                       >
                         Lorem ipsum
                       </span>
@@ -5494,10 +6104,10 @@ exports[`Input with type time 1`] = `
                   </span>
                 </Label>
                 <div
-                  className="HoiPoi__Input__formControl-3-9"
+                  className="HoiPoi__Input__formControl-3-10"
                 >
                   <input
-                    className="HoiPoi__Input__input-3-10"
+                    className="HoiPoi__Input__input-3-11"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -5508,37 +6118,40 @@ exports[`Input with type time 1`] = `
                     value=""
                   />
                   <div
-                    className="HoiPoi__Input__postComponent-3-22"
+                    className="HoiPoi__Input__postComponent-3-25"
                   >
-                    <Icon
-                      className="HoiPoi__DatePicker__calendarIcon-3-1"
-                      name="clock"
+                    <div
                       onClick={[Function]}
-                      overrides={Object {}}
-                      size="medium"
+                      onMouseDown={[Function]}
                     >
-                      <span
-                        className="HoiPoi__Icon__root-3-40 HoiPoi__Icon__medium-3-42 HoiPoi__Icon__clickable-3-46 HoiPoi__DatePicker__calendarIcon-3-1"
-                        onClick={[Function]}
+                      <Icon
+                        className="HoiPoi__DatePicker__clockIcon-3-2"
+                        name="clock"
+                        overrides={Object {}}
+                        size="medium"
                       >
-                        <Clock
-                          color="#788590"
+                        <span
+                          className="HoiPoi__Icon__root-3-43 HoiPoi__Icon__medium-3-45 HoiPoi__DatePicker__clockIcon-3-2"
                         >
-                          <svg
-                            fill="none"
-                            id="ic_access_time"
-                            viewBox="0 0 24 24"
+                          <Clock
+                            color="#788590"
                           >
-                            <path
-                              clipRule="evenodd"
-                              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 4c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm.5 3H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"
-                              fill="#788590"
-                              fillRule="evenodd"
-                            />
-                          </svg>
-                        </Clock>
-                      </span>
-                    </Icon>
+                            <svg
+                              fill="none"
+                              id="ic_access_time"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                clipRule="evenodd"
+                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 4c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm.5 3H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"
+                                fill="#788590"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </Clock>
+                        </span>
+                      </Icon>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -4,18 +4,21 @@ function trimString(str) {
     return str.replace(/^\s+|\s+$/g, '');
 }
 
-function defaultStringify(option) {
-    return `${option.label}`;
+function defaultStringify(option, filterByKey) {
+    if (filterByKey) return `${option.value} ${option.label}`;
+    else return `${option.label}`;
 }
 
-export function createFilter(option, rawInput) {
+export function createFilter(option, rawInput, filterByKey = false) {
     const ignoreCase = true;
     const ignoreAccents = true;
     const trim = true;
     const matchFrom = 'any';
-
     let input = trim ? trimString(rawInput) : rawInput;
-    let candidate = trim ? trimString(defaultStringify(option)) : defaultStringify(option);
+
+    let candidate = trim
+        ? trimString(defaultStringify(option, filterByKey))
+        : defaultStringify(option, filterByKey);
     if (ignoreCase) {
         input = input.toLowerCase();
         candidate = candidate.toLowerCase();
@@ -24,7 +27,10 @@ export function createFilter(option, rawInput) {
         input = stripDiacritics(input);
         candidate = stripDiacritics(candidate);
     }
+
     return matchFrom === 'start'
         ? candidate.substr(0, input.length) === input
         : candidate.indexOf(input) > -1;
 }
+
+export const filterKeyValue = (option, rawInput) => createFilter(option, rawInput, true);

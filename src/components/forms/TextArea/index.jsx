@@ -52,6 +52,7 @@ function TextArea({
             [classes.isReadOnly]: isReadOnly,
             [classes.isReadAndDuplicable]: isCopyable && isReadOnly,
             [classes[labelMode]]: labelMode,
+            [classes.isFullWidth]: isFullWidth,
             [classes.focused]: focused,
             [classes.errored]: error,
             [classes.withMessage]: (error || info) && !(error && info),
@@ -221,6 +222,7 @@ TextArea.propTypes = {
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     placeholder: PropTypes.string,
+    isFullWidth: PropTypes.bool,
     /** Info popover */
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */

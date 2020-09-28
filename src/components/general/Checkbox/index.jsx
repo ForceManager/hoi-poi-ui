@@ -56,6 +56,7 @@ function Checkbox({
                 onChange={!isDisabled ? onChange : undefined}
                 type="checkbox"
                 checked={checked ? 'checked' : ''}
+                value={checkState}
                 disabled={isDisabled ? 'disabled' : ''}
                 {...override.input}
             />
