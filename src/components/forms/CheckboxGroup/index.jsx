@@ -35,7 +35,7 @@ function CheckboxGroup({
     const rootClassName = classnames(
         classes.root,
         {
-            [classes.isReadOnly]: isReadOnly,
+            [classes.isReadOnly]: isReadOnly === true,
             [classes[labelMode]]: labelMode,
             [classes.errored]: error,
         },
@@ -76,12 +76,12 @@ function CheckboxGroup({
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={formControlClassName} {...override.formControl}>
-                {options.map((option) => (
+                {options.map((option, i) => (
                     <CheckboxControl
                         key={option.value}
                         option={option}
                         value={value[option.value]}
-                        isReadOnly={isReadOnly}
+                        isReadOnly={Array.isArray(isReadOnly) ? isReadOnly[i] : isReadOnly}
                         onChange={onChangeCheckbox}
                         overrides={overridesProp}
                     />
@@ -131,7 +131,7 @@ CheckboxGroup.propTypes = {
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Info popover */
     hint: PropTypes.string,
-    isReadOnly: PropTypes.bool,
+    isReadOnly: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
     isFullWidth: PropTypes.bool,
 };
 
