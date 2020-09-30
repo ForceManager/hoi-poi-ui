@@ -3,7 +3,7 @@ import React from 'react';
 function Mpp({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     fill="#2E7237"
                     d="M.563 2.439V15.56l9.492 1.877V.563zM10.582 3.2v1.45h4.812v3.559H16.7l-1.781 1.854-1.829-1.854h1.25V5.704h-3.758v5.26l1.68-1.68 2.21 2.21-2.21 2.209-1.68-1.68.016 2.783h6.686a.137.137 0 00.137-.137l-.016-11.333a.137.137 0 00-.137-.137h-6.686z"

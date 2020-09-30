@@ -3,7 +3,7 @@ import React from 'react';
 function Mov({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g transform="translate(2.25)" fill="none" fill-rule="evenodd">
+            <g transform="translate(2.25)" fill="none" fillRule="evenodd">
                 <path
                     d="M9.583 0H.478C.214 0 0 .21 0 .62v17.059c0 .11.214.321.478.321h13.1c.265 0 .479-.21.479-.321l.005-13.165"
                     fill="#EAEAEA"
