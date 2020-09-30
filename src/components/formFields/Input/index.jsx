@@ -137,27 +137,25 @@ function Input({
     if (value && !isReadOnly) {
         renderedPostComponent = (
             <Fragment>
-                <span
+                <div
                     onClick={postComponentClick}
                     className={`${classes.postCloseComponent} ${classes.isClickable} ${classes.clear}`}
                 >
                     <Icon name="close" />
-                </span>
+                </div>
                 {postComponent}
             </Fragment>
         );
     }
 
     if (isReadOnly) {
-        renderedPostComponent = (
-            <span className={classes.postCloseComponent}>{compIsReadOnly}</span>
-        );
+        renderedPostComponent = <div className={classes.postCloseComponent}>{compIsReadOnly}</div>;
     }
 
     if (isCopyable) {
         renderedPostComponent = (
             <Fragment>
-                <span className={`${classes.postCloseComponent}`}>{compIsCopyable}</span>
+                <div className={`${classes.postCloseComponent}`}>{compIsCopyable}</div>
                 {postComponent}
             </Fragment>
         );
@@ -165,10 +163,10 @@ function Input({
 
     if (isReadOnly && isCopyable) {
         renderedPostComponent = (
-            <span className={`${classes.postCloseComponent}`}>
-                <span className={`${classes.isClickable} ${classes.copy}`}>{compIsCopyable}</span>
+            <div className={`${classes.postCloseComponent}`}>
+                <div className={`${classes.isClickable} ${classes.copy}`}>{compIsCopyable}</div>
                 {compIsReadOnly}
-            </span>
+            </div>
         );
     }
 

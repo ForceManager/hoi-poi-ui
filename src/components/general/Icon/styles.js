@@ -1,8 +1,13 @@
 export default (theme) => ({
     root: {
-        display: 'inline-block',
+        // display: 'inline-block',
         textAlign: 'center',
         lineHeight: 0,
+
+        '& svg': {
+            width: '100%',
+            height: '100%',
+        },
     },
     small: {
         width: 10,

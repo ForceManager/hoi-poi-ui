@@ -117,6 +117,120 @@ const colors = {
     turquoise900: '#00335b',
 };
 
+const typography = {
+    h1: {
+        fontFamily,
+        fontSize: 96,
+        fontWeight: 300,
+        lineHeight: 112,
+        letterSpacing: -1.5,
+        textTransform: 'uppercase',
+    },
+    h2: {
+        fontFamily,
+        fontSize: 60,
+        fontWeight: 300,
+        lineHeight: 71,
+        letterSpacing: -0.5,
+        textTransform: 'uppercase',
+    },
+    h3: {
+        fontFamily,
+        fontSize: 48,
+        fontWeight: 400,
+        lineHeight: 57,
+        textTransform: 'uppercase',
+    },
+    h4: {
+        fontFamily,
+        fontSize: 34,
+        fontWeight: 400,
+        lineHeight: 40,
+        letterSpacing: 0.25,
+        textTransform: 'uppercase',
+    },
+    h5: {
+        fontFamily,
+        fontSize: 24,
+        fontWeight: 400,
+        lineHeight: 28,
+        textTransform: 'uppercase',
+    },
+    h6: {
+        fontFamily,
+        fontSize: 20,
+        fontWeight: 500,
+        lineHeight: 24,
+        letterSpacing: 0.25,
+        textTransform: 'uppercase',
+    },
+    subtitle1: {
+        fontFamily,
+        fontSize: 16,
+        fontWeight: 400,
+        lineHeight: 24,
+        letterSpacing: 0.15,
+    },
+    subtitle: {
+        fontFamily,
+        fontSize: 14,
+        fontWeight: 500,
+        lineHeight: 24,
+        letterSpacing: 0.09,
+    },
+    body1: {
+        fontFamily,
+        fontSize: 16,
+        fontWeight: 400,
+        lineHeight: 28,
+        letterSpacing: 0.5,
+    },
+    body: {
+        fontFamily,
+        fontSize: 14,
+        fontWeight: 400,
+        lineHeight: 20,
+        letterSpacing: 0.6,
+    },
+    button: {
+        fontFamily,
+        fontSize: 14,
+        fontWeight: 500,
+        lineHeight: 16,
+        letterSpacing: 0.6,
+        textTransform: 'uppercase',
+    },
+    caption: {
+        fontFamily,
+        fontSize: 12,
+        fontWeight: 400,
+        lineHeight: 16,
+        letterSpacing: 0.4,
+    },
+    captionMedium: {
+        fontFamily,
+        fontSize: 12,
+        fontWeight: 500,
+        lineHeight: 16,
+        letterSpacing: 0.4,
+    },
+    badges: {
+        fontFamily,
+        fontSize: 10,
+        fontWeight: 400,
+        lineHeight: 16,
+        letterSpacing: 0.4,
+    },
+    overline: {
+        fontFamily,
+        fontSize: 12,
+        fontWeight: 500,
+        lineHeight: 16,
+        letterSpacing: 2,
+        textTransform: 'uppercase',
+    },
+};
+
 export default {
     colors: {
         white,
@@ -204,6 +318,7 @@ export default {
             fontSize: fontSizeBig,
             fontFamily,
         },
+        ...typography,
     },
     effects: {
         boxShadow,

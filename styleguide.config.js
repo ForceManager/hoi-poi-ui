@@ -34,13 +34,13 @@ module.exports = {
             ],
         },
         {
-            name: 'FormFields',
+            name: 'Forms',
             description: '',
             sectionDepth: 0,
             components: ['./src/components/formFields/Input/index.jsx'],
         },
         {
-            name: 'Forms',
+            name: 'OldForms',
             description: 'Components related (but not exclusively) to build forms.',
             sectionDepth: 0,
             components: [

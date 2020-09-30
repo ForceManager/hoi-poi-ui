@@ -8,14 +8,14 @@ export default (theme) => ({
         padding: '0 0 8px 0',
     },
     info: {
-        ...theme.typography.smallText,
+        ...theme.typography.caption,
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral600,
     },
     error: {
-        ...theme.typography.smallText,
+        ...theme.typography.caption,
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
@@ -26,48 +26,27 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         width: 290,
+        padding: '0 10px',
         lineHeight: 0,
-        // border: '1px solid red',
         borderRadius: '4px',
         border: '1px solid transparent',
         backgroundColor: theme.colors.neutral200,
-        // '&::before': {
-        //     borderBottom: `1px solid ${theme.colors.lines}`,
-        //     left: 0,
-        //     right: 0,
-        //     bottom: 0,
-        //     content: '""',
-        //     position: 'absolute',
-        //     transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-        //     pointerEvents: 'none',
-        // },
-        // '&::after': {
-        //     left: 0,
-        //     right: 0,
-        //     bottom: 0,
-        //     content: '""',
-        //     position: 'absolute',
-        //     transform: 'scaleX(0)',
-        //     transition: 'transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms',
-        //     borderBottom: `1px solid ${theme.colors.primary}`,
-        //     pointerEvents: 'none',
-        // },
+        transition: 'all 0.15s ease',
     },
     input: {
-        ...theme.typography.defaultText,
+        ...theme.typography.body,
         background: 'transparent',
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral900,
         width: '100%',
         lineHeight: '20px',
         height: '40px',
         alignItems: 'center',
-        paddingLeft: '10px',
         boxSizing: 'border-box',
         flexGrow: 1,
         outline: 'none',
         border: 'none',
         '&::placeholder': {
-            color: theme.colors.disabledGrey,
+            color: theme.colors.neutral600,
         },
     },
     withMessage: {
@@ -83,26 +62,15 @@ export default (theme) => ({
         '& $formControl': {
             backgroundColor: theme.colors.neutralBase,
             border: `1px solid ${theme.colors.red500}`,
-            '&::before': {
-                borderBottom: `1px solid ${theme.colors.red500} !important`,
-            },
-            '&::after': {
-                borderBottom: `1px solid ${theme.colors.red500} !important`,
-            },
         },
     },
     isReadOnly: {
         '& $formControl': {
-            '&::before': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
-            },
-            '&::after': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
-            },
-        },
-        '&$focused': {
-            '& $formControl::after': {
-                transform: 'scaleX(0)',
+            border: `1px solid ${theme.colors.neutral500}`,
+            backgroundColor: theme.colors.neutralBase,
+            color: theme.colors.neutral500,
+            '&::placeholder': {
+                color: theme.colors.neutral500,
             },
         },
     },
@@ -113,7 +81,6 @@ export default (theme) => ({
     },
     isClickable: {
         cursor: 'pointer',
-        marginRight: '10px',
     },
     clear: {},
     copy: {},
@@ -122,17 +89,11 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutralBase,
             border: `1px solid ${theme.colors.orange500}`,
         },
-        '& $formControl::after': {
-            transform: 'scaleX(1)',
-        },
     },
     vertical: {
         display: 'block',
         padding: '15px 0 10px 0',
         marginLeft: '0 !important',
-        // '& $formControl': {
-        //     marginTop: ,
-        // },
         '& $Label': {
             width: '100%',
         },
@@ -166,6 +127,7 @@ export default (theme) => ({
         '& span': {
             width: 8,
             height: 8,
+            marginLeft: '5px',
         },
     },
     custom: {
