@@ -28,12 +28,14 @@ export { default as DataGrid } from './components/general/DataGrid';
 export { default as ProgressBar } from './components/general/ProgressBar';
 export { default as Carousel } from './components/general/Carousel';
 
+export { default as Input } from './components/forms/Input';
+
 export { default as Form } from './components/forms/Form';
 export { default as Section } from './components/forms/Section';
 export { default as CheckboxInput } from './components/forms/CheckboxInput';
 export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
 export { default as Label } from './components/forms/Label';
-export { default as Input } from './components/forms/Input';
+// export { default as Input } from './components/forms/Input';
 export { default as InputGroup } from './components/forms/InputGroup';
 export { default as TextArea } from './components/forms/TextArea';
 export { default as Select } from './components/forms/Select';

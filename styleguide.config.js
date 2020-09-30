@@ -34,6 +34,12 @@ module.exports = {
             ],
         },
         {
+            name: 'FormFields',
+            description: '',
+            sectionDepth: 0,
+            components: ['./src/components/formFields/Input/index.jsx'],
+        },
+        {
             name: 'Forms',
             description: 'Components related (but not exclusively) to build forms.',
             sectionDepth: 0,
@@ -43,7 +49,7 @@ module.exports = {
                 './src/components/forms/DatePicker/index.jsx',
                 './src/components/forms/FilePicker/index.jsx',
                 './src/components/forms/Form/index.jsx',
-                './src/components/forms/Input/index.jsx',
+                // './src/components/forms/Input/index.jsx',
                 './src/components/forms/InputGroup/index.jsx',
                 './src/components/forms/Label/index.jsx',
                 './src/components/forms/Radio/index.jsx',
