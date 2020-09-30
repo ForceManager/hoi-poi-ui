@@ -90,7 +90,7 @@ import OpportunityThumbsUp from './icons/actions/OpportunityThumbsUp';
 import RelatedContact from './icons/actions/RelatedContact';
 import Route from './icons/actions/Route';
 import Search from './icons/actions/Search';
-import ShoppingBasketThumbsDown from './icons/actions/ShoppingbasketThumbsDown';
+import ShoppingBasketThumbsDown from './icons/actions/ShoppingBasketThumbsDown';
 import ShoppingBasketThumbsUp from './icons/actions/ShoppingBasketThumbsUp';
 import ShoppingThumbsDown from './icons/actions/ShoppingThumbsDown';
 import ShoppingThumbsUp from './icons/actions/ShoppingThumbsUp';
