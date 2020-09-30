@@ -3,7 +3,7 @@ import React from 'react';
 function Doc({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g transform="translate(.563 .563)" fill="none" fill-rule="evenodd">
+            <g transform="translate(.563 .563)" fill="none" fillRule="evenodd">
                 <path fill="#2A5598" d="M0 1.876V15l9.492 1.876V0z" />
                 <path
                     fill="#FFF"
