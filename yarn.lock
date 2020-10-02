@@ -1588,13 +1588,6 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime-corejs3@^7.8.3":
-  version "7.9.6"
-  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.9.6.tgz#67aded13fffbbc2cb93247388cf84d77a4be9a71"
-  dependencies:
-    core-js-pure "^3.0.0"
-    regenerator-runtime "^0.13.4"
-
 "@babel/runtime@7.9.0":
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.0.tgz#337eda67401f5b066a6f205a3113d4ac18ba495b"
@@ -2659,7 +2652,7 @@ array-flatten@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-2.1.2.tgz#24ef80a28c1a893617e2149b0c6d0d788293b099"
 
-array-includes@^3.0.3, array-includes@^3.1.1:
+array-includes@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/array-includes/-/array-includes-3.1.1.tgz#cdd67e6852bdf9c1215460786732255ed2459348"
   dependencies:
@@ -2698,6 +2691,14 @@ array.prototype.flat@^1.2.3:
   dependencies:
     define-properties "^1.1.3"
     es-abstract "^1.17.0-next.1"
+
+array.prototype.flatmap@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/array.prototype.flatmap/-/array.prototype.flatmap-1.2.3.tgz#1c13f84a178566042dd63de4414440db9222e443"
+  dependencies:
+    define-properties "^1.1.3"
+    es-abstract "^1.17.0-next.1"
+    function-bind "^1.1.1"
 
 arrify@^1.0.1:
   version "1.0.1"
@@ -4494,6 +4495,39 @@ es-abstract@^1.13.0, es-abstract@^1.17.0, es-abstract@^1.17.0-next.1, es-abstrac
     string.prototype.trimleft "^2.1.1"
     string.prototype.trimright "^2.1.1"
 
+es-abstract@^1.17.5:
+  version "1.17.7"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.17.7.tgz#a4de61b2f66989fc7421676c1cb9787573ace54c"
+  dependencies:
+    es-to-primitive "^1.2.1"
+    function-bind "^1.1.1"
+    has "^1.0.3"
+    has-symbols "^1.0.1"
+    is-callable "^1.2.2"
+    is-regex "^1.1.1"
+    object-inspect "^1.8.0"
+    object-keys "^1.1.1"
+    object.assign "^4.1.1"
+    string.prototype.trimend "^1.0.1"
+    string.prototype.trimstart "^1.0.1"
+
+es-abstract@^1.18.0-next.0:
+  version "1.18.0-next.1"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.18.0-next.1.tgz#6e3a0a4bda717e5023ab3b8e90bec36108d22c68"
+  dependencies:
+    es-to-primitive "^1.2.1"
+    function-bind "^1.1.1"
+    has "^1.0.3"
+    has-symbols "^1.0.1"
+    is-callable "^1.2.2"
+    is-negative-zero "^2.0.0"
+    is-regex "^1.1.1"
+    object-inspect "^1.8.0"
+    object-keys "^1.1.1"
+    object.assign "^4.1.1"
+    string.prototype.trimend "^1.0.1"
+    string.prototype.trimstart "^1.0.1"
+
 es-to-primitive@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/es-to-primitive/-/es-to-primitive-1.2.1.tgz#e55cd4c9cdc188bcefb03b366c736323fc5c898a"
@@ -4626,21 +4660,21 @@ eslint-plugin-react-hooks@^4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.4.tgz#aed33b4254a41b045818cacb047b81e6df27fa58"
 
-eslint-plugin-react@7.20.0:
-  version "7.20.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.20.0.tgz#f98712f0a5e57dfd3e5542ef0604b8739cd47be3"
+eslint-plugin-react@7.21.2:
+  version "7.21.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.21.2.tgz#3bd5d2c4c36d5a0428d0d6dda301ac9a84d681b2"
   dependencies:
     array-includes "^3.1.1"
+    array.prototype.flatmap "^1.2.3"
     doctrine "^2.1.0"
     has "^1.0.3"
-    jsx-ast-utils "^2.2.3"
-    object.entries "^1.1.1"
+    jsx-ast-utils "^2.4.1"
+    object.entries "^1.1.2"
     object.fromentries "^2.0.2"
     object.values "^1.1.1"
     prop-types "^15.7.2"
-    resolve "^1.15.1"
+    resolve "^1.17.0"
     string.prototype.matchall "^4.0.2"
-    xregexp "^4.3.0"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
@@ -6016,6 +6050,10 @@ is-callable@^1.1.4, is-callable@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.5.tgz#f7e46b596890456db74e7f6e976cb3273d06faab"
 
+is-callable@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.2.2.tgz#c7c6715cd22d4ddb48d3e19970223aceabb080d9"
+
 is-ci@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-2.0.0.tgz#6bc6334181810e04b5c22b3d589fdca55026404c"
@@ -6126,6 +6164,10 @@ is-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-module/-/is-module-1.0.0.tgz#3258fb69f78c14d5b815d664336b4cffb6441591"
 
+is-negative-zero@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-negative-zero/-/is-negative-zero-2.0.0.tgz#9553b121b0fac28869da9ed459e20c7543788461"
+
 is-number-object@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/is-number-object/-/is-number-object-1.0.4.tgz#36ac95e741cf18b283fc1ddf5e83da798e3ec197"
@@ -6193,6 +6235,12 @@ is-regex@^1.0.4, is-regex@^1.0.5:
   resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.5.tgz#39d589a358bf18967f726967120b8fc1aed74eae"
   dependencies:
     has "^1.0.3"
+
+is-regex@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.1.1.tgz#c6f98aacc546f6cec5468a07b7b153ab564a57b9"
+  dependencies:
+    has-symbols "^1.0.1"
 
 is-regexp@^1.0.0:
   version "1.0.0"
@@ -7098,13 +7146,6 @@ jss@^10.3.0:
     is-in-browser "^1.1.3"
     tiny-warning "^1.0.2"
 
-jsx-ast-utils@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.2.3.tgz#8a9364e402448a3ce7f14d357738310d9248054f"
-  dependencies:
-    array-includes "^3.0.3"
-    object.assign "^4.1.0"
-
 jsx-ast-utils@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.4.1.tgz#1114a4c1209481db06c690c2b4f488cc665f657e"
@@ -7940,6 +7981,10 @@ object-inspect@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.7.0.tgz#f4f6bd181ad77f006b5ece60bd0b6f398ff74a67"
 
+object-inspect@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.8.0.tgz#df807e5ecf53a609cc6bfe93eac3cc7be5b3a9d0"
+
 object-is@^1.0.1, object-is@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/object-is/-/object-is-1.0.2.tgz#6b80eb84fe451498f65007982f035a5b445edec4"
@@ -7963,13 +8008,21 @@ object.assign@^4.1.0:
     has-symbols "^1.0.0"
     object-keys "^1.0.11"
 
-object.entries@^1.1.0, object.entries@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.1.1.tgz#ee1cf04153de02bb093fec33683900f57ce5399b"
+object.assign@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.1.tgz#303867a666cdd41936ecdedfb1f8f3e32a478cdd"
   dependencies:
     define-properties "^1.1.3"
-    es-abstract "^1.17.0-next.1"
-    function-bind "^1.1.1"
+    es-abstract "^1.18.0-next.0"
+    has-symbols "^1.0.1"
+    object-keys "^1.1.1"
+
+object.entries@^1.1.0, object.entries@^1.1.1, object.entries@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/object.entries/-/object.entries-1.1.2.tgz#bc73f00acb6b6bb16c203434b10f9a7e797d3add"
+  dependencies:
+    define-properties "^1.1.3"
+    es-abstract "^1.17.5"
     has "^1.0.3"
 
 object.fromentries@^2.0.2:
@@ -9621,7 +9674,7 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
-resolve@^1.10.0, resolve@^1.11.0, resolve@^1.11.1, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.15.1, resolve@^1.17.0, resolve@^1.3.2, resolve@^1.8.1:
+resolve@^1.10.0, resolve@^1.11.0, resolve@^1.11.1, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.17.0, resolve@^1.3.2, resolve@^1.8.1:
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
   dependencies:
@@ -10362,6 +10415,13 @@ string.prototype.trim@^1.2.1:
     es-abstract "^1.17.0-next.1"
     function-bind "^1.1.1"
 
+string.prototype.trimend@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/string.prototype.trimend/-/string.prototype.trimend-1.0.1.tgz#85812a6b847ac002270f5808146064c995fb6913"
+  dependencies:
+    define-properties "^1.1.3"
+    es-abstract "^1.17.5"
+
 string.prototype.trimleft@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/string.prototype.trimleft/-/string.prototype.trimleft-2.1.1.tgz#9bdb8ac6abd6d602b17a4ed321870d2f8dcefc74"
@@ -10375,6 +10435,13 @@ string.prototype.trimright@^2.1.1:
   dependencies:
     define-properties "^1.1.3"
     function-bind "^1.1.1"
+
+string.prototype.trimstart@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/string.prototype.trimstart/-/string.prototype.trimstart-1.0.1.tgz#14af6d9f34b053f7cfc89b72f8f2ee14b9039a54"
+  dependencies:
+    define-properties "^1.1.3"
+    es-abstract "^1.17.5"
 
 string_decoder@^1.0.0, string_decoder@^1.1.1:
   version "1.3.0"
@@ -11449,12 +11516,6 @@ xml-name-validator@^3.0.0:
 xmlchars@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/xmlchars/-/xmlchars-2.2.0.tgz#060fe1bcb7f9c76fe2a17db86a9bc3ab894210cb"
-
-xregexp@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/xregexp/-/xregexp-4.3.0.tgz#7e92e73d9174a99a59743f67a4ce879a04b5ae50"
-  dependencies:
-    "@babel/runtime-corejs3" "^7.8.3"
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.2"
