@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useCallback } from 'react';
+import React, { Fragment, memo, useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -9,199 +9,286 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Input');
 
-function Input({
-    children,
-    classes: classesProp,
-    overrides: overridesProp,
-    className: classNameProp,
-    onChange,
-    onCopy,
-    onFocus,
-    onBlur,
-    onEnter,
-    id,
-    name,
-    type,
-    value,
-    label,
-    labelMode,
-    isFullWidth,
-    placeholder,
-    hint,
-    error,
-    info,
-    isRequired,
-    isReadOnly,
-    preComponent,
-    postComponent,
-    component,
-    isCopyable,
-    ...props
-}) {
-    const classes = useClasses(useStyles, classesProp);
-    // State
-    const [focused, setFocused] = useState(false);
+const directionKeys = ['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown'];
+const deleteKeys = ['Backspace', 'Delete'];
+const integerRegEx = /^[+-]$|^[-+]?\d+$/;
+const decimalRegEx = /^[+-]$|^[+-]?\d+[,.]?\d*$/;
+const incompleteDecimalRegEx = /^[+-]?\d+[,.]$/;
 
-    // Overrides
-    const override = getOverrides(overridesProp, Input.overrides);
+const types = {
+    integer: 'text',
+    decimal: 'text',
+    title: 'text',
+};
 
-    // Classes
-    const rootClassName = classnames(
-        classes.root,
-        {
-            [classes.isReadOnly]: isReadOnly,
-            [classes.isReadAndDuplicable]: isCopyable && isReadOnly,
-            [classes[labelMode]]: labelMode,
-            [classes.isFullWidth]: isFullWidth,
-            [classes.focused]: focused,
-            [classes.errored]: error,
-            [classes.custom]: component,
-            [classes.withMessage]: (error || info) && !(error && info),
-            [classes.withTwoMessage]: error && info,
-        },
-        classNameProp,
-    );
-
-    const rootProps = {
-        className: rootClassName,
-    };
-
-    const labelProps = {
-        className: classes.Label,
-        isRequired,
-        hint,
-        ...override.Label,
-    };
-
-    let inputProps = {
+const Input = memo(
+    ({
+        children,
+        classes: classesProp,
+        overrides: overridesProp,
+        className: classNameProp,
+        onChange,
+        onCopy,
+        onFocus,
+        onBlur,
+        onEnter,
         id,
         name,
-        className: classes.input,
         type,
-        placeholder,
         value,
-        onChange: isReadOnly ? undefined : onChange,
-        onFocus: useCallback(
+        label,
+        labelMode,
+        isFullWidth,
+        placeholder,
+        hint,
+        error,
+        info,
+        isRequired,
+        isReadOnly,
+        preComponent,
+        postComponent,
+        component,
+        isCopyable,
+        ...props
+    }) => {
+        const [focused, setFocused] = useState(false);
+
+        const classes = useClasses(useStyles, classesProp);
+        const override = getOverrides(overridesProp, Input.overrides);
+
+        const rootClassName = classnames(
+            classes.root,
+            {
+                [classes.isReadOnly]: isReadOnly,
+                [classes.isReadAndDuplicable]: isCopyable && isReadOnly,
+                [classes[labelMode]]: labelMode,
+                [classes.isFullWidth]: isFullWidth,
+                [classes.focused]: focused,
+                [classes.error]: error,
+                [classes.custom]: component,
+                [classes.withMessage]: (error || info) && !(error && info),
+                [classes.withTwoMessage]: error && info,
+                [classes.title]: type === 'title',
+            },
+            classNameProp,
+        );
+
+        const handleOnFocus = useCallback(
             (e) => {
+                if (isReadOnly) return;
                 setFocused(true);
                 onFocus && onFocus(e);
             },
-            [onFocus],
-        ),
-        onBlur: useCallback(
+            [onFocus, isReadOnly],
+        );
+
+        const handleOnBlur = useCallback(
             (e) => {
+                if (isReadOnly) return;
+                if (type === 'decimal' && incompleteDecimalRegEx.test(e.target.value)) {
+                }
                 setFocused(false);
                 onBlur && onBlur(e);
             },
-            [onBlur],
-        ),
-        onKeyDown: useCallback(
+            [isReadOnly, onBlur, type],
+        );
+
+        const handleOnKeyDown = useCallback(
             (e) => {
                 if (e.key === 'Enter') {
                     onEnter && onEnter(e);
                 }
+                const newValue = `${e.target.value}${e.key}`;
+
+                if (type === 'integer') {
+                    if (directionKeys.includes(e.key)) return;
+                    else if (deleteKeys.includes(e.key)) return;
+                    else if (integerRegEx.test(newValue)) return;
+                    else {
+                        e.preventDefault();
+                        return;
+                    }
+                }
+
+                if (type === 'decimal') {
+                    if (directionKeys.includes(e.key)) return;
+                    else if (deleteKeys.includes(e.key)) return;
+                    else if (decimalRegEx.test(newValue)) return;
+                    else {
+                        e.preventDefault();
+                        return;
+                    }
+                }
             },
-            [onEnter],
-        ),
-        ...override.input,
-    };
+            [onEnter, type],
+        );
 
-    if (component) {
-        inputProps.isReadOnly = isReadOnly;
-    } else {
-        inputProps.readOnly = isReadOnly;
-    }
+        const handleOnChange = useCallback(
+            (e) => {
+                onChange && onChange(e);
+            },
+            [onChange],
+        );
 
-    // Remove content post component
-    const postComponentClick = useCallback(() => {
-        onChange && onChange();
-        onBlur && onBlur();
-    }, [onBlur, onChange]);
+        let inputProps = useMemo(() => {
+            return {
+                id,
+                name,
+                className: classes.input,
+                type: types[type] || type,
+                placeholder,
+                value: value,
+                onChange: isReadOnly ? undefined : handleOnChange,
+                onFocus: handleOnFocus,
+                onBlur: handleOnBlur,
+                onKeyDown: handleOnKeyDown,
+                ...override.input,
+            };
+        }, [
+            classes,
+            handleOnChange,
+            handleOnFocus,
+            handleOnBlur,
+            handleOnKeyDown,
+            id,
+            isReadOnly,
+            name,
+            value,
+            override,
+            type,
+            placeholder,
+        ]);
 
-    let renderedPostComponent = postComponent;
+        if (component) inputProps.isReadOnly = isReadOnly;
+        else inputProps.readOnly = isReadOnly;
 
-    const copyValue = useCallback(() => {
-        const textField = document.createElement('textarea');
-        textField.innerText = value;
-        document.body.appendChild(textField);
-        textField.select();
-        document.execCommand('copy');
-        textField.remove();
-        onCopy && onCopy();
-    }, [onCopy, value]);
+        let newPostComponent = postComponent;
 
-    const compIsReadOnly = <Icon name="lock" />;
+        // Remove content post component
+        const postComponentClick = useCallback(() => {
+            onChange && onChange();
+            onBlur && onBlur();
+        }, [onBlur, onChange]);
 
-    const compIsCopyable = <Icon name="duplicate" onClick={copyValue} />;
+        const copyValue = useCallback(() => {
+            const textField = document.createElement('textarea');
+            textField.innerText = value;
+            document.body.appendChild(textField);
+            textField.select();
+            document.execCommand('copy');
+            textField.remove();
+            onCopy && onCopy();
+        }, [onCopy, value]);
 
-    if (value && !isReadOnly) {
-        renderedPostComponent = (
-            <Fragment>
-                <div
-                    onClick={postComponentClick}
-                    className={`${classes.postCloseComponent} ${classes.isClickable} ${classes.clear}`}
-                >
-                    <Icon name="close" />
+        const compIsReadOnly = useMemo(() => <Icon name="lock" size="medium" />, []);
+
+        const compIsCopyable = useMemo(() => <Icon name="duplicate" onClick={copyValue} />, [
+            copyValue,
+        ]);
+
+        if (value && !isReadOnly) {
+            newPostComponent = (
+                <Fragment>
+                    <div
+                        onClick={postComponentClick}
+                        className={`${classes.postCloseComponent} ${classes.isClickable} ${classes.clear}`}
+                    >
+                        <Icon name="close" />
+                    </div>
+                    <div
+                        className={`${classes.customPostComponent}`}
+                        {...override.customPostComponent}
+                    >
+                        {postComponent}
+                    </div>
+                </Fragment>
+            );
+        }
+
+        if (isReadOnly) {
+            newPostComponent = (
+                <div className={classes.postCloseComponent} {...override.postCloseComponent}>
+                    {compIsReadOnly}
                 </div>
-                {postComponent}
-            </Fragment>
-        );
-    }
+            );
+        }
 
-    if (isReadOnly) {
-        renderedPostComponent = <div className={classes.postCloseComponent}>{compIsReadOnly}</div>;
-    }
+        if (isCopyable) {
+            newPostComponent = (
+                <Fragment>
+                    <div
+                        className={`${classes.postCloseComponent}`}
+                        {...override.postCloseComponent}
+                    >
+                        {compIsCopyable}
+                    </div>
+                    <div
+                        className={`${classes.customPostComponent}`}
+                        {...override.customPostComponent}
+                    >
+                        {postComponent}
+                    </div>
+                </Fragment>
+            );
+        }
 
-    if (isCopyable) {
-        renderedPostComponent = (
-            <Fragment>
-                <div className={`${classes.postCloseComponent}`}>{compIsCopyable}</div>
-                {postComponent}
-            </Fragment>
-        );
-    }
+        if (isReadOnly && isCopyable) {
+            newPostComponent = (
+                <div className={`${classes.postCloseComponent}`} {...override.postCloseComponent}>
+                    <div className={`${classes.isClickable} ${classes.copy}`} {...override.copy}>
+                        {compIsCopyable}
+                    </div>
+                    {compIsReadOnly}
+                </div>
+            );
+        }
 
-    if (isReadOnly && isCopyable) {
-        renderedPostComponent = (
-            <div className={`${classes.postCloseComponent}`}>
-                <div className={`${classes.isClickable} ${classes.copy}`}>{compIsCopyable}</div>
-                {compIsReadOnly}
+        const Component = component;
+
+        const errorInfoClassName = classnames(classes.errorInfo, {
+            [classes.errorInfoSecond]: info && error,
+        });
+
+        return (
+            <div className={rootClassName} {...override.root}>
+                {label && (
+                    <Label
+                        className={classes.Label}
+                        isRequired={isRequired}
+                        hint={hint}
+                        {...override.Label}
+                    >
+                        {label}
+                    </Label>
+                )}
+                <div className={classes.formControl} {...override.formControl}>
+                    {preComponent && (
+                        <div className={classes.preComponent} {...override.preComponent}>
+                            {preComponent}
+                        </div>
+                    )}
+                    {!component && <input {...inputProps} />}
+                    {component && <Component {...inputProps} />}
+                    {newPostComponent && (
+                        <div className={classes.postComponent} {...override.postComponent}>
+                            {newPostComponent}
+                        </div>
+                    )}
+                    {info && (
+                        <div className={classes.info} {...override.info}>
+                            {info}
+                        </div>
+                    )}
+                    {error && (
+                        <div className={errorInfoClassName} {...override.error}>
+                            {error}
+                        </div>
+                    )}
+                </div>
             </div>
         );
-    }
-
-    const Component = component;
-
-    return (
-        <div {...rootProps} {...override.root}>
-            {label && <Label {...labelProps}>{label}</Label>}
-            <div className={classes.formControl} {...override.formControl}>
-                {preComponent && (
-                    <div className={classes.preComponent} {...override.postComponent}>
-                        {preComponent}
-                    </div>
-                )}
-                {!component && <input {...inputProps} />}
-                {component && <Component {...inputProps} />}
-                {renderedPostComponent && (
-                    <div className={classes.postComponent} {...override.postComponent}>
-                        {renderedPostComponent}
-                    </div>
-                )}
-                {info && (
-                    <div className={classes.info} {...override.info}>
-                        {info}
-                    </div>
-                )}
-                {error && (
-                    <div className={classes.error} {...override.error}>
-                        {error}
-                    </div>
-                )}
-            </div>
-        </div>
-    );
-}
+    },
+);
 
 Input.overrides = [
     'root',
@@ -260,4 +347,4 @@ Input.propTypes = {
     component: PropTypes.any,
 };
 
-export default React.memo(Input);
+export default Input;

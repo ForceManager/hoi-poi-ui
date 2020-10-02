@@ -1,6 +1,6 @@
 export default (theme) => ({
     root: {
-        // display: 'inline-block',
+        display: 'inline-block',
         textAlign: 'center',
         lineHeight: 0,
 

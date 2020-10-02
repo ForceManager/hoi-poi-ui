@@ -170,9 +170,9 @@ function Icon({
     );
 
     return (
-        <div onClick={onClick} className={rootClassName} {...override.root}>
+        <span onClick={onClick} className={rootClassName} {...override.root}>
             <SelectedIcon color={color || theme.colors.greySoft} {...override.icon} />
-        </div>
+        </span>
     );
 }
 

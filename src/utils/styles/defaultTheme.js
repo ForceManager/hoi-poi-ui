@@ -124,7 +124,6 @@ const typography = {
         fontWeight: 300,
         lineHeight: 112,
         letterSpacing: -1.5,
-        textTransform: 'uppercase',
     },
     h2: {
         fontFamily,
@@ -132,14 +131,12 @@ const typography = {
         fontWeight: 300,
         lineHeight: 71,
         letterSpacing: -0.5,
-        textTransform: 'uppercase',
     },
     h3: {
         fontFamily,
         fontSize: 48,
         fontWeight: 400,
         lineHeight: 57,
-        textTransform: 'uppercase',
     },
     h4: {
         fontFamily,
@@ -147,14 +144,12 @@ const typography = {
         fontWeight: 400,
         lineHeight: 40,
         letterSpacing: 0.25,
-        textTransform: 'uppercase',
     },
     h5: {
         fontFamily,
         fontSize: 24,
         fontWeight: 400,
         lineHeight: 28,
-        textTransform: 'uppercase',
     },
     h6: {
         fontFamily,
@@ -162,7 +157,6 @@ const typography = {
         fontWeight: 500,
         lineHeight: 24,
         letterSpacing: 0.25,
-        textTransform: 'uppercase',
     },
     subtitle1: {
         fontFamily,
