@@ -3,7 +3,7 @@ import React from 'react';
 function Pub({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path fill="#087366" d="M12.877 2.672v.619l2.807 1.628v6.676h1.753V2.672z" />
                 <path
                     fill="#087366"

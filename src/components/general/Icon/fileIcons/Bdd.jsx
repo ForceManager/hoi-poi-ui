@@ -3,7 +3,7 @@ import React from 'react';
 function Bdd({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     d="M2.856 0c-.258 0-.468.206-.468.606v16.712c0 .108.21.315.468.315h12.839c.258 0 .468-.207.468-.315V4.086c0-.219-.03-.29-.082-.341L12.353.08A.286.286 0 0012.154 0H2.856z"
                     fill="#A13638"

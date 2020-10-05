@@ -51,6 +51,36 @@ let onChange = (value) => setState({ value });
 />;
 ```
 
+Some Disabled
+
+```jsx
+import { useState } from 'react';
+let options = [
+    {
+        label: 'Lorem ipsum',
+        value: 'lorem',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem3',
+    },
+];
+
+const [state, setState] = useState({});
+let onChange = (value) => setState({ value });
+<CheckboxGroup
+    label="Lorem ipsum"
+    options={options}
+    onChange={onChange}
+    value={state.value}
+    isReadOnly={[false, true, false]}
+/>;
+```
+
 Default vertical label
 
 ```jsx

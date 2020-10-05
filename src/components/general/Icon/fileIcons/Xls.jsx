@@ -3,7 +3,7 @@ import React from 'react';
 function Xls({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     d="M10.582 2.672v12.656h6.28a.564.564 0 00.576-.55V3.226a.565.565 0 00-.576-.554h-6.28z"
                     fill="#227547"

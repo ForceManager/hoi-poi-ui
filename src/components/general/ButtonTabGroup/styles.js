@@ -17,7 +17,7 @@ export default (theme) => ({
         cursor: 'pointer !important',
         background: 'none',
         fontWeight: 500,
-        ...theme.typography.button,
+        ...theme.typography.buttonText,
         fontSize: 12,
         lineHeight: '16px',
         letterSpacing: '0.4px',

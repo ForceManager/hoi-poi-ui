@@ -3,7 +3,7 @@ import React from 'react';
 function Xsn({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path fill="#693885" d="M.563 2.439V15.56l9.492 1.877V.563z" />
                 <path fill="#FFF" d="M5.72 11.819H4.687V5.86H5.72z" />
                 <path

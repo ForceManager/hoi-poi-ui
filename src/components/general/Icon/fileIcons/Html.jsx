@@ -3,7 +3,7 @@ import React from 'react';
 function Html({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     d="M13.907 0H4.416c-.264 0-.479.21-.479.62v17.059c0 .11.215.321.479.321h13.106c.264 0 .478-.21.478-.321V4.172c0-.224-.03-.296-.084-.35L14.111.083A.292.292 0 0013.907 0z"
                     fill="#F16529"

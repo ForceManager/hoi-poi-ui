@@ -3,7 +3,7 @@ import React from 'react';
 function Zip({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     d="M2.166 0c-.264 0-.478.21-.478.62v17.059c0 .11.214.321.478.321h13.106c.264 0 .478-.21.478-.321l.006-13.165C14.775 3.89 12.324 1.431 11.274 0H2.166z"
                     fill="#FFE797"
