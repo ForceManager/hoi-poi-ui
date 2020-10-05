@@ -149,7 +149,7 @@ export default (theme) => {
             },
         },
         isReadAndDuplicable: {
-            '& $postCloseComponent': {
+            '& $postComponentClose': {
                 display: 'inline-flex',
             },
         },

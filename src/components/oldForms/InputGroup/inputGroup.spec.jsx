@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import InputGroup from '../../forms/InputGroup';
+import InputGroup from '../../oldForms/InputGroup';
 
 describe('InputGroup', () => {
     test('default match', () => {

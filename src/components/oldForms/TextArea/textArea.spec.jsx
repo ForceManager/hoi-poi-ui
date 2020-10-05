@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import TextArea from '../../forms/TextArea';
+import TextArea from '../../oldForms/TextArea';
 
 describe('TextArea', () => {
     test('default match', () => {

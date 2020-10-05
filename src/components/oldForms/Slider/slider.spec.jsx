@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Slider from '../../forms/Slider';
+import Slider from '../../oldForms/Slider';
 
 describe('Input', () => {
     test('default match', () => {
