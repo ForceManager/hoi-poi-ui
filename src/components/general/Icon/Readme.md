@@ -150,6 +150,21 @@ Navigation:
 <span> </span>
 <Icon name="arrowBack"/>
 <span> </span>
+<Icon name="close"/>
+<span> </span>
+<Icon name="closeSmall"/>
+<span> </span>
+```
+
+Content:
+
+```jsx
+<Icon name="contentCopy"/>
+<span> </span>
+<Icon name="contentCut"/>
+<span> </span>
+<Icon name="contentPaste"/>
+<span> </span>
 ```
 
 Icons:

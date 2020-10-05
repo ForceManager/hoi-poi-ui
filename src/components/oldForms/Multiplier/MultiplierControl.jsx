@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
-import Form from '../../forms/Form';
+import Form from '../../oldForms/Form';
 import FieldControl from '../Form/FieldControl';
 import Icon from '../../general/Icon';
 

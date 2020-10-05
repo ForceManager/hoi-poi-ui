@@ -1,8 +1,8 @@
 export default (theme) => ({
     root: {
-        ...theme.typography.body,
+        ...theme.typography.defaultText,
         lineHeight: '20px',
-        color: theme.colors.neutral900,
+        color: theme.colors.text.greySoft,
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',

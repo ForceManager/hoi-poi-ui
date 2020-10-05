@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -6,7 +6,6 @@ import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Chevron from './icons/Chevron';
 import Info from './icons/Info';
-import Close from './icons/Close';
 import Lock from './icons/Lock';
 import ThickEnabled from './icons/ThickEnabled';
 import WarningRounded from './icons/WarningRounded';
@@ -119,6 +118,13 @@ import ZoomList from './icons/logos/ZoomList';
 //Navigation
 import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
+import Close from './icons/navigation/Close';
+import CloseSmall from './icons/navigation/CloseSmall';
+
+//Content
+import ContentCopy from './icons/content/ContentCopy';
+import ContentCut from './icons/content/ContentCut';
+import ContentPaste from './icons/content/ContentPaste';
 
 //File Icons
 import File from './fileIcons/File';
@@ -258,6 +264,11 @@ const ICONS = {
     //Navigation
     apps: Apps,
     arrowBack: ArrowBack,
+    closeSmall: CloseSmall,
+    //Content
+    contentCopy: ContentCopy,
+    contentCut: ContentCut,
+    contentPaste: ContentPaste,
     //File Icons
     file: File,
     img: Img,
@@ -289,10 +300,37 @@ function Icon({
     overrides: overridesProp,
     className: classNameProp,
     onClick,
+    onMouseOver,
+    onMouseOut,
+    onMouseDown,
+    onMouseUp,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     const theme = useTheme();
+
+    const [newColor, setNewColor] = useState(color || theme.colors.neutral700);
+
+    const handleOnMouseOver = useCallback(() => {
+        onClick && setNewColor(theme.colors.neutral800);
+        onMouseOver && onMouseOver();
+    }, [onClick, theme, onMouseOver]);
+
+    const handleOnMouseOut = useCallback(() => {
+        onClick && setNewColor(theme.colors.neutral700);
+        onMouseOut && onMouseOut();
+    }, [onClick, theme, onMouseOut]);
+
+    const handleOnMouseDown = useCallback(() => {
+        onClick && setNewColor(theme.colors.neutral600);
+        onMouseDown && onMouseDown();
+    }, [onClick, theme, onMouseDown]);
+
+    const handleOnMouseUp = useCallback(() => {
+        onClick && setNewColor(theme.colors.neutral700);
+        onMouseUp && onMouseUp();
+    }, [onClick, theme, onMouseUp]);
+
     let SelectedIcon = ICONS[name];
     if (!SelectedIcon) return null;
 
@@ -310,8 +348,16 @@ function Icon({
     );
 
     return (
-        <span onClick={onClick} className={rootClassName} {...override.root}>
-            <SelectedIcon color={color || theme.colors.greySoft} {...override.icon} />
+        <span
+            onClick={onClick}
+            onMouseOver={handleOnMouseOver}
+            onMouseOut={handleOnMouseOut}
+            onMouseDown={handleOnMouseDown}
+            onMouseUp={handleOnMouseUp}
+            className={rootClassName}
+            {...override.root}
+        >
+            <SelectedIcon color={newColor} {...override.icon} />
         </span>
     );
 }
