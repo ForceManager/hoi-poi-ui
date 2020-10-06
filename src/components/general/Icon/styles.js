@@ -3,6 +3,11 @@ export default (theme) => ({
         display: 'inline-block',
         textAlign: 'center',
         lineHeight: 0,
+
+        '& svg': {
+            width: '100%',
+            height: '100%',
+        },
     },
     small: {
         width: 10,

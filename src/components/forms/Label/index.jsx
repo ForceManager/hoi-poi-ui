@@ -32,7 +32,7 @@ function Label({
     };
 
     return (
-        <span {...rootProps} {...override.root}>
+        <div {...rootProps} {...override.root}>
             <Text className={classes.Text} {...override.Text}>
                 {children}
                 {isRequired && '*'}
@@ -50,7 +50,7 @@ function Label({
                     </span>
                 </Popover>
             )}
-        </span>
+        </div>
     );
 }
 

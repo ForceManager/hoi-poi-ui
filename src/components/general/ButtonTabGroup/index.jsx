@@ -32,7 +32,8 @@ function ButtonTabGroup({
                 });
 
                 // not first or last
-                if (idx && idx < buttons.length) array.push(<span className={classes.divider} />);
+                if (idx && idx < buttons.length)
+                    array.push(<span key={`${idx}${button.value}`} className={classes.divider} />);
 
                 array.push(
                     <button

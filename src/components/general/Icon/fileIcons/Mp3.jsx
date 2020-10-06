@@ -3,7 +3,7 @@ import React from 'react';
 function Mp3({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     d="M11.837 0H2.728c-.264 0-.478.21-.478.62v17.059c0 .11.214.321.478.321h13.106c.264 0 .479-.21.479-.321l.005-13.165"
                     fill="#AA5B9C"

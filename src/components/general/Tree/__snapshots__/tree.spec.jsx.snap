@@ -7,18 +7,23 @@ exports[`Tree default match 1`] = `
       Object {
         "colors": Object {
           "aqua100": "#e4fafd",
+          "aqua200": "#cbf3fc",
+          "aqua400": "#98d5f1",
           "aqua500": "#76bde8",
+          "aqua600": "#5695c7",
+          "aqua700": "#3b71a7",
           "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
-          "blue100": "#cceeff",
-          "blue200": "#99d8ff",
-          "blue400": "#3fa4ff",
-          "blue500": "#007aff",
-          "blue600": "#005edb",
-          "blue900": "#00237a",
+          "blue100": "#d3e3fe",
+          "blue200": "#a7c5fe",
+          "blue400": "#5a89fd",
+          "blue500": "#245dfd",
+          "blue600": "#1a47d9",
+          "blue700": "#1234b6",
+          "blue900": "#061879",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "green100": "#f4fad2",
@@ -26,6 +31,7 @@ exports[`Tree default match 1`] = `
           "green400": "#aecd50",
           "green500": "#86ad20",
           "green600": "#6e9417",
+          "green700": "#237c10",
           "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
@@ -49,6 +55,7 @@ exports[`Tree default match 1`] = `
           "orange400": "#ffb13f",
           "orange500": "#ff8c00",
           "orange600": "#db6e00",
+          "orange700": "#b75400",
           "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
@@ -59,7 +66,11 @@ exports[`Tree default match 1`] = `
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
           "purple100": "#fae3ed",
+          "purple200": "#f6c8e1",
+          "purple400": "#cc84b8",
           "purple500": "#aa5b9c",
+          "purple600": "#92428b",
+          "purple700": "#792d7a",
           "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
@@ -68,6 +79,7 @@ exports[`Tree default match 1`] = `
           "red400": "#ff7863",
           "red500": "#ff3b30",
           "red600": "#db2328",
+          "red700": "#b7182a",
           "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -95,7 +107,11 @@ exports[`Tree default match 1`] = `
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "turquoise100": "#c9fbf1",
+          "turquoise200": "#95f8ec",
+          "turquoise400": "#36d2d8",
           "turquoise500": "#00a8be",
+          "turquoise600": "#0083a3",
+          "turquoise700": "#006388",
           "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
@@ -104,6 +120,7 @@ exports[`Tree default match 1`] = `
           "yellow400": "#f1cb3c",
           "yellow500": "#e9b200",
           "yellow600": "#c89400",
+          "yellow700": "#a77700",
           "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
@@ -115,15 +132,58 @@ exports[`Tree default match 1`] = `
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "letterSpacing": 0.5,
           },
+          "body": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": 20,
+          },
+          "body1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": 28,
+          },
           "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.6,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
+          "buttonText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "lineHeight": 1.5,
+          },
+          "caption": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
+          "captionMedium": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -133,6 +193,46 @@ exports[`Tree default match 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "h1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 96,
+            "fontWeight": 300,
+            "letterSpacing": -1.5,
+            "lineHeight": 112,
+          },
+          "h2": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 60,
+            "fontWeight": 300,
+            "letterSpacing": -0.5,
+            "lineHeight": 71,
+          },
+          "h3": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": 57,
+          },
+          "h4": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": 40,
+          },
+          "h5": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": 28,
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
+            "fontWeight": 500,
+            "letterSpacing": 0.25,
+            "lineHeight": 24,
+          },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
@@ -140,10 +240,32 @@ exports[`Tree default match 1`] = `
           },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
+          "overline": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 2,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "letterSpacing": 0.5,
+          },
+          "subtitle": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.09,
+            "lineHeight": 24,
+          },
+          "subtitle1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": 24,
           },
         },
         "utils": Object {
@@ -891,9 +1013,13 @@ exports[`Tree default match 1`] = `
                             >
                               <span
                                 className="HoiPoi__Icon__root-1-9 HoiPoi__Icon__small-1-10"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
                                 <Chevron
-                                  color="#788590"
+                                  color="#7d8a96"
                                 >
                                   <svg
                                     viewBox="0 0 10 10"
@@ -901,7 +1027,7 @@ exports[`Tree default match 1`] = `
                                   >
                                     <path
                                       d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                      fill="#788590"
+                                      fill="#7d8a96"
                                       fillRule="evenodd"
                                     />
                                   </svg>
@@ -1352,9 +1478,13 @@ exports[`Tree default match 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-1-9 HoiPoi__Icon__small-1-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -1362,7 +1492,7 @@ exports[`Tree default match 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -1744,9 +1874,13 @@ exports[`Tree default match 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-1-9 HoiPoi__Icon__small-1-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -1754,7 +1888,7 @@ exports[`Tree default match 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -2133,9 +2267,13 @@ exports[`Tree default match 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-1-9 HoiPoi__Icon__small-1-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -2143,7 +2281,7 @@ exports[`Tree default match 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -2522,9 +2660,13 @@ exports[`Tree default match 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-1-9 HoiPoi__Icon__small-1-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -2532,7 +2674,7 @@ exports[`Tree default match 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -2911,9 +3053,13 @@ exports[`Tree default match 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-1-9 HoiPoi__Icon__small-1-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -2921,7 +3067,7 @@ exports[`Tree default match 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -3014,18 +3160,23 @@ exports[`Tree with customs 1`] = `
       Object {
         "colors": Object {
           "aqua100": "#e4fafd",
+          "aqua200": "#cbf3fc",
+          "aqua400": "#98d5f1",
           "aqua500": "#76bde8",
+          "aqua600": "#5695c7",
+          "aqua700": "#3b71a7",
           "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
-          "blue100": "#cceeff",
-          "blue200": "#99d8ff",
-          "blue400": "#3fa4ff",
-          "blue500": "#007aff",
-          "blue600": "#005edb",
-          "blue900": "#00237a",
+          "blue100": "#d3e3fe",
+          "blue200": "#a7c5fe",
+          "blue400": "#5a89fd",
+          "blue500": "#245dfd",
+          "blue600": "#1a47d9",
+          "blue700": "#1234b6",
+          "blue900": "#061879",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "green100": "#f4fad2",
@@ -3033,6 +3184,7 @@ exports[`Tree with customs 1`] = `
           "green400": "#aecd50",
           "green500": "#86ad20",
           "green600": "#6e9417",
+          "green700": "#237c10",
           "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
@@ -3056,6 +3208,7 @@ exports[`Tree with customs 1`] = `
           "orange400": "#ffb13f",
           "orange500": "#ff8c00",
           "orange600": "#db6e00",
+          "orange700": "#b75400",
           "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
@@ -3066,7 +3219,11 @@ exports[`Tree with customs 1`] = `
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
           "purple100": "#fae3ed",
+          "purple200": "#f6c8e1",
+          "purple400": "#cc84b8",
           "purple500": "#aa5b9c",
+          "purple600": "#92428b",
+          "purple700": "#792d7a",
           "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
@@ -3075,6 +3232,7 @@ exports[`Tree with customs 1`] = `
           "red400": "#ff7863",
           "red500": "#ff3b30",
           "red600": "#db2328",
+          "red700": "#b7182a",
           "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -3102,7 +3260,11 @@ exports[`Tree with customs 1`] = `
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "turquoise100": "#c9fbf1",
+          "turquoise200": "#95f8ec",
+          "turquoise400": "#36d2d8",
           "turquoise500": "#00a8be",
+          "turquoise600": "#0083a3",
+          "turquoise700": "#006388",
           "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
@@ -3111,6 +3273,7 @@ exports[`Tree with customs 1`] = `
           "yellow400": "#f1cb3c",
           "yellow500": "#e9b200",
           "yellow600": "#c89400",
+          "yellow700": "#a77700",
           "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
@@ -3122,15 +3285,58 @@ exports[`Tree with customs 1`] = `
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "letterSpacing": 0.5,
           },
+          "body": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": 20,
+          },
+          "body1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": 28,
+          },
           "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.6,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
+          "buttonText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "lineHeight": 1.5,
+          },
+          "caption": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
+          "captionMedium": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -3140,6 +3346,46 @@ exports[`Tree with customs 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "h1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 96,
+            "fontWeight": 300,
+            "letterSpacing": -1.5,
+            "lineHeight": 112,
+          },
+          "h2": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 60,
+            "fontWeight": 300,
+            "letterSpacing": -0.5,
+            "lineHeight": 71,
+          },
+          "h3": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": 57,
+          },
+          "h4": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": 40,
+          },
+          "h5": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": 28,
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
+            "fontWeight": 500,
+            "letterSpacing": 0.25,
+            "lineHeight": 24,
+          },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
@@ -3147,10 +3393,32 @@ exports[`Tree with customs 1`] = `
           },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
+          "overline": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 2,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "letterSpacing": 0.5,
+          },
+          "subtitle": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.09,
+            "lineHeight": 24,
+          },
+          "subtitle1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": 24,
           },
         },
         "utils": Object {
@@ -3902,9 +4170,13 @@ exports[`Tree with customs 1`] = `
                             >
                               <span
                                 className="HoiPoi__Icon__root-4-9 HoiPoi__Icon__small-4-10"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
                                 <Chevron
-                                  color="#788590"
+                                  color="#7d8a96"
                                 >
                                   <svg
                                     viewBox="0 0 10 10"
@@ -3912,7 +4184,7 @@ exports[`Tree with customs 1`] = `
                                   >
                                     <path
                                       d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                      fill="#788590"
+                                      fill="#7d8a96"
                                       fillRule="evenodd"
                                     />
                                   </svg>
@@ -4550,9 +4822,13 @@ exports[`Tree with customs 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-4-9 HoiPoi__Icon__small-4-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -4560,7 +4836,7 @@ exports[`Tree with customs 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -5105,9 +5381,13 @@ exports[`Tree with customs 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-4-9 HoiPoi__Icon__small-4-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -5115,7 +5395,7 @@ exports[`Tree with customs 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -5641,9 +5921,13 @@ exports[`Tree with customs 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-4-9 HoiPoi__Icon__small-4-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -5651,7 +5935,7 @@ exports[`Tree with customs 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -6174,9 +6458,13 @@ exports[`Tree with customs 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-4-9 HoiPoi__Icon__small-4-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -6184,7 +6472,7 @@ exports[`Tree with customs 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -6707,9 +6995,13 @@ exports[`Tree with customs 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-4-9 HoiPoi__Icon__small-4-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -6717,7 +7009,7 @@ exports[`Tree with customs 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -6954,18 +7246,23 @@ exports[`Tree with disabled nodes 1`] = `
       Object {
         "colors": Object {
           "aqua100": "#e4fafd",
+          "aqua200": "#cbf3fc",
+          "aqua400": "#98d5f1",
           "aqua500": "#76bde8",
+          "aqua600": "#5695c7",
+          "aqua700": "#3b71a7",
           "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
-          "blue100": "#cceeff",
-          "blue200": "#99d8ff",
-          "blue400": "#3fa4ff",
-          "blue500": "#007aff",
-          "blue600": "#005edb",
-          "blue900": "#00237a",
+          "blue100": "#d3e3fe",
+          "blue200": "#a7c5fe",
+          "blue400": "#5a89fd",
+          "blue500": "#245dfd",
+          "blue600": "#1a47d9",
+          "blue700": "#1234b6",
+          "blue900": "#061879",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "green100": "#f4fad2",
@@ -6973,6 +7270,7 @@ exports[`Tree with disabled nodes 1`] = `
           "green400": "#aecd50",
           "green500": "#86ad20",
           "green600": "#6e9417",
+          "green700": "#237c10",
           "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
@@ -6996,6 +7294,7 @@ exports[`Tree with disabled nodes 1`] = `
           "orange400": "#ffb13f",
           "orange500": "#ff8c00",
           "orange600": "#db6e00",
+          "orange700": "#b75400",
           "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
@@ -7006,7 +7305,11 @@ exports[`Tree with disabled nodes 1`] = `
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
           "purple100": "#fae3ed",
+          "purple200": "#f6c8e1",
+          "purple400": "#cc84b8",
           "purple500": "#aa5b9c",
+          "purple600": "#92428b",
+          "purple700": "#792d7a",
           "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
@@ -7015,6 +7318,7 @@ exports[`Tree with disabled nodes 1`] = `
           "red400": "#ff7863",
           "red500": "#ff3b30",
           "red600": "#db2328",
+          "red700": "#b7182a",
           "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -7042,7 +7346,11 @@ exports[`Tree with disabled nodes 1`] = `
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "turquoise100": "#c9fbf1",
+          "turquoise200": "#95f8ec",
+          "turquoise400": "#36d2d8",
           "turquoise500": "#00a8be",
+          "turquoise600": "#0083a3",
+          "turquoise700": "#006388",
           "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
@@ -7051,6 +7359,7 @@ exports[`Tree with disabled nodes 1`] = `
           "yellow400": "#f1cb3c",
           "yellow500": "#e9b200",
           "yellow600": "#c89400",
+          "yellow700": "#a77700",
           "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
@@ -7062,15 +7371,58 @@ exports[`Tree with disabled nodes 1`] = `
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "letterSpacing": 0.5,
           },
+          "body": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": 20,
+          },
+          "body1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": 28,
+          },
           "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.6,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
+          "buttonText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "lineHeight": 1.5,
+          },
+          "caption": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
+          "captionMedium": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -7080,6 +7432,46 @@ exports[`Tree with disabled nodes 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "h1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 96,
+            "fontWeight": 300,
+            "letterSpacing": -1.5,
+            "lineHeight": 112,
+          },
+          "h2": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 60,
+            "fontWeight": 300,
+            "letterSpacing": -0.5,
+            "lineHeight": 71,
+          },
+          "h3": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": 57,
+          },
+          "h4": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": 40,
+          },
+          "h5": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": 28,
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
+            "fontWeight": 500,
+            "letterSpacing": 0.25,
+            "lineHeight": 24,
+          },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
@@ -7087,10 +7479,32 @@ exports[`Tree with disabled nodes 1`] = `
           },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
+          "overline": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 2,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "letterSpacing": 0.5,
+          },
+          "subtitle": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.09,
+            "lineHeight": 24,
+          },
+          "subtitle1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": 24,
           },
         },
         "utils": Object {
@@ -7848,9 +8262,13 @@ exports[`Tree with disabled nodes 1`] = `
                             >
                               <span
                                 className="HoiPoi__Icon__root-2-9 HoiPoi__Icon__small-2-10"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
                                 <Chevron
-                                  color="#788590"
+                                  color="#7d8a96"
                                 >
                                   <svg
                                     viewBox="0 0 10 10"
@@ -7858,7 +8276,7 @@ exports[`Tree with disabled nodes 1`] = `
                                   >
                                     <path
                                       d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                      fill="#788590"
+                                      fill="#7d8a96"
                                       fillRule="evenodd"
                                     />
                                   </svg>
@@ -8311,9 +8729,13 @@ exports[`Tree with disabled nodes 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-2-9 HoiPoi__Icon__small-2-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -8321,7 +8743,7 @@ exports[`Tree with disabled nodes 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -8702,9 +9124,13 @@ exports[`Tree with disabled nodes 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-2-9 HoiPoi__Icon__small-2-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -8712,7 +9138,7 @@ exports[`Tree with disabled nodes 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -9093,9 +9519,13 @@ exports[`Tree with disabled nodes 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-2-9 HoiPoi__Icon__small-2-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -9103,7 +9533,7 @@ exports[`Tree with disabled nodes 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -9481,9 +9911,13 @@ exports[`Tree with disabled nodes 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-2-9 HoiPoi__Icon__small-2-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -9491,7 +9925,7 @@ exports[`Tree with disabled nodes 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -9870,9 +10304,13 @@ exports[`Tree with disabled nodes 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-2-9 HoiPoi__Icon__small-2-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -9880,7 +10318,7 @@ exports[`Tree with disabled nodes 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -9973,18 +10411,23 @@ exports[`Tree with parents not selectable 1`] = `
       Object {
         "colors": Object {
           "aqua100": "#e4fafd",
+          "aqua200": "#cbf3fc",
+          "aqua400": "#98d5f1",
           "aqua500": "#76bde8",
+          "aqua600": "#5695c7",
+          "aqua700": "#3b71a7",
           "aqua900": "#16386f",
           "black": "#262B34",
           "blackLight": "#5f656b",
           "blackberry": "#2e2d4c",
           "blackberryDark": "#24243C",
-          "blue100": "#cceeff",
-          "blue200": "#99d8ff",
-          "blue400": "#3fa4ff",
-          "blue500": "#007aff",
-          "blue600": "#005edb",
-          "blue900": "#00237a",
+          "blue100": "#d3e3fe",
+          "blue200": "#a7c5fe",
+          "blue400": "#5a89fd",
+          "blue500": "#245dfd",
+          "blue600": "#1a47d9",
+          "blue700": "#1234b6",
+          "blue900": "#061879",
           "disabledGrey": "#ced4d9",
           "green": "#86AD20",
           "green100": "#f4fad2",
@@ -9992,6 +10435,7 @@ exports[`Tree with parents not selectable 1`] = `
           "green400": "#aecd50",
           "green500": "#86ad20",
           "green600": "#6e9417",
+          "green700": "#237c10",
           "green900": "#345306",
           "greenLight": "#e7f1d5",
           "grey": "#697782",
@@ -10015,6 +10459,7 @@ exports[`Tree with parents not selectable 1`] = `
           "orange400": "#ffb13f",
           "orange500": "#ff8c00",
           "orange600": "#db6e00",
+          "orange700": "#b75400",
           "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
           "placeholders": "#e1e4e7",
@@ -10025,7 +10470,11 @@ exports[`Tree with parents not selectable 1`] = `
           "primarySoft": "#ff9d26",
           "purple": "#AA5B9C",
           "purple100": "#fae3ed",
+          "purple200": "#f6c8e1",
+          "purple400": "#cc84b8",
           "purple500": "#aa5b9c",
+          "purple600": "#92428b",
+          "purple700": "#792d7a",
           "purple900": "#441151",
           "purpleLight": "#EEDEEB",
           "red": "#f04540",
@@ -10034,6 +10483,7 @@ exports[`Tree with parents not selectable 1`] = `
           "red400": "#ff7863",
           "red500": "#ff3b30",
           "red600": "#db2328",
+          "red700": "#b7182a",
           "red900": "#7a0929",
           "redDark": "#C43833",
           "redLight": "#FAE7E7",
@@ -10061,7 +10511,11 @@ exports[`Tree with parents not selectable 1`] = `
           },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "turquoise100": "#c9fbf1",
+          "turquoise200": "#95f8ec",
+          "turquoise400": "#36d2d8",
           "turquoise500": "#00a8be",
+          "turquoise600": "#0083a3",
+          "turquoise700": "#006388",
           "turquoise900": "#00335b",
           "white": "#FFFFFF",
           "yellow": "#E9B200",
@@ -10070,6 +10524,7 @@ exports[`Tree with parents not selectable 1`] = `
           "yellow400": "#f1cb3c",
           "yellow500": "#e9b200",
           "yellow600": "#c89400",
+          "yellow700": "#a77700",
           "yellow900": "#6f4a00",
           "yellowDark": "#BE9100",
           "yellowLight": "#FCF7E5",
@@ -10081,15 +10536,58 @@ exports[`Tree with parents not selectable 1`] = `
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "letterSpacing": 0.5,
           },
+          "body": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": 20,
+          },
+          "body1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": 28,
+          },
           "button": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.6,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
+          "buttonText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "lineHeight": 1.5,
+          },
+          "caption": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
+          },
+          "captionMedium": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 0.4,
+            "lineHeight": 16,
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -10099,6 +10597,46 @@ exports[`Tree with parents not selectable 1`] = `
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
           "fontSizeBase": 13,
           "fontSizeSmall": 11,
+          "h1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 96,
+            "fontWeight": 300,
+            "letterSpacing": -1.5,
+            "lineHeight": 112,
+          },
+          "h2": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 60,
+            "fontWeight": 300,
+            "letterSpacing": -0.5,
+            "lineHeight": 71,
+          },
+          "h3": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": 57,
+          },
+          "h4": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": 40,
+          },
+          "h5": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": 28,
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
+            "fontWeight": 500,
+            "letterSpacing": 0.25,
+            "lineHeight": 24,
+          },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
@@ -10106,10 +10644,32 @@ exports[`Tree with parents not selectable 1`] = `
           },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
+          "overline": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "letterSpacing": 2,
+            "lineHeight": 16,
+            "textTransform": "uppercase",
+          },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "letterSpacing": 0.5,
+          },
+          "subtitle": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "letterSpacing": 0.09,
+            "lineHeight": 24,
+          },
+          "subtitle1": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": 24,
           },
         },
         "utils": Object {
@@ -10858,9 +11418,13 @@ exports[`Tree with parents not selectable 1`] = `
                             >
                               <span
                                 className="HoiPoi__Icon__root-3-9 HoiPoi__Icon__small-3-10"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
                                 <Chevron
-                                  color="#788590"
+                                  color="#7d8a96"
                                 >
                                   <svg
                                     viewBox="0 0 10 10"
@@ -10868,7 +11432,7 @@ exports[`Tree with parents not selectable 1`] = `
                                   >
                                     <path
                                       d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                      fill="#788590"
+                                      fill="#7d8a96"
                                       fillRule="evenodd"
                                     />
                                   </svg>
@@ -11319,9 +11883,13 @@ exports[`Tree with parents not selectable 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-3-9 HoiPoi__Icon__small-3-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -11329,7 +11897,7 @@ exports[`Tree with parents not selectable 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -11711,9 +12279,13 @@ exports[`Tree with parents not selectable 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-3-9 HoiPoi__Icon__small-3-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -11721,7 +12293,7 @@ exports[`Tree with parents not selectable 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -12100,9 +12672,13 @@ exports[`Tree with parents not selectable 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-3-9 HoiPoi__Icon__small-3-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -12110,7 +12686,7 @@ exports[`Tree with parents not selectable 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -12489,9 +13065,13 @@ exports[`Tree with parents not selectable 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-3-9 HoiPoi__Icon__small-3-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -12499,7 +13079,7 @@ exports[`Tree with parents not selectable 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>
@@ -12878,9 +13458,13 @@ exports[`Tree with parents not selectable 1`] = `
                                                 >
                                                   <span
                                                     className="HoiPoi__Icon__root-3-9 HoiPoi__Icon__small-3-10"
+                                                    onMouseDown={[Function]}
+                                                    onMouseOut={[Function]}
+                                                    onMouseOver={[Function]}
+                                                    onMouseUp={[Function]}
                                                   >
                                                     <Chevron
-                                                      color="#788590"
+                                                      color="#7d8a96"
                                                     >
                                                       <svg
                                                         viewBox="0 0 10 10"
@@ -12888,7 +13472,7 @@ exports[`Tree with parents not selectable 1`] = `
                                                       >
                                                         <path
                                                           d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                          fill="#788590"
+                                                          fill="#7d8a96"
                                                           fillRule="evenodd"
                                                         />
                                                       </svg>

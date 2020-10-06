@@ -36,7 +36,7 @@ export default (theme) => ({
         justifyContent: 'inherit',
         fontWeight: 500,
         transition: 'opacity .2s ease-in-out',
-        ...theme.typography.button,
+        ...theme.typography.buttonText,
         lineHeight: '20px',
     },
     labelLoading: {

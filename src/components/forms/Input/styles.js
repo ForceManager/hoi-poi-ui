@@ -1,165 +1,213 @@
-export default (theme) => ({
-    root: {
-        outline: 'none',
-    },
-    Label: {
-        width: 153,
-        marginRight: 17,
-        padding: '0 0 5px 0',
-    },
-    info: {
-        ...theme.typography.smallText,
-        position: 'absolute',
-        lineHeight: '20px',
-        bottom: -21,
-        color: theme.colors.greySoft,
-    },
-    error: {
-        ...theme.typography.smallText,
-        position: 'absolute',
-        lineHeight: '20px',
-        bottom: -21,
-        color: theme.colors.red,
-    },
-    formControl: {
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        width: 290,
-        lineHeight: 0,
-        '&::before': {
-            borderBottom: `1px solid ${theme.colors.lines}`,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            content: '""',
+export default (theme) => {
+    const titleBorder = {
+        backgroundColor: theme.colors.neutralBase,
+        border: '1px solid transparent',
+        borderBottom: `1px solid ${theme.colors.neutral400}`,
+    };
+    return {
+        root: {
+            outline: 'none',
+        },
+        title: {
+            '& $formControl': {
+                padding: 0,
+                ...titleBorder,
+            },
+            '&$focused': {
+                '& $formControl': {
+                    ...titleBorder,
+                },
+            },
+            '&$error': {
+                '& $formControl': {
+                    ...titleBorder,
+                },
+            },
+            '&$isReadOnly': {
+                '& $formControl': {
+                    ...titleBorder,
+                },
+            },
+            '& $input': {
+                ...theme.typography.h5,
+            },
+            '& $info': {
+                marginLeft: 0,
+            },
+            '& $errorInfo': {
+                marginLeft: 0,
+            },
+        },
+        Label: {
+            width: 150,
+            marginRight: 17,
+            padding: '0 0 8px 0',
+        },
+        vertical: {
+            display: 'block',
+            padding: '15px 0 10px 0',
+            marginLeft: '0 !important',
+            '& $Label': {
+                width: '100%',
+            },
+        },
+        horizontal: {
+            display: 'flex',
+            alignItems: 'center',
+            padding: '15px 0 10px 0',
+            '& $error': {},
+            '& $Label': {
+                padding: 0,
+            },
+        },
+        info: {
+            ...theme.typography.caption,
             position: 'absolute',
-            transition: 'border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-            pointerEvents: 'none',
+            marginLeft: -10,
+            lineHeight: '20px',
+            bottom: -24,
+            color: theme.colors.neutral600,
         },
-        '&::after': {
-            left: 0,
-            right: 0,
-            bottom: 0,
-            content: '""',
+        errorInfo: {
+            ...theme.typography.caption,
             position: 'absolute',
-            transform: 'scaleX(0)',
-            transition: 'transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms',
-            borderBottom: `1px solid ${theme.colors.primary}`,
-            pointerEvents: 'none',
+            marginLeft: -10,
+            lineHeight: '20px',
+            bottom: -24,
+            color: theme.colors.red500,
         },
-    },
-    input: {
-        ...theme.typography.defaultText,
-        background: 'transparent',
-        color: theme.colors.greySoft,
-        width: '100%',
-        lineHeight: '20px',
-        padding: '0 0 5px 0',
-        flexGrow: 1,
-        outline: 'none',
-        border: 'none',
-        '&::placeholder': {
-            color: theme.colors.disabledGrey,
+        errorInfoSecond: {
+            bottom: -42,
         },
-    },
-    withMessage: {
-        paddingBottom: '30px !important',
-    },
-    withTwoMessage: {
-        paddingBottom: '45px !important',
-        '& $error': {
-            bottom: -39,
+        formControl: {
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            width: 300,
+            minWidth: 150,
+            boxSizing: 'border-box',
+            padding: '0 10px',
+            lineHeight: 0,
+            borderRadius: '4px',
+            border: '1px solid transparent',
+            backgroundColor: theme.colors.neutral200,
+            transition: 'all 0.15s ease',
         },
-    },
-    errored: {
-        '& $formControl': {
-            '&::before': {
-                borderBottom: `1px solid ${theme.colors.red} !important`,
-            },
-            '&::after': {
-                borderBottom: `1px solid ${theme.colors.red} !important`,
-            },
-        },
-    },
-    isReadOnly: {
-        '& $formControl': {
-            '&::before': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
-            },
-            '&::after': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
-            },
-        },
-        '&$focused': {
-            '& $formControl::after': {
-                transform: 'scaleX(0)',
-            },
-        },
-    },
-    isReadAndDuplicable: {
-        '& $postCloseComponent': {
-            display: 'inline-flex',
-        },
-    },
-    isClickable: {
-        cursor: 'pointer',
-        marginRight: '5px',
-    },
-    clear: {},
-    copy: {},
-    focused: {
-        '& $formControl::after': {
-            transform: 'scaleX(1)',
-        },
-    },
-    vertical: {
-        display: 'block',
-        padding: '15px 0 10px 0',
-        marginLeft: '0 !important',
-        '& $formControl': {
-            marginTop: 10,
-        },
-        '& $Label': {
+        input: {
+            ...theme.typography.body,
+            background: 'transparent',
+            color: theme.colors.neutral900,
             width: '100%',
+            lineHeight: '20px',
+            height: '40px',
+            alignItems: 'center',
+            boxSizing: 'border-box',
+            flexGrow: 1,
+            outline: 'none',
+            border: 'none',
+            '&::placeholder': {
+                color: theme.colors.neutral600,
+            },
+            '&::-webkit-outer-spin-button': {
+                '-webkit-appearance': 'none',
+                margin: 0,
+            },
+            '&::-webkit-inner-spin-button': {
+                '-webkit-appearance': 'none',
+                margin: 0,
+            },
+            '&[type=number]': {
+                '-moz-appearance': 'textfield',
+            },
         },
-    },
-    horizontal: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: '15px 0 10px 0',
-        '& $error': {},
-    },
-    isFullWidth: {
-        '& $formControl': {
-            width: '100%',
-            flex: 1,
+        withMessage: {
+            paddingBottom: '30px !important',
         },
-        '&$vertical $Label': {
-            width: '100%',
+        withTwoMessage: {
+            paddingBottom: '45px !important',
+            '& $error': {
+                bottom: -39,
+            },
         },
-    },
-    preComponent: {
-        marginRight: 5,
-        marginBottom: 3,
-    },
-    postComponent: {
-        marginLeft: 5,
-        marginBottom: 3,
-        display: 'flex',
-        alignItems: 'center',
-    },
-    postCloseComponent: {
-        '& span': {
-            width: 8,
+        error: {
+            '& $formControl': {
+                backgroundColor: theme.colors.neutralBase,
+                border: `1px solid ${theme.colors.red500}`,
+            },
+        },
+        isReadOnly: {
+            '& $formControl': {
+                border: `1px solid ${theme.colors.neutral500}`,
+                backgroundColor: theme.colors.neutralBase,
+                color: theme.colors.neutral500,
+                '&::placeholder': {
+                    color: theme.colors.neutral500,
+                },
+            },
+            '& $input': {
+                cursor: 'text',
+            },
+        },
+        isReadAndDuplicable: {
+            '& $postComponentClose': {
+                display: 'inline-flex',
+            },
+        },
+        isClickable: {
+            cursor: 'pointer',
+        },
+        clear: {},
+        clearSeparator: {
+            width: 2,
             height: 8,
+            backgroundColor: theme.colors.neutral400,
+            margin: '0 2px',
         },
-    },
-    custom: {
-        '& $formControl': {
-            '&::before': {
-                borderBottom: 'none',
+        copy: {},
+        focused: {
+            '& $formControl': {
+                backgroundColor: theme.colors.neutralBase,
+                border: `1px solid ${theme.colors.orange500}`,
             },
         },
-    },
-});
+        isFullWidth: {
+            '& $formControl': {
+                width: '100%',
+                flex: 1,
+            },
+            '&$vertical $Label': {
+                width: '100%',
+            },
+        },
+        preComponent: {
+            marginRight: 5,
+        },
+        postComponent: {
+            marginLeft: 5,
+            display: 'flex',
+            alignItems: 'center',
+            '& > span, > div': {
+                marginLeft: '5px',
+                '&:first-child': {
+                    marginLeft: '0px',
+                },
+            },
+        },
+        customPostComponent: {
+            marginLeft: 5,
+        },
+        postComponentClose: {
+            display: 'flex',
+            alignItems: 'center',
+        },
+        postComponentReadOnly: {},
+        postComponentCopy: {},
+        custom: {
+            '& $formControl': {
+                '&::before': {
+                    borderBottom: 'none',
+                },
+            },
+        },
+    };
+};

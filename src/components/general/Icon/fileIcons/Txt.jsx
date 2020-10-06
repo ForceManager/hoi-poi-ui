@@ -3,7 +3,7 @@ import React from 'react';
 function Txt({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     d="M2.735.5c.01.001.015.014.015.12V17.5h13.063V4.171c0-.034.001-.048.007-.049L12.134.5H2.735zM15.82 4.122c.008 0 .025.025.058.057l-.058-.057z"
                     stroke="#DEE0DF"

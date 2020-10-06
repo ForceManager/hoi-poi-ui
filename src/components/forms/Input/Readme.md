@@ -1,4 +1,4 @@
-Horizontal label:
+Title Field:
 
 ```jsx
 import { useState } from 'react';
@@ -13,42 +13,137 @@ const onChange = (field) => {
 const onCopy = () => window.alert('Copied to Clipboard');
 
 <div>
-    <Input label="Lorem ipsum" placeholder="Write here" onChange={onChange(1)} value={state[1]} />
     <Input
-        label="Lorem ipsum"
+        label="Title"
+        placeholder="Write here"
+        onChange={onChange('1')}
+        value={state['1']}
+        type="title"
+    />
+    <Input
+        label="Title Error"
+        placeholder="Write here"
+        onChange={onChange('2')}
+        value={state['2']}
+        type="title"
+        info="I am an info message"
+        error="I am an error"
+    />
+    <Input
+        label="Title ReadOnly"
+        placeholder="Write here"
+        onChange={onChange('3')}
+        value={state['3']}
+        type="title"
+        isCopyable={true}
+        onCopy={onCopy}
+        isReadOnly={true}
+    />
+</div>
+```
+
+Text Field:
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (field) => {
+    return (e) => {
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    };
+};
+
+<div>
+    <Input label="Text" placeholder="Write here" onChange={onChange(1)} value={state[1]} type="text"/>
+</div>
+```
+
+Integer Field:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (field) => {
+    return (e) => {
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    };
+};
+
+const onBlur = (field) => {
+    return (e) => {
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    };
+}
+<div>
+    <Input label="Integer" placeholder="0" onChange={onChange(1)} onBlur={onBlur(1)} value={state[1]} type="integer"/>
+</div>
+```
+
+Decimal Field:
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (field) => {
+    return (e) => {
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    };
+};
+
+const onBlur = (field) => {
+    return (e) => {
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    };
+}
+<div>
+    <Input label="Decimal" placeholder="0.00" onChange={onChange(1)} onBlur={onBlur(1)} value={state[1]} type="decimal"/>
+    <Input label="Custom decimals" numberDecimals="3" placeholder="0.000" onChange={onChange(2)} onBlur={onBlur(2)} value={state[2]} type="decimal"/>
+</div>
+```
+
+Vertical label:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (field) => {
+    return (e) => {
+        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    };
+};
+
+const onCopy = () => window.alert('Copied to Clipboard');
+
+<div>
+    <Input
+        label="Hint"
         placeholder="Write here"
         hint="Hello!"
         isRequired
-        onChange={onChange(2)}
-        value={state[2]}
+        onChange={onChange(1)}
+        value={state[1]}
     />
+    <Input label="Info" placeholder="Write here" info="I am an info message" />
+    <Input label="Error" placeholder="Write here" error="I am an error" />
     <Input
-        label="Lorem ipsum Lorem ipsum Lorem ipsum"
-        placeholder="Write here"
-        hint="Hello!"
-        isRequired
-        onChange={onChange(3)}
-        value={state[3]}
-    />
-    <Input label="Lorem ipsum" placeholder="Write here" error="I am an error" />
-    <Input label="Lorem ipsum" placeholder="Write here" info="I am an info message" />
-    <Input
-        label="Lorem ipsum"
+        label="Info and Error"
         placeholder="Write here"
         info="I am an info message"
         error="I am an error"
     />
-    <Input label="Lorem ipsum" placeholder="Write here" value="I am disabled" isReadOnly={true} />
+    <Input label="Disabled" placeholder="Write here" value="I am disabled" isReadOnly={true} />
     <Input
-        label="Lorem ipsum"
+        label="Copy"
         placeholder="Write here"
-        onChange={onChange(1)}
-        value={state[1]}
+        onChange={onChange(6)}
+        value={state[6]}
         isCopyable={true}
         onCopy={onCopy}
     />
     <Input
-        label="Lorem ipsum"
+        label="Copy and Read Only"
         placeholder="Write here"
         value="You can Copy but typing is disabled"
         isCopyable={true}
@@ -58,7 +153,7 @@ const onCopy = () => window.alert('Copied to Clipboard');
 </div>;
 ```
 
-Vertical label:
+Horizontal label:
 
 ```jsx
 import { useState } from 'react';
@@ -68,7 +163,23 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 <div>
     <Input
         label="Lorem ipsum"
-        labelMode="vertical"
+        labelMode="horizontal"
+        placeholder="Write here"
+        onChange={onChange}
+        value={state.value}
+    />
+</div>;
+```
+
+Without label:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+<div>
+    <Input
         placeholder="Write here"
         onChange={onChange}
         value={state.value}
@@ -100,6 +211,7 @@ Custom component:
 
 ```jsx
 import { useState } from 'react';
+import CustomComponent from './CustomComponent';
 const [state, setState] = useState({});
 const onChange = (field) => {
     return (e) => {
@@ -107,12 +219,8 @@ const onChange = (field) => {
     };
 };
 
-function CustomComponent(props) {
-    return <input />;
-}
-
 <div>
-    <Input label="Lorem ipsum" component={CustomComponent} onChange={onChange(1)} />
+    <Input label="Lorem ipsum" placeholder="Write something in this custom input" component={CustomComponent} onChange={onChange(1)} value={state[1]}/>
 </div>;
 ```
 

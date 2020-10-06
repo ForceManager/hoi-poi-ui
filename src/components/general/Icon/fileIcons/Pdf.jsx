@@ -3,7 +3,7 @@ import React from 'react';
 function Pdf({ ...props }) {
     return (
         <svg viewBox="0 0 18 18" {...props}>
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
                 <path
                     d="M2.173.5c.01.001.014.014.014.12V17.5H15.25l.005-12.724c-1.091-.802-3.168-2.899-4.23-4.276H2.173zM15.25 17.67v.008-.008zM2.173.5h-.007.007z"
                     stroke="#C1272D"
