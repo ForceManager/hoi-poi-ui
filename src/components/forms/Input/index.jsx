@@ -85,7 +85,7 @@ const Input = memo(
         const handleOnBlur = useCallback(
             (e) => {
                 if (isReadOnly) return;
-                if (type === 'integer') {
+                if (type === 'integer' && e.target.value) {
                     if (!integerRegEx.test(e.target.value) || isNaN(parseInt(e.target.value, 10))) {
                         e.target.value = '';
                     }
@@ -199,8 +199,6 @@ const Input = memo(
         if (component) inputProps.isReadOnly = isReadOnly;
         else inputProps.readOnly = isReadOnly;
 
-        // let newPostComponent = postComponent;
-
         // Remove content post component
         const postComponentClick = useCallback(() => {
             onChange && onChange();
@@ -225,59 +223,71 @@ const Input = memo(
 
         const shouldSeparate = isCopyable || isReadOnly || postComponent;
 
-        let newPostComponent = [];
+        let newPostComponent = useMemo(() => {
+            let postComponentsArray = [];
+            if (value && !isReadOnly) {
+                postComponentsArray.push(
+                    <div
+                        key="close"
+                        className={`${classes.postComponentClose} ${classes.isClickable} ${classes.clear}`}
+                        {...override.postComponentClose}
+                    >
+                        <Icon name="closeSmall" size="medium" onClick={postComponentClick} />
+                        {shouldSeparate && (
+                            <div className={classes.clearSeparator} {...override.clearSeparator} />
+                        )}
+                    </div>,
+                );
+            }
 
-        if (value && !isReadOnly) {
-            newPostComponent = [
-                <div
-                    key="close"
-                    onClick={postComponentClick}
-                    className={`${classes.postComponentClose} ${classes.isClickable} ${classes.clear}`}
-                    {...override.postComponentClose}
-                >
-                    <Icon name="closeSmall" size="medium" />
-                    {shouldSeparate && (
-                        <div className={classes.clearSeparator} {...override.clearSeparator} />
-                    )}
-                </div>,
-            ];
-        }
+            if (isCopyable) {
+                postComponentsArray.push(
+                    <div
+                        key="copy"
+                        className={`${classes.postComponentCopy}`}
+                        {...override.postComponentCopy}
+                    >
+                        {compIsCopyable}
+                    </div>,
+                );
+            }
 
-        if (isCopyable) {
-            newPostComponent.push(
-                <div
-                    key="copy"
-                    className={`${classes.postComponentCopy}`}
-                    {...override.postComponentCopy}
-                >
-                    {compIsCopyable}
-                </div>,
-            );
-        }
+            if (isReadOnly) {
+                postComponentsArray.push(
+                    <div
+                        key="readOnly"
+                        className={classes.postComponentReadOnly}
+                        {...override.postComponentReadOnly}
+                    >
+                        {compIsReadOnly}
+                    </div>,
+                );
+            }
 
-        if (isReadOnly) {
-            newPostComponent.push(
-                <div
-                    key="readOnly"
-                    className={classes.postComponentReadOnly}
-                    {...override.postComponentReadOnly}
-                >
-                    {compIsReadOnly}
-                </div>,
-            );
-        }
-
-        if (postComponent) {
-            newPostComponent.push(
-                <div
-                    key="custom"
-                    className={`${classes.customPostComponent}`}
-                    {...override.customPostComponent}
-                >
-                    {postComponent}
-                </div>,
-            );
-        }
+            if (postComponent) {
+                postComponentsArray.push(
+                    <div
+                        key="custom"
+                        className={`${classes.customPostComponent}`}
+                        {...override.customPostComponent}
+                    >
+                        {postComponent}
+                    </div>,
+                );
+            }
+            return postComponentsArray;
+        }, [
+            classes,
+            isCopyable,
+            isReadOnly,
+            compIsCopyable,
+            compIsReadOnly,
+            override,
+            postComponent,
+            postComponentClick,
+            shouldSeparate,
+            value,
+        ]);
 
         const Component = component;
 
@@ -305,7 +315,7 @@ const Input = memo(
                     )}
                     {!component && <input {...inputProps} />}
                     {component && <Component {...inputProps} />}
-                    {newPostComponent && (
+                    {newPostComponent.length > 0 && (
                         <div className={classes.postComponent} {...override.postComponent}>
                             {newPostComponent}
                         </div>
