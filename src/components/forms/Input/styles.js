@@ -11,11 +11,13 @@ export default (theme) => {
         title: {
             '& $formControl': {
                 padding: 0,
+                borderRadius: 0,
                 ...titleBorder,
             },
             '&$focused': {
                 '& $formControl': {
                     ...titleBorder,
+                    borderBottomColor: theme.colors.orange500,
                 },
             },
             '&$error': {
@@ -99,12 +101,14 @@ export default (theme) => {
             color: theme.colors.neutral900,
             width: '100%',
             lineHeight: '20px',
-            height: '40px',
+            height: '38px',
             alignItems: 'center',
             boxSizing: 'border-box',
             flexGrow: 1,
             outline: 'none',
             border: 'none',
+            padding: 0,
+            margin: 0,
             '&::placeholder': {
                 color: theme.colors.neutral600,
             },

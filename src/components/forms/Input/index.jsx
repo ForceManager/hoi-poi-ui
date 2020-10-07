@@ -232,7 +232,11 @@ const Input = memo(
                         className={`${classes.postComponentClose} ${classes.isClickable} ${classes.clear}`}
                         {...override.postComponentClose}
                     >
-                        <Icon name="closeSmall" size="medium" onClick={postComponentClick} />
+                        <Icon
+                            name={type === 'title' ? 'close' : 'closeSmall'}
+                            size={type === 'title' ? 'large' : 'medium'}
+                            onClick={postComponentClick}
+                        />
                         {shouldSeparate && (
                             <div className={classes.clearSeparator} {...override.clearSeparator} />
                         )}
@@ -277,16 +281,27 @@ const Input = memo(
             }
             return postComponentsArray;
         }, [
-            classes,
-            isCopyable,
+            value,
             isReadOnly,
-            compIsCopyable,
-            compIsReadOnly,
-            override,
+            isCopyable,
             postComponent,
+            classes.postComponentClose,
+            classes.isClickable,
+            classes.clear,
+            classes.clearSeparator,
+            classes.postComponentCopy,
+            classes.postComponentReadOnly,
+            classes.customPostComponent,
+            override.postComponentClose,
+            override.clearSeparator,
+            override.postComponentCopy,
+            override.postComponentReadOnly,
+            override.customPostComponent,
+            type,
             postComponentClick,
             shouldSeparate,
-            value,
+            compIsCopyable,
+            compIsReadOnly,
         ]);
 
         const Component = component;

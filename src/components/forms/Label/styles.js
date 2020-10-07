@@ -1,14 +1,14 @@
 export default (theme) => ({
     root: {
-        ...theme.typography.body,
-        lineHeight: '20px',
-        color: theme.colors.neutral900,
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
     Text: {
         paddingRight: 5,
+        ...theme.typography.body,
+        lineHeight: '20px',
+        color: theme.colors.neutral900,
     },
     info: {
         display: 'block',

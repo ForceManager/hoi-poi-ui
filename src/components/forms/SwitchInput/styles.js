@@ -15,6 +15,7 @@ export default (theme) => ({
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'flex-end',
         width: 290,
         lineHeight: 0,
     },
