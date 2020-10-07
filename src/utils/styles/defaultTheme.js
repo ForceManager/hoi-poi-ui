@@ -56,7 +56,7 @@ const purpleLight = '#EEDEEB';
 //Text
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
 const lineHeightBase = 1.5;
-const fontSizeBase = 13;
+const fontSizeBase = 14;
 const fontSizeSmall = 11;
 const fontSizeLarge = 16;
 const fontSizeBig = 20;
