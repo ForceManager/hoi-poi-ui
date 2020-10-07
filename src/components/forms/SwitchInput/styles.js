@@ -9,7 +9,7 @@ export default (theme) => ({
         ...theme.typography.defaultText,
         position: 'absolute',
         bottom: -15,
-        color: theme.colors.red,
+        color: theme.colors.red500,
     },
     formControl: {
         position: 'relative',
