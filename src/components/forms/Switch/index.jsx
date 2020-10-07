@@ -9,6 +9,12 @@ import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Switch');
 
+const sizes = {
+    small: { handle: 12, width: 28, height: 16 },
+    medium: { handle: 16, width: 36, height: 20 },
+    large: { handle: 20, width: 44, height: 24 },
+};
+
 function Switch({
     checked,
     classes: classesProp,
@@ -35,12 +41,6 @@ function Switch({
         classNameProp,
     );
 
-    const sizes = {
-        small: { handle: 12, width: 28, height: 16 },
-        medium: { handle: 16, width: 36, height: 20 },
-        large: { handle: 20, width: 44, height: 24 },
-    };
-
     const rootProps = {
         className: rootClassName,
     };
@@ -52,11 +52,12 @@ function Switch({
         },
         [isDisabled, onChange],
     );
+    const onHover = useCallback((value) => setHovered(value), []);
 
     return (
         <div
-            onMouseOver={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            onMouseOver={() => onHover(true)}
+            onMouseLeave={() => onHover(false)}
             {...rootProps}
             {...override.root}
         >
@@ -71,8 +72,8 @@ function Switch({
                 onColor={hovered && !isDisabled ? theme.colors.orange600 : theme.colors.orange500}
                 offHandleColor={theme.colors.neutralBase}
                 onHandleColor={theme.colors.neutralBase}
-                boxShadow="null"
-                activeBoxShadow="null"
+                boxShadow={null}
+                activeBoxShadow={null}
                 handleDiameter={sizes[size].handle}
                 width={sizes[size].width}
                 height={sizes[size].height}

@@ -116,21 +116,18 @@ function Slider({
         ],
     );
 
-    // Avoiding re-renderings
-    const onChange = useCallback((value) => {
-        setInnerValue(value);
-    }, []);
+    const onAfterChange = useCallback(
+        (...args) => {
+            props.onBlur && props.onBlur(...args);
+        },
+        [props],
+    );
 
     const sliderProps = {
         className: sizes[size].slider,
         value: innerValue,
-        onChange: onChange,
-        onAfterChange: useCallback(
-            (...args) => {
-                props.onBlur && props.onBlur(...args);
-            },
-            [props],
-        ),
+        onChange: (value) => setInnerValue(value),
+        onAfterChange: onAfterChange,
         disabled: isReadOnly,
         max,
         min,
