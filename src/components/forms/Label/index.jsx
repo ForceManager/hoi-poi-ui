@@ -18,6 +18,7 @@ function Label({
     className: classNameProp,
     isRequired,
     hint,
+    isDisabled,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -33,7 +34,11 @@ function Label({
 
     return (
         <div {...rootProps} {...override.root}>
-            <Text className={classes.Text} {...override.Text}>
+            <Text
+                type={isDisabled ? 'light' : 'normal'}
+                className={classes.Text}
+                {...override.Text}
+            >
                 {children}
                 {isRequired && '*'}
             </Text>

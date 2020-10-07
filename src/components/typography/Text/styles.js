@@ -33,11 +33,11 @@ export default (theme) => ({
     },
     normal: {
         fontWeight: 'normal',
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral900,
     },
     light: {
         fontWeight: 'normal',
-        color: theme.colors.disabledGrey,
+        color: theme.colors.neutral600,
     },
     isLoading: {
         display: 'flex',
