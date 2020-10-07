@@ -126,7 +126,7 @@ function Slider({
     const sliderProps = {
         className: sizes[size].slider,
         value: innerValue,
-        onChange: (value) => setInnerValue(value),
+        onChange: setInnerValue,
         onAfterChange: onAfterChange,
         disabled: isReadOnly,
         max,
