@@ -120,6 +120,9 @@ import ZoomList from './icons/logos/ZoomList';
 import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
 
+//Editor
+import InsertDriveFile from './icons/editor/InsertDriveFile';
+
 //File Icons
 import File from './fileIcons/File';
 import Img from './fileIcons/Img';
@@ -258,6 +261,8 @@ const ICONS = {
     //Navigation
     apps: Apps,
     arrowBack: ArrowBack,
+    //Editor
+    insertDriveFile: InsertDriveFile,
     //File Icons
     file: File,
     img: Img,

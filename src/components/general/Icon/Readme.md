@@ -152,6 +152,13 @@ Navigation:
 <span> </span>
 ```
 
+Editor:
+
+```jsx
+<Icon name="insertDriveFile"/>
+<span> </span>
+```
+
 Icons:
 
 ```jsx
