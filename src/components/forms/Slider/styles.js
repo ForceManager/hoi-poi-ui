@@ -9,7 +9,7 @@ export default (theme) => ({
         ...theme.typography.defaultText,
         position: 'absolute',
         bottom: -15,
-        color: theme.colors.red,
+        color: theme.colors.red500,
     },
     formControl: {
         position: 'relative',
@@ -89,7 +89,7 @@ export default (theme) => ({
             boxSizing: 'border-box',
             position: 'absolute',
             width: '100%',
-            backgroundColor: theme.colors.greyLight,
+            backgroundColor: theme.colors.neutral400,
             height: 2,
             borderRadius: 6,
         },
