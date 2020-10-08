@@ -137,7 +137,7 @@ exports[`SwitchInput checked match snapshot 1`] = `
             "fontSize": 10,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -149,21 +149,21 @@ exports[`SwitchInput checked match snapshot 1`] = `
             "fontSize": 14,
             "fontWeight": 400,
             "letterSpacing": 0.6,
-            "lineHeight": 20,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.5,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.6,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "buttonText": Object {
@@ -176,14 +176,14 @@ exports[`SwitchInput checked match snapshot 1`] = `
             "fontSize": 12,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -198,40 +198,40 @@ exports[`SwitchInput checked match snapshot 1`] = `
             "fontSize": 96,
             "fontWeight": 300,
             "letterSpacing": -1.5,
-            "lineHeight": 112,
+            "lineHeight": "112px",
           },
           "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 60,
             "fontWeight": 300,
             "letterSpacing": -0.5,
-            "lineHeight": 71,
+            "lineHeight": "71px",
           },
           "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 48,
             "fontWeight": 400,
-            "lineHeight": 57,
+            "lineHeight": "57px",
           },
           "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 34,
             "fontWeight": 400,
             "letterSpacing": 0.25,
-            "lineHeight": 40,
+            "lineHeight": "40px",
           },
           "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 24,
             "fontWeight": 400,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "h6": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "fontWeight": 500,
             "letterSpacing": 0.25,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -245,7 +245,7 @@ exports[`SwitchInput checked match snapshot 1`] = `
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 2,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "smallText": Object {
@@ -258,14 +258,14 @@ exports[`SwitchInput checked match snapshot 1`] = `
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.09,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.15,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -436,136 +436,160 @@ exports[`SwitchInput checked match snapshot 1`] = `
         overrides={Object {}}
         value={true}
       >
-        <div
-          className="HoiPoi__SwitchInput__root-2-0 HoiPoi__SwitchInput__horizontal-2-7"
+        <Component
+          className="HoiPoi__SwitchInput__root-2-0"
+          error=""
+          info=""
+          labelMode="horizontal"
+          override={Object {}}
+          overrides={Object {}}
         >
           <div
-            className="HoiPoi__SwitchInput__formControl-2-3"
+            className="HoiPoi__Input__root-2-3 HoiPoi__Input__horizontal-2-8 HoiPoi__SwitchInput__root-2-0"
           >
-            <Switch
-              checked={true}
-              isDisabled={false}
-              onChange={[Function]}
-              overrides={Object {}}
-              size="medium"
+            <div
+              className="HoiPoi__Input__inputWrapper-2-4"
             >
               <div
-                className="HoiPoi__Switch__root-2-9"
-                onMouseLeave={[Function]}
-                onMouseOver={[Function]}
+                className="HoiPoi__Input__formControl-2-9"
               >
-                <ReactSwitch
-                  activeBoxShadow={null}
-                  boxShadow={null}
+                <Switch
                   checked={true}
-                  checkedIcon={false}
-                  disabled={false}
-                  handleDiameter={16}
-                  height={20}
-                  offColor="#7d8a96"
-                  offHandleColor="#ffffff"
+                  className="HoiPoi__SwitchInput__switchinput-2-1"
+                  isDisabled={false}
                   onChange={[Function]}
-                  onColor="#ff8c00"
-                  onHandleColor="#ffffff"
-                  uncheckedIcon={false}
-                  width={36}
+                  overrides={Object {}}
+                  size="medium"
                 >
                   <div
-                    style={
-                      Object {
-                        "MozTransition": "opacity 0.25s",
-                        "MozUserSelect": "none",
-                        "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                        "WebkitTransition": "opacity 0.25s",
-                        "WebkitUserSelect": "none",
-                        "borderRadius": 10,
-                        "direction": "ltr",
-                        "display": "inline-block",
-                        "msUserSelect": "none",
-                        "opacity": 1,
-                        "position": "relative",
-                        "textAlign": "left",
-                        "touchAction": "none",
-                        "transition": "opacity 0.25s",
-                        "userSelect": "none",
-                      }
-                    }
+                    className="HoiPoi__Switch__root-2-12 HoiPoi__SwitchInput__switchinput-2-1"
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
                   >
-                    <div
-                      className="react-switch-bg"
-                      onClick={[Function]}
-                      onMouseDown={[Function]}
-                      style={
-                        Object {
-                          "MozTransition": "background 0.25s",
-                          "WebkitTransition": "background 0.25s",
-                          "background": "#ff8c00",
-                          "borderRadius": 10,
-                          "cursor": "pointer",
-                          "height": 20,
-                          "margin": 0,
-                          "position": "relative",
-                          "transition": "background 0.25s",
-                          "width": 36,
-                        }
-                      }
-                    />
-                    <div
-                      className="react-switch-handle"
-                      onClick={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      style={
-                        Object {
-                          "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                          "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                          "background": "#ffffff",
-                          "border": 0,
-                          "borderRadius": "50%",
-                          "boxShadow": null,
-                          "cursor": "pointer",
-                          "display": "inline-block",
-                          "height": 16,
-                          "outline": 0,
-                          "position": "absolute",
-                          "top": 2,
-                          "transform": "translateX(18px)",
-                          "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                          "width": 16,
-                        }
-                      }
-                    />
-                    <input
+                    <ReactSwitch
+                      activeBoxShadow={null}
+                      boxShadow={null}
                       checked={true}
+                      checkedIcon={false}
                       disabled={false}
-                      onBlur={[Function]}
+                      handleDiameter={16}
+                      height={20}
+                      offColor="#7d8a96"
+                      offHandleColor="#ffffff"
                       onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyUp={[Function]}
-                      role="switch"
-                      style={
-                        Object {
-                          "border": 0,
-                          "clip": "rect(0 0 0 0)",
-                          "height": 1,
-                          "margin": -1,
-                          "overflow": "hidden",
-                          "padding": 0,
-                          "position": "absolute",
-                          "width": 1,
+                      onColor="#ff8c00"
+                      onHandleColor="#ffffff"
+                      uncheckedIcon={false}
+                      width={36}
+                    >
+                      <div
+                        style={
+                          Object {
+                            "MozTransition": "opacity 0.25s",
+                            "MozUserSelect": "none",
+                            "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                            "WebkitTransition": "opacity 0.25s",
+                            "WebkitUserSelect": "none",
+                            "borderRadius": 10,
+                            "direction": "ltr",
+                            "display": "inline-block",
+                            "msUserSelect": "none",
+                            "opacity": 1,
+                            "position": "relative",
+                            "textAlign": "left",
+                            "touchAction": "none",
+                            "transition": "opacity 0.25s",
+                            "userSelect": "none",
+                          }
                         }
-                      }
-                      type="checkbox"
-                    />
+                      >
+                        <div
+                          className="react-switch-bg"
+                          onClick={[Function]}
+                          onMouseDown={[Function]}
+                          style={
+                            Object {
+                              "MozTransition": "background 0.25s",
+                              "WebkitTransition": "background 0.25s",
+                              "background": "#ff8c00",
+                              "borderRadius": 10,
+                              "cursor": "pointer",
+                              "height": 20,
+                              "margin": 0,
+                              "position": "relative",
+                              "transition": "background 0.25s",
+                              "width": 36,
+                            }
+                          }
+                        />
+                        <div
+                          className="react-switch-handle"
+                          onClick={[Function]}
+                          onMouseDown={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                              "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                              "background": "#ffffff",
+                              "border": 0,
+                              "borderRadius": "50%",
+                              "boxShadow": null,
+                              "cursor": "pointer",
+                              "display": "inline-block",
+                              "height": 16,
+                              "outline": 0,
+                              "position": "absolute",
+                              "top": 2,
+                              "transform": "translateX(18px)",
+                              "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                              "width": 16,
+                            }
+                          }
+                        />
+                        <input
+                          checked={true}
+                          disabled={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyUp={[Function]}
+                          role="switch"
+                          style={
+                            Object {
+                              "border": 0,
+                              "clip": "rect(0 0 0 0)",
+                              "height": 1,
+                              "margin": -1,
+                              "overflow": "hidden",
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": 1,
+                            }
+                          }
+                          type="checkbox"
+                        />
+                      </div>
+                    </ReactSwitch>
                   </div>
-                </ReactSwitch>
+                </Switch>
               </div>
-            </Switch>
+            </div>
+            <Component
+              className=""
+              error=""
+              info=""
+              overrides={Object {}}
+            >
+              <div
+                className="HoiPoi__FieldBottom__root-2-15"
+              />
+            </Component>
           </div>
-        </div>
+        </Component>
       </SwitchInput>
     </JssProvider>
   </ThemeProvider>
@@ -709,7 +733,7 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
             "fontSize": 10,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -721,21 +745,21 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
             "fontSize": 14,
             "fontWeight": 400,
             "letterSpacing": 0.6,
-            "lineHeight": 20,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.5,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.6,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "buttonText": Object {
@@ -748,14 +772,14 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
             "fontSize": 12,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -770,40 +794,40 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
             "fontSize": 96,
             "fontWeight": 300,
             "letterSpacing": -1.5,
-            "lineHeight": 112,
+            "lineHeight": "112px",
           },
           "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 60,
             "fontWeight": 300,
             "letterSpacing": -0.5,
-            "lineHeight": 71,
+            "lineHeight": "71px",
           },
           "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 48,
             "fontWeight": 400,
-            "lineHeight": 57,
+            "lineHeight": "57px",
           },
           "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 34,
             "fontWeight": 400,
             "letterSpacing": 0.25,
-            "lineHeight": 40,
+            "lineHeight": "40px",
           },
           "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 24,
             "fontWeight": 400,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "h6": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "fontWeight": 500,
             "letterSpacing": 0.25,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -817,7 +841,7 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 2,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "smallText": Object {
@@ -830,14 +854,14 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.09,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.15,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -1008,136 +1032,160 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
         overrides={Object {}}
         value={false}
       >
-        <div
-          className="HoiPoi__SwitchInput__root-1-0 HoiPoi__SwitchInput__horizontal-1-7"
+        <Component
+          className="HoiPoi__SwitchInput__root-1-0"
+          error=""
+          info=""
+          labelMode="horizontal"
+          override={Object {}}
+          overrides={Object {}}
         >
           <div
-            className="HoiPoi__SwitchInput__formControl-1-3"
+            className="HoiPoi__Input__root-1-3 HoiPoi__Input__horizontal-1-8 HoiPoi__SwitchInput__root-1-0"
           >
-            <Switch
-              checked={false}
-              isDisabled={false}
-              onChange={[Function]}
-              overrides={Object {}}
-              size="medium"
+            <div
+              className="HoiPoi__Input__inputWrapper-1-4"
             >
               <div
-                className="HoiPoi__Switch__root-1-9"
-                onMouseLeave={[Function]}
-                onMouseOver={[Function]}
+                className="HoiPoi__Input__formControl-1-9"
               >
-                <ReactSwitch
-                  activeBoxShadow={null}
-                  boxShadow={null}
+                <Switch
                   checked={false}
-                  checkedIcon={false}
-                  disabled={false}
-                  handleDiameter={16}
-                  height={20}
-                  offColor="#7d8a96"
-                  offHandleColor="#ffffff"
+                  className="HoiPoi__SwitchInput__switchinput-1-1"
+                  isDisabled={false}
                   onChange={[Function]}
-                  onColor="#ff8c00"
-                  onHandleColor="#ffffff"
-                  uncheckedIcon={false}
-                  width={36}
+                  overrides={Object {}}
+                  size="medium"
                 >
                   <div
-                    style={
-                      Object {
-                        "MozTransition": "opacity 0.25s",
-                        "MozUserSelect": "none",
-                        "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                        "WebkitTransition": "opacity 0.25s",
-                        "WebkitUserSelect": "none",
-                        "borderRadius": 10,
-                        "direction": "ltr",
-                        "display": "inline-block",
-                        "msUserSelect": "none",
-                        "opacity": 1,
-                        "position": "relative",
-                        "textAlign": "left",
-                        "touchAction": "none",
-                        "transition": "opacity 0.25s",
-                        "userSelect": "none",
-                      }
-                    }
+                    className="HoiPoi__Switch__root-1-12 HoiPoi__SwitchInput__switchinput-1-1"
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
                   >
-                    <div
-                      className="react-switch-bg"
-                      onClick={[Function]}
-                      onMouseDown={[Function]}
-                      style={
-                        Object {
-                          "MozTransition": "background 0.25s",
-                          "WebkitTransition": "background 0.25s",
-                          "background": "#7d8a96",
-                          "borderRadius": 10,
-                          "cursor": "pointer",
-                          "height": 20,
-                          "margin": 0,
-                          "position": "relative",
-                          "transition": "background 0.25s",
-                          "width": 36,
-                        }
-                      }
-                    />
-                    <div
-                      className="react-switch-handle"
-                      onClick={[Function]}
-                      onMouseDown={[Function]}
-                      onTouchCancel={[Function]}
-                      onTouchEnd={[Function]}
-                      onTouchMove={[Function]}
-                      onTouchStart={[Function]}
-                      style={
-                        Object {
-                          "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                          "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                          "background": "#ffffff",
-                          "border": 0,
-                          "borderRadius": "50%",
-                          "boxShadow": null,
-                          "cursor": "pointer",
-                          "display": "inline-block",
-                          "height": 16,
-                          "outline": 0,
-                          "position": "absolute",
-                          "top": 2,
-                          "transform": "translateX(2px)",
-                          "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                          "width": 16,
-                        }
-                      }
-                    />
-                    <input
+                    <ReactSwitch
+                      activeBoxShadow={null}
+                      boxShadow={null}
                       checked={false}
+                      checkedIcon={false}
                       disabled={false}
-                      onBlur={[Function]}
+                      handleDiameter={16}
+                      height={20}
+                      offColor="#7d8a96"
+                      offHandleColor="#ffffff"
                       onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyUp={[Function]}
-                      role="switch"
-                      style={
-                        Object {
-                          "border": 0,
-                          "clip": "rect(0 0 0 0)",
-                          "height": 1,
-                          "margin": -1,
-                          "overflow": "hidden",
-                          "padding": 0,
-                          "position": "absolute",
-                          "width": 1,
+                      onColor="#ff8c00"
+                      onHandleColor="#ffffff"
+                      uncheckedIcon={false}
+                      width={36}
+                    >
+                      <div
+                        style={
+                          Object {
+                            "MozTransition": "opacity 0.25s",
+                            "MozUserSelect": "none",
+                            "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                            "WebkitTransition": "opacity 0.25s",
+                            "WebkitUserSelect": "none",
+                            "borderRadius": 10,
+                            "direction": "ltr",
+                            "display": "inline-block",
+                            "msUserSelect": "none",
+                            "opacity": 1,
+                            "position": "relative",
+                            "textAlign": "left",
+                            "touchAction": "none",
+                            "transition": "opacity 0.25s",
+                            "userSelect": "none",
+                          }
                         }
-                      }
-                      type="checkbox"
-                    />
+                      >
+                        <div
+                          className="react-switch-bg"
+                          onClick={[Function]}
+                          onMouseDown={[Function]}
+                          style={
+                            Object {
+                              "MozTransition": "background 0.25s",
+                              "WebkitTransition": "background 0.25s",
+                              "background": "#7d8a96",
+                              "borderRadius": 10,
+                              "cursor": "pointer",
+                              "height": 20,
+                              "margin": 0,
+                              "position": "relative",
+                              "transition": "background 0.25s",
+                              "width": 36,
+                            }
+                          }
+                        />
+                        <div
+                          className="react-switch-handle"
+                          onClick={[Function]}
+                          onMouseDown={[Function]}
+                          onTouchCancel={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                              "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                              "background": "#ffffff",
+                              "border": 0,
+                              "borderRadius": "50%",
+                              "boxShadow": null,
+                              "cursor": "pointer",
+                              "display": "inline-block",
+                              "height": 16,
+                              "outline": 0,
+                              "position": "absolute",
+                              "top": 2,
+                              "transform": "translateX(2px)",
+                              "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                              "width": 16,
+                            }
+                          }
+                        />
+                        <input
+                          checked={false}
+                          disabled={false}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          onKeyUp={[Function]}
+                          role="switch"
+                          style={
+                            Object {
+                              "border": 0,
+                              "clip": "rect(0 0 0 0)",
+                              "height": 1,
+                              "margin": -1,
+                              "overflow": "hidden",
+                              "padding": 0,
+                              "position": "absolute",
+                              "width": 1,
+                            }
+                          }
+                          type="checkbox"
+                        />
+                      </div>
+                    </ReactSwitch>
                   </div>
-                </ReactSwitch>
+                </Switch>
               </div>
-            </Switch>
+            </div>
+            <Component
+              className=""
+              error=""
+              info=""
+              overrides={Object {}}
+            >
+              <div
+                className="HoiPoi__FieldBottom__root-1-15"
+              />
+            </Component>
           </div>
-        </div>
+        </Component>
       </SwitchInput>
     </JssProvider>
   </ThemeProvider>
