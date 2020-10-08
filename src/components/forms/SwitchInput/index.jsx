@@ -2,12 +2,13 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { getOverrides, useClasses } from '../../../utils/overrides';
-import Label from '../Label';
-
 import { createUseStyles } from '../../../utils/styles';
-import styles from './styles';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+
+import InputWrapper from '../components/InputWrapper';
 import Switch from '../Switch';
+
+import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'SwitchInput');
 
@@ -16,13 +17,9 @@ function SwitchInput({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    label,
     labelMode,
-    isFullWidth,
-    hint,
     error,
     checked,
-    isRequired,
     isReadOnly,
     isRange,
     onChange,
@@ -39,30 +36,17 @@ function SwitchInput({
         classes.root,
         {
             [classes.isReadOnly]: isReadOnly,
-            [classes[labelMode]]: labelMode,
-            [classes.isFullWidth]: isFullWidth,
-            [classes.errored]: error,
+            [classes.vertical]: labelMode === 'vertical',
         },
         classNameProp,
     );
-
-    const rootProps = {
-        className: rootClassName,
-    };
-
-    const labelProps = {
-        className: classes.Label,
-        isRequired,
-        hint,
-        ...override.Label,
-    };
 
     const onSwitch = useCallback(() => {
         onChange && onChange(!value);
     }, [onChange, value]);
 
     const switchProps = {
-        className: classes.SwitchInput,
+        className: classes.switchinput,
         onChange: onSwitch,
         checked: !!value,
         isDisabled: isReadOnly,
@@ -70,21 +54,16 @@ function SwitchInput({
     };
 
     return (
-        <div {...rootProps} {...override.root}>
-            {label && (
-                <Label isDisabled={isReadOnly} {...labelProps}>
-                    {label}
-                </Label>
-            )}
-            <div className={classes.formControl} {...override.formControl}>
-                <Switch {...switchProps} />
-                {error && (
-                    <div className={classes.error} {...override.error}>
-                        {error}
-                    </div>
-                )}
-            </div>
-        </div>
+        <InputWrapper
+            {...props}
+            error=""
+            info=""
+            labelMode={labelMode}
+            className={rootClassName}
+            overrides={overridesProp}
+        >
+            <Switch {...switchProps} />
+        </InputWrapper>
     );
 }
 

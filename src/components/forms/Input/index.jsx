@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
-import Label from '../Label';
-import FieldBottom from '../components/FieldBottom';
+import InputWrapper from '../components/InputWrapper';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -37,14 +36,8 @@ const Input = memo(
         type,
         numberDecimals,
         value,
-        label,
-        labelMode,
-        isFullWidth,
         placeholder,
-        hint,
         error,
-        info,
-        isRequired,
         isReadOnly,
         preComponent,
         postComponent,
@@ -62,8 +55,6 @@ const Input = memo(
             {
                 [classes.isReadOnly]: isReadOnly,
                 [classes.isReadAndDuplicable]: isCopyable && isReadOnly,
-                [classes[labelMode]]: labelMode,
-                [classes.isFullWidth]: isFullWidth,
                 [classes.focused]: focused,
                 [classes.error]: error,
                 [classes.custom]: component,
@@ -71,10 +62,6 @@ const Input = memo(
             },
             classNameProp,
         );
-
-        const fieldBottomClass = classnames({
-            [classes.fieldBottom]: label && labelMode === 'horizontal',
-        });
 
         const handleOnFocus = useCallback(
             (e) => {
@@ -237,7 +224,7 @@ const Input = memo(
                     >
                         <Icon
                             name={type === 'title' ? 'close' : 'closeSmall'}
-                            size={type === 'title' ? 'large' : 'medium'}
+                            size="large"
                             onClick={postComponentClick}
                         />
                         {shouldSeparate && (
@@ -310,41 +297,27 @@ const Input = memo(
         const Component = component;
 
         return (
-            <div className={rootClassName} {...override.root}>
-                <div className={classes.inputWrapper}>
-                    {label && (
-                        <Label
-                            className={classes.Label}
-                            isRequired={isRequired}
-                            hint={hint}
-                            {...override.Label}
-                        >
-                            {label}
-                        </Label>
+            <InputWrapper
+                {...props}
+                error={error}
+                className={rootClassName}
+                overrides={overridesProp}
+            >
+                <div className={classes.inputComponents} {...override.inputComponents}>
+                    {preComponent && (
+                        <div className={classes.preComponent} {...override.preComponent}>
+                            {preComponent}
+                        </div>
                     )}
-                    <div className={classes.formControl} {...override.formControl}>
-                        {preComponent && (
-                            <div className={classes.preComponent} {...override.preComponent}>
-                                {preComponent}
-                            </div>
-                        )}
-                        {!component && <input {...inputProps} />}
-                        {component && <Component {...inputProps} />}
-                        {newPostComponent.length > 0 && (
-                            <div className={classes.postComponent} {...override.postComponent}>
-                                {newPostComponent}
-                            </div>
-                        )}
-                    </div>
+                    {!component && <input {...inputProps} />}
+                    {component && <Component {...inputProps} />}
+                    {newPostComponent.length > 0 && (
+                        <div className={classes.postComponent} {...override.postComponent}>
+                            {newPostComponent}
+                        </div>
+                    )}
                 </div>
-                <FieldBottom
-                    className={fieldBottomClass}
-                    info={info}
-                    error={error}
-                    overrides={overridesProp}
-                    isFullWidth={isFullWidth}
-                />
-            </div>
+            </InputWrapper>
         );
     },
 );
@@ -357,23 +330,34 @@ Input.overrides = [
     'preComponent',
     'postComponent',
     'formControl',
+    'inputComponents',
     'Label',
 ];
 
 Input.defaultProps = {
-    labelMode: 'vertical',
+    ...InputWrapper.defaultProps,
     type: 'text',
     onChange: () => {},
     value: '',
     isReadOnly: false,
     isCopyable: false,
     numberDecimals: 2,
-    override: {},
+    overrides: {},
 };
 
 Input.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
+    label: PropTypes.string,
+    labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
+    isFullWidth: PropTypes.bool,
+    /** Info popover */
+    hint: PropTypes.string,
+    /** Error will be displayed below the component with style changes */
+    error: PropTypes.string,
+    /** Info will be displayed below the component with style changes */
+    info: PropTypes.string,
+    isRequired: PropTypes.bool,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
@@ -385,19 +369,9 @@ Input.propTypes = {
     /** Native input type */
     type: PropTypes.string,
     value: PropTypes.any,
-    label: PropTypes.string,
-    labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     placeholder: PropTypes.string,
-    isFullWidth: PropTypes.bool,
     numberDecimals: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /** Info popover */
-    hint: PropTypes.string,
-    /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
     onCopy: PropTypes.func,
-    /** Info will be displayed below the component with style changes */
-    info: PropTypes.string,
-    isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     isCopyable: PropTypes.bool,
     /** Component rendered at the input beginning */

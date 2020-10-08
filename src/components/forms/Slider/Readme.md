@@ -78,6 +78,27 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Bottom info & error
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+<div>
+    <Slider
+        label="Lorem ipsum"
+        labelMode="horizontal"
+        onChange={onChange}
+        value={state.value}
+        isRange
+        error="Error text here"
+        info="Info text here"
+    />
+</div>;
+```
+
 ### Component tree
 
 ---

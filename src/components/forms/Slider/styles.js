@@ -1,46 +1,5 @@
 export default (theme) => ({
     root: {},
-    Label: {
-        width: 153,
-        marginRight: 17,
-        padding: '6px 0',
-    },
-    error: {
-        ...theme.typography.defaultText,
-        position: 'absolute',
-        bottom: -15,
-        color: theme.colors.red500,
-    },
-    formControl: {
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        width: 290,
-        lineHeight: 0,
-    },
-    errored: {
-        paddingBottom: '20px !important',
-    },
-    vertical: {
-        display: 'block',
-        padding: '12px 0 11px 0',
-        marginLeft: '0 !important',
-        '& $formControl': {
-            marginTop: 10,
-        },
-    },
-    horizontal: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: '12px 0 11px 0',
-        '& $error': {},
-    },
-    isFullWidth: {
-        '& $formControl': {
-            width: '100%',
-            flex: 1,
-        },
-    },
     // Slider custom styles
     slider: {
         width: 'calc(100% - 15px)',
@@ -75,7 +34,6 @@ export default (theme) => ({
             background: 'transparent',
         },
     },
-
     smallSlider: {
         width: 'calc(100% - 15px)',
         minHeight: 50,
@@ -135,7 +93,6 @@ export default (theme) => ({
             marginTop: -10,
         },
     },
-
     smallOverlayHandler: {
         position: 'absolute',
         marginLeft: -5,
