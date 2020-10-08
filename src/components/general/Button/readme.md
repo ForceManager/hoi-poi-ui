@@ -1,98 +1,118 @@
-Default buttons:
+Types:
 
 ```jsx
-<Button>PUSH ME</Button>
 <span> </span>
-<Button color="primary">PUSH ME</Button>
+<Button>Push me</Button>
 <span> </span>
-<Button color="danger">PUSH ME</Button>
+<Button type="primary-error">Push me</Button>
 <span> </span>
-<Button color="grey">PUSH ME</Button>
+<Button type="secondary">Push me</Button>
+<span> </span>
+<Button type="secondary-error">Push me</Button>
+<span> </span>
+<Button type="terciary">Push me</Button>
 ```
 
 Sizes:
 
 ```jsx
-<Button size="small" color="primary">PUSH ME</Button>
+<Button size="small">Push me</Button>
 <span> </span>
-<Button size="medium" color="primary">PUSH ME</Button>
+<Button>Push me</Button>
 <span> </span>
-<Button size="big" color="primary">PUSH ME</Button>
+<Button size="big">Push me</Button>
 ```
 
-Outlined buttons:
+Disabled:
 
 ```jsx
-<Button size="small" type="outlined">PUSH ME</Button>
+<Button type="primary" isDisabled>Push me</Button>
 <span> </span>
-<Button size="medium" color="primary" type="outlined">PUSH ME</Button>
+<Button type="primary-error" isDisabled>Push me</Button>
 <span> </span>
-<Button size="big" color="danger" type="outlined">PUSH ME</Button>
+<Button type="secondary" isDisabled>Push me</Button>
+<span> </span>
+<Button type="secondary-error" isDisabled>Push me</Button>
+<span> </span>
+<Button type="terciary" isDisabled>Push me</Button>
 ```
 
-Squared buttons:
+Loading:
 
 ```jsx
-<Button size="small" type="squared">PUSH ME</Button>
-<span> </span>
-<Button size="medium" color="primary" type="squared">PUSH ME</Button>
-<span> </span>
-<Button size="big" color="danger" type="squared">PUSH ME</Button>
-<span> </span>
-<Button size="medium" color="primary" type="squared" isDisabled>PUSH ME</Button>
+const [loading, setLoading] = React.useState(false);
+const onClick = () => setLoading(true);
+<div>
+    <Button type="primary" size="small" isLoading>
+        Push me
+    </Button>
+    <span> </span>
+    <Button type="primary-error" isLoading>
+        Push me
+    </Button>
+    <span> </span>
+    <Button type="secondary" isLoading>
+        Push me
+    </Button>
+    <span> </span>
+    <Button type="secondary-error" isLoading>
+        Push me
+    </Button>
+    <span> </span>
+    <Button type="terciary" size="big" isLoading>
+        Push me
+    </Button>
+    <span> </span>
+    <Button type="primary" size="small" isLoading={loading} onClick={onClick}>
+        Push me
+    </Button>
+    <span> </span>
+    <Button type="primary-error" isLoading={loading} onClick={onClick}>
+        Push me
+    </Button>
+</div>;
 ```
 
-Squared outlined buttons:
+Icon Left:
 
 ```jsx
-<Button size="small" type="squared-outlined">PUSH ME</Button>
 <span> </span>
-<Button size="medium" color="primary" type="squared-outlined">PUSH ME</Button>
+<Button type="primary" icon="cloudUpload">Push me</Button>
 <span> </span>
-<Button size="big" color="danger" type="squared-outlined">PUSH ME</Button>
+<Button type="primary-error" icon="cloudUpload">Push me</Button>
 <span> </span>
-<Button size="big" color="danger" type="squared-outlined" isDisabled>PUSH ME</Button>
+<Button type="secondary" icon="cloudUpload">Push me</Button>
+<span> </span>
+<Button type="secondary-error" icon="cloudUpload">Push me</Button>
+<span> </span>
+<Button type="terciary" icon="cloudUpload">Push me</Button>
 ```
 
-Disabled buttons:
+Icon Right:
 
 ```jsx
-<Button size="small" color="primary" isDisabled>PUSH ME</Button>
 <span> </span>
-<Button size="medium" color="primary" isDisabled>PUSH ME</Button>
+<Button type="primary" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
-<Button size="big" color="primary" isDisabled>PUSH ME</Button>
+<Button type="primary-error" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
-<Button size="big" color="primary" type="outlined" isDisabled>PUSH ME</Button>
+<Button type="secondary" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
-<Button type="squared" isDisabled>PUSH ME</Button>
-<Button type="squared" color="grey" isDisabled>PUSH ME</Button>
-```
-
-Loading buttons:
-
-```jsx
-<Button size="small" color="primary" isLoading>PUSH ME</Button>
+<Button type="secondary-error" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
-<Button size="medium" color="primary" isLoading>PUSH ME</Button>
-<span> </span>
-<Button size="big" color="primary" isLoading>PUSH ME</Button>
-<span> </span>
-<Button size="big" color="primary" type="outlined" isLoading>PUSH ME</Button>
-<span> </span>
-<Button type="squared" color="primary" isLoading>PUSH ME</Button>
+<Button type="terciary" icon="cloudUpload" iconPosition="right">Push me</Button>
 ```
 
 Full-width
 
 ```jsx
-<Button size="big" color="primary" isFullWidth>PUSH ME</Button>
+<Button isFullWidth>Push me</Button>
 <br />
 <br />
-<Button size="big" color="primary" type="outlined" isFullWidth>PUSH ME</Button>
+<Button isDisabled isFullWidth>Push me</Button>
 <br />
 <br />
-<Button size="big" color="primary" isFullWidth isLoading>PUSH ME</Button>
+<Button isFullWidth isLoading>Push me</Button>
 ```
 
 ### Component tree

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -23,12 +23,13 @@ function Button({
     onClick,
     size,
     type,
-    color,
     isDisabled,
     isFullWidth,
     isLoading,
     href,
     target,
+    icon,
+    iconPosition,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -39,22 +40,18 @@ function Button({
     const rootClassName = classnames(
         classes.root,
         {
-            [classes[type]]: type,
-            [classes.white]: !color,
-            [classes.primary]: color === 'primary',
-            [classes.danger]: color === 'danger',
-            [classes.grey]: color === 'grey',
-            [classes.small]: size === 'small',
-            [classes.big]: size === 'big',
-            [classes.disabled]: isDisabled || isLoading,
+            [classes.primary]: type === 'primary',
+            [classes.primaryError]: type === 'primary-error',
+            [classes.secondary]: type === 'secondary',
+            [classes.secondaryError]: type === 'secondary-error',
+            [classes.terciary]: type === 'terciary',
+            [classes[size]]: size,
+            [classes.disabled]: isDisabled,
+            [classes.loading]: isLoading,
             [classes.fullWidth]: isFullWidth,
         },
         classNameProp,
     );
-
-    const wrapperLabelClass = classnames({
-        [classes.labelLoading]: isLoading,
-    });
 
     const rootProps = {
         ...props,
@@ -63,20 +60,16 @@ function Button({
     };
 
     const content = (
-        <span className={wrapperLabelClass}>
+        <Fragment>
             {isLoading && (
-                <div className={classes.loader}>
-                    <Loader
-                        size={LOADER_SIZES[size]}
-                        color={['outlined', 'squared-outlined'].includes(type) ? color : 'white'}
-                        {...override.Loader}
-                    />
+                <div className={classes.loaderContainer}>
+                    <Loader size={LOADER_SIZES[size]} color="white" {...override.Loader} />
                 </div>
             )}
             <Text className={classes.Text} {...override.Text}>
                 {children}
             </Text>
-        </span>
+        </Fragment>
     );
 
     if (href) {
@@ -98,8 +91,9 @@ Button.overrides = ['root', 'Text', 'Loader'];
 
 Button.defaultProps = {
     size: 'medium',
-    type: 'filled',
+    type: 'primary',
     overrides: {},
+    iconPosition: 'left',
 };
 
 Button.propTypes = {
@@ -108,8 +102,7 @@ Button.propTypes = {
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['big', 'medium', 'small']),
-    type: PropTypes.oneOf(['filled', 'outlined', 'squared', 'squared-outlined']),
-    color: PropTypes.oneOf(['primary', 'danger', 'white', 'grey']),
+    type: PropTypes.oneOf(['primary', 'primary-error', 'secondary', 'secondary-error', 'terciary']),
     isDisabled: PropTypes.bool,
     /** Use the whole container */
     isFullWidth: PropTypes.bool,
@@ -118,6 +111,8 @@ Button.propTypes = {
     href: PropTypes.string,
     /** native <a/> target */
     target: PropTypes.string,
+    icon: PropTypes.string,
+    iconPosition: PropTypes.oneOf(['left', 'right']),
 };
 
 export default React.memo(Button);
