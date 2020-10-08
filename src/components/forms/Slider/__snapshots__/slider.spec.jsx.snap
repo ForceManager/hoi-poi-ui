@@ -137,7 +137,7 @@ exports[`Input custom max/min/step match 1`] = `
             "fontSize": 10,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -149,21 +149,21 @@ exports[`Input custom max/min/step match 1`] = `
             "fontSize": 14,
             "fontWeight": 400,
             "letterSpacing": 0.6,
-            "lineHeight": 20,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.5,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.6,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "buttonText": Object {
@@ -176,14 +176,14 @@ exports[`Input custom max/min/step match 1`] = `
             "fontSize": 12,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -198,40 +198,40 @@ exports[`Input custom max/min/step match 1`] = `
             "fontSize": 96,
             "fontWeight": 300,
             "letterSpacing": -1.5,
-            "lineHeight": 112,
+            "lineHeight": "112px",
           },
           "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 60,
             "fontWeight": 300,
             "letterSpacing": -0.5,
-            "lineHeight": 71,
+            "lineHeight": "71px",
           },
           "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 48,
             "fontWeight": 400,
-            "lineHeight": 57,
+            "lineHeight": "57px",
           },
           "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 34,
             "fontWeight": 400,
             "letterSpacing": 0.25,
-            "lineHeight": 40,
+            "lineHeight": "40px",
           },
           "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 24,
             "fontWeight": 400,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "h6": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "fontWeight": 500,
             "letterSpacing": 0.25,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -245,7 +245,7 @@ exports[`Input custom max/min/step match 1`] = `
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 2,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "smallText": Object {
@@ -258,14 +258,14 @@ exports[`Input custom max/min/step match 1`] = `
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.09,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.15,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -442,185 +442,205 @@ exports[`Input custom max/min/step match 1`] = `
         step={100}
         value={5000}
       >
-        <div
-          className="HoiPoi__Slider__root-4-0 HoiPoi__Slider__horizontal-4-6"
+        <Component
+          className="HoiPoi__Slider__root-4-0"
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          onChange={[Function]}
+          override={Object {}}
+          overrides={Object {}}
         >
-          <Label
-            className="HoiPoi__Slider__Label-4-1"
-            isDisabled={false}
+          <div
+            className="HoiPoi__Input__root-4-8 HoiPoi__Input__horizontal-4-13 HoiPoi__Slider__root-4-0"
           >
             <div
-              className="HoiPoi__Label__root-4-15 HoiPoi__Slider__Label-4-1"
+              className="HoiPoi__Input__inputWrapper-4-9"
             >
-              <Text
-                className="HoiPoi__Label__Text-4-16"
-                overrides={Object {}}
-                type="normal"
-              >
-                <span
-                  className="HoiPoi__Text__root-4-19 HoiPoi__Text__normal-4-26 HoiPoi__Label__Text-4-16"
-                >
-                  Lorem ipsum
-                </span>
-              </Text>
-            </div>
-          </Label>
-          <div
-            className="HoiPoi__Slider__formControl-4-3"
-          >
-            <ComponentEnhancer(undefined)
-              activeDotStyle={Object {}}
-              className="HoiPoi__Slider__slider-4-8"
-              defaultValue={5000}
-              disabled={false}
-              dotStyle={Object {}}
-              dots={false}
-              handle={[Function]}
-              handleStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              included={true}
-              marks={Object {}}
-              max={10000}
-              min={5000}
-              onAfterChange={[Function]}
-              onBeforeChange={[Function]}
-              onChange={[Function]}
-              prefixCls="rc-slider"
-              railStyle={Object {}}
-              reverse={false}
-              step={100}
-              trackStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              value={5000}
-              vertical={false}
-            >
-              <div
-                className="rc-slider HoiPoi__Slider__slider-4-8"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                onTouchStart={[Function]}
+              <Label
+                className="HoiPoi__Input__Label-4-11"
               >
                 <div
-                  className="rc-slider-rail"
-                  style={Object {}}
-                />
-                <Track
-                  className="rc-slider-track"
-                  included={true}
-                  length={0}
-                  offset={0}
-                  reverse={false}
-                  style={Object {}}
-                  vertical={false}
+                  className="HoiPoi__Label__root-4-17 HoiPoi__Input__Label-4-11"
                 >
-                  <div
-                    className="rc-slider-track"
-                    style={
-                      Object {
-                        "left": "0%",
-                        "right": "auto",
-                        "width": "0%",
-                      }
-                    }
-                  />
-                </Track>
-                <Steps
+                  <Text
+                    className="HoiPoi__Label__Text-4-18"
+                    overrides={Object {}}
+                    type="normal"
+                  >
+                    <span
+                      className="HoiPoi__Text__root-4-21 HoiPoi__Text__normal-4-28 HoiPoi__Label__Text-4-18"
+                    >
+                      Lorem ipsum
+                    </span>
+                  </Text>
+                </div>
+              </Label>
+              <div
+                className="HoiPoi__Input__formControl-4-14"
+              >
+                <ComponentEnhancer(undefined)
                   activeDotStyle={Object {}}
+                  className="HoiPoi__Slider__slider-4-1"
+                  defaultValue={5000}
+                  disabled={false}
                   dotStyle={Object {}}
                   dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
                   included={true}
-                  lowerBound={5000}
                   marks={Object {}}
                   max={10000}
                   min={5000}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
                   prefixCls="rc-slider"
+                  railStyle={Object {}}
                   reverse={false}
                   step={100}
-                  upperBound={5000}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={5000}
                   vertical={false}
                 >
                   <div
-                    className="rc-slider-step"
-                  />
-                </Steps>
-                <div
-                  className="HoiPoi__Slider__overlay-4-10"
-                  key="0"
-                >
-                  <span
-                    className="HoiPoi__Slider__overlayLabel-4-13"
-                    style={
-                      Object {
-                        "left": "0%",
-                      }
-                    }
-                  >
-                    5000
-                  </span>
-                  <Handle
-                    className="HoiPoi__Slider__overlayHandler-4-11"
-                    disabled={false}
-                    dragging="false"
-                    max={10000}
-                    min={5000}
-                    offset={0}
-                    prefixCls="hoi-poi-slider"
-                    reverse={false}
-                    style={Object {}}
-                    value={5000}
-                    vertical={false}
+                    className="rc-slider HoiPoi__Slider__slider-4-1"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      aria-disabled={false}
-                      aria-valuemax={10000}
-                      aria-valuemin={5000}
-                      aria-valuenow={5000}
-                      className="HoiPoi__Slider__overlayHandler-4-11"
-                      dragging="false"
-                      onBlur={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseDown={[Function]}
-                      role="slider"
-                      style={
-                        Object {
-                          "left": "0%",
-                          "right": "auto",
-                          "transform": "translateX(-50%)",
-                        }
-                      }
-                      tabIndex={0}
+                      className="rc-slider-rail"
+                      style={Object {}}
                     />
-                  </Handle>
-                </div>
-                <Marks
-                  className="rc-slider-mark"
-                  included={true}
-                  lowerBound={5000}
-                  marks={Object {}}
-                  max={10000}
-                  min={5000}
-                  onClickLabel={[Function]}
-                  reverse={false}
-                  upperBound={5000}
-                  vertical={false}
-                >
-                  <div
-                    className="rc-slider-mark"
-                  />
-                </Marks>
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      reverse={false}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "right": "auto",
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={5000}
+                      marks={Object {}}
+                      max={10000}
+                      min={5000}
+                      prefixCls="rc-slider"
+                      reverse={false}
+                      step={100}
+                      upperBound={5000}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
+                      />
+                    </Steps>
+                    <div
+                      className="HoiPoi__Slider__overlay-4-3"
+                      key="0"
+                    >
+                      <span
+                        className="HoiPoi__Slider__overlayLabel-4-6"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        5000
+                      </span>
+                      <Handle
+                        className="HoiPoi__Slider__overlayHandler-4-4"
+                        disabled={false}
+                        dragging="false"
+                        max={10000}
+                        min={5000}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        reverse={false}
+                        style={Object {}}
+                        value={5000}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={false}
+                          aria-valuemax={10000}
+                          aria-valuemin={5000}
+                          aria-valuenow={5000}
+                          className="HoiPoi__Slider__overlayHandler-4-4"
+                          dragging="false"
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
+                            }
+                          }
+                          tabIndex={0}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={5000}
+                      marks={Object {}}
+                      max={10000}
+                      min={5000}
+                      onClickLabel={[Function]}
+                      reverse={false}
+                      upperBound={5000}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
               </div>
-            </ComponentEnhancer(undefined)>
+            </div>
+            <Component
+              className="HoiPoi__Input__fieldBottom-4-10"
+              overrides={Object {}}
+            >
+              <div
+                className="HoiPoi__FieldBottom__root-4-32 HoiPoi__Input__fieldBottom-4-10"
+              />
+            </Component>
           </div>
-        </div>
+        </Component>
       </Slider>
     </JssProvider>
   </ThemeProvider>
@@ -764,7 +784,7 @@ exports[`Input custom tip match 1`] = `
             "fontSize": 10,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -776,21 +796,21 @@ exports[`Input custom tip match 1`] = `
             "fontSize": 14,
             "fontWeight": 400,
             "letterSpacing": 0.6,
-            "lineHeight": 20,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.5,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.6,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "buttonText": Object {
@@ -803,14 +823,14 @@ exports[`Input custom tip match 1`] = `
             "fontSize": 12,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -825,40 +845,40 @@ exports[`Input custom tip match 1`] = `
             "fontSize": 96,
             "fontWeight": 300,
             "letterSpacing": -1.5,
-            "lineHeight": 112,
+            "lineHeight": "112px",
           },
           "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 60,
             "fontWeight": 300,
             "letterSpacing": -0.5,
-            "lineHeight": 71,
+            "lineHeight": "71px",
           },
           "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 48,
             "fontWeight": 400,
-            "lineHeight": 57,
+            "lineHeight": "57px",
           },
           "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 34,
             "fontWeight": 400,
             "letterSpacing": 0.25,
-            "lineHeight": 40,
+            "lineHeight": "40px",
           },
           "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 24,
             "fontWeight": 400,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "h6": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "fontWeight": 500,
             "letterSpacing": 0.25,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -872,7 +892,7 @@ exports[`Input custom tip match 1`] = `
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 2,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "smallText": Object {
@@ -885,14 +905,14 @@ exports[`Input custom tip match 1`] = `
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.09,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.15,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -1070,185 +1090,205 @@ exports[`Input custom tip match 1`] = `
         tipFormatter={[Function]}
         value={0}
       >
-        <div
-          className="HoiPoi__Slider__root-3-0 HoiPoi__Slider__horizontal-3-6"
+        <Component
+          className="HoiPoi__Slider__root-3-0"
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          onChange={[Function]}
+          override={Object {}}
+          overrides={Object {}}
         >
-          <Label
-            className="HoiPoi__Slider__Label-3-1"
-            isDisabled={false}
+          <div
+            className="HoiPoi__Input__root-3-8 HoiPoi__Input__horizontal-3-13 HoiPoi__Slider__root-3-0"
           >
             <div
-              className="HoiPoi__Label__root-3-15 HoiPoi__Slider__Label-3-1"
+              className="HoiPoi__Input__inputWrapper-3-9"
             >
-              <Text
-                className="HoiPoi__Label__Text-3-16"
-                overrides={Object {}}
-                type="normal"
-              >
-                <span
-                  className="HoiPoi__Text__root-3-19 HoiPoi__Text__normal-3-26 HoiPoi__Label__Text-3-16"
-                >
-                  Lorem ipsum
-                </span>
-              </Text>
-            </div>
-          </Label>
-          <div
-            className="HoiPoi__Slider__formControl-3-3"
-          >
-            <ComponentEnhancer(undefined)
-              activeDotStyle={Object {}}
-              className="HoiPoi__Slider__slider-3-8"
-              defaultValue={0}
-              disabled={false}
-              dotStyle={Object {}}
-              dots={false}
-              handle={[Function]}
-              handleStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              included={true}
-              marks={Object {}}
-              max={100}
-              min={0}
-              onAfterChange={[Function]}
-              onBeforeChange={[Function]}
-              onChange={[Function]}
-              prefixCls="rc-slider"
-              railStyle={Object {}}
-              reverse={false}
-              step={1}
-              trackStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              value={0}
-              vertical={false}
-            >
-              <div
-                className="rc-slider HoiPoi__Slider__slider-3-8"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                onTouchStart={[Function]}
+              <Label
+                className="HoiPoi__Input__Label-3-11"
               >
                 <div
-                  className="rc-slider-rail"
-                  style={Object {}}
-                />
-                <Track
-                  className="rc-slider-track"
-                  included={true}
-                  length={0}
-                  offset={0}
-                  reverse={false}
-                  style={Object {}}
-                  vertical={false}
+                  className="HoiPoi__Label__root-3-17 HoiPoi__Input__Label-3-11"
                 >
-                  <div
-                    className="rc-slider-track"
-                    style={
-                      Object {
-                        "left": "0%",
-                        "right": "auto",
-                        "width": "0%",
-                      }
-                    }
-                  />
-                </Track>
-                <Steps
+                  <Text
+                    className="HoiPoi__Label__Text-3-18"
+                    overrides={Object {}}
+                    type="normal"
+                  >
+                    <span
+                      className="HoiPoi__Text__root-3-21 HoiPoi__Text__normal-3-28 HoiPoi__Label__Text-3-18"
+                    >
+                      Lorem ipsum
+                    </span>
+                  </Text>
+                </div>
+              </Label>
+              <div
+                className="HoiPoi__Input__formControl-3-14"
+              >
+                <ComponentEnhancer(undefined)
                   activeDotStyle={Object {}}
+                  className="HoiPoi__Slider__slider-3-1"
+                  defaultValue={0}
+                  disabled={false}
                   dotStyle={Object {}}
                   dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
                   included={true}
-                  lowerBound={0}
                   marks={Object {}}
                   max={100}
                   min={0}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
                   prefixCls="rc-slider"
+                  railStyle={Object {}}
                   reverse={false}
                   step={1}
-                  upperBound={0}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={0}
                   vertical={false}
                 >
                   <div
-                    className="rc-slider-step"
-                  />
-                </Steps>
-                <div
-                  className="HoiPoi__Slider__overlay-3-10"
-                  key="0"
-                >
-                  <span
-                    className="HoiPoi__Slider__overlayLabel-3-13"
-                    style={
-                      Object {
-                        "left": "0%",
-                      }
-                    }
-                  >
-                    0%
-                  </span>
-                  <Handle
-                    className="HoiPoi__Slider__overlayHandler-3-11"
-                    disabled={false}
-                    dragging="false"
-                    max={100}
-                    min={0}
-                    offset={0}
-                    prefixCls="hoi-poi-slider"
-                    reverse={false}
-                    style={Object {}}
-                    value={0}
-                    vertical={false}
+                    className="rc-slider HoiPoi__Slider__slider-3-1"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      aria-disabled={false}
-                      aria-valuemax={100}
-                      aria-valuemin={0}
-                      aria-valuenow={0}
-                      className="HoiPoi__Slider__overlayHandler-3-11"
-                      dragging="false"
-                      onBlur={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseDown={[Function]}
-                      role="slider"
-                      style={
-                        Object {
-                          "left": "0%",
-                          "right": "auto",
-                          "transform": "translateX(-50%)",
-                        }
-                      }
-                      tabIndex={0}
+                      className="rc-slider-rail"
+                      style={Object {}}
                     />
-                  </Handle>
-                </div>
-                <Marks
-                  className="rc-slider-mark"
-                  included={true}
-                  lowerBound={0}
-                  marks={Object {}}
-                  max={100}
-                  min={0}
-                  onClickLabel={[Function]}
-                  reverse={false}
-                  upperBound={0}
-                  vertical={false}
-                >
-                  <div
-                    className="rc-slider-mark"
-                  />
-                </Marks>
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      reverse={false}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "right": "auto",
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      prefixCls="rc-slider"
+                      reverse={false}
+                      step={1}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
+                      />
+                    </Steps>
+                    <div
+                      className="HoiPoi__Slider__overlay-3-3"
+                      key="0"
+                    >
+                      <span
+                        className="HoiPoi__Slider__overlayLabel-3-6"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        0%
+                      </span>
+                      <Handle
+                        className="HoiPoi__Slider__overlayHandler-3-4"
+                        disabled={false}
+                        dragging="false"
+                        max={100}
+                        min={0}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        reverse={false}
+                        style={Object {}}
+                        value={0}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={false}
+                          aria-valuemax={100}
+                          aria-valuemin={0}
+                          aria-valuenow={0}
+                          className="HoiPoi__Slider__overlayHandler-3-4"
+                          dragging="false"
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
+                            }
+                          }
+                          tabIndex={0}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      onClickLabel={[Function]}
+                      reverse={false}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
               </div>
-            </ComponentEnhancer(undefined)>
+            </div>
+            <Component
+              className="HoiPoi__Input__fieldBottom-3-10"
+              overrides={Object {}}
+            >
+              <div
+                className="HoiPoi__FieldBottom__root-3-32 HoiPoi__Input__fieldBottom-3-10"
+              />
+            </Component>
           </div>
-        </div>
+        </Component>
       </Slider>
     </JssProvider>
   </ThemeProvider>
@@ -1392,7 +1432,7 @@ exports[`Input default match 1`] = `
             "fontSize": 10,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1404,21 +1444,21 @@ exports[`Input default match 1`] = `
             "fontSize": 14,
             "fontWeight": 400,
             "letterSpacing": 0.6,
-            "lineHeight": 20,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.5,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.6,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "buttonText": Object {
@@ -1431,14 +1471,14 @@ exports[`Input default match 1`] = `
             "fontSize": 12,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1453,40 +1493,40 @@ exports[`Input default match 1`] = `
             "fontSize": 96,
             "fontWeight": 300,
             "letterSpacing": -1.5,
-            "lineHeight": 112,
+            "lineHeight": "112px",
           },
           "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 60,
             "fontWeight": 300,
             "letterSpacing": -0.5,
-            "lineHeight": 71,
+            "lineHeight": "71px",
           },
           "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 48,
             "fontWeight": 400,
-            "lineHeight": 57,
+            "lineHeight": "57px",
           },
           "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 34,
             "fontWeight": 400,
             "letterSpacing": 0.25,
-            "lineHeight": 40,
+            "lineHeight": "40px",
           },
           "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 24,
             "fontWeight": 400,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "h6": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "fontWeight": 500,
             "letterSpacing": 0.25,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1500,7 +1540,7 @@ exports[`Input default match 1`] = `
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 2,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "smallText": Object {
@@ -1513,14 +1553,14 @@ exports[`Input default match 1`] = `
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.09,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.15,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -1697,185 +1737,205 @@ exports[`Input default match 1`] = `
         step={1}
         value={0}
       >
-        <div
-          className="HoiPoi__Slider__root-1-0 HoiPoi__Slider__horizontal-1-6"
+        <Component
+          className="HoiPoi__Slider__root-1-0"
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          onChange={[Function]}
+          override={Object {}}
+          overrides={Object {}}
         >
-          <Label
-            className="HoiPoi__Slider__Label-1-1"
-            isDisabled={false}
+          <div
+            className="HoiPoi__Input__root-1-8 HoiPoi__Input__horizontal-1-13 HoiPoi__Slider__root-1-0"
           >
             <div
-              className="HoiPoi__Label__root-1-15 HoiPoi__Slider__Label-1-1"
+              className="HoiPoi__Input__inputWrapper-1-9"
             >
-              <Text
-                className="HoiPoi__Label__Text-1-16"
-                overrides={Object {}}
-                type="normal"
-              >
-                <span
-                  className="HoiPoi__Text__root-1-19 HoiPoi__Text__normal-1-26 HoiPoi__Label__Text-1-16"
-                >
-                  Lorem ipsum
-                </span>
-              </Text>
-            </div>
-          </Label>
-          <div
-            className="HoiPoi__Slider__formControl-1-3"
-          >
-            <ComponentEnhancer(undefined)
-              activeDotStyle={Object {}}
-              className="HoiPoi__Slider__slider-1-8"
-              defaultValue={0}
-              disabled={false}
-              dotStyle={Object {}}
-              dots={false}
-              handle={[Function]}
-              handleStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              included={true}
-              marks={Object {}}
-              max={100}
-              min={0}
-              onAfterChange={[Function]}
-              onBeforeChange={[Function]}
-              onChange={[Function]}
-              prefixCls="rc-slider"
-              railStyle={Object {}}
-              reverse={false}
-              step={1}
-              trackStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              value={0}
-              vertical={false}
-            >
-              <div
-                className="rc-slider HoiPoi__Slider__slider-1-8"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                onTouchStart={[Function]}
+              <Label
+                className="HoiPoi__Input__Label-1-11"
               >
                 <div
-                  className="rc-slider-rail"
-                  style={Object {}}
-                />
-                <Track
-                  className="rc-slider-track"
-                  included={true}
-                  length={0}
-                  offset={0}
-                  reverse={false}
-                  style={Object {}}
-                  vertical={false}
+                  className="HoiPoi__Label__root-1-17 HoiPoi__Input__Label-1-11"
                 >
-                  <div
-                    className="rc-slider-track"
-                    style={
-                      Object {
-                        "left": "0%",
-                        "right": "auto",
-                        "width": "0%",
-                      }
-                    }
-                  />
-                </Track>
-                <Steps
+                  <Text
+                    className="HoiPoi__Label__Text-1-18"
+                    overrides={Object {}}
+                    type="normal"
+                  >
+                    <span
+                      className="HoiPoi__Text__root-1-21 HoiPoi__Text__normal-1-28 HoiPoi__Label__Text-1-18"
+                    >
+                      Lorem ipsum
+                    </span>
+                  </Text>
+                </div>
+              </Label>
+              <div
+                className="HoiPoi__Input__formControl-1-14"
+              >
+                <ComponentEnhancer(undefined)
                   activeDotStyle={Object {}}
+                  className="HoiPoi__Slider__slider-1-1"
+                  defaultValue={0}
+                  disabled={false}
                   dotStyle={Object {}}
                   dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
                   included={true}
-                  lowerBound={0}
                   marks={Object {}}
                   max={100}
                   min={0}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
                   prefixCls="rc-slider"
+                  railStyle={Object {}}
                   reverse={false}
                   step={1}
-                  upperBound={0}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={0}
                   vertical={false}
                 >
                   <div
-                    className="rc-slider-step"
-                  />
-                </Steps>
-                <div
-                  className="HoiPoi__Slider__overlay-1-10"
-                  key="0"
-                >
-                  <span
-                    className="HoiPoi__Slider__overlayLabel-1-13"
-                    style={
-                      Object {
-                        "left": "0%",
-                      }
-                    }
-                  >
-                    0
-                  </span>
-                  <Handle
-                    className="HoiPoi__Slider__overlayHandler-1-11"
-                    disabled={false}
-                    dragging="false"
-                    max={100}
-                    min={0}
-                    offset={0}
-                    prefixCls="hoi-poi-slider"
-                    reverse={false}
-                    style={Object {}}
-                    value={0}
-                    vertical={false}
+                    className="rc-slider HoiPoi__Slider__slider-1-1"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      aria-disabled={false}
-                      aria-valuemax={100}
-                      aria-valuemin={0}
-                      aria-valuenow={0}
-                      className="HoiPoi__Slider__overlayHandler-1-11"
-                      dragging="false"
-                      onBlur={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseDown={[Function]}
-                      role="slider"
-                      style={
-                        Object {
-                          "left": "0%",
-                          "right": "auto",
-                          "transform": "translateX(-50%)",
-                        }
-                      }
-                      tabIndex={0}
+                      className="rc-slider-rail"
+                      style={Object {}}
                     />
-                  </Handle>
-                </div>
-                <Marks
-                  className="rc-slider-mark"
-                  included={true}
-                  lowerBound={0}
-                  marks={Object {}}
-                  max={100}
-                  min={0}
-                  onClickLabel={[Function]}
-                  reverse={false}
-                  upperBound={0}
-                  vertical={false}
-                >
-                  <div
-                    className="rc-slider-mark"
-                  />
-                </Marks>
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      reverse={false}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "right": "auto",
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      prefixCls="rc-slider"
+                      reverse={false}
+                      step={1}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
+                      />
+                    </Steps>
+                    <div
+                      className="HoiPoi__Slider__overlay-1-3"
+                      key="0"
+                    >
+                      <span
+                        className="HoiPoi__Slider__overlayLabel-1-6"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        0
+                      </span>
+                      <Handle
+                        className="HoiPoi__Slider__overlayHandler-1-4"
+                        disabled={false}
+                        dragging="false"
+                        max={100}
+                        min={0}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        reverse={false}
+                        style={Object {}}
+                        value={0}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={false}
+                          aria-valuemax={100}
+                          aria-valuemin={0}
+                          aria-valuenow={0}
+                          className="HoiPoi__Slider__overlayHandler-1-4"
+                          dragging="false"
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
+                            }
+                          }
+                          tabIndex={0}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      onClickLabel={[Function]}
+                      reverse={false}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
               </div>
-            </ComponentEnhancer(undefined)>
+            </div>
+            <Component
+              className="HoiPoi__Input__fieldBottom-1-10"
+              overrides={Object {}}
+            >
+              <div
+                className="HoiPoi__FieldBottom__root-1-32 HoiPoi__Input__fieldBottom-1-10"
+              />
+            </Component>
           </div>
-        </div>
+        </Component>
       </Slider>
     </JssProvider>
   </ThemeProvider>
@@ -2019,7 +2079,7 @@ exports[`Input disabled match 1`] = `
             "fontSize": 10,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -2031,21 +2091,21 @@ exports[`Input disabled match 1`] = `
             "fontSize": 14,
             "fontWeight": 400,
             "letterSpacing": 0.6,
-            "lineHeight": 20,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.5,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.6,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "buttonText": Object {
@@ -2058,14 +2118,14 @@ exports[`Input disabled match 1`] = `
             "fontSize": 12,
             "fontWeight": 400,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 0.4,
-            "lineHeight": 16,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -2080,40 +2140,40 @@ exports[`Input disabled match 1`] = `
             "fontSize": 96,
             "fontWeight": 300,
             "letterSpacing": -1.5,
-            "lineHeight": 112,
+            "lineHeight": "112px",
           },
           "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 60,
             "fontWeight": 300,
             "letterSpacing": -0.5,
-            "lineHeight": 71,
+            "lineHeight": "71px",
           },
           "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 48,
             "fontWeight": 400,
-            "lineHeight": 57,
+            "lineHeight": "57px",
           },
           "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 34,
             "fontWeight": 400,
             "letterSpacing": 0.25,
-            "lineHeight": 40,
+            "lineHeight": "40px",
           },
           "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 24,
             "fontWeight": 400,
-            "lineHeight": 28,
+            "lineHeight": "28px",
           },
           "h6": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "fontWeight": 500,
             "letterSpacing": 0.25,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -2127,7 +2187,7 @@ exports[`Input disabled match 1`] = `
             "fontSize": 12,
             "fontWeight": 500,
             "letterSpacing": 2,
-            "lineHeight": 16,
+            "lineHeight": "16px",
             "textTransform": "uppercase",
           },
           "smallText": Object {
@@ -2140,14 +2200,14 @@ exports[`Input disabled match 1`] = `
             "fontSize": 14,
             "fontWeight": 500,
             "letterSpacing": 0.09,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "fontWeight": 400,
             "letterSpacing": 0.15,
-            "lineHeight": 24,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -2324,185 +2384,205 @@ exports[`Input disabled match 1`] = `
         step={1}
         value={0}
       >
-        <div
-          className="HoiPoi__Slider__root-2-0 HoiPoi__Slider__isReadOnly-2-14 HoiPoi__Slider__horizontal-2-6"
+        <Component
+          className="HoiPoi__Slider__root-2-0 HoiPoi__Slider__isReadOnly-2-7"
+          label="Lorem ipsum"
+          labelMode="horizontal"
+          onChange={[Function]}
+          override={Object {}}
+          overrides={Object {}}
         >
-          <Label
-            className="HoiPoi__Slider__Label-2-1"
-            isDisabled={true}
+          <div
+            className="HoiPoi__Input__root-2-8 HoiPoi__Input__horizontal-2-13 HoiPoi__Slider__root-2-0 HoiPoi__Slider__isReadOnly-2-7"
           >
             <div
-              className="HoiPoi__Label__root-2-15 HoiPoi__Slider__Label-2-1"
+              className="HoiPoi__Input__inputWrapper-2-9"
             >
-              <Text
-                className="HoiPoi__Label__Text-2-16"
-                overrides={Object {}}
-                type="light"
-              >
-                <span
-                  className="HoiPoi__Text__root-2-19 HoiPoi__Text__light-2-27 HoiPoi__Label__Text-2-16"
-                >
-                  Lorem ipsum
-                </span>
-              </Text>
-            </div>
-          </Label>
-          <div
-            className="HoiPoi__Slider__formControl-2-3"
-          >
-            <ComponentEnhancer(undefined)
-              activeDotStyle={Object {}}
-              className="HoiPoi__Slider__slider-2-8"
-              defaultValue={0}
-              disabled={true}
-              dotStyle={Object {}}
-              dots={false}
-              handle={[Function]}
-              handleStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              included={true}
-              marks={Object {}}
-              max={100}
-              min={0}
-              onAfterChange={[Function]}
-              onBeforeChange={[Function]}
-              onChange={[Function]}
-              prefixCls="rc-slider"
-              railStyle={Object {}}
-              reverse={false}
-              step={1}
-              trackStyle={
-                Array [
-                  Object {},
-                ]
-              }
-              value={0}
-              vertical={false}
-            >
-              <div
-                className="rc-slider rc-slider-disabled HoiPoi__Slider__slider-2-8"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseUp={[Function]}
-                onTouchStart={[Function]}
+              <Label
+                className="HoiPoi__Input__Label-2-11"
               >
                 <div
-                  className="rc-slider-rail"
-                  style={Object {}}
-                />
-                <Track
-                  className="rc-slider-track"
-                  included={true}
-                  length={0}
-                  offset={0}
-                  reverse={false}
-                  style={Object {}}
-                  vertical={false}
+                  className="HoiPoi__Label__root-2-17 HoiPoi__Input__Label-2-11"
                 >
-                  <div
-                    className="rc-slider-track"
-                    style={
-                      Object {
-                        "left": "0%",
-                        "right": "auto",
-                        "width": "0%",
-                      }
-                    }
-                  />
-                </Track>
-                <Steps
+                  <Text
+                    className="HoiPoi__Label__Text-2-18"
+                    overrides={Object {}}
+                    type="normal"
+                  >
+                    <span
+                      className="HoiPoi__Text__root-2-21 HoiPoi__Text__normal-2-28 HoiPoi__Label__Text-2-18"
+                    >
+                      Lorem ipsum
+                    </span>
+                  </Text>
+                </div>
+              </Label>
+              <div
+                className="HoiPoi__Input__formControl-2-14"
+              >
+                <ComponentEnhancer(undefined)
                   activeDotStyle={Object {}}
+                  className="HoiPoi__Slider__slider-2-1"
+                  defaultValue={0}
+                  disabled={true}
                   dotStyle={Object {}}
                   dots={false}
+                  handle={[Function]}
+                  handleStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
                   included={true}
-                  lowerBound={0}
                   marks={Object {}}
                   max={100}
                   min={0}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
                   prefixCls="rc-slider"
+                  railStyle={Object {}}
                   reverse={false}
                   step={1}
-                  upperBound={0}
+                  trackStyle={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                  value={0}
                   vertical={false}
                 >
                   <div
-                    className="rc-slider-step"
-                  />
-                </Steps>
-                <div
-                  className="HoiPoi__Slider__overlay-2-10"
-                  key="0"
-                >
-                  <span
-                    className="HoiPoi__Slider__overlayLabel-2-13"
-                    style={
-                      Object {
-                        "left": "0%",
-                      }
-                    }
-                  >
-                    0
-                  </span>
-                  <Handle
-                    className="HoiPoi__Slider__overlayHandler-2-11"
-                    disabled={true}
-                    dragging="false"
-                    max={100}
-                    min={0}
-                    offset={0}
-                    prefixCls="hoi-poi-slider"
-                    reverse={false}
-                    style={Object {}}
-                    value={0}
-                    vertical={false}
+                    className="rc-slider rc-slider-disabled HoiPoi__Slider__slider-2-1"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      aria-disabled={true}
-                      aria-valuemax={100}
-                      aria-valuemin={0}
-                      aria-valuenow={0}
-                      className="HoiPoi__Slider__overlayHandler-2-11"
-                      dragging="false"
-                      onBlur={[Function]}
-                      onKeyDown={[Function]}
-                      onMouseDown={[Function]}
-                      role="slider"
-                      style={
-                        Object {
-                          "left": "0%",
-                          "right": "auto",
-                          "transform": "translateX(-50%)",
-                        }
-                      }
-                      tabIndex={null}
+                      className="rc-slider-rail"
+                      style={Object {}}
                     />
-                  </Handle>
-                </div>
-                <Marks
-                  className="rc-slider-mark"
-                  included={true}
-                  lowerBound={0}
-                  marks={Object {}}
-                  max={100}
-                  min={0}
-                  onClickLabel={[Function]}
-                  reverse={false}
-                  upperBound={0}
-                  vertical={false}
-                >
-                  <div
-                    className="rc-slider-mark"
-                  />
-                </Marks>
+                    <Track
+                      className="rc-slider-track"
+                      included={true}
+                      length={0}
+                      offset={0}
+                      reverse={false}
+                      style={Object {}}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-track"
+                        style={
+                          Object {
+                            "left": "0%",
+                            "right": "auto",
+                            "width": "0%",
+                          }
+                        }
+                      />
+                    </Track>
+                    <Steps
+                      activeDotStyle={Object {}}
+                      dotStyle={Object {}}
+                      dots={false}
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      prefixCls="rc-slider"
+                      reverse={false}
+                      step={1}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-step"
+                      />
+                    </Steps>
+                    <div
+                      className="HoiPoi__Slider__overlay-2-3"
+                      key="0"
+                    >
+                      <span
+                        className="HoiPoi__Slider__overlayLabel-2-6"
+                        style={
+                          Object {
+                            "left": "0%",
+                          }
+                        }
+                      >
+                        0
+                      </span>
+                      <Handle
+                        className="HoiPoi__Slider__overlayHandler-2-4"
+                        disabled={true}
+                        dragging="false"
+                        max={100}
+                        min={0}
+                        offset={0}
+                        prefixCls="hoi-poi-slider"
+                        reverse={false}
+                        style={Object {}}
+                        value={0}
+                        vertical={false}
+                      >
+                        <div
+                          aria-disabled={true}
+                          aria-valuemax={100}
+                          aria-valuemin={0}
+                          aria-valuenow={0}
+                          className="HoiPoi__Slider__overlayHandler-2-4"
+                          dragging="false"
+                          onBlur={[Function]}
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          role="slider"
+                          style={
+                            Object {
+                              "left": "0%",
+                              "right": "auto",
+                              "transform": "translateX(-50%)",
+                            }
+                          }
+                          tabIndex={null}
+                        />
+                      </Handle>
+                    </div>
+                    <Marks
+                      className="rc-slider-mark"
+                      included={true}
+                      lowerBound={0}
+                      marks={Object {}}
+                      max={100}
+                      min={0}
+                      onClickLabel={[Function]}
+                      reverse={false}
+                      upperBound={0}
+                      vertical={false}
+                    >
+                      <div
+                        className="rc-slider-mark"
+                      />
+                    </Marks>
+                  </div>
+                </ComponentEnhancer(undefined)>
               </div>
-            </ComponentEnhancer(undefined)>
+            </div>
+            <Component
+              className="HoiPoi__Input__fieldBottom-2-10"
+              overrides={Object {}}
+            >
+              <div
+                className="HoiPoi__FieldBottom__root-2-32 HoiPoi__Input__fieldBottom-2-10"
+              />
+            </Component>
           </div>
-        </div>
+        </Component>
       </Slider>
     </JssProvider>
   </ThemeProvider>

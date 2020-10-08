@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import RCSlider, { Range } from 'rc-slider';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import Label from '../Label';
+import InputWrapper from '../components/InputWrapper';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -18,12 +18,7 @@ function Slider({
     overrides: overridesProp,
     className: classNameProp,
     value,
-    label,
-    labelMode,
-    isFullWidth,
-    hint,
     error,
-    isRequired,
     isReadOnly,
     isRange,
     min,
@@ -47,24 +42,9 @@ function Slider({
         classes.root,
         {
             [classes.isReadOnly]: isReadOnly,
-            [classes[labelMode]]: labelMode,
-            [classes.isFullWidth]: isFullWidth,
-            [classes.errored]: error,
         },
         classNameProp,
     );
-
-    const rootProps = {
-        className: rootClassName,
-    };
-
-    const labelProps = {
-        className: classes.Label,
-        isRequired,
-        hint,
-        ...override.Label,
-    };
-
     const sizes = {
         small: {
             overlayHandler: classes?.smallOverlayHandler,
@@ -140,21 +120,9 @@ function Slider({
     const Component = isRange ? Range : RCSlider;
 
     return (
-        <div {...rootProps} {...override.root}>
-            {label && (
-                <Label isDisabled={isReadOnly} {...labelProps}>
-                    {label}
-                </Label>
-            )}
-            <div className={classes.formControl} {...override.formControl}>
-                <Component {...sliderProps} />
-                {error && (
-                    <div className={classes.error} {...override.error}>
-                        {error}
-                    </div>
-                )}
-            </div>
-        </div>
+        <InputWrapper {...props} error={error} className={rootClassName} overrides={overridesProp}>
+            <Component {...sliderProps} />
+        </InputWrapper>
     );
 }
 
@@ -203,6 +171,8 @@ Slider.propTypes = {
     min: PropTypes.number,
     /** Value to be added or subtracted on each step the slider makes. Must be greater than zero, and max - min should be evenly divisible by the step value.  */
     step: PropTypes.number,
+    /** Info will be displayed below the component with style changes */
+    info: PropTypes.string,
 };
 
 export default React.memo(Slider);

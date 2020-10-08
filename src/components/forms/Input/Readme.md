@@ -39,10 +39,11 @@ const onCopy = () => window.alert('Copied to Clipboard');
         onCopy={onCopy}
         isReadOnly={true}
     />
-</div>
+</div>;
 ```
 
 Text Field:
+
 ```jsx
 import { useState } from 'react';
 
@@ -54,8 +55,14 @@ const onChange = (field) => {
 };
 
 <div>
-    <Input label="Text" placeholder="Write here" onChange={onChange(1)} value={state[1]} type="text"/>
-</div>
+    <Input
+        label="Text"
+        placeholder="Write here"
+        onChange={onChange(1)}
+        value={state[1]}
+        type="text"
+    />
+</div>;
 ```
 
 Integer Field:
@@ -74,13 +81,21 @@ const onBlur = (field) => {
     return (e) => {
         setState({ ...state, [field]: e && e.target ? e.target.value : '' });
     };
-}
+};
 <div>
-    <Input label="Integer" placeholder="0" onChange={onChange(1)} onBlur={onBlur(1)} value={state[1]} type="integer"/>
-</div>
+    <Input
+        label="Integer"
+        placeholder="0"
+        onChange={onChange(1)}
+        onBlur={onBlur(1)}
+        value={state[1]}
+        type="integer"
+    />
+</div>;
 ```
 
 Decimal Field:
+
 ```jsx
 import { useState } from 'react';
 
@@ -95,11 +110,26 @@ const onBlur = (field) => {
     return (e) => {
         setState({ ...state, [field]: e && e.target ? e.target.value : '' });
     };
-}
+};
 <div>
-    <Input label="Decimal" placeholder="0.00" onChange={onChange(1)} onBlur={onBlur(1)} value={state[1]} type="decimal"/>
-    <Input label="Custom decimals" numberDecimals="3" placeholder="0.000" onChange={onChange(2)} onBlur={onBlur(2)} value={state[2]} type="decimal"/>
-</div>
+    <Input
+        label="Decimal"
+        placeholder="0.00"
+        onChange={onChange(1)}
+        onBlur={onBlur(1)}
+        value={state[1]}
+        type="decimal"
+    />
+    <Input
+        label="Custom decimals"
+        numberDecimals="3"
+        placeholder="0.000"
+        onChange={onChange(2)}
+        onBlur={onBlur(2)}
+        value={state[2]}
+        type="decimal"
+    />
+</div>;
 ```
 
 Vertical label:
@@ -179,11 +209,7 @@ import { useState } from 'react';
 const [state, setState] = useState({});
 const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
 <div>
-    <Input
-        placeholder="Write here"
-        onChange={onChange}
-        value={state.value}
-    />
+    <Input placeholder="Write here" onChange={onChange} value={state.value} />
 </div>;
 ```
 
@@ -220,7 +246,13 @@ const onChange = (field) => {
 };
 
 <div>
-    <Input label="Lorem ipsum" placeholder="Write something in this custom input" component={CustomComponent} onChange={onChange(1)} value={state[1]}/>
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write something in this custom input"
+        component={CustomComponent}
+        onChange={onChange(1)}
+        value={state[1]}
+    />
 </div>;
 ```
 
@@ -235,3 +267,4 @@ const onChange = (field) => {
 -   [Label](#/Forms?id=label)
 -   preComponent - Component rendered at the input beginning
 -   postComponent - Component rendered at the input ending
+-   inputComponents - Wrapper around input and pre/post components

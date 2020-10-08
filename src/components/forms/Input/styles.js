@@ -9,35 +9,29 @@ export default (theme) => {
             outline: 'none',
         },
         title: {
-            '& $formControl': {
-                padding: 0,
-                borderRadius: 0,
-                ...titleBorder,
-            },
             '&$focused': {
-                '& $formControl': {
+                '& $inputComponents': {
                     ...titleBorder,
                     borderBottomColor: theme.colors.orange500,
                 },
             },
             '&$error': {
-                '& $formControl': {
+                '& $inputComponents': {
                     ...titleBorder,
                 },
             },
             '&$isReadOnly': {
-                '& $formControl': {
+                '& $inputComponents': {
                     ...titleBorder,
                 },
             },
+            '& $inputComponents': {
+                padding: 0,
+                borderRadius: 0,
+                ...titleBorder,
+            },
             '& $input': {
                 ...theme.typography.h5,
-            },
-            '& $info': {
-                marginLeft: 0,
-            },
-            '& $errorInfo': {
-                marginLeft: 0,
             },
         },
         Label: {
@@ -45,43 +39,7 @@ export default (theme) => {
             marginRight: 17,
             padding: '0 0 8px 0',
         },
-        vertical: {
-            display: 'block',
-            padding: '15px 0 10px 0',
-            marginLeft: '0 !important',
-            '& $Label': {
-                width: '100%',
-            },
-        },
-        horizontal: {
-            display: 'flex',
-            alignItems: 'center',
-            padding: '15px 0 10px 0',
-            '& $error': {},
-            '& $Label': {
-                padding: 0,
-            },
-        },
-        info: {
-            ...theme.typography.caption,
-            position: 'absolute',
-            marginLeft: -10,
-            lineHeight: '20px',
-            bottom: -24,
-            color: theme.colors.neutral600,
-        },
-        errorInfo: {
-            ...theme.typography.caption,
-            position: 'absolute',
-            marginLeft: -10,
-            lineHeight: '20px',
-            bottom: -24,
-            color: theme.colors.red500,
-        },
-        errorInfoSecond: {
-            bottom: -42,
-        },
-        formControl: {
+        inputComponents: {
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
@@ -100,7 +58,6 @@ export default (theme) => {
             background: 'transparent',
             color: theme.colors.neutral900,
             width: '100%',
-            lineHeight: '20px',
             height: '38px',
             alignItems: 'center',
             boxSizing: 'border-box',
@@ -124,32 +81,24 @@ export default (theme) => {
                 '-moz-appearance': 'textfield',
             },
         },
-        withMessage: {
-            paddingBottom: '30px !important',
-        },
-        withTwoMessage: {
-            paddingBottom: '45px !important',
-            '& $error': {
-                bottom: -39,
-            },
-        },
         error: {
-            '& $formControl': {
+            '& $inputComponents': {
                 backgroundColor: theme.colors.neutralBase,
                 border: `1px solid ${theme.colors.red500}`,
             },
         },
         isReadOnly: {
-            '& $formControl': {
+            '& $inputComponents': {
                 border: `1px solid ${theme.colors.neutral500}`,
                 backgroundColor: theme.colors.neutralBase,
-                color: theme.colors.neutral500,
+
                 '&::placeholder': {
                     color: theme.colors.neutral500,
                 },
             },
             '& $input': {
                 cursor: 'text',
+                color: theme.colors.neutral700,
             },
         },
         isReadAndDuplicable: {
@@ -169,13 +118,13 @@ export default (theme) => {
         },
         copy: {},
         focused: {
-            '& $formControl': {
+            '& $inputComponents': {
                 backgroundColor: theme.colors.neutralBase,
                 border: `1px solid ${theme.colors.orange500}`,
             },
         },
         isFullWidth: {
-            '& $formControl': {
+            '& $inputComponents': {
                 width: '100%',
                 flex: 1,
             },
@@ -207,7 +156,7 @@ export default (theme) => {
         postComponentReadOnly: {},
         postComponentCopy: {},
         custom: {
-            '& $formControl': {
+            '& $inputComponents': {
                 '&::before': {
                     borderBottom: 'none',
                 },
