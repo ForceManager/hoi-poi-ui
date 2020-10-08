@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import Label from '../Label';
+import FieldBottom from '../components/FieldBottom';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -66,12 +67,14 @@ const Input = memo(
                 [classes.focused]: focused,
                 [classes.error]: error,
                 [classes.custom]: component,
-                [classes.withMessage]: (error || info) && !(error && info),
-                [classes.withTwoMessage]: error && info,
                 [classes.title]: type === 'title',
             },
             classNameProp,
         );
+
+        const fieldBottomClass = classnames({
+            [classes.fieldBottom]: label && labelMode === 'horizontal',
+        });
 
         const handleOnFocus = useCallback(
             (e) => {
@@ -306,46 +309,41 @@ const Input = memo(
 
         const Component = component;
 
-        const errorInfoClassName = classnames(classes.errorInfo, {
-            [classes.errorInfoSecond]: info && error,
-        });
-
         return (
             <div className={rootClassName} {...override.root}>
-                {label && (
-                    <Label
-                        className={classes.Label}
-                        isRequired={isRequired}
-                        hint={hint}
-                        {...override.Label}
-                    >
-                        {label}
-                    </Label>
-                )}
-                <div className={classes.formControl} {...override.formControl}>
-                    {preComponent && (
-                        <div className={classes.preComponent} {...override.preComponent}>
-                            {preComponent}
-                        </div>
+                <div className={classes.inputWrapper}>
+                    {label && (
+                        <Label
+                            className={classes.Label}
+                            isRequired={isRequired}
+                            hint={hint}
+                            {...override.Label}
+                        >
+                            {label}
+                        </Label>
                     )}
-                    {!component && <input {...inputProps} />}
-                    {component && <Component {...inputProps} />}
-                    {newPostComponent.length > 0 && (
-                        <div className={classes.postComponent} {...override.postComponent}>
-                            {newPostComponent}
-                        </div>
-                    )}
-                    {info && (
-                        <div className={classes.info} {...override.info}>
-                            {info}
-                        </div>
-                    )}
-                    {error && (
-                        <div className={errorInfoClassName} {...override.error}>
-                            {error}
-                        </div>
-                    )}
+                    <div className={classes.formControl} {...override.formControl}>
+                        {preComponent && (
+                            <div className={classes.preComponent} {...override.preComponent}>
+                                {preComponent}
+                            </div>
+                        )}
+                        {!component && <input {...inputProps} />}
+                        {component && <Component {...inputProps} />}
+                        {newPostComponent.length > 0 && (
+                            <div className={classes.postComponent} {...override.postComponent}>
+                                {newPostComponent}
+                            </div>
+                        )}
+                    </div>
                 </div>
+                <FieldBottom
+                    className={fieldBottomClass}
+                    info={info}
+                    error={error}
+                    overrides={overridesProp}
+                    isFullWidth={isFullWidth}
+                />
             </div>
         );
     },

@@ -7,7 +7,6 @@ export default (theme) => ({
     Text: {
         paddingRight: 5,
         ...theme.typography.body,
-        lineHeight: '20px',
         color: theme.colors.neutral900,
     },
     info: {
