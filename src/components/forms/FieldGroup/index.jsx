@@ -65,11 +65,22 @@ const FieldGroup = memo(
 
                 // Adding dividers
                 if (inputs[index + 1] && (divider || dividerText)) {
-                    if (divider) inputNodes.push(<div className={classes.divider}>{divider}</div>);
+                    if (divider)
+                        inputNodes.push(
+                            <div className={classes.divider} {...override.divider}>
+                                {divider}
+                            </div>,
+                        );
                     else if (dividerText)
                         inputNodes.push(
-                            <div key={`${index}-divider`} className={classes.divider}>
-                                <span className={classes.dividerText}>{dividerText}</span>
+                            <div
+                                key={`${index}-divider`}
+                                className={classes.divider}
+                                {...override.divider}
+                            >
+                                <span className={classes.dividerText} {...override.dividerText}>
+                                    {dividerText}
+                                </span>
                             </div>,
                         );
                 }
@@ -85,6 +96,8 @@ const FieldGroup = memo(
             inputs,
             isFullWidth,
             onChangeInput,
+            override.divider,
+            override.dividerText,
             value,
         ]);
 
@@ -104,7 +117,7 @@ const FieldGroup = memo(
     },
 );
 
-FieldGroup.overrides = ['root', 'rangeWrapper', 'divider'];
+FieldGroup.overrides = ['root', 'rangeWrapper', 'divider', 'dividerText'];
 
 FieldGroup.defaultProps = {
     ...InputWrapper.defaultProps,

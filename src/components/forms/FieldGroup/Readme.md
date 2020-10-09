@@ -163,4 +163,5 @@ const [values, setValues] = useState([]);
 -   [Label](#/Forms?id=label)
 -   inputWrapper - Wrapper around Label and input components
 -   rangeWrapper - Wrapper around all fields
--   divider - Divider component when there is dividerText
+-   divider - Divider wrapper
+-   dividerText - divider text span
