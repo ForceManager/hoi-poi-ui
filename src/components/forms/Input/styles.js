@@ -34,17 +34,11 @@ export default (theme) => {
                 ...theme.typography.h5,
             },
         },
-        Label: {
-            width: 150,
-            marginRight: 17,
-            padding: '0 0 8px 0',
-        },
         inputComponents: {
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
-            width: 300,
-            minWidth: 150,
+            width: 320,
             boxSizing: 'border-box',
             padding: '0 10px',
             lineHeight: 0,
@@ -124,12 +118,10 @@ export default (theme) => {
             },
         },
         isFullWidth: {
+            width: '100%',
             '& $inputComponents': {
                 width: '100%',
                 flex: 1,
-            },
-            '&$vertical $Label': {
-                width: '100%',
             },
         },
         preComponent: {
