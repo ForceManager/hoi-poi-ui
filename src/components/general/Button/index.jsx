@@ -54,7 +54,6 @@ function Button({
             [classes.fullWidth]: isFullWidth,
             [classes.iconLeft]: icon && iconPosition === 'left',
             [classes.iconRight]: icon && iconPosition === 'right',
-            [classes.outline]: ['secondary', 'secondary-error', 'terciary'].includes(type),
         },
         classNameProp,
     );
