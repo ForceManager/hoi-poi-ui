@@ -1,8 +1,7 @@
 export default (theme) => {
     return {
         root: {
-            width: 300,
-            minWidth: 150,
+            width: 320,
             marginTop: -3,
         },
         isFullWidth: {

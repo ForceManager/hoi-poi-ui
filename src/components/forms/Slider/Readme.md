@@ -105,8 +105,10 @@ const onChange = (value) => setState({ value });
 
 -   root - root element
 -   [rc-slider](https://github.com/react-component/slider/)
+-   infor - Info text wrapper
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)
+-   inputWrapper - Wrapper around Label and input components
 -   overlay - Dragged component (tip)
 -   overlayLabel - Dragged component label (tip)

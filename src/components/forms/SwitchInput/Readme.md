@@ -72,4 +72,9 @@ function toggleState(st) {
 ---
 
 -   root - root element
+-   infor - Info text wrapper
+-   error - Error wrapper
+-   formControl - Input wrapper excluding label
+-   [Label](#/Forms?id=label)
+-   inputWrapper - Wrapper around Label and switch components
 -   [Switch](https://github.com/markusenglund/react-switch)

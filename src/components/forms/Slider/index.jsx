@@ -126,15 +126,7 @@ function Slider({
     );
 }
 
-Slider.overrides = [
-    'root',
-    'rc-slider',
-    'error',
-    'formControl',
-    'Label',
-    'overlay',
-    'overlayLabel',
-];
+Slider.overrides = ['root', 'rc-slider', 'overlay', 'overlayLabel'];
 
 Slider.defaultProps = {
     overrides: {},
