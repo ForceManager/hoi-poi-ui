@@ -124,7 +124,7 @@ export default (theme) => ({
                 borderColor: theme.colors.neutral300,
                 backgroundColor: theme.colors.neutral300,
                 color: theme.colors.neutral600,
-                '& path': { fill: theme.colors.neutral800 },
+                '& path': { fill: theme.colors.neutral600 },
             },
         },
     },

@@ -164,13 +164,8 @@ exports[`Modal like a confirm modal 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -517,32 +512,33 @@ exports[`Modal like a confirm modal 1`] = `
                       class="HoiPoi__Modal__footer-3-4"
                     >
                       <button
-                        class="HoiPoi__Button__root-3-27 HoiPoi__Button__filled-3-34 HoiPoi__Button__white-3-35 HoiPoi__Modal__cancelButton-3-8"
+                        class="HoiPoi__Button__root-3-27 HoiPoi__Button__primary-3-32 HoiPoi__Button__medium-3-38 HoiPoi__Modal__cancelButton-3-8"
                         type="button"
                       >
-                        <span
-                          class=""
+                        <div
+                          class="HoiPoi__Button__content-3-28"
                         >
                           <span
-                            class="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-28"
+                            class="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-29"
                           >
                             Cancel
                           </span>
-                        </span>
+                        </div>
                       </button>
                       <button
-                        class="HoiPoi__Button__root-3-27 HoiPoi__Button__filled-3-34 HoiPoi__Button__primary-3-36 HoiPoi__Modal__confirmButton-3-7"
+                        class="HoiPoi__Button__root-3-27 HoiPoi__Button__primary-3-32 HoiPoi__Button__medium-3-38 HoiPoi__Modal__confirmButton-3-7"
+                        color="primary"
                         type="button"
                       >
-                        <span
-                          class=""
+                        <div
+                          class="HoiPoi__Button__content-3-28"
                         >
                           <span
-                            class="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-28"
+                            class="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-29"
                           >
                             Confirm
                           </span>
-                        </span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -686,65 +682,68 @@ exports[`Modal like a confirm modal 1`] = `
                   >
                     <Button
                       className="HoiPoi__Modal__cancelButton-3-8"
+                      iconPosition="left"
                       onClick={[Function]}
                       overrides={Object {}}
                       size="medium"
-                      type="filled"
+                      type="primary"
                     >
                       <button
-                        className="HoiPoi__Button__root-3-27 HoiPoi__Button__filled-3-34 HoiPoi__Button__white-3-35 HoiPoi__Modal__cancelButton-3-8"
+                        className="HoiPoi__Button__root-3-27 HoiPoi__Button__primary-3-32 HoiPoi__Button__medium-3-38 HoiPoi__Modal__cancelButton-3-8"
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className=""
+                        <div
+                          className="HoiPoi__Button__content-3-28"
                         >
                           <Text
-                            className="HoiPoi__Button__Text-3-28"
+                            className="HoiPoi__Button__Text-3-29"
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
                             type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-28"
+                              className="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-29"
                             >
                               Cancel
                             </span>
                           </Text>
-                        </span>
+                        </div>
                       </button>
                     </Button>
                     <Button
                       className="HoiPoi__Modal__confirmButton-3-7"
                       color="primary"
+                      iconPosition="left"
                       onClick={[Function]}
                       overrides={Object {}}
                       size="medium"
-                      type="filled"
+                      type="primary"
                     >
                       <button
-                        className="HoiPoi__Button__root-3-27 HoiPoi__Button__filled-3-34 HoiPoi__Button__primary-3-36 HoiPoi__Modal__confirmButton-3-7"
+                        className="HoiPoi__Button__root-3-27 HoiPoi__Button__primary-3-32 HoiPoi__Button__medium-3-38 HoiPoi__Modal__confirmButton-3-7"
+                        color="primary"
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className=""
+                        <div
+                          className="HoiPoi__Button__content-3-28"
                         >
                           <Text
-                            className="HoiPoi__Button__Text-3-28"
+                            className="HoiPoi__Button__Text-3-29"
                             isTruncated={false}
                             overrides={Object {}}
                             size="medium"
                             type="normal"
                           >
                             <span
-                              className="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-28"
+                              className="HoiPoi__Text__root-3-9 HoiPoi__Text__normal-3-16 HoiPoi__Text__medium-3-12 HoiPoi__Button__Text-3-29"
                             >
                               Confirm
                             </span>
                           </Text>
-                        </span>
+                        </div>
                       </button>
                     </Button>
                   </div>
@@ -923,13 +922,8 @@ exports[`Modal with different sizes 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -2023,13 +2017,8 @@ exports[`Modal without header 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,

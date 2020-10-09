@@ -164,13 +164,8 @@ exports[`Button is disabled 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -430,34 +425,35 @@ exports[`Button is disabled 1`] = `
       }
     >
       <Button
+        iconPosition="left"
         isDisabled={true}
         onClick={[Function]}
         overrides={Object {}}
         size="medium"
-        type="filled"
+        type="primary"
       >
         <button
-          className="HoiPoi__Button__root-4-0 HoiPoi__Button__filled-4-7 HoiPoi__Button__white-4-8 HoiPoi__Button__disabled-4-14"
+          className="HoiPoi__Button__root-4-0 HoiPoi__Button__primary-4-5 HoiPoi__Button__medium-4-11 HoiPoi__Button__disabled-4-13"
           onClick={null}
           type="button"
         >
-          <span
-            className=""
+          <div
+            className="HoiPoi__Button__content-4-1"
           >
             <Text
-              className="HoiPoi__Button__Text-4-1"
+              className="HoiPoi__Button__Text-4-2"
               isTruncated={false}
               overrides={Object {}}
               size="medium"
               type="normal"
             >
               <span
-                className="HoiPoi__Text__root-4-16 HoiPoi__Text__normal-4-23 HoiPoi__Text__medium-4-19 HoiPoi__Button__Text-4-1"
+                className="HoiPoi__Text__root-4-18 HoiPoi__Text__normal-4-25 HoiPoi__Text__medium-4-21 HoiPoi__Button__Text-4-2"
               >
                 Hello
               </span>
             </Text>
-          </span>
+          </div>
         </button>
       </Button>
     </JssProvider>
@@ -629,13 +625,8 @@ exports[`Button is rendered as a link 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -896,31 +887,32 @@ exports[`Button is rendered as a link 1`] = `
     >
       <Button
         href="https://hello.com"
+        iconPosition="left"
         overrides={Object {}}
         size="medium"
-        type="filled"
+        type="primary"
       >
         <a
-          className="HoiPoi__Button__root-3-0 HoiPoi__Button__filled-3-7 HoiPoi__Button__white-3-8"
+          className="HoiPoi__Button__root-3-0 HoiPoi__Button__primary-3-5 HoiPoi__Button__medium-3-11"
           href="https://hello.com"
         >
-          <span
-            className=""
+          <div
+            className="HoiPoi__Button__content-3-1"
           >
             <Text
-              className="HoiPoi__Button__Text-3-1"
+              className="HoiPoi__Button__Text-3-2"
               isTruncated={false}
               overrides={Object {}}
               size="medium"
               type="normal"
             >
               <span
-                className="HoiPoi__Text__root-3-16 HoiPoi__Text__normal-3-23 HoiPoi__Text__medium-3-19 HoiPoi__Button__Text-3-1"
+                className="HoiPoi__Text__root-3-18 HoiPoi__Text__normal-3-25 HoiPoi__Text__medium-3-21 HoiPoi__Button__Text-3-2"
               >
                 Hello
               </span>
             </Text>
-          </span>
+          </div>
         </a>
       </Button>
     </JssProvider>
@@ -1092,13 +1084,8 @@ exports[`Button is rendered combining props 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -1358,60 +1345,61 @@ exports[`Button is rendered combining props 1`] = `
       }
     >
       <Button
-        color="danger"
+        iconPosition="left"
         overrides={Object {}}
         size="big"
-        type="outlined"
+        type="primary"
       >
         <button
-          className="HoiPoi__Button__root-2-0 HoiPoi__Button__outlined-2-4 HoiPoi__Button__danger-2-10 HoiPoi__Button__big-2-13"
+          className="HoiPoi__Button__root-2-0 HoiPoi__Button__primary-2-5 HoiPoi__Button__big-2-10"
           type="button"
         >
-          <span
-            className=""
+          <div
+            className="HoiPoi__Button__content-2-1"
           >
             <Text
-              className="HoiPoi__Button__Text-2-1"
+              className="HoiPoi__Button__Text-2-2"
               isTruncated={false}
               overrides={Object {}}
               size="medium"
               type="normal"
             >
               <span
-                className="HoiPoi__Text__root-2-16 HoiPoi__Text__normal-2-23 HoiPoi__Text__medium-2-19 HoiPoi__Button__Text-2-1"
+                className="HoiPoi__Text__root-2-18 HoiPoi__Text__normal-2-25 HoiPoi__Text__medium-2-21 HoiPoi__Button__Text-2-2"
               >
                 ACTION
               </span>
             </Text>
-          </span>
+          </div>
         </button>
       </Button>
       <Button
+        iconPosition="left"
         overrides={Object {}}
         size="big"
-        type="squared"
+        type="secondary"
       >
         <button
-          className="HoiPoi__Button__root-2-0 HoiPoi__Button__squared-2-5 HoiPoi__Button__white-2-8 HoiPoi__Button__big-2-13"
+          className="HoiPoi__Button__root-2-0 HoiPoi__Button__secondary-2-7 HoiPoi__Button__big-2-10"
           type="button"
         >
-          <span
-            className=""
+          <div
+            className="HoiPoi__Button__content-2-1"
           >
             <Text
-              className="HoiPoi__Button__Text-2-1"
+              className="HoiPoi__Button__Text-2-2"
               isTruncated={false}
               overrides={Object {}}
               size="medium"
               type="normal"
             >
               <span
-                className="HoiPoi__Text__root-2-16 HoiPoi__Text__normal-2-23 HoiPoi__Text__medium-2-19 HoiPoi__Button__Text-2-1"
+                className="HoiPoi__Text__root-2-18 HoiPoi__Text__normal-2-25 HoiPoi__Text__medium-2-21 HoiPoi__Button__Text-2-2"
               >
                 ACTION
               </span>
             </Text>
-          </span>
+          </div>
         </button>
       </Button>
     </JssProvider>
@@ -1583,13 +1571,8 @@ exports[`Button is rendered without crashes 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -1849,31 +1832,32 @@ exports[`Button is rendered without crashes 1`] = `
       }
     >
       <Button
+        iconPosition="left"
         overrides={Object {}}
         size="medium"
-        type="filled"
+        type="primary"
       >
         <button
-          className="HoiPoi__Button__root-1-0 HoiPoi__Button__filled-1-7 HoiPoi__Button__white-1-8"
+          className="HoiPoi__Button__root-1-0 HoiPoi__Button__primary-1-5 HoiPoi__Button__medium-1-11"
           type="button"
         >
-          <span
-            className=""
+          <div
+            className="HoiPoi__Button__content-1-1"
           >
             <Text
-              className="HoiPoi__Button__Text-1-1"
+              className="HoiPoi__Button__Text-1-2"
               isTruncated={false}
               overrides={Object {}}
               size="medium"
               type="normal"
             >
               <span
-                className="HoiPoi__Text__root-1-16 HoiPoi__Text__normal-1-23 HoiPoi__Text__medium-1-19 HoiPoi__Button__Text-1-1"
+                className="HoiPoi__Text__root-1-18 HoiPoi__Text__normal-1-25 HoiPoi__Text__medium-1-21 HoiPoi__Button__Text-1-2"
               >
                 Hello
               </span>
             </Text>
-          </span>
+          </div>
         </button>
       </Button>
     </JssProvider>

@@ -16,10 +16,10 @@ describe('Button', () => {
     test('is rendered combining props', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Button color="danger" type="outlined" size="big">
+                <Button type="primary" size="big">
                     ACTION
                 </Button>
-                <Button type="squared" size="big">
+                <Button type="secondary" size="big">
                     ACTION
                 </Button>
             </HoiPoiProvider>,

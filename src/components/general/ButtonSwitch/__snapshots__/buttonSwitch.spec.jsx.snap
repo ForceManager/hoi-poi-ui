@@ -164,13 +164,8 @@ exports[`Button is rendered without crashes 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -450,6 +445,7 @@ exports[`Button is rendered without crashes 1`] = `
         >
           <Button
             className="HoiPoi__ButtonSwitch__button-1-2 HoiPoi__ButtonSwitch__active-1-1"
+            iconPosition="left"
             key="true"
             onClick={[Function]}
             overrides={Object {}}
@@ -457,31 +453,32 @@ exports[`Button is rendered without crashes 1`] = `
             type="squared-outlined"
           >
             <button
-              className="HoiPoi__Button__root-1-3 HoiPoi__Button__squared-outlined-1-9 HoiPoi__Button__white-1-11 HoiPoi__ButtonSwitch__button-1-2 HoiPoi__ButtonSwitch__active-1-1"
+              className="HoiPoi__Button__root-1-3 HoiPoi__Button__medium-1-14 HoiPoi__ButtonSwitch__button-1-2 HoiPoi__ButtonSwitch__active-1-1"
               onClick={[Function]}
               type="button"
             >
-              <span
-                className=""
+              <div
+                className="HoiPoi__Button__content-1-4"
               >
                 <Text
-                  className="HoiPoi__Button__Text-1-4"
+                  className="HoiPoi__Button__Text-1-5"
                   isTruncated={false}
                   overrides={Object {}}
                   size="medium"
                   type="normal"
                 >
                   <span
-                    className="HoiPoi__Text__root-1-19 HoiPoi__Text__normal-1-26 HoiPoi__Text__medium-1-22 HoiPoi__Button__Text-1-4"
+                    className="HoiPoi__Text__root-1-21 HoiPoi__Text__normal-1-28 HoiPoi__Text__medium-1-24 HoiPoi__Button__Text-1-5"
                   >
                     ON
                   </span>
                 </Text>
-              </span>
+              </div>
             </button>
           </Button>
           <Button
             className="HoiPoi__ButtonSwitch__button-1-2"
+            iconPosition="left"
             key="false"
             onClick={[Function]}
             overrides={Object {}}
@@ -489,27 +486,27 @@ exports[`Button is rendered without crashes 1`] = `
             type="squared-outlined"
           >
             <button
-              className="HoiPoi__Button__root-1-3 HoiPoi__Button__squared-outlined-1-9 HoiPoi__Button__white-1-11 HoiPoi__ButtonSwitch__button-1-2"
+              className="HoiPoi__Button__root-1-3 HoiPoi__Button__medium-1-14 HoiPoi__ButtonSwitch__button-1-2"
               onClick={[Function]}
               type="button"
             >
-              <span
-                className=""
+              <div
+                className="HoiPoi__Button__content-1-4"
               >
                 <Text
-                  className="HoiPoi__Button__Text-1-4"
+                  className="HoiPoi__Button__Text-1-5"
                   isTruncated={false}
                   overrides={Object {}}
                   size="medium"
                   type="normal"
                 >
                   <span
-                    className="HoiPoi__Text__root-1-19 HoiPoi__Text__normal-1-26 HoiPoi__Text__medium-1-22 HoiPoi__Button__Text-1-4"
+                    className="HoiPoi__Text__root-1-21 HoiPoi__Text__normal-1-28 HoiPoi__Text__medium-1-24 HoiPoi__Button__Text-1-5"
                   >
                     OFF
                   </span>
                 </Text>
-              </span>
+              </div>
             </button>
           </Button>
         </div>
@@ -684,13 +681,8 @@ exports[`Button is rendering with string values 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -970,6 +962,7 @@ exports[`Button is rendering with string values 1`] = `
         >
           <Button
             className="HoiPoi__ButtonSwitch__button-2-2"
+            iconPosition="left"
             key="on"
             onClick={[Function]}
             overrides={Object {}}
@@ -977,31 +970,32 @@ exports[`Button is rendering with string values 1`] = `
             type="squared-outlined"
           >
             <button
-              className="HoiPoi__Button__root-2-3 HoiPoi__Button__squared-outlined-2-9 HoiPoi__Button__white-2-11 HoiPoi__ButtonSwitch__button-2-2"
+              className="HoiPoi__Button__root-2-3 HoiPoi__Button__medium-2-14 HoiPoi__ButtonSwitch__button-2-2"
               onClick={[Function]}
               type="button"
             >
-              <span
-                className=""
+              <div
+                className="HoiPoi__Button__content-2-4"
               >
                 <Text
-                  className="HoiPoi__Button__Text-2-4"
+                  className="HoiPoi__Button__Text-2-5"
                   isTruncated={false}
                   overrides={Object {}}
                   size="medium"
                   type="normal"
                 >
                   <span
-                    className="HoiPoi__Text__root-2-19 HoiPoi__Text__normal-2-26 HoiPoi__Text__medium-2-22 HoiPoi__Button__Text-2-4"
+                    className="HoiPoi__Text__root-2-21 HoiPoi__Text__normal-2-28 HoiPoi__Text__medium-2-24 HoiPoi__Button__Text-2-5"
                   >
                     ON
                   </span>
                 </Text>
-              </span>
+              </div>
             </button>
           </Button>
           <Button
             className="HoiPoi__ButtonSwitch__button-2-2"
+            iconPosition="left"
             key="false"
             onClick={[Function]}
             overrides={Object {}}
@@ -1009,27 +1003,27 @@ exports[`Button is rendering with string values 1`] = `
             type="squared-outlined"
           >
             <button
-              className="HoiPoi__Button__root-2-3 HoiPoi__Button__squared-outlined-2-9 HoiPoi__Button__white-2-11 HoiPoi__ButtonSwitch__button-2-2"
+              className="HoiPoi__Button__root-2-3 HoiPoi__Button__medium-2-14 HoiPoi__ButtonSwitch__button-2-2"
               onClick={[Function]}
               type="button"
             >
-              <span
-                className=""
+              <div
+                className="HoiPoi__Button__content-2-4"
               >
                 <Text
-                  className="HoiPoi__Button__Text-2-4"
+                  className="HoiPoi__Button__Text-2-5"
                   isTruncated={false}
                   overrides={Object {}}
                   size="medium"
                   type="normal"
                 >
                   <span
-                    className="HoiPoi__Text__root-2-19 HoiPoi__Text__normal-2-26 HoiPoi__Text__medium-2-22 HoiPoi__Button__Text-2-4"
+                    className="HoiPoi__Text__root-2-21 HoiPoi__Text__normal-2-28 HoiPoi__Text__medium-2-24 HoiPoi__Button__Text-2-5"
                   >
                     OFF
                   </span>
                 </Text>
-              </span>
+              </div>
             </button>
           </Button>
         </div>
