@@ -25,6 +25,11 @@ export default (theme) => ({
             cursor: 'pointer',
         },
     },
+    content: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     Text: {
         display: 'inherit',
         alignItems: 'inherit',
@@ -44,7 +49,11 @@ export default (theme) => ({
         left: 0,
         justifyContent: 'center',
         alignItems: 'center',
+        '& div': {
+            marginBottom: -0,
+        },
     },
+    icon: {},
     // labelLoading: {
     //     top: 1,
     //     position: 'relative',
@@ -71,66 +80,110 @@ export default (theme) => ({
     primary: {
         backgroundColor: theme.colors.orange500,
         color: theme.colors.neutralBase,
-        '&:hover:not($loading):not($disabled)': {
-            backgroundColor: theme.colors.orange400,
-        },
-        '&:active': {
-            backgroundColor: theme.colors.orange600,
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                backgroundColor: theme.colors.orange400,
+            },
+            '&:active': {
+                backgroundColor: theme.colors.orange600,
+            },
         },
     },
     primaryError: {
         backgroundColor: theme.colors.red500,
         color: theme.colors.neutralBase,
-        '&:hover:not($loading):not($disabled)': {
-            backgroundColor: theme.colors.red400,
-        },
-        '&:active': {
-            backgroundColor: theme.colors.red600,
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                backgroundColor: theme.colors.red400,
+            },
+            '&:active': {
+                backgroundColor: theme.colors.red600,
+            },
         },
     },
     secondary: {
         border: `1px solid ${theme.colors.orange500}`,
         backgroundColor: theme.colors.neutralBase,
         color: theme.colors.orange500,
-        '&:hover:not($loading):not($disabled)': {
-            borderWidth: 2,
-            color: theme.colors.orange400,
-        },
-        '&:active': {
-            backgroundColor: theme.colors.orange600,
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                borderWidth: 2,
+                color: theme.colors.orange400,
+            },
+            '&:active': {
+                border: `2px solid ${theme.colors.orange600}`,
+                backgroundColor: theme.colors.orange600,
+                color: theme.colors.neutralBase,
+                '& path': { fill: theme.colors.neutralBase },
+            },
         },
     },
     secondaryError: {
-        border: `1px solid ${theme.colors.neutral500}`,
+        border: `1px solid ${theme.colors.neutral400}`,
         backgroundColor: theme.colors.neutralBase,
         color: theme.colors.red500,
-        '&:hover:not($loading):not($disabled)': {
-            borderWidth: 2,
-            color: theme.colors.red400,
-        },
-        '&:active': {
-            backgroundColor: theme.colors.red600,
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                border: `2px solid ${theme.colors.red400}`,
+                color: theme.colors.red400,
+            },
+            '&:active': {
+                border: `2px solid ${theme.colors.red600}`,
+                backgroundColor: theme.colors.red600,
+                color: theme.colors.neutralBase,
+                '& path': { fill: theme.colors.neutralBase },
+            },
         },
     },
     terciary: {
-        border: `1px solid ${theme.colors.neutral500}`,
+        border: `1px solid ${theme.colors.neutral400}`,
         backgroundColor: theme.colors.neutralBase,
         color: theme.colors.neutral700,
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                border: `2px solid ${theme.colors.neutral200}`,
+                color: theme.colors.neutral600,
+            },
+            '&:active': {
+                border: `2px solid ${theme.colors.neutral300}`,
+                backgroundColor: theme.colors.neutral300,
+                color: theme.colors.neutral800,
+                '& path': { fill: theme.colors.neutral800 },
+            },
+        },
+    },
+    outline: {
+        '&:not($loading):not($disabled)': {
+            '&:hover, &:active': {
+                '&$big': {
+                    padding: '0 16px',
+                },
+                '&$medium': {
+                    padding: '0 15px',
+                },
+                '&$small': {
+                    padding: '0 9px',
+                },
+            },
+        },
     },
 
     // Sizes
     big: {
-        padding: '14px 17px',
+        height: 44,
+        padding: '0 17px',
         // Ver typography
         fontSize: 14,
     },
     medium: {
-        padding: '8px 16px',
+        height: 32,
+        padding: '0 16px',
         // Ver typography
         fontSize: 14,
     },
     small: {
-        padding: '4px 8px',
+        height: 24,
+        padding: '0 8px',
         // Ver typography
         fontSize: 12,
     },
@@ -140,10 +193,19 @@ export default (theme) => ({
     loading: {
         '& $Text': {
             opacity: 0,
-            height: 0,
         },
     },
     fullWidth: {},
+    iconLeft: {
+        '& $icon': {
+            marginRight: 6,
+        },
+    },
+    iconRight: {
+        '& $icon': {
+            marginLeft: 6,
+        },
+    },
     // outlined: {
     //     padding: '4px 20px',
     //     '&$primary': {

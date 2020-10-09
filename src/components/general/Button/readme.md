@@ -40,36 +40,51 @@ Disabled:
 Loading:
 
 ```jsx
-const [loading, setLoading] = React.useState(false);
-const onClick = () => setLoading(true);
+const [loadingPs, setLoadingPs] = React.useState(false);
+const [loadingPes, setLoadingPes] = React.useState(false);
+const [loadingPm, setLoadingPm] = React.useState(false);
+const [loadingPem, setLoadingPem] = React.useState(false);
+const [loadingPb, setLoadingPb] = React.useState(false);
+const [loadingPeb, setLoadingPeb] = React.useState(false);
+
+const onClickPs = () => onClick(setLoadingPs);
+const onClickPes = () => onClick(setLoadingPes);
+const onClickPm = () => onClick(setLoadingPm);
+const onClickPem = () => onClick(setLoadingPem);
+const onClickPb = () => onClick(setLoadingPb);
+const onClickPeb = () => onClick(setLoadingPeb);
+
+const onClick = (set) => {
+    set(true);
+    setTimeout(() => {
+        set(false);
+    }, 3000);
+};
 <div>
-    <Button type="primary" size="small" isLoading>
+    <Button type="primary" size="small" isLoading={loadingPs} onClick={onClickPs}>
         Push me
     </Button>
     <span> </span>
-    <Button type="primary-error" isLoading>
+    <Button type="primary-error" size="small" isLoading={loadingPes} onClick={onClickPes}>
         Push me
     </Button>
     <span> </span>
-    <Button type="secondary" isLoading>
+    <Button type="primary" size="medium" isLoading={loadingPm} onClick={onClickPm}>
         Push me
     </Button>
     <span> </span>
-    <Button type="secondary-error" isLoading>
+    <Button type="primary-error" size="medium" isLoading={loadingPem} onClick={onClickPem}>
         Push me
     </Button>
     <span> </span>
-    <Button type="terciary" size="big" isLoading>
+    <Button type="primary" size="big" isLoading={loadingPb} onClick={onClickPb}>
         Push me
     </Button>
     <span> </span>
-    <Button type="primary" size="small" isLoading={loading} onClick={onClick}>
+    <Button type="primary-error" size="big" isLoading={loadingPeb} onClick={onClickPeb}>
         Push me
     </Button>
     <span> </span>
-    <Button type="primary-error" isLoading={loading} onClick={onClick}>
-        Push me
-    </Button>
 </div>;
 ```
 
@@ -107,6 +122,9 @@ Full-width
 
 ```jsx
 <Button isFullWidth>Push me</Button>
+<br />
+<br />
+<Button isFullWidth type="primary" icon="cloudUpload">Push me</Button>
 <br />
 <br />
 <Button isDisabled isFullWidth>Push me</Button>
