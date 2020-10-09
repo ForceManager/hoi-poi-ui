@@ -120,7 +120,7 @@ import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
 import Close from './icons/navigation/Close';
 import CloseSmall from './icons/navigation/CloseSmall';
-import DropDownArrow from './icons/navigation/DropDownArrow';
+import ArrowDropDown from './icons/navigation/ArrowDropDown';
 
 //Content
 import ContentCopy from './icons/content/ContentCopy';
@@ -266,7 +266,7 @@ const ICONS = {
     apps: Apps,
     arrowBack: ArrowBack,
     closeSmall: CloseSmall,
-    DropDownArrow: DropDownArrow,
+    arrowDropDown: ArrowDropDown,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
