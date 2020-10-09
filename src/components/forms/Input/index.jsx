@@ -39,6 +39,7 @@ const Input = memo(
         placeholder,
         error,
         isReadOnly,
+        isFullWidth,
         preComponent,
         postComponent,
         component,
@@ -59,6 +60,7 @@ const Input = memo(
                 [classes.error]: error,
                 [classes.custom]: component,
                 [classes.title]: type === 'title',
+                [classes.isFullWidth]: isFullWidth,
             },
             classNameProp,
         );
@@ -168,22 +170,24 @@ const Input = memo(
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
                 onKeyUp: handleOnKeyUp,
+                isFullWidth,
                 ...override.input,
             };
         }, [
-            classes,
+            id,
+            name,
+            classes.input,
+            type,
+            placeholder,
+            value,
+            isReadOnly,
             handleOnChange,
             handleOnFocus,
             handleOnBlur,
             handleOnKeyDown,
             handleOnKeyUp,
-            id,
-            isReadOnly,
-            name,
-            value,
-            override,
-            type,
-            placeholder,
+            isFullWidth,
+            override.input,
         ]);
 
         if (component) inputProps.isReadOnly = isReadOnly;
@@ -322,17 +326,7 @@ const Input = memo(
     },
 );
 
-Input.overrides = [
-    'root',
-    'input',
-    'error',
-    'info',
-    'preComponent',
-    'postComponent',
-    'formControl',
-    'inputComponents',
-    'Label',
-];
+Input.overrides = ['root', 'input', 'preComponent', 'postComponent', 'inputComponents'];
 
 Input.defaultProps = {
     ...InputWrapper.defaultProps,
