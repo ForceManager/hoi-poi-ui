@@ -6,7 +6,8 @@ export default (theme) => ({
         background: '#fff',
         boxShadow: theme.effects.boxShadow,
         outline: 'none',
-        padding: 30,
+        padding: '16px 32px',
+        borderRadius: 16,
     },
     overlay: {
         position: 'fixed',
@@ -32,7 +33,7 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingBottom: 30,
+        height: 65,
     },
     title: {
         color: theme.colors.text.black,
@@ -41,13 +42,11 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        paddingTop: 30,
+        padding: '16px 0',
     },
     content: {},
     closeIcon: {},
-    confirmButton: {
-        textTransform: 'uppercase',
-    },
+    confirmButton: {},
     cancelButton: {
         marginRight: 20,
     },

@@ -332,9 +332,9 @@ export default {
         ...typography,
     },
     effects: {
-        boxShadow,
-        buttonActive: {
-            boxShadow: 'inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)',
+        boxShadow: {
+            boxShadow:
+                '0px 16px 24px rgba(39, 60, 80, 0.14), 0px 6px 30px rgba(39, 60, 80, 0.12), 0px 8px 10px rgba(39, 60, 80, 0.2)',
         },
     },
     utils: {

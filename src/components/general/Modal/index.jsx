@@ -13,9 +13,11 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Modal');
 
 const SIZES = {
-    small: 400,
-    medium: 670,
-    large: 875,
+    tiny: 320,
+    small: 440,
+    medium: 640,
+    large: 960,
+    big: 1120,
 };
 
 function Modal({
@@ -101,6 +103,7 @@ function Modal({
                 <div className={classes.footer} {...override.footer}>
                     {onCancel && (
                         <Button
+                            type="secondary"
                             className={classes.cancelButton}
                             onClick={onCancel}
                             {...override.cancelButton}
@@ -110,7 +113,6 @@ function Modal({
                     )}
                     {onConfirm && (
                         <Button
-                            color="primary"
                             className={classes.confirmButton}
                             onClick={onConfirm}
                             {...override.confirmButton}
