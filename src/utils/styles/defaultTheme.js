@@ -209,7 +209,6 @@ const typography = {
         fontWeight: 500,
         lineHeight: '16px',
         letterSpacing: 0.6,
-        textTransform: 'uppercase',
     },
     caption: {
         fontFamily,
@@ -304,11 +303,7 @@ export default {
         fontSizeBase,
         fontSizeSmall,
         fontFamily,
-        buttonText: {
-            fontFamily,
-            lineHeight: lineHeightBase,
-            fontSize: 11,
-        },
+        buttonText: {},
         defaultText: {
             letterSpacing: 0.5,
             fontSize: fontSizeBase,

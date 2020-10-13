@@ -164,13 +164,8 @@ exports[`Form complete match 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
-          },
+          "buttonText": Object {},
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 12,
@@ -7391,30 +7386,31 @@ exports[`Form complete match 1`] = `
                           >
                             <Button
                               className="HoiPoi__Multiplier__button-1-156"
+                              iconPosition="left"
                               onClick={[Function]}
                               overrides={Object {}}
                               size="medium"
                               type="squared-outlined"
                             >
                               <button
-                                className="HoiPoi__Button__root-1-172 HoiPoi__Button__squared-outlined-1-178 HoiPoi__Button__white-1-180 HoiPoi__Multiplier__button-1-156"
+                                className="HoiPoi__Button__root-1-172 HoiPoi__Button__medium-1-183 HoiPoi__Multiplier__button-1-156"
                                 onClick={[Function]}
                                 type="button"
                               >
-                                <span
-                                  className=""
+                                <div
+                                  className="HoiPoi__Button__content-1-173"
                                 >
                                   <Text
-                                    className="HoiPoi__Button__Text-1-173"
+                                    className="HoiPoi__Button__Text-1-174"
                                     overrides={Object {}}
                                   >
                                     <span
-                                      className="HoiPoi__Text__root-1-6 HoiPoi__Button__Text-1-173"
+                                      className="HoiPoi__Text__root-1-6 HoiPoi__Button__Text-1-174"
                                     >
                                       + Add
                                     </span>
                                   </Text>
-                                </span>
+                                </div>
                               </button>
                             </Button>
                           </div>

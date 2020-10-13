@@ -9,10 +9,15 @@ module.exports = {
             name: 'General',
             description: 'General and global components',
             sectionDepth: 0,
+            components: ['./src/components/general/Button/index.jsx'],
+        },
+        {
+            name: 'Old eneral',
+            description: 'Old General and global components',
+            sectionDepth: 0,
             components: [
                 './src/components/general/Advice/index.jsx',
                 './src/components/general/Badge/index.jsx',
-                './src/components/general/Button/index.jsx',
                 './src/components/general/ButtonSwitch/index.jsx',
                 './src/components/general/ButtonTabGroup/index.jsx',
                 './src/components/general/Checkbox/index.jsx',
