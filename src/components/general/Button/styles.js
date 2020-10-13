@@ -58,10 +58,10 @@ export default (theme) => ({
         color: theme.colors.neutralBase,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                backgroundColor: theme.colors.orange400,
+                backgroundColor: theme.colors.orange600,
             },
             '&:active': {
-                backgroundColor: theme.colors.orange600,
+                backgroundColor: theme.colors.orange400,
             },
         },
     },
@@ -70,10 +70,10 @@ export default (theme) => ({
         color: theme.colors.neutralBase,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                backgroundColor: theme.colors.red400,
+                backgroundColor: theme.colors.red600,
             },
             '&:active': {
-                backgroundColor: theme.colors.red600,
+                backgroundColor: theme.colors.red400,
             },
         },
     },
@@ -83,12 +83,12 @@ export default (theme) => ({
         color: theme.colors.orange500,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.orange400,
-                color: theme.colors.orange400,
+                borderColor: theme.colors.orange600,
+                color: theme.colors.orange600,
             },
             '&:active': {
-                borderColor: theme.colors.orange600,
-                backgroundColor: theme.colors.orange600,
+                borderColor: theme.colors.orange400,
+                backgroundColor: theme.colors.orange400,
                 color: theme.colors.neutralBase,
                 '& path': { fill: theme.colors.neutralBase },
             },
@@ -100,12 +100,12 @@ export default (theme) => ({
         color: theme.colors.red500,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.red400,
-                color: theme.colors.red400,
+                borderColor: theme.colors.red600,
+                color: theme.colors.red600,
             },
             '&:active': {
-                borderColor: theme.colors.red600,
-                backgroundColor: theme.colors.red600,
+                borderColor: theme.colors.red400,
+                backgroundColor: theme.colors.red400,
                 color: theme.colors.neutralBase,
                 '& path': { fill: theme.colors.neutralBase },
             },
