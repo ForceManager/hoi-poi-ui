@@ -5,6 +5,7 @@ import RCSlider, { Range } from 'rc-slider';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import InputWrapper from '../components/InputWrapper';
+import Tooltip from '../../utils/Tooltip';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -31,7 +32,7 @@ function Slider({
     const classes = useClasses(useStyles, classesProp);
     // State
     const [innerValue, setInnerValue] = useState(
-        isRange && value === undefined ? [min, max] : value || 0,
+        isRange && value === undefined ? [min, max] : value || min,
     );
 
     // Overrides
@@ -45,53 +46,35 @@ function Slider({
         },
         classNameProp,
     );
-    const sizes = {
-        small: {
-            overlayHandler: classes?.smallOverlayHandler,
-            slider: classes?.smallSlider,
-        },
-        medium: {
-            overlayHandler: classes?.overlayHandler,
-            slider: classes?.slider,
-        },
-    };
 
     // Tip element
     const handle = useCallback(
         (props) => {
             const { offset, dragging, index, ...restProps } = props;
-            const positionStyle = { left: `${offset}%` };
             const handlerValue = Array.isArray(innerValue) ? innerValue[index] : innerValue;
             const finalValue = tipFormatter ? tipFormatter(handlerValue) : handlerValue;
 
             return (
                 <div key={index} className={classes.overlay} {...override.overlay}>
-                    <span
-                        style={positionStyle}
-                        className={classes.overlayLabel}
-                        {...override.overlayLabel}
-                    >
-                        {finalValue}
-                    </span>
-                    <Handle
-                        value={innerValue}
-                        offset={offset}
-                        {...restProps}
-                        className={sizes[size].overlayHandler}
-                        prefixCls="hoi-poi-slider"
-                        dragging={dragging.toString()}
-                    />
+                    <Tooltip placement="top" content={finalValue} visible={!isReadOnly}>
+                        <Handle
+                            value={innerValue}
+                            offset={offset}
+                            {...restProps}
+                            className={classes.overlayHandler}
+                            prefixCls="hoi-poi-slider"
+                            dragging={dragging.toString()}
+                        />
+                    </Tooltip>
                 </div>
             );
         },
         [
             classes.overlay,
-            classes.overlayLabel,
+            classes.overlayHandler,
             innerValue,
+            isReadOnly,
             override.overlay,
-            override.overlayLabel,
-            size,
-            sizes,
             tipFormatter,
         ],
     );
@@ -104,11 +87,12 @@ function Slider({
     );
 
     const sliderProps = {
-        className: sizes[size].slider,
+        className: classes.slider,
         value: innerValue,
         onChange: setInnerValue,
         onAfterChange: onAfterChange,
         disabled: isReadOnly,
+        labelMode: 'vertical',
         max,
         min,
         step,
@@ -126,19 +110,11 @@ function Slider({
     );
 }
 
-Slider.overrides = [
-    'root',
-    'rc-slider',
-    'error',
-    'formControl',
-    'Label',
-    'overlay',
-    'overlayLabel',
-];
+Slider.overrides = ['root', 'rc-slider', 'error', 'formControl', 'Label', 'overlay'];
 
 Slider.defaultProps = {
     overrides: {},
-    labelMode: 'horizontal',
+
     onChange: () => {},
     isReadOnly: false,
     max: 100,
@@ -152,8 +128,6 @@ Slider.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     label: PropTypes.string,
-    labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
-    size: PropTypes.oneOf(['small', 'medium']),
     value: PropTypes.any,
     onChange: PropTypes.func,
     isFullWidth: PropTypes.bool,
