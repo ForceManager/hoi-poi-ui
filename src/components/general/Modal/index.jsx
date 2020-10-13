@@ -87,7 +87,7 @@ function Modal({
                     </Text>
                     {useCornerClose && (
                         <Icon
-                            size="medium"
+                            size="large"
                             name="close"
                             className={classes.closeIcon}
                             onClick={onRequestClose}
@@ -103,7 +103,7 @@ function Modal({
                 <div className={classes.footer} {...override.footer}>
                     {onCancel && (
                         <Button
-                            type="secondary"
+                            type="terciary"
                             className={classes.cancelButton}
                             onClick={onCancel}
                             {...override.cancelButton}

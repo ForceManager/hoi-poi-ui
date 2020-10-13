@@ -62,7 +62,7 @@ const fontSizeLarge = 16;
 const fontSizeBig = 20;
 
 // Others
-const boxShadow = `0 3px 9px 0 ${shadow}`;
+// const boxShadow = `0 3px 9px 0 ${shadow}`;
 
 // New color scheme
 const colors = {
