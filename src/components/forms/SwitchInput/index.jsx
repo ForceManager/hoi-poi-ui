@@ -67,15 +67,7 @@ function SwitchInput({
     );
 }
 
-SwitchInput.overrides = [
-    'root',
-    'Switch',
-    'error',
-    'formControl',
-    'Label',
-    'overlay',
-    'overlayLabel',
-];
+SwitchInput.overrides = ['root', 'Switch', 'overlay', 'overlayLabel'];
 
 SwitchInput.defaultProps = {
     overrides: {},

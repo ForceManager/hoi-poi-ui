@@ -262,9 +262,11 @@ const onChange = (field) => {
 
 -   root - root element
 -   input - Native input
+-   infor - Info text wrapper
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)
+-   inputWrapper - Wrapper around Label and input components
 -   preComponent - Component rendered at the input beginning
 -   postComponent - Component rendered at the input ending
 -   inputComponents - Wrapper around input and pre/post components

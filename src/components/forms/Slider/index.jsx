@@ -58,7 +58,7 @@ function Slider({
             else if (isPercentage) finalValue = `${handlerValue}%`;
             else finalValue = handlerValue;
             return (
-                <div key={index} className={classes.overlay} {...override.overlay}>
+                <div key={index} {...override.overlay}>
                     <Tooltip placement="top" content={finalValue} visible={!isReadOnly}>
                         <Handle
                             value={innerValue}
@@ -73,7 +73,6 @@ function Slider({
             );
         },
         [
-            classes.overlay,
             classes.overlayHandler,
             innerValue,
             isPercentage,

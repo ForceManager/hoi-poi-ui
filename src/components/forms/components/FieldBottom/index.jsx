@@ -28,6 +28,8 @@ const Input = memo(
             classNameProp,
         );
 
+        if (!error || !info) return null;
+
         return (
             <div className={rootClassName} {...override.root}>
                 {info && (
