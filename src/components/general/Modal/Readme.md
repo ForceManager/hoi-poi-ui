@@ -271,7 +271,7 @@ const [isOpen, setIsOpen] = useState({
 </div>;
 ```
 
-Sizes width buttons:
+Sizes with buttons:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
@@ -495,6 +495,51 @@ const [isOpen, setIsOpen] = useState({
 </div>;
 ```
 
+With no text content:
+
+```jsx
+import { Button, Title, Text, Icon, DataGrid } from 'hoi-poi-ui';
+import { useState, useMemo } from 'react';
+
+const [state, setState] = useState({});
+let isOpen = state.isOpen || false;
+let i = 10;
+let rowData = [];
+while (i--) {
+    rowData.push({
+        make: 'Toyota',
+        model: 'Celica',
+        price: Math.round(Math.random() * 1000) + '$',
+    });
+}
+
+<div>
+    <Button onClick={() => setState({ isOpen: !isOpen })}>Show</Button>
+    <span> </span>
+    <Modal title="Lorem modal" isOpen={isOpen} onRequestClose={() => setState({ isOpen: false })}>
+        <div style={{ height: 350 }}>
+            <DataGrid
+                columnDefs={[
+                    {
+                        headerName: 'Make',
+                        field: 'make',
+                    },
+                    {
+                        headerName: 'Model',
+                        field: 'model',
+                    },
+                    {
+                        headerName: 'Price',
+                        field: 'price',
+                    },
+                ]}
+                rowData={rowData.length ? rowData : null}
+            />
+        </div>
+    </Modal>
+</div>;
+```
+
 Without close icon:
 
 ```jsx
@@ -521,7 +566,7 @@ let isOpen = state.isOpen || false;
 </div>;
 ```
 
-Without custom title component:
+With custom title component:
 
 ```jsx
 import { Button, Title, Text, Icon } from 'hoi-poi-ui';
@@ -529,12 +574,19 @@ import { useState, useMemo } from 'react';
 
 const [state, setState] = useState({});
 let isOpen = state.isOpen || false;
-const title = useMemo(()=>(
-    <fragment>
-    <Title>Lorem modal</Title>
-    <Text>Lorem ipsum dolor sit amet.</Text>
-    <fragment>
-));
+
+const title = useMemo(
+    () => (
+        <div style={{ flexDirection: 'column' }}>
+            <Title>Document name</Title>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <Icon name="pdf" />
+                <Text style={{ marginLeft: 10 }}>PDF, 2MB, 20/10/2019</Text>
+            </div>
+        </div>
+    ),
+    [],
+);
 
 <div>
     <Button onClick={() => setState({ isOpen: !isOpen })}>Show</Button>

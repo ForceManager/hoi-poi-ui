@@ -64,13 +64,10 @@ const fontSizeBig = 20;
 // Others
 const boxShadow = `0 3px 9px 0 ${shadow}`;
 
-function alphaColor(color, a) {
-    const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
+function alphaColor(hex, a) {
+    const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     if (!rgb) return '';
-    const r = parseInt(rgb[1], 16);
-    const g = parseInt(rgb[2], 16);
-    const b = parseInt(rgb[3], 16);
-    return `rgba(${r}, ${g}, ${b}, ${a})`;
+    return `rgba(${parseInt(rgb[1], 16)}, ${parseInt(rgb[2], 16)}, ${parseInt(rgb[3], 16)}, ${a})`;
 }
 
 // New color scheme
@@ -341,7 +338,7 @@ export default {
             boxShadow: 'inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)',
         },
         boxShadow24: {
-            boxShadow: `0px 18px 41px ${alphaColor(colors.neutral900, 0.5)}`,
+            boxShadow: `0px 18px 40px ${alphaColor(colors.neutral900, 0.4)}`,
         },
     },
     utils: {

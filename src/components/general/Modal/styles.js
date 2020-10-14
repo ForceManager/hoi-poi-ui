@@ -31,7 +31,7 @@ export default (theme) => ({
         padding: '32px',
         boxSizing: 'border-box',
         background: theme.colors.neutralBase,
-        boxShadow: theme.effects.boxShadow24,
+        ...theme.effects.boxShadow24,
         borderRadius: 16,
         display: 'flex',
         flexDirection: 'column',
@@ -52,6 +52,7 @@ export default (theme) => ({
         paddingTop: 16,
     },
     content: {
+        position: 'relative',
         overflow: 'auto',
         ...theme.utils.scrollbar,
     },
