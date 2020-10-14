@@ -303,7 +303,6 @@ export default {
         fontSizeBase,
         fontSizeSmall,
         fontFamily,
-        buttonText: {},
         defaultText: {
             letterSpacing: 0.5,
             fontSize: fontSizeBase,

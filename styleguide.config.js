@@ -12,7 +12,7 @@ module.exports = {
             components: ['./src/components/general/Button/index.jsx'],
         },
         {
-            name: 'Old eneral',
+            name: 'Old General',
             description: 'Old General and global components',
             sectionDepth: 0,
             components: [
