@@ -15,6 +15,7 @@ function Tooltip({
     className: classNameProp,
     content,
     placement,
+    visible,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -31,6 +32,7 @@ function Tooltip({
         overlayClassName: rootClassName,
         overlay: content,
         placement,
+        visible,
     };
 
     return (
@@ -45,12 +47,14 @@ Tooltip.overrides = ['root'];
 Tooltip.defaultProps = {
     overrides: {},
     placement: 'top',
+    visible: false,
 };
 
 Tooltip.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     content: PropTypes.any,
+    visible: PropTypes.bool,
     placement: PropTypes.oneOf([
         'top',
         'topLeft',
