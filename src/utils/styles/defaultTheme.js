@@ -62,7 +62,16 @@ const fontSizeLarge = 16;
 const fontSizeBig = 20;
 
 // Others
-// const boxShadow = `0 3px 9px 0 ${shadow}`;
+const boxShadow = `0 3px 9px 0 ${shadow}`;
+
+function alphaColor(color, a) {
+    const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
+    if (!rgb) return '';
+    const r = parseInt(rgb[1], 16);
+    const g = parseInt(rgb[2], 16);
+    const b = parseInt(rgb[3], 16);
+    return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
 
 // New color scheme
 const colors = {
@@ -327,9 +336,12 @@ export default {
         ...typography,
     },
     effects: {
-        boxShadow: {
-            boxShadow:
-                '0px 16px 24px rgba(39, 60, 80, 0.14), 0px 6px 30px rgba(39, 60, 80, 0.12), 0px 8px 10px rgba(39, 60, 80, 0.2)',
+        boxShadow,
+        buttonActive: {
+            boxShadow: 'inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)',
+        },
+        boxShadow24: {
+            boxShadow: `0px 18px 41px ${alphaColor(colors.neutral900, 0.5)}`,
         },
     },
     utils: {
@@ -340,13 +352,13 @@ export default {
             },
             '&::-webkit-scrollbar-thumb': {
                 borderRadius: 10,
-                background: placeholders,
+                background: colors.neutral400,
                 backgroundClip: 'content-box',
                 border: '4px solid rgba(0, 0, 0, 0)',
             },
             '&::-webkit-scrollbar-thumb:window-inactive': {
                 borderRadius: 10,
-                background: placeholders,
+                background: colors.neutral400,
                 backgroundClip: 'content-box',
                 border: '4px solid rgba(0, 0, 0, 0)',
             },
