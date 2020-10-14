@@ -113,11 +113,10 @@ function Slider({
     );
 }
 
-Slider.overrides = ['root', 'rc-slider', 'error', 'formControl', 'Label', 'overlay'];
+Slider.overrides = ['root', 'rc-slider', 'overlay'];
 
 Slider.defaultProps = {
     overrides: {},
-
     onChange: () => {},
     isReadOnly: false,
     max: 100,
