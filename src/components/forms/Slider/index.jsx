@@ -121,7 +121,6 @@ Slider.defaultProps = {
     min: 0,
     step: 1,
     isRange: false,
-    size: 'medium',
 };
 
 Slider.propTypes = {
