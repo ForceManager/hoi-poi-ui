@@ -14,6 +14,7 @@ export { default as Loader } from './components/general/Loader';
 export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
 export { default as Advice } from './components/general/Advice';
+export { default as NewAdvice } from './components/general/NewAdvice';
 export { default as Chip } from './components/general/Chip';
 export { default as ChipGroup } from './components/general/ChipGroup';
 export { default as Tabs } from './components/general/Tabs';
