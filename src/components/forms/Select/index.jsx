@@ -9,8 +9,9 @@ import { default as RSelect } from 'react-select';
 import { createFilter, filterKeyValue } from './utils';
 import Checkbox from '../../general/Checkbox';
 
-import DropdownIndicator from './DropdownIndicator';
-import SearchIndicator from './SearchIndicator';
+import DropdownIndicator from './components/DropdownIndicator';
+import OptionsMulti from './components/OptionsMulti';
+// import SearchIndicator from './components/SearchIndicator';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -32,7 +33,7 @@ const Select = memo(
         isClearable,
         placeholder,
         options,
-        value,
+        defaultValue,
         isValueObject,
         onChange,
         onBlur,
@@ -44,6 +45,7 @@ const Select = memo(
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
+        const [value, setValue] = useState(defaultValue || null);
         // const [innerOptions, setInnerOptions] = useState(options);
         // const [lazyOptions, setLazyOptions] = useState({
         //     areLoaded: false,
@@ -65,115 +67,39 @@ const Select = memo(
             classNameProp,
         );
 
-        // const menuListClassName = classnames(classes.menuList, props.menuListClassName);
-        // const menuClassName = classnames(classes.menu, props.menuClassName);
         const selectClassName = classnames(classes.select, {
             [classes.isMulti]: isMulti,
         });
 
-        const selectedValue = useMemo(() => {
-            if (isValueObject) return value;
+        const newDefaultValue = useMemo(() => {
+            if (isValueObject) return defaultValue;
             const finalOptions = options && options.length ? options : options;
             if (
                 !isMulti &&
                 finalOptions &&
                 finalOptions.length &&
-                value !== null &&
-                value !== undefined
+                defaultValue !== null &&
+                defaultValue !== undefined
             ) {
                 return finalOptions.find((op) => {
-                    return op.value === value;
+                    return op.value === defaultValue;
                 });
             }
-            if (isMulti && finalOptions && finalOptions.length && value) {
-                return value.map((v) => finalOptions.find((op) => op.value === v));
+            if (isMulti && finalOptions && finalOptions.length && defaultValue) {
+                return defaultValue.map((v) => finalOptions.find((op) => op.value === v));
             }
-        }, [isMulti, options, value, isValueObject]);
+        }, [isMulti, options, defaultValue, isValueObject])
 
-        // const onRemove = useCallback(
-        //     (itemForRemove) => {
-        //         const result = value.filter((item) => item.value !== itemForRemove.value);
-        //         onChange && onChange(result, options);
-        //         onBlur && onBlur(result, options);
-        //     },
-        //     [onBlur, onChange, options, value],
-        // );
-
-        const handleOnChange = useCallback(
-            (data, action) => {
-                if (isMulti) {
-                    debugger;
-                    let hasValue = !!(value || []).find(
-                        (item) => item.value === data[0].value || item === data[0].value,
-                    );
-                    if (hasValue) {
-                        data = value.filter((item) =>
-                            isValueObject ? item.value !== data[0].value : item !== data[0].value,
-                        );
-                    } else {
-                        data = [...value, ...data];
-                    }
-                }
-
-                if (!isValueObject && data) {
-                    if (isMulti) {
-                        data = data.map((d) => d?.value ?? d);
-                    } else {
-                        data = data.value;
-                    }
-                }
-                onChange && onChange(data, options);
-                onBlur && onBlur(data, options);
-            },
-            [onChange, onBlur, isMulti, isValueObject, options, value],
-        );
-
-        // const handleOnFocus = useCallback(
-        //     (e) => {
-        //         setFocused(true);
-        //         if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
-        //             setLazyOptions({
-        //                 ...lazyOptions,
-        //                 isLoading: true,
-        //             });
-        //             loadOptions().then((options) => {
-        //                 setLazyOptions({
-        //                     areLoaded: true,
-        //                     isLoading: false,
-        //                     options,
-        //                 });
-        //             });
-        //         }
-        //     },
-        //     [isFuzzy, lazyOptions, loadOptions],
-        // );
+        const handleOnChange = useCallback((data, action) => {
+            console.log(data, action)
+            setValue(data);
+            onChange && onChange(data);
+            onBlur && onBlur(data);
+        }, [onChange, onBlur])
 
         const handleOnBlur = useCallback(() => {
             setFocused(false);
         }, []);
-
-        // const formatOptionLabel = useCallback(
-        //     (data) => {
-        //         return (
-        //             <div className={classes.optionLabel}>
-        //                 {isMulti && (
-        //                     <Checkbox
-        //                         checked={
-        //                             value
-        //                                 ? !!value.find(
-        //                                       (item) =>
-        //                                           item.value === data.value || item === data.value,
-        //                                   )
-        //                                 : false
-        //                         }
-        //                     />
-        //                 )}
-        //                 <span>{data.label}</span>
-        //             </div>
-        //         );
-        //     },
-        //     [classes.optionLabel, isMulti, value],
-        // );
 
         const formatGroupLabel = useCallback(
             (data) => (
@@ -190,7 +116,7 @@ const Select = memo(
             };
 
             if (isFocused) {
-                styles = { ...styles, ...newStyles.constrolFocused };
+                styles = { ...styles, ...newStyles.controlFocused };
             }
             return styles;
         }, []);
@@ -203,6 +129,21 @@ const Select = memo(
             return styles;
         }, []);
 
+        const formatOptionLabel = useCallback((option, data) => {
+            console.log(option, data)
+            const selected = data.selectedValue;
+            const isSelected = selected && selected.includes(option);
+            // const value = data.value;
+            return (
+                    <div className={classes.optionLabel}>
+                        <Checkbox
+                            checked={isSelected}
+                        />
+                        <div>{option.label}</div>
+                    </div>
+                );
+        }, [classes])
+
         const indicatorSeparator = useMemo(() => {
             return newStyles.indicatorSeparator;
         }, []);
@@ -213,14 +154,12 @@ const Select = memo(
                 classNamePrefix: 'hoi-poi-select',
                 placeholder,
                 options: options,
-                value: isMulti ? [] : selectedValue,
+                defaultValue: newDefaultValue,
                 isMulti,
                 onChange: handleOnChange,
-                // onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
                 isDisabled: isReadOnly,
-                isClearable: isMulti ? false : isClearable,
-                // isLoading: lazyOptions.isLoading,
+                isClearable: isMulti ? true : isClearable,
                 autoFocus: focused,
                 hideSelectedOptions: isMulti ? true : hideSelectedOptions,
                 closeMenuOnSelect: isMulti ? false : true,
@@ -245,6 +184,10 @@ const Select = memo(
                         ...styles,
                         ...newStyles.dropdownIndicator,
                     }),
+                    multiValue: (base) => ({...base, ...newStyles.multiValue}),
+                    multiValueLabel: (base) => ({...base, ...newStyles.multiValueLabel}),
+                    multiValueRemove: (base) => ({...base, ...newStyles.multiValueRemove}),
+                    noOptionsMessage: (base) => ({...base, ...newStyles.noOptionsMessage}),
                 },
                 components: {
                     DropdownIndicator: DropdownIndicator, //loadOptions && isFuzzy ? SearchIndicator :
@@ -261,7 +204,8 @@ const Select = memo(
             options,
             placeholder,
             selectClassName,
-            selectedValue,
+            // selectedValue,
+            newDefaultValue,
             focused,
             handleOnChange,
             // handleOnFocus,
@@ -279,6 +223,14 @@ const Select = memo(
             optionsStyles,
             indicatorSeparator,
         ]);
+
+        if (isMulti) {
+            selectProps.formatOptionLabel = formatOptionLabel;
+        }
+
+        // if (isMulti) {
+        //     selectProps.components.Option = OptionsMulti;
+        // }
 
         let SelectComponent = RSelect;
         // if (loadOptions && isFuzzy) {

@@ -23,7 +23,7 @@ export default (theme) => ({
             cursor: 'pointer',
         },
     },
-    constrolFocused: {
+    controlFocused: {
         border: '1px solid transparent',
         borderColor: 'transparent',
         boxShadow: 'none',
@@ -36,6 +36,25 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutral200,
             cursor: 'pointer',
         },
+    },
+    multiValue: {
+        backgroundColor: theme.colors.blue100,
+        border: 'none',
+        borderRadius: '4px',
+        color: theme.colors.blue500,
+    },
+    multiValueLabel: {
+        ...theme.typography.caption,
+        color: theme.colors.blue500,
+    },
+    multiValueRemove: {
+        '&:hover': {
+            backgroundColor: 'initial',
+            color: theme.colors.blue600,
+        }
+    },
+    noOptionsMessage: {
+        ...theme.typography.body,
     },
     indicatorSeparator: {
         marginBottom: 0,

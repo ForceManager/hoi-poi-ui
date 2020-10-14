@@ -58,7 +58,10 @@ const options = [
         value: 'lorem-ipsum-4',
     },
 ];
-const [state, setState] = useState({});
+const [state, setState] = useState([{
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    }]);
 const onChange = (value) => setState({ value });
 
 <div>
@@ -68,7 +71,8 @@ const onChange = (value) => setState({ value });
         onChange={onChange}
         options={options}
         value={state.value}
-        isMulti
+        isMulti={true}
+        isClearable
     />
 </div>;
 ```
