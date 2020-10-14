@@ -26,6 +26,7 @@ function Slider({
     max,
     step,
     tipFormatter,
+    isPercentage,
     size,
     ...props
 }) {
@@ -52,8 +53,10 @@ function Slider({
         (props) => {
             const { offset, dragging, index, ...restProps } = props;
             const handlerValue = Array.isArray(innerValue) ? innerValue[index] : innerValue;
-            const finalValue = tipFormatter ? tipFormatter(handlerValue) : handlerValue;
-
+            let finalValue;
+            if (tipFormatter) finalValue = tipFormatter(handlerValue);
+            else if (isPercentage) finalValue = `${handlerValue}%`;
+            else finalValue = handlerValue;
             return (
                 <div key={index} className={classes.overlay} {...override.overlay}>
                     <Tooltip placement="top" content={finalValue} visible={!isReadOnly}>
@@ -73,6 +76,7 @@ function Slider({
             classes.overlay,
             classes.overlayHandler,
             innerValue,
+            isPercentage,
             isReadOnly,
             override.overlay,
             tipFormatter,
@@ -121,6 +125,7 @@ Slider.defaultProps = {
     min: 0,
     step: 1,
     isRange: false,
+    isPercentage: false,
 };
 
 Slider.propTypes = {
@@ -138,6 +143,8 @@ Slider.propTypes = {
     isReadOnly: PropTypes.bool,
     /** A function to format tooltip\'s overlay */
     tipFormatter: PropTypes.func,
+    /** This prop adds percentage symbol to value label */
+    isPercentage: PropTypes.bool,
     /** The maximum value of the slider */
     max: PropTypes.number,
     /** The minimum value of the slider */

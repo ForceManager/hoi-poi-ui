@@ -11,6 +11,19 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Percentage tip:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+<div>
+    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} isPercentage isFullWidth />
+</div>;
+```
+
 Custom tip:
 
 ```jsx
@@ -24,7 +37,7 @@ const onChange = (value) => setState({ value });
         label="Lorem ipsum"
         onChange={onChange}
         value={state.value}
-        tipFormatter={(v) => `${v}%`}
+        tipFormatter={(v) => `${v}$`}
         isFullWidth
     />
 </div>;
