@@ -151,7 +151,7 @@ function Advice({
                                 className={classes.dropdownIcon}
                                 {...override.dropdownIcon}
                             >
-                                <Icon name="DropDownArrow" size="small" />
+                                <Icon name="arrowDropDown" size="small" />
                             </span>
                         )}
                     </div>

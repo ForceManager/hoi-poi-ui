@@ -79,6 +79,6 @@ Title mode:
 -   root - root element
 -   textContainer - text and dropdown icon container
 -   [Icon](#/General?id=icon)
--   [DropdownArrow](#/General?id=icon)
+-   [ArrowDropDown](#/General?id=icon)
 -   [react-animate-height](https://github.com/Stanko/react-animate-height)
 -   [Text](#/Typography?=text)

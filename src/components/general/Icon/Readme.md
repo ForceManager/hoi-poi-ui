@@ -154,7 +154,7 @@ Navigation:
 <span> </span>
 <Icon name="closeSmall"/>
 <span> </span>
-<Icon name="DropDownArrow"/>
+<Icon name="arrowDropDown"/>
 <span> </span>
 ```
 
