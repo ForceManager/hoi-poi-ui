@@ -429,10 +429,10 @@ exports[`Badge default match 1`] = `
         overrides={Object {}}
         showCollapse={true}
         showIcon={false}
-        type="info"
+        type="default"
       >
         <div
-          className="HoiPoi__Advice__root-1-0 HoiPoi__Advice__info-1-4 HoiPoi__Advice__isCollapsed-1-9"
+          className="HoiPoi__Advice__root-1-0 HoiPoi__Advice__default-1-3 HoiPoi__Advice__isCollapsed-1-10"
         >
           <AnimateHeight
             animateOpacity={false}
@@ -471,7 +471,7 @@ exports[`Badge default match 1`] = `
                 style={Object {}}
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-1-7"
+                  className="HoiPoi__Advice__textContainer-1-8"
                 >
                   <Text
                     className="HoiPoi__Advice__Text-1-2"
@@ -481,7 +481,7 @@ exports[`Badge default match 1`] = `
                         "root": Object {
                           "ref": Object {
                             "current": <span
-                              class="HoiPoi__Text__root-1-11 HoiPoi__Text__normal-1-18 HoiPoi__Text__medium-1-14 HoiPoi__Advice__Text-1-2 HoiPoi__Text__truncated-1-12"
+                              class="HoiPoi__Text__root-1-12 HoiPoi__Text__normal-1-19 HoiPoi__Text__medium-1-15 HoiPoi__Advice__Text-1-2 HoiPoi__Text__truncated-1-13"
                             >
                               Lorem ipsum
                             </span>,
@@ -493,7 +493,7 @@ exports[`Badge default match 1`] = `
                     type="normal"
                   >
                     <span
-                      className="HoiPoi__Text__root-1-11 HoiPoi__Text__normal-1-18 HoiPoi__Text__medium-1-14 HoiPoi__Advice__Text-1-2 HoiPoi__Text__truncated-1-12"
+                      className="HoiPoi__Text__root-1-12 HoiPoi__Text__normal-1-19 HoiPoi__Text__medium-1-15 HoiPoi__Advice__Text-1-2 HoiPoi__Text__truncated-1-13"
                     >
                       Lorem ipsum
                     </span>
@@ -941,38 +941,38 @@ exports[`Badge with icon and type match 1`] = `
         type="error"
       >
         <div
-          className="HoiPoi__Advice__root-4-0 HoiPoi__Advice__error-4-3 HoiPoi__Advice__isCollapsed-4-9"
+          className="HoiPoi__Advice__root-4-0 HoiPoi__Advice__error-4-4 HoiPoi__Advice__isCollapsed-4-10"
         >
           <div
             className="HoiPoi__Advice__icon-4-1"
           >
             <Icon
-              color="#f04540"
-              name="warning"
+              color="#ff3b30"
+              name="warningOutline"
               overrides={Object {}}
               size="medium"
             >
               <span
-                className="HoiPoi__Icon__root-4-11 HoiPoi__Icon__medium-4-13"
+                className="HoiPoi__Icon__root-4-12 HoiPoi__Icon__medium-4-14"
                 onMouseDown={[Function]}
                 onMouseOut={[Function]}
                 onMouseOver={[Function]}
                 onMouseUp={[Function]}
               >
-                <Warning
-                  color="#f04540"
+                <WarningOutline
+                  color="#ff3b30"
                 >
                   <svg
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
-                      fill="#f04540"
+                      d="M12 2L1 21h22M12 6l7.53 13H4.47M11 10v4h2v-4m-2 6v2h2v-2"
+                      fill="#ff3b30"
                       fillRule="evenodd"
                     />
                   </svg>
-                </Warning>
+                </WarningOutline>
               </span>
             </Icon>
           </div>
@@ -1013,7 +1013,7 @@ exports[`Badge with icon and type match 1`] = `
                 style={Object {}}
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-4-7"
+                  className="HoiPoi__Advice__textContainer-4-8"
                 >
                   <Text
                     className="HoiPoi__Advice__Text-4-2"
@@ -1023,7 +1023,7 @@ exports[`Badge with icon and type match 1`] = `
                         "root": Object {
                           "ref": Object {
                             "current": <span
-                              class="HoiPoi__Text__root-4-18 HoiPoi__Text__normal-4-25 HoiPoi__Text__medium-4-21 HoiPoi__Advice__Text-4-2 HoiPoi__Text__truncated-4-19"
+                              class="HoiPoi__Text__root-4-19 HoiPoi__Text__normal-4-26 HoiPoi__Text__medium-4-22 HoiPoi__Advice__Text-4-2 HoiPoi__Text__truncated-4-20"
                             >
                               Lorem ipsum
                             </span>,
@@ -1035,7 +1035,7 @@ exports[`Badge with icon and type match 1`] = `
                     type="normal"
                   >
                     <span
-                      className="HoiPoi__Text__root-4-18 HoiPoi__Text__normal-4-25 HoiPoi__Text__medium-4-21 HoiPoi__Advice__Text-4-2 HoiPoi__Text__truncated-4-19"
+                      className="HoiPoi__Text__root-4-19 HoiPoi__Text__normal-4-26 HoiPoi__Text__medium-4-22 HoiPoi__Advice__Text-4-2 HoiPoi__Text__truncated-4-20"
                     >
                       Lorem ipsum
                     </span>
@@ -1480,41 +1480,42 @@ exports[`Badge with icon match 1`] = `
         overrides={Object {}}
         showCollapse={true}
         showIcon={true}
-        type="info"
+        type="default"
       >
         <div
-          className="HoiPoi__Advice__root-3-0 HoiPoi__Advice__info-3-4 HoiPoi__Advice__isCollapsed-3-9"
+          className="HoiPoi__Advice__root-3-0 HoiPoi__Advice__default-3-3 HoiPoi__Advice__isCollapsed-3-10"
         >
           <div
             className="HoiPoi__Advice__icon-3-1"
           >
             <Icon
-              color="#00A8Be"
-              name="info"
+              color="#7d8a96"
+              name="infoOutlined"
               overrides={Object {}}
               size="medium"
             >
               <span
-                className="HoiPoi__Icon__root-3-11 HoiPoi__Icon__medium-3-13"
+                className="HoiPoi__Icon__root-3-12 HoiPoi__Icon__medium-3-14"
                 onMouseDown={[Function]}
                 onMouseOut={[Function]}
                 onMouseOver={[Function]}
                 onMouseUp={[Function]}
               >
-                <Info
-                  color="#00A8Be"
+                <InfoOutlined
+                  color="#7d8a96"
                 >
                   <svg
-                    viewBox="0 0 18 18"
-                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 16 16"
                   >
                     <path
-                      d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
-                      fill="#00A8Be"
-                      fillRule="nonzero"
+                      clipRule="evenodd"
+                      d="M8.75 5.75h-1.5v-1.5h1.5v1.5zm0 6h-1.5v-4.5h1.5v4.5zm-.742 3.75c4.14 0 7.492-3.36 7.492-7.5 0-4.14-3.352-7.5-7.492-7.5C3.86.5.5 3.86.5 8c0 4.14 3.36 7.5 7.508 7.5zM8 2c3.315 0 6 2.685 6 6s-2.685 6-6 6-6-2.685-6-6 2.685-6 6-6z"
+                      fill="#7d8a96"
+                      fillRule="evenodd"
                     />
                   </svg>
-                </Info>
+                </InfoOutlined>
               </span>
             </Icon>
           </div>
@@ -1555,7 +1556,7 @@ exports[`Badge with icon match 1`] = `
                 style={Object {}}
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-3-7"
+                  className="HoiPoi__Advice__textContainer-3-8"
                 >
                   <Text
                     className="HoiPoi__Advice__Text-3-2"
@@ -1565,7 +1566,7 @@ exports[`Badge with icon match 1`] = `
                         "root": Object {
                           "ref": Object {
                             "current": <span
-                              class="HoiPoi__Text__root-3-18 HoiPoi__Text__normal-3-25 HoiPoi__Text__medium-3-21 HoiPoi__Advice__Text-3-2 HoiPoi__Text__truncated-3-19"
+                              class="HoiPoi__Text__root-3-19 HoiPoi__Text__normal-3-26 HoiPoi__Text__medium-3-22 HoiPoi__Advice__Text-3-2 HoiPoi__Text__truncated-3-20"
                             >
                               Lorem ipsum
                             </span>,
@@ -1577,7 +1578,7 @@ exports[`Badge with icon match 1`] = `
                     type="normal"
                   >
                     <span
-                      className="HoiPoi__Text__root-3-18 HoiPoi__Text__normal-3-25 HoiPoi__Text__medium-3-21 HoiPoi__Advice__Text-3-2 HoiPoi__Text__truncated-3-19"
+                      className="HoiPoi__Text__root-3-19 HoiPoi__Text__normal-3-26 HoiPoi__Text__medium-3-22 HoiPoi__Advice__Text-3-2 HoiPoi__Text__truncated-3-20"
                     >
                       Lorem ipsum
                     </span>
@@ -2025,7 +2026,7 @@ exports[`Badge with type match 1`] = `
         type="success"
       >
         <div
-          className="HoiPoi__Advice__root-2-0 HoiPoi__Advice__success-2-5 HoiPoi__Advice__isCollapsed-2-9"
+          className="HoiPoi__Advice__root-2-0 HoiPoi__Advice__success-2-6 HoiPoi__Advice__isCollapsed-2-10"
         >
           <AnimateHeight
             animateOpacity={false}
@@ -2064,7 +2065,7 @@ exports[`Badge with type match 1`] = `
                 style={Object {}}
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-2-7"
+                  className="HoiPoi__Advice__textContainer-2-8"
                 >
                   <Text
                     className="HoiPoi__Advice__Text-2-2"
@@ -2074,7 +2075,7 @@ exports[`Badge with type match 1`] = `
                         "root": Object {
                           "ref": Object {
                             "current": <span
-                              class="HoiPoi__Text__root-2-11 HoiPoi__Text__normal-2-18 HoiPoi__Text__medium-2-14 HoiPoi__Advice__Text-2-2 HoiPoi__Text__truncated-2-12"
+                              class="HoiPoi__Text__root-2-12 HoiPoi__Text__normal-2-19 HoiPoi__Text__medium-2-15 HoiPoi__Advice__Text-2-2 HoiPoi__Text__truncated-2-13"
                             >
                               Lorem ipsum
                             </span>,
@@ -2086,7 +2087,7 @@ exports[`Badge with type match 1`] = `
                     type="normal"
                   >
                     <span
-                      className="HoiPoi__Text__root-2-11 HoiPoi__Text__normal-2-18 HoiPoi__Text__medium-2-14 HoiPoi__Advice__Text-2-2 HoiPoi__Text__truncated-2-12"
+                      className="HoiPoi__Text__root-2-12 HoiPoi__Text__normal-2-19 HoiPoi__Text__medium-2-15 HoiPoi__Advice__Text-2-2 HoiPoi__Text__truncated-2-13"
                     >
                       Lorem ipsum
                     </span>
@@ -2531,41 +2532,42 @@ exports[`Badge with with icon and disabled collapase 1`] = `
         overrides={Object {}}
         showCollapse={false}
         showIcon={true}
-        type="info"
+        type="default"
       >
         <div
-          className="HoiPoi__Advice__root-5-0 HoiPoi__Advice__info-5-4 HoiPoi__Advice__isCollapsed-5-9"
+          className="HoiPoi__Advice__root-5-0 HoiPoi__Advice__default-5-3 HoiPoi__Advice__isCollapsed-5-10"
         >
           <div
             className="HoiPoi__Advice__icon-5-1"
           >
             <Icon
-              color="#00A8Be"
-              name="info"
+              color="#7d8a96"
+              name="infoOutlined"
               overrides={Object {}}
               size="medium"
             >
               <span
-                className="HoiPoi__Icon__root-5-11 HoiPoi__Icon__medium-5-13"
+                className="HoiPoi__Icon__root-5-12 HoiPoi__Icon__medium-5-14"
                 onMouseDown={[Function]}
                 onMouseOut={[Function]}
                 onMouseOver={[Function]}
                 onMouseUp={[Function]}
               >
-                <Info
-                  color="#00A8Be"
+                <InfoOutlined
+                  color="#7d8a96"
                 >
                   <svg
-                    viewBox="0 0 18 18"
-                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 16 16"
                   >
                     <path
-                      d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
-                      fill="#00A8Be"
-                      fillRule="nonzero"
+                      clipRule="evenodd"
+                      d="M8.75 5.75h-1.5v-1.5h1.5v1.5zm0 6h-1.5v-4.5h1.5v4.5zm-.742 3.75c4.14 0 7.492-3.36 7.492-7.5 0-4.14-3.352-7.5-7.492-7.5C3.86.5.5 3.86.5 8c0 4.14 3.36 7.5 7.508 7.5zM8 2c3.315 0 6 2.685 6 6s-2.685 6-6 6-6-2.685-6-6 2.685-6 6-6z"
+                      fill="#7d8a96"
+                      fillRule="evenodd"
                     />
                   </svg>
-                </Info>
+                </InfoOutlined>
               </span>
             </Icon>
           </div>
@@ -2577,7 +2579,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
                 "root": Object {
                   "ref": Object {
                     "current": <span
-                      class="HoiPoi__Text__root-5-18 HoiPoi__Text__normal-5-25 HoiPoi__Text__medium-5-21 HoiPoi__Advice__Text-5-2"
+                      class="HoiPoi__Text__root-5-19 HoiPoi__Text__normal-5-26 HoiPoi__Text__medium-5-22 HoiPoi__Advice__Text-5-2"
                     >
                       Lorem ipsum
                     </span>,
@@ -2589,7 +2591,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
             type="normal"
           >
             <span
-              className="HoiPoi__Text__root-5-18 HoiPoi__Text__normal-5-25 HoiPoi__Text__medium-5-21 HoiPoi__Advice__Text-5-2"
+              className="HoiPoi__Text__root-5-19 HoiPoi__Text__normal-5-26 HoiPoi__Text__medium-5-22 HoiPoi__Advice__Text-5-2"
             >
               Lorem ipsum
             </span>

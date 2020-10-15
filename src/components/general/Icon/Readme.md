@@ -154,7 +154,7 @@ Navigation:
 <span> </span>
 <Icon name="closeSmall"/>
 <span> </span>
-<Icon name="DropDownArrow"/>
+<Icon name="arrowDropDown"/>
 <span> </span>
 ```
 
@@ -175,6 +175,8 @@ Icons:
 <Icon name="chevron" />
 <span> </span>
 <Icon name="info" />
+<span> </span>
+<Icon name="infoOutlined" />
 <span> </span>
 <Icon name="close" />
 <span> </span>
