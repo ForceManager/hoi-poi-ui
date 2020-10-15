@@ -15,7 +15,7 @@ const LOADER_SIZES = {
     medium: 'tiny',
     small: 'mini',
 };
-const ALLOWED_LOADING_TYES = ['primary', 'primary-error'];
+const ALLOWED_LOADING_TYPES = ['primary', 'primary-error'];
 
 function Button({
     children,
@@ -50,7 +50,7 @@ function Button({
             [classes.terciary]: type === 'terciary',
             [classes[size]]: size,
             [classes.disabled]: isDisabled,
-            [classes.loading]: isLoading && ALLOWED_LOADING_TYES.includes(type),
+            [classes.loading]: isLoading && ALLOWED_LOADING_TYPES.includes(type),
             [classes.fullWidth]: isFullWidth,
             [classes.iconLeft]: icon && iconPosition === 'left',
             [classes.iconRight]: icon && iconPosition === 'right',
@@ -104,7 +104,7 @@ function Button({
 
     const content = (
         <div className={classes.content}>
-            {isLoading && ALLOWED_LOADING_TYES.includes(type) && (
+            {isLoading && ALLOWED_LOADING_TYPES.includes(type) && (
                 <div className={classes.loaderContainer}>
                     <Loader size={LOADER_SIZES[size]} color="white" {...override.Loader} />
                 </div>
