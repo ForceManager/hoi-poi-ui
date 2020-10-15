@@ -6,6 +6,7 @@ import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Chevron from './icons/Chevron';
 import Info from './icons/Info';
+import InfoOutlined from './icons/InfoOutlined';
 import Lock from './icons/Lock';
 import ThickEnabled from './icons/ThickEnabled';
 import WarningRounded from './icons/WarningRounded';
@@ -120,7 +121,7 @@ import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
 import Close from './icons/navigation/Close';
 import CloseSmall from './icons/navigation/CloseSmall';
-import DropDownArrow from './icons/navigation/DropDownArrow';
+import ArrowDropDown from './icons/navigation/ArrowDropDown';
 
 //Content
 import ContentCopy from './icons/content/ContentCopy';
@@ -156,6 +157,7 @@ const useStyles = createUseStyles(styles, 'Icon');
 const ICONS = {
     chevron: Chevron,
     info: Info,
+    infoOutlined: InfoOutlined,
     close: Close,
     lock: Lock,
     thickEnabledFilled: ThickEnabledFilled,
@@ -266,7 +268,7 @@ const ICONS = {
     apps: Apps,
     arrowBack: ArrowBack,
     closeSmall: CloseSmall,
-    DropDownArrow: DropDownArrow,
+    arrowDropDown: ArrowDropDown,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
