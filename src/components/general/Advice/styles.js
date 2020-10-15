@@ -1,47 +1,53 @@
 export default (theme) => ({
     root: {
         ...theme.typography.defaultText,
-        color: theme.colors.text.black,
-        borderRadius: '2px',
+        borderRadius: '8px',
         display: 'flex',
-        padding: '15px 20px',
+        padding: '16px',
         '& > div.rah-static, & > div.rah-animating': {
             width: '100%',
             overflow: 'hidden !important',
         },
     },
     icon: {
-        lineHeight: '0',
         display: 'flex',
         marginRight: 10,
+        marginTop: 1,
     },
     Text: {
         display: 'block',
         width: '100%',
     },
+
     // Types
-    error: {
-        backgroundColor: theme.colors.redLight,
+    default: {
+        backgroundColor: theme.colors.neutral100,
         '& $Text': {
-            color: theme.colors.text.red,
+            color: theme.colors.neutral700,
+        },
+    },
+    error: {
+        backgroundColor: theme.colors.red100,
+        '& $Text': {
+            color: theme.colors.red500,
         },
     },
     info: {
-        backgroundColor: theme.colors.secondaryLight,
+        backgroundColor: theme.colors.aqua100,
         '& $Text': {
-            color: theme.colors.text.secondary,
+            color: theme.colors.aqua700,
         },
     },
     success: {
-        backgroundColor: theme.colors.greenLight,
+        backgroundColor: theme.colors.green100,
         '& $Text': {
-            color: theme.colors.text.green,
+            color: theme.colors.green700,
         },
     },
     warning: {
-        backgroundColor: theme.colors.yellowLight,
+        backgroundColor: theme.colors.yellow100,
         '& $Text': {
-            color: theme.colors.text.yellow,
+            color: theme.colors.yellow700,
         },
     },
     textContainer: {

@@ -6,24 +6,20 @@ Default:
 <Advice showIcon>This is an important information that will help you out in this process.</Advice>
 ```
 
+Default:
+
+```jsx
+<Advice type='info'>This is an important information that will help you out in this process.</Advice>
+<br />
+<Advice type='info' showIcon>This is an important information that will help you out in this process.</Advice>
+```
+
 Error:
 
 ```jsx
 <Advice type="error">An error occurred while uploading your file.</Advice>
 <br />
 <Advice type="error" showIcon>An error occurred while uploading your file.</Advice>
-```
-
-Info:
-
-```jsx
-<Advice type="info">
-    This is an important information that will help you out in this process.
-</Advice>
-<br />
-<Advice type="info" showIcon>
-    This is an important information that will help you out in this process.
-</Advice>
 ```
 
 Success:
@@ -73,7 +69,7 @@ Title mode:
 ```jsx
 <Advice defaultCollapsed={false} title="Advice" >This is an important information that will help you out in this process.</Advice>
 <br />
-<Advice title="Advive" showIcon>This is an important information that will help you out in this process.</Advice>
+<Advice title="Advice" showIcon>This is an important information that will help you out in this process.</Advice>
 ```
 
 ### Component tree
@@ -83,6 +79,6 @@ Title mode:
 -   root - root element
 -   textContainer - text and dropdown icon container
 -   [Icon](#/General?id=icon)
--   [DropdownIcon](#/General?id=icon)
+-   [DropdownArrow](#/General?id=icon)
 -   [react-animate-height](https://github.com/Stanko/react-animate-height)
 -   [Text](#/Typography?=text)

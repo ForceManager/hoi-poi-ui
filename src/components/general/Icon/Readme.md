@@ -176,6 +176,8 @@ Icons:
 <span> </span>
 <Icon name="info" />
 <span> </span>
+<Icon name="infoOutlined" />
+<span> </span>
 <Icon name="close" />
 <span> </span>
 <Icon name="lock" />

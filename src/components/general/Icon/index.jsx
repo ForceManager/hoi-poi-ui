@@ -6,6 +6,7 @@ import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Chevron from './icons/Chevron';
 import Info from './icons/Info';
+import InfoOutlined from './icons/InfoOutlined';
 import Lock from './icons/Lock';
 import ThickEnabled from './icons/ThickEnabled';
 import WarningRounded from './icons/WarningRounded';
@@ -156,6 +157,7 @@ const useStyles = createUseStyles(styles, 'Icon');
 const ICONS = {
     chevron: Chevron,
     info: Info,
+    infoOutlined: InfoOutlined,
     close: Close,
     lock: Lock,
     thickEnabledFilled: ThickEnabledFilled,

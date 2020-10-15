@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
-import Icon from '../../general/Icon';
+import Icon from '../Icon';
 import Text from '../../typography/Text';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
@@ -68,30 +68,43 @@ function Advice({
             case 'error':
                 return {
                     ...properties,
-                    name: 'warning',
-                    color: theme.colors.red,
+                    name: 'warningOutline',
+                    color: theme.colors.red500,
                 };
             case 'success':
                 return {
                     ...properties,
                     name: 'thickEnabled',
-                    color: theme.colors.green,
+                    color: theme.colors.green700,
                 };
             case 'warning':
                 return {
                     ...properties,
                     name: 'warningRounded',
-                    color: theme.colors.yellow,
+                    color: theme.colors.yellow700,
                 };
             case 'info':
+                return {
+                    ...properties,
+                    name: 'infoOutlined',
+                    color: theme.colors.aqua700,
+                };
+            case 'default':
             default:
                 return {
                     ...properties,
-                    name: 'info',
-                    color: theme.colors.secondary,
+                    name: 'infoOutlined',
+                    color: theme.colors.neutral700,
                 };
         }
-    }, [theme.colors.green, theme.colors.red, theme.colors.secondary, theme.colors.yellow, type]);
+    }, [
+        theme.colors.aqua700,
+        theme.colors.green700,
+        theme.colors.neutral700,
+        theme.colors.red500,
+        theme.colors.yellow700,
+        type,
+    ]);
 
     const toggleCollapsing = useCallback(() => {
         setIsCollapsed(!isCollapsed);
@@ -138,7 +151,7 @@ function Advice({
                                 className={classes.dropdownIcon}
                                 {...override.dropdownIcon}
                             >
-                                <Icon name="chevron" size="small" />
+                                <Icon name="DropDownArrow" size="small" />
                             </span>
                         )}
                     </div>
@@ -173,7 +186,7 @@ Advice.defaultProps = {
     overrides: {},
     showIcon: false,
     showCollapse: true,
-    type: 'info',
+    type: 'default',
     defaultCollapsed: true,
 };
 
@@ -185,7 +198,7 @@ Advice.propTypes = {
     showIcon: PropTypes.bool,
     showCollapse: PropTypes.bool,
     defaultCollapsed: PropTypes.bool,
-    type: PropTypes.oneOf(['error', 'info', 'success', 'warning']),
+    type: PropTypes.oneOf(['default', 'error', 'info', 'success', 'warning']),
 };
 
 export default React.memo(Advice);
