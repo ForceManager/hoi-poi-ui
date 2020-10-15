@@ -164,12 +164,6 @@ exports[`Multiplier complete match 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -2665,30 +2659,31 @@ exports[`Multiplier complete match 1`] = `
           >
             <Button
               className="HoiPoi__Multiplier__button-1-6 addButton"
+              iconPosition="left"
               onClick={[Function]}
               overrides={Object {}}
               size="medium"
               type="squared-outlined"
             >
               <button
-                className="HoiPoi__Button__root-1-91 HoiPoi__Button__squared-outlined-1-97 HoiPoi__Button__white-1-99 HoiPoi__Multiplier__button-1-6 addButton"
+                className="HoiPoi__Button__root-1-91 HoiPoi__Button__medium-1-102 HoiPoi__Multiplier__button-1-6 addButton"
                 onClick={[Function]}
                 type="button"
               >
-                <span
-                  className=""
+                <div
+                  className="HoiPoi__Button__content-1-92"
                 >
                   <Text
-                    className="HoiPoi__Button__Text-1-92"
+                    className="HoiPoi__Button__Text-1-93"
                     overrides={Object {}}
                   >
                     <span
-                      className="HoiPoi__Text__root-1-51 HoiPoi__Button__Text-1-92"
+                      className="HoiPoi__Text__root-1-51 HoiPoi__Button__Text-1-93"
                     >
                       Add
                     </span>
                   </Text>
-                </span>
+                </div>
               </button>
             </Button>
           </div>

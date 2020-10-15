@@ -164,12 +164,6 @@ exports[`Tooltip match snapshot 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -444,31 +438,32 @@ exports[`Tooltip match snapshot 1`] = `
           className="HoiPoi__Section__root-1-0"
         >
           <Button
+            iconPosition="left"
             overrides={Object {}}
             size="medium"
-            type="filled"
+            type="primary"
           >
             <button
-              className="HoiPoi__Button__root-1-6 HoiPoi__Button__filled-1-13 HoiPoi__Button__white-1-14"
+              className="HoiPoi__Button__root-1-6 HoiPoi__Button__primary-1-11 HoiPoi__Button__medium-1-17"
               type="button"
             >
-              <span
-                className=""
+              <div
+                className="HoiPoi__Button__content-1-7"
               >
                 <Text
-                  className="HoiPoi__Button__Text-1-7"
+                  className="HoiPoi__Button__Text-1-8"
                   isTruncated={false}
                   overrides={Object {}}
                   size="medium"
                   type="normal"
                 >
                   <span
-                    className="HoiPoi__Text__root-1-22 HoiPoi__Text__normal-1-29 HoiPoi__Text__medium-1-25 HoiPoi__Button__Text-1-7"
+                    className="HoiPoi__Text__root-1-24 HoiPoi__Text__normal-1-31 HoiPoi__Text__medium-1-27 HoiPoi__Button__Text-1-8"
                   >
                     top
                   </span>
                 </Text>
-              </span>
+              </div>
             </button>
           </Button>
         </div>
@@ -642,12 +637,6 @@ exports[`Tooltip visible match snapshot 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -922,31 +911,32 @@ exports[`Tooltip visible match snapshot 1`] = `
           className="HoiPoi__Section__root-2-0"
         >
           <Button
+            iconPosition="left"
             overrides={Object {}}
             size="medium"
-            type="filled"
+            type="primary"
           >
             <button
-              className="HoiPoi__Button__root-2-6 HoiPoi__Button__filled-2-13 HoiPoi__Button__white-2-14"
+              className="HoiPoi__Button__root-2-6 HoiPoi__Button__primary-2-11 HoiPoi__Button__medium-2-17"
               type="button"
             >
-              <span
-                className=""
+              <div
+                className="HoiPoi__Button__content-2-7"
               >
                 <Text
-                  className="HoiPoi__Button__Text-2-7"
+                  className="HoiPoi__Button__Text-2-8"
                   isTruncated={false}
                   overrides={Object {}}
                   size="medium"
                   type="normal"
                 >
                   <span
-                    className="HoiPoi__Text__root-2-22 HoiPoi__Text__normal-2-29 HoiPoi__Text__medium-2-25 HoiPoi__Button__Text-2-7"
+                    className="HoiPoi__Text__root-2-24 HoiPoi__Text__normal-2-31 HoiPoi__Text__medium-2-27 HoiPoi__Button__Text-2-8"
                   >
                     top
                   </span>
                 </Text>
-              </span>
+              </div>
             </button>
           </Button>
         </div>
