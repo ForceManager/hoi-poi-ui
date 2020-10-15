@@ -3,35 +3,25 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import Loader from '../../general/Loader';
 
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Text');
-
-const LOADERS_SIZE = {
-    small: 'mini',
-    medium: 'tiny',
-    large: 'small',
-    big: 'medium',
-};
 
 function Text({
     children,
     isTruncated,
-    size,
     type,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    isLoading,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
+    const theme = useTheme();
     //Overrides
-    const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProp, {
+    const rootClassName = classnames(classes.root, classNameProp, {
         [classes.truncated]: isTruncated,
-        [classes.isLoading]: isLoading,
     });
 
     const override = getOverrides(overridesProp, Text.overrides);
@@ -41,13 +31,8 @@ function Text({
         ...override.root,
     };
 
-    const loaderSize = LOADERS_SIZE[size];
-
     return (
-        <span className={rootClassName} {...rootProps}>
-            {isLoading && (
-                <Loader size={loaderSize} className={classes.Loader} {...override.Loader} />
-            )}
+        <span className={rootClassName} style={{ ...theme.typography[type] }} {...rootProps}>
             {children}
         </span>
     );
@@ -56,8 +41,7 @@ function Text({
 Text.overrides = ['root', 'Loader'];
 
 Text.defaultProps = {
-    type: 'normal',
-    size: 'medium',
+    type: 'body',
     className: '',
     overrides: {},
     isTruncated: false,
@@ -65,12 +49,26 @@ Text.defaultProps = {
 
 Text.propTypes = {
     className: PropTypes.string,
-    type: PropTypes.oneOf(['bold', 'normal', 'light']),
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'big']),
+    type: PropTypes.oneOf([
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'subtitle1',
+        'subtitle',
+        'body1',
+        'body',
+        'button',
+        'caption',
+        'captionMedium',
+        'badges',
+        'overline',
+    ]),
     overrides: PropTypes.object,
     children: PropTypes.node,
     isTruncated: PropTypes.bool,
-    isLoading: PropTypes.bool,
 };
 
 export default React.memo(Text);
