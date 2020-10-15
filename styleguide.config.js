@@ -10,6 +10,7 @@ module.exports = {
             description: 'General and global components',
             sectionDepth: 0,
             components: [
+                './src/components/general/Advice/index.jsx',
                 './src/components/general/Button/index.jsx',
                 './src/components/general/Modal/index.jsx',
             ],
@@ -19,7 +20,6 @@ module.exports = {
             description: 'Old General and global components',
             sectionDepth: 0,
             components: [
-                './src/components/general/Advice/index.jsx',
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/ButtonSwitch/index.jsx',
                 './src/components/general/ButtonTabGroup/index.jsx',
@@ -91,12 +91,17 @@ module.exports = {
         },
         {
             name: 'Typography',
+            description: 'Text & Link components',
+            sectionDepth: 0,
+            components: ['./src/components/typography/Text/index.jsx'],
+        },
+        {
+            name: 'Old Typography',
             description: 'Text & Title components',
             sectionDepth: 0,
             components: [
                 './src/components/typography/Link/index.jsx',
                 './src/components/typography/Title/index.jsx',
-                './src/components/typography/Text/index.jsx',
             ],
         },
     ],
