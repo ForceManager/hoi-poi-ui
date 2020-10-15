@@ -6,7 +6,7 @@ Default:
 <Advice showIcon>This is an important information that will help you out in this process.</Advice>
 ```
 
-Default:
+info:
 
 ```jsx
 <Advice type='info'>This is an important information that will help you out in this process.</Advice>
