@@ -2,19 +2,15 @@ export default (theme) => ({
     root: {
         display: 'inline-block',
         cursor: 'pointer !important',
-        lineHeight: '20px',
         padding: 0,
-        color: theme.colors.link,
+        color: theme.colors.blue500,
         transition: 'color .1s ease-in-out',
         border: 'none',
         outline: 'none',
         background: 'transparent',
         textDecoration: 'none',
-        '&:active': {
-            color: theme.colors.link,
-        },
         '&:hover': {
-            color: theme.colors.linkDark,
+            color: theme.colors.blue600,
         },
         '& *': {
             cursor: 'pointer',
@@ -30,7 +26,4 @@ export default (theme) => ({
             cursor: 'not-allowed',
         },
     },
-    big: { ...theme.typography.bigText },
-    medium: { ...theme.typography.defaultText },
-    small: { ...theme.typography.smallText },
 });
