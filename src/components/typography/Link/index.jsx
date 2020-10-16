@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Link');
 
@@ -14,21 +14,19 @@ function Link({
     onClick,
     isDisabled,
     href,
-    size,
+    type,
     target,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
+    const theme = useTheme();
     //Overrides
     const override = getOverrides(overridesProp, Link.overrides);
 
     // Classes
     const rootClassName = classnames(
         classes.root,
-        {
-            [classes.isDisabled]: isDisabled,
-            [classes[size]]: size,
-        },
+        { [classes.isDisabled]: isDisabled },
         classNameProp,
     );
 
@@ -40,13 +38,24 @@ function Link({
 
     if (href) {
         return (
-            <a href={href} target={target} {...rootProps} {...override.root}>
+            <a
+                href={href}
+                target={target}
+                style={{ ...theme.typography[type] }}
+                {...rootProps}
+                {...override.root}
+            >
                 {children}
             </a>
         );
     } else {
         return (
-            <button {...rootProps} type="button" {...override.root}>
+            <button
+                {...rootProps}
+                type="button"
+                style={{ ...theme.typography[type] }}
+                {...override.root}
+            >
                 {children}
             </button>
         );
@@ -57,7 +66,7 @@ Link.overrides = ['root'];
 
 Link.defaultProps = {
     overrides: {},
-    size: 'medium',
+    type: 'body',
 };
 
 Link.propTypes = {
@@ -65,7 +74,7 @@ Link.propTypes = {
     overrides: PropTypes.object,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
-    size: PropTypes.oneOf(['small', 'medium', 'big']),
+    type: PropTypes.oneOf(['body', 'caption']),
     isDisabled: PropTypes.bool,
     /** Render the component as a tag <a/> with href */
     href: PropTypes.string,
