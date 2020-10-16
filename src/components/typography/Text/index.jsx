@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
-import { createUseStyles, useTheme } from '../../../utils/styles';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Text');
 
@@ -18,9 +18,8 @@ function Text({
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const theme = useTheme();
     //Overrides
-    const rootClassName = classnames(classes.root, classNameProp, {
+    const rootClassName = classnames(classes.root, classNameProp, classes[type], {
         [classes.truncated]: isTruncated,
     });
 
@@ -32,7 +31,7 @@ function Text({
     };
 
     return (
-        <span className={rootClassName} style={{ ...theme.typography[type] }} {...rootProps}>
+        <span className={rootClassName} {...rootProps}>
             {children}
         </span>
     );
