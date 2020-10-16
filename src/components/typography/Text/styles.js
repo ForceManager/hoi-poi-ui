@@ -1,3 +1,20 @@
+const typographies = [
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'subtitle1',
+    'subtitle',
+    'body1',
+    'body',
+    'button',
+    'caption',
+    'captionMedium',
+    'badges',
+    'overline',
+];
 export default (theme) => ({
     root: {
         display: 'inherit',
@@ -7,9 +24,5 @@ export default (theme) => ({
         overflow: 'hidden',
         textOverflow: 'ellipsis',
     },
-    isLoading: {
-        display: 'flex',
-        alignItems: 'center',
-    },
-    Loader: { marginTop: -2, marginRight: 10 },
+    ...typographies.reduce((obj, key) => ({ ...obj, [key]: { ...theme.typography[key] } }), {}),
 });
