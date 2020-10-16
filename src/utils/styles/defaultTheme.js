@@ -64,6 +64,12 @@ const fontSizeBig = 20;
 // Others
 const boxShadow = `0 3px 9px 0 ${shadow}`;
 
+function alphaColor(hex, a) {
+    const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    if (!rgb) return '';
+    return `rgba(${parseInt(rgb[1], 16)}, ${parseInt(rgb[2], 16)}, ${parseInt(rgb[3], 16)}, ${a})`;
+}
+
 // New color scheme
 const colors = {
     neutralBase: '#ffffff',
@@ -330,6 +336,9 @@ export default {
         buttonActive: {
             boxShadow: 'inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)',
         },
+        boxShadow24: {
+            boxShadow: `0px 18px 40px ${alphaColor(colors.neutral900, 0.4)}`,
+        },
     },
     utils: {
         scrollbar: {
@@ -339,13 +348,13 @@ export default {
             },
             '&::-webkit-scrollbar-thumb': {
                 borderRadius: 10,
-                background: placeholders,
+                background: colors.neutral400,
                 backgroundClip: 'content-box',
                 border: '4px solid rgba(0, 0, 0, 0)',
             },
             '&::-webkit-scrollbar-thumb:window-inactive': {
                 borderRadius: 10,
-                background: placeholders,
+                background: colors.neutral400,
                 backgroundClip: 'content-box',
                 border: '4px solid rgba(0, 0, 0, 0)',
             },

@@ -9,7 +9,10 @@ module.exports = {
             name: 'General',
             description: 'General and global components',
             sectionDepth: 0,
-            components: ['./src/components/general/Button/index.jsx'],
+            components: [
+                './src/components/general/Button/index.jsx',
+                './src/components/general/Modal/index.jsx',
+            ],
         },
         {
             name: 'Old General',
@@ -26,7 +29,6 @@ module.exports = {
                 './src/components/general/Drawer/index.jsx',
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/Loader/index.jsx',
-                './src/components/general/Modal/index.jsx',
                 './src/components/general/ProgressBar/index.jsx',
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/Stepper/index.jsx',

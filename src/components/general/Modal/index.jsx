@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RModal from 'react-modal';
@@ -13,9 +13,11 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Modal');
 
 const SIZES = {
-    small: 400,
-    medium: 670,
-    large: 875,
+    tiny: 320,
+    small: 440,
+    medium: 640,
+    large: 960,
+    big: 1120,
 };
 
 function Modal({
@@ -51,6 +53,8 @@ function Modal({
 
     let contentStyle = {
         width: width || SIZES[size],
+        maxWidth: '100%',
+        maxHeight: '100%',
         top: '50%',
         left: '50%',
         right: 'auto',
@@ -76,50 +80,61 @@ function Modal({
 
     const showFooter = onConfirm || onCancel;
 
+    const renderTitle = useMemo(() => {
+        if (typeof title === 'string') {
+            return (
+                <Text size="big" className={classes.title} {...override.title}>
+                    {title}
+                </Text>
+            );
+        }
+        return title;
+    }, [classes.title, override.title, title]);
+
     return (
         <RModal className={rootClassName} {...rootProps}>
-            {useHeader && (
-                <div className={classes.header} {...override.header}>
-                    <Text size="big" className={classes.title} {...override.title}>
-                        {title}
-                    </Text>
-                    {useCornerClose && (
-                        <Icon
-                            size="medium"
-                            name="close"
-                            className={classes.closeIcon}
-                            onClick={onRequestClose}
-                            {...override.closeIcon}
-                        />
-                    )}
+            <div className={classes.container}>
+                {useHeader && (
+                    <div className={classes.header} {...override.header}>
+                        {renderTitle}
+                        {useCornerClose && (
+                            <Icon
+                                size="large"
+                                name="close"
+                                className={classes.closeIcon}
+                                onClick={onRequestClose}
+                                {...override.closeIcon}
+                            />
+                        )}
+                    </div>
+                )}
+                <div className={classes.content} {...override.content}>
+                    {children}
                 </div>
-            )}
-            <div className={classes.content} {...override.content}>
-                {children}
+                {showFooter && (
+                    <div className={classes.footer} {...override.footer}>
+                        {onCancel && (
+                            <Button
+                                type="terciary"
+                                className={classes.cancelButton}
+                                onClick={onCancel}
+                                {...override.cancelButton}
+                            >
+                                {cancelText}
+                            </Button>
+                        )}
+                        {onConfirm && (
+                            <Button
+                                className={classes.confirmButton}
+                                onClick={onConfirm}
+                                {...override.confirmButton}
+                            >
+                                {confirmText}
+                            </Button>
+                        )}
+                    </div>
+                )}
             </div>
-            {showFooter && (
-                <div className={classes.footer} {...override.footer}>
-                    {onCancel && (
-                        <Button
-                            className={classes.cancelButton}
-                            onClick={onCancel}
-                            {...override.cancelButton}
-                        >
-                            {cancelText}
-                        </Button>
-                    )}
-                    {onConfirm && (
-                        <Button
-                            color="primary"
-                            className={classes.confirmButton}
-                            onClick={onConfirm}
-                            {...override.confirmButton}
-                        >
-                            {confirmText}
-                        </Button>
-                    )}
-                </div>
-            )}
         </RModal>
     );
 }
@@ -149,7 +164,7 @@ Modal.propTypes = {
     overlayClassName: PropTypes.string,
     overrides: PropTypes.object,
     children: PropTypes.any,
-    title: PropTypes.string,
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     isOpen: PropTypes.bool.isRequired,
     width: PropTypes.string,
     size: PropTypes.oneOf(['small', 'medium', 'large']),

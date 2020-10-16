@@ -3,10 +3,8 @@ export default (theme) => ({
         position: 'relative',
         boxSizing: 'border-box',
         display: 'block',
-        background: '#fff',
-        boxShadow: theme.effects.boxShadow,
         outline: 'none',
-        padding: 30,
+        padding: '10px',
     },
     overlay: {
         position: 'fixed',
@@ -28,11 +26,21 @@ export default (theme) => ({
             opacity: 0,
         },
     },
+    container: {
+        maxHeight: 'calc(100vh - 20px)',
+        padding: '32px',
+        boxSizing: 'border-box',
+        background: theme.colors.neutralBase,
+        ...theme.effects.boxShadow24,
+        borderRadius: 16,
+        display: 'flex',
+        flexDirection: 'column',
+    },
     header: {
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'space-between',
-        paddingBottom: 30,
+        paddingBottom: 16,
     },
     title: {
         color: theme.colors.text.black,
@@ -41,13 +49,17 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        paddingTop: 30,
+        paddingTop: 16,
     },
-    content: {},
-    closeIcon: {},
-    confirmButton: {
-        textTransform: 'uppercase',
+    content: {
+        position: 'relative',
+        overflow: 'auto',
+        ...theme.utils.scrollbar,
     },
+    closeIcon: {
+        flexShrink: 0,
+    },
+    confirmButton: {},
     cancelButton: {
         marginRight: 20,
     },
