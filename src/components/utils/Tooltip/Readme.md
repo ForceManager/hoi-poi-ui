@@ -17,6 +17,10 @@ import { Button } from 'hoi-poi-ui';
     <Tooltip placement="right" content={<span>Hello!</span>}>
         <Button>right</Button>
     </Tooltip>
+    <span> </span>
+    <Tooltip>
+        <Button>Without content</Button>
+    </Tooltip>
 </div>;
 ```
 

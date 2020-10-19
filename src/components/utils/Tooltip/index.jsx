@@ -33,6 +33,8 @@ function Tooltip({
         placement,
     };
 
+    if (content === undefined || content === null) return children;
+
     return (
         <RCTooltip {...rootProps} {...override.root}>
             {children}
