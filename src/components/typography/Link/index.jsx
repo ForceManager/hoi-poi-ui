@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import { createUseStyles, useTheme } from '../../../utils/styles';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Link');
 
@@ -19,16 +19,13 @@ function Link({
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const theme = useTheme();
     //Overrides
     const override = getOverrides(overridesProp, Link.overrides);
 
     // Classes
-    const rootClassName = classnames(
-        classes.root,
-        { [classes.isDisabled]: isDisabled },
-        classNameProp,
-    );
+    const rootClassName = classnames(classes.root, classNameProp, classes[type], {
+        [classes.isDisabled]: isDisabled,
+    });
 
     const rootProps = {
         ...props,
@@ -38,24 +35,13 @@ function Link({
 
     if (href) {
         return (
-            <a
-                href={href}
-                target={target}
-                style={{ ...theme.typography[type] }}
-                {...rootProps}
-                {...override.root}
-            >
+            <a href={href} target={target} {...rootProps} {...override.root}>
                 {children}
             </a>
         );
     } else {
         return (
-            <button
-                {...rootProps}
-                type="button"
-                style={{ ...theme.typography[type] }}
-                {...override.root}
-            >
+            <button {...rootProps} type="button" {...override.root}>
                 {children}
             </button>
         );

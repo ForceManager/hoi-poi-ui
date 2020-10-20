@@ -26,4 +26,6 @@ export default (theme) => ({
             cursor: 'not-allowed',
         },
     },
+    body: { ...theme.typography.body },
+    caption: { ...theme.typography.caption },
 });
