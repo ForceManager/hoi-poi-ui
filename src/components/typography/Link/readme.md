@@ -4,32 +4,36 @@ Default:
 <Link>Click me</Link>
 ```
 
-Default as a link:
+Body:
+
+```jsx
+<Link type="body">Click me</Link>
+```
+
+Caption:
+
+```jsx
+<Link type="caption">Click me</Link>
+```
+
+Link:
 
 ```jsx
 <Link href="https://github.com/ForceManager/hoi-poi-ui" target="_blank">
     Click me
 </Link>
-```
-
-Sizes:
-
-```jsx
-<Link size="small">Click me</Link>
 <br />
-<Link size="medium">Click Me</Link>
-<br />
-<Link size="big">Click Me</Link>
+<Link type="caption" href="https://github.com/ForceManager/hoi-poi-ui" target="_blank">
+    Click me
+</Link>
 ```
 
 Disabled:
 
 ```jsx
-<Link size="small" isDisabled>Click me</Link>
+<Link isDisabled>Click me</Link>
 <br />
-<Link size="medium" isDisabled>Click Me</Link>
-<br />
-<Link size="big" isDisabled>Click Me</Link>
+<Link type="caption" isDisabled>Click Me</Link>
 ```
 
 ### Component tree
