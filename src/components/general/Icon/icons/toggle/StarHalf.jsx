@@ -1,6 +1,7 @@
 import React from 'react';
+import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function Apps({ color = '#788590', ...props }) {
+function StarHalf({ color = colors.neutral700, ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
             <path
@@ -12,4 +13,4 @@ function Apps({ color = '#788590', ...props }) {
     );
 }
 
-export default Apps;
+export default StarHalf;

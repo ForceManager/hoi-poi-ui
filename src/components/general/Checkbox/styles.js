@@ -8,7 +8,6 @@ export default (theme) => ({
         display: 'none',
     },
     disabled: {
-        opacity: 0.5,
         cursor: 'not-allowed',
     },
 });

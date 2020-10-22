@@ -7,7 +7,7 @@ const CheckedIcon = React.memo(({ color, ...props }) => {
         <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" {...props}>
             <g fill="none" fillRule="evenodd">
                 <rect
-                    fill={color || theme.colors.secondary}
+                    fill={color || theme.colors.neutral700}
                     x="2"
                     y="2"
                     width="14"

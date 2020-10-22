@@ -6,7 +6,7 @@ const UnCheckedIcon = React.memo(({ color, ...props }) => {
     return (
         <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" {...props}>
             <rect
-                stroke={color || theme.colors.greySoft}
+                stroke={color || theme.colors.neutral700}
                 x="2.5"
                 y="2.5"
                 width="13"
