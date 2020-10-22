@@ -145,6 +145,17 @@ import UnfoldLess from './icons/navigation/UnfoldLess';
 //Editor
 import InsertDriveFile from './icons/editor/InsertDriveFile';
 
+//Toggle
+import CheckBox from './icons/toggle/CheckBox';
+import CheckBoxOutlineBlank from './icons/toggle/CheckBoxOutlineBlank';
+import IndeterminateCheckBox from './icons/toggle/IndeterminateCheckBox';
+import RadioButtonChecked from './icons/toggle/RadioButtonChecked';
+import RadioButtonUnchecked from './icons/toggle/RadioButtonUnchecked';
+import Star from './icons/toggle/Star';
+import StarBorder from './icons/toggle/StarBorder';
+import StarHalf from './icons/toggle/StarHalf';
+import StarsCircle from './icons/toggle/StarsCircle';
+
 //File Icons
 import File from './fileIcons/File';
 import Img from './fileIcons/Img';
@@ -329,6 +340,16 @@ const ICONS = {
     html: Html,
     zip: Zip,
     link: Link,
+    //Toggle
+    checkBox: CheckBox,
+    checkBoxOutlineBlank: CheckBoxOutlineBlank,
+    indeterminateCheckBox: IndeterminateCheckBox,
+    radioButtonChecked: RadioButtonChecked,
+    radioButtonUnchecked: RadioButtonUnchecked,
+    star: Star,
+    starBorder: StarBorder,
+    starHalf: StarHalf,
+    starsCircle: StarsCircle,
 };
 
 function Icon({

@@ -207,6 +207,29 @@ Editor:
 <span> </span>
 ```
 
+Toggle:
+
+```jsx
+<Icon name="checkBox"/>
+<span> </span>
+<Icon name="checkBoxOutlineBlank"/>
+<span> </span>
+<Icon name="indeterminateCheckBox"/>
+<span> </span>
+<Icon name="radioButtonChecked"/>
+<span> </span>
+<Icon name="radioButtonUnchecked"/>
+<span> </span>
+<Icon name="star"/>
+<span> </span>
+<Icon name="starBorder"/>
+<span> </span>
+<Icon name="starHalf"/>
+<span> </span>
+<Icon name="starsCircle"/>
+<span> </span>
+```
+
 Icons:
 
 ```jsx
