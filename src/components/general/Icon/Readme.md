@@ -182,9 +182,9 @@ Navigation:
 <span> </span>
 <Icon name="expandMore"/>
 <span> </span>
-<Icon name="fullscreen"/>
+<Icon name="fullScreen"/>
 <span> </span>
-<Icon name="fullscreenExit"/>
+<Icon name="fullScreenExit"/>
 <span> </span>
 <Icon name="menu"/>
 <span> </span>
