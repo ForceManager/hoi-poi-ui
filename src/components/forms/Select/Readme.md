@@ -304,6 +304,7 @@ const onChange = (value) => setState({ value });
         isMulti={true}
         isClearable
         type="multiCheckbox"
+        isFullWidth={true}
     />
 </div>;
 ```
@@ -368,6 +369,7 @@ const onChange = (value) => setState({ value });
         options={options}
         value={state.value}
         menuIsOpen={true}
+        isFullWidth={true}
     />
 </div>;
 ```

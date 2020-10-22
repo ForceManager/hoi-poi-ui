@@ -20,7 +20,7 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 import defaultTheme from '../../../utils/styles/defaultTheme';
 
-const useStyles = createUseStyles(styles, 'Input');
+const useStyles = createUseStyles(styles, 'Select');
 const newStyles = styles(defaultTheme);
 
 const Select = memo(
@@ -97,25 +97,32 @@ const Select = memo(
         const handleOnChange = useCallback(
             (data, action) => {
                 onChange && onChange(data);
-                onBlur && onBlur(data);
             },
-            [onChange, onBlur],
+            [onChange],
         );
+
+        const handleOnFocus = useCallback(() => {
+            setFocused(true);
+        }, []);
 
         const handleOnBlur = useCallback(() => {
             setFocused(false);
-        }, []);
+            onBlur && onBlur();
+        }, [onBlur]);
 
-        const controlStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
-            let styles = {
-                ...newStyles.control,
-            };
+        const controlStyles = useCallback(
+            ({ data, isDisabled, isFocused, isSelected }) => {
+                let styles = {
+                    ...newStyles.control,
+                };
 
-            if (isFocused) {
-                styles = { ...styles, ...newStyles.controlFocused };
-            }
-            return styles;
-        }, []);
+                if (focused) {
+                    styles = { ...styles, ...newStyles.controlFocused };
+                }
+                return styles;
+            },
+            [focused],
+        );
 
         const optionsStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
             let styles = {
@@ -249,6 +256,7 @@ const Select = memo(
                 defaultValue: newDefaultValue,
                 isMulti,
                 onChange: handleOnChange,
+                onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
                 isDisabled: isReadOnly,
                 isClearable: isMulti ? true : isClearable,
@@ -311,7 +319,7 @@ const Select = memo(
             newDefaultValue,
             focused,
             handleOnChange,
-            // handleOnFocus,
+            handleOnFocus,
             handleOnBlur,
             hideSelectedOptions,
             // innerOptions,
@@ -339,6 +347,7 @@ const Select = memo(
                 error={error}
                 className={rootClassName}
                 overrides={overridesProp}
+                isFullWidth={isFullWidth}
             >
                 <div className={classes.inputComponents} {...override.inputComponents}>
                     <SelectComponent {...selectProps} />

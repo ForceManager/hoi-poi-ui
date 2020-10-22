@@ -1,7 +1,18 @@
 export default (theme) => ({
     root: {},
-    isFullWidth: {},
-
+    isFullWidth: {
+        '& $inputComponents': {
+            width: '100%',
+            flex: 1,
+        },
+        // '& $formControl': {
+        //     width: '100%',
+        //     '& $inputComponents': {
+        //         width: '100%',
+        //         flex: 1,
+        //     },
+        // },
+    },
     errored: {},
     select: {},
     isMulti: {},
@@ -58,18 +69,19 @@ export default (theme) => ({
     control: {
         ...theme.typography.body,
         outline: 'none',
+        padding: 2,
         borderRadius: '4px',
-        border: '1px solid transparent',
+        border: `1px solid ${theme.colors.neutral200}`,
         backgroundColor: theme.colors.neutral200,
         color: theme.colors.neutral900,
+        transition: 'all 0.15s ease',
         '&:hover': {
-            border: '1px solid transparent',
             cursor: 'pointer',
         },
     },
     controlFocused: {
-        border: '1px solid transparent',
-        borderColor: 'transparent',
+        backgroundColor: theme.colors.neutralBase,
+        border: `1px solid ${theme.colors.orange500}`,
         boxShadow: 'none',
     },
     options: {
@@ -83,16 +95,22 @@ export default (theme) => ({
         },
     },
     multiValue: {
-        backgroundColor: theme.colors.blue100,
+        margin: 4,
+        padding: '2px 6px 2px 8px',
         border: 'none',
         borderRadius: '4px',
+        backgroundColor: theme.colors.blue100,
         color: theme.colors.blue500,
     },
     multiValueLabel: {
         ...theme.typography.caption,
         color: theme.colors.blue500,
+        padding: 0,
+        paddingLeft: 0,
+        paddingRight: 8,
     },
     multiValueRemove: {
+        padding: 0,
         transition: 'all 0.15s ease',
         '&:hover': {
             backgroundColor: 'initial',
