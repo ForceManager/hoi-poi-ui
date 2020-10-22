@@ -1,6 +1,5 @@
 import React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
-import { colors } from '../../../../../utils/styles/defaultTheme';
 
 function ArrowDropUp({ color = colors.neutral700utral700, ...props }) {
     return (
