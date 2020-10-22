@@ -442,6 +442,7 @@ exports[`Checkbox checked match snapshot 1`] = `
             <Checkbox
               checked={true}
               className="HoiPoi__CheckboxInput__checkbox-2-4"
+              color="neutral"
               isDisabled={false}
               onChange={[Function]}
               overrides={Object {}}
@@ -450,34 +451,35 @@ exports[`Checkbox checked match snapshot 1`] = `
                 className="HoiPoi__Checkbox__root-2-9 HoiPoi__CheckboxInput__checkbox-2-4"
                 onClick={[Function]}
               >
-                <Component>
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
+                <Icon
+                  color="#7d8a96"
+                  name="checkBox"
+                  overrides={Object {}}
+                  size="medium"
+                >
+                  <span
+                    className="HoiPoi__Icon__root-2-12 HoiPoi__Icon__medium-2-14"
+                    onMouseDown={[Function]}
+                    onMouseOut={[Function]}
+                    onMouseOver={[Function]}
+                    onMouseUp={[Function]}
                   >
-                    <g
-                      fill="none"
-                      fillRule="evenodd"
+                    <CheckBox
+                      color="#7d8a96"
                     >
-                      <rect
-                        fill="#00A8Be"
-                        height="14"
-                        rx="3"
-                        width="14"
-                        x="2"
-                        y="2"
-                      />
-                      <path
-                        d="M5.01 9.01l2.033 3.006 5.951-6.01"
-                        stroke="#FFF"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                      />
-                    </g>
-                  </svg>
-                </Component>
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                          fill="#7d8a96"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CheckBox>
+                  </span>
+                </Icon>
                 <input
                   checked="checked"
                   className="HoiPoi__Checkbox__input-2-10"
@@ -938,6 +940,7 @@ exports[`Checkbox unchecked match snapshot 1`] = `
             <Checkbox
               checked={false}
               className="HoiPoi__CheckboxInput__checkbox-1-4"
+              color="neutral"
               isDisabled={false}
               onChange={[Function]}
               overrides={Object {}}
@@ -946,24 +949,35 @@ exports[`Checkbox unchecked match snapshot 1`] = `
                 className="HoiPoi__Checkbox__root-1-9 HoiPoi__CheckboxInput__checkbox-1-4"
                 onClick={[Function]}
               >
-                <Component>
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
+                <Icon
+                  color="#7d8a96"
+                  name="checkBoxOutlineBlank"
+                  overrides={Object {}}
+                  size="medium"
+                >
+                  <span
+                    className="HoiPoi__Icon__root-1-12 HoiPoi__Icon__medium-1-14"
+                    onMouseDown={[Function]}
+                    onMouseOut={[Function]}
+                    onMouseOver={[Function]}
+                    onMouseUp={[Function]}
                   >
-                    <rect
-                      fill="none"
-                      fillRule="evenodd"
-                      height="13"
-                      rx="3"
-                      stroke="#788590"
-                      width="13"
-                      x="2.5"
-                      y="2.5"
-                    />
-                  </svg>
-                </Component>
+                    <CheckBoxOutlineBlank
+                      color="#7d8a96"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14zm0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                          fill="#7d8a96"
+                          fillRule="evenodd"
+                        />
+                      </svg>
+                    </CheckBoxOutlineBlank>
+                  </span>
+                </Icon>
                 <input
                   checked=""
                   className="HoiPoi__Checkbox__input-1-10"
