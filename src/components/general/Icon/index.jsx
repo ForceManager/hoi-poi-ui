@@ -128,7 +128,7 @@ import ChevronLeft from './icons/navigation/ChevronLeft';
 import ChevronRight from './icons/navigation/ChevronRight';
 import Close from './icons/navigation/Close';
 import CloseSmall from './icons/navigation/CloseSmall';
-import DragDrop from './icons/navigation/DragDrop';
+import DragAndDrop from './icons/navigation/DragAndDrop';
 import ExpandLess from './icons/navigation/ExpandLess';
 import ExpandMore from './icons/navigation/ExpandMore';
 import Fullscreen from './icons/navigation/Fullscreen';
