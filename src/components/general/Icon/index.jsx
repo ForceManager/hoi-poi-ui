@@ -119,9 +119,30 @@ import ZoomList from './icons/logos/ZoomList';
 //Navigation
 import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
+import ArrowDownward from './icons/navigation/ArrowDownward';
+import ArrowDropDownCircle from './icons/navigation/ArrowDropDownCircle';
+import ArrowDropUp from './icons/navigation/ArrowDropUp';
+import ArrowForward from './icons/navigation/ArrowForward';
+import ArrowUpward from './icons/navigation/ArrowUpward';
+import Check from './icons/navigation/Check';
+import ChevronLeft from './icons/navigation/ChevronLeft';
+import ChevronRight from './icons/navigation/ChevronRight';
 import Close from './icons/navigation/Close';
 import CloseSmall from './icons/navigation/CloseSmall';
-import ArrowDropDown from './icons/navigation/ArrowDropDown';
+import DragAndDrop from './icons/navigation/DragAndDrop';
+import ExpandLess from './icons/navigation/ExpandLess';
+import ExpandMore from './icons/navigation/ExpandMore';
+import Fullscreen from './icons/navigation/Fullscreen';
+import FullscreenExit from './icons/navigation/FullscreenExit';
+import Menu from './icons/navigation/Menu';
+import MoreHoriz from './icons/navigation/MoreHoriz';
+import MoreVert from './icons/navigation/MoreVert';
+import Refresh from './icons/navigation/Refresh';
+import SortArrowDownward from './icons/navigation/SortArrowDownward';
+import SortArrowUpward from './icons/navigation/SortArrowUpward';
+import SubdirectoryArrowLeft from './icons/navigation/SubdirectoryArrowLeft';
+import SubdirectoryArrowRight from './icons/navigation/SubdirectoryArrowRight';
+import UnfoldLess from './icons/navigation/UnfoldLess';
 
 //Content
 import ContentCopy from './icons/content/ContentCopy';
@@ -169,7 +190,6 @@ const ICONS = {
     chevron: Chevron,
     info: Info,
     infoOutlined: InfoOutlined,
-    close: Close,
     lock: Lock,
     thickEnabledFilled: ThickEnabledFilled,
     thickEnabled: ThickEnabled,
@@ -278,8 +298,30 @@ const ICONS = {
     //Navigation
     apps: Apps,
     arrowBack: ArrowBack,
+    arrowDownward: ArrowDownward,
+    arrowDropDownCircle: ArrowDropDownCircle,
+    arrowDropUp: ArrowDropUp,
+    arrowForward: ArrowForward,
+    arrowUpward: ArrowUpward,
+    check: Check,
+    chevronLeft: ChevronLeft,
+    chevronRight: ChevronRight,
+    close: Close,
     closeSmall: CloseSmall,
-    arrowDropDown: ArrowDropDown,
+    dragAndDrop: DragAndDrop,
+    expandLess: ExpandLess,
+    expandMore: ExpandMore,
+    fullscreen: Fullscreen,
+    fullscreenExit: FullscreenExit,
+    menu: Menu,
+    moreHoriz: MoreHoriz,
+    moreVert: MoreVert,
+    refresh: Refresh,
+    sortArrowDownward: SortArrowDownward,
+    sortArrowUpward: SortArrowUpward,
+    subdirectoryArrowLeft: SubdirectoryArrowLeft,
+    subdirectoryArrowRight: SubdirectoryArrowRight,
+    unfoldLess: UnfoldLess,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
