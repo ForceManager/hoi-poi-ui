@@ -127,6 +127,9 @@ exports[`Label default match 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
@@ -164,12 +167,6 @@ exports[`Label default match 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -275,13 +272,13 @@ exports[`Label default match 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
@@ -439,7 +436,7 @@ exports[`Label default match 1`] = `
             type="normal"
           >
             <span
-              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Label__Text-1-1"
+              className="HoiPoi__Text__root-1-4 HoiPoi__Label__Text-1-1"
             >
               Lorem ipsum
             </span>
@@ -578,6 +575,9 @@ exports[`Label is required match 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
@@ -615,12 +615,6 @@ exports[`Label is required match 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -726,13 +720,13 @@ exports[`Label is required match 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
@@ -892,7 +886,7 @@ exports[`Label is required match 1`] = `
             type="normal"
           >
             <span
-              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Label__Text-2-1"
+              className="HoiPoi__Text__root-2-4 HoiPoi__Label__Text-2-1"
             >
               Lorem ipsum
               *
@@ -1032,6 +1026,9 @@ exports[`Label with hint match 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
@@ -1069,12 +1066,6 @@ exports[`Label with hint match 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1180,13 +1171,13 @@ exports[`Label with hint match 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
@@ -1346,7 +1337,7 @@ exports[`Label with hint match 1`] = `
             type="normal"
           >
             <span
-              className="HoiPoi__Text__root-3-4 HoiPoi__Text__normal-3-11 HoiPoi__Label__Text-3-1"
+              className="HoiPoi__Text__root-3-4 HoiPoi__Label__Text-3-1"
             >
               Lorem ipsum
             </span>
@@ -1368,7 +1359,7 @@ exports[`Label with hint match 1`] = `
               mouseEnterDelay={0}
               mouseLeaveDelay={0.1}
               overlay="I am a hint"
-              overlayClassName="HoiPoi__Popover__root-3-15"
+              overlayClassName="HoiPoi__Popover__root-3-21"
               placement="top"
               prefixCls="hoi-poi-popover"
               transitionName="hoi-poi-popover--fade"
@@ -1622,7 +1613,7 @@ exports[`Label with hint match 1`] = `
                 overlay="I am a hint"
                 popup={[Function]}
                 popupAlign={Object {}}
-                popupClassName="HoiPoi__Popover__root-3-15"
+                popupClassName="HoiPoi__Popover__root-3-21"
                 popupPlacement="top"
                 popupStyle={Object {}}
                 popupTransitionName="hoi-poi-popover--fade"
@@ -1642,7 +1633,7 @@ exports[`Label with hint match 1`] = `
                     size="medium"
                   >
                     <span
-                      className="HoiPoi__Icon__root-3-16 HoiPoi__Icon__medium-3-18 HoiPoi__Label__icon-3-3"
+                      className="HoiPoi__Icon__root-3-22 HoiPoi__Icon__medium-3-24 HoiPoi__Label__icon-3-3"
                       onMouseDown={[Function]}
                       onMouseOut={[Function]}
                       onMouseOver={[Function]}

@@ -72,7 +72,7 @@ const InputWrapper = memo(
     },
 );
 
-InputWrapper.overrides = ['root', 'error', 'info', 'formControl', 'Label'];
+InputWrapper.overrides = ['root', 'error', 'info', 'formControl', 'Label', 'inputWrapper'];
 
 InputWrapper.defaultProps = {
     labelMode: 'vertical',

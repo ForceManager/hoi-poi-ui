@@ -13,7 +13,7 @@ export default (theme) => {
         vertical: {
             '& $inputWrapper': {
                 display: 'block',
-                padding: '15px 0 10px 0',
+                padding: '10px 0',
                 marginLeft: '0 !important',
                 '& $Label': {
                     width: '100%',
@@ -27,7 +27,7 @@ export default (theme) => {
             '& $inputWrapper': {
                 display: 'flex',
                 alignItems: 'center',
-                padding: '15px 0 10px 0',
+                padding: '10px 0',
                 '& $error': {},
                 '& $Label': {
                     padding: 0,
@@ -38,8 +38,7 @@ export default (theme) => {
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
-            width: 300,
-            minWidth: 150,
+            width: 320,
             boxSizing: 'border-box',
         },
         isFullWidth: {
@@ -47,6 +46,9 @@ export default (theme) => {
                 width: '100%',
             },
             '&$vertical $Label': {
+                width: '100%',
+            },
+            '& $formControl': {
                 width: '100%',
             },
         },

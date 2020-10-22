@@ -1,4 +1,4 @@
-export default () => ({
+export default (theme) => ({
     root: {},
     switchinput: {
         width: '100%',

@@ -11,17 +11,24 @@ module.exports = {
             sectionDepth: 0,
             components: [
                 './src/components/general/Advice/index.jsx',
-                './src/components/general/Badge/index.jsx',
                 './src/components/general/Button/index.jsx',
+                './src/components/general/Checkbox/index.jsx',
+                './src/components/general/Modal/index.jsx',
+            ],
+        },
+        {
+            name: 'Old General',
+            description: 'Old General and global components',
+            sectionDepth: 0,
+            components: [
+                './src/components/general/Badge/index.jsx',
                 './src/components/general/ButtonSwitch/index.jsx',
                 './src/components/general/ButtonTabGroup/index.jsx',
-                './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Chip/index.jsx',
                 './src/components/general/ChipGroup/index.jsx',
                 './src/components/general/Drawer/index.jsx',
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/Loader/index.jsx',
-                './src/components/general/Modal/index.jsx',
                 './src/components/general/ProgressBar/index.jsx',
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/Stepper/index.jsx',
@@ -44,6 +51,7 @@ module.exports = {
                 './src/components/forms/Slider/index.jsx',
                 './src/components/forms/Switch/index.jsx',
                 './src/components/forms/SwitchInput/index.jsx',
+                './src/components/forms/FieldGroup/index.jsx',
             ],
         },
         {
@@ -84,13 +92,18 @@ module.exports = {
         },
         {
             name: 'Typography',
-            description: 'Text & Title components',
+            description: 'Text & Link components',
             sectionDepth: 0,
             components: [
                 './src/components/typography/Link/index.jsx',
-                './src/components/typography/Title/index.jsx',
                 './src/components/typography/Text/index.jsx',
             ],
+        },
+        {
+            name: 'Old Typography',
+            description: 'Text & Title components',
+            sectionDepth: 0,
+            components: ['./src/components/typography/Title/index.jsx'],
         },
     ],
     theme: {

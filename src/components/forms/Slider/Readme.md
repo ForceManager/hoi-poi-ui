@@ -7,10 +7,39 @@ const [state, setState] = useState({});
 
 const onChange = (value) => setState({ value });
 <div>
-    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} size="small" />
-    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} smallSize />
-    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} size="small" isReadOnly />
-    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} isReadOnly />
+    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} />
+</div>;
+```
+
+Percentage tip:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+<div>
+    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} isPercentage isFullWidth />
+</div>;
+```
+
+Custom tip:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+<div>
+    <Slider
+        label="Lorem ipsum"
+        onChange={onChange}
+        value={state.value}
+        tipFormatter={(v) => `${v}$`}
+        isFullWidth
+    />
 </div>;
 ```
 
@@ -31,37 +60,6 @@ const onChange = (value) => setState({ value });
         min={5000}
         step={100}
     />
-</div>;
-```
-
-Custom tip:
-
-```jsx
-import { useState } from 'react';
-
-const [state, setState] = useState({});
-
-const onChange = (value) => setState({ value });
-<div>
-    <Slider
-        label="Lorem ipsum"
-        onChange={onChange}
-        value={state.value}
-        tipFormatter={(v) => `${v}%`}
-    />
-</div>;
-```
-
-Vertical label:
-
-```jsx
-import { useState } from 'react';
-
-const [state, setState] = useState({});
-
-const onChange = (value) => setState({ value });
-<div>
-    <Slider label="Lorem ipsum" labelMode="vertical" onChange={onChange} value={state.value} />
 </div>;
 ```
 
@@ -89,9 +87,9 @@ const onChange = (value) => setState({ value });
 <div>
     <Slider
         label="Lorem ipsum"
-        labelMode="horizontal"
         onChange={onChange}
         value={state.value}
+        isReadOnly
         isRange
         error="Error text here"
         info="Info text here"
@@ -105,8 +103,10 @@ const onChange = (value) => setState({ value });
 
 -   root - root element
 -   [rc-slider](https://github.com/react-component/slider/)
+-   infor - Info text wrapper
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)
+-   inputWrapper - Wrapper around Label and input components
 -   overlay - Dragged component (tip)
 -   overlayLabel - Dragged component label (tip)

@@ -127,6 +127,9 @@ exports[`Multiplier complete match 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
@@ -164,12 +167,6 @@ exports[`Multiplier complete match 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -275,13 +272,13 @@ exports[`Multiplier complete match 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
@@ -2427,7 +2424,7 @@ exports[`Multiplier complete match 1`] = `
                                                                 size="small"
                                                               >
                                                                 <span
-                                                                  className="HoiPoi__Icon__root-1-62 HoiPoi__Icon__small-1-63"
+                                                                  className="HoiPoi__Icon__root-1-68 HoiPoi__Icon__small-1-69"
                                                                   onMouseDown={[Function]}
                                                                   onMouseOut={[Function]}
                                                                   onMouseOver={[Function]}
@@ -2523,14 +2520,14 @@ exports[`Multiplier complete match 1`] = `
                             value=""
                           >
                             <div
-                              className="HoiPoi__Input__root-1-69 HoiPoi__Input__horizontal-1-85"
+                              className="HoiPoi__Input__root-1-75 HoiPoi__Input__horizontal-1-91"
                             >
                               <Label
-                                className="HoiPoi__Input__Label-1-70"
+                                className="HoiPoi__Input__Label-1-76"
                                 isRequired={true}
                               >
                                 <span
-                                  className="HoiPoi__Label__root-1-47 HoiPoi__Input__Label-1-70"
+                                  className="HoiPoi__Label__root-1-47 HoiPoi__Input__Label-1-76"
                                 >
                                   <Text
                                     className="HoiPoi__Label__Text-1-48"
@@ -2546,10 +2543,10 @@ exports[`Multiplier complete match 1`] = `
                                 </span>
                               </Label>
                               <div
-                                className="HoiPoi__Input__formControl-1-73"
+                                className="HoiPoi__Input__formControl-1-79"
                               >
                                 <input
-                                  className="HoiPoi__Input__input-1-74"
+                                  className="HoiPoi__Input__input-1-80"
                                   name="name"
                                   onBlur={[Function]}
                                   onChange={[Function]}
@@ -2613,14 +2610,14 @@ exports[`Multiplier complete match 1`] = `
                             value=""
                           >
                             <div
-                              className="HoiPoi__Input__root-1-69 HoiPoi__Input__horizontal-1-85"
+                              className="HoiPoi__Input__root-1-75 HoiPoi__Input__horizontal-1-91"
                             >
                               <Label
-                                className="HoiPoi__Input__Label-1-70"
+                                className="HoiPoi__Input__Label-1-76"
                                 isRequired={true}
                               >
                                 <span
-                                  className="HoiPoi__Label__root-1-47 HoiPoi__Input__Label-1-70"
+                                  className="HoiPoi__Label__root-1-47 HoiPoi__Input__Label-1-76"
                                 >
                                   <Text
                                     className="HoiPoi__Label__Text-1-48"
@@ -2636,10 +2633,10 @@ exports[`Multiplier complete match 1`] = `
                                 </span>
                               </Label>
                               <div
-                                className="HoiPoi__Input__formControl-1-73"
+                                className="HoiPoi__Input__formControl-1-79"
                               >
                                 <input
-                                  className="HoiPoi__Input__input-1-74"
+                                  className="HoiPoi__Input__input-1-80"
                                   name="email"
                                   onBlur={[Function]}
                                   onChange={[Function]}
@@ -2665,30 +2662,31 @@ exports[`Multiplier complete match 1`] = `
           >
             <Button
               className="HoiPoi__Multiplier__button-1-6 addButton"
+              iconPosition="left"
               onClick={[Function]}
               overrides={Object {}}
               size="medium"
               type="squared-outlined"
             >
               <button
-                className="HoiPoi__Button__root-1-91 HoiPoi__Button__squared-outlined-1-97 HoiPoi__Button__white-1-99 HoiPoi__Multiplier__button-1-6 addButton"
+                className="HoiPoi__Button__root-1-97 HoiPoi__Button__medium-1-108 HoiPoi__Multiplier__button-1-6 addButton"
                 onClick={[Function]}
                 type="button"
               >
-                <span
-                  className=""
+                <div
+                  className="HoiPoi__Button__content-1-98"
                 >
                   <Text
-                    className="HoiPoi__Button__Text-1-92"
+                    className="HoiPoi__Button__Text-1-99"
                     overrides={Object {}}
                   >
                     <span
-                      className="HoiPoi__Text__root-1-51 HoiPoi__Button__Text-1-92"
+                      className="HoiPoi__Text__root-1-51 HoiPoi__Button__Text-1-99"
                     >
                       Add
                     </span>
                   </Text>
-                </span>
+                </div>
               </button>
             </Button>
           </div>

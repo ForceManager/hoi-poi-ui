@@ -127,6 +127,9 @@ exports[`Tabs default 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
@@ -164,12 +167,6 @@ exports[`Tabs default 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -275,13 +272,13 @@ exports[`Tabs default 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
@@ -481,8 +478,7 @@ exports[`Tabs default 1`] = `
                       className="HoiPoi__Stepper__icon-1-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       1
                     </Text>
@@ -503,7 +499,6 @@ exports[`Tabs default 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
                       type="bold"
                     >
                       Step 1
@@ -535,11 +530,10 @@ exports[`Tabs default 1`] = `
                             className="HoiPoi__Stepper__icon-1-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7 HoiPoi__Stepper__icon-1-1"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Stepper__icon-1-1 HoiPoi__Text__body-1-15"
                             >
                               1
                             </span>
@@ -560,11 +554,10 @@ exports[`Tabs default 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
                             type="bold"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__bold-1-10 HoiPoi__Text__medium-1-7"
+                              className="HoiPoi__Text__root-1-4"
                             >
                               Step 1
                             </span>
@@ -584,8 +577,7 @@ exports[`Tabs default 1`] = `
                       className="HoiPoi__Stepper__icon-1-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       2
                     </Text>
@@ -604,8 +596,7 @@ exports[`Tabs default 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       Step 2
                     </Text>
@@ -634,11 +625,10 @@ exports[`Tabs default 1`] = `
                             className="HoiPoi__Stepper__icon-1-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7 HoiPoi__Stepper__icon-1-1"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Stepper__icon-1-1 HoiPoi__Text__body-1-15"
                             >
                               2
                             </span>
@@ -657,11 +647,10 @@ exports[`Tabs default 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__body-1-15"
                             >
                               Step 2
                             </span>
@@ -681,8 +670,7 @@ exports[`Tabs default 1`] = `
                       className="HoiPoi__Stepper__icon-1-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       3
                     </Text>
@@ -701,8 +689,7 @@ exports[`Tabs default 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       Step 3
                     </Text>
@@ -731,11 +718,10 @@ exports[`Tabs default 1`] = `
                             className="HoiPoi__Stepper__icon-1-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7 HoiPoi__Stepper__icon-1-1"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Stepper__icon-1-1 HoiPoi__Text__body-1-15"
                             >
                               3
                             </span>
@@ -754,11 +740,10 @@ exports[`Tabs default 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__body-1-15"
                             >
                               Step 3
                             </span>
@@ -778,8 +763,7 @@ exports[`Tabs default 1`] = `
                       className="HoiPoi__Stepper__icon-1-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       4
                     </Text>
@@ -798,8 +782,7 @@ exports[`Tabs default 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       Step 4
                     </Text>
@@ -828,11 +811,10 @@ exports[`Tabs default 1`] = `
                             className="HoiPoi__Stepper__icon-1-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7 HoiPoi__Stepper__icon-1-1"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Stepper__icon-1-1 HoiPoi__Text__body-1-15"
                             >
                               4
                             </span>
@@ -851,11 +833,10 @@ exports[`Tabs default 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__body-1-15"
                             >
                               Step 4
                             </span>
@@ -875,8 +856,7 @@ exports[`Tabs default 1`] = `
                       className="HoiPoi__Stepper__icon-1-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       5
                     </Text>
@@ -895,8 +875,7 @@ exports[`Tabs default 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       Step 5
                     </Text>
@@ -925,11 +904,10 @@ exports[`Tabs default 1`] = `
                             className="HoiPoi__Stepper__icon-1-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7 HoiPoi__Stepper__icon-1-1"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Stepper__icon-1-1 HoiPoi__Text__body-1-15"
                             >
                               5
                             </span>
@@ -948,11 +926,10 @@ exports[`Tabs default 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__normal-1-11 HoiPoi__Text__medium-1-7"
+                              className="HoiPoi__Text__root-1-4 HoiPoi__Text__body-1-15"
                             >
                               Step 5
                             </span>
@@ -1099,6 +1076,9 @@ exports[`Tabs with completed 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
@@ -1136,12 +1116,6 @@ exports[`Tabs with completed 1`] = `
             "fontWeight": 500,
             "letterSpacing": 0.6,
             "lineHeight": "16px",
-            "textTransform": "uppercase",
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1247,13 +1221,13 @@ exports[`Tabs with completed 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
@@ -1455,8 +1429,7 @@ exports[`Tabs with completed 1`] = `
                       className="HoiPoi__Stepper__icon-2-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       <Icon
                         color="white"
@@ -1482,7 +1455,6 @@ exports[`Tabs with completed 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
                       type="bold"
                     >
                       Step 1
@@ -1514,11 +1486,10 @@ exports[`Tabs with completed 1`] = `
                             className="HoiPoi__Stepper__icon-2-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Text__medium-2-7 HoiPoi__Stepper__icon-2-1"
+                              className="HoiPoi__Text__root-2-4 HoiPoi__Stepper__icon-2-1 HoiPoi__Text__body-2-15"
                             >
                               <Icon
                                 color="white"
@@ -1527,7 +1498,7 @@ exports[`Tabs with completed 1`] = `
                                 size="small"
                               >
                                 <span
-                                  className="HoiPoi__Icon__root-2-15 HoiPoi__Icon__small-2-16"
+                                  className="HoiPoi__Icon__root-2-21 HoiPoi__Icon__small-2-22"
                                   onMouseDown={[Function]}
                                   onMouseOut={[Function]}
                                   onMouseOver={[Function]}
@@ -1567,11 +1538,10 @@ exports[`Tabs with completed 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
                             type="bold"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__bold-2-10 HoiPoi__Text__medium-2-7"
+                              className="HoiPoi__Text__root-2-4"
                             >
                               Step 1
                             </span>
@@ -1593,8 +1563,7 @@ exports[`Tabs with completed 1`] = `
                       className="HoiPoi__Stepper__icon-2-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       <Icon
                         color="white"
@@ -1620,7 +1589,6 @@ exports[`Tabs with completed 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
                       type="bold"
                     >
                       Step 2
@@ -1652,11 +1620,10 @@ exports[`Tabs with completed 1`] = `
                             className="HoiPoi__Stepper__icon-2-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Text__medium-2-7 HoiPoi__Stepper__icon-2-1"
+                              className="HoiPoi__Text__root-2-4 HoiPoi__Stepper__icon-2-1 HoiPoi__Text__body-2-15"
                             >
                               <Icon
                                 color="white"
@@ -1665,7 +1632,7 @@ exports[`Tabs with completed 1`] = `
                                 size="small"
                               >
                                 <span
-                                  className="HoiPoi__Icon__root-2-15 HoiPoi__Icon__small-2-16"
+                                  className="HoiPoi__Icon__root-2-21 HoiPoi__Icon__small-2-22"
                                   onMouseDown={[Function]}
                                   onMouseOut={[Function]}
                                   onMouseOver={[Function]}
@@ -1705,11 +1672,10 @@ exports[`Tabs with completed 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
                             type="bold"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__bold-2-10 HoiPoi__Text__medium-2-7"
+                              className="HoiPoi__Text__root-2-4"
                             >
                               Step 2
                             </span>
@@ -1729,8 +1695,7 @@ exports[`Tabs with completed 1`] = `
                       className="HoiPoi__Stepper__icon-2-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       3
                     </Text>
@@ -1749,8 +1714,7 @@ exports[`Tabs with completed 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       Step 3
                     </Text>
@@ -1779,11 +1743,10 @@ exports[`Tabs with completed 1`] = `
                             className="HoiPoi__Stepper__icon-2-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Text__medium-2-7 HoiPoi__Stepper__icon-2-1"
+                              className="HoiPoi__Text__root-2-4 HoiPoi__Stepper__icon-2-1 HoiPoi__Text__body-2-15"
                             >
                               3
                             </span>
@@ -1802,11 +1765,10 @@ exports[`Tabs with completed 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Text__medium-2-7"
+                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__body-2-15"
                             >
                               Step 3
                             </span>
@@ -1828,8 +1790,7 @@ exports[`Tabs with completed 1`] = `
                       className="HoiPoi__Stepper__icon-2-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       4
                     </Text>
@@ -1850,7 +1811,6 @@ exports[`Tabs with completed 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
                       type="bold"
                     >
                       Step 4
@@ -1882,11 +1842,10 @@ exports[`Tabs with completed 1`] = `
                             className="HoiPoi__Stepper__icon-2-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Text__medium-2-7 HoiPoi__Stepper__icon-2-1"
+                              className="HoiPoi__Text__root-2-4 HoiPoi__Stepper__icon-2-1 HoiPoi__Text__body-2-15"
                             >
                               4
                             </span>
@@ -1907,11 +1866,10 @@ exports[`Tabs with completed 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
                             type="bold"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__bold-2-10 HoiPoi__Text__medium-2-7"
+                              className="HoiPoi__Text__root-2-4"
                             >
                               Step 4
                             </span>
@@ -1931,8 +1889,7 @@ exports[`Tabs with completed 1`] = `
                       className="HoiPoi__Stepper__icon-2-1"
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       5
                     </Text>
@@ -1951,8 +1908,7 @@ exports[`Tabs with completed 1`] = `
                       className=""
                       isTruncated={false}
                       overrides={Object {}}
-                      size="medium"
-                      type="normal"
+                      type="body"
                     >
                       Step 5
                     </Text>
@@ -1981,11 +1937,10 @@ exports[`Tabs with completed 1`] = `
                             className="HoiPoi__Stepper__icon-2-1"
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Text__medium-2-7 HoiPoi__Stepper__icon-2-1"
+                              className="HoiPoi__Text__root-2-4 HoiPoi__Stepper__icon-2-1 HoiPoi__Text__body-2-15"
                             >
                               5
                             </span>
@@ -2004,11 +1959,10 @@ exports[`Tabs with completed 1`] = `
                             className=""
                             isTruncated={false}
                             overrides={Object {}}
-                            size="medium"
-                            type="normal"
+                            type="body"
                           >
                             <span
-                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__normal-2-11 HoiPoi__Text__medium-2-7"
+                              className="HoiPoi__Text__root-2-4 HoiPoi__Text__body-2-15"
                             >
                               Step 5
                             </span>

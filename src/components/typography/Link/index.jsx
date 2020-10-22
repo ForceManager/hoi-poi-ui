@@ -14,7 +14,7 @@ function Link({
     onClick,
     isDisabled,
     href,
-    size,
+    type,
     target,
     ...props
 }) {
@@ -23,14 +23,9 @@ function Link({
     const override = getOverrides(overridesProp, Link.overrides);
 
     // Classes
-    const rootClassName = classnames(
-        classes.root,
-        {
-            [classes.isDisabled]: isDisabled,
-            [classes[size]]: size,
-        },
-        classNameProp,
-    );
+    const rootClassName = classnames(classes.root, classNameProp, classes[type], {
+        [classes.isDisabled]: isDisabled,
+    });
 
     const rootProps = {
         ...props,
@@ -57,7 +52,7 @@ Link.overrides = ['root'];
 
 Link.defaultProps = {
     overrides: {},
-    size: 'medium',
+    type: 'body',
 };
 
 Link.propTypes = {
@@ -65,7 +60,7 @@ Link.propTypes = {
     overrides: PropTypes.object,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
-    size: PropTypes.oneOf(['small', 'medium', 'big']),
+    type: PropTypes.oneOf(['body', 'caption']),
     isDisabled: PropTypes.bool,
     /** Render the component as a tag <a/> with href */
     href: PropTypes.string,
