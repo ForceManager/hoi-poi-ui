@@ -131,8 +131,8 @@ import CloseSmall from './icons/navigation/CloseSmall';
 import DragAndDrop from './icons/navigation/DragAndDrop';
 import ExpandLess from './icons/navigation/ExpandLess';
 import ExpandMore from './icons/navigation/ExpandMore';
-import Fullscreen from './icons/navigation/Fullscreen';
-import FullscreenExit from './icons/navigation/FullscreenExit';
+import FullScreen from './icons/navigation/FullScreen';
+import FullScreenExit from './icons/navigation/FullScreenExit';
 import Menu from './icons/navigation/Menu';
 import MoreHoriz from './icons/navigation/MoreHoriz';
 import MoreVert from './icons/navigation/MoreVert';
@@ -295,8 +295,8 @@ const ICONS = {
     dragAndDrop: DragAndDrop,
     expandLess: ExpandLess,
     expandMore: ExpandMore,
-    fullscreen: Fullscreen,
-    fullscreenExit: FullscreenExit,
+    fullScreen: FullScreen,
+    fullScreenExit: FullScreenExit,
     menu: Menu,
     moreHoriz: MoreHoriz,
     moreVert: MoreVert,

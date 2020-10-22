@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Fullscreen({ color = '#788590', ...props }) {
+function FullScreen({ color = '#788590', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
             <path
@@ -12,4 +12,4 @@ function Fullscreen({ color = '#788590', ...props }) {
     );
 }
 
-export default Fullscreen;
+export default FullScreen;
