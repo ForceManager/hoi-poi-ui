@@ -13,7 +13,7 @@ export default (theme) => ({
         //     },
         // },
     },
-    errored: {},
+    async: {},
     select: {},
     isMulti: {},
     optionLabel: {
@@ -175,6 +175,9 @@ export default (theme) => ({
     noOptionsMessage: {
         ...theme.typography.body,
     },
+    loadingMessage: {
+        ...theme.typography.body,
+    },
     indicatorsContainer: {
         alignSelf: 'flex-start',
     },
@@ -197,5 +200,8 @@ export default (theme) => ({
         '&:hover svg path': {
             fill: theme.colors.neutral800,
         },
+    },
+    loadingIndicator: {
+        marginRight: '8px',
     },
 });

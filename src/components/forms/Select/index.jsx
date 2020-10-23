@@ -1,20 +1,21 @@
-import React, { memo, useState, useCallback, useMemo } from 'react';
-// import PropTypes from 'prop-types';
+import React, { memo, useState, useCallback, useMemo, useRef } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
+import { createFilter, filterKeyValue } from './utils'; // Local utils
 import Icon from '../../general/Icon';
 import Avatar from '../../general/Avatar';
 import InputWrapper from '../components/InputWrapper';
 import { default as RSelect } from 'react-select';
-// import AsyncSelect from 'react-select/async';
-import { createFilter, filterKeyValue } from './utils';
+import AsyncSelect from 'react-select/async';
 import Checkbox from '../../general/Checkbox';
 
 import DropdownIndicator from './components/DropdownIndicator';
 import ClearIndicator from './components/ClearIndicator';
-// import SearchIndicator from './components/SearchIndicator';
+import SearchIndicator from './components/SearchIndicator';
 import SingleValue from './components/SingleValue';
 import MultiValueLabel from './components/MultiValueLabel';
+import LoadingIndicator from './components/LoadingIndicator';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -45,30 +46,30 @@ const Select = memo(
         hideSelectedOptions,
         filterByKey,
         defaultMenuIsOpen = false,
-        // loadOptions,
-        // loadingMessage,
-        // loadingPlaceholder,
+        loadOptions,
+        loadingMessage,
+        loadingPlaceholder,
+        noOptionsMessage,
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
         const newDefaultValue = defaultValue || value;
-        // const [innerOptions, setInnerOptions] = useState(options);
-        // const [lazyOptions, setLazyOptions] = useState({
-        //     areLoaded: false,
-        //     options: null,
-        //     isLoading: false,
-        // });
+        const [innerOptions, setInnerOptions] = useState(options);
+        const [lazyOptions, setLazyOptions] = useState({
+            areLoaded: false,
+            options: null,
+            isLoading: false,
+        });
+        const debounce = useRef(null);
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
 
         const rootClassName = classnames(
             classes.root,
             {
-                // [classes.isReadOnly]: isReadOnly && !isFuzzy,
                 [classes.isFullWidth]: isFullWidth,
                 [classes.focused]: focused,
-                [classes.errored]: error,
-                // [classes.async]: loadOptions && isFuzzy,
+                [classes.async]: loadOptions && isFuzzy,
             },
             classNameProp,
         );
@@ -77,24 +78,25 @@ const Select = memo(
             [classes.isMulti]: isMulti,
         });
 
-        // const newDefaultValue = useMemo(() => {
-        //     if (isValueObject) return defaultValue;
-        //     const finalOptions = options && options.length ? options : options;
-        //     if (
-        //         !isMulti &&
-        //         finalOptions &&
-        //         finalOptions.length &&
-        //         defaultValue !== null &&
-        //         defaultValue !== undefined
-        //     ) {
-        //         return finalOptions.find((op) => {
-        //             return op.value === defaultValue;
-        //         });
-        //     }
-        //     if (isMulti && finalOptions && finalOptions.length && defaultValue) {
-        //         return defaultValue.map((v) => finalOptions.find((op) => op.value === v));
-        //     }
-        // }, [isMulti, options, defaultValue, isValueObject]);
+        const loadOptionsCb = useCallback(
+            (text, cb) => {
+                if (debounce.current) clearTimeout(debounce.current);
+                debounce.current = setTimeout(() => {
+                    if (!loadOptions) return cb();
+                    const loader = loadOptions(text, cb);
+                    if (loader && typeof loader.then === 'function') {
+                        loader.then(
+                            (results) => {
+                                setInnerOptions(results);
+                                cb(results);
+                            },
+                            () => cb(),
+                        );
+                    }
+                }, 500);
+            },
+            [loadOptions],
+        );
 
         const handleOnChange = useCallback(
             (data, action) => {
@@ -105,123 +107,182 @@ const Select = memo(
 
         const handleOnFocus = useCallback(() => {
             setFocused(true);
-        }, []);
+            if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
+                setLazyOptions({
+                    ...lazyOptions,
+                    isLoading: true,
+                });
+                loadOptions().then((options) => {
+                    setLazyOptions({
+                        areLoaded: true,
+                        isLoading: false,
+                        options,
+                    });
+                });
+            }
+        }, [isFuzzy, lazyOptions, loadOptions]);
 
         const handleOnBlur = useCallback(() => {
             setFocused(false);
             onBlur && onBlur();
         }, [onBlur]);
 
-        const controlStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
-            let styles = {
-                ...newStyles.control,
-            };
-
-            if (isFocused) {
-                styles = { ...styles, ...newStyles.controlFocused };
-            }
-            return styles;
-        }, []);
-
-        const optionsStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
-            let styles = {
-                ...newStyles.options,
-            };
-
-            if (isDisabled) {
-                styles = {
-                    ...styles,
-                    ...newStyles.optionDisabled,
-                };
-            }
-
-            return styles;
-        }, []);
-
-        const valueContainerStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
-            let styles = {
-                ...newStyles.valueContainer,
-            };
-
-            if (isDisabled) {
-                styles = {
-                    ...newStyles.valueContainerDisabled,
-                };
-            }
-            return styles;
-        }, []);
-
-        const placeholderStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
-            let styles = {
-                ...newStyles.placeholder,
-            };
-
-            if (isDisabled) {
-                styles = {
-                    ...newStyles.placeholderDisabled,
-                };
-            }
-            return styles;
-        }, []);
-
-        const multiValueLabelStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
-            let styles = {
-                ...newStyles.multiValueLabel,
-            };
-            if (isDisabled) {
-                styles = {
-                    ...styles,
-                    ...newStyles.multiValueLabelDisabled,
-                };
-            }
-
-            return styles;
-        }, []);
-
-        const multiValueRemoveStyles = useCallback(
+        const controlStyles = useCallback(
             ({ data, isDisabled, isFocused, isSelected }) => {
                 let styles = {
-                    ...newStyles.multiValueRemove,
+                    ...newStyles.control,
+                    ...(override.control?.style || {}),
                 };
+
+                if (isFocused) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.controlFocused,
+                        ...(override.controlFocused?.style || {}),
+                    };
+                }
+                return styles;
+            },
+            [override],
+        );
+
+        const optionsStyles = useCallback(
+            ({ data, isDisabled, isFocused, isSelected }) => {
+                let styles = {
+                    ...newStyles.options,
+                    ...(override.options?.style || {}),
+                };
+
                 if (isDisabled) {
                     styles = {
                         ...styles,
-                        ...newStyles.multiValueRemoveDisabled,
+                        ...newStyles.optionDisabled,
+                        ...(override.optionDisabled?.style || {}),
                     };
                 }
 
                 return styles;
             },
-            [],
+            [override],
         );
 
-        const oneLine = useCallback(
+        const valueContainerStyles = useCallback(
+            ({ data, isDisabled, isFocused, isSelected }) => {
+                let styles = {
+                    ...newStyles.valueContainer,
+                    ...(override.valueContainer?.style || {}),
+                };
+
+                if (isDisabled) {
+                    styles = {
+                        ...newStyles.valueContainerDisabled,
+                        ...(override.valueContainerDisabled?.style || {}),
+                    };
+                }
+                return styles;
+            },
+            [override],
+        );
+
+        const placeholderStyles = useCallback(
+            ({ data, isDisabled, isFocused, isSelected }) => {
+                let styles = {
+                    ...newStyles.placeholder,
+                    ...(override.placeholder?.style || {}),
+                };
+
+                if (isDisabled) {
+                    styles = {
+                        ...newStyles.placeholderDisabled,
+                        ...(override.placeholderDisabled?.style || {}),
+                    };
+                }
+                return styles;
+            },
+            [override],
+        );
+
+        const multiValueLabelStyles = useCallback(
+            ({ data, isDisabled, isFocused, isSelected }) => {
+                let styles = {
+                    ...newStyles.multiValueLabel,
+                    ...(override.multiValueLabel?.style || {}),
+                };
+                if (isDisabled) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.multiValueLabelDisabled,
+                        ...(override.multiValueLabelDisabled?.style || {}),
+                    };
+                }
+
+                return styles;
+            },
+            [override],
+        );
+
+        const multiValueRemoveStyles = useCallback(
+            ({ data, isDisabled, isFocused, isSelected }) => {
+                let styles = {
+                    ...newStyles.multiValueRemove,
+                    ...(override.multiValueRemove?.style || {}),
+                };
+                if (isDisabled) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.multiValueRemoveDisabled,
+                        ...(override.multiValueRemoveDisabled?.style || {}),
+                    };
+                }
+
+                return styles;
+            },
+            [override],
+        );
+
+        const single = useCallback(
             (option, data) => {
                 let textClasses = [classes.optionLabelText];
+                let subtitleClasses = [classes.optionLabelSubtitle];
                 let iconClasses = [classes.optionLabelIcon];
                 let customIconClasses = [classes.optionLabelCustomIcon];
 
                 if (option.isDisabled) {
                     textClasses.push(classes.disabledText);
+                    subtitleClasses.push(classes.disabledText);
                     iconClasses.push(classes.disabledIcon);
                     customIconClasses.push(classes.disabledIcon);
                 }
                 return (
-                    <div className={classes.optionLabel}>
+                    <div className={classes.optionLabel} {...override.optionLabel}>
                         {option.iconType && (
                             <Icon
                                 className={iconClasses.join(' ')}
                                 name={option.iconType}
                                 color={option.iconColor || null}
                                 size="medium"
+                                {...override.optionLabelIcon}
                             />
                         )}
                         {option.icon && (
-                            <div className={customIconClasses.join(' ')}>{option.icon}</div>
+                            <div
+                                className={customIconClasses.join(' ')}
+                                {...override.optionLabelCustomIcon}
+                            >
+                                {option.icon}
+                            </div>
                         )}
                         {option.src && (
-                            <div className={classes.optionLabelAvatar}>
-                                {option.isDisabled && <div className={classes.disabledAvatar} />}
+                            <div
+                                className={classes.optionLabelAvatar}
+                                {...override.optionLabelAvatar}
+                            >
+                                {option.isDisabled && (
+                                    <div
+                                        className={classes.disabledAvatar}
+                                        {...override.disabledAvatar}
+                                    />
+                                )}
                                 <Avatar
                                     size="small"
                                     src={option.src}
@@ -230,34 +291,38 @@ const Select = memo(
                                 />
                             </div>
                         )}
-                        <div className={textClasses.join(' ')}>{option.label}</div>
+
+                        {!option.description && (
+                            <div className={textClasses.join(' ')} {...override.label}>
+                                {option.label}
+                            </div>
+                        )}
+                        {option.description && (
+                            <div
+                                className={classes.optionLabelBlock}
+                                {...override.optionLabelBlock}
+                            >
+                                <div
+                                    className={textClasses.join(' ')}
+                                    {...override.optionLabelText}
+                                >
+                                    {option.label}
+                                </div>
+                                <div
+                                    className={subtitleClasses.join(' ')}
+                                    {...override.optionLabelSubtitle}
+                                >
+                                    {option.description}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 );
             },
-            [classes],
+            [classes, override],
         );
 
-        const twoLines = useCallback(
-            (option, data) => {
-                let textClasses = [classes.optionLabelText];
-                let subtitleClasses = [classes.optionLabelSubtitle];
-                if (option.isDisabled) {
-                    textClasses.push(classes.disabledText);
-                    subtitleClasses.push(classes.disabledText);
-                }
-                return (
-                    <div className={classes.optionLabel}>
-                        <div className={classes.optionLabelBlock}>
-                            <div className={textClasses.join(' ')}>{option.label}</div>
-                            <div className={subtitleClasses.join(' ')}>{option.description}</div>
-                        </div>
-                    </div>
-                );
-            },
-            [classes],
-        );
-
-        const multiCheckbox = useCallback(
+        const multi = useCallback(
             (option, data) => {
                 const isSelected = value
                     ? !!value.find((item) => item.value === option.value)
@@ -281,38 +346,36 @@ const Select = memo(
                 }
 
                 return (
-                    <div className={classes.optionLabel}>
+                    <div className={classes.optionLabel} {...override.optionLabel}>
                         <Checkbox
                             className={classes.optionLabelCheckbox}
                             checked={isSelected}
                             color="orange"
                             isDisabled={option.isDisabled || false}
                             isBiTone={true}
+                            {...override.optionLabelCheckbox}
                         />
-                        {option.type && <div className={bulletClasses.join(' ')} />}
-                        <div className={textClasses.join(' ')}>{option.label}</div>
+                        {option.type && (
+                            <div
+                                className={bulletClasses.join(' ')}
+                                {...override.optionLabelBullet}
+                            />
+                        )}
+                        <div className={textClasses.join(' ')} {...override.optionLabelText}>
+                            {option.label}
+                        </div>
                     </div>
                 );
             },
-            [classes, value],
+            [classes, value, override],
         );
-
-        const optionLabels = useMemo(() => {
-            return {
-                twoLines,
-            };
-        }, [twoLines]);
 
         const formatOptionLabel = useCallback(
             (option, data) => {
-                if (isMulti) {
-                    return multiCheckbox(option, data);
-                } else {
-                    if (type && optionLabels[type]) return optionLabels[type](option, data);
-                    return oneLine(option, data);
-                }
+                if (isMulti) return multi(option, data);
+                else return single(option, data);
             },
-            [type, optionLabels, isMulti, multiCheckbox, oneLine],
+            [isMulti, multi, single],
         );
 
         const formatGroupLabel = useCallback(
@@ -333,21 +396,35 @@ const Select = memo(
                 className: selectClassName,
                 classNamePrefix: 'hoi-poi-select',
                 placeholder,
-                options: options,
+                options: lazyOptions.options || innerOptions,
+                noOptionsMessage,
+                loadingMessage,
                 defaultValue: newDefaultValue,
                 defaultMenuIsOpen,
                 isMulti,
                 isDisabled: isReadOnly,
-                onChange: handleOnChange,
-                onFocus: handleOnFocus,
-                onBlur: handleOnBlur,
                 isClearable: isMulti ? true : isClearable,
+                isLoading: lazyOptions.isLoading,
                 autoFocus: focused,
                 hideSelectedOptions: isMulti ? false : hideSelectedOptions,
                 closeMenuOnSelect: isMulti ? false : true,
-                defaultOptions: isMulti && isFuzzy ? options : null,
                 menuPlacement: 'auto',
                 menuPortalTarget: document.body,
+                loadOptions,
+                openMenuOnClick: !(loadOptions && isFuzzy),
+                onChange: handleOnChange,
+                onFocus: handleOnFocus,
+                onBlur: handleOnBlur,
+                filterOption: filterByKey ? filterKeyValue : createFilter,
+                formatOptionLabel,
+                formatGroupLabel,
+                components: {
+                    DropdownIndicator: loadOptions && isFuzzy ? SearchIndicator : DropdownIndicator,
+                    ClearIndicator,
+                    SingleValue,
+                    MultiValueLabel,
+                    LoadingIndicator,
+                },
                 styles: {
                     menuPortal: (base) => ({ ...base, zIndex: 9999 }),
                     control: (styles, { data, isDisabled, isFocused, isSelected }) => ({
@@ -369,20 +446,28 @@ const Select = memo(
                     indicatorsContainer: (styles) => ({
                         ...styles,
                         ...newStyles.indicatorsContainer,
+                        ...(override.indicatorsContainer?.style || {}),
                     }),
                     clearIndicator: (styles) => ({
                         ...styles,
                         ...newStyles.clearIndicator,
+                        ...(override.clearIndicator?.style || {}),
                     }),
                     indicatorSeparator: (styles) => ({
                         ...styles,
                         ...indicatorSeparator,
+                        ...(override.indicatorSeparator?.style || {}),
                     }),
                     dropdownIndicator: (styles) => ({
                         ...styles,
                         ...newStyles.dropdownIndicator,
+                        ...(override.dropdownIndicator?.style || {}),
                     }),
-                    multiValue: (styles) => ({ ...styles, ...newStyles.multiValue }),
+                    multiValue: (styles) => ({
+                        ...styles,
+                        ...newStyles.multiValue,
+                        ...(override.multiValue?.style || {}),
+                    }),
                     multiValueLabel: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
                         ...multiValueLabelStyles({ data, isDisabled, isFocused, isSelected }),
@@ -391,57 +476,56 @@ const Select = memo(
                         ...styles,
                         ...multiValueRemoveStyles({ data, isDisabled, isFocused, isSelected }),
                     }),
-                    // multiValueRemove: (styles) => ({ ...styles, ...newStyles.multiValueRemove }),
-                    noOptionsMessage: (styles) => ({ ...styles, ...newStyles.noOptionsMessage }),
+                    noOptionsMessage: (styles) => ({
+                        ...styles,
+                        ...newStyles.noOptionsMessage,
+                        ...(override.noOptionsMessage?.style || {}),
+                    }),
+                    loadingMessage: (styles) => ({
+                        ...styles,
+                        ...newStyles.loadingMessage,
+                        ...(override.loadingMessage?.style || {}),
+                    }),
                 },
-                components: {
-                    DropdownIndicator, //loadOptions && isFuzzy ? SearchIndicator :
-                    ClearIndicator,
-                    SingleValue,
-                    MultiValueLabel,
-                },
-                filterOption: filterByKey ? filterKeyValue : createFilter,
-                formatOptionLabel,
-                formatGroupLabel,
-                // loadOptions,
-                openMenuOnClick: true, //!(loadOptions && isFuzzy),
                 ...override['react-select'],
             };
         }, [
             isMulti,
-            options,
+            isClearable,
+            isReadOnly,
+            isFuzzy,
+            loadOptions,
+            loadingMessage,
+            noOptionsMessage,
+            filterByKey,
             placeholder,
-            selectClassName,
-            // selectedValue,
+            defaultMenuIsOpen,
+            hideSelectedOptions,
+            innerOptions,
+            lazyOptions,
             newDefaultValue,
+            selectClassName,
             focused,
+            indicatorSeparator,
+            override,
             handleOnChange,
             handleOnFocus,
             handleOnBlur,
-            hideSelectedOptions,
-            // innerOptions,
-            isClearable,
-            isFuzzy,
-            isReadOnly,
-            filterByKey,
             formatOptionLabel,
             formatGroupLabel,
-            override,
             controlStyles,
             optionsStyles,
             valueContainerStyles,
             placeholderStyles,
             multiValueLabelStyles,
             multiValueRemoveStyles,
-            indicatorSeparator,
-            defaultMenuIsOpen,
         ]);
 
         let SelectComponent = RSelect;
-        // if (loadOptions && isFuzzy) {
-        //     SelectComponent = AsyncSelect;
-        //     selectProps.loadOptions = loadOptionsCb;
-        // }
+        if (loadOptions && isFuzzy) {
+            SelectComponent = AsyncSelect;
+            selectProps.loadOptions = loadOptionsCb;
+        }
 
         return (
             <InputWrapper
@@ -458,5 +542,79 @@ const Select = memo(
         );
     },
 );
+
+Select.overrides = ['root', 'react-select'];
+
+Select.defaultProps = {
+    labelMode: 'vertical',
+    onChange: () => {},
+    value: '',
+    isReadOnly: false,
+    hideSelectedOptions: true,
+    isClearable: true,
+    overrides: {},
+    isValueObject: true,
+    hideOptions: false,
+    filterByKey: false,
+};
+
+Select.propTypes = {
+    className: PropTypes.string,
+    menuListClassName: PropTypes.string,
+    menuClassName: PropTypes.string,
+    overrides: PropTypes.object,
+    /** Async mode */
+    loadOptions: PropTypes.func,
+    /* Autocomplete/Search UI */
+    isFuzzy: PropTypes.bool,
+    onChange: PropTypes.func,
+    /** Native input id */
+    id: PropTypes.string,
+    /** Native input name */
+    name: PropTypes.string,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            value: PropTypes.any,
+            isDisabled: PropTypes.bool,
+            src: PropTypes.string,
+            icon: PropTypes.element,
+            iconType: PropTypes.string,
+            description: PropTypes.string,
+        }),
+    ),
+    value: PropTypes.any,
+    label: PropTypes.string,
+    labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
+    placeholder: PropTypes.string,
+    noOptionsPlaceholder: PropTypes.string,
+    loadingPlaceholder: PropTypes.string,
+    isFullWidth: PropTypes.bool,
+    /** Info popover */
+    hint: PropTypes.string,
+    /** Error will be displayed below the component with style changes */
+    error: PropTypes.string,
+    isRequired: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
+    /** Hide the selected option from the menu */
+    hideSelectedOptions: PropTypes.bool,
+    /** Is the select value clearable */
+    isClearable: PropTypes.bool,
+    /** React select component customization */
+    components: PropTypes.object,
+    /** multiple select support */
+    isMulti: PropTypes.bool,
+    /** Use value as a object { label, value } or as the value */
+    isValueObject: PropTypes.bool,
+    /** Fixed actions added at the bottom con menu list */
+    actions: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            onClick: PropTypes.func,
+        }),
+    ),
+    /** Filter by keys as well */
+    filterByKey: PropTypes.bool,
+};
 
 export default Select;

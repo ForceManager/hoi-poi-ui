@@ -67,7 +67,11 @@ const FieldGroup = memo(
                 if (inputs[index + 1] && (divider || dividerText)) {
                     if (divider)
                         inputNodes.push(
-                            <div className={classes.divider} {...override.divider}>
+                            <div
+                                key={`${index}-divider`}
+                                className={classes.divider}
+                                {...override.divider}
+                            >
                                 {divider}
                             </div>,
                         );

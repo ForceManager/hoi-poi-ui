@@ -284,7 +284,6 @@ const onChange = (value) => setState({ value });
         options={options}
         value={state.value}
         filterByKey
-        type="twoLines"
     />
 </div>;
 ```
@@ -326,7 +325,6 @@ const onChange = (value) => setState({ value });
         isMulti={true}
         isClearable
         isReadOnly
-        type="multiCheckbox"
     />
 </div>;
 ```
@@ -370,7 +368,6 @@ const onChange = (value) => setState({ value });
         value={state.value}
         isMulti={true}
         isClearable
-        type="multiCheckbox"
     />
 </div>;
 ```
@@ -422,7 +419,6 @@ const onChange = (value) => setState({ value });
         value={state.value}
         isMulti={true}
         isClearable
-        type="multiCheckbox"
         isFullWidth={true}
     />
 </div>;
@@ -489,6 +485,136 @@ const onChange = (value) => setState({ value });
         value={state.value}
         menuIsOpen={true}
         isFullWidth={true}
+    />
+</div>;
+```
+
+Async load options:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
+    />
+</div>;
+```
+
+Async load options with fuzzy style:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
+        isFuzzy
+    />
+</div>;
+```
+
+Async load multiple options with fuzzy style:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+let options = [];
+let total = 100;
+for (let i = 0; i < total; i++) {
+    options.push({
+        label: `Lorem ipsum ${i}`,
+        value: `lorem-ipsum-${i}`,
+    });
+}
+
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
+        isFuzzy
+        isMulti
     />
 </div>;
 ```
