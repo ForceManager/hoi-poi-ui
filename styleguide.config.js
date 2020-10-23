@@ -11,6 +11,7 @@ module.exports = {
             sectionDepth: 0,
             components: [
                 './src/components/general/Advice/index.jsx',
+                './src/components/general/Avatar/index.jsx',
                 './src/components/general/Button/index.jsx',
                 './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Modal/index.jsx',
@@ -33,7 +34,6 @@ module.exports = {
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/Stepper/index.jsx',
                 './src/components/general/Menus/index.jsx',
-                './src/components/general/Avatar/index.jsx',
                 './src/components/general/CircularProgress/index.jsx',
                 './src/components/general/Tree/index.jsx',
                 './src/components/general/DataGrid/index.jsx',
