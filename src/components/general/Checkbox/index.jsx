@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -7,6 +7,18 @@ import Icon from '../../general/Icon';
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Checkbox');
+
+const defaultColors = [
+    'neutral',
+    'red',
+    'orange',
+    'green',
+    'blue',
+    'purple',
+    'aqua',
+    'yellow',
+    'turquoise',
+];
 
 function Checkbox({
     children,
@@ -18,6 +30,8 @@ function Checkbox({
     isDisabled,
     onChange,
     color: colorProp,
+    colors,
+    isBiTone,
     ...props
 }) {
     const theme = useTheme();
@@ -34,14 +48,37 @@ function Checkbox({
         classNameProp,
     );
 
-    const color = useMemo(() => {
-        if (colorProp === 'neutral') {
-            return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
-        }
-        return isDisabled
-            ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
-            : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
-    }, [colorProp, isDisabled, theme.colors]);
+    const getColor = useCallback(
+        (checkState) => {
+            if (isBiTone) {
+                if (checkState === 'unchecked') {
+                    return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
+                } else {
+                    return isDisabled
+                        ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
+                        : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
+                }
+            } else if (colors && colors.checked) {
+                if (colors[checkState]) {
+                    return isDisabled
+                        ? colors[`${checkState}Disabled`] || colors[checkState]
+                        : colors[checkState];
+                } else {
+                    return isDisabled
+                        ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
+                        : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
+                }
+            } else {
+                if (colorProp === 'neutral') {
+                    return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
+                }
+                return isDisabled
+                    ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
+                    : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
+            }
+        },
+        [colorProp, isDisabled, theme.colors, colors, isBiTone],
+    );
 
     const rootProps = {
         className: rootClassName,
@@ -54,12 +91,18 @@ function Checkbox({
 
     return (
         <div {...rootProps} {...override.root}>
-            {checkState === 'checked' && <Icon name="checkBox" color={color} {...override.svg} />}
+            {checkState === 'checked' && (
+                <Icon name="checkBox" color={getColor('checked')} {...override.svg} />
+            )}
             {checkState === 'unchecked' && (
-                <Icon name="checkBoxOutlineBlank" color={color} {...override.svg} />
+                <Icon name="checkBoxOutlineBlank" color={getColor('unchecked')} {...override.svg} />
             )}
             {checkState === 'indeterminate' && (
-                <Icon name="indeterminateCheckBox" color={color} {...override.svg} />
+                <Icon
+                    name="indeterminateCheckBox"
+                    color={getColor('indeterminate')}
+                    {...override.svg}
+                />
             )}
             <input
                 className={classes.input}
@@ -89,17 +132,8 @@ Checkbox.propTypes = {
     indeterminate: PropTypes.bool,
     onChange: PropTypes.func,
     isDisabled: PropTypes.bool,
-    color: PropTypes.oneOf([
-        'neutral',
-        'red',
-        'orange',
-        'green',
-        'blue',
-        'purple',
-        'aqua',
-        'yellow',
-        'turquoise',
-    ]),
+    color: PropTypes.oneOf(defaultColors),
+    colors: PropTypes.object,
 };
 
 export default React.memo(Checkbox);

@@ -44,12 +44,14 @@ const Select = memo(
         onBlur,
         hideSelectedOptions,
         filterByKey,
+        defaultMenuIsOpen = false,
         // loadOptions,
         // loadingMessage,
         // loadingPlaceholder,
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
+        const newDefaultValue = defaultValue || value;
         // const [innerOptions, setInnerOptions] = useState(options);
         // const [lazyOptions, setLazyOptions] = useState({
         //     areLoaded: false,
@@ -75,24 +77,24 @@ const Select = memo(
             [classes.isMulti]: isMulti,
         });
 
-        const newDefaultValue = useMemo(() => {
-            if (isValueObject) return defaultValue;
-            const finalOptions = options && options.length ? options : options;
-            if (
-                !isMulti &&
-                finalOptions &&
-                finalOptions.length &&
-                defaultValue !== null &&
-                defaultValue !== undefined
-            ) {
-                return finalOptions.find((op) => {
-                    return op.value === defaultValue;
-                });
-            }
-            if (isMulti && finalOptions && finalOptions.length && defaultValue) {
-                return defaultValue.map((v) => finalOptions.find((op) => op.value === v));
-            }
-        }, [isMulti, options, defaultValue, isValueObject]);
+        // const newDefaultValue = useMemo(() => {
+        //     if (isValueObject) return defaultValue;
+        //     const finalOptions = options && options.length ? options : options;
+        //     if (
+        //         !isMulti &&
+        //         finalOptions &&
+        //         finalOptions.length &&
+        //         defaultValue !== null &&
+        //         defaultValue !== undefined
+        //     ) {
+        //         return finalOptions.find((op) => {
+        //             return op.value === defaultValue;
+        //         });
+        //     }
+        //     if (isMulti && finalOptions && finalOptions.length && defaultValue) {
+        //         return defaultValue.map((v) => finalOptions.find((op) => op.value === v));
+        //     }
+        // }, [isMulti, options, defaultValue, isValueObject]);
 
         const handleOnChange = useCallback(
             (data, action) => {
@@ -110,45 +112,116 @@ const Select = memo(
             onBlur && onBlur();
         }, [onBlur]);
 
-        const controlStyles = useCallback(
-            ({ data, isDisabled, isFocused, isSelected }) => {
-                let styles = {
-                    ...newStyles.control,
-                };
+        const controlStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
+            let styles = {
+                ...newStyles.control,
+            };
 
-                if (focused) {
-                    styles = { ...styles, ...newStyles.controlFocused };
-                }
-                return styles;
-            },
-            [focused],
-        );
+            if (isFocused) {
+                styles = { ...styles, ...newStyles.controlFocused };
+            }
+            return styles;
+        }, []);
 
         const optionsStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
             let styles = {
                 ...newStyles.options,
             };
 
+            if (isDisabled) {
+                styles = {
+                    ...styles,
+                    ...newStyles.optionDisabled,
+                };
+            }
+
             return styles;
         }, []);
 
+        const valueContainerStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
+            let styles = {
+                ...newStyles.valueContainer,
+            };
+
+            if (isDisabled) {
+                styles = {
+                    ...newStyles.valueContainerDisabled,
+                };
+            }
+            return styles;
+        }, []);
+
+        const placeholderStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
+            let styles = {
+                ...newStyles.placeholder,
+            };
+
+            if (isDisabled) {
+                styles = {
+                    ...newStyles.placeholderDisabled,
+                };
+            }
+            return styles;
+        }, []);
+
+        const multiValueLabelStyles = useCallback(({ data, isDisabled, isFocused, isSelected }) => {
+            let styles = {
+                ...newStyles.multiValueLabel,
+            };
+            if (isDisabled) {
+                styles = {
+                    ...styles,
+                    ...newStyles.multiValueLabelDisabled,
+                };
+            }
+
+            return styles;
+        }, []);
+
+        const multiValueRemoveStyles = useCallback(
+            ({ data, isDisabled, isFocused, isSelected }) => {
+                let styles = {
+                    ...newStyles.multiValueRemove,
+                };
+                if (isDisabled) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.multiValueRemoveDisabled,
+                    };
+                }
+
+                return styles;
+            },
+            [],
+        );
+
         const oneLine = useCallback(
             (option, data) => {
+                let textClasses = [classes.optionLabelText];
+                let iconClasses = [classes.optionLabelIcon];
+                let customIconClasses = [classes.optionLabelCustomIcon];
+
+                if (option.isDisabled) {
+                    textClasses.push(classes.disabledText);
+                    iconClasses.push(classes.disabledIcon);
+                    customIconClasses.push(classes.disabledIcon);
+                }
                 return (
                     <div className={classes.optionLabel}>
                         {option.iconType && (
                             <Icon
-                                className={classes.optionLabelIcon}
+                                className={iconClasses.join(' ')}
                                 name={option.iconType}
                                 color={option.iconColor || null}
                                 size="medium"
                             />
                         )}
                         {option.icon && (
-                            <div className={classes.optionLabelCustomIcon}>{option.icon}</div>
+                            <div className={customIconClasses.join(' ')}>{option.icon}</div>
                         )}
                         {option.src && (
                             <div className={classes.optionLabelAvatar}>
+                                {option.isDisabled && <div className={classes.disabledAvatar} />}
                                 <Avatar
                                     size="small"
                                     src={option.src}
@@ -157,7 +230,7 @@ const Select = memo(
                                 />
                             </div>
                         )}
-                        <div className={classes.optionLabelText}>{option.label}</div>
+                        <div className={textClasses.join(' ')}>{option.label}</div>
                     </div>
                 );
             },
@@ -166,11 +239,17 @@ const Select = memo(
 
         const twoLines = useCallback(
             (option, data) => {
+                let textClasses = [classes.optionLabelText];
+                let subtitleClasses = [classes.optionLabelSubtitle];
+                if (option.isDisabled) {
+                    textClasses.push(classes.disabledText);
+                    subtitleClasses.push(classes.disabledText);
+                }
                 return (
                     <div className={classes.optionLabel}>
                         <div className={classes.optionLabelBlock}>
-                            <div className={classes.optionLabelText}>{option.label}</div>
-                            <div className={classes.optionLabelSubtitle}>{option.description}</div>
+                            <div className={textClasses.join(' ')}>{option.label}</div>
+                            <div className={subtitleClasses.join(' ')}>{option.description}</div>
                         </div>
                     </div>
                 );
@@ -178,22 +257,17 @@ const Select = memo(
             [classes],
         );
 
-        // const iconLine = useCallback((option, data) => {
-        //     return (
-        //         <div className={classes.optionLabel}>
-        //                 <
-        //                 <div className={classes.optionLabelText}>{option.label}</div>
-        //         </div>
-        //     );
-        // }, [classes])
-
         const multiCheckbox = useCallback(
             (option, data) => {
                 const isSelected = value
                     ? !!value.find((item) => item.value === option.value)
                     : false;
                 let bulletClasses = [classes.optionLabelBullet];
-                if (option.type) {
+                let textClasses = [classes.optionLabelText];
+
+                if (option.isDisabled) {
+                    bulletClasses.push(classes.optionLabelBulletDisabled);
+                } else if (option.type) {
                     if (option.type === 'primary')
                         bulletClasses.push(classes.optionLabelBulletPrimary);
                     if (option.type === 'danger')
@@ -201,15 +275,22 @@ const Select = memo(
                     if (option.type === 'success')
                         bulletClasses.push(classes.optionLabelBulletSuccess);
                 }
+
+                if (option.isDisabled) {
+                    textClasses.push(classes.disabledText);
+                }
+
                 return (
                     <div className={classes.optionLabel}>
                         <Checkbox
                             className={classes.optionLabelCheckbox}
                             checked={isSelected}
-                            color={defaultTheme.colors.orange500}
+                            color="orange"
+                            isDisabled={option.isDisabled || false}
+                            isBiTone={true}
                         />
                         {option.type && <div className={bulletClasses.join(' ')} />}
-                        <div className={classes.optionLabelText}>{option.label}</div>
+                        <div className={textClasses.join(' ')}>{option.label}</div>
                     </div>
                 );
             },
@@ -254,11 +335,12 @@ const Select = memo(
                 placeholder,
                 options: options,
                 defaultValue: newDefaultValue,
+                defaultMenuIsOpen,
                 isMulti,
+                isDisabled: isReadOnly,
                 onChange: handleOnChange,
                 onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
-                isDisabled: isReadOnly,
                 isClearable: isMulti ? true : isClearable,
                 autoFocus: focused,
                 hideSelectedOptions: isMulti ? false : hideSelectedOptions,
@@ -271,6 +353,14 @@ const Select = memo(
                     control: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
                         ...controlStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    placeholder: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...placeholderStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    valueContainer: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...valueContainerStyles({ data, isDisabled, isFocused, isSelected }),
                     }),
                     option: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
@@ -292,10 +382,17 @@ const Select = memo(
                         ...styles,
                         ...newStyles.dropdownIndicator,
                     }),
-                    multiValue: (base) => ({ ...base, ...newStyles.multiValue }),
-                    multiValueLabel: (base) => ({ ...base, ...newStyles.multiValueLabel }),
-                    multiValueRemove: (base) => ({ ...base, ...newStyles.multiValueRemove }),
-                    noOptionsMessage: (base) => ({ ...base, ...newStyles.noOptionsMessage }),
+                    multiValue: (styles) => ({ ...styles, ...newStyles.multiValue }),
+                    multiValueLabel: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...multiValueLabelStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    multiValueRemove: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...multiValueRemoveStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    // multiValueRemove: (styles) => ({ ...styles, ...newStyles.multiValueRemove }),
+                    noOptionsMessage: (styles) => ({ ...styles, ...newStyles.noOptionsMessage }),
                 },
                 components: {
                     DropdownIndicator, //loadOptions && isFuzzy ? SearchIndicator :
@@ -332,7 +429,12 @@ const Select = memo(
             override,
             controlStyles,
             optionsStyles,
+            valueContainerStyles,
+            placeholderStyles,
+            multiValueLabelStyles,
+            multiValueRemoveStyles,
             indicatorSeparator,
+            defaultMenuIsOpen,
         ]);
 
         let SelectComponent = RSelect;

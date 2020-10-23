@@ -48,9 +48,6 @@ export default (theme) => {
             '&$vertical $Label': {
                 width: '100%',
             },
-            '& $formControl': {
-                width: '100%',
-            },
         },
         error: {},
     };

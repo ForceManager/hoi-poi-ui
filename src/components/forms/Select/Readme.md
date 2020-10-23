@@ -1,3 +1,63 @@
+No Options:
+
+```jsx
+import { useState } from 'react';
+
+const options = [];
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        filterByKey
+    />
+</div>;
+```
+
+Single ReadOnly:
+
+```jsx
+import { useState } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const [state, setState] = useState({value: options[0]});
+const onChange = (value) => setState(value);
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        filterByKey
+        isReadOnly={true}
+    />
+</div>;
+```
+
 Single:
 
 ```jsx
@@ -11,6 +71,7 @@ const options = [
     {
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
+        isDisabled: true,
     },
     {
         label: 'Lorem ipsum 3',
@@ -51,6 +112,7 @@ const options = [
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
         iconType: 'route',
+        isDisabled: true,
     },
     {
         label: 'Lorem ipsum 3',
@@ -104,6 +166,12 @@ const options = [
         icon: customIcon,
     },
     {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        icon: customIcon,
+        isDisabled: true,
+    },
+    {
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
         iconType: 'route',
@@ -149,6 +217,7 @@ const options = [
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
         src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        isDisabled: true,
     },
     {
         label: 'Lorem ipsum 3',
@@ -191,6 +260,7 @@ const options = [
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
         description: 'lorem-ipsum-2',
+        isDisabled: true,
     },
     {
         label: 'Lorem ipsum 3',
@@ -219,6 +289,48 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Multi ReadOnly:
+
+```jsx
+import { useState } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const [state, setState] = useState({value: [options[0], options[1]]});
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        isMulti={true}
+        isClearable
+        isReadOnly
+        type="multiCheckbox"
+    />
+</div>;
+```
+
 Multi:
 
 ```jsx
@@ -232,6 +344,7 @@ const options = [
     {
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
+        isDisabled: true,
     },
     {
         label: 'Lorem ipsum 3',
@@ -276,15 +389,21 @@ const options = [
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
         type: 'success',
+        isDisabled: true,
     },
     {
         label: 'Lorem ipsum 3',
         value: 'lorem-ipsum-3',
-        type: 'primary',
+        type: 'success',
     },
     {
         label: 'Lorem ipsum 4',
         value: 'lorem-ipsum-4',
+        type: 'primary',
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: 'lorem-ipsum-5',
         type: 'danger',
     },
 ];

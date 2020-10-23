@@ -16,6 +16,75 @@ States:
 </div>
 ```
 
+States BiTone
+
+```jsx
+<div>
+    <Checkbox color="red" isBiTone />
+    <span> </span>
+    <Checkbox color="red" isBiTone checked />
+    <span> </span>
+    <Checkbox color="red" isBiTone checked indeterminate />
+    <br />
+    <Checkbox color="red" isBiTone isDisabled />
+    <span> </span>
+    <Checkbox color="red" isBiTone checked isDisabled />
+    <span> </span>
+    <Checkbox color="red" isBiTone checked indeterminate isDisabled />
+    <br />
+    <Checkbox color="orange" isBiTone />
+    <span> </span>
+    <Checkbox color="orange" isBiTone checked />
+    <span> </span>
+    <Checkbox color="orange" isBiTone checked indeterminate />
+    <br />
+    <Checkbox color="orange" isBiTone isDisabled />
+    <span> </span>
+    <Checkbox color="orange" isBiTone checked isDisabled />
+    <span> </span>
+    <Checkbox color="orange" isBiTone checked indeterminate isDisabled />
+    <br />
+    <Checkbox color="green" isBiTone />
+    <span> </span>
+    <Checkbox color="green" isBiTone checked />
+    <span> </span>
+    <Checkbox color="green" isBiTone checked indeterminate />
+    <br />
+    <Checkbox color="green" isBiTone isDisabled />
+    <span> </span>
+    <Checkbox color="green" isBiTone checked isDisabled />
+    <span> </span>
+    <Checkbox color="green" isBiTone checked indeterminate isDisabled />
+</div>
+```
+
+States Custom
+
+```jsx
+const colors = {
+    unchecked: 'violet',
+    uncheckedDisabled: 'indigo',
+    checked: 'blue',
+    checkedDisabled: 'green',
+    indeterminate: 'yellow',
+    indeterminateDisabled: 'orange',
+};
+
+<div>
+    <Checkbox colors={colors}/>
+    <span> </span>
+    <Checkbox colors={colors} checked />
+    <span> </span>
+    <Checkbox colors={colors} checked indeterminate />
+    <br />
+    <Checkbox colors={colors} isDisabled />
+    <span> </span>
+    <Checkbox colors={colors} checked isDisabled />
+    <span> </span>
+    <Checkbox colors={colors} checked indeterminate isDisabled />
+</div>
+```
+
 Custom color:
 
 ```jsx

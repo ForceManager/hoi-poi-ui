@@ -29,9 +29,11 @@ export default (theme) => ({
         marginRight: 10,
     },
     optionLabelAvatar: {
-        width: 24,
-        height: 24,
+        width: 20,
+        height: 20,
         marginRight: 10,
+        borderRadius: '50%',
+        position: 'relative',
     },
     optionLabelCheckbox: {
         marginRight: 10,
@@ -41,6 +43,8 @@ export default (theme) => ({
         height: 8,
         marginRight: 8,
         borderRadius: '50%',
+    },
+    optionLabelBulletDisabled: {
         backgroundColor: theme.colors.neutral500,
     },
     optionLabelBulletPrimary: {
@@ -57,6 +61,22 @@ export default (theme) => ({
         ...theme.typography.caption,
         color: theme.colors.neutral700,
     },
+    disabledText: {
+        color: theme.colors.neutral500,
+    },
+    disabledIcon: {
+        '& path': {
+            fill: theme.colors.neutral500,
+        },
+    },
+    disabledAvatar: {
+        position: 'absolute',
+        width: 20,
+        height: 20,
+        borderRadius: '50%',
+        backgroundColor: theme.colors.neutral500,
+        opacity: '0.8',
+    },
     group: {
         ...theme.typography.subtitle,
         color: theme.colors.neutral700,
@@ -68,12 +88,12 @@ export default (theme) => ({
     },
     control: {
         ...theme.typography.body,
+        minHeight: 40,
         outline: 'none',
         padding: 2,
         borderRadius: '4px',
         border: `1px solid ${theme.colors.neutral200}`,
         backgroundColor: theme.colors.neutral200,
-        color: theme.colors.neutral900,
         transition: 'all 0.15s ease',
         '&:hover': {
             cursor: 'pointer',
@@ -83,6 +103,18 @@ export default (theme) => ({
         backgroundColor: theme.colors.neutralBase,
         border: `1px solid ${theme.colors.orange500}`,
         boxShadow: 'none',
+    },
+    placeholder: {
+        color: theme.colors.neutral900,
+    },
+    placeholderDisabled: {
+        color: theme.colors.neutral700,
+    },
+    valueContainer: {
+        color: theme.colors.neutral900,
+    },
+    valueContainerDisabled: {
+        color: theme.colors.neutral700,
     },
     options: {
         ...theme.typography.body,
@@ -94,13 +126,23 @@ export default (theme) => ({
             cursor: 'pointer',
         },
     },
+    optionDisabled: {
+        '&:hover': {
+            backgroundColor: 'none',
+            cursor: 'default',
+        },
+    },
     multiValue: {
         margin: 4,
-        padding: '2px 6px 2px 8px',
+        padding: '3px 6px 3px 8px',
         border: 'none',
-        borderRadius: '4px',
+        borderRadius: '20px',
         backgroundColor: theme.colors.blue100,
         color: theme.colors.blue500,
+        transition: 'all 0.15s ease',
+        '&:hover': {
+            backgroundColor: theme.colors.blue200,
+        },
     },
     multiValueLabel: {
         ...theme.typography.caption,
@@ -109,12 +151,25 @@ export default (theme) => ({
         paddingLeft: 0,
         paddingRight: 8,
     },
+    multiValueLabelDisabled: {
+        color: theme.colors.blue200,
+    },
     multiValueRemove: {
         padding: 0,
         transition: 'all 0.15s ease',
+        '& svg path': {
+            fill: theme.colors.blue500,
+        },
         '&:hover': {
             backgroundColor: 'initial',
-            color: theme.colors.blue600,
+            '& svg path': {
+                fill: theme.colors.blue600,
+            },
+        },
+    },
+    multiValueRemoveDisabled: {
+        '& svg path': {
+            fill: theme.colors.blue200,
         },
     },
     noOptionsMessage: {
