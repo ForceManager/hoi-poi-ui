@@ -45,8 +45,9 @@ module.exports = {
             description: '',
             sectionDepth: 0,
             components: [
-                './src/components/forms/Label/index.jsx',
+                './src/components/forms/DatePicker/index.jsx',
                 './src/components/forms/Input/index.jsx',
+                './src/components/forms/Label/index.jsx',
                 './src/components/forms/Slider/index.jsx',
                 './src/components/forms/Switch/index.jsx',
                 './src/components/forms/SwitchInput/index.jsx',
@@ -60,7 +61,7 @@ module.exports = {
             components: [
                 './src/components/oldForms/CheckboxInput/index.jsx',
                 './src/components/oldForms/CheckboxGroup/index.jsx',
-                './src/components/oldForms/DatePicker/index.jsx',
+                // './src/components/oldForms/DatePicker/index.jsx',
                 './src/components/oldForms/FilePicker/index.jsx',
                 './src/components/oldForms/Form/index.jsx',
                 // './src/components/oldForms/Input/index.jsx',
