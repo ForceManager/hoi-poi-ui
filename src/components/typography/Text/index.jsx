@@ -12,6 +12,7 @@ function Text({
     children,
     isTruncated,
     type,
+    bold,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
@@ -20,6 +21,7 @@ function Text({
     const classes = useClasses(useStyles, classesProp);
     //Overrides
     const rootClassName = classnames(classes.root, classNameProp, classes[type], {
+        [classes.bold]: bold,
         [classes.truncated]: isTruncated,
     });
 
@@ -68,6 +70,7 @@ Text.propTypes = {
     overrides: PropTypes.object,
     children: PropTypes.node,
     isTruncated: PropTypes.bool,
+    bold: PropTypes.bool,
 };
 
 export default React.memo(Text);

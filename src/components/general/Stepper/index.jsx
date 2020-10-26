@@ -61,9 +61,7 @@ function Stepper({
                         icon={getIcon(i)}
                         title={
                             <span onClick={isHighlighted(step, i) ? () => onClick(i) : undefined}>
-                                <Text type={isHighlighted(step, i) ? 'bold' : undefined}>
-                                    {step.title}
-                                </Text>
+                                <Text bold={isHighlighted(step, i)}>{step.title}</Text>
                             </span>
                         }
                     />

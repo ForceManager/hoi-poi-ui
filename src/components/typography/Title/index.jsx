@@ -29,7 +29,7 @@ function Title({
     };
 
     return (
-        <Text type="bold" {...rootProps}>
+        <Text {...rootProps}>
             <h1 className={classes.textTitle}>{children}</h1>
         </Text>
     );
