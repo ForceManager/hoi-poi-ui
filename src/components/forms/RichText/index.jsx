@@ -21,6 +21,8 @@ import Icon from '../../general/Icon';
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 
+const useStyles = createUseStyles(styles, 'RichText');
+
 const RichText = memo(
     ({
         className: classNameProp,
@@ -56,7 +58,6 @@ const RichText = memo(
             };
         });
 
-        const useStyles = createUseStyles(styles, 'RichText');
         const classes = useClasses(useStyles, classesProp);
         const theme = useTheme();
 
