@@ -35,6 +35,8 @@ function Tooltip({
         visible,
     };
 
+    if (content === undefined || content === null) return children;
+
     return (
         <RCTooltip {...rootProps} {...override.root}>
             {children}
