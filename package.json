@@ -14,7 +14,8 @@
         "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./babel.config.js ./src --out-dir ./dist/es --ignore \"**/*.spec.jsx\"",
         "build:umd": "cross-env BABEL_ENV=umd rollup -c rollup.config.js",
         "build:watch": "yarn build:esm --watch",
-        "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f",
+        "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f ",
+        "release-next": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f --tag next",
         "test": " cross-env NODE_ENV=test jest",
         "test:snapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
         "gh-pages": "cross-env NODE_ENV=production styleguidist build && gh-pages -d styleguide --repo https://$GH_TOKEN@github.com/ForceManager/hoi-poi-ui.git"
