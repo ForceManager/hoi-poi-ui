@@ -33,7 +33,7 @@ function ButtonSwitch({
                 return (
                     <Button
                         key={button.value}
-                        type="squared-outlined"
+                        type="secondary"
                         className={buttonClassName}
                         onClick={() => onChange && onChange(button.value)}
                         {...override.Button}

@@ -50,7 +50,7 @@ function Section({
     const renderTitle = useMemo(() => {
         if (typeof title === 'string') {
             return (
-                <Text type="bold" className={classes.Text} {...override.Text}>
+                <Text className={classes.Text} {...override.Text}>
                     {title}
                 </Text>
             );
