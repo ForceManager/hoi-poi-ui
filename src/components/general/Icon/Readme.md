@@ -150,6 +150,54 @@ Navigation:
 <span> </span>
 <Icon name="arrowBack"/>
 <span> </span>
+<Icon name="arrowDownward"/>
+<span> </span>
+<Icon name="arrowDropDownCircle"/>
+<span> </span>
+<Icon name="arrowDropUp"/>
+<span> </span>
+<Icon name="arrowForward"/>
+<span> </span>
+<Icon name="arrowUpward"/>
+<span> </span>
+<Icon name="check"/>
+<span> </span>
+<Icon name="chevronLeft"/>
+<span> </span>
+<Icon name="chevronRight"/>
+<span> </span>
+<Icon name="close"/>
+<span> </span>
+<Icon name="closeSmall"/>
+<span> </span>
+<Icon name="dragAndDrop"/>
+<span> </span>
+<Icon name="expandLess"/>
+<span> </span>
+<Icon name="expandMore"/>
+<span> </span>
+<Icon name="fullScreen"/>
+<span> </span>
+<Icon name="fullScreenExit"/>
+<span> </span>
+<Icon name="menu"/>
+<span> </span>
+<Icon name="moreHoriz"/>
+<span> </span>
+<Icon name="moreVert"/>
+<span> </span>
+<Icon name="refresh"/>
+<span> </span>
+<Icon name="sortArrowDownward"/>
+<span> </span>
+<Icon name="sortArrowUpward"/>
+<span> </span>
+<Icon name="subdirectoryArrowLeft"/>
+<span> </span>
+<Icon name="subdirectoryArrowRight"/>
+<span> </span>
+<Icon name="unfoldLess"/>
+<span> </span>
 ```
 
 Editor:
@@ -159,14 +207,35 @@ Editor:
 <span> </span>
 ```
 
+Toggle:
+
+```jsx
+<Icon name="checkBox"/>
+<span> </span>
+<Icon name="checkBoxOutlineBlank"/>
+<span> </span>
+<Icon name="indeterminateCheckBox"/>
+<span> </span>
+<Icon name="radioButtonChecked"/>
+<span> </span>
+<Icon name="radioButtonUnchecked"/>
+<span> </span>
+<Icon name="star"/>
+<span> </span>
+<Icon name="starBorder"/>
+<span> </span>
+<Icon name="starHalf"/>
+<span> </span>
+<Icon name="starsCircle"/>
+<span> </span>
+```
+
 Icons:
 
 ```jsx
 <Icon name="chevron" />
 <span> </span>
 <Icon name="info" />
-<span> </span>
-<Icon name="close" />
 <span> </span>
 <Icon name="lock" />
 <span> </span>
