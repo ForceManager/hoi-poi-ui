@@ -32,7 +32,7 @@ function Tooltip({
         overlayClassName: rootClassName,
         overlay: content,
         placement,
-        visible,
+        // visible,
     };
 
     return (

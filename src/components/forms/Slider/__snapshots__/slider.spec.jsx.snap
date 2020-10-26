@@ -284,6 +284,14 @@ exports[`Input custom max/min/step match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -584,7 +592,6 @@ exports[`Input custom max/min/step match 1`] = `
                               "hover",
                             ]
                           }
-                          visible={true}
                         >
                           <Trigger
                             action={
@@ -834,10 +841,8 @@ exports[`Input custom max/min/step match 1`] = `
                             popupPlacement="top"
                             popupStyle={Object {}}
                             popupTransitionName="hoi-poi-tooltip--fade"
-                            popupVisible={true}
                             prefixCls="hoi-poi-tooltip"
                             showAction={Array []}
-                            visible={true}
                           >
                             <Handle
                               className="HoiPoi__Slider__overlayHandler-4-2"
@@ -878,191 +883,6 @@ exports[`Input custom max/min/step match 1`] = `
                                 tabIndex={0}
                               />
                             </Handle>
-                            <Portal
-                              didUpdate={[Function]}
-                              getContainer={[Function]}
-                              key="portal"
-                            >
-                              <Portal
-                                containerInfo={
-                                  <div
-                                    style="position: absolute; top: 0px; left: 0px; width: 100%;"
-                                  >
-                                    <div>
-                                      <div
-                                        class="hoi-poi-tooltip HoiPoi__Tooltip__root-4-34 hoi-poi-tooltip-placement-top hoi-poi-tooltip--fade-appear"
-                                        style="left: -991px; top: -1009px;"
-                                      >
-                                        <div
-                                          class="hoi-poi-tooltip-content"
-                                        >
-                                          <div
-                                            class="hoi-poi-tooltip-arrow"
-                                          />
-                                          <div
-                                            class="hoi-poi-tooltip-inner"
-                                            role="tooltip"
-                                          >
-                                            5000
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                }
-                              >
-                                <Popup
-                                  action={
-                                    Array [
-                                      "hover",
-                                    ]
-                                  }
-                                  align={
-                                    Object {
-                                      "offset": Array [
-                                        0,
-                                        -4,
-                                      ],
-                                      "overflow": Object {
-                                        "adjustX": 1,
-                                        "adjustY": 1,
-                                      },
-                                      "points": Array [
-                                        "bc",
-                                        "tc",
-                                      ],
-                                      "targetOffset": Array [
-                                        0,
-                                        0,
-                                      ],
-                                    }
-                                  }
-                                  className="HoiPoi__Tooltip__root-4-34"
-                                  destroyPopupOnHide={false}
-                                  getClassNameFromAlign={[Function]}
-                                  getRootDomNode={[Function]}
-                                  mask={false}
-                                  onAlign={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  onTouchStart={[Function]}
-                                  prefixCls="hoi-poi-tooltip"
-                                  style={Object {}}
-                                  transitionName="hoi-poi-tooltip--fade"
-                                  visible={true}
-                                >
-                                  <div>
-                                    <Animate
-                                      animation={Object {}}
-                                      component=""
-                                      componentProps={Object {}}
-                                      exclusive={true}
-                                      onAppear={[Function]}
-                                      onEnd={[Function]}
-                                      onEnter={[Function]}
-                                      onLeave={[Function]}
-                                      showProp="xVisible"
-                                      transitionAppear={true}
-                                      transitionEnter={true}
-                                      transitionLeave={true}
-                                      transitionName="hoi-poi-tooltip--fade"
-                                    >
-                                      <AnimateChild
-                                        animation={Object {}}
-                                        key="popup"
-                                        transitionAppear={true}
-                                        transitionEnter={true}
-                                        transitionLeave={true}
-                                        transitionName="hoi-poi-tooltip--fade"
-                                      >
-                                        <Align
-                                          align={
-                                            Object {
-                                              "offset": Array [
-                                                0,
-                                                -4,
-                                              ],
-                                              "overflow": Object {
-                                                "adjustX": 1,
-                                                "adjustY": 1,
-                                              },
-                                              "points": Array [
-                                                "bc",
-                                                "tc",
-                                              ],
-                                              "targetOffset": Array [
-                                                0,
-                                                0,
-                                              ],
-                                            }
-                                          }
-                                          childrenProps={
-                                            Object {
-                                              "visible": "xVisible",
-                                            }
-                                          }
-                                          disabled={false}
-                                          key="popup"
-                                          monitorBufferTime={50}
-                                          monitorWindowResize={true}
-                                          onAlign={[Function]}
-                                          target={[Function]}
-                                          xVisible={true}
-                                        >
-                                          <PopupInner
-                                            className="hoi-poi-tooltip HoiPoi__Tooltip__root-4-34 hoi-poi-tooltip-placement-top "
-                                            hiddenClassName="hoi-poi-tooltip-hidden"
-                                            onMouseDown={[Function]}
-                                            onMouseEnter={[Function]}
-                                            onMouseLeave={[Function]}
-                                            onTouchStart={[Function]}
-                                            prefixCls="hoi-poi-tooltip"
-                                            style={Object {}}
-                                            visible={true}
-                                          >
-                                            <div
-                                              className="hoi-poi-tooltip HoiPoi__Tooltip__root-4-34 hoi-poi-tooltip-placement-top "
-                                              onMouseDown={[Function]}
-                                              onMouseEnter={[Function]}
-                                              onMouseLeave={[Function]}
-                                              onTouchStart={[Function]}
-                                              style={Object {}}
-                                            >
-                                              <LazyRenderBox
-                                                className="hoi-poi-tooltip-content"
-                                                visible={true}
-                                              >
-                                                <div
-                                                  className="hoi-poi-tooltip-content"
-                                                >
-                                                  <div
-                                                    className="hoi-poi-tooltip-arrow"
-                                                    key="arrow"
-                                                  />
-                                                  <Content
-                                                    key="content"
-                                                    overlay={5000}
-                                                    prefixCls="hoi-poi-tooltip"
-                                                  >
-                                                    <div
-                                                      className="hoi-poi-tooltip-inner"
-                                                      role="tooltip"
-                                                    >
-                                                      5000
-                                                    </div>
-                                                  </Content>
-                                                </div>
-                                              </LazyRenderBox>
-                                            </div>
-                                          </PopupInner>
-                                        </Align>
-                                      </AnimateChild>
-                                    </Animate>
-                                  </div>
-                                </Popup>
-                              </Portal>
-                            </Portal>
                           </Trigger>
                         </Tooltip>
                       </Tooltip>
@@ -1383,6 +1203,14 @@ exports[`Input custom tip match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -1684,7 +1512,6 @@ exports[`Input custom tip match 1`] = `
                               "hover",
                             ]
                           }
-                          visible={true}
                         >
                           <Trigger
                             action={
@@ -1934,10 +1761,8 @@ exports[`Input custom tip match 1`] = `
                             popupPlacement="top"
                             popupStyle={Object {}}
                             popupTransitionName="hoi-poi-tooltip--fade"
-                            popupVisible={true}
                             prefixCls="hoi-poi-tooltip"
                             showAction={Array []}
-                            visible={true}
                           >
                             <Handle
                               className="HoiPoi__Slider__overlayHandler-3-2"
@@ -1978,191 +1803,6 @@ exports[`Input custom tip match 1`] = `
                                 tabIndex={0}
                               />
                             </Handle>
-                            <Portal
-                              didUpdate={[Function]}
-                              getContainer={[Function]}
-                              key="portal"
-                            >
-                              <Portal
-                                containerInfo={
-                                  <div
-                                    style="position: absolute; top: 0px; left: 0px; width: 100%;"
-                                  >
-                                    <div>
-                                      <div
-                                        class="hoi-poi-tooltip HoiPoi__Tooltip__root-3-34 hoi-poi-tooltip-placement-top hoi-poi-tooltip--fade-appear"
-                                        style="left: -991px; top: -1009px;"
-                                      >
-                                        <div
-                                          class="hoi-poi-tooltip-content"
-                                        >
-                                          <div
-                                            class="hoi-poi-tooltip-arrow"
-                                          />
-                                          <div
-                                            class="hoi-poi-tooltip-inner"
-                                            role="tooltip"
-                                          >
-                                            0%
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                }
-                              >
-                                <Popup
-                                  action={
-                                    Array [
-                                      "hover",
-                                    ]
-                                  }
-                                  align={
-                                    Object {
-                                      "offset": Array [
-                                        0,
-                                        -4,
-                                      ],
-                                      "overflow": Object {
-                                        "adjustX": 1,
-                                        "adjustY": 1,
-                                      },
-                                      "points": Array [
-                                        "bc",
-                                        "tc",
-                                      ],
-                                      "targetOffset": Array [
-                                        0,
-                                        0,
-                                      ],
-                                    }
-                                  }
-                                  className="HoiPoi__Tooltip__root-3-34"
-                                  destroyPopupOnHide={false}
-                                  getClassNameFromAlign={[Function]}
-                                  getRootDomNode={[Function]}
-                                  mask={false}
-                                  onAlign={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  onTouchStart={[Function]}
-                                  prefixCls="hoi-poi-tooltip"
-                                  style={Object {}}
-                                  transitionName="hoi-poi-tooltip--fade"
-                                  visible={true}
-                                >
-                                  <div>
-                                    <Animate
-                                      animation={Object {}}
-                                      component=""
-                                      componentProps={Object {}}
-                                      exclusive={true}
-                                      onAppear={[Function]}
-                                      onEnd={[Function]}
-                                      onEnter={[Function]}
-                                      onLeave={[Function]}
-                                      showProp="xVisible"
-                                      transitionAppear={true}
-                                      transitionEnter={true}
-                                      transitionLeave={true}
-                                      transitionName="hoi-poi-tooltip--fade"
-                                    >
-                                      <AnimateChild
-                                        animation={Object {}}
-                                        key="popup"
-                                        transitionAppear={true}
-                                        transitionEnter={true}
-                                        transitionLeave={true}
-                                        transitionName="hoi-poi-tooltip--fade"
-                                      >
-                                        <Align
-                                          align={
-                                            Object {
-                                              "offset": Array [
-                                                0,
-                                                -4,
-                                              ],
-                                              "overflow": Object {
-                                                "adjustX": 1,
-                                                "adjustY": 1,
-                                              },
-                                              "points": Array [
-                                                "bc",
-                                                "tc",
-                                              ],
-                                              "targetOffset": Array [
-                                                0,
-                                                0,
-                                              ],
-                                            }
-                                          }
-                                          childrenProps={
-                                            Object {
-                                              "visible": "xVisible",
-                                            }
-                                          }
-                                          disabled={false}
-                                          key="popup"
-                                          monitorBufferTime={50}
-                                          monitorWindowResize={true}
-                                          onAlign={[Function]}
-                                          target={[Function]}
-                                          xVisible={true}
-                                        >
-                                          <PopupInner
-                                            className="hoi-poi-tooltip HoiPoi__Tooltip__root-3-34 hoi-poi-tooltip-placement-top "
-                                            hiddenClassName="hoi-poi-tooltip-hidden"
-                                            onMouseDown={[Function]}
-                                            onMouseEnter={[Function]}
-                                            onMouseLeave={[Function]}
-                                            onTouchStart={[Function]}
-                                            prefixCls="hoi-poi-tooltip"
-                                            style={Object {}}
-                                            visible={true}
-                                          >
-                                            <div
-                                              className="hoi-poi-tooltip HoiPoi__Tooltip__root-3-34 hoi-poi-tooltip-placement-top "
-                                              onMouseDown={[Function]}
-                                              onMouseEnter={[Function]}
-                                              onMouseLeave={[Function]}
-                                              onTouchStart={[Function]}
-                                              style={Object {}}
-                                            >
-                                              <LazyRenderBox
-                                                className="hoi-poi-tooltip-content"
-                                                visible={true}
-                                              >
-                                                <div
-                                                  className="hoi-poi-tooltip-content"
-                                                >
-                                                  <div
-                                                    className="hoi-poi-tooltip-arrow"
-                                                    key="arrow"
-                                                  />
-                                                  <Content
-                                                    key="content"
-                                                    overlay="0%"
-                                                    prefixCls="hoi-poi-tooltip"
-                                                  >
-                                                    <div
-                                                      className="hoi-poi-tooltip-inner"
-                                                      role="tooltip"
-                                                    >
-                                                      0%
-                                                    </div>
-                                                  </Content>
-                                                </div>
-                                              </LazyRenderBox>
-                                            </div>
-                                          </PopupInner>
-                                        </Align>
-                                      </AnimateChild>
-                                    </Animate>
-                                  </div>
-                                </Popup>
-                              </Portal>
-                            </Portal>
                           </Trigger>
                         </Tooltip>
                       </Tooltip>
@@ -2483,6 +2123,14 @@ exports[`Input default match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -2783,7 +2431,6 @@ exports[`Input default match 1`] = `
                               "hover",
                             ]
                           }
-                          visible={true}
                         >
                           <Trigger
                             action={
@@ -3033,10 +2680,8 @@ exports[`Input default match 1`] = `
                             popupPlacement="top"
                             popupStyle={Object {}}
                             popupTransitionName="hoi-poi-tooltip--fade"
-                            popupVisible={true}
                             prefixCls="hoi-poi-tooltip"
                             showAction={Array []}
-                            visible={true}
                           >
                             <Handle
                               className="HoiPoi__Slider__overlayHandler-1-2"
@@ -3077,191 +2722,6 @@ exports[`Input default match 1`] = `
                                 tabIndex={0}
                               />
                             </Handle>
-                            <Portal
-                              didUpdate={[Function]}
-                              getContainer={[Function]}
-                              key="portal"
-                            >
-                              <Portal
-                                containerInfo={
-                                  <div
-                                    style="position: absolute; top: 0px; left: 0px; width: 100%;"
-                                  >
-                                    <div>
-                                      <div
-                                        class="hoi-poi-tooltip HoiPoi__Tooltip__root-1-34 hoi-poi-tooltip-placement-top hoi-poi-tooltip--fade-appear"
-                                        style="left: -991px; top: -1009px;"
-                                      >
-                                        <div
-                                          class="hoi-poi-tooltip-content"
-                                        >
-                                          <div
-                                            class="hoi-poi-tooltip-arrow"
-                                          />
-                                          <div
-                                            class="hoi-poi-tooltip-inner"
-                                            role="tooltip"
-                                          >
-                                            0
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                }
-                              >
-                                <Popup
-                                  action={
-                                    Array [
-                                      "hover",
-                                    ]
-                                  }
-                                  align={
-                                    Object {
-                                      "offset": Array [
-                                        0,
-                                        -4,
-                                      ],
-                                      "overflow": Object {
-                                        "adjustX": 1,
-                                        "adjustY": 1,
-                                      },
-                                      "points": Array [
-                                        "bc",
-                                        "tc",
-                                      ],
-                                      "targetOffset": Array [
-                                        0,
-                                        0,
-                                      ],
-                                    }
-                                  }
-                                  className="HoiPoi__Tooltip__root-1-34"
-                                  destroyPopupOnHide={false}
-                                  getClassNameFromAlign={[Function]}
-                                  getRootDomNode={[Function]}
-                                  mask={false}
-                                  onAlign={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
-                                  onTouchStart={[Function]}
-                                  prefixCls="hoi-poi-tooltip"
-                                  style={Object {}}
-                                  transitionName="hoi-poi-tooltip--fade"
-                                  visible={true}
-                                >
-                                  <div>
-                                    <Animate
-                                      animation={Object {}}
-                                      component=""
-                                      componentProps={Object {}}
-                                      exclusive={true}
-                                      onAppear={[Function]}
-                                      onEnd={[Function]}
-                                      onEnter={[Function]}
-                                      onLeave={[Function]}
-                                      showProp="xVisible"
-                                      transitionAppear={true}
-                                      transitionEnter={true}
-                                      transitionLeave={true}
-                                      transitionName="hoi-poi-tooltip--fade"
-                                    >
-                                      <AnimateChild
-                                        animation={Object {}}
-                                        key="popup"
-                                        transitionAppear={true}
-                                        transitionEnter={true}
-                                        transitionLeave={true}
-                                        transitionName="hoi-poi-tooltip--fade"
-                                      >
-                                        <Align
-                                          align={
-                                            Object {
-                                              "offset": Array [
-                                                0,
-                                                -4,
-                                              ],
-                                              "overflow": Object {
-                                                "adjustX": 1,
-                                                "adjustY": 1,
-                                              },
-                                              "points": Array [
-                                                "bc",
-                                                "tc",
-                                              ],
-                                              "targetOffset": Array [
-                                                0,
-                                                0,
-                                              ],
-                                            }
-                                          }
-                                          childrenProps={
-                                            Object {
-                                              "visible": "xVisible",
-                                            }
-                                          }
-                                          disabled={false}
-                                          key="popup"
-                                          monitorBufferTime={50}
-                                          monitorWindowResize={true}
-                                          onAlign={[Function]}
-                                          target={[Function]}
-                                          xVisible={true}
-                                        >
-                                          <PopupInner
-                                            className="hoi-poi-tooltip HoiPoi__Tooltip__root-1-34 hoi-poi-tooltip-placement-top "
-                                            hiddenClassName="hoi-poi-tooltip-hidden"
-                                            onMouseDown={[Function]}
-                                            onMouseEnter={[Function]}
-                                            onMouseLeave={[Function]}
-                                            onTouchStart={[Function]}
-                                            prefixCls="hoi-poi-tooltip"
-                                            style={Object {}}
-                                            visible={true}
-                                          >
-                                            <div
-                                              className="hoi-poi-tooltip HoiPoi__Tooltip__root-1-34 hoi-poi-tooltip-placement-top "
-                                              onMouseDown={[Function]}
-                                              onMouseEnter={[Function]}
-                                              onMouseLeave={[Function]}
-                                              onTouchStart={[Function]}
-                                              style={Object {}}
-                                            >
-                                              <LazyRenderBox
-                                                className="hoi-poi-tooltip-content"
-                                                visible={true}
-                                              >
-                                                <div
-                                                  className="hoi-poi-tooltip-content"
-                                                >
-                                                  <div
-                                                    className="hoi-poi-tooltip-arrow"
-                                                    key="arrow"
-                                                  />
-                                                  <Content
-                                                    key="content"
-                                                    overlay={0}
-                                                    prefixCls="hoi-poi-tooltip"
-                                                  >
-                                                    <div
-                                                      className="hoi-poi-tooltip-inner"
-                                                      role="tooltip"
-                                                    >
-                                                      0
-                                                    </div>
-                                                  </Content>
-                                                </div>
-                                              </LazyRenderBox>
-                                            </div>
-                                          </PopupInner>
-                                        </Align>
-                                      </AnimateChild>
-                                    </Animate>
-                                  </div>
-                                </Popup>
-                              </Portal>
-                            </Portal>
                           </Trigger>
                         </Tooltip>
                       </Tooltip>
@@ -3582,6 +3042,14 @@ exports[`Input disabled match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -3882,7 +3350,6 @@ exports[`Input disabled match 1`] = `
                               "hover",
                             ]
                           }
-                          visible={false}
                         >
                           <Trigger
                             action={
@@ -4132,10 +3599,8 @@ exports[`Input disabled match 1`] = `
                             popupPlacement="top"
                             popupStyle={Object {}}
                             popupTransitionName="hoi-poi-tooltip--fade"
-                            popupVisible={false}
                             prefixCls="hoi-poi-tooltip"
                             showAction={Array []}
-                            visible={false}
                           >
                             <Handle
                               className="HoiPoi__Slider__overlayHandler-2-2"
