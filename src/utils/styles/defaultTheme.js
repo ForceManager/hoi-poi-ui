@@ -341,6 +341,14 @@ export default {
         },
     },
     utils: {
+        selection: {
+            '& ::selection': {
+                backgroundColor: colors.orange200,
+            },
+            '& ::-moz-selection': {
+                backgroundColor: colors.orange200,
+            },
+        },
         scrollbar: {
             '&::-webkit-scrollbar': {
                 width: 17,

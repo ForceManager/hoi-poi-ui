@@ -15,7 +15,6 @@ function Tooltip({
     className: classNameProp,
     content,
     placement,
-    visible,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -26,13 +25,13 @@ function Tooltip({
     const rootClassName = classnames(classes.root, classNameProp);
 
     const rootProps = {
+        ...props,
         prefixCls: 'hoi-poi-tooltip',
         transitionName: 'hoi-poi-tooltip--fade',
         trigger: ['hover'],
         overlayClassName: rootClassName,
         overlay: content,
         placement,
-        visible,
     };
 
     if (content === undefined || content === null) return children;
@@ -49,14 +48,12 @@ Tooltip.overrides = ['root'];
 Tooltip.defaultProps = {
     overrides: {},
     placement: 'top',
-    visible: false,
 };
 
 Tooltip.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     content: PropTypes.any,
-    visible: PropTypes.bool,
     placement: PropTypes.oneOf([
         'top',
         'topLeft',
