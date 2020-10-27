@@ -16,6 +16,7 @@ import SearchIndicator from './components/SearchIndicator';
 import SingleValue from './components/SingleValue';
 import MultiValueLabel from './components/MultiValueLabel';
 import LoadingIndicator from './components/LoadingIndicator';
+import Menu from './components/Menu';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -35,12 +36,12 @@ const Select = memo(
         isFullWidth,
         isFuzzy,
         isMulti,
+        isRequired,
         isClearable,
         placeholder,
         options,
         defaultValue,
         value,
-        isValueObject,
         onChange,
         onBlur,
         hideSelectedOptions,
@@ -50,10 +51,12 @@ const Select = memo(
         loadingMessage,
         loadingPlaceholder,
         noOptionsMessage,
+        actions,
+        onClickAction,
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
-        const newDefaultValue = defaultValue || value;
+        const [newValue, setNewValue] = useState(defaultValue || value);
         const [innerOptions, setInnerOptions] = useState(options);
         const [lazyOptions, setLazyOptions] = useState({
             areLoaded: false,
@@ -100,6 +103,7 @@ const Select = memo(
 
         const handleOnChange = useCallback(
             (data, action) => {
+                setNewValue(data);
                 onChange && onChange(data);
             },
             [onChange],
@@ -149,8 +153,8 @@ const Select = memo(
         const optionsStyles = useCallback(
             ({ data, isDisabled, isFocused, isSelected }) => {
                 let styles = {
-                    ...newStyles.options,
-                    ...(override.options?.style || {}),
+                    ...newStyles.option,
+                    ...(override.option?.style || {}),
                 };
 
                 if (isDisabled) {
@@ -240,7 +244,13 @@ const Select = memo(
             [override],
         );
 
-        const single = useCallback(
+        const indicatorSeparatorStyles = useMemo(() => {
+            if (newValue && ((isMulti && newValue.length > 0) || (!isMulti && newValue))) {
+                return newStyles.indicatorSeparator;
+            } else return newStyles.indicatorSeparatorHidden;
+        }, [isMulti, newValue]);
+
+        const menuSingle = useCallback(
             (option, data) => {
                 let textClasses = [classes.optionLabelText];
                 let subtitleClasses = [classes.optionLabelSubtitle];
@@ -292,12 +302,12 @@ const Select = memo(
                             </div>
                         )}
 
-                        {!option.description && (
+                        {!option.subLabel && (
                             <div className={textClasses.join(' ')} {...override.label}>
                                 {option.label}
                             </div>
                         )}
-                        {option.description && (
+                        {option.subLabel && (
                             <div
                                 className={classes.optionLabelBlock}
                                 {...override.optionLabelBlock}
@@ -310,9 +320,9 @@ const Select = memo(
                                 </div>
                                 <div
                                     className={subtitleClasses.join(' ')}
-                                    {...override.optionLabelSubtitle}
+                                    {...override.optionLabelSubLabel}
                                 >
-                                    {option.description}
+                                    {option.subLabel}
                                 </div>
                             </div>
                         )}
@@ -322,7 +332,7 @@ const Select = memo(
             [classes, override],
         );
 
-        const multi = useCallback(
+        const menuMulti = useCallback(
             (option, data) => {
                 const isSelected = value
                     ? !!value.find((item) => item.value === option.value)
@@ -372,10 +382,10 @@ const Select = memo(
 
         const formatOptionLabel = useCallback(
             (option, data) => {
-                if (isMulti) return multi(option, data);
-                else return single(option, data);
+                if (isMulti) return menuMulti(option, data);
+                else return menuSingle(option, data);
             },
-            [isMulti, multi, single],
+            [isMulti, menuMulti, menuSingle],
         );
 
         const formatGroupLabel = useCallback(
@@ -387,9 +397,10 @@ const Select = memo(
             [classes],
         );
 
-        const indicatorSeparator = useMemo(() => {
-            return newStyles.indicatorSeparator;
-        }, []);
+        const newIsClearable = useMemo(() => {
+            if (isRequired) return false;
+            else return isClearable;
+        }, [isRequired, isClearable]);
 
         const selectProps = useMemo(() => {
             return {
@@ -397,13 +408,15 @@ const Select = memo(
                 classNamePrefix: 'hoi-poi-select',
                 placeholder,
                 options: lazyOptions.options || innerOptions,
+                // defaultOptions: true,
                 noOptionsMessage,
                 loadingMessage,
-                defaultValue: newDefaultValue,
+                defaultValue: newValue,
                 defaultMenuIsOpen,
+                actions,
                 isMulti,
                 isDisabled: isReadOnly,
-                isClearable: isMulti ? true : isClearable,
+                isClearable: isMulti ? true : newIsClearable,
                 isLoading: lazyOptions.isLoading,
                 autoFocus: focused,
                 hideSelectedOptions: isMulti ? false : hideSelectedOptions,
@@ -424,6 +437,24 @@ const Select = memo(
                     SingleValue,
                     MultiValueLabel,
                     LoadingIndicator,
+                    Menu: Menu({
+                        className: classes.menu,
+                        actionContainerClassName: classes.actionContainer,
+                        actionClassName: classes.action,
+                        actionIconClassName: classes.actionIcon,
+                        actionTextClassName: classes.actionText,
+                        actionTextWithIconClassName: classes.actionTextWithIcon,
+                        actions,
+                        onClickAction,
+                        override: {
+                            menu: override.menu,
+                            actionContainer: override.actionContainer,
+                            action: override.action,
+                            actionIcon: override.actionIcon,
+                            actionText: override.actionText,
+                            actionTextWithIcon: override.actionTextWithIcon,
+                        },
+                    }),
                 },
                 styles: {
                     menuPortal: (base) => ({ ...base, zIndex: 9999 }),
@@ -455,7 +486,7 @@ const Select = memo(
                     }),
                     indicatorSeparator: (styles) => ({
                         ...styles,
-                        ...indicatorSeparator,
+                        ...indicatorSeparatorStyles,
                         ...(override.indicatorSeparator?.style || {}),
                     }),
                     dropdownIndicator: (styles) => ({
@@ -490,10 +521,12 @@ const Select = memo(
                 ...override['react-select'],
             };
         }, [
+            actions,
+            onClickAction,
             isMulti,
-            isClearable,
             isReadOnly,
             isFuzzy,
+            newIsClearable,
             loadOptions,
             loadingMessage,
             noOptionsMessage,
@@ -501,12 +534,12 @@ const Select = memo(
             placeholder,
             defaultMenuIsOpen,
             hideSelectedOptions,
+            classes,
             innerOptions,
             lazyOptions,
-            newDefaultValue,
+            newValue,
             selectClassName,
             focused,
-            indicatorSeparator,
             override,
             handleOnChange,
             handleOnFocus,
@@ -519,6 +552,7 @@ const Select = memo(
             placeholderStyles,
             multiValueLabelStyles,
             multiValueRemoveStyles,
+            indicatorSeparatorStyles,
         ]);
 
         let SelectComponent = RSelect;
@@ -534,6 +568,7 @@ const Select = memo(
                 className={rootClassName}
                 overrides={overridesProp}
                 isFullWidth={isFullWidth}
+                isRequired={isRequired}
             >
                 <div className={classes.inputComponents} {...override.inputComponents}>
                     <SelectComponent {...selectProps} />
@@ -543,7 +578,34 @@ const Select = memo(
     },
 );
 
-Select.overrides = ['root', 'react-select'];
+Select.overrides = [
+    'root',
+    'react-select',
+    'inputComponents',
+    'control',
+    'controlFocused',
+    'options',
+    'optionsDisabled',
+    'valueContainer',
+    'valueContainerDisabled',
+    'placeholder',
+    'placeholderDisabled',
+    'multipleValueLabel',
+    'multipleValueLabelDisabled',
+    'multipleValueRemove',
+    'multipleValueRemoveDisabled',
+    'optionLabel',
+    'optionLabelIcon',
+    'optionLabelCustomIcon',
+    'optionLabelAvatar',
+    'disabledAvatar',
+    'disabledText',
+    'disabledIcon',
+    'label',
+    'optionLabelBlock',
+    'optionLabelText',
+    'optionLabelSubLabel',
+];
 
 Select.defaultProps = {
     labelMode: 'vertical',
@@ -553,7 +615,6 @@ Select.defaultProps = {
     hideSelectedOptions: true,
     isClearable: true,
     overrides: {},
-    isValueObject: true,
     hideOptions: false,
     filterByKey: false,
 };
@@ -580,7 +641,7 @@ Select.propTypes = {
             src: PropTypes.string,
             icon: PropTypes.element,
             iconType: PropTypes.string,
-            description: PropTypes.string,
+            subLabel: PropTypes.string,
         }),
     ),
     value: PropTypes.any,
@@ -604,8 +665,6 @@ Select.propTypes = {
     components: PropTypes.object,
     /** multiple select support */
     isMulti: PropTypes.bool,
-    /** Use value as a object { label, value } or as the value */
-    isValueObject: PropTypes.bool,
     /** Fixed actions added at the bottom con menu list */
     actions: PropTypes.arrayOf(
         PropTypes.shape({

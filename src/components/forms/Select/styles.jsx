@@ -5,17 +5,36 @@ export default (theme) => ({
             width: '100%',
             flex: 1,
         },
-        // '& $formControl': {
-        //     width: '100%',
-        //     '& $inputComponents': {
-        //         width: '100%',
-        //         flex: 1,
-        //     },
-        // },
     },
     async: {},
     select: {},
     isMulti: {},
+    menu: {},
+    actionContainer: {
+        borderTop: '1px solid',
+        borderTopColor: theme.colors.neutral400,
+    },
+    action: {
+        height: '40px',
+        padding: '0 16px',
+        display: 'flex',
+        alignItems: 'center',
+        cursor: 'pointer',
+    },
+    actionIcon: {
+        width: 20,
+        height: 20,
+    },
+    actionText: {
+        ...theme.typography.button,
+        marginLeft: 0,
+        color: theme.colors.orange500,
+    },
+    actionTextWithIcon: {
+        ...theme.typography.button,
+        marginLeft: 8,
+        color: theme.colors.orange500,
+    },
     optionLabel: {
         display: 'flex',
         alignItems: 'center',
@@ -112,12 +131,14 @@ export default (theme) => ({
     },
     valueContainer: {
         color: theme.colors.neutral900,
+        padding: '2px 10px',
     },
     valueContainerDisabled: {
         color: theme.colors.neutral700,
     },
-    options: {
+    option: {
         ...theme.typography.body,
+        padding: '8px 16px',
         color: theme.colors.neutral900,
         backgroundColor: theme.colors.neutralBase,
         transition: 'all 0.15s ease',
@@ -133,7 +154,7 @@ export default (theme) => ({
         },
     },
     multiValue: {
-        margin: 4,
+        margin: '4px 6px 4px 2px',
         padding: '3px 6px 3px 8px',
         border: 'none',
         borderRadius: '20px',
@@ -179,6 +200,7 @@ export default (theme) => ({
         ...theme.typography.body,
     },
     indicatorsContainer: {
+        height: 34,
         alignSelf: 'flex-start',
     },
     clearIndicator: {
@@ -193,6 +215,9 @@ export default (theme) => ({
         width: 2,
         alignSelf: 'center',
         backgroundColor: theme.colors.neutral400,
+    },
+    indicatorSeparatorHidden: {
+        display: 'none',
     },
     dropdownIndicator: {
         padding: 4,

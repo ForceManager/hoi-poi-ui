@@ -178,6 +178,8 @@ Navigation:
 <span> </span>
 <Icon name="dragAndDrop"/>
 <span> </span>
+<Icon name="plus"/>
+<span> </span>
 <Icon name="expandLess"/>
 <span> </span>
 <Icon name="expandMore"/>

@@ -58,33 +58,6 @@ States BiTone
 </div>
 ```
 
-States Custom
-
-```jsx
-const colors = {
-    unchecked: 'violet',
-    uncheckedDisabled: 'indigo',
-    checked: 'blue',
-    checkedDisabled: 'green',
-    indeterminate: 'yellow',
-    indeterminateDisabled: 'orange',
-};
-
-<div>
-    <Checkbox colors={colors}/>
-    <span> </span>
-    <Checkbox colors={colors} checked />
-    <span> </span>
-    <Checkbox colors={colors} checked indeterminate />
-    <br />
-    <Checkbox colors={colors} isDisabled />
-    <span> </span>
-    <Checkbox colors={colors} checked isDisabled />
-    <span> </span>
-    <Checkbox colors={colors} checked indeterminate isDisabled />
-</div>
-```
-
 Custom color:
 
 ```jsx

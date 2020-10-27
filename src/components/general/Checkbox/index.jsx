@@ -30,7 +30,6 @@ function Checkbox({
     isDisabled,
     onChange,
     color: colorProp,
-    colors,
     isBiTone,
     ...props
 }) {
@@ -58,16 +57,6 @@ function Checkbox({
                         ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
                         : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
                 }
-            } else if (colors && colors.checked) {
-                if (colors[checkState]) {
-                    return isDisabled
-                        ? colors[`${checkState}Disabled`] || colors[checkState]
-                        : colors[checkState];
-                } else {
-                    return isDisabled
-                        ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
-                        : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
-                }
             } else {
                 if (colorProp === 'neutral') {
                     return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
@@ -77,7 +66,7 @@ function Checkbox({
                     : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
             }
         },
-        [colorProp, isDisabled, theme.colors, colors, isBiTone],
+        [colorProp, isDisabled, theme.colors, isBiTone],
     );
 
     const rootProps = {
@@ -133,7 +122,6 @@ Checkbox.propTypes = {
     onChange: PropTypes.func,
     isDisabled: PropTypes.bool,
     color: PropTypes.oneOf(defaultColors),
-    colors: PropTypes.object,
 };
 
 export default React.memo(Checkbox);
