@@ -7,6 +7,7 @@ export default (theme) => ({
     },
     header: {
         display: 'flex',
+        justifyContent: 'space-between',
         alignItems: 'center',
         height: 40,
         boxSizing: 'border-box',
@@ -24,6 +25,9 @@ export default (theme) => ({
     isExpandable: {
         cursor: 'pointer',
     },
+    titleContainer: {
+        display: 'flex',
+    },
     Text: {
         color: theme.colors.neutral700,
         transition: 'all 0.15s ease',
@@ -31,17 +35,38 @@ export default (theme) => ({
     icon: {
         marginRight: 4,
         lineHeight: '0',
-        transition: 'transform 0.3s ease-out',
-        willChange: 'transform',
-        transform: 'rotate(-90deg) translateY(0px)',
+        alignSelf: 'center',
         cursor: 'pointer',
+        '& svg': {
+            willChange: 'transform',
+            transition: 'transform 0.3s ease-out',
+            transform: 'rotate(-90deg) translateY(0px)',
+        },
+    },
+    activeFields: {
+        minWidth: 18,
+        height: 20,
+        padding: '0px 3px',
+        borderRadius: 18,
+        backgroundColor: theme.colors.orange100,
+        color: theme.colors.orange500,
+        position: 'relative',
+        '& span': {
+            position: 'absolute',
+            marginTop: 1,
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+        },
     },
     open: {
         '& $Text': {
             color: theme.colors.neutral900,
         },
         '& $icon': {
-            transform: 'rotate(0deg) translateY(0px)',
+            '& svg': {
+                transform: 'rotate(0deg) translateY(0px)',
+            },
             '& svg path': {
                 fill: theme.colors.neutral900,
             },

@@ -22,6 +22,7 @@ const Section = memo(
         isExpandable,
         defaultOpen,
         onChange,
+        activeFields,
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -55,14 +56,28 @@ const Section = memo(
             return title;
         }, [classes.Text, override.Text, title]);
 
+        const newActiveFields = useMemo(() => {
+            if (!activeFields) return null;
+            return (
+                <div className={classes.activeFields}>
+                    <Text bold type="subtitle">
+                        {activeFields}
+                    </Text>
+                </div>
+            );
+        }, [classes, activeFields]);
+
         if (title && isExpandable) {
             return (
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} onClick={onToggle} {...override.header}>
-                        <div className={classes.icon} {...override.icon}>
-                            <Icon name="arrowDropDown" />
+                        <div className={classes.titleContainer}>
+                            <div className={classes.icon} {...override.icon}>
+                                <Icon name="arrowDropDown" />
+                            </div>
+                            {renderTitle}
                         </div>
-                        {renderTitle}
+                        {newActiveFields}
                     </div>
                     <AnimateHeight
                         height={isOpen ? 'auto' : 0}
@@ -76,7 +91,8 @@ const Section = memo(
             return (
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} {...override.header}>
-                        {renderTitle}
+                        <div className={classes.titleContainer}>{renderTitle}</div>
+                        {newActiveFields}
                     </div>
                     {children}
                 </div>
@@ -99,10 +115,16 @@ Section.defaultProps = {
 };
 Section.propTypes = {
     className: PropTypes.string,
-    overrides: PropTypes.object,
     title: PropTypes.any,
     defaultOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
+    activeFields: PropTypes.number,
+    overrides: PropTypes.shape({
+        root: PropTypes.object,
+        header: PropTypes.object,
+        Text: PropTypes.object,
+        icon: PropTypes.object,
+    }),
 };
 
 export default Section;

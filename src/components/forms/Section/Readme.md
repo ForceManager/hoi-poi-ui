@@ -1,3 +1,5 @@
+Section Simple
+
 ```jsx
 import { Input } from 'hoi-poi-ui';
 import { useState } from 'react';
@@ -7,6 +9,29 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 
 <div style={{padding: 20, backgroundColor: '#F4F5F6'}}>
     <Section title="Title here">
+        <Input
+            label="Lorem ipsum"
+            placeholder="Write here"
+            onChange={onChange}
+            value={state.value}
+        />
+    </Section>
+</div>
+```
+
+Section With ActiveFields
+
+```jsx
+import { Input } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({value: 'Lorem ipsum', activeFields: 1});
+const onChange = (e) => {
+    setState({ value: e && e.target ? e.target.value : '', activeFields: e && e.target && e.target.value ? 1 : 0 });
+}
+
+<div style={{padding: 20, backgroundColor: '#F4F5F6'}}>
+    <Section title="Title here" activeFields={state.activeFields}>
         <Input
             label="Lorem ipsum"
             placeholder="Write here"
