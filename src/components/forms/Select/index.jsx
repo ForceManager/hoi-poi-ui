@@ -250,10 +250,14 @@ const Select = memo(
         );
 
         const indicatorSeparatorStyles = useMemo(() => {
-            if (newValue && ((isMulti && newValue.length > 0) || (!isMulti && newValue))) {
+            if (
+                !isReadOnly &&
+                newValue &&
+                ((isMulti && newValue.length > 0) || (!isMulti && newValue))
+            ) {
                 return newStyles.indicatorSeparator;
             } else return newStyles.indicatorSeparatorHidden;
-        }, [isMulti, newValue]);
+        }, [isReadOnly, isMulti, newValue]);
 
         const formatOptionLabel = useCallback(
             (option) => {
