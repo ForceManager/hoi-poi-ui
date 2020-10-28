@@ -87,7 +87,7 @@ const RichText = memo(
                 });
                 setEditorContent({});
             },
-            [setEditorContent, setEditorState],
+            [setEditorContent, setEditorState, setFocused],
         );
 
         const handleClick = useCallback(
