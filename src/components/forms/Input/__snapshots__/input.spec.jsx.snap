@@ -284,6 +284,14 @@ exports[`Input default match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -464,7 +472,7 @@ exports[`Input default match 1`] = `
                     type="body"
                   >
                     <span
-                      className="HoiPoi__Text__root-1-33 HoiPoi__Label__Text-1-30 HoiPoi__Text__body-1-44"
+                      className="HoiPoi__Text__root-1-33 HoiPoi__Label__Text-1-30 HoiPoi__Text__body-1-43"
                     >
                       Lorem ipsum
                     </span>
@@ -503,7 +511,7 @@ exports[`Input default match 1`] = `
                         size="large"
                       >
                         <span
-                          className="HoiPoi__Icon__root-1-50 HoiPoi__Icon__large-1-53 HoiPoi__Icon__clickable-1-56"
+                          className="HoiPoi__Icon__root-1-51 HoiPoi__Icon__large-1-54 HoiPoi__Icon__clickable-1-57"
                           onClick={[Function]}
                           onMouseDown={[Function]}
                           onMouseOut={[Function]}
@@ -828,6 +836,14 @@ exports[`Input is read only match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -1008,7 +1024,7 @@ exports[`Input is read only match 1`] = `
                     type="body"
                   >
                     <span
-                      className="HoiPoi__Text__root-5-33 HoiPoi__Label__Text-5-30 HoiPoi__Text__body-5-44"
+                      className="HoiPoi__Text__root-5-33 HoiPoi__Label__Text-5-30 HoiPoi__Text__body-5-43"
                     >
                       Lorem ipsum
                     </span>
@@ -1045,7 +1061,7 @@ exports[`Input is read only match 1`] = `
                         size="medium"
                       >
                         <span
-                          className="HoiPoi__Icon__root-5-50 HoiPoi__Icon__medium-5-52"
+                          className="HoiPoi__Icon__root-5-51 HoiPoi__Icon__medium-5-53"
                           onMouseDown={[Function]}
                           onMouseOut={[Function]}
                           onMouseOver={[Function]}
@@ -1368,6 +1384,14 @@ exports[`Input is required match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -1551,7 +1575,7 @@ exports[`Input is required match 1`] = `
                     type="body"
                   >
                     <span
-                      className="HoiPoi__Text__root-3-33 HoiPoi__Label__Text-3-30 HoiPoi__Text__body-3-44"
+                      className="HoiPoi__Text__root-3-33 HoiPoi__Label__Text-3-30 HoiPoi__Text__body-3-43"
                     >
                       Lorem ipsum
                       *
@@ -1876,6 +1900,14 @@ exports[`Input vertical label mode match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -2056,7 +2088,7 @@ exports[`Input vertical label mode match 1`] = `
                     type="body"
                   >
                     <span
-                      className="HoiPoi__Text__root-6-33 HoiPoi__Label__Text-6-30 HoiPoi__Text__body-6-44"
+                      className="HoiPoi__Text__root-6-33 HoiPoi__Label__Text-6-30 HoiPoi__Text__body-6-43"
                     >
                       Lorem ipsum
                     </span>
@@ -2380,6 +2412,14 @@ exports[`Input with error match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -2562,7 +2602,7 @@ exports[`Input with error match 1`] = `
                     type="body"
                   >
                     <span
-                      className="HoiPoi__Text__root-4-33 HoiPoi__Label__Text-4-30 HoiPoi__Text__body-4-44"
+                      className="HoiPoi__Text__root-4-33 HoiPoi__Label__Text-4-30 HoiPoi__Text__body-4-43"
                     >
                       Lorem ipsum
                     </span>
@@ -2594,7 +2634,17 @@ exports[`Input with error match 1`] = `
               className=""
               error="I am an error"
               overrides={Object {}}
-            />
+            >
+              <div
+                className="HoiPoi__FieldBottom__root-4-51"
+              >
+                <div
+                  className="HoiPoi__FieldBottom__error-4-54"
+                >
+                  I am an error
+                </div>
+              </div>
+            </Component>
           </div>
         </Component>
       </Component>
@@ -2887,6 +2937,14 @@ exports[`Input with hint match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -3070,7 +3128,7 @@ exports[`Input with hint match 1`] = `
                     type="body"
                   >
                     <span
-                      className="HoiPoi__Text__root-2-33 HoiPoi__Label__Text-2-30 HoiPoi__Text__body-2-44"
+                      className="HoiPoi__Text__root-2-33 HoiPoi__Label__Text-2-30 HoiPoi__Text__body-2-43"
                     >
                       Lorem ipsum
                     </span>
@@ -3092,7 +3150,7 @@ exports[`Input with hint match 1`] = `
                       mouseEnterDelay={0}
                       mouseLeaveDelay={0.1}
                       overlay="Hello"
-                      overlayClassName="HoiPoi__Popover__root-2-50"
+                      overlayClassName="HoiPoi__Popover__root-2-51"
                       placement="top"
                       prefixCls="hoi-poi-popover"
                       transitionName="hoi-poi-popover--fade"
@@ -3346,7 +3404,7 @@ exports[`Input with hint match 1`] = `
                         overlay="Hello"
                         popup={[Function]}
                         popupAlign={Object {}}
-                        popupClassName="HoiPoi__Popover__root-2-50"
+                        popupClassName="HoiPoi__Popover__root-2-51"
                         popupPlacement="top"
                         popupStyle={Object {}}
                         popupTransitionName="hoi-poi-popover--fade"
@@ -3366,7 +3424,7 @@ exports[`Input with hint match 1`] = `
                             size="medium"
                           >
                             <span
-                              className="HoiPoi__Icon__root-2-51 HoiPoi__Icon__medium-2-53 HoiPoi__Label__icon-2-32"
+                              className="HoiPoi__Icon__root-2-52 HoiPoi__Icon__medium-2-54 HoiPoi__Label__icon-2-32"
                               onMouseDown={[Function]}
                               onMouseOut={[Function]}
                               onMouseOver={[Function]}
@@ -3711,6 +3769,14 @@ exports[`Input with pre/post component match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -3901,7 +3967,7 @@ exports[`Input with pre/post component match 1`] = `
                     type="body"
                   >
                     <span
-                      className="HoiPoi__Text__root-7-33 HoiPoi__Label__Text-7-30 HoiPoi__Text__body-7-44"
+                      className="HoiPoi__Text__root-7-33 HoiPoi__Label__Text-7-30 HoiPoi__Text__body-7-43"
                     >
                       Lorem ipsum
                     </span>

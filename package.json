@@ -1,6 +1,6 @@
 {
     "name": "hoi-poi-ui",
-    "version": "0.0.38",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "module": "dist/esm/index.js",
     "scripts": {
@@ -14,7 +14,8 @@
         "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./babel.config.js ./src --out-dir ./dist/es --ignore \"**/*.spec.jsx\"",
         "build:umd": "cross-env BABEL_ENV=umd rollup -c rollup.config.js",
         "build:watch": "yarn build:esm --watch",
-        "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f",
+        "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f ",
+        "release-next": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f --tag next",
         "test": " cross-env NODE_ENV=test jest",
         "test:snapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
         "gh-pages": "cross-env NODE_ENV=production styleguidist build && gh-pages -d styleguide --repo https://$GH_TOKEN@github.com/ForceManager/hoi-poi-ui.git"
@@ -117,6 +118,12 @@
         "classnames": "^2.2.6",
         "core-js": "^3.6.5",
         "deepmerge": "^4.2.2",
+        "draft-js": "^0.11.7",
+        "draft-js-buttons": "^2.0.2",
+        "draft-js-export-html": "^1.4.1",
+        "draft-js-import-html": "^1.4.1",
+        "draft-js-inline-toolbar-plugin": "^3.0.1",
+        "draft-js-plugins-editor": "^3.0.0",
         "jss": "^10.3.0",
         "prop-types": "^15.7.2",
         "rc-menu": "^8.3.1",

@@ -11,9 +11,7 @@ import { Icon, Text } from 'hoi-poi-ui';
 const titleComponent = (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
         <Icon name="thickEnabled" />
-        <Text type="bold" style={{ marginLeft: 10 }}>
-            Title here
-        </Text>
+        <Text style={{ marginLeft: 10 }}>Title here</Text>
     </div>
 );
 
