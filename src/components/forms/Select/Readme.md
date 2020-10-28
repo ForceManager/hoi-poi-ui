@@ -560,11 +560,14 @@ const options = [
         value: 'lorem-ipsum-4',
     },
 ];
-const loadOptions = () =>
+const loadOptions = (text, cb) =>
     new Promise(
         (resolve, reject) =>
             setTimeout(() => {
-                resolve(options);
+                const newOptions = options.filter((current) => {
+                    return current.value.includes(text);
+                });
+                resolve(newOptions);
             }, 1000),
         [],
     );
@@ -598,11 +601,14 @@ for (let i = 0; i < total; i++) {
     });
 }
 
-const loadOptions = () =>
+const loadOptions = (text, cb) =>
     new Promise(
         (resolve, reject) =>
             setTimeout(() => {
-                resolve(options);
+                const newOptions = options.filter((current) => {
+                    return current.value.includes(text);
+                });
+                resolve(newOptions);
             }, 1000),
         [],
     );
@@ -667,7 +673,6 @@ const onChange = (value) => setState({ value });
             {
                 label: 'Create new lorem ipsum',
                 onClick: () => console.log('click'),
-                iconType: 'plus',
                 isLink: true,
             },
             {

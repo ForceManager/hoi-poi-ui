@@ -30,7 +30,7 @@ function Checkbox({
     isDisabled,
     onChange,
     color: colorProp,
-    isBiTone,
+    isMonoTone,
     ...props
 }) {
     const theme = useTheme();
@@ -49,7 +49,14 @@ function Checkbox({
 
     const getColor = useCallback(
         (checkState) => {
-            if (isBiTone) {
+            if (isMonoTone) {
+                if (colorProp === 'neutral') {
+                    return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
+                }
+                return isDisabled
+                    ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
+                    : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
+            } else {
                 if (checkState === 'unchecked') {
                     return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
                 } else {
@@ -57,16 +64,9 @@ function Checkbox({
                         ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
                         : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
                 }
-            } else {
-                if (colorProp === 'neutral') {
-                    return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
-                }
-                return isDisabled
-                    ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
-                    : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
             }
         },
-        [colorProp, isDisabled, theme.colors, isBiTone],
+        [colorProp, isDisabled, theme.colors, isMonoTone],
     );
 
     const rootProps = {

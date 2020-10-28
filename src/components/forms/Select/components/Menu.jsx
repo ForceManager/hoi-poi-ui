@@ -53,7 +53,7 @@ export default ({
                     )}
                     <div className={textClasses} {...textOverride}>
                         {action.isLink && <Link>{action.label}</Link>}
-                        {!action.isLink && <Text>{action.label}</Text>}
+                        {!action.isLink && <Text type="button">{action.label}</Text>}
                     </div>
                 </div>
             );

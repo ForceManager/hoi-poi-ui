@@ -20,18 +20,30 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         cursor: 'pointer',
+        transition: 'all 0.15s ease',
+        '&:hover': {
+            '& $actionIcon': {
+                '& svg path': {
+                    fill: theme.colors.orange600,
+                },
+            },
+            '& $actionText': {
+                color: theme.colors.orange600,
+            },
+            '& $actionTextWithIcon': {
+                color: theme.colors.orange600,
+            },
+        },
     },
     actionIcon: {
         width: 20,
         height: 20,
     },
     actionText: {
-        ...theme.typography.button,
         marginLeft: 0,
         color: theme.colors.orange500,
     },
     actionTextWithIcon: {
-        ...theme.typography.button,
         marginLeft: 8,
         color: theme.colors.orange500,
     },

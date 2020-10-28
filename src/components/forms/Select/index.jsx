@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createFilter, filterKeyValue } from './utils'; // Local utils
-import Icon from '../../general/Icon';
-import Avatar from '../../general/Avatar';
 import InputWrapper from '../components/InputWrapper';
 import { default as RSelect } from 'react-select';
 import AsyncSelect from 'react-select/async';
-import Checkbox from '../../general/Checkbox';
 
 import DropdownIndicator from './components/DropdownIndicator';
 import ClearIndicator from './components/ClearIndicator';
@@ -17,6 +14,8 @@ import SingleValue from './components/SingleValue';
 import MultiValueLabel from './components/MultiValueLabel';
 import LoadingIndicator from './components/LoadingIndicator';
 import Menu from './components/Menu';
+import MenuSingle from './components/MenuSingle';
+import MenuMulti from './components/MenuMulti';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -31,7 +30,6 @@ const Select = memo(
         classes: classesProp,
         overrides: overridesProp,
         className: classNameProp,
-        type = 'checkboxAndBullet',
         isReadOnly,
         isFullWidth,
         isFuzzy,
@@ -46,7 +44,7 @@ const Select = memo(
         onBlur,
         hideSelectedOptions,
         filterByKey,
-        defaultMenuIsOpen = false,
+        defaultMenuIsOpen,
         loadOptions,
         loadingMessage,
         loadingPlaceholder,
@@ -57,7 +55,7 @@ const Select = memo(
     }) => {
         const [focused, setFocused] = useState(false);
         const [newValue, setNewValue] = useState(defaultValue || value);
-        const [innerOptions, setInnerOptions] = useState(options);
+        const [innerOptions, setInnerOptions] = useState(options || []);
         const [lazyOptions, setLazyOptions] = useState({
             areLoaded: false,
             options: null,
@@ -84,8 +82,8 @@ const Select = memo(
         const loadOptionsCb = useCallback(
             (text, cb) => {
                 if (debounce.current) clearTimeout(debounce.current);
+                if (!loadOptions) return cb();
                 debounce.current = setTimeout(() => {
-                    if (!loadOptions) return cb();
                     const loader = loadOptions(text, cb);
                     if (loader && typeof loader.then === 'function') {
                         loader.then(
@@ -250,142 +248,12 @@ const Select = memo(
             } else return newStyles.indicatorSeparatorHidden;
         }, [isMulti, newValue]);
 
-        const menuSingle = useCallback(
-            (option, data) => {
-                let textClasses = [classes.optionLabelText];
-                let subtitleClasses = [classes.optionLabelSubtitle];
-                let iconClasses = [classes.optionLabelIcon];
-                let customIconClasses = [classes.optionLabelCustomIcon];
-
-                if (option.isDisabled) {
-                    textClasses.push(classes.disabledText);
-                    subtitleClasses.push(classes.disabledText);
-                    iconClasses.push(classes.disabledIcon);
-                    customIconClasses.push(classes.disabledIcon);
-                }
-                return (
-                    <div className={classes.optionLabel} {...override.optionLabel}>
-                        {option.iconType && (
-                            <Icon
-                                className={iconClasses.join(' ')}
-                                name={option.iconType}
-                                color={option.iconColor || null}
-                                size="medium"
-                                {...override.optionLabelIcon}
-                            />
-                        )}
-                        {option.icon && (
-                            <div
-                                className={customIconClasses.join(' ')}
-                                {...override.optionLabelCustomIcon}
-                            >
-                                {option.icon}
-                            </div>
-                        )}
-                        {option.src && (
-                            <div
-                                className={classes.optionLabelAvatar}
-                                {...override.optionLabelAvatar}
-                            >
-                                {option.isDisabled && (
-                                    <div
-                                        className={classes.disabledAvatar}
-                                        {...override.disabledAvatar}
-                                    />
-                                )}
-                                <Avatar
-                                    size="small"
-                                    src={option.src}
-                                    placeholder={option.placeholder || ''}
-                                    alt={option.alt}
-                                />
-                            </div>
-                        )}
-
-                        {!option.subLabel && (
-                            <div className={textClasses.join(' ')} {...override.label}>
-                                {option.label}
-                            </div>
-                        )}
-                        {option.subLabel && (
-                            <div
-                                className={classes.optionLabelBlock}
-                                {...override.optionLabelBlock}
-                            >
-                                <div
-                                    className={textClasses.join(' ')}
-                                    {...override.optionLabelText}
-                                >
-                                    {option.label}
-                                </div>
-                                <div
-                                    className={subtitleClasses.join(' ')}
-                                    {...override.optionLabelSubLabel}
-                                >
-                                    {option.subLabel}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                );
-            },
-            [classes, override],
-        );
-
-        const menuMulti = useCallback(
-            (option, data) => {
-                const isSelected = value
-                    ? !!value.find((item) => item.value === option.value)
-                    : false;
-                let bulletClasses = [classes.optionLabelBullet];
-                let textClasses = [classes.optionLabelText];
-
-                if (option.isDisabled) {
-                    bulletClasses.push(classes.optionLabelBulletDisabled);
-                } else if (option.type) {
-                    if (option.type === 'primary')
-                        bulletClasses.push(classes.optionLabelBulletPrimary);
-                    if (option.type === 'danger')
-                        bulletClasses.push(classes.optionLabelBulletDanger);
-                    if (option.type === 'success')
-                        bulletClasses.push(classes.optionLabelBulletSuccess);
-                }
-
-                if (option.isDisabled) {
-                    textClasses.push(classes.disabledText);
-                }
-
-                return (
-                    <div className={classes.optionLabel} {...override.optionLabel}>
-                        <Checkbox
-                            className={classes.optionLabelCheckbox}
-                            checked={isSelected}
-                            color="orange"
-                            isDisabled={option.isDisabled || false}
-                            isBiTone={true}
-                            {...override.optionLabelCheckbox}
-                        />
-                        {option.type && (
-                            <div
-                                className={bulletClasses.join(' ')}
-                                {...override.optionLabelBullet}
-                            />
-                        )}
-                        <div className={textClasses.join(' ')} {...override.optionLabelText}>
-                            {option.label}
-                        </div>
-                    </div>
-                );
-            },
-            [classes, value, override],
-        );
-
         const formatOptionLabel = useCallback(
-            (option, data) => {
-                if (isMulti) return menuMulti(option, data);
-                else return menuSingle(option, data);
+            (option) => {
+                if (isMulti) return MenuMulti({ option, value: newValue, classes, override });
+                else return MenuSingle({ option, classes, override });
             },
-            [isMulti, menuMulti, menuSingle],
+            [isMulti, classes, override, newValue],
         );
 
         const formatGroupLabel = useCallback(
@@ -408,7 +276,8 @@ const Select = memo(
                 classNamePrefix: 'hoi-poi-select',
                 placeholder,
                 options: lazyOptions.options || innerOptions,
-                // defaultOptions: true,
+                defaultOptions: innerOptions,
+                cacheOptions: true,
                 noOptionsMessage,
                 loadingMessage,
                 defaultValue: newValue,
@@ -605,6 +474,11 @@ Select.overrides = [
     'optionLabelBlock',
     'optionLabelText',
     'optionLabelSubLabel',
+    'actionContainer',
+    'action',
+    'actionIcon',
+    'actionText',
+    'actionTextWithIcon',
 ];
 
 Select.defaultProps = {
@@ -617,6 +491,7 @@ Select.defaultProps = {
     overrides: {},
     hideOptions: false,
     filterByKey: false,
+    defaultMenuIsOpen: false,
 };
 
 Select.propTypes = {
