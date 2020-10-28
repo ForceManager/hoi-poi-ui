@@ -86,7 +86,6 @@ const RichText = memo(
                     return newState;
                 });
                 setEditorContent({});
-                // editorEl.current.focus();
             },
             [setEditorContent, setEditorState],
         );
