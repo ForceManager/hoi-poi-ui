@@ -35,11 +35,11 @@ function DatePicker({
     formatDate,
     onChange,
     value,
-    type,
     outputType,
     lang,
     isReadOnly,
     calendarButtonLabel,
+    placeholder,
     ...props
 }) {
     const flatpickrRef = useRef();
@@ -53,38 +53,15 @@ function DatePicker({
     const rootClassName = classnames(classes.root, classNameProp);
 
     const flatpickrOptions = useMemo(() => {
-        const defaultDateFormats = { date: 'd M Y', datetime: 'Y-m-d H:i:S', time: 'H:i' };
         return {
-            enableTime: type !== 'date',
-            noCalendar: type === 'time',
-            dateFormat: dateFormat || defaultDateFormats[type],
+            dateFormat: dateFormat || 'd M Y',
             formatDate,
             locale: flatpickrl10n[lang],
             clickOpens: !isReadOnly,
             time_24hr: true,
             ...override.flatpickrOptions,
         };
-    }, [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions, type]);
-
-    const clicked = useCallback(() => {
-        onChange && onChange(new Date());
-    }, [onChange]);
-
-    const todayButton = useMemo(() => {
-        const div = document.createElement('div');
-        div.className = classes.todayContainer;
-        div.addEventListener('click', () => clicked());
-        div.innerHTML = calendarButtonLabel;
-        return div;
-    }, [classes, clicked, calendarButtonLabel]);
-
-    const onReady = useCallback(
-        (_, __, fp) => {
-            fp.calendarContainer.classList.add(classes.container);
-            if (fp.rContainer) fp.rContainer.appendChild(todayButton);
-        },
-        [classes.container, todayButton],
-    );
+    }, [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions]);
 
     const onChangeDate = useCallback(
         (date) => {
@@ -92,7 +69,6 @@ function DatePicker({
                 outputType === 'string'
                     ? flatpickr.formatDate(date[0], flatpickrOptions.dateFormat)
                     : date[0];
-
             onChange && onChange(formattedDate, name);
         },
         [flatpickrOptions.dateFormat, name, onChange, outputType],
@@ -102,6 +78,28 @@ function DatePicker({
     const onInputChange = useCallback(() => {
         onChange && onChange(undefined, name);
     }, [name, onChange]);
+
+    const todayClicked = useCallback(() => {
+        const today = new Date(new Date().setHours(0, 0, 0));
+        onChangeDate([today]);
+    }, [onChangeDate]);
+
+    const todayButton = useMemo(() => {
+        const div = document.createElement('div');
+        const classNames = [classes.todayContainer];
+        div.className = classNames;
+        div.addEventListener('click', () => todayClicked());
+        div.innerHTML = calendarButtonLabel;
+        return div;
+    }, [classes.todayContainer, calendarButtonLabel, todayClicked]);
+
+    const onReady = useCallback(
+        (_, __, fp) => {
+            fp.calendarContainer.classList.add(classes.container);
+            if (fp.rContainer) fp.rContainer.appendChild(todayButton);
+        },
+        [classes.container, todayButton],
+    );
 
     const onClick = useCallback((e) => {
         e.stopPropagation();
@@ -120,8 +118,6 @@ function DatePicker({
                         ? formatDate(value, flatpickrOptions.dateFormat)
                         : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
                     : value;
-            const inputClasses =
-                value && !isReadOnly ? { postCloseComponent: classes.clear } : null;
             return (
                 <Input
                     {...props}
@@ -129,25 +125,24 @@ function DatePicker({
                     className={className}
                     isReadOnly={isReadOnly}
                     onChange={isReadOnly ? undefined : onInputChange}
-                    classes={inputClasses}
                     overrides={{ input: { ref } }}
+                    placeholder={placeholder}
                     postComponent={
-                        <div onClick={onClick} onMouseDown={onMouseDown}>
-                            <Icon
-                                className={
-                                    type === 'time' ? classes.clockIcon : classes.calendarIcon
-                                }
-                                name={type === 'time' ? 'clock' : 'calendar'}
-                            />
-                        </div>
+                        !isReadOnly && (
+                            <div
+                                className={classes.calendarIcon}
+                                onClick={onClick}
+                                onMouseDown={onMouseDown}
+                            >
+                                <Icon name="calendar" />
+                            </div>
+                        )
                     }
                 />
             );
         },
         [
             classes.calendarIcon,
-            classes.clear,
-            classes.clockIcon,
             flatpickrOptions.dateFormat,
             formatDate,
             isReadOnly,
@@ -155,8 +150,8 @@ function DatePicker({
             onInputChange,
             onMouseDown,
             outputType,
+            placeholder,
             props,
-            type,
         ],
     );
 
@@ -191,7 +186,6 @@ DatePicker.overrides = [
 
 DatePicker.defaultProps = {
     labelMode: 'vertical',
-    type: 'date',
     outputType: 'object',
     onChange: () => {},
     value: '',
@@ -199,6 +193,7 @@ DatePicker.defaultProps = {
     lang: 'en',
     isReadOnly: false,
     calendarButtonLabel: 'Today',
+    placeholder: 'Select date',
     override: {},
 };
 
@@ -225,8 +220,8 @@ DatePicker.propTypes = {
     info: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
-    type: PropTypes.oneOf(['date', 'datetime', 'time']),
     outputType: PropTypes.oneOf(['object', 'string']),
+    placeholder: PropTypes.string,
     lang: PropTypes.string,
     /** default to flatpickr format tokens */
     dateFormat: PropTypes.string,

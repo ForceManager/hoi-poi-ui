@@ -1,37 +1,10 @@
 export default (theme) => ({
-    '@keyframes fpFadeInDown': {
-        from: {
-            opacity: '0',
-            transform: 'translate3d(0, -20px, 0)',
-        },
-        to: {
-            opacity: '1',
-            transform: 'translate3d(0, 0, 0)',
-        },
-    },
-    calendarIcon: {
-        cursor: 'pointer',
-        margin: '0 0 0 5px',
-    },
-    clockIcon: {
-        cursor: 'pointer',
-        margin: '0 0 0 3px',
-    },
     root: {},
     multipleComponents: {
         display: 'inline-flex',
     },
-    clear: {
-        position: 'relative',
-        marginRight: 16,
-        '&:before': {
-            position: 'absolute',
-            left: 18,
-            content: "''",
-            backgroundColor: '#CCC',
-            width: 1,
-            height: 9,
-        },
+    calendarIcon: {
+        cursor: 'pointer',
     },
     todayContainer: {
         display: 'flex',
@@ -42,10 +15,11 @@ export default (theme) => ({
         marginRight: 16,
         height: '39px',
         color: theme.colors.orange500,
-        weight: 500,
+        fontWeight: 500,
         cursor: 'pointer',
+        ...theme.typography.defaultText,
         '&:hover': {
-            color: theme.colors.orange400,
+            color: theme.colors.orange600,
         },
     },
     container: {
@@ -53,9 +27,10 @@ export default (theme) => ({
             boxSizing: 'inherit',
         },
         '&.flatpickr-calendar': {
-            fontFamily: theme.typography.fontFamily,
             background: 'transparent',
             opacity: '0',
+            marginTop: 12,
+            marginLeft: -10,
             display: 'none',
             textAlign: 'center',
             visibility: 'hidden',
@@ -63,15 +38,16 @@ export default (theme) => ({
             animation: 'none',
             direction: 'ltr',
             border: '0',
-            fontSize: 14,
             lineHeight: '24px',
-            borderRadius: 5,
+            borderRadius: 4,
             position: 'absolute',
-            width: 307.875,
+            Width: '312px',
+            Height: '336px',
             boxSizing: 'border-box',
             touchAction: 'manipulation',
-            boxShadow: '0 3px 13px rgba(0, 0, 0, 0.08)',
-            marginTop: 5,
+            boxShadow:
+                '0px 8px 10px rgba(39, 60, 80, 0.14), 0px 3px 14px rgba(39, 60, 80, 0.12), 0px 4px 5px rgba(39, 60, 80, 0.2)',
+            ...theme.typography.defaultText,
         },
         '&.flatpickr-calendar.open, &.flatpickr-calendar.inline': {
             opacity: '1',
@@ -102,7 +78,7 @@ export default (theme) => ({
             boxShadow: 'none !important',
         },
         '&.flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+2) .flatpickr-day.inRange:nth-child(7n+1)': {
-            boxShadow: '-2px 0 0 #e6e6e6, 5px 0 0 #e6e6e6',
+            boxShadow: `-2px 0 0 ${theme.colors.neutral300}, 5px 0 0 ${theme.colors.neutral300}`,
         },
         '&.flatpickr-calendar .hasWeeks .dayContainer, &.flatpickr-calendar .hasTime .dayContainer': {
             borderBottom: '0',
@@ -145,35 +121,12 @@ export default (theme) => ({
             borderWidth: 4,
             margin: '0 -4px',
         },
-        '&.flatpickr-calendar.arrowTop:before, &.flatpickr-calendar.arrowTop:after': {
-            bottom: '100%',
-        },
-        '&.flatpickr-calendar.arrowTop:before': {
-            borderBottomColor: 'rgba(72, 72, 72, 0.1)',
-        },
-        '&.flatpickr-calendar.arrowTop:after': {
-            borderBottomColor: theme.colors.orange500,
-        },
-        '&.flatpickr-calendar.noCalendar.arrowTop:after': {
-            borderBottomColor: theme.colors.neutralBase,
-            zIndex: 1000,
-            top: -9,
-            borderWidth: 5,
-            left: 21,
-        },
+
         '&.flatpickr-calendar.noCalendar.rightMost:after': {
             left: 'auto',
             right: 21,
         },
-        '&.flatpickr-calendar.arrowBottom:before, &.flatpickr-calendar.arrowBottom:after': {
-            top: '100%',
-        },
-        '&.flatpickr-calendar.arrowBottom:before': {
-            borderTopColor: theme.colors.neutralBase,
-        },
-        '&.flatpickr-calendar.arrowBottom:after': {
-            borderTopColor: theme.colors.neutralBase,
-        },
+
         '&.flatpickr-calendar:focus': {
             outline: '0',
         },
@@ -187,8 +140,8 @@ export default (theme) => ({
         '& .flatpickr-months .flatpickr-month': {
             borderRadius: '5px 5px 0 0',
             background: theme.colors.orange500,
-            color: '#fff',
-            fill: '#fff',
+            color: theme.colors.neutralBase,
+            fill: theme.colors.neutralBase,
             height: 34,
             lineHeight: '1',
             textAlign: 'center',
@@ -206,8 +159,8 @@ export default (theme) => ({
             height: 40,
             padding: '7px 0',
             zIndex: '3',
-            color: '#fff',
-            fill: '#fff',
+            color: theme.colors.neutralBase,
+            fill: theme.colors.neutralBase,
         },
         '& .flatpickr-months .flatpickr-prev-month.flatpickr-disabled, & .flatpickr-months .flatpickr-next-month.flatpickr-disabled': {
             display: 'none',
@@ -222,10 +175,10 @@ export default (theme) => ({
             right: '0',
         },
         '& .flatpickr-months .flatpickr-prev-month:hover, & .flatpickr-months .flatpickr-next-month:hover': {
-            color: '#bbb',
+            color: theme.colors.neutralbase,
         },
         '& .flatpickr-months .flatpickr-prev-month:hover svg, & .flatpickr-months .flatpickr-next-month:hover svg': {
-            fill: theme.colors.orange500,
+            fill: theme.colors.orange700,
         },
         '& .flatpickr-months .flatpickr-prev-month svg, & .flatpickr-months .flatpickr-next-month svg': {
             width: 10,
@@ -234,6 +187,7 @@ export default (theme) => ({
         '& .flatpickr-months .flatpickr-prev-month svg path, & .flatpickr-months .flatpickr-next-month svg path': {
             transition: 'fill 0.1s',
             fill: 'inherit',
+            border: `2px solid ${theme.colors.neutralBase}`,
         },
         '& .numInputWrapper': {
             position: 'relative',
@@ -301,7 +255,7 @@ export default (theme) => ({
             fill: 'rgba(255, 255, 255, 0.5)',
         },
         '& .numInputWrapper:hover': {
-            background: 'rgba(0, 0, 0, 0.05)',
+            background: theme.colors.orange600,
         },
         '& .numInputWrapper:hover span': {
             opacity: '1',
@@ -336,10 +290,10 @@ export default (theme) => ({
             display: 'inline-block',
         },
         '& .flatpickr-current-month .numInputWrapper span.arrowUp:after': {
-            borderBottomColor: '#fff',
+            borderBottomColor: theme.colors.neutralBase,
         },
         '& .flatpickr-current-month .numInputWrapper span.arrowDown:after': {
-            borderTopColor: '#fff',
+            borderTopColor: theme.colors.neutralBase,
         },
         '& .flatpickr-current-month input.cur-year': {
             background: 'transparent',
@@ -357,7 +311,7 @@ export default (theme) => ({
             '-moz-appearance': 'textfield',
             appearance: 'textfield',
             fontWeight: 400,
-            ...theme.typography.largeText,
+            ...theme.typography.defaultText,
         },
         '& .flatpickr-current-month input.cur-year:focus': {
             outline: '0',
@@ -378,30 +332,28 @@ export default (theme) => ({
             boxSizing: 'border-box',
             color: 'inherit',
             cursor: 'pointer',
-            fontSize: 'inherit',
             fontFamily: 'inherit',
             fontWeight: 400,
-            height: 22,
             margin: '-1px 0 0 0',
             outline: 'none',
             padding: '0 0 0 0.5ch',
             position: 'relative',
             verticalAlign: 'initial',
             width: 'auto',
-            ...theme.typography.largeText,
+            ...theme.typography.defaultText,
         },
         '& .flatpickr-current-month .flatpickr-monthDropdown-months:focus, & .flatpickr-current-month .flatpickr-monthDropdown-months:active': {
             outline: 'none',
         },
         '& .flatpickr-current-month .flatpickr-monthDropdown-months:hover': {
-            background: 'rgba(0, 0, 0, 0.05)',
+            background: theme.colors.orange600,
         },
         '& .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month': {
             backgroundColor: theme.colors.orange500,
             outline: 'none',
             border: 0,
             padding: '10px 0 10px 10px',
-            ...theme.typography.largeText,
+            ...theme.typography.defaultText,
         },
         '& .flatpickr-weekdays': {
             background: theme.colors.orange500,
@@ -420,7 +372,6 @@ export default (theme) => ({
         },
         '& span.flatpickr-weekday': {
             cursor: 'default',
-            fontSize: '90%',
             background: theme.colors.orange500,
             lineHeight: '1px',
             margin: '0',
@@ -428,8 +379,7 @@ export default (theme) => ({
             display: 'block',
             flex: '1',
             color: theme.colors.neutralBase,
-            ...theme.typography.smallText,
-            textTransform: 'uppercase',
+            ...theme.typography.defaultText,
         },
         '& .dayContainer, & .flatpickr-weeks': {
             padding: '1px 0 0 0',
@@ -468,12 +418,12 @@ export default (theme) => ({
             border: '1px solid transparent',
             borderRadius: 4,
             boxSizing: 'border-box',
-            color: theme.colors.black,
+            color: theme.colors.neutral900,
             cursor: 'pointer',
             fontWeight: '400',
             width: '14.2857143%',
             flexBasis: '14.2857143%',
-            maxWidth: 39,
+            maxWidth: 40,
             height: 39,
             lineHeight: '39px',
             margin: '0',
@@ -486,9 +436,7 @@ export default (theme) => ({
         '& .flatpickr-day.inRange, & .flatpickr-day.prevMonthDay.inRange, & .flatpickr-day.nextMonthDay.inRange, & .flatpickr-day.today.inRange, & .flatpickr-day.prevMonthDay.today.inRange, & .flatpickr-day.nextMonthDay.today.inRange, & .flatpickr-day:hover, & .flatpickr-day.prevMonthDay:hover, & .flatpickr-day.nextMonthDay:hover, & .flatpickr-day:focus, & .flatpickr-day.prevMonthDay:focus, & .flatpickr-day.nextMonthDay:focus': {
             cursor: 'pointer',
             outline: '0',
-            color: theme.colors.neutralBase,
-            background: theme.colors.orange500,
-            borderColor: theme.colors.orange500,
+            background: theme.colors.orange200,
         },
         '& .flatpickr-day.today': {
             borderColor: theme.colors.orange500,
@@ -496,13 +444,12 @@ export default (theme) => ({
         '& .flatpickr-day.today:hover, & .flatpickr-day.today:focus': {
             borderColor: theme.colors.orange500,
             background: theme.colors.orange500,
-            color: '#fff',
+            color: theme.colors.neutralBase,
         },
         '& .flatpickr-day.selected, & .flatpickr-day.startRange, & .flatpickr-day.endRange, & .flatpickr-day.selected.inRange, & .flatpickr-day.startRange.inRange, & .flatpickr-day.endRange.inRange, & .flatpickr-day.selected:focus, & .flatpickr-day.startRange:focus, & .flatpickr-day.endRange:focus, & .flatpickr-day.selected:hover, & .flatpickr-day.startRange:hover, & .flatpickr-day.endRange:hover, & .flatpickr-day.selected.prevMonthDay, & .flatpickr-day.startRange.prevMonthDay, & .flatpickr-day.endRange.prevMonthDay, & .flatpickr-day.selected.nextMonthDay, & .flatpickr-day.startRange.nextMonthDay, & .flatpickr-day.endRange.nextMonthDay': {
             background: theme.colors.orange500,
             boxShadow: 'none',
-            color: '#fff',
-            borderColor: theme.colors.orange500,
+            color: theme.colors.neutralBase,
         },
         '& .flatpickr-day.selected.startRange, & .flatpickr-day.startRange.startRange, & .flatpickr-day.endRange.startRange': {
             borderRadius: '50px 0 0 50px',
@@ -518,7 +465,7 @@ export default (theme) => ({
         },
         '& .flatpickr-day.inRange': {
             borderRadius: '0',
-            boxShadow: '-5px 0 0 #e2e2e2, 5px 0 0 #e2e2e2',
+            boxShadow: `-5px 0 0 ${theme.colors.neutral400}, 5px 0 0 `,
         },
         '& .flatpickr-day.flatpickr-disabled, & .flatpickr-day.flatpickr-disabled:hover, & .flatpickr-day.prevMonthDay, & .flatpickr-day.nextMonthDay, & .flatpickr-day.notAllowed, & .flatpickr-day.notAllowed.prevMonthDay, & .flatpickr-day.notAllowed.nextMonthDay': {
             color: theme.colors.disabledGrey,
@@ -559,97 +506,18 @@ export default (theme) => ({
             color: 'rgba(72, 72, 72, 0.3)',
             background: 'transparent',
             cursor: 'default',
-            border: 'none',
         },
         '& .flatpickr-innerContainer': {
             display: 'flex',
             boxSizing: 'border-box',
             overflow: 'hidden',
-            background: '#fff',
+            background: theme.colors.neutralBase,
             borderBottomLeftRadius: 5,
             borderBottomRightRadius: 5,
         },
         '& .flatpickr-rContainer': {
             display: 'inline-block',
             boxSizing: 'border-box',
-        },
-        '& .flatpickr-time': {
-            textAlign: 'center',
-            outline: '0',
-            display: 'flex',
-            height: '0',
-            lineHeight: '40px',
-            maxHeight: 40,
-            boxSizing: 'border-box',
-            overflow: 'hidden',
-            background: '#fff',
-            borderRadius: '0 0 5px 5px',
-        },
-        '& .flatpickr-time:after': {
-            content: '""',
-            display: 'table',
-            clear: 'both',
-        },
-        '& .flatpickr-time .numInputWrapper': {
-            flex: '1',
-            width: '40%',
-            height: 40,
-            float: 'left',
-        },
-        '& .flatpickr-time .numInputWrapper span.arrowUp:after': {
-            borderBottomColor: theme.colors.neutral800,
-        },
-        '& .flatpickr-time .numInputWrapper span.arrowDown:after': {
-            borderTopColor: theme.colors.neutral800,
-        },
-        '& .flatpickr-time.hasSeconds .numInputWrapper': {
-            width: '26%',
-        },
-        '& .flatpickr-time.time24hr .numInputWrapper': {
-            width: '49%',
-        },
-        '& .flatpickr-time input': {
-            background: 'transparent',
-            boxShadow: 'none',
-            border: '0',
-            borderRadius: '0',
-            textAlign: 'center',
-            margin: '0',
-            padding: '0',
-            height: 'inherit',
-            lineHeight: 'inherit',
-            color: theme.colors.black,
-            position: 'relative',
-            boxSizing: 'border-box',
-            appearance: 'textfield',
-            ...theme.typography.largeText,
-        },
-        '& .flatpickr-time input.flatpickr-hour': {
-            fontWeight: 'bold',
-        },
-        '& .flatpickr-time input.flatpickr-minute, & .flatpickr-time input.flatpickr-second': {
-            fontWeight: '400',
-        },
-        '& .flatpickr-time input:focus': {
-            outline: '0',
-            border: '0',
-        },
-        '& .flatpickr-time .flatpickr-time-separator, & .flatpickr-time .flatpickr-am-pm': {
-            height: 'inherit',
-            float: 'left',
-            lineHeight: 'inherit',
-            color: theme.colors.neutral800,
-            fontWeight: 'bold',
-            width: '2%',
-            userSelect: 'none',
-            alignSelf: 'center',
-        },
-        '& .flatpickr-time .flatpickr-am-pm': {
-            outline: '0',
-            width: '18%',
-            cursor: 'pointer',
-            textAlign: 'center',
-            fontWeight: '400',
         },
         '& .flatpickr-input[readonly]': {
             cursor: 'pointer',

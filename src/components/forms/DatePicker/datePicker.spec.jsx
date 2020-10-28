@@ -4,37 +4,11 @@ import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
 import DatePicker from '../DatePicker';
 
-describe('Input', () => {
+describe('DatePicker', () => {
     test('default match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
                 <DatePicker label="Lorem ipsum" placeholder="Write here" onChange={() => {}} />
-            </HoiPoiProvider>,
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    test('with type datetime', () => {
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <DatePicker
-                    label="Lorem ipsum"
-                    placeholder="Write here"
-                    onChange={() => {}}
-                    type="datetime"
-                />
-            </HoiPoiProvider>,
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    test('with type time', () => {
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <DatePicker
-                    label="Lorem ipsum"
-                    placeholder="Write here"
-                    onChange={() => {}}
-                    type="time"
-                />
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
