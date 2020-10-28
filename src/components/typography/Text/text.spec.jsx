@@ -13,18 +13,34 @@ describe('Text', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('type bold', () => {
+    test('type h1', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Text type="bold">Hello</Text>
+                <Text type="h1">Hello</Text>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('type light', () => {
+    test('type subtitle', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Text type="light">Hello</Text>
+                <Text type="subtitle">Hello</Text>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('isTruncated', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Text isTruncated>Hello</Text>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('bold', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Text bold>Hello</Text>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -114,7 +114,7 @@ function Multiplier({
             {showButton && (
                 <div className={classes.buttonContainer} {...override.buttonContainer}>
                     <Button
-                        type="squared-outlined"
+                        type="secondary"
                         className={buttonClassNames}
                         onClick={onClickAdd}
                         {...override.button}

@@ -48,6 +48,7 @@ module.exports = {
                 './src/components/forms/DatePicker/index.jsx',
                 './src/components/forms/Input/index.jsx',
                 './src/components/forms/Label/index.jsx',
+                './src/components/forms/RichText/index.jsx',
                 './src/components/forms/Slider/index.jsx',
                 './src/components/forms/Switch/index.jsx',
                 './src/components/forms/SwitchInput/index.jsx',
