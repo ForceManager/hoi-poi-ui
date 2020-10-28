@@ -3,8 +3,8 @@ import { colors } from '../../../../../utils/styles/defaultTheme';
 
 function ArrowDropDown({ color = colors.neutral700, ...props }) {
     return (
-        <svg viewBox="0 0 10 6" fill="none" {...props}>
-            <path fillRule="evenodd" clipRule="evenodd" d="M0 .5l5 5 5-5H0z" fill={color} />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M7 10l5 5 5-5z" fill={color} fillRule="evenodd" />
         </svg>
     );
 }
