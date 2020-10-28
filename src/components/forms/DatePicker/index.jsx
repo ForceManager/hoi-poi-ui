@@ -173,16 +173,7 @@ function DatePicker({
     );
 }
 
-DatePicker.overrides = [
-    'root',
-    'input',
-    'error',
-    'info',
-    'formControl',
-    'Label',
-    'flatpickr',
-    'flatpickrOptions',
-];
+DatePicker.overrides = ['root', 'input', 'flatpickr', 'flatpickrOptions'];
 
 DatePicker.defaultProps = {
     labelMode: 'vertical',
