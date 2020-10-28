@@ -155,6 +155,13 @@ const Select = memo(
                     ...(override.option?.style || {}),
                 };
 
+                if (isSelected) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.optionSelected,
+                    };
+                }
+
                 if (isDisabled) {
                     styles = {
                         ...styles,
