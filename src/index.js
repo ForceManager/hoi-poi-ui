@@ -29,7 +29,9 @@ export { default as ProgressBar } from './components/general/ProgressBar';
 export { default as Carousel } from './components/general/Carousel';
 
 export { default as DatePicker } from './components/forms/DatePicker';
+export { default as FieldGroup } from './components/forms/FieldGroup';
 export { default as Input } from './components/forms/Input';
+export { default as Label } from './components/forms/Label';
 export { default as RichText } from './components/forms/RichText';
 export { default as Switch } from './components/forms/Switch';
 export { default as SwitchInput } from './components/forms/SwitchInput';
