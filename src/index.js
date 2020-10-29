@@ -28,7 +28,10 @@ export { default as DataGrid } from './components/general/DataGrid';
 export { default as ProgressBar } from './components/general/ProgressBar';
 export { default as Carousel } from './components/general/Carousel';
 
+export { default as DatePicker } from './components/forms/DatePicker';
+export { default as FieldGroup } from './components/forms/FieldGroup';
 export { default as Input } from './components/forms/Input';
+export { default as Label } from './components/forms/Label';
 export { default as RichText } from './components/forms/RichText';
 export { default as Switch } from './components/forms/Switch';
 export { default as SwitchInput } from './components/forms/SwitchInput';
@@ -50,7 +53,7 @@ export { default as RadioGroup } from './components/oldForms/RadioGroup';
 export { default as Multiplier } from './components/oldForms/Multiplier';
 // export { default as Switch } from './components/oldForms/Switch';
 // export { default as SwitchInput } from './components/oldForms/SwitchInput';
-export { default as DatePicker } from './components/oldForms/DatePicker';
+// export { default as DatePicker } from './components/oldForms/DatePicker';
 export { default as FilePicker } from './components/oldForms/FilePicker';
 
 export { default as ScrollBar } from './components/utils/ScrollBar';

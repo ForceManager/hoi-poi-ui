@@ -29,8 +29,9 @@ function Checkbox({
     indeterminate,
     isDisabled,
     onChange,
+    size,
     color: colorProp,
-    isMonoTone,
+    isMonotone,
     ...props
 }) {
     const theme = useTheme();
@@ -49,7 +50,7 @@ function Checkbox({
 
     const getColor = useCallback(
         (checkState) => {
-            if (isMonoTone) {
+            if (isMonotone) {
                 if (colorProp === 'neutral') {
                     return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
                 }
@@ -66,7 +67,7 @@ function Checkbox({
                 }
             }
         },
-        [colorProp, isDisabled, theme.colors, isMonoTone],
+        [colorProp, isDisabled, theme.colors, isMonotone],
     );
 
     const rootProps = {
@@ -81,14 +82,20 @@ function Checkbox({
     return (
         <div {...rootProps} {...override.root}>
             {checkState === 'checked' && (
-                <Icon name="checkBox" color={getColor('checked')} {...override.svg} />
+                <Icon name="checkBox" size={size} color={getColor('checked')} {...override.svg} />
             )}
             {checkState === 'unchecked' && (
-                <Icon name="checkBoxOutlineBlank" color={getColor('unchecked')} {...override.svg} />
+                <Icon
+                    name="checkBoxOutlineBlank"
+                    size={size}
+                    color={getColor('unchecked')}
+                    {...override.svg}
+                />
             )}
             {checkState === 'indeterminate' && (
                 <Icon
                     name="indeterminateCheckBox"
+                    size={size}
                     color={getColor('indeterminate')}
                     {...override.svg}
                 />
@@ -112,6 +119,7 @@ Checkbox.defaultProps = {
     onChange: () => {},
     overrides: {},
     color: 'neutral',
+    size: 'medium',
 };
 
 Checkbox.propTypes = {
@@ -122,6 +130,8 @@ Checkbox.propTypes = {
     onChange: PropTypes.func,
     isDisabled: PropTypes.bool,
     color: PropTypes.oneOf(defaultColors),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
+    isMonotone: PropTypes.bool,
 };
 
 export default React.memo(Checkbox);

@@ -262,7 +262,7 @@ const onChange = (field) => {
 
 -   root - root element
 -   input - Native input
--   infor - Info text wrapper
+-   info - Info text wrapper
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)
