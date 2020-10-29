@@ -60,5 +60,6 @@ const formatDate = (value, format) => {
 ---
 
 -   root - root element
--   inputWrapper - Wrapper around Label and input components
--   [Label](#/Forms?id=label)
+-   flatpickrOptions
+-   [Input](#/Forms?id=input)
+-   [flatpick](https://github.com/flatpickr/flatpickr)
