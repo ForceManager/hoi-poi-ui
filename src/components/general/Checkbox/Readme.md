@@ -16,6 +16,22 @@ States:
 </div>
 ```
 
+Size (icons):
+
+```jsx
+<div>
+    <Checkbox size="small" />
+    <span> </span>
+    <Checkbox checked size="medium" />
+    <span> </span>
+    <Checkbox checked indeterminate size="large" />
+    <span> </span>
+    <Checkbox isDisabled size="big" />
+    <span> </span>
+    <Checkbox checked isDisabled size="huge" />
+</div>
+```
+
 Custom color:
 
 ```jsx

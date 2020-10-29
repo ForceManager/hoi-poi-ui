@@ -17,6 +17,7 @@ function Checkbox({
     indeterminate,
     isDisabled,
     onChange,
+    size,
     color: colorProp,
     ...props
 }) {
@@ -54,12 +55,14 @@ function Checkbox({
 
     return (
         <div {...rootProps} {...override.root}>
-            {checkState === 'checked' && <Icon name="checkBox" color={color} {...override.svg} />}
+            {checkState === 'checked' && (
+                <Icon name="checkBox" size={size} color={color} {...override.svg} />
+            )}
             {checkState === 'unchecked' && (
-                <Icon name="checkBoxOutlineBlank" color={color} {...override.svg} />
+                <Icon name="checkBoxOutlineBlank" color={color} size={size} {...override.svg} />
             )}
             {checkState === 'indeterminate' && (
-                <Icon name="indeterminateCheckBox" color={color} {...override.svg} />
+                <Icon name="indeterminateCheckBox" color={color} size={size} {...override.svg} />
             )}
             <input
                 className={classes.input}
@@ -80,6 +83,7 @@ Checkbox.defaultProps = {
     onChange: () => {},
     overrides: {},
     color: 'neutral',
+    size: 'medium',
 };
 
 Checkbox.propTypes = {
@@ -89,6 +93,7 @@ Checkbox.propTypes = {
     indeterminate: PropTypes.bool,
     onChange: PropTypes.func,
     isDisabled: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
     color: PropTypes.oneOf([
         'neutral',
         'red',

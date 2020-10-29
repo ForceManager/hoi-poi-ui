@@ -11,6 +11,13 @@ export default (theme) => ({
             cursor: 'text',
             width: '100%',
         },
+        '& .DraftEditor-editorContainer': {
+            height: '100%',
+        },
+        '& .public-DraftEditor-content': {
+            height: '100%',
+            padding: '10px 36px 10px 12px',
+        },
         '& [class^="draftJsToolbar__toolbar"]': {
             position: 'absolute',
             zIndex: 1,
@@ -84,7 +91,7 @@ export default (theme) => ({
         minHeight: '80px',
         alignItems: 'stretch',
         boxSizing: 'border-box',
-        padding: '10px 36px 10px 12px',
+        padding: 0,
         borderRadius: '4px',
         border: '1px solid transparent',
         backgroundColor: theme.colors.neutral200,

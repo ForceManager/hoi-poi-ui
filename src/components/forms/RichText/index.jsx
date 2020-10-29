@@ -75,12 +75,19 @@ const RichText = memo(
         const handleClear = useCallback(
             (e) => {
                 e.stopPropagation();
-                setEditorState((editorState) =>
-                    EditorState.push(editorState, ContentState.createFromText(''), 'remove-range'),
-                );
+                setEditorState((editorState) => {
+                    let newState = EditorState.push(
+                        editorState,
+                        ContentState.createFromText(''),
+                        'remove-range',
+                    );
+                    newState = EditorState.moveFocusToEnd(newState);
+                    setFocused(true);
+                    return newState;
+                });
                 setEditorContent({});
             },
-            [setEditorContent, setEditorState],
+            [setEditorContent, setEditorState, setFocused],
         );
 
         const handleClick = useCallback(
