@@ -96,3 +96,13 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
     </Section>
 </div>;
 ```
+
+### Component tree
+
+---
+
+-   root - root element
+-   [react-animate-height](https://github.com/Stanko/react-animate-height)
+-   [Text](#/Forms?id=text)
+-   header
+-   icon
