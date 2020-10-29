@@ -157,8 +157,8 @@ With diferent inputs:
 ```jsx
 import { useState } from 'react';
 import Input from '../Input';
-import Select from '../../oldForms/Select';
-import DatePicker from '../../oldForms/DatePicker';
+import Select from '../../forms/Select';
+import DatePicker from '../../forms/DatePicker';
 
 const options = [
     {
@@ -191,7 +191,7 @@ const [values, setValues] = useState([]);
         ]}
         onChange={setValues}
         value={values}
-        // isFullWidth
+        isFullWidth
     />
 </div>;
 ```
