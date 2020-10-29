@@ -136,7 +136,7 @@ export default (theme) => ({
         boxShadow: 'none',
     },
     placeholder: {
-        color: theme.colors.neutral900,
+        color: theme.colors.neutral600,
     },
     placeholderDisabled: {
         color: theme.colors.neutral700,

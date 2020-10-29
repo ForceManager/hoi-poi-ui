@@ -82,7 +82,7 @@ const options = [
     },
 ];
 const [state, setState] = useState({});
-const onChange = (value) => setState(value);
+const onChange = (value) => setState({ value });
 
 <div>
     <Select
