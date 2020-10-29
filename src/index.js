@@ -36,10 +36,11 @@ export { default as RichText } from './components/forms/RichText';
 export { default as Switch } from './components/forms/Switch';
 export { default as SwitchInput } from './components/forms/SwitchInput';
 export { default as Slider } from './components/forms/Slider';
+export { default as Section } from './components/forms/Section';
 export { default as Select } from './components/forms/Select';
 
 export { default as Form } from './components/oldForms/Form';
-export { default as Section } from './components/oldForms/Section';
+// export { default as Section } from './components/oldForms/Section';
 export { default as CheckboxInput } from './components/oldForms/CheckboxInput';
 export { default as CheckboxGroup } from './components/oldForms/CheckboxGroup';
 // export { default as Input } from './components/oldForms/Input';

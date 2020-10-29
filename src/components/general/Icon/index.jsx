@@ -121,6 +121,7 @@ import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
 import ArrowDownward from './icons/navigation/ArrowDownward';
 import ArrowDropDownCircle from './icons/navigation/ArrowDropDownCircle';
+import ArrowDropDown from './icons/navigation/ArrowDropDown';
 import ArrowDropUp from './icons/navigation/ArrowDropUp';
 import ArrowForward from './icons/navigation/ArrowForward';
 import ArrowUpward from './icons/navigation/ArrowUpward';
@@ -302,6 +303,7 @@ const ICONS = {
     arrowBack: ArrowBack,
     arrowDownward: ArrowDownward,
     arrowDropDownCircle: ArrowDropDownCircle,
+    arrowDropDown: ArrowDropDown,
     arrowDropUp: ArrowDropUp,
     arrowForward: ArrowForward,
     arrowUpward: ArrowUpward,
