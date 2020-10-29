@@ -34,11 +34,7 @@ function Label({
 
     return (
         <div {...rootProps} {...override.root}>
-            <Text
-                type={isDisabled ? 'light' : 'normal'}
-                className={classes.Text}
-                {...override.Text}
-            >
+            <Text type={isDisabled ? 'light' : 'body'} className={classes.Text} {...override.Text}>
                 {children}
                 {isRequired && '*'}
             </Text>
