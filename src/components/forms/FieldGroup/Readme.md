@@ -152,9 +152,55 @@ const [values, setValues] = useState([]);
 </div>;
 ```
 
+With diferent inputs:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+import Select from '../../oldForms/Select';
+import DatePicker from '../../oldForms/DatePicker';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Select, DatePicker]}
+        inputProps={[
+            { placeholder: 'Type' },
+            { placeholder: 'Select one', options },
+            { placeholder: 'Select date' },
+        ]}
+        onChange={setValues}
+        value={values}
+        // isFullWidth
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
+
+∫
 
 -   root - root element
 -   infor - Info text wrapper

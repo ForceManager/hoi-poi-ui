@@ -39,7 +39,7 @@ const FieldGroup = memo(
         const onChangeInput = useCallback(
             (newValue, index) => {
                 let changedValue = [...value];
-                changedValue[index] = newValue?.target?.value || newValue;
+                changedValue[index] = newValue?.target ? newValue?.target?.value : newValue;
                 onChange && onChange(changedValue, newValue, index);
             },
             [onChange, value],
@@ -56,8 +56,8 @@ const FieldGroup = memo(
                 inputNodes.push(
                     <Input
                         key={index}
-                        {...props}
                         isFullWidth={isFullWidth}
+                        {...props}
                         onChange={(v) => onChangeInput(v, index)}
                         value={value[index]}
                     />,
