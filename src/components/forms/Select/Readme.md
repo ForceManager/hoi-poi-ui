@@ -697,3 +697,49 @@ const onChange = (value) => setState({ value });
     />
 </div>;
 ```
+
+### Component tree
+
+---
+
+-   root - root element
+-   inputWrapper - Wrapper around Label and input components
+-   [react-select](https://github.com/JedWatson/react-select)
+-   inputComponents
+-   control - Field wrapper
+-   controlFocused - Field wrapper focused
+-   indicatorsContainer - Field icons wrapper
+-   clearIndicator - Clear icon
+-   indicatorSeparator - Separator line
+-   dropdownIndicator - Dropdown icon
+-   noOptionsMessage
+-   loadingMessage
+-   valueContainer - Input wrapper
+-   valueContainerDisabled - Input wrapper disabled
+-   placeholder
+-   placeholderDisabled
+-   multiValue - Value element in isMulti type field
+-   multipleValueLabel - Label of the element
+-   multipleValueLabelDisabled - Label of the element disabled
+-   multipleValueRemove - Element remove icon
+-   multipleValueRemoveDisabled - Element remove icon disabled
+-   menu - Menu element in react-select
+-   options - Options wrapper by block
+-   optionsDisabled - Disabled option
+-   optionLabel
+-   optionLabelIcon
+-   optionLabelCustomIcon
+-   optionLabelAvatar
+-   disabledAvatar
+-   disabledText - Styles for disabled text
+-   disabledIcon
+-   label - Label of the value
+-   subLabel - SubLabel of the value in two lines option
+-   optionLabelBlock - Value wrapper in two lines option (contains optionLabelText and optionLabelSublabel)
+-   optionLabelText - Label wrapper in two lines option
+-   optionLabelSubLabel - Sublabel wrapper in two lines option
+-   actionContainer - Actions wrapper
+-   action - Action wrapper
+-   actionIcon - Action icon
+-   actionText - Action text
+-   actionTextWithIcon - Action

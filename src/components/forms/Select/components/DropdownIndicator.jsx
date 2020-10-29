@@ -5,9 +5,7 @@ import defaultTheme from './../../../../utils/styles/defaultTheme';
 
 export default React.memo((props) => {
     const icon = props.isDisabled ? (
-        <div style={{ padding: '2px 2px 2px 6px', display: 'flex' }}>
-            <Icon name="lockOutline" size="medium" color={defaultTheme.colors.neutral600} />
-        </div>
+        <Icon name="lockOutline" size="medium" color={defaultTheme.colors.neutral600} />
     ) : (
         <Icon name="arrowDropDown" size="large" />
     );

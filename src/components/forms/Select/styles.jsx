@@ -121,7 +121,7 @@ export default (theme) => ({
         ...theme.typography.body,
         minHeight: 40,
         outline: 'none',
-        padding: 2,
+        padding: '2px 4px 2px 12px',
         borderRadius: '4px',
         border: `1px solid ${theme.colors.neutral200}`,
         backgroundColor: theme.colors.neutral200,
@@ -143,7 +143,7 @@ export default (theme) => ({
     },
     valueContainer: {
         color: theme.colors.neutral900,
-        padding: '2px 10px',
+        padding: '2px 10px 2px 0px',
     },
     valueContainerDisabled: {
         color: theme.colors.neutral700,
@@ -223,7 +223,7 @@ export default (theme) => ({
     },
     clearIndicator: {
         transition: 'all 0.15s ease',
-        padding: '0px 8px',
+        padding: 0,
         '&:hover svg path': {
             fill: theme.colors.neutral800,
         },
@@ -231,6 +231,8 @@ export default (theme) => ({
     indicatorSeparator: {
         height: 8,
         width: 2,
+        marginLeft: 8,
+        marginRight: 4,
         alignSelf: 'center',
         backgroundColor: theme.colors.neutral400,
     },
@@ -238,7 +240,8 @@ export default (theme) => ({
         display: 'none',
     },
     dropdownIndicator: {
-        padding: 4,
+        paddingLeft: 0,
+        paddingRight: 4,
         transition: 'all 0.15s ease',
         '&:hover svg path': {
             fill: theme.colors.neutral800,
