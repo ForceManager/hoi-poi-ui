@@ -121,6 +121,7 @@ import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
 import ArrowDownward from './icons/navigation/ArrowDownward';
 import ArrowDropDownCircle from './icons/navigation/ArrowDropDownCircle';
+import ArrowDropDown from './icons/navigation/ArrowDropDown';
 import ArrowDropUp from './icons/navigation/ArrowDropUp';
 import ArrowForward from './icons/navigation/ArrowForward';
 import ArrowUpward from './icons/navigation/ArrowUpward';
@@ -130,6 +131,7 @@ import ChevronRight from './icons/navigation/ChevronRight';
 import Close from './icons/navigation/Close';
 import CloseSmall from './icons/navigation/CloseSmall';
 import DragAndDrop from './icons/navigation/DragAndDrop';
+import Plus from './icons/navigation/Plus';
 import ExpandLess from './icons/navigation/ExpandLess';
 import ExpandMore from './icons/navigation/ExpandMore';
 import Fullscreen from './icons/navigation/Fullscreen';
@@ -300,6 +302,7 @@ const ICONS = {
     arrowBack: ArrowBack,
     arrowDownward: ArrowDownward,
     arrowDropDownCircle: ArrowDropDownCircle,
+    arrowDropDown: ArrowDropDown,
     arrowDropUp: ArrowDropUp,
     arrowForward: ArrowForward,
     arrowUpward: ArrowUpward,
@@ -309,6 +312,7 @@ const ICONS = {
     close: Close,
     closeSmall: CloseSmall,
     dragAndDrop: DragAndDrop,
+    plus: Plus,
     expandLess: ExpandLess,
     expandMore: ExpandMore,
     fullscreen: Fullscreen,

@@ -154,11 +154,11 @@ Navigation:
 <span> </span>
 <Icon name="closeSmall"/>
 <span> </span>
-<Icon name="arrowDropDown"/>
-<span> </span>
 <Icon name="arrowDownward"/>
 <span> </span>
 <Icon name="arrowDropDownCircle"/>
+<span> </span>
+<Icon name="arrowDropDown"/>
 <span> </span>
 <Icon name="arrowDropUp"/>
 <span> </span>
@@ -177,6 +177,8 @@ Navigation:
 <Icon name="closeSmall"/>
 <span> </span>
 <Icon name="dragAndDrop"/>
+<span> </span>
+<Icon name="plus"/>
 <span> </span>
 <Icon name="expandLess"/>
 <span> </span>

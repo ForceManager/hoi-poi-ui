@@ -42,10 +42,10 @@ export default (theme) => {
             boxSizing: 'border-box',
         },
         isFullWidth: {
-            '&$vertical $Label': {
+            '& $formControl': {
                 width: '100%',
             },
-            '& $formControl': {
+            '&$vertical $Label': {
                 width: '100%',
             },
         },

@@ -170,7 +170,6 @@ const Input = memo(
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
                 onKeyUp: handleOnKeyUp,
-                isFullWidth,
                 ...override.input,
             };
         }, [
@@ -186,12 +185,13 @@ const Input = memo(
             handleOnBlur,
             handleOnKeyDown,
             handleOnKeyUp,
-            isFullWidth,
             override.input,
         ]);
 
-        if (component) inputProps.isReadOnly = isReadOnly;
-        else inputProps.readOnly = isReadOnly;
+        if (component) {
+            inputProps.isReadOnly = isReadOnly;
+            if (isFullWidth) inputProps.isFullWidth = isFullWidth;
+        } else inputProps.readOnly = isReadOnly;
 
         // Remove content post component
         const postComponentClick = useCallback(() => {
