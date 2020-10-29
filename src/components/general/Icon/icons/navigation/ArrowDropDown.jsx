@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
 function ArrowDropDown({ color = colors.neutral700, ...props }) {

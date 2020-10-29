@@ -131,6 +131,7 @@ import ChevronRight from './icons/navigation/ChevronRight';
 import Close from './icons/navigation/Close';
 import CloseSmall from './icons/navigation/CloseSmall';
 import DragAndDrop from './icons/navigation/DragAndDrop';
+import Plus from './icons/navigation/Plus';
 import ExpandLess from './icons/navigation/ExpandLess';
 import ExpandMore from './icons/navigation/ExpandMore';
 import Fullscreen from './icons/navigation/Fullscreen';
@@ -311,6 +312,7 @@ const ICONS = {
     close: Close,
     closeSmall: CloseSmall,
     dragAndDrop: DragAndDrop,
+    plus: Plus,
     expandLess: ExpandLess,
     expandMore: ExpandMore,
     fullscreen: Fullscreen,

@@ -8,7 +8,7 @@ import FieldBottom from '../FieldBottom';
 
 import { createUseStyles } from '../../../../utils/styles';
 import styles from './styles';
-const useStyles = createUseStyles(styles, 'Input');
+const useStyles = createUseStyles(styles, 'InputWrapper');
 
 const InputWrapper = memo(
     ({

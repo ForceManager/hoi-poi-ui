@@ -30,7 +30,7 @@ export default (theme) => ({
             background: 'transparent',
             opacity: '0',
             marginTop: 12,
-            marginLeft: -10,
+            marginLeft: -12,
             display: 'none',
             textAlign: 'center',
             visibility: 'hidden',

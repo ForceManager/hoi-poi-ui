@@ -31,6 +31,22 @@ const commonjsOptions = {
             'element',
         ],
         './node_modules/react-treebeard/index.js': ['Treebeard'],
+        './node_modules/immutable/dist/immutable.js': [
+            'OrderedSet',
+            'is',
+            'List',
+            'Seq',
+            'Map',
+            'Repeat',
+        ],
+        './node_modules/draft-js/lib/Draft.js': [
+            'SelectionState',
+            'EditorState',
+            'ContentBlock',
+            'genKey',
+            'ContentState',
+            'CharacterMetadata',
+        ],
     },
 };
 
