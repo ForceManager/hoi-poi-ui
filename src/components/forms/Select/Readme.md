@@ -704,6 +704,10 @@ const onChange = (value) => setState({ value });
 
 -   root - root element
 -   inputWrapper - Wrapper around Label and input components
+-   infor - Info text wrapper
+-   error - Error wrapper
+-   formControl - Input wrapper excluding label
+-   [Label](#/Forms?id=label)
 -   [react-select](https://github.com/JedWatson/react-select)
 -   inputComponents
 -   control - Field wrapper
