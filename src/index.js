@@ -7,6 +7,7 @@ export { HoiPoiProvider, createHoiPoiTheme, useTheme, createUseStyles } from './
 
 // Components
 export { default as Badge } from './components/general/Badge';
+export { default as BadgeNotification } from './components/general/BadgeNotification';
 export { default as Button } from './components/general/Button';
 export { default as ButtonSwitch } from './components/general/ButtonSwitch';
 export { default as ButtonTabGroup } from './components/general/ButtonTabGroup';

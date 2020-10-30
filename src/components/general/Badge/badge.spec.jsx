@@ -37,4 +37,20 @@ describe('Badge', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('type warning match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Badge type="warning">Lorem ipsum</Badge>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('type ongoing match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Badge type="ongoing">Lorem ipsum</Badge>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
