@@ -119,7 +119,6 @@ function DatePicker({
 
     const flatpickrRender = useCallback(
         ({ className, value }, ref) => {
-            console.log('className', className);
             const formatValue =
                 value && outputType === 'object'
                     ? formatDate
