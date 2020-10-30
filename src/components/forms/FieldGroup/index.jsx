@@ -39,7 +39,7 @@ const FieldGroup = memo(
         const onChangeInput = useCallback(
             (newValue, index) => {
                 let changedValue = [...value];
-                changedValue[index] = newValue?.target ? newValue?.target?.value : newValue;
+                changedValue[index] = newValue;
                 onChange && onChange(changedValue, newValue, index);
             },
             [onChange, value],

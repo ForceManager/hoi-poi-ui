@@ -1,5 +1,8 @@
 export default (theme) => ({
     root: {},
+    isFullWidth: {
+        width: '100%',
+    },
     multipleComponents: {
         display: 'inline-flex',
     },
