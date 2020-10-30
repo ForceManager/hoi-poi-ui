@@ -38,6 +38,7 @@ function DatePicker({
     outputType,
     lang,
     isReadOnly,
+    isFullWidth,
     calendarButtonLabel,
     placeholder,
     ...props
@@ -50,7 +51,13 @@ function DatePicker({
     const override = getOverrides(overridesProp, DatePicker.overrides);
 
     // Classes
-    const rootClassName = classnames(classes.root, classNameProp);
+    const rootClassName = classnames(
+        classes.root,
+        {
+            [classes.isFullWidth]: isFullWidth,
+        },
+        classNameProp,
+    );
 
     const flatpickrOptions = useMemo(() => {
         return {
@@ -118,12 +125,14 @@ function DatePicker({
                         ? formatDate(value, flatpickrOptions.dateFormat)
                         : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
                     : value;
+            // const inputClassName = classnames({ [classes.isFullWidth]: isFullWidth }, className);
             return (
                 <Input
                     {...props}
                     value={formatValue}
                     className={className}
                     isReadOnly={isReadOnly}
+                    isFullWidth={isFullWidth}
                     onChange={isReadOnly ? undefined : onInputChange}
                     overrides={{ input: { ref } }}
                     placeholder={placeholder}
@@ -145,6 +154,7 @@ function DatePicker({
             classes.calendarIcon,
             flatpickrOptions.dateFormat,
             formatDate,
+            isFullWidth,
             isReadOnly,
             onClick,
             onInputChange,
@@ -157,19 +167,18 @@ function DatePicker({
 
     const key = `flatpickr-${name || 'anon'}--${isReadOnly ? 'read-only' : 'active'}`;
     return (
-        <div className={rootClassName}>
-            <Flatpickr
-                ref={flatpickrRef}
-                key={key}
-                options={flatpickrOptions}
-                render={flatpickrRender}
-                overrides={overridesProp}
-                value={value}
-                onReady={onReady}
-                onChange={isReadOnly ? undefined : onChangeDate}
-                {...override.flatpickr}
-            />
-        </div>
+        <Flatpickr
+            className={rootClassName}
+            ref={flatpickrRef}
+            key={key}
+            options={flatpickrOptions}
+            render={flatpickrRender}
+            overrides={overridesProp}
+            value={value}
+            onReady={onReady}
+            onChange={isReadOnly ? undefined : onChangeDate}
+            {...override.flatpickr}
+        />
     );
 }
 

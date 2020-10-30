@@ -1,9 +1,9 @@
 export default (theme) => ({
     root: {},
     isFullWidth: {
+        width: '100%',
         '& $inputComponents': {
             width: '100%',
-            flex: 1,
         },
     },
     async: {},

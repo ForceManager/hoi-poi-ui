@@ -9,7 +9,7 @@ export default (theme) => {
             justifyContent: 'space-between',
             alignItems: 'center',
             '& > *': {
-                marginRight: 12,
+                marginRight: 16,
                 '&:last-child': {
                     marginRight: 0,
                 },
