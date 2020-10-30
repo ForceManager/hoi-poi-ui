@@ -83,7 +83,7 @@ function Modal({
     const renderTitle = useMemo(() => {
         if (typeof title === 'string') {
             return (
-                <Text size="big" className={classes.title} {...override.title}>
+                <Text type="h6" className={classes.title} {...override.title}>
                     {title}
                 </Text>
             );
