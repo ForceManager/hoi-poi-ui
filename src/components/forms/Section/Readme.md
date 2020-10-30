@@ -5,7 +5,7 @@ import { Input } from 'hoi-poi-ui';
 import { useState } from 'react';
 
 const [state, setState] = useState({});
-const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+const onChange = (value) => setState({ value });
 
 <div style={{padding: 20, backgroundColor: '#F4F5F6'}}>
     <Section title="Title here">
@@ -26,12 +26,12 @@ import { Input } from 'hoi-poi-ui';
 import { useState } from 'react';
 
 const [state, setState] = useState({value: 'Lorem ipsum', activeFields: 1});
-const onChange = (e) => {
-    setState({ value: e && e.target ? e.target.value : '', activeFields: e && e.target && e.target.value ? 1 : 0 });
+const onChange = (value) => {
+    setState({ value, activeFields: value ? 1 : 0 });
 }
 
 <div style={{padding: 20, backgroundColor: '#F4F5F6'}}>
-    <Section title="Title here" activeFields={state.activeFields}>
+    <Section title="Title here" activeFields={state.activeFields} defaultOpen={false}>
         <Input
             label="Lorem ipsum"
             placeholder="Write here"
@@ -49,7 +49,7 @@ import { Icon, Text, Input } from 'hoi-poi-ui';
 import { useState } from 'react';
 
 const [state, setState] = useState({});
-const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+const onChange = (value) => setState({ value });
 
 const titleComponent = (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -80,7 +80,7 @@ const [isOpen, setIsOpen] = useState({});
 const [state, setState] = useState({});
 
 const onOpen = (e) => setIsOpen(!isOpen);
-const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+const onChange = (value) => setState({ value });
 
 <div style={{padding: 16, backgroundColor: '#F4F5F6'}}>
     <Button color="primary" onClick={onOpen} style={{marginBottom: 16}}>
@@ -103,6 +103,7 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 
 -   root - root element
 -   [react-animate-height](https://github.com/Stanko/react-animate-height)
--   [Text](#/Forms?id=text)
+-   [Text](#/Typography?id=text)
+-   [BadgeNotification](#/General?id=badgenotification)
 -   header
 -   icon

@@ -8,23 +8,28 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Badge');
 
-function Badge({
+const fontBySize = {
+    small: 'badges',
+    medium: 'caption',
+};
+
+function BadgeNotification({
     classes: classesProp,
     children,
     overrides: overridesProp,
     className: classNameProp,
-    type,
+    size,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
-    const override = getOverrides(overridesProp, Badge.overrides);
+    const override = getOverrides(overridesProp, BadgeNotification.overrides);
 
     // Classes
     const rootClassName = classnames(
         classes.root,
         {
-            [classes[type]]: type,
+            [classes[size]]: size,
         },
         classNameProp,
     );
@@ -36,26 +41,30 @@ function Badge({
 
     return (
         <div {...rootProps} {...override.root}>
-            <Text type="caption" className={classes.Text} {...override.Text}>
+            <Text
+                type={fontBySize[size] || fontBySize.medium}
+                className={classes.Text}
+                {...override.Text}
+            >
                 {children}
             </Text>
         </div>
     );
 }
 
-Badge.overrides = ['root', 'Text'];
+BadgeNotification.overrides = ['root', 'Text'];
 
-Badge.defaultProps = {
+BadgeNotification.defaultProps = {
     className: '',
     overrides: {},
-    type: 'default',
+    size: 'medium',
 };
 
-Badge.propTypes = {
+BadgeNotification.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warning', 'ongoing']),
+    size: PropTypes.oneOf(['small', 'medium']),
 };
 
-export default React.memo(Badge);
+export default React.memo(BadgeNotification);

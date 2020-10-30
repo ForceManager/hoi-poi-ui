@@ -1,49 +1,49 @@
 export default (theme) => ({
     root: {
-        ...theme.typography.smallText,
-        lineHeight: '20px',
-        color: theme.colors.text.black,
-        borderRadius: '3px',
+        height: '20px',
+        minWidth: '70px',
+        padding: '0px 8px',
+        borderRadius: '4px',
         display: 'inline-block',
-        padding: '0 10px',
-        minWidth: 70,
-        textAlign: 'center',
+        alignText: 'center',
     },
-    Text: {
-        lineHeight: '20px',
-        fontWeight: 500,
-        textTransform: 'uppercase',
-        fontSize: 9,
-    },
+    Text: {},
     // Types
+    default: {
+        backgroundColor: theme.colors.neutral300,
+        '& $Text': {
+            color: theme.colors.neutral700,
+        },
+    },
+    success: {
+        backgroundColor: theme.colors.green100,
+        '& $Text': {
+            color: theme.colors.green600,
+        },
+    },
+    warning: {
+        backgroundColor: theme.colors.yellow100,
+        '& $Text': {
+            color: theme.colors.yellow600,
+        },
+    },
     error: {
         backgroundColor: theme.colors.redLight,
         '& $Text': {
             color: theme.colors.text.red,
         },
     },
-    default: {
-        backgroundColor: theme.colors.greyLight,
-        '& $Text': {
-            color: theme.colors.text.greySoft,
-        },
-    },
     info: {
-        backgroundColor: theme.colors.secondaryLight,
+        backgroundColor: theme.colors.blue100,
         '& $Text': {
-            color: theme.colors.text.secondary,
+            color: theme.colors.blue400,
         },
     },
-    success: {
-        backgroundColor: theme.colors.greenLight,
+
+    ongoing: {
+        backgroundColor: theme.colors.purple100,
         '& $Text': {
-            color: theme.colors.text.green,
-        },
-    },
-    warn: {
-        backgroundColor: theme.colors.yellowLight,
-        '& $Text': {
-            color: theme.colors.text.yellow,
+            color: theme.colors.purple500,
         },
     },
 });

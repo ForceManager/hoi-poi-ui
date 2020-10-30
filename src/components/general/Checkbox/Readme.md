@@ -58,7 +58,7 @@ States default with color
 </div>
 ```
 
-States montotone color:
+States monotone color:
 
 ```jsx
 <div>

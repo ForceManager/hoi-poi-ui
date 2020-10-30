@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import AnimateHeight from 'react-animate-height';
 
 import Icon from '../../general/Icon';
+import BadgeNotification from '../../general/BadgeNotification';
 import Text from '../../typography/Text';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
@@ -57,15 +58,17 @@ const Section = memo(
         }, [classes.Text, override.Text, title]);
 
         const newActiveFields = useMemo(() => {
-            if (!activeFields) return null;
+            if (!activeFields || isOpen) return null;
             return (
-                <div className={classes.activeFields}>
-                    <Text bold type="subtitle">
-                        {activeFields}
-                    </Text>
-                </div>
+                <BadgeNotification
+                    size="small"
+                    className={classes.BadgeNotification}
+                    {...override.BadgeNotification}
+                >
+                    {activeFields}
+                </BadgeNotification>
             );
-        }, [classes, activeFields]);
+        }, [classes, override, activeFields, isOpen]);
 
         if (title && isExpandable) {
             return (
@@ -106,7 +109,7 @@ const Section = memo(
     },
 );
 
-Section.overrides = ['root', 'header', 'Text', 'icon', 'react-animate-height'];
+Section.overrides = ['root', 'header', 'Text', 'BadgeNotification', 'icon', 'react-animate-height'];
 
 Section.defaultProps = {
     isExpandable: true,

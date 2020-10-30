@@ -32,6 +32,7 @@ export default (theme) => ({
         color: theme.colors.neutral700,
         transition: 'all 0.15s ease',
     },
+    BadgeNotification: {},
     icon: {
         marginRight: 4,
         lineHeight: '0',

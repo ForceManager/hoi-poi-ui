@@ -4,6 +4,18 @@ Default:
 <Badge>Lorem ipsum</Badge>
 ```
 
+Success:
+
+```jsx
+<Badge type="success">Lorem ipsum</Badge>
+```
+
+Warning:
+
+```jsx
+<Badge type="warning">Lorem ipsum</Badge>
+```
+
 Error:
 
 ```jsx
@@ -16,16 +28,10 @@ Info:
 <Badge type="info">Lorem ipsum</Badge>
 ```
 
-Success:
+Ongoing:
 
 ```jsx
-<Badge type="success">Lorem ipsum</Badge>
-```
-
-Warning:
-
-```jsx
-<Badge type="warn">Lorem ipsum</Badge>
+<Badge type="ongoing">Lorem ipsum</Badge>
 ```
 
 ### Component tree

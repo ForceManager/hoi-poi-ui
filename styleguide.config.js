@@ -14,6 +14,8 @@ module.exports = {
                 './src/components/general/Button/index.jsx',
                 './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Modal/index.jsx',
+                './src/components/general/Badge/index.jsx',
+                './src/components/general/BadgeNotification/index.jsx',
             ],
         },
         {
@@ -21,7 +23,6 @@ module.exports = {
             description: 'Old General and global components',
             sectionDepth: 0,
             components: [
-                './src/components/general/Badge/index.jsx',
                 './src/components/general/ButtonSwitch/index.jsx',
                 './src/components/general/ButtonTabGroup/index.jsx',
                 './src/components/general/Chip/index.jsx',
