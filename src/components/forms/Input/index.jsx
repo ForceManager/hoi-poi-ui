@@ -69,7 +69,8 @@ const Input = memo(
             (e) => {
                 if (isReadOnly) return;
                 setFocused(true);
-                onFocus && onFocus(e);
+                const finalValue = e.target.value || '';
+                onFocus && onFocus(finalValue, e);
             },
             [onFocus, isReadOnly],
         );
@@ -99,7 +100,8 @@ const Input = memo(
                 }
 
                 setFocused(false);
-                onBlur && onBlur(e);
+                const finalValue = e.target.value || '';
+                onBlur && onBlur(finalValue, e);
             },
             [isReadOnly, onBlur, type, numberDecimals],
         );
@@ -107,7 +109,8 @@ const Input = memo(
         const handleOnKeyDown = useCallback(
             (e) => {
                 if (e.key === 'Enter') {
-                    onEnter && onEnter(e);
+                    const finalValue = e.target.value || '';
+                    onEnter && onEnter(finalValue, e);
                 }
 
                 if (
@@ -152,7 +155,8 @@ const Input = memo(
 
         const handleOnChange = useCallback(
             (e) => {
-                onChange && onChange(e);
+                const finalValue = e.target.value || '';
+                onChange && onChange(finalValue, e);
             },
             [onChange],
         );
@@ -306,6 +310,7 @@ const Input = memo(
                 error={error}
                 className={rootClassName}
                 overrides={overridesProp}
+                isFullWidth={isFullWidth}
             >
                 <div className={classes.inputComponents} {...override.inputComponents}>
                     {preComponent && (
