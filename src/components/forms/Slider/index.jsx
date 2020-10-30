@@ -28,6 +28,7 @@ function Slider({
     tipFormatter,
     isPercentage,
     size,
+    onChange,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -88,11 +89,17 @@ function Slider({
         },
         [props],
     );
-
+    const onChangeRange = useCallback(
+        (value) => {
+            setInnerValue(value);
+            onChange && onChange(value);
+        },
+        [onChange],
+    );
     const sliderProps = {
         className: classes.slider,
         value: innerValue,
-        onChange: setInnerValue,
+        onChange: onChangeRange,
         onAfterChange: onAfterChange,
         disabled: isReadOnly,
         labelMode: 'vertical',
