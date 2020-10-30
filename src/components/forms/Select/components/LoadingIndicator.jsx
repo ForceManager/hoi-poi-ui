@@ -2,7 +2,7 @@ import React from 'react';
 // import { components } from 'react-select';
 import Loader from '../../../general/Loader';
 import defaultTheme from '../../../../utils/styles/defaultTheme';
-import styles from './../styles.jsx';
+import styles from './../styles';
 
 const newStyles = styles(defaultTheme);
 

@@ -543,6 +543,8 @@ Select.propTypes = {
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
+    /** Info will be displayed below the component with style changes */
+    info: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     /** Hide the selected option from the menu */
