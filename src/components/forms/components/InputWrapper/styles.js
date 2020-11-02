@@ -13,7 +13,7 @@ export default (theme) => {
         vertical: {
             '& $inputWrapper': {
                 display: 'block',
-                padding: '10px 0',
+                padding: '8px 0',
                 marginLeft: '0 !important',
                 '& $Label': {
                     width: '100%',
@@ -27,7 +27,7 @@ export default (theme) => {
             '& $inputWrapper': {
                 display: 'flex',
                 alignItems: 'center',
-                padding: '10px 0',
+                padding: '8px 0',
                 '& $error': {},
                 '& $Label': {
                     padding: 0,
