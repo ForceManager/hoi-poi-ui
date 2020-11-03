@@ -282,6 +282,7 @@ const Input = memo(
         }, [
             value,
             isReadOnly,
+            hideClear,
             isCopyable,
             postComponent,
             classes.postComponentClose,
