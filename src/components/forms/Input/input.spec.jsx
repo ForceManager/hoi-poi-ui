@@ -97,4 +97,12 @@ describe('Input', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('hide clear match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Input label="Lorem ipsum" placeholder="Write here" onChange={() => {}} hideClear />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
