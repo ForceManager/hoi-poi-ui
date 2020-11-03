@@ -120,10 +120,54 @@ const [values, setValues] = useState([]);
 Customizing props:
 
 ```jsx
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Input from '../Input';
 
 const [values, setValues] = useState([]);
+const inputRefs = useRef([]);
+
+const setFocus = useCallback((index) => {
+    inputRefs.current[index] && inputRefs.current[index].focus();
+}, []);
+
+useEffect(() => {
+    setFocus(0);
+}, [setFocus]);
+
+const onChange = useCallback(
+    (values, value, index) => {
+        setValues(values);
+        if (value === '') {
+            setFocus(index - 1);
+        } else {
+            setFocus(index + 1);
+        }
+    },
+    [setFocus],
+);
+
+const onKeyDown = (e) => {
+    const index = parseInt(e.target.name, 10);
+    if (e.keyCode === 8 && event.target.value === '') {
+        setFocus(index - 1);
+        e.preventDefault();
+    } else if (e.keyCode !== 8 && event.target.value !== '') {
+        setFocus(index + 1);
+        e.preventDefault();
+    }
+};
+
+const onFocus = (value, e) => {
+    if (e.keyCode === 8 && event.target.value === '') {
+        setFocus(e.target.name);
+    }
+};
+
+const getRef = useCallback((index) => {
+    return (ref) => {
+        inputRefs.current[index] = ref;
+    };
+}, []);
 
 <div>
     <FieldGroup
@@ -146,6 +190,69 @@ const [values, setValues] = useState([]);
             { placeholder: 'Field 6' },
         ]}
         onChange={setValues}
+        value={values}
+        isFullWidth
+    />
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Input, Input, Input, Input, Input]}
+        inputProps={[
+            {
+                onKeyDown,
+                onFocus,
+                maxLength: 1,
+                type: 'integer',
+                hideClear: true,
+                getRef: getRef(0),
+                name: '0',
+            },
+            {
+                onKeyDown,
+                onFocus,
+                maxLength: 1,
+                type: 'integer',
+                hideClear: true,
+                getRef: getRef(1),
+                name: '1',
+            },
+            {
+                onKeyDown,
+                onFocus,
+                maxLength: 1,
+                type: 'integer',
+                hideClear: true,
+                getRef: getRef(2),
+                name: '2',
+            },
+            {
+                onKeyDown,
+                onFocus,
+                maxLength: 1,
+                type: 'integer',
+                hideClear: true,
+                getRef: getRef(3),
+                name: '3',
+            },
+            {
+                onKeyDown,
+                onFocus,
+                maxLength: 1,
+                type: 'integer',
+                hideClear: true,
+                getRef: getRef(4),
+                name: '4',
+            },
+            {
+                onKeyDown,
+                onFocus,
+                maxLength: 1,
+                type: 'integer',
+                hideClear: true,
+                getRef: getRef(5),
+                name: '5',
+            },
+        ]}
+        onChange={onChange}
         value={values}
         isFullWidth
     />

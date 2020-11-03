@@ -45,6 +45,9 @@ const Input = memo(
         component,
         isCopyable,
         hideClear,
+        label,
+        labelMode,
+        getRef,
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
@@ -175,9 +178,12 @@ const Input = memo(
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
                 onKeyUp: handleOnKeyUp,
+                ref: getRef || null,
+                ...props,
                 ...override.input,
             };
         }, [
+            props,
             id,
             name,
             classes.input,
@@ -190,6 +196,7 @@ const Input = memo(
             handleOnBlur,
             handleOnKeyDown,
             handleOnKeyUp,
+            getRef,
             override.input,
         ]);
 
@@ -308,7 +315,8 @@ const Input = memo(
 
         return (
             <InputWrapper
-                {...props}
+                label={label}
+                labelMode={labelMode}
                 error={error}
                 className={rootClassName}
                 overrides={overridesProp}
@@ -377,6 +385,7 @@ Input.propTypes = {
     isReadOnly: PropTypes.bool,
     isCopyable: PropTypes.bool,
     hideClear: PropTypes.bool,
+    getRef: PropTypes.func,
     /** Component rendered at the input beginning */
     preComponent: PropTypes.any,
     /** Component rendered at the input ending */
