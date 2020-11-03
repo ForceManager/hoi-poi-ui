@@ -95,7 +95,7 @@ function Modal({
 
     return (
         <RModal className={rootClassName} {...rootProps}>
-            <div className={classes.container}>
+            <div className={classes.container} {...override.container}>
                 {useHeader && (
                     <div className={classes.header} {...override.header}>
                         {renderTitle}
