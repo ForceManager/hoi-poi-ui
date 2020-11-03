@@ -41,6 +41,8 @@ function Modal({
     shouldCloseOnEsc,
     shouldCloseOnOverlayClick,
     closeTimeoutMS,
+    preComponent,
+    postComponent,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -108,9 +110,19 @@ function Modal({
                         )}
                     </div>
                 )}
+                {preComponent && (
+                    <div className={classes.preComponent} {...override.preComponent}>
+                        {preComponent}
+                    </div>
+                )}
                 <div className={classes.content} {...override.content}>
                     {children}
                 </div>
+                {postComponent && (
+                    <div className={classes.postComponent} {...override.postComponent}>
+                        {postComponent}
+                    </div>
+                )}
                 {showFooter && (
                     <div className={classes.footer} {...override.footer}>
                         {onCancel && (
@@ -144,6 +156,8 @@ Modal.overrides = [
     'title',
     'header',
     'content',
+    'preComponent',
+    'postComponent',
     'footer',
     'closeIcon',
     'cancelButton',
@@ -185,6 +199,8 @@ Modal.propTypes = {
     /** Show header section */
     useHeader: PropTypes.bool,
     closeTimeoutMS: PropTypes.number,
+    preComponent: PropTypes.element,
+    postComponent: PropTypes.element,
 };
 
 export default React.memo(Modal);

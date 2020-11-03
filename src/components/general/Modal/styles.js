@@ -56,6 +56,12 @@ export default (theme) => ({
         overflow: 'auto',
         ...theme.utils.scrollbar,
     },
+    preComponent: {
+        marginBottom: '8px',
+    },
+    postComponent: {
+        marginTop: '8px',
+    },
     closeIcon: {
         flexShrink: 0,
     },
