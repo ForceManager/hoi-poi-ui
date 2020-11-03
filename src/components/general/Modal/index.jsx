@@ -155,6 +155,7 @@ Modal.overrides = [
     'root',
     'title',
     'header',
+    'container',
     'content',
     'preComponent',
     'postComponent',
