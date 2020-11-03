@@ -435,6 +435,7 @@ exports[`Input default match 1`] = `
       }
     >
       <Component
+        hideClear={false}
         isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
@@ -987,6 +988,7 @@ exports[`Input is read only match 1`] = `
       }
     >
       <Component
+        hideClear={false}
         isCopyable={false}
         isReadOnly={true}
         label="Lorem ipsum"
@@ -1535,6 +1537,7 @@ exports[`Input is required match 1`] = `
       }
     >
       <Component
+        hideClear={false}
         isCopyable={false}
         isReadOnly={false}
         isRequired={true}
@@ -2051,6 +2054,7 @@ exports[`Input vertical label mode match 1`] = `
       }
     >
       <Component
+        hideClear={false}
         isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
@@ -2564,6 +2568,7 @@ exports[`Input with error match 1`] = `
     >
       <Component
         error="I am an error"
+        hideClear={false}
         isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"
@@ -3088,6 +3093,7 @@ exports[`Input with hint match 1`] = `
       }
     >
       <Component
+        hideClear={false}
         hint="Hello"
         isCopyable={false}
         isReadOnly={false}
@@ -3920,6 +3926,7 @@ exports[`Input with pre/post component match 1`] = `
       }
     >
       <Component
+        hideClear={false}
         isCopyable={false}
         isReadOnly={false}
         label="Lorem ipsum"

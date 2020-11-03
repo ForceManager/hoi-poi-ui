@@ -44,6 +44,7 @@ const Input = memo(
         postComponent,
         component,
         isCopyable,
+        hideClear,
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
@@ -223,7 +224,7 @@ const Input = memo(
 
         let newPostComponent = useMemo(() => {
             let postComponentsArray = [];
-            if (value && !isReadOnly) {
+            if (value && !isReadOnly && !hideClear) {
                 postComponentsArray.push(
                     <div
                         key="close"
@@ -340,6 +341,7 @@ Input.defaultProps = {
     value: '',
     isReadOnly: false,
     isCopyable: false,
+    hideClear: false,
     numberDecimals: 2,
     overrides: {},
 };
@@ -373,6 +375,7 @@ Input.propTypes = {
     onCopy: PropTypes.func,
     isReadOnly: PropTypes.bool,
     isCopyable: PropTypes.bool,
+    hideClear: PropTypes.bool,
     /** Component rendered at the input beginning */
     preComponent: PropTypes.any,
     /** Component rendered at the input ending */

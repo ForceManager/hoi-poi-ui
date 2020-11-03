@@ -155,10 +155,20 @@ const onCopy = () => window.alert('Copied to Clipboard');
         onChange={onChange(1)}
         value={state[1]}
     />
-    <Input label="Info" placeholder="Write here" onChange={onChange(2)}
-        value={state[2]} info="I am an info message" />
-    <Input label="Error" placeholder="Write here" onChange={onChange(3)}
-        value={state[3]} error="I am an error" />
+    <Input
+        label="Info"
+        placeholder="Write here"
+        onChange={onChange(2)}
+        value={state[2]}
+        info="I am an info message"
+    />
+    <Input
+        label="Error"
+        placeholder="Write here"
+        onChange={onChange(3)}
+        value={state[3]}
+        error="I am an error"
+    />
     <Input
         label="Info and Error"
         placeholder="Write here"
@@ -217,6 +227,24 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Without clear:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+<div>
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        onChange={onChange}
+        value={state.value}
+        hideClear
+    />
+</div>;
+```
+
 Pre/Post components
 
 ```jsx
@@ -245,7 +273,13 @@ import { useState } from 'react';
 const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 <div>
-    <Input label="Lorem ipsum" placeholder="Write here" onChange={onChange} value={state.value} isFullWidth/>
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        onChange={onChange}
+        value={state.value}
+        isFullWidth
+    />
 </div>;
 ```
 

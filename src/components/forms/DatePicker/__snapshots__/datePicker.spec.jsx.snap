@@ -447,111 +447,140 @@ exports[`DatePicker default match 1`] = `
         placeholder="Write here"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-1-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-1-0"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Write here"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-1-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
-              isCopyable={false}
-              isReadOnly={false}
+              className="HoiPoi__Input__root-1-6 HoiPoi__DatePicker__root-1-0"
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -560,140 +589,110 @@ exports[`DatePicker default match 1`] = `
                   },
                 }
               }
-              placeholder="Write here"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-1-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-1-5"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-1-26 HoiPoi__InputWrapper__vertical-1-30 HoiPoi__Input__root-1-6 HoiPoi__DatePicker__root-1-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-1-25 HoiPoi__InputWrapper__vertical-1-29 HoiPoi__Input__root-1-5"
+                  className="HoiPoi__InputWrapper__inputWrapper-1-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-1-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-1-29"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-1-28"
-                    >
-                      <div
-                        className="HoiPoi__Label__root-1-34 HoiPoi__InputWrapper__Label-1-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-1-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-1-38 HoiPoi__Label__Text-1-35 HoiPoi__Text__body-1-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-1-31"
+                      className="HoiPoi__Label__root-1-35 HoiPoi__InputWrapper__Label-1-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-1-7"
+                      <Text
+                        className="HoiPoi__Label__Text-1-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-1-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Write here"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
+                        <span
+                          className="HoiPoi__Text__root-1-39 HoiPoi__Label__Text-1-36 HoiPoi__Text__body-1-49"
+                        >
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-1-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-1-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-1-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Write here"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-1-20"
+                      >
                         <div
-                          className="HoiPoi__Input__postComponent-1-19"
+                          className="HoiPoi__Input__customPostComponent-1-21"
+                          key="custom"
                         >
                           <div
-                            className="HoiPoi__Input__customPostComponent-1-20"
-                            key="custom"
+                            className="HoiPoi__DatePicker__calendarIcon-1-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-1-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
                             >
-                              <Icon
-                                name="calendar"
-                                overrides={Object {}}
-                                size="medium"
+                              <span
+                                className="HoiPoi__Icon__root-1-57 HoiPoi__Icon__medium-1-59"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
-                                <span
-                                  className="HoiPoi__Icon__root-1-56 HoiPoi__Icon__medium-1-58"
-                                  onMouseDown={[Function]}
-                                  onMouseOut={[Function]}
-                                  onMouseOver={[Function]}
-                                  onMouseUp={[Function]}
+                                <Calendar
+                                  color="#7d8a96"
                                 >
-                                  <Calendar
-                                    color="#7d8a96"
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <svg
-                                      viewBox="0 0 18 18"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                                        fill="#7d8a96"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </Calendar>
-                                </span>
-                              </Icon>
-                            </div>
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -1147,110 +1146,127 @@ exports[`DatePicker is read only match 1`] = `
         placeholder="Select date"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-8-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--read-only"
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": false,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--read-only"
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": false,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-8-0"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={true}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Select date"
+            postComponent={false}
+            type="text"
             value=""
           >
             <Component
-              isCopyable={false}
-              isReadOnly={true}
+              className="HoiPoi__Input__root-8-6 HoiPoi__Input__isReadOnly-8-11 HoiPoi__DatePicker__root-8-0"
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -1259,121 +1275,103 @@ exports[`DatePicker is read only match 1`] = `
                   },
                 }
               }
-              placeholder="Select date"
-              postComponent={false}
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-8-5 HoiPoi__Input__isReadOnly-8-10"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-8-26 HoiPoi__InputWrapper__vertical-8-30 HoiPoi__Input__root-8-6 HoiPoi__Input__isReadOnly-8-11 HoiPoi__DatePicker__root-8-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-8-25 HoiPoi__InputWrapper__vertical-8-29 HoiPoi__Input__root-8-5 HoiPoi__Input__isReadOnly-8-10"
+                  className="HoiPoi__InputWrapper__inputWrapper-8-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-8-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-8-29"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-8-28"
-                    >
-                      <div
-                        className="HoiPoi__Label__root-8-34 HoiPoi__InputWrapper__Label-8-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-8-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-8-38 HoiPoi__Label__Text-8-35 HoiPoi__Text__body-8-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-8-31"
+                      className="HoiPoi__Label__root-8-35 HoiPoi__InputWrapper__Label-8-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-8-7"
+                      <Text
+                        className="HoiPoi__Label__Text-8-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-8-8"
-                          onBlur={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Select date"
-                          readOnly={true}
-                          type="text"
-                          value=""
-                        />
-                        <div
-                          className="HoiPoi__Input__postComponent-8-19"
+                        <span
+                          className="HoiPoi__Text__root-8-39 HoiPoi__Label__Text-8-36 HoiPoi__Text__body-8-49"
                         >
-                          <div
-                            className="HoiPoi__Input__postComponentReadOnly-8-22"
-                            key="readOnly"
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-8-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-8-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-8-9"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Select date"
+                        readOnly={true}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-8-20"
+                      >
+                        <div
+                          className="HoiPoi__Input__postComponentReadOnly-8-23"
+                          key="readOnly"
+                        >
+                          <Icon
+                            name="lockOutline"
+                            overrides={Object {}}
+                            size="medium"
                           >
-                            <Icon
-                              name="lockOutline"
-                              overrides={Object {}}
-                              size="medium"
+                            <span
+                              className="HoiPoi__Icon__root-8-57 HoiPoi__Icon__medium-8-59"
+                              onMouseDown={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                              onMouseUp={[Function]}
                             >
-                              <span
-                                className="HoiPoi__Icon__root-8-56 HoiPoi__Icon__medium-8-58"
-                                onMouseDown={[Function]}
-                                onMouseOut={[Function]}
-                                onMouseOver={[Function]}
-                                onMouseUp={[Function]}
+                              <LockOutline
+                                color="#7d8a96"
                               >
-                                <LockOutline
-                                  color="#7d8a96"
+                                <svg
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H8.9V6zM18 20H6V10h12v10z"
-                                      fill="#7d8a96"
-                                      fillRule="evenodd"
-                                    />
-                                  </svg>
-                                </LockOutline>
-                              </span>
-                            </Icon>
-                          </div>
+                                  <path
+                                    d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H8.9V6zM18 20H6V10h12v10z"
+                                    fill="#7d8a96"
+                                    fillRule="evenodd"
+                                  />
+                                </svg>
+                              </LockOutline>
+                            </span>
+                          </Icon>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -1828,112 +1826,142 @@ exports[`DatePicker is required match 1`] = `
         placeholder="Select date"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-6-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-6-0"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={false}
+            isRequired={true}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Select date"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-6-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
-              isCopyable={false}
-              isReadOnly={false}
+              className="HoiPoi__Input__root-6-6 HoiPoi__DatePicker__root-6-0"
               isRequired={true}
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -1942,143 +1970,112 @@ exports[`DatePicker is required match 1`] = `
                   },
                 }
               }
-              placeholder="Select date"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-6-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-6-5"
-                isRequired={true}
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-6-26 HoiPoi__InputWrapper__vertical-6-30 HoiPoi__Input__root-6-6 HoiPoi__DatePicker__root-6-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-6-25 HoiPoi__InputWrapper__vertical-6-29 HoiPoi__Input__root-6-5"
+                  className="HoiPoi__InputWrapper__inputWrapper-6-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-6-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-6-29"
+                    isRequired={true}
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-6-28"
-                      isRequired={true}
-                    >
-                      <div
-                        className="HoiPoi__Label__root-6-34 HoiPoi__InputWrapper__Label-6-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-6-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-6-38 HoiPoi__Label__Text-6-35 HoiPoi__Text__body-6-48"
-                          >
-                            Lorem ipsum
-                            *
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-6-31"
+                      className="HoiPoi__Label__root-6-35 HoiPoi__InputWrapper__Label-6-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-6-7"
+                      <Text
+                        className="HoiPoi__Label__Text-6-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-6-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Select date"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
+                        <span
+                          className="HoiPoi__Text__root-6-39 HoiPoi__Label__Text-6-36 HoiPoi__Text__body-6-49"
+                        >
+                          Lorem ipsum
+                          *
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-6-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-6-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-6-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Select date"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-6-20"
+                      >
                         <div
-                          className="HoiPoi__Input__postComponent-6-19"
+                          className="HoiPoi__Input__customPostComponent-6-21"
+                          key="custom"
                         >
                           <div
-                            className="HoiPoi__Input__customPostComponent-6-20"
-                            key="custom"
+                            className="HoiPoi__DatePicker__calendarIcon-6-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-6-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
                             >
-                              <Icon
-                                name="calendar"
-                                overrides={Object {}}
-                                size="medium"
+                              <span
+                                className="HoiPoi__Icon__root-6-57 HoiPoi__Icon__medium-6-59"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
-                                <span
-                                  className="HoiPoi__Icon__root-6-56 HoiPoi__Icon__medium-6-58"
-                                  onMouseDown={[Function]}
-                                  onMouseOut={[Function]}
-                                  onMouseOver={[Function]}
-                                  onMouseUp={[Function]}
+                                <Calendar
+                                  color="#7d8a96"
                                 >
-                                  <Calendar
-                                    color="#7d8a96"
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <svg
-                                      viewBox="0 0 18 18"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                                        fill="#7d8a96"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </Calendar>
-                                </span>
-                              </Icon>
-                            </div>
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -2532,111 +2529,140 @@ exports[`DatePicker vertical label mode match 1`] = `
         placeholder="Select date"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-9-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-9-0"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Select date"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-9-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
-              isCopyable={false}
-              isReadOnly={false}
+              className="HoiPoi__Input__root-9-6 HoiPoi__DatePicker__root-9-0"
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -2645,140 +2671,110 @@ exports[`DatePicker vertical label mode match 1`] = `
                   },
                 }
               }
-              placeholder="Select date"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-9-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-9-5"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-9-26 HoiPoi__InputWrapper__vertical-9-30 HoiPoi__Input__root-9-6 HoiPoi__DatePicker__root-9-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-9-25 HoiPoi__InputWrapper__vertical-9-29 HoiPoi__Input__root-9-5"
+                  className="HoiPoi__InputWrapper__inputWrapper-9-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-9-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-9-29"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-9-28"
-                    >
-                      <div
-                        className="HoiPoi__Label__root-9-34 HoiPoi__InputWrapper__Label-9-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-9-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-9-38 HoiPoi__Label__Text-9-35 HoiPoi__Text__body-9-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-9-31"
+                      className="HoiPoi__Label__root-9-35 HoiPoi__InputWrapper__Label-9-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-9-7"
+                      <Text
+                        className="HoiPoi__Label__Text-9-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-9-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Select date"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
+                        <span
+                          className="HoiPoi__Text__root-9-39 HoiPoi__Label__Text-9-36 HoiPoi__Text__body-9-49"
+                        >
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-9-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-9-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-9-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Select date"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-9-20"
+                      >
                         <div
-                          className="HoiPoi__Input__postComponent-9-19"
+                          className="HoiPoi__Input__customPostComponent-9-21"
+                          key="custom"
                         >
                           <div
-                            className="HoiPoi__Input__customPostComponent-9-20"
-                            key="custom"
+                            className="HoiPoi__DatePicker__calendarIcon-9-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-9-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
                             >
-                              <Icon
-                                name="calendar"
-                                overrides={Object {}}
-                                size="medium"
+                              <span
+                                className="HoiPoi__Icon__root-9-57 HoiPoi__Icon__medium-9-59"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
-                                <span
-                                  className="HoiPoi__Icon__root-9-56 HoiPoi__Icon__medium-9-58"
-                                  onMouseDown={[Function]}
-                                  onMouseOut={[Function]}
-                                  onMouseOver={[Function]}
-                                  onMouseUp={[Function]}
+                                <Calendar
+                                  color="#7d8a96"
                                 >
-                                  <Calendar
-                                    color="#7d8a96"
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <svg
-                                      viewBox="0 0 18 18"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                                        fill="#7d8a96"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </Calendar>
-                                </span>
-                              </Icon>
-                            </div>
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -3232,111 +3228,140 @@ exports[`DatePicker with different format 1`] = `
         placeholder="Write here"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-3-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "Z",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "Z",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-3-0"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Write here"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-3-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
-              isCopyable={false}
-              isReadOnly={false}
+              className="HoiPoi__Input__root-3-6 HoiPoi__DatePicker__root-3-0"
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -3345,140 +3370,110 @@ exports[`DatePicker with different format 1`] = `
                   },
                 }
               }
-              placeholder="Write here"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-3-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-3-5"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-3-26 HoiPoi__InputWrapper__vertical-3-30 HoiPoi__Input__root-3-6 HoiPoi__DatePicker__root-3-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-3-25 HoiPoi__InputWrapper__vertical-3-29 HoiPoi__Input__root-3-5"
+                  className="HoiPoi__InputWrapper__inputWrapper-3-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-3-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-3-29"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-3-28"
-                    >
-                      <div
-                        className="HoiPoi__Label__root-3-34 HoiPoi__InputWrapper__Label-3-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-3-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-3-38 HoiPoi__Label__Text-3-35 HoiPoi__Text__body-3-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-3-31"
+                      className="HoiPoi__Label__root-3-35 HoiPoi__InputWrapper__Label-3-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-3-7"
+                      <Text
+                        className="HoiPoi__Label__Text-3-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-3-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Write here"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
+                        <span
+                          className="HoiPoi__Text__root-3-39 HoiPoi__Label__Text-3-36 HoiPoi__Text__body-3-49"
+                        >
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-3-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-3-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-3-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Write here"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-3-20"
+                      >
                         <div
-                          className="HoiPoi__Input__postComponent-3-19"
+                          className="HoiPoi__Input__customPostComponent-3-21"
+                          key="custom"
                         >
                           <div
-                            className="HoiPoi__Input__customPostComponent-3-20"
-                            key="custom"
+                            className="HoiPoi__DatePicker__calendarIcon-3-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-3-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
                             >
-                              <Icon
-                                name="calendar"
-                                overrides={Object {}}
-                                size="medium"
+                              <span
+                                className="HoiPoi__Icon__root-3-57 HoiPoi__Icon__medium-3-59"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
-                                <span
-                                  className="HoiPoi__Icon__root-3-56 HoiPoi__Icon__medium-3-58"
-                                  onMouseDown={[Function]}
-                                  onMouseOut={[Function]}
-                                  onMouseOver={[Function]}
-                                  onMouseUp={[Function]}
+                                <Calendar
+                                  color="#7d8a96"
                                 >
-                                  <Calendar
-                                    color="#7d8a96"
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <svg
-                                      viewBox="0 0 18 18"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                                        fill="#7d8a96"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </Calendar>
-                                </span>
-                              </Icon>
-                            </div>
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -3933,112 +3928,142 @@ exports[`DatePicker with different locale 1`] = `
         placeholder="Write here"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-4-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-4-0"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            locale="ru"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Write here"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-4-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
-              isCopyable={false}
-              isReadOnly={false}
+              className="HoiPoi__Input__root-4-6 HoiPoi__DatePicker__root-4-0"
               label="Lorem ipsum"
               labelMode="vertical"
               locale="ru"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -4047,141 +4072,110 @@ exports[`DatePicker with different locale 1`] = `
                   },
                 }
               }
-              placeholder="Write here"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-4-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-4-5"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                locale="ru"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-4-26 HoiPoi__InputWrapper__vertical-4-30 HoiPoi__Input__root-4-6 HoiPoi__DatePicker__root-4-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-4-25 HoiPoi__InputWrapper__vertical-4-29 HoiPoi__Input__root-4-5"
+                  className="HoiPoi__InputWrapper__inputWrapper-4-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-4-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-4-29"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-4-28"
-                    >
-                      <div
-                        className="HoiPoi__Label__root-4-34 HoiPoi__InputWrapper__Label-4-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-4-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-4-38 HoiPoi__Label__Text-4-35 HoiPoi__Text__body-4-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-4-31"
+                      className="HoiPoi__Label__root-4-35 HoiPoi__InputWrapper__Label-4-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-4-7"
+                      <Text
+                        className="HoiPoi__Label__Text-4-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-4-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Write here"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
+                        <span
+                          className="HoiPoi__Text__root-4-39 HoiPoi__Label__Text-4-36 HoiPoi__Text__body-4-49"
+                        >
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-4-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-4-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-4-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Write here"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-4-20"
+                      >
                         <div
-                          className="HoiPoi__Input__postComponent-4-19"
+                          className="HoiPoi__Input__customPostComponent-4-21"
+                          key="custom"
                         >
                           <div
-                            className="HoiPoi__Input__customPostComponent-4-20"
-                            key="custom"
+                            className="HoiPoi__DatePicker__calendarIcon-4-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-4-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
                             >
-                              <Icon
-                                name="calendar"
-                                overrides={Object {}}
-                                size="medium"
+                              <span
+                                className="HoiPoi__Icon__root-4-57 HoiPoi__Icon__medium-4-59"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
-                                <span
-                                  className="HoiPoi__Icon__root-4-56 HoiPoi__Icon__medium-4-58"
-                                  onMouseDown={[Function]}
-                                  onMouseOut={[Function]}
-                                  onMouseOver={[Function]}
-                                  onMouseUp={[Function]}
+                                <Calendar
+                                  color="#7d8a96"
                                 >
-                                  <Calendar
-                                    color="#7d8a96"
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <svg
-                                      viewBox="0 0 18 18"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                                        fill="#7d8a96"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </Calendar>
-                                </span>
-                              </Icon>
-                            </div>
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -4636,112 +4630,142 @@ exports[`DatePicker with error match 1`] = `
         placeholder="Select date"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-7-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-7-0"
+            error="I am an error"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Select date"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-7-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
+              className="HoiPoi__Input__root-7-6 HoiPoi__Input__error-7-10 HoiPoi__DatePicker__root-7-0"
               error="I am an error"
-              isCopyable={false}
-              isReadOnly={false}
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -4750,152 +4774,121 @@ exports[`DatePicker with error match 1`] = `
                   },
                 }
               }
-              placeholder="Select date"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-7-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-7-5 HoiPoi__Input__error-7-9"
-                error="I am an error"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-7-26 HoiPoi__InputWrapper__vertical-7-30 HoiPoi__InputWrapper__error-7-34 HoiPoi__Input__root-7-6 HoiPoi__Input__error-7-10 HoiPoi__DatePicker__root-7-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-7-25 HoiPoi__InputWrapper__vertical-7-29 HoiPoi__InputWrapper__error-7-33 HoiPoi__Input__root-7-5 HoiPoi__Input__error-7-9"
+                  className="HoiPoi__InputWrapper__inputWrapper-7-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-7-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-7-29"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-7-28"
-                    >
-                      <div
-                        className="HoiPoi__Label__root-7-34 HoiPoi__InputWrapper__Label-7-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-7-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-7-38 HoiPoi__Label__Text-7-35 HoiPoi__Text__body-7-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-7-31"
+                      className="HoiPoi__Label__root-7-35 HoiPoi__InputWrapper__Label-7-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-7-7"
+                      <Text
+                        className="HoiPoi__Label__Text-7-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-7-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Select date"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
+                        <span
+                          className="HoiPoi__Text__root-7-39 HoiPoi__Label__Text-7-36 HoiPoi__Text__body-7-49"
+                        >
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-7-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-7-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-7-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Select date"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-7-20"
+                      >
                         <div
-                          className="HoiPoi__Input__postComponent-7-19"
+                          className="HoiPoi__Input__customPostComponent-7-21"
+                          key="custom"
                         >
                           <div
-                            className="HoiPoi__Input__customPostComponent-7-20"
-                            key="custom"
+                            className="HoiPoi__DatePicker__calendarIcon-7-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-7-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
                             >
-                              <Icon
-                                name="calendar"
-                                overrides={Object {}}
-                                size="medium"
+                              <span
+                                className="HoiPoi__Icon__root-7-57 HoiPoi__Icon__medium-7-59"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
-                                <span
-                                  className="HoiPoi__Icon__root-7-56 HoiPoi__Icon__medium-7-58"
-                                  onMouseDown={[Function]}
-                                  onMouseOut={[Function]}
-                                  onMouseOver={[Function]}
-                                  onMouseUp={[Function]}
+                                <Calendar
+                                  color="#7d8a96"
                                 >
-                                  <Calendar
-                                    color="#7d8a96"
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <svg
-                                      viewBox="0 0 18 18"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                                        fill="#7d8a96"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </Calendar>
-                                </span>
-                              </Icon>
-                            </div>
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    error="I am an error"
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
+                </div>
+                <Component
+                  className=""
+                  error="I am an error"
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
                     }
+                  }
+                >
+                  <div
+                    className="HoiPoi__FieldBottom__root-7-64"
                   >
                     <div
-                      className="HoiPoi__FieldBottom__root-7-63"
+                      className="HoiPoi__FieldBottom__error-7-67"
                     >
-                      <div
-                        className="HoiPoi__FieldBottom__error-7-66"
-                      >
-                        I am an error
-                      </div>
+                      I am an error
                     </div>
-                  </Component>
-                </div>
-              </Component>
+                  </div>
+                </Component>
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -5350,112 +5343,142 @@ exports[`DatePicker with hint match 1`] = `
         placeholder="Select date"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-5-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-5-0"
+            hideClear={false}
+            hint="Hello"
+            isCopyable={false}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Select date"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-5-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
+              className="HoiPoi__Input__root-5-6 HoiPoi__DatePicker__root-5-0"
               hint="Hello"
-              isCopyable={false}
-              isReadOnly={false}
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -5464,423 +5487,329 @@ exports[`DatePicker with hint match 1`] = `
                   },
                 }
               }
-              placeholder="Select date"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-5-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-5-5"
-                hint="Hello"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-5-26 HoiPoi__InputWrapper__vertical-5-30 HoiPoi__Input__root-5-6 HoiPoi__DatePicker__root-5-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-5-25 HoiPoi__InputWrapper__vertical-5-29 HoiPoi__Input__root-5-5"
+                  className="HoiPoi__InputWrapper__inputWrapper-5-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-5-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-5-29"
+                    hint="Hello"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-5-28"
-                      hint="Hello"
+                    <div
+                      className="HoiPoi__Label__root-5-35 HoiPoi__InputWrapper__Label-5-29"
                     >
-                      <div
-                        className="HoiPoi__Label__root-5-34 HoiPoi__InputWrapper__Label-5-28"
+                      <Text
+                        className="HoiPoi__Label__Text-5-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <Text
-                          className="HoiPoi__Label__Text-5-35"
-                          overrides={Object {}}
-                          type="body"
+                        <span
+                          className="HoiPoi__Text__root-5-39 HoiPoi__Label__Text-5-36 HoiPoi__Text__body-5-49"
                         >
-                          <span
-                            className="HoiPoi__Text__root-5-38 HoiPoi__Label__Text-5-35 HoiPoi__Text__body-5-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                        <Popover
-                          content="Hello"
-                          overrides={Object {}}
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                      <Popover
+                        content="Hello"
+                        overrides={Object {}}
+                        placement="top"
+                        trigger={
+                          Array [
+                            "hover",
+                          ]
+                        }
+                      >
+                        <Tooltip
+                          align={Object {}}
+                          arrowContent={null}
+                          destroyTooltipOnHide={false}
+                          mouseEnterDelay={0}
+                          mouseLeaveDelay={0.1}
+                          overlay="Hello"
+                          overlayClassName="HoiPoi__Popover__root-5-57"
                           placement="top"
+                          prefixCls="hoi-poi-popover"
+                          transitionName="hoi-poi-popover--fade"
                           trigger={
                             Array [
                               "hover",
                             ]
                           }
                         >
-                          <Tooltip
-                            align={Object {}}
-                            arrowContent={null}
-                            destroyTooltipOnHide={false}
-                            mouseEnterDelay={0}
-                            mouseLeaveDelay={0.1}
-                            overlay="Hello"
-                            overlayClassName="HoiPoi__Popover__root-5-56"
-                            placement="top"
-                            prefixCls="hoi-poi-popover"
-                            transitionName="hoi-poi-popover--fade"
-                            trigger={
+                          <Trigger
+                            action={
                               Array [
                                 "hover",
                               ]
                             }
-                          >
-                            <Trigger
-                              action={
-                                Array [
-                                  "hover",
-                                ]
+                            afterPopupVisibleChange={[Function]}
+                            arrowContent={null}
+                            blurDelay={0.15}
+                            builtinPlacements={
+                              Object {
+                                "bottom": Object {
+                                  "offset": Array [
+                                    0,
+                                    4,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "tc",
+                                    "bc",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "bottomLeft": Object {
+                                  "offset": Array [
+                                    0,
+                                    4,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "tl",
+                                    "bl",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "bottomRight": Object {
+                                  "offset": Array [
+                                    0,
+                                    4,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "tr",
+                                    "br",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "left": Object {
+                                  "offset": Array [
+                                    -4,
+                                    0,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "cr",
+                                    "cl",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "leftBottom": Object {
+                                  "offset": Array [
+                                    -4,
+                                    0,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "br",
+                                    "bl",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "leftTop": Object {
+                                  "offset": Array [
+                                    -4,
+                                    0,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "tr",
+                                    "tl",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "right": Object {
+                                  "offset": Array [
+                                    4,
+                                    0,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "cl",
+                                    "cr",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "rightBottom": Object {
+                                  "offset": Array [
+                                    4,
+                                    0,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "bl",
+                                    "br",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "rightTop": Object {
+                                  "offset": Array [
+                                    4,
+                                    0,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "tl",
+                                    "tr",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "top": Object {
+                                  "offset": Array [
+                                    0,
+                                    -4,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "bc",
+                                    "tc",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "topLeft": Object {
+                                  "offset": Array [
+                                    0,
+                                    -4,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "bl",
+                                    "tl",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
+                                "topRight": Object {
+                                  "offset": Array [
+                                    0,
+                                    -4,
+                                  ],
+                                  "overflow": Object {
+                                    "adjustX": 1,
+                                    "adjustY": 1,
+                                  },
+                                  "points": Array [
+                                    "br",
+                                    "tr",
+                                  ],
+                                  "targetOffset": Array [
+                                    0,
+                                    0,
+                                  ],
+                                },
                               }
-                              afterPopupVisibleChange={[Function]}
-                              arrowContent={null}
-                              blurDelay={0.15}
-                              builtinPlacements={
-                                Object {
-                                  "bottom": Object {
-                                    "offset": Array [
-                                      0,
-                                      4,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "tc",
-                                      "bc",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "bottomLeft": Object {
-                                    "offset": Array [
-                                      0,
-                                      4,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "tl",
-                                      "bl",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "bottomRight": Object {
-                                    "offset": Array [
-                                      0,
-                                      4,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "tr",
-                                      "br",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "left": Object {
-                                    "offset": Array [
-                                      -4,
-                                      0,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "cr",
-                                      "cl",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "leftBottom": Object {
-                                    "offset": Array [
-                                      -4,
-                                      0,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "br",
-                                      "bl",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "leftTop": Object {
-                                    "offset": Array [
-                                      -4,
-                                      0,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "tr",
-                                      "tl",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "right": Object {
-                                    "offset": Array [
-                                      4,
-                                      0,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "cl",
-                                      "cr",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "rightBottom": Object {
-                                    "offset": Array [
-                                      4,
-                                      0,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "bl",
-                                      "br",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "rightTop": Object {
-                                    "offset": Array [
-                                      4,
-                                      0,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "tl",
-                                      "tr",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "top": Object {
-                                    "offset": Array [
-                                      0,
-                                      -4,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "bc",
-                                      "tc",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "topLeft": Object {
-                                    "offset": Array [
-                                      0,
-                                      -4,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "bl",
-                                      "tl",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                  "topRight": Object {
-                                    "offset": Array [
-                                      0,
-                                      -4,
-                                    ],
-                                    "overflow": Object {
-                                      "adjustX": 1,
-                                      "adjustY": 1,
-                                    },
-                                    "points": Array [
-                                      "br",
-                                      "tr",
-                                    ],
-                                    "targetOffset": Array [
-                                      0,
-                                      0,
-                                    ],
-                                  },
-                                }
-                              }
-                              defaultPopupVisible={false}
-                              destroyPopupOnHide={false}
-                              focusDelay={0}
-                              getDocument={[Function]}
-                              getPopupClassNameFromAlign={[Function]}
-                              hideAction={Array []}
-                              mask={false}
-                              maskClosable={true}
-                              mouseEnterDelay={0}
-                              mouseLeaveDelay={0.1}
-                              onPopupAlign={[Function]}
-                              onPopupVisibleChange={[Function]}
-                              overlay="Hello"
-                              popup={[Function]}
-                              popupAlign={Object {}}
-                              popupClassName="HoiPoi__Popover__root-5-56"
-                              popupPlacement="top"
-                              popupStyle={Object {}}
-                              popupTransitionName="hoi-poi-popover--fade"
-                              prefixCls="hoi-poi-popover"
-                              showAction={Array []}
-                            >
-                              <span
-                                className="HoiPoi__Label__info-5-36"
-                                key="trigger"
-                                onMouseEnter={[Function]}
-                                onMouseLeave={[Function]}
-                              >
-                                <Icon
-                                  className="HoiPoi__Label__icon-5-37"
-                                  name="info"
-                                  overrides={Object {}}
-                                  size="medium"
-                                >
-                                  <span
-                                    className="HoiPoi__Icon__root-5-57 HoiPoi__Icon__medium-5-59 HoiPoi__Label__icon-5-37"
-                                    onMouseDown={[Function]}
-                                    onMouseOut={[Function]}
-                                    onMouseOver={[Function]}
-                                    onMouseUp={[Function]}
-                                  >
-                                    <Info
-                                      color="#7d8a96"
-                                    >
-                                      <svg
-                                        viewBox="0 0 18 18"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
-                                          fill="#7d8a96"
-                                          fillRule="nonzero"
-                                        />
-                                      </svg>
-                                    </Info>
-                                  </span>
-                                </Icon>
-                              </span>
-                            </Trigger>
-                          </Tooltip>
-                        </Popover>
-                      </div>
-                    </Label>
-                    <div
-                      className="HoiPoi__InputWrapper__formControl-5-31"
-                    >
-                      <div
-                        className="HoiPoi__Input__inputComponents-5-7"
-                      >
-                        <input
-                          className="HoiPoi__Input__input-5-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Select date"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
-                        <div
-                          className="HoiPoi__Input__postComponent-5-19"
-                        >
-                          <div
-                            className="HoiPoi__Input__customPostComponent-5-20"
-                            key="custom"
+                            }
+                            defaultPopupVisible={false}
+                            destroyPopupOnHide={false}
+                            focusDelay={0}
+                            getDocument={[Function]}
+                            getPopupClassNameFromAlign={[Function]}
+                            hideAction={Array []}
+                            mask={false}
+                            maskClosable={true}
+                            mouseEnterDelay={0}
+                            mouseLeaveDelay={0.1}
+                            onPopupAlign={[Function]}
+                            onPopupVisibleChange={[Function]}
+                            overlay="Hello"
+                            popup={[Function]}
+                            popupAlign={Object {}}
+                            popupClassName="HoiPoi__Popover__root-5-57"
+                            popupPlacement="top"
+                            popupStyle={Object {}}
+                            popupTransitionName="hoi-poi-popover--fade"
+                            prefixCls="hoi-poi-popover"
+                            showAction={Array []}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-5-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <span
+                              className="HoiPoi__Label__info-5-37"
+                              key="trigger"
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
                             >
                               <Icon
-                                name="calendar"
+                                className="HoiPoi__Label__icon-5-38"
+                                name="info"
                                 overrides={Object {}}
                                 size="medium"
                               >
                                 <span
-                                  className="HoiPoi__Icon__root-5-57 HoiPoi__Icon__medium-5-59"
+                                  className="HoiPoi__Icon__root-5-58 HoiPoi__Icon__medium-5-60 HoiPoi__Label__icon-5-38"
                                   onMouseDown={[Function]}
                                   onMouseOut={[Function]}
                                   onMouseOver={[Function]}
                                   onMouseUp={[Function]}
                                 >
-                                  <Calendar
+                                  <Info
                                     color="#7d8a96"
                                   >
                                     <svg
@@ -5888,35 +5817,98 @@ exports[`DatePicker with hint match 1`] = `
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                        d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
                                         fill="#7d8a96"
-                                        fillRule="evenodd"
+                                        fillRule="nonzero"
                                       />
                                     </svg>
-                                  </Calendar>
+                                  </Info>
                                 </span>
                               </Icon>
-                            </div>
+                            </span>
+                          </Trigger>
+                        </Tooltip>
+                      </Popover>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-5-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-5-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-5-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Select date"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-5-20"
+                      >
+                        <div
+                          className="HoiPoi__Input__customPostComponent-5-21"
+                          key="custom"
+                        >
+                          <div
+                            className="HoiPoi__DatePicker__calendarIcon-5-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                          >
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
+                            >
+                              <span
+                                className="HoiPoi__Icon__root-5-58 HoiPoi__Icon__medium-5-60"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
+                              >
+                                <Calendar
+                                  color="#7d8a96"
+                                >
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
@@ -6370,111 +6362,140 @@ exports[`DatePicker with outputType string 1`] = `
         placeholder="Write here"
         value=""
       >
-        <div
+        <DateTimePicker
           className="HoiPoi__DatePicker__root-2-0"
-        >
-          <DateTimePicker
-            key="flatpickr-anon--active"
-            onChange={[Function]}
-            onReady={[Function]}
-            options={
-              Object {
-                "clickOpens": true,
-                "dateFormat": "d M Y",
-                "formatDate": undefined,
-                "locale": Object {
-                  "amPM": Array [
-                    "AM",
-                    "PM",
+          key="flatpickr-anon--active"
+          onChange={[Function]}
+          onReady={[Function]}
+          options={
+            Object {
+              "clickOpens": true,
+              "dateFormat": "d M Y",
+              "formatDate": undefined,
+              "locale": Object {
+                "amPM": Array [
+                  "AM",
+                  "PM",
+                ],
+                "daysInMonth": Array [
+                  31,
+                  28,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                  31,
+                  30,
+                  31,
+                  30,
+                  31,
+                ],
+                "firstDayOfWeek": 0,
+                "hourAriaLabel": "Hour",
+                "minuteAriaLabel": "Minute",
+                "months": Object {
+                  "longhand": Array [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December",
                   ],
-                  "daysInMonth": Array [
-                    31,
-                    28,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
-                    31,
-                    30,
-                    31,
-                    30,
-                    31,
+                  "shorthand": Array [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec",
                   ],
-                  "firstDayOfWeek": 0,
-                  "hourAriaLabel": "Hour",
-                  "minuteAriaLabel": "Minute",
-                  "months": Object {
-                    "longhand": Array [
-                      "January",
-                      "February",
-                      "March",
-                      "April",
-                      "May",
-                      "June",
-                      "July",
-                      "August",
-                      "September",
-                      "October",
-                      "November",
-                      "December",
-                    ],
-                    "shorthand": Array [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec",
-                    ],
-                  },
-                  "ordinal": [Function],
-                  "rangeSeparator": " to ",
-                  "scrollTitle": "Scroll to increment",
-                  "time_24hr": false,
-                  "toggleTitle": "Click to toggle",
-                  "weekAbbreviation": "Wk",
-                  "weekdays": Object {
-                    "longhand": Array [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday",
-                    ],
-                    "shorthand": Array [
-                      "Sun",
-                      "Mon",
-                      "Tue",
-                      "Wed",
-                      "Thu",
-                      "Fri",
-                      "Sat",
-                    ],
-                  },
-                  "yearAriaLabel": "Year",
                 },
-                "time_24hr": true,
+                "ordinal": [Function],
+                "rangeSeparator": " to ",
+                "scrollTitle": "Scroll to increment",
+                "time_24hr": false,
+                "toggleTitle": "Click to toggle",
+                "weekAbbreviation": "Wk",
+                "weekdays": Object {
+                  "longhand": Array [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  "shorthand": Array [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ],
+                },
+                "yearAriaLabel": "Year",
+              },
+              "time_24hr": true,
+            }
+          }
+          render={[Function]}
+          value=""
+        >
+          <Component
+            className="HoiPoi__DatePicker__root-2-0"
+            hideClear={false}
+            isCopyable={false}
+            isReadOnly={false}
+            label="Lorem ipsum"
+            labelMode="vertical"
+            numberDecimals={2}
+            onChange={[Function]}
+            override={Object {}}
+            overrides={
+              Object {
+                "input": Object {
+                  "ref": [Function],
+                },
               }
             }
-            render={[Function]}
+            placeholder="Write here"
+            postComponent={
+              <div
+                className="HoiPoi__DatePicker__calendarIcon-2-3"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <Icon
+                  name="calendar"
+                  overrides={Object {}}
+                  size="medium"
+                />
+              </div>
+            }
+            type="text"
             value=""
           >
             <Component
-              isCopyable={false}
-              isReadOnly={false}
+              className="HoiPoi__Input__root-2-6 HoiPoi__DatePicker__root-2-0"
               label="Lorem ipsum"
               labelMode="vertical"
-              numberDecimals={2}
-              onChange={[Function]}
               override={Object {}}
               overrides={
                 Object {
@@ -6483,140 +6504,110 @@ exports[`DatePicker with outputType string 1`] = `
                   },
                 }
               }
-              placeholder="Write here"
-              postComponent={
-                <div
-                  className="HoiPoi__DatePicker__calendarIcon-2-2"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                >
-                  <Icon
-                    name="calendar"
-                    overrides={Object {}}
-                    size="medium"
-                  />
-                </div>
-              }
-              type="text"
-              value=""
             >
-              <Component
-                className="HoiPoi__Input__root-2-5"
-                label="Lorem ipsum"
-                labelMode="vertical"
-                override={Object {}}
-                overrides={
-                  Object {
-                    "input": Object {
-                      "ref": [Function],
-                    },
-                  }
-                }
+              <div
+                className="HoiPoi__InputWrapper__root-2-26 HoiPoi__InputWrapper__vertical-2-30 HoiPoi__Input__root-2-6 HoiPoi__DatePicker__root-2-0"
               >
                 <div
-                  className="HoiPoi__InputWrapper__root-2-25 HoiPoi__InputWrapper__vertical-2-29 HoiPoi__Input__root-2-5"
+                  className="HoiPoi__InputWrapper__inputWrapper-2-27"
                 >
-                  <div
-                    className="HoiPoi__InputWrapper__inputWrapper-2-26"
+                  <Label
+                    className="HoiPoi__InputWrapper__Label-2-29"
                   >
-                    <Label
-                      className="HoiPoi__InputWrapper__Label-2-28"
-                    >
-                      <div
-                        className="HoiPoi__Label__root-2-34 HoiPoi__InputWrapper__Label-2-28"
-                      >
-                        <Text
-                          className="HoiPoi__Label__Text-2-35"
-                          overrides={Object {}}
-                          type="body"
-                        >
-                          <span
-                            className="HoiPoi__Text__root-2-38 HoiPoi__Label__Text-2-35 HoiPoi__Text__body-2-48"
-                          >
-                            Lorem ipsum
-                          </span>
-                        </Text>
-                      </div>
-                    </Label>
                     <div
-                      className="HoiPoi__InputWrapper__formControl-2-31"
+                      className="HoiPoi__Label__root-2-35 HoiPoi__InputWrapper__Label-2-29"
                     >
-                      <div
-                        className="HoiPoi__Input__inputComponents-2-7"
+                      <Text
+                        className="HoiPoi__Label__Text-2-36"
+                        overrides={Object {}}
+                        type="body"
                       >
-                        <input
-                          className="HoiPoi__Input__input-2-8"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          placeholder="Write here"
-                          readOnly={false}
-                          type="text"
-                          value=""
-                        />
+                        <span
+                          className="HoiPoi__Text__root-2-39 HoiPoi__Label__Text-2-36 HoiPoi__Text__body-2-49"
+                        >
+                          Lorem ipsum
+                        </span>
+                      </Text>
+                    </div>
+                  </Label>
+                  <div
+                    className="HoiPoi__InputWrapper__formControl-2-32"
+                  >
+                    <div
+                      className="HoiPoi__Input__inputComponents-2-8"
+                    >
+                      <input
+                        className="HoiPoi__Input__input-2-9"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyUp={[Function]}
+                        placeholder="Write here"
+                        readOnly={false}
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="HoiPoi__Input__postComponent-2-20"
+                      >
                         <div
-                          className="HoiPoi__Input__postComponent-2-19"
+                          className="HoiPoi__Input__customPostComponent-2-21"
+                          key="custom"
                         >
                           <div
-                            className="HoiPoi__Input__customPostComponent-2-20"
-                            key="custom"
+                            className="HoiPoi__DatePicker__calendarIcon-2-3"
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
                           >
-                            <div
-                              className="HoiPoi__DatePicker__calendarIcon-2-2"
-                              onClick={[Function]}
-                              onMouseDown={[Function]}
+                            <Icon
+                              name="calendar"
+                              overrides={Object {}}
+                              size="medium"
                             >
-                              <Icon
-                                name="calendar"
-                                overrides={Object {}}
-                                size="medium"
+                              <span
+                                className="HoiPoi__Icon__root-2-57 HoiPoi__Icon__medium-2-59"
+                                onMouseDown={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                                onMouseUp={[Function]}
                               >
-                                <span
-                                  className="HoiPoi__Icon__root-2-56 HoiPoi__Icon__medium-2-58"
-                                  onMouseDown={[Function]}
-                                  onMouseOut={[Function]}
-                                  onMouseOver={[Function]}
-                                  onMouseUp={[Function]}
+                                <Calendar
+                                  color="#7d8a96"
                                 >
-                                  <Calendar
-                                    color="#7d8a96"
+                                  <svg
+                                    viewBox="0 0 18 18"
+                                    xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <svg
-                                      viewBox="0 0 18 18"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
-                                        fill="#7d8a96"
-                                        fillRule="evenodd"
-                                      />
-                                    </svg>
-                                  </Calendar>
-                                </span>
-                              </Icon>
-                            </div>
+                                    <path
+                                      d="M15 2V1a1 1 0 00-2 0v1H5V1a1 1 0 10-2 0v1H2C.89 2 .01 2.9.01 4L0 16a2 2 0 002 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2h-1zM2 16V6h14v10H2zm2-7a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1zm0 4a1 1 0 001 1h8a1 1 0 000-2H5a1 1 0 00-1 1z"
+                                      fill="#7d8a96"
+                                      fillRule="evenodd"
+                                    />
+                                  </svg>
+                                </Calendar>
+                              </span>
+                            </Icon>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <Component
-                    className=""
-                    overrides={
-                      Object {
-                        "input": Object {
-                          "ref": [Function],
-                        },
-                      }
-                    }
-                  />
                 </div>
-              </Component>
+                <Component
+                  className=""
+                  overrides={
+                    Object {
+                      "input": Object {
+                        "ref": [Function],
+                      },
+                    }
+                  }
+                />
+              </div>
             </Component>
-          </DateTimePicker>
-        </div>
+          </Component>
+        </DateTimePicker>
       </DatePicker>
     </JssProvider>
   </ThemeProvider>
