@@ -939,6 +939,7 @@ let isOpen = state.isOpen || false;
 
 -   [root](https://github.com/reactjs/react-modal)
 -   header - header wrapper.
+-   container
 -   content - inner content and `children` wrapper.
 -   preComponent
 -   postComponent
