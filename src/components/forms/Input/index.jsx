@@ -1,4 +1,4 @@
-import React, { memo, useState, useCallback, useMemo } from 'react';
+import React, { forwardRef, memo, useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -20,35 +20,39 @@ const types = {
     title: 'text',
 };
 
-const Input = memo(
-    ({
-        children,
-        classes: classesProp,
-        overrides: overridesProp,
-        className: classNameProp,
-        onChange,
-        onCopy,
-        onFocus,
-        onBlur,
-        onEnter,
-        id,
-        name,
-        type,
-        numberDecimals,
-        value,
-        placeholder,
-        error,
-        isReadOnly,
-        isFullWidth,
-        preComponent,
-        postComponent,
-        component,
-        isCopyable,
-        hideClear,
-        ...props
-    }) => {
+const Input = forwardRef(
+    (
+        {
+            children,
+            classes: classesProp,
+            overrides: overridesProp,
+            className: classNameProp,
+            onChange,
+            onCopy,
+            onFocus,
+            onBlur,
+            onEnter,
+            id,
+            name,
+            type,
+            numberDecimals,
+            value,
+            placeholder,
+            error,
+            isReadOnly,
+            isFullWidth,
+            preComponent,
+            postComponent,
+            component,
+            isCopyable,
+            hideClear,
+            label,
+            labelMode,
+            ...props
+        },
+        ref,
+    ) => {
         const [focused, setFocused] = useState(false);
-
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Input.overrides);
 
@@ -175,9 +179,12 @@ const Input = memo(
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
                 onKeyUp: handleOnKeyUp,
+                ref,
+                ...props,
                 ...override.input,
             };
         }, [
+            props,
             id,
             name,
             classes.input,
@@ -190,6 +197,7 @@ const Input = memo(
             handleOnBlur,
             handleOnKeyDown,
             handleOnKeyUp,
+            ref,
             override.input,
         ]);
 
@@ -308,7 +316,8 @@ const Input = memo(
 
         return (
             <InputWrapper
-                {...props}
+                label={label}
+                labelMode={labelMode}
                 error={error}
                 className={rootClassName}
                 overrides={overridesProp}
@@ -377,6 +386,7 @@ Input.propTypes = {
     isReadOnly: PropTypes.bool,
     isCopyable: PropTypes.bool,
     hideClear: PropTypes.bool,
+    ref: PropTypes.func,
     /** Component rendered at the input beginning */
     preComponent: PropTypes.any,
     /** Component rendered at the input ending */
@@ -385,4 +395,4 @@ Input.propTypes = {
     component: PropTypes.any,
 };
 
-export default Input;
+export default memo(Input);
