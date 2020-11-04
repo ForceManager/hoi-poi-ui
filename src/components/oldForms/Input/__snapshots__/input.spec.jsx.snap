@@ -434,7 +434,7 @@ exports[`Input default match 1`] = `
         }
       }
     >
-      <Component
+      <ForwardRef
         hideClear={false}
         isCopyable={false}
         isReadOnly={false}
@@ -493,6 +493,7 @@ exports[`Input default match 1`] = `
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
+                    override={Object {}}
                     placeholder="Write here"
                     readOnly={false}
                     type="text"
@@ -547,7 +548,7 @@ exports[`Input default match 1`] = `
             />
           </div>
         </Component>
-      </Component>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -987,7 +988,7 @@ exports[`Input is read only match 1`] = `
         }
       }
     >
-      <Component
+      <ForwardRef
         hideClear={false}
         isCopyable={false}
         isReadOnly={true}
@@ -1045,6 +1046,7 @@ exports[`Input is read only match 1`] = `
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
+                    override={Object {}}
                     placeholder="Write here"
                     readOnly={true}
                     type="text"
@@ -1096,7 +1098,7 @@ exports[`Input is read only match 1`] = `
             />
           </div>
         </Component>
-      </Component>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -1536,7 +1538,7 @@ exports[`Input is required match 1`] = `
         }
       }
     >
-      <Component
+      <ForwardRef
         hideClear={false}
         isCopyable={false}
         isReadOnly={false}
@@ -1553,7 +1555,6 @@ exports[`Input is required match 1`] = `
       >
         <Component
           className="HoiPoi__Input__root-3-0"
-          isRequired={true}
           label="Lorem ipsum"
           labelMode="vertical"
           override={Object {}}
@@ -1567,7 +1568,6 @@ exports[`Input is required match 1`] = `
             >
               <Label
                 className="HoiPoi__InputWrapper__Label-3-23"
-                isRequired={true}
               >
                 <div
                   className="HoiPoi__Label__root-3-29 HoiPoi__InputWrapper__Label-3-23"
@@ -1581,7 +1581,6 @@ exports[`Input is required match 1`] = `
                       className="HoiPoi__Text__root-3-33 HoiPoi__Label__Text-3-30 HoiPoi__Text__body-3-43"
                     >
                       Lorem ipsum
-                      *
                     </span>
                   </Text>
                 </div>
@@ -1594,11 +1593,13 @@ exports[`Input is required match 1`] = `
                 >
                   <input
                     className="HoiPoi__Input__input-3-3"
+                    isRequired={true}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
+                    override={Object {}}
                     placeholder="Write here"
                     readOnly={false}
                     type="text"
@@ -1613,7 +1614,7 @@ exports[`Input is required match 1`] = `
             />
           </div>
         </Component>
-      </Component>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -2053,7 +2054,7 @@ exports[`Input vertical label mode match 1`] = `
         }
       }
     >
-      <Component
+      <ForwardRef
         hideClear={false}
         isCopyable={false}
         isReadOnly={false}
@@ -2112,6 +2113,7 @@ exports[`Input vertical label mode match 1`] = `
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
+                    override={Object {}}
                     placeholder="Write here"
                     readOnly={false}
                     type="text"
@@ -2126,7 +2128,7 @@ exports[`Input vertical label mode match 1`] = `
             />
           </div>
         </Component>
-      </Component>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -2566,7 +2568,7 @@ exports[`Input with error match 1`] = `
         }
       }
     >
-      <Component
+      <ForwardRef
         error="I am an error"
         hideClear={false}
         isCopyable={false}
@@ -2627,6 +2629,7 @@ exports[`Input with error match 1`] = `
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
+                    override={Object {}}
                     placeholder="Write here"
                     readOnly={false}
                     type="text"
@@ -2652,7 +2655,7 @@ exports[`Input with error match 1`] = `
             </Component>
           </div>
         </Component>
-      </Component>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -3092,7 +3095,7 @@ exports[`Input with hint match 1`] = `
         }
       }
     >
-      <Component
+      <ForwardRef
         hideClear={false}
         hint="Hello"
         isCopyable={false}
@@ -3109,7 +3112,6 @@ exports[`Input with hint match 1`] = `
       >
         <Component
           className="HoiPoi__Input__root-2-0"
-          hint="Hello"
           label="Lorem ipsum"
           labelMode="vertical"
           override={Object {}}
@@ -3123,7 +3125,6 @@ exports[`Input with hint match 1`] = `
             >
               <Label
                 className="HoiPoi__InputWrapper__Label-2-23"
-                hint="Hello"
               >
                 <div
                   className="HoiPoi__Label__root-2-29 HoiPoi__InputWrapper__Label-2-23"
@@ -3139,323 +3140,6 @@ exports[`Input with hint match 1`] = `
                       Lorem ipsum
                     </span>
                   </Text>
-                  <Popover
-                    content="Hello"
-                    overrides={Object {}}
-                    placement="top"
-                    trigger={
-                      Array [
-                        "hover",
-                      ]
-                    }
-                  >
-                    <Tooltip
-                      align={Object {}}
-                      arrowContent={null}
-                      destroyTooltipOnHide={false}
-                      mouseEnterDelay={0}
-                      mouseLeaveDelay={0.1}
-                      overlay="Hello"
-                      overlayClassName="HoiPoi__Popover__root-2-51"
-                      placement="top"
-                      prefixCls="hoi-poi-popover"
-                      transitionName="hoi-poi-popover--fade"
-                      trigger={
-                        Array [
-                          "hover",
-                        ]
-                      }
-                    >
-                      <Trigger
-                        action={
-                          Array [
-                            "hover",
-                          ]
-                        }
-                        afterPopupVisibleChange={[Function]}
-                        arrowContent={null}
-                        blurDelay={0.15}
-                        builtinPlacements={
-                          Object {
-                            "bottom": Object {
-                              "offset": Array [
-                                0,
-                                4,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "tc",
-                                "bc",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "bottomLeft": Object {
-                              "offset": Array [
-                                0,
-                                4,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "tl",
-                                "bl",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "bottomRight": Object {
-                              "offset": Array [
-                                0,
-                                4,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "tr",
-                                "br",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "left": Object {
-                              "offset": Array [
-                                -4,
-                                0,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "cr",
-                                "cl",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "leftBottom": Object {
-                              "offset": Array [
-                                -4,
-                                0,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "br",
-                                "bl",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "leftTop": Object {
-                              "offset": Array [
-                                -4,
-                                0,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "tr",
-                                "tl",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "right": Object {
-                              "offset": Array [
-                                4,
-                                0,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "cl",
-                                "cr",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "rightBottom": Object {
-                              "offset": Array [
-                                4,
-                                0,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "bl",
-                                "br",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "rightTop": Object {
-                              "offset": Array [
-                                4,
-                                0,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "tl",
-                                "tr",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "top": Object {
-                              "offset": Array [
-                                0,
-                                -4,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "bc",
-                                "tc",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "topLeft": Object {
-                              "offset": Array [
-                                0,
-                                -4,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "bl",
-                                "tl",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                            "topRight": Object {
-                              "offset": Array [
-                                0,
-                                -4,
-                              ],
-                              "overflow": Object {
-                                "adjustX": 1,
-                                "adjustY": 1,
-                              },
-                              "points": Array [
-                                "br",
-                                "tr",
-                              ],
-                              "targetOffset": Array [
-                                0,
-                                0,
-                              ],
-                            },
-                          }
-                        }
-                        defaultPopupVisible={false}
-                        destroyPopupOnHide={false}
-                        focusDelay={0}
-                        getDocument={[Function]}
-                        getPopupClassNameFromAlign={[Function]}
-                        hideAction={Array []}
-                        mask={false}
-                        maskClosable={true}
-                        mouseEnterDelay={0}
-                        mouseLeaveDelay={0.1}
-                        onPopupAlign={[Function]}
-                        onPopupVisibleChange={[Function]}
-                        overlay="Hello"
-                        popup={[Function]}
-                        popupAlign={Object {}}
-                        popupClassName="HoiPoi__Popover__root-2-51"
-                        popupPlacement="top"
-                        popupStyle={Object {}}
-                        popupTransitionName="hoi-poi-popover--fade"
-                        prefixCls="hoi-poi-popover"
-                        showAction={Array []}
-                      >
-                        <span
-                          className="HoiPoi__Label__info-2-31"
-                          key="trigger"
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                        >
-                          <Icon
-                            className="HoiPoi__Label__icon-2-32"
-                            name="info"
-                            overrides={Object {}}
-                            size="medium"
-                          >
-                            <span
-                              className="HoiPoi__Icon__root-2-52 HoiPoi__Icon__medium-2-54 HoiPoi__Label__icon-2-32"
-                              onMouseDown={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                              onMouseUp={[Function]}
-                            >
-                              <Info
-                                color="#7d8a96"
-                              >
-                                <svg
-                                  viewBox="0 0 18 18"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
-                                    fill="#7d8a96"
-                                    fillRule="nonzero"
-                                  />
-                                </svg>
-                              </Info>
-                            </span>
-                          </Icon>
-                        </span>
-                      </Trigger>
-                    </Tooltip>
-                  </Popover>
                 </div>
               </Label>
               <div
@@ -3466,11 +3150,13 @@ exports[`Input with hint match 1`] = `
                 >
                   <input
                     className="HoiPoi__Input__input-2-3"
+                    hint="Hello"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
+                    override={Object {}}
                     placeholder="Write here"
                     readOnly={false}
                     type="text"
@@ -3485,7 +3171,7 @@ exports[`Input with hint match 1`] = `
             />
           </div>
         </Component>
-      </Component>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -3925,7 +3611,7 @@ exports[`Input with pre/post component match 1`] = `
         }
       }
     >
-      <Component
+      <ForwardRef
         hideClear={false}
         isCopyable={false}
         isReadOnly={false}
@@ -4001,6 +3687,7 @@ exports[`Input with pre/post component match 1`] = `
                     onFocus={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
+                    override={Object {}}
                     placeholder="Write here"
                     readOnly={false}
                     type="text"
@@ -4027,7 +3714,7 @@ exports[`Input with pre/post component match 1`] = `
             />
           </div>
         </Component>
-      </Component>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>

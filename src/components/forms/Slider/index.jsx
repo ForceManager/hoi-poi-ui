@@ -5,7 +5,6 @@ import RCSlider, { Range } from 'rc-slider';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import InputWrapper from '../components/InputWrapper';
-import Tooltip from '../../utils/Tooltip';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -53,32 +52,45 @@ function Slider({
     const handle = useCallback(
         (props) => {
             const { offset, dragging, index, ...restProps } = props;
+            const positionStyle = { left: `${offset}%` };
             const handlerValue = Array.isArray(innerValue) ? innerValue[index] : innerValue;
             let finalValue;
             if (tipFormatter) finalValue = tipFormatter(handlerValue);
             else if (isPercentage) finalValue = `${handlerValue}%`;
             else finalValue = handlerValue;
             return (
-                <div key={index} {...override.overlay}>
-                    <Tooltip placement="top" content={finalValue} visible={!isReadOnly}>
-                        <Handle
-                            value={innerValue}
-                            offset={offset}
-                            {...restProps}
-                            className={classes.overlayHandler}
-                            prefixCls="hoi-poi-slider"
-                            dragging={dragging.toString()}
-                        />
-                    </Tooltip>
+                <div key={index} className={classes.overlay} {...override.overlay}>
+                    {!isReadOnly && (
+                        <span
+                            style={positionStyle}
+                            className={classes.overlayLabel}
+                            {...override.overlayLabel}
+                        >
+                            {finalValue}
+                        </span>
+                    )}
+                    <Handle
+                        value={innerValue}
+                        offset={offset}
+                        {...restProps}
+                        className={classes.overlayHandler}
+                        prefixCls="hoi-poi-slider"
+                        dragging={dragging.toString()}
+                        {...override.overlayHandler}
+                    />
                 </div>
             );
         },
         [
+            classes.overlay,
             classes.overlayHandler,
+            classes.overlayLabel,
             innerValue,
             isPercentage,
             isReadOnly,
             override.overlay,
+            override.overlayHandler,
+            override.overlayLabel,
             tipFormatter,
         ],
     );
@@ -120,7 +132,7 @@ function Slider({
     );
 }
 
-Slider.overrides = ['root', 'rc-slider', 'overlay'];
+Slider.overrides = ['root', 'rc-slider', 'overlay', 'overlayLabel', 'overlayHandler'];
 
 Slider.defaultProps = {
     overrides: {},
