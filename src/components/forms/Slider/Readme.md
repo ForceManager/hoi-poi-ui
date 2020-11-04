@@ -111,3 +111,4 @@ const onChange = (value) => setState({ value });
 -   inputWrapper - Wrapper around Label and input components
 -   overlay - Dragged component (tip)
 -   overlayLabel - Dragged component label (tip)
+-   overlayHandler - Handler component style and props

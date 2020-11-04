@@ -33,6 +33,18 @@ export default (theme) => ({
             background: 'transparent',
         },
     },
+    overlay: {},
+    overlayLabel: {
+        position: 'absolute',
+        minWidth: 15,
+        top: 5,
+        marginLeft: -8,
+        textAlign: 'center',
+        color: theme.colors.neutral600,
+        fontSize: 12,
+        fontFamily: theme.typography.fontFamily,
+        letterSpacing: theme.typography.letterSpacing,
+    },
     overlayHandler: {
         position: 'absolute',
         marginTop: -6,

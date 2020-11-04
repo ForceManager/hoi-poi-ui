@@ -77,6 +77,7 @@ function Slider({
                         className={classes.overlayHandler}
                         prefixCls="hoi-poi-slider"
                         dragging={dragging.toString()}
+                        {...override.overlayHandler}
                     />
                 </div>
             );
@@ -89,6 +90,7 @@ function Slider({
             isPercentage,
             isReadOnly,
             override.overlay,
+            override.overlayHandler,
             override.overlayLabel,
             tipFormatter,
         ],
@@ -131,7 +133,7 @@ function Slider({
     );
 }
 
-Slider.overrides = ['root', 'rc-slider', 'overlay'];
+Slider.overrides = ['root', 'rc-slider', 'overlay', 'overlayLabel', 'overlayHandler'];
 
 Slider.defaultProps = {
     overrides: {},
