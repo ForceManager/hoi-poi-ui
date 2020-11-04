@@ -5,7 +5,6 @@ import RCSlider, { Range } from 'rc-slider';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import InputWrapper from '../components/InputWrapper';
-import Tooltip from '../../utils/Tooltip';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
