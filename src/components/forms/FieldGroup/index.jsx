@@ -57,6 +57,7 @@ const FieldGroup = memo(
                     <Input
                         key={index}
                         isFullWidth={isFullWidth}
+                        error={!!error}
                         {...props}
                         onChange={(v) => onChangeInput(v, index)}
                         value={value[index]}
@@ -96,6 +97,7 @@ const FieldGroup = memo(
             classes.dividerText,
             divider,
             dividerText,
+            error,
             inputProps,
             inputs,
             isFullWidth,
