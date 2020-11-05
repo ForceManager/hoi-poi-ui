@@ -196,6 +196,27 @@ const [values, setValues] = useState([]);
 </div>;
 ```
 
+With error:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+import Icon from '../../general/Icon';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Input, Input, Input, Input, Input]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+        error="I am an error"
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
