@@ -60,7 +60,7 @@ const FieldGroup = memo(
                         {...props}
                         onChange={(v) => onChangeInput(v, index)}
                         value={value[index]}
-                        error={error ? true : false}
+                        error={!!error}
                     />,
                 );
 
