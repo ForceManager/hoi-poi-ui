@@ -196,6 +196,53 @@ const [values, setValues] = useState([]);
 </div>;
 ```
 
+With error:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+import Icon from '../../general/Icon';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Input, Input, Input, Input, Input]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+        error="I am an error"
+    />
+</div>;
+```
+
+With different errors:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+import Icon from '../../general/Icon';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Input, Input]}
+        inputProps={[
+            { error: 'I am an error' },
+            { error: 'I am another error' },
+            { error: 'I am a different error' },
+        ]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+        error="I am a general error"
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
