@@ -3,12 +3,12 @@ export default (theme) => ({
         display: 'inline-block',
         textAlign: 'center',
         backgroundColor: theme.colors.orange500,
-        color: theme.colors.neutralBase,
         position: 'relative',
     },
     Text: {
         padding: '0px 8px',
         verticalAlign: 'middle',
+        color: theme.colors.neutralBase,
     },
     medium: {
         height: 24,
