@@ -133,6 +133,19 @@ Full-width
 <Button isFullWidth isLoading>Push me</Button>
 ```
 
+Ref
+
+```jsx
+import { useRef } from 'react';
+
+const buttonRef = useRef(null);
+const onClickPs = () => console.log('buttonRef', buttonRef.current);
+
+<Button ref={(ref) => (buttonRef.current = ref)} onClick={onClickPs}>
+    Push me
+</Button>;
+```
+
 ### Component tree
 
 ---
