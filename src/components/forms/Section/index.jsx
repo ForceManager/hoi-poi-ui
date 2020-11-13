@@ -27,10 +27,10 @@ const Section = memo(
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
-        const [isOpen, open] = useState(onChange ? isOpenProp : defaultOpen);
+        const [isOpen, setIsOpen] = useState(onChange ? isOpenProp : defaultOpen);
 
         useEffect(() => {
-            if (onChange) open(isOpenProp);
+            if (onChange) setIsOpen(isOpenProp);
         }, [isOpenProp, onChange]);
 
         const override = getOverrides(overridesProp, Section.overrides);
@@ -43,7 +43,7 @@ const Section = memo(
 
         const onToggle = useCallback(() => {
             onChange && onChange(!isOpen);
-            !onChange && open(!isOpen);
+            !onChange && setIsOpen(!isOpen);
         }, [isOpen, onChange]);
 
         const renderTitle = useMemo(() => {
@@ -122,6 +122,7 @@ Section.propTypes = {
     defaultOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
     activeFields: PropTypes.number,
+    onChange: PropTypes.func,
     overrides: PropTypes.shape({
         root: PropTypes.object,
         header: PropTypes.object,

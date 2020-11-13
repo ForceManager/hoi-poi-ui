@@ -208,8 +208,8 @@ const Input = forwardRef(
 
         // Remove content post component
         const postComponentClick = useCallback(() => {
-            onChange && onChange();
-            onBlur && onBlur();
+            onChange && onChange('');
+            onBlur && onBlur('');
         }, [onBlur, onChange]);
 
         const copyValue = useCallback(() => {
