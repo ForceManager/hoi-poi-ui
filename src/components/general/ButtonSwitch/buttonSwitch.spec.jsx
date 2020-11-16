@@ -44,31 +44,4 @@ describe('Button', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
-    test('is not throwing an error if no onChange prop is defined', () => {
-        const buttons = [
-            {
-                label: 'ON',
-                value: 'on',
-            },
-            {
-                label: 'OFF',
-                value: 'false',
-            },
-        ];
-
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <ButtonSwitch buttons={buttons} value={true} onChange={undefined}></ButtonSwitch>;
-            </HoiPoiProvider>,
-        );
-
-        expect(() => {
-            wrapper
-                .find('ButtonSwitch')
-                .find('Button')
-                .first()
-                .simulate('click');
-        }).not.toThrow();
-    });
 });
