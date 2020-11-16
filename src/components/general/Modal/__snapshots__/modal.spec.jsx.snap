@@ -701,7 +701,7 @@ exports[`Modal like a confirm modal 1`] = `
                     <div
                       className="HoiPoi__Modal__footer-3-5"
                     >
-                      <Button
+                      <ForwardRef
                         className="HoiPoi__Modal__cancelButton-3-11"
                         iconPosition="left"
                         onClick={[Function]}
@@ -731,10 +731,11 @@ exports[`Modal like a confirm modal 1`] = `
                             </Text>
                           </div>
                         </button>
-                      </Button>
-                      <Button
+                      </ForwardRef>
+                      <ForwardRef
                         className="HoiPoi__Modal__confirmButton-3-10"
                         iconPosition="left"
+                        isDisabled={false}
                         onClick={[Function]}
                         overrides={Object {}}
                         size="medium"
@@ -762,7 +763,7 @@ exports[`Modal like a confirm modal 1`] = `
                             </Text>
                           </div>
                         </button>
-                      </Button>
+                      </ForwardRef>
                     </div>
                   </div>
                 </div>

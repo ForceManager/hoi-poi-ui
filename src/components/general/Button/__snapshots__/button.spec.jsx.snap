@@ -434,7 +434,7 @@ exports[`Button is disabled 1`] = `
         }
       }
     >
-      <Button
+      <ForwardRef
         iconPosition="left"
         isDisabled={true}
         onClick={[Function]}
@@ -464,7 +464,7 @@ exports[`Button is disabled 1`] = `
             </Text>
           </div>
         </button>
-      </Button>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -904,7 +904,7 @@ exports[`Button is rendered as a link 1`] = `
         }
       }
     >
-      <Button
+      <ForwardRef
         href="https://hello.com"
         iconPosition="left"
         overrides={Object {}}
@@ -932,7 +932,7 @@ exports[`Button is rendered as a link 1`] = `
             </Text>
           </div>
         </a>
-      </Button>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -1372,7 +1372,7 @@ exports[`Button is rendered combining props 1`] = `
         }
       }
     >
-      <Button
+      <ForwardRef
         iconPosition="left"
         overrides={Object {}}
         size="big"
@@ -1399,8 +1399,8 @@ exports[`Button is rendered combining props 1`] = `
             </Text>
           </div>
         </button>
-      </Button>
-      <Button
+      </ForwardRef>
+      <ForwardRef
         iconPosition="left"
         overrides={Object {}}
         size="big"
@@ -1427,7 +1427,7 @@ exports[`Button is rendered combining props 1`] = `
             </Text>
           </div>
         </button>
-      </Button>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -1867,7 +1867,7 @@ exports[`Button is rendered without crashes 1`] = `
         }
       }
     >
-      <Button
+      <ForwardRef
         iconPosition="left"
         overrides={Object {}}
         size="medium"
@@ -1894,7 +1894,7 @@ exports[`Button is rendered without crashes 1`] = `
             </Text>
           </div>
         </button>
-      </Button>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
