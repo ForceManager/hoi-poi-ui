@@ -453,7 +453,7 @@ exports[`Button is rendered without crashes 1`] = `
         <div
           className="HoiPoi__ButtonSwitch__root-1-0"
         >
-          <Button
+          <ForwardRef
             className="HoiPoi__ButtonSwitch__button-1-2 HoiPoi__ButtonSwitch__active-1-1"
             iconPosition="left"
             key="true"
@@ -484,8 +484,8 @@ exports[`Button is rendered without crashes 1`] = `
                 </Text>
               </div>
             </button>
-          </Button>
-          <Button
+          </ForwardRef>
+          <ForwardRef
             className="HoiPoi__ButtonSwitch__button-1-2"
             iconPosition="left"
             key="false"
@@ -516,7 +516,7 @@ exports[`Button is rendered without crashes 1`] = `
                 </Text>
               </div>
             </button>
-          </Button>
+          </ForwardRef>
         </div>
       </ButtonSwitch>
       ;
@@ -978,7 +978,7 @@ exports[`Button is rendering with string values 1`] = `
         <div
           className="HoiPoi__ButtonSwitch__root-2-0"
         >
-          <Button
+          <ForwardRef
             className="HoiPoi__ButtonSwitch__button-2-2"
             iconPosition="left"
             key="on"
@@ -1009,8 +1009,8 @@ exports[`Button is rendering with string values 1`] = `
                 </Text>
               </div>
             </button>
-          </Button>
-          <Button
+          </ForwardRef>
+          <ForwardRef
             className="HoiPoi__ButtonSwitch__button-2-2"
             iconPosition="left"
             key="false"
@@ -1041,7 +1041,7 @@ exports[`Button is rendering with string values 1`] = `
                 </Text>
               </div>
             </button>
-          </Button>
+          </ForwardRef>
         </div>
       </ButtonSwitch>
       ;
