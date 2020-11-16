@@ -1,4 +1,4 @@
-import React, { memo, useState, useCallback, useMemo, useRef } from 'react';
+import React, { memo, useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -78,6 +78,10 @@ const Select = memo(
         const selectClassName = classnames(classes.select, {
             [classes.isMulti]: isMulti,
         });
+
+        useEffect(() => {
+            setNewValue(value);
+        }, [value]);
 
         const loadOptionsCb = useCallback(
             (text, cb) => {
@@ -294,6 +298,7 @@ const Select = memo(
                 noOptionsMessage,
                 loadingMessage,
                 defaultValue: newValue,
+                value: newValue,
                 defaultMenuIsOpen,
                 actions,
                 isMulti,
