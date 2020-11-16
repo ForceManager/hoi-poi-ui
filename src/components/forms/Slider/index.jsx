@@ -33,7 +33,7 @@ function Slider({
     const classes = useClasses(useStyles, classesProp);
     // State
     const [innerValue, setInnerValue] = useState(
-        isRange && value === undefined ? [min, max] : value || min,
+        isRange && (value === undefined || value === null) ? [min, max] : value || min,
     );
 
     // Overrides
