@@ -8,6 +8,6 @@ export default (theme) => ({
         display: 'none',
     },
     disabled: {
-        cursor: 'not-allowed',
+        cursor: 'default',
     },
 });

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -381,6 +381,12 @@ function Icon({
     const theme = useTheme();
 
     const [newColor, setNewColor] = useState(color || theme.colors.neutral700);
+
+    useEffect(() => {
+        if (color && color !== newColor) {
+            setNewColor(color);
+        }
+    }, [color, newColor]);
 
     const handleOnMouseOver = useCallback(() => {
         onClick && setNewColor(theme.colors.neutral800);
