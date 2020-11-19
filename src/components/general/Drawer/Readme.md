@@ -84,6 +84,7 @@ const onTransitionEnds = () => {
         onRequestClose={() => setIsOpen(false)}
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
+        classes={{ overlay: 'overlay-ipsum' }}
     >
         <span onClick={() => setIsOpen(false)}>Close</span>
     </Drawer>

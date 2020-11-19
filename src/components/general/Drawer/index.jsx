@@ -72,7 +72,10 @@ function Drawer({
         return styles;
     }, [hideOverlay, width]);
 
-    const capitalizedSide = side.charAt(0).toUpperCase() + side.slice(1);
+    const overlaySide = useMemo(() => {
+        const capitalizedSide = side.charAt(0).toUpperCase() + side.slice(1);
+        return `overlay${capitalizedSide}`;
+    }, [side]);
 
     const rootProps = {
         ariaHideApp: false,
@@ -88,7 +91,7 @@ function Drawer({
             },
             ...style,
         },
-        overlayClassName: classes[`overlay${capitalizedSide}`],
+        overlayClassName: classes[overlaySide],
         onRequestClose,
         shouldCloseOnOverlayClick,
         shouldCloseOnEsc,
