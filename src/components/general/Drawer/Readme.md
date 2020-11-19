@@ -4,31 +4,134 @@ Default:
 import { Button } from 'hoi-poi-ui';
 import { useState } from 'react';
 
-const [state, setState] = useState({});
-
-let isOpen = state.isOpen || false;
-let side = state.side || 'right';
+const [isOpen, setIsOpen] = useState(false);
+const [side, setSide] = useState('right');
 
 const onTransitionEnds = () => {
     console.log('Transition is finished');
 };
 
 <div>
-    <Button color="primary" onClick={() => setState({ side: 'left', isOpen: !isOpen })}>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('left');
+        }}
+    >
         Left
     </Button>
     <span> </span>
-    <Button color="primary" onClick={() => setState({ side: 'right', isOpen: !isOpen })}>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('right');
+        }}
+    >
         Right
     </Button>
     <span> </span>
     <Drawer
         onTransitionEnds={onTransitionEnds}
-        side={state.side}
+        side={side}
         isOpen={isOpen}
-        onRequestClose={() => setState({ isOpen: false })}
+        onRequestClose={() => setIsOpen(false)}
     >
-        <span onClick={() => setState({ isOpen: false })}>Close</span>
+        <span onClick={() => setIsOpen(false)}>Close</span>
+    </Drawer>
+</div>;
+```
+
+Overlay close and "Esc" close:
+
+```jsx
+import { Button } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [isOpen, setIsOpen] = useState(false);
+const [side, setSide] = useState('right');
+
+const onTransitionEnds = () => {
+    console.log('Transition is finished');
+};
+
+<div>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('left');
+        }}
+    >
+        Left
+    </Button>
+    <span> </span>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('right');
+        }}
+    >
+        Right
+    </Button>
+    <span> </span>
+    <Drawer
+        onTransitionEnds={onTransitionEnds}
+        side={side}
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+    >
+        <span onClick={() => setIsOpen(false)}>Close</span>
+    </Drawer>
+</div>;
+```
+
+Hidden Overlay:
+
+```jsx
+import { Button } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [isOpen, setIsOpen] = useState(false);
+const [side, setSide] = useState('right');
+
+const onTransitionEnds = () => {
+    console.log('Transition is finished');
+};
+
+<div>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('left');
+        }}
+    >
+        Left
+    </Button>
+    <span> </span>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('right');
+        }}
+    >
+        Right
+    </Button>
+    <span> </span>
+    <Drawer
+        onTransitionEnds={onTransitionEnds}
+        side={side}
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+        hideOverlay={true}
+    >
+        <span onClick={() => setIsOpen(false)}>Close</span>
     </Drawer>
 </div>;
 ```
@@ -39,27 +142,32 @@ Custom width:
 import { Button } from 'hoi-poi-ui';
 import { useState } from 'react';
 
-const [state, setState] = useState({});
-
-let isOpen = state.isOpen || false;
-let side = state.side || 'right';
+const [isOpen, setIsOpen] = useState(false);
+const [side, setSide] = useState('right');
 
 <div>
-    <Button color="primary" onClick={() => setState({ side: 'left', isOpen: !isOpen })}>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('left');
+        }}
+    >
         Left
     </Button>
     <span> </span>
-    <Button color="primary" onClick={() => setState({ side: 'right', isOpen: !isOpen })}>
+    <Button
+        color="primary"
+        onClick={() => {
+            setIsOpen(!isOpen);
+            setSide('right');
+        }}
+    >
         Right
     </Button>
     <span> </span>
-    <Drawer
-        side={state.side}
-        isOpen={isOpen}
-        width="80%"
-        onRequestClose={() => setState({ isOpen: false })}
-    >
-        <span onClick={() => setState({ isOpen: false })}>Close</span>
+    <Drawer side={side} isOpen={isOpen} width="80%" onRequestClose={() => setIsOpen(false)}>
+        <span onClick={() => setIsOpen(false)}>Close</span>
     </Drawer>
 </div>;
 ```
