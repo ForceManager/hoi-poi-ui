@@ -201,7 +201,6 @@ With error:
 ```jsx
 import { useState } from 'react';
 import Input from '../Input';
-import Icon from '../../general/Icon';
 
 const [values, setValues] = useState([]);
 
@@ -230,15 +229,12 @@ const [values, setValues] = useState([]);
     <FieldGroup
         label="Label"
         inputs={[Input, Input, Input]}
-        inputProps={[
-            { error: 'I am an error' },
-            { error: 'I am another error' },
-            { error: 'I am a different error' },
-        ]}
+        inputProps={[{ error: 'I am an error' }, { error: null }, { error: 'I am another error' }]}
         onChange={setValues}
         value={values}
         isFullWidth
         error="I am a general error"
+        divider={<Icon name="arrowRight" />}
     />
 </div>;
 ```
