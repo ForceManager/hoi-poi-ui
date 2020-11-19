@@ -7,7 +7,7 @@ export default (theme) => {
             marginTop: -10,
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             '& > *': {
                 marginRight: 16,
                 '&:last-child': {
@@ -15,7 +15,11 @@ export default (theme) => {
                 },
             },
         },
-        divider: {},
+        divider: {
+            height: 56,
+            alignItems: 'center',
+            display: 'flex',
+        },
         dividerText: {
             ...theme.typography.body,
         },
