@@ -68,8 +68,7 @@ function Drawer({
     const hideOverlayStyles = useMemo(() => {
         if (!hideOverlay) return {};
 
-        let styles = { width, backgroundColor: 'rgba(0, 0, 0, 0)' };
-        return styles;
+        return { width, backgroundColor: 'rgba(0, 0, 0, 0)' };
     }, [hideOverlay, width]);
 
     const overlaySide = useMemo(() => {
