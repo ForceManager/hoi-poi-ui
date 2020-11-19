@@ -16,12 +16,24 @@ export default (theme) => ({
         position: 'relative',
         height: '100%',
     },
-    overlay: {
+    overlayRight: {
         position: 'fixed',
         width: '100%',
         zIndex: 1000,
         top: 0,
         right: 0,
+        bottom: 0,
+        background: theme.colors.overlay,
+        '&.ReactModal__Overlay--before-close': {
+            background: 'transparent',
+        },
+    },
+    overlayLeft: {
+        position: 'fixed',
+        width: '100%',
+        zIndex: 1000,
+        top: 0,
+        left: 0,
         bottom: 0,
         background: theme.colors.overlay,
         '&.ReactModal__Overlay--before-close': {

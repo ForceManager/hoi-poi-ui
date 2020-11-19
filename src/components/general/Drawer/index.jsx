@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Modal from 'react-modal';
@@ -41,6 +41,7 @@ function Drawer({
     contentStyles,
     style,
     onTransitionEnds,
+    hideOverlay,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -64,6 +65,15 @@ function Drawer({
             drawerTransitionEl.removeEventListener(transitionEndEventName, onTransitionEnds);
     }, [classes.root, onAfterOpen, onTransitionEnds]);
 
+    const hideOverlayStyles = useMemo(() => {
+        if (!hideOverlay) return {};
+
+        let styles = { width, backgroundColor: 'rgba(0, 0, 0, 0)' };
+        return styles;
+    }, [hideOverlay, width]);
+
+    const capitalizedSide = side.charAt(0).toUpperCase() + side.slice(1);
+
     const rootProps = {
         ariaHideApp: false,
         isOpen,
@@ -71,14 +81,17 @@ function Drawer({
         style: {
             content: {
                 ...contentStyle,
-                ...contentStyles,
+                ...(contentStyles || {}),
+            },
+            overlay: {
+                ...hideOverlayStyles,
             },
             ...style,
         },
-        overlayClassName: classes.overlay,
+        overlayClassName: classes[`overlay${capitalizedSide}`],
         onRequestClose,
-        shouldCloseOnOverlayClick: false,
-        shouldCloseOnEsc: false,
+        shouldCloseOnOverlayClick,
+        shouldCloseOnEsc,
         ...override.root,
     };
 
@@ -97,8 +110,9 @@ Drawer.defaultProps = {
     width: '500px',
     side: 'right',
     closeTimeout: 500,
-    shouldCloseOnOverlayClick: true,
-    shouldCloseOnEsc: true,
+    shouldCloseOnOverlayClick: false,
+    shouldCloseOnEsc: false,
+    hideOverlay: false,
 };
 
 Drawer.propTypes = {
@@ -108,6 +122,7 @@ Drawer.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     side: PropTypes.oneOf(['right', 'left']),
+    hideOverlay: PropTypes.bool,
     /**Milliseconds to wait before closing the drawer */
     closeTimeout: PropTypes.number,
     /** Function that will be called after the drawer has opened */
