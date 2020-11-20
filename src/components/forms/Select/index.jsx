@@ -16,6 +16,7 @@ import LoadingIndicator from './components/LoadingIndicator';
 import Menu from './components/Menu';
 import MenuSingle from './components/MenuSingle';
 import MenuMulti from './components/MenuMulti';
+import { isEqual } from '../../../utils/arrays';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -38,6 +39,7 @@ const Select = memo(
         isClearable,
         placeholder,
         options,
+        defaultSearch,
         defaultValue,
         value,
         onChange,
@@ -83,6 +85,10 @@ const Select = memo(
             setNewValue(value);
         }, [value]);
 
+        useEffect(() => {
+            if (!isFuzzy && !isEqual(options, innerOptions)) setInnerOptions(options);
+        }, [options, innerOptions, isFuzzy]);
+
         const loadOptionsCb = useCallback(
             (text, cb) => {
                 if (debounce.current) clearTimeout(debounce.current);
@@ -125,8 +131,22 @@ const Select = memo(
                         options,
                     });
                 });
+            } else if (defaultSearch && loadOptions && isFuzzy && !lazyOptions.areLoaded) {
+                setLazyOptions({
+                    ...lazyOptions,
+                    isLoading: true,
+                });
+                const text = defaultSearch || '';
+                loadOptions(text).then((options) => {
+                    setInnerOptions(options);
+                    setLazyOptions({
+                        areLoaded: true,
+                        isLoading: false,
+                        options,
+                    });
+                });
             }
-        }, [isFuzzy, lazyOptions, loadOptions]);
+        }, [isFuzzy, defaultSearch, lazyOptions, loadOptions]);
 
         const handleOnBlur = useCallback(() => {
             setFocused(false);
@@ -537,6 +557,8 @@ Select.propTypes = {
             subLabel: PropTypes.string,
         }),
     ),
+    defaultSearch: PropTypes.string,
+    defaultValue: PropTypes.any,
     value: PropTypes.any,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),

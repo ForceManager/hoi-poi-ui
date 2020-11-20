@@ -49,13 +49,15 @@ const Section = memo(
         const renderTitle = useMemo(() => {
             if (typeof title === 'string') {
                 return (
-                    <Text bold type="subtitle" className={classes.Text} {...override.Text}>
-                        {title}
-                    </Text>
+                    <div className={classes.textContainer} {...override.textContainer}>
+                        <Text bold type="subtitle" className={classes.Text} {...override.Text}>
+                            {title}
+                        </Text>
+                    </div>
                 );
             }
             return title;
-        }, [classes.Text, override.Text, title]);
+        }, [classes.Text, classes.textContainer, override.Text, override.textContainer, title]);
 
         const newActiveFields = useMemo(() => {
             if (!activeFields || isOpen) return null;
@@ -74,13 +76,15 @@ const Section = memo(
             return (
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} onClick={onToggle} {...override.header}>
-                        <div className={classes.titleContainer}>
-                            <div className={classes.icon} {...override.icon}>
-                                <Icon name="arrowDropDown" />
+                        <div className={classes.headerContent} {...override.headerContent}>
+                            <div className={classes.titleContainer} {...override.titleContainer}>
+                                <div className={classes.icon} {...override.icon}>
+                                    <Icon name="arrowDropDown" />
+                                </div>
+                                {renderTitle}
                             </div>
-                            {renderTitle}
+                            {newActiveFields}
                         </div>
-                        {newActiveFields}
                     </div>
                     <AnimateHeight
                         height={isOpen ? 'auto' : 0}
@@ -94,8 +98,12 @@ const Section = memo(
             return (
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} {...override.header}>
-                        <div className={classes.titleContainer}>{renderTitle}</div>
-                        {newActiveFields}
+                        <div className={classes.headerContent} {...override.headerContent}>
+                            <div className={classes.titleContainer} {...override.titleContainer}>
+                                {renderTitle}
+                            </div>
+                            {newActiveFields}
+                        </div>
                     </div>
                     {children}
                 </div>
