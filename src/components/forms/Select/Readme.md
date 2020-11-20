@@ -663,6 +663,7 @@ const loadOptions = (text, cb) =>
         placeholder="Search"
         loadOptions={loadOptions}
         onChange={onChange}
+        defaultSearch="11"
         value={state.value}
         isFuzzy
         isMulti
