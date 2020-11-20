@@ -22,17 +22,32 @@ export default (theme) => ({
             },
         },
     },
+    headerContent: {
+        width: '100%',
+        display: 'flex',
+    },
     isExpandable: {
         cursor: 'pointer',
     },
     titleContainer: {
+        width: '100%',
         display: 'flex',
+        alignItems: 'center',
+        overflow: 'hidden',
+    },
+    textContainer: {
+        overflow: 'hidden',
     },
     Text: {
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
         color: theme.colors.neutral700,
         transition: 'all 0.15s ease',
     },
-    BadgeNotification: {},
+    BadgeNotification: {
+        marginLeft: '8px',
+    },
     icon: {
         marginRight: 4,
         lineHeight: '0',

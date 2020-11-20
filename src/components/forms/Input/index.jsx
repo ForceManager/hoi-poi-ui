@@ -83,13 +83,13 @@ const Input = forwardRef(
         const handleOnBlur = useCallback(
             (e) => {
                 if (isReadOnly) return;
-                if (type === 'integer' && e.target.value) {
+                if (type === 'integer' && e?.target?.value) {
                     if (!integerRegEx.test(e.target.value) || isNaN(parseInt(e.target.value, 10))) {
                         e.target.value = '';
                     }
                 }
 
-                if (type === 'decimal' && e.target.value) {
+                if (type === 'decimal' && e?.target?.value) {
                     if (!decimalRegEx.test(e.target.value) || isNaN(parseFloat(e.target.value))) {
                         e.target.value = '';
                     } else {
@@ -103,9 +103,8 @@ const Input = forwardRef(
                         e.target.value = newValue;
                     }
                 }
-
                 setFocused(false);
-                const finalValue = e.target.value || '';
+                const finalValue = e?.target?.value || '';
                 onBlur && onBlur(finalValue, e);
             },
             [isReadOnly, onBlur, type, numberDecimals],
@@ -160,7 +159,7 @@ const Input = forwardRef(
 
         const handleOnChange = useCallback(
             (e) => {
-                const finalValue = e.target.value || '';
+                const finalValue = e?.target?.value || '';
                 onChange && onChange(finalValue, e);
             },
             [onChange],
@@ -208,9 +207,9 @@ const Input = forwardRef(
 
         // Remove content post component
         const postComponentClick = useCallback(() => {
-            onChange && onChange('');
-            onBlur && onBlur('');
-        }, [onBlur, onChange]);
+            handleOnChange();
+            handleOnBlur();
+        }, [handleOnBlur, handleOnChange]);
 
         const copyValue = useCallback(() => {
             const textField = document.createElement('textarea');
