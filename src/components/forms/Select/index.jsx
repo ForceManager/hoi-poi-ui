@@ -401,6 +401,11 @@ const Select = memo(
                         ...newStyles.dropdownIndicator,
                         ...(override.dropdownIndicator?.style || {}),
                     }),
+                    menuList: (styles) => ({
+                        ...styles,
+                        ...newStyles.menuList,
+                        ...(override.menuList?.style || {}),
+                    }),
                     multiValue: (styles) => ({
                         ...styles,
                         ...newStyles.multiValue,
