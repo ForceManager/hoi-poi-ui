@@ -4,9 +4,12 @@ export default (theme) => ({
         borderRadius: '8px',
         display: 'flex',
         padding: '16px',
-        '& > div.rah-static, & > div.rah-animating': {
+        '& .ReactCollapse--collapse': {
             width: '100%',
+            minHeight: 20,
             overflow: 'hidden !important',
+            transition: 'height 500ms',
+            willChange: 'height',
         },
     },
     icon: {
@@ -51,24 +54,27 @@ export default (theme) => ({
         },
     },
     textContainer: {
+        flex: 1,
+        overflow: 'hidden',
+    },
+    collapseContainer: {
         display: 'flex',
         overflow: 'hidden',
         alignItems: 'flex-start',
     },
     dropdownIcon: {
-        margin: '5px 0 5px 20px',
         lineHeight: '0',
         transition: 'transform 0.3s ease-out',
         willChange: 'transform',
         transform: 'rotate(-180deg) translateY(1px)',
         cursor: 'pointer',
     },
-    isCollapsed: {
-        '& $textContainer': {
-            alignItems: 'center',
-        },
+    isOpened: {
         '& $dropdownIcon': {
             transform: 'rotate(0) translateY(1px)',
+        },
+        '& $Text': {
+            whiteSpace: 'pre-wrap',
         },
     },
     withTitleContainer: {

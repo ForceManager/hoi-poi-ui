@@ -1,7 +1,7 @@
 import React, { useMemo, useRef, useLayoutEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import AnimateHeight from 'react-animate-height';
+import { Collapse } from 'react-collapse';
 
 import Icon from '../Icon';
 import Text from '../../typography/Text';
@@ -26,15 +26,14 @@ function Advice({
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
     const [isEllipsisActive, setEllipsisActive] = useState(false);
-    const [isCollapsed, setIsCollapsed] = useState(defaultCollapsed);
+    const [isOpened, setIsOpened] = useState(!defaultCollapsed);
     const textEl = useRef(null);
-    const textHeight = useRef(null);
 
     useLayoutEffect(() => {
         if (title) return;
         const el = textEl.current;
+        console.log(el.offsetWidth, el.scrollWidth, el.offsetHeight);
         setEllipsisActive(el.offsetWidth < el.scrollWidth);
-        textHeight.current = el.offsetHeight;
 
         // Handling resize windows
         const handleResize = () => setEllipsisActive(el.offsetWidth < el.scrollWidth);
@@ -52,7 +51,7 @@ function Advice({
         classes.root,
         {
             [classes[type]]: type,
-            [classes.isCollapsed]: isCollapsed,
+            [classes.isOpened]: isOpened,
         },
         classNameProp,
     );
@@ -107,8 +106,8 @@ function Advice({
     ]);
 
     const toggleCollapsing = useCallback(() => {
-        setIsCollapsed(!isCollapsed);
-    }, [isCollapsed]);
+        setIsOpened(!isOpened);
+    }, [isOpened]);
 
     const showCollapsingIcon = isEllipsisActive || title;
 
@@ -131,42 +130,42 @@ function Advice({
             )}
 
             {showCollapse && (
-                <AnimateHeight
-                    height={isCollapsed ? textHeight.current || 20 : 'auto'}
-                    {...override['react-animate-height']}
-                >
-                    <div className={classes.textContainer} {...override.textContainer}>
-                        <Text
-                            isTruncated={isCollapsed}
-                            className={classes.Text}
-                            {...override.Text}
-                            overrides={{ root: { ref: textEl } }}
-                        >
-                            {!title && children}
-                            {title && title}
-                        </Text>
+                <Collapse isOpened={isOpened || false} {...override['react-collapse']}>
+                    <div className={classes.collapseContainer} {...override.collapseContainer}>
+                        <div className={classes.textContainer} {...override.textContainer}>
+                            <Text
+                                isTruncated={!isOpened}
+                                className={classes.Text}
+                                bold={!!title}
+                                {...override.Text}
+                                overrides={{ root: { ref: textEl } }}
+                            >
+                                {!title && children}
+                                {title && title}
+                            </Text>
+                            {title && (
+                                <div className={classes.withTitleContainer}>
+                                    <Text
+                                        className={classes.Text}
+                                        {...override.Text}
+                                        overrides={{ root: { ref: textEl } }}
+                                    >
+                                        {children}
+                                    </Text>
+                                </div>
+                            )}
+                        </div>
                         {showCollapsingIcon && (
                             <span
                                 onClick={toggleCollapsing}
                                 className={classes.dropdownIcon}
                                 {...override.dropdownIcon}
                             >
-                                <Icon name="arrowDropDown" size="small" />
+                                <Icon name="arrowDropDown" size="large" />
                             </span>
                         )}
                     </div>
-                    {title && (
-                        <div className={classes.withTitleContainer}>
-                            <Text
-                                className={classes.Text}
-                                {...override.Text}
-                                overrides={{ root: { ref: textEl } }}
-                            >
-                                {children}
-                            </Text>
-                        </div>
-                    )}
-                </AnimateHeight>
+                </Collapse>
             )}
         </div>
     );
@@ -176,9 +175,10 @@ Advice.overrides = [
     'root',
     'icon',
     'textContainer',
+    'collapseContainer',
     'Text',
     'dropdownIcon',
-    'react-animate-height',
+    'react-collapse',
 ];
 
 Advice.defaultProps = {
