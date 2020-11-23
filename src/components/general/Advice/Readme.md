@@ -77,7 +77,8 @@ Title mode:
 ---
 
 -   root - root element
--   textContainer - text and dropdown icon container
+-   textContainer - text and title container
+-   collapseContainer - content and icon container
 -   [Icon](#/General?id=icon)
 -   [ArrowDropDown](#/General?id=icon)
 -   [react-collapse](https://github.com/nkbt/react-collapse)

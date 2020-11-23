@@ -443,75 +443,67 @@ exports[`Badge default match 1`] = `
         type="default"
       >
         <div
-          className="HoiPoi__Advice__root-1-0 HoiPoi__Advice__default-1-3 HoiPoi__Advice__isCollapsed-1-10"
+          className="HoiPoi__Advice__root-1-0 HoiPoi__Advice__default-1-3"
         >
-          <AnimateHeight
-            animateOpacity={false}
-            animationStateClasses={
+          <Collapse
+            checkTimeout={50}
+            isOpened={false}
+            theme={
               Object {
-                "animating": "rah-animating",
-                "animatingDown": "rah-animating--down",
-                "animatingToHeightAuto": "rah-animating--to-height-auto",
-                "animatingToHeightSpecific": "rah-animating--to-height-specific",
-                "animatingToHeightZero": "rah-animating--to-height-zero",
-                "animatingUp": "rah-animating--up",
-                "static": "rah-static",
-                "staticHeightAuto": "rah-static--height-auto",
-                "staticHeightSpecific": "rah-static--height-specific",
-                "staticHeightZero": "rah-static--height-zero",
+                "collapse": "ReactCollapse--collapse",
+                "content": "ReactCollapse--content",
               }
             }
-            applyInlineTransitions={true}
-            delay={0}
-            duration={250}
-            easing="ease"
-            height={20}
-            style={Object {}}
           >
             <div
-              aria-hidden={false}
-              className="rah-static rah-static--height-specific"
+              aria-hidden={true}
+              className="ReactCollapse--collapse"
               style={
                 Object {
-                  "height": 20,
+                  "height": "0px",
                   "overflow": "hidden",
                 }
               }
             >
               <div
-                style={Object {}}
+                className="ReactCollapse--content"
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-1-8"
+                  className="HoiPoi__Advice__collapseContainer-1-9"
                 >
-                  <Text
-                    className="HoiPoi__Advice__Text-1-2"
-                    isTruncated={true}
-                    overrides={
-                      Object {
-                        "root": Object {
-                          "ref": Object {
-                            "current": <span
-                              class="HoiPoi__Text__root-1-12 HoiPoi__Advice__Text-1-2 HoiPoi__Text__body-1-22 HoiPoi__Text__truncated-1-28"
-                            >
-                              Lorem ipsum
-                            </span>,
-                          },
-                        },
-                      }
-                    }
-                    type="body"
+                  <div
+                    className="HoiPoi__Advice__textContainer-1-8"
                   >
-                    <span
-                      className="HoiPoi__Text__root-1-12 HoiPoi__Advice__Text-1-2 HoiPoi__Text__body-1-22 HoiPoi__Text__truncated-1-28"
+                    <Text
+                      bold={false}
+                      className="HoiPoi__Advice__Text-1-2"
+                      isTruncated={true}
+                      overrides={
+                        Object {
+                          "root": Object {
+                            "ref": Object {
+                              "current": <span
+                                class="HoiPoi__Text__root-1-13 HoiPoi__Advice__Text-1-2 HoiPoi__Text__body-1-23 HoiPoi__Text__truncated-1-29"
+                              >
+                                Lorem ipsum
+                              </span>,
+                            },
+                          },
+                        }
+                      }
+                      type="body"
                     >
-                      Lorem ipsum
-                    </span>
-                  </Text>
+                      <span
+                        className="HoiPoi__Text__root-1-13 HoiPoi__Advice__Text-1-2 HoiPoi__Text__body-1-23 HoiPoi__Text__truncated-1-29"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </Text>
+                  </div>
                 </div>
               </div>
             </div>
-          </AnimateHeight>
+          </Collapse>
         </div>
       </Advice>
     </JssProvider>
@@ -962,7 +954,7 @@ exports[`Badge with icon and type match 1`] = `
         type="error"
       >
         <div
-          className="HoiPoi__Advice__root-4-0 HoiPoi__Advice__error-4-4 HoiPoi__Advice__isCollapsed-4-10"
+          className="HoiPoi__Advice__root-4-0 HoiPoi__Advice__error-4-4"
         >
           <div
             className="HoiPoi__Advice__icon-4-1"
@@ -974,7 +966,7 @@ exports[`Badge with icon and type match 1`] = `
               size="medium"
             >
               <span
-                className="HoiPoi__Icon__root-4-12 HoiPoi__Icon__medium-4-14"
+                className="HoiPoi__Icon__root-4-13 HoiPoi__Icon__medium-4-15"
                 onMouseDown={[Function]}
                 onMouseOut={[Function]}
                 onMouseOver={[Function]}
@@ -997,73 +989,65 @@ exports[`Badge with icon and type match 1`] = `
               </span>
             </Icon>
           </div>
-          <AnimateHeight
-            animateOpacity={false}
-            animationStateClasses={
+          <Collapse
+            checkTimeout={50}
+            isOpened={false}
+            theme={
               Object {
-                "animating": "rah-animating",
-                "animatingDown": "rah-animating--down",
-                "animatingToHeightAuto": "rah-animating--to-height-auto",
-                "animatingToHeightSpecific": "rah-animating--to-height-specific",
-                "animatingToHeightZero": "rah-animating--to-height-zero",
-                "animatingUp": "rah-animating--up",
-                "static": "rah-static",
-                "staticHeightAuto": "rah-static--height-auto",
-                "staticHeightSpecific": "rah-static--height-specific",
-                "staticHeightZero": "rah-static--height-zero",
+                "collapse": "ReactCollapse--collapse",
+                "content": "ReactCollapse--content",
               }
             }
-            applyInlineTransitions={true}
-            delay={0}
-            duration={250}
-            easing="ease"
-            height={20}
-            style={Object {}}
           >
             <div
-              aria-hidden={false}
-              className="rah-static rah-static--height-specific"
+              aria-hidden={true}
+              className="ReactCollapse--collapse"
               style={
                 Object {
-                  "height": 20,
+                  "height": "0px",
                   "overflow": "hidden",
                 }
               }
             >
               <div
-                style={Object {}}
+                className="ReactCollapse--content"
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-4-8"
+                  className="HoiPoi__Advice__collapseContainer-4-9"
                 >
-                  <Text
-                    className="HoiPoi__Advice__Text-4-2"
-                    isTruncated={true}
-                    overrides={
-                      Object {
-                        "root": Object {
-                          "ref": Object {
-                            "current": <span
-                              class="HoiPoi__Text__root-4-19 HoiPoi__Advice__Text-4-2 HoiPoi__Text__body-4-29 HoiPoi__Text__truncated-4-35"
-                            >
-                              Lorem ipsum
-                            </span>,
-                          },
-                        },
-                      }
-                    }
-                    type="body"
+                  <div
+                    className="HoiPoi__Advice__textContainer-4-8"
                   >
-                    <span
-                      className="HoiPoi__Text__root-4-19 HoiPoi__Advice__Text-4-2 HoiPoi__Text__body-4-29 HoiPoi__Text__truncated-4-35"
+                    <Text
+                      bold={false}
+                      className="HoiPoi__Advice__Text-4-2"
+                      isTruncated={true}
+                      overrides={
+                        Object {
+                          "root": Object {
+                            "ref": Object {
+                              "current": <span
+                                class="HoiPoi__Text__root-4-20 HoiPoi__Advice__Text-4-2 HoiPoi__Text__body-4-30 HoiPoi__Text__truncated-4-36"
+                              >
+                                Lorem ipsum
+                              </span>,
+                            },
+                          },
+                        }
+                      }
+                      type="body"
                     >
-                      Lorem ipsum
-                    </span>
-                  </Text>
+                      <span
+                        className="HoiPoi__Text__root-4-20 HoiPoi__Advice__Text-4-2 HoiPoi__Text__body-4-30 HoiPoi__Text__truncated-4-36"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </Text>
+                  </div>
                 </div>
               </div>
             </div>
-          </AnimateHeight>
+          </Collapse>
         </div>
       </Advice>
     </JssProvider>
@@ -1514,7 +1498,7 @@ exports[`Badge with icon match 1`] = `
         type="default"
       >
         <div
-          className="HoiPoi__Advice__root-3-0 HoiPoi__Advice__default-3-3 HoiPoi__Advice__isCollapsed-3-10"
+          className="HoiPoi__Advice__root-3-0 HoiPoi__Advice__default-3-3"
         >
           <div
             className="HoiPoi__Advice__icon-3-1"
@@ -1526,7 +1510,7 @@ exports[`Badge with icon match 1`] = `
               size="medium"
             >
               <span
-                className="HoiPoi__Icon__root-3-12 HoiPoi__Icon__medium-3-14"
+                className="HoiPoi__Icon__root-3-13 HoiPoi__Icon__medium-3-15"
                 onMouseDown={[Function]}
                 onMouseOut={[Function]}
                 onMouseOver={[Function]}
@@ -1550,73 +1534,65 @@ exports[`Badge with icon match 1`] = `
               </span>
             </Icon>
           </div>
-          <AnimateHeight
-            animateOpacity={false}
-            animationStateClasses={
+          <Collapse
+            checkTimeout={50}
+            isOpened={false}
+            theme={
               Object {
-                "animating": "rah-animating",
-                "animatingDown": "rah-animating--down",
-                "animatingToHeightAuto": "rah-animating--to-height-auto",
-                "animatingToHeightSpecific": "rah-animating--to-height-specific",
-                "animatingToHeightZero": "rah-animating--to-height-zero",
-                "animatingUp": "rah-animating--up",
-                "static": "rah-static",
-                "staticHeightAuto": "rah-static--height-auto",
-                "staticHeightSpecific": "rah-static--height-specific",
-                "staticHeightZero": "rah-static--height-zero",
+                "collapse": "ReactCollapse--collapse",
+                "content": "ReactCollapse--content",
               }
             }
-            applyInlineTransitions={true}
-            delay={0}
-            duration={250}
-            easing="ease"
-            height={20}
-            style={Object {}}
           >
             <div
-              aria-hidden={false}
-              className="rah-static rah-static--height-specific"
+              aria-hidden={true}
+              className="ReactCollapse--collapse"
               style={
                 Object {
-                  "height": 20,
+                  "height": "0px",
                   "overflow": "hidden",
                 }
               }
             >
               <div
-                style={Object {}}
+                className="ReactCollapse--content"
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-3-8"
+                  className="HoiPoi__Advice__collapseContainer-3-9"
                 >
-                  <Text
-                    className="HoiPoi__Advice__Text-3-2"
-                    isTruncated={true}
-                    overrides={
-                      Object {
-                        "root": Object {
-                          "ref": Object {
-                            "current": <span
-                              class="HoiPoi__Text__root-3-19 HoiPoi__Advice__Text-3-2 HoiPoi__Text__body-3-29 HoiPoi__Text__truncated-3-35"
-                            >
-                              Lorem ipsum
-                            </span>,
-                          },
-                        },
-                      }
-                    }
-                    type="body"
+                  <div
+                    className="HoiPoi__Advice__textContainer-3-8"
                   >
-                    <span
-                      className="HoiPoi__Text__root-3-19 HoiPoi__Advice__Text-3-2 HoiPoi__Text__body-3-29 HoiPoi__Text__truncated-3-35"
+                    <Text
+                      bold={false}
+                      className="HoiPoi__Advice__Text-3-2"
+                      isTruncated={true}
+                      overrides={
+                        Object {
+                          "root": Object {
+                            "ref": Object {
+                              "current": <span
+                                class="HoiPoi__Text__root-3-20 HoiPoi__Advice__Text-3-2 HoiPoi__Text__body-3-30 HoiPoi__Text__truncated-3-36"
+                              >
+                                Lorem ipsum
+                              </span>,
+                            },
+                          },
+                        }
+                      }
+                      type="body"
                     >
-                      Lorem ipsum
-                    </span>
-                  </Text>
+                      <span
+                        className="HoiPoi__Text__root-3-20 HoiPoi__Advice__Text-3-2 HoiPoi__Text__body-3-30 HoiPoi__Text__truncated-3-36"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </Text>
+                  </div>
                 </div>
               </div>
             </div>
-          </AnimateHeight>
+          </Collapse>
         </div>
       </Advice>
     </JssProvider>
@@ -2067,75 +2043,67 @@ exports[`Badge with type match 1`] = `
         type="success"
       >
         <div
-          className="HoiPoi__Advice__root-2-0 HoiPoi__Advice__success-2-6 HoiPoi__Advice__isCollapsed-2-10"
+          className="HoiPoi__Advice__root-2-0 HoiPoi__Advice__success-2-6"
         >
-          <AnimateHeight
-            animateOpacity={false}
-            animationStateClasses={
+          <Collapse
+            checkTimeout={50}
+            isOpened={false}
+            theme={
               Object {
-                "animating": "rah-animating",
-                "animatingDown": "rah-animating--down",
-                "animatingToHeightAuto": "rah-animating--to-height-auto",
-                "animatingToHeightSpecific": "rah-animating--to-height-specific",
-                "animatingToHeightZero": "rah-animating--to-height-zero",
-                "animatingUp": "rah-animating--up",
-                "static": "rah-static",
-                "staticHeightAuto": "rah-static--height-auto",
-                "staticHeightSpecific": "rah-static--height-specific",
-                "staticHeightZero": "rah-static--height-zero",
+                "collapse": "ReactCollapse--collapse",
+                "content": "ReactCollapse--content",
               }
             }
-            applyInlineTransitions={true}
-            delay={0}
-            duration={250}
-            easing="ease"
-            height={20}
-            style={Object {}}
           >
             <div
-              aria-hidden={false}
-              className="rah-static rah-static--height-specific"
+              aria-hidden={true}
+              className="ReactCollapse--collapse"
               style={
                 Object {
-                  "height": 20,
+                  "height": "0px",
                   "overflow": "hidden",
                 }
               }
             >
               <div
-                style={Object {}}
+                className="ReactCollapse--content"
               >
                 <div
-                  className="HoiPoi__Advice__textContainer-2-8"
+                  className="HoiPoi__Advice__collapseContainer-2-9"
                 >
-                  <Text
-                    className="HoiPoi__Advice__Text-2-2"
-                    isTruncated={true}
-                    overrides={
-                      Object {
-                        "root": Object {
-                          "ref": Object {
-                            "current": <span
-                              class="HoiPoi__Text__root-2-12 HoiPoi__Advice__Text-2-2 HoiPoi__Text__body-2-22 HoiPoi__Text__truncated-2-28"
-                            >
-                              Lorem ipsum
-                            </span>,
-                          },
-                        },
-                      }
-                    }
-                    type="body"
+                  <div
+                    className="HoiPoi__Advice__textContainer-2-8"
                   >
-                    <span
-                      className="HoiPoi__Text__root-2-12 HoiPoi__Advice__Text-2-2 HoiPoi__Text__body-2-22 HoiPoi__Text__truncated-2-28"
+                    <Text
+                      bold={false}
+                      className="HoiPoi__Advice__Text-2-2"
+                      isTruncated={true}
+                      overrides={
+                        Object {
+                          "root": Object {
+                            "ref": Object {
+                              "current": <span
+                                class="HoiPoi__Text__root-2-13 HoiPoi__Advice__Text-2-2 HoiPoi__Text__body-2-23 HoiPoi__Text__truncated-2-29"
+                              >
+                                Lorem ipsum
+                              </span>,
+                            },
+                          },
+                        }
+                      }
+                      type="body"
                     >
-                      Lorem ipsum
-                    </span>
-                  </Text>
+                      <span
+                        className="HoiPoi__Text__root-2-13 HoiPoi__Advice__Text-2-2 HoiPoi__Text__body-2-23 HoiPoi__Text__truncated-2-29"
+                      >
+                        Lorem ipsum
+                      </span>
+                    </Text>
+                  </div>
                 </div>
               </div>
             </div>
-          </AnimateHeight>
+          </Collapse>
         </div>
       </Advice>
     </JssProvider>
@@ -2586,7 +2554,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
         type="default"
       >
         <div
-          className="HoiPoi__Advice__root-5-0 HoiPoi__Advice__default-5-3 HoiPoi__Advice__isCollapsed-5-10"
+          className="HoiPoi__Advice__root-5-0 HoiPoi__Advice__default-5-3"
         >
           <div
             className="HoiPoi__Advice__icon-5-1"
@@ -2598,7 +2566,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
               size="medium"
             >
               <span
-                className="HoiPoi__Icon__root-5-12 HoiPoi__Icon__medium-5-14"
+                className="HoiPoi__Icon__root-5-13 HoiPoi__Icon__medium-5-15"
                 onMouseDown={[Function]}
                 onMouseOut={[Function]}
                 onMouseOver={[Function]}
@@ -2630,7 +2598,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
                 "root": Object {
                   "ref": Object {
                     "current": <span
-                      class="HoiPoi__Text__root-5-19 HoiPoi__Advice__Text-5-2 HoiPoi__Text__body-5-29"
+                      class="HoiPoi__Text__root-5-20 HoiPoi__Advice__Text-5-2 HoiPoi__Text__body-5-30"
                     >
                       Lorem ipsum
                     </span>,
@@ -2641,7 +2609,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
             type="body"
           >
             <span
-              className="HoiPoi__Text__root-5-19 HoiPoi__Advice__Text-5-2 HoiPoi__Text__body-5-29"
+              className="HoiPoi__Text__root-5-20 HoiPoi__Advice__Text-5-2 HoiPoi__Text__body-5-30"
             >
               Lorem ipsum
             </span>
