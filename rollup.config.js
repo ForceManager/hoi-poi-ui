@@ -21,6 +21,7 @@ const commonjsOptions = {
     ignoreGlobal: true,
     include: /node_modules/,
     namedExports: {
+        'node_modules/react-collapse/lib/index.js': ['Collapse'],
         'node_modules/react-is/index.js': ['isFragment', 'ForwardRef'],
         './node_modules/prop-types/index.js': [
             'elementType',
