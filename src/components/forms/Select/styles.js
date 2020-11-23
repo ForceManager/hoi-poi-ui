@@ -10,6 +10,9 @@ export default (theme) => ({
     select: {},
     isMulti: {},
     menu: {},
+    menuList: {
+        ...theme.utils.scrollbar,
+    },
     actionContainer: {
         borderTop: '1px solid',
         borderTopColor: theme.colors.neutral400,

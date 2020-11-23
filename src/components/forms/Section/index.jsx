@@ -39,6 +39,7 @@ const Section = memo(
         const headerClassName = classnames(classes.header, {
             [classes.isExpandable]: isExpandable,
             [classes.open]: isOpen,
+            [classes.headerActiveFields]: !!activeFields,
         });
 
         const onToggle = useCallback(() => {
