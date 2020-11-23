@@ -47,6 +47,7 @@ const commonjsOptions = {
             'ContentState',
             'CharacterMetadata',
         ],
+        './node_modules/react-collapse/lib/index.js': ['Collapse'],
     },
 };
 
