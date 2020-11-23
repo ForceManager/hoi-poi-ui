@@ -32,7 +32,6 @@ function Advice({
     useLayoutEffect(() => {
         if (title) return;
         const el = textEl.current;
-        console.log(el.offsetWidth, el.scrollWidth, el.offsetHeight);
         setEllipsisActive(el.offsetWidth < el.scrollWidth);
 
         // Handling resize windows
