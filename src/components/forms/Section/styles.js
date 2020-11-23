@@ -22,6 +22,29 @@ export default (theme) => ({
             },
         },
     },
+    open: {
+        '& $Text': {
+            color: theme.colors.neutral900,
+        },
+        '& $icon': {
+            '& svg': {
+                transform: 'rotate(0deg) translateY(0px)',
+            },
+            '& svg path': {
+                fill: theme.colors.neutral900,
+            },
+        },
+    },
+    headerActiveFields: {
+        '& $Text': {
+            color: theme.colors.neutral900,
+        },
+        '& $icon': {
+            '& svg path': {
+                fill: theme.colors.neutral900,
+            },
+        },
+    },
     headerContent: {
         width: '100%',
         display: 'flex',
@@ -46,6 +69,8 @@ export default (theme) => ({
         transition: 'all 0.15s ease',
     },
     BadgeNotification: {
+        height: '100%',
+        alignSelf: 'center',
         marginLeft: '8px',
     },
     icon: {
@@ -73,19 +98,6 @@ export default (theme) => ({
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-        },
-    },
-    open: {
-        '& $Text': {
-            color: theme.colors.neutral900,
-        },
-        '& $icon': {
-            '& svg': {
-                transform: 'rotate(0deg) translateY(0px)',
-            },
-            '& svg path': {
-                fill: theme.colors.neutral900,
-            },
         },
     },
 });
