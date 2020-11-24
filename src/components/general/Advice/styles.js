@@ -63,15 +63,16 @@ export default (theme) => ({
         alignItems: 'flex-start',
     },
     dropdownIcon: {
+        marginTop: -4,
         lineHeight: '0',
         transition: 'transform 0.3s ease-out',
         willChange: 'transform',
-        transform: 'rotate(-180deg) translateY(1px)',
+        transform: 'rotate(0) translateY(1px)',
         cursor: 'pointer',
     },
     isOpened: {
         '& $dropdownIcon': {
-            transform: 'rotate(0) translateY(1px)',
+            transform: 'rotate(-180deg) translateY(0px)',
         },
         '& $Text': {
             whiteSpace: 'pre-wrap',
