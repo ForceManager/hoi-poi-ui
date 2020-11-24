@@ -12,7 +12,6 @@ export default (theme) => ({
     },
     medium: {
         height: 24,
-        minWidth: 24,
         borderRadius: 24,
         '& $Text': {
             lineHeight: '24px',
@@ -20,7 +19,6 @@ export default (theme) => ({
     },
     small: {
         height: 18,
-        minWidth: 18,
         borderRadius: 18,
         '& $Text': {
             lineHeight: '18px',
