@@ -175,7 +175,7 @@ const Select = memo(
         const optionsStyles = useCallback(
             ({ data, isDisabled, isFocused, isSelected }) => {
                 let listOfGrouped = [];
-                if (innerOptions.length > 0) {
+                if (innerOptions && innerOptions.length > 0) {
                     listOfGrouped = innerOptions.reduce((arr, current) => {
                         if (!current?.options?.length > 0) return [];
                         current.options.forEach((item) => {
