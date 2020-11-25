@@ -3,11 +3,12 @@ import { colors } from '../../../../../utils/styles/defaultTheme';
 
 function IndeterminateCheckBox({ color = colors.neutral700, ...props }) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" {...props}>
             <path
-                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"
-                fill={color}
                 fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm-2 10H4V8h10v2z"
+                fill={color}
             />
         </svg>
     );

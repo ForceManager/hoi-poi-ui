@@ -9,9 +9,12 @@ export default (theme) => ({
     async: {},
     select: {},
     isMulti: {},
-    menu: {},
+    menu: {
+        boxShadow: `${theme.effects.boxShadow} !important`,
+    },
     menuList: {
         ...theme.utils.scrollbar,
+        padding: '16px 0px',
     },
     actionContainer: {
         borderTop: '1px solid',
@@ -112,6 +115,14 @@ export default (theme) => ({
         opacity: '0.8',
     },
     group: {
+        paddingTop: '0px',
+        paddingBottom: '0px',
+    },
+    groupHeading: {
+        marginBottom: '0px',
+    },
+    groupLabel: {
+        padding: '6px 0px',
         ...theme.typography.subtitle,
         color: theme.colors.neutral700,
         textTransform: 'initial',
@@ -173,6 +184,9 @@ export default (theme) => ({
             backgroundColor: 'none',
             cursor: 'default',
         },
+    },
+    optionGrouped: {
+        padding: '8px 12px 8px 44px',
     },
     multiValue: {
         margin: '4px 6px 4px 2px',

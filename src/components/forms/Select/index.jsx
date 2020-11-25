@@ -174,6 +174,19 @@ const Select = memo(
 
         const optionsStyles = useCallback(
             ({ data, isDisabled, isFocused, isSelected }) => {
+                let listOfGrouped = [];
+                if (innerOptions.length > 0) {
+                    listOfGrouped = innerOptions.reduce((arr, current) => {
+                        if (!current?.options?.length > 0) return [];
+                        current.options.forEach((item) => {
+                            arr.push(item.value);
+                        });
+                        return arr;
+                    }, []);
+                }
+
+                const isGrouped = listOfGrouped.includes(data.value);
+
                 let styles = {
                     ...newStyles.option,
                     ...(override.option?.style || {}),
@@ -194,9 +207,17 @@ const Select = memo(
                     };
                 }
 
+                if (isGrouped) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.optionGrouped,
+                        ...(override.optionGrouped?.style || {}),
+                    };
+                }
+
                 return styles;
             },
-            [override],
+            [override, innerOptions],
         );
 
         const valueContainerStyles = useCallback(
@@ -295,11 +316,11 @@ const Select = memo(
 
         const formatGroupLabel = useCallback(
             (data) => (
-                <div key={data.value} className={classes.group}>
+                <div key={data.value} className={classes.groupLabel} {...override.groupLabel}>
                     {data.label}
                 </div>
             ),
-            [classes],
+            [classes, override],
         );
 
         const newIsClearable = useMemo(() => {
@@ -376,6 +397,16 @@ const Select = memo(
                     valueContainer: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
                         ...valueContainerStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    group: (styles) => ({
+                        ...styles,
+                        ...newStyles.group,
+                        ...(override.group?.style || {}),
+                    }),
+                    groupHeading: (styles) => ({
+                        ...styles,
+                        ...newStyles.groupHeading,
+                        ...(override.groupHeading?.style || {}),
                     }),
                     option: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,

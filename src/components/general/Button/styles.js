@@ -79,7 +79,6 @@ export default (theme) => ({
     },
     secondary: {
         border: `1px solid ${theme.colors.orange500}`,
-        backgroundColor: theme.colors.neutralBase,
         color: theme.colors.orange500,
         '&:not($loading):not($disabled)': {
             '&:hover': {
@@ -96,7 +95,6 @@ export default (theme) => ({
     },
     secondaryError: {
         border: `1px solid ${theme.colors.neutral400}`,
-        backgroundColor: theme.colors.neutralBase,
         color: theme.colors.red500,
         '&:not($loading):not($disabled)': {
             '&:hover': {
@@ -113,7 +111,6 @@ export default (theme) => ({
     },
     terciary: {
         border: `1px solid ${theme.colors.neutral400}`,
-        backgroundColor: theme.colors.neutralBase,
         color: theme.colors.neutral700,
         '&:not($loading):not($disabled)': {
             '&:hover': {
