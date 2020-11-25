@@ -579,6 +579,70 @@ const loadOptions = () =>
 </div>;
 ```
 
+Async load with grouped options:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const groupOptions = (options) => {
+    const odd = {
+        label: 'Odd',
+        options: [],
+    };
+    const even = {
+        label: 'Even',
+        options: [],
+    };
+    options.forEach((current, index) => {
+        if ((index + 1) % 2 === 0) even.options.push(current);
+        else odd.options.push(current);
+    });
+    const finalOptions = [odd, even];
+    return finalOptions;
+};
+
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                const groupedOptions = groupOptions(options);
+                resolve(groupedOptions);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
+    />
+</div>;
+```
+
 Async load options with fuzzy style:
 
 ```jsx
@@ -604,6 +668,7 @@ const options = [
         value: 'lorem-ipsum-4',
     },
 ];
+
 const loadOptions = (text, cb) =>
     new Promise(
         (resolve, reject) =>
@@ -612,6 +677,75 @@ const loadOptions = (text, cb) =>
                     return current.value.includes(text);
                 });
                 resolve(newOptions);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
+        isFuzzy
+    />
+</div>;
+```
+
+Async load grouped options with fuzzy style:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const groupOptions = (options) => {
+    const odd = {
+        label: 'Odd',
+        options: [],
+    };
+    const even = {
+        label: 'Even',
+        options: [],
+    };
+    options.forEach((current, index) => {
+        if ((index + 1) % 2 === 0) even.options.push(current);
+        else odd.options.push(current);
+    });
+    const finalOptions = [odd, even];
+    return finalOptions;
+};
+
+const loadOptions = (text, cb) =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                const newOptions = options.filter((current) => {
+                    return current.value.includes(text);
+                });
+
+                const groupedOptions = groupOptions(newOptions);
+                resolve(groupedOptions);
             }, 1000),
         [],
     );
