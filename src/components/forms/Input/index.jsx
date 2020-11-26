@@ -158,9 +158,9 @@ const Input = forwardRef(
         }, []);
 
         const handleOnChange = useCallback(
-            (e) => {
+            (e, action) => {
                 const finalValue = e?.target?.value || '';
-                onChange && onChange(finalValue, e);
+                onChange && onChange(finalValue, e, { action });
             },
             [onChange],
         );
@@ -207,9 +207,8 @@ const Input = forwardRef(
 
         // Remove content post component
         const postComponentClick = useCallback(() => {
-            handleOnChange();
-            handleOnBlur();
-        }, [handleOnBlur, handleOnChange]);
+            handleOnChange(null, 'clear');
+        }, [handleOnChange]);
 
         const copyValue = useCallback(() => {
             const textField = document.createElement('textarea');

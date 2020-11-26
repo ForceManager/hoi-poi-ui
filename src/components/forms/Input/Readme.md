@@ -245,6 +245,21 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Reading Clear Action:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value, e, info) => {
+    if (info && info.action) alert(info.action);
+    setState({ value });
+};
+<div>
+    <Input label="Lorem ipsum" placeholder="Write here" onChange={onChange} value={state.value} />
+</div>;
+```
+
 Pre/Post components
 
 ```jsx
