@@ -117,6 +117,9 @@ export default (theme) => ({
     group: {
         paddingTop: '0px',
         paddingBottom: '0px',
+        '& $option': {
+            padding: '8px 12px 8px 44px',
+        },
     },
     groupHeading: {
         marginBottom: '0px',
@@ -184,9 +187,6 @@ export default (theme) => ({
             backgroundColor: 'none',
             cursor: 'default',
         },
-    },
-    optionGrouped: {
-        padding: '8px 12px 8px 44px',
     },
     multiValue: {
         margin: '4px 6px 4px 2px',

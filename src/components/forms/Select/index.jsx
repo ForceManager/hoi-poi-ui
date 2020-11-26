@@ -16,6 +16,8 @@ import LoadingIndicator from './components/LoadingIndicator';
 import Menu from './components/Menu';
 import MenuSingle from './components/MenuSingle';
 import MenuMulti from './components/MenuMulti';
+import Group from './components/Group';
+import Option from './components/Option';
 import { isEqual } from '../../../utils/arrays';
 
 import { createUseStyles } from '../../../utils/styles';
@@ -48,6 +50,7 @@ const Select = memo(
         filterByKey,
         defaultMenuIsOpen,
         loadOptions,
+        groupOptions,
         loadingMessage,
         loadingPlaceholder,
         noOptionsMessage,
@@ -174,19 +177,6 @@ const Select = memo(
 
         const optionsStyles = useCallback(
             ({ data, isDisabled, isFocused, isSelected }) => {
-                let listOfGrouped = [];
-                if (innerOptions && innerOptions.length > 0) {
-                    listOfGrouped = innerOptions.reduce((arr, current) => {
-                        if (!current?.options?.length > 0) return [];
-                        current.options.forEach((item) => {
-                            arr.push(item.value);
-                        });
-                        return arr;
-                    }, []);
-                }
-
-                const isGrouped = listOfGrouped.includes(data.value);
-
                 let styles = {
                     ...newStyles.option,
                     ...(override.option?.style || {}),
@@ -207,17 +197,9 @@ const Select = memo(
                     };
                 }
 
-                if (isGrouped) {
-                    styles = {
-                        ...styles,
-                        ...newStyles.optionGrouped,
-                        ...(override.optionGrouped?.style || {}),
-                    };
-                }
-
                 return styles;
             },
-            [override, innerOptions],
+            [override],
         );
 
         const valueContainerStyles = useCallback(
@@ -381,6 +363,18 @@ const Select = memo(
                             actionIcon: override.actionIcon,
                             actionText: override.actionText,
                             actionTextWithIcon: override.actionTextWithIcon,
+                        },
+                    }),
+                    Group: Group({
+                        className: classes.group,
+                        override: {
+                            group: override.group,
+                        },
+                    }),
+                    Option: Option({
+                        className: classes.option,
+                        override: {
+                            option: override.option,
                         },
                     }),
                 },
@@ -575,6 +569,7 @@ Select.propTypes = {
     overrides: PropTypes.object,
     /** Async mode */
     loadOptions: PropTypes.func,
+    groupOptions: PropTypes.func,
     /* Autocomplete/Search UI */
     isFuzzy: PropTypes.bool,
     onChange: PropTypes.func,
