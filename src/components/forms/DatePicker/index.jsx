@@ -125,7 +125,6 @@ function DatePicker({
                         ? formatDate(value, flatpickrOptions.dateFormat)
                         : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
                     : value;
-            // const inputClassName = classnames({ [classes.isFullWidth]: isFullWidth }, className);
             return (
                 <Input
                     {...props}
