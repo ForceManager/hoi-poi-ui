@@ -11,6 +11,7 @@ export default (theme) => ({
     isMulti: {},
     menu: {
         boxShadow: `${theme.effects.boxShadow} !important`,
+        padding: '4px 0px',
     },
     menuList: {
         ...theme.utils.scrollbar,
@@ -160,7 +161,7 @@ export default (theme) => ({
     },
     valueContainer: {
         color: theme.colors.neutral900,
-        padding: '2px 10px 2px 0px',
+        padding: '1px 10px 1px 0px',
     },
     valueContainerDisabled: {
         color: theme.colors.neutral700,
@@ -190,7 +191,7 @@ export default (theme) => ({
     },
     multiValue: {
         margin: '4px 6px 4px 2px',
-        padding: '3px 6px 3px 8px',
+        padding: '4px 6px 4px 8px',
         border: 'none',
         borderRadius: '20px',
         backgroundColor: theme.colors.blue100,

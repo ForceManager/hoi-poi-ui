@@ -211,6 +211,7 @@ const Select = memo(
 
                 if (isDisabled) {
                     styles = {
+                        ...styles,
                         ...newStyles.valueContainerDisabled,
                         ...(override.valueContainerDisabled?.style || {}),
                     };
@@ -622,6 +623,7 @@ Select.propTypes = {
     ),
     /** Filter by keys as well */
     filterByKey: PropTypes.bool,
+    defaultMenuIsOpen: PropTypes.bool,
 };
 
 export default Select;
