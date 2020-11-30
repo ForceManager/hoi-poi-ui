@@ -15,7 +15,7 @@ export default (theme) => ({
     },
     menuList: {
         ...theme.utils.scrollbar,
-        padding: '16px 0px',
+        padding: '12px 0px',
     },
     actionContainer: {
         borderTop: '1px solid',
