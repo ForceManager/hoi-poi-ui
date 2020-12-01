@@ -37,10 +37,10 @@ const FieldGroup = memo(
         );
 
         const onChangeInput = useCallback(
-            (newValue, index) => {
+            (newValue, index, event, info) => {
                 let changedValue = [...value];
                 changedValue[index] = newValue;
-                onChange && onChange(changedValue, newValue, index);
+                onChange && onChange(changedValue, newValue, index, event, info);
             },
             [onChange, value],
         );
@@ -58,7 +58,7 @@ const FieldGroup = memo(
                         key={index}
                         isFullWidth={isFullWidth}
                         error={!!error}
-                        onChange={(v) => onChangeInput(v, index)}
+                        onChange={(value, event, info) => onChangeInput(value, index, event, info)}
                         value={value[index]}
                         {...props}
                     />,
