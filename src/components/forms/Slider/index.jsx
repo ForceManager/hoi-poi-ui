@@ -37,8 +37,13 @@ function Slider({
     );
 
     useEffect(() => {
-        setInnerValue(value);
-    }, [value]);
+        if (isRange) {
+            if (!value) setInnerValue([min, max]);
+            else setInnerValue(value);
+        } else {
+            setInnerValue(value || min);
+        }
+    }, [value, isRange, min, max]);
 
     // Overrides
     const override = getOverrides(overridesProp, Slider.overrides);
