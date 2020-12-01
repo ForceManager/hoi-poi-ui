@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCSlider, { Range } from 'rc-slider';
@@ -35,6 +35,10 @@ function Slider({
     const [innerValue, setInnerValue] = useState(
         isRange && (value === undefined || value === null) ? [min, max] : value || min,
     );
+
+    useEffect(() => {
+        setInnerValue(value);
+    }, [value]);
 
     // Overrides
     const override = getOverrides(overridesProp, Slider.overrides);
