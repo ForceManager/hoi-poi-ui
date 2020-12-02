@@ -57,6 +57,7 @@ function Modal({
     const [maxContentHeight, setMaxContentHeight] = useState(maxHeight);
     const maxContentHeightRef = useRef(maxHeight);
     const prevIsOpenRef = useRef(isOpen);
+    const isFirstLoadRef = useRef(true);
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Modal.overrides);
@@ -67,8 +68,8 @@ function Modal({
 
     const onResize = useCallback(() => {
         setTimeout(() => {
-            const node = modalRef?.current.node;
-            const overlay = node.querySelector('.ReactModal__Overlay');
+            const node = modalRef?.current?.node;
+            const overlay = node?.querySelector('.ReactModal__Overlay');
 
             if (!overlay) return;
 
@@ -85,10 +86,11 @@ function Modal({
     }, [maxHeight]);
 
     useLayoutEffect(() => {
-        if (isOpen && isOpen !== prevIsOpenRef.current) {
+        if (isOpen && (isFirstLoadRef.current || isOpen !== prevIsOpenRef.current)) {
             onResize();
         }
         prevIsOpenRef.current = isOpen;
+        isFirstLoadRef.current = false;
     }, [isOpen, onResize]);
 
     useLayoutEffect(() => {
