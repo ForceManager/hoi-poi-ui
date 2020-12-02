@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef, useLayoutEffect, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RModal from 'react-modal';
@@ -30,6 +30,7 @@ function Modal({
     isOpen,
     useCornerClose,
     useHeader,
+    useAutoHeight,
     size,
     width,
     cancelText,
@@ -46,6 +47,17 @@ function Modal({
     postComponent,
     ...props
 }) {
+    const modalRef = useRef();
+    const maxHeight = useMemo(() => {
+        const base = width || SIZES[size];
+        const baseReduced = base * 0.4;
+        const newHeight = base + baseReduced;
+        return newHeight;
+    }, [width, size]);
+    const [maxContentHeight, setMaxContentHeight] = useState(maxHeight);
+    const maxContentHeightRef = useRef(maxHeight);
+    const prevIsOpenRef = useRef(isOpen);
+    const isFirstLoadRef = useRef(true);
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Modal.overrides);
@@ -53,6 +65,38 @@ function Modal({
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
     const overlayClassNames = classnames(classes.overlay, overlayClassName);
+
+    const onResize = useCallback(() => {
+        setTimeout(() => {
+            const node = modalRef?.current?.node;
+            const overlay = node?.querySelector('.ReactModal__Overlay');
+
+            if (!overlay) return;
+
+            if (overlay.clientHeight < maxHeight + 20) {
+                if (maxContentHeightRef.current === overlay.clientHeight - 20) return;
+                maxContentHeightRef.current = overlay.clientHeight - 20;
+                setMaxContentHeight(overlay.clientHeight - 20);
+            } else {
+                if (maxContentHeightRef.current === maxHeight) return;
+                maxContentHeightRef.current = maxHeight;
+                setMaxContentHeight(maxHeight);
+            }
+        });
+    }, [maxHeight]);
+
+    useLayoutEffect(() => {
+        if (isOpen && (isFirstLoadRef.current || isOpen !== prevIsOpenRef.current)) {
+            onResize();
+        }
+        prevIsOpenRef.current = isOpen;
+        isFirstLoadRef.current = false;
+    }, [isOpen, onResize]);
+
+    useLayoutEffect(() => {
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, [onResize]);
 
     let contentStyle = {
         width: width || SIZES[size],
@@ -81,6 +125,13 @@ function Modal({
         ...override.root,
     };
 
+    const contentStyles = useMemo(() => {
+        if (!useAutoHeight) return {};
+        return {
+            maxHeight: maxContentHeight,
+        };
+    }, [useAutoHeight, maxContentHeight]);
+
     const showFooter = onConfirm || onCancel;
 
     const renderTitle = useMemo(() => {
@@ -95,8 +146,8 @@ function Modal({
     }, [classes.title, override.title, title]);
 
     return (
-        <RModal className={rootClassName} {...rootProps}>
-            <div className={classes.container} {...override.container}>
+        <RModal className={rootClassName} {...rootProps} ref={modalRef}>
+            <div className={classes.container} style={contentStyles} {...override.container}>
                 {useHeader && (
                     <div className={classes.header} {...override.header}>
                         {renderTitle}
@@ -169,6 +220,7 @@ Modal.overrides = [
 
 Modal.defaultProps = {
     size: 'medium',
+    useAutoHeight: true,
     shouldCloseOnOverlayClick: true,
     shouldCloseOnEsc: true,
     useCornerClose: true,
@@ -184,7 +236,8 @@ Modal.propTypes = {
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     isOpen: PropTypes.bool.isRequired,
     width: PropTypes.string,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big']),
+    useAutoHeight: PropTypes.bool,
     onCancel: PropTypes.func,
     onConfirm: PropTypes.func,
     confirmText: PropTypes.string,
