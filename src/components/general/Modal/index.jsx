@@ -31,6 +31,7 @@ function Modal({
     useCornerClose,
     useHeader,
     useAutoHeight,
+    useAutoWidth,
     size,
     width,
     cancelText,
@@ -50,12 +51,13 @@ function Modal({
     const modalRef = useRef();
     const maxHeight = useMemo(() => {
         const base = width || SIZES[size];
-        const baseReduced = base * 0.4;
+        const baseReduced = base * 0.2;
         const newHeight = base + baseReduced;
         return newHeight;
     }, [width, size]);
-    const [maxContentHeight, setMaxContentHeight] = useState(maxHeight);
-    const maxContentHeightRef = useRef(maxHeight);
+    const [autoHeight, setAutoHeight] = useState(maxHeight);
+    const [autoWidth, setAutoWidth] = useState(width || SIZES[size]);
+    const autoHeightRef = useRef(maxHeight);
     const prevIsOpenRef = useRef(isOpen);
     const isFirstLoadRef = useRef(true);
     const classes = useClasses(useStyles, classesProp);
@@ -73,48 +75,69 @@ function Modal({
 
             if (!overlay) return;
 
-            if (overlay.clientHeight < maxHeight + 20) {
-                if (maxContentHeightRef.current === overlay.clientHeight - 20) return;
-                maxContentHeightRef.current = overlay.clientHeight - 20;
-                setMaxContentHeight(overlay.clientHeight - 20);
-            } else {
-                if (maxContentHeightRef.current === maxHeight) return;
-                maxContentHeightRef.current = maxHeight;
-                setMaxContentHeight(maxHeight);
+            if (useAutoWidth) {
+                const defaultWidth = width || SIZES[size];
+                const marginWidth = overlay.clientWidth * 0.2;
+                const maxModalWidthWithMargins = overlay.clientWidth - marginWidth;
+
+                if (defaultWidth > maxModalWidthWithMargins) {
+                    setAutoWidth(maxModalWidthWithMargins);
+                } else {
+                    setAutoWidth(defaultWidth);
+                }
+            }
+
+            if (useAutoHeight) {
+                if (overlay.clientHeight < maxHeight + 20) {
+                    const marginHeight = overlay.clientHeight * 0.2;
+                    const maxModalHeightWithMargins = overlay.clientHeight - marginHeight;
+                    if (autoHeightRef.current === maxModalHeightWithMargins) return;
+                    autoHeightRef.current = maxModalHeightWithMargins;
+                    setAutoHeight(maxModalHeightWithMargins);
+                } else {
+                    if (autoHeightRef.current === maxHeight) return;
+                    autoHeightRef.current = maxHeight;
+                    setAutoHeight(maxHeight);
+                }
             }
         });
-    }, [maxHeight]);
+    }, [maxHeight, useAutoHeight, useAutoWidth, size, width]);
 
     useLayoutEffect(() => {
+        if (!useAutoWidth && !useAutoHeight) return;
         if (isOpen && (isFirstLoadRef.current || isOpen !== prevIsOpenRef.current)) {
             onResize();
         }
         prevIsOpenRef.current = isOpen;
         isFirstLoadRef.current = false;
-    }, [isOpen, onResize]);
+    }, [isOpen, onResize, useAutoWidth, useAutoHeight]);
 
     useLayoutEffect(() => {
+        if (!useAutoWidth && !useAutoHeight) return;
         window.addEventListener('resize', onResize);
         return () => window.removeEventListener('resize', onResize);
-    }, [onResize]);
+    }, [onResize, useAutoWidth, useAutoHeight]);
 
-    let contentStyle = {
-        width: width || SIZES[size],
-        maxWidth: '100%',
-        maxHeight: '100%',
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-    };
+    let rootContentStyle = useMemo(
+        () => ({
+            width: useAutoWidth ? autoWidth : width || SIZES[size],
+            maxWidth: '100%',
+            maxHeight: '100%',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+        }),
+        [useAutoWidth, autoWidth, width, size],
+    );
 
     const rootProps = {
         ariaHideApp: false,
         isOpen,
         style: {
-            content: contentStyle,
+            content: rootContentStyle,
         },
         overlayClassName: overlayClassNames,
         onAfterOpen,
@@ -128,9 +151,9 @@ function Modal({
     const contentStyles = useMemo(() => {
         if (!useAutoHeight) return {};
         return {
-            maxHeight: maxContentHeight,
+            maxHeight: autoHeight,
         };
-    }, [useAutoHeight, maxContentHeight]);
+    }, [useAutoHeight, autoHeight]);
 
     const showFooter = onConfirm || onCancel;
 
@@ -221,6 +244,7 @@ Modal.overrides = [
 Modal.defaultProps = {
     size: 'medium',
     useAutoHeight: true,
+    useAutoWidth: true,
     shouldCloseOnOverlayClick: true,
     shouldCloseOnEsc: true,
     useCornerClose: true,
@@ -238,11 +262,12 @@ Modal.propTypes = {
     width: PropTypes.string,
     size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big']),
     useAutoHeight: PropTypes.bool,
+    useAutoWidth: PropTypes.bool,
     onCancel: PropTypes.func,
     onConfirm: PropTypes.func,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
-    isConfirmDisabled: PropTypes.string,
+    isConfirmDisabled: PropTypes.bool,
     /** Function that will be called after the drawer has opened */
     onAfterOpen: PropTypes.func,
     /** Function that will be called when the drawer is requested to be closed (either by clicking on overlay or pressing ESC) */
