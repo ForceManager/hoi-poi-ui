@@ -76,7 +76,7 @@ InputWrapper.overrides = ['root', 'error', 'info', 'formControl', 'Label', 'inpu
 
 InputWrapper.defaultProps = {
     labelMode: 'vertical',
-    override: {},
+    overrides: {},
 };
 
 InputWrapper.propTypes = {
