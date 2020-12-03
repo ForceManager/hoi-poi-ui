@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef, useLayoutEffect, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RModal from 'react-modal';
@@ -30,6 +30,8 @@ function Modal({
     isOpen,
     useCornerClose,
     useHeader,
+    useAutoHeight,
+    useAutoWidth,
     size,
     width,
     cancelText,
@@ -46,6 +48,18 @@ function Modal({
     postComponent,
     ...props
 }) {
+    const modalRef = useRef();
+    const maxHeight = useMemo(() => {
+        const base = width || SIZES[size];
+        const baseReduced = base * 0.2;
+        const newHeight = base + baseReduced;
+        return newHeight;
+    }, [width, size]);
+    const [autoHeight, setAutoHeight] = useState(maxHeight);
+    const [autoWidth, setAutoWidth] = useState(width || SIZES[size]);
+    const autoHeightRef = useRef(maxHeight);
+    const prevIsOpenRef = useRef(isOpen);
+    const isFirstLoadRef = useRef(true);
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Modal.overrides);
@@ -54,23 +68,76 @@ function Modal({
     const rootClassName = classnames(classes.root, classNameProp);
     const overlayClassNames = classnames(classes.overlay, overlayClassName);
 
-    let contentStyle = {
-        width: width || SIZES[size],
-        maxWidth: '100%',
-        maxHeight: '100%',
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)',
-    };
+    const onResize = useCallback(() => {
+        setTimeout(() => {
+            const node = modalRef?.current?.node;
+            const overlay = node?.querySelector('.ReactModal__Overlay');
+
+            if (!overlay) return;
+
+            if (useAutoWidth) {
+                const defaultWidth = width || SIZES[size];
+                const marginWidth = overlay.clientWidth * 0.2;
+                const maxModalWidthWithMargins = overlay.clientWidth - marginWidth;
+
+                if (defaultWidth > maxModalWidthWithMargins) {
+                    setAutoWidth(maxModalWidthWithMargins);
+                } else {
+                    setAutoWidth(defaultWidth);
+                }
+            }
+
+            if (useAutoHeight) {
+                if (overlay.clientHeight < maxHeight + 20) {
+                    const marginHeight = overlay.clientHeight * 0.2;
+                    const maxModalHeightWithMargins = overlay.clientHeight - marginHeight;
+                    if (autoHeightRef.current === maxModalHeightWithMargins) return;
+                    autoHeightRef.current = maxModalHeightWithMargins;
+                    setAutoHeight(maxModalHeightWithMargins);
+                } else {
+                    if (autoHeightRef.current === maxHeight) return;
+                    autoHeightRef.current = maxHeight;
+                    setAutoHeight(maxHeight);
+                }
+            }
+        });
+    }, [maxHeight, useAutoHeight, useAutoWidth, size, width]);
+
+    useLayoutEffect(() => {
+        if (!useAutoWidth && !useAutoHeight) return;
+        if (isOpen && (isFirstLoadRef.current || isOpen !== prevIsOpenRef.current)) {
+            onResize();
+        }
+        prevIsOpenRef.current = isOpen;
+        isFirstLoadRef.current = false;
+    }, [isOpen, onResize, useAutoWidth, useAutoHeight]);
+
+    useLayoutEffect(() => {
+        if (!useAutoWidth && !useAutoHeight) return;
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, [onResize, useAutoWidth, useAutoHeight]);
+
+    let rootContentStyle = useMemo(
+        () => ({
+            width: useAutoWidth ? autoWidth : width || SIZES[size],
+            maxWidth: '100%',
+            maxHeight: '100%',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+        }),
+        [useAutoWidth, autoWidth, width, size],
+    );
 
     const rootProps = {
         ariaHideApp: false,
         isOpen,
         style: {
-            content: contentStyle,
+            content: rootContentStyle,
         },
         overlayClassName: overlayClassNames,
         onAfterOpen,
@@ -80,6 +147,13 @@ function Modal({
         closeTimeoutMS,
         ...override.root,
     };
+
+    const contentStyles = useMemo(() => {
+        if (!useAutoHeight) return {};
+        return {
+            maxHeight: autoHeight,
+        };
+    }, [useAutoHeight, autoHeight]);
 
     const showFooter = onConfirm || onCancel;
 
@@ -95,8 +169,8 @@ function Modal({
     }, [classes.title, override.title, title]);
 
     return (
-        <RModal className={rootClassName} {...rootProps}>
-            <div className={classes.container} {...override.container}>
+        <RModal className={rootClassName} {...rootProps} ref={modalRef}>
+            <div className={classes.container} style={contentStyles} {...override.container}>
                 {useHeader && (
                     <div className={classes.header} {...override.header}>
                         {renderTitle}
@@ -169,6 +243,8 @@ Modal.overrides = [
 
 Modal.defaultProps = {
     size: 'medium',
+    useAutoHeight: true,
+    useAutoWidth: true,
     shouldCloseOnOverlayClick: true,
     shouldCloseOnEsc: true,
     useCornerClose: true,
@@ -184,12 +260,14 @@ Modal.propTypes = {
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     isOpen: PropTypes.bool.isRequired,
     width: PropTypes.string,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big']),
+    useAutoHeight: PropTypes.bool,
+    useAutoWidth: PropTypes.bool,
     onCancel: PropTypes.func,
     onConfirm: PropTypes.func,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
-    isConfirmDisabled: PropTypes.string,
+    isConfirmDisabled: PropTypes.bool,
     /** Function that will be called after the drawer has opened */
     onAfterOpen: PropTypes.func,
     /** Function that will be called when the drawer is requested to be closed (either by clicking on overlay or pressing ESC) */

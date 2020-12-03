@@ -4,7 +4,6 @@ export default (theme) => ({
         boxSizing: 'border-box',
         display: 'block',
         outline: 'none',
-        padding: '10px',
     },
     overlay: {
         position: 'fixed',
