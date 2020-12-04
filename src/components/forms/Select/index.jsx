@@ -277,6 +277,19 @@ const Select = memo(
             [override],
         );
 
+        const menuListStyles = useMemo(() => {
+            let styles = {
+                ...newStyles.menuList,
+                ...(override.menuList?.style || {}),
+            };
+
+            if (lazyOptions.isLoading) {
+                styles.minHeight = '300px';
+            }
+
+            return styles;
+        }, [override, lazyOptions.isLoading]);
+
         const indicatorSeparatorStyles = useMemo(() => {
             if (isRequired && !isMulti) {
                 return newStyles.indicatorSeparatorHidden;
@@ -429,8 +442,7 @@ const Select = memo(
                     }),
                     menuList: (styles) => ({
                         ...styles,
-                        ...newStyles.menuList,
-                        ...(override.menuList?.style || {}),
+                        ...menuListStyles,
                     }),
                     multiValue: (styles) => ({
                         ...styles,
@@ -491,6 +503,7 @@ const Select = memo(
             multiValueLabelStyles,
             multiValueRemoveStyles,
             indicatorSeparatorStyles,
+            menuListStyles,
         ]);
 
         let SelectComponent = RSelect;
