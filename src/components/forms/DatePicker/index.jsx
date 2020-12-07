@@ -44,7 +44,6 @@ function DatePicker({
     ...props
 }) {
     const flatpickrRef = useRef();
-    const open = useRef(false);
     const classes = useClasses(useStyles, classesProp);
 
     // Overrides
@@ -110,11 +109,7 @@ function DatePicker({
 
     const onClick = useCallback((e) => {
         e.stopPropagation();
-        open.current && flatpickrRef.current.flatpickr.input.focus();
-    }, []);
-
-    const onMouseDown = useCallback((e) => {
-        open.current = !flatpickrRef.current.flatpickr.isOpen;
+        flatpickrRef.current.flatpickr.input.focus();
     }, []);
 
     const flatpickrRender = useCallback(
@@ -137,11 +132,7 @@ function DatePicker({
                     placeholder={placeholder}
                     postComponent={
                         !isReadOnly && (
-                            <div
-                                className={classes.calendarIcon}
-                                onClick={onClick}
-                                onMouseDown={onMouseDown}
-                            >
+                            <div className={classes.calendarIcon} onClick={onClick}>
                                 <Icon name="calendar" />
                             </div>
                         )
@@ -157,7 +148,6 @@ function DatePicker({
             isReadOnly,
             onClick,
             onInputChange,
-            onMouseDown,
             outputType,
             placeholder,
             props,
