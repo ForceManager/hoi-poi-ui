@@ -19,6 +19,32 @@ let isOpen = state.isOpen || false;
 </div>;
 ```
 
+Default Static Height:
+
+```jsx
+import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+let isOpen = state.isOpen || false;
+
+<div>
+    <Button onClick={() => setState({ isOpen: !isOpen })}>Show</Button>
+    <span> </span>
+    <Modal
+        title="Lorem modal"
+        isOpen={isOpen}
+        useStaticHeight={true}
+        onRequestClose={() => setState({ isOpen: false })}
+    >
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nibh ac quisque tincidunt
+            tincidunt eu, faucibus cras scelerisque.
+        </Text>
+    </Modal>
+</div>;
+```
+
 With buttons :
 
 ```jsx
@@ -948,7 +974,11 @@ let isOpen = state.isOpen || false;
         title="Lorem modal ipsum dolor sit amet, consectetur adipiscing elit"
         isOpen={isOpen}
         onRequestClose={() => setState({ isOpen: false })}
-        postComponent={<Advice type="error" title="Title">Here goes the sun</Advice>}
+        postComponent={
+            <Advice type="error" title="Title">
+                Here goes the sun
+            </Advice>
+        }
     >
         <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui, morbi donec quis sed. Nisl
