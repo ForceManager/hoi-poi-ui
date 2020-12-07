@@ -67,6 +67,7 @@ const Select = memo(
             isLoading: false,
         });
         const debounce = useRef(null);
+        const menuPlacementRef = useRef('bottom');
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
 
@@ -120,36 +121,48 @@ const Select = memo(
             [onChange],
         );
 
-        const handleOnFocus = useCallback(() => {
-            setFocused(true);
-            if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
-                setLazyOptions({
-                    ...lazyOptions,
-                    isLoading: true,
-                });
-                loadOptions().then((options) => {
+        const setMenuPlacement = useCallback((e) => {
+            const { y } = e.currentTarget.getBoundingClientRect();
+            const bodyHeight = document.body.clientHeight;
+            const baseMenuHeight = 300;
+            if (bodyHeight - y > baseMenuHeight) menuPlacementRef.current = 'bottom';
+            else menuPlacementRef.current = 'top';
+        }, []);
+
+        const handleOnFocus = useCallback(
+            (e) => {
+                setMenuPlacement(e);
+                setFocused(true);
+                if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
                     setLazyOptions({
-                        areLoaded: true,
-                        isLoading: false,
-                        options,
+                        ...lazyOptions,
+                        isLoading: true,
                     });
-                });
-            } else if (defaultSearch && loadOptions && isFuzzy && !lazyOptions.areLoaded) {
-                setLazyOptions({
-                    ...lazyOptions,
-                    isLoading: true,
-                });
-                const text = defaultSearch || '';
-                loadOptions(text).then((options) => {
-                    setInnerOptions(options);
+                    loadOptions().then((options) => {
+                        setLazyOptions({
+                            areLoaded: true,
+                            isLoading: false,
+                            options,
+                        });
+                    });
+                } else if (defaultSearch && loadOptions && isFuzzy && !lazyOptions.areLoaded) {
                     setLazyOptions({
-                        areLoaded: true,
-                        isLoading: false,
-                        options,
+                        ...lazyOptions,
+                        isLoading: true,
                     });
-                });
-            }
-        }, [isFuzzy, defaultSearch, lazyOptions, loadOptions]);
+                    const text = defaultSearch || '';
+                    loadOptions(text).then((options) => {
+                        setInnerOptions(options);
+                        setLazyOptions({
+                            areLoaded: true,
+                            isLoading: false,
+                            options,
+                        });
+                    });
+                }
+            },
+            [isFuzzy, defaultSearch, lazyOptions, loadOptions, setMenuPlacement],
+        );
 
         const handleOnBlur = useCallback(() => {
             setFocused(false);
@@ -283,12 +296,8 @@ const Select = memo(
                 ...(override.menuList?.style || {}),
             };
 
-            if (lazyOptions.isLoading) {
-                styles.minHeight = '300px';
-            }
-
             return styles;
-        }, [override, lazyOptions.isLoading]);
+        }, [override]);
 
         const indicatorSeparatorStyles = useMemo(() => {
             if (isRequired && !isMulti) {
@@ -345,7 +354,8 @@ const Select = memo(
                 autoFocus: focused,
                 hideSelectedOptions: isMulti ? false : hideSelectedOptions,
                 closeMenuOnSelect: isMulti ? false : true,
-                menuPlacement: 'auto',
+                menuPlacement: menuPlacementRef.current,
+                menuPosition: 'fixed',
                 menuPortalTarget: document.body,
                 loadOptions,
                 openMenuOnClick: !(loadOptions && isFuzzy),
