@@ -234,10 +234,6 @@ export default (theme) => ({
     },
     loadingMessage: {
         ...theme.typography.body,
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
     },
     indicatorsContainer: {
         height: 34,
