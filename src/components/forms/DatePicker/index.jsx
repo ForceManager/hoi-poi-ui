@@ -88,6 +88,7 @@ function DatePicker({
     const todayClicked = useCallback(() => {
         const today = new Date(new Date().setHours(0, 0, 0));
         onChangeDate([today]);
+        flatpickrRef.current.flatpickr.close();
     }, [onChangeDate]);
 
     const todayButton = useMemo(() => {
@@ -107,10 +108,30 @@ function DatePicker({
         [classes.container, todayButton],
     );
 
-    const onClick = useCallback((e) => {
-        e.stopPropagation();
-        flatpickrRef.current.flatpickr.input.focus();
+    const focusInputParent = useCallback((element) => {
+        let isInputParent = false;
+        if (element.classList.length > 0) {
+            element.classList.forEach((current) => {
+                if (current.includes('HoiPoi__Input__inputComponents')) isInputParent = true;
+            });
+        }
+
+        if (isInputParent) {
+            const input = element.querySelector('input');
+            if (input) input.focus();
+            return;
+        } else {
+            focusInputParent(element.parentNode);
+        }
     }, []);
+
+    const onClick = useCallback(
+        (e) => {
+            e.stopPropagation();
+            focusInputParent(e.target);
+        },
+        [focusInputParent],
+    );
 
     const flatpickrRender = useCallback(
         ({ className, value }, ref) => {
