@@ -121,13 +121,23 @@ const Select = memo(
             [onChange],
         );
 
-        const setMenuPlacement = useCallback((e) => {
-            const { y } = e.currentTarget.getBoundingClientRect();
-            const bodyHeight = document.body.clientHeight;
-            const baseMenuHeight = 300;
-            if (bodyHeight - y > baseMenuHeight) menuPlacementRef.current = 'bottom';
-            else menuPlacementRef.current = 'top';
-        }, []);
+        const setMenuPlacement = useCallback(
+            (e) => {
+                const { y } = e.currentTarget.getBoundingClientRect();
+                const bodyHeight = document.body.clientHeight;
+                let overrideHeight;
+                if (
+                    override.menuList?.style?.maxHeight &&
+                    !isNaN(override.menuList?.style?.maxHeight)
+                ) {
+                    overrideHeight = override.menuList?.style?.maxHeight;
+                }
+                const baseMenuHeight = overrideHeight || newStyles.menuList.maxHeight || 300;
+                if (bodyHeight - y > baseMenuHeight) menuPlacementRef.current = 'bottom';
+                else menuPlacementRef.current = 'top';
+            },
+            [override],
+        );
 
         const handleOnFocus = useCallback(
             (e) => {
