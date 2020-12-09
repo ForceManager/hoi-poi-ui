@@ -46,6 +46,7 @@ import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
 import Send from './icons/Send';
+import EmptyAvatar from './icons/EmptyAvatar';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -231,6 +232,7 @@ const ICONS = {
     videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,
+    emptyAvatar: EmptyAvatar,
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,

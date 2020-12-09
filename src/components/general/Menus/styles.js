@@ -11,16 +11,14 @@ export default (theme) => {
             listStyle: 'none',
 
             '& .rc-menu-submenu-title': {
-                paddingTop: '10px',
-                paddingBottom: '10px',
-                paddingLeft: '20px',
+                paddingBottom: '8px',
                 display: 'flex',
                 alignItems: 'center',
                 cursor: 'pointer',
                 userSelect: 'none',
 
                 '& span': {
-                    marginRight: '10px',
+                    marginRight: '8px',
                 },
             },
         },
@@ -28,11 +26,12 @@ export default (theme) => {
             position: 'relative',
             width: (props) => props.popupSize,
             overflow: 'hidden',
-            paddingTop: '10px',
-            paddingBottom: '10px',
-            backgroundColor: '#fff',
-            boxShadow: '0 3px 9px 0 rgba(0, 0, 0, 0.25)',
+            paddingTop: '8px',
+            paddingBottom: '8px',
+            backgroundColor: theme.colors.neutralBase,
+            boxShadow: theme.effects.boxShadow,
             cursor: 'pointer',
+            borderRadius: 4,
 
             '& .rc-menu-sub': {
                 padding: '0',
@@ -44,24 +43,20 @@ export default (theme) => {
             },
         },
         menuItem: {
-            height: '45px',
-            paddingLeft: '20px',
-            paddingRight: '20px',
+            height: '36px',
+            paddingLeft: '16px',
+            paddingRight: '16px',
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'row-reverse',
             justifyContent: 'flex-end',
             listStyle: 'none',
-            color: theme.colors.greySoft,
-            backgroundColor: '#fff',
-            fontSize: '13px',
-            fontStyle: 'normal',
-            fontWeight: 'normal',
             cursor: 'pointer',
             userSelect: 'none',
+            ...theme.typography.subtitle,
 
             '&:hover': {
-                backgroundColor: theme.colors.tableHeader,
+                backgroundColor: theme.colors.neutral300,
             },
 
             '& span': {
