@@ -16,6 +16,7 @@ module.exports = {
                 './src/components/general/Modal/index.jsx',
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/BadgeNotification/index.jsx',
+                './src/components/general/Menus/index.jsx',
             ],
         },
         {
@@ -33,7 +34,6 @@ module.exports = {
                 './src/components/general/ProgressBar/index.jsx',
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/Stepper/index.jsx',
-                './src/components/general/Menus/index.jsx',
                 './src/components/general/Avatar/index.jsx',
                 './src/components/general/CircularProgress/index.jsx',
                 './src/components/general/Tree/index.jsx',
