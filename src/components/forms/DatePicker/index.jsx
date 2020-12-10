@@ -109,8 +109,7 @@ function DatePicker({
     );
 
     const onClick = useCallback((e) => {
-        flatpickrRef.current.flatpickr.input.focus();
-        flatpickrRef.current.flatpickr.open();
+        setTimeout(() => flatpickrRef.current.flatpickr.open());
     }, []);
 
     const flatpickrRender = useCallback(
