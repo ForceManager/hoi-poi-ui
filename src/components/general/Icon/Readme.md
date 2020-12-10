@@ -314,6 +314,8 @@ Icons:
 <Icon name="chat"/>
 <span> </span>
 <Icon name="chatFilled"/>
+<span> </span>
+<Icon name="draggableSort"/>
 ```
 
 File Icons:
