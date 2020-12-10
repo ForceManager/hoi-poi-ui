@@ -332,6 +332,8 @@ Icons:
 <Icon name="chatFilled"/>
 <span> </span>
 <Icon name="send"/>
+<span> </span>
+<Icon name="draggableSort"/>
 ```
 
 File Icons:
