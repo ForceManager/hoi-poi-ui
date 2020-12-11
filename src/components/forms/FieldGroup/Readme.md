@@ -196,6 +196,23 @@ const [values, setValues] = useState([]);
 </div>;
 ```
 
+```jsx
+import { useState } from 'react';
+import DatePicker from '../../forms/DatePicker';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[DatePicker, DatePicker]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+    />
+</div>;
+```
+
 With error:
 
 ```jsx

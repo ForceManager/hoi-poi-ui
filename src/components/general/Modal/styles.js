@@ -47,9 +47,11 @@ export default (theme) => ({
     footer: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
         paddingTop: 16,
     },
+    footerLeft: {},
+    footerRight: {},
     content: {
         position: 'relative',
         overflow: 'auto',
@@ -67,5 +69,11 @@ export default (theme) => ({
     confirmButton: {},
     cancelButton: {
         marginRight: 20,
+    },
+    deleteButton: {
+        color: theme.colors.red500,
+        '&:hover': {
+            color: theme.colors.red600,
+        },
     },
 });

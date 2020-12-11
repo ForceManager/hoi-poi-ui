@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useMemo } from 'react';
+import React, { useRef, useCallback, useMemo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -44,6 +44,7 @@ function DatePicker({
     ...props
 }) {
     const flatpickrRef = useRef();
+    const todayButtonRef = useRef();
     const classes = useClasses(useStyles, classesProp);
 
     // Overrides
@@ -91,26 +92,38 @@ function DatePicker({
         flatpickrRef.current.flatpickr.close();
     }, [onChangeDate]);
 
-    const todayButton = useMemo(() => {
-        const div = document.createElement('div');
-        const classNames = [classes.todayContainer];
-        div.className = classNames;
-        div.addEventListener('click', () => todayClicked());
-        div.innerHTML = calendarButtonLabel;
-        return div;
-    }, [classes.todayContainer, calendarButtonLabel, todayClicked]);
-
     const onReady = useCallback(
         (_, __, fp) => {
             fp.calendarContainer.classList.add(classes.container);
-            if (fp.rContainer) fp.rContainer.appendChild(todayButton);
+            if (fp.rContainer) {
+                const div = document.createElement('div');
+                const classNames = [classes.todayContainer];
+                div.className = classNames;
+                div.addEventListener('click', todayClicked);
+                div.innerHTML = calendarButtonLabel;
+                todayButtonRef.current = {
+                    element: div,
+                    function: todayClicked,
+                };
+                fp.rContainer.appendChild(div);
+            }
         },
-        [classes.container, todayButton],
+        [calendarButtonLabel, classes.container, classes.todayContainer, todayClicked],
     );
 
+    useEffect(() => {
+        if (todayButtonRef.current) {
+            todayButtonRef.current.element.removeEventListener(
+                'click',
+                todayButtonRef.current.function,
+            );
+            todayButtonRef.current.element.addEventListener('click', todayClicked);
+            todayButtonRef.current.function = todayClicked;
+        }
+    }, [todayClicked]);
+
     const onClick = useCallback((e) => {
-        flatpickrRef.current.flatpickr.input.focus();
-        flatpickrRef.current.flatpickr.open();
+        setTimeout(() => flatpickrRef.current.flatpickr.open());
     }, []);
 
     const flatpickrRender = useCallback(

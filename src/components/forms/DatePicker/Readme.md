@@ -5,7 +5,7 @@ import { useState } from 'react';
 const [state, setState] = useState({});
 const onChange = (field) => {
     return (e) => {
-        setState({ [field]: e });
+        setState({ ...state, [field]: e });
     };
 };
 
