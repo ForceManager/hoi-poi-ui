@@ -103,6 +103,72 @@ const [isOpen, setIsOpen] = useState({
 </div>;
 ```
 
+With delete:
+
+```jsx
+import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [isOpen, setIsOpen] = useState({
+    confirm: false,
+    confirmCancel: false,
+});
+
+<div>
+    <Button onClick={() => setIsOpen({ ...isOpen, confirm: !isOpen.confirm })}>Confirm</Button>
+    <Modal
+        title="Lorem modal"
+        isOpen={isOpen.confirm}
+        onRequestClose={() => setIsOpen({ ...isOpen, confirm: false })}
+        onDelete={() => {
+            setIsOpen({ ...isOpen, confirm: false });
+        }}
+        onConfirm={() => {
+            setIsOpen({ ...isOpen, confirm: false });
+        }}
+        deleteText="Delete"
+        confirmText="Confirm"
+    >
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat sit pellentesque
+            tempor turpis sed sollicitudin sit commodo. Nisi tristique etiam viverra nulla diam
+            neque egestas. Pretium enim tortor, donec pharetra neque erat at sit amet. Venenatis,
+            enim ut orci, facilisis ac turpis aliquet. Elit aenean amet sagittis dolor velit tempor.
+            Convallis nullam facilisis amet tristique neque. Hendrerit volutpat, odio in congue.
+            Suscipit est cras nulla ultricies id gravida quis ut ut.
+        </Text>
+    </Modal>
+    <span> </span>
+    <Button onClick={() => setIsOpen({ ...isOpen, confirmCancel: !isOpen.confirmCancel })}>
+        Confirm & Cancel
+    </Button>
+    <Modal
+        title="Lorem modal"
+        isOpen={isOpen.confirmCancel}
+        onRequestClose={() => setIsOpen({ ...isOpen, confirmCancel: false })}
+        onCancel={() => setIsOpen({ ...isOpen, confirmCancel: false })}
+        onConfirm={() => {
+            setIsOpen({ ...isOpen, confirmCancel: false });
+        }}
+        onDelete={() => {
+            setIsOpen({ ...isOpen, confirmCancel: false });
+        }}
+        deleteText="Delete"
+        confirmText="Confirm"
+        cancelText="Cancel"
+    >
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat sit pellentesque
+            tempor turpis sed sollicitudin sit commodo. Nisi tristique etiam viverra nulla diam
+            neque egestas. Pretium enim tortor, donec pharetra neque erat at sit amet. Venenatis,
+            enim ut orci, facilisis ac turpis aliquet. Elit aenean amet sagittis dolor velit tempor.
+            Convallis nullam facilisis amet tristique neque. Hendrerit volutpat, odio in congue.
+            Suscipit est cras nulla ultricies id gravida quis ut ut.
+        </Text>
+    </Modal>
+</div>;
+```
+
 With buttons confirm disabled :
 
 ```jsx
