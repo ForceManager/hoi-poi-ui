@@ -30,7 +30,6 @@ export default (theme) => {
             paddingBottom: '8px',
             backgroundColor: theme.colors.neutralBase,
             boxShadow: theme.effects.boxShadow,
-            cursor: 'pointer',
             borderRadius: 4,
 
             '& .rc-menu-sub': {
@@ -51,16 +50,18 @@ export default (theme) => {
             flexDirection: 'row-reverse',
             justifyContent: 'flex-end',
             listStyle: 'none',
-            cursor: 'pointer',
             userSelect: 'none',
             ...theme.typography.subtitle,
 
-            '&:hover': {
-                backgroundColor: theme.colors.neutral300,
-            },
-
             '& span': {
                 marginRight: '10px',
+            },
+        },
+
+        clickable: {
+            cursor: 'pointer',
+            '&:hover': {
+                backgroundColor: theme.colors.neutral300,
             },
         },
     };

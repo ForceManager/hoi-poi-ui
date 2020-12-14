@@ -6,6 +6,7 @@ import { Menus, Icon, Text } from 'hoi-poi-ui';
 const items = [
     {
         title: <Text bold>Bruce Wayne</Text>,
+        infoItem: true,
         icon: <Icon name="emptyAvatar" size="medium" color="#a9b1b9" />,
     },
     {
