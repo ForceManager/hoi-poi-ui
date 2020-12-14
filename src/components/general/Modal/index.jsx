@@ -5,6 +5,7 @@ import RModal from 'react-modal';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Text from '../../typography/Text';
+import Link from '../../typography/Link';
 import Icon from '../../general/Icon';
 import Button from '../../general/Button';
 
@@ -37,8 +38,10 @@ function Modal({
     width,
     cancelText,
     confirmText,
+    deleteText,
     onCancel,
     onConfirm,
+    onDelete,
     isConfirmDisabled,
     onAfterOpen,
     onRequestClose,
@@ -200,26 +203,39 @@ function Modal({
                 )}
                 {showFooter && (
                     <div className={classes.footer} {...override.footer}>
-                        {onCancel && (
-                            <Button
-                                type="terciary"
-                                className={classes.cancelButton}
-                                onClick={onCancel}
-                                {...override.cancelButton}
-                            >
-                                {cancelText}
-                            </Button>
-                        )}
-                        {onConfirm && (
-                            <Button
-                                className={classes.confirmButton}
-                                onClick={onConfirm}
-                                isDisabled={isConfirmDisabled || false}
-                                {...override.confirmButton}
-                            >
-                                {confirmText}
-                            </Button>
-                        )}
+                        <div className={classes.footerLeft} {...override.footerLeft}>
+                            {onDelete && (
+                                <Link
+                                    className={classes.deleteButton}
+                                    onClick={onDelete}
+                                    {...override.deleteButton}
+                                >
+                                    {deleteText}
+                                </Link>
+                            )}
+                        </div>
+                        <div className={classes.footerRight} {...override.footerRight}>
+                            {onCancel && (
+                                <Button
+                                    type="terciary"
+                                    className={classes.cancelButton}
+                                    onClick={onCancel}
+                                    {...override.cancelButton}
+                                >
+                                    {cancelText}
+                                </Button>
+                            )}
+                            {onConfirm && (
+                                <Button
+                                    className={classes.confirmButton}
+                                    onClick={onConfirm}
+                                    isDisabled={isConfirmDisabled || false}
+                                    {...override.confirmButton}
+                                >
+                                    {confirmText}
+                                </Button>
+                            )}
+                        </div>
                     </div>
                 )}
             </div>
@@ -236,9 +252,12 @@ Modal.overrides = [
     'preComponent',
     'postComponent',
     'footer',
+    'footerLeft',
+    'footerRight',
     'closeIcon',
     'cancelButton',
     'confirmButton',
+    'deleteButton',
 ];
 
 Modal.defaultProps = {
@@ -267,8 +286,10 @@ Modal.propTypes = {
     useStaticHeight: PropTypes.bool,
     onCancel: PropTypes.func,
     onConfirm: PropTypes.func,
+    onDelete: PropTypes.func,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
+    deleteText: PropTypes.string,
     isConfirmDisabled: PropTypes.bool,
     /** Function that will be called after the drawer has opened */
     onAfterOpen: PropTypes.func,

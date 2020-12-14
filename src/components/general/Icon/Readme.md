@@ -334,6 +334,8 @@ Icons:
 <Icon name="send"/>
 <span> </span>
 <Icon name="emptyAvatar"/>
+<span> </span>
+<Icon name="draggableSort"/>
 ```
 
 File Icons:
