@@ -333,6 +333,8 @@ Icons:
 <span> </span>
 <Icon name="send"/>
 <span> </span>
+<Icon name="emptyAvatar"/>
+<span> </span>
 <Icon name="draggableSort"/>
 ```
 

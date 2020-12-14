@@ -46,6 +46,7 @@ import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
 import Send from './icons/Send';
+import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 
 //Actions
@@ -232,6 +233,7 @@ const ICONS = {
     videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,
+    emptyAvatar: EmptyAvatar,
     draggableSort: DraggableSort,
     //Actions
     accountCheckin: AccountCheckin,

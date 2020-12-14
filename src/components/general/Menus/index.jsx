@@ -22,6 +22,7 @@ function Menus({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
+    classNameMenu,
     triggerAction,
     size,
 }) {
@@ -32,6 +33,7 @@ function Menus({
 
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
+    const menuClassName = classnames(classes.subMenu, classNameMenu);
 
     const menuProps = {
         mode: 'horizontal',
@@ -47,7 +49,7 @@ function Menus({
                 {title && title}
             </Fragment>
         ),
-        popupClassName: classes.subMenu,
+        popupClassName: menuClassName,
     };
 
     const menuItemProps = {
