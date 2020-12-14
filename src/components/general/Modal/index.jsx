@@ -43,6 +43,7 @@ function Modal({
     onConfirm,
     onDelete,
     isConfirmDisabled,
+    isLoadingConfirm,
     onAfterOpen,
     onRequestClose,
     shouldCloseOnEsc,
@@ -220,6 +221,7 @@ function Modal({
                                     type="terciary"
                                     className={classes.cancelButton}
                                     onClick={onCancel}
+                                    isDisabled={isLoadingConfirm}
                                     {...override.cancelButton}
                                 >
                                     {cancelText}
@@ -230,6 +232,7 @@ function Modal({
                                     className={classes.confirmButton}
                                     onClick={onConfirm}
                                     isDisabled={isConfirmDisabled || false}
+                                    isLoading={isLoadingConfirm}
                                     {...override.confirmButton}
                                 >
                                     {confirmText}
@@ -292,6 +295,7 @@ Modal.propTypes = {
     deleteText: PropTypes.string,
     isConfirmDisabled: PropTypes.bool,
     /** Function that will be called after the drawer has opened */
+    isLoadingConfirm: PropTypes.bool,
     onAfterOpen: PropTypes.func,
     /** Function that will be called when the drawer is requested to be closed (either by clicking on overlay or pressing ESC) */
     onRequestClose: PropTypes.func,
