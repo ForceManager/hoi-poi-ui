@@ -52,10 +52,6 @@ function Menus({
         popupClassName: menuClassName,
     };
 
-    const menuItemProps = {
-        className: classes.menuItem,
-    };
-
     return (
         <div className={rootClassName} {...override.root}>
             <RCMenu {...menuProps}>
@@ -66,7 +62,11 @@ function Menus({
                                 key={id}
                                 itemIcon={item.icon}
                                 onClick={item.onClick}
-                                {...menuItemProps}
+                                className={
+                                    item.infoItem
+                                        ? classes.menuItem
+                                        : classnames(classes.menuItem, classes.clickable)
+                                }
                             >
                                 {item.title}
                             </MenuItem>
@@ -93,6 +93,7 @@ Menus.propTypes = {
         PropTypes.shape({
             title: PropTypes.any,
             icon: PropTypes.object,
+            infoItem: PropTypes.bool /** In order to know if an item is clickable or not */,
             onClick: PropTypes.func,
         }),
     ),
