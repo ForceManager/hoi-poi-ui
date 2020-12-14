@@ -5,18 +5,18 @@ import { Menus, Icon, Text } from 'hoi-poi-ui';
 
 const items = [
     {
-        title: <Text>Create</Text>,
-        icon: <Icon name="info" />,
-        onClick: () => console.log('create'),
+        title: <Text bold>Bruce Wayne</Text>,
+        infoItem: true,
+        icon: <Icon name="emptyAvatar" size="medium" color="#a9b1b9" />,
     },
     {
         title: <Text>Edit</Text>,
-        icon: <Icon name="info" />,
+        icon: <Icon name="info" color="#a9b1b9" />,
         onClick: () => console.log('edit'),
     },
     {
         title: <Text>Delete</Text>,
-        icon: <Icon name="info" />,
+        icon: <Icon name="info" color="#a9b1b9" />,
         onClick: () => console.log('delete'),
     },
 ];
