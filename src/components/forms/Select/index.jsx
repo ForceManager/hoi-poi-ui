@@ -369,6 +369,7 @@ const Select = memo(
                 menuPortalTarget: document.body,
                 loadOptions,
                 openMenuOnClick: !(loadOptions && isFuzzy),
+                openMenuOnFocus: true,
                 onChange: handleOnChange,
                 onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
