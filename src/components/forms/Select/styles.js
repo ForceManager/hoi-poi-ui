@@ -11,7 +11,10 @@ export default (theme) => ({
     isMulti: {},
     menu: {
         boxShadow: `${theme.effects.boxShadow} !important`,
-        padding: '4px 0px',
+        paddingTop: 4,
+        paddingBottom: 4,
+        marginTop: 8,
+        marginBottom: 8,
     },
     menuList: {
         ...theme.utils.scrollbar,

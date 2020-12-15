@@ -25,6 +25,13 @@ export default (theme) => ({
             color: theme.colors.orange600,
         },
     },
+    todayContainerDisabled: {
+        color: theme.colors.orange200,
+        cursor: 'not-allowed',
+        '&:hover': {
+            color: theme.colors.orange200,
+        },
+    },
     container: {
         '& *, :after, :before': {
             boxSizing: 'inherit',

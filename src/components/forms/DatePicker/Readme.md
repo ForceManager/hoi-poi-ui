@@ -36,6 +36,58 @@ const onChange = (field) => {
 </div>;
 ```
 
+MaxDate and MinDate
+
+```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
+const onChange = (field) => {
+    return (e) => {
+        setState({ ...state, [field]: e });
+    };
+};
+
+const today = new Date();
+const tomorrow = new Date(today);
+tomorrow.setDate(tomorrow.getDate() + 1);
+const yesterday = new Date(today);
+yesterday.setDate(yesterday.getDate() - 1);
+
+const fpOptions1 = {
+    minDate: yesterday,
+    maxDate: tomorrow,
+};
+
+const fpOptions2 = {
+    minDate: tomorrow,
+};
+
+const fpOptions3 = {
+    maxDate: yesterday,
+};
+
+<div>
+    <DatePicker
+        label="Lorem ipsum"
+        onChange={onChange(1)}
+        value={state[1]}
+        overrides={{ flatpickrOptions: { ...fpOptions1 } }}
+    />
+    <DatePicker
+        label="Lorem ipsum"
+        onChange={onChange(2)}
+        value={state[2]}
+        overrides={{ flatpickrOptions: { ...fpOptions2 } }}
+    />
+    <DatePicker
+        label="Lorem ipsum"
+        onChange={onChange(3)}
+        value={state[3]}
+        overrides={{ flatpickrOptions: { ...fpOptions3 } }}
+    />
+</div>;
+```
+
 Custom formatDate
 
 ```jsx

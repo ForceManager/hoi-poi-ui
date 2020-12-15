@@ -132,7 +132,32 @@ const Select = memo(
                 ) {
                     overrideHeight = override.menuList?.style?.maxHeight;
                 }
-                const baseMenuHeight = overrideHeight || newStyles.menuList.maxHeight || 300;
+
+                const overrideMenu = override?.menu?.style || null;
+                const overrideMenuPaddingTop =
+                    (!isNaN(parseInt(overrideMenu?.paddingTop, 10)) &&
+                        parseInt(overrideMenu?.paddingTop, 10)) ||
+                    null;
+                const overrideMenuPaddingBottom =
+                    (!isNaN(parseInt(overrideMenu?.paddingBottom, 10)) &&
+                        parseInt(overrideMenu?.paddingBottom, 10)) ||
+                    null;
+                const overrideMenuMarginTop =
+                    (!isNaN(parseInt(overrideMenu?.marginTop, 10)) &&
+                        parseInt(overrideMenu?.marginTop, 10)) ||
+                    null;
+                const overrideMenuMarginBottom =
+                    (!isNaN(parseInt(overrideMenu?.marginBottom, 10)) &&
+                        parseInt(overrideMenu?.marginBottom, 10)) ||
+                    null;
+
+                const margins =
+                    (newStyles.menu.paddingTop || overrideMenuPaddingTop || 4) +
+                    (newStyles.menu.paddingBottom || overrideMenuPaddingBottom || 4) +
+                    (newStyles.menu.marginTop || overrideMenuMarginTop || 8) +
+                    (newStyles.menu.marginBottom || overrideMenuMarginBottom || 8);
+                const baseMenuHeight =
+                    (overrideHeight || newStyles.menuList.maxHeight || 300) + margins;
                 if (bodyHeight - y > baseMenuHeight) menuPlacementRef.current = 'bottom';
                 else menuPlacementRef.current = 'top';
             },
@@ -356,6 +381,7 @@ const Select = memo(
                 defaultValue: newValue,
                 value: newValue,
                 defaultMenuIsOpen,
+                menuIsOpen: true,
                 actions,
                 isMulti,
                 isDisabled: isReadOnly,
