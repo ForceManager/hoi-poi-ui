@@ -33,7 +33,7 @@ function Modal({
     useHeader,
     useAutoHeight,
     useAutoWidth,
-    useStaticHeight,
+    useContentStaticHeight,
     size,
     width,
     cancelText,
@@ -154,10 +154,10 @@ function Modal({
     };
 
     const contentStyles = useMemo(() => {
-        if (!useStaticHeight && !useAutoHeight) return {};
-        if (useStaticHeight) return { height: autoHeight };
+        if (!useContentStaticHeight && !useAutoHeight) return {};
+        if (useContentStaticHeight) return { height: autoHeight };
         else return { maxHeight: autoHeight };
-    }, [useStaticHeight, useAutoHeight, autoHeight]);
+    }, [useContentStaticHeight, useAutoHeight, autoHeight]);
 
     const showFooter = onConfirm || onCancel;
 
@@ -267,7 +267,7 @@ Modal.defaultProps = {
     size: 'medium',
     useAutoHeight: true,
     useAutoWidth: true,
-    useStaticHeight: false,
+    useContentStaticHeight: false,
     shouldCloseOnOverlayClick: true,
     shouldCloseOnEsc: true,
     useCornerClose: true,
@@ -286,7 +286,7 @@ Modal.propTypes = {
     size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big']),
     useAutoHeight: PropTypes.bool,
     useAutoWidth: PropTypes.bool,
-    useStaticHeight: PropTypes.bool,
+    useContentStaticHeight: PropTypes.bool,
     onCancel: PropTypes.func,
     onConfirm: PropTypes.func,
     onDelete: PropTypes.func,
