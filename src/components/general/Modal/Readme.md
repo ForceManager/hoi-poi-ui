@@ -19,7 +19,7 @@ let isOpen = state.isOpen || false;
 </div>;
 ```
 
-Default Static Height:
+Content Static Height:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
@@ -34,7 +34,7 @@ let isOpen = state.isOpen || false;
     <Modal
         title="Lorem modal"
         isOpen={isOpen}
-        useStaticHeight={true}
+        useContentStaticHeight={true}
         onRequestClose={() => setState({ isOpen: false })}
     >
         <Text>
