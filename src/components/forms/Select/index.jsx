@@ -381,7 +381,6 @@ const Select = memo(
                 defaultValue: newValue,
                 value: newValue,
                 defaultMenuIsOpen,
-                menuIsOpen: true,
                 actions,
                 isMulti,
                 isDisabled: isReadOnly,
