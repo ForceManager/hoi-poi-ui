@@ -86,11 +86,23 @@ function DatePicker({
         onChange && onChange(undefined, name);
     }, [name, onChange]);
 
+    const shouldDisableToday = useMemo(() => {
+        const minDate = override.flatpickrOptions?.minDate;
+        const maxDate = override.flatpickrOptions?.maxDate;
+        if (minDate || maxDate) {
+            const today = new Date();
+            if (minDate && minDate.getTime() > today.getTime()) return true;
+            if (maxDate && maxDate.getTime() < today.getTime()) return true;
+        }
+        return false;
+    }, [override]);
+
     const todayClicked = useCallback(() => {
+        if (shouldDisableToday) return;
         const today = new Date(new Date().setHours(0, 0, 0));
         onChangeDate([today]);
         flatpickrRef.current.flatpickr.close();
-    }, [onChangeDate]);
+    }, [onChangeDate, shouldDisableToday]);
 
     const onReady = useCallback(
         (_, __, fp) => {
@@ -98,7 +110,8 @@ function DatePicker({
             if (fp.rContainer) {
                 const div = document.createElement('div');
                 const classNames = [classes.todayContainer];
-                div.className = classNames;
+                if (shouldDisableToday) classNames.push(classes.todayContainerDisabled);
+                div.className = classNames.join(' ');
                 div.addEventListener('click', todayClicked);
                 div.innerHTML = calendarButtonLabel;
                 todayButtonRef.current = {
@@ -108,7 +121,14 @@ function DatePicker({
                 fp.rContainer.appendChild(div);
             }
         },
-        [calendarButtonLabel, classes.container, classes.todayContainer, todayClicked],
+        [
+            calendarButtonLabel,
+            classes.container,
+            classes.todayContainer,
+            classes.todayContainerDisabled,
+            todayClicked,
+            shouldDisableToday,
+        ],
     );
 
     useEffect(() => {
