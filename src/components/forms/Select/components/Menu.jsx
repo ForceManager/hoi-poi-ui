@@ -5,19 +5,21 @@ import Icon from '../../../general/Icon';
 import defaultTheme from '../../../../utils/styles/defaultTheme';
 import Text from '../../../typography/Text';
 
-export default ({
-    className,
-    actionContainerClassName,
-    actionClassName,
-    actionIconClassName,
-    actionTextClassName,
-    actionTextWithIconClassName,
-    override,
-    actions,
-    onClickAction,
-}) => {
-    return React.memo(({ children, ...props }) => {
-        const linkRow = useCallback((action, index) => {
+export default React.memo(({ children, ...props }) => {
+    const {
+        className,
+        actionContainerClassName,
+        actionClassName,
+        actionIconClassName,
+        actionTextClassName,
+        actionTextWithIconClassName,
+        override,
+        actions,
+        onClickAction,
+    } = props.selectProps.menuProps;
+
+    const linkRow = useCallback(
+        (action, index) => {
             const icon = action.icon;
             const iconType = action.iconType;
 
@@ -57,19 +59,27 @@ export default ({
                     </div>
                 </div>
             );
-        }, []);
+        },
+        [
+            actionClassName,
+            actionIconClassName,
+            actionTextClassName,
+            actionTextWithIconClassName,
+            override,
+            onClickAction,
+        ],
+    );
 
-        return (
-            components.Menu && (
-                <components.Menu {...props} className={className} {...override.menu}>
-                    {children}
-                    {actions && (
-                        <div className={actionContainerClassName} {...override.actionContainer}>
-                            {actions.map((action, idx) => linkRow(action, idx))}
-                        </div>
-                    )}
-                </components.Menu>
-            )
-        );
-    });
-};
+    return (
+        components.Menu && (
+            <components.Menu {...props} className={className} {...override.menu}>
+                {children}
+                {actions && (
+                    <div className={actionContainerClassName} {...override.actionContainer}>
+                        {actions.map((action, idx) => linkRow(action, idx))}
+                    </div>
+                )}
+            </components.Menu>
+        )
+    );
+});
