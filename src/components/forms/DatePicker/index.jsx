@@ -111,7 +111,7 @@ function DatePicker({
                 const div = document.createElement('div');
                 const classNames = [classes.todayContainer];
                 if (shouldDisableToday) classNames.push(classes.todayContainerDisabled);
-                div.classList.add(...classNames);
+                div.className = classNames.join(' ');
                 div.addEventListener('click', todayClicked);
                 div.innerHTML = calendarButtonLabel;
                 todayButtonRef.current = {

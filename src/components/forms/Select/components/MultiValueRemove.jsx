@@ -5,9 +5,15 @@ import Icon from '../../../general/Icon';
 export default React.memo((props) => {
     const onClick = (e) => {
         e.stopPropagation();
-        const newValue = props.selectProps.value.filter((current) => {
-            return current.value !== props.data.value;
-        });
+
+        let newValue = [];
+
+        if (props.selectProps?.value?.length > 0) {
+            newValue = props.selectProps.value.filter((current) => {
+                return current.value !== props.data.value;
+            });
+        }
+
         props.selectProps.onChange(newValue, {
             action: 'remove-value',
             removedValue: props.data,
