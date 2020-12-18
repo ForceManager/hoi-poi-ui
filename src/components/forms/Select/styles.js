@@ -123,7 +123,7 @@ export default (theme) => ({
         paddingTop: '0px',
         paddingBottom: '0px',
         '& $option': {
-            padding: '8px 12px 8px 44px',
+            padding: '8px 12px 8px 12px',
         },
     },
     groupHeading: {
