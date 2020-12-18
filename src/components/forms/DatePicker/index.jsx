@@ -156,6 +156,15 @@ function DatePicker({
         setTimeout(() => flatpickrRef.current.flatpickr.open());
     }, []);
 
+    const inputOverride = useMemo(
+        () => ({
+            formControl: {
+                onClick: !isReadOnly ? onClick : undefined,
+            },
+        }),
+        [isReadOnly, onClick],
+    );
+
     const flatpickrRender = useCallback(
         ({ className, value }, ref) => {
             const formatValue =
@@ -172,7 +181,7 @@ function DatePicker({
                     isReadOnly={isReadOnly}
                     isFullWidth={isFullWidth}
                     onChange={isReadOnly ? undefined : onInputChange}
-                    overrides={{ input: { ref } }}
+                    overrides={{ input: { ref }, ...inputOverride }}
                     placeholder={placeholder}
                     postComponent={
                         !isReadOnly && (
@@ -188,6 +197,7 @@ function DatePicker({
             classes.calendarIcon,
             flatpickrOptions.dateFormat,
             formatDate,
+            inputOverride,
             isFullWidth,
             isReadOnly,
             onClick,
