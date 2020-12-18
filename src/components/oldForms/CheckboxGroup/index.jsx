@@ -126,7 +126,7 @@ CheckboxGroup.propTypes = {
         }),
     ),
     value: PropTypes.object,
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Info popover */

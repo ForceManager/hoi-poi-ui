@@ -54,7 +54,7 @@ Input.defaultProps = {};
 Input.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     info: PropTypes.string,
 };
 

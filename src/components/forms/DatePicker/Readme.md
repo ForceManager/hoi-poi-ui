@@ -49,9 +49,11 @@ const onChange = (field) => {
 
 const today = new Date();
 const tomorrow = new Date(today);
-tomorrow.setDate(tomorrow.getDate() + 1);
 const yesterday = new Date(today);
+tomorrow.setDate(tomorrow.getDate() + 1);
 yesterday.setDate(yesterday.getDate() - 1);
+tomorrow.setHours(0, 0, 0, 0);
+yesterday.setHours(0, 0, 0, 0);
 
 const fpOptions1 = {
     minDate: yesterday,

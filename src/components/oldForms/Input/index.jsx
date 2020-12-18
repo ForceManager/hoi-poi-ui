@@ -247,7 +247,7 @@ Input.propTypes = {
     /** Info popover */
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     onCopy: PropTypes.func,
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
