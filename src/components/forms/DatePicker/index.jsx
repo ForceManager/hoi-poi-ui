@@ -142,7 +142,7 @@ function DatePicker({
             todayButtonRef.current.element.addEventListener('click', todayClicked);
             todayButtonRef.current.function = todayClicked;
         }
-    }, [classes.todayContainer, classes.todayContainerDisabled, shouldDisableToday, todayClicked]);
+    }, [classes.todayContainer, classes.todayContainerDisabled, todayClicked]);
 
     useEffect(() => {
         if (todayButtonRef.current) {
