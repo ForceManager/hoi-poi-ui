@@ -101,7 +101,7 @@ function DatePicker({
 
     const todayClicked = useCallback(() => {
         if (shouldDisableToday) return;
-        const today = new Date(new Date().setHours(0, 0, 0));
+        const today = new Date(new Date().setHours(0, 0, 0, 0));
         onChangeDate([today]);
         flatpickrRef.current.flatpickr.close();
     }, [onChangeDate, shouldDisableToday]);
