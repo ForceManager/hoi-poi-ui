@@ -100,4 +100,19 @@ export default (theme) => ({
             transform: 'translate(-50%, -50%)',
         },
     },
+    fieldModeHorizontal: {
+        display: 'flex',
+        margin: '0 -8px',
+        padding: 0,
+        '& > [class*="InputWrapper"]': {
+            flex: 1,
+            padding: '0 8px',
+        },
+        '& [class*="formControl"]': {
+            width: 'auto',
+        },
+        '& [class*="formControl"] > div': {
+            width: '100%',
+        },
+    },
 });

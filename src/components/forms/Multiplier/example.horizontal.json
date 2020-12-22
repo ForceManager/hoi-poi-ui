@@ -1,0 +1,25 @@
+[
+    {
+        "fields": [
+            {
+                "label": "Name",
+                "labelMode": "vertical",
+                "name": "name",
+                "type": "text",
+                "placeholder": "Search contact",
+                "isRequired": true
+            },
+            {
+                "label": "Email",
+                "labelMode": "vertical",
+                "name": "email",
+                "type": "text",
+                "placeholder": "Write here",
+                "isRequired": true,
+                "attrs": {
+                    "type": "email"
+                }
+            }
+        ]
+    }
+]

@@ -9,6 +9,7 @@ export default (theme) => {
             width: 150,
             marginRight: 17,
             padding: '0 0 8px 0',
+            flexShrink: 0,
         },
         vertical: {
             '& $inputWrapper': {

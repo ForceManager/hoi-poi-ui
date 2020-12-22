@@ -136,7 +136,7 @@ export default (theme) => ({
         textTransform: 'initial',
     },
     inputComponents: {
-        width: 300,
+        width: 320,
         minWidth: 150,
     },
     control: {
