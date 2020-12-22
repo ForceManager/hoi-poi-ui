@@ -28,6 +28,7 @@ export { default as Tree } from './components/general/Tree';
 export { default as DataGrid } from './components/general/DataGrid';
 export { default as ProgressBar } from './components/general/ProgressBar';
 export { default as Carousel } from './components/general/Carousel';
+export { default as RadioBox } from './components/general/RadioBox';
 
 export { default as DatePicker } from './components/forms/DatePicker';
 export { default as FieldGroup } from './components/forms/FieldGroup';
@@ -50,7 +51,7 @@ export { default as TextArea } from './components/oldForms/TextArea';
 // export { default as Select } from './components/oldForms/Select';
 export { default as SelectButton } from './components/oldForms/SelectButton';
 // export { default as Slider } from './components/oldForms/Slider';
-export { default as Radio } from './components/oldForms/Radio';
+export { default as Radio } from './components/forms/Radio';
 export { default as RadioGroup } from './components/oldForms/RadioGroup';
 export { default as Multiplier } from './components/oldForms/Multiplier';
 // export { default as Switch } from './components/oldForms/Switch';
