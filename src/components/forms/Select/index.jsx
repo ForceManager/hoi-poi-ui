@@ -12,6 +12,7 @@ import ClearIndicator from './components/ClearIndicator';
 import SearchIndicator from './components/SearchIndicator';
 import SingleValue from './components/SingleValue';
 import MultiValueLabel from './components/MultiValueLabel';
+import MultiValueRemove from './components/MultiValueRemove';
 import LoadingIndicator from './components/LoadingIndicator';
 import Menu from './components/Menu';
 import MenuSingle from './components/MenuSingle';
@@ -401,30 +402,32 @@ const Select = memo(
                 filterOption: filterByKey ? filterKeyValue : createFilter,
                 formatOptionLabel,
                 formatGroupLabel,
+                menuProps: {
+                    className: classes.menu,
+                    actionContainerClassName: classes.actionContainer,
+                    actionClassName: classes.action,
+                    actionIconClassName: classes.actionIcon,
+                    actionTextClassName: classes.actionText,
+                    actionTextWithIconClassName: classes.actionTextWithIcon,
+                    actions,
+                    onClickAction,
+                    override: {
+                        menu: override.menu,
+                        actionContainer: override.actionContainer,
+                        action: override.action,
+                        actionIcon: override.actionIcon,
+                        actionText: override.actionText,
+                        actionTextWithIcon: override.actionTextWithIcon,
+                    },
+                },
                 components: {
                     DropdownIndicator: loadOptions && isFuzzy ? SearchIndicator : DropdownIndicator,
                     ClearIndicator,
                     SingleValue,
                     MultiValueLabel,
+                    MultiValueRemove,
                     LoadingIndicator,
-                    Menu: Menu({
-                        className: classes.menu,
-                        actionContainerClassName: classes.actionContainer,
-                        actionClassName: classes.action,
-                        actionIconClassName: classes.actionIcon,
-                        actionTextClassName: classes.actionText,
-                        actionTextWithIconClassName: classes.actionTextWithIcon,
-                        actions,
-                        onClickAction,
-                        override: {
-                            menu: override.menu,
-                            actionContainer: override.actionContainer,
-                            action: override.action,
-                            actionIcon: override.actionIcon,
-                            actionText: override.actionText,
-                            actionTextWithIcon: override.actionTextWithIcon,
-                        },
-                    }),
+                    Menu,
                     Group: Group({
                         className: classes.group,
                         override: {
@@ -518,7 +521,6 @@ const Select = memo(
             };
         }, [
             actions,
-            onClickAction,
             isMulti,
             isReadOnly,
             isFuzzy,
@@ -530,6 +532,7 @@ const Select = memo(
             placeholder,
             defaultMenuIsOpen,
             hideSelectedOptions,
+            onClickAction,
             classes,
             innerOptions,
             lazyOptions,
@@ -602,6 +605,7 @@ Select.overrides = [
     'optionLabelBlock',
     'optionLabelText',
     'optionLabelSubLabel',
+    'menu',
     'actionContainer',
     'action',
     'actionIcon',
@@ -660,7 +664,7 @@ Select.propTypes = {
     /** Info popover */
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
     isRequired: PropTypes.bool,

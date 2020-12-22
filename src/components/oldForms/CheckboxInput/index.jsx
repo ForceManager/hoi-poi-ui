@@ -111,7 +111,7 @@ CheckboxInput.propTypes = {
     /** Info popover */
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
 };

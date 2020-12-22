@@ -41,6 +41,8 @@ function DatePicker({
     isFullWidth,
     calendarButtonLabel,
     placeholder,
+    minDate,
+    maxDate,
     ...props
 }) {
     const flatpickrRef = useRef();
@@ -66,9 +68,11 @@ function DatePicker({
             locale: flatpickrl10n[lang],
             clickOpens: !isReadOnly,
             time_24hr: true,
+            minDate,
+            maxDate,
             ...override.flatpickrOptions,
         };
-    }, [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions]);
+    }, [dateFormat, formatDate, isReadOnly, lang, maxDate, minDate, override.flatpickrOptions]);
 
     const onChangeDate = useCallback(
         (date) => {
@@ -87,19 +91,17 @@ function DatePicker({
     }, [name, onChange]);
 
     const shouldDisableToday = useMemo(() => {
-        const minDate = override.flatpickrOptions?.minDate;
-        const maxDate = override.flatpickrOptions?.maxDate;
         if (minDate || maxDate) {
             const today = new Date();
             if (minDate && minDate.getTime() > today.getTime()) return true;
             if (maxDate && maxDate.getTime() < today.getTime()) return true;
         }
         return false;
-    }, [override]);
+    }, [minDate, maxDate]);
 
     const todayClicked = useCallback(() => {
         if (shouldDisableToday) return;
-        const today = new Date(new Date().setHours(0, 0, 0));
+        const today = new Date(new Date().setHours(0, 0, 0, 0));
         onChangeDate([today]);
         flatpickrRef.current.flatpickr.close();
     }, [onChangeDate, shouldDisableToday]);
@@ -140,11 +142,28 @@ function DatePicker({
             todayButtonRef.current.element.addEventListener('click', todayClicked);
             todayButtonRef.current.function = todayClicked;
         }
-    }, [todayClicked]);
+    }, [classes.todayContainer, classes.todayContainerDisabled, todayClicked]);
+
+    useEffect(() => {
+        if (todayButtonRef.current) {
+            const classNames = [classes.todayContainer];
+            if (shouldDisableToday) classNames.push(classes.todayContainerDisabled);
+            todayButtonRef.current.element.className = classNames.join(' ');
+        }
+    }, [classes.todayContainer, classes.todayContainerDisabled, shouldDisableToday]);
 
     const onClick = useCallback((e) => {
         setTimeout(() => flatpickrRef.current.flatpickr.open());
     }, []);
+
+    const inputOverride = useMemo(
+        () => ({
+            formControl: {
+                onClick: !isReadOnly ? onClick : undefined,
+            },
+        }),
+        [isReadOnly, onClick],
+    );
 
     const flatpickrRender = useCallback(
         ({ className, value }, ref) => {
@@ -162,7 +181,7 @@ function DatePicker({
                     isReadOnly={isReadOnly}
                     isFullWidth={isFullWidth}
                     onChange={isReadOnly ? undefined : onInputChange}
-                    overrides={{ input: { ref } }}
+                    overrides={{ input: { ref }, ...inputOverride }}
                     placeholder={placeholder}
                     postComponent={
                         !isReadOnly && (
@@ -178,6 +197,7 @@ function DatePicker({
             classes.calendarIcon,
             flatpickrOptions.dateFormat,
             formatDate,
+            inputOverride,
             isFullWidth,
             isReadOnly,
             onClick,
@@ -189,6 +209,7 @@ function DatePicker({
     );
 
     const key = `flatpickr-${name || 'anon'}--${isReadOnly ? 'read-only' : 'active'}`;
+
     return (
         <Flatpickr
             className={rootClassName}
@@ -238,7 +259,7 @@ DatePicker.propTypes = {
     /** Info popover */
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
     isRequired: PropTypes.bool,
@@ -252,6 +273,8 @@ DatePicker.propTypes = {
     formatDate: PropTypes.func,
     /** Custom text for Today's button */
     calendarButtonLabel: PropTypes.string,
+    minDate: PropTypes.instanceOf(Date),
+    maxDate: PropTypes.instanceOf(Date),
 };
 
 export default React.memo(DatePicker);

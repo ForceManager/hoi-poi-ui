@@ -149,7 +149,7 @@ SelectButton.propTypes = {
     value: PropTypes.any,
     placeholder: PropTypes.string,
     noOptionsPlaceholder: PropTypes.string,
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Hide the selected option from the menu */
     hideSelectedOptions: PropTypes.bool,
     /** multiple select support */

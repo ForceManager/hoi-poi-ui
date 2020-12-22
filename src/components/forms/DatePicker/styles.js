@@ -51,13 +51,14 @@ export default (theme) => ({
             lineHeight: '24px',
             borderRadius: 4,
             position: 'absolute',
-            Width: '312px',
-            Height: '336px',
             boxSizing: 'border-box',
             touchAction: 'manipulation',
             boxShadow:
                 '0px 8px 10px rgba(39, 60, 80, 0.14), 0px 3px 14px rgba(39, 60, 80, 0.12), 0px 4px 5px rgba(39, 60, 80, 0.2)',
             ...theme.typography.defaultText,
+        },
+        '&.flatpickr-calendar.arrowBottom': {
+            marginTop: -12,
         },
         '&.flatpickr-calendar.open, &.flatpickr-calendar.inline': {
             opacity: '1',

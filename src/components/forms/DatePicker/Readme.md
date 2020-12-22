@@ -49,9 +49,11 @@ const onChange = (field) => {
 
 const today = new Date();
 const tomorrow = new Date(today);
-tomorrow.setDate(tomorrow.getDate() + 1);
 const yesterday = new Date(today);
+tomorrow.setDate(tomorrow.getDate() + 1);
 yesterday.setDate(yesterday.getDate() - 1);
+tomorrow.setHours(0, 0, 0, 0);
+yesterday.setHours(0, 0, 0, 0);
 
 const fpOptions1 = {
     minDate: yesterday,
@@ -67,24 +69,9 @@ const fpOptions3 = {
 };
 
 <div>
-    <DatePicker
-        label="Lorem ipsum"
-        onChange={onChange(1)}
-        value={state[1]}
-        overrides={{ flatpickrOptions: { ...fpOptions1 } }}
-    />
-    <DatePicker
-        label="Lorem ipsum"
-        onChange={onChange(2)}
-        value={state[2]}
-        overrides={{ flatpickrOptions: { ...fpOptions2 } }}
-    />
-    <DatePicker
-        label="Lorem ipsum"
-        onChange={onChange(3)}
-        value={state[3]}
-        overrides={{ flatpickrOptions: { ...fpOptions3 } }}
-    />
+    <DatePicker label="Lorem ipsum" onChange={onChange(1)} value={state[1]} {...fpOptions1} />
+    <DatePicker label="Lorem ipsum" onChange={onChange(2)} value={state[2]} {...fpOptions2} />
+    <DatePicker label="Lorem ipsum" onChange={onChange(3)} value={state[3]} {...fpOptions3} />
 </div>;
 ```
 

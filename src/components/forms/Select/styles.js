@@ -123,7 +123,7 @@ export default (theme) => ({
         paddingTop: '0px',
         paddingBottom: '0px',
         '& $option': {
-            padding: '8px 12px 8px 44px',
+            padding: '8px 12px 8px 12px',
         },
     },
     groupHeading: {
@@ -195,7 +195,7 @@ export default (theme) => ({
     },
     multiValue: {
         margin: '4px 6px 4px 2px',
-        padding: '4px 6px 4px 8px',
+        padding: '4px 4px 4px 8px',
         border: 'none',
         borderRadius: '20px',
         backgroundColor: theme.colors.blue100,
@@ -210,7 +210,7 @@ export default (theme) => ({
         color: theme.colors.blue500,
         padding: 0,
         paddingLeft: 0,
-        paddingRight: 8,
+        paddingRight: 4,
     },
     multiValueLabelDisabled: {
         color: theme.colors.blue200,

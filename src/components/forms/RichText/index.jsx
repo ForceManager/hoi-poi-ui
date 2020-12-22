@@ -239,7 +239,7 @@ RichText.defaultProps = {
 RichText.propTypes = {
     className: PropTypes.string,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component */
     info: PropTypes.string,
     isFullWidth: PropTypes.bool,

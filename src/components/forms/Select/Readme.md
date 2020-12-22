@@ -392,6 +392,39 @@ const options = [
     {
         label: 'Lorem ipsum 4',
         value: 'lorem-ipsum-4',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: 'lorem-ipsum-5',
+    },
+    {
+        label: 'Lorem ipsum 6',
+        value: 'lorem-ipsum-6',
+    },
+    {
+        label: 'Lorem ipsum 7',
+        value: 'lorem-ipsum-7',
+    },
+    {
+        label: 'Lorem ipsum 8',
+        value: 'lorem-ipsum-8',
+    },
+    {
+        label: 'Lorem ipsum 9',
+        value: 'lorem-ipsum-9',
+    },
+    {
+        label: 'Lorem ipsum 10',
+        value: 'lorem-ipsum-10',
+    },
+    {
+        label: 'Lorem ipsum 11',
+        value: 'lorem-ipsum-11',
+    },
+    {
+        label: 'Lorem ipsum 12',
+        value: 'lorem-ipsum-12',
     },
 ];
 const [state, setState] = useState([
@@ -762,7 +795,7 @@ const loadOptions = (text, cb) =>
 </div>;
 ```
 
-Async load multiple options with fuzzy style:
+Async load multiple options with fuzzy style and default search:
 
 ```jsx
 import { useState } from 'react';
