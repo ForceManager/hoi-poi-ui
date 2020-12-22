@@ -1548,6 +1548,7 @@ exports[`Input is required match 1`] = `
       >
         <Component
           className="HoiPoi__Input__root-3-0"
+          isRequired={true}
           label="Lorem ipsum"
           labelMode="vertical"
           overrides={Object {}}
@@ -1560,6 +1561,7 @@ exports[`Input is required match 1`] = `
             >
               <Label
                 className="HoiPoi__InputWrapper__Label-3-23"
+                isRequired={true}
               >
                 <div
                   className="HoiPoi__Label__root-3-29 HoiPoi__InputWrapper__Label-3-23"
@@ -1573,6 +1575,7 @@ exports[`Input is required match 1`] = `
                       className="HoiPoi__Text__root-3-33 HoiPoi__Label__Text-3-30 HoiPoi__Text__body-3-43"
                     >
                       Lorem ipsum
+                      *
                     </span>
                   </Text>
                 </div>
@@ -1585,7 +1588,6 @@ exports[`Input is required match 1`] = `
                 >
                   <input
                     className="HoiPoi__Input__input-3-3"
-                    isRequired={true}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}

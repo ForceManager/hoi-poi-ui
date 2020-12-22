@@ -78,7 +78,7 @@ function Multiplier({
         [onChange, value],
     );
 
-    const type = Array.isArray(schema) ? 'fieldset' : 'field';
+    const type = Array.isArray(schema) ? 'form' : 'field';
     const items = [];
 
     const showButton = !(max && size >= max) && isReadOnly !== true;

@@ -47,7 +47,7 @@ function MultiplierControl({
     }, [onRemove, schema, index]);
 
     let component;
-    if (type === 'fieldset') {
+    if (type === 'form') {
         component = (
             <Form
                 className={classes.form}
