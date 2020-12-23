@@ -4,27 +4,13 @@ import { useTheme } from '../../../utils/styles';
 const CheckedIcon = React.memo(({ ...props }) => {
     const theme = useTheme();
     return (
-        <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" {...props}>
-            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                <circle
-                    id="Radio-Background"
-                    stroke={theme.colors.secondary}
-                    cx="9"
-                    cy="9"
-                    r="7.5"
-                />
-                <circle id="Radio-Circle" fill={theme.colors.secondary} cx="9" cy="9" r="4" />
-                <rect
-                    id="Radio-Bounds"
-                    fillOpacity="0.1"
-                    fill="#FF0000"
-                    opacity="0"
-                    x="0"
-                    y="0"
-                    width="18"
-                    height="18"
-                />
-            </g>
+        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <path
+                fill={theme.colors.orange500}
+                fill-rule="evenodd"
+                d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                clip-rule="evenodd"
+            />
         </svg>
     );
 });

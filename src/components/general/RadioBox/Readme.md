@@ -6,15 +6,14 @@ States default:
         icon="addAccount"
         title={'Create new accounts'}
         text={'Import data to add new accounts to ForceManager'}
+        style={{ marginBottom: 20 }}
     />
-    <span> </span>
     <RadioBox
         icon="accountDetails"
         title={'Update existing accounts'}
         text={'Import data to update ForceManager accounts'}
         checked
     />
-    <span> </span>
 </div>
 ```
 

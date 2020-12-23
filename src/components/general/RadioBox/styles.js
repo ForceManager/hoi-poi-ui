@@ -6,7 +6,6 @@ export default (theme) => ({
         padding: 24,
         width: '100%',
         justifyContent: 'space-between',
-        marginBottom: 20,
         cursor: 'pointer',
         boxSizing: 'border-box',
     },
@@ -28,7 +27,7 @@ export default (theme) => ({
     title: {},
     text: {},
     radio: {
-        marginTop: 12,
+        marginTop: 10,
         marginLeft: 16,
     },
 });

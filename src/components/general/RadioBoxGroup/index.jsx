@@ -1,32 +1,108 @@
-import React, { memo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { createUseStyles, Radio, Icon, Text } from 'hoi-poi-ui-next';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 
+import RadioControl from './RadioControl';
+import Label from '../../forms/Label';
+
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'RadioBoxGroup');
 
-const RadioBoxGroup = ({ icon, title, text, checked, className, onClick }) => {
-    const classes = useStyles();
+function RadioBoxGroup({
+    children,
+    classes: classesProp,
+    overrides: overridesProp,
+    className: classNameProp,
+    options,
+    onChange,
+    onBlur,
+    value,
+    label,
+    labelMode,
+    hint,
+    isReadOnly,
+    isFullWidth,
+    ...props
+}) {
+    const classes = useClasses(useStyles, classesProp);
+    // Overrides
+    const override = getOverrides(overridesProp, RadioBoxGroup.overrides);
 
-    const rootClassNames = classnames(classes.root, className, {
-        [classes.checked]: checked,
+    // Classes
+    const rootClassName = classnames(
+        classes.root,
+        {
+            [classes.isReadOnly]: isReadOnly,
+            [classes[labelMode]]: labelMode,
+        },
+        classNameProp,
+    );
+
+    const formControlClassName = classnames(classes.formControl, {
+        [classes.isFullWidth]: isFullWidth,
     });
 
+    const rootProps = {
+        className: rootClassName,
+    };
+
+    const labelProps = {
+        className: classes.Label,
+        hint,
+        ...override.Label,
+    };
+
     return (
-        <div className={rootClassNames}>
-            <Icon className={classes.icon} name={icon} />
-            <div className={classes.textContainer}>
-                <Text className={classes.title}>{title}</Text>
-                <Text className={classes.text}>{text}</Text>
+        <div {...rootProps} {...override.root}>
+            {label && <Label {...labelProps}>{label}</Label>}
+            <div className={formControlClassName} {...override.formControl}>
+                {options.map((option) => (
+                    <RadioControl
+                        key={option.value}
+                        onClick={isReadOnly ? undefined : onChange}
+                        overrides={overridesProp}
+                        isReadOnly={isReadOnly}
+                        option={option}
+                        value={value}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                    />
+                ))}
             </div>
-            <Radio className={classes.radio} checked={checked} />
         </div>
     );
+}
+
+RadioBoxGroup.overrides = ['root', 'Radio', 'formControl', 'Label'];
+
+RadioBoxGroup.defaultProps = {
+    labelMode: 'horizontal',
+    onChange: () => {},
+    value: null,
+    options: [],
+    isReadOnly: false,
+    overrides: {},
 };
 
 RadioBoxGroup.propTypes = {
-    permissions: PropTypes.array,
+    className: PropTypes.string,
+    overrides: PropTypes.object,
+    onChange: PropTypes.func,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            value: PropTypes.string,
+        }),
+    ),
+    value: PropTypes.string,
+    label: PropTypes.string,
+    labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
+    /** Info popover */
+    hint: PropTypes.string,
+    isReadOnly: PropTypes.bool,
+    isFullWidth: PropTypes.bool,
 };
 
-export default memo(RadioBoxGroup);
+export default React.memo(RadioBoxGroup);

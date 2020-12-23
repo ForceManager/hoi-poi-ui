@@ -29,6 +29,7 @@ export { default as DataGrid } from './components/general/DataGrid';
 export { default as ProgressBar } from './components/general/ProgressBar';
 export { default as Carousel } from './components/general/Carousel';
 export { default as RadioBox } from './components/general/RadioBox';
+export { default as RadioBoxGroup } from './components/general/RadioBoxGroup';
 
 export { default as DatePicker } from './components/forms/DatePicker';
 export { default as FieldGroup } from './components/forms/FieldGroup';

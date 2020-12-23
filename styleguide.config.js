@@ -18,6 +18,7 @@ module.exports = {
                 './src/components/general/Menus/index.jsx',
                 './src/components/general/Modal/index.jsx',
                 './src/components/general/RadioBox/index.jsx',
+                './src/components/general/RadioBoxGroup/index.jsx',
             ],
         },
         {
