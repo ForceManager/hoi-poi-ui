@@ -21,6 +21,9 @@ export default (theme) => ({
         alignItems: 'center',
         lineHeight: '20px',
         marginBottom: 14,
+        borderRadius: 4,
+        border: `solid 1px ${theme.colors.neutral400}`,
+        padding: 8,
     },
     radioLabel: {
         marginLeft: 10,
