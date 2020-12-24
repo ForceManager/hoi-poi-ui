@@ -8,6 +8,7 @@ export default (theme) => ({
         justifyContent: 'space-between',
         cursor: 'pointer',
         boxSizing: 'border-box',
+        transition: 'height .3s ease',
     },
     checked: {
         border: `1px solid ${theme.colors.orange500}`,
@@ -29,5 +30,9 @@ export default (theme) => ({
     radio: {
         marginTop: 10,
         marginLeft: 16,
+    },
+    disabled: {
+        opacity: 0.5,
+        cursor: 'not-allowed',
     },
 });

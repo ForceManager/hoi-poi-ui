@@ -2,22 +2,31 @@ Default
 
 ```jsx
 import { useState } from 'react';
+import { Text } from 'hoi-poi-ui';
+
+const children = (
+    <Text style={{ backgroundColor: 'white', padding: 10, borderRadius: 5 }}>Children</Text>
+);
 
 let options = [
     {
         icon: 'addAccount',
         title: 'Lorem ipsum',
         text: 'Lorem ipsum dolor sit amet',
+        value: 'lorem',
     },
     {
         icon: 'accountDetails',
         title: 'Lorem ipsum 2',
         text: 'Lorem ipsum dolor sit amet 2',
+        value: 'lorem2',
     },
     {
         icon: 'accountCheckin',
         title: 'Lorem ipsum 3',
         text: 'Lorem ipsum dolor sit amet 3',
+        value: 'lorem3',
+        children,
     },
 ];
 const [state, setState] = useState({});
@@ -25,27 +34,32 @@ let onChange = (value) => setState({ value });
 <RadioBoxGroup label="Lorem ipsum" options={options} onChange={onChange} value={state.value} />;
 ```
 
-<!-- Disabled
+All disabled
 
 ```jsx
 import { useState } from 'react';
 
-const [state, setState] = useState({});
 let options = [
     {
-        label: 'Lorem ipsum',
+        icon: 'addAccount',
+        title: 'Lorem ipsum',
+        text: 'Lorem ipsum dolor sit amet',
         value: 'lorem',
     },
     {
-        label: 'Lorem ipsum 2',
+        icon: 'accountDetails',
+        title: 'Lorem ipsum 2',
+        text: 'Lorem ipsum dolor sit amet 2',
         value: 'lorem2',
     },
     {
-        label: 'Lorem ipsum 3',
+        icon: 'accountCheckin',
+        title: 'Lorem ipsum 3',
+        text: 'Lorem ipsum dolor sit amet 3',
         value: 'lorem3',
     },
 ];
-
+const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <RadioBoxGroup
     label="Lorem ipsum"
@@ -56,62 +70,36 @@ let onChange = (value) => setState({ value });
 />;
 ```
 
-Default vertical label
+One option disabled
 
 ```jsx
 import { useState } from 'react';
 
 let options = [
     {
-        label: 'Lorem ipsum',
+        icon: 'addAccount',
+        title: 'Lorem ipsum',
+        text: 'Lorem ipsum dolor sit amet',
         value: 'lorem',
     },
     {
-        label: 'Lorem ipsum 2',
+        icon: 'accountDetails',
+        title: 'Lorem ipsum 2',
+        text: 'Lorem ipsum dolor sit amet 2',
         value: 'lorem2',
+        isReadOnly: true,
     },
     {
-        label: 'Lorem ipsum 3',
+        icon: 'accountCheckin',
+        title: 'Lorem ipsum 3',
+        text: 'Lorem ipsum dolor sit amet 3',
         value: 'lorem3',
     },
 ];
 const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
-<RadioBoxGroup
-    label="Lorem ipsum"
-    labelMode="vertical"
-    options={options}
-    onChange={onChange}
-    value={state.value}
-/>;
+<RadioBoxGroup label="Lorem ipsum" options={options} onChange={onChange} value={state.value} />;
 ```
-
-FullWidth
-
-```jsx
-import { useState } from 'react';
-
-let options = [
-    {
-        label:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat. ',
-        value: 'lorem',
-    },
-    {
-        label:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  2',
-        value: 'lorem2',
-    },
-    {
-        label:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  3',
-        value: 'lorem3',
-    },
-];
-const [state, setState] = useState({});
-let onChange = (value) => setState({ value });
-<RadioBoxGroup options={options} onChange={onChange} value={state.value} isFullWidth />;
-``` -->
 
 ### Component tree
 

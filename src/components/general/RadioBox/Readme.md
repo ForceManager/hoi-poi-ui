@@ -1,4 +1,4 @@
-States default:
+States:
 
 ```jsx
 <div>
@@ -6,12 +6,27 @@ States default:
         icon="addAccount"
         title={'Create new accounts'}
         text={'Import data to add new accounts to ForceManager'}
-        style={{ marginBottom: 20 }}
     />
+    <br />
     <RadioBox
         icon="accountDetails"
         title={'Update existing accounts'}
         text={'Import data to update ForceManager accounts'}
+        checked
+    />
+    <br />
+    <RadioBox
+        icon="addAccount"
+        title={'Create new accounts'}
+        text={'Import data to add new accounts to ForceManager'}
+        isReadOnly
+    />
+    <br />
+    <RadioBox
+        icon="accountDetails"
+        title={'Update existing accounts'}
+        text={'Import data to update ForceManager accounts'}
+        isReadOnly
         checked
     />
 </div>
@@ -37,5 +52,6 @@ import { Text } from 'hoi-poi-ui';
 ---
 
 -   root - root element
--   input - Hidden native input
--   svg - icon determined by the checkbox state
+-   [Radio](#/Forms?id=radio)
+-   [Icon](#/General?id=icon)
+-   [Text](#/Typography?id=text)

@@ -5,9 +5,9 @@ import RadioBox from '../RadioBox';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
-const useStyles = createUseStyles(styles, 'RadioControl');
+const useStyles = createUseStyles(styles, 'RadioBoxControl');
 
-function RadioControl({
+function RadioBoxControl({
     children,
     classes: classesProp,
     overrides: overridesProp,
@@ -21,7 +21,7 @@ function RadioControl({
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
-    const override = getOverrides(overridesProp, RadioControl.overrides);
+    const override = getOverrides(overridesProp, RadioBoxControl.overrides);
 
     const onChangeRadio = useCallback(() => {
         onChange && onChange(option.value);
@@ -30,27 +30,30 @@ function RadioControl({
 
     return (
         <div
-            className={classes.radioControl}
-            onClick={isReadOnly ? undefined : onChangeRadio}
-            {...override.radioControl}
+            className={classes.radioBoxControl}
+            onClick={isReadOnly || option.isReadOnly ? undefined : onChangeRadio}
+            {...override.radioBoxControl}
         >
-            <RadioBox checked={value === option.value} isDisabled={isReadOnly} />
-            <span className={classes.radioLabel} {...override.radioLabel}>
-                {option.label}
-            </span>
+            <RadioBox
+                checked={value === option.value}
+                icon={option.icon}
+                title={option.title}
+                text={option.text}
+                isReadOnly={isReadOnly || option.isReadOnly}
+                children={option.children}
+                overrides={overridesProp.radioBox}
+            />
         </div>
     );
 }
 
-RadioControl.overrides = ['radioLabel', 'radioControl'];
-
-RadioControl.defaultProps = {
+RadioBoxControl.defaultProps = {
     onChange: () => {},
     option: {},
     isReadOnly: false,
 };
 
-RadioControl.propTypes = {
+RadioBoxControl.propTypes = {
     overrides: PropTypes.object,
     onChange: PropTypes.func,
     option: PropTypes.shape({
@@ -61,4 +64,4 @@ RadioControl.propTypes = {
     isReadOnly: PropTypes.bool,
 };
 
-export default React.memo(RadioControl);
+export default React.memo(RadioBoxControl);
