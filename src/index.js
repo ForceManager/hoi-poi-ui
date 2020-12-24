@@ -36,12 +36,14 @@ export { default as FieldGroup } from './components/forms/FieldGroup';
 export { default as Input } from './components/forms/Input';
 export { default as Label } from './components/forms/Label';
 export { default as Multiplier } from './components/forms/Multiplier';
+export { default as Radio } from './components/forms/Radio';
+export { default as RadioGroup } from './components/forms/RadioGroup';
 export { default as RichText } from './components/forms/RichText';
-export { default as Switch } from './components/forms/Switch';
-export { default as SwitchInput } from './components/forms/SwitchInput';
-export { default as Slider } from './components/forms/Slider';
 export { default as Section } from './components/forms/Section';
 export { default as Select } from './components/forms/Select';
+export { default as Slider } from './components/forms/Slider';
+export { default as Switch } from './components/forms/Switch';
+export { default as SwitchInput } from './components/forms/SwitchInput';
 
 export { default as Form } from './components/oldForms/Form';
 export { default as CheckboxInput } from './components/oldForms/CheckboxInput';
@@ -49,14 +51,12 @@ export { default as CheckboxGroup } from './components/oldForms/CheckboxGroup';
 export { default as InputGroup } from './components/oldForms/InputGroup';
 export { default as TextArea } from './components/oldForms/TextArea';
 export { default as SelectButton } from './components/oldForms/SelectButton';
-export { default as Radio } from './components/forms/Radio';
-export { default as RadioGroup } from './components/oldForms/RadioGroup';
 export { default as FilePicker } from './components/oldForms/FilePicker';
 
-export { default as ScrollBar } from './components/utils/ScrollBar';
-export { default as Tooltip } from './components/utils/Tooltip';
 export { default as Popover } from './components/utils/Popover';
+export { default as ScrollBar } from './components/utils/ScrollBar';
 export { Toast, toast, dismissToast } from './components/utils/Toast';
+export { default as Tooltip } from './components/utils/Tooltip';
 
 export { default as Link } from './components/typography/Link';
 export { default as Title } from './components/typography/Title';
