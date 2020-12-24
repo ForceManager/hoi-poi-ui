@@ -52,6 +52,6 @@ import { Text } from 'hoi-poi-ui';
 ---
 
 -   root - root element
--   [Radio](#/Forms?id=radio)
 -   [Icon](#/General?id=icon)
 -   [Text](#/Typography?id=text)
+-   [Radio](#/Forms?id=radio)
