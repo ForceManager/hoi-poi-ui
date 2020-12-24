@@ -1,0 +1,228 @@
+[
+    {
+        "title": "General",
+        "className": "tab-general",
+        "fields": [
+            {
+                "label": "Name",
+                "name": "name",
+                "type": "text",
+                "placeholder": "Your name",
+                "className": "field-name",
+                "isRequired": true
+            },
+            {
+                "label": "Email",
+                "name": "email",
+                "type": "text",
+                "placeholder": "Your email",
+                "hint": "No spam!",
+                "isReadOnly": true,
+                "attrs": {
+                    "type": "email"
+                }
+            },
+            {
+                "label": "Password",
+                "name": "password",
+                "type": "text",
+                "placeholder": "Your password",
+                "isRequired": true,
+                "attrs": {
+                    "type": "password"
+                }
+            },
+            {
+                "label": "Gender",
+                "name": "gender",
+                "type": "select",
+                "placeholder": "Select your gender",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Male",
+                            "value": "male"
+                        },
+                        {
+                            "label": "Female",
+                            "value": "female"
+                        },
+                        {
+                            "label": "Other",
+                            "value": "other"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Employment status",
+                "name": "employmentStatus",
+                "type": "radioGroup",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Employee",
+                            "value": "employee"
+                        },
+                        {
+                            "label": "Worker",
+                            "value": "worker"
+                        },
+                        {
+                            "label": "Self-employed",
+                            "value": "self-employed"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Interest",
+                "name": "interest",
+                "type": "slider"
+            },
+            {
+                "label": "Interested",
+                "name": "Interested",
+                "type": "switch"
+            }
+        ]
+    },
+    {
+        "title": "Contact details",
+        "fields": [
+            {
+                "label": "Address",
+                "name": "address",
+                "type": "text",
+                "placeholder": "Write an address"
+            },
+            {
+                "label": "Phone",
+                "name": "phone",
+                "type": "text",
+                "placeholder": "Write a phone"
+            },
+            {
+                "label": "Prefered way",
+                "name": "prefered-way",
+                "type": "checkboxGroup",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Email",
+                            "value": "email"
+                        },
+                        {
+                            "label": "Phone",
+                            "value": "phone"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "title": "Extra",
+        "fields": [
+            {
+                "name": "biography",
+                "type": "inputGroup",
+                "attrs": {
+                    "showInputsLabel": "Show translations",
+                    "hideInputsLabel": "Hide translations",
+                    "inputs": [
+                        {
+                            "label": "Biography",
+                            "name": "english"
+                        },
+                        {
+                            "label": "Spanish",
+                            "name": "spanish"
+                        },
+                        {
+                            "label": "French",
+                            "name": "french"
+                        },
+                        {
+                            "label": "Germany",
+                            "name": "germany"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "title": "MULTIPLIER",
+        "fields": [
+            {
+                "label": "Address",
+                "name": "address",
+                "type": "text",
+                "placeholder": "Write an address"
+            },
+            {
+                "label": "Multiplier",
+                "name": "multiplier",
+                "type": "multiplier",
+                "buttonLabel": "+ Add",
+                "schema": [
+                    {
+                        "className": "general-info",
+                        "name": "generalInformation",
+                        "fields": [
+                            {
+                                "label": "Activity",
+                                "name": "activity",
+                                "type": "select",
+                                "attrs": {
+                                    "options": [
+                                        {
+                                            "label": "A",
+                                            "value": "a"
+                                        },
+                                        {
+                                            "label": "B",
+                                            "value": "b"
+                                        },
+                                        {
+                                            "label": "C",
+                                            "value": "c"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "label": "Name",
+                                "name": "name",
+                                "type": "text",
+                                "isRequired": true
+                            },
+                            {
+                                "label": "Email",
+                                "name": "email",
+                                "type": "customInput",
+                                "isRequired": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Custom Fields",
+        "fields": [
+            {
+                "name": "myField",
+                "label": "Custom Field 1",
+                "type": "customInput"
+            },
+            {
+                "name": "myOtherField",
+                "label": "Custom Field 2",
+                "type": "customText"
+            }
+        ]
+    }
+]

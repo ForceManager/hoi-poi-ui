@@ -1984,6 +1984,7 @@ exports[`DatePicker is required match 1`] = `
           >
             <Component
               className="HoiPoi__Input__root-6-7 HoiPoi__DatePicker__root-6-0"
+              isRequired={true}
               label="Lorem ipsum"
               labelMode="vertical"
               overrides={
@@ -2005,6 +2006,7 @@ exports[`DatePicker is required match 1`] = `
                 >
                   <Label
                     className="HoiPoi__InputWrapper__Label-6-30"
+                    isRequired={true}
                   >
                     <div
                       className="HoiPoi__Label__root-6-36 HoiPoi__InputWrapper__Label-6-30"
@@ -2018,6 +2020,7 @@ exports[`DatePicker is required match 1`] = `
                           className="HoiPoi__Text__root-6-40 HoiPoi__Label__Text-6-37 HoiPoi__Text__body-6-50"
                         >
                           Lorem ipsum
+                          *
                         </span>
                       </Text>
                     </div>
@@ -2031,7 +2034,6 @@ exports[`DatePicker is required match 1`] = `
                     >
                       <input
                         className="HoiPoi__Input__input-6-10"
-                        isRequired={true}
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}
