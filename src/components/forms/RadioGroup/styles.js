@@ -42,7 +42,7 @@ export default (theme) => ({
             },
         },
     },
-    vertical: {
+    verticalLabel: {
         display: 'block',
         padding: '12px 0 11px 0',
         marginLeft: '0 !important',
@@ -50,9 +50,23 @@ export default (theme) => ({
             marginTop: 10,
         },
     },
-    horizontal: {
+    horizontalLabel: {
         display: 'flex',
         alignItems: 'flex-start',
         padding: '12px 0 11px 0',
+    },
+    vertical: {},
+    horizontal: {
+        '& $formControl': {
+            flexDirection: 'row',
+            width: '100%',
+        },
+        '& $radioControl': {
+            marginRight: 20,
+            width: 'auto',
+            '&:last-child': {
+                marginRight: 0,
+            },
+        },
     },
 });

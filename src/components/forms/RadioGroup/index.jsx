@@ -36,7 +36,7 @@ function RadioGroup({
         classes.root,
         {
             [classes.isReadOnly]: isReadOnly,
-            [classes[labelMode]]: `${labelMode}Label`,
+            [classes[`${labelMode}Label`]]: labelMode,
             [classes[mode]]: mode,
         },
         classNameProp,
