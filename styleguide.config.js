@@ -11,12 +11,14 @@ module.exports = {
             sectionDepth: 0,
             components: [
                 './src/components/general/Advice/index.jsx',
-                './src/components/general/Button/index.jsx',
-                './src/components/general/Checkbox/index.jsx',
-                './src/components/general/Modal/index.jsx',
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/BadgeNotification/index.jsx',
+                './src/components/general/Button/index.jsx',
+                './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Menus/index.jsx',
+                './src/components/general/Modal/index.jsx',
+                './src/components/general/RadioBox/index.jsx',
+                './src/components/general/RadioBoxGroup/index.jsx',
             ],
         },
         {
