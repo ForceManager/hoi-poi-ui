@@ -48,6 +48,7 @@ const Input = forwardRef(
             hideClear,
             label,
             labelMode,
+            isRequired,
             ...props
         },
         ref,
@@ -320,6 +321,7 @@ const Input = forwardRef(
                 className={rootClassName}
                 overrides={overridesProp}
                 isFullWidth={isFullWidth}
+                isRequired={isRequired}
             >
                 <div className={classes.inputComponents} {...override.inputComponents}>
                     {preComponent && (

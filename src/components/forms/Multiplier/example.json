@@ -1,0 +1,39 @@
+[
+    {
+        "fields": [
+            {
+                "label": "Activity",
+                "name": "activity",
+                "type": "select",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "A",
+                            "value": "a"
+                        },
+                        {
+                            "label": "B",
+                            "value": "b"
+                        },
+                        {
+                            "label": "C",
+                            "value": "c"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Name",
+                "name": "name",
+                "type": "text",
+                "isRequired": true
+            },
+            {
+                "label": "Email",
+                "name": "email",
+                "type": "text",
+                "isRequired": true
+            }
+        ]
+    }
+]

@@ -24,6 +24,7 @@ const Section = memo(
         defaultOpen,
         onChange,
         activeFields,
+        fieldMode,
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -35,7 +36,14 @@ const Section = memo(
 
         const override = getOverrides(overridesProp, Section.overrides);
 
-        const rootClassName = classnames(classes.root, {}, classNameProp);
+        const rootClassName = classnames(
+            classes.root,
+            {
+                [classes.fieldModeHorizontal]: fieldMode === 'horizontal',
+            },
+            classNameProp,
+        );
+
         const headerClassName = classnames(classes.header, {
             [classes.isExpandable]: isExpandable,
             [classes.open]: isOpen,
@@ -138,6 +146,7 @@ Section.propTypes = {
         Text: PropTypes.object,
         icon: PropTypes.object,
     }),
+    fieldMode: PropTypes.string,
 };
 
 export default Section;
