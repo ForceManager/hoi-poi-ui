@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioGroup default match 1`] = `
+exports[`Radio checked match snapshot 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -434,288 +434,67 @@ exports[`RadioGroup default match 1`] = `
         }
       }
     >
-      <RadioGroup
-        isReadOnly={false}
-        label="Lorem ipsum"
-        labelMode="horizontal"
+      <Radio
+        checked={true}
         onChange={[Function]}
-        options={
-          Array [
-            Object {
-              "label": "Lorem ipsum",
-              "value": "lorem",
-            },
-            Object {
-              "label": "Lorem ipsum 2",
-              "value": "lorem2",
-            },
-            Object {
-              "label": "Lorem ipsum 3",
-              "value": "lorem3",
-            },
-          ]
-        }
         overrides={Object {}}
-        value={null}
       >
         <div
-          className="HoiPoi__RadioGroup__root-1-0 HoiPoi__RadioGroup__horizontal-1-8"
+          className="HoiPoi__Radio__root-2-0"
+          onClick={[Function]}
         >
-          <Label
-            className="HoiPoi__RadioGroup__Label-1-1"
-          >
-            <span
-              className="HoiPoi__Label__root-1-9 HoiPoi__RadioGroup__Label-1-1"
+          <Component>
+            <svg
+              height="18"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <Text
-                className="HoiPoi__Label__Text-1-10"
-                overrides={Object {}}
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1"
               >
-                <span
-                  className="HoiPoi__Text__root-1-13 HoiPoi__Label__Text-1-10"
-                >
-                  Lorem ipsum
-                </span>
-              </Text>
-            </span>
-          </Label>
-          <div
-            className="HoiPoi__RadioGroup__formControl-1-2"
-          >
-            <RadioControl
-              isReadOnly={false}
-              key="lorem"
-              onChange={[Function]}
-              onClick={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum",
-                  "value": "lorem",
-                }
-              }
-              overrides={Object {}}
-              value={null}
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-1-35"
-                onClick={[Function]}
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={false}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-1-40"
-                    onClick={[Function]}
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-1-41"
-                      disabled=""
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-1-36"
-                >
-                  Lorem ipsum
-                </span>
-              </div>
-            </RadioControl>
-            <RadioControl
-              isReadOnly={false}
-              key="lorem2"
-              onChange={[Function]}
-              onClick={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum 2",
-                  "value": "lorem2",
-                }
-              }
-              overrides={Object {}}
-              value={null}
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-1-35"
-                onClick={[Function]}
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={false}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-1-40"
-                    onClick={[Function]}
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-1-41"
-                      disabled=""
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-1-36"
-                >
-                  Lorem ipsum 2
-                </span>
-              </div>
-            </RadioControl>
-            <RadioControl
-              isReadOnly={false}
-              key="lorem3"
-              onChange={[Function]}
-              onClick={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum 3",
-                  "value": "lorem3",
-                }
-              }
-              overrides={Object {}}
-              value={null}
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-1-35"
-                onClick={[Function]}
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={false}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-1-40"
-                    onClick={[Function]}
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-1-41"
-                      disabled=""
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-1-36"
-                >
-                  Lorem ipsum 3
-                </span>
-              </div>
-            </RadioControl>
-          </div>
+                <circle
+                  cx="9"
+                  cy="9"
+                  r="7.5"
+                  stroke="#00A8Be"
+                />
+                <circle
+                  cx="9"
+                  cy="9"
+                  fill="#00A8Be"
+                  id="Radio-Circle"
+                  r="4"
+                />
+                <rect
+                  fill="#FF0000"
+                  fillOpacity="0.1"
+                  height="18"
+                  opacity="0"
+                  width="18"
+                  x="0"
+                  y="0"
+                />
+              </g>
+            </svg>
+          </Component>
+          <input
+            checked="checked"
+            className="HoiPoi__Radio__input-2-1"
+            disabled=""
+            onChange={[Function]}
+            type="radio"
+          />
         </div>
-      </RadioGroup>
+      </Radio>
     </JssProvider>
   </ThemeProvider>
 </Component>
 `;
 
-exports[`RadioGroup disabled match 1`] = `
+exports[`Radio disabled match snapshot 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -1149,276 +928,60 @@ exports[`RadioGroup disabled match 1`] = `
         }
       }
     >
-      <RadioGroup
-        isReadOnly={true}
-        label="Lorem ipsum"
-        labelMode="horizontal"
+      <Radio
+        checked={false}
+        isDisabled={true}
         onChange={[Function]}
-        options={
-          Array [
-            Object {
-              "label": "Lorem ipsum",
-              "value": "lorem",
-            },
-            Object {
-              "label": "Lorem ipsum 2",
-              "value": "lorem2",
-            },
-            Object {
-              "label": "Lorem ipsum 3",
-              "value": "lorem3",
-            },
-          ]
-        }
         overrides={Object {}}
-        value={null}
       >
         <div
-          className="HoiPoi__RadioGroup__root-3-0 HoiPoi__RadioGroup__isReadOnly-3-6 HoiPoi__RadioGroup__horizontal-3-8"
+          className="HoiPoi__Radio__root-3-0 HoiPoi__Radio__disabled-3-2"
         >
-          <Label
-            className="HoiPoi__RadioGroup__Label-3-1"
-          >
-            <span
-              className="HoiPoi__Label__root-3-9 HoiPoi__RadioGroup__Label-3-1"
+          <Component>
+            <svg
+              height="18"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <Text
-                className="HoiPoi__Label__Text-3-10"
-                overrides={Object {}}
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1"
               >
-                <span
-                  className="HoiPoi__Text__root-3-13 HoiPoi__Label__Text-3-10"
-                >
-                  Lorem ipsum
-                </span>
-              </Text>
-            </span>
-          </Label>
-          <div
-            className="HoiPoi__RadioGroup__formControl-3-2"
-          >
-            <RadioControl
-              isReadOnly={true}
-              key="lorem"
-              onChange={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum",
-                  "value": "lorem",
-                }
-              }
-              overrides={Object {}}
-              value={null}
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-3-35"
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={true}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-3-40 HoiPoi__Radio__disabled-3-42"
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-3-41"
-                      disabled="disabled"
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-3-36"
-                >
-                  Lorem ipsum
-                </span>
-              </div>
-            </RadioControl>
-            <RadioControl
-              isReadOnly={true}
-              key="lorem2"
-              onChange={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum 2",
-                  "value": "lorem2",
-                }
-              }
-              overrides={Object {}}
-              value={null}
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-3-35"
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={true}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-3-40 HoiPoi__Radio__disabled-3-42"
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-3-41"
-                      disabled="disabled"
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-3-36"
-                >
-                  Lorem ipsum 2
-                </span>
-              </div>
-            </RadioControl>
-            <RadioControl
-              isReadOnly={true}
-              key="lorem3"
-              onChange={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum 3",
-                  "value": "lorem3",
-                }
-              }
-              overrides={Object {}}
-              value={null}
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-3-35"
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={true}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-3-40 HoiPoi__Radio__disabled-3-42"
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-3-41"
-                      disabled="disabled"
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-3-36"
-                >
-                  Lorem ipsum 3
-                </span>
-              </div>
-            </RadioControl>
-          </div>
+                <circle
+                  cx="9"
+                  cy="9"
+                  fill="#FFFFFF"
+                  r="7.5"
+                  stroke="#788590"
+                />
+                <rect
+                  fill="#FF0000"
+                  fillOpacity="0.1"
+                  height="18"
+                  opacity="0"
+                  width="18"
+                  x="0"
+                  y="0"
+                />
+              </g>
+            </svg>
+          </Component>
+          <input
+            checked=""
+            className="HoiPoi__Radio__input-3-1"
+            disabled="disabled"
+            type="radio"
+          />
         </div>
-      </RadioGroup>
+      </Radio>
     </JssProvider>
   </ThemeProvider>
 </Component>
 `;
 
-exports[`RadioGroup with values match 1`] = `
+exports[`Radio unchecked match snapshot 1`] = `
 <Component>
   <ThemeProvider
     theme={
@@ -1852,288 +1415,55 @@ exports[`RadioGroup with values match 1`] = `
         }
       }
     >
-      <RadioGroup
-        isReadOnly={false}
-        label="Lorem ipsum"
-        labelMode="horizontal"
+      <Radio
+        checked={false}
         onChange={[Function]}
-        options={
-          Array [
-            Object {
-              "label": "Lorem ipsum",
-              "value": "lorem",
-            },
-            Object {
-              "label": "Lorem ipsum 2",
-              "value": "lorem2",
-            },
-            Object {
-              "label": "Lorem ipsum 3",
-              "value": "lorem3",
-            },
-          ]
-        }
         overrides={Object {}}
-        value="lorem2"
       >
         <div
-          className="HoiPoi__RadioGroup__root-2-0 HoiPoi__RadioGroup__horizontal-2-8"
+          className="HoiPoi__Radio__root-1-0"
+          onClick={[Function]}
         >
-          <Label
-            className="HoiPoi__RadioGroup__Label-2-1"
-          >
-            <span
-              className="HoiPoi__Label__root-2-9 HoiPoi__RadioGroup__Label-2-1"
+          <Component>
+            <svg
+              height="18"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <Text
-                className="HoiPoi__Label__Text-2-10"
-                overrides={Object {}}
+              <g
+                fill="none"
+                fillRule="evenodd"
+                stroke="none"
+                strokeWidth="1"
               >
-                <span
-                  className="HoiPoi__Text__root-2-13 HoiPoi__Label__Text-2-10"
-                >
-                  Lorem ipsum
-                </span>
-              </Text>
-            </span>
-          </Label>
-          <div
-            className="HoiPoi__RadioGroup__formControl-2-2"
-          >
-            <RadioControl
-              isReadOnly={false}
-              key="lorem"
-              onChange={[Function]}
-              onClick={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum",
-                  "value": "lorem",
-                }
-              }
-              overrides={Object {}}
-              value="lorem2"
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-2-35"
-                onClick={[Function]}
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={false}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-2-40"
-                    onClick={[Function]}
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-2-41"
-                      disabled=""
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-2-36"
-                >
-                  Lorem ipsum
-                </span>
-              </div>
-            </RadioControl>
-            <RadioControl
-              isReadOnly={false}
-              key="lorem2"
-              onChange={[Function]}
-              onClick={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum 2",
-                  "value": "lorem2",
-                }
-              }
-              overrides={Object {}}
-              value="lorem2"
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-2-35"
-                onClick={[Function]}
-              >
-                <Radio
-                  checked={true}
-                  isDisabled={false}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-2-40"
-                    onClick={[Function]}
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            r="7.5"
-                            stroke="#00A8Be"
-                          />
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#00A8Be"
-                            id="Radio-Circle"
-                            r="4"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked="checked"
-                      className="HoiPoi__Radio__input-2-41"
-                      disabled=""
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-2-36"
-                >
-                  Lorem ipsum 2
-                </span>
-              </div>
-            </RadioControl>
-            <RadioControl
-              isReadOnly={false}
-              key="lorem3"
-              onChange={[Function]}
-              onClick={[Function]}
-              option={
-                Object {
-                  "label": "Lorem ipsum 3",
-                  "value": "lorem3",
-                }
-              }
-              overrides={Object {}}
-              value="lorem2"
-            >
-              <div
-                className="HoiPoi__RadioControl__radioControl-2-35"
-                onClick={[Function]}
-              >
-                <Radio
-                  checked={false}
-                  isDisabled={false}
-                  onChange={[Function]}
-                  overrides={Object {}}
-                >
-                  <div
-                    className="HoiPoi__Radio__root-2-40"
-                    onClick={[Function]}
-                  >
-                    <Component>
-                      <svg
-                        height="18"
-                        width="18"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g
-                          fill="none"
-                          fillRule="evenodd"
-                          stroke="none"
-                          strokeWidth="1"
-                        >
-                          <circle
-                            cx="9"
-                            cy="9"
-                            fill="#FFFFFF"
-                            r="7.5"
-                            stroke="#788590"
-                          />
-                          <rect
-                            fill="#FF0000"
-                            fillOpacity="0.1"
-                            height="18"
-                            opacity="0"
-                            width="18"
-                            x="0"
-                            y="0"
-                          />
-                        </g>
-                      </svg>
-                    </Component>
-                    <input
-                      checked=""
-                      className="HoiPoi__Radio__input-2-41"
-                      disabled=""
-                      onChange={[Function]}
-                      type="radio"
-                    />
-                  </div>
-                </Radio>
-                <span
-                  className="HoiPoi__RadioControl__radioLabel-2-36"
-                >
-                  Lorem ipsum 3
-                </span>
-              </div>
-            </RadioControl>
-          </div>
+                <circle
+                  cx="9"
+                  cy="9"
+                  fill="#FFFFFF"
+                  r="7.5"
+                  stroke="#788590"
+                />
+                <rect
+                  fill="#FF0000"
+                  fillOpacity="0.1"
+                  height="18"
+                  opacity="0"
+                  width="18"
+                  x="0"
+                  y="0"
+                />
+              </g>
+            </svg>
+          </Component>
+          <input
+            checked=""
+            className="HoiPoi__Radio__input-1-1"
+            disabled=""
+            onChange={[Function]}
+            type="radio"
+          />
         </div>
-      </RadioGroup>
+      </Radio>
     </JssProvider>
   </ThemeProvider>
 </Component>
