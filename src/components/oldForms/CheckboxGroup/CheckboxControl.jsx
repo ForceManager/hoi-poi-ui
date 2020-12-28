@@ -16,6 +16,7 @@ function CheckboxControl({
     onChange,
     value,
     isReadOnly,
+    color,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -33,7 +34,7 @@ function CheckboxControl({
             onClick={isReadOnly ? undefined : () => onChangeCheckbox(option.value)}
             {...override.checkboxControl}
         >
-            <Checkbox checked={value} isDisabled={isReadOnly} />
+            <Checkbox checked={value} isDisabled={isReadOnly} color={color} />
             <span className={classes.checkboxLabel} {...override.checkboxLabel}>
                 {option.label}
             </span>

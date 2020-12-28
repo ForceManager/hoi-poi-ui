@@ -25,6 +25,7 @@ function CheckboxGroup({
     error,
     isReadOnly,
     isFullWidth,
+    color,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -83,6 +84,7 @@ function CheckboxGroup({
                         value={value[option.value]}
                         isReadOnly={Array.isArray(isReadOnly) ? isReadOnly[i] : isReadOnly}
                         onChange={onChangeCheckbox}
+                        color={color}
                         overrides={overridesProp}
                     />
                 ))}
