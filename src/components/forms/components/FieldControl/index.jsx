@@ -2,13 +2,13 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Input from '../../Input';
-// import InputGroup from '../InputGroup'; // TO-DO: Add when this component is updated
-// import CheckboxGroup from '../CheckboxGroup'; // TO-DO: Add when this component is updated
-// import RadioGroup from '../RadioGroup'; // TO-DO: Add when this component is updated
+// import InputGroup from '../../InputGroup'; // TO-DO: Add when this component is updated
+// import CheckboxGroup from '../../CheckboxGroup'; // TO-DO: Add when this component is updated
+import RadioGroup from '../../RadioGroup';
 import Select from '../../Select';
 import Slider from '../../Slider';
 import Multiplier from '../../Multiplier';
-// import CheckboxInput from '../CheckboxInput'; // TO-DO: Add when this component is updated
+// import CheckboxInput from '../../CheckboxInput'; // TO-DO: Add when this component is updated
 import DatePicker from '../../DatePicker';
 import SwitchInput from '../../SwitchInput';
 
@@ -17,7 +17,7 @@ const FIELD_MAP = {
     // inputGroup: InputGroup, // TO-DO: Add when this component is updated
     // checkbox: CheckboxInput, // TO-DO: Add when this component is updated
     // checkboxGroup: CheckboxGroup, // TO-DO: Add when this component is updated
-    // radioGroup: RadioGroup, // TO-DO: Add when this component is updated
+    radioGroup: RadioGroup,
     select: Select,
     slider: Slider,
     multiplier: Multiplier,

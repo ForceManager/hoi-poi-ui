@@ -3665,7 +3665,265 @@ exports[`Form complete match 1`] = `
                       onChange={[Function]}
                       onEnter={[Function]}
                       onFocus={[Function]}
-                    />
+                    >
+                      <RadioGroup
+                        attrs={
+                          Object {
+                            "options": Array [
+                              Object {
+                                "label": "Employee",
+                                "value": "employee",
+                              },
+                              Object {
+                                "label": "Worker",
+                                "value": "worker",
+                              },
+                              Object {
+                                "label": "Self-employed",
+                                "value": "self-employed",
+                              },
+                            ],
+                          }
+                        }
+                        error=""
+                        isFullWidth={false}
+                        isReadOnly={false}
+                        label="Employment status"
+                        labelMode="horizontal"
+                        mode="vertical"
+                        name="employmentStatus"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onEnter={[Function]}
+                        onFocus={[Function]}
+                        options={
+                          Array [
+                            Object {
+                              "label": "Employee",
+                              "value": "employee",
+                            },
+                            Object {
+                              "label": "Worker",
+                              "value": "worker",
+                            },
+                            Object {
+                              "label": "Self-employed",
+                              "value": "self-employed",
+                            },
+                          ]
+                        }
+                        overrides={Object {}}
+                        type="radioGroup"
+                        value={null}
+                      >
+                        <div
+                          className="HoiPoi__RadioGroup__root-1-128 HoiPoi__RadioGroup__horizontalLabel-1-136 HoiPoi__RadioGroup__vertical-1-137"
+                        >
+                          <Label
+                            className="HoiPoi__RadioGroup__Label-1-129"
+                          >
+                            <span
+                              className="HoiPoi__Label__root-1-139 HoiPoi__RadioGroup__Label-1-129"
+                            >
+                              <Text
+                                className="HoiPoi__Label__Text-1-140"
+                                overrides={Object {}}
+                              >
+                                <span
+                                  className="HoiPoi__Text__root-1-20 HoiPoi__Label__Text-1-140"
+                                >
+                                  Employment status
+                                </span>
+                              </Text>
+                            </span>
+                          </Label>
+                          <div
+                            className="HoiPoi__RadioGroup__formControl-1-130"
+                          >
+                            <RadioControl
+                              isReadOnly={false}
+                              key="employee"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              option={
+                                Object {
+                                  "label": "Employee",
+                                  "value": "employee",
+                                }
+                              }
+                              overrides={Object {}}
+                              value={null}
+                            >
+                              <div
+                                className="HoiPoi__RadioControl__radioControl-1-147"
+                                onClick={[Function]}
+                              >
+                                <Radio
+                                  checked={false}
+                                  isDisabled={false}
+                                  onChange={[Function]}
+                                  overrides={Object {}}
+                                >
+                                  <div
+                                    className="HoiPoi__Radio__root-1-154"
+                                    onClick={[Function]}
+                                  >
+                                    <Component>
+                                      <svg
+                                        fill="none"
+                                        height="24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          clipRule="evenodd"
+                                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                          fill="#7d8a96"
+                                          fillRule="evenodd"
+                                        />
+                                      </svg>
+                                    </Component>
+                                    <input
+                                      checked=""
+                                      className="HoiPoi__Radio__input-1-155"
+                                      disabled=""
+                                      onChange={[Function]}
+                                      type="radio"
+                                    />
+                                  </div>
+                                </Radio>
+                                <span
+                                  className="HoiPoi__RadioControl__radioLabel-1-148"
+                                >
+                                  Employee
+                                </span>
+                              </div>
+                            </RadioControl>
+                            <RadioControl
+                              isReadOnly={false}
+                              key="worker"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              option={
+                                Object {
+                                  "label": "Worker",
+                                  "value": "worker",
+                                }
+                              }
+                              overrides={Object {}}
+                              value={null}
+                            >
+                              <div
+                                className="HoiPoi__RadioControl__radioControl-1-147"
+                                onClick={[Function]}
+                              >
+                                <Radio
+                                  checked={false}
+                                  isDisabled={false}
+                                  onChange={[Function]}
+                                  overrides={Object {}}
+                                >
+                                  <div
+                                    className="HoiPoi__Radio__root-1-154"
+                                    onClick={[Function]}
+                                  >
+                                    <Component>
+                                      <svg
+                                        fill="none"
+                                        height="24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          clipRule="evenodd"
+                                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                          fill="#7d8a96"
+                                          fillRule="evenodd"
+                                        />
+                                      </svg>
+                                    </Component>
+                                    <input
+                                      checked=""
+                                      className="HoiPoi__Radio__input-1-155"
+                                      disabled=""
+                                      onChange={[Function]}
+                                      type="radio"
+                                    />
+                                  </div>
+                                </Radio>
+                                <span
+                                  className="HoiPoi__RadioControl__radioLabel-1-148"
+                                >
+                                  Worker
+                                </span>
+                              </div>
+                            </RadioControl>
+                            <RadioControl
+                              isReadOnly={false}
+                              key="self-employed"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              option={
+                                Object {
+                                  "label": "Self-employed",
+                                  "value": "self-employed",
+                                }
+                              }
+                              overrides={Object {}}
+                              value={null}
+                            >
+                              <div
+                                className="HoiPoi__RadioControl__radioControl-1-147"
+                                onClick={[Function]}
+                              >
+                                <Radio
+                                  checked={false}
+                                  isDisabled={false}
+                                  onChange={[Function]}
+                                  overrides={Object {}}
+                                >
+                                  <div
+                                    className="HoiPoi__Radio__root-1-154"
+                                    onClick={[Function]}
+                                  >
+                                    <Component>
+                                      <svg
+                                        fill="none"
+                                        height="24"
+                                        width="24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          clipRule="evenodd"
+                                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                                          fill="#7d8a96"
+                                          fillRule="evenodd"
+                                        />
+                                      </svg>
+                                    </Component>
+                                    <input
+                                      checked=""
+                                      className="HoiPoi__Radio__input-1-155"
+                                      disabled=""
+                                      onChange={[Function]}
+                                      type="radio"
+                                    />
+                                  </div>
+                                </Radio>
+                                <span
+                                  className="HoiPoi__RadioControl__radioLabel-1-148"
+                                >
+                                  Self-employed
+                                </span>
+                              </div>
+                            </RadioControl>
+                          </div>
+                        </div>
+                      </RadioGroup>
+                    </FieldControl>
                     <FieldControl
                       error=""
                       field={
@@ -3703,7 +3961,7 @@ exports[`Form complete match 1`] = `
                         type="slider"
                       >
                         <Component
-                          className="HoiPoi__Slider__root-1-128"
+                          className="HoiPoi__Slider__root-1-157"
                           error=""
                           isFullWidth={false}
                           label="Interest"
@@ -3716,7 +3974,7 @@ exports[`Form complete match 1`] = `
                           type="slider"
                         >
                           <div
-                            className="HoiPoi__InputWrapper__root-1-58 HoiPoi__InputWrapper__horizontal-1-63 HoiPoi__Slider__root-1-128"
+                            className="HoiPoi__InputWrapper__root-1-58 HoiPoi__InputWrapper__horizontal-1-63 HoiPoi__Slider__root-1-157"
                           >
                             <div
                               className="HoiPoi__InputWrapper__inputWrapper-1-59"
@@ -3745,7 +4003,7 @@ exports[`Form complete match 1`] = `
                               >
                                 <ComponentEnhancer(undefined)
                                   activeDotStyle={Object {}}
-                                  className="HoiPoi__Slider__slider-1-129"
+                                  className="HoiPoi__Slider__slider-1-158"
                                   defaultValue={0}
                                   disabled={false}
                                   dotStyle={Object {}}
@@ -3777,7 +4035,7 @@ exports[`Form complete match 1`] = `
                                   vertical={false}
                                 >
                                   <div
-                                    className="rc-slider HoiPoi__Slider__slider-1-129"
+                                    className="rc-slider HoiPoi__Slider__slider-1-158"
                                     onBlur={[Function]}
                                     onFocus={[Function]}
                                     onKeyDown={[Function]}
@@ -3829,11 +4087,11 @@ exports[`Form complete match 1`] = `
                                       />
                                     </Steps>
                                     <div
-                                      className="HoiPoi__Slider__overlay-1-130"
+                                      className="HoiPoi__Slider__overlay-1-159"
                                       key="0"
                                     >
                                       <span
-                                        className="HoiPoi__Slider__overlayLabel-1-131"
+                                        className="HoiPoi__Slider__overlayLabel-1-160"
                                         style={
                                           Object {
                                             "left": "0%",
@@ -3843,7 +4101,7 @@ exports[`Form complete match 1`] = `
                                         0
                                       </span>
                                       <Handle
-                                        className="HoiPoi__Slider__overlayHandler-1-132"
+                                        className="HoiPoi__Slider__overlayHandler-1-161"
                                         disabled={false}
                                         dragging="false"
                                         max={100}
@@ -3860,7 +4118,7 @@ exports[`Form complete match 1`] = `
                                           aria-valuemax={100}
                                           aria-valuemin={0}
                                           aria-valuenow={0}
-                                          className="HoiPoi__Slider__overlayHandler-1-132"
+                                          className="HoiPoi__Slider__overlayHandler-1-161"
                                           dragging="false"
                                           onBlur={[Function]}
                                           onKeyDown={[Function]}
@@ -3939,7 +4197,7 @@ exports[`Form complete match 1`] = `
                         type="switch"
                       >
                         <Component
-                          className="HoiPoi__SwitchInput__root-1-134"
+                          className="HoiPoi__SwitchInput__root-1-163"
                           error=""
                           info=""
                           isFullWidth={false}
@@ -3953,7 +4211,7 @@ exports[`Form complete match 1`] = `
                           type="switch"
                         >
                           <div
-                            className="HoiPoi__InputWrapper__root-1-58 HoiPoi__InputWrapper__horizontal-1-63 HoiPoi__SwitchInput__root-1-134"
+                            className="HoiPoi__InputWrapper__root-1-58 HoiPoi__InputWrapper__horizontal-1-63 HoiPoi__SwitchInput__root-1-163"
                           >
                             <div
                               className="HoiPoi__InputWrapper__inputWrapper-1-59"
@@ -3982,14 +4240,14 @@ exports[`Form complete match 1`] = `
                               >
                                 <Switch
                                   checked={false}
-                                  className="HoiPoi__SwitchInput__switchinput-1-135"
+                                  className="HoiPoi__SwitchInput__switchinput-1-164"
                                   isDisabled={false}
                                   onChange={[Function]}
                                   overrides={Object {}}
                                   size="medium"
                                 >
                                   <div
-                                    className="HoiPoi__Switch__root-1-137 HoiPoi__SwitchInput__switchinput-1-135"
+                                    className="HoiPoi__Switch__root-1-166 HoiPoi__SwitchInput__switchinput-1-164"
                                     onMouseLeave={[Function]}
                                     onMouseOver={[Function]}
                                   >
@@ -4959,11 +5217,11 @@ exports[`Form complete match 1`] = `
                         }
                       >
                         <div
-                          className="HoiPoi__Multiplier__root-1-140"
+                          className="HoiPoi__Multiplier__root-1-169"
                         >
                           <div>
                             <MultiplierControl
-                              className="HoiPoi__Multiplier__item-1-141"
+                              className="HoiPoi__Multiplier__item-1-170"
                               index={0}
                               isFullWidth={false}
                               key="0"
@@ -4978,7 +5236,7 @@ exports[`Form complete match 1`] = `
                                   "root": Object {},
                                 }
                               }
-                              removeIconClassName="HoiPoi__Multiplier__removeIcon-1-146"
+                              removeIconClassName="HoiPoi__Multiplier__removeIcon-1-175"
                               schema={
                                 Array [
                                   Object {
@@ -5026,10 +5284,10 @@ exports[`Form complete match 1`] = `
                               values={null}
                             >
                               <div
-                                className="HoiPoi__Multiplier__item-1-141"
+                                className="HoiPoi__Multiplier__item-1-170"
                               >
                                 <Form
-                                  className="HoiPoi__MultiplierControl__form-1-159"
+                                  className="HoiPoi__MultiplierControl__form-1-188"
                                   errors={Object {}}
                                   isFullWidth={false}
                                   labelMode="horizontal"
@@ -5091,7 +5349,7 @@ exports[`Form complete match 1`] = `
                                   values={null}
                                 >
                                   <div
-                                    className="HoiPoi__MultiplierControl__form-1-159"
+                                    className="HoiPoi__MultiplierControl__form-1-188"
                                   >
                                     <Component
                                       className="general-info"
@@ -7749,7 +8007,7 @@ exports[`Form complete match 1`] = `
                             </MultiplierControl>
                           </div>
                           <div
-                            className="HoiPoi__Multiplier__buttonContainer-1-145"
+                            className="HoiPoi__Multiplier__buttonContainer-1-174"
                           >
                             <ForwardRef
                               className=""
@@ -7760,19 +8018,19 @@ exports[`Form complete match 1`] = `
                               type="terciary"
                             >
                               <button
-                                className="HoiPoi__Button__root-1-162 HoiPoi__Button__terciary-1-171 HoiPoi__Button__small-1-174"
+                                className="HoiPoi__Button__root-1-191 HoiPoi__Button__terciary-1-200 HoiPoi__Button__small-1-203"
                                 onClick={[Function]}
                                 type="button"
                               >
                                 <div
-                                  className="HoiPoi__Button__content-1-163"
+                                  className="HoiPoi__Button__content-1-192"
                                 >
                                   <Text
-                                    className="HoiPoi__Button__Text-1-164"
+                                    className="HoiPoi__Button__Text-1-193"
                                     overrides={Object {}}
                                   >
                                     <span
-                                      className="HoiPoi__Text__root-1-20 HoiPoi__Button__Text-1-164"
+                                      className="HoiPoi__Text__root-1-20 HoiPoi__Button__Text-1-193"
                                     >
                                       + Add
                                     </span>
