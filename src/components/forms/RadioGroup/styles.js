@@ -3,14 +3,14 @@ export default (theme) => ({
     Label: {
         width: 153,
         marginRight: 17,
-        padding: '6px 0',
+        padding: '8px 0',
     },
     formControl: {
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
         width: 290,
-        padding: '5px 0',
+        padding: 0,
         cursor: 'pointer',
     },
     isFullWidth: {
@@ -46,9 +46,6 @@ export default (theme) => ({
         display: 'block',
         padding: '12px 0 11px 0',
         marginLeft: '0 !important',
-        '& $formControl': {
-            marginTop: 10,
-        },
     },
     horizontalLabel: {
         display: 'flex',
@@ -58,12 +55,13 @@ export default (theme) => ({
     vertical: {},
     horizontal: {
         '& $formControl': {
-            flexDirection: 'row',
+            flexFlow: 'row nowrap',
             width: '100%',
         },
-        '& $radioControl': {
-            marginRight: 20,
+        '& [class*="RadioControl"]': {
+            marginRight: 16,
             width: 'auto',
+            flex: 1,
             '&:last-child': {
                 marginRight: 0,
             },
