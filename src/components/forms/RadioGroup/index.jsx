@@ -21,6 +21,7 @@ function RadioGroup({
     value,
     label,
     labelMode,
+    mode,
     hint,
     isReadOnly,
     isFullWidth,
@@ -35,7 +36,8 @@ function RadioGroup({
         classes.root,
         {
             [classes.isReadOnly]: isReadOnly,
-            [classes[labelMode]]: labelMode,
+            [classes[`${labelMode}Label`]]: labelMode,
+            [classes[mode]]: mode,
         },
         classNameProp,
     );
@@ -79,6 +81,7 @@ RadioGroup.overrides = ['root', 'Radio', 'formControl', 'Label'];
 
 RadioGroup.defaultProps = {
     labelMode: 'horizontal',
+    mode: 'vertical',
     onChange: () => {},
     value: null,
     options: [],
@@ -99,6 +102,7 @@ RadioGroup.propTypes = {
     value: PropTypes.string,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
+    mode: PropTypes.oneOf(['horizontal', 'vertical']),
     /** Info popover */
     hint: PropTypes.string,
     isReadOnly: PropTypes.bool,
