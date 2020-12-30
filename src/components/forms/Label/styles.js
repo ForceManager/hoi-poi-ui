@@ -15,11 +15,11 @@ export default (theme) => ({
     },
     icon: {
         display: 'block',
-        width: 10,
-        height: 10,
+        width: 13,
+        height: 13,
         cursor: 'pointer',
         '& path': {
-            fill: theme.colors.disabledGrey,
+            fill: theme.colors.neutral700,
         },
     },
 });
