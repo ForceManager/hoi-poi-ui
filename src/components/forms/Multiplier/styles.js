@@ -52,21 +52,26 @@ export default (theme) => ({
     removeIcon: {
         cursor: 'pointer',
         marginLeft: 8,
-        marginTop: 24,
+        marginTop: 16,
     },
     vertical: {
         '& $buttonContainer': {
             marginLeft: 0,
         },
-        '& $item': {
-            '&:first-child': {
-                '& $removeIcon': { marginTop: 28 },
-            },
-        },
         '& $singleItem': {
             marginLeft: 0,
             '& > div': {
                 padding: 0,
+            },
+        },
+        '& $fieldModeHorizontal': {
+            '&:first-child': {
+                '& $removeIcon': { marginTop: 44 },
+            },
+        },
+        '& $item': {
+            '&:first-child': {
+                '& $removeIcon': { marginTop: 28 },
             },
         },
     },
@@ -88,10 +93,6 @@ export default (theme) => ({
         '& $removeIcon': {
             flexShrink: 0,
             marginTop: 16,
-        },
-        '&:first-child $removeIcon': {
-            flexShrink: 0,
-            marginTop: 44,
         },
         '&:not(:first-child) [class*="Label"]': {
             display: 'none',
