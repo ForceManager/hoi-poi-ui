@@ -65,7 +65,7 @@ Text.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     isRequired: PropTypes.bool,
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 export default React.memo(Label);

@@ -24,7 +24,7 @@ const Section = memo(
         defaultOpen,
         onChange,
         activeFields,
-        fieldMode,
+        orientation,
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -39,7 +39,7 @@ const Section = memo(
         const rootClassName = classnames(
             classes.root,
             {
-                [classes.fieldModeHorizontal]: fieldMode === 'horizontal',
+                [classes.horizontal]: orientation === 'horizontal',
             },
             classNameProp,
         );
@@ -146,7 +146,7 @@ Section.propTypes = {
         Text: PropTypes.object,
         icon: PropTypes.object,
     }),
-    fieldMode: PropTypes.string,
+    orientation: PropTypes.oneOf(['horizontal', 'vertical']),
 };
 
 export default Section;

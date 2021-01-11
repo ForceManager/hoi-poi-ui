@@ -64,7 +64,7 @@ export default (theme) => ({
                 padding: 0,
             },
         },
-        '& $fieldModeHorizontal': {
+        '& $horizontal': {
             '&:first-child': {
                 '& $removeIcon': { marginTop: 44 },
             },
@@ -86,7 +86,7 @@ export default (theme) => ({
             width: 'auto',
         },
     },
-    fieldModeHorizontal: {
+    horizontal: {
         borderBottom: 'none',
         marginTop: 0,
         justifyContent: 'flex-start',

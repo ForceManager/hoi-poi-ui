@@ -28,7 +28,7 @@ function MultiplierControl({
     onBlur,
     onRemove,
     removeIconClassName,
-    fieldMode,
+    orientation,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -65,7 +65,7 @@ function MultiplierControl({
                 {...override.Form}
                 override={override.Form}
                 useNativeForm={false}
-                fieldMode={fieldMode}
+                orientation={orientation}
             />
         );
     } else if (type === 'field') {
@@ -122,7 +122,7 @@ MultiplierControl.propTypes = {
     values: PropTypes.any,
     errors: PropTypes.any,
     multiplierItemClassNames: PropTypes.any,
-    fieldMode: PropTypes.string,
+    orientation: PropTypes.oneOf(['horizontal', 'vertical']),
 };
 
 export default React.memo(MultiplierControl);

@@ -110,7 +110,7 @@ let onChange = (value) => setState({ value });
     options={options}
     onChange={onChange}
     value={state.value}
-    mode="horizontal"
+    orientation="horizontal"
 />;
 ```
 

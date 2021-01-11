@@ -100,7 +100,7 @@ export default (theme) => ({
             transform: 'translate(-50%, -50%)',
         },
     },
-    fieldModeHorizontal: {
+    horizontal: {
         display: 'flex',
         margin: '0 -8px',
         padding: 0,
