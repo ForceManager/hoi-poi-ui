@@ -49,6 +49,7 @@ module.exports = {
             sectionDepth: 0,
             components: [
                 './src/components/forms/DatePicker/index.jsx',
+                './src/components/forms/TimePicker/index.jsx',
                 './src/components/forms/FieldGroup/index.jsx',
                 './src/components/forms/Input/index.jsx',
                 './src/components/forms/Label/index.jsx',

@@ -32,6 +32,7 @@ export { default as RadioBox } from './components/general/RadioBox';
 export { default as RadioBoxGroup } from './components/general/RadioBoxGroup';
 
 export { default as DatePicker } from './components/forms/DatePicker';
+export { default as TimePicker } from './components/forms/TimePicker';
 export { default as FieldGroup } from './components/forms/FieldGroup';
 export { default as Input } from './components/forms/Input';
 export { default as Label } from './components/forms/Label';
