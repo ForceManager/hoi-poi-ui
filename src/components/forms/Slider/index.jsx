@@ -163,7 +163,7 @@ Slider.propTypes = {
     isFullWidth: PropTypes.bool,
     isRange: PropTypes.bool,
     /** Info popover */
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     isReadOnly: PropTypes.bool,

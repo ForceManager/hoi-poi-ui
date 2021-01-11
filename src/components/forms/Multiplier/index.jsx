@@ -28,7 +28,7 @@ function Multiplier({
     onBlur,
     labelMode,
     customFields,
-    fieldMode,
+    orientation,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -47,7 +47,7 @@ function Multiplier({
     const multiplierItemClassNames = classnames(classes.item, {
         [classes.separator]: separator,
         [classes.singleItem]: !Array.isArray(schema),
-        [classes.fieldModeHorizontal]: fieldMode && fieldMode === 'horizontal',
+        [classes.horizontal]: orientation && orientation === 'horizontal',
     });
 
     const rootProps = {
@@ -104,7 +104,7 @@ function Multiplier({
                 {...override.multiplierControl}
                 overrides={override}
                 removeIconClassName={classes.removeIcon}
-                fieldMode={fieldMode}
+                orientation={orientation}
             />,
         );
     }
@@ -163,7 +163,7 @@ Multiplier.propTypes = {
             name: PropTypes.string,
             type: PropTypes.string,
             placeholder: PropTypes.string,
-            hint: PropTypes.string,
+            hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
             isRequired: PropTypes.bool,
             isReadOnly: PropTypes.bool,
             attrs: PropTypes.object,
@@ -178,7 +178,7 @@ Multiplier.propTypes = {
     isFullWidth: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     customFields: PropTypes.object,
-    fieldMode: PropTypes.string,
+    orientation: PropTypes.oneOf(['horizontal', 'vertical']),
 };
 
 export default React.memo(Multiplier);

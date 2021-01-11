@@ -662,7 +662,7 @@ Select.propTypes = {
     loadingPlaceholder: PropTypes.string,
     isFullWidth: PropTypes.bool,
     /** Info popover */
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component with style changes */
