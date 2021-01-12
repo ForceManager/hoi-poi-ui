@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -22,6 +22,11 @@ const TimePicker = memo(
         hint,
         info,
         isRequired,
+        options,
+        value: dateValue,
+        loadOptions,
+        interval = 30,
+        onChange,
         ...props
     }) => {
         const override = getOverrides(overridesProp, TimePicker.overrides);
@@ -33,6 +38,83 @@ const TimePicker = memo(
                 [classes.isFullWidth]: isFullWidth,
             },
             classNameProp,
+        );
+
+        const [newOptions, setNewOptions] = useState(options || []);
+        const [timeValue, setTimeValue] = useState(null);
+
+        const getTimeValue = useCallback(
+            (options) => {
+                if (!dateValue || !options || options.length === 0) return null;
+                let closestTimeIndex = 0;
+                let lastDiff;
+                options.forEach((current, index) => {
+                    if (isRequired && dateValue) {
+                        const diff = Math.abs(current.value.getTime() - dateValue.getTime());
+                        if (isNaN(lastDiff)) {
+                            lastDiff = diff;
+                            closestTimeIndex = index;
+                        } else if (!isNaN(lastDiff) && lastDiff > diff) {
+                            lastDiff = diff;
+                            closestTimeIndex = index;
+                        }
+                    }
+                });
+                setTimeValue(options[closestTimeIndex]);
+            },
+            [dateValue, isRequired],
+        );
+
+        const getNewOptions = useCallback(() => {
+            const today = new Date();
+            let date = new Date(today.setHours(0, 0, 0, 0));
+            let iterations = 1440 / interval;
+            iterations = iterations % 2 === 0 ? iterations - 1 : iterations;
+            let datesList = [];
+
+            for (let i = 0; i < iterations; i++) {
+                let hours;
+                let minutes;
+                let ampm;
+                if (i === 0) {
+                    hours = date.getHours();
+                    minutes = date.getMinutes();
+                    hours = `0${hours}`.slice(-2);
+                    minutes = `0${minutes}`.slice(-2);
+                    ampm = hours >= 12 ? 'PM' : 'AM';
+                    datesList.push({
+                        label: `${hours}:${minutes} ${ampm}`,
+                        value: date,
+                    });
+                }
+                date = new Date(date.getTime() + interval * 60000);
+                hours = date.getHours();
+                minutes = date.getMinutes();
+                hours = `0${hours}`.slice(-2);
+                minutes = `0${minutes}`.slice(-2);
+                ampm = hours >= 12 ? 'PM' : 'AM';
+                datesList.push({
+                    label: `${hours}:${minutes} ${ampm}`,
+                    value: date,
+                });
+            }
+
+            getTimeValue(datesList);
+            setNewOptions(datesList);
+        }, [interval, getTimeValue]);
+
+        useEffect(() => {
+            if (!options) {
+                getNewOptions();
+            }
+        }, [options, getNewOptions]);
+
+        const handleOnChange = useCallback(
+            (value) => {
+                setTimeValue(value);
+                onChange && onChange(value?.value || null);
+            },
+            [onChange],
         );
 
         return (
@@ -51,6 +133,11 @@ const TimePicker = memo(
                 <Select
                     overrides={override.timePicker}
                     dropDownIcon={<Icon name="clock" />}
+                    options={newOptions}
+                    value={timeValue}
+                    hideSelectedOptions={false}
+                    isSearchable={false}
+                    onChange={handleOnChange}
                     {...props}
                 />
             </InputWrapper>

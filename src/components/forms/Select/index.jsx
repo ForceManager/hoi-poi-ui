@@ -58,6 +58,7 @@ const Select = memo(
         actions,
         onClickAction,
         dropDownIcon,
+        isSearchable = true,
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
@@ -404,6 +405,7 @@ const Select = memo(
                 formatOptionLabel,
                 formatGroupLabel,
                 dropDownIcon,
+                isSearchable,
                 menuProps: {
                     className: classes.menu,
                     actionContainerClassName: classes.actionContainer,
@@ -556,6 +558,7 @@ const Select = memo(
             indicatorSeparatorStyles,
             menuListStyles,
             dropDownIcon,
+            isSearchable,
         ]);
 
         let SelectComponent = RSelect;

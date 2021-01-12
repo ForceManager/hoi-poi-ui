@@ -38,3 +38,30 @@ const onChange = (value) => setState({ value });
     />
 </div>;
 ```
+
+Simple No Options Prop:
+
+```jsx
+import { useState } from 'react';
+import { Icon } from 'hoi-poi-ui';
+
+const [state, setState] = useState(new Date());
+const onChange = (value) => setState(value);
+
+<div>
+    <TimePicker
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        value={state}
+        filterByKey
+        isRequired={true}
+    />
+</div>;
+```
+
+### Component tree
+
+---
+
+-   [Select](#/Forms?id=select)
