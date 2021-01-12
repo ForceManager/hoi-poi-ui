@@ -304,6 +304,7 @@ let onChange = (value, newValue, index, schema) => {
     errors={errors}
     schema={schema}
     onChange={onChange}
+    labelMode="vertical"
 />;
 ```
 
