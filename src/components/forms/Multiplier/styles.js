@@ -98,4 +98,7 @@ export default (theme) => ({
             display: 'none',
         },
     },
+    noLabel: {
+        '& + [class*="removeIcon"]': { marginTop: '0 !important' },
+    },
 });

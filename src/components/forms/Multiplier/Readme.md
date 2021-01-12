@@ -283,6 +283,31 @@ let onChange = (value, newValue, index, schema) => {
 />;
 ```
 
+Without label
+
+```jsx
+import { useState } from 'react';
+import schema from './example.no_label.json';
+
+const errors = {
+    email: 'Invalid email',
+};
+const [state, setState] = useState({});
+let onChange = (value, newValue, index, schema) => {
+    setState({ value });
+};
+
+<Multiplier
+    name="no-label-example"
+    buttonLabel="Add"
+    value={state.value}
+    errors={errors}
+    schema={schema}
+    onChange={onChange}
+    labelMode="vertical"
+/>;
+```
+
 ### Component tree
 
 ---

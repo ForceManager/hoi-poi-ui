@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Form from '../Form';
@@ -71,9 +72,14 @@ function MultiplierControl({
     } else if (type === 'field') {
         let field = { ...schema };
         field.label = index === 0 ? field.label : '';
+
+        const fieldClasses = classnames(classes.field, {
+            [classes.noLabel]: !field.label,
+        });
+
         component = (
             <FieldControl
-                className={classes.field}
+                className={fieldClasses}
                 labelMode={labelMode}
                 isFullWidth={isFullWidth}
                 isReadOnly={isReadOnly}
