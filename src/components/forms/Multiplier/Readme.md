@@ -279,7 +279,7 @@ let onChange = (value, newValue, index, schema) => {
     separator={true}
     onChange={onChange}
     labelMode="vertical"
-    fieldMode="horizontal"
+    orientation="horizontal"
 />;
 ```
 
