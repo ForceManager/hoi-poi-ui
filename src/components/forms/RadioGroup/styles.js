@@ -20,7 +20,7 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         lineHeight: '20px',
-        marginBottom: 14,
+        marginBottom: 16,
         borderRadius: 4,
         border: `solid 1px ${theme.colors.neutral400}`,
         padding: 8,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -9,7 +9,7 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'RadioBoxGroup');
 
-function RadioBoxGroup({
+const RadioBoxGroup = ({
     children,
     classes: classesProp,
     overrides: overridesProp,
@@ -20,7 +20,7 @@ function RadioBoxGroup({
     value,
     isReadOnly,
     ...props
-}) {
+}) => {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, RadioBoxGroup.overrides);
@@ -50,7 +50,7 @@ function RadioBoxGroup({
             ))}
         </div>
     );
-}
+};
 
 RadioBoxGroup.overrides = ['root', 'RadioBox', 'radioBoxControl'];
 
@@ -78,4 +78,4 @@ RadioBoxGroup.propTypes = {
     isReadOnly: PropTypes.bool,
 };
 
-export default React.memo(RadioBoxGroup);
+export default memo(RadioBoxGroup);
