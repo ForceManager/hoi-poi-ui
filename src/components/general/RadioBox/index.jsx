@@ -41,7 +41,7 @@ const RadioBox = ({
         <div className={rootClassNames} {...props} {...override.root}>
             <Icon className={classes.icon} name={icon} {...override.icon} />
             <div className={classes.content} {...override.content}>
-                <Text className={classes.title} {...override.title}>
+                <Text type="h6" className={classes.title} {...override.title}>
                     {title}
                 </Text>
                 <Text className={classes.text} {...override.text}>
