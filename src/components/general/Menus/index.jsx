@@ -39,6 +39,7 @@ function Menus({
         mode: 'horizontal',
         className: classes.menu,
         triggerSubMenuAction: triggerAction,
+        openAnimation: 'slide-up',
         ...override['rc-menu'],
     };
 

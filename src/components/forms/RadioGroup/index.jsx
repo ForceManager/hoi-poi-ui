@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import RadioControl from './RadioControl';
-import Label from '../../oldForms/Label';
+import Label from '../../forms/Label';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';

@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Popover from '../../oldForms/Section';
+import Popover from '../../forms/Section';
 import Button from '../../general/Button';
 
 describe('Popover', () => {
