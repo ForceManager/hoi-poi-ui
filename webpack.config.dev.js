@@ -82,12 +82,5 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
     ].filter(Boolean),
-    node: {
-        dgram: 'empty',
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty',
-        child_process: 'empty',
-    },
     performance: false,
 };
