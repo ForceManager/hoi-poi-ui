@@ -27,6 +27,11 @@ const TimePicker = memo(
         loadOptions,
         interval = 30,
         onChange,
+        minTime, // HH:mm:ss
+        maxTime, // HH:mm:ss
+        formatLabel,
+        formatDate,
+        formatOption,
         ...props
     }) => {
         const override = getOverrides(overridesProp, TimePicker.overrides);
@@ -42,6 +47,37 @@ const TimePicker = memo(
 
         const [newOptions, setNewOptions] = useState(options || []);
         const [timeValue, setTimeValue] = useState(null);
+
+        const getMinMax = useCallback(() => {
+            const date = new Date();
+            if (!minTime && !maxTime) return null;
+            const minAttrs = (minTime && minTime.split(':')) || null;
+            const maxAttrs = (maxTime && maxTime.split(':')) || null;
+            let newMinTime;
+            let newMaxTime;
+
+            if (minAttrs) {
+                newMinTime = new Date(date.setHours(minAttrs[0], minAttrs[1], minAttrs[2]));
+            }
+
+            if (maxAttrs) {
+                newMaxTime = new Date(date.setHours(maxAttrs[0], maxAttrs[1], maxAttrs[2]));
+            }
+
+            return {
+                minTime: newMinTime,
+                maxTime: newMaxTime,
+            };
+        }, [maxTime, minTime]);
+
+        const getIfOptionIsDisabled = useCallback((date, minTime, maxTime) => {
+            if (!minTime && !maxTime) return false;
+            const dateInMiliseconds = date.getTime();
+
+            if (minTime && dateInMiliseconds < minTime.getTime()) return true;
+            if (maxTime && dateInMiliseconds > maxTime.getTime()) return true;
+            return false;
+        }, []);
 
         const getTimeValue = useCallback(
             (options) => {
@@ -71,7 +107,7 @@ const TimePicker = memo(
             let iterations = 1440 / interval;
             iterations = iterations % 2 === 0 ? iterations - 1 : iterations;
             let datesList = [];
-
+            const minMax = getMinMax() || null;
             for (let i = 0; i < iterations; i++) {
                 let hours;
                 let minutes;
@@ -82,10 +118,26 @@ const TimePicker = memo(
                     hours = `0${hours}`.slice(-2);
                     minutes = `0${minutes}`.slice(-2);
                     ampm = hours >= 12 ? 'PM' : 'AM';
-                    datesList.push({
-                        label: `${hours}:${minutes} ${ampm}`,
-                        value: date,
-                    });
+
+                    let isDisabled = false;
+
+                    if (minMax) {
+                        isDisabled = getIfOptionIsDisabled(date, minMax.minTime, minMax.maxTime);
+                    }
+
+                    const newValue = formatDate ? formatDate(date) : date;
+                    const label = `${hours}:${minutes} ${ampm}`;
+                    const newLabel = formatLabel ? formatLabel(newValue, label) : label;
+
+                    let option = {
+                        label: newLabel,
+                        value: newValue,
+                    };
+
+                    if (formatOption) option = formatOption(option);
+                    if (isDisabled) option.isDisabled = isDisabled;
+
+                    datesList.push(option);
                 }
                 date = new Date(date.getTime() + interval * 60000);
                 hours = date.getHours();
@@ -93,15 +145,39 @@ const TimePicker = memo(
                 hours = `0${hours}`.slice(-2);
                 minutes = `0${minutes}`.slice(-2);
                 ampm = hours >= 12 ? 'PM' : 'AM';
-                datesList.push({
-                    label: `${hours}:${minutes} ${ampm}`,
-                    value: date,
-                });
+
+                let isDisabled = false;
+
+                if (minMax) {
+                    isDisabled = getIfOptionIsDisabled(date, minMax.minTime, minMax.maxTime);
+                }
+
+                const newValue = formatDate ? formatDate(date) : date;
+                const label = `${hours}:${minutes} ${ampm}`;
+                const newLabel = formatLabel ? formatLabel(newValue, label) : label;
+
+                let option = {
+                    label: newLabel,
+                    value: newValue,
+                };
+
+                if (formatOption) option = formatOption(option);
+                if (isDisabled) option.isDisabled = isDisabled;
+
+                datesList.push(option);
             }
 
             getTimeValue(datesList);
             setNewOptions(datesList);
-        }, [interval, getTimeValue]);
+        }, [
+            interval,
+            getTimeValue,
+            getIfOptionIsDisabled,
+            getMinMax,
+            formatOption,
+            formatDate,
+            formatLabel,
+        ]);
 
         useEffect(() => {
             if (!options) {

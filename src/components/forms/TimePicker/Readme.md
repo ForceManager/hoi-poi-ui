@@ -60,6 +60,55 @@ const onChange = (value) => setState(value);
 </div>;
 ```
 
+Simple Min and Max Time:
+
+```jsx
+import { useState } from 'react';
+import { Icon } from 'hoi-poi-ui';
+
+const [state, setState] = useState(new Date());
+const onChange = (value) => setState(value);
+
+<div>
+    <TimePicker
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        value={state}
+        filterByKey
+        isRequired={true}
+        minTime="11:00:00"
+        maxTime="12:10:00"
+    />
+</div>;
+```
+
+Simple Format Label:
+
+```jsx
+import { useState } from 'react';
+import { Icon } from 'hoi-poi-ui';
+
+const [state, setState] = useState(new Date());
+const onChange = (value) => setState(value);
+
+const formatLabel = (date, label) => {
+    return `Formatted ${label}`;
+};
+
+<div>
+    <TimePicker
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        value={state}
+        filterByKey
+        isRequired={true}
+        formatLabel={formatLabel}
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
