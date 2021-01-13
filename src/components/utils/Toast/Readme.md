@@ -91,11 +91,11 @@ let closeOnClickOptions = [
 ];
 
 let onChange = (value) => setState({ type: value });
-let onChangeTitle = (e) => {
-    setState({ title: e && e.target ? e.target.value : '' });
+let onChangeTitle = (value) => {
+    setState({ ...state, title: value });
 };
-let onChangeText = (e) => {
-    setState({ text: e && e.target ? e.target.value : '' });
+let onChangeText = (value) => {
+    setState({ ...state, text: value });
 };
 let onChangePosition = (value) => setState({ position: value });
 let onChangeAutoClose = (value) => setState({ autoClose: value });
