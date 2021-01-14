@@ -52,7 +52,14 @@ import DraggableSort from './icons/DraggableSort';
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
 import AccountDetails from './icons/actions/AccountDetails';
-import AddAccount from './icons/actions/AddAccount';
+import AccountsAdd from './icons/actions/AccountsAdd';
+import AccountsEdit from './icons/actions/AccountsEdit';
+import ContactAdd from './icons/actions/ContactAdd';
+import ContactEdit from './icons/actions/ContactEdit';
+import OpportunityAdd from './icons/actions/OpportunityAdd';
+import OpportunityEdit from './icons/actions/OpportunityEdit';
+import ValueListAdd from './icons/actions/ValueListAdd';
+import ValueListEdit from './icons/actions/ValueListEdit';
 import AddActivity from './icons/actions/AddActivity';
 import AddEvent from './icons/actions/AddEvent';
 import Autorenew from './icons/actions/Autorenew';
@@ -238,7 +245,14 @@ const ICONS = {
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,
-    addAccount: AddAccount,
+    accountsAdd: AccountsAdd,
+    accountsEdit: AccountsEdit,
+    contactAdd: ContactAdd,
+    contactEdit: ContactEdit,
+    opportunityAdd: OpportunityAdd,
+    opportunityEdit: OpportunityEdit,
+    valueListAdd: ValueListAdd,
+    valueListEdit: ValueListEdit,
     addActivity: AddActivity,
     addEvent: AddEvent,
     autorenew: Autorenew,
