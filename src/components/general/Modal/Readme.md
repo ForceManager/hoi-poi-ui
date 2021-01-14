@@ -676,7 +676,7 @@ let isOpen = state.isOpen || false;
 With custom title component:
 
 ```jsx
-import { Button, Title, Text, Icon } from 'hoi-poi-ui';
+import { Button, Text, Icon } from 'hoi-poi-ui';
 import { useState, useMemo } from 'react';
 
 const [state, setState] = useState({});
@@ -685,7 +685,7 @@ let isOpen = state.isOpen || false;
 const title = useMemo(
     () => (
         <div style={{ flexDirection: 'column' }}>
-            <Title>Document name</Title>
+            <Text type="h6">Document name</Text>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <Icon name="pdf" />
                 <Text style={{ marginLeft: 10 }}>PDF, 2MB, 20/10/2019</Text>
