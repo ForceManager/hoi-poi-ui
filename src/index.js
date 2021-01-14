@@ -41,5 +41,4 @@ export { Toast, toast, dismissToast } from './components/utils/Toast';
 export { default as Tooltip } from './components/utils/Tooltip';
 
 export { default as Link } from './components/typography/Link';
-export { default as Title } from './components/typography/Title';
 export { default as Text } from './components/typography/Text';
