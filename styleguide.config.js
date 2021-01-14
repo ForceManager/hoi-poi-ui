@@ -65,12 +65,6 @@ module.exports = {
                 './src/components/typography/Text/index.jsx',
             ],
         },
-        {
-            name: 'Old Typography',
-            description: 'Text & Title components',
-            sectionDepth: 0,
-            components: ['./src/components/typography/Title/index.jsx'],
-        },
     ],
     theme: {
         color: {
