@@ -5,7 +5,7 @@ import Icon from '../../../general/Icon';
 export default React.memo((props) => {
     const onClick = (e) => {
         e.stopPropagation();
-        props.selectProps.onChange([], {
+        props.selectProps.onChange(null, {
             action: 'clear',
         });
     };
