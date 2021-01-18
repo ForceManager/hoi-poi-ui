@@ -69,7 +69,7 @@ Title mode:
 ```jsx
 <Advice defaultCollapsed={false} title="Advice" >This is an important information that will help you out in this process.</Advice>
 <br />
-<Advice title="Advice" showIcon>OJETE This is an important information that will help you out in this process.</Advice>
+<Advice title="Advice" showIcon>This is an important information that will help you out in this process.</Advice>
 ```
 
 Dismissable:
