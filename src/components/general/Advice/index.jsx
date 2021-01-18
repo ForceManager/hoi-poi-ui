@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Collapse } from 'react-collapse';
 
+import Button from '../Button';
 import Icon from '../Icon';
 import Text from '../../typography/Text';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -21,6 +22,9 @@ function Advice({
     showCollapse,
     type,
     defaultCollapsed,
+    isDismissable,
+    dismissText,
+    onDismiss,
     ...props
 }) {
     const theme = useTheme();
@@ -112,59 +116,71 @@ function Advice({
 
     return (
         <div {...rootProps}>
-            {showIcon && (
-                <div className={classes.icon} {...override.icon}>
-                    <Icon {...iconProps} />
-                </div>
-            )}
+            <div className={classes.wrap}>
+                {showIcon && (
+                    <div className={classes.icon} {...override.icon}>
+                        <Icon {...iconProps} />
+                    </div>
+                )}
 
-            {!showCollapse && (
-                <Text
-                    className={classes.Text}
-                    {...override.Text}
-                    overrides={{ root: { ref: textEl } }}
-                >
-                    {children}
-                </Text>
-            )}
+                {!showCollapse && (
+                    <Text
+                        className={classes.Text}
+                        {...override.Text}
+                        overrides={{ root: { ref: textEl } }}
+                    >
+                        {children}
+                    </Text>
+                )}
 
-            {showCollapse && (
-                <Collapse isOpened={isOpened || false} {...override['react-collapse']}>
-                    <div className={classes.collapseContainer} {...override.collapseContainer}>
-                        <div className={classes.textContainer} {...override.textContainer}>
-                            <Text
-                                isTruncated={!isOpened}
-                                className={classes.Text}
-                                bold={!!title}
-                                {...override.Text}
-                                overrides={{ root: { ref: textEl } }}
-                            >
-                                {!title && children}
-                                {title && title}
-                            </Text>
-                            {title && (
-                                <div className={classes.withTitleContainer}>
-                                    <Text
-                                        className={classes.Text}
-                                        {...override.Text}
-                                        overrides={{ root: { ref: textEl } }}
-                                    >
-                                        {children}
-                                    </Text>
-                                </div>
+                {showCollapse && (
+                    <Collapse isOpened={isOpened || false} {...override['react-collapse']}>
+                        <div className={classes.collapseContainer} {...override.collapseContainer}>
+                            <div className={classes.textContainer} {...override.textContainer}>
+                                <Text
+                                    isTruncated={!isOpened}
+                                    className={classes.Text}
+                                    bold={!!title}
+                                    {...override.Text}
+                                    overrides={{ root: { ref: textEl } }}
+                                >
+                                    {!title && children}
+                                    {title && title}
+                                </Text>
+                                {title && (
+                                    <div className={classes.withTitleContainer}>
+                                        <Text
+                                            className={classes.Text}
+                                            {...override.Text}
+                                            overrides={{ root: { ref: textEl } }}
+                                        >
+                                            {children}
+                                        </Text>
+                                    </div>
+                                )}
+                            </div>
+                            {showCollapsingIcon && (
+                                <span
+                                    onClick={toggleCollapsing}
+                                    className={classes.dropdownIcon}
+                                    {...override.dropdownIcon}
+                                >
+                                    <Icon name="arrowDropDown" size="large" />
+                                </span>
                             )}
                         </div>
-                        {showCollapsingIcon && (
-                            <span
-                                onClick={toggleCollapsing}
-                                className={classes.dropdownIcon}
-                                {...override.dropdownIcon}
-                            >
-                                <Icon name="arrowDropDown" size="large" />
-                            </span>
-                        )}
-                    </div>
-                </Collapse>
+                    </Collapse>
+                )}
+            </div>
+            {isDismissable && (
+                <Button
+                    className={classes.dismiss}
+                    onClick={onDismiss}
+                    type="terciary"
+                    size="small"
+                >
+                    {dismissText}
+                </Button>
             )}
         </div>
     );
@@ -187,6 +203,7 @@ Advice.defaultProps = {
     showCollapse: true,
     type: 'default',
     defaultCollapsed: true,
+    isDismissable: false,
 };
 
 Advice.propTypes = {
@@ -198,6 +215,9 @@ Advice.propTypes = {
     showCollapse: PropTypes.bool,
     defaultCollapsed: PropTypes.bool,
     type: PropTypes.oneOf(['default', 'error', 'info', 'success', 'warning']),
+    isDismissable: PropTypes.bool,
+    dismissText: PropTypes.string,
+    onDismiss: PropTypes.func,
 };
 
 export default React.memo(Advice);
