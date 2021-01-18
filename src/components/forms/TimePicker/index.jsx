@@ -57,11 +57,11 @@ const TimePicker = memo(
             let newMaxTime;
 
             if (minAttrs) {
-                newMinTime = new Date(date.setHours(minAttrs[0], minAttrs[1], minAttrs[2]));
+                newMinTime = new Date(date.setHours(minAttrs[0], minAttrs[1], minAttrs[2] || '00'));
             }
 
             if (maxAttrs) {
-                newMaxTime = new Date(date.setHours(maxAttrs[0], maxAttrs[1], maxAttrs[2]));
+                newMaxTime = new Date(date.setHours(maxAttrs[0], maxAttrs[1], maxAttrs[2] || '00'));
             }
 
             return {
@@ -82,11 +82,17 @@ const TimePicker = memo(
         const getTimeValue = useCallback(
             (options) => {
                 if (!dateValue || !options || options.length === 0) return null;
+                if (!dateValue) return null;
                 let closestTimeIndex = 0;
                 let lastDiff;
+                const dateValueNow = new Date();
+                const hours = dateValue.getHours();
+                const minutes = dateValue.getMinutes();
+                const seconds = dateValue.getSeconds();
+                dateValueNow.setHours(hours, minutes, seconds);
                 options.forEach((current, index) => {
-                    if (isRequired && dateValue) {
-                        const diff = Math.abs(current.value.getTime() - dateValue.getTime());
+                    if (isRequired) {
+                        const diff = Math.abs(current.value.getTime() - dateValueNow.getTime());
                         if (isNaN(lastDiff)) {
                             lastDiff = diff;
                             closestTimeIndex = index;
@@ -220,5 +226,16 @@ const TimePicker = memo(
         );
     },
 );
+
+TimePicker.propTypes = {
+    interval: PropTypes.number,
+    minTime: PropTypes.string,
+    /** HH:mm:ss */
+    maxTime: PropTypes.string,
+    /** HH:mm:ss */
+    formatLabel: PropTypes.func,
+    formatDate: PropTypes.func,
+    formatOption: PropTypes.func,
+};
 
 export default TimePicker;
