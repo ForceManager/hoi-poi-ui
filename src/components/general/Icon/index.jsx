@@ -48,6 +48,7 @@ import ChatFilled from './icons/ChatFilled';
 import Send from './icons/Send';
 import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
+import FileDownload from './icons/FileDownload';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -242,6 +243,7 @@ const ICONS = {
     chatFilled: ChatFilled,
     emptyAvatar: EmptyAvatar,
     draggableSort: DraggableSort,
+    fileDownload: FileDownload,
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,
