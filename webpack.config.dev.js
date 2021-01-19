@@ -82,6 +82,7 @@ module.exports = {
             'process.env.NODE_ENV': 'development',
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({ process: 'process/browser' }),
     ].filter(Boolean),
     performance: false,
 };

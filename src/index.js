@@ -20,6 +20,7 @@ export { default as Menus } from './components/general/Menus';
 export { default as RadioBox } from './components/general/RadioBox';
 export { default as RadioBoxGroup } from './components/general/RadioBoxGroup';
 
+export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
 export { default as DatePicker } from './components/forms/DatePicker';
 export { default as FieldGroup } from './components/forms/FieldGroup';
 export { default as Form } from './components/forms/Form';
