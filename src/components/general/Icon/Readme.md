@@ -350,6 +350,9 @@ Icons:
 <Icon name="emptyAvatar"/>
 <span> </span>
 <Icon name="draggableSort"/>
+<span> </span>
+<Icon name="fileDownload"/>
+<span> </span>
 ```
 
 File Icons:
