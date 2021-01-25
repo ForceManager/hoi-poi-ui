@@ -83,6 +83,50 @@ const onChange = (value) => setState(value);
 </div>;
 ```
 
+Simple Min Time Now:
+
+```jsx
+import { useState } from 'react';
+import { Icon } from 'hoi-poi-ui';
+
+const [state, setState] = useState(new Date());
+const onChange = (value) => setState(value);
+
+<div>
+    <TimePicker
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        value={state}
+        filterByKey
+        isRequired={true}
+        isMinTimeNow={true}
+    />
+</div>;
+```
+
+Simple Max Time Now:
+
+```jsx
+import { useState } from 'react';
+import { Icon } from 'hoi-poi-ui';
+
+const [state, setState] = useState(new Date());
+const onChange = (value) => setState(value);
+
+<div>
+    <TimePicker
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        value={state}
+        filterByKey
+        isRequired={true}
+        isMaxTimeNow={true}
+    />
+</div>;
+```
+
 Simple Format Label:
 
 ```jsx

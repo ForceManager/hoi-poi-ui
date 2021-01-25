@@ -24,11 +24,13 @@ const TimePicker = memo(
         isRequired,
         options,
         value: dateValue,
-        loadOptions,
+        loadOptions, //declared here to prevent passing it via props
         interval = 30,
         onChange,
         minTime, // HH:mm:ss
         maxTime, // HH:mm:ss
+        isMinTimeNow,
+        isMaxTimeNow,
         formatLabel,
         formatDate,
         formatOption,
@@ -50,11 +52,22 @@ const TimePicker = memo(
 
         const getMinMax = useCallback(() => {
             const date = new Date();
-            if (!minTime && !maxTime) return null;
-            const minAttrs = (minTime && minTime.split(':')) || null;
-            const maxAttrs = (maxTime && maxTime.split(':')) || null;
             let newMinTime;
             let newMaxTime;
+            if (!minTime && !maxTime && !isMinTimeNow && !isMaxTimeNow) return null;
+
+            if (isMinTimeNow || isMaxTimeNow) {
+                if (isMinTimeNow) newMinTime = date;
+                if (isMaxTimeNow) newMaxTime = date;
+
+                return {
+                    minTime: newMinTime,
+                    maxTime: newMaxTime,
+                };
+            }
+
+            const minAttrs = (minTime && minTime.split(':')) || null;
+            const maxAttrs = (maxTime && maxTime.split(':')) || null;
 
             if (minAttrs) {
                 newMinTime = new Date(date.setHours(minAttrs[0], minAttrs[1], minAttrs[2] || '00'));
@@ -68,7 +81,7 @@ const TimePicker = memo(
                 minTime: newMinTime,
                 maxTime: newMaxTime,
             };
-        }, [maxTime, minTime]);
+        }, [maxTime, minTime, isMinTimeNow, isMaxTimeNow]);
 
         const getIfOptionIsDisabled = useCallback((date, minTime, maxTime) => {
             if (!minTime && !maxTime) return false;
@@ -233,6 +246,8 @@ TimePicker.propTypes = {
     /** HH:mm:ss */
     maxTime: PropTypes.string,
     /** HH:mm:ss */
+    isMinTimeNow: PropTypes.bool,
+    isMaxTimeNow: PropTypes.bool,
     formatLabel: PropTypes.func,
     formatDate: PropTypes.func,
     formatOption: PropTypes.func,
