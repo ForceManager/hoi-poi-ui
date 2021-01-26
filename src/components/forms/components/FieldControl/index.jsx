@@ -91,7 +91,6 @@ function FieldControl({
         className: classNameProp,
         value,
         error,
-        customFields,
         component,
         overrides: overridesProp,
     };
