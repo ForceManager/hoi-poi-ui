@@ -4,27 +4,29 @@ Simple:
 import { useState } from 'react';
 import { Icon } from 'hoi-poi-ui';
 
+let date = new Date();
+
 const options = [
     {
-        label: '09:00 am',
-        value: '09:00 am',
+        label: '09:00 AM',
+        value: new Date(date.setHours(9, 0, 0, 0)),
     },
     {
-        label: '09:30 am',
-        value: '09:30 am',
+        label: '09:30 AM',
+        value: new Date(date.setHours(9, 30, 0, 0)),
         isDisabled: true,
     },
     {
-        label: '10:00 am',
-        value: '10:00 am',
+        label: '10:00 AM',
+        value: new Date(date.setHours(10, 0, 0, 0)),
     },
     {
-        label: '10:30 am',
-        value: '10:30 am',
+        label: '10:30 AM',
+        value: new Date(date.setHours(10, 30, 0, 0)),
     },
 ];
-const [state, setState] = useState({});
-const onChange = (value) => setState({ value });
+const [state, setState] = useState();
+const onChange = (value) => setState(value);
 
 <div>
     <TimePicker
@@ -32,7 +34,51 @@ const onChange = (value) => setState({ value });
         placeholder="Select one"
         onChange={onChange}
         options={options}
-        value={state.value}
+        value={state}
+        filterByKey
+        isRequired={true}
+    />
+</div>;
+```
+
+Simple With Format:
+
+```jsx
+import { useState } from 'react';
+import { Icon } from 'hoi-poi-ui';
+
+let date = new Date();
+
+const options = [
+    {
+        label: '09:00 AM',
+        value: new Date(date.setHours(9, 0, 0, 0)),
+    },
+    {
+        label: '09:30 AM',
+        value: new Date(date.setHours(9, 30, 0, 0)),
+        isDisabled: true,
+    },
+    {
+        label: '10:00 AM',
+        value: new Date(date.setHours(10, 0, 0, 0)),
+    },
+    {
+        label: '10:30 AM',
+        value: new Date(date.setHours(10, 30, 0, 0)),
+    },
+];
+const [state, setState] = useState('26/3/2021 10:30:00');
+const onChange = (value) => setState(value);
+
+<div>
+    <TimePicker
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state}
+        format="dd/mm/yyyy hh:mm:ss"
         filterByKey
         isRequired={true}
     />

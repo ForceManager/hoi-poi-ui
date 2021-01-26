@@ -24,6 +24,7 @@ const TimePicker = memo(
         isRequired,
         options,
         value: dateValue,
+        format,
         loadOptions, //declared here to prevent passing it via props
         interval = 30,
         onChange,
@@ -96,12 +97,16 @@ const TimePicker = memo(
             (options) => {
                 if (!dateValue || !options || options.length === 0) return null;
                 if (!dateValue) return null;
+                let newDateValue = dateValue;
+                if (dateValue && format) {
+                    newDateValue = new Date(dateValue, format);
+                }
                 let closestTimeIndex = 0;
                 let lastDiff;
                 const dateValueNow = new Date();
-                const hours = dateValue.getHours();
-                const minutes = dateValue.getMinutes();
-                const seconds = dateValue.getSeconds();
+                const hours = newDateValue.getHours();
+                const minutes = newDateValue.getMinutes();
+                const seconds = newDateValue.getSeconds();
                 dateValueNow.setHours(hours, minutes, seconds);
                 options.forEach((current, index) => {
                     if (isRequired) {
@@ -117,7 +122,7 @@ const TimePicker = memo(
                 });
                 setTimeValue(options[closestTimeIndex]);
             },
-            [dateValue, isRequired],
+            [dateValue, isRequired, format],
         );
 
         const getNewOptions = useCallback(() => {
@@ -127,6 +132,44 @@ const TimePicker = memo(
             iterations = iterations % 2 === 0 ? iterations - 1 : iterations;
             let datesList = [];
             const minMax = getMinMax() || null;
+            let newDefaultOption = null;
+            let dateToCompare = null;
+
+            if (dateValue) {
+                let newDateValue = dateValue;
+                if (dateValue && format) {
+                    newDateValue = new Date(dateValue, format);
+                }
+                const defaultHours = `0${newDateValue.getHours()}`.slice(-2);
+                const defaultMinutes = `0${newDateValue.getMinutes()}`.slice(-2);
+                const defaultAmPm = defaultHours >= 12 ? 'PM' : 'AM';
+                const defaultLabel = `${defaultHours}:${defaultMinutes} ${defaultAmPm}`;
+                const newDefaultLabel = formatLabel
+                    ? formatLabel(newDateValue, defaultLabel)
+                    : defaultLabel;
+
+                newDefaultOption = {
+                    label: newDefaultLabel,
+                    value: formatDate ? formatDate(newDateValue) : newDateValue,
+                };
+
+                const todayDay = today.getDate();
+                const todayMonth = today.getMonth();
+                const todayYear = today.getFullYear();
+
+                let dateToToday = newDateValue;
+                dateToToday.setFullYear(todayYear);
+                dateToToday.setMonth(todayMonth);
+                dateToToday.setDate(todayDay);
+
+                dateToCompare = {
+                    label: newDefaultLabel,
+                    value: formatDate ? formatDate(dateToToday) : dateToToday,
+                };
+
+                datesList.push(newDefaultOption);
+            }
+
             for (let i = 0; i < iterations; i++) {
                 let hours;
                 let minutes;
@@ -156,8 +199,20 @@ const TimePicker = memo(
                     if (formatOption) option = formatOption(option);
                     if (isDisabled) option.isDisabled = isDisabled;
 
-                    datesList.push(option);
+                    if (dateToCompare) {
+                        if (dateToCompare.label !== option.label) {
+                            if (dateToCompare.value.getTime() < option.value.getTime()) {
+                                datesList.push(option);
+                            } else {
+                                const newDefaultOptionPosition = datesList.indexOf(dateToCompare);
+                                datesList.splice(newDefaultOptionPosition, 0, option);
+                            }
+                        }
+                    } else {
+                        datesList.push(option);
+                    }
                 }
+
                 date = new Date(date.getTime() + interval * 60000);
                 hours = date.getHours();
                 minutes = date.getMinutes();
@@ -183,7 +238,18 @@ const TimePicker = memo(
                 if (formatOption) option = formatOption(option);
                 if (isDisabled) option.isDisabled = isDisabled;
 
-                datesList.push(option);
+                if (dateToCompare) {
+                    if (dateToCompare.label !== option.label) {
+                        if (dateToCompare.value.getTime() < option.value.getTime()) {
+                            datesList.push(option);
+                        } else {
+                            const newDefaultOptionPosition = datesList.indexOf(dateToCompare);
+                            datesList.splice(newDefaultOptionPosition, 0, option);
+                        }
+                    }
+                } else {
+                    datesList.push(option);
+                }
             }
 
             getTimeValue(datesList);
@@ -196,20 +262,29 @@ const TimePicker = memo(
             formatOption,
             formatDate,
             formatLabel,
+            dateValue,
+            format,
         ]);
 
         useEffect(() => {
-            if (!options) {
+            if (!options && newOptions?.length === 0) {
                 getNewOptions();
+            } else {
+                getTimeValue(newOptions);
             }
-        }, [options, getNewOptions]);
+        }, [options, getNewOptions, getTimeValue, newOptions]);
 
         const handleOnChange = useCallback(
             (value) => {
                 setTimeValue(value);
+                let finalDate = value.value;
+                if (format) {
+                    finalDate.toDateString();
+                    console.log(finalDate);
+                }
                 onChange && onChange(value?.value || null);
             },
-            [onChange],
+            [onChange, format],
         );
 
         return (
