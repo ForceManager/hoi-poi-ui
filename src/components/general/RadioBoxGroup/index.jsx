@@ -10,15 +10,14 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'RadioBoxGroup');
 
 const RadioBoxGroup = ({
-    children,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
     options,
-    onChange,
-    onBlur,
     value,
     isReadOnly,
+    onBlur,
+    onChange,
     ...props
 }) => {
     const classes = useClasses(useStyles, classesProp);
@@ -39,13 +38,13 @@ const RadioBoxGroup = ({
             {options.map((option) => (
                 <RadioBoxControl
                     key={option.value}
-                    onClick={isReadOnly ? undefined : onChange}
                     overrides={overridesProp}
                     isReadOnly={isReadOnly}
                     option={option}
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}
+                    {...props}
                 />
             ))}
         </div>
