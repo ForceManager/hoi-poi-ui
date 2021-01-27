@@ -74,6 +74,7 @@ import Delete from './icons/actions/Delete';
 import Documents from './icons/actions/Documents';
 import Done from './icons/actions/Done';
 import DoneAll from './icons/actions/DoneAll';
+import EditArea from './icons/actions/EditArea';
 import EmailLate from './icons/actions/EmailLate';
 import EmailReceive from './icons/actions/EmailReceive';
 import Event from './icons/actions/Event';
@@ -268,6 +269,7 @@ const ICONS = {
     documents: Documents,
     done: Done,
     doneAll: DoneAll,
+    editArea: EditArea,
     emailLate: EmailLate,
     emailReceive: EmailReceive,
     event: Event,
