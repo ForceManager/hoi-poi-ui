@@ -159,6 +159,7 @@ function InputGroup({
                         label={input.label}
                         value={value[input.name]}
                         onChange={onChangeInput}
+                        onBlur={onBlurInput}
                         overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
                         {...inputsProps}
                         placeholder={input.placeholder || inputsProps.placeholder}
