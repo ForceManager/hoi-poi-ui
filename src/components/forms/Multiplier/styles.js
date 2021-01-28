@@ -103,7 +103,6 @@ export default (theme) => ({
     },
     showRemove: {
         '& [class*="formControl"]': {
-            // paddingRight: 32,
             maxWidth: 288,
         },
     },
