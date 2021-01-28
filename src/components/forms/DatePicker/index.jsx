@@ -61,6 +61,7 @@ function DatePicker({
             locale: flatpickrl10n[lang],
             clickOpens: !isReadOnly,
             time_24hr: true,
+            disableMobile: true,
             ...override.flatpickrOptions,
         };
     }, [dateFormat, formatDate, isReadOnly, lang, override.flatpickrOptions, type]);
