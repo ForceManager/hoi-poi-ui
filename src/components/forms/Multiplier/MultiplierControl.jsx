@@ -75,6 +75,7 @@ function MultiplierControl({
 
         const fieldClasses = classnames(classes.field, {
             [classes.noLabel]: !field.label,
+            [classes.showRemove]: isReadOnly !== true && onRemove,
         });
 
         component = (
