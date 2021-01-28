@@ -23,10 +23,12 @@ function RadioControl({
     // Overrides
     const override = getOverrides(overridesProp, RadioControl.overrides);
 
+    const { value: optionValue, overrides: optionOverrides, label, ...optionProps } = option;
+
     const onChangeRadio = useCallback(() => {
-        onChange && onChange(option.value);
-        onBlur && onBlur(option.value);
-    }, [onBlur, onChange, option.value]);
+        onChange && onChange(optionValue);
+        onBlur && onBlur(optionValue);
+    }, [onBlur, onChange, optionValue]);
 
     return (
         <div
@@ -34,9 +36,15 @@ function RadioControl({
             onClick={isReadOnly ? undefined : onChangeRadio}
             {...override.radioControl}
         >
-            <Radio checked={value === option.value} isDisabled={isReadOnly} />
+            <Radio
+                {...props}
+                {...optionProps}
+                checked={value === optionValue}
+                isDisabled={isReadOnly}
+                overrides={{ ...overridesProp.radio, ...optionOverrides }}
+            />
             <span className={classes.radioLabel} {...override.radioLabel}>
-                {option.label}
+                {label}
             </span>
         </div>
     );

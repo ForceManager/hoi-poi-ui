@@ -7,14 +7,17 @@ let options = [
     {
         label: 'Lorem ipsum',
         value: 'lorem',
+        className: 'radio__lorem--1',
     },
     {
         label: 'Lorem ipsum 2',
         value: 'lorem2',
+        className: 'radio__lorem--2',
     },
     {
         label: 'Lorem ipsum 3',
         value: 'lorem3',
+        className: 'radio__lorem--3',
     },
 ];
 const [state, setState] = useState({});
