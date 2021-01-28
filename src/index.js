@@ -12,6 +12,7 @@ export { default as Badge } from './components/general/Badge';
 export { default as BadgeNotification } from './components/general/BadgeNotification';
 export { default as Button } from './components/general/Button';
 export { default as Checkbox } from './components/general/Checkbox';
+export { default as Chip } from './components/general/Chip';
 export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
 export { default as Loader } from './components/general/Loader';

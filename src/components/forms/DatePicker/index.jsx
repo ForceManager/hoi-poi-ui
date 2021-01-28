@@ -14,10 +14,8 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'DatePicker');
 
-// Safari fix
+// Old browser and Safari fix fix
 (() => {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    if (!isSafari) return;
     if (document.getElementById('flatpickr')) return;
     const styleTag = document.createElement('style');
     styleTag.id = 'flatpickr';
