@@ -70,6 +70,7 @@ function DatePicker({
             time_24hr: true,
             minDate,
             maxDate,
+            disableMobile: true,
             ...override.flatpickrOptions,
         };
     }, [dateFormat, formatDate, isReadOnly, lang, maxDate, minDate, override.flatpickrOptions]);
@@ -124,12 +125,12 @@ function DatePicker({
             }
         },
         [
-            calendarButtonLabel,
             classes.container,
             classes.todayContainer,
             classes.todayContainerDisabled,
-            todayClicked,
             shouldDisableToday,
+            todayClicked,
+            calendarButtonLabel,
         ],
     );
 
