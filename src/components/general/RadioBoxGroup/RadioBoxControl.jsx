@@ -8,40 +8,44 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'RadioBoxControl');
 
 function RadioBoxControl({
-    children,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
     option,
-    onChange,
-    onBlur,
     value,
     isReadOnly,
+    onChange,
+    onBlur,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, RadioBoxControl.overrides);
 
+    const {
+        value: optionValue,
+        isReadOnly: optionIsReadOnly,
+        overrides: optionOverrides,
+        ...optionProps
+    } = option;
+
     const onChangeRadio = useCallback(() => {
-        onChange && onChange(option.value);
-        onBlur && onBlur(option.value);
-    }, [onBlur, onChange, option.value]);
+        onChange && onChange(optionValue);
+        onBlur && onBlur(optionValue);
+    }, [onBlur, onChange, optionValue]);
 
     return (
         <div
             className={classes.radioBoxControl}
-            onClick={isReadOnly || option.isReadOnly ? undefined : onChangeRadio}
+            onClick={isReadOnly || optionIsReadOnly ? undefined : onChangeRadio}
             {...override.radioBoxControl}
         >
             <RadioBox
-                checked={value === option.value}
-                icon={option.icon}
-                title={option.title}
-                text={option.text}
-                isReadOnly={isReadOnly || option.isReadOnly}
-                children={option.children}
-                overrides={overridesProp.radioBox}
+                {...props}
+                {...optionProps}
+                checked={value === optionValue}
+                isReadOnly={isReadOnly || optionIsReadOnly}
+                overrides={{ ...overridesProp.radioBox, ...optionOverrides }}
             />
         </div>
     );

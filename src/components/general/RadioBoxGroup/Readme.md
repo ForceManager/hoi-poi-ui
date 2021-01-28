@@ -14,18 +14,21 @@ let options = [
         title: 'Lorem ipsum',
         text: 'Lorem ipsum dolor sit amet',
         value: 'lorem',
+        className: 'radio-group__accounts--add',
     },
     {
         icon: 'accountsEdit',
         title: 'Lorem ipsum 2',
         text: 'Lorem ipsum dolor sit amet 2',
         value: 'lorem2',
+        className: 'radio-group__accounts--edit',
     },
     {
         icon: 'accountDetails',
         title: 'Lorem ipsum 3',
         text: 'Lorem ipsum dolor sit amet 3',
         value: 'lorem3',
+        className: 'radio-group__accounts--details',
         children,
     },
 ];
