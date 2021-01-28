@@ -28,7 +28,7 @@ export default (theme) => ({
     radioLabel: {
         marginLeft: 10,
         ...theme.typography.defaultText,
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral900,
         fontWeight: 400,
     },
     isReadOnly: {
