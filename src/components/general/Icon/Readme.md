@@ -45,6 +45,8 @@ Actions:
 <span> </span>
 <Icon name="doneAll"/>
 <span> </span>
+<Icon name="editArea"/>
+<span> </span>
 <Icon name="emailLate"/>
 <span> </span>
 <Icon name="emailReceive"/>

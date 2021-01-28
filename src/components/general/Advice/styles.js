@@ -107,5 +107,6 @@ export default (theme) => ({
     },
     dismiss: {
         alignSelf: 'flex-end',
+        marginTop: 16,
     },
 });

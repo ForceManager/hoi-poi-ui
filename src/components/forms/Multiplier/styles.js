@@ -101,4 +101,9 @@ export default (theme) => ({
     noLabel: {
         '& + [class*="removeIcon"]': { marginTop: '0 !important' },
     },
+    showRemove: {
+        '& [class*="formControl"]': {
+            maxWidth: 288,
+        },
+    },
 });
