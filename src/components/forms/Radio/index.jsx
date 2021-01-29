@@ -27,6 +27,7 @@ function Radio({
         classes.root,
         {
             [classes.disabled]: isDisabled,
+            [classes.checked]: checked,
         },
         classNameProp,
     );
