@@ -1,27 +1,6 @@
 Default:
 
 ```jsx
-<Chip>Lorem ipsum</Chip>
-<span> </span>
-<Chip isActive>Lorem ipsum</Chip>
-<span> </span>
-<Chip isDisabled>Lorem ipsum</Chip>
-<span> </span>
-<Chip isReadOnly>Lorem ipsum</Chip>
-<br/>
-<br/>
-<Chip isFilled>Lorem ipsum</Chip>
-<span> </span>
-<Chip isFilled isActive>Lorem ipsum</Chip>
-<span> </span>
-<Chip isFilled isDisabled>Lorem ipsum</Chip>
-<span> </span>
-<Chip isFilled isReadOnly>Lorem ipsum</Chip>
-```
-
-Filled:
-
-```jsx
 <Chip onClick={() => {}}>Lorem ipsum</Chip>
 <span> </span>
 <Chip onClick={() => {}} isActive>Lorem ipsum</Chip>
@@ -32,6 +11,72 @@ Filled:
 <span> </span>
 <br/>
 <br/>
+<Chip onClick={() => {}} onRemove={() => {}}>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} onRemove={() => {}} isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip isFolded onRemove={() => {}}>Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isFolded isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip isFolded onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isActive
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isDisabled
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isReadOnly
+>
+  Lorem ipsum
+</Chip>
+<br/>
+<br/>
+<Chip onClick={() => {}} icon="send" isFolded onRemove={() => {}}>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" onRemove={() => {}} isFolded isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFolded onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFolded onRemove={() => {}}  isReadOnly>Lorem ipsum</Chip>
+```
+
+Filled:
+
+```jsx
 <Chip onClick={() => {}} isFilled>Lorem ipsum</Chip>
 <span> </span>
 <Chip onClick={() => {}} isFilled isActive>Lorem ipsum</Chip>
@@ -41,31 +86,11 @@ Filled:
 <Chip onClick={() => {}} isFilled isReadOnly>Lorem ipsum</Chip>
 <br/>
 <br/>
-<br/>
-<Chip onClick={() => {}} onRemove={() => {}}>Lorem ipsum</Chip>
-<span> </span>
-<Chip onClick={() => {}} onRemove={() => {}} isActive>Lorem ipsum</Chip>
-<span> </span>
-<Chip onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
-<span> </span>
-<br/>
-<br/>
 <Chip onRemove={() => {}} isFilled>Lorem ipsum</Chip>
 <span> </span>
 <Chip onRemove={() => {}} isFilled isActive>Lorem ipsum</Chip>
 <span> </span>
 <Chip onRemove={() => {}} isFilled isDisabled>Lorem ipsum</Chip>
-<span> </span>
-<Chip onRemove={() => {}} isFilled isReadOnly>Lorem ipsum</Chip>
-<span> </span>
-<br/>
-<br/>
-<br/>
-<Chip isFolded onRemove={() => {}}>Lorem ipsum</Chip>
-<span> </span>
-<Chip onRemove={() => {}} isFolded isActive>Lorem ipsum</Chip>
-<span> </span>
-<Chip isFolded onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
 <span> </span>
 <br/>
 <br/>
@@ -74,67 +99,139 @@ Filled:
 <Chip onRemove={() => {}} isFolded isFilled isActive>Lorem ipsum</Chip>
 <span> </span>
 <Chip isFolded onRemove={() => {}} isFilled isDisabled>Lorem ipsum</Chip>
-<span> </span>
-<Chip isFolded onRemove={() => {}} isFilled isReadOnly>Lorem ipsum</Chip>
-<span> </span>
-```
-
-With avatar:
-
-```jsx
-<Chip
-  onClick={() => {}}
-  src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+<br/>
+<br/>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
   placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
   alt="image"
->
-  Lorem ipsum
-</Chip>
-<span> </span>
-<Chip
-  onClick={() => {}}
-  isActive
-  src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
-  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
-  alt="image"
->
-  Lorem ipsum
-</Chip>
-<span> </span>
-<Chip
-  onClick={() => {}}
-  src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
-  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
-  alt="image"
+  onRemove={() => {}}
+  isFolded
   isFilled
 >
   Lorem ipsum
 </Chip>
 <span> </span>
-<Chip
-  onClick={() => {}}
-  isFilled
-  isActive
-  src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
   placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
   alt="image"
+  onRemove={() => {}}
+  isFolded
+  isActive
+  isFilled
 >
   Lorem ipsum
 </Chip>
 <span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isDisabled
+  isFilled
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isReadOnly
+  isFilled
+>
+  Lorem ipsum
+</Chip>
+<br/>
+<br/>
+<Chip onClick={() => {}} icon="send" isFilled isFolded onRemove={() => {}}>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFilled onRemove={() => {}} isFolded isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFilled isFolded onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFilled isFolded onRemove={() => {}}  isReadOnly>Lorem ipsum</Chip>
 ```
 
-With icon:
+Outlined:
 
 ```jsx
-<Chip onClick={() => {}} icon="send">Lorem ipsum</Chip>
+<Chip onClick={() => {}} isOutlined>Lorem ipsum</Chip>
 <span> </span>
-<Chip onClick={() => {}} icon="send" isActive>Lorem ipsum</Chip>
+<Chip onClick={() => {}} isOutlined isActive>Lorem ipsum</Chip>
 <span> </span>
-<Chip onClick={() => {}} icon="send" isFilled>Lorem ipsum</Chip>
+<Chip onClick={() => {}} isOutlined isDisabled>Lorem ipsum</Chip>
 <span> </span>
-<Chip onClick={() => {}} icon="send" isActive isFilled>Lorem ipsum</Chip>
+<Chip onClick={() => {}} isOutlined isReadOnly>Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip onRemove={() => {}} isOutlined>Lorem ipsum</Chip>
 <span> </span>
+<Chip onRemove={() => {}} isOutlined isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isOutlined isDisabled>Lorem ipsum</Chip>
+<span> </span>
+<br/>
+<br/>
+<Chip onRemove={() => {}} isFolded isOutlined>Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isFolded isOutlined isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip isFolded onRemove={() => {}} isOutlined isDisabled>Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isOutlined
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isActive
+  isOutlined
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isDisabled
+  isOutlined
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isReadOnly
+  isOutlined
+>
+  Lorem ipsum
+</Chip>
+<br/>
+<br/>
+<Chip onClick={() => {}} icon="send" isOutlined isFolded onRemove={() => {}}>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isOutlined onRemove={() => {}} isFolded isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isOutlined isFolded onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isOutlined isFolded onRemove={() => {}}  isReadOnly>Lorem ipsum</Chip>
 ```
 
 Interactive:
@@ -153,6 +250,19 @@ const [state, setState] = useState({
                 isFolded: !state.isFolded,
             })
         }
+        isFolded={state.isFolded}
+        isUnfolded={!state.isFolded}
+    >
+        Lorem ipsum
+    </Chip>
+    <span> </span>
+    <Chip
+        onClick={() =>
+            setState({
+                isFolded: !state.isFolded,
+            })
+        }
+        isOutlined
         isFolded={state.isFolded}
         isUnfolded={!state.isFolded}
     >
@@ -193,13 +303,85 @@ const [state, setState] = useState({
 Size:
 
 ```jsx
-<Chip>Lorem ipsum</Chip>
+<Chip onClick={() => {}} isFilled size="large">Lorem ipsum</Chip>
 <span> </span>
-<Chip isFilled>Lorem ipsum</Chip>
+<Chip onClick={() => {}} isFilled isActive size="large">Lorem ipsum</Chip>
 <span> </span>
-<Chip size="large">Lorem ipsum</Chip>
+<Chip onClick={() => {}} isFilled isDisabled size="large">Lorem ipsum</Chip>
 <span> </span>
-<Chip  isFilled size="large">Lorem ipsum</Chip>
+<Chip onClick={() => {}} isFilled isReadOnly size="large">Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip onRemove={() => {}} isFilled size="large">Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isFilled isActive size="large">Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isFilled isDisabled size="large">Lorem ipsum</Chip>
+<span> </span>
+<br/>
+<br/>
+<Chip onRemove={() => {}} isFolded isFilled size="large">Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isFolded isFilled isActive size="large">Lorem ipsum</Chip>
+<span> </span>
+<Chip isFolded onRemove={() => {}} isFilled isDisabled size="large">Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isFilled
+  size="large"
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isActive
+  isFilled
+  size="large"
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isDisabled
+  isFilled
+  size="large"
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isReadOnly
+  isFilled
+  size="large"
+>
+  Lorem ipsum
+</Chip>
+<br/>
+<br/>
+<Chip onClick={() => {}} icon="send" isFilled isFolded onRemove={() => {}} size="large">Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFilled onRemove={() => {}} isFolded isActive size="large">Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFilled isFolded onRemove={() => {}}  isDisabled size="large">Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isFilled isFolded onRemove={() => {}}  isReadOnly size="large">Lorem ipsum</Chip>
 ```
 
 ### Component tree
@@ -208,4 +390,11 @@ Size:
 
 -   root - root element
 -   wrapper - div container
+-   icons - Right icons wrapper
+-   [Icon](#/General?id=icon) - Left icon
+-   [Avatar](#/General?id=avatar)
+-   [DropDownIcon](#/General?id=icon)
+-   [CloseIcon](#/General?id=icon)
+-   [DividerIcon](#/General?id=icon)
+-   [ReadOnlyIcon](#/General?id=icon)
 -   [Text](#/Typography?id=text)

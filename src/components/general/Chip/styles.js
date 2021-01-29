@@ -72,9 +72,6 @@ export default (theme) => ({
     iconLeft: {
         marginRight: 4,
     },
-    closeIcon: {
-        margin: '0 -8px',
-    },
     iconFolded: {
         transform: 'rotate(-90deg)',
     },
@@ -130,6 +127,14 @@ export default (theme) => ({
             '& $icon path, & $icon rect': {
                 fill: theme.colors.blue400,
             },
+        },
+    },
+    isOutlined: {
+        border: '1px solid',
+        borderColor: theme.colors.neutral400,
+        transition: 'border-color 0.15s ease',
+        '&$clickable:hover': {
+            borderColor: theme.colors.neutral300,
         },
     },
 });

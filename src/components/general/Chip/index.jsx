@@ -17,6 +17,7 @@ function Chip({
     className: classNameProp,
     size,
     isFilled,
+    isOutlined,
     isFolded,
     isUnfolded,
     isDisabled,
@@ -40,6 +41,7 @@ function Chip({
         classes.root,
         {
             [classes.isFilled]: isFilled,
+            [classes.isOutlined]: isOutlined,
             [classes.isDisabled]: isDisabled,
             [classes.isReadOnly]: isReadOnly && !isDisabled,
             [classes.isActive]: isActive,
@@ -70,6 +72,7 @@ function Chip({
                     key="chip__dropdown"
                     name="arrowDropDown"
                     size="large"
+                    {...override.DropDownIcon}
                 />,
             );
         }
@@ -83,6 +86,7 @@ function Chip({
                     key="chip__divider"
                     name="verticalDivider"
                     size="small"
+                    {...override.DividerIcon}
                 />,
             );
         }
@@ -91,13 +95,27 @@ function Chip({
         if (onRemove) {
             const iconClass = classnames(classes.icon, classes.closeIcon);
             icons.push(
-                <Icon className={iconClass} key="chip__close" name="closeSmall" size="large" />,
+                <Icon
+                    className={iconClass}
+                    key="chip__close"
+                    name="closeRaw"
+                    size="raw"
+                    {...override.CloseIcon}
+                />,
             );
         }
 
         // ReadOnly
         if (isReadOnly)
-            icons = [<Icon className={classes.icon} key="chip__read-only" name="lock" />];
+            icons = [
+                <Icon
+                    className={classes.icon}
+                    key="chip__read-only"
+                    name="lockRaw"
+                    size="raw"
+                    {...override.ReadOnlyIcon}
+                />,
+            ];
 
         return icons;
     }, [
@@ -110,6 +128,10 @@ function Chip({
         isReadOnly,
         isUnfolded,
         onRemove,
+        override.CloseIcon,
+        override.DividerIcon,
+        override.DropDownIcon,
+        override.ReadOnlyIcon,
     ]);
 
     return (
@@ -118,9 +140,13 @@ function Chip({
             onClick={!isDisabled && !isReadOnly ? onClick : undefined}
             {...override.root}
         >
-            <div className={classes.wrapper}>
+            <div className={classes.wrapper} {...override.wrapper}>
                 {icon && (
-                    <Icon className={classnames(classes.icon, classes.iconLeft)} name={icon} />
+                    <Icon
+                        className={classnames(classes.icon, classes.iconLeft)}
+                        name={icon}
+                        {...override.Icon}
+                    />
                 )}
                 {src && (
                     <Avatar
@@ -129,24 +155,41 @@ function Chip({
                         src={src}
                         placeholder={placeholder}
                         alt={alt}
+                        {...override.Avatar}
                     />
                 )}
                 <Text type="caption" className={classes.Text} {...override.Text}>
                     {children}
                 </Text>
-                {icons.length > 0 && <div className={classes.icons}>{icons}</div>}
+                {icons.length > 0 && (
+                    <div className={classes.icons} {...override.icons}>
+                        {icons}
+                    </div>
+                )}
             </div>
         </div>
     );
 }
 
-Chip.overrides = ['root', 'Text'];
+Chip.overrides = [
+    'root',
+    'Text',
+    'Icon',
+    'Avatar',
+    'DropDownIcon',
+    'CloseIcon',
+    'DividerIcon',
+    'ReadOnlyIcon',
+    'icons',
+    'wrapper',
+];
 
 Chip.defaultProps = {
     className: '',
     overrides: {},
     size: 'small',
     isFilled: false,
+    isOutlined: false,
     isFolded: false,
     isUnfolded: false,
     isDisabled: false,
@@ -164,6 +207,7 @@ Chip.propTypes = {
     alt: PropTypes.string,
     icon: PropTypes.string,
     isFilled: PropTypes.bool,
+    isOutlined: PropTypes.bool,
     isFolded: PropTypes.bool,
     isUnfolded: PropTypes.bool,
     isDisabled: PropTypes.bool,

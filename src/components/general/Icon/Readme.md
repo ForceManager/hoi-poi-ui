@@ -355,6 +355,30 @@ Icons:
 <span> </span>
 ```
 
+Raw Icons:
+
+```jsx
+<Icon name="lockRaw" size="raw" />
+<span> </span>
+<Icon name="closeRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropUpRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropDownRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropRightRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropLeftRaw" size="raw" />
+<span> </span>
+<Icon name="arrowUpRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDownRaw" size="raw" />
+<span> </span>
+<Icon name="arrowRightRaw" size="raw" />
+<span> </span>
+<Icon name="arrowLeftRaw" size="raw" />
+```
+
 File Icons:
 
 ```jsx

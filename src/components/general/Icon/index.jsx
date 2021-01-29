@@ -195,6 +195,18 @@ import Html from './fileIcons/Html';
 import Zip from './fileIcons/Zip';
 import Link from './fileIcons/Link';
 
+// Raw icons
+import LockRaw from './rawIcons/Lock';
+import CloseRaw from './rawIcons/Close';
+import ArrowDropUpRaw from './rawIcons/ArrowDropUp';
+import ArrowDropDownRaw from './rawIcons/ArrowDropDown';
+import ArrowDropLeftRaw from './rawIcons/ArrowDropLeft';
+import ArrowDropRightRaw from './rawIcons/ArrowDropRight';
+import ArrowUpRaw from './rawIcons/ArrowUp';
+import ArrowDownRaw from './rawIcons/ArrowDown';
+import ArrowLeftRaw from './rawIcons/ArrowLeft';
+import ArrowRightRaw from './rawIcons/ArrowRight';
+
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Icon');
@@ -383,6 +395,17 @@ const ICONS = {
     starHalf: StarHalf,
     starsCircle: StarsCircle,
     send: Send,
+    //Raw
+    lockRaw: LockRaw,
+    closeRaw: CloseRaw,
+    arrowDropUpRaw: ArrowDropUpRaw,
+    arrowDropDownRaw: ArrowDropDownRaw,
+    arrowDropLeftRaw: ArrowDropLeftRaw,
+    arrowDropRightRaw: ArrowDropRightRaw,
+    arrowUpRaw: ArrowUpRaw,
+    arrowDownRaw: ArrowDownRaw,
+    arrowLeftRaw: ArrowLeftRaw,
+    arrowRightRaw: ArrowRightRaw,
 };
 
 function Icon({
