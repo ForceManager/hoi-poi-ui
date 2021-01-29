@@ -394,7 +394,7 @@ Size:
 -   [Icon](#/General?id=icon) - Left icon
 -   [Avatar](#/General?id=avatar)
 -   [DropDownIcon](#/General?id=icon)
--   [CloseIcon](#/General?id=icon)
+-   [CloseIcon](#/General?id=icon)0
 -   [DividerIcon](#/General?id=icon)
 -   [ReadOnlyIcon](#/General?id=icon)
 -   [Text](#/Typography?id=text)
