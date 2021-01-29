@@ -391,10 +391,10 @@ Size:
 -   root - root element
 -   wrapper - div container
 -   icons - Right icons wrapper
--   [Icon](#/General?id=icon) - Left icon
+-   [Icon](#/General?id=icon)
 -   [Avatar](#/General?id=avatar)
 -   [DropDownIcon](#/General?id=icon)
--   [CloseIcon](#/General?id=icon)0
+-   [CloseIcon](#/General?id=icon)
 -   [DividerIcon](#/General?id=icon)
 -   [ReadOnlyIcon](#/General?id=icon)
 -   [Text](#/Typography?id=text)
