@@ -204,6 +204,10 @@ Navigation:
 <span> </span>
 <Icon name="fullscreenExit"/>
 <span> </span>
+<Icon name="fullscreenArrows"/>
+<span> </span>
+<Icon name="fullscreenArrowsExit"/>
+<span> </span>
 <Icon name="menu"/>
 <span> </span>
 <Icon name="moreHoriz"/>

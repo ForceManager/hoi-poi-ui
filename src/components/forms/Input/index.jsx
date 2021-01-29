@@ -315,6 +315,7 @@ const Input = forwardRef(
 
         return (
             <InputWrapper
+                {...props}
                 label={label}
                 labelMode={labelMode}
                 error={error}
