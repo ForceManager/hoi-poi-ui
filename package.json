@@ -16,7 +16,7 @@
         "build:umd": "cross-env BABEL_ENV=umd rollup -c rollup.config.js",
         "build:watch": "yarn build:esm --watch",
         "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn publish dist -f ",
-        "release-next": "yarn build && cp package.json dist/ && cp postinstall.js dist/post/ && cp README.md dist/ && yarn publish dist -f --tag next",
+        "release-next": "yarn build && cp package.json dist/ && cp postinstall.js dist/ && cp README.md dist/ && yarn publish dist -f --tag next",
         "test": " cross-env NODE_ENV=test jest",
         "test:snapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
         "gh-pages": "cross-env NODE_ENV=production styleguidist build && gh-pages -d styleguide --repo https://$GH_TOKEN@github.com/ForceManager/hoi-poi-ui.git"
