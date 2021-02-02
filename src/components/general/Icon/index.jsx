@@ -148,6 +148,8 @@ import ExpandLess from './icons/navigation/ExpandLess';
 import ExpandMore from './icons/navigation/ExpandMore';
 import Fullscreen from './icons/navigation/Fullscreen';
 import FullscreenExit from './icons/navigation/FullscreenExit';
+import FullscreenArrows from './icons/navigation/FullscreenArrows';
+import FullscreenArrowsExit from './icons/navigation/FullscreenArrowsExit';
 import Menu from './icons/navigation/Menu';
 import MoreHoriz from './icons/navigation/MoreHoriz';
 import MoreVert from './icons/navigation/MoreVert';
@@ -352,6 +354,8 @@ const ICONS = {
     expandMore: ExpandMore,
     fullscreen: Fullscreen,
     fullscreenExit: FullscreenExit,
+    fullscreenArrows: FullscreenArrows,
+    fullscreenArrowsExit: FullscreenArrowsExit,
     menu: Menu,
     moreHoriz: MoreHoriz,
     moreVert: MoreVert,
