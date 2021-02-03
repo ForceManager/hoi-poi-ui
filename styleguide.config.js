@@ -14,6 +14,7 @@ module.exports = {
                 './src/components/general/Avatar/index.jsx',
                 './src/components/general/Badge/index.jsx',
                 './src/components/general/BadgeNotification/index.jsx',
+                './src/components/general/Breadcrumbs/index.jsx',
                 './src/components/general/Button/index.jsx',
                 './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Chip/index.jsx',

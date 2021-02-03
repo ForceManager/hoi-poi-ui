@@ -10,6 +10,7 @@ export { default as Advice } from './components/general/Advice';
 export { default as Avatar } from './components/general/Avatar';
 export { default as Badge } from './components/general/Badge';
 export { default as BadgeNotification } from './components/general/BadgeNotification';
+export { default as Breadcrumbs } from './components/general/Breadcrumbs';
 export { default as Button } from './components/general/Button';
 export { default as Checkbox } from './components/general/Checkbox';
 export { default as Chip } from './components/general/Chip';
