@@ -44,39 +44,38 @@ function Breadcrumbs({
     );
 
     const breadcrumbItems = useMemo(() => {
-        return (
-            items?.reduce((arr, item, idx) => {
-                if (item) {
-                    const isLast = idx === items.length - 1;
-                    arr.push(
-                        <div
-                            key={item.id || idx}
-                            className={classes.item}
-                            onClick={isLast ? undefined : () => onClickItem(item)}
-                            {...override.item}
-                        >
-                            <Text {...override.Text}>{item.text}</Text>
-                        </div>,
-                    );
-                }
+        if (!items) return null;
+        return items.reduce((arr, item, idx) => {
+            if (item) {
+                const isLast = idx === items.length - 1;
+                arr.push(
+                    <div
+                        key={item.id || idx}
+                        className={classes.item}
+                        onClick={isLast ? undefined : () => onClickItem(item)}
+                        {...override.item}
+                    >
+                        <Text {...override.Text}>{item.text}</Text>
+                    </div>,
+                );
+            }
 
-                if (idx < items.length - 1) {
-                    const dividerClass = classnames(classes.item, classes.divider);
-                    arr.push(
-                        <div
-                            key={`divider-${idx}`}
-                            className={dividerClass}
-                            {...override.item}
-                            {...override.divider}
-                        >
-                            <Icon name="arrowRightRaw" size="raw"></Icon>
-                        </div>,
-                    );
-                }
+            if (idx < items.length - 1) {
+                const dividerClass = classnames(classes.item, classes.divider);
+                arr.push(
+                    <div
+                        key={`divider-${idx}`}
+                        className={dividerClass}
+                        {...override.item}
+                        {...override.divider}
+                    >
+                        <Icon name="arrowRightRaw" size="raw"></Icon>
+                    </div>,
+                );
+            }
 
-                return arr;
-            }, []) ?? null
-        );
+            return arr;
+        }, []);
     }, [
         classes.divider,
         classes.item,
