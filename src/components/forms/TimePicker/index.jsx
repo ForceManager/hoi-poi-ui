@@ -40,13 +40,7 @@ const TimePicker = memo(
         const override = getOverrides(overridesProp, TimePicker.overrides);
         const classes = useClasses(useStyles, classesProp);
 
-        const rootClassName = classnames(
-            classes.root,
-            {
-                [classes.isFullWidth]: isFullWidth,
-            },
-            classNameProp,
-        );
+        const rootClassName = classnames(classes.root, {}, classNameProp);
 
         const [newOptions, setNewOptions] = useState(options || []);
         const [timeValue, setTimeValue] = useState(null);
@@ -308,6 +302,7 @@ const TimePicker = memo(
                     hideSelectedOptions={false}
                     isSearchable={false}
                     onChange={handleOnChange}
+                    isFullWidth={isFullWidth}
                     {...props}
                 />
             </InputWrapper>

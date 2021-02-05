@@ -195,6 +195,7 @@ const formatLabel = (date, label) => {
         filterByKey
         isRequired={true}
         formatLabel={formatLabel}
+        isFullWidth
     />
 </div>;
 ```
