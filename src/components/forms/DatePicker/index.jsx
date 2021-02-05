@@ -14,10 +14,8 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'DatePicker');
 
-// Safari fix
+// Old browser and Safari fix fix
 (() => {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    if (!isSafari) return;
     if (document.getElementById('flatpickr')) return;
     const styleTag = document.createElement('style');
     styleTag.id = 'flatpickr';
@@ -70,6 +68,7 @@ function DatePicker({
             time_24hr: true,
             minDate,
             maxDate,
+            disableMobile: true,
             ...override.flatpickrOptions,
         };
     }, [dateFormat, formatDate, isReadOnly, lang, maxDate, minDate, override.flatpickrOptions]);
@@ -124,12 +123,12 @@ function DatePicker({
             }
         },
         [
-            calendarButtonLabel,
             classes.container,
             classes.todayContainer,
             classes.todayContainerDisabled,
-            todayClicked,
             shouldDisableToday,
+            todayClicked,
+            calendarButtonLabel,
         ],
     );
 
@@ -257,7 +256,7 @@ DatePicker.propTypes = {
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     isFullWidth: PropTypes.bool,
     /** Info popover */
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component with style changes */

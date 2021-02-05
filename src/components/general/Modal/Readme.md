@@ -647,51 +647,6 @@ const [isOpen, setIsOpen] = useState({
 </div>;
 ```
 
-With no text content:
-
-```jsx
-import { Button, Title, Text, Icon, DataGrid } from 'hoi-poi-ui';
-import { useState, useMemo } from 'react';
-
-const [state, setState] = useState({});
-let isOpen = state.isOpen || false;
-let i = 10;
-let rowData = [];
-while (i--) {
-    rowData.push({
-        make: 'Toyota',
-        model: 'Celica',
-        price: Math.round(Math.random() * 1000) + '$',
-    });
-}
-
-<div>
-    <Button onClick={() => setState({ isOpen: !isOpen })}>Show</Button>
-    <span> </span>
-    <Modal title="Lorem modal" isOpen={isOpen} onRequestClose={() => setState({ isOpen: false })}>
-        <div style={{ height: 350 }}>
-            <DataGrid
-                columnDefs={[
-                    {
-                        headerName: 'Make',
-                        field: 'make',
-                    },
-                    {
-                        headerName: 'Model',
-                        field: 'model',
-                    },
-                    {
-                        headerName: 'Price',
-                        field: 'price',
-                    },
-                ]}
-                rowData={rowData.length ? rowData : null}
-            />
-        </div>
-    </Modal>
-</div>;
-```
-
 Without close icon:
 
 ```jsx
@@ -721,7 +676,7 @@ let isOpen = state.isOpen || false;
 With custom title component:
 
 ```jsx
-import { Button, Title, Text, Icon } from 'hoi-poi-ui';
+import { Button, Text, Icon } from 'hoi-poi-ui';
 import { useState, useMemo } from 'react';
 
 const [state, setState] = useState({});
@@ -730,7 +685,7 @@ let isOpen = state.isOpen || false;
 const title = useMemo(
     () => (
         <div style={{ flexDirection: 'column' }}>
-            <Title>Document name</Title>
+            <Text type="h6">Document name</Text>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <Icon name="pdf" />
                 <Text style={{ marginLeft: 10 }}>PDF, 2MB, 20/10/2019</Text>

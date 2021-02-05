@@ -29,6 +29,7 @@ export default (theme) => ({
         width: 64,
         height: 64,
     },
+    raw: {},
     clickable: {
         cursor: 'pointer',
     },

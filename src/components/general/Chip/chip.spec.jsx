@@ -2,60 +2,28 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import Chip from '../../general/Chip';
+import Chip from '../Chip';
 
 describe('Chip', () => {
-    test('if onClose is true', () => {
-        const mockFunc = jest.fn();
+    test('default match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Chip onClose={mockFunc}>Lorem ipsum</Chip>
+                <Chip>Lorem ipsum</Chip>
             </HoiPoiProvider>,
         );
-        wrapper
-            .find('Icon')
-            .props()
-            .onClick();
-        expect(mockFunc.mock.calls.length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('if img is added and onClose true', () => {
-        const mockFunc = jest.fn();
-
+    test('filled variation match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
                 <Chip
-                    url="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"
-                    onClose={mockFunc}
-                >
-                    Lorem ipsum
-                </Chip>
-            </HoiPoiProvider>,
-        );
-
-        wrapper
-            .find('Icon')
-            .props()
-            .onClick();
-        expect(mockFunc.mock.calls.length).toEqual(1);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    test('if picture is added and onClose false', () => {
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <Chip url="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg">
-                    Lorem ipsum
-                </Chip>
-            </HoiPoiProvider>,
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-    test('if isShrinked is true with picture', () => {
-        const wrapper = mount(
-            <HoiPoiProvider>
-                <Chip
-                    url="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"
-                    isShrinked={true}
+                    src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+                    placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+                    alt="image"
+                    onRemove={() => {}}
+                    isFolded
+                    isActive
+                    isFilled
                 >
                     Lorem ipsum
                 </Chip>
@@ -63,10 +31,28 @@ describe('Chip', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('if isShrinked is true without picture', () => {
+    test('outlined variation match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Chip isShrinked={true}>Lorem ipsum</Chip>
+                <Chip
+                    src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+                    placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+                    alt="image"
+                    onRemove={() => {}}
+                    isFolded
+                    isReadOnly
+                    isOutlined
+                >
+                    Lorem ipsum
+                </Chip>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('big size match', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Chip size="large">Lorem ipsum</Chip>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();

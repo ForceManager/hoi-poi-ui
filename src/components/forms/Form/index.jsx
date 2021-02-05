@@ -20,7 +20,7 @@ function Form({
     errors,
     customFields,
     useNativeForm,
-    fieldMode,
+    orientation,
     ...props
 }) {
     // Overrides
@@ -96,7 +96,7 @@ function Form({
             title={section.title}
             className={section.className}
             isExpandable={section.isExpandable}
-            fieldMode={fieldMode}
+            orientation={orientation}
             {...override.Section}
         >
             {section.fields.map((field) => {
@@ -189,7 +189,7 @@ Form.propTypes = {
             ),
         }),
     ).isRequired,
-    fieldMode: PropTypes.string,
+    orientation: PropTypes.oneOf(['horizontal', 'vertical']),
 };
 
 export default React.memo(Form);

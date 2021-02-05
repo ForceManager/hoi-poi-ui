@@ -48,11 +48,19 @@ import ChatFilled from './icons/ChatFilled';
 import Send from './icons/Send';
 import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
+import FileDownload from './icons/FileDownload';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
 import AccountDetails from './icons/actions/AccountDetails';
-import AddAccount from './icons/actions/AddAccount';
+import AccountsAdd from './icons/actions/AccountsAdd';
+import AccountsEdit from './icons/actions/AccountsEdit';
+import ContactAdd from './icons/actions/ContactAdd';
+import ContactEdit from './icons/actions/ContactEdit';
+import OpportunityAdd from './icons/actions/OpportunityAdd';
+import OpportunityEdit from './icons/actions/OpportunityEdit';
+import ValueListAdd from './icons/actions/ValueListAdd';
+import ValueListEdit from './icons/actions/ValueListEdit';
 import AddActivity from './icons/actions/AddActivity';
 import AddEvent from './icons/actions/AddEvent';
 import Autorenew from './icons/actions/Autorenew';
@@ -66,6 +74,7 @@ import Delete from './icons/actions/Delete';
 import Documents from './icons/actions/Documents';
 import Done from './icons/actions/Done';
 import DoneAll from './icons/actions/DoneAll';
+import EditArea from './icons/actions/EditArea';
 import EmailLate from './icons/actions/EmailLate';
 import EmailReceive from './icons/actions/EmailReceive';
 import Event from './icons/actions/Event';
@@ -139,6 +148,8 @@ import ExpandLess from './icons/navigation/ExpandLess';
 import ExpandMore from './icons/navigation/ExpandMore';
 import Fullscreen from './icons/navigation/Fullscreen';
 import FullscreenExit from './icons/navigation/FullscreenExit';
+import FullscreenArrows from './icons/navigation/FullscreenArrows';
+import FullscreenArrowsExit from './icons/navigation/FullscreenArrowsExit';
 import Menu from './icons/navigation/Menu';
 import MoreHoriz from './icons/navigation/MoreHoriz';
 import MoreVert from './icons/navigation/MoreVert';
@@ -186,6 +197,18 @@ import Bdd from './fileIcons/Bdd';
 import Html from './fileIcons/Html';
 import Zip from './fileIcons/Zip';
 import Link from './fileIcons/Link';
+
+// Raw icons
+import LockRaw from './rawIcons/Lock';
+import CloseRaw from './rawIcons/Close';
+import ArrowDropUpRaw from './rawIcons/ArrowDropUp';
+import ArrowDropDownRaw from './rawIcons/ArrowDropDown';
+import ArrowDropLeftRaw from './rawIcons/ArrowDropLeft';
+import ArrowDropRightRaw from './rawIcons/ArrowDropRight';
+import ArrowUpRaw from './rawIcons/ArrowUp';
+import ArrowDownRaw from './rawIcons/ArrowDown';
+import ArrowLeftRaw from './rawIcons/ArrowLeft';
+import ArrowRightRaw from './rawIcons/ArrowRight';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -235,10 +258,18 @@ const ICONS = {
     chatFilled: ChatFilled,
     emptyAvatar: EmptyAvatar,
     draggableSort: DraggableSort,
+    fileDownload: FileDownload,
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,
-    addAccount: AddAccount,
+    accountsAdd: AccountsAdd,
+    accountsEdit: AccountsEdit,
+    contactAdd: ContactAdd,
+    contactEdit: ContactEdit,
+    opportunityAdd: OpportunityAdd,
+    opportunityEdit: OpportunityEdit,
+    valueListAdd: ValueListAdd,
+    valueListEdit: ValueListEdit,
     addActivity: AddActivity,
     addEvent: AddEvent,
     autorenew: Autorenew,
@@ -252,6 +283,7 @@ const ICONS = {
     documents: Documents,
     done: Done,
     doneAll: DoneAll,
+    editArea: EditArea,
     emailLate: EmailLate,
     emailReceive: EmailReceive,
     event: Event,
@@ -322,6 +354,8 @@ const ICONS = {
     expandMore: ExpandMore,
     fullscreen: Fullscreen,
     fullscreenExit: FullscreenExit,
+    fullscreenArrows: FullscreenArrows,
+    fullscreenArrowsExit: FullscreenArrowsExit,
     menu: Menu,
     moreHoriz: MoreHoriz,
     moreVert: MoreVert,
@@ -367,6 +401,17 @@ const ICONS = {
     starHalf: StarHalf,
     starsCircle: StarsCircle,
     send: Send,
+    //Raw
+    lockRaw: LockRaw,
+    closeRaw: CloseRaw,
+    arrowDropUpRaw: ArrowDropUpRaw,
+    arrowDropDownRaw: ArrowDropDownRaw,
+    arrowDropLeftRaw: ArrowDropLeftRaw,
+    arrowDropRightRaw: ArrowDropRightRaw,
+    arrowUpRaw: ArrowUpRaw,
+    arrowDownRaw: ArrowDownRaw,
+    arrowLeftRaw: ArrowLeftRaw,
+    arrowRightRaw: ArrowRightRaw,
 };
 
 function Icon({
@@ -455,7 +500,7 @@ Icon.defaultProps = {
 Icon.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
+    size: PropTypes.oneOf(['raw', 'small', 'medium', 'large', 'big', 'huge']),
     name: PropTypes.string,
     color: PropTypes.string,
     onClick: PropTypes.func,

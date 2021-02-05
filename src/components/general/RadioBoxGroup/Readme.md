@@ -10,22 +10,25 @@ const children = (
 
 let options = [
     {
-        icon: 'addAccount',
+        icon: 'accountsAdd',
         title: 'Lorem ipsum',
         text: 'Lorem ipsum dolor sit amet',
         value: 'lorem',
+        className: 'radio-group__accounts--add',
     },
     {
-        icon: 'accountDetails',
+        icon: 'accountsEdit',
         title: 'Lorem ipsum 2',
         text: 'Lorem ipsum dolor sit amet 2',
         value: 'lorem2',
+        className: 'radio-group__accounts--edit',
     },
     {
-        icon: 'accountCheckin',
+        icon: 'accountDetails',
         title: 'Lorem ipsum 3',
         text: 'Lorem ipsum dolor sit amet 3',
         value: 'lorem3',
+        className: 'radio-group__accounts--details',
         children,
     },
 ];
@@ -41,19 +44,19 @@ import { useState } from 'react';
 
 let options = [
     {
-        icon: 'addAccount',
+        icon: 'accountsAdd',
         title: 'Lorem ipsum',
         text: 'Lorem ipsum dolor sit amet',
         value: 'lorem',
     },
     {
-        icon: 'accountDetails',
+        icon: 'accountsEdit',
         title: 'Lorem ipsum 2',
         text: 'Lorem ipsum dolor sit amet 2',
         value: 'lorem2',
     },
     {
-        icon: 'accountCheckin',
+        icon: 'accountDetails',
         title: 'Lorem ipsum 3',
         text: 'Lorem ipsum dolor sit amet 3',
         value: 'lorem3',
@@ -77,20 +80,20 @@ import { useState } from 'react';
 
 let options = [
     {
-        icon: 'addAccount',
+        icon: 'accountsAdd',
         title: 'Lorem ipsum',
         text: 'Lorem ipsum dolor sit amet',
         value: 'lorem',
     },
     {
-        icon: 'accountDetails',
+        icon: 'accountsEdit',
         title: 'Lorem ipsum 2',
         text: 'Lorem ipsum dolor sit amet 2',
         value: 'lorem2',
         isReadOnly: true,
     },
     {
-        icon: 'accountCheckin',
+        icon: 'accountDetails',
         title: 'Lorem ipsum 3',
         text: 'Lorem ipsum dolor sit amet 3',
         value: 'lorem3',

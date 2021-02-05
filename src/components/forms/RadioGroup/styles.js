@@ -20,7 +20,7 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         lineHeight: '20px',
-        marginBottom: 14,
+        marginBottom: 16,
         borderRadius: 4,
         border: `solid 1px ${theme.colors.neutral400}`,
         padding: 8,
@@ -28,7 +28,7 @@ export default (theme) => ({
     radioLabel: {
         marginLeft: 10,
         ...theme.typography.defaultText,
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral900,
         fontWeight: 400,
     },
     isReadOnly: {

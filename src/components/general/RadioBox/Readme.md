@@ -3,27 +3,27 @@ States:
 ```jsx
 <div>
     <RadioBox
-        icon="addAccount"
+        icon="accountsAdd"
         title={'Create new accounts'}
         text={'Import data to add new accounts to ForceManager'}
     />
     <br />
     <RadioBox
-        icon="accountDetails"
+        icon="accountsEdit"
         title={'Update existing accounts'}
         text={'Import data to update ForceManager accounts'}
         checked
     />
     <br />
     <RadioBox
-        icon="addAccount"
+        icon="opportunityAdd"
         title={'Create new accounts'}
         text={'Import data to add new accounts to ForceManager'}
         isReadOnly
     />
     <br />
     <RadioBox
-        icon="accountDetails"
+        icon="opportunityEdit"
         title={'Update existing accounts'}
         text={'Import data to update ForceManager accounts'}
         isReadOnly
@@ -38,7 +38,7 @@ With children
 import { Text } from 'hoi-poi-ui';
 
 <RadioBox
-    icon="accountDetails"
+    icon="accountsAdd"
     title={'Update existing accounts'}
     text={'Import data to update ForceManager accounts'}
     checked

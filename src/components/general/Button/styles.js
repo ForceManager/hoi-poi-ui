@@ -83,8 +83,9 @@ export default (theme) => ({
         color: theme.colors.orange500,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.orange600,
-                color: theme.colors.orange600,
+                borderColor: theme.colors.orange500,
+                backgroundColor: theme.colors.orange200,
+                color: theme.colors.orange500,
             },
             '&:active': {
                 borderColor: theme.colors.orange400,
@@ -100,8 +101,9 @@ export default (theme) => ({
         color: theme.colors.red500,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.red600,
-                color: theme.colors.red600,
+                borderColor: theme.colors.red500,
+                backgroundColor: theme.colors.red200,
+                color: theme.colors.red500,
             },
             '&:active': {
                 borderColor: theme.colors.red400,
@@ -117,8 +119,9 @@ export default (theme) => ({
         color: theme.colors.neutral700,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.neutral200,
-                color: theme.colors.neutral600,
+                borderColor: theme.colors.neutral400,
+                backgroundColor: theme.colors.neutral300,
+                color: theme.colors.neutral700,
             },
             '&:active': {
                 borderColor: theme.colors.neutral300,

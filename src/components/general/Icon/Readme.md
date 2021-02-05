@@ -5,7 +5,21 @@ Actions:
 <span> </span>
 <Icon name="accountDetails"/>
 <span> </span>
-<Icon name="addAccount"/>
+<Icon name="accountsAdd"/>
+<span> </span>
+<Icon name="sccountsEdit"/>
+<span> </span>
+<Icon name="contactAdd"/>
+<span> </span>
+<Icon name="contactEdit"/>
+<span> </span>
+<Icon name="opportunityAdd"/>
+<span> </span>
+<Icon name="opportunityEdit"/>
+<span> </span>
+<Icon name="valueListAdd"/>
+<span> </span>
+<Icon name="valueListEdit"/>
 <span> </span>
 <Icon name="addActivity"/>
 <span> </span>
@@ -30,6 +44,8 @@ Actions:
 <Icon name="done"/>
 <span> </span>
 <Icon name="doneAll"/>
+<span> </span>
+<Icon name="editArea"/>
 <span> </span>
 <Icon name="emailLate"/>
 <span> </span>
@@ -188,6 +204,10 @@ Navigation:
 <span> </span>
 <Icon name="fullscreenExit"/>
 <span> </span>
+<Icon name="fullscreenArrows"/>
+<span> </span>
+<Icon name="fullscreenArrowsExit"/>
+<span> </span>
 <Icon name="menu"/>
 <span> </span>
 <Icon name="moreHoriz"/>
@@ -336,6 +356,33 @@ Icons:
 <Icon name="emptyAvatar"/>
 <span> </span>
 <Icon name="draggableSort"/>
+<span> </span>
+<Icon name="fileDownload"/>
+<span> </span>
+```
+
+Raw Icons:
+
+```jsx
+<Icon name="lockRaw" size="raw" />
+<span> </span>
+<Icon name="closeRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropUpRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropDownRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropRightRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDropLeftRaw" size="raw" />
+<span> </span>
+<Icon name="arrowUpRaw" size="raw" />
+<span> </span>
+<Icon name="arrowDownRaw" size="raw" />
+<span> </span>
+<Icon name="arrowRightRaw" size="raw" />
+<span> </span>
+<Icon name="arrowLeftRaw" size="raw" />
 ```
 
 File Icons:

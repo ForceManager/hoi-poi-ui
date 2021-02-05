@@ -91,7 +91,6 @@ function FieldControl({
         className: classNameProp,
         value,
         error,
-        customFields,
         component,
         overrides: overridesProp,
     };
@@ -126,7 +125,7 @@ FieldControl.propTypes = {
         name: PropTypes.string,
         type: PropTypes.string,
         placeholder: PropTypes.string,
-        hint: PropTypes.string,
+        hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
         isRequired: PropTypes.bool,
         isReadOnly: PropTypes.bool,
         className: PropTypes.string,
