@@ -430,7 +430,7 @@ exports[`Drawer is rendering closed 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -448,11 +448,14 @@ exports[`Drawer is rendering closed 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Drawer__root-1-0 HoiPoi__Drawer__right-1-4"
           closeTimeoutMS={500}
+          contentElement={[Function]}
           isOpen={false}
           onAfterOpen={[Function]}
           overlayClassName="HoiPoi__Drawer__overlayRight-1-2"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={false}
           shouldCloseOnOverlayClick={false}
@@ -479,6 +482,7 @@ exports[`Drawer is rendering closed 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Drawer__root-1-0 HoiPoi__Drawer__right-1-4"
               closeTimeoutMS={500}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -508,8 +512,10 @@ exports[`Drawer is rendering closed 1`] = `
               isOpen={false}
               onAfterOpen={[Function]}
               overlayClassName="HoiPoi__Drawer__overlayRight-1-2"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={false}
               shouldCloseOnOverlayClick={false}
@@ -962,7 +968,7 @@ exports[`Drawer is rendering opened with content 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -980,11 +986,14 @@ exports[`Drawer is rendering opened with content 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Drawer__root-2-0 HoiPoi__Drawer__right-2-4"
           closeTimeoutMS={500}
+          contentElement={[Function]}
           isOpen={true}
           onAfterOpen={[Function]}
           overlayClassName="HoiPoi__Drawer__overlayRight-2-2"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={false}
           shouldCloseOnOverlayClick={false}
@@ -1008,6 +1017,7 @@ exports[`Drawer is rendering opened with content 1`] = `
                   class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi__Drawer__overlayRight-2-2"
                 >
                   <div
+                    aria-modal="true"
                     class="ReactModal__Content ReactModal__Content--after-open HoiPoi__Drawer__root-2-0 HoiPoi__Drawer__right-2-4"
                     role="dialog"
                     style="width: 500px;"
@@ -1030,6 +1040,7 @@ exports[`Drawer is rendering opened with content 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Drawer__root-2-0 HoiPoi__Drawer__right-2-4"
               closeTimeoutMS={500}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -1059,8 +1070,10 @@ exports[`Drawer is rendering opened with content 1`] = `
               isOpen={true}
               onAfterOpen={[Function]}
               overlayClassName="HoiPoi__Drawer__overlayRight-2-2"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={false}
               shouldCloseOnOverlayClick={false}
@@ -1082,6 +1095,7 @@ exports[`Drawer is rendering opened with content 1`] = `
                 style={Object {}}
               >
                 <div
+                  aria-modal={true}
                   className="ReactModal__Content ReactModal__Content--after-open HoiPoi__Drawer__root-2-0 HoiPoi__Drawer__right-2-4"
                   onClick={[Function]}
                   onKeyDown={[Function]}
@@ -1550,7 +1564,7 @@ exports[`Drawer pass width and classnames to modal 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -1574,11 +1588,14 @@ exports[`Drawer pass width and classnames to modal 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Drawer__root-3-0 HoiPoi__Drawer__right-3-4 className-ipsum"
           closeTimeoutMS={500}
+          contentElement={[Function]}
           isOpen={true}
           onAfterOpen={[Function]}
           overlayClassName="HoiPoi__Drawer__overlayRight-3-2 overlay-ipsum"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={false}
           shouldCloseOnOverlayClick={false}
@@ -1602,6 +1619,7 @@ exports[`Drawer pass width and classnames to modal 1`] = `
                   class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi__Drawer__overlayRight-3-2 overlay-ipsum"
                 >
                   <div
+                    aria-modal="true"
                     class="ReactModal__Content ReactModal__Content--after-open HoiPoi__Drawer__root-3-0 HoiPoi__Drawer__right-3-4 className-ipsum"
                     role="dialog"
                     style="width: 400px;"
@@ -1624,6 +1642,7 @@ exports[`Drawer pass width and classnames to modal 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Drawer__root-3-0 HoiPoi__Drawer__right-3-4 className-ipsum"
               closeTimeoutMS={500}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -1653,8 +1672,10 @@ exports[`Drawer pass width and classnames to modal 1`] = `
               isOpen={true}
               onAfterOpen={[Function]}
               overlayClassName="HoiPoi__Drawer__overlayRight-3-2 overlay-ipsum"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={false}
               shouldCloseOnOverlayClick={false}
@@ -1676,6 +1697,7 @@ exports[`Drawer pass width and classnames to modal 1`] = `
                 style={Object {}}
               >
                 <div
+                  aria-modal={true}
                   className="ReactModal__Content ReactModal__Content--after-open HoiPoi__Drawer__root-3-0 HoiPoi__Drawer__right-3-4 className-ipsum"
                   onClick={[Function]}
                   onKeyDown={[Function]}

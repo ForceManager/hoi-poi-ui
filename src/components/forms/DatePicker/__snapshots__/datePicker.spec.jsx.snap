@@ -430,7 +430,7 @@ exports[`DatePicker default match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -480,6 +480,7 @@ exports[`DatePicker default match 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -1141,7 +1142,7 @@ exports[`DatePicker is read only match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -1190,6 +1191,7 @@ exports[`DatePicker is read only match 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -1833,7 +1835,7 @@ exports[`DatePicker is required match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -1884,6 +1886,7 @@ exports[`DatePicker is required match 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -2549,7 +2552,7 @@ exports[`DatePicker vertical label mode match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -2599,6 +2602,7 @@ exports[`DatePicker vertical label mode match 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -3260,7 +3264,7 @@ exports[`DatePicker with different format 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -3310,6 +3314,7 @@ exports[`DatePicker with different format 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -3971,7 +3976,7 @@ exports[`DatePicker with different locale 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -4022,6 +4027,7 @@ exports[`DatePicker with different locale 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -4686,7 +4692,7 @@ exports[`DatePicker with error match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -4737,6 +4743,7 @@ exports[`DatePicker with error match 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -5411,7 +5418,7 @@ exports[`DatePicker with hint match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -5462,6 +5469,7 @@ exports[`DatePicker with hint match 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
@@ -5616,12 +5624,7 @@ exports[`DatePicker with hint match 1`] = `
                           ]
                         }
                       >
-                        <Tooltip
-                          align={Object {}}
-                          arrowContent={null}
-                          destroyTooltipOnHide={false}
-                          mouseEnterDelay={0}
-                          mouseLeaveDelay={0.1}
+                        <ForwardRef(Tooltip)
                           overlay="Hello"
                           overlayClassName="HoiPoi__Popover__root-5-58"
                           placement="top"
@@ -5640,7 +5643,7 @@ exports[`DatePicker with hint match 1`] = `
                               ]
                             }
                             afterPopupVisibleChange={[Function]}
-                            arrowContent={null}
+                            autoDestroy={false}
                             blurDelay={0.15}
                             builtinPlacements={
                               Object {
@@ -5921,7 +5924,7 @@ exports[`DatePicker with hint match 1`] = `
                               </Icon>
                             </span>
                           </Trigger>
-                        </Tooltip>
+                        </ForwardRef(Tooltip)>
                       </Popover>
                     </div>
                   </Label>
@@ -6444,7 +6447,7 @@ exports[`DatePicker with outputType string 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.1",
         }
       }
     >
@@ -6494,6 +6497,7 @@ exports[`DatePicker with outputType string 1`] = `
                 "firstDayOfWeek": 0,
                 "hourAriaLabel": "Hour",
                 "minuteAriaLabel": "Minute",
+                "monthAriaLabel": "Month",
                 "months": Object {
                   "longhand": Array [
                     "January",
