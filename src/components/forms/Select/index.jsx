@@ -57,6 +57,8 @@ const Select = memo(
         noOptionsMessage,
         actions,
         onClickAction,
+        dropDownIcon,
+        isSearchable = true,
         ...props
     }) => {
         const [focused, setFocused] = useState(false);
@@ -402,6 +404,8 @@ const Select = memo(
                 filterOption: filterByKey ? filterKeyValue : createFilter,
                 formatOptionLabel,
                 formatGroupLabel,
+                dropDownIcon,
+                isSearchable,
                 menuProps: {
                     className: classes.menu,
                     actionContainerClassName: classes.actionContainer,
@@ -553,6 +557,8 @@ const Select = memo(
             multiValueRemoveStyles,
             indicatorSeparatorStyles,
             menuListStyles,
+            dropDownIcon,
+            isSearchable,
         ]);
 
         let SelectComponent = RSelect;
@@ -687,6 +693,7 @@ Select.propTypes = {
     /** Filter by keys as well */
     filterByKey: PropTypes.bool,
     defaultMenuIsOpen: PropTypes.bool,
+    dropDownIcon: PropTypes.element,
 };
 
 export default Select;
