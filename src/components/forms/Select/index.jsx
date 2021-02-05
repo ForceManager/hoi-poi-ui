@@ -7,9 +7,10 @@ import InputWrapper from '../components/InputWrapper';
 import { default as RSelect } from 'react-select';
 import AsyncSelect from 'react-select/async';
 
+import Control from './components/Control';
 import DropdownIndicator from './components/DropdownIndicator';
 import ClearIndicator from './components/ClearIndicator';
-import SearchIndicator from './components/SearchIndicator';
+import LockIndicator from './components/LockIndicator';
 import SingleValue from './components/SingleValue';
 import MultiValueLabel from './components/MultiValueLabel';
 import MultiValueRemove from './components/MultiValueRemove';
@@ -117,9 +118,10 @@ const Select = memo(
         const handleOnChange = useCallback(
             (data, action) => {
                 setNewValue(data);
+                if (!isMulti) setFocused(false);
                 onChange && onChange(data);
             },
-            [onChange],
+            [isMulti, onChange],
         );
 
         const setMenuPlacement = useCallback(
@@ -206,7 +208,7 @@ const Select = memo(
         }, [onBlur]);
 
         const controlStyles = useCallback(
-            ({ data, isDisabled, isFocused, isSelected }) => {
+            ({ isFocused }) => {
                 let styles = {
                     ...newStyles.control,
                     ...(override.control?.style || {}),
@@ -225,7 +227,7 @@ const Select = memo(
         );
 
         const optionsStyles = useCallback(
-            ({ data, isDisabled, isFocused, isSelected }) => {
+            ({ isDisabled, isSelected }) => {
                 let styles = {
                     ...newStyles.option,
                     ...(override.option?.style || {}),
@@ -252,7 +254,7 @@ const Select = memo(
         );
 
         const valueContainerStyles = useCallback(
-            ({ data, isDisabled, isFocused, isSelected }) => {
+            ({ isDisabled }) => {
                 let styles = {
                     ...newStyles.valueContainer,
                     ...(override.valueContainer?.style || {}),
@@ -271,7 +273,7 @@ const Select = memo(
         );
 
         const placeholderStyles = useCallback(
-            ({ data, isDisabled, isFocused, isSelected }) => {
+            ({ isDisabled }) => {
                 let styles = {
                     ...newStyles.placeholder,
                     ...(override.placeholder?.style || {}),
@@ -289,7 +291,7 @@ const Select = memo(
         );
 
         const multiValueLabelStyles = useCallback(
-            ({ data, isDisabled, isFocused, isSelected }) => {
+            ({ isDisabled }) => {
                 let styles = {
                     ...newStyles.multiValueLabel,
                     ...(override.multiValueLabel?.style || {}),
@@ -308,7 +310,7 @@ const Select = memo(
         );
 
         const multiValueRemoveStyles = useCallback(
-            ({ data, isDisabled, isFocused, isSelected }) => {
+            ({ isDisabled }) => {
                 let styles = {
                     ...newStyles.multiValueRemove,
                     ...(override.multiValueRemove?.style || {}),
@@ -370,6 +372,10 @@ const Select = memo(
         }, [isRequired, isClearable]);
 
         const selectProps = useMemo(() => {
+            const menuIsOpen = focused && (!(loadOptions && isFuzzy) || innerOptions.length);
+            let Indicator = DropdownIndicator;
+            if (loadOptions && isFuzzy) Indicator = null;
+            if (isReadOnly) Indicator = LockIndicator;
             return {
                 className: selectClassName,
                 classNamePrefix: 'hoi-poi-select',
@@ -395,13 +401,15 @@ const Select = memo(
                 menuPortalTarget: document.body,
                 loadOptions,
                 openMenuOnClick: !(loadOptions && isFuzzy),
-                openMenuOnFocus: true,
+                openMenuOnFocus: !(loadOptions && isFuzzy),
+                menuIsOpen,
                 onChange: handleOnChange,
                 onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
                 filterOption: filterByKey ? filterKeyValue : createFilter,
                 formatOptionLabel,
                 formatGroupLabel,
+                isFuzzy,
                 menuProps: {
                     className: classes.menu,
                     actionContainerClassName: classes.actionContainer,
@@ -421,7 +429,8 @@ const Select = memo(
                     },
                 },
                 components: {
-                    DropdownIndicator: loadOptions && isFuzzy ? SearchIndicator : DropdownIndicator,
+                    DropdownIndicator: Indicator,
+                    Control,
                     ClearIndicator,
                     SingleValue,
                     MultiValueLabel,
@@ -520,39 +529,47 @@ const Select = memo(
                 ...override['react-select'],
             };
         }, [
+            focused,
+            loadOptions,
+            isFuzzy,
+            innerOptions,
+            selectClassName,
+            placeholder,
+            lazyOptions.options,
+            lazyOptions.isLoading,
+            noOptionsMessage,
+            loadingMessage,
+            newValue,
+            defaultMenuIsOpen,
             actions,
             isMulti,
             isReadOnly,
-            isFuzzy,
             newIsClearable,
-            loadOptions,
-            loadingMessage,
-            noOptionsMessage,
-            filterByKey,
-            placeholder,
-            defaultMenuIsOpen,
             hideSelectedOptions,
-            onClickAction,
-            classes,
-            innerOptions,
-            lazyOptions,
-            newValue,
-            selectClassName,
-            focused,
-            override,
             handleOnChange,
             handleOnFocus,
             handleOnBlur,
+            filterByKey,
             formatOptionLabel,
             formatGroupLabel,
+            classes.menu,
+            classes.actionContainer,
+            classes.action,
+            classes.actionIcon,
+            classes.actionText,
+            classes.actionTextWithIcon,
+            classes.group,
+            classes.option,
+            onClickAction,
+            override,
             controlStyles,
-            optionsStyles,
-            valueContainerStyles,
             placeholderStyles,
-            multiValueLabelStyles,
-            multiValueRemoveStyles,
+            valueContainerStyles,
+            optionsStyles,
             indicatorSeparatorStyles,
             menuListStyles,
+            multiValueLabelStyles,
+            multiValueRemoveStyles,
         ]);
 
         let SelectComponent = RSelect;
