@@ -47,6 +47,7 @@ module.exports = {
                 './src/components/forms/Slider/index.jsx',
                 './src/components/forms/Switch/index.jsx',
                 './src/components/forms/SwitchInput/index.jsx',
+                './src/components/forms/Textarea/index.jsx',
             ],
         },
         {

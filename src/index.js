@@ -38,6 +38,7 @@ export { default as Select } from './components/forms/Select';
 export { default as Slider } from './components/forms/Slider';
 export { default as Switch } from './components/forms/Switch';
 export { default as SwitchInput } from './components/forms/SwitchInput';
+export { default as Textarea } from './components/forms/Textarea';
 
 export { default as Popover } from './components/utils/Popover';
 export { default as ScrollBar } from './components/utils/ScrollBar';
