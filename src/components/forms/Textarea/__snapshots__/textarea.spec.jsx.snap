@@ -430,7 +430,7 @@ exports[`Textarea default match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -978,7 +978,7 @@ exports[`Textarea hide clear match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -1486,7 +1486,7 @@ exports[`Textarea horizontal label mode match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -1994,7 +1994,7 @@ exports[`Textarea is read only match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -2538,7 +2538,7 @@ exports[`Textarea is required match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -3050,7 +3050,7 @@ exports[`Textarea with error match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -3571,7 +3571,7 @@ exports[`Textarea with hint match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
@@ -3628,7 +3628,12 @@ exports[`Textarea with hint match 1`] = `
                       ]
                     }
                   >
-                    <ForwardRef(Tooltip)
+                    <Tooltip
+                      align={Object {}}
+                      arrowContent={null}
+                      destroyTooltipOnHide={false}
+                      mouseEnterDelay={0}
+                      mouseLeaveDelay={0.1}
                       overlay="Hello"
                       overlayClassName="HoiPoi__Popover__root-2-48"
                       placement="top"
@@ -3647,7 +3652,7 @@ exports[`Textarea with hint match 1`] = `
                           ]
                         }
                         afterPopupVisibleChange={[Function]}
-                        autoDestroy={false}
+                        arrowContent={null}
                         blurDelay={0.15}
                         builtinPlacements={
                           Object {
@@ -3928,7 +3933,7 @@ exports[`Textarea with hint match 1`] = `
                           </Icon>
                         </span>
                       </Trigger>
-                    </ForwardRef(Tooltip)>
+                    </Tooltip>
                   </Popover>
                 </div>
               </Label>
@@ -4395,7 +4400,7 @@ exports[`Textarea without label mode match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.3.0",
         }
       }
     >
