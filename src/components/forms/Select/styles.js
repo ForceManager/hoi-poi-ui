@@ -151,6 +151,12 @@ export default (theme) => ({
         '&:hover': {
             cursor: 'pointer',
         },
+        '& .hoi-poi-select__search-indicator': {
+            width: 14,
+            marginRight: 8,
+            alignSelf: 'flex-start',
+            height: 34,
+        },
     },
     controlFocused: {
         backgroundColor: theme.colors.neutralBase,
@@ -194,7 +200,7 @@ export default (theme) => ({
         },
     },
     multiValue: {
-        margin: '4px 6px 4px 2px',
+        margin: '3px 6px 3px 2px',
         padding: '4px 4px 4px 8px',
         border: 'none',
         borderRadius: '20px',
@@ -242,6 +248,7 @@ export default (theme) => ({
     indicatorsContainer: {
         height: 34,
         alignSelf: 'flex-start',
+        marginRight: 4,
     },
     clearIndicator: {
         transition: 'all 0.15s ease',
@@ -253,7 +260,7 @@ export default (theme) => ({
     indicatorSeparator: {
         height: 8,
         width: 2,
-        marginLeft: 8,
+        marginLeft: 4,
         marginRight: 4,
         alignSelf: 'center',
         backgroundColor: theme.colors.neutral400,
@@ -263,7 +270,7 @@ export default (theme) => ({
     },
     dropdownIndicator: {
         paddingLeft: 0,
-        paddingRight: 4,
+        paddingRight: 2,
         transition: 'all 0.15s ease',
         '&:hover svg path': {
             fill: theme.colors.neutral800,
@@ -271,5 +278,30 @@ export default (theme) => ({
     },
     loadingIndicator: {
         marginRight: '8px',
+    },
+    input: {
+        padding: 0,
+    },
+    small: {
+        '& .hoi-poi-select__control': {
+            minHeight: '32px !important',
+        },
+        '& .hoi-poi-select__search-indicator': {
+            height: '26px !important',
+        },
+        '& .hoi-poi-select__indicators': {
+            height: '26px !important',
+            alignSelf: 'center',
+        },
+        '& .hoi-poi-select__value-container': {
+            height: 26,
+        },
+    },
+    medium: {},
+    onlyText: {
+        '& .hoi-poi-select__control': {
+            border: 'none',
+            background: 'transparent',
+        },
     },
 });
