@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { components } from 'react-select';
 import Link from '../../../typography/Link';
 import Icon from '../../../general/Icon';
@@ -16,6 +16,7 @@ export default React.memo(({ children, ...props }) => {
         override,
         actions,
         onClickAction,
+        dropdownWidth,
     } = props.selectProps.menuProps;
 
     const linkRow = useCallback(
@@ -70,9 +71,19 @@ export default React.memo(({ children, ...props }) => {
         ],
     );
 
+    const innerProps = useMemo(() => {
+        if (dropdownWidth) return { ...props.innerProps, style: { width: dropdownWidth } };
+        return props.innerProps;
+    }, [dropdownWidth, props]);
+
     return (
         components.Menu && (
-            <components.Menu {...props} className={className} {...override.menu}>
+            <components.Menu
+                {...props}
+                className={className}
+                innerProps={innerProps}
+                {...override.menu}
+            >
                 {children}
                 {actions && (
                     <div className={actionContainerClassName} {...override.actionContainer}>
