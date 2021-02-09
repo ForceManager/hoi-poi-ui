@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -15,7 +15,9 @@ function SearchBar({
     overrides: overridesProp,
     className: classNameProp,
     loadOptions,
-    placeholder,
+    onChangeType,
+    typeOptions,
+    type,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -31,19 +33,54 @@ function SearchBar({
         className: rootClassName,
     };
 
+    const TypeSelector = useMemo(() => {
+        if (!onChangeType) return null;
+        const typeClassname = classnames(classes.typeSelector, {
+            [classes.typeSelectorWithValue]: !!type,
+        });
+        return (
+            <>
+                <Select
+                    className={typeClassname}
+                    onChange={onChangeType}
+                    options={typeOptions}
+                    value={type}
+                    onlyText
+                    size={props.size}
+                    dropdownWidth="250px"
+                    isSearchable={false}
+                    classes={{
+                        inputComponents: classes.typeSelectorInput,
+                        singleValue: classes.typeSingleValue,
+                    }}
+                />
+            </>
+        );
+    }, [
+        classes.typeSelector,
+        classes.typeSelectorInput,
+        classes.typeSelectorWithValue,
+        classes.typeSingleValue,
+        onChangeType,
+        props.size,
+        type,
+        typeOptions,
+    ]);
+
     return (
         <div {...rootProps} {...override.root}>
             <Select
-                placeholder={placeholder}
                 loadOptions={loadOptions}
                 isFuzzy
-                {...override.Select}
+                afterControl={TypeSelector}
+                isFullWidth
+                {...props}
             />
         </div>
     );
 }
 
-SearchBar.overrides = ['root', 'Select'];
+SearchBar.overrides = ['root'];
 
 SearchBar.defaultProps = {
     className: '',
@@ -53,7 +90,6 @@ SearchBar.defaultProps = {
 SearchBar.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    placeholder: PropTypes.string,
 };
 
 export default React.memo(SearchBar);

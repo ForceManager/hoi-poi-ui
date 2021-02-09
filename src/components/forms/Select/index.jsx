@@ -41,6 +41,7 @@ const Select = memo(
         isMulti,
         isRequired,
         isClearable,
+        isSearchable,
         placeholder,
         options,
         defaultSearch,
@@ -58,8 +59,14 @@ const Select = memo(
         noOptionsMessage,
         actions,
         onClickAction,
+        size,
+        onlyText,
+        dropdownWidth,
+        afterControl,
+        beforeControl,
         ...props
     }) => {
+        const selectRef = useRef();
         const [focused, setFocused] = useState(false);
         const [newValue, setNewValue] = useState(defaultValue || value);
         const [innerOptions, setInnerOptions] = useState(options || []);
@@ -79,6 +86,8 @@ const Select = memo(
                 [classes.isFullWidth]: isFullWidth,
                 [classes.focused]: focused,
                 [classes.async]: loadOptions && isFuzzy,
+                [classes[size]]: size,
+                [classes.onlyText]: onlyText,
             },
             classNameProp,
         );
@@ -366,6 +375,14 @@ const Select = memo(
             [classes, override],
         );
 
+        const onMouseDown = useCallback((e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            selectRef.current.focus();
+            setFocused(true);
+            return false;
+        }, []);
+
         const newIsClearable = useMemo(() => {
             if (isRequired) return false;
             else return isClearable;
@@ -376,7 +393,9 @@ const Select = memo(
             let Indicator = DropdownIndicator;
             if (loadOptions && isFuzzy) Indicator = null;
             if (isReadOnly) Indicator = LockIndicator;
+
             return {
+                ref: selectRef,
                 className: selectClassName,
                 classNamePrefix: 'hoi-poi-select',
                 placeholder,
@@ -392,8 +411,10 @@ const Select = memo(
                 isMulti,
                 isDisabled: isReadOnly,
                 isClearable: isMulti ? true : newIsClearable,
+                isSearchable,
                 isLoading: lazyOptions.isLoading,
                 autoFocus: focused,
+                blurInputOnSelect: !isMulti,
                 hideSelectedOptions: isMulti ? false : hideSelectedOptions,
                 closeMenuOnSelect: isMulti ? false : true,
                 menuPlacement: menuPlacementRef.current,
@@ -410,7 +431,11 @@ const Select = memo(
                 formatOptionLabel,
                 formatGroupLabel,
                 isFuzzy,
+                beforeControl,
+                afterControl,
+                onMouseDown,
                 menuProps: {
+                    dropdownWidth,
                     className: classes.menu,
                     actionContainerClassName: classes.actionContainer,
                     actionClassName: classes.action,
@@ -463,6 +488,11 @@ const Select = memo(
                     valueContainer: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
                         ...valueContainerStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    input: (styles) => ({
+                        ...styles,
+                        ...newStyles.input,
+                        ...(override.input?.style || {}),
                     }),
                     group: (styles) => ({
                         ...styles,
@@ -533,6 +563,7 @@ const Select = memo(
             loadOptions,
             isFuzzy,
             innerOptions,
+            isReadOnly,
             selectClassName,
             placeholder,
             lazyOptions.options,
@@ -543,8 +574,8 @@ const Select = memo(
             defaultMenuIsOpen,
             actions,
             isMulti,
-            isReadOnly,
             newIsClearable,
+            isSearchable,
             hideSelectedOptions,
             handleOnChange,
             handleOnFocus,
@@ -552,6 +583,10 @@ const Select = memo(
             filterByKey,
             formatOptionLabel,
             formatGroupLabel,
+            beforeControl,
+            afterControl,
+            onMouseDown,
+            dropdownWidth,
             classes.menu,
             classes.actionContainer,
             classes.action,
@@ -641,6 +676,9 @@ Select.defaultProps = {
     hideOptions: false,
     filterByKey: false,
     defaultMenuIsOpen: false,
+    size: 'medium',
+    onlyText: false,
+    isSearchable: false,
 };
 
 Select.propTypes = {
@@ -686,6 +724,7 @@ Select.propTypes = {
     info: PropTypes.string,
     isRequired: PropTypes.bool,
     isReadOnly: PropTypes.bool,
+    isSearchable: PropTypes.bool,
     /** Hide the selected option from the menu */
     hideSelectedOptions: PropTypes.bool,
     /** Is the select value clearable */
@@ -704,6 +743,11 @@ Select.propTypes = {
     /** Filter by keys as well */
     filterByKey: PropTypes.bool,
     defaultMenuIsOpen: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium']),
+    onlyText: PropTypes.bool,
+    dropdownWidth: PropTypes.string,
+    beforeControl: PropTypes.node,
+    afterControl: PropTypes.node,
 };
 
 export default Select;

@@ -152,6 +152,7 @@ export default (theme) => ({
             cursor: 'pointer',
         },
         '& .hoi-poi-select__search-indicator': {
+            width: 14,
             marginRight: 8,
             alignSelf: 'flex-start',
             height: 34,
@@ -277,5 +278,29 @@ export default (theme) => ({
     },
     loadingIndicator: {
         marginRight: '8px',
+    },
+    input: {
+        padding: 0,
+    },
+    small: {
+        '& .hoi-poi-select__control': {
+            minHeight: '32px !important',
+        },
+        '& .hoi-poi-select__search-indicator': {
+            height: '26px !important',
+        },
+        '& .hoi-poi-select__indicators': {
+            height: '24px !important',
+        },
+        '& .hoi-poi-select__value-container': {
+            height: 26,
+        },
+    },
+    medium: {},
+    onlyText: {
+        '& .hoi-poi-select__control': {
+            border: 'none',
+            background: 'transparent',
+        },
     },
 });
