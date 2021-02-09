@@ -1,4 +1,4 @@
-import React, { forwardRef, memo, useState, useCallback, useMemo } from 'react';
+import React, { forwardRef, memo, useState, useCallback, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -7,6 +7,7 @@ import InputWrapper from '../components/InputWrapper';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+
 const useStyles = createUseStyles(styles, 'Textarea');
 
 const Textarea = forwardRef(
@@ -33,11 +34,15 @@ const Textarea = forwardRef(
             label,
             labelMode,
             isRequired,
+            minRows,
             ...props
         },
         ref,
     ) => {
         const [focused, setFocused] = useState(false);
+
+        const textAreaRef = useRef(null);
+
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Textarea.overrides);
 
@@ -107,8 +112,23 @@ const Textarea = forwardRef(
             [onChange],
         );
 
-        let textareaProps = useMemo(() => {
-            return {
+        const getScrollHeight = useCallback((el) => {
+            const savedValue = el.value;
+            el.value = '';
+            el._baseScrollHeight = el.scrollHeight;
+            el.value = savedValue;
+        }, []);
+
+        const handleInput = useCallback(() => {
+            const el = textAreaRef.current;
+            !el._baseScrollHeight && getScrollHeight(el);
+            el.rows = minRows;
+            const rows = Math.ceil((el.scrollHeight - el._baseScrollHeight) / 20); // 20 = textarea's line-height CSS value
+            el.rows = rows + minRows;
+        }, [getScrollHeight, minRows]);
+
+        let textareaProps = useMemo(
+            () => ({
                 id,
                 name,
                 className: classes.textarea,
@@ -116,34 +136,42 @@ const Textarea = forwardRef(
                 value: value,
                 onChange: isReadOnly ? undefined : handleOnChange,
                 onFocus: handleOnFocus,
+                onInput: handleInput,
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
                 onKeyUp: handleOnKeyUp,
                 readOnly: isReadOnly || ref,
+                ref: textAreaRef,
+                rows: minRows,
                 ...props,
                 ...override.textarea,
-            };
-        }, [
-            id,
-            name,
-            classes.textarea,
-            placeholder,
-            value,
-            isReadOnly,
-            handleOnChange,
-            handleOnFocus,
-            handleOnBlur,
-            handleOnKeyDown,
-            handleOnKeyUp,
-            ref,
-            props,
-            override.textarea,
-        ]);
+            }),
+            [
+                id,
+                name,
+                classes.textarea,
+                placeholder,
+                value,
+                isReadOnly,
+                handleOnChange,
+                handleOnFocus,
+                handleInput,
+                handleOnBlur,
+                handleOnKeyDown,
+                handleOnKeyUp,
+                ref,
+                minRows,
+                props,
+                override.textarea,
+            ],
+        );
 
         // Remove content post component
         const postComponentClick = useCallback(() => {
             handleOnChange(null, 'clear');
-        }, [handleOnChange]);
+            textAreaRef.current.rows = minRows;
+            textAreaRef.current.removeAttribute('style');
+        }, [handleOnChange, minRows]);
 
         const copyValue = useCallback(() => {
             const textField = document.createElement('textarea');
@@ -260,6 +288,7 @@ Textarea.defaultProps = {
     isCopyable: false,
     hideClear: false,
     overrides: {},
+    minRows: 3,
 };
 
 Textarea.propTypes = {
@@ -290,6 +319,8 @@ Textarea.propTypes = {
     isCopyable: PropTypes.bool,
     hideClear: PropTypes.bool,
     ref: PropTypes.func,
+    /** Minimum text rows visible (initial height of the textarea) */
+    minRows: PropTypes.number,
 };
 
 export default memo(Textarea);

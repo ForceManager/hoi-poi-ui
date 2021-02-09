@@ -5,11 +5,8 @@ export default (theme) => {
         },
         textareaComponents: {
             position: 'relative',
-            display: 'flex',
-            alignItems: 'center',
             width: 320,
             boxSizing: 'border-box',
-            padding: '8px 12px',
             lineHeight: 0,
             borderRadius: 4,
             border: '1px solid transparent',
@@ -20,19 +17,30 @@ export default (theme) => {
             ...theme.typography.body,
             background: 'transparent',
             color: theme.colors.neutral900,
-            width: '100%',
-            minHeight: 60,
-            alignItems: 'center',
+            minHeight: 38,
+            width: '100% !important',
+            maxWidth: '100%',
             boxSizing: 'border-box',
-            flexGrow: 1,
             outline: 'none',
             border: 'none',
-            padding: 0,
+            padding: '8px 48px 8px 12px',
             margin: 0,
-            resize: 'none',
             caretColor: theme.colors.orange500,
+            scrollbarWidth: 'thin',
+            scrollbarColor: `${theme.colors.neutral700} ${theme.colors.neutralBase}`,
             '&::placeholder': {
                 color: theme.colors.neutral600,
+            },
+            '&::-webkit-scrollbar': {
+                width: 12,
+            },
+            '&::-webkit-scrollbar-track': {
+                background: theme.colors.neutralBase,
+            },
+            '&::-webkit-scrollbar-thumb': {
+                backgroundColor: theme.colors.neutral700,
+                border: `3px solid ${theme.colors.neutralBase}`,
+                borderRadius: 6,
             },
         },
         error: {
@@ -85,10 +93,11 @@ export default (theme) => {
             },
         },
         postComponent: {
-            marginLeft: 8,
+            position: 'absolute',
+            top: 8,
+            right: 12,
             display: 'flex',
             alignItems: 'center',
-            alignSelf: 'flex-start',
             '& > span, > div': {
                 marginLeft: 4,
                 '&:first-child': {
