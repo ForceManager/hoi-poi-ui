@@ -26,7 +26,9 @@ const OptionsList = memo(
                                     className={classes.optionListGroupLabel}
                                     {...(override.optionListGroupLabel || {})}
                                 >
-                                    <Text type="subtitle">{current.label}</Text>
+                                    <Text type="subtitle" isTruncated>
+                                        {current.label}
+                                    </Text>
                                 </div>
                             )}
                             {current.options.map((item) => {

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Popover from '../../utils/Popover';
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import OptionsList from './components/OptionsList';
+import OptionList from './components/OptionList';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
-const useStyles = createUseStyles(styles, 'WrapperSelect');
+const useStyles = createUseStyles(styles, 'SelectWrapper');
 
-const WrapperSelect = memo(
+const SelectWrapper = memo(
     ({
         children,
         classes: classesProp,
@@ -19,7 +19,7 @@ const WrapperSelect = memo(
         trigger,
         isMulti,
         options,
-        optionsComponent,
+        customOptions,
         value,
         getIsOpen,
         onOpen,
@@ -28,7 +28,7 @@ const WrapperSelect = memo(
         checkboxColor,
         checkBoxIsMonotone,
     }) => {
-        const override = getOverrides(overridesProp, WrapperSelect.overrides);
+        const override = getOverrides(overridesProp, SelectWrapper.overrides);
         const classes = useClasses(useStyles, classesProp);
         const rootClassName = classnames(classes.root, {}, classNameProp);
 
@@ -82,27 +82,45 @@ const WrapperSelect = memo(
             [isMulti, onChange, value, mappedValue],
         );
 
-        const finalOptions =
-            optionsComponent ||
-            (options && (
-                <OptionsList
-                    options={options}
-                    isMulti={isMulti}
-                    classes={classes}
-                    override={override}
-                    onChange={handleOnChange}
-                    value={value}
-                    mappedValue={mappedValue}
-                    checkboxColor={checkboxColor}
-                    checkBoxIsMonotone={checkBoxIsMonotone}
-                />
-            )) ||
-            null;
+        const finalOptions = useMemo(() => {
+            if (customOptions) {
+                return (
+                    <div className={classes.customOptions} {...(override.customOptions || {})}>
+                        {customOptions}
+                    </div>
+                );
+            } else if (options && options.length > 0) {
+                return (
+                    <OptionList
+                        options={options}
+                        isMulti={isMulti}
+                        classes={classes}
+                        override={override}
+                        onChange={handleOnChange}
+                        value={value}
+                        mappedValue={mappedValue}
+                        checkboxColor={checkboxColor}
+                        checkBoxIsMonotone={checkBoxIsMonotone}
+                    />
+                );
+            } else return null;
+        }, [
+            customOptions,
+            options,
+            isMulti,
+            classes,
+            override,
+            handleOnChange,
+            value,
+            mappedValue,
+            checkboxColor,
+            checkBoxIsMonotone,
+        ]);
 
         const onChangeOpen = useCallback(
-            (isVisible) => {
-                getIsOpen && getIsOpen(isVisible);
-                if (isVisible) {
+            (isOpen) => {
+                getIsOpen && getIsOpen(isOpen);
+                if (isOpen) {
                     onOpen && onOpen();
                 } else {
                     onClose && onClose();
@@ -112,7 +130,7 @@ const WrapperSelect = memo(
         );
 
         return (
-            <div className={rootClassName} overrides={override.root}>
+            <div className={rootClassName} {...(override.root || {})}>
                 <Popover
                     content={finalOptions}
                     placement={placement}
@@ -127,7 +145,7 @@ const WrapperSelect = memo(
     },
 );
 
-WrapperSelect.overrides = [
+SelectWrapper.overrides = [
     'root',
     'wrapperPopover',
     'optionList',
@@ -144,7 +162,7 @@ WrapperSelect.overrides = [
     'optionLabelBulletSuccess',
 ];
 
-WrapperSelect.defaultProps = {
+SelectWrapper.defaultProps = {
     placement: 'bottomLeft',
     trigger: ['click'],
     isMulti: false,
@@ -152,10 +170,10 @@ WrapperSelect.defaultProps = {
     checkBoxIsMonotone: false,
 };
 
-WrapperSelect.propTypes = {
+SelectWrapper.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
     overrides: PropTypes.object,
 };
 
-export default WrapperSelect;
+export default SelectWrapper;

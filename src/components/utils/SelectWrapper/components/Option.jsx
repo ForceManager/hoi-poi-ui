@@ -27,7 +27,11 @@ const Option = memo(
         }
 
         return (
-            <div className={rootClasses.join(' ')} onClick={!option.isDisabled && onChange(option)}>
+            <div
+                className={rootClasses.join(' ')}
+                {...(override.option || {})}
+                onClick={!option.isDisabled && onChange(option)}
+            >
                 {isMulti && (
                     <Checkbox
                         className={classes.optionCheckbox}
@@ -45,7 +49,9 @@ const Option = memo(
                     />
                 )}
                 <div className={classes.optionLabel} {...(override.optionLabel || {})}>
-                    <Text type="body">{option.label}</Text>
+                    <Text type="body" isTruncated>
+                        {option.label}
+                    </Text>
                 </div>
             </div>
         );

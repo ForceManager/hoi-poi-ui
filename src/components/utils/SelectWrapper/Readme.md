@@ -2,18 +2,16 @@ Default:
 
 ```jsx
 import { useState, useMemo } from 'react';
-import { Button, Chip, Avatar } from 'hoi-poi-ui';
+import { Button, Chip, Avatar, Text, Icon, Badge } from 'hoi-poi-ui';
 
 const [state, setState] = useState({
     value: null,
 });
+const onChange = (value) => setState({ value });
 const [chipState, setChipState] = useState({
     isFolded: true,
 });
-
-const onChange = (value) => setState({ value });
 const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
-const onRemove = () => setState({});
 
 const options = [
     {
@@ -35,33 +33,37 @@ const options = [
     },
 ];
 
-console.log(state);
-
-<div style={{ display: 'flex', alignItems: 'center' }}>
-    <WrapperSelect options={options} value={state.value} onChange={onChange}>
-        <Button>Select One</Button>
-    </WrapperSelect>
-    <span> </span>
-    <WrapperSelect options={options} getIsOpen={getIsOpen} value={state.value} onChange={onChange}>
+<div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
         <Chip
             isFolded={chipState.isFolded}
             isUnfolded={!chipState.isFolded}
             isFilled
             isActive={state.value ? !!state.value : false}
-            onRemove={state.value ? onRemove : null}
         >
             Select One
         </Chip>
-    </WrapperSelect>
-    <span> </span>
-    <WrapperSelect options={options} value={state.value} onChange={onChange}>
+    </SelectWrapper>
+    <SelectWrapper options={options} value={state.value} onChange={onChange}>
+        <Button>Select One</Button>
+    </SelectWrapper>
+    <SelectWrapper options={options} value={state.value} onChange={onChange}>
         <Avatar
             size="medium"
             src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
             placeholder="/public/placeholder.png"
             alt="image"
         />
-    </WrapperSelect>
+    </SelectWrapper>
+    <SelectWrapper options={options} value={state.value} onChange={onChange}>
+        <Text type="subtitle">Select One</Text>
+    </SelectWrapper>
+    <SelectWrapper options={options} value={state.value} onChange={onChange}>
+        <Icon name="arrowDropDownCircle" />
+    </SelectWrapper>
+    <SelectWrapper options={options} value={state.value} onChange={onChange}>
+        <Badge type="error">Lorem ipsum</Badge>
+    </SelectWrapper>
 </div>;
 ```
 
@@ -69,11 +71,19 @@ Groups:
 
 ```jsx
 import { useState } from 'react';
-import { Button } from 'hoi-poi-ui';
+import { Chip } from 'hoi-poi-ui';
 
 const [state, setState] = useState({});
 
 const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
 
 const options = [
     {
@@ -122,9 +132,17 @@ const options = [
 ];
 
 <div>
-    <WrapperSelect options={options} value={state.value} onChange={onChange}>
-        <Button>Select One</Button>
-    </WrapperSelect>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select One
+        </Chip>
+    </SelectWrapper>
 </div>;
 ```
 
@@ -132,20 +150,30 @@ Multi:
 
 ```jsx
 import { useState } from 'react';
-import { Button } from 'hoi-poi-ui';
+import { Chip } from 'hoi-poi-ui';
 
 const [state, setState] = useState({});
 
 const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
 
 const options = [
     {
         label: 'Lorem ipsum 1',
         value: 'lorem-ipsum-1',
+        type: 'success',
     },
     {
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
+        type: 'danger',
     },
     {
         label: 'Lorem ipsum 3',
@@ -174,19 +202,31 @@ const options = [
     {
         label: 'Lorem ipsum 9',
         value: 'lorem-ipsum-9',
-        type: 'success',
     },
     {
         label: 'Lorem ipsum 10',
         value: 'lorem-ipsum-10',
-        type: 'danger',
     },
 ];
 
 <div>
-    <WrapperSelect options={options} isMulti={true} value={state.value} onChange={onChange}>
-        <Button>Select Multi</Button>
-    </WrapperSelect>
+    <SelectWrapper
+        options={options}
+        isMulti={true}
+        value={state.value}
+        getIsOpen={getIsOpen}
+        onChange={onChange}
+    >
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
 </div>;
 ```
 
@@ -194,11 +234,19 @@ Groups Multi:
 
 ```jsx
 import { useState } from 'react';
-import { Button } from 'hoi-poi-ui';
+import { Chip } from 'hoi-poi-ui';
 
 const [state, setState] = useState({});
 
 const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
 
 const options = [
     {
@@ -247,9 +295,23 @@ const options = [
 ];
 
 <div>
-    <WrapperSelect options={options} isMulti={true} value={state.value} onChange={onChange}>
-        <Button>Select Multi</Button>
-    </WrapperSelect>
+    <SelectWrapper
+        options={options}
+        isMulti={true}
+        value={state.value}
+        getIsOpen={getIsOpen}
+        onChange={onChange}
+    >
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
 </div>;
 ```
 
@@ -257,15 +319,26 @@ Custom Component Options:
 
 ```jsx
 import { useState } from 'react';
-import { Button } from 'hoi-poi-ui';
+import { Button, SwitchInput } from 'hoi-poi-ui';
 
 const [state, setState] = useState({});
 
 const onChange = (value) => setState({ value });
 
 <div>
-    <WrapperSelect optionsComponent={<div>Hola</div>} value={state.value} onChange={onChange}>
+    <SelectWrapper
+        customOptions={
+            <SwitchInput
+                label="Lorem Ipsum"
+                labelMode="horizontal"
+                onChange={onChange}
+                value={state.value}
+                info="Info text here"
+                error="Error text here"
+            />
+        }
+    >
         <Button>Activate</Button>
-    </WrapperSelect>
+    </SelectWrapper>
 </div>;
 ```

@@ -5,17 +5,21 @@ export default (theme) => ({
     },
     wrapperPopover: {
         '& .hoi-poi-popover-inner': {
-            minWidth: 220,
+            width: 240,
             padding: '4px 0px',
             borderRadius: 4,
         },
     },
+    customOptions: {
+        padding: '16px 12px',
+    },
     optionList: {
         ...theme.utils.scrollbar,
+        width: '100%',
         maxHeight: 300,
         padding: '12px 0px',
         boxSizing: 'border-box',
-        overflowY: 'scroll',
+        overflowY: 'auto',
     },
     optionListGroup: {},
     optionListGroupLabel: {
@@ -26,6 +30,7 @@ export default (theme) => ({
         alignItems: 'center',
     },
     option: {
+        width: '100%',
         height: 36,
         padding: '0px 12px',
         boxSizing: 'border-box',
@@ -77,5 +82,7 @@ export default (theme) => ({
     optionLabelBulletSuccess: {
         backgroundColor: theme.colors.green500,
     },
-    optionLabel: {},
+    optionLabel: {
+        width: '100%',
+    },
 });
