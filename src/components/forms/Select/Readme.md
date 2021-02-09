@@ -952,6 +952,49 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Select only text:
+
+```jsx
+import { useState, useMemo } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+];
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        onlyText
+    />
+</div>;
+```
+
 ### Component tree
 
 ---

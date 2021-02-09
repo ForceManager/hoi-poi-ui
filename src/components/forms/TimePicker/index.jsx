@@ -296,7 +296,7 @@ const TimePicker = memo(
             >
                 <Select
                     overrides={override.timePicker}
-                    dropDownIcon={<Icon name="clock" />}
+                    dropDownIcon={<Icon className={classes.clockIcon} name="clock" />}
                     options={newOptions}
                     value={timeValue}
                     hideSelectedOptions={false}
