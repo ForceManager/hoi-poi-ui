@@ -12,6 +12,8 @@ export default (theme) => ({
             position: 'relative',
             top: 'auto',
             transform: 'none',
+            ...theme.typography.caption,
+            color: theme.colors.neutral700,
         },
         '& .hoi-poi-select__value-container': {
             padding: '0 4px 0 0',
@@ -29,5 +31,10 @@ export default (theme) => ({
     },
     typeSelectorInput: {
         minWidth: 'auto',
+    },
+    typeDivider: {
+        width: 1,
+        height: 23,
+        backgroundColor: theme.colors.neutral400,
     },
 });

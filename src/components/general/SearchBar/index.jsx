@@ -40,6 +40,7 @@ function SearchBar({
         });
         return (
             <>
+                <div className={classes.typeDivider} {...override.typeDivider} />
                 <Select
                     className={typeClassname}
                     onChange={onChangeType}
@@ -53,15 +54,19 @@ function SearchBar({
                         inputComponents: classes.typeSelectorInput,
                         singleValue: classes.typeSingleValue,
                     }}
+                    {...override.TypeDivider}
                 />
             </>
         );
     }, [
+        classes.typeDivider,
         classes.typeSelector,
         classes.typeSelectorInput,
         classes.typeSelectorWithValue,
         classes.typeSingleValue,
         onChangeType,
+        override.TypeDivider,
+        override.typeDivider,
         props.size,
         type,
         typeOptions,
@@ -80,7 +85,7 @@ function SearchBar({
     );
 }
 
-SearchBar.overrides = ['root'];
+SearchBar.overrides = ['root', 'typeDivider', 'TypeSelector'];
 
 SearchBar.defaultProps = {
     className: '',
@@ -90,6 +95,19 @@ SearchBar.defaultProps = {
 SearchBar.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
+    onChangeType: PropTypes.func,
+    typeOptions: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            value: PropTypes.any,
+            isDisabled: PropTypes.bool,
+            src: PropTypes.string,
+            icon: PropTypes.element,
+            iconType: PropTypes.string,
+            subLabel: PropTypes.string,
+        }),
+    ),
+    type: PropTypes.any,
 };
 
 export default React.memo(SearchBar);

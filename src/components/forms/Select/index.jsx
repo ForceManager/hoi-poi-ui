@@ -678,7 +678,7 @@ Select.defaultProps = {
     defaultMenuIsOpen: false,
     size: 'medium',
     onlyText: false,
-    isSearchable: false,
+    isSearchable: true,
 };
 
 Select.propTypes = {

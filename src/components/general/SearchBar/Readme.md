@@ -163,7 +163,7 @@ const loadOptions = (text, cb) =>
                     return current.value.includes(text);
                 });
                 resolve(newOptions);
-            }, 1000),
+            }, 10000),
         [],
     );
 
@@ -195,10 +195,24 @@ const typeOptions = [
         onChangeType={setType}
     />
 </div>;
+<div>
+    <SearchBar
+        placeholder="Search"
+        loadOptions={loadOptions}
+        typeOptions={typeOptions}
+        type={type}
+        onChangeType={setType}
+        size="small"
+    />
+</div>;
 ```
 
 ### Component tree
 
 ---
 
--   root - root element
+All props will pass to principal select
+
+-   root - root container
+-   typeDivider
+-   TypeSelector - secondary select
