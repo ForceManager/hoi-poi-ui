@@ -290,7 +290,7 @@ export default (theme) => ({
             height: '26px !important',
         },
         '& .hoi-poi-select__indicators': {
-            height: '22px !important',
+            height: '26px !important',
             alignSelf: 'center',
         },
         '& .hoi-poi-select__value-container': {

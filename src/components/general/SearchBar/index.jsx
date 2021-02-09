@@ -53,6 +53,7 @@ function SearchBar({
                     classes={{
                         inputComponents: classes.typeSelectorInput,
                         singleValue: classes.typeSingleValue,
+                        small: classes.typeSmall,
                     }}
                     {...override.TypeDivider}
                 />
@@ -64,6 +65,7 @@ function SearchBar({
         classes.typeSelectorInput,
         classes.typeSelectorWithValue,
         classes.typeSingleValue,
+        classes.typeSmall,
         onChangeType,
         override.TypeDivider,
         override.typeDivider,

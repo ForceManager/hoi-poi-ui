@@ -8,7 +8,7 @@ const onChange = (value) => setState({ value });
 const options = [
     {
         label: 'Lorem ipsum 1',
-        value: 'lorem-ipsum-1',
+        value: 'lorem-ipsum-1',0
     },
     {
         label: 'Lorem ipsum 2',
@@ -163,7 +163,7 @@ const loadOptions = (text, cb) =>
                     return current.value.includes(text);
                 });
                 resolve(newOptions);
-            }, 10000),
+            }, 1000),
         [],
     );
 
@@ -194,8 +194,6 @@ const typeOptions = [
         type={type}
         onChangeType={setType}
     />
-</div>;
-<div>
     <SearchBar
         placeholder="Search"
         loadOptions={loadOptions}
