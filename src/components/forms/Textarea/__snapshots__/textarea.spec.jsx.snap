@@ -430,7 +430,7 @@ exports[`Textarea default match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -440,6 +440,7 @@ exports[`Textarea default match 1`] = `
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="vertical"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -487,10 +488,12 @@ exports[`Textarea default match 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
+                    rows={3}
                     value="Hello"
                   />
                   <div
@@ -978,7 +981,7 @@ exports[`Textarea hide clear match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -988,6 +991,7 @@ exports[`Textarea hide clear match 1`] = `
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="vertical"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -1035,10 +1039,12 @@ exports[`Textarea hide clear match 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
+                    rows={3}
                     value=""
                   />
                 </div>
@@ -1486,7 +1492,7 @@ exports[`Textarea horizontal label mode match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -1496,6 +1502,7 @@ exports[`Textarea horizontal label mode match 1`] = `
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="horizontal"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -1543,10 +1550,12 @@ exports[`Textarea horizontal label mode match 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
+                    rows={3}
                     value=""
                   />
                 </div>
@@ -1994,7 +2003,7 @@ exports[`Textarea is read only match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -2004,6 +2013,7 @@ exports[`Textarea is read only match 1`] = `
         isReadOnly={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -2050,10 +2060,12 @@ exports[`Textarea is read only match 1`] = `
                     className="HoiPoi__Textarea__textarea-5-2"
                     onBlur={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={true}
+                    rows={3}
                     value=""
                   />
                   <div
@@ -2538,7 +2550,7 @@ exports[`Textarea is required match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -2549,6 +2561,7 @@ exports[`Textarea is required match 1`] = `
         isRequired={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -2599,10 +2612,12 @@ exports[`Textarea is required match 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
+                    rows={3}
                     value=""
                   />
                 </div>
@@ -3050,7 +3065,7 @@ exports[`Textarea with error match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -3061,6 +3076,7 @@ exports[`Textarea with error match 1`] = `
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="vertical"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -3109,10 +3125,12 @@ exports[`Textarea with error match 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
+                    rows={3}
                     value=""
                   />
                 </div>
@@ -3571,7 +3589,7 @@ exports[`Textarea with hint match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -3582,6 +3600,7 @@ exports[`Textarea with hint match 1`] = `
         isReadOnly={false}
         label="Lorem ipsum"
         labelMode="vertical"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -3944,10 +3963,12 @@ exports[`Textarea with hint match 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
+                    rows={3}
                     value=""
                   />
                 </div>
@@ -4395,7 +4416,7 @@ exports[`Textarea without label mode match 1`] = `
               ],
             },
           },
-          "version": "10.5.1",
+          "version": "10.5.0",
         }
       }
     >
@@ -4404,6 +4425,7 @@ exports[`Textarea without label mode match 1`] = `
         isCopyable={false}
         isReadOnly={false}
         labelMode="vertical"
+        minRows={3}
         onChange={[Function]}
         overrides={Object {}}
         placeholder="Write here"
@@ -4431,10 +4453,12 @@ exports[`Textarea without label mode match 1`] = `
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
+                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
+                    rows={3}
                     value=""
                   />
                 </div>
