@@ -430,7 +430,7 @@ exports[`SelectWrapper default match 1`] = `
               ],
             },
           },
-          "version": "10.5.0",
+          "version": "10.3.0",
         }
       }
     >
@@ -580,7 +580,12 @@ exports[`SelectWrapper default match 1`] = `
               ]
             }
           >
-            <ForwardRef(Tooltip)
+            <Tooltip
+              align={Object {}}
+              arrowContent={null}
+              destroyTooltipOnHide={false}
+              mouseEnterDelay={0}
+              mouseLeaveDelay={0.1}
               onVisibleChange={[Function]}
               overlay={
                 <Unknown
@@ -694,7 +699,7 @@ exports[`SelectWrapper default match 1`] = `
                   ]
                 }
                 afterPopupVisibleChange={[Function]}
-                autoDestroy={false}
+                arrowContent={null}
                 blurDelay={0.15}
                 builtinPlacements={
                   Object {
@@ -1069,7 +1074,7 @@ exports[`SelectWrapper default match 1`] = `
                   </button>
                 </ForwardRef>
               </Trigger>
-            </ForwardRef(Tooltip)>
+            </Tooltip>
           </Popover>
         </div>
       </Component>
@@ -1508,7 +1513,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
               ],
             },
           },
-          "version": "10.5.0",
+          "version": "10.3.0",
         }
       }
     >
@@ -1662,7 +1667,12 @@ exports[`SelectWrapper with disabled options match 1`] = `
               ]
             }
           >
-            <ForwardRef(Tooltip)
+            <Tooltip
+              align={Object {}}
+              arrowContent={null}
+              destroyTooltipOnHide={false}
+              mouseEnterDelay={0}
+              mouseLeaveDelay={0.1}
               onVisibleChange={[Function]}
               overlay={
                 <Unknown
@@ -1778,7 +1788,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                   ]
                 }
                 afterPopupVisibleChange={[Function]}
-                autoDestroy={false}
+                arrowContent={null}
                 blurDelay={0.15}
                 builtinPlacements={
                   Object {
@@ -2155,7 +2165,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                   </button>
                 </ForwardRef>
               </Trigger>
-            </ForwardRef(Tooltip)>
+            </Tooltip>
           </Popover>
         </div>
       </Component>
