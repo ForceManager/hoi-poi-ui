@@ -155,11 +155,19 @@ SelectWrapper.overrides = [
     'optionSelect',
     'optionDisabled',
     'optionCheckbox',
+    'optionTwoLines',
+    'optionLabel',
+    'optionSubLabel',
+    'optionLabelBlock',
     'optionLabelBullet',
     'optionLabelBulletDisabled',
     'optionLabelBulletPrimary',
     'optionLabelBulletDanger',
     'optionLabelBulletSuccess',
+    'optionLabelIcon',
+    'optionLabelCustomIcon',
+    'optionLabelAvatar',
+    'optionDisabledAvatar',
 ];
 
 SelectWrapper.defaultProps = {

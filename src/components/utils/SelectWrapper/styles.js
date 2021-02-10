@@ -42,6 +42,9 @@ export default (theme) => ({
             cursor: 'pointer',
         },
     },
+    optionTwoLines: {
+        height: 52,
+    },
     optionSelected: {
         backgroundColor: theme.colors.neutral200,
         '&:hover': {
@@ -59,8 +62,21 @@ export default (theme) => ({
             },
         },
     },
+    optionDisabledIcon: {
+        '& path': {
+            fill: theme.colors.neutral500,
+        },
+    },
+    optionDisabledAvatar: {
+        position: 'absolute',
+        width: 20,
+        height: 20,
+        borderRadius: '50%',
+        backgroundColor: theme.colors.neutral500,
+        opacity: '0.8',
+    },
     optionCheckbox: {
-        paddingRight: '8px',
+        marginRight: 10,
         display: 'flex',
         alignItems: 'center',
     },
@@ -84,5 +100,25 @@ export default (theme) => ({
     },
     optionLabel: {
         width: '100%',
+    },
+    optionSubLabel: {
+        '& >': {
+            color: 'red',
+        },
+    },
+    optionLabelIcon: {
+        marginRight: 10,
+    },
+    optionLabelCustomIcon: {
+        width: 18,
+        height: 18,
+        marginRight: 10,
+    },
+    optionLabelAvatar: {
+        width: 20,
+        height: 20,
+        marginRight: 10,
+        borderRadius: '50%',
+        position: 'relative',
     },
 });

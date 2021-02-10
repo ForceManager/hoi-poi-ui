@@ -67,6 +67,253 @@ const options = [
 </div>;
 ```
 
+Two Lines:
+
+```jsx
+import { useState } from 'react';
+import { Chip } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        subLabel: 'Lorem ipsum 1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        subLabel: 'Lorem ipsum 2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        subLabel: 'Lorem ipsum 3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        subLabel: 'Lorem ipsum 4',
+    },
+];
+
+<div>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
+Icon:
+
+```jsx
+import { useState } from 'react';
+import { Chip } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        iconType: 'route',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        iconType: 'route',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        iconType: 'route',
+        iconColor: 'orange',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        iconType: 'route',
+    },
+];
+
+<div>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
+Custom Icon:
+
+```jsx
+import { useState, useMemo } from 'react';
+import { Chip } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const customIcon = useMemo(() => {
+    return (
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M10 15.625v2.617l4.337-2.617H18a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6.625a2 2 0 002 2h4zm-2 6.16v-4.16H6a4 4 0 01-4-4V7a4 4 0 014-4h12a4 4 0 014 4v6.625a4 4 0 01-4 4h-3.106L8 21.785z"
+                fill="red"
+            />
+        </svg>
+    );
+});
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        icon: customIcon,
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        icon: customIcon,
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        iconType: 'route',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        iconType: 'route',
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: 'lorem-ipsum-5',
+        iconType: 'route',
+    },
+];
+
+<div>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
+Avatar:
+
+```jsx
+import { useState } from 'react';
+import { Chip } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+];
+
+<div>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
 Groups:
 
 ```jsx
