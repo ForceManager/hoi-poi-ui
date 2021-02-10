@@ -430,7 +430,7 @@ exports[`Form complete match 1`] = `
               ],
             },
           },
-          "version": "10.5.0",
+          "version": "10.3.0",
         }
       }
     >
@@ -741,6 +741,7 @@ exports[`Form complete match 1`] = `
                       >
                         <span
                           className="HoiPoi__Text__root-1-21 HoiPoi__Section__Text-1-8 HoiPoi__Text__subtitle-1-29 HoiPoi__Text__bold-1-38"
+                          style={Object {}}
                         >
                           General
                         </span>
@@ -856,6 +857,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Name
                                       *
@@ -978,6 +980,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Email
                                     </span>
@@ -992,7 +995,12 @@ exports[`Form complete match 1`] = `
                                       ]
                                     }
                                   >
-                                    <ForwardRef(Tooltip)
+                                    <Tooltip
+                                      align={Object {}}
+                                      arrowContent={null}
+                                      destroyTooltipOnHide={false}
+                                      mouseEnterDelay={0}
+                                      mouseLeaveDelay={0.1}
                                       overlay="No spam!"
                                       overlayClassName="HoiPoi__Popover__root-1-76"
                                       placement="top"
@@ -1011,7 +1019,7 @@ exports[`Form complete match 1`] = `
                                           ]
                                         }
                                         afterPopupVisibleChange={[Function]}
-                                        autoDestroy={false}
+                                        arrowContent={null}
                                         blurDelay={0.15}
                                         builtinPlacements={
                                           Object {
@@ -1292,7 +1300,7 @@ exports[`Form complete match 1`] = `
                                           </Icon>
                                         </span>
                                       </Trigger>
-                                    </ForwardRef(Tooltip)>
+                                    </Tooltip>
                                   </Popover>
                                 </div>
                               </Label>
@@ -1451,6 +1459,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Password
                                       *
@@ -1637,6 +1646,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Gender
                                     </span>
@@ -4356,6 +4366,7 @@ exports[`Form complete match 1`] = `
                               >
                                 <span
                                   className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                  style={Object {}}
                                 >
                                   Employment status
                                 </span>
@@ -4620,6 +4631,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Interest
                                     </span>
@@ -4857,6 +4869,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Interested
                                     </span>
@@ -4964,7 +4977,6 @@ exports[`Form complete match 1`] = `
                                           }
                                         />
                                         <input
-                                          aria-checked={false}
                                           checked={false}
                                           disabled={false}
                                           onBlur={[Function]}
@@ -5071,6 +5083,7 @@ exports[`Form complete match 1`] = `
                       >
                         <span
                           className="HoiPoi__Text__root-1-21 HoiPoi__Section__Text-1-8 HoiPoi__Text__subtitle-1-29 HoiPoi__Text__bold-1-38"
+                          style={Object {}}
                         >
                           Contact details
                         </span>
@@ -5179,6 +5192,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Address
                                     </span>
@@ -5281,6 +5295,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Phone
                                     </span>
@@ -5426,6 +5441,7 @@ exports[`Form complete match 1`] = `
                       >
                         <span
                           className="HoiPoi__Text__root-1-21 HoiPoi__Section__Text-1-8 HoiPoi__Text__subtitle-1-29 HoiPoi__Text__bold-1-38"
+                          style={Object {}}
                         >
                           Extra
                         </span>
@@ -5577,6 +5593,7 @@ exports[`Form complete match 1`] = `
                       >
                         <span
                           className="HoiPoi__Text__root-1-21 HoiPoi__Section__Text-1-8 HoiPoi__Text__subtitle-1-29 HoiPoi__Text__bold-1-38"
+                          style={Object {}}
                         >
                           MULTIPLIER
                         </span>
@@ -5685,6 +5702,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                      style={Object {}}
                                     >
                                       Address
                                     </span>
@@ -6149,6 +6167,7 @@ exports[`Form complete match 1`] = `
                                                       >
                                                         <span
                                                           className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                                          style={Object {}}
                                                         >
                                                           Activity
                                                         </span>
@@ -8859,6 +8878,7 @@ exports[`Form complete match 1`] = `
                                                       >
                                                         <span
                                                           className="HoiPoi__Text__root-1-21 HoiPoi__Label__Text-1-69 HoiPoi__Text__body-1-31"
+                                                          style={Object {}}
                                                         >
                                                           Name
                                                           *
@@ -8960,6 +8980,7 @@ exports[`Form complete match 1`] = `
                                   >
                                     <span
                                       className="HoiPoi__Text__root-1-21 HoiPoi__Button__Text-1-199"
+                                      style={Object {}}
                                     >
                                       + Add
                                     </span>
@@ -9039,6 +9060,7 @@ exports[`Form complete match 1`] = `
                       >
                         <span
                           className="HoiPoi__Text__root-1-21 HoiPoi__Section__Text-1-8 HoiPoi__Text__subtitle-1-29 HoiPoi__Text__bold-1-38"
+                          style={Object {}}
                         >
                           Custom Fields
                         </span>

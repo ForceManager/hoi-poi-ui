@@ -608,7 +608,6 @@ const Select = memo(
             indicatorSeparatorStyles,
             menuListStyles,
             dropDownIcon,
-            isSearchable,
             multiValueLabelStyles,
             multiValueRemoveStyles,
         ]);

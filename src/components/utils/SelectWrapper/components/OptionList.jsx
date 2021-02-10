@@ -14,12 +14,13 @@ const OptionsList = memo(
         checkBoxIsMonotone,
     }) => {
         const renderOptions = useMemo(() => {
-            return options.map((current) => {
+            return options.map((current, index) => {
                 if (current?.options?.length > 0) {
                     return (
                         <div
                             className={classes.optionListGroup}
                             {...(override.optionListGroup || {})}
+                            key={index}
                         >
                             {current.label && (
                                 <div
@@ -50,6 +51,7 @@ const OptionsList = memo(
                 } else {
                     return (
                         <Option
+                            key={index}
                             option={current}
                             isMulti={isMulti}
                             classes={classes}

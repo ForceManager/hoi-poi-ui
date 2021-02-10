@@ -490,7 +490,7 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
-MultiBullets:
+Multi with bullets:
 
 ```jsx
 import { useState } from 'react';
