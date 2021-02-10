@@ -15,7 +15,7 @@ export default React.memo((props) => {
     return (
         components.ClearIndicator && (
             <components.ClearIndicator {...props}>
-                <Icon name="closeSmall" />
+                <Icon name="closeSmall" size="large" />
             </components.ClearIndicator>
         )
     );

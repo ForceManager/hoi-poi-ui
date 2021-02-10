@@ -100,6 +100,7 @@ function Chip({
                     key="chip__close"
                     name="closeRaw"
                     size="raw"
+                    onClick={onRemove}
                     {...override.CloseIcon}
                 />,
             );

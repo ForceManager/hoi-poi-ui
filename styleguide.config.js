@@ -25,6 +25,7 @@ module.exports = {
                 './src/components/general/Modal/index.jsx',
                 './src/components/general/RadioBox/index.jsx',
                 './src/components/general/RadioBoxGroup/index.jsx',
+                './src/components/general/SearchBar/index.jsx',
             ],
         },
         {
@@ -59,6 +60,7 @@ module.exports = {
                 './src/components/utils/ScrollBar/index.jsx',
                 './src/components/utils/Toast/Toast.jsx',
                 './src/components/utils/Tooltip/index.jsx',
+                './src/components/utils/SelectWrapper/index.jsx',
             ],
         },
         {

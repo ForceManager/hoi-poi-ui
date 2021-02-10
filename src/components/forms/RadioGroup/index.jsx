@@ -96,7 +96,7 @@ RadioGroup.propTypes = {
     options: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
-            value: PropTypes.string,
+            value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
         }),
     ),
     value: PropTypes.string,
