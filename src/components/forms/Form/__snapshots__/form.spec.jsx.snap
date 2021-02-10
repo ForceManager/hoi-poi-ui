@@ -430,7 +430,7 @@ exports[`Form complete match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -995,12 +995,7 @@ exports[`Form complete match 1`] = `
                                       ]
                                     }
                                   >
-                                    <Tooltip
-                                      align={Object {}}
-                                      arrowContent={null}
-                                      destroyTooltipOnHide={false}
-                                      mouseEnterDelay={0}
-                                      mouseLeaveDelay={0.1}
+                                    <ForwardRef(Tooltip)
                                       overlay="No spam!"
                                       overlayClassName="HoiPoi__Popover__root-1-76"
                                       placement="top"
@@ -1019,7 +1014,7 @@ exports[`Form complete match 1`] = `
                                           ]
                                         }
                                         afterPopupVisibleChange={[Function]}
-                                        arrowContent={null}
+                                        autoDestroy={false}
                                         blurDelay={0.15}
                                         builtinPlacements={
                                           Object {
@@ -1300,7 +1295,7 @@ exports[`Form complete match 1`] = `
                                           </Icon>
                                         </span>
                                       </Trigger>
-                                    </Tooltip>
+                                    </ForwardRef(Tooltip)>
                                   </Popover>
                                 </div>
                               </Label>
@@ -2560,7 +2555,8 @@ exports[`Form complete match 1`] = `
                                                   css={
                                                     Object {
                                                       "& .hoi-poi-select__search-indicator": Object {
-                                                        "alignSelf": "flex-start",
+                                                        "alignItems": "center",
+                                                        "display": "flex",
                                                         "height": 34,
                                                         "marginRight": 8,
                                                         "width": 14,
@@ -2598,7 +2594,7 @@ exports[`Form complete match 1`] = `
                                                   onTouchEnd={[Function]}
                                                 >
                                                   <div
-                                                    className="hoi-poi-select__control css-s4mvnk-control"
+                                                    className="hoi-poi-select__control css-en49af-control"
                                                     onMouseDown={[Function]}
                                                     onTouchEnd={[Function]}
                                                   >
@@ -4977,6 +4973,7 @@ exports[`Form complete match 1`] = `
                                           }
                                         />
                                         <input
+                                          aria-checked={false}
                                           checked={false}
                                           disabled={false}
                                           onBlur={[Function]}
@@ -7080,7 +7077,8 @@ exports[`Form complete match 1`] = `
                                                                       css={
                                                                         Object {
                                                                           "& .hoi-poi-select__search-indicator": Object {
-                                                                            "alignSelf": "flex-start",
+                                                                            "alignItems": "center",
+                                                                            "display": "flex",
                                                                             "height": 34,
                                                                             "marginRight": 8,
                                                                             "width": 14,
@@ -7118,7 +7116,7 @@ exports[`Form complete match 1`] = `
                                                                       onTouchEnd={[Function]}
                                                                     >
                                                                       <div
-                                                                        className="hoi-poi-select__control css-s4mvnk-control"
+                                                                        className="hoi-poi-select__control css-en49af-control"
                                                                         onMouseDown={[Function]}
                                                                         onTouchEnd={[Function]}
                                                                       >
