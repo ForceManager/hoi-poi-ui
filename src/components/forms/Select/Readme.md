@@ -995,6 +995,76 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Custom Option:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        label2: 'Lorem-ipsum-1',
+        label3: 'Lorem-ipsum-1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        label2: 'Lorem-ipsum-2',
+        label3: 'Lorem-ipsum-2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        label2: 'Lorem-ipsum-3',
+        label3: 'Lorem-ipsum-3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        label2: 'Lorem-ipsum-4',
+        label3: 'Lorem-ipsum-4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const loadOptions = (text, cb) =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                const newOptions = options.filter((current) => {
+                    return current.value.includes(text);
+                });
+                resolve(newOptions);
+            }, 1000),
+        [],
+    );
+
+const customOption = (option) => {
+    return (
+        <div>
+            <div>{option.label}</div>
+            <div>{option.label2}</div>
+            <div>{option.label3}</div>
+        </div>
+    );
+};
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onChange={onChange}
+        value={state.value}
+        isFuzzy
+        customOption={customOption}
+        isMulti
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
