@@ -85,6 +85,8 @@ export default (theme) => ({
         height: 8,
         marginRight: 8,
         borderRadius: '50%',
+        display: 'flex',
+        flexShrink: 0,
     },
     optionLabelBulletDisabled: {
         backgroundColor: theme.colors.neutral500,

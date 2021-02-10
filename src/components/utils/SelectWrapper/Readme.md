@@ -415,12 +415,10 @@ const options = [
     {
         label: 'Lorem ipsum 1',
         value: 'lorem-ipsum-1',
-        type: 'success',
     },
     {
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
-        type: 'danger',
     },
     {
         label: 'Lorem ipsum 3',
@@ -453,6 +451,73 @@ const options = [
     {
         label: 'Lorem ipsum 10',
         value: 'lorem-ipsum-10',
+    },
+];
+
+<div>
+    <SelectWrapper
+        options={options}
+        isMulti={true}
+        value={state.value}
+        getIsOpen={getIsOpen}
+        onChange={onChange}
+    >
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
+Multi With Bullets:
+
+```jsx
+import { useState } from 'react';
+import { Chip } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        type: 'success',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        type: 'success',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        type: 'primary',
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: 'lorem-ipsum-5',
+        type: 'danger',
     },
 ];
 
@@ -589,3 +654,16 @@ const onChange = (value) => setState({ value });
     </SelectWrapper>
 </div>;
 ```
+
+### Component tree
+
+---
+
+-   root - root element
+-   [Popover](#/Utils?id=popover)
+-   optionList - options wrapper
+-   option - option
+-   [Text](#/General?id=text)
+-   [Icon](#/General?id=icon)
+-   [Avatar](#/General?id=avatar)
+-   [Checkbox](#/General?id=checkbox)
