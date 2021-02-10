@@ -8,7 +8,7 @@ const onChange = (value) => setState({ value });
 const options = [
     {
         label: 'Lorem ipsum 1',
-        value: 'lorem-ipsum-1',0
+        value: 'lorem-ipsum-1',
     },
     {
         label: 'Lorem ipsum 2',

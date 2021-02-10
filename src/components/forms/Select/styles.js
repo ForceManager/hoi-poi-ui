@@ -153,9 +153,10 @@ export default (theme) => ({
         },
         '& .hoi-poi-select__search-indicator': {
             width: 14,
-            marginRight: 8,
-            alignSelf: 'flex-start',
             height: 34,
+            marginRight: 8,
+            display: 'flex',
+            alignItems: 'center',
         },
     },
     controlFocused: {

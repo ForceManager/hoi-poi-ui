@@ -430,7 +430,7 @@ exports[`Modal like a confirm modal 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -456,10 +456,13 @@ exports[`Modal like a confirm modal 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Modal__root-3-0"
           closeTimeoutMS={300}
+          contentElement={[Function]}
           isOpen={true}
           overlayClassName="HoiPoi__Modal__overlay-3-1"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={true}
           shouldCloseOnOverlayClick={true}
@@ -490,6 +493,7 @@ exports[`Modal like a confirm modal 1`] = `
                   class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi__Modal__overlay-3-1"
                 >
                   <div
+                    aria-modal="true"
                     class="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-3-0"
                     role="dialog"
                     style="width: 640px; max-width: 100%; max-height: 100%; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);"
@@ -577,6 +581,7 @@ exports[`Modal like a confirm modal 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Modal__root-3-0"
               closeTimeoutMS={300}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -605,8 +610,10 @@ exports[`Modal like a confirm modal 1`] = `
               }
               isOpen={true}
               overlayClassName="HoiPoi__Modal__overlay-3-1"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={true}
               shouldCloseOnOverlayClick={true}
@@ -635,6 +642,7 @@ exports[`Modal like a confirm modal 1`] = `
                 style={Object {}}
               >
                 <div
+                  aria-modal={true}
                   className="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-3-0"
                   onClick={[Function]}
                   onKeyDown={[Function]}
@@ -1233,7 +1241,7 @@ exports[`Modal with different sizes 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1255,10 +1263,13 @@ exports[`Modal with different sizes 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Modal__root-1-0"
           closeTimeoutMS={300}
+          contentElement={[Function]}
           isOpen={true}
           overlayClassName="HoiPoi__Modal__overlay-1-1"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={true}
           shouldCloseOnOverlayClick={true}
@@ -1289,6 +1300,7 @@ exports[`Modal with different sizes 1`] = `
                   class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi__Modal__overlay-1-1"
                 >
                   <div
+                    aria-modal="true"
                     class="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-1-0"
                     role="dialog"
                     style="width: 640px; max-width: 100%; max-height: 100%; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);"
@@ -1337,6 +1349,7 @@ exports[`Modal with different sizes 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Modal__root-1-0"
               closeTimeoutMS={300}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -1365,8 +1378,10 @@ exports[`Modal with different sizes 1`] = `
               }
               isOpen={true}
               overlayClassName="HoiPoi__Modal__overlay-1-1"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={true}
               shouldCloseOnOverlayClick={true}
@@ -1395,6 +1410,7 @@ exports[`Modal with different sizes 1`] = `
                 style={Object {}}
               >
                 <div
+                  aria-modal={true}
                   className="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-1-0"
                   onClick={[Function]}
                   onKeyDown={[Function]}
@@ -1500,10 +1516,13 @@ exports[`Modal with different sizes 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Modal__root-1-0"
           closeTimeoutMS={300}
+          contentElement={[Function]}
           isOpen={true}
           overlayClassName="HoiPoi__Modal__overlay-1-1"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={true}
           shouldCloseOnOverlayClick={true}
@@ -1534,6 +1553,7 @@ exports[`Modal with different sizes 1`] = `
                   class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi__Modal__overlay-1-1"
                 >
                   <div
+                    aria-modal="true"
                     class="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-1-0"
                     role="dialog"
                     style="width: 440px; max-width: 100%; max-height: 100%; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);"
@@ -1582,6 +1602,7 @@ exports[`Modal with different sizes 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Modal__root-1-0"
               closeTimeoutMS={300}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -1610,8 +1631,10 @@ exports[`Modal with different sizes 1`] = `
               }
               isOpen={true}
               overlayClassName="HoiPoi__Modal__overlay-1-1"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={true}
               shouldCloseOnOverlayClick={true}
@@ -1640,6 +1663,7 @@ exports[`Modal with different sizes 1`] = `
                 style={Object {}}
               >
                 <div
+                  aria-modal={true}
                   className="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-1-0"
                   onClick={[Function]}
                   onKeyDown={[Function]}
@@ -1745,10 +1769,13 @@ exports[`Modal with different sizes 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Modal__root-1-0"
           closeTimeoutMS={300}
+          contentElement={[Function]}
           isOpen={true}
           overlayClassName="HoiPoi__Modal__overlay-1-1"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={true}
           shouldCloseOnOverlayClick={true}
@@ -1779,6 +1806,7 @@ exports[`Modal with different sizes 1`] = `
                   class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi__Modal__overlay-1-1"
                 >
                   <div
+                    aria-modal="true"
                     class="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-1-0"
                     role="dialog"
                     style="width: 960px; max-width: 100%; max-height: 100%; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);"
@@ -1827,6 +1855,7 @@ exports[`Modal with different sizes 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Modal__root-1-0"
               closeTimeoutMS={300}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -1855,8 +1884,10 @@ exports[`Modal with different sizes 1`] = `
               }
               isOpen={true}
               overlayClassName="HoiPoi__Modal__overlay-1-1"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={true}
               shouldCloseOnOverlayClick={true}
@@ -1885,6 +1916,7 @@ exports[`Modal with different sizes 1`] = `
                 style={Object {}}
               >
                 <div
+                  aria-modal={true}
                   className="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-1-0"
                   onClick={[Function]}
                   onKeyDown={[Function]}
@@ -2407,7 +2439,7 @@ exports[`Modal without header 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -2429,10 +2461,13 @@ exports[`Modal without header 1`] = `
           bodyOpenClassName="ReactModal__Body--open"
           className="HoiPoi__Modal__root-2-0"
           closeTimeoutMS={300}
+          contentElement={[Function]}
           isOpen={true}
           overlayClassName="HoiPoi__Modal__overlay-2-1"
+          overlayElement={[Function]}
           parentSelector={[Function]}
           portalClassName="ReactModalPortal"
+          preventScroll={false}
           role="dialog"
           shouldCloseOnEsc={true}
           shouldCloseOnOverlayClick={true}
@@ -2463,6 +2498,7 @@ exports[`Modal without header 1`] = `
                   class="ReactModal__Overlay ReactModal__Overlay--after-open HoiPoi__Modal__overlay-2-1"
                 >
                   <div
+                    aria-modal="true"
                     class="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-2-0"
                     role="dialog"
                     style="width: 640px; max-width: 100%; max-height: 100%; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);"
@@ -2488,6 +2524,7 @@ exports[`Modal without header 1`] = `
               bodyOpenClassName="ReactModal__Body--open"
               className="HoiPoi__Modal__root-2-0"
               closeTimeoutMS={300}
+              contentElement={[Function]}
               defaultStyles={
                 Object {
                   "content": Object {
@@ -2516,8 +2553,10 @@ exports[`Modal without header 1`] = `
               }
               isOpen={true}
               overlayClassName="HoiPoi__Modal__overlay-2-1"
+              overlayElement={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              preventScroll={false}
               role="dialog"
               shouldCloseOnEsc={true}
               shouldCloseOnOverlayClick={true}
@@ -2546,6 +2585,7 @@ exports[`Modal without header 1`] = `
                 style={Object {}}
               >
                 <div
+                  aria-modal={true}
                   className="ReactModal__Content ReactModal__Content--after-open HoiPoi__Modal__root-2-0"
                   onClick={[Function]}
                   onKeyDown={[Function]}
