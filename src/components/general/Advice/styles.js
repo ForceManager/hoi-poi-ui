@@ -35,6 +35,12 @@ export default (theme) => ({
         '& $dismiss': {
             color: `${theme.colors.neutral700} !important`,
             borderColor: `${theme.neutral700} !important`,
+            '&:hover': {
+                backgroundColor: `${theme.colors.neutral200} !important`,
+            },
+            '&:active': {
+                backgroundColor: `${theme.colors.neutral400} !important`,
+            },
         },
     },
     error: {
@@ -45,6 +51,12 @@ export default (theme) => ({
         '& $dismiss': {
             color: `${theme.colors.red500} !important`,
             borderColor: `${theme.colors.red500} !important`,
+            '&:hover': {
+                backgroundColor: `${theme.colors.red200} !important`,
+            },
+            '&:active': {
+                backgroundColor: `${theme.colors.red400} !important`,
+            },
         },
     },
     info: {
@@ -55,6 +67,12 @@ export default (theme) => ({
         '& $dismiss': {
             color: `${theme.colors.aqua700} !important`,
             borderColor: `${theme.colors.aqua700} !important`,
+            '&:hover': {
+                backgroundColor: `${theme.colors.aqua200} !important`,
+            },
+            '&:active': {
+                backgroundColor: `${theme.colors.aqua400} !important`,
+            },
         },
     },
     success: {
@@ -65,6 +83,12 @@ export default (theme) => ({
         '& $dismiss': {
             color: `${theme.colors.green700} !important`,
             borderColor: `${theme.colors.green700} !important`,
+            '&:hover': {
+                backgroundColor: `${theme.colors.green200} !important`,
+            },
+            '&:active': {
+                backgroundColor: `${theme.colors.green400} !important`,
+            },
         },
     },
     warning: {
@@ -75,6 +99,12 @@ export default (theme) => ({
         '& $dismiss': {
             color: `${theme.colors.yellow700} !important`,
             borderColor: `${theme.colors.yellow700} !important`,
+            '&:hover': {
+                backgroundColor: `${theme.colors.yellow200} !important`,
+            },
+            '&:active': {
+                backgroundColor: `${theme.colors.yellow400} !important`,
+            },
         },
     },
     textContainer: {

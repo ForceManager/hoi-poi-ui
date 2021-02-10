@@ -12,7 +12,8 @@ export default (theme) => ({
         '& .hoi-poi-popover-inner': {
             ...theme.typography.defaultText,
             padding: 32,
-            color: theme.colors.text.default,
+            color: theme.colors.neutral900,
+            lineHeight: 1.4285714,
             textDecoration: 'none',
             backgroundColor: theme.colors.white,
             boxShadow: theme.effects.boxShadow,
