@@ -60,6 +60,9 @@ export default (theme) => {
             border: 'none',
             padding: 0,
             margin: 0,
+            '&:invalid': {
+                boxShadow: 'none',
+            },
             '&::placeholder': {
                 color: theme.colors.neutral600,
             },
