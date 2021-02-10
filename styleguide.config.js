@@ -60,6 +60,7 @@ module.exports = {
                 './src/components/utils/ScrollBar/index.jsx',
                 './src/components/utils/Toast/Toast.jsx',
                 './src/components/utils/Tooltip/index.jsx',
+                './src/components/utils/SelectWrapper/index.jsx',
             ],
         },
         {

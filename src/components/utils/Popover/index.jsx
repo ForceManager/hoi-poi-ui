@@ -33,6 +33,7 @@ function Popover({
         overlayClassName: rootClassName,
         overlay: content,
         placement,
+        ...props,
     };
 
     return (
