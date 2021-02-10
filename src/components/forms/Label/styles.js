@@ -19,7 +19,7 @@ export default (theme) => ({
         height: 13,
         cursor: 'pointer',
         '& path': {
-            fill: theme.colors.neutral700,
+            fill: theme.colors.neutral600,
         },
     },
 });
