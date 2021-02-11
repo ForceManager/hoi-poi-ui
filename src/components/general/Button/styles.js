@@ -51,7 +51,9 @@ export default (theme) => ({
             marginBottom: -0,
         },
     },
-    icon: {},
+    icon: {
+        height: 18,
+    },
     // Types
     primary: {
         backgroundColor: theme.colors.orange500,
