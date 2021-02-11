@@ -19,6 +19,7 @@ import VisibilityOff from './icons/VisibilityOff';
 import VisibilityOn from './icons/VisibilityOn';
 import ThreeDots from './icons/ThreeDots';
 import Download from './icons/Download';
+import DownloadAlt from './icons/DownloadAlt';
 import Duplicate from './icons/Duplicate';
 import ArrowRight from './icons/ArrowRight';
 import ArrowLeft from './icons/ArrowLeft';
@@ -49,6 +50,7 @@ import Send from './icons/Send';
 import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
+import Columns from './icons/Columns';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -75,6 +77,7 @@ import Documents from './icons/actions/Documents';
 import Done from './icons/actions/Done';
 import DoneAll from './icons/actions/DoneAll';
 import EditArea from './icons/actions/EditArea';
+import Email from './icons/actions/Email';
 import EmailLate from './icons/actions/EmailLate';
 import EmailReceive from './icons/actions/EmailReceive';
 import Event from './icons/actions/Event';
@@ -124,6 +127,7 @@ import WarningOutline from './icons/alert/WarningOutline';
 import WarningOutlineTwoToned from './icons/alert/WarningOutlineTwoToned';
 
 //Logos
+import Mailchimp from './icons/logos/Mailchimp';
 import MicrosoftTeams from './icons/logos/MicrosofTeams';
 import ZoomCam from './icons/logos/ZoomCam';
 import ZoomList from './icons/logos/ZoomList';
@@ -234,6 +238,7 @@ const ICONS = {
     duplicate: Duplicate,
     threeDots: ThreeDots,
     download: Download,
+    downloadAlt: DownloadAlt,
     arrowRight: ArrowRight,
     arrowLeft: ArrowLeft,
     arrowTop: ArrowTop,
@@ -260,6 +265,7 @@ const ICONS = {
     emptyAvatar: EmptyAvatar,
     draggableSort: DraggableSort,
     fileDownload: FileDownload,
+    columns: Columns,
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,
@@ -285,6 +291,7 @@ const ICONS = {
     done: Done,
     doneAll: DoneAll,
     editArea: EditArea,
+    email: Email,
     emailLate: EmailLate,
     emailReceive: EmailReceive,
     event: Event,
@@ -332,6 +339,7 @@ const ICONS = {
     warningOutline: WarningOutline,
     warningOutlineTwoToned: WarningOutlineTwoToned,
     //Logos
+    mailchimp: Mailchimp,
     microsofTeams: MicrosoftTeams,
     zoomCam: ZoomCam,
     zoomList: ZoomList,
