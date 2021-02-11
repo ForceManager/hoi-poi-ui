@@ -66,6 +66,7 @@ const Select = memo(
         dropdownWidth,
         afterControl,
         beforeControl,
+        customOption,
         ...props
     }) => {
         const selectRef = useRef();
@@ -362,10 +363,11 @@ const Select = memo(
 
         const formatOptionLabel = useCallback(
             (option) => {
-                if (isMulti) return MenuMulti({ option, value: newValue, classes, override });
+                if (customOption) return customOption(option);
+                else if (isMulti) return MenuMulti({ option, value: newValue, classes, override });
                 else return MenuSingle({ option, classes, override });
             },
-            [isMulti, classes, override, newValue],
+            [isMulti, classes, override, newValue, customOption],
         );
 
         const formatGroupLabel = useCallback(
