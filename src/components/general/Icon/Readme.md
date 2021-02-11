@@ -47,6 +47,8 @@ Actions:
 <span> </span>
 <Icon name="editArea"/>
 <span> </span>
+<Icon name="email"/>
+<span> </span>
 <Icon name="emailLate"/>
 <span> </span>
 <Icon name="emailReceive"/>
@@ -151,6 +153,8 @@ Alert:
 Logos:
 
 ```jsx
+<Icon name="mailchimp"/>
+<span> </span>
 <Icon name="microsofTeams"/>
 <span> </span>
 <Icon name="zoomCam"/>
@@ -303,6 +307,8 @@ Icons:
 <span> </span>
 <Icon name="download" />
 <span> </span>
+<Icon name="downloadAlt" />
+<span> </span>
 <Icon name="duplicate" />
 <span> </span>
 <Icon name="arrowRight" />
@@ -358,6 +364,8 @@ Icons:
 <Icon name="draggableSort"/>
 <span> </span>
 <Icon name="fileDownload"/>
+<span> </span>
+<Icon name="columns"/>
 <span> </span>
 ```
 
