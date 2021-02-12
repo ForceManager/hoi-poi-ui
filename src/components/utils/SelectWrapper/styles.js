@@ -3,12 +3,17 @@ export default (theme) => ({
         display: 'inline-block',
         cursor: 'pointer',
     },
-    wrapperPopover: {
+    Popover: {
         '& .hoi-poi-popover-inner': {
             width: 240,
             padding: '4px 0px',
             borderRadius: 4,
         },
+    },
+    loaderContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     customOptions: {
         padding: '16px 12px',

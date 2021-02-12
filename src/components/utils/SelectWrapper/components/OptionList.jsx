@@ -1,9 +1,11 @@
 import React, { memo, useMemo } from 'react';
 import Option from './Option';
 import Text from '../../../typography/Text';
+import Loader from '../../../general/Loader';
 
 const OptionsList = memo(
     ({
+        isLoading,
         options,
         isMulti,
         classes,
@@ -77,7 +79,16 @@ const OptionsList = memo(
 
         return (
             <div className={classes.optionList} {...(override.optionList || {})}>
-                {renderOptions}
+                {isLoading && (
+                    <div className={classes.loaderContainer} {...(override.loaderContainer || {})}>
+                        <Loader
+                            className={classes.Loader}
+                            override={override.Loader || {}}
+                            size="tiny"
+                        />
+                    </div>
+                )}
+                {!isLoading && renderOptions}
             </div>
         );
     },

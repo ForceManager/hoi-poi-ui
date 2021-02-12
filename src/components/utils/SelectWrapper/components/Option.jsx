@@ -37,7 +37,7 @@ const Option = memo(
             <div
                 className={rootClasses.join(' ')}
                 {...(override.option || {})}
-                onClick={!option.isDisabled && onChange(option)}
+                onClick={!option.isDisabled ? onChange(option) : undefined}
             >
                 {isMulti && (
                     <Checkbox
