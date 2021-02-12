@@ -734,3 +734,4 @@ const onChange = (value) => setState({ value });
 -   [Icon](#/General?id=icon)
 -   [Avatar](#/General?id=avatar)
 -   [Checkbox](#/General?id=checkbox)
+-   [Loader](#/General?id=loader)
