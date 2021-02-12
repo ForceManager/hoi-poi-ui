@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback } from 'react';
+import React, { memo, useMemo, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Popover from '../../utils/Popover';
@@ -19,6 +19,7 @@ const SelectWrapper = memo(
         trigger,
         isMulti,
         options,
+        loadOptions,
         customOptions,
         value,
         getIsOpen,
@@ -31,6 +32,8 @@ const SelectWrapper = memo(
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
         const classes = useClasses(useStyles, classesProp);
         const rootClassName = classnames(classes.root, {}, classNameProp);
+        const [innerOptions, setInnerOptions] = useState(options || []);
+        const [isLoading, setIsLoading] = useState(false);
 
         const mappedValue = useMemo(() => {
             if (
@@ -89,10 +92,10 @@ const SelectWrapper = memo(
                         {customOptions}
                     </div>
                 );
-            } else if (options && options.length > 0) {
+            } else if (loadOptions || innerOptions?.length > 0) {
                 return (
                     <OptionList
-                        options={options}
+                        options={innerOptions}
                         isMulti={isMulti}
                         classes={classes}
                         override={override}
@@ -101,12 +104,13 @@ const SelectWrapper = memo(
                         mappedValue={mappedValue}
                         checkboxColor={checkboxColor}
                         checkBoxIsMonotone={checkBoxIsMonotone}
+                        isLoading={isLoading}
                     />
                 );
             } else return null;
         }, [
             customOptions,
-            options,
+            innerOptions,
             isMulti,
             classes,
             override,
@@ -115,18 +119,31 @@ const SelectWrapper = memo(
             mappedValue,
             checkboxColor,
             checkBoxIsMonotone,
+            loadOptions,
+            isLoading,
         ]);
 
         const onChangeOpen = useCallback(
             (isOpen) => {
                 getIsOpen && getIsOpen(isOpen);
                 if (isOpen) {
+                    if (loadOptions && innerOptions.length === 0) {
+                        setIsLoading(true);
+                        loadOptions()
+                            .then((result) => {
+                                setInnerOptions(result);
+                                setIsLoading(false);
+                            })
+                            .catch(() => {
+                                setIsLoading(false);
+                            });
+                    }
                     onOpen && onOpen();
                 } else {
                     onClose && onClose();
                 }
             },
-            [getIsOpen, onOpen, onClose],
+            [getIsOpen, onOpen, onClose, innerOptions, loadOptions],
         );
 
         return (
@@ -135,8 +152,9 @@ const SelectWrapper = memo(
                     content={finalOptions}
                     placement={placement}
                     trigger={trigger}
-                    className={classes.wrapperPopover}
+                    className={classes.Popover}
                     onVisibleChange={onChangeOpen}
+                    overrides={override.Popover || {}}
                 >
                     {children && children}
                 </Popover>
@@ -147,7 +165,9 @@ const SelectWrapper = memo(
 
 SelectWrapper.overrides = [
     'root',
-    'wrapperPopover',
+    'Popover',
+    'loaderContainer',
+    'Loader',
     'optionList',
     'optionListGroup',
     'optionListGroupLabel',
