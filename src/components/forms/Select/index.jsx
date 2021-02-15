@@ -50,6 +50,8 @@ const Select = memo(
         value,
         onChange,
         onBlur,
+        onEnter,
+        onKeyDown,
         hideSelectedOptions,
         filterByKey,
         defaultMenuIsOpen,
@@ -239,16 +241,25 @@ const Select = memo(
         );
 
         const optionsStyles = useCallback(
-            ({ isDisabled, isSelected }) => {
+            ({ isDisabled, isSelected, isFocused }) => {
                 let styles = {
                     ...newStyles.option,
                     ...(override.option?.style || {}),
                 };
 
+                if (isFocused) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.optionFocused,
+                        ...(override.optionFocused?.style || {}),
+                    };
+                }
+
                 if (isSelected) {
                     styles = {
                         ...styles,
                         ...newStyles.optionSelected,
+                        ...(override.optionSelected?.style || {}),
                     };
                 }
 
@@ -432,6 +443,7 @@ const Select = memo(
                 onChange: handleOnChange,
                 onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
+                onKeyDown,
                 filterOption: filterByKey ? filterKeyValue : createFilter,
                 formatOptionLabel,
                 formatGroupLabel,
@@ -586,6 +598,7 @@ const Select = memo(
             handleOnChange,
             handleOnFocus,
             handleOnBlur,
+            onKeyDown,
             filterByKey,
             formatOptionLabel,
             formatGroupLabel,
@@ -644,6 +657,8 @@ Select.overrides = [
     'control',
     'controlFocused',
     'options',
+    'optionFocused',
+    'optionSelected',
     'optionsDisabled',
     'valueContainer',
     'valueContainerDisabled',
@@ -699,6 +714,7 @@ Select.propTypes = {
     /* Autocomplete/Search UI */
     isFuzzy: PropTypes.bool,
     onChange: PropTypes.func,
+    onKeyDown: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
     /** Native input name */

@@ -28,6 +28,8 @@ const SelectWrapper = memo(
         onChange,
         checkboxColor,
         checkBoxIsMonotone,
+        loadingMessage,
+        noOptionsPlaceholder,
     }) => {
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
         const classes = useClasses(useStyles, classesProp);
@@ -92,7 +94,7 @@ const SelectWrapper = memo(
                         {customOptions}
                     </div>
                 );
-            } else if (loadOptions || innerOptions?.length > 0) {
+            } else {
                 return (
                     <OptionList
                         options={innerOptions}
@@ -105,9 +107,11 @@ const SelectWrapper = memo(
                         checkboxColor={checkboxColor}
                         checkBoxIsMonotone={checkBoxIsMonotone}
                         isLoading={isLoading}
+                        loadingMessage={loadingMessage}
+                        noOptionsPlaceholder={noOptionsPlaceholder}
                     />
                 );
-            } else return null;
+            }
         }, [
             customOptions,
             innerOptions,
@@ -119,8 +123,9 @@ const SelectWrapper = memo(
             mappedValue,
             checkboxColor,
             checkBoxIsMonotone,
-            loadOptions,
             isLoading,
+            loadingMessage,
+            noOptionsPlaceholder,
         ]);
 
         const onChangeOpen = useCallback(
@@ -169,6 +174,7 @@ SelectWrapper.overrides = [
     'loaderContainer',
     'Loader',
     'optionList',
+    'noOptions',
     'optionListGroup',
     'optionListGroupLabel',
     'option',
@@ -202,6 +208,8 @@ SelectWrapper.propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
     overrides: PropTypes.object,
+    ladingMessage: PropTypes.string,
+    noOptionsPlaceholder: PropTypes.string,
 };
 
 export default SelectWrapper;

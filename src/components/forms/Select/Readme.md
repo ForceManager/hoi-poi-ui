@@ -1051,12 +1051,19 @@ const customOption = (option) => {
     );
 };
 
+const onKeyDown = (e) => {
+    if (e.key === 'Enter') {
+        console.log('Enter key has been pushed and input value is:', e.target.value);
+    }
+};
+
 <div>
     <Select
         label="Lorem ipsum"
         placeholder="Search"
         loadOptions={loadOptions}
         onChange={onChange}
+        onKeyDown={onKeyDown}
         value={state.value}
         isFuzzy
         customOption={customOption}

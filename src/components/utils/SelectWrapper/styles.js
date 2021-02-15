@@ -10,6 +10,11 @@ export default (theme) => ({
             borderRadius: 4,
         },
     },
+    noOptions: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     loaderContainer: {
         display: 'flex',
         justifyContent: 'center',

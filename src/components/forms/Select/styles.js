@@ -183,22 +183,20 @@ export default (theme) => ({
         color: theme.colors.neutral900,
         backgroundColor: theme.colors.neutralBase,
         transition: 'all 0.15s ease',
+    },
+    optionFocused: {
+        backgroundColor: theme.colors.neutral200,
+        cursor: 'pointer',
         '&:hover': {
             backgroundColor: theme.colors.neutral200,
-            cursor: 'pointer',
         },
     },
     optionSelected: {
         backgroundColor: theme.colors.neutral200,
-        '&:hover': {
-            backgroundColor: theme.colors.neutral200,
-        },
     },
     optionDisabled: {
-        '&:hover': {
-            backgroundColor: 'none',
-            cursor: 'default',
-        },
+        backgroundColor: 'none',
+        cursor: 'default',
     },
     multiValue: {
         margin: '3px 6px 3px 2px',

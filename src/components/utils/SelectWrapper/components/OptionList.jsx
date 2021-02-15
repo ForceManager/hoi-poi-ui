@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from 'react';
+import PropTypes from 'prop-types';
 import Option from './Option';
 import Text from '../../../typography/Text';
-import Loader from '../../../general/Loader';
 
 const OptionsList = memo(
     ({
@@ -14,8 +14,20 @@ const OptionsList = memo(
         mappedValue,
         checkboxColor,
         checkBoxIsMonotone,
+        loadingMessage,
+        noOptionsPlaceholder,
     }) => {
         const renderOptions = useMemo(() => {
+            if (!options || options.length === 0) {
+                return (
+                    <div className={classes.noOptions} {...(override.noOptions || {})}>
+                        <Text type="body" color="neutral700">
+                            {noOptionsPlaceholder || 'No options'}
+                        </Text>
+                    </div>
+                );
+            }
+
             return options.map((current, index) => {
                 if (current?.options?.length > 0) {
                     return (
@@ -34,9 +46,10 @@ const OptionsList = memo(
                                     </Text>
                                 </div>
                             )}
-                            {current.options.map((item) => {
+                            {current.options.map((item, itemIndex) => {
                                 return (
                                     <Option
+                                        key={itemIndex}
                                         option={item}
                                         isMulti={isMulti}
                                         classes={classes}
@@ -75,17 +88,16 @@ const OptionsList = memo(
             onChange,
             checkboxColor,
             checkBoxIsMonotone,
+            noOptionsPlaceholder,
         ]);
 
         return (
             <div className={classes.optionList} {...(override.optionList || {})}>
                 {isLoading && (
                     <div className={classes.loaderContainer} {...(override.loaderContainer || {})}>
-                        <Loader
-                            className={classes.Loader}
-                            override={override.Loader || {}}
-                            size="tiny"
-                        />
+                        <Text type="body" color="neutral700">
+                            {loadingMessage || 'Loading...'}
+                        </Text>
                     </div>
                 )}
                 {!isLoading && renderOptions}
@@ -93,5 +105,19 @@ const OptionsList = memo(
         );
     },
 );
+
+OptionsList.propTypes = {
+    isLoading: PropTypes.bool,
+    options: PropTypes.array,
+    isMulti: PropTypes.bool,
+    classes: PropTypes.object,
+    override: PropTypes.object,
+    onChange: PropTypes.func,
+    mappedValue: PropTypes.object,
+    checkboxColor: PropTypes.string,
+    checkBoxIsMonotone: PropTypes.bool,
+    loadingMessage: PropTypes.string,
+    noOptionsPlaceholder: PropTypes.string,
+};
 
 export default OptionsList;
