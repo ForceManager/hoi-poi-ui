@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import Checkbox from '../../../general/Checkbox';
 import Text from '../../../typography/Text';
 import Icon from '../../../general/Icon';
@@ -119,5 +120,16 @@ const Option = memo(
         );
     },
 );
+
+Option.propTypes = {
+    option: PropTypes.array,
+    isMulti: PropTypes.bool,
+    classes: PropTypes.object,
+    override: PropTypes.object,
+    isSelected: PropTypes.bool,
+    onChange: PropTypes.func,
+    checkboxColor: PropTypes.string,
+    checkBoxIsMonotone: PropTypes.bool,
+};
 
 export default Option;

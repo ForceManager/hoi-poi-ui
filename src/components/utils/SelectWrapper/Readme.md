@@ -1,3 +1,34 @@
+No Options
+
+```jsx
+import { useState, useMemo } from 'react';
+import { Button, Chip, Avatar, Text, Icon, Badge } from 'hoi-poi-ui';
+
+const [state, setState] = useState({
+    value: null,
+});
+const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+
+const options = [];
+
+<div>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+        >
+            Select One
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
 Default:
 
 ```jsx
