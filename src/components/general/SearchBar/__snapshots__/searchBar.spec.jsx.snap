@@ -436,6 +436,8 @@ exports[`SearchBar default match 1`] = `
     >
       <SearchBar
         className=""
+        forceBlurOnEnter={true}
+        keepInputValue={true}
         loadOptions={[Function]}
         onChangeType={[Function]}
         overrides={Object {}}
@@ -520,6 +522,7 @@ exports[`SearchBar default match 1`] = `
             }
             defaultMenuIsOpen={false}
             filterByKey={false}
+            forceBlurOnEnter={true}
             hideOptions={false}
             hideSelectedOptions={true}
             isClearable={true}
@@ -527,6 +530,7 @@ exports[`SearchBar default match 1`] = `
             isFuzzy={true}
             isReadOnly={false}
             isSearchable={true}
+            keepInputValue={true}
             labelMode="vertical"
             loadOptions={[Function]}
             onChange={[Function]}
@@ -540,6 +544,7 @@ exports[`SearchBar default match 1`] = `
               className="HoiPoi__Select__root-1-6 HoiPoi__Select__isFullWidth-1-7 HoiPoi__Select__async-1-8 HoiPoi__Select__medium-1-62"
               hideOptions={false}
               isFullWidth={true}
+              keepInputValue={true}
               labelMode="vertical"
               overrides={Object {}}
             >
@@ -668,6 +673,8 @@ exports[`SearchBar default match 1`] = `
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}
+                        onInputChange={[Function]}
+                        onKeyDown={[Function]}
                         onMouseDown={[Function]}
                         openMenuOnClick={false}
                         openMenuOnFocus={false}
@@ -811,6 +818,7 @@ exports[`SearchBar default match 1`] = `
                           onChange={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
+                          onKeyDown={[Function]}
                           onMouseDown={[Function]}
                           openMenuOnClick={false}
                           openMenuOnFocus={false}
@@ -968,6 +976,7 @@ exports[`SearchBar default match 1`] = `
                             onChange={[Function]}
                             onFocus={[Function]}
                             onInputChange={[Function]}
+                            onKeyDown={[Function]}
                             onMenuClose={[Function]}
                             onMenuOpen={[Function]}
                             onMouseDown={[Function]}
@@ -1148,7 +1157,7 @@ exports[`SearchBar default match 1`] = `
                                   "onChange": [Function],
                                   "onFocus": [Function],
                                   "onInputChange": [Function],
-                                  "onKeyDown": undefined,
+                                  "onKeyDown": [Function],
                                   "onMenuClose": [Function],
                                   "onMenuOpen": [Function],
                                   "onMouseDown": [Function],
@@ -1379,7 +1388,7 @@ exports[`SearchBar default match 1`] = `
                                         "onChange": [Function],
                                         "onFocus": [Function],
                                         "onInputChange": [Function],
-                                        "onKeyDown": undefined,
+                                        "onKeyDown": [Function],
                                         "onMenuClose": [Function],
                                         "onMenuOpen": [Function],
                                         "onMouseDown": [Function],
@@ -1591,7 +1600,7 @@ exports[`SearchBar default match 1`] = `
                                           "onChange": [Function],
                                           "onFocus": [Function],
                                           "onInputChange": [Function],
-                                          "onKeyDown": undefined,
+                                          "onKeyDown": [Function],
                                           "onMenuClose": [Function],
                                           "onMenuOpen": [Function],
                                           "onMouseDown": [Function],
@@ -1877,7 +1886,7 @@ exports[`SearchBar default match 1`] = `
                                                 "onChange": [Function],
                                                 "onFocus": [Function],
                                                 "onInputChange": [Function],
-                                                "onKeyDown": undefined,
+                                                "onKeyDown": [Function],
                                                 "onMenuClose": [Function],
                                                 "onMenuOpen": [Function],
                                                 "onMouseDown": [Function],
@@ -2104,7 +2113,7 @@ exports[`SearchBar default match 1`] = `
                                                       "onChange": [Function],
                                                       "onFocus": [Function],
                                                       "onInputChange": [Function],
-                                                      "onKeyDown": undefined,
+                                                      "onKeyDown": [Function],
                                                       "onMenuClose": [Function],
                                                       "onMenuOpen": [Function],
                                                       "onMouseDown": [Function],
@@ -2334,7 +2343,7 @@ exports[`SearchBar default match 1`] = `
                                                       "onChange": [Function],
                                                       "onFocus": [Function],
                                                       "onInputChange": [Function],
-                                                      "onKeyDown": undefined,
+                                                      "onKeyDown": [Function],
                                                       "onMenuClose": [Function],
                                                       "onMenuOpen": [Function],
                                                       "onMouseDown": [Function],
@@ -2647,7 +2656,7 @@ exports[`SearchBar default match 1`] = `
                                                 "onChange": [Function],
                                                 "onFocus": [Function],
                                                 "onInputChange": [Function],
-                                                "onKeyDown": undefined,
+                                                "onKeyDown": [Function],
                                                 "onMenuClose": [Function],
                                                 "onMenuOpen": [Function],
                                                 "onMouseDown": [Function],
@@ -2879,6 +2888,8 @@ exports[`SearchBar default match 1`] = `
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onFocus={[Function]}
+                                                        onInputChange={[Function]}
+                                                        onKeyDown={[Function]}
                                                         onMouseDown={[Function]}
                                                         openMenuOnClick={true}
                                                         openMenuOnFocus={true}
@@ -3021,6 +3032,7 @@ exports[`SearchBar default match 1`] = `
                                                           onChange={[Function]}
                                                           onFocus={[Function]}
                                                           onInputChange={[Function]}
+                                                          onKeyDown={[Function]}
                                                           onMenuClose={[Function]}
                                                           onMenuOpen={[Function]}
                                                           onMouseDown={[Function]}
@@ -3209,7 +3221,7 @@ exports[`SearchBar default match 1`] = `
                                                                 "onChange": [Function],
                                                                 "onFocus": [Function],
                                                                 "onInputChange": [Function],
-                                                                "onKeyDown": undefined,
+                                                                "onKeyDown": [Function],
                                                                 "onMenuClose": [Function],
                                                                 "onMenuOpen": [Function],
                                                                 "onMouseDown": [Function],
@@ -3446,7 +3458,7 @@ exports[`SearchBar default match 1`] = `
                                                                       "onChange": [Function],
                                                                       "onFocus": [Function],
                                                                       "onInputChange": [Function],
-                                                                      "onKeyDown": undefined,
+                                                                      "onKeyDown": [Function],
                                                                       "onMenuClose": [Function],
                                                                       "onMenuOpen": [Function],
                                                                       "onMouseDown": [Function],
@@ -3664,7 +3676,7 @@ exports[`SearchBar default match 1`] = `
                                                                         "onChange": [Function],
                                                                         "onFocus": [Function],
                                                                         "onInputChange": [Function],
-                                                                        "onKeyDown": undefined,
+                                                                        "onKeyDown": [Function],
                                                                         "onMenuClose": [Function],
                                                                         "onMenuOpen": [Function],
                                                                         "onMouseDown": [Function],
@@ -3923,7 +3935,7 @@ exports[`SearchBar default match 1`] = `
                                                                               "onChange": [Function],
                                                                               "onFocus": [Function],
                                                                               "onInputChange": [Function],
-                                                                              "onKeyDown": undefined,
+                                                                              "onKeyDown": [Function],
                                                                               "onMenuClose": [Function],
                                                                               "onMenuOpen": [Function],
                                                                               "onMouseDown": [Function],
@@ -4156,7 +4168,7 @@ exports[`SearchBar default match 1`] = `
                                                                                     "onChange": [Function],
                                                                                     "onFocus": [Function],
                                                                                     "onInputChange": [Function],
-                                                                                    "onKeyDown": undefined,
+                                                                                    "onKeyDown": [Function],
                                                                                     "onMenuClose": [Function],
                                                                                     "onMenuOpen": [Function],
                                                                                     "onMouseDown": [Function],
@@ -4440,7 +4452,7 @@ exports[`SearchBar default match 1`] = `
                                                                               "onChange": [Function],
                                                                               "onFocus": [Function],
                                                                               "onInputChange": [Function],
-                                                                              "onKeyDown": undefined,
+                                                                              "onKeyDown": [Function],
                                                                               "onMenuClose": [Function],
                                                                               "onMenuOpen": [Function],
                                                                               "onMouseDown": [Function],
@@ -4669,7 +4681,7 @@ exports[`SearchBar default match 1`] = `
                                                                                     "onChange": [Function],
                                                                                     "onFocus": [Function],
                                                                                     "onInputChange": [Function],
-                                                                                    "onKeyDown": undefined,
+                                                                                    "onKeyDown": [Function],
                                                                                     "onMenuClose": [Function],
                                                                                     "onMenuOpen": [Function],
                                                                                     "onMouseDown": [Function],
@@ -4910,7 +4922,7 @@ exports[`SearchBar default match 1`] = `
                                                                                     "onChange": [Function],
                                                                                     "onFocus": [Function],
                                                                                     "onInputChange": [Function],
-                                                                                    "onKeyDown": undefined,
+                                                                                    "onKeyDown": [Function],
                                                                                     "onMenuClose": [Function],
                                                                                     "onMenuOpen": [Function],
                                                                                     "onMouseDown": [Function],
@@ -5127,7 +5139,7 @@ exports[`SearchBar default match 1`] = `
                                                                                       "onChange": [Function],
                                                                                       "onFocus": [Function],
                                                                                       "onInputChange": [Function],
-                                                                                      "onKeyDown": undefined,
+                                                                                      "onKeyDown": [Function],
                                                                                       "onMenuClose": [Function],
                                                                                       "onMenuOpen": [Function],
                                                                                       "onMouseDown": [Function],
@@ -5760,6 +5772,8 @@ exports[`SearchBar small match 1`] = `
     >
       <SearchBar
         className=""
+        forceBlurOnEnter={true}
+        keepInputValue={true}
         loadOptions={[Function]}
         onChangeType={[Function]}
         overrides={Object {}}
@@ -5846,6 +5860,7 @@ exports[`SearchBar small match 1`] = `
             }
             defaultMenuIsOpen={false}
             filterByKey={false}
+            forceBlurOnEnter={true}
             hideOptions={false}
             hideSelectedOptions={true}
             isClearable={true}
@@ -5853,6 +5868,7 @@ exports[`SearchBar small match 1`] = `
             isFuzzy={true}
             isReadOnly={false}
             isSearchable={true}
+            keepInputValue={true}
             labelMode="vertical"
             loadOptions={[Function]}
             onChange={[Function]}
@@ -5866,6 +5882,7 @@ exports[`SearchBar small match 1`] = `
               className="HoiPoi__Select__root-2-6 HoiPoi__Select__isFullWidth-2-7 HoiPoi__Select__async-2-8 HoiPoi__Select__small-2-61"
               hideOptions={false}
               isFullWidth={true}
+              keepInputValue={true}
               labelMode="vertical"
               overrides={Object {}}
             >
@@ -5994,6 +6011,8 @@ exports[`SearchBar small match 1`] = `
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}
+                        onInputChange={[Function]}
+                        onKeyDown={[Function]}
                         onMouseDown={[Function]}
                         openMenuOnClick={false}
                         openMenuOnFocus={false}
@@ -6137,6 +6156,7 @@ exports[`SearchBar small match 1`] = `
                           onChange={[Function]}
                           onFocus={[Function]}
                           onInputChange={[Function]}
+                          onKeyDown={[Function]}
                           onMouseDown={[Function]}
                           openMenuOnClick={false}
                           openMenuOnFocus={false}
@@ -6294,6 +6314,7 @@ exports[`SearchBar small match 1`] = `
                             onChange={[Function]}
                             onFocus={[Function]}
                             onInputChange={[Function]}
+                            onKeyDown={[Function]}
                             onMenuClose={[Function]}
                             onMenuOpen={[Function]}
                             onMouseDown={[Function]}
@@ -6474,7 +6495,7 @@ exports[`SearchBar small match 1`] = `
                                   "onChange": [Function],
                                   "onFocus": [Function],
                                   "onInputChange": [Function],
-                                  "onKeyDown": undefined,
+                                  "onKeyDown": [Function],
                                   "onMenuClose": [Function],
                                   "onMenuOpen": [Function],
                                   "onMouseDown": [Function],
@@ -6705,7 +6726,7 @@ exports[`SearchBar small match 1`] = `
                                         "onChange": [Function],
                                         "onFocus": [Function],
                                         "onInputChange": [Function],
-                                        "onKeyDown": undefined,
+                                        "onKeyDown": [Function],
                                         "onMenuClose": [Function],
                                         "onMenuOpen": [Function],
                                         "onMouseDown": [Function],
@@ -6917,7 +6938,7 @@ exports[`SearchBar small match 1`] = `
                                           "onChange": [Function],
                                           "onFocus": [Function],
                                           "onInputChange": [Function],
-                                          "onKeyDown": undefined,
+                                          "onKeyDown": [Function],
                                           "onMenuClose": [Function],
                                           "onMenuOpen": [Function],
                                           "onMouseDown": [Function],
@@ -7203,7 +7224,7 @@ exports[`SearchBar small match 1`] = `
                                                 "onChange": [Function],
                                                 "onFocus": [Function],
                                                 "onInputChange": [Function],
-                                                "onKeyDown": undefined,
+                                                "onKeyDown": [Function],
                                                 "onMenuClose": [Function],
                                                 "onMenuOpen": [Function],
                                                 "onMouseDown": [Function],
@@ -7430,7 +7451,7 @@ exports[`SearchBar small match 1`] = `
                                                       "onChange": [Function],
                                                       "onFocus": [Function],
                                                       "onInputChange": [Function],
-                                                      "onKeyDown": undefined,
+                                                      "onKeyDown": [Function],
                                                       "onMenuClose": [Function],
                                                       "onMenuOpen": [Function],
                                                       "onMouseDown": [Function],
@@ -7660,7 +7681,7 @@ exports[`SearchBar small match 1`] = `
                                                       "onChange": [Function],
                                                       "onFocus": [Function],
                                                       "onInputChange": [Function],
-                                                      "onKeyDown": undefined,
+                                                      "onKeyDown": [Function],
                                                       "onMenuClose": [Function],
                                                       "onMenuOpen": [Function],
                                                       "onMouseDown": [Function],
@@ -7973,7 +7994,7 @@ exports[`SearchBar small match 1`] = `
                                                 "onChange": [Function],
                                                 "onFocus": [Function],
                                                 "onInputChange": [Function],
-                                                "onKeyDown": undefined,
+                                                "onKeyDown": [Function],
                                                 "onMenuClose": [Function],
                                                 "onMenuOpen": [Function],
                                                 "onMouseDown": [Function],
@@ -8205,6 +8226,8 @@ exports[`SearchBar small match 1`] = `
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onFocus={[Function]}
+                                                        onInputChange={[Function]}
+                                                        onKeyDown={[Function]}
                                                         onMouseDown={[Function]}
                                                         openMenuOnClick={true}
                                                         openMenuOnFocus={true}
@@ -8347,6 +8370,7 @@ exports[`SearchBar small match 1`] = `
                                                           onChange={[Function]}
                                                           onFocus={[Function]}
                                                           onInputChange={[Function]}
+                                                          onKeyDown={[Function]}
                                                           onMenuClose={[Function]}
                                                           onMenuOpen={[Function]}
                                                           onMouseDown={[Function]}
@@ -8535,7 +8559,7 @@ exports[`SearchBar small match 1`] = `
                                                                 "onChange": [Function],
                                                                 "onFocus": [Function],
                                                                 "onInputChange": [Function],
-                                                                "onKeyDown": undefined,
+                                                                "onKeyDown": [Function],
                                                                 "onMenuClose": [Function],
                                                                 "onMenuOpen": [Function],
                                                                 "onMouseDown": [Function],
@@ -8772,7 +8796,7 @@ exports[`SearchBar small match 1`] = `
                                                                       "onChange": [Function],
                                                                       "onFocus": [Function],
                                                                       "onInputChange": [Function],
-                                                                      "onKeyDown": undefined,
+                                                                      "onKeyDown": [Function],
                                                                       "onMenuClose": [Function],
                                                                       "onMenuOpen": [Function],
                                                                       "onMouseDown": [Function],
@@ -8990,7 +9014,7 @@ exports[`SearchBar small match 1`] = `
                                                                         "onChange": [Function],
                                                                         "onFocus": [Function],
                                                                         "onInputChange": [Function],
-                                                                        "onKeyDown": undefined,
+                                                                        "onKeyDown": [Function],
                                                                         "onMenuClose": [Function],
                                                                         "onMenuOpen": [Function],
                                                                         "onMouseDown": [Function],
@@ -9249,7 +9273,7 @@ exports[`SearchBar small match 1`] = `
                                                                               "onChange": [Function],
                                                                               "onFocus": [Function],
                                                                               "onInputChange": [Function],
-                                                                              "onKeyDown": undefined,
+                                                                              "onKeyDown": [Function],
                                                                               "onMenuClose": [Function],
                                                                               "onMenuOpen": [Function],
                                                                               "onMouseDown": [Function],
@@ -9482,7 +9506,7 @@ exports[`SearchBar small match 1`] = `
                                                                                     "onChange": [Function],
                                                                                     "onFocus": [Function],
                                                                                     "onInputChange": [Function],
-                                                                                    "onKeyDown": undefined,
+                                                                                    "onKeyDown": [Function],
                                                                                     "onMenuClose": [Function],
                                                                                     "onMenuOpen": [Function],
                                                                                     "onMouseDown": [Function],
@@ -9766,7 +9790,7 @@ exports[`SearchBar small match 1`] = `
                                                                               "onChange": [Function],
                                                                               "onFocus": [Function],
                                                                               "onInputChange": [Function],
-                                                                              "onKeyDown": undefined,
+                                                                              "onKeyDown": [Function],
                                                                               "onMenuClose": [Function],
                                                                               "onMenuOpen": [Function],
                                                                               "onMouseDown": [Function],
@@ -9995,7 +10019,7 @@ exports[`SearchBar small match 1`] = `
                                                                                     "onChange": [Function],
                                                                                     "onFocus": [Function],
                                                                                     "onInputChange": [Function],
-                                                                                    "onKeyDown": undefined,
+                                                                                    "onKeyDown": [Function],
                                                                                     "onMenuClose": [Function],
                                                                                     "onMenuOpen": [Function],
                                                                                     "onMouseDown": [Function],
@@ -10236,7 +10260,7 @@ exports[`SearchBar small match 1`] = `
                                                                                     "onChange": [Function],
                                                                                     "onFocus": [Function],
                                                                                     "onInputChange": [Function],
-                                                                                    "onKeyDown": undefined,
+                                                                                    "onKeyDown": [Function],
                                                                                     "onMenuClose": [Function],
                                                                                     "onMenuOpen": [Function],
                                                                                     "onMouseDown": [Function],
@@ -10453,7 +10477,7 @@ exports[`SearchBar small match 1`] = `
                                                                                       "onChange": [Function],
                                                                                       "onFocus": [Function],
                                                                                       "onInputChange": [Function],
-                                                                                      "onKeyDown": undefined,
+                                                                                      "onKeyDown": [Function],
                                                                                       "onMenuClose": [Function],
                                                                                       "onMenuOpen": [Function],
                                                                                       "onMouseDown": [Function],
