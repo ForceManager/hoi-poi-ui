@@ -48,6 +48,10 @@ const Select = memo(
         defaultSearch,
         defaultValue,
         value,
+        inputValue,
+        forceBlurOnEnter,
+        keepInputValueOnBlur,
+        useAsSearch,
         onChange,
         onBlur,
         onEnter,
@@ -73,7 +77,14 @@ const Select = memo(
     }) => {
         const selectRef = useRef();
         const [focused, setFocused] = useState(false);
-        const [newValue, setNewValue] = useState(defaultValue || value);
+        const [newValue, setNewValue] = useState(
+            defaultValue ||
+                value ||
+                (!isMulti &&
+                    keepInputValueOnBlur &&
+                    inputValue && { label: inputValue, value: inputValue }) ||
+                null,
+        );
         const [innerOptions, setInnerOptions] = useState(options || []);
         const [lazyOptions, setLazyOptions] = useState({
             areLoaded: false,
@@ -133,7 +144,7 @@ const Select = memo(
             (data, action) => {
                 setNewValue(data);
                 if (!isMulti) setFocused(false);
-                onChange && onChange(data);
+                onChange && onChange(data, action);
             },
             [isMulti, onChange],
         );
@@ -403,6 +414,31 @@ const Select = memo(
             else return isClearable;
         }, [isRequired, isClearable]);
 
+        const handleOnKeyDown = useCallback(
+            (e) => {
+                if (e.key === 'Enter') {
+                    if (forceBlurOnEnter) setFocused(false);
+                    onEnter && onEnter(e);
+                }
+                onKeyDown && onKeyDown(e);
+            },
+            [onKeyDown, onEnter, forceBlurOnEnter],
+        );
+
+        const handleOnChangeInput = useCallback(
+            (inputValue, action) => {
+                if (
+                    !isMulti &&
+                    keepInputValueOnBlur &&
+                    action.action !== 'input-blur' &&
+                    action.action !== 'menu-close'
+                ) {
+                    setNewValue({ label: inputValue, value: inputValue });
+                }
+            },
+            [keepInputValueOnBlur, isMulti],
+        );
+
         const selectProps = useMemo(() => {
             const menuIsOpen = focused && (!(loadOptions && isFuzzy) || innerOptions.length);
             let Indicator = DropdownIndicator;
@@ -441,9 +477,10 @@ const Select = memo(
                 openMenuOnFocus: !(loadOptions && isFuzzy),
                 menuIsOpen,
                 onChange: handleOnChange,
+                onInputChange: handleOnChangeInput,
                 onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
-                onKeyDown,
+                onKeyDown: handleOnKeyDown,
                 filterOption: filterByKey ? filterKeyValue : createFilter,
                 formatOptionLabel,
                 formatGroupLabel,
@@ -596,9 +633,10 @@ const Select = memo(
             isSearchable,
             hideSelectedOptions,
             handleOnChange,
+            handleOnChangeInput,
             handleOnFocus,
             handleOnBlur,
-            onKeyDown,
+            handleOnKeyDown,
             filterByKey,
             formatOptionLabel,
             formatGroupLabel,
@@ -739,6 +777,9 @@ Select.propTypes = {
     noOptionsPlaceholder: PropTypes.string,
     loadingPlaceholder: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    inputValue: PropTypes.string,
+    forceBlurOnEnter: PropTypes.bool,
+    keepInputValueOnBlur: PropTypes.bool,
     /** Info popover */
     hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
