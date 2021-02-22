@@ -116,6 +116,8 @@ SearchBar.propTypes = {
         }),
     ),
     type: PropTypes.any,
+    keepInputValueOnBlur: PropTypes.bool,
+    forceBlurOnEnter: PropTypes.bool,
 };
 
 export default React.memo(SearchBar);
