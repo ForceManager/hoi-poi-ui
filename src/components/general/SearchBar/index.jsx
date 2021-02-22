@@ -18,7 +18,7 @@ function SearchBar({
     onChangeType,
     typeOptions,
     type,
-    keepInputValue,
+    keepInputValueOnBlur,
     forceBlurOnEnter,
     ...props
 }) {
@@ -83,7 +83,7 @@ function SearchBar({
                 isFuzzy
                 afterControl={TypeSelector}
                 isFullWidth
-                keepInputValue={keepInputValue}
+                keepInputValueOnBlur={keepInputValueOnBlur}
                 forceBlurOnEnter={forceBlurOnEnter}
                 {...props}
             />
@@ -96,7 +96,7 @@ SearchBar.overrides = ['root', 'typeDivider', 'TypeSelector'];
 SearchBar.defaultProps = {
     className: '',
     overrides: {},
-    keepInputValue: true,
+    keepInputValueOnBlur: true,
     forceBlurOnEnter: true,
 };
 
