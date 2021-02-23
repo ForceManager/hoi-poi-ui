@@ -25,10 +25,14 @@ function RadioControl({
 
     const { value: optionValue, overrides: optionOverrides, label, ...optionProps } = option;
 
-    const onChangeRadio = useCallback(() => {
-        onChange && onChange(optionValue);
-        onBlur && onBlur(optionValue);
-    }, [onBlur, onChange, optionValue]);
+    const onChangeRadio = useCallback(
+        (e) => {
+            e.stopPropagation();
+            onChange && onChange(optionValue, e);
+            onBlur && onBlur(optionValue);
+        },
+        [onBlur, onChange, optionValue],
+    );
 
     return (
         <div
