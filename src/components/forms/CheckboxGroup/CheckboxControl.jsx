@@ -23,9 +23,13 @@ function CheckboxControl({
     // Overrides
     const override = getOverrides(overridesProp, CheckboxControl.overrides);
 
-    const onChangeCheckbox = useCallback(() => {
-        onChange && onChange(option.value);
-    }, [onChange, option]);
+    const onChangeCheckbox = useCallback(
+        (e) => {
+            e.stopPropagation();
+            onChange && onChange(option.value, e);
+        },
+        [onChange, option],
+    );
 
     return (
         <div
