@@ -52,7 +52,7 @@ const Select = memo(
         inputValue,
         forceBlurOnEnter,
         keepInputValueOnBlur,
-        useAsSearch,
+        useAsSimpleSearch,
         onChange,
         onBlur,
         onEnter,
@@ -443,10 +443,12 @@ const Select = memo(
         );
 
         const selectProps = useMemo(() => {
-            const menuIsOpen = focused && (!(loadOptions && isFuzzy) || innerOptions.length);
+            const menuIsOpen = useAsSimpleSearch
+                ? false
+                : focused && (!(loadOptions && isFuzzy) || innerOptions.length);
             let Indicator = DropdownIndicator;
             let additionalComponents = {};
-            if (loadOptions && isFuzzy) Indicator = null;
+            if ((loadOptions && isFuzzy) || useAsSimpleSearch) Indicator = null;
             if (isReadOnly) Indicator = LockIndicator;
             if (dropDownIcon) Indicator = CustomIndicator;
             if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
@@ -654,6 +656,7 @@ const Select = memo(
             onMouseDown,
             numSelectedLiteral,
             dropdownWidth,
+            useAsSimpleSearch,
             classes.menu,
             classes.actionContainer,
             classes.action,
