@@ -62,7 +62,7 @@ function SearchBar({
                         singleValue: classes.typeSingleValue,
                         small: classes.typeSmall,
                     }}
-                    {...override.typeSelector}
+                    {...override.TypeSelector}
                 />
             </>
         );
@@ -76,7 +76,7 @@ function SearchBar({
         classes.typeSmall,
         type,
         override.typeDivider,
-        override.typeSelector,
+        override.TypeSelector,
         typeOptions,
         props.size,
         allowMultipleTypes,
@@ -98,7 +98,7 @@ function SearchBar({
     );
 }
 
-SearchBar.overrides = ['root', 'typeDivider', 'typeSelector'];
+SearchBar.overrides = ['root', 'typeDivider', 'TypeSelector'];
 
 SearchBar.defaultProps = {
     className: '',
