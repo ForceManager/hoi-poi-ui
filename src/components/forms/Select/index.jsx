@@ -467,7 +467,7 @@ const Select = memo(
                 actions,
                 isMulti,
                 isDisabled: isReadOnly,
-                isClearable: isMulti ? true : newIsClearable,
+                isClearable: showNumSelected ? false : isMulti ? true : newIsClearable,
                 isSearchable: showNumSelected ? false : isSearchable,
                 isLoading: lazyOptions.isLoading,
                 autoFocus: focused,

@@ -20,6 +20,8 @@ function SearchBar({
     type,
     keepInputValueOnBlur,
     forceBlurOnEnter,
+    allowMultipleTypes,
+    selectedTypesLiteral,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -38,7 +40,7 @@ function SearchBar({
     const TypeSelector = useMemo(() => {
         if (!onChangeType) return null;
         const typeClassname = classnames(classes.typeSelector, {
-            [classes.typeSelectorWithValue]: !!type,
+            [classes.typeSelectorWithValue]: !!type && !allowMultipleTypes,
         });
         return (
             <>
@@ -52,28 +54,33 @@ function SearchBar({
                     size={props.size}
                     dropdownWidth="250px"
                     isSearchable={false}
+                    isMulti={allowMultipleTypes}
+                    showNumSelected={allowMultipleTypes}
+                    numSelectedLiteral={selectedTypesLiteral}
                     classes={{
                         inputComponents: classes.typeSelectorInput,
                         singleValue: classes.typeSingleValue,
                         small: classes.typeSmall,
                     }}
-                    {...override.TypeDivider}
+                    {...override.typeSelector}
                 />
             </>
         );
     }, [
-        classes.typeDivider,
+        onChangeType,
         classes.typeSelector,
-        classes.typeSelectorInput,
         classes.typeSelectorWithValue,
+        classes.typeDivider,
+        classes.typeSelectorInput,
         classes.typeSingleValue,
         classes.typeSmall,
-        onChangeType,
-        override.TypeDivider,
-        override.typeDivider,
-        props.size,
         type,
+        override.typeDivider,
+        override.typeSelector,
         typeOptions,
+        props.size,
+        allowMultipleTypes,
+        selectedTypesLiteral,
     ]);
 
     return (
@@ -91,19 +98,24 @@ function SearchBar({
     );
 }
 
-SearchBar.overrides = ['root', 'typeDivider', 'TypeSelector'];
+SearchBar.overrides = ['root', 'typeDivider', 'typeSelector'];
 
 SearchBar.defaultProps = {
     className: '',
     overrides: {},
     keepInputValueOnBlur: true,
     forceBlurOnEnter: true,
+    allowMultipleTypes: false,
+    selectedTypesLiteral: '%@ Selected',
 };
 
 SearchBar.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     onChangeType: PropTypes.func,
+    /** Allow multiple types selection */
+    allowMultipleTypes: PropTypes.bool,
+    selectedTypesLiteral: PropTypes.string,
     typeOptions: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
