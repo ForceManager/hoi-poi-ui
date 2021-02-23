@@ -21,6 +21,7 @@ import MenuSingle from './components/MenuSingle';
 import MenuMulti from './components/MenuMulti';
 import Group from './components/Group';
 import Option from './components/Option';
+import ValueContainer from './components/ValueContainer';
 import { isEqual } from '../../../utils/arrays';
 
 import { createUseStyles } from '../../../utils/styles';
@@ -73,6 +74,8 @@ const Select = memo(
         afterControl,
         beforeControl,
         customOption,
+        showNumSelected,
+        numSelectedLiteral,
         ...props
     }) => {
         const selectRef = useRef();
@@ -442,9 +445,11 @@ const Select = memo(
         const selectProps = useMemo(() => {
             const menuIsOpen = focused && (!(loadOptions && isFuzzy) || innerOptions.length);
             let Indicator = DropdownIndicator;
+            let additionalComponents = {};
             if (loadOptions && isFuzzy) Indicator = null;
             if (isReadOnly) Indicator = LockIndicator;
             if (dropDownIcon) Indicator = CustomIndicator;
+            if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
 
             return {
                 ref: selectRef,
@@ -462,8 +467,8 @@ const Select = memo(
                 actions,
                 isMulti,
                 isDisabled: isReadOnly,
-                isClearable: isMulti ? true : newIsClearable,
-                isSearchable,
+                isClearable: showNumSelected ? false : isMulti ? true : newIsClearable,
+                isSearchable: showNumSelected ? false : isSearchable,
                 isLoading: lazyOptions.isLoading,
                 autoFocus: focused,
                 blurInputOnSelect: !isMulti,
@@ -489,6 +494,7 @@ const Select = memo(
                 beforeControl,
                 afterControl,
                 onMouseDown,
+                numSelectedLiteral,
                 menuProps: {
                     dropdownWidth,
                     className: classes.menu,
@@ -529,6 +535,7 @@ const Select = memo(
                             option: override.option,
                         },
                     }),
+                    ...additionalComponents,
                 },
                 styles: {
                     menuPortal: (base) => ({ ...base, zIndex: 9999 }),
@@ -619,6 +626,8 @@ const Select = memo(
             isFuzzy,
             innerOptions,
             isReadOnly,
+            dropDownIcon,
+            showNumSelected,
             selectClassName,
             placeholder,
             lazyOptions.options,
@@ -643,6 +652,7 @@ const Select = memo(
             beforeControl,
             afterControl,
             onMouseDown,
+            numSelectedLiteral,
             dropdownWidth,
             classes.menu,
             classes.actionContainer,
@@ -660,7 +670,6 @@ const Select = memo(
             optionsStyles,
             indicatorSeparatorStyles,
             menuListStyles,
-            dropDownIcon,
             multiValueLabelStyles,
             multiValueRemoveStyles,
         ]);
@@ -739,6 +748,8 @@ Select.defaultProps = {
     size: 'medium',
     onlyText: false,
     isSearchable: true,
+    showNumSelected: false,
+    numSelectedLiteral: '%@ Selected',
 };
 
 Select.propTypes = {
@@ -813,6 +824,8 @@ Select.propTypes = {
     dropdownWidth: PropTypes.string,
     beforeControl: PropTypes.node,
     afterControl: PropTypes.node,
+    showNumSelected: PropTypes.bool,
+    numSelectedLiteral: PropTypes.string,
 };
 
 export default Select;
