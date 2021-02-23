@@ -37,7 +37,7 @@ const loadOptions = (text, cb) =>
     );
 
 <div>
-    <SearchBar placeholder="Search" loadOptions={loadOptions} />
+    <SearchBar placeholder="Search" loadOptions={loadOptions} isMulti />
 </div>;
 ```
 
@@ -80,7 +80,7 @@ const loadOptions = (text, cb) =>
     );
 
 <div>
-    <SearchBar placeholder="Search" loadOptions={loadOptions} isMulti />
+    <SearchBar placeholder="Search" loadOptions={loadOptions} />
 </div>;
 ```
 
@@ -273,6 +273,18 @@ const typeOptions = [
         onChangeType={setType}
         allowMultipleTypes
     />
+</div>;
+```
+
+Without options and loadOptions:
+
+```jsx
+const onEnter = (e) => {
+    console.log(e.target.value);
+};
+
+<div>
+    <SearchBar placeholder="Search" useAsSimpleSearch={true} onEnter={onEnter} />
 </div>;
 ```
 

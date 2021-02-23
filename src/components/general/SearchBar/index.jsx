@@ -22,6 +22,10 @@ function SearchBar({
     forceBlurOnEnter,
     allowMultipleTypes,
     selectedTypesLiteral,
+    onEnter,
+    useAsSimpleSearch,
+    isMulti,
+    customOption,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -92,6 +96,10 @@ function SearchBar({
                 isFullWidth
                 keepInputValueOnBlur={keepInputValueOnBlur}
                 forceBlurOnEnter={forceBlurOnEnter}
+                useAsSimpleSearch={useAsSimpleSearch}
+                onEnter={onEnter}
+                isMulti={isMulti}
+                customOption={customOption}
                 {...props}
             />
         </div>
@@ -130,6 +138,10 @@ SearchBar.propTypes = {
     type: PropTypes.any,
     keepInputValueOnBlur: PropTypes.bool,
     forceBlurOnEnter: PropTypes.bool,
+    onEnter: PropTypes.func,
+    useAsSimpleSearch: PropTypes.bool,
+    isMulti: PropTypes.bool,
+    customOption: PropTypes.func,
 };
 
 export default React.memo(SearchBar);
