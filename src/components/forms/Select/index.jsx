@@ -222,7 +222,7 @@ const Select = memo(
                         ...lazyOptions,
                         isLoading: true,
                     });
-                    // const text = defaultSearch || newInputValue || '';
+
                     loadOptions(searchText).then((options) => {
                         setInnerOptions(options);
                         setLazyOptions({
