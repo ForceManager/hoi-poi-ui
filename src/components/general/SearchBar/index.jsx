@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -18,11 +18,13 @@ function SearchBar({
     onChangeType,
     typeOptions,
     type,
+    inputValue,
     keepInputValueOnBlur,
     forceBlurOnEnter,
     allowMultipleTypes,
     selectedTypesLiteral,
     onEnter,
+    onBlur,
     useAsSimpleSearch,
     isMulti,
     customOption,
@@ -87,6 +89,13 @@ function SearchBar({
         selectedTypesLiteral,
     ]);
 
+    const handleOnBlur = useCallback(
+        (e) => {
+            onEnter && onEnter(e);
+        },
+        [onEnter],
+    );
+
     return (
         <div {...rootProps} {...override.root}>
             <Select
@@ -94,12 +103,14 @@ function SearchBar({
                 isFuzzy
                 afterControl={TypeSelector}
                 isFullWidth
-                keepInputValueOnBlur={keepInputValueOnBlur}
+                keepInputValueOnBlur={keepInputValueOnBlur || useAsSimpleSearch}
                 forceBlurOnEnter={forceBlurOnEnter}
                 useAsSimpleSearch={useAsSimpleSearch}
                 onEnter={onEnter}
+                onBlur={onBlur ? onBlur : handleOnBlur}
                 isMulti={isMulti}
                 customOption={customOption}
+                inputValue={inputValue}
                 {...props}
             />
         </div>
@@ -136,6 +147,7 @@ SearchBar.propTypes = {
         }),
     ),
     type: PropTypes.any,
+    inputValue: PropTypes.string,
     keepInputValueOnBlur: PropTypes.bool,
     forceBlurOnEnter: PropTypes.bool,
     onEnter: PropTypes.func,

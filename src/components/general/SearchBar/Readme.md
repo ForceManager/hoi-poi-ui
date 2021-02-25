@@ -1,4 +1,4 @@
-Default:
+Default Multi:
 
 ```jsx
 import { useState } from 'react';
@@ -38,6 +38,146 @@ const loadOptions = (text, cb) =>
 
 <div>
     <SearchBar placeholder="Search" loadOptions={loadOptions} isMulti />
+</div>;
+```
+
+Default Single with Search:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const onEnter = (e) => console.log(e.target.value);
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const loadOptions = (text, cb) =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                const newOptions = options.filter((current) => {
+                    return current.value.includes(text);
+                });
+                resolve(newOptions);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <SearchBar placeholder="Search" loadOptions={loadOptions} onEnter={onEnter} />
+</div>;
+```
+
+Default Single with Search and Default Search Text:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const onEnter = (e) => console.log(e.target.value);
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const loadOptions = (text, cb) =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                const newOptions = options.filter((current) => {
+                    return current.value.includes(text);
+                });
+                resolve(newOptions);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <SearchBar
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onEnter={onEnter}
+        inputValue="lorem"
+    />
+</div>;
+```
+
+Default Single with Search and Default Option Value:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({
+    label: 'Lorem ipsum 1',
+    value: 'lorem-ipsum-1',
+});
+const onChange = (value) => setState(value);
+const onEnter = (e) => console.log(e.target.value);
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const loadOptions = (text, cb) =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                const newOptions = options.filter((current) => {
+                    return current.value.includes(text);
+                });
+                resolve(newOptions);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <SearchBar placeholder="Search" loadOptions={loadOptions} onEnter={onEnter} value={state} />
 </div>;
 ```
 
@@ -276,15 +416,46 @@ const typeOptions = [
 </div>;
 ```
 
-Without options and loadOptions:
+Simple Search:
 
 ```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
 const onEnter = (e) => {
     console.log(e.target.value);
 };
 
 <div>
-    <SearchBar placeholder="Search" useAsSimpleSearch={true} onEnter={onEnter} />
+    <SearchBar
+        placeholder="Search"
+        useAsSimpleSearch={true}
+        onEnter={onEnter}
+        onChange={onChange}
+    />
+</div>;
+```
+
+Simple Search with Default Search:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const onEnter = (e) => {
+    console.log(e.target.value);
+};
+
+<div>
+    <SearchBar
+        placeholder="Search"
+        onEnter={onEnter}
+        onChange={onChange}
+        useAsSimpleSearch={true}
+        inputValue="last search"
+    />
 </div>;
 ```
 
