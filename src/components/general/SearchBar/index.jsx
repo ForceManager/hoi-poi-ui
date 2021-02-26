@@ -90,7 +90,7 @@ function SearchBar({
         selectedTypesLiteral,
     ]);
 
-    // handleOnEnter can be triggered in two differen scenarios
+    // handleOnBlurSearch can be triggered in two differen scenarios
     // those scenarios are on blur through onInputCange and on press enter via onKeyDown
     const handleOnBlurSearch = useCallback(
         (value, action) => {
