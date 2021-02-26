@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -23,14 +23,15 @@ function SearchBar({
     forceBlurOnEnter,
     allowMultipleTypes,
     selectedTypesLiteral,
-    onEnter,
-    onBlur,
+    onBlurSearch,
     useAsSimpleSearch,
+    hideDropdownIndicator,
     isMulti,
     customOption,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
+    const actionsControlRef = useRef([]);
 
     // Overrides
     const override = getOverrides(overridesProp, SearchBar.overrides);
@@ -89,11 +90,23 @@ function SearchBar({
         selectedTypesLiteral,
     ]);
 
-    const handleOnBlur = useCallback(
-        (e) => {
-            onEnter && onEnter(e);
+    // handleOnEnter can be triggered in two differen scenarios
+    // those scenarios are on blur through onInputCange and on press enter via onKeyDown
+    const handleOnBlurSearch = useCallback(
+        (value, action) => {
+            if (action.action && typeof action.action === 'string') {
+                actionsControlRef.current.push(action.action);
+                setTimeout(() => {
+                    if (action.action === 'input-blur') {
+                        if (!actionsControlRef.current.includes('set-value')) {
+                            onBlurSearch && onBlurSearch(value);
+                        }
+                        actionsControlRef.current = [];
+                    }
+                }, 50);
+            }
         },
-        [onEnter],
+        [onBlurSearch],
     );
 
     return (
@@ -106,8 +119,8 @@ function SearchBar({
                 keepInputValueOnBlur={keepInputValueOnBlur || useAsSimpleSearch}
                 forceBlurOnEnter={forceBlurOnEnter}
                 useAsSimpleSearch={useAsSimpleSearch}
-                onEnter={onEnter}
-                onBlur={onBlur ? onBlur : handleOnBlur}
+                hideDropdownIndicator={hideDropdownIndicator}
+                onBlurSearch={handleOnBlurSearch}
                 isMulti={isMulti}
                 customOption={customOption}
                 inputValue={inputValue}
@@ -150,8 +163,9 @@ SearchBar.propTypes = {
     inputValue: PropTypes.string,
     keepInputValueOnBlur: PropTypes.bool,
     forceBlurOnEnter: PropTypes.bool,
-    onEnter: PropTypes.func,
+    onBlurSearch: PropTypes.func,
     useAsSimpleSearch: PropTypes.bool,
+    hideDropdownIndicator: PropTypes.bool,
     isMulti: PropTypes.bool,
     customOption: PropTypes.func,
 };

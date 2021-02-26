@@ -55,6 +55,7 @@ const Select = memo(
         useAsSimpleSearch,
         onChange,
         onBlur,
+        onBlurSearch,
         onEnter,
         onKeyDown,
         hideSelectedOptions,
@@ -76,6 +77,7 @@ const Select = memo(
         customOption,
         showNumSelected,
         numSelectedLiteral,
+        hideDropdownIndicator,
         ...props
     }) => {
         const selectRef = useRef();
@@ -438,7 +440,10 @@ const Select = memo(
         const handleOnKeyDown = useCallback(
             (e) => {
                 if (e.key === 'Enter') {
-                    if (forceBlurOnEnter) setFocused(false);
+                    if (forceBlurOnEnter) {
+                        selectRef.current.blur();
+                        setFocused(false);
+                    }
                     if (keepInputValueOnBlur && !isMulti) {
                         setNewValue(null);
                     }
@@ -456,18 +461,22 @@ const Select = memo(
                     if (keepInputValueOnBlur && !isMulti && newValue?.value) {
                         setNewValue(null);
                     }
+                } else {
+                    //This is exectued everytime blur is executed, including onKeyDown e.key === 'Enter'
+                    onBlurSearch && onBlurSearch(newInputValue, action);
                 }
             },
-            [keepInputValueOnBlur, isMulti, newValue],
+            [keepInputValueOnBlur, isMulti, newValue, onBlurSearch, newInputValue],
         );
 
         const selectProps = useMemo(() => {
-            const menuIsOpen = !useAsSimpleSearch
-                ? focused && (!(loadOptions && isFuzzy) || innerOptions.length)
-                : null;
+            let menuIsOpen =
+                (focused && (!(loadOptions && isFuzzy) || innerOptions?.length)) || false;
+            if (useAsSimpleSearch) menuIsOpen = false;
             let Indicator = DropdownIndicator;
             let additionalComponents = {};
-            if ((loadOptions && isFuzzy) || useAsSimpleSearch) Indicator = null;
+            if ((loadOptions && isFuzzy) || useAsSimpleSearch || hideDropdownIndicator)
+                Indicator = null;
             if (newInputValue && !newValue && keepInputValueOnBlur) Indicator = ClearIndicator;
             if (isReadOnly) Indicator = LockIndicator;
             if (dropDownIcon) Indicator = CustomIndicator;
@@ -658,6 +667,7 @@ const Select = memo(
             noOptionsMessage,
             loadingMessage,
             useAsSimpleSearch,
+            hideDropdownIndicator,
             newValue,
             newInputValue,
             defaultMenuIsOpen,
@@ -776,6 +786,7 @@ Select.defaultProps = {
     isSearchable: true,
     showNumSelected: false,
     numSelectedLiteral: '%@ Selected',
+    hideDropdownIndicator: false,
 };
 
 Select.propTypes = {
@@ -846,6 +857,7 @@ Select.propTypes = {
     filterByKey: PropTypes.bool,
     defaultMenuIsOpen: PropTypes.bool,
     dropDownIcon: PropTypes.element,
+    hideDropdownIndicator: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'medium']),
     onlyText: PropTypes.bool,
     dropdownWidth: PropTypes.string,
