@@ -103,7 +103,7 @@ function SearchBar({
                         }
                         actionsControlRef.current = [];
                     }
-                }, 50);
+                });
             }
         },
         [onBlurSearch],
