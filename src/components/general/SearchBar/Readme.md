@@ -48,7 +48,7 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
-const onEnter = (e) => console.log(e.target.value);
+const onBlurSearch = (value) => console.log(value);
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -81,7 +81,7 @@ const loadOptions = (text, cb) =>
     );
 
 <div>
-    <SearchBar placeholder="Search" loadOptions={loadOptions} onEnter={onEnter} />
+    <SearchBar placeholder="Search" loadOptions={loadOptions} onBlurSearch={onBlurSearch} />
 </div>;
 ```
 
@@ -92,7 +92,7 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
-const onEnter = (e) => console.log(e.target.value);
+const onBlurSearch = (value) => console.log(value);
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -128,7 +128,7 @@ const loadOptions = (text, cb) =>
     <SearchBar
         placeholder="Search"
         loadOptions={loadOptions}
-        onEnter={onEnter}
+        onBlurSearch={onBlurSearch}
         inputValue="lorem"
     />
 </div>;
@@ -144,7 +144,7 @@ const [state, setState] = useState({
     value: 'lorem-ipsum-1',
 });
 const onChange = (value) => setState(value);
-const onEnter = (e) => console.log(e.target.value);
+const onBlurSearch = (value) => console.log(value);
 const options = [
     {
         label: 'Lorem ipsum 1',
@@ -177,7 +177,12 @@ const loadOptions = (text, cb) =>
     );
 
 <div>
-    <SearchBar placeholder="Search" loadOptions={loadOptions} onEnter={onEnter} value={state} />
+    <SearchBar
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onBlurSearch={onBlurSearch}
+        value={state}
+    />
 </div>;
 ```
 
@@ -416,6 +421,45 @@ const typeOptions = [
 </div>;
 ```
 
+Without DropdownIndicator:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const onBlurSearch = (value) => console.log(value);
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+<div>
+    <SearchBar
+        placeholder="Search"
+        hideDropdownIndicator={true}
+        onBlurSearch={onBlurSearch}
+        onChange={onChange}
+        options={options}
+    />
+</div>;
+```
+
 Simple Search:
 
 ```jsx
@@ -423,15 +467,13 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
-const onEnter = (e) => {
-    console.log(e.target.value);
-};
+const onBlurSearch = (value) => console.log(value);
 
 <div>
     <SearchBar
         placeholder="Search"
         useAsSimpleSearch={true}
-        onEnter={onEnter}
+        onBlurSearch={onBlurSearch}
         onChange={onChange}
     />
 </div>;
@@ -444,14 +486,12 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
-const onEnter = (e) => {
-    console.log(e.target.value);
-};
+const onBlurSearch = (value) => console.log(value);
 
 <div>
     <SearchBar
         placeholder="Search"
-        onEnter={onEnter}
+        onBlurSearch={onBlurSearch}
         onChange={onChange}
         useAsSimpleSearch={true}
         inputValue="last search"
