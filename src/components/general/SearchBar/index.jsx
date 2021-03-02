@@ -130,7 +130,7 @@ function SearchBar({
                 customOption={customOption}
                 inputValue={inputValue}
                 hideSelectedOptions={hideSelectedOptions}
-                shouldSetValueOnChange={shouldSetValueOnChange}
+                shouldSetValueOnChange={isMulti ? true : shouldSetValueOnChange}
                 {...props}
             />
         </div>
@@ -173,12 +173,16 @@ SearchBar.propTypes = {
     keepInputValueOnBlur: PropTypes.bool,
     forceBlurOnEnter: PropTypes.bool,
     onBlurSearch: PropTypes.func,
+    /** It allows using the Select as a simple input for search uses */
     useAsSimpleSearch: PropTypes.bool,
     hideDropdownIndicator: PropTypes.bool,
     isMulti: PropTypes.bool,
+    /** Function to customize the option row */
     customOption: PropTypes.func,
+    /** Function to customize the option row in the optionType selector */
     customTypeOption: PropTypes.func,
     hideSelectedOptions: PropTypes.bool,
+    /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
     shouldSetValueOnChange: PropTypes.bool,
 };
 

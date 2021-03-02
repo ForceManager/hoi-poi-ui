@@ -830,7 +830,9 @@ Select.propTypes = {
     inputValue: PropTypes.string,
     forceBlurOnEnter: PropTypes.bool,
     keepInputValueOnBlur: PropTypes.bool,
+    /** It allows using the Select as a simple input for search uses */
     useAsSimpleSearch: PropTypes.bool,
+    onBlurSearch: PropTypes.func,
     /** Info popover */
     hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
@@ -867,6 +869,9 @@ Select.propTypes = {
     afterControl: PropTypes.node,
     showNumSelected: PropTypes.bool,
     numSelectedLiteral: PropTypes.string,
+    /** Function to customize the option row */
+    customOption: PropTypes.func,
+    /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
     shouldSetValueOnChange: PropTypes.bool,
 };
 
