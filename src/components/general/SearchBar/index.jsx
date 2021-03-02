@@ -28,6 +28,9 @@ function SearchBar({
     hideDropdownIndicator,
     isMulti,
     customOption,
+    customTypeOption,
+    hideSelectedOptions,
+    shouldSetValueOnChange,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -62,6 +65,7 @@ function SearchBar({
                     dropdownWidth="250px"
                     isSearchable={false}
                     isMulti={allowMultipleTypes}
+                    customOption={customTypeOption}
                     showNumSelected={allowMultipleTypes}
                     numSelectedLiteral={selectedTypesLiteral}
                     classes={{
@@ -88,6 +92,7 @@ function SearchBar({
         props.size,
         allowMultipleTypes,
         selectedTypesLiteral,
+        customTypeOption,
     ]);
 
     // handleOnBlurSearch can be triggered in two differen scenarios
@@ -124,6 +129,8 @@ function SearchBar({
                 isMulti={isMulti}
                 customOption={customOption}
                 inputValue={inputValue}
+                hideSelectedOptions={hideSelectedOptions}
+                shouldSetValueOnChange={shouldSetValueOnChange}
                 {...props}
             />
         </div>
@@ -139,6 +146,8 @@ SearchBar.defaultProps = {
     forceBlurOnEnter: true,
     allowMultipleTypes: false,
     selectedTypesLiteral: '%@ Selected',
+    hideSelectedOptions: false,
+    shouldSetValueOnChange: false,
 };
 
 SearchBar.propTypes = {
@@ -168,6 +177,9 @@ SearchBar.propTypes = {
     hideDropdownIndicator: PropTypes.bool,
     isMulti: PropTypes.bool,
     customOption: PropTypes.func,
+    customTypeOption: PropTypes.func,
+    hideSelectedOptions: PropTypes.bool,
+    shouldSetValueOnChange: PropTypes.bool,
 };
 
 export default React.memo(SearchBar);

@@ -78,6 +78,7 @@ const Select = memo(
         showNumSelected,
         numSelectedLiteral,
         hideDropdownIndicator,
+        shouldSetValueOnChange,
         ...props
     }) => {
         const selectRef = useRef();
@@ -141,7 +142,7 @@ const Select = memo(
 
         const handleOnChange = useCallback(
             (data, action) => {
-                setNewValue(data);
+                if (shouldSetValueOnChange) setNewValue(data);
                 if (!isMulti) setFocused(false);
                 onChange && onChange(data, action);
                 if (
@@ -152,7 +153,7 @@ const Select = memo(
                     setNewInputValue('');
                 }
             },
-            [isMulti, onChange, newInputValue],
+            [isMulti, onChange, newInputValue, shouldSetValueOnChange],
         );
 
         const setMenuPlacement = useCallback(
@@ -787,6 +788,7 @@ Select.defaultProps = {
     showNumSelected: false,
     numSelectedLiteral: '%@ Selected',
     hideDropdownIndicator: false,
+    shouldSetValueOnChange: true,
 };
 
 Select.propTypes = {
@@ -865,6 +867,7 @@ Select.propTypes = {
     afterControl: PropTypes.node,
     showNumSelected: PropTypes.bool,
     numSelectedLiteral: PropTypes.string,
+    shouldSetValueOnChange: PropTypes.bool,
 };
 
 export default Select;
