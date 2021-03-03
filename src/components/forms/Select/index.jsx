@@ -79,6 +79,7 @@ const Select = memo(
         numSelectedLiteral,
         hideDropdownIndicator,
         shouldSetValueOnChange,
+        cacheOptions,
         ...props
     }) => {
         const selectRef = useRef();
@@ -490,7 +491,7 @@ const Select = memo(
                 placeholder,
                 options: lazyOptions.options || innerOptions,
                 defaultOptions: innerOptions,
-                cacheOptions: true,
+                cacheOptions,
                 noOptionsMessage,
                 loadingMessage,
                 defaultValue: newValue,
@@ -662,6 +663,7 @@ const Select = memo(
             dropDownIcon,
             showNumSelected,
             selectClassName,
+            cacheOptions,
             placeholder,
             lazyOptions.options,
             lazyOptions.isLoading,
@@ -789,6 +791,7 @@ Select.defaultProps = {
     numSelectedLiteral: '%@ Selected',
     hideDropdownIndicator: false,
     shouldSetValueOnChange: true,
+    cacheOptions: true,
 };
 
 Select.propTypes = {
