@@ -131,13 +131,14 @@ function SearchBar({
                 inputValue={inputValue}
                 hideSelectedOptions={hideSelectedOptions}
                 shouldSetValueOnChange={isMulti ? true : shouldSetValueOnChange}
+                {...override.Select}
                 {...props}
             />
         </div>
     );
 }
 
-SearchBar.overrides = ['root', 'typeDivider', 'TypeSelector'];
+SearchBar.overrides = ['root', 'typeDivider', 'TypeSelector', 'Select'];
 
 SearchBar.defaultProps = {
     className: '',
