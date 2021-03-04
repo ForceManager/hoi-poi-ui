@@ -876,6 +876,7 @@ Select.propTypes = {
     customOption: PropTypes.func,
     /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
     shouldSetValueOnChange: PropTypes.bool,
+    cacheOptions: PropTypes.bool,
 };
 
 export default Select;
