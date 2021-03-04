@@ -79,6 +79,7 @@ const Select = memo(
         numSelectedLiteral,
         hideDropdownIndicator,
         shouldSetValueOnChange,
+        cacheOptions,
         ...props
     }) => {
         const selectRef = useRef();
@@ -490,7 +491,7 @@ const Select = memo(
                 placeholder,
                 options: lazyOptions.options || innerOptions,
                 defaultOptions: innerOptions,
-                cacheOptions: true,
+                cacheOptions,
                 noOptionsMessage,
                 loadingMessage,
                 defaultValue: newValue,
@@ -662,6 +663,7 @@ const Select = memo(
             dropDownIcon,
             showNumSelected,
             selectClassName,
+            cacheOptions,
             placeholder,
             lazyOptions.options,
             lazyOptions.isLoading,
@@ -789,6 +791,7 @@ Select.defaultProps = {
     numSelectedLiteral: '%@ Selected',
     hideDropdownIndicator: false,
     shouldSetValueOnChange: true,
+    cacheOptions: true,
 };
 
 Select.propTypes = {
@@ -873,6 +876,7 @@ Select.propTypes = {
     customOption: PropTypes.func,
     /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
     shouldSetValueOnChange: PropTypes.bool,
+    cacheOptions: PropTypes.bool,
 };
 
 export default Select;
