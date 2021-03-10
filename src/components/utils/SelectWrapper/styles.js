@@ -89,6 +89,9 @@ export default (theme) => ({
         marginRight: 10,
         display: 'flex',
         alignItems: 'center',
+        '& + $optionLabel': {
+            maxWidth: 'calc(100% - 28px)',
+        },
     },
     optionLabelBullet: {
         width: 8,

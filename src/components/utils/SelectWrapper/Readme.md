@@ -444,7 +444,7 @@ const onRemove = (e) => {
 
 const options = [
     {
-        label: 'Lorem ipsum 1',
+        label: 'Lorem ipsum 1 with a very long label',
         value: 'lorem-ipsum-1',
     },
     {
