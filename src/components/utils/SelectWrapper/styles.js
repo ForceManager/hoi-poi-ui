@@ -21,7 +21,7 @@ export default (theme) => ({
         alignItems: 'center',
     },
     customOptions: {
-        padding: '16px 12px',
+        padding: '8px 12px',
     },
     optionList: {
         ...theme.utils.scrollbar,
