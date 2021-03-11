@@ -21,7 +21,7 @@ export default (theme) => ({
         alignItems: 'center',
     },
     customOptions: {
-        padding: '16px 12px',
+        padding: '8px 12px',
     },
     optionList: {
         ...theme.utils.scrollbar,
@@ -89,6 +89,9 @@ export default (theme) => ({
         marginRight: 10,
         display: 'flex',
         alignItems: 'center',
+        '& + $optionLabel': {
+            maxWidth: 'calc(100% - 28px)',
+        },
     },
     optionLabelBullet: {
         width: 8,
