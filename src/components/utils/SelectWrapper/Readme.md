@@ -87,10 +87,10 @@ const options = [
         />
     </SelectWrapper>
     <SelectWrapper options={options} value={state.value} onChange={onChange}>
-        <Text type="subtitle">Select One</Text>
-    </SelectWrapper>
-    <SelectWrapper options={options} value={state.value} onChange={onChange}>
         <Icon name="arrowDropDownCircle" />
+    </SelectWrapper>
+    <SelectWrapper options={options} value={state.value} onChange={onChange} popoverWide>
+        <Text type="subtitle">Select One with wider popover</Text>
     </SelectWrapper>
     <SelectWrapper
         options={options}

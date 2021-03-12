@@ -10,6 +10,11 @@ export default (theme) => ({
             borderRadius: 4,
         },
     },
+    PopoverWide: {
+        '& .hoi-poi-popover-inner': {
+            width: 344,
+        },
+    },
     noOptions: {
         display: 'flex',
         justifyContent: 'center',
