@@ -15,6 +15,7 @@ const Option = memo(
         onChange,
         checkboxColor,
         checkBoxIsMonotone,
+        isTruncated,
     }) => {
         let rootClasses = [classes.option];
         if (option.isDisabled) rootClasses.push(classes.optionDisabled);
@@ -91,7 +92,7 @@ const Option = memo(
                 )}
                 {!option.subLabel && (
                     <div className={classes.optionLabel} {...(override.optionLabel || {})}>
-                        <Text type="body" isTruncated>
+                        <Text type="body" isTruncated={isTruncated}>
                             {option.label}
                         </Text>
                     </div>
@@ -102,7 +103,7 @@ const Option = memo(
                         {...(override.optionLabelBlock || {})}
                     >
                         <div className={classes.optionLabel} {...(override.optionLabel || {})}>
-                            <Text type="body" isTruncated>
+                            <Text type="body" isTruncated={isTruncated}>
                                 {option.label}
                             </Text>
                         </div>
@@ -110,7 +111,7 @@ const Option = memo(
                             className={classes.optionSubLabel}
                             {...(override.optionSubLabel || {})}
                         >
-                            <Text type="caption" isTruncated color="neutral700">
+                            <Text type="caption" isTruncated={isTruncated} color="neutral700">
                                 {option.subLabel}
                             </Text>
                         </div>
@@ -121,6 +122,10 @@ const Option = memo(
     },
 );
 
+Option.defaultProps = {
+    isTruncated: true,
+};
+
 Option.propTypes = {
     option: PropTypes.array,
     isMulti: PropTypes.bool,
@@ -130,6 +135,7 @@ Option.propTypes = {
     onChange: PropTypes.func,
     checkboxColor: PropTypes.string,
     checkBoxIsMonotone: PropTypes.bool,
+    isTruncated: PropTypes.string,
 };
 
 export default Option;

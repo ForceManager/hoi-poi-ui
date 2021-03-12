@@ -30,6 +30,7 @@ const SelectWrapper = memo(
         checkBoxIsMonotone,
         loadingMessage,
         noOptionsPlaceholder,
+        truncateOptions,
     }) => {
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
         const classes = useClasses(useStyles, classesProp);
@@ -109,6 +110,7 @@ const SelectWrapper = memo(
                         isLoading={isLoading}
                         loadingMessage={loadingMessage}
                         noOptionsPlaceholder={noOptionsPlaceholder}
+                        truncateOptions={truncateOptions}
                     />
                 );
             }
@@ -126,6 +128,7 @@ const SelectWrapper = memo(
             isLoading,
             loadingMessage,
             noOptionsPlaceholder,
+            truncateOptions,
         ]);
 
         const onChangeOpen = useCallback(
@@ -202,6 +205,7 @@ SelectWrapper.defaultProps = {
     isMulti: false,
     checkboxColor: 'orange',
     checkBoxIsMonotone: false,
+    truncateOptions: true,
 };
 
 SelectWrapper.propTypes = {
@@ -210,6 +214,8 @@ SelectWrapper.propTypes = {
     overrides: PropTypes.object,
     ladingMessage: PropTypes.string,
     noOptionsPlaceholder: PropTypes.string,
+    /** Truncate text label in select options */
+    truncateOptions: PropTypes.bool,
 };
 
 export default SelectWrapper;

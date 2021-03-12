@@ -46,7 +46,7 @@ const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
 
 const options = [
     {
-        label: 'Lorem ipsum 1',
+        label: 'Lorem ipsum 1 with a really long label',
         value: 'lorem-ipsum-1',
     },
     {
@@ -92,8 +92,13 @@ const options = [
     <SelectWrapper options={options} value={state.value} onChange={onChange}>
         <Icon name="arrowDropDownCircle" />
     </SelectWrapper>
-    <SelectWrapper options={options} value={state.value} onChange={onChange}>
-        <Badge type="error">Lorem ipsum</Badge>
+    <SelectWrapper
+        options={options}
+        value={state.value}
+        onChange={onChange}
+        truncateOptions={false}
+    >
+        <Badge type="error">Lorem ipsum with no truncated options</Badge>
     </SelectWrapper>
 </div>;
 ```
