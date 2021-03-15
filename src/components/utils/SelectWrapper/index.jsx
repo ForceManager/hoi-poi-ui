@@ -30,6 +30,8 @@ const SelectWrapper = memo(
         checkBoxIsMonotone,
         loadingMessage,
         noOptionsPlaceholder,
+        truncateOptions,
+        popoverWide,
     }) => {
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
         const classes = useClasses(useStyles, classesProp);
@@ -109,6 +111,7 @@ const SelectWrapper = memo(
                         isLoading={isLoading}
                         loadingMessage={loadingMessage}
                         noOptionsPlaceholder={noOptionsPlaceholder}
+                        truncateOptions={truncateOptions}
                     />
                 );
             }
@@ -126,6 +129,7 @@ const SelectWrapper = memo(
             isLoading,
             loadingMessage,
             noOptionsPlaceholder,
+            truncateOptions,
         ]);
 
         const onChangeOpen = useCallback(
@@ -151,13 +155,18 @@ const SelectWrapper = memo(
             [getIsOpen, onOpen, onClose, innerOptions, loadOptions],
         );
 
+        const popoverClassName = useMemo(
+            () => classnames(classes.Popover, { [classes.PopoverWide]: popoverWide }),
+            [classes.Popover, classes.PopoverWide, popoverWide],
+        );
+
         return (
             <div className={rootClassName} {...(override.root || {})}>
                 <Popover
                     content={finalOptions}
                     placement={placement}
                     trigger={trigger}
-                    className={classes.Popover}
+                    className={popoverClassName}
                     onVisibleChange={onChangeOpen}
                     overrides={override.Popover || {}}
                 >
@@ -202,6 +211,8 @@ SelectWrapper.defaultProps = {
     isMulti: false,
     checkboxColor: 'orange',
     checkBoxIsMonotone: false,
+    truncateOptions: true,
+    popoverWide: false,
 };
 
 SelectWrapper.propTypes = {
@@ -210,6 +221,10 @@ SelectWrapper.propTypes = {
     overrides: PropTypes.object,
     ladingMessage: PropTypes.string,
     noOptionsPlaceholder: PropTypes.string,
+    /** Truncate text label in select options */
+    truncateOptions: PropTypes.bool,
+    /** Enable popover extra width (344px) */
+    popoverWide: PropTypes.bool,
 };
 
 export default SelectWrapper;

@@ -16,6 +16,7 @@ const OptionsList = memo(
         checkBoxIsMonotone,
         loadingMessage,
         noOptionsPlaceholder,
+        truncateOptions,
     }) => {
         const renderOptions = useMemo(() => {
             if (!options || options.length === 0) {
@@ -58,6 +59,7 @@ const OptionsList = memo(
                                         onChange={onChange}
                                         checkboxColor={checkboxColor}
                                         checkBoxIsMonotone={checkBoxIsMonotone}
+                                        isTruncated={truncateOptions}
                                     />
                                 );
                             })}
@@ -75,6 +77,7 @@ const OptionsList = memo(
                             onChange={onChange}
                             checkboxColor={checkboxColor}
                             checkBoxIsMonotone={checkBoxIsMonotone}
+                            isTruncated={truncateOptions}
                         />
                     );
                 }
@@ -89,6 +92,7 @@ const OptionsList = memo(
             checkboxColor,
             checkBoxIsMonotone,
             noOptionsPlaceholder,
+            truncateOptions,
         ]);
 
         return (
@@ -118,6 +122,7 @@ OptionsList.propTypes = {
     checkBoxIsMonotone: PropTypes.bool,
     loadingMessage: PropTypes.string,
     noOptionsPlaceholder: PropTypes.string,
+    truncateOptions: PropTypes.bool,
 };
 
 export default OptionsList;
