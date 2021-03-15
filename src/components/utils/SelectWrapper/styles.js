@@ -10,6 +10,11 @@ export default (theme) => ({
             borderRadius: 4,
         },
     },
+    PopoverWide: {
+        '& .hoi-poi-popover-inner': {
+            width: 344,
+        },
+    },
     noOptions: {
         display: 'flex',
         justifyContent: 'center',
@@ -33,7 +38,7 @@ export default (theme) => ({
     },
     optionListGroup: {},
     optionListGroupLabel: {
-        height: '36px',
+        minHeight: '36px',
         padding: '0px 12px',
         boxSizing: 'border-box',
         display: 'flex',
@@ -41,8 +46,8 @@ export default (theme) => ({
     },
     option: {
         width: '100%',
-        height: 36,
-        padding: '0px 12px',
+        minHeight: 36,
+        padding: '8px 12px',
         boxSizing: 'border-box',
         display: 'flex',
         alignItems: 'center',
