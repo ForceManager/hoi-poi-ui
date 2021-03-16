@@ -155,8 +155,7 @@ export default (theme) => ({
             width: 14,
             height: 34,
             marginRight: 8,
-            display: 'flex',
-            alignItems: 'center',
+            alignSelf: 'flexs-start',
         },
     },
     controlFocused: {
