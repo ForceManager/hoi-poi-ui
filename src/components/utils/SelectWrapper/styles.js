@@ -32,7 +32,7 @@ export default (theme) => ({
         ...theme.utils.scrollbar,
         width: '100%',
         maxHeight: 300,
-        padding: '12px 0px',
+        padding: '4px 0px',
         boxSizing: 'border-box',
         overflowY: 'auto',
     },
