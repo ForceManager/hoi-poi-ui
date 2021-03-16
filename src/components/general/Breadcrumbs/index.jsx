@@ -44,7 +44,7 @@ function Breadcrumbs({
     );
 
     const breadcrumbItems = useMemo(() => {
-        if (!items) return null;
+        if (!items || items.length === 1) return null;
         return items.reduce((arr, item, idx) => {
             if (item) {
                 const isLast = idx === items.length - 1;
