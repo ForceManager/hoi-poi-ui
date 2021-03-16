@@ -135,6 +135,15 @@ function Chip({
         override.ReadOnlyIcon,
     ]);
 
+    const textProps = useMemo(
+        () => ({
+            type: size === 'large' ? 'body' : 'caption',
+            className: classes.Text,
+            ...override.Text,
+        }),
+        [classes.Text, override.Text, size],
+    );
+
     return (
         <div
             {...rootProps}
@@ -159,9 +168,7 @@ function Chip({
                         {...override.Avatar}
                     />
                 )}
-                <Text type="caption" className={classes.Text} {...override.Text}>
-                    {children}
-                </Text>
+                <Text {...textProps}>{children}</Text>
                 {icons.length > 0 && (
                     <div className={classes.icons} {...override.icons}>
                         {icons}
