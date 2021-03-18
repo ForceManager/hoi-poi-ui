@@ -26,7 +26,10 @@ export default (theme) => ({
         alignItems: 'center',
     },
     customOptions: {
-        padding: '8px 12px',
+        padding: '4px 12px',
+        '& [class*="inputWrapper"]': {
+            padding: '0 !important',
+        },
     },
     optionList: {
         ...theme.utils.scrollbar,

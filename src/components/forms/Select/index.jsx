@@ -426,13 +426,18 @@ const Select = memo(
             [classes, override],
         );
 
-        const onMouseDown = useCallback((e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            selectRef.current.focus();
-            setFocused(true);
-            return false;
-        }, []);
+        const onMouseDown = useCallback(
+            (e) => {
+                if (!focused) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    selectRef.current.focus();
+                    setFocused(true);
+                    return false;
+                }
+            },
+            [focused],
+        );
 
         const newIsClearable = useMemo(() => {
             if (isRequired) return false;
