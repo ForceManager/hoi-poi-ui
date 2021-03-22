@@ -49,6 +49,7 @@ const Input = forwardRef(
             label,
             labelMode,
             isRequired,
+            locator,
             ...props
         },
         ref,
@@ -68,9 +69,9 @@ const Input = forwardRef(
                 [classes.title]: type === 'title',
                 [classes.isFullWidth]: isFullWidth,
             },
+            locator,
             classNameProp,
         );
-
         const handleOnFocus = useCallback(
             (e) => {
                 if (isReadOnly) return;
