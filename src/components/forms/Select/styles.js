@@ -19,7 +19,7 @@ export default (theme) => ({
     menuList: {
         ...theme.utils.scrollbar,
         maxHeight: 300,
-        padding: '12px 0px',
+        padding: '4px 0px',
     },
     actionContainer: {
         borderTop: '1px solid',
