@@ -80,6 +80,7 @@ const Select = memo(
         hideDropdownIndicator,
         shouldSetValueOnChange,
         cacheOptions,
+        focusDefaultOption,
         ...props
     }) => {
         const selectRef = useRef();
@@ -120,6 +121,22 @@ const Select = memo(
         useEffect(() => {
             if (!isFuzzy && !isEqual(options, innerOptions)) setInnerOptions(options);
         }, [options, innerOptions, isFuzzy]);
+
+        useEffect(() => {
+            if (!focusDefaultOption) {
+                let select = selectRef.current?.select?.select;
+                select ??= selectRef.current?.select; // <-- for multi input
+
+                if (select) {
+                    const original = select.getNextFocusedOption.bind(select);
+
+                    select.getNextFocusedOption = (options) => {
+                        const inputValue = selectRef.current?.state?.inputValue;
+                        if (inputValue) return original(options);
+                    };
+                }
+            }
+        }, [focusDefaultOption]);
 
         const loadOptionsCb = useCallback(
             (text, cb) => {
@@ -797,6 +814,7 @@ Select.defaultProps = {
     hideDropdownIndicator: false,
     shouldSetValueOnChange: true,
     cacheOptions: true,
+    focusDefaultOption: true,
 };
 
 Select.propTypes = {
@@ -882,6 +900,8 @@ Select.propTypes = {
     /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
     shouldSetValueOnChange: PropTypes.bool,
     cacheOptions: PropTypes.bool,
+    // Enable/disable focusing first option of the select
+    focusDefaultOption: PropTypes.bool,
 };
 
 export default Select;
