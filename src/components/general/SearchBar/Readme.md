@@ -340,12 +340,13 @@ const typeOptions = [
         onChangeType={setType}
     />
     <SearchBar
-        placeholder="Search"
+        placeholder="Search (focusDefaultOption = false)"
         loadOptions={loadOptions}
         typeOptions={typeOptions}
         type={type}
         onChangeType={setType}
         size="small"
+        focusDefaultOption={false}
     />
 </div>;
 ```

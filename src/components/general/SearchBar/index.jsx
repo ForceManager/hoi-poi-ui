@@ -31,6 +31,7 @@ function SearchBar({
     customTypeOption,
     hideSelectedOptions,
     shouldSetValueOnChange,
+    focusDefaultOption,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -131,6 +132,7 @@ function SearchBar({
                 inputValue={inputValue}
                 hideSelectedOptions={hideSelectedOptions}
                 shouldSetValueOnChange={isMulti ? true : shouldSetValueOnChange}
+                focusDefaultOption={focusDefaultOption}
                 {...override.Select}
                 {...props}
             />
@@ -149,6 +151,7 @@ SearchBar.defaultProps = {
     selectedTypesLiteral: '%@ Selected',
     hideSelectedOptions: false,
     shouldSetValueOnChange: false,
+    focusDefaultOption: true,
 };
 
 SearchBar.propTypes = {
@@ -185,6 +188,7 @@ SearchBar.propTypes = {
     hideSelectedOptions: PropTypes.bool,
     /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
     shouldSetValueOnChange: PropTypes.bool,
+    focusDefaultOption: PropTypes.bool,
 };
 
 export default React.memo(SearchBar);

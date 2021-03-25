@@ -126,17 +126,9 @@ const Select = memo(
             if (!focusDefaultOption) {
                 let select = selectRef.current?.select?.select;
                 select ??= selectRef.current?.select; // <-- for multi input
-
-                if (select) {
-                    const original = select.getNextFocusedOption.bind(select);
-
-                    select.getNextFocusedOption = (options) => {
-                        const inputValue = selectRef.current?.state?.inputValue;
-                        if (inputValue) return original(options);
-                    };
-                }
+                if (select) select.getNextFocusedOption = () => null;
             }
-        }, [focusDefaultOption]);
+        });
 
         const loadOptionsCb = useCallback(
             (text, cb) => {
