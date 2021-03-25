@@ -188,6 +188,7 @@ SearchBar.propTypes = {
     hideSelectedOptions: PropTypes.bool,
     /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
     shouldSetValueOnChange: PropTypes.bool,
+    /** Enable/disable focusing first option of the select */
     focusDefaultOption: PropTypes.bool,
 };
 
