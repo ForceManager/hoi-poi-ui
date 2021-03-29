@@ -464,6 +464,8 @@ const Select = memo(
                         setNewValue(null);
                     }
                     onEnter && onEnter(e);
+                } else {
+                    setFocused(true);
                 }
                 onKeyDown && onKeyDown(e);
             },
@@ -487,7 +489,7 @@ const Select = memo(
 
         const selectProps = useMemo(() => {
             let menuIsOpen =
-                (focused && (!(loadOptions && isFuzzy) || innerOptions?.length)) || false;
+                (focused && (!(loadOptions && isFuzzy) || !!innerOptions?.length)) || false;
             if (useAsSimpleSearch) menuIsOpen = false;
             let Indicator = DropdownIndicator;
             let additionalComponents = {};
