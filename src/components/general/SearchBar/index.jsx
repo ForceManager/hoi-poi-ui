@@ -133,6 +133,7 @@ function SearchBar({
                 hideSelectedOptions={hideSelectedOptions}
                 shouldSetValueOnChange={isMulti ? true : shouldSetValueOnChange}
                 focusDefaultOption={focusDefaultOption}
+                withoutFilter
                 {...override.Select}
                 {...props}
             />

@@ -60,6 +60,7 @@ const Select = memo(
         onKeyDown,
         hideSelectedOptions,
         filterByKey,
+        withoutFilter,
         defaultMenuIsOpen,
         loadOptions,
         groupOptions,
@@ -499,6 +500,8 @@ const Select = memo(
             if (isReadOnly) Indicator = LockIndicator;
             if (dropDownIcon) Indicator = CustomIndicator;
             if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
+            let filterOption = filterByKey ? filterKeyValue : createFilter;
+            if (withoutFilter) filterOption = undefined;
 
             return {
                 ref: selectRef,
@@ -536,7 +539,7 @@ const Select = memo(
                 onFocus: handleOnFocus,
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
-                filterOption: filterByKey ? filterKeyValue : createFilter,
+                filterOption,
                 formatOptionLabel,
                 formatGroupLabel,
                 dropDownIcon,
@@ -809,6 +812,7 @@ Select.defaultProps = {
     shouldSetValueOnChange: true,
     cacheOptions: true,
     focusDefaultOption: true,
+    withoutFilter: false,
 };
 
 Select.propTypes = {
