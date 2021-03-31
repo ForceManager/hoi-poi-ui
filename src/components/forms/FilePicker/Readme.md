@@ -92,7 +92,11 @@ const onRemove = (deletedFile) => {
         onDrop={onDrop}
         onRemove={onRemove}
         files={state}
+        multiple
+        isFullWidth
         previewImages
+        cropAspect={16 / 9}
+        cropImages
     />
 </div>;
 ```

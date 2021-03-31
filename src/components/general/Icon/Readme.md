@@ -127,6 +127,8 @@ Actions:
 <span> </span>
 <Icon name="workflow"/>
 <span> </span>
+<Icon name="crop"/>
+<span> </span>
 ```
 
 Alert:

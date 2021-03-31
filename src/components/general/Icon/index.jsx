@@ -51,6 +51,7 @@ import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
 import Columns from './icons/Columns';
+import Crop from './icons/Crop';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -266,6 +267,7 @@ const ICONS = {
     draggableSort: DraggableSort,
     fileDownload: FileDownload,
     columns: Columns,
+    crop: Crop,
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,

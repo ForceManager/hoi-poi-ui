@@ -1,6 +1,9 @@
+import reactCropStyles from './reactCrop.styles';
+
 export default (theme) => ({
     root: {
         outline: 'none',
+        ...reactCropStyles(theme),
     },
     Label: {
         width: 153,
@@ -81,7 +84,18 @@ export default (theme) => ({
         display: 'flex',
     },
     fileIconContainer: {
+        width: 24,
+        height: 24,
         marginRight: 8,
+        '& span': {
+            display: 'flex',
+            width: '100%',
+            height: '100%',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            borderRadius: 4,
+        },
     },
     fileTextContainer: {
         display: 'flex',
@@ -93,8 +107,13 @@ export default (theme) => ({
         marginLeft: 4,
         color: theme.colors.neutral700,
     },
+    actions: {},
     clear: {
         cursor: 'pointer',
+    },
+    crop: {
+        cursor: 'pointer',
+        marginRight: 4,
     },
 
     errored: {
@@ -146,5 +165,18 @@ export default (theme) => ({
         '&$vertical $Label': {
             width: '100%',
         },
+    },
+    cropModal: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    cropModalContent: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    cropCanvas: {
+        maxHeight: '70vh',
     },
 });

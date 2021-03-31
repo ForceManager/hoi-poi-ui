@@ -1,9 +1,10 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { useDropzone } from 'react-dropzone';
 
-import File from './File';
+import File from './components/File';
+import Crop from './components/Crop';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Button from '../../general/Button';
 import Label from '../Label';
@@ -14,11 +15,18 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'FilePicker');
 
+const imageTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/bmp'];
+
 function FilePicker({
     accept,
     buttonLabel,
     classes: classesProp,
     className: classNameProp,
+    cropAspect,
+    cropImages,
+    cropTitle,
+    cropAcceptLabel,
+    cropCancelLabel,
     disabled,
     error,
     files,
@@ -33,6 +41,10 @@ function FilePicker({
     maxFiles,
     maxSize,
     minSize,
+    maxHeight,
+    maxWidth,
+    minHeight,
+    minWidth,
     multiple,
     name,
     onDrop,
@@ -43,28 +55,39 @@ function FilePicker({
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
+    const [crop, setCrop] = useState({ isOpen: false, image: null });
 
     const handleOnDrop = useCallback(
-        (droppedFiles) => {
-            let uniqueFiles = droppedFiles.filter(
-                (droppedFile) =>
-                    !files.some(
-                        (file) =>
-                            file.name === droppedFile.name &&
-                            file.size === droppedFile.size &&
-                            file.type === droppedFile.type,
-                    ),
-            );
-            if (previewImages) {
-                uniqueFiles = uniqueFiles.map((file) =>
-                    Object.assign(file, {
-                        preview: URL.createObjectURL(file),
-                    }),
-                );
-            }
-            return onDrop(uniqueFiles);
+        (droppedFiles) =>
+            onDrop(
+                droppedFiles.filter(
+                    (droppedFile) =>
+                        !files.some(
+                            (file) =>
+                                file.name === droppedFile.name &&
+                                file.size === droppedFile.size &&
+                                file.type === droppedFile.type,
+                        ),
+                ),
+            ),
+        [files, onDrop],
+    );
+
+    const handleOnCrop = useCallback((image, type, name) => {
+        console.log('handleOnCrop', image);
+        setCrop({ isOpen: true, image, type, name });
+    }, []);
+
+    const handleOnCancelCrop = useCallback(() => {
+        setCrop({ isOpen: false, image: crop.image });
+    }, [crop.image]);
+
+    const handleOnAcceptCrop = useCallback(
+        (image) => {
+            console.log('handleOnAcceptCrop', image);
+            setCrop({ isOpen: false, image: crop.image });
         },
-        [files, onDrop, previewImages],
+        [crop.image],
     );
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
@@ -116,12 +139,35 @@ function FilePicker({
 
     const renderFiles = useMemo(() => {
         if (!files.length) return null;
-        const filesList = files.map((file, i) => (
-            <File key={i} file={file} onRemove={onRemove} overrides={overridesProp} />
-        ));
+        const filesList = files.map((file, i) => {
+            const preview = previewImages && imageTypes.includes(file.type);
+            const crop = cropImages && imageTypes.includes(file.type);
+
+            return (
+                <File
+                    key={i}
+                    classes={classesProp}
+                    crop={crop}
+                    file={file}
+                    onCrop={handleOnCrop}
+                    onRemove={onRemove}
+                    overrides={overridesProp}
+                    preview={preview}
+                />
+            );
+        });
 
         return <div className={classes.files}>{filesList}</div>;
-    }, [classes.files, files, onRemove, overridesProp]);
+    }, [
+        classes.files,
+        classesProp,
+        cropImages,
+        files,
+        handleOnCrop,
+        onRemove,
+        overridesProp,
+        previewImages,
+    ]);
 
     const showDragzone = useMemo(() => !(maxFiles && files.length === maxFiles), [
         files.length,
@@ -160,6 +206,20 @@ function FilePicker({
                     </div>
                 )}
             </div>
+            <Crop
+                aspect={cropAspect}
+                classes={classesProp}
+                name={crop.name}
+                image={crop.image}
+                type={crop.type}
+                isOpen={crop.isOpen}
+                onAccept={handleOnAcceptCrop}
+                onCancel={handleOnCancelCrop}
+                confirmText={cropAcceptLabel}
+                cancelText={cropCancelLabel}
+                overrides={overridesProp}
+                title={cropTitle}
+            />
         </div>
     );
 }
@@ -175,6 +235,10 @@ FilePicker.defaultProps = {
     maxFiles: 0,
     placeholder: 'or drop files here',
     buttonLabel: 'Select file',
+    cropTitle: 'Crop image',
+    cropAcceptLabel: 'Crop',
+    cropCancelLabel: 'Cancel',
+    previewImages: false,
 };
 
 FilePicker.propTypes = {
@@ -184,6 +248,11 @@ FilePicker.propTypes = {
     buttonLabel: PropTypes.string,
     classes: PropTypes.object,
     className: PropTypes.string,
+    cropAspect: PropTypes.number,
+    cropImages: PropTypes.bool,
+    cropAcceptLabel: PropTypes.string,
+    cropCancelLabel: PropTypes.string,
+    cropTitle: PropTypes.string,
     disabled: PropTypes.bool,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
@@ -205,8 +274,15 @@ FilePicker.propTypes = {
     maxSize: PropTypes.number,
     /** Minimum file size (in bytes) */
     minSize: PropTypes.number,
-    /** Native filePicker name */
-    multiple: PropTypes.number,
+    /** Maximum image height (in pixels) */
+    maxHeight: PropTypes.number,
+    /** Maximum image width (in pixels) */
+    maxWidth: PropTypes.number,
+    /** Minimum image height (in pixels) */
+    minHeight: PropTypes.number,
+    /** Minimum image width (in pixels) */
+    minWidth: PropTypes.number,
+    multiple: PropTypes.bool,
     /** Native filePicker name */
     name: PropTypes.string,
     /** Cb for when the drop event occurs. Note that this callback is invoked after the getFilesFromEvent callback is done. */
@@ -214,6 +290,7 @@ FilePicker.propTypes = {
     onRemove: PropTypes.func,
     overrides: PropTypes.object,
     placeholder: PropTypes.string,
+    previewImages: PropTypes.bool,
 };
 
 export default React.memo(FilePicker);
