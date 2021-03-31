@@ -3,7 +3,6 @@ import reactCropStyles from './reactCrop.styles';
 export default (theme) => ({
     root: {
         outline: 'none',
-        ...reactCropStyles(theme),
     },
     Label: {
         width: 153,
@@ -172,11 +171,18 @@ export default (theme) => ({
         alignItems: 'center',
     },
     cropModalContent: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        position: 'relative',
+        borderRadius: 4,
+        padding: 22,
+        border: `1px dashed ${theme.colors.neutral400}`,
+        backgroundColor: theme.colors.neutral300,
     },
     cropCanvas: {
-        maxHeight: '70vh',
+        position: 'relative',
+        overflow: 'auto',
+        ...reactCropStyles(theme),
+        '&:focus': {
+            outline: 'none',
+        },
     },
 });

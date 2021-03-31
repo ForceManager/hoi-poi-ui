@@ -1,19 +1,19 @@
 export default (theme) => ({
-    '.ReactCrop': {
+    '& .ReactCrop': {
         position: 'relative',
         display: 'inline-block',
         cursor: 'crosshair',
         overflow: 'hidden',
         maxWidth: '100%',
     },
-    '.ReactCrop:focus': { outline: 'none' },
-    '.ReactCrop--disabled, .ReactCrop--locked': { cursor: 'inherit' },
-    '.ReactCrop__image': {
+    '& .ReactCrop:focus': { outline: 'none' },
+    '& .ReactCrop--disabled, .ReactCrop--locked': { cursor: 'inherit' },
+    '& .ReactCrop__image': {
         display: 'block',
         maxWidth: '100%',
         touchAction: 'manipulation',
     },
-    '.ReactCrop__crop-selection': {
+    '& .ReactCrop__crop-selection': {
         position: 'absolute',
         top: '0',
         left: '0',
@@ -28,40 +28,40 @@ export default (theme) => ({
         borderImageSlice: '1',
         borderImageRepeat: 'repeat',
     },
-    '.ReactCrop--disabled .ReactCrop__crop-selection': { cursor: 'inherit' },
-    '.ReactCrop--circular-crop .ReactCrop__crop-selection': {
+    '& .ReactCrop--disabled .ReactCrop__crop-selection': { cursor: 'inherit' },
+    '& .ReactCrop--circular-crop .ReactCrop__crop-selection': {
         borderRadius: '50%',
         boxShadow: '0px 0px 1px 1px white, 0 0 0 9999em rgba(0, 0, 0, 0.5)',
     },
-    '.ReactCrop--invisible-crop .ReactCrop__crop-selection': { display: 'none' },
-    '.ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after, .ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after': {
+    '& .ReactCrop--invisible-crop .ReactCrop__crop-selection': { display: 'none' },
+    '& .ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after, .ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after': {
         content: "''",
         display: 'block',
         position: 'absolute',
         backgroundColor: 'rgba(255, 255, 255, 0.4)',
     },
-    '.ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after': {
+    '& .ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after': {
         width: '1px',
         height: '100%',
     },
-    '.ReactCrop__rule-of-thirds-vt::before': {
+    '& .ReactCrop__rule-of-thirds-vt::before': {
         left: ['33.3333%', 'calc(100% / 3)'],
     },
-    '.ReactCrop__rule-of-thirds-vt::after': {
+    '& .ReactCrop__rule-of-thirds-vt::after': {
         left: ['66.6666%', 'calc(100% / 3 * 2)'],
     },
-    '.ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after': {
+    '& .ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after': {
         width: '100%',
         height: '1px',
     },
-    '.ReactCrop__rule-of-thirds-hz::before': {
+    '& .ReactCrop__rule-of-thirds-hz::before': {
         top: ['33.3333%', 'calc(100% / 3)'],
     },
-    '.ReactCrop__rule-of-thirds-hz::after': {
+    '& .ReactCrop__rule-of-thirds-hz::after': {
         top: ['66.6666%', 'calc(100% / 3 * 2)'],
     },
-    '.ReactCrop__drag-handle': { position: 'absolute' },
-    '.ReactCrop__drag-handle::after': {
+    '& .ReactCrop__drag-handle': { position: 'absolute' },
+    '& .ReactCrop__drag-handle::after': {
         position: 'absolute',
         content: "''",
         display: 'block',
@@ -72,110 +72,110 @@ export default (theme) => ({
         boxSizing: 'border-box',
         outline: '1px solid transparent',
     },
-    '.ReactCrop .ord-nw': {
+    '& .ReactCrop .ord-nw': {
         top: '0',
         left: '0',
         marginTop: '-5px',
         marginLeft: '-5px',
         cursor: 'nw-resize',
     },
-    '.ReactCrop .ord-nw::after': { top: '0', left: '0' },
-    '.ReactCrop .ord-n': {
+    '& .ReactCrop .ord-nw::after': { top: '0', left: '0' },
+    '& .ReactCrop .ord-n': {
         top: '0',
         left: '50%',
         marginTop: '-5px',
         marginLeft: '-5px',
         cursor: 'n-resize',
     },
-    '.ReactCrop .ord-n::after': { top: '0' },
-    '.ReactCrop .ord-ne': {
+    '& .ReactCrop .ord-n::after': { top: '0' },
+    '& .ReactCrop .ord-ne': {
         top: '0',
         right: '0',
         marginTop: '-5px',
         marginRight: '-5px',
         cursor: 'ne-resize',
     },
-    '.ReactCrop .ord-ne::after': { top: '0', right: '0' },
-    '.ReactCrop .ord-e': {
+    '& .ReactCrop .ord-ne::after': { top: '0', right: '0' },
+    '& .ReactCrop .ord-e': {
         top: '50%',
         right: '0',
         marginTop: '-5px',
         marginRight: '-5px',
         cursor: 'e-resize',
     },
-    '.ReactCrop .ord-e::after': { right: '0' },
-    '.ReactCrop .ord-se': {
+    '& .ReactCrop .ord-e::after': { right: '0' },
+    '& .ReactCrop .ord-se': {
         bottom: '0',
         right: '0',
         marginBottom: '-5px',
         marginRight: '-5px',
         cursor: 'se-resize',
     },
-    '.ReactCrop .ord-se::after': { bottom: '0', right: '0' },
-    '.ReactCrop .ord-s': {
+    '& .ReactCrop .ord-se::after': { bottom: '0', right: '0' },
+    '& .ReactCrop .ord-s': {
         bottom: '0',
         left: '50%',
         marginBottom: '-5px',
         marginLeft: '-5px',
         cursor: 's-resize',
     },
-    '.ReactCrop .ord-s::after': { bottom: '0' },
-    '.ReactCrop .ord-sw': {
+    '& .ReactCrop .ord-s::after': { bottom: '0' },
+    '& .ReactCrop .ord-sw': {
         bottom: '0',
         left: '0',
         marginBottom: '-5px',
         marginLeft: '-5px',
         cursor: 'sw-resize',
     },
-    '.ReactCrop .ord-sw::after': { bottom: '0', left: '0' },
-    '.ReactCrop .ord-w': {
+    '& .ReactCrop .ord-sw::after': { bottom: '0', left: '0' },
+    '& .ReactCrop .ord-w': {
         top: '50%',
         left: '0',
         marginTop: '-5px',
         marginLeft: '-5px',
         cursor: 'w-resize',
     },
-    '.ReactCrop .ord-w::after': { left: '0' },
-    '.ReactCrop__disabled .ReactCrop__drag-handle': { cursor: 'inherit' },
-    '.ReactCrop__drag-bar': { position: 'absolute' },
-    '.ReactCrop__drag-bar.ord-n': {
+    '& .ReactCrop .ord-w::after': { left: '0' },
+    '& .ReactCrop__disabled .ReactCrop__drag-handle': { cursor: 'inherit' },
+    '& .ReactCrop__drag-bar': { position: 'absolute' },
+    '& .ReactCrop__drag-bar.ord-n': {
         top: '0',
         left: '0',
         width: '100%',
         height: '6px',
         marginTop: '-3px',
     },
-    '.ReactCrop__drag-bar.ord-e': {
+    '& .ReactCrop__drag-bar.ord-e': {
         right: '0',
         top: '0',
         width: '6px',
         height: '100%',
         marginRight: '-3px',
     },
-    '.ReactCrop__drag-bar.ord-s': {
+    '& .ReactCrop__drag-bar.ord-s': {
         bottom: '0',
         left: '0',
         width: '100%',
         height: '6px',
         marginBottom: '-3px',
     },
-    '.ReactCrop__drag-bar.ord-w': {
+    '& .ReactCrop__drag-bar.ord-w': {
         top: '0',
         left: '0',
         width: '6px',
         height: '100%',
         marginLeft: '-3px',
     },
-    '.ReactCrop--new-crop .ReactCrop__drag-bar,\n  .ReactCrop--new-crop .ReactCrop__drag-handle,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-bar': {
+    '& .ReactCrop--new-crop .ReactCrop__drag-bar,\n  .ReactCrop--new-crop .ReactCrop__drag-handle,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-bar': {
         display: 'none',
     },
-    '.ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-n,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-e,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-s,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-w': {
+    '& .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-n,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-e,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-s,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-w': {
         display: 'none',
     },
     '@media (pointer: coarse)': {
-        '.ReactCrop .ord-n,\n    .ReactCrop .ord-e,\n    .ReactCrop .ord-s,\n    .ReactCrop .ord-w': {
+        '& .ReactCrop .ord-n,\n    .ReactCrop .ord-e,\n    .ReactCrop .ord-s,\n    .ReactCrop .ord-w': {
             display: 'none',
         },
-        '.ReactCrop__drag-handle': { width: '24px', height: '24px' },
+        '& .ReactCrop__drag-handle': { width: '24px', height: '24px' },
     },
 });

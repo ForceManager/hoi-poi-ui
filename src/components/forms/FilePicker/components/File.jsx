@@ -4,6 +4,7 @@ import prettyBytes from 'pretty-bytes';
 
 import { getOverrides, useClasses } from '../../../../utils/overrides';
 import Icon from '../../../general/Icon';
+import Tooltip from '../../../utils/Tooltip';
 import Text from '../../../typography/Text';
 import FILE_TYPES from '../FILE_TYPES';
 
@@ -17,6 +18,7 @@ function File({
     file,
     preview,
     crop,
+    cropTooltip,
     onRemove,
     onCrop,
     overrides: overridesProp,
@@ -27,37 +29,32 @@ function File({
     // Overrides
     const override = getOverrides(overridesProp, File.overrides);
 
-    const image = useMemo(() => (preview && URL.createObjectURL(file)) || null, [file, preview]);
-
     const handleOnRemove = useCallback(() => onRemove(file), [file, onRemove]);
 
-    const handleOnCrop = useCallback(() => onCrop(image, file.type, file.name), [
-        file.name,
-        file.type,
-        image,
-        onCrop,
-    ]);
+    const handleOnCrop = useCallback(() => onCrop(file), [file, onCrop]);
 
     const renderIcon = useMemo(() => {
-        if (image)
+        if (preview)
             return (
                 <span
                     style={{
-                        backgroundImage: `url("${image}")`,
+                        backgroundImage: `url("${URL.createObjectURL(file)}")`,
                     }}
                 />
             );
         return <Icon name={FILE_TYPES[file.type] || 'file'} />;
-    }, [file.type, image]);
+    }, [file, preview]);
 
     const renderCrop = useMemo(() => {
         if (!crop) return null;
         return (
-            <span onClick={handleOnCrop} className={classes.crop}>
-                <Icon name="crop" />
-            </span>
+            <Tooltip placement="top" content={<span>{cropTooltip}</span>}>
+                <span onClick={handleOnCrop} className={classes.crop}>
+                    <Icon name="crop" />
+                </span>
+            </Tooltip>
         );
-    }, [crop, handleOnCrop, classes.crop]);
+    }, [crop, cropTooltip, handleOnCrop, classes.crop]);
 
     return (
         <div className={classes.file} {...override.file}>

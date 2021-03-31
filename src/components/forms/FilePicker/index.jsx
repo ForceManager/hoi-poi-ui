@@ -25,6 +25,7 @@ function FilePicker({
     cropAspect,
     cropImages,
     cropTitle,
+    cropTooltip,
     cropAcceptLabel,
     cropCancelLabel,
     disabled,
@@ -73,9 +74,9 @@ function FilePicker({
         [files, onDrop],
     );
 
-    const handleOnCrop = useCallback((image, type, name) => {
-        console.log('handleOnCrop', image);
-        setCrop({ isOpen: true, image, type, name });
+    const handleOnCrop = useCallback((file) => {
+        console.log('handleOnCrop', file);
+        setCrop({ isOpen: true, file });
     }, []);
 
     const handleOnCancelCrop = useCallback(() => {
@@ -148,6 +149,7 @@ function FilePicker({
                     key={i}
                     classes={classesProp}
                     crop={crop}
+                    cropTooltip={cropTooltip}
                     file={file}
                     onCrop={handleOnCrop}
                     onRemove={onRemove}
@@ -209,9 +211,7 @@ function FilePicker({
             <Crop
                 aspect={cropAspect}
                 classes={classesProp}
-                name={crop.name}
-                image={crop.image}
-                type={crop.type}
+                file={crop.file}
                 isOpen={crop.isOpen}
                 onAccept={handleOnAcceptCrop}
                 onCancel={handleOnCancelCrop}
@@ -236,6 +236,7 @@ FilePicker.defaultProps = {
     placeholder: 'or drop files here',
     buttonLabel: 'Select file',
     cropTitle: 'Crop image',
+    cropTooltip: 'Crop image',
     cropAcceptLabel: 'Crop',
     cropCancelLabel: 'Cancel',
     previewImages: false,
@@ -253,6 +254,7 @@ FilePicker.propTypes = {
     cropAcceptLabel: PropTypes.string,
     cropCancelLabel: PropTypes.string,
     cropTitle: PropTypes.string,
+    cropTooltip: PropTypes.string,
     disabled: PropTypes.bool,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,

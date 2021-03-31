@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import ReactCrop from 'react-image-crop';
 
@@ -15,9 +15,7 @@ function Crop({
     confirmText,
     cancelText,
     classes: classesProp,
-    image,
-    name,
-    type,
+    file,
     isOpen,
     onCancel,
     onAccept,
@@ -27,21 +25,24 @@ function Crop({
 }) {
     const classes = useClasses(useStyles, classesProp);
     const [crop, setCrop] = useState({ aspect });
-    console.log('image', image);
+    const imgRef = useRef();
 
     // Overrides
     const override = getOverrides(overridesProp, Crop.overrides);
 
+    const image = useMemo(() => (file && URL.createObjectURL(file)) || {}, [file]);
+    console.log('Crop', file, image);
+
     const handleOnConfirm = useCallback(() => {
         const canvas = document.createElement('canvas');
-        const scaleX = image.naturalWidth / image.width;
-        const scaleY = image.naturalHeight / image.height;
+        const scaleX = imgRef.current.naturalWidth / imgRef.current.width;
+        const scaleY = imgRef.current.naturalHeight / imgRef.current.height;
         canvas.width = crop.width;
         canvas.height = crop.height;
         const ctx = canvas.getContext('2d');
 
         ctx.drawImage(
-            image,
+            imgRef.current,
             crop.x * scaleX,
             crop.y * scaleY,
             crop.width * scaleX,
@@ -53,13 +54,19 @@ function Crop({
         );
         canvas.toBlob(
             (blob) => {
-                blob.name = `${name}_crop`;
+                blob.name = `${file.name}_crop`;
                 onAccept(blob);
             },
-            type,
+            file.type,
             1,
         );
-    }, [crop.height, crop.width, crop.x, crop.y, image, name, onAccept, type]);
+    }, [crop.height, crop.width, crop.x, crop.y, file, onAccept]);
+
+    const onImageLoaded = useCallback((img) => {
+        console.log('onLoad', img);
+        imgRef.current = img;
+        return false;
+    }, []);
 
     return (
         <Modal
@@ -74,14 +81,13 @@ function Crop({
             {...override.crop}
         >
             <div className={classes.cropModalContent}>
-                {image && (
-                    <ReactCrop
-                        src={image}
-                        crop={crop}
-                        onChange={setCrop}
-                        className={classes.cropCanvas}
-                    />
-                )}
+                <ReactCrop
+                    src={image}
+                    crop={crop}
+                    onImageLoaded={onImageLoaded}
+                    onChange={setCrop}
+                    className={classes.cropCanvas}
+                />
             </div>
         </Modal>
     );
