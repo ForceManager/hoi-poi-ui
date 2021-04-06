@@ -19,6 +19,7 @@ function File({
     preview,
     crop,
     cropTooltip,
+    index,
     onRemove,
     onCrop,
     overrides: overridesProp,
@@ -31,7 +32,7 @@ function File({
 
     const handleOnRemove = useCallback(() => onRemove(file), [file, onRemove]);
 
-    const handleOnCrop = useCallback(() => onCrop(file), [file, onCrop]);
+    const handleOnCrop = useCallback(() => onCrop(file, index), [file, index, onCrop]);
 
     const renderIcon = useMemo(() => {
         if (preview)
@@ -80,6 +81,7 @@ File.defaultProps = {};
 File.propTypes = {
     classes: PropTypes.object,
     className: PropTypes.string,
+    index: PropTypes.number,
     onRemove: PropTypes.func,
     overrides: PropTypes.object,
 };

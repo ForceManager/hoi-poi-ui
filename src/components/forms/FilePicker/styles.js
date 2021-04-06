@@ -55,13 +55,18 @@ export default (theme) => ({
         backgroundColor: theme.colors.neutral200,
     },
     button: {
-        marginBottom: 16,
+        marginTop: 16,
     },
-    placeholder: {
+    title: {
         display: 'block',
         textAlign: 'center',
-        lineHeight: '20px',
         width: '100%',
+    },
+    subtitle: {
+        display: 'block',
+        textAlign: 'center',
+        width: '100%',
+        color: theme.colors.neutral700,
     },
     cloudUploadIcon: {
         marginBottom: 2,

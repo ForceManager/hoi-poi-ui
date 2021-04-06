@@ -24,7 +24,7 @@ const onRemove = (deletedFile) => {
 <div>
     <FilePicker
         label="File"
-        placeholder="or drop files here"
+        title="or drop files here"
         buttonLabel="Select file"
         onDrop={onDrop}
         onRemove={onRemove}
@@ -52,7 +52,7 @@ const onRemove = (file) => {
         label="File"
         labelMode="horizontal"
         multiple={false}
-        placeholder="or drop files here"
+        title="or drop files here"
         buttonLabel="Select file"
         onDrop={onDrop}
         onRemove={onRemove}
@@ -71,6 +71,13 @@ const onDrop = (acceptedFiles) => {
     setState([...state, ...acceptedFiles]);
 };
 
+const onCrop = (file, index) => {
+    const files = [...state];
+
+    files[index] = file;
+    setState(files);
+};
+
 const onRemove = (deletedFile) => {
     setState(
         state.filter(
@@ -87,15 +94,17 @@ const onRemove = (deletedFile) => {
 <div>
     <FilePicker
         label="File"
-        placeholder="or drop files here"
+        title="Drop files here"
+        subtitle="Logo image shouyld be at least 609x81px"
         buttonLabel="Select file"
+        onCrop={onCrop}
         onDrop={onDrop}
         onRemove={onRemove}
         files={state}
         multiple
         isFullWidth
         previewImages
-        cropAspect={16 / 9}
+        // cropAspect={16 / 9}
         cropImages
     />
 </div>;
@@ -127,7 +136,7 @@ const onRemove = (deletedFile) => {
 <div>
     <FilePicker
         label="File"
-        placeholder="or drop files here"
+        title="or drop files here"
         buttonLabel="Select file"
         onDrop={onDrop}
         onRemove={onRemove}
@@ -163,7 +172,7 @@ const onRemove = (deletedFile) => {
 <div>
     <FilePicker
         label="File"
-        placeholder="or drop files here"
+        title="or drop files here"
         buttonLabel="Select file"
         onDrop={onDrop}
         onRemove={onRemove}
@@ -199,7 +208,7 @@ const onRemove = (deletedFile) => {
 <div>
     <FilePicker
         label="File"
-        placeholder="or drop files here"
+        title="or drop files here"
         buttonLabel="Select file"
         onDrop={onDrop}
         onRemove={onRemove}

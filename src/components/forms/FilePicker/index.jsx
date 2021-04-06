@@ -48,18 +48,21 @@ function FilePicker({
     minWidth,
     multiple,
     name,
+    onCrop,
     onDrop,
     onRemove,
     overrides: overridesProp,
-    placeholder,
     previewImages,
+    title,
+    subtitle,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const [crop, setCrop] = useState({ isOpen: false, image: null });
+    const [crop, setCrop] = useState({ isOpen: false, file: null });
 
     const handleOnDrop = useCallback(
         (droppedFiles) =>
+            onDrop &&
             onDrop(
                 droppedFiles.filter(
                     (droppedFile) =>
@@ -74,21 +77,20 @@ function FilePicker({
         [files, onDrop],
     );
 
-    const handleOnCrop = useCallback((file) => {
-        console.log('handleOnCrop', file);
-        setCrop({ isOpen: true, file });
+    const handleOnCrop = useCallback((file, index) => {
+        setCrop({ isOpen: true, file, index });
     }, []);
 
     const handleOnCancelCrop = useCallback(() => {
-        setCrop({ isOpen: false, image: crop.image });
-    }, [crop.image]);
+        setCrop({ ...crop, isOpen: false });
+    }, [crop]);
 
     const handleOnAcceptCrop = useCallback(
-        (image) => {
-            console.log('handleOnAcceptCrop', image);
-            setCrop({ isOpen: false, image: crop.image });
+        (file) => {
+            onCrop && onCrop(file, crop.index);
+            setCrop({ ...crop, isOpen: false });
         },
-        [crop.image],
+        [crop, onCrop],
     );
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
@@ -147,6 +149,7 @@ function FilePicker({
             return (
                 <File
                     key={i}
+                    index={i}
                     classes={classesProp}
                     crop={crop}
                     cropTooltip={cropTooltip}
@@ -164,6 +167,7 @@ function FilePicker({
         classes.files,
         classesProp,
         cropImages,
+        cropTooltip,
         files,
         handleOnCrop,
         onRemove,
@@ -190,10 +194,15 @@ function FilePicker({
                 {showDragzone && (
                     <div className={dropZoneClassName} {...getRootProps()}>
                         <input {...getInputProps()} {...filePickerProps} />
+                        <Text type="subtitle" className={classes.title}>
+                            {title}
+                        </Text>
+                        <Text type="caption" className={classes.subtitle}>
+                            {subtitle}
+                        </Text>
                         <Button className={classes.button} type="secondary" onClick={open}>
                             {buttonLabel}
                         </Button>
-                        <Text className={classes.placeholder}>{placeholder}</Text>
                     </div>
                 )}
                 {renderFiles}
@@ -233,7 +242,7 @@ FilePicker.defaultProps = {
     isReadOnly: false,
     overrides: {},
     maxFiles: 0,
-    placeholder: 'or drop files here',
+    title: 'Drop files here',
     buttonLabel: 'Select file',
     cropTitle: 'Crop image',
     cropTooltip: 'Crop image',
@@ -287,11 +296,14 @@ FilePicker.propTypes = {
     multiple: PropTypes.bool,
     /** Native filePicker name */
     name: PropTypes.string,
+    onCrop: PropTypes.func,
     /** Cb for when the drop event occurs. Note that this callback is invoked after the getFilesFromEvent callback is done. */
     onDrop: PropTypes.func,
     onRemove: PropTypes.func,
     overrides: PropTypes.object,
-    placeholder: PropTypes.string,
+    title: PropTypes.string,
+    /** Additional info for size limits, accepted file types and others */
+    subtitle: PropTypes.string,
     previewImages: PropTypes.bool,
 };
 

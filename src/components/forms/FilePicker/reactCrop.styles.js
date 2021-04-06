@@ -72,70 +72,70 @@ export default (theme) => ({
         boxSizing: 'border-box',
         outline: '1px solid transparent',
     },
-    '& .ReactCrop .ord-nw': {
+    '& .ord-nw': {
         top: '0',
         left: '0',
         marginTop: '-5px',
         marginLeft: '-5px',
         cursor: 'nw-resize',
     },
-    '& .ReactCrop .ord-nw::after': { top: '0', left: '0' },
-    '& .ReactCrop .ord-n': {
+    '& .ord-nw::after': { top: '0', left: '0' },
+    '& .ord-n': {
         top: '0',
         left: '50%',
         marginTop: '-5px',
         marginLeft: '-5px',
         cursor: 'n-resize',
     },
-    '& .ReactCrop .ord-n::after': { top: '0' },
-    '& .ReactCrop .ord-ne': {
+    '& .ord-n::after': { top: '0' },
+    '& .ord-ne': {
         top: '0',
         right: '0',
         marginTop: '-5px',
         marginRight: '-5px',
         cursor: 'ne-resize',
     },
-    '& .ReactCrop .ord-ne::after': { top: '0', right: '0' },
-    '& .ReactCrop .ord-e': {
+    '& .ord-ne::after': { top: '0', right: '0' },
+    '& .ord-e': {
         top: '50%',
         right: '0',
         marginTop: '-5px',
         marginRight: '-5px',
         cursor: 'e-resize',
     },
-    '& .ReactCrop .ord-e::after': { right: '0' },
-    '& .ReactCrop .ord-se': {
+    '& .ord-e::after': { right: '0' },
+    '& .ord-se': {
         bottom: '0',
         right: '0',
         marginBottom: '-5px',
         marginRight: '-5px',
         cursor: 'se-resize',
     },
-    '& .ReactCrop .ord-se::after': { bottom: '0', right: '0' },
-    '& .ReactCrop .ord-s': {
+    '& .ord-se::after': { bottom: '0', right: '0' },
+    '& .ord-s': {
         bottom: '0',
         left: '50%',
         marginBottom: '-5px',
         marginLeft: '-5px',
         cursor: 's-resize',
     },
-    '& .ReactCrop .ord-s::after': { bottom: '0' },
-    '& .ReactCrop .ord-sw': {
+    '& .ord-s::after': { bottom: '0' },
+    '& .ord-sw': {
         bottom: '0',
         left: '0',
         marginBottom: '-5px',
         marginLeft: '-5px',
         cursor: 'sw-resize',
     },
-    '& .ReactCrop .ord-sw::after': { bottom: '0', left: '0' },
-    '& .ReactCrop .ord-w': {
+    '& .ord-sw::after': { bottom: '0', left: '0' },
+    '& .ord-w': {
         top: '50%',
         left: '0',
         marginTop: '-5px',
         marginLeft: '-5px',
         cursor: 'w-resize',
     },
-    '& .ReactCrop .ord-w::after': { left: '0' },
+    '& .ord-w::after': { left: '0' },
     '& .ReactCrop__disabled .ReactCrop__drag-handle': { cursor: 'inherit' },
     '& .ReactCrop__drag-bar': { position: 'absolute' },
     '& .ReactCrop__drag-bar.ord-n': {
