@@ -115,6 +115,10 @@ import ThumbDown from './icons/actions/ThumbDown';
 import ThumbUp from './icons/actions/ThumbUp';
 import Visibility from './icons/actions/Visibility';
 import Workflow from './icons/actions/Workflow';
+import Impersonate from './icons/actions/Impersonate';
+import RemoveCircle from './icons/actions/RemoveCircle';
+import Key from './icons/actions/Key';
+import PowerOn from './icons/actions/PowerOn';
 
 //Alert
 import AddAlert from './icons/alert/AddAlert';
@@ -329,6 +333,10 @@ const ICONS = {
     thumbUp: ThumbUp,
     visibility: Visibility,
     workflow: Workflow,
+    impersonate: Impersonate,
+    removeCircle: RemoveCircle,
+    key: Key,
+    powerOn: PowerOn,
     //Alert
     addAlert: AddAlert,
     asterisk: Asterisk,
