@@ -67,6 +67,8 @@ Actions:
 <span> </span>
 <Icon name="favoriteBorder"/>
 <span> </span>
+<Icon name="impersonate"/>
+<span> </span>
 <Icon name="filterList"/>
 <span> </span>
 <Icon name="filterListActive"/>
@@ -126,6 +128,14 @@ Actions:
 <Icon name="visibilityOff"/>
 <span> </span>
 <Icon name="workflow"/>
+<span> </span>
+<Icon name="removeCircle"/>
+<span> </span>
+<Icon name="key"/>
+<span> </span>
+<Icon name="activate"/>
+<span> </span>
+<Icon name="powerOn"/>
 <span> </span>
 ```
 
