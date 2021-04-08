@@ -31,6 +31,7 @@ function FilePicker({
     disabled,
     error,
     files,
+    filesData,
     hint,
     id,
     info,
@@ -64,17 +65,24 @@ function FilePicker({
         (droppedFiles) =>
             onDrop &&
             onDrop(
-                droppedFiles.filter(
-                    (droppedFile) =>
-                        !files.some(
-                            (file) =>
-                                file.name === droppedFile.name &&
-                                file.size === droppedFile.size &&
-                                file.type === droppedFile.type,
-                        ),
-                ),
+                droppedFiles
+                    .map((file) =>
+                        Object.assign(file, {
+                            id: Date.now(),
+                        }),
+                    )
+                    .filter(
+                        (droppedFile) =>
+                            !files.some(
+                                (file) =>
+                                    (!filesData || !filesData[file.id]?.error) &&
+                                    file.name === droppedFile.name &&
+                                    file.size === droppedFile.size &&
+                                    file.type === droppedFile.type,
+                            ),
+                    ),
             ),
-        [files, onDrop],
+        [files, filesData, onDrop],
     );
 
     const handleOnCrop = useCallback((file, index) => {
@@ -145,6 +153,7 @@ function FilePicker({
         const filesList = files.map((file, i) => {
             const preview = previewImages && imageTypes.includes(file.type);
             const crop = cropImages && imageTypes.includes(file.type);
+            const data = filesData?.[file.id] || {};
 
             return (
                 <File
@@ -153,6 +162,9 @@ function FilePicker({
                     classes={classesProp}
                     crop={crop}
                     cropTooltip={cropTooltip}
+                    loading={data.loading}
+                    error={data.error}
+                    progress={data.progress}
                     file={file}
                     onCrop={handleOnCrop}
                     onRemove={onRemove}
@@ -169,6 +181,7 @@ function FilePicker({
         cropImages,
         cropTooltip,
         files,
+        filesData,
         handleOnCrop,
         onRemove,
         overridesProp,
@@ -268,6 +281,7 @@ FilePicker.propTypes = {
     /** Error will be displayed below the component with style changes */
     error: PropTypes.string,
     files: PropTypes.array,
+    filesData: PropTypes.object,
     /** Info popover */
     hint: PropTypes.string,
     /** Native filePicker id */

@@ -75,6 +75,7 @@ export default (theme) => ({
         width: '100%',
     },
     file: {
+        position: 'relative',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -84,10 +85,23 @@ export default (theme) => ({
         borderBottom: `1px solid  ${theme.colors.neutral500}`,
         marginBottom: 16,
     },
+    fileError: {
+        backgroundColor: theme.colors.red100,
+        borderBottom: 'none',
+        borderRadius: 4,
+    },
+    fileLoading: {
+        backgroundColor: theme.colors.neutral300,
+        borderBottom: 'none',
+        borderRadius: 4,
+    },
     fileDataContainer: {
         display: 'flex',
     },
     fileIconContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         width: 24,
         height: 24,
         marginRight: 8,
@@ -103,6 +117,7 @@ export default (theme) => ({
     },
     fileTextContainer: {
         display: 'flex',
+        alignItems: 'center',
     },
     fileName: {
         color: theme.colors.neutral900,
@@ -118,6 +133,14 @@ export default (theme) => ({
     crop: {
         cursor: 'pointer',
         marginRight: 4,
+    },
+    progress: {
+        position: 'absolute',
+        bottom: 2,
+        left: 0,
+        height: 2,
+        borderRadius: 10,
+        backgroundColor: theme.colors.orange500,
     },
 
     errored: {
