@@ -284,6 +284,14 @@ exports[`Label default match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -422,7 +430,7 @@ exports[`Label default match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -433,10 +441,11 @@ exports[`Label default match 1`] = `
           <Text
             className="HoiPoi__Label__Text-1-1"
             overrides={Object {}}
-            type="normal"
+            type="body"
           >
             <span
-              className="HoiPoi__Text__root-1-4 HoiPoi__Label__Text-1-1"
+              className="HoiPoi__Text__root-1-4 HoiPoi__Label__Text-1-1 HoiPoi__Text__body-1-14"
+              style={Object {}}
             >
               Lorem ipsum
             </span>
@@ -732,6 +741,14 @@ exports[`Label is required match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -870,7 +887,7 @@ exports[`Label is required match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -883,10 +900,11 @@ exports[`Label is required match 1`] = `
           <Text
             className="HoiPoi__Label__Text-2-1"
             overrides={Object {}}
-            type="normal"
+            type="body"
           >
             <span
-              className="HoiPoi__Text__root-2-4 HoiPoi__Label__Text-2-1"
+              className="HoiPoi__Text__root-2-4 HoiPoi__Label__Text-2-1 HoiPoi__Text__body-2-14"
+              style={Object {}}
             >
               Lorem ipsum
               *
@@ -1183,6 +1201,14 @@ exports[`Label with hint match 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -1321,7 +1347,7 @@ exports[`Label with hint match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1334,10 +1360,11 @@ exports[`Label with hint match 1`] = `
           <Text
             className="HoiPoi__Label__Text-3-1"
             overrides={Object {}}
-            type="normal"
+            type="body"
           >
             <span
-              className="HoiPoi__Text__root-3-4 HoiPoi__Label__Text-3-1"
+              className="HoiPoi__Text__root-3-4 HoiPoi__Label__Text-3-1 HoiPoi__Text__body-3-14"
+              style={Object {}}
             >
               Lorem ipsum
             </span>
@@ -1352,14 +1379,9 @@ exports[`Label with hint match 1`] = `
               ]
             }
           >
-            <Tooltip
-              align={Object {}}
-              arrowContent={null}
-              destroyTooltipOnHide={false}
-              mouseEnterDelay={0}
-              mouseLeaveDelay={0.1}
+            <ForwardRef(Tooltip)
               overlay="I am a hint"
-              overlayClassName="HoiPoi__Popover__root-3-21"
+              overlayClassName="HoiPoi__Popover__root-3-22"
               placement="top"
               prefixCls="hoi-poi-popover"
               transitionName="hoi-poi-popover--fade"
@@ -1376,7 +1398,7 @@ exports[`Label with hint match 1`] = `
                   ]
                 }
                 afterPopupVisibleChange={[Function]}
-                arrowContent={null}
+                autoDestroy={false}
                 blurDelay={0.15}
                 builtinPlacements={
                   Object {
@@ -1613,7 +1635,7 @@ exports[`Label with hint match 1`] = `
                 overlay="I am a hint"
                 popup={[Function]}
                 popupAlign={Object {}}
-                popupClassName="HoiPoi__Popover__root-3-21"
+                popupClassName="HoiPoi__Popover__root-3-22"
                 popupPlacement="top"
                 popupStyle={Object {}}
                 popupTransitionName="hoi-poi-popover--fade"
@@ -1633,7 +1655,7 @@ exports[`Label with hint match 1`] = `
                     size="medium"
                   >
                     <span
-                      className="HoiPoi__Icon__root-3-22 HoiPoi__Icon__medium-3-24 HoiPoi__Label__icon-3-3"
+                      className="HoiPoi__Icon__root-3-23 HoiPoi__Icon__medium-3-25 HoiPoi__Label__icon-3-3"
                       onMouseDown={[Function]}
                       onMouseOut={[Function]}
                       onMouseOver={[Function]}
@@ -1657,7 +1679,7 @@ exports[`Label with hint match 1`] = `
                   </Icon>
                 </span>
               </Trigger>
-            </Tooltip>
+            </ForwardRef(Tooltip)>
           </Popover>
         </div>
       </Label>

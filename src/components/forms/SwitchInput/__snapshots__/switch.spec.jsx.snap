@@ -284,6 +284,14 @@ exports[`SwitchInput checked match snapshot 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -422,7 +430,7 @@ exports[`SwitchInput checked match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -438,17 +446,16 @@ exports[`SwitchInput checked match snapshot 1`] = `
           error=""
           info=""
           labelMode="horizontal"
-          override={Object {}}
           overrides={Object {}}
         >
           <div
-            className="HoiPoi__Input__root-2-3 HoiPoi__Input__horizontal-2-8 HoiPoi__SwitchInput__root-2-0"
+            className="HoiPoi__InputWrapper__root-2-3 HoiPoi__InputWrapper__horizontal-2-8 HoiPoi__SwitchInput__root-2-0"
           >
             <div
-              className="HoiPoi__Input__inputWrapper-2-4"
+              className="HoiPoi__InputWrapper__inputWrapper-2-4"
             >
               <div
-                className="HoiPoi__Input__formControl-2-9"
+                className="HoiPoi__InputWrapper__formControl-2-9"
               >
                 <Switch
                   checked={true}
@@ -548,6 +555,7 @@ exports[`SwitchInput checked match snapshot 1`] = `
                           }
                         />
                         <input
+                          aria-checked={true}
                           checked={true}
                           disabled={false}
                           onBlur={[Function]}
@@ -873,6 +881,14 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -1011,7 +1027,7 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1027,17 +1043,16 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
           error=""
           info=""
           labelMode="horizontal"
-          override={Object {}}
           overrides={Object {}}
         >
           <div
-            className="HoiPoi__Input__root-1-3 HoiPoi__Input__horizontal-1-8 HoiPoi__SwitchInput__root-1-0"
+            className="HoiPoi__InputWrapper__root-1-3 HoiPoi__InputWrapper__horizontal-1-8 HoiPoi__SwitchInput__root-1-0"
           >
             <div
-              className="HoiPoi__Input__inputWrapper-1-4"
+              className="HoiPoi__InputWrapper__inputWrapper-1-4"
             >
               <div
-                className="HoiPoi__Input__formControl-1-9"
+                className="HoiPoi__InputWrapper__formControl-1-9"
               >
                 <Switch
                   checked={false}
@@ -1137,6 +1152,7 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
                           }
                         />
                         <input
+                          aria-checked={false}
                           checked={false}
                           disabled={false}
                           onBlur={[Function]}

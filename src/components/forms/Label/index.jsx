@@ -34,11 +34,7 @@ function Label({
 
     return (
         <div {...rootProps} {...override.root}>
-            <Text
-                type={isDisabled ? 'light' : 'normal'}
-                className={classes.Text}
-                {...override.Text}
-            >
+            <Text type={isDisabled ? 'light' : 'body'} className={classes.Text} {...override.Text}>
                 {children}
                 {isRequired && '*'}
             </Text>
@@ -69,7 +65,7 @@ Text.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     isRequired: PropTypes.bool,
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 export default React.memo(Label);

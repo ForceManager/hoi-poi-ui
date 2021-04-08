@@ -4,7 +4,6 @@ export default (theme) => ({
         boxSizing: 'border-box',
         display: 'block',
         outline: 'none',
-        padding: '10px',
     },
     overlay: {
         position: 'fixed',
@@ -48,13 +47,21 @@ export default (theme) => ({
     footer: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
         paddingTop: 16,
     },
+    footerLeft: {},
+    footerRight: {},
     content: {
         position: 'relative',
         overflow: 'auto',
         ...theme.utils.scrollbar,
+    },
+    preComponent: {
+        marginBottom: '8px',
+    },
+    postComponent: {
+        marginTop: '8px',
     },
     closeIcon: {
         flexShrink: 0,
@@ -62,5 +69,11 @@ export default (theme) => ({
     confirmButton: {},
     cancelButton: {
         marginRight: 20,
+    },
+    deleteButton: {
+        color: theme.colors.red500,
+        '&:hover': {
+            color: theme.colors.red600,
+        },
     },
 });

@@ -36,7 +36,7 @@ describe('Drawer', () => {
                     isOpen={true}
                     width="400px"
                     className="className-ipsum"
-                    classes={{ overlay: 'overlay-ipsum' }}
+                    classes={{ overlayRight: 'overlay-ipsum' }}
                 >
                     <span>Lorem Ipsum</span>
                 </Drawer>

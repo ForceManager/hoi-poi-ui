@@ -7,15 +7,19 @@ export default (theme) => {
             marginTop: -10,
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             '& > *': {
-                marginRight: 12,
+                marginRight: 16,
                 '&:last-child': {
                     marginRight: 0,
                 },
             },
         },
-        divider: {},
+        divider: {
+            height: 56,
+            alignItems: 'center',
+            display: 'flex',
+        },
         dividerText: {
             ...theme.typography.body,
         },

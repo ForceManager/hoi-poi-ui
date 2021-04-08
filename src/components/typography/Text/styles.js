@@ -18,11 +18,13 @@ const typographies = [
 export default (theme) => ({
     root: {
         display: 'inherit',
+        color: theme.colors.neutral900,
     },
+    ...typographies.reduce((obj, key) => ({ ...obj, [key]: { ...theme.typography[key] } }), {}),
     truncated: {
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
     },
-    ...typographies.reduce((obj, key) => ({ ...obj, [key]: { ...theme.typography[key] } }), {}),
+    bold: { fontWeight: 500 },
 });

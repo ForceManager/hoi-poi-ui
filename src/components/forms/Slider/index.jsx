@@ -1,11 +1,10 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCSlider, { Range } from 'rc-slider';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import InputWrapper from '../components/InputWrapper';
-import Tooltip from '../../utils/Tooltip';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -28,13 +27,23 @@ function Slider({
     tipFormatter,
     isPercentage,
     size,
+    onChange,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     // State
     const [innerValue, setInnerValue] = useState(
-        isRange && value === undefined ? [min, max] : value || min,
+        isRange && (value === undefined || value === null) ? [min, max] : value || min,
     );
+
+    useEffect(() => {
+        if (isRange) {
+            if (!value) setInnerValue([min, max]);
+            else setInnerValue(value);
+        } else {
+            setInnerValue(value || min);
+        }
+    }, [value, isRange, min, max]);
 
     // Overrides
     const override = getOverrides(overridesProp, Slider.overrides);
@@ -52,32 +61,45 @@ function Slider({
     const handle = useCallback(
         (props) => {
             const { offset, dragging, index, ...restProps } = props;
+            const positionStyle = { left: `${offset}%` };
             const handlerValue = Array.isArray(innerValue) ? innerValue[index] : innerValue;
             let finalValue;
             if (tipFormatter) finalValue = tipFormatter(handlerValue);
             else if (isPercentage) finalValue = `${handlerValue}%`;
             else finalValue = handlerValue;
             return (
-                <div key={index} {...override.overlay}>
-                    <Tooltip placement="top" content={finalValue} visible={!isReadOnly}>
-                        <Handle
-                            value={innerValue}
-                            offset={offset}
-                            {...restProps}
-                            className={classes.overlayHandler}
-                            prefixCls="hoi-poi-slider"
-                            dragging={dragging.toString()}
-                        />
-                    </Tooltip>
+                <div key={index} className={classes.overlay} {...override.overlay}>
+                    {!isReadOnly && (
+                        <span
+                            style={positionStyle}
+                            className={classes.overlayLabel}
+                            {...override.overlayLabel}
+                        >
+                            {finalValue}
+                        </span>
+                    )}
+                    <Handle
+                        value={innerValue}
+                        offset={offset}
+                        {...restProps}
+                        className={classes.overlayHandler}
+                        prefixCls="hoi-poi-slider"
+                        dragging={dragging.toString()}
+                        {...override.overlayHandler}
+                    />
                 </div>
             );
         },
         [
+            classes.overlay,
             classes.overlayHandler,
+            classes.overlayLabel,
             innerValue,
             isPercentage,
             isReadOnly,
             override.overlay,
+            override.overlayHandler,
+            override.overlayLabel,
             tipFormatter,
         ],
     );
@@ -88,11 +110,17 @@ function Slider({
         },
         [props],
     );
-
+    const onChangeRange = useCallback(
+        (value) => {
+            setInnerValue(value);
+            onChange && onChange(value);
+        },
+        [onChange],
+    );
     const sliderProps = {
         className: classes.slider,
         value: innerValue,
-        onChange: setInnerValue,
+        onChange: onChangeRange,
         onAfterChange: onAfterChange,
         disabled: isReadOnly,
         labelMode: 'vertical',
@@ -113,7 +141,7 @@ function Slider({
     );
 }
 
-Slider.overrides = ['root', 'rc-slider', 'overlay'];
+Slider.overrides = ['root', 'rc-slider', 'overlay', 'overlayLabel', 'overlayHandler'];
 
 Slider.defaultProps = {
     overrides: {},
@@ -135,9 +163,9 @@ Slider.propTypes = {
     isFullWidth: PropTypes.bool,
     isRange: PropTypes.bool,
     /** Info popover */
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     isReadOnly: PropTypes.bool,
     /** A function to format tooltip\'s overlay */
     tipFormatter: PropTypes.func,

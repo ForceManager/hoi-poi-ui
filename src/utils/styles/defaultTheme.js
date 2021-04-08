@@ -71,7 +71,7 @@ function alphaColor(hex, a) {
 }
 
 // New color scheme
-const colors = {
+export const colors = {
     neutralBase: '#ffffff',
     neutral100: '#f9f9fa',
     neutral200: '#f4f5f6',
@@ -140,7 +140,7 @@ const colors = {
     turquoise900: '#00335b',
 };
 
-const typography = {
+export const typography = {
     h1: {
         fontFamily,
         fontSize: 96,
@@ -341,6 +341,14 @@ export default {
         },
     },
     utils: {
+        selection: {
+            '& ::selection': {
+                backgroundColor: colors.orange200,
+            },
+            '& ::-moz-selection': {
+                backgroundColor: colors.orange200,
+            },
+        },
         scrollbar: {
             '&::-webkit-scrollbar': {
                 width: 17,

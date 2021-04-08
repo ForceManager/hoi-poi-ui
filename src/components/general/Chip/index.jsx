@@ -1,92 +1,228 @@
-import React, { Fragment, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
-
-import Icon from '../../general/Icon';
 import Text from '../../typography/Text';
+import Icon from '../Icon';
+import Avatar from '../Avatar';
 
-import { createUseStyles, useTheme } from '../../../utils/styles';
+import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Chip');
 
 function Chip({
-    children,
     classes: classesProp,
-    className: classNameProp,
+    children,
     overrides: overridesProp,
-    onClose,
-    url,
-    isShrinked,
+    className: classNameProp,
+    size,
+    isFilled,
+    isOutlined,
+    isFolded,
+    isUnfolded,
+    isDisabled,
+    isReadOnly,
+    isActive,
+    onClick,
+    onRemove,
+    src,
+    placeholder,
+    alt,
+    icon,
     ...props
 }) {
-    const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
-    const rootClassName = classnames(classes.root, classNameProp);
 
+    // Overrides
     const override = getOverrides(overridesProp, Chip.overrides);
+
+    // Classes
+    const rootClassName = classnames(
+        classes.root,
+        {
+            [classes.isFilled]: isFilled,
+            [classes.isOutlined]: isOutlined,
+            [classes.isDisabled]: isDisabled,
+            [classes.isReadOnly]: isReadOnly && !isDisabled,
+            [classes.isActive]: isActive,
+            [classes.clickable]: !!onClick && !isDisabled && !isReadOnly,
+        },
+        classes[size],
+        classNameProp,
+    );
 
     const rootProps = {
         ...props,
         className: rootClassName,
     };
 
-    const matches = useMemo(() => children && children.match(/\b(\w)/g), [children]);
+    const icons = useMemo(() => {
+        let icons = [];
+
+        // Dropdown
+        if (isFolded || isUnfolded) {
+            const iconClass = classnames(
+                classes.icon,
+                classes.iconDropdown,
+                isFolded ? classes.iconFolded : undefined,
+            );
+            icons.push(
+                <Icon
+                    className={iconClass}
+                    key="chip__dropdown"
+                    name="arrowDropDown"
+                    size="large"
+                    {...override.DropDownIcon}
+                />,
+            );
+        }
+
+        // Divider
+        if ((isFolded || isUnfolded) && onRemove) {
+            const iconClass = classnames(classes.icon, classes.dividerIcon);
+            icons.push(
+                <Icon
+                    className={iconClass}
+                    key="chip__divider"
+                    name="verticalDivider"
+                    size="small"
+                    {...override.DividerIcon}
+                />,
+            );
+        }
+
+        // Close
+        if (onRemove) {
+            const iconClass = classnames(classes.icon, classes.closeIcon);
+            icons.push(
+                <Icon
+                    className={iconClass}
+                    key="chip__close"
+                    name="closeRaw"
+                    size="raw"
+                    onClick={onRemove}
+                    {...override.CloseIcon}
+                />,
+            );
+        }
+
+        // ReadOnly
+        if (isReadOnly)
+            icons = [
+                <Icon
+                    className={classes.icon}
+                    key="chip__read-only"
+                    name="lockRaw"
+                    size="raw"
+                    {...override.ReadOnlyIcon}
+                />,
+            ];
+
+        return icons;
+    }, [
+        classes.closeIcon,
+        classes.dividerIcon,
+        classes.icon,
+        classes.iconDropdown,
+        classes.iconFolded,
+        isFolded,
+        isReadOnly,
+        isUnfolded,
+        onRemove,
+        override.CloseIcon,
+        override.DividerIcon,
+        override.DropDownIcon,
+        override.ReadOnlyIcon,
+    ]);
+
+    const textProps = useMemo(
+        () => ({
+            type: size === 'large' ? 'body' : 'caption',
+            className: classes.Text,
+            ...override.Text,
+        }),
+        [classes.Text, override.Text, size],
+    );
 
     return (
-        <div {...rootProps} {...override.root}>
+        <div
+            {...rootProps}
+            onClick={!isDisabled && !isReadOnly ? onClick : undefined}
+            {...override.root}
+        >
             <div className={classes.wrapper} {...override.wrapper}>
-                {url && (
-                    <img
-                        className={isShrinked ? classes.shrinkedPicture : classes.picture}
-                        src={url}
-                        alt=""
-                        {...override.img}
+                {icon && (
+                    <Icon
+                        className={classnames(classes.icon, classes.iconLeft)}
+                        name={icon}
+                        {...override.Icon}
                     />
                 )}
-                {isShrinked && !url && (
-                    <Text className={classes.shrinked} {...override.shrinked}>
-                        {matches}
-                    </Text>
+                {src && (
+                    <Avatar
+                        className={classes.avatar}
+                        size="small"
+                        src={src}
+                        placeholder={placeholder}
+                        alt={alt}
+                        {...override.Avatar}
+                    />
                 )}
-                {!isShrinked && (
-                    <Fragment>
-                        <Text className={classes.Text} {...override.Text}>
-                            {children}
-                        </Text>
-                        {onClose && (
-                            <Icon
-                                onClick={onClose}
-                                className={classes.close}
-                                name="close"
-                                size="small"
-                                color={theme.colors.text.greySoft}
-                                {...override.Icon}
-                            />
-                        )}
-                    </Fragment>
+                <Text {...textProps}>{children}</Text>
+                {icons.length > 0 && (
+                    <div className={classes.icons} {...override.icons}>
+                        {icons}
+                    </div>
                 )}
             </div>
         </div>
     );
 }
 
-Chip.overrides = ['root', 'wrapper', 'img', 'shrinked', 'Text', 'Icon', 'onClose'];
+Chip.overrides = [
+    'root',
+    'Text',
+    'Icon',
+    'Avatar',
+    'DropDownIcon',
+    'CloseIcon',
+    'DividerIcon',
+    'ReadOnlyIcon',
+    'icons',
+    'wrapper',
+];
 
 Chip.defaultProps = {
     className: '',
     overrides: {},
-    isShrinked: false,
-    url: '',
+    size: 'small',
+    isFilled: false,
+    isOutlined: false,
+    isFolded: false,
+    isUnfolded: false,
+    isDisabled: false,
+    isReadOnly: false,
+    isActive: false,
 };
 
 Chip.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.string.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    onClose: PropTypes.func,
-    isShrinked: PropTypes.bool,
-    url: PropTypes.string,
+    size: PropTypes.oneOf(['small', 'large']),
+    src: PropTypes.string,
+    placeholder: PropTypes.string,
+    alt: PropTypes.string,
+    icon: PropTypes.string,
+    isFilled: PropTypes.bool,
+    isOutlined: PropTypes.bool,
+    isFolded: PropTypes.bool,
+    isUnfolded: PropTypes.bool,
+    isDisabled: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
+    isActive: PropTypes.bool,
+    onClick: PropTypes.func,
+    onRemove: PropTypes.func,
 };
 
 export default React.memo(Chip);

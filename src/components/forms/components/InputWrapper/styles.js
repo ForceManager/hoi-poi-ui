@@ -9,11 +9,12 @@ export default (theme) => {
             width: 150,
             marginRight: 17,
             padding: '0 0 8px 0',
+            flexShrink: 0,
         },
         vertical: {
             '& $inputWrapper': {
                 display: 'block',
-                padding: '10px 0',
+                padding: '8px 0',
                 marginLeft: '0 !important',
                 '& $Label': {
                     width: '100%',
@@ -27,7 +28,7 @@ export default (theme) => {
             '& $inputWrapper': {
                 display: 'flex',
                 alignItems: 'center',
-                padding: '10px 0',
+                padding: '8px 0',
                 '& $error': {},
                 '& $Label': {
                     padding: 0,
@@ -42,10 +43,10 @@ export default (theme) => {
             boxSizing: 'border-box',
         },
         isFullWidth: {
-            '&$vertical $Label': {
+            '& $formControl': {
                 width: '100%',
             },
-            '& $formControl': {
+            '&$vertical $Label': {
                 width: '100%',
             },
         },

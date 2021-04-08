@@ -22,6 +22,7 @@ function Menus({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
+    classNameMenu,
     triggerAction,
     size,
 }) {
@@ -32,11 +33,13 @@ function Menus({
 
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);
+    const menuClassName = classnames(classes.subMenu, classNameMenu);
 
     const menuProps = {
         mode: 'horizontal',
         className: classes.menu,
         triggerSubMenuAction: triggerAction,
+        openAnimation: 'slide-up',
         ...override['rc-menu'],
     };
 
@@ -47,11 +50,7 @@ function Menus({
                 {title && title}
             </Fragment>
         ),
-        popupClassName: classes.subMenu,
-    };
-
-    const menuItemProps = {
-        className: classes.menuItem,
+        popupClassName: menuClassName,
     };
 
     return (
@@ -64,7 +63,11 @@ function Menus({
                                 key={id}
                                 itemIcon={item.icon}
                                 onClick={item.onClick}
-                                {...menuItemProps}
+                                className={
+                                    item.infoItem
+                                        ? classes.menuItem
+                                        : classnames(classes.menuItem, classes.clickable)
+                                }
                             >
                                 {item.title}
                             </MenuItem>
@@ -91,6 +94,7 @@ Menus.propTypes = {
         PropTypes.shape({
             title: PropTypes.any,
             icon: PropTypes.object,
+            infoItem: PropTypes.bool /** In order to know if an item is clickable or not */,
             onClick: PropTypes.func,
         }),
     ),

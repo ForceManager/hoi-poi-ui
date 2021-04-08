@@ -36,7 +36,7 @@ function Badge({
 
     return (
         <div {...rootProps} {...override.root}>
-            <Text size="small" className={classes.Text} {...override.Text}>
+            <Text type="caption" className={classes.Text} {...override.Text}>
                 {children}
             </Text>
         </div>
@@ -55,7 +55,7 @@ Badge.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warn']),
+    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warning', 'ongoing']),
 };
 
 export default React.memo(Badge);

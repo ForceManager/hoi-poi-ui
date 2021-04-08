@@ -37,10 +37,10 @@ const FieldGroup = memo(
         );
 
         const onChangeInput = useCallback(
-            (newValue, index) => {
+            (newValue, index, event, info) => {
                 let changedValue = [...value];
-                changedValue[index] = newValue?.target?.value || newValue;
-                onChange && onChange(changedValue, newValue, index);
+                changedValue[index] = newValue;
+                onChange && onChange(changedValue, newValue, index, event, info);
             },
             [onChange, value],
         );
@@ -56,10 +56,11 @@ const FieldGroup = memo(
                 inputNodes.push(
                     <Input
                         key={index}
-                        {...props}
                         isFullWidth={isFullWidth}
-                        onChange={(v) => onChangeInput(v, index)}
+                        error={!!error}
+                        onChange={(value, event, info) => onChangeInput(value, index, event, info)}
                         value={value[index]}
+                        {...props}
                     />,
                 );
 
@@ -67,7 +68,11 @@ const FieldGroup = memo(
                 if (inputs[index + 1] && (divider || dividerText)) {
                     if (divider)
                         inputNodes.push(
-                            <div className={classes.divider} {...override.divider}>
+                            <div
+                                key={`${index}-divider`}
+                                className={classes.divider}
+                                {...override.divider}
+                            >
                                 {divider}
                             </div>,
                         );
@@ -92,6 +97,7 @@ const FieldGroup = memo(
             classes.dividerText,
             divider,
             dividerText,
+            error,
             inputProps,
             inputs,
             isFullWidth,
@@ -137,7 +143,7 @@ FieldGroup.propTypes = {
     /** Info popover */
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
     isRequired: PropTypes.bool,

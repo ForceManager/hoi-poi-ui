@@ -84,9 +84,9 @@ SwitchInput.propTypes = {
     value: PropTypes.any,
     onChange: PropTypes.func,
     /** Info popover */
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     isReadOnly: PropTypes.bool,
 };
 

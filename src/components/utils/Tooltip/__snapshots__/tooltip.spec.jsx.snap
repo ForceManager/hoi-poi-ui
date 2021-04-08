@@ -284,6 +284,14 @@ exports[`Tooltip match snapshot 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -422,11 +430,11 @@ exports[`Tooltip match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
-      <Section
+      <Component
         content={
           <span>
             Hello!
@@ -440,36 +448,37 @@ exports[`Tooltip match snapshot 1`] = `
         <div
           className="HoiPoi__Section__root-1-0"
         >
-          <Button
+          <ForwardRef
             iconPosition="left"
             overrides={Object {}}
             size="medium"
             type="primary"
           >
             <button
-              className="HoiPoi__Button__root-1-6 HoiPoi__Button__primary-1-11 HoiPoi__Button__medium-1-17"
+              className="HoiPoi__Button__root-1-13 HoiPoi__Button__primary-1-18 HoiPoi__Button__medium-1-24"
               type="button"
             >
               <div
-                className="HoiPoi__Button__content-1-7"
+                className="HoiPoi__Button__content-1-14"
               >
                 <Text
-                  className="HoiPoi__Button__Text-1-8"
+                  className="HoiPoi__Button__Text-1-15"
                   isTruncated={false}
                   overrides={Object {}}
                   type="body"
                 >
                   <span
-                    className="HoiPoi__Text__root-1-24 HoiPoi__Button__Text-1-8 HoiPoi__Text__body-1-35"
+                    className="HoiPoi__Text__root-1-31 HoiPoi__Button__Text-1-15 HoiPoi__Text__body-1-41"
+                    style={Object {}}
                   >
                     top
                   </span>
                 </Text>
               </div>
             </button>
-          </Button>
+          </ForwardRef>
         </div>
-      </Section>
+      </Component>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -759,6 +768,14 @@ exports[`Tooltip visible match snapshot 1`] = `
               "borderRadius": 10,
             },
           },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+          },
         },
       }
     }
@@ -897,11 +914,11 @@ exports[`Tooltip visible match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
-      <Section
+      <Component
         content={
           <span>
             Hello!
@@ -915,36 +932,37 @@ exports[`Tooltip visible match snapshot 1`] = `
         <div
           className="HoiPoi__Section__root-2-0"
         >
-          <Button
+          <ForwardRef
             iconPosition="left"
             overrides={Object {}}
             size="medium"
             type="primary"
           >
             <button
-              className="HoiPoi__Button__root-2-6 HoiPoi__Button__primary-2-11 HoiPoi__Button__medium-2-17"
+              className="HoiPoi__Button__root-2-13 HoiPoi__Button__primary-2-18 HoiPoi__Button__medium-2-24"
               type="button"
             >
               <div
-                className="HoiPoi__Button__content-2-7"
+                className="HoiPoi__Button__content-2-14"
               >
                 <Text
-                  className="HoiPoi__Button__Text-2-8"
+                  className="HoiPoi__Button__Text-2-15"
                   isTruncated={false}
                   overrides={Object {}}
                   type="body"
                 >
                   <span
-                    className="HoiPoi__Text__root-2-24 HoiPoi__Button__Text-2-8 HoiPoi__Text__body-2-35"
+                    className="HoiPoi__Text__root-2-31 HoiPoi__Button__Text-2-15 HoiPoi__Text__body-2-41"
+                    style={Object {}}
                   >
                     top
                   </span>
                 </Text>
               </div>
             </button>
-          </Button>
+          </ForwardRef>
         </div>
-      </Section>
+      </Component>
     </JssProvider>
   </ThemeProvider>
 </Component>

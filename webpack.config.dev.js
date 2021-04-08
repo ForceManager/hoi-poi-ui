@@ -20,6 +20,7 @@ module.exports = {
     resolve: {
         alias: {
             'hoi-poi-ui': srcPath,
+            process: 'process/browser',
         },
         extensions: ['js', 'json', 'jsx'],
     },
@@ -78,16 +79,10 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': 'production',
+            'process.env.NODE_ENV': 'development',
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({ process: 'process/browser' }),
     ].filter(Boolean),
-    node: {
-        dgram: 'empty',
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty',
-        child_process: 'empty',
-    },
     performance: false,
 };

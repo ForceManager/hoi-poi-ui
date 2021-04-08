@@ -40,7 +40,7 @@ export default (theme) => {
             alignItems: 'center',
             width: 320,
             boxSizing: 'border-box',
-            padding: '0 10px',
+            padding: '0 12px',
             lineHeight: 0,
             borderRadius: '4px',
             border: '1px solid transparent',
@@ -60,6 +60,9 @@ export default (theme) => {
             border: 'none',
             padding: 0,
             margin: 0,
+            '&:invalid': {
+                boxShadow: 'none',
+            },
             '&::placeholder': {
                 color: theme.colors.neutral600,
             },

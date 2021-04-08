@@ -1,13 +1,6 @@
 {
-    "extends": [
-        "react-app",
-        "prettier",
-        "prettier/react",
-        "plugin:jest/recommended"
-    ],
-    "plugins": [
-        "prettier"
-    ],
+    "extends": ["react-app", "prettier", "prettier/react", "plugin:jest/recommended"],
+    "plugins": ["prettier"],
     "settings": {
         "react": {
             "pragma": "React",
@@ -23,5 +16,8 @@
         "Blob": true,
         "navigator": true
     },
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "rules": {
+        "import/no-anonymous-default-export": 0
+    }
 }

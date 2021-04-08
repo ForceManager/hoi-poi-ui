@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { forwardRef, memo, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -17,128 +17,134 @@ const LOADER_SIZES = {
 };
 const ALLOWED_LOADING_TYPES = ['primary', 'primary-error'];
 
-function Button({
-    children,
-    classes: classesProp,
-    overrides: overridesProp,
-    className: classNameProp,
-    onClick,
-    size,
-    type,
-    isDisabled,
-    isFullWidth,
-    isLoading,
-    href,
-    target,
-    icon,
-    iconPosition,
-    ...props
-}) {
-    const theme = useTheme();
-    const classes = useClasses(useStyles, classesProp);
-    // Overrides
-    const override = getOverrides(overridesProp, Button.overrides);
-
-    // Classes
-    const rootClassName = classnames(
-        classes.root,
+const Button = forwardRef(
+    (
         {
-            [classes.primary]: type === 'primary',
-            [classes.primaryError]: type === 'primary-error',
-            [classes.secondary]: type === 'secondary',
-            [classes.secondaryError]: type === 'secondary-error',
-            [classes.terciary]: type === 'terciary',
-            [classes[size]]: size,
-            [classes.disabled]: isDisabled,
-            [classes.loading]: isLoading && ALLOWED_LOADING_TYPES.includes(type),
-            [classes.fullWidth]: isFullWidth,
-            [classes.iconLeft]: icon && iconPosition === 'left',
-            [classes.iconRight]: icon && iconPosition === 'right',
+            children,
+            classes: classesProp,
+            overrides: overridesProp,
+            className: classNameProp,
+            onClick,
+            size,
+            type,
+            isDisabled,
+            isFullWidth,
+            isLoading,
+            href,
+            target,
+            icon,
+            iconPosition,
+            ...props
         },
-        classNameProp,
-    );
+        ref,
+    ) => {
+        const theme = useTheme();
+        const classes = useClasses(useStyles, classesProp);
+        // Overrides
+        const override = getOverrides(overridesProp, Button.overrides);
 
-    const rootProps = useMemo(
-        () => ({
-            ...props,
-            className: rootClassName,
-            onClick: isDisabled || isLoading ? null : onClick,
-        }),
-        [props, rootClassName, isDisabled, isLoading, onClick],
-    );
+        // Classes
+        const rootClassName = classnames(
+            classes.root,
+            {
+                [classes.primary]: type === 'primary',
+                [classes.primaryError]: type === 'primary-error',
+                [classes.secondary]: type === 'secondary',
+                [classes.secondaryError]: type === 'secondary-error',
+                [classes.terciary]: type === 'terciary',
+                [classes[size]]: size,
+                [classes.disabled]: isDisabled,
+                [classes.loading]: isLoading && ALLOWED_LOADING_TYPES.includes(type),
+                [classes.fullWidth]: isFullWidth,
+                [classes.iconLeft]: icon && iconPosition === 'left',
+                [classes.iconRight]: icon && iconPosition === 'right',
+            },
+            classNameProp,
+        );
 
-    const iconProps = useMemo(() => {
-        const properties = { size: 'medium', name: icon };
-        switch (type) {
-            case 'secondary':
-                return {
-                    ...properties,
-                    color: theme.colors.orange500,
-                };
-            case 'secondary-error':
-                return {
-                    ...properties,
-                    color: theme.colors.red500,
-                };
-            case 'terciary':
-                return {
-                    ...properties,
-                    color: theme.colors.neutral700,
-                };
-            case 'primary':
-            case 'primary-error':
-            default:
-                return {
-                    ...properties,
-                    color: theme.colors.neutralBase,
-                };
+        const rootProps = useMemo(
+            () => ({
+                ref,
+                ...props,
+                className: rootClassName,
+                onClick: isDisabled || isLoading ? null : onClick,
+            }),
+            [props, ref, rootClassName, isDisabled, isLoading, onClick],
+        );
+
+        const iconProps = useMemo(() => {
+            const properties = { size: 'medium', name: icon };
+            switch (type) {
+                case 'secondary':
+                    return {
+                        ...properties,
+                        color: theme.colors.orange500,
+                    };
+                case 'secondary-error':
+                    return {
+                        ...properties,
+                        color: theme.colors.red500,
+                    };
+                case 'terciary':
+                    return {
+                        ...properties,
+                        color: theme.colors.neutral700,
+                    };
+                case 'primary':
+                case 'primary-error':
+                default:
+                    return {
+                        ...properties,
+                        color: theme.colors.neutralBase,
+                    };
+            }
+        }, [
+            icon,
+            theme.colors.neutral700,
+            theme.colors.neutralBase,
+            theme.colors.orange500,
+            theme.colors.red500,
+            type,
+        ]);
+
+        const content = (
+            <div className={classes.content}>
+                {isLoading && ALLOWED_LOADING_TYPES.includes(type) && (
+                    <div className={classes.loaderContainer}>
+                        <Loader size={LOADER_SIZES[size]} color="white" {...override.Loader} />
+                    </div>
+                )}
+                {icon && iconPosition === 'left' && (
+                    <div className={classes.icon} {...override.icon}>
+                        <Icon {...iconProps} />
+                    </div>
+                )}
+                <Text className={classes.Text} {...override.Text}>
+                    {children}
+                </Text>
+                {icon && iconPosition === 'right' && (
+                    <div className={classes.icon} {...override.icon}>
+                        <Icon {...iconProps} />
+                    </div>
+                )}
+            </div>
+        );
+
+        if (href) {
+            return (
+                <a href={href} target={target} {...rootProps} {...override.root}>
+                    {content}
+                </a>
+            );
+        } else {
+            return (
+                <button {...rootProps} type="button" {...override.root}>
+                    {content}
+                </button>
+            );
         }
-    }, [
-        icon,
-        theme.colors.neutral700,
-        theme.colors.neutralBase,
-        theme.colors.orange500,
-        theme.colors.red500,
-        type,
-    ]);
-
-    const content = (
-        <div className={classes.content}>
-            {isLoading && ALLOWED_LOADING_TYPES.includes(type) && (
-                <div className={classes.loaderContainer}>
-                    <Loader size={LOADER_SIZES[size]} color="white" {...override.Loader} />
-                </div>
-            )}
-            {icon && iconPosition === 'left' && (
-                <div className={classes.icon} {...override.icon}>
-                    <Icon {...iconProps} />
-                </div>
-            )}
-            <Text className={classes.Text} {...override.Text}>
-                {children}
-            </Text>
-            {icon && iconPosition === 'right' && (
-                <div className={classes.icon} {...override.icon}>
-                    <Icon {...iconProps} />
-                </div>
-            )}
-        </div>
-    );
-
-    if (href) {
-        return (
-            <a href={href} target={target} {...rootProps} {...override.root}>
-                {content}
-            </a>
-        );
-    } else {
-        return (
-            <button {...rootProps} type="button" {...override.root}>
-                {content}
-            </button>
-        );
-    }
-}
+    },
+);
 
 Button.overrides = ['root', 'Text', 'Loader'];
 
@@ -168,4 +174,4 @@ Button.propTypes = {
     iconPosition: PropTypes.oneOf(['left', 'right']),
 };
 
-export default React.memo(Button);
+export default memo(Button);

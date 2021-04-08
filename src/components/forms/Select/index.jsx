@@ -1,0 +1,905 @@
+import React, { memo, useState, useCallback, useMemo, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { getOverrides, useClasses } from '../../../utils/overrides';
+import { createFilter, filterKeyValue } from './utils'; // Local utils
+import InputWrapper from '../components/InputWrapper';
+import { default as RSelect } from 'react-select';
+import AsyncSelect from 'react-select/async';
+
+import Control from './components/Control';
+import DropdownIndicator from './components/DropdownIndicator';
+import ClearIndicator from './components/ClearIndicator';
+import LockIndicator from './components/LockIndicator';
+import CustomIndicator from './components/CustomIndicator';
+import SingleValue from './components/SingleValue';
+import MultiValueLabel from './components/MultiValueLabel';
+import MultiValueRemove from './components/MultiValueRemove';
+import LoadingIndicator from './components/LoadingIndicator';
+import Menu from './components/Menu';
+import MenuSingle from './components/MenuSingle';
+import MenuMulti from './components/MenuMulti';
+import Group from './components/Group';
+import Option from './components/Option';
+import ValueContainer from './components/ValueContainer';
+import { isEqual } from '../../../utils/arrays';
+
+import { createUseStyles } from '../../../utils/styles';
+import styles from './styles';
+import defaultTheme from '../../../utils/styles/defaultTheme';
+
+const useStyles = createUseStyles(styles, 'Select');
+const newStyles = styles(defaultTheme);
+
+const Select = memo(
+    ({
+        error,
+        classes: classesProp,
+        overrides: overridesProp,
+        className: classNameProp,
+        isReadOnly,
+        isFullWidth,
+        isFuzzy,
+        isMulti,
+        isRequired,
+        isClearable,
+        isSearchable,
+        placeholder,
+        options,
+        defaultSearch,
+        defaultValue,
+        value,
+        inputValue,
+        forceBlurOnEnter,
+        keepInputValueOnBlur,
+        useAsSimpleSearch,
+        onChange,
+        onBlur,
+        onBlurSearch,
+        onEnter,
+        onKeyDown,
+        hideSelectedOptions,
+        filterByKey,
+        withoutFilter,
+        defaultMenuIsOpen,
+        loadOptions,
+        groupOptions,
+        loadingMessage,
+        loadingPlaceholder,
+        noOptionsMessage,
+        actions,
+        onClickAction,
+        dropDownIcon,
+        size,
+        onlyText,
+        dropdownWidth,
+        afterControl,
+        beforeControl,
+        customOption,
+        showNumSelected,
+        numSelectedLiteral,
+        hideDropdownIndicator,
+        shouldSetValueOnChange,
+        cacheOptions,
+        focusDefaultOption,
+        ...props
+    }) => {
+        const selectRef = useRef();
+        const [focused, setFocused] = useState(false);
+        const [newValue, setNewValue] = useState(defaultValue || value || null);
+        const [newInputValue, setNewInputValue] = useState(inputValue || '');
+        const [innerOptions, setInnerOptions] = useState(options || []);
+        const [lazyOptions, setLazyOptions] = useState({
+            areLoaded: false,
+            options: null,
+            isLoading: false,
+        });
+        const debounce = useRef(null);
+        const menuPlacementRef = useRef('bottom');
+        const classes = useClasses(useStyles, classesProp);
+        const override = getOverrides(overridesProp, Select.overrides);
+
+        const rootClassName = classnames(
+            classes.root,
+            {
+                [classes.isFullWidth]: isFullWidth,
+                [classes.focused]: focused,
+                [classes.async]: loadOptions && isFuzzy,
+                [classes[size]]: size,
+                [classes.onlyText]: onlyText,
+            },
+            classNameProp,
+        );
+
+        const selectClassName = classnames(classes.select, {
+            [classes.isMulti]: isMulti,
+        });
+
+        useEffect(() => {
+            setNewValue(value);
+        }, [value]);
+
+        useEffect(() => {
+            if (!isFuzzy && !isEqual(options, innerOptions)) setInnerOptions(options);
+        }, [options, innerOptions, isFuzzy]);
+
+        useEffect(() => {
+            if (!focusDefaultOption) {
+                let select = selectRef.current?.select?.select;
+                select ??= selectRef.current?.select; // <-- for multi input
+                if (select) select.getNextFocusedOption = () => null;
+            }
+        });
+
+        const loadOptionsCb = useCallback(
+            (text, cb) => {
+                if (debounce.current) clearTimeout(debounce.current);
+                if (!loadOptions) return cb();
+                debounce.current = setTimeout(() => {
+                    const loader = loadOptions(text, cb);
+                    if (loader && typeof loader.then === 'function') {
+                        loader.then(
+                            (results) => {
+                                setInnerOptions(results);
+                                cb(results);
+                            },
+                            () => cb(),
+                        );
+                    }
+                }, 500);
+            },
+            [loadOptions],
+        );
+
+        const handleOnChange = useCallback(
+            (data, action) => {
+                if (shouldSetValueOnChange) setNewValue(data);
+                if (!isMulti) setFocused(false);
+                onChange && onChange(data, action);
+                if (
+                    isMulti ||
+                    (data && data.value) ||
+                    (action?.action && action.action === 'clear' && newInputValue)
+                ) {
+                    setNewInputValue('');
+                }
+            },
+            [isMulti, onChange, newInputValue, shouldSetValueOnChange],
+        );
+
+        const setMenuPlacement = useCallback(
+            (e) => {
+                const { y } = e.currentTarget.getBoundingClientRect();
+                const bodyHeight = document.body.clientHeight;
+                let overrideHeight;
+                if (
+                    override.menuList?.style?.maxHeight &&
+                    !isNaN(override.menuList?.style?.maxHeight)
+                ) {
+                    overrideHeight = override.menuList?.style?.maxHeight;
+                }
+
+                const overrideMenu = override?.menu?.style || null;
+                const overrideMenuPaddingTop =
+                    (!isNaN(parseInt(overrideMenu?.paddingTop, 10)) &&
+                        parseInt(overrideMenu?.paddingTop, 10)) ||
+                    null;
+                const overrideMenuPaddingBottom =
+                    (!isNaN(parseInt(overrideMenu?.paddingBottom, 10)) &&
+                        parseInt(overrideMenu?.paddingBottom, 10)) ||
+                    null;
+                const overrideMenuMarginTop =
+                    (!isNaN(parseInt(overrideMenu?.marginTop, 10)) &&
+                        parseInt(overrideMenu?.marginTop, 10)) ||
+                    null;
+                const overrideMenuMarginBottom =
+                    (!isNaN(parseInt(overrideMenu?.marginBottom, 10)) &&
+                        parseInt(overrideMenu?.marginBottom, 10)) ||
+                    null;
+
+                const margins =
+                    (newStyles.menu.paddingTop || overrideMenuPaddingTop || 4) +
+                    (newStyles.menu.paddingBottom || overrideMenuPaddingBottom || 4) +
+                    (newStyles.menu.marginTop || overrideMenuMarginTop || 8) +
+                    (newStyles.menu.marginBottom || overrideMenuMarginBottom || 8);
+                const baseMenuHeight =
+                    (overrideHeight || newStyles.menuList.maxHeight || 300) + margins;
+                if (bodyHeight - y > baseMenuHeight) menuPlacementRef.current = 'bottom';
+                else menuPlacementRef.current = 'top';
+            },
+            [override],
+        );
+
+        const handleOnFocus = useCallback(
+            (e) => {
+                setMenuPlacement(e);
+                setFocused(true);
+                const searchText =
+                    defaultSearch ||
+                    newInputValue ||
+                    newValue?.label?.charAt(0)?.toLowerCase() ||
+                    '';
+                if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
+                    setLazyOptions({
+                        ...lazyOptions,
+                        isLoading: true,
+                    });
+                    loadOptions().then((options) => {
+                        setLazyOptions({
+                            areLoaded: true,
+                            isLoading: false,
+                            options,
+                        });
+                    });
+                } else if (searchText && loadOptions && isFuzzy && !lazyOptions.areLoaded) {
+                    setLazyOptions({
+                        ...lazyOptions,
+                        isLoading: true,
+                    });
+
+                    loadOptions(searchText).then((options) => {
+                        setInnerOptions(options);
+                        setLazyOptions({
+                            areLoaded: true,
+                            isLoading: false,
+                            options,
+                        });
+                    });
+                }
+            },
+            [
+                isFuzzy,
+                defaultSearch,
+                newInputValue,
+                lazyOptions,
+                loadOptions,
+                setMenuPlacement,
+                newValue,
+            ],
+        );
+
+        const handleOnBlur = useCallback(
+            (e) => {
+                setFocused(false);
+                if (!keepInputValueOnBlur || isMulti) setNewInputValue('');
+                onBlur && onBlur(e);
+            },
+            [onBlur, keepInputValueOnBlur, isMulti],
+        );
+
+        const controlStyles = useCallback(
+            ({ isFocused }) => {
+                let styles = {
+                    ...newStyles.control,
+                    ...(override.control?.style || {}),
+                };
+
+                if (isFocused) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.controlFocused,
+                        ...(override.controlFocused?.style || {}),
+                    };
+                }
+                return styles;
+            },
+            [override],
+        );
+
+        const optionsStyles = useCallback(
+            ({ isDisabled, isSelected, isFocused }) => {
+                let styles = {
+                    ...newStyles.option,
+                    ...(override.option?.style || {}),
+                };
+
+                if (isFocused) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.optionFocused,
+                        ...(override.optionFocused?.style || {}),
+                    };
+                }
+
+                if (isSelected) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.optionSelected,
+                        ...(override.optionSelected?.style || {}),
+                    };
+                }
+
+                if (isDisabled) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.optionDisabled,
+                        ...(override.optionDisabled?.style || {}),
+                    };
+                }
+
+                return styles;
+            },
+            [override],
+        );
+
+        const valueContainerStyles = useCallback(
+            ({ isDisabled }) => {
+                let styles = {
+                    ...newStyles.valueContainer,
+                    ...(override.valueContainer?.style || {}),
+                };
+
+                if (isDisabled) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.valueContainerDisabled,
+                        ...(override.valueContainerDisabled?.style || {}),
+                    };
+                }
+                return styles;
+            },
+            [override],
+        );
+
+        const placeholderStyles = useCallback(
+            ({ isDisabled }) => {
+                let styles = {
+                    ...newStyles.placeholder,
+                    ...(override.placeholder?.style || {}),
+                };
+
+                if (isDisabled) {
+                    styles = {
+                        ...newStyles.placeholderDisabled,
+                        ...(override.placeholderDisabled?.style || {}),
+                    };
+                }
+                return styles;
+            },
+            [override],
+        );
+
+        const multiValueLabelStyles = useCallback(
+            ({ isDisabled }) => {
+                let styles = {
+                    ...newStyles.multiValueLabel,
+                    ...(override.multiValueLabel?.style || {}),
+                };
+                if (isDisabled) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.multiValueLabelDisabled,
+                        ...(override.multiValueLabelDisabled?.style || {}),
+                    };
+                }
+
+                return styles;
+            },
+            [override],
+        );
+
+        const multiValueRemoveStyles = useCallback(
+            ({ isDisabled }) => {
+                let styles = {
+                    ...newStyles.multiValueRemove,
+                    ...(override.multiValueRemove?.style || {}),
+                };
+                if (isDisabled) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.multiValueRemoveDisabled,
+                        ...(override.multiValueRemoveDisabled?.style || {}),
+                    };
+                }
+
+                return styles;
+            },
+            [override],
+        );
+
+        const menuListStyles = useMemo(() => {
+            let styles = {
+                ...newStyles.menuList,
+                ...(override.menuList?.style || {}),
+            };
+
+            return styles;
+        }, [override]);
+
+        const indicatorSeparatorStyles = useMemo(() => {
+            if (isRequired && !isMulti) {
+                return newStyles.indicatorSeparatorHidden;
+            } else if (
+                !isReadOnly &&
+                newValue &&
+                ((isMulti && newValue.length > 0) || (!isMulti && newValue))
+            ) {
+                return newStyles.indicatorSeparator;
+            } else return newStyles.indicatorSeparatorHidden;
+        }, [isReadOnly, isMulti, newValue, isRequired]);
+
+        const formatOptionLabel = useCallback(
+            (option) => {
+                if (customOption) return customOption(option);
+                else if (isMulti) return MenuMulti({ option, value: newValue, classes, override });
+                else return MenuSingle({ option, classes, override });
+            },
+            [isMulti, classes, override, newValue, customOption],
+        );
+
+        const formatGroupLabel = useCallback(
+            (data) => (
+                <div key={data.value} className={classes.groupLabel} {...override.groupLabel}>
+                    {data.label}
+                </div>
+            ),
+            [classes, override],
+        );
+
+        const onMouseDown = useCallback(
+            (e) => {
+                if (!focused) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    selectRef.current.focus();
+                    setFocused(true);
+                    return false;
+                }
+            },
+            [focused],
+        );
+
+        const newIsClearable = useMemo(() => {
+            if (isRequired) return false;
+            else return isClearable;
+        }, [isRequired, isClearable]);
+
+        const handleOnKeyDown = useCallback(
+            (e) => {
+                if (e.key === 'Enter') {
+                    if (forceBlurOnEnter) {
+                        selectRef.current.blur();
+                        setFocused(false);
+                    }
+                    if (keepInputValueOnBlur && !isMulti) {
+                        setNewValue(null);
+                    }
+                    onEnter && onEnter(e);
+                } else {
+                    setFocused(true);
+                }
+                onKeyDown && onKeyDown(e);
+            },
+            [onKeyDown, onEnter, forceBlurOnEnter, keepInputValueOnBlur, isMulti],
+        );
+
+        const handleOnInputChange = useCallback(
+            (inputValue, action) => {
+                if (action.action === 'input-change') {
+                    setNewInputValue(inputValue);
+                    if (keepInputValueOnBlur && !isMulti && newValue?.value) {
+                        setNewValue(null);
+                    }
+                } else {
+                    //This is exectued everytime blur is executed, including onKeyDown e.key === 'Enter'
+                    onBlurSearch && onBlurSearch(newInputValue, action);
+                }
+            },
+            [keepInputValueOnBlur, isMulti, newValue, onBlurSearch, newInputValue],
+        );
+
+        const selectProps = useMemo(() => {
+            let menuIsOpen =
+                (focused && (!(loadOptions && isFuzzy) || !!innerOptions?.length)) || false;
+            if (useAsSimpleSearch) menuIsOpen = false;
+            let Indicator = DropdownIndicator;
+            let additionalComponents = {};
+            if ((loadOptions && isFuzzy) || useAsSimpleSearch || hideDropdownIndicator)
+                Indicator = null;
+            if (newInputValue && !newValue && keepInputValueOnBlur) Indicator = ClearIndicator;
+            if (isReadOnly) Indicator = LockIndicator;
+            if (dropDownIcon) Indicator = CustomIndicator;
+            if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
+            let filterOption = filterByKey ? filterKeyValue : createFilter;
+            if (withoutFilter) filterOption = undefined;
+
+            return {
+                ref: selectRef,
+                className: selectClassName,
+                classNamePrefix: 'hoi-poi-select',
+                placeholder,
+                options: lazyOptions.options || innerOptions,
+                defaultOptions: innerOptions,
+                cacheOptions,
+                noOptionsMessage,
+                loadingMessage,
+                defaultValue: newValue,
+                value: newValue,
+                inputValue: newInputValue,
+                defaultMenuIsOpen,
+                actions,
+                isMulti,
+                isDisabled: isReadOnly,
+                isClearable: showNumSelected ? false : isMulti ? true : newIsClearable,
+                isSearchable: showNumSelected ? false : isSearchable,
+                isLoading: lazyOptions.isLoading,
+                autoFocus: focused,
+                blurInputOnSelect: !isMulti,
+                hideSelectedOptions: isMulti ? false : hideSelectedOptions,
+                closeMenuOnSelect: isMulti ? false : true,
+                menuPlacement: menuPlacementRef.current,
+                menuPosition: 'fixed',
+                menuPortalTarget: document.body,
+                loadOptions,
+                openMenuOnClick: !(loadOptions && isFuzzy),
+                openMenuOnFocus: !(loadOptions && isFuzzy),
+                menuIsOpen,
+                onChange: handleOnChange,
+                onInputChange: handleOnInputChange,
+                onFocus: handleOnFocus,
+                onBlur: handleOnBlur,
+                onKeyDown: handleOnKeyDown,
+                filterOption,
+                formatOptionLabel,
+                formatGroupLabel,
+                dropDownIcon,
+                isFuzzy,
+                beforeControl,
+                afterControl,
+                onMouseDown,
+                numSelectedLiteral,
+                menuProps: {
+                    dropdownWidth,
+                    className: classes.menu,
+                    actionContainerClassName: classes.actionContainer,
+                    actionClassName: classes.action,
+                    actionIconClassName: classes.actionIcon,
+                    actionTextClassName: classes.actionText,
+                    actionTextWithIconClassName: classes.actionTextWithIcon,
+                    actions,
+                    onClickAction,
+                    override: {
+                        menu: override.menu,
+                        actionContainer: override.actionContainer,
+                        action: override.action,
+                        actionIcon: override.actionIcon,
+                        actionText: override.actionText,
+                        actionTextWithIcon: override.actionTextWithIcon,
+                    },
+                },
+                components: {
+                    DropdownIndicator: Indicator,
+                    Control,
+                    ClearIndicator,
+                    SingleValue,
+                    MultiValueLabel,
+                    MultiValueRemove,
+                    LoadingIndicator,
+                    Menu,
+                    Group: Group({
+                        className: classes.group,
+                        override: {
+                            group: override.group,
+                        },
+                    }),
+                    Option: Option({
+                        className: classes.option,
+                        override: {
+                            option: override.option,
+                        },
+                    }),
+                    ...additionalComponents,
+                },
+                styles: {
+                    menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+                    control: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...controlStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    placeholder: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...placeholderStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    valueContainer: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...valueContainerStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    input: (styles) => ({
+                        ...styles,
+                        ...newStyles.input,
+                        ...(override.input?.style || {}),
+                    }),
+                    group: (styles) => ({
+                        ...styles,
+                        ...newStyles.group,
+                        ...(override.group?.style || {}),
+                    }),
+                    groupHeading: (styles) => ({
+                        ...styles,
+                        ...newStyles.groupHeading,
+                        ...(override.groupHeading?.style || {}),
+                    }),
+                    option: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...optionsStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    indicatorsContainer: (styles) => ({
+                        ...styles,
+                        ...newStyles.indicatorsContainer,
+                        ...(override.indicatorsContainer?.style || {}),
+                    }),
+                    clearIndicator: (styles) => ({
+                        ...styles,
+                        ...newStyles.clearIndicator,
+                        ...(override.clearIndicator?.style || {}),
+                    }),
+                    indicatorSeparator: (styles) => ({
+                        ...styles,
+                        ...indicatorSeparatorStyles,
+                        ...(override.indicatorSeparator?.style || {}),
+                    }),
+                    dropdownIndicator: (styles) => ({
+                        ...styles,
+                        ...newStyles.dropdownIndicator,
+                        ...(override.dropdownIndicator?.style || {}),
+                    }),
+                    menuList: (styles) => ({
+                        ...styles,
+                        ...menuListStyles,
+                    }),
+                    multiValue: (styles) => ({
+                        ...styles,
+                        ...newStyles.multiValue,
+                        ...(override.multiValue?.style || {}),
+                    }),
+                    multiValueLabel: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...multiValueLabelStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    multiValueRemove: (styles, { data, isDisabled, isFocused, isSelected }) => ({
+                        ...styles,
+                        ...multiValueRemoveStyles({ data, isDisabled, isFocused, isSelected }),
+                    }),
+                    noOptionsMessage: (styles) => ({
+                        ...styles,
+                        ...newStyles.noOptionsMessage,
+                        ...(override.noOptionsMessage?.style || {}),
+                    }),
+                    loadingMessage: (styles) => ({
+                        ...styles,
+                        ...newStyles.loadingMessage,
+                        ...(override.loadingMessage?.style || {}),
+                    }),
+                },
+                ...override['react-select'],
+            };
+        }, [
+            focused,
+            loadOptions,
+            isFuzzy,
+            innerOptions,
+            isReadOnly,
+            dropDownIcon,
+            showNumSelected,
+            selectClassName,
+            cacheOptions,
+            placeholder,
+            lazyOptions.options,
+            lazyOptions.isLoading,
+            noOptionsMessage,
+            loadingMessage,
+            useAsSimpleSearch,
+            hideDropdownIndicator,
+            newValue,
+            newInputValue,
+            defaultMenuIsOpen,
+            keepInputValueOnBlur,
+            actions,
+            isMulti,
+            newIsClearable,
+            isSearchable,
+            hideSelectedOptions,
+            handleOnChange,
+            handleOnInputChange,
+            handleOnFocus,
+            handleOnBlur,
+            handleOnKeyDown,
+            filterByKey,
+            formatOptionLabel,
+            formatGroupLabel,
+            beforeControl,
+            afterControl,
+            onMouseDown,
+            numSelectedLiteral,
+            dropdownWidth,
+            classes.menu,
+            classes.actionContainer,
+            classes.action,
+            classes.actionIcon,
+            classes.actionText,
+            classes.actionTextWithIcon,
+            classes.group,
+            classes.option,
+            onClickAction,
+            override,
+            controlStyles,
+            placeholderStyles,
+            valueContainerStyles,
+            optionsStyles,
+            indicatorSeparatorStyles,
+            menuListStyles,
+            multiValueLabelStyles,
+            multiValueRemoveStyles,
+        ]);
+
+        let SelectComponent = RSelect;
+        if (loadOptions && isFuzzy) {
+            SelectComponent = AsyncSelect;
+            selectProps.loadOptions = loadOptionsCb;
+        }
+
+        return (
+            <InputWrapper
+                {...props}
+                error={error}
+                className={rootClassName}
+                overrides={overridesProp}
+                isFullWidth={isFullWidth}
+                isRequired={isRequired}
+            >
+                <div className={classes.inputComponents} {...override.inputComponents}>
+                    <SelectComponent {...selectProps} />
+                </div>
+            </InputWrapper>
+        );
+    },
+);
+
+Select.overrides = [
+    'root',
+    'react-select',
+    'inputComponents',
+    'control',
+    'controlFocused',
+    'options',
+    'optionFocused',
+    'optionSelected',
+    'optionsDisabled',
+    'valueContainer',
+    'valueContainerDisabled',
+    'placeholder',
+    'placeholderDisabled',
+    'multipleValueLabel',
+    'multipleValueLabelDisabled',
+    'multipleValueRemove',
+    'multipleValueRemoveDisabled',
+    'optionLabel',
+    'optionLabelIcon',
+    'optionLabelCustomIcon',
+    'optionLabelAvatar',
+    'disabledAvatar',
+    'disabledText',
+    'disabledIcon',
+    'label',
+    'optionLabelBlock',
+    'optionLabelText',
+    'optionLabelSubLabel',
+    'menu',
+    'actionContainer',
+    'action',
+    'actionIcon',
+    'actionText',
+    'actionTextWithIcon',
+];
+
+Select.defaultProps = {
+    labelMode: 'vertical',
+    onChange: () => {},
+    value: '',
+    isReadOnly: false,
+    hideSelectedOptions: true,
+    isClearable: true,
+    overrides: {},
+    hideOptions: false,
+    filterByKey: false,
+    defaultMenuIsOpen: false,
+    size: 'medium',
+    onlyText: false,
+    isSearchable: true,
+    showNumSelected: false,
+    numSelectedLiteral: '%@ Selected',
+    hideDropdownIndicator: false,
+    shouldSetValueOnChange: true,
+    cacheOptions: true,
+    focusDefaultOption: true,
+    withoutFilter: false,
+};
+
+Select.propTypes = {
+    className: PropTypes.string,
+    menuListClassName: PropTypes.string,
+    menuClassName: PropTypes.string,
+    overrides: PropTypes.object,
+    /** Async mode */
+    loadOptions: PropTypes.func,
+    groupOptions: PropTypes.func,
+    /* Autocomplete/Search UI */
+    isFuzzy: PropTypes.bool,
+    onChange: PropTypes.func,
+    onKeyDown: PropTypes.func,
+    /** Native input id */
+    id: PropTypes.string,
+    /** Native input name */
+    name: PropTypes.string,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            value: PropTypes.any,
+            isDisabled: PropTypes.bool,
+            src: PropTypes.string,
+            icon: PropTypes.element,
+            iconType: PropTypes.string,
+            subLabel: PropTypes.string,
+        }),
+    ),
+    defaultSearch: PropTypes.string,
+    defaultValue: PropTypes.any,
+    value: PropTypes.any,
+    label: PropTypes.string,
+    labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
+    placeholder: PropTypes.string,
+    noOptionsPlaceholder: PropTypes.string,
+    loadingPlaceholder: PropTypes.string,
+    isFullWidth: PropTypes.bool,
+    inputValue: PropTypes.string,
+    forceBlurOnEnter: PropTypes.bool,
+    keepInputValueOnBlur: PropTypes.bool,
+    /** It allows using the Select as a simple input for search uses */
+    useAsSimpleSearch: PropTypes.bool,
+    onBlurSearch: PropTypes.func,
+    /** Info popover */
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    /** Error will be displayed below the component with style changes */
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    /** Info will be displayed below the component with style changes */
+    info: PropTypes.string,
+    isRequired: PropTypes.bool,
+    isReadOnly: PropTypes.bool,
+    isSearchable: PropTypes.bool,
+    /** Hide the selected option from the menu */
+    hideSelectedOptions: PropTypes.bool,
+    /** Is the select value clearable */
+    isClearable: PropTypes.bool,
+    /** React select component customization */
+    components: PropTypes.object,
+    /** multiple select support */
+    isMulti: PropTypes.bool,
+    /** Fixed actions added at the bottom con menu list */
+    actions: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string,
+            onClick: PropTypes.func,
+        }),
+    ),
+    /** Filter by keys as well */
+    filterByKey: PropTypes.bool,
+    defaultMenuIsOpen: PropTypes.bool,
+    dropDownIcon: PropTypes.element,
+    hideDropdownIndicator: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium']),
+    onlyText: PropTypes.bool,
+    dropdownWidth: PropTypes.string,
+    beforeControl: PropTypes.node,
+    afterControl: PropTypes.node,
+    showNumSelected: PropTypes.bool,
+    numSelectedLiteral: PropTypes.string,
+    /** Function to customize the option row */
+    customOption: PropTypes.func,
+    /** If false, the selected value won't be set as selected. Useful if your goal is just to pick an option without showing it on the input */
+    shouldSetValueOnChange: PropTypes.bool,
+    cacheOptions: PropTypes.bool,
+    /** Enable/disable focusing first option of the select */
+    focusDefaultOption: PropTypes.bool,
+};
+
+export default Select;

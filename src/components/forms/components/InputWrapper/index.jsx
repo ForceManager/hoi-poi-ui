@@ -8,7 +8,7 @@ import FieldBottom from '../FieldBottom';
 
 import { createUseStyles } from '../../../../utils/styles';
 import styles from './styles';
-const useStyles = createUseStyles(styles, 'Input');
+const useStyles = createUseStyles(styles, 'InputWrapper');
 
 const InputWrapper = memo(
     ({
@@ -76,7 +76,7 @@ InputWrapper.overrides = ['root', 'error', 'info', 'formControl', 'Label', 'inpu
 
 InputWrapper.defaultProps = {
     labelMode: 'vertical',
-    override: {},
+    overrides: {},
 };
 
 InputWrapper.propTypes = {
@@ -86,9 +86,9 @@ InputWrapper.propTypes = {
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     isFullWidth: PropTypes.bool,
     /** Info popover */
-    hint: PropTypes.string,
+    hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
     isRequired: PropTypes.bool,

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -19,6 +19,7 @@ import VisibilityOff from './icons/VisibilityOff';
 import VisibilityOn from './icons/VisibilityOn';
 import ThreeDots from './icons/ThreeDots';
 import Download from './icons/Download';
+import DownloadAlt from './icons/DownloadAlt';
 import Duplicate from './icons/Duplicate';
 import ArrowRight from './icons/ArrowRight';
 import ArrowLeft from './icons/ArrowLeft';
@@ -45,11 +46,23 @@ import Clock from './icons/Clock';
 import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
+import Send from './icons/Send';
+import EmptyAvatar from './icons/EmptyAvatar';
+import DraggableSort from './icons/DraggableSort';
+import FileDownload from './icons/FileDownload';
+import Columns from './icons/Columns';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
 import AccountDetails from './icons/actions/AccountDetails';
-import AddAccount from './icons/actions/AddAccount';
+import AccountsAdd from './icons/actions/AccountsAdd';
+import AccountsEdit from './icons/actions/AccountsEdit';
+import ContactAdd from './icons/actions/ContactAdd';
+import ContactEdit from './icons/actions/ContactEdit';
+import OpportunityAdd from './icons/actions/OpportunityAdd';
+import OpportunityEdit from './icons/actions/OpportunityEdit';
+import ValueListAdd from './icons/actions/ValueListAdd';
+import ValueListEdit from './icons/actions/ValueListEdit';
 import AddActivity from './icons/actions/AddActivity';
 import AddEvent from './icons/actions/AddEvent';
 import Autorenew from './icons/actions/Autorenew';
@@ -63,6 +76,8 @@ import Delete from './icons/actions/Delete';
 import Documents from './icons/actions/Documents';
 import Done from './icons/actions/Done';
 import DoneAll from './icons/actions/DoneAll';
+import EditArea from './icons/actions/EditArea';
+import Email from './icons/actions/Email';
 import EmailLate from './icons/actions/EmailLate';
 import EmailReceive from './icons/actions/EmailReceive';
 import Event from './icons/actions/Event';
@@ -100,6 +115,10 @@ import ThumbDown from './icons/actions/ThumbDown';
 import ThumbUp from './icons/actions/ThumbUp';
 import Visibility from './icons/actions/Visibility';
 import Workflow from './icons/actions/Workflow';
+import Impersonate from './icons/actions/Impersonate';
+import RemoveCircle from './icons/actions/RemoveCircle';
+import Key from './icons/actions/Key';
+import PowerOn from './icons/actions/PowerOn';
 
 //Alert
 import AddAlert from './icons/alert/AddAlert';
@@ -112,6 +131,7 @@ import WarningOutline from './icons/alert/WarningOutline';
 import WarningOutlineTwoToned from './icons/alert/WarningOutlineTwoToned';
 
 //Logos
+import Mailchimp from './icons/logos/Mailchimp';
 import MicrosoftTeams from './icons/logos/MicrosofTeams';
 import ZoomCam from './icons/logos/ZoomCam';
 import ZoomList from './icons/logos/ZoomList';
@@ -121,6 +141,7 @@ import Apps from './icons/navigation/Apps';
 import ArrowBack from './icons/navigation/ArrowBack';
 import ArrowDownward from './icons/navigation/ArrowDownward';
 import ArrowDropDownCircle from './icons/navigation/ArrowDropDownCircle';
+import ArrowDropDown from './icons/navigation/ArrowDropDown';
 import ArrowDropUp from './icons/navigation/ArrowDropUp';
 import ArrowForward from './icons/navigation/ArrowForward';
 import ArrowUpward from './icons/navigation/ArrowUpward';
@@ -130,10 +151,13 @@ import ChevronRight from './icons/navigation/ChevronRight';
 import Close from './icons/navigation/Close';
 import CloseSmall from './icons/navigation/CloseSmall';
 import DragAndDrop from './icons/navigation/DragAndDrop';
+import Plus from './icons/navigation/Plus';
 import ExpandLess from './icons/navigation/ExpandLess';
 import ExpandMore from './icons/navigation/ExpandMore';
 import Fullscreen from './icons/navigation/Fullscreen';
 import FullscreenExit from './icons/navigation/FullscreenExit';
+import FullscreenArrows from './icons/navigation/FullscreenArrows';
+import FullscreenArrowsExit from './icons/navigation/FullscreenArrowsExit';
 import Menu from './icons/navigation/Menu';
 import MoreHoriz from './icons/navigation/MoreHoriz';
 import MoreVert from './icons/navigation/MoreVert';
@@ -182,6 +206,19 @@ import Html from './fileIcons/Html';
 import Zip from './fileIcons/Zip';
 import Link from './fileIcons/Link';
 
+// Raw icons
+import LockRaw from './rawIcons/Lock';
+import CloseRaw from './rawIcons/Close';
+import ArrowDropUpRaw from './rawIcons/ArrowDropUp';
+import ArrowDropDownRaw from './rawIcons/ArrowDropDown';
+import ArrowDropLeftRaw from './rawIcons/ArrowDropLeft';
+import ArrowDropRightRaw from './rawIcons/ArrowDropRight';
+import ArrowUpRaw from './rawIcons/ArrowUp';
+import ArrowDownRaw from './rawIcons/ArrowDown';
+import ArrowLeftRaw from './rawIcons/ArrowLeft';
+import ArrowRightRaw from './rawIcons/ArrowRight';
+import SearchRaw from './rawIcons/Search';
+
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Icon');
@@ -205,6 +242,7 @@ const ICONS = {
     duplicate: Duplicate,
     threeDots: ThreeDots,
     download: Download,
+    downloadAlt: DownloadAlt,
     arrowRight: ArrowRight,
     arrowLeft: ArrowLeft,
     arrowTop: ArrowTop,
@@ -228,10 +266,21 @@ const ICONS = {
     videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,
+    emptyAvatar: EmptyAvatar,
+    draggableSort: DraggableSort,
+    fileDownload: FileDownload,
+    columns: Columns,
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,
-    addAccount: AddAccount,
+    accountsAdd: AccountsAdd,
+    accountsEdit: AccountsEdit,
+    contactAdd: ContactAdd,
+    contactEdit: ContactEdit,
+    opportunityAdd: OpportunityAdd,
+    opportunityEdit: OpportunityEdit,
+    valueListAdd: ValueListAdd,
+    valueListEdit: ValueListEdit,
     addActivity: AddActivity,
     addEvent: AddEvent,
     autorenew: Autorenew,
@@ -245,6 +294,8 @@ const ICONS = {
     documents: Documents,
     done: Done,
     doneAll: DoneAll,
+    editArea: EditArea,
+    email: Email,
     emailLate: EmailLate,
     emailReceive: EmailReceive,
     event: Event,
@@ -282,6 +333,10 @@ const ICONS = {
     thumbUp: ThumbUp,
     visibility: Visibility,
     workflow: Workflow,
+    impersonate: Impersonate,
+    removeCircle: RemoveCircle,
+    key: Key,
+    powerOn: PowerOn,
     //Alert
     addAlert: AddAlert,
     asterisk: Asterisk,
@@ -292,6 +347,7 @@ const ICONS = {
     warningOutline: WarningOutline,
     warningOutlineTwoToned: WarningOutlineTwoToned,
     //Logos
+    mailchimp: Mailchimp,
     microsofTeams: MicrosoftTeams,
     zoomCam: ZoomCam,
     zoomList: ZoomList,
@@ -300,6 +356,7 @@ const ICONS = {
     arrowBack: ArrowBack,
     arrowDownward: ArrowDownward,
     arrowDropDownCircle: ArrowDropDownCircle,
+    arrowDropDown: ArrowDropDown,
     arrowDropUp: ArrowDropUp,
     arrowForward: ArrowForward,
     arrowUpward: ArrowUpward,
@@ -309,10 +366,13 @@ const ICONS = {
     close: Close,
     closeSmall: CloseSmall,
     dragAndDrop: DragAndDrop,
+    plus: Plus,
     expandLess: ExpandLess,
     expandMore: ExpandMore,
     fullscreen: Fullscreen,
     fullscreenExit: FullscreenExit,
+    fullscreenArrows: FullscreenArrows,
+    fullscreenArrowsExit: FullscreenArrowsExit,
     menu: Menu,
     moreHoriz: MoreHoriz,
     moreVert: MoreVert,
@@ -357,6 +417,19 @@ const ICONS = {
     starBorder: StarBorder,
     starHalf: StarHalf,
     starsCircle: StarsCircle,
+    send: Send,
+    //Raw
+    lockRaw: LockRaw,
+    closeRaw: CloseRaw,
+    arrowDropUpRaw: ArrowDropUpRaw,
+    arrowDropDownRaw: ArrowDropDownRaw,
+    arrowDropLeftRaw: ArrowDropLeftRaw,
+    arrowDropRightRaw: ArrowDropRightRaw,
+    arrowUpRaw: ArrowUpRaw,
+    arrowDownRaw: ArrowDownRaw,
+    arrowLeftRaw: ArrowLeftRaw,
+    arrowRightRaw: ArrowRightRaw,
+    searchRaw: SearchRaw,
 };
 
 function Icon({
@@ -377,6 +450,12 @@ function Icon({
     const theme = useTheme();
 
     const [newColor, setNewColor] = useState(color || theme.colors.neutral700);
+
+    useEffect(() => {
+        if (color && color !== newColor) {
+            setNewColor(color);
+        }
+    }, [color, newColor]);
 
     const handleOnMouseOver = useCallback(() => {
         onClick && setNewColor(theme.colors.neutral800);
@@ -439,7 +518,7 @@ Icon.defaultProps = {
 Icon.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
+    size: PropTypes.oneOf(['raw', 'small', 'medium', 'large', 'big', 'huge']),
     name: PropTypes.string,
     color: PropTypes.string,
     onClick: PropTypes.func,

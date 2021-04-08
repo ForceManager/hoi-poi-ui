@@ -1,4 +1,4 @@
-import React, { memo, useState, useCallback, useMemo } from 'react';
+import React, { forwardRef, memo, useState, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -20,34 +20,40 @@ const types = {
     title: 'text',
 };
 
-const Input = memo(
-    ({
-        children,
-        classes: classesProp,
-        overrides: overridesProp,
-        className: classNameProp,
-        onChange,
-        onCopy,
-        onFocus,
-        onBlur,
-        onEnter,
-        id,
-        name,
-        type,
-        numberDecimals,
-        value,
-        placeholder,
-        error,
-        isReadOnly,
-        isFullWidth,
-        preComponent,
-        postComponent,
-        component,
-        isCopyable,
-        ...props
-    }) => {
+const Input = forwardRef(
+    (
+        {
+            children,
+            classes: classesProp,
+            overrides: overridesProp,
+            className: classNameProp,
+            onChange,
+            onCopy,
+            onFocus,
+            onBlur,
+            onEnter,
+            id,
+            name,
+            type,
+            numberDecimals,
+            value,
+            placeholder,
+            error,
+            isReadOnly,
+            isFullWidth,
+            preComponent,
+            postComponent,
+            component,
+            isCopyable,
+            hideClear,
+            label,
+            labelMode,
+            isRequired,
+            ...props
+        },
+        ref,
+    ) => {
         const [focused, setFocused] = useState(false);
-
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Input.overrides);
 
@@ -69,7 +75,8 @@ const Input = memo(
             (e) => {
                 if (isReadOnly) return;
                 setFocused(true);
-                onFocus && onFocus(e);
+                const finalValue = e.target.value || '';
+                onFocus && onFocus(finalValue, e);
             },
             [onFocus, isReadOnly],
         );
@@ -77,13 +84,13 @@ const Input = memo(
         const handleOnBlur = useCallback(
             (e) => {
                 if (isReadOnly) return;
-                if (type === 'integer' && e.target.value) {
+                if (type === 'integer' && e?.target?.value) {
                     if (!integerRegEx.test(e.target.value) || isNaN(parseInt(e.target.value, 10))) {
                         e.target.value = '';
                     }
                 }
 
-                if (type === 'decimal' && e.target.value) {
+                if (type === 'decimal' && e?.target?.value) {
                     if (!decimalRegEx.test(e.target.value) || isNaN(parseFloat(e.target.value))) {
                         e.target.value = '';
                     } else {
@@ -97,9 +104,9 @@ const Input = memo(
                         e.target.value = newValue;
                     }
                 }
-
                 setFocused(false);
-                onBlur && onBlur(e);
+                const finalValue = e?.target?.value || '';
+                onBlur && onBlur(finalValue, e);
             },
             [isReadOnly, onBlur, type, numberDecimals],
         );
@@ -107,7 +114,8 @@ const Input = memo(
         const handleOnKeyDown = useCallback(
             (e) => {
                 if (e.key === 'Enter') {
-                    onEnter && onEnter(e);
+                    const finalValue = e.target.value || '';
+                    onEnter && onEnter(finalValue, e);
                 }
 
                 if (
@@ -151,8 +159,9 @@ const Input = memo(
         }, []);
 
         const handleOnChange = useCallback(
-            (e) => {
-                onChange && onChange(e);
+            (e, action) => {
+                const finalValue = e?.target?.value || '';
+                onChange && onChange(finalValue, e, { action });
             },
             [onChange],
         );
@@ -170,10 +179,12 @@ const Input = memo(
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
                 onKeyUp: handleOnKeyUp,
-                isFullWidth,
+                ref,
+                ...props,
                 ...override.input,
             };
         }, [
+            props,
             id,
             name,
             classes.input,
@@ -186,18 +197,19 @@ const Input = memo(
             handleOnBlur,
             handleOnKeyDown,
             handleOnKeyUp,
-            isFullWidth,
+            ref,
             override.input,
         ]);
 
-        if (component) inputProps.isReadOnly = isReadOnly;
-        else inputProps.readOnly = isReadOnly;
+        if (component) {
+            inputProps.isReadOnly = isReadOnly;
+            if (isFullWidth) inputProps.isFullWidth = isFullWidth;
+        } else inputProps.readOnly = isReadOnly;
 
         // Remove content post component
         const postComponentClick = useCallback(() => {
-            onChange && onChange();
-            onBlur && onBlur();
-        }, [onBlur, onChange]);
+            handleOnChange(null, 'clear');
+        }, [handleOnChange]);
 
         const copyValue = useCallback(() => {
             const textField = document.createElement('textarea');
@@ -219,7 +231,7 @@ const Input = memo(
 
         let newPostComponent = useMemo(() => {
             let postComponentsArray = [];
-            if (value && !isReadOnly) {
+            if (value && !isReadOnly && !hideClear) {
                 postComponentsArray.push(
                     <div
                         key="close"
@@ -277,6 +289,7 @@ const Input = memo(
         }, [
             value,
             isReadOnly,
+            hideClear,
             isCopyable,
             postComponent,
             classes.postComponentClose,
@@ -303,9 +316,13 @@ const Input = memo(
         return (
             <InputWrapper
                 {...props}
+                label={label}
+                labelMode={labelMode}
                 error={error}
                 className={rootClassName}
                 overrides={overridesProp}
+                isFullWidth={isFullWidth}
+                isRequired={isRequired}
             >
                 <div className={classes.inputComponents} {...override.inputComponents}>
                     {preComponent && (
@@ -335,6 +352,7 @@ Input.defaultProps = {
     value: '',
     isReadOnly: false,
     isCopyable: false,
+    hideClear: false,
     numberDecimals: 2,
     overrides: {},
 };
@@ -348,7 +366,7 @@ Input.propTypes = {
     /** Info popover */
     hint: PropTypes.string,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
     isRequired: PropTypes.bool,
@@ -368,6 +386,8 @@ Input.propTypes = {
     onCopy: PropTypes.func,
     isReadOnly: PropTypes.bool,
     isCopyable: PropTypes.bool,
+    hideClear: PropTypes.bool,
+    ref: PropTypes.func,
     /** Component rendered at the input beginning */
     preComponent: PropTypes.any,
     /** Component rendered at the input ending */
@@ -376,4 +396,4 @@ Input.propTypes = {
     component: PropTypes.any,
 };
 
-export default Input;
+export default memo(Input);

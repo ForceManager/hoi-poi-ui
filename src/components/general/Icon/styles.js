@@ -3,11 +3,6 @@ export default (theme) => ({
         display: 'inline-block',
         textAlign: 'center',
         lineHeight: 0,
-
-        '& svg': {
-            width: '100%',
-            height: '100%',
-        },
     },
     small: {
         width: 10,
@@ -28,6 +23,10 @@ export default (theme) => ({
     huge: {
         width: 64,
         height: 64,
+    },
+    raw: {
+        width: 'inherit',
+        height: 'inherit',
     },
     clickable: {
         cursor: 'pointer',

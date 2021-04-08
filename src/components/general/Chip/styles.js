@@ -1,68 +1,140 @@
 export default (theme) => ({
     root: {
-        ...theme.typography.smallText,
-        backgroundColor: theme.colors.secondaryGrey,
-        color: theme.colors.text.greySoft,
-
-        borderRadius: '3px',
-
-        lineHeight: '20px',
-
         display: 'inline-block',
-        verticalAlign: 'middle',
-
-        padding: '0',
-        marginRight: '3px',
-        height: '20px',
+        borderRadius: 4,
+        boxSizing: 'border-box',
+        transition: 'background-color 0.15s ease',
+        '&$clickable:hover': {
+            backgroundColor: theme.colors.neutral300,
+        },
+        '&$isActive': {
+            backgroundColor: theme.colors.neutral400,
+        },
+        '&$isDisabled': {
+            '& $Text': {
+                color: theme.colors.neutral600,
+            },
+        },
     },
-
     wrapper: {
         display: 'flex',
         alignItems: 'center',
+        height: '100%',
     },
-
     Text: {
-        color: theme.colors.text.greySoft,
-
-        fontSize: '13px',
-        lineHeight: '20px',
-        letterSpacing: '0.5px',
-
-        display: 'flex',
-        padding: '0 5px',
+        color: theme.colors.neutral700,
+        transition: 'color 0.15s ease',
     },
-
-    shrinked: {
-        color: theme.colors.text.greySoft,
-
-        fontSize: '11px',
-        lineHeight: '20px',
-        letterSpacing: '0.5px',
-
-        display: 'inline',
-        textAlign: 'center',
-
-        height: '20px',
-        width: '20px',
+    small: {
+        height: 24,
+        padding: '3px 8px',
     },
-
-    close: {
+    large: {
+        height: 32,
+        padding: '7px 8px',
+    },
+    avatar: {
+        marginRight: 4,
+    },
+    clickable: {
         cursor: 'pointer',
-        margin: '0 5px',
     },
-
-    picture: {
-        height: '20px',
-        width: '20px',
-
-        borderTopLeftRadius: '3px',
-        borderBottomLeftRadius: '3px',
+    isDisabled: {
+        cursor: 'not-allowed',
+        '& $icon': {
+            cursor: 'unset',
+        },
+        '& $icon path, & $icon rect': {
+            fill: theme.colors.neutral600,
+        },
     },
+    isReadOnly: {
+        '& $icon': {
+            cursor: 'unset',
+        },
+        '& $icon path, & $icon rect': {
+            fill: theme.colors.neutral600,
+        },
+    },
+    isActive: {},
+    icons: {
+        display: 'flex',
+        alignItems: 'center',
+        marginLeft: 8,
+    },
+    icon: {
+        cursor: 'pointer',
+        '& path, & rect': {
+            fill: theme.colors.neutral700,
+            transition: 'all 0.15s ease',
+        },
+    },
+    iconLeft: {
+        marginRight: 4,
+    },
+    iconFolded: {
+        transform: 'rotate(-90deg)',
+    },
+    iconDropdown: {
+        margin: '0 -8px',
+        transition: 'transform 0.15s ease',
+    },
+    dividerIcon: {
+        padding: '0 2px',
+    },
+    isFilled: {
+        backgroundColor: theme.colors.blue100,
 
-    shrinkedPicture: {
-        borderRadius: '3px',
+        '& $Text': {
+            color: theme.colors.blue500,
+        },
+        '& $icon path, & $icon rect': {
+            fill: theme.colors.blue500,
+        },
+        '&$clickable:hover': {
+            backgroundColor: theme.colors.blue200,
+            '& $Text': {
+                color: theme.colors.blue500,
+            },
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.blue500,
+            },
+        },
+        '&$isActive': {
+            backgroundColor: theme.colors.blue400,
+            '& $Text': {
+                color: theme.colors.neutralBase,
+            },
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.neutralBase,
+            },
+        },
+        '&$isDisabled': {
+            backgroundColor: theme.colors.blue100,
+            '& $Text': {
+                color: theme.colors.blue200,
+            },
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.blue200,
+            },
+        },
+        '&$isReadOnly': {
+            backgroundColor: theme.colors.blue100,
+            '& $Text': {
+                color: theme.colors.blue400,
+            },
 
-        height: '20px',
-        width: '20px',
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.blue400,
+            },
+        },
+    },
+    isOutlined: {
+        border: '1px solid',
+        borderColor: theme.colors.neutral400,
+        transition: 'border-color 0.15s ease',
+        '&$clickable:hover': {
+            borderColor: theme.colors.neutral300,
+        },
     },
 });

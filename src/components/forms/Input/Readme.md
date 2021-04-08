@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 
@@ -49,8 +49,8 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 
@@ -72,14 +72,14 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 
 const onBlur = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 <div>
@@ -101,14 +101,14 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 
 const onBlur = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 <div>
@@ -139,8 +139,8 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 const onChange = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 
@@ -155,11 +155,25 @@ const onCopy = () => window.alert('Copied to Clipboard');
         onChange={onChange(1)}
         value={state[1]}
     />
-    <Input label="Info" placeholder="Write here" info="I am an info message" />
-    <Input label="Error" placeholder="Write here" error="I am an error" />
+    <Input
+        label="Info"
+        placeholder="Write here"
+        onChange={onChange(2)}
+        value={state[2]}
+        info="I am an info message"
+    />
+    <Input
+        label="Error"
+        placeholder="Write here"
+        onChange={onChange(3)}
+        value={state[3]}
+        error="I am an error"
+    />
     <Input
         label="Info and Error"
         placeholder="Write here"
+        onChange={onChange(4)}
+        value={state[4]}
         info="I am an info message"
         error="I am an error"
     />
@@ -189,7 +203,7 @@ Horizontal label:
 import { useState } from 'react';
 
 const [state, setState] = useState({});
-const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+const onChange = (value) => setState({ value });
 <div>
     <Input
         label="Lorem ipsum"
@@ -207,9 +221,42 @@ Without label:
 import { useState } from 'react';
 
 const [state, setState] = useState({});
-const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+const onChange = (value) => setState({ value });
 <div>
     <Input placeholder="Write here" onChange={onChange} value={state.value} />
+</div>;
+```
+
+Without clear:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+<div>
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        onChange={onChange}
+        value={state.value}
+        hideClear
+    />
+</div>;
+```
+
+Reading Clear Action:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value, e, info) => {
+    if (info && info.action) alert(info.action);
+    setState({ value });
+};
+<div>
+    <Input label="Lorem ipsum" placeholder="Write here" onChange={onChange} value={state.value} />
 </div>;
 ```
 
@@ -220,7 +267,7 @@ import { useState } from 'react';
 
 import { Icon } from 'hoi-poi-ui';
 const [state, setState] = useState({});
-const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+const onChange = (value) => setState({ value });
 <div>
     <Input
         label="Lorem ipsum"
@@ -233,6 +280,24 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 </div>;
 ```
 
+Full width:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+<div>
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        onChange={onChange}
+        value={state.value}
+        isFullWidth
+    />
+</div>;
+```
+
 Custom component:
 
 ```jsx
@@ -240,8 +305,8 @@ import { useState } from 'react';
 import CustomComponent from './CustomComponent';
 const [state, setState] = useState({});
 const onChange = (field) => {
-    return (e) => {
-        setState({ ...state, [field]: e && e.target ? e.target.value : '' });
+    return (value) => {
+        setState({ ...state, [field]: value });
     };
 };
 
@@ -262,7 +327,7 @@ const onChange = (field) => {
 
 -   root - root element
 -   input - Native input
--   infor - Info text wrapper
+-   info - Info text wrapper
 -   error - Error wrapper
 -   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)

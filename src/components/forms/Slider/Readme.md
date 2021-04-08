@@ -6,6 +6,7 @@ import { useState } from 'react';
 const [state, setState] = useState({});
 
 const onChange = (value) => setState({ value });
+
 <div>
     <Slider label="Lorem ipsum" onChange={onChange} value={state.value} />
 </div>;
@@ -110,3 +111,4 @@ const onChange = (value) => setState({ value });
 -   inputWrapper - Wrapper around Label and input components
 -   overlay - Dragged component (tip)
 -   overlayLabel - Dragged component label (tip)
+-   overlayHandler - Handler component style and props

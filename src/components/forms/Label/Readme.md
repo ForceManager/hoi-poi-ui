@@ -25,4 +25,4 @@ With hint:
 -   root - root element
 -   [Popover](#/Utils?id=popover)
 -   text - text part, without info popover
--   [Text](#/Utils?id=popover)
+-   [Text](#/Typography?id=text)

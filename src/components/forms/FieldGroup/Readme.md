@@ -152,9 +152,115 @@ const [values, setValues] = useState([]);
 </div>;
 ```
 
+With diferent inputs:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+import Select from '../../forms/Select';
+import DatePicker from '../../forms/DatePicker';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Select, DatePicker]}
+        inputProps={[
+            { placeholder: 'Type' },
+            { placeholder: 'Select one', options },
+            { placeholder: 'Select date' },
+        ]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+    />
+</div>;
+```
+
+```jsx
+import { useState } from 'react';
+import DatePicker from '../../forms/DatePicker';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[DatePicker, DatePicker]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+    />
+</div>;
+```
+
+With error:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Input, Input, Input, Input, Input]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+        error="I am an error"
+    />
+</div>;
+```
+
+With different errors:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+import Icon from '../../general/Icon';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Label"
+        inputs={[Input, Input, Input]}
+        inputProps={[{ error: 'I am an error' }, { error: null }, { error: 'I am another error' }]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+        error="I am a general error"
+        divider={<Icon name="arrowRight" />}
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
+
+∫
 
 -   root - root element
 -   infor - Info text wrapper

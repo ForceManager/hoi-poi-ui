@@ -28,7 +28,7 @@ const Input = memo(
             classNameProp,
         );
 
-        if (!error || !info) return null;
+        if (!error && !info) return null;
 
         return (
             <div className={rootClassName} {...override.root}>
@@ -54,7 +54,7 @@ Input.defaultProps = {};
 Input.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     info: PropTypes.string,
 };
 
