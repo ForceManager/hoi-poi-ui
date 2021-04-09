@@ -60,6 +60,7 @@ import Integer from './icons/Integer';
 import CheckboxGroup from './icons/CheckboxGroup';
 import Percentage from './icons/Percentage';
 import Text from './icons/Text';
+import Switch from './icons/Switch';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -288,6 +289,7 @@ const ICONS = {
     checkboxGroup: CheckboxGroup,
     percentage: Percentage,
     text: Text,
+    switch: Switch,
 
     //Actions
     accountCheckin: AccountCheckin,
