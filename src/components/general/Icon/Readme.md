@@ -395,6 +395,8 @@ Icons:
 <span> </span>
 <Icon name="text"/>
 <span> </span>
+<Icon name="switch"/>
+<span> </span>
 ```
 
 Raw Icons:
