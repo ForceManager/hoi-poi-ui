@@ -377,6 +377,24 @@ Icons:
 <span> </span>
 <Icon name="columns"/>
 <span> </span>
+<Icon name="currency"/>
+<span> </span>
+<Icon name="dateTime"/>
+<span> </span>
+<Icon name="date"/>
+<span> </span>
+<Icon name="decimals"/>
+<span> </span>
+<Icon name="valueList"/>
+<span> </span>
+<Icon name="integer"/>
+<span> </span>
+<Icon name="checkboxGroup"/>
+<span> </span>
+<Icon name="percentage"/>
+<span> </span>
+<Icon name="text"/>
+<span> </span>
 ```
 
 Raw Icons:
