@@ -160,7 +160,7 @@ const uploadFile = (file) =>
 
 const onDrop = (acceptedFiles) => {
     const acceptedFilesData = acceptedFiles.reduce(
-        (acc, el) => ({ ...acc, [el.id]: { loading: true, progress: 0, error: false } }),
+        (acc, el) => ({ ...acc, [el.id]: { loading: true, progress: 0, error: null } }),
         {},
     );
     const newFiles = [...files, ...acceptedFiles];
@@ -175,7 +175,7 @@ const onDrop = (acceptedFiles) => {
                     [file.id]: {
                         loading: false,
                         progress: null,
-                        error: false,
+                        error: null,
                     },
                 });
             })
@@ -185,7 +185,7 @@ const onDrop = (acceptedFiles) => {
                     [file.id]: {
                         loading: false,
                         progress: null,
-                        error: true,
+                        error: 'Invalid file',
                     },
                 });
             });

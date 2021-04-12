@@ -76,7 +76,8 @@ function File({
                 <div className={classes.fileIconContainer}>{renderIcon}</div>
                 <div className={classes.fileTextContainer}>
                     <Text className={classes.fileName}>{file.name}</Text>
-                    <Text className={classes.fileSize}>({prettyBytes(file.size)})</Text>
+                    {!error && <Text className={classes.fileSize}>{prettyBytes(file.size)}</Text>}
+                    {error && <Text className={classes.fileSize}>{error}</Text>}
                 </div>
             </div>
             <div className={classes.actions}>
