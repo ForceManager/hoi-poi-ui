@@ -159,7 +159,7 @@ function Modal({
         else return { maxHeight: autoHeight };
     }, [useContentStaticHeight, useAutoHeight, autoHeight]);
 
-    const showFooter = onConfirm || onCancel;
+    const showFooter = onConfirm || onCancel || onDelete;
 
     const renderTitle = useMemo(() => {
         if (typeof title === 'string') {
