@@ -25,7 +25,7 @@ describe('Modal', () => {
                 </Modal>
             </HoiPoiProvider>,
         );
-        expect(wrapper.find('.ReactModal__Content').contains('Lorem ipsum')).toEqual(true);
+        expect(wrapper.find('.ReactModal__Content').contains('Default')).toEqual(true);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
