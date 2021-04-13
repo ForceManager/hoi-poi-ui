@@ -77,7 +77,9 @@ function File({
                 <div className={classes.fileTextContainer}>
                     <Text className={classes.fileName}>{file.name}</Text>
                     {!error && <Text className={classes.fileSize}>{prettyBytes(file.size)}</Text>}
-                    {error && <Text className={classes.fileSize}>{error}</Text>}
+                    {error && error.length && (
+                        <Text className={classes.fileErrorText}>{error}</Text>
+                    )}
                 </div>
             </div>
             <div className={classes.actions}>

@@ -95,6 +95,10 @@ export default (theme) => ({
         borderBottom: 'none',
         borderRadius: 4,
     },
+    fileErrorText: {
+        marginLeft: 4,
+        color: theme.colors.red500,
+    },
     fileDataContainer: {
         display: 'flex',
     },

@@ -224,7 +224,7 @@ function FilePicker({
                         {info}
                     </div>
                 )}
-                {error && error.length && (
+                {error && (
                     <div className={classes.error} {...override.error}>
                         {error}
                     </div>
