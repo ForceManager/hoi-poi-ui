@@ -224,7 +224,7 @@ function FilePicker({
                         {info}
                     </div>
                 )}
-                {error && (
+                {error && error.length && (
                     <div className={classes.error} {...override.error}>
                         {error}
                     </div>
@@ -279,7 +279,7 @@ FilePicker.propTypes = {
     cropTooltip: PropTypes.string,
     disabled: PropTypes.bool,
     /** Error will be displayed below the component with style changes */
-    error: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     files: PropTypes.array,
     filesData: PropTypes.object,
     /** Info popover */
