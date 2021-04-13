@@ -52,6 +52,16 @@ import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
 import Columns from './icons/Columns';
 import Crop from './icons/Crop';
+import Currency from './icons/Currency';
+import DateTime from './icons/DateTime';
+import Date from './icons/Date';
+import Decimals from './icons/Decimals';
+import ValueList from './icons/ValueList';
+import Integer from './icons/Integer';
+import CheckboxGroup from './icons/CheckboxGroup';
+import Percentage from './icons/Percentage';
+import Text from './icons/Text';
+import Switch from './icons/Switch';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -116,6 +126,10 @@ import ThumbDown from './icons/actions/ThumbDown';
 import ThumbUp from './icons/actions/ThumbUp';
 import Visibility from './icons/actions/Visibility';
 import Workflow from './icons/actions/Workflow';
+import Impersonate from './icons/actions/Impersonate';
+import RemoveCircle from './icons/actions/RemoveCircle';
+import Key from './icons/actions/Key';
+import PowerOn from './icons/actions/PowerOn';
 
 //Alert
 import AddAlert from './icons/alert/AddAlert';
@@ -268,6 +282,17 @@ const ICONS = {
     fileDownload: FileDownload,
     columns: Columns,
     crop: Crop,
+    currency: Currency,
+    dateTime: DateTime,
+    date: Date,
+    decimals: Decimals,
+    valueList: ValueList,
+    integer: Integer,
+    checkboxGroup: CheckboxGroup,
+    percentage: Percentage,
+    text: Text,
+    switch: Switch,
+
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,
@@ -331,6 +356,10 @@ const ICONS = {
     thumbUp: ThumbUp,
     visibility: Visibility,
     workflow: Workflow,
+    impersonate: Impersonate,
+    removeCircle: RemoveCircle,
+    key: Key,
+    powerOn: PowerOn,
     //Alert
     addAlert: AddAlert,
     asterisk: Asterisk,

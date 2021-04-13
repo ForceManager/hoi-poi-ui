@@ -67,6 +67,8 @@ Actions:
 <span> </span>
 <Icon name="favoriteBorder"/>
 <span> </span>
+<Icon name="impersonate"/>
+<span> </span>
 <Icon name="filterList"/>
 <span> </span>
 <Icon name="filterListActive"/>
@@ -128,6 +130,14 @@ Actions:
 <Icon name="workflow"/>
 <span> </span>
 <Icon name="crop"/>
+<span> </span>
+<Icon name="removeCircle"/>
+<span> </span>
+<Icon name="key"/>
+<span> </span>
+<Icon name="activate"/>
+<span> </span>
+<Icon name="powerOn"/>
 <span> </span>
 ```
 
@@ -368,6 +378,26 @@ Icons:
 <Icon name="fileDownload"/>
 <span> </span>
 <Icon name="columns"/>
+<span> </span>
+<Icon name="currency"/>
+<span> </span>
+<Icon name="dateTime"/>
+<span> </span>
+<Icon name="date"/>
+<span> </span>
+<Icon name="decimals"/>
+<span> </span>
+<Icon name="valueList"/>
+<span> </span>
+<Icon name="integer"/>
+<span> </span>
+<Icon name="checkboxGroup"/>
+<span> </span>
+<Icon name="percentage"/>
+<span> </span>
+<Icon name="text"/>
+<span> </span>
+<Icon name="switch"/>
 <span> </span>
 ```
 
