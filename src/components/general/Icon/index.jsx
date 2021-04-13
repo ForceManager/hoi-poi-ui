@@ -51,6 +51,16 @@ import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
 import Columns from './icons/Columns';
+import Currency from './icons/Currency';
+import DateTime from './icons/DateTime';
+import Date from './icons/Date';
+import Decimals from './icons/Decimals';
+import ValueList from './icons/ValueList';
+import Integer from './icons/Integer';
+import CheckboxGroup from './icons/CheckboxGroup';
+import Percentage from './icons/Percentage';
+import Text from './icons/Text';
+import Switch from './icons/Switch';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -270,6 +280,17 @@ const ICONS = {
     draggableSort: DraggableSort,
     fileDownload: FileDownload,
     columns: Columns,
+    currency: Currency,
+    dateTime: DateTime,
+    date: Date,
+    decimals: Decimals,
+    valueList: ValueList,
+    integer: Integer,
+    checkboxGroup: CheckboxGroup,
+    percentage: Percentage,
+    text: Text,
+    switch: Switch,
+
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,
