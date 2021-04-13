@@ -127,11 +127,21 @@ exports[`Input default match 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
@@ -139,106 +149,86 @@ exports[`Input default match 1`] = `
           },
           "body": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
+          "h1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
+          "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
+          "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
+          "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
+          "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -249,12 +239,11 @@ exports[`Input default match 1`] = `
           "lineHeightBase": 1.5,
           "overline": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -263,21 +252,17 @@ exports[`Input default match 1`] = `
           },
           "subtitle": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -287,16 +272,24 @@ exports[`Input default match 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -437,60 +430,68 @@ exports[`Input default match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
       <FilePicker
+        buttonLabel="Select file"
+        cropAcceptLabel="Crop"
+        cropCancelLabel="Cancel"
+        cropTitle="Crop image"
+        cropTooltip="Crop image"
         files={Array []}
         isReadOnly={false}
         label="File"
-        labelMode="horizontal"
+        labelMode="vertical"
+        maxFiles={0}
         onDrop={[Function]}
         onRemove={[Function]}
-        override={Object {}}
+        overrides={Object {}}
         placeholder="Drag and drop or click to upload"
         placeholderActive="Drop file to upload"
+        previewImages={false}
+        title="Drop files here"
       >
         <div
-          className="HoiPoi__FilePicker__root-1-0 HoiPoi__FilePicker__horizontal-1-19"
+          className="HoiPoi__FilePicker__root-1-0 HoiPoi__FilePicker__vertical-1-27"
         >
           <Label
             className="HoiPoi__FilePicker__Label-1-1"
           >
-            <span
-              className="HoiPoi__Label__root-1-21 HoiPoi__FilePicker__Label-1-1"
+            <div
+              className="HoiPoi__Label__root-1-33 HoiPoi__FilePicker__Label-1-1"
             >
               <Text
-                className="HoiPoi__Label__Text-1-22"
+                className="HoiPoi__Label__Text-1-34"
                 overrides={Object {}}
+                type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-1-25 HoiPoi__Label__Text-1-22"
+                  className="HoiPoi__Text__root-1-37 HoiPoi__Label__Text-1-34 HoiPoi__Text__body-1-47"
+                  style={Object {}}
                 >
                   File
                 </span>
               </Text>
-            </span>
+            </div>
           </Label>
           <div
             className="HoiPoi__FilePicker__formControl-1-4"
           >
             <div
               className="HoiPoi__FilePicker__dropZone-1-5"
-              onBlur={[Function]}
+              onBlur={null}
               onClick={[Function]}
               onDragEnter={[Function]}
               onDragLeave={[Function]}
               onDragOver={[Function]}
               onDrop={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              tabIndex={0}
+              onFocus={null}
+              onKeyDown={null}
             >
               <input
                 autoComplete="off"
-                multiple={true}
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -501,48 +502,191 @@ exports[`Input default match 1`] = `
                 tabIndex={-1}
                 type="file"
               />
-              <div
-                className="HoiPoi__FilePicker__dropZoneInactive-1-7"
+              <Text
+                className="HoiPoi__FilePicker__title-1-9"
+                overrides={Object {}}
+                type="subtitle"
               >
-                <Icon
-                  className="HoiPoi__FilePicker__cloudUploadIcon-1-10"
-                  color="#788590"
-                  name="cloudUpload"
-                  overrides={Object {}}
-                  size="medium"
+                <span
+                  className="HoiPoi__Text__root-1-37 HoiPoi__FilePicker__title-1-9 HoiPoi__Text__subtitle-1-45"
+                  style={Object {}}
                 >
-                  <span
-                    className="HoiPoi__Icon__root-1-36 HoiPoi__Icon__medium-1-38 HoiPoi__FilePicker__cloudUploadIcon-1-10"
+                  Drop files here
+                </span>
+              </Text>
+              <Text
+                className="HoiPoi__FilePicker__subtitle-1-10"
+                overrides={Object {}}
+                type="caption"
+              >
+                <span
+                  className="HoiPoi__Text__root-1-37 HoiPoi__FilePicker__subtitle-1-10 HoiPoi__Text__caption-1-49"
+                  style={Object {}}
+                />
+              </Text>
+              <ForwardRef
+                className="HoiPoi__FilePicker__button-1-8"
+                iconPosition="left"
+                onClick={[Function]}
+                overrides={Object {}}
+                size="medium"
+                type="secondary"
+              >
+                <button
+                  className="HoiPoi__Button__root-1-55 HoiPoi__Button__secondary-1-62 HoiPoi__Button__medium-1-66 HoiPoi__FilePicker__button-1-8"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="HoiPoi__Button__content-1-56"
                   >
-                    <CloudUpload
-                      color="#788590"
+                    <Text
+                      className="HoiPoi__Button__Text-1-57"
+                      overrides={Object {}}
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="HoiPoi__Text__root-1-37 HoiPoi__Button__Text-1-57"
+                        style={Object {}}
                       >
-                        <path
-                          d="M19.35,10.04 C18.67,6.59 15.64,4 12,4 C9.11,4 6.6,5.64 5.35,8.04 C2.34,8.36 0,10.91 0,14 C0,17.31 2.69,20 6,20 L19,20 C21.76,20 24,17.76 24,15 C24,12.36 21.95,10.22 19.35,10.04 L19.35,10.04 Z M14,13 L14,17 L10,17 L10,13 L7,13 L12,8 L17,13 L14,13 L14,13 Z"
-                          fill="#788590"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </CloudUpload>
-                  </span>
-                </Icon>
-                <Text
-                  className="HoiPoi__FilePicker__placeholder-1-8"
-                  overrides={Object {}}
-                >
-                  <span
-                    className="HoiPoi__Text__root-1-25 HoiPoi__FilePicker__placeholder-1-8"
-                  >
-                    Drag and drop or click to upload
-                  </span>
-                </Text>
-              </div>
+                        Select file
+                      </span>
+                    </Text>
+                  </div>
+                </button>
+              </ForwardRef>
             </div>
           </div>
+          <Crop
+            cancelText="Cancel"
+            confirmText="Crop"
+            file={null}
+            isOpen={false}
+            onAccept={[Function]}
+            onCancel={[Function]}
+            overrides={Object {}}
+            title="Crop image"
+          >
+            <Modal
+              cancelText="Cancel"
+              className="HoiPoi__FilePickerFile__cropModal-1-103"
+              closeTimeoutMS={300}
+              confirmText="Crop"
+              isOpen={false}
+              onCancel={[Function]}
+              onConfirm={[Function]}
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              size="medium"
+              title="Crop image"
+              useAutoHeight={true}
+              useAutoWidth={true}
+              useContentStaticHeight={false}
+              useCornerClose={false}
+              useHeader={true}
+            >
+              <Modal
+                ariaHideApp={false}
+                bodyOpenClassName="ReactModal__Body--open"
+                className="HoiPoi__Modal__root-1-106 HoiPoi__FilePickerFile__cropModal-1-103"
+                closeTimeoutMS={300}
+                contentElement={[Function]}
+                isOpen={false}
+                overlayClassName="HoiPoi__Modal__overlay-1-107"
+                overlayElement={[Function]}
+                parentSelector={[Function]}
+                portalClassName="ReactModalPortal"
+                preventScroll={false}
+                role="dialog"
+                shouldCloseOnEsc={true}
+                shouldCloseOnOverlayClick={true}
+                shouldFocusAfterRender={true}
+                shouldReturnFocusAfterClose={true}
+                style={
+                  Object {
+                    "content": Object {
+                      "bottom": "auto",
+                      "left": "50%",
+                      "marginRight": "-50%",
+                      "maxHeight": "100%",
+                      "maxWidth": "100%",
+                      "right": "auto",
+                      "top": "50%",
+                      "transform": "translate(-50%, -50%)",
+                      "width": 640,
+                    },
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div
+                      class="ReactModalPortal"
+                    />
+                  }
+                >
+                  <ModalPortal
+                    ariaHideApp={false}
+                    bodyOpenClassName="ReactModal__Body--open"
+                    className="HoiPoi__Modal__root-1-106 HoiPoi__FilePickerFile__cropModal-1-103"
+                    closeTimeoutMS={300}
+                    contentElement={[Function]}
+                    defaultStyles={
+                      Object {
+                        "content": Object {
+                          "WebkitOverflowScrolling": "touch",
+                          "background": "#fff",
+                          "border": "1px solid #ccc",
+                          "borderRadius": "4px",
+                          "bottom": "40px",
+                          "left": "40px",
+                          "outline": "none",
+                          "overflow": "auto",
+                          "padding": "20px",
+                          "position": "absolute",
+                          "right": "40px",
+                          "top": "40px",
+                        },
+                        "overlay": Object {
+                          "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "fixed",
+                          "right": 0,
+                          "top": 0,
+                        },
+                      }
+                    }
+                    isOpen={false}
+                    overlayClassName="HoiPoi__Modal__overlay-1-107"
+                    overlayElement={[Function]}
+                    parentSelector={[Function]}
+                    portalClassName="ReactModalPortal"
+                    preventScroll={false}
+                    role="dialog"
+                    shouldCloseOnEsc={true}
+                    shouldCloseOnOverlayClick={true}
+                    shouldFocusAfterRender={true}
+                    shouldReturnFocusAfterClose={true}
+                    style={
+                      Object {
+                        "content": Object {
+                          "bottom": "auto",
+                          "left": "50%",
+                          "marginRight": "-50%",
+                          "maxHeight": "100%",
+                          "maxWidth": "100%",
+                          "right": "auto",
+                          "top": "50%",
+                          "transform": "translate(-50%, -50%)",
+                          "width": 640,
+                        },
+                      }
+                    }
+                  />
+                </Portal>
+              </Modal>
+            </Modal>
+          </Crop>
         </div>
       </FilePicker>
     </JssProvider>
@@ -677,11 +821,21 @@ exports[`Input is full width match 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
@@ -689,106 +843,86 @@ exports[`Input is full width match 1`] = `
           },
           "body": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
+          "h1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
+          "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
+          "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
+          "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
+          "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -799,12 +933,11 @@ exports[`Input is full width match 1`] = `
           "lineHeightBase": 1.5,
           "overline": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -813,21 +946,17 @@ exports[`Input is full width match 1`] = `
           },
           "subtitle": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -837,16 +966,24 @@ exports[`Input is full width match 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -987,61 +1124,69 @@ exports[`Input is full width match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
       <FilePicker
+        buttonLabel="Select file"
+        cropAcceptLabel="Crop"
+        cropCancelLabel="Cancel"
+        cropTitle="Crop image"
+        cropTooltip="Crop image"
         files={Array []}
         isFullWidth={true}
         isReadOnly={false}
         label="File"
-        labelMode="horizontal"
+        labelMode="vertical"
+        maxFiles={0}
         onDrop={[Function]}
         onRemove={[Function]}
-        override={Object {}}
+        overrides={Object {}}
         placeholder="Drag and drop or click to upload"
         placeholderActive="Drop file to upload"
+        previewImages={false}
+        title="Drop files here"
       >
         <div
-          className="HoiPoi__FilePicker__root-4-0 HoiPoi__FilePicker__horizontal-4-19 HoiPoi__FilePicker__isFullWidth-4-20"
+          className="HoiPoi__FilePicker__root-4-0 HoiPoi__FilePicker__vertical-4-27 HoiPoi__FilePicker__isFullWidth-4-29"
         >
           <Label
             className="HoiPoi__FilePicker__Label-4-1"
           >
-            <span
-              className="HoiPoi__Label__root-4-21 HoiPoi__FilePicker__Label-4-1"
+            <div
+              className="HoiPoi__Label__root-4-33 HoiPoi__FilePicker__Label-4-1"
             >
               <Text
-                className="HoiPoi__Label__Text-4-22"
+                className="HoiPoi__Label__Text-4-34"
                 overrides={Object {}}
+                type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-4-25 HoiPoi__Label__Text-4-22"
+                  className="HoiPoi__Text__root-4-37 HoiPoi__Label__Text-4-34 HoiPoi__Text__body-4-47"
+                  style={Object {}}
                 >
                   File
                 </span>
               </Text>
-            </span>
+            </div>
           </Label>
           <div
             className="HoiPoi__FilePicker__formControl-4-4"
           >
             <div
               className="HoiPoi__FilePicker__dropZone-4-5"
-              onBlur={[Function]}
+              onBlur={null}
               onClick={[Function]}
               onDragEnter={[Function]}
               onDragLeave={[Function]}
               onDragOver={[Function]}
               onDrop={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              tabIndex={0}
+              onFocus={null}
+              onKeyDown={null}
             >
               <input
                 autoComplete="off"
-                multiple={true}
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -1052,48 +1197,191 @@ exports[`Input is full width match 1`] = `
                 tabIndex={-1}
                 type="file"
               />
-              <div
-                className="HoiPoi__FilePicker__dropZoneInactive-4-7"
+              <Text
+                className="HoiPoi__FilePicker__title-4-9"
+                overrides={Object {}}
+                type="subtitle"
               >
-                <Icon
-                  className="HoiPoi__FilePicker__cloudUploadIcon-4-10"
-                  color="#788590"
-                  name="cloudUpload"
-                  overrides={Object {}}
-                  size="medium"
+                <span
+                  className="HoiPoi__Text__root-4-37 HoiPoi__FilePicker__title-4-9 HoiPoi__Text__subtitle-4-45"
+                  style={Object {}}
                 >
-                  <span
-                    className="HoiPoi__Icon__root-4-36 HoiPoi__Icon__medium-4-38 HoiPoi__FilePicker__cloudUploadIcon-4-10"
+                  Drop files here
+                </span>
+              </Text>
+              <Text
+                className="HoiPoi__FilePicker__subtitle-4-10"
+                overrides={Object {}}
+                type="caption"
+              >
+                <span
+                  className="HoiPoi__Text__root-4-37 HoiPoi__FilePicker__subtitle-4-10 HoiPoi__Text__caption-4-49"
+                  style={Object {}}
+                />
+              </Text>
+              <ForwardRef
+                className="HoiPoi__FilePicker__button-4-8"
+                iconPosition="left"
+                onClick={[Function]}
+                overrides={Object {}}
+                size="medium"
+                type="secondary"
+              >
+                <button
+                  className="HoiPoi__Button__root-4-55 HoiPoi__Button__secondary-4-62 HoiPoi__Button__medium-4-66 HoiPoi__FilePicker__button-4-8"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="HoiPoi__Button__content-4-56"
                   >
-                    <CloudUpload
-                      color="#788590"
+                    <Text
+                      className="HoiPoi__Button__Text-4-57"
+                      overrides={Object {}}
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="HoiPoi__Text__root-4-37 HoiPoi__Button__Text-4-57"
+                        style={Object {}}
                       >
-                        <path
-                          d="M19.35,10.04 C18.67,6.59 15.64,4 12,4 C9.11,4 6.6,5.64 5.35,8.04 C2.34,8.36 0,10.91 0,14 C0,17.31 2.69,20 6,20 L19,20 C21.76,20 24,17.76 24,15 C24,12.36 21.95,10.22 19.35,10.04 L19.35,10.04 Z M14,13 L14,17 L10,17 L10,13 L7,13 L12,8 L17,13 L14,13 L14,13 Z"
-                          fill="#788590"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </CloudUpload>
-                  </span>
-                </Icon>
-                <Text
-                  className="HoiPoi__FilePicker__placeholder-4-8"
-                  overrides={Object {}}
-                >
-                  <span
-                    className="HoiPoi__Text__root-4-25 HoiPoi__FilePicker__placeholder-4-8"
-                  >
-                    Drag and drop or click to upload
-                  </span>
-                </Text>
-              </div>
+                        Select file
+                      </span>
+                    </Text>
+                  </div>
+                </button>
+              </ForwardRef>
             </div>
           </div>
+          <Crop
+            cancelText="Cancel"
+            confirmText="Crop"
+            file={null}
+            isOpen={false}
+            onAccept={[Function]}
+            onCancel={[Function]}
+            overrides={Object {}}
+            title="Crop image"
+          >
+            <Modal
+              cancelText="Cancel"
+              className="HoiPoi__FilePickerFile__cropModal-4-103"
+              closeTimeoutMS={300}
+              confirmText="Crop"
+              isOpen={false}
+              onCancel={[Function]}
+              onConfirm={[Function]}
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              size="medium"
+              title="Crop image"
+              useAutoHeight={true}
+              useAutoWidth={true}
+              useContentStaticHeight={false}
+              useCornerClose={false}
+              useHeader={true}
+            >
+              <Modal
+                ariaHideApp={false}
+                bodyOpenClassName="ReactModal__Body--open"
+                className="HoiPoi__Modal__root-4-106 HoiPoi__FilePickerFile__cropModal-4-103"
+                closeTimeoutMS={300}
+                contentElement={[Function]}
+                isOpen={false}
+                overlayClassName="HoiPoi__Modal__overlay-4-107"
+                overlayElement={[Function]}
+                parentSelector={[Function]}
+                portalClassName="ReactModalPortal"
+                preventScroll={false}
+                role="dialog"
+                shouldCloseOnEsc={true}
+                shouldCloseOnOverlayClick={true}
+                shouldFocusAfterRender={true}
+                shouldReturnFocusAfterClose={true}
+                style={
+                  Object {
+                    "content": Object {
+                      "bottom": "auto",
+                      "left": "50%",
+                      "marginRight": "-50%",
+                      "maxHeight": "100%",
+                      "maxWidth": "100%",
+                      "right": "auto",
+                      "top": "50%",
+                      "transform": "translate(-50%, -50%)",
+                      "width": 640,
+                    },
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div
+                      class="ReactModalPortal"
+                    />
+                  }
+                >
+                  <ModalPortal
+                    ariaHideApp={false}
+                    bodyOpenClassName="ReactModal__Body--open"
+                    className="HoiPoi__Modal__root-4-106 HoiPoi__FilePickerFile__cropModal-4-103"
+                    closeTimeoutMS={300}
+                    contentElement={[Function]}
+                    defaultStyles={
+                      Object {
+                        "content": Object {
+                          "WebkitOverflowScrolling": "touch",
+                          "background": "#fff",
+                          "border": "1px solid #ccc",
+                          "borderRadius": "4px",
+                          "bottom": "40px",
+                          "left": "40px",
+                          "outline": "none",
+                          "overflow": "auto",
+                          "padding": "20px",
+                          "position": "absolute",
+                          "right": "40px",
+                          "top": "40px",
+                        },
+                        "overlay": Object {
+                          "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "fixed",
+                          "right": 0,
+                          "top": 0,
+                        },
+                      }
+                    }
+                    isOpen={false}
+                    overlayClassName="HoiPoi__Modal__overlay-4-107"
+                    overlayElement={[Function]}
+                    parentSelector={[Function]}
+                    portalClassName="ReactModalPortal"
+                    preventScroll={false}
+                    role="dialog"
+                    shouldCloseOnEsc={true}
+                    shouldCloseOnOverlayClick={true}
+                    shouldFocusAfterRender={true}
+                    shouldReturnFocusAfterClose={true}
+                    style={
+                      Object {
+                        "content": Object {
+                          "bottom": "auto",
+                          "left": "50%",
+                          "marginRight": "-50%",
+                          "maxHeight": "100%",
+                          "maxWidth": "100%",
+                          "right": "auto",
+                          "top": "50%",
+                          "transform": "translate(-50%, -50%)",
+                          "width": 640,
+                        },
+                      }
+                    }
+                  />
+                </Portal>
+              </Modal>
+            </Modal>
+          </Crop>
         </div>
       </FilePicker>
     </JssProvider>
@@ -1228,11 +1516,21 @@ exports[`Input vertical label mode match 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
@@ -1240,106 +1538,86 @@ exports[`Input vertical label mode match 1`] = `
           },
           "body": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
+          "h1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
+          "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
+          "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
+          "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
+          "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1350,12 +1628,11 @@ exports[`Input vertical label mode match 1`] = `
           "lineHeightBase": 1.5,
           "overline": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1364,21 +1641,17 @@ exports[`Input vertical label mode match 1`] = `
           },
           "subtitle": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -1388,16 +1661,24 @@ exports[`Input vertical label mode match 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -1538,60 +1819,68 @@ exports[`Input vertical label mode match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
       <FilePicker
+        buttonLabel="Select file"
+        cropAcceptLabel="Crop"
+        cropCancelLabel="Cancel"
+        cropTitle="Crop image"
+        cropTooltip="Crop image"
         files={Array []}
         isReadOnly={false}
         label="File"
         labelMode="vertical"
+        maxFiles={0}
         onDrop={[Function]}
         onRemove={[Function]}
-        override={Object {}}
+        overrides={Object {}}
         placeholder="Drag and drop or click to upload"
         placeholderActive="Drop file to upload"
+        previewImages={false}
+        title="Drop files here"
       >
         <div
-          className="HoiPoi__FilePicker__root-5-0 HoiPoi__FilePicker__vertical-5-18"
+          className="HoiPoi__FilePicker__root-5-0 HoiPoi__FilePicker__vertical-5-27"
         >
           <Label
             className="HoiPoi__FilePicker__Label-5-1"
           >
-            <span
-              className="HoiPoi__Label__root-5-21 HoiPoi__FilePicker__Label-5-1"
+            <div
+              className="HoiPoi__Label__root-5-33 HoiPoi__FilePicker__Label-5-1"
             >
               <Text
-                className="HoiPoi__Label__Text-5-22"
+                className="HoiPoi__Label__Text-5-34"
                 overrides={Object {}}
+                type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-5-25 HoiPoi__Label__Text-5-22"
+                  className="HoiPoi__Text__root-5-37 HoiPoi__Label__Text-5-34 HoiPoi__Text__body-5-47"
+                  style={Object {}}
                 >
                   File
                 </span>
               </Text>
-            </span>
+            </div>
           </Label>
           <div
             className="HoiPoi__FilePicker__formControl-5-4"
           >
             <div
               className="HoiPoi__FilePicker__dropZone-5-5"
-              onBlur={[Function]}
+              onBlur={null}
               onClick={[Function]}
               onDragEnter={[Function]}
               onDragLeave={[Function]}
               onDragOver={[Function]}
               onDrop={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              tabIndex={0}
+              onFocus={null}
+              onKeyDown={null}
             >
               <input
                 autoComplete="off"
-                multiple={true}
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -1602,48 +1891,191 @@ exports[`Input vertical label mode match 1`] = `
                 tabIndex={-1}
                 type="file"
               />
-              <div
-                className="HoiPoi__FilePicker__dropZoneInactive-5-7"
+              <Text
+                className="HoiPoi__FilePicker__title-5-9"
+                overrides={Object {}}
+                type="subtitle"
               >
-                <Icon
-                  className="HoiPoi__FilePicker__cloudUploadIcon-5-10"
-                  color="#788590"
-                  name="cloudUpload"
-                  overrides={Object {}}
-                  size="medium"
+                <span
+                  className="HoiPoi__Text__root-5-37 HoiPoi__FilePicker__title-5-9 HoiPoi__Text__subtitle-5-45"
+                  style={Object {}}
                 >
-                  <span
-                    className="HoiPoi__Icon__root-5-36 HoiPoi__Icon__medium-5-38 HoiPoi__FilePicker__cloudUploadIcon-5-10"
+                  Drop files here
+                </span>
+              </Text>
+              <Text
+                className="HoiPoi__FilePicker__subtitle-5-10"
+                overrides={Object {}}
+                type="caption"
+              >
+                <span
+                  className="HoiPoi__Text__root-5-37 HoiPoi__FilePicker__subtitle-5-10 HoiPoi__Text__caption-5-49"
+                  style={Object {}}
+                />
+              </Text>
+              <ForwardRef
+                className="HoiPoi__FilePicker__button-5-8"
+                iconPosition="left"
+                onClick={[Function]}
+                overrides={Object {}}
+                size="medium"
+                type="secondary"
+              >
+                <button
+                  className="HoiPoi__Button__root-5-55 HoiPoi__Button__secondary-5-62 HoiPoi__Button__medium-5-66 HoiPoi__FilePicker__button-5-8"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="HoiPoi__Button__content-5-56"
                   >
-                    <CloudUpload
-                      color="#788590"
+                    <Text
+                      className="HoiPoi__Button__Text-5-57"
+                      overrides={Object {}}
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="HoiPoi__Text__root-5-37 HoiPoi__Button__Text-5-57"
+                        style={Object {}}
                       >
-                        <path
-                          d="M19.35,10.04 C18.67,6.59 15.64,4 12,4 C9.11,4 6.6,5.64 5.35,8.04 C2.34,8.36 0,10.91 0,14 C0,17.31 2.69,20 6,20 L19,20 C21.76,20 24,17.76 24,15 C24,12.36 21.95,10.22 19.35,10.04 L19.35,10.04 Z M14,13 L14,17 L10,17 L10,13 L7,13 L12,8 L17,13 L14,13 L14,13 Z"
-                          fill="#788590"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </CloudUpload>
-                  </span>
-                </Icon>
-                <Text
-                  className="HoiPoi__FilePicker__placeholder-5-8"
-                  overrides={Object {}}
-                >
-                  <span
-                    className="HoiPoi__Text__root-5-25 HoiPoi__FilePicker__placeholder-5-8"
-                  >
-                    Drag and drop or click to upload
-                  </span>
-                </Text>
-              </div>
+                        Select file
+                      </span>
+                    </Text>
+                  </div>
+                </button>
+              </ForwardRef>
             </div>
           </div>
+          <Crop
+            cancelText="Cancel"
+            confirmText="Crop"
+            file={null}
+            isOpen={false}
+            onAccept={[Function]}
+            onCancel={[Function]}
+            overrides={Object {}}
+            title="Crop image"
+          >
+            <Modal
+              cancelText="Cancel"
+              className="HoiPoi__FilePickerFile__cropModal-5-103"
+              closeTimeoutMS={300}
+              confirmText="Crop"
+              isOpen={false}
+              onCancel={[Function]}
+              onConfirm={[Function]}
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              size="medium"
+              title="Crop image"
+              useAutoHeight={true}
+              useAutoWidth={true}
+              useContentStaticHeight={false}
+              useCornerClose={false}
+              useHeader={true}
+            >
+              <Modal
+                ariaHideApp={false}
+                bodyOpenClassName="ReactModal__Body--open"
+                className="HoiPoi__Modal__root-5-106 HoiPoi__FilePickerFile__cropModal-5-103"
+                closeTimeoutMS={300}
+                contentElement={[Function]}
+                isOpen={false}
+                overlayClassName="HoiPoi__Modal__overlay-5-107"
+                overlayElement={[Function]}
+                parentSelector={[Function]}
+                portalClassName="ReactModalPortal"
+                preventScroll={false}
+                role="dialog"
+                shouldCloseOnEsc={true}
+                shouldCloseOnOverlayClick={true}
+                shouldFocusAfterRender={true}
+                shouldReturnFocusAfterClose={true}
+                style={
+                  Object {
+                    "content": Object {
+                      "bottom": "auto",
+                      "left": "50%",
+                      "marginRight": "-50%",
+                      "maxHeight": "100%",
+                      "maxWidth": "100%",
+                      "right": "auto",
+                      "top": "50%",
+                      "transform": "translate(-50%, -50%)",
+                      "width": 640,
+                    },
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div
+                      class="ReactModalPortal"
+                    />
+                  }
+                >
+                  <ModalPortal
+                    ariaHideApp={false}
+                    bodyOpenClassName="ReactModal__Body--open"
+                    className="HoiPoi__Modal__root-5-106 HoiPoi__FilePickerFile__cropModal-5-103"
+                    closeTimeoutMS={300}
+                    contentElement={[Function]}
+                    defaultStyles={
+                      Object {
+                        "content": Object {
+                          "WebkitOverflowScrolling": "touch",
+                          "background": "#fff",
+                          "border": "1px solid #ccc",
+                          "borderRadius": "4px",
+                          "bottom": "40px",
+                          "left": "40px",
+                          "outline": "none",
+                          "overflow": "auto",
+                          "padding": "20px",
+                          "position": "absolute",
+                          "right": "40px",
+                          "top": "40px",
+                        },
+                        "overlay": Object {
+                          "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "fixed",
+                          "right": 0,
+                          "top": 0,
+                        },
+                      }
+                    }
+                    isOpen={false}
+                    overlayClassName="HoiPoi__Modal__overlay-5-107"
+                    overlayElement={[Function]}
+                    parentSelector={[Function]}
+                    portalClassName="ReactModalPortal"
+                    preventScroll={false}
+                    role="dialog"
+                    shouldCloseOnEsc={true}
+                    shouldCloseOnOverlayClick={true}
+                    shouldFocusAfterRender={true}
+                    shouldReturnFocusAfterClose={true}
+                    style={
+                      Object {
+                        "content": Object {
+                          "bottom": "auto",
+                          "left": "50%",
+                          "marginRight": "-50%",
+                          "maxHeight": "100%",
+                          "maxWidth": "100%",
+                          "right": "auto",
+                          "top": "50%",
+                          "transform": "translate(-50%, -50%)",
+                          "width": 640,
+                        },
+                      }
+                    }
+                  />
+                </Portal>
+              </Modal>
+            </Modal>
+          </Crop>
         </div>
       </FilePicker>
     </JssProvider>
@@ -1778,11 +2210,21 @@ exports[`Input with accept 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
@@ -1790,106 +2232,86 @@ exports[`Input with accept 1`] = `
           },
           "body": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
+          "h1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
+          "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
+          "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
+          "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
+          "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1900,12 +2322,11 @@ exports[`Input with accept 1`] = `
           "lineHeightBase": 1.5,
           "overline": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -1914,21 +2335,17 @@ exports[`Input with accept 1`] = `
           },
           "subtitle": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -1938,16 +2355,24 @@ exports[`Input with accept 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -2088,7 +2513,7 @@ exports[`Input with accept 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -2099,51 +2524,60 @@ exports[`Input with accept 1`] = `
             "application/vnd.rar",
           ]
         }
+        buttonLabel="Select file"
+        cropAcceptLabel="Crop"
+        cropCancelLabel="Cancel"
+        cropTitle="Crop image"
+        cropTooltip="Crop image"
         files={Array []}
         isReadOnly={false}
         label="File"
-        labelMode="horizontal"
+        labelMode="vertical"
+        maxFiles={0}
         onDrop={[Function]}
         onRemove={[Function]}
-        override={Object {}}
+        overrides={Object {}}
         placeholder="Drag and drop or click to upload"
         placeholderActive="Drop file to upload"
+        previewImages={false}
+        title="Drop files here"
       >
         <div
-          className="HoiPoi__FilePicker__root-3-0 HoiPoi__FilePicker__horizontal-3-19"
+          className="HoiPoi__FilePicker__root-3-0 HoiPoi__FilePicker__vertical-3-27"
         >
           <Label
             className="HoiPoi__FilePicker__Label-3-1"
           >
-            <span
-              className="HoiPoi__Label__root-3-21 HoiPoi__FilePicker__Label-3-1"
+            <div
+              className="HoiPoi__Label__root-3-33 HoiPoi__FilePicker__Label-3-1"
             >
               <Text
-                className="HoiPoi__Label__Text-3-22"
+                className="HoiPoi__Label__Text-3-34"
                 overrides={Object {}}
+                type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-3-25 HoiPoi__Label__Text-3-22"
+                  className="HoiPoi__Text__root-3-37 HoiPoi__Label__Text-3-34 HoiPoi__Text__body-3-47"
+                  style={Object {}}
                 >
                   File
                 </span>
               </Text>
-            </span>
+            </div>
           </Label>
           <div
             className="HoiPoi__FilePicker__formControl-3-4"
           >
             <div
               className="HoiPoi__FilePicker__dropZone-3-5"
-              onBlur={[Function]}
+              onBlur={null}
               onClick={[Function]}
               onDragEnter={[Function]}
               onDragLeave={[Function]}
               onDragOver={[Function]}
               onDrop={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              tabIndex={0}
+              onFocus={null}
+              onKeyDown={null}
             >
               <input
                 accept={
@@ -2153,7 +2587,6 @@ exports[`Input with accept 1`] = `
                   ]
                 }
                 autoComplete="off"
-                multiple={true}
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -2164,48 +2597,191 @@ exports[`Input with accept 1`] = `
                 tabIndex={-1}
                 type="file"
               />
-              <div
-                className="HoiPoi__FilePicker__dropZoneInactive-3-7"
+              <Text
+                className="HoiPoi__FilePicker__title-3-9"
+                overrides={Object {}}
+                type="subtitle"
               >
-                <Icon
-                  className="HoiPoi__FilePicker__cloudUploadIcon-3-10"
-                  color="#788590"
-                  name="cloudUpload"
-                  overrides={Object {}}
-                  size="medium"
+                <span
+                  className="HoiPoi__Text__root-3-37 HoiPoi__FilePicker__title-3-9 HoiPoi__Text__subtitle-3-45"
+                  style={Object {}}
                 >
-                  <span
-                    className="HoiPoi__Icon__root-3-36 HoiPoi__Icon__medium-3-38 HoiPoi__FilePicker__cloudUploadIcon-3-10"
+                  Drop files here
+                </span>
+              </Text>
+              <Text
+                className="HoiPoi__FilePicker__subtitle-3-10"
+                overrides={Object {}}
+                type="caption"
+              >
+                <span
+                  className="HoiPoi__Text__root-3-37 HoiPoi__FilePicker__subtitle-3-10 HoiPoi__Text__caption-3-49"
+                  style={Object {}}
+                />
+              </Text>
+              <ForwardRef
+                className="HoiPoi__FilePicker__button-3-8"
+                iconPosition="left"
+                onClick={[Function]}
+                overrides={Object {}}
+                size="medium"
+                type="secondary"
+              >
+                <button
+                  className="HoiPoi__Button__root-3-55 HoiPoi__Button__secondary-3-62 HoiPoi__Button__medium-3-66 HoiPoi__FilePicker__button-3-8"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="HoiPoi__Button__content-3-56"
                   >
-                    <CloudUpload
-                      color="#788590"
+                    <Text
+                      className="HoiPoi__Button__Text-3-57"
+                      overrides={Object {}}
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="HoiPoi__Text__root-3-37 HoiPoi__Button__Text-3-57"
+                        style={Object {}}
                       >
-                        <path
-                          d="M19.35,10.04 C18.67,6.59 15.64,4 12,4 C9.11,4 6.6,5.64 5.35,8.04 C2.34,8.36 0,10.91 0,14 C0,17.31 2.69,20 6,20 L19,20 C21.76,20 24,17.76 24,15 C24,12.36 21.95,10.22 19.35,10.04 L19.35,10.04 Z M14,13 L14,17 L10,17 L10,13 L7,13 L12,8 L17,13 L14,13 L14,13 Z"
-                          fill="#788590"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </CloudUpload>
-                  </span>
-                </Icon>
-                <Text
-                  className="HoiPoi__FilePicker__placeholder-3-8"
-                  overrides={Object {}}
-                >
-                  <span
-                    className="HoiPoi__Text__root-3-25 HoiPoi__FilePicker__placeholder-3-8"
-                  >
-                    Drag and drop or click to upload
-                  </span>
-                </Text>
-              </div>
+                        Select file
+                      </span>
+                    </Text>
+                  </div>
+                </button>
+              </ForwardRef>
             </div>
           </div>
+          <Crop
+            cancelText="Cancel"
+            confirmText="Crop"
+            file={null}
+            isOpen={false}
+            onAccept={[Function]}
+            onCancel={[Function]}
+            overrides={Object {}}
+            title="Crop image"
+          >
+            <Modal
+              cancelText="Cancel"
+              className="HoiPoi__FilePickerFile__cropModal-3-103"
+              closeTimeoutMS={300}
+              confirmText="Crop"
+              isOpen={false}
+              onCancel={[Function]}
+              onConfirm={[Function]}
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              size="medium"
+              title="Crop image"
+              useAutoHeight={true}
+              useAutoWidth={true}
+              useContentStaticHeight={false}
+              useCornerClose={false}
+              useHeader={true}
+            >
+              <Modal
+                ariaHideApp={false}
+                bodyOpenClassName="ReactModal__Body--open"
+                className="HoiPoi__Modal__root-3-106 HoiPoi__FilePickerFile__cropModal-3-103"
+                closeTimeoutMS={300}
+                contentElement={[Function]}
+                isOpen={false}
+                overlayClassName="HoiPoi__Modal__overlay-3-107"
+                overlayElement={[Function]}
+                parentSelector={[Function]}
+                portalClassName="ReactModalPortal"
+                preventScroll={false}
+                role="dialog"
+                shouldCloseOnEsc={true}
+                shouldCloseOnOverlayClick={true}
+                shouldFocusAfterRender={true}
+                shouldReturnFocusAfterClose={true}
+                style={
+                  Object {
+                    "content": Object {
+                      "bottom": "auto",
+                      "left": "50%",
+                      "marginRight": "-50%",
+                      "maxHeight": "100%",
+                      "maxWidth": "100%",
+                      "right": "auto",
+                      "top": "50%",
+                      "transform": "translate(-50%, -50%)",
+                      "width": 640,
+                    },
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div
+                      class="ReactModalPortal"
+                    />
+                  }
+                >
+                  <ModalPortal
+                    ariaHideApp={false}
+                    bodyOpenClassName="ReactModal__Body--open"
+                    className="HoiPoi__Modal__root-3-106 HoiPoi__FilePickerFile__cropModal-3-103"
+                    closeTimeoutMS={300}
+                    contentElement={[Function]}
+                    defaultStyles={
+                      Object {
+                        "content": Object {
+                          "WebkitOverflowScrolling": "touch",
+                          "background": "#fff",
+                          "border": "1px solid #ccc",
+                          "borderRadius": "4px",
+                          "bottom": "40px",
+                          "left": "40px",
+                          "outline": "none",
+                          "overflow": "auto",
+                          "padding": "20px",
+                          "position": "absolute",
+                          "right": "40px",
+                          "top": "40px",
+                        },
+                        "overlay": Object {
+                          "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "fixed",
+                          "right": 0,
+                          "top": 0,
+                        },
+                      }
+                    }
+                    isOpen={false}
+                    overlayClassName="HoiPoi__Modal__overlay-3-107"
+                    overlayElement={[Function]}
+                    parentSelector={[Function]}
+                    portalClassName="ReactModalPortal"
+                    preventScroll={false}
+                    role="dialog"
+                    shouldCloseOnEsc={true}
+                    shouldCloseOnOverlayClick={true}
+                    shouldFocusAfterRender={true}
+                    shouldReturnFocusAfterClose={true}
+                    style={
+                      Object {
+                        "content": Object {
+                          "bottom": "auto",
+                          "left": "50%",
+                          "marginRight": "-50%",
+                          "maxHeight": "100%",
+                          "maxWidth": "100%",
+                          "right": "auto",
+                          "top": "50%",
+                          "transform": "translate(-50%, -50%)",
+                          "width": 640,
+                        },
+                      }
+                    }
+                  />
+                </Portal>
+              </Modal>
+            </Modal>
+          </Crop>
         </div>
       </FilePicker>
     </JssProvider>
@@ -2340,11 +2916,21 @@ exports[`Input with limit 1`] = `
         },
         "effects": Object {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
+          "boxShadow24": Object {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
           "buttonActive": Object {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
         "typography": Object {
+          "badges": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
           "bigText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
             "fontSize": 20,
@@ -2352,106 +2938,86 @@ exports[`Input with limit 1`] = `
           },
           "body": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
           "body1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
           "button": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
-          },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
           "caption": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "captionMedium": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
           "defaultText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
           "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
+          "h1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
+          "h2": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
+          "h3": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
+          "h4": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
+          "h5": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": Object {
+            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
           "largeText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -2462,12 +3028,11 @@ exports[`Input with limit 1`] = `
           "lineHeightBase": 1.5,
           "overline": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
           "smallText": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
@@ -2476,21 +3041,17 @@ exports[`Input with limit 1`] = `
           },
           "subtitle": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "24px",
           },
           "subtitle1": Object {
             "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
         "utils": Object {
@@ -2500,16 +3061,24 @@ exports[`Input with limit 1`] = `
               "width": 17,
             },
             "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
             "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": Object {
+            "& ::-moz-selection": Object {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": Object {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -2650,61 +3219,69 @@ exports[`Input with limit 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
       <FilePicker
+        buttonLabel="Select file"
+        cropAcceptLabel="Crop"
+        cropCancelLabel="Cancel"
+        cropTitle="Crop image"
+        cropTooltip="Crop image"
         files={Array []}
         isReadOnly={false}
         label="File"
-        labelMode="horizontal"
+        labelMode="vertical"
         limit={1}
+        maxFiles={0}
         onDrop={[Function]}
         onRemove={[Function]}
-        override={Object {}}
+        overrides={Object {}}
         placeholder="Drag and drop or click to upload"
         placeholderActive="Drop file to upload"
+        previewImages={false}
+        title="Drop files here"
       >
         <div
-          className="HoiPoi__FilePicker__root-2-0 HoiPoi__FilePicker__horizontal-2-19"
+          className="HoiPoi__FilePicker__root-2-0 HoiPoi__FilePicker__vertical-2-27"
         >
           <Label
             className="HoiPoi__FilePicker__Label-2-1"
           >
-            <span
-              className="HoiPoi__Label__root-2-21 HoiPoi__FilePicker__Label-2-1"
+            <div
+              className="HoiPoi__Label__root-2-33 HoiPoi__FilePicker__Label-2-1"
             >
               <Text
-                className="HoiPoi__Label__Text-2-22"
+                className="HoiPoi__Label__Text-2-34"
                 overrides={Object {}}
+                type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-2-25 HoiPoi__Label__Text-2-22"
+                  className="HoiPoi__Text__root-2-37 HoiPoi__Label__Text-2-34 HoiPoi__Text__body-2-47"
+                  style={Object {}}
                 >
                   File
                 </span>
               </Text>
-            </span>
+            </div>
           </Label>
           <div
             className="HoiPoi__FilePicker__formControl-2-4"
           >
             <div
               className="HoiPoi__FilePicker__dropZone-2-5"
-              onBlur={[Function]}
+              onBlur={null}
               onClick={[Function]}
               onDragEnter={[Function]}
               onDragLeave={[Function]}
               onDragOver={[Function]}
               onDrop={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              tabIndex={0}
+              onFocus={null}
+              onKeyDown={null}
             >
               <input
                 autoComplete="off"
-                multiple={true}
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -2715,48 +3292,191 @@ exports[`Input with limit 1`] = `
                 tabIndex={-1}
                 type="file"
               />
-              <div
-                className="HoiPoi__FilePicker__dropZoneInactive-2-7"
+              <Text
+                className="HoiPoi__FilePicker__title-2-9"
+                overrides={Object {}}
+                type="subtitle"
               >
-                <Icon
-                  className="HoiPoi__FilePicker__cloudUploadIcon-2-10"
-                  color="#788590"
-                  name="cloudUpload"
-                  overrides={Object {}}
-                  size="medium"
+                <span
+                  className="HoiPoi__Text__root-2-37 HoiPoi__FilePicker__title-2-9 HoiPoi__Text__subtitle-2-45"
+                  style={Object {}}
                 >
-                  <span
-                    className="HoiPoi__Icon__root-2-36 HoiPoi__Icon__medium-2-38 HoiPoi__FilePicker__cloudUploadIcon-2-10"
+                  Drop files here
+                </span>
+              </Text>
+              <Text
+                className="HoiPoi__FilePicker__subtitle-2-10"
+                overrides={Object {}}
+                type="caption"
+              >
+                <span
+                  className="HoiPoi__Text__root-2-37 HoiPoi__FilePicker__subtitle-2-10 HoiPoi__Text__caption-2-49"
+                  style={Object {}}
+                />
+              </Text>
+              <ForwardRef
+                className="HoiPoi__FilePicker__button-2-8"
+                iconPosition="left"
+                onClick={[Function]}
+                overrides={Object {}}
+                size="medium"
+                type="secondary"
+              >
+                <button
+                  className="HoiPoi__Button__root-2-55 HoiPoi__Button__secondary-2-62 HoiPoi__Button__medium-2-66 HoiPoi__FilePicker__button-2-8"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="HoiPoi__Button__content-2-56"
                   >
-                    <CloudUpload
-                      color="#788590"
+                    <Text
+                      className="HoiPoi__Button__Text-2-57"
+                      overrides={Object {}}
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                      <span
+                        className="HoiPoi__Text__root-2-37 HoiPoi__Button__Text-2-57"
+                        style={Object {}}
                       >
-                        <path
-                          d="M19.35,10.04 C18.67,6.59 15.64,4 12,4 C9.11,4 6.6,5.64 5.35,8.04 C2.34,8.36 0,10.91 0,14 C0,17.31 2.69,20 6,20 L19,20 C21.76,20 24,17.76 24,15 C24,12.36 21.95,10.22 19.35,10.04 L19.35,10.04 Z M14,13 L14,17 L10,17 L10,13 L7,13 L12,8 L17,13 L14,13 L14,13 Z"
-                          fill="#788590"
-                          fillRule="evenodd"
-                        />
-                      </svg>
-                    </CloudUpload>
-                  </span>
-                </Icon>
-                <Text
-                  className="HoiPoi__FilePicker__placeholder-2-8"
-                  overrides={Object {}}
-                >
-                  <span
-                    className="HoiPoi__Text__root-2-25 HoiPoi__FilePicker__placeholder-2-8"
-                  >
-                    Drag and drop or click to upload
-                  </span>
-                </Text>
-              </div>
+                        Select file
+                      </span>
+                    </Text>
+                  </div>
+                </button>
+              </ForwardRef>
             </div>
           </div>
+          <Crop
+            cancelText="Cancel"
+            confirmText="Crop"
+            file={null}
+            isOpen={false}
+            onAccept={[Function]}
+            onCancel={[Function]}
+            overrides={Object {}}
+            title="Crop image"
+          >
+            <Modal
+              cancelText="Cancel"
+              className="HoiPoi__FilePickerFile__cropModal-2-103"
+              closeTimeoutMS={300}
+              confirmText="Crop"
+              isOpen={false}
+              onCancel={[Function]}
+              onConfirm={[Function]}
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              size="medium"
+              title="Crop image"
+              useAutoHeight={true}
+              useAutoWidth={true}
+              useContentStaticHeight={false}
+              useCornerClose={false}
+              useHeader={true}
+            >
+              <Modal
+                ariaHideApp={false}
+                bodyOpenClassName="ReactModal__Body--open"
+                className="HoiPoi__Modal__root-2-106 HoiPoi__FilePickerFile__cropModal-2-103"
+                closeTimeoutMS={300}
+                contentElement={[Function]}
+                isOpen={false}
+                overlayClassName="HoiPoi__Modal__overlay-2-107"
+                overlayElement={[Function]}
+                parentSelector={[Function]}
+                portalClassName="ReactModalPortal"
+                preventScroll={false}
+                role="dialog"
+                shouldCloseOnEsc={true}
+                shouldCloseOnOverlayClick={true}
+                shouldFocusAfterRender={true}
+                shouldReturnFocusAfterClose={true}
+                style={
+                  Object {
+                    "content": Object {
+                      "bottom": "auto",
+                      "left": "50%",
+                      "marginRight": "-50%",
+                      "maxHeight": "100%",
+                      "maxWidth": "100%",
+                      "right": "auto",
+                      "top": "50%",
+                      "transform": "translate(-50%, -50%)",
+                      "width": 640,
+                    },
+                  }
+                }
+              >
+                <Portal
+                  containerInfo={
+                    <div
+                      class="ReactModalPortal"
+                    />
+                  }
+                >
+                  <ModalPortal
+                    ariaHideApp={false}
+                    bodyOpenClassName="ReactModal__Body--open"
+                    className="HoiPoi__Modal__root-2-106 HoiPoi__FilePickerFile__cropModal-2-103"
+                    closeTimeoutMS={300}
+                    contentElement={[Function]}
+                    defaultStyles={
+                      Object {
+                        "content": Object {
+                          "WebkitOverflowScrolling": "touch",
+                          "background": "#fff",
+                          "border": "1px solid #ccc",
+                          "borderRadius": "4px",
+                          "bottom": "40px",
+                          "left": "40px",
+                          "outline": "none",
+                          "overflow": "auto",
+                          "padding": "20px",
+                          "position": "absolute",
+                          "right": "40px",
+                          "top": "40px",
+                        },
+                        "overlay": Object {
+                          "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                          "bottom": 0,
+                          "left": 0,
+                          "position": "fixed",
+                          "right": 0,
+                          "top": 0,
+                        },
+                      }
+                    }
+                    isOpen={false}
+                    overlayClassName="HoiPoi__Modal__overlay-2-107"
+                    overlayElement={[Function]}
+                    parentSelector={[Function]}
+                    portalClassName="ReactModalPortal"
+                    preventScroll={false}
+                    role="dialog"
+                    shouldCloseOnEsc={true}
+                    shouldCloseOnOverlayClick={true}
+                    shouldFocusAfterRender={true}
+                    shouldReturnFocusAfterClose={true}
+                    style={
+                      Object {
+                        "content": Object {
+                          "bottom": "auto",
+                          "left": "50%",
+                          "marginRight": "-50%",
+                          "maxHeight": "100%",
+                          "maxWidth": "100%",
+                          "right": "auto",
+                          "top": "50%",
+                          "transform": "translate(-50%, -50%)",
+                          "width": 640,
+                        },
+                      }
+                    }
+                  />
+                </Portal>
+              </Modal>
+            </Modal>
+          </Crop>
         </div>
       </FilePicker>
     </JssProvider>
