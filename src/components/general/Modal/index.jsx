@@ -19,6 +19,7 @@ const SIZES = {
     medium: 640,
     large: 960,
     big: 1120,
+    full: '90%',
 };
 
 function Modal({
@@ -126,6 +127,7 @@ function Modal({
     let rootContentStyle = useMemo(
         () => ({
             width: useAutoWidth ? autoWidth : width || SIZES[size],
+            height: size === 'full' ? '90%' : 'auto',
             maxWidth: '100%',
             maxHeight: '100%',
             top: '50%',
@@ -154,10 +156,11 @@ function Modal({
     };
 
     const contentStyles = useMemo(() => {
+        if (size === 'full') return { height: '100%' };
         if (!useContentStaticHeight && !useAutoHeight) return {};
         if (useContentStaticHeight) return { height: autoHeight };
         else return { maxHeight: autoHeight };
-    }, [useContentStaticHeight, useAutoHeight, autoHeight]);
+    }, [size, useContentStaticHeight, useAutoHeight, autoHeight]);
 
     const showFooter = onConfirm || onCancel;
 
