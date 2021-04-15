@@ -37,7 +37,7 @@ const loadOptions = (text, cb) =>
     );
 
 <div>
-    <SearchBar placeholder="Search" loadOptions={loadOptions} isMulti />
+    <SearchBar placeholder="Search" loadOptions={loadOptions} isMulti highlightMatch />
 </div>;
 ```
 
@@ -81,7 +81,12 @@ const loadOptions = (text, cb) =>
     );
 
 <div>
-    <SearchBar placeholder="Search" loadOptions={loadOptions} onBlurSearch={onBlurSearch} />
+    <SearchBar
+        placeholder="Search"
+        loadOptions={loadOptions}
+        onBlurSearch={onBlurSearch}
+        highlightMatch
+    />
 </div>;
 ```
 

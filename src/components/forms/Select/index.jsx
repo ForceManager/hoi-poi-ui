@@ -419,25 +419,27 @@ const Select = memo(
             } else return newStyles.indicatorSeparatorHidden;
         }, [isReadOnly, isMulti, newValue, isRequired]);
 
-        const getMatchingCharacters = useCallback((optionLabel, search) => {
-            if (!search) return '';
-            if (optionLabel.includes(search)) return search;
-            const optionLowerCase = optionLabel.toLowerCase();
-            const searchLowerCase = search.toLowerCase();
-            if (optionLowerCase.includes(searchLowerCase)) {
-                const firstIndex = optionLowerCase.indexOf(searchLowerCase);
-                const lastIndex = firstIndex + searchLowerCase.length;
-                const matchingCharacters = optionLabel.slice(firstIndex, lastIndex);
-                return matchingCharacters;
-            }
-            return '';
-        }, []);
+        const getMatchingCharacters = useCallback(
+            (optionLabel) => {
+                if (!optionLabel || !newInputValue) return '';
+                if (optionLabel.includes(newInputValue)) return newInputValue;
+                const optionLowerCase = optionLabel.toLowerCase();
+                const searchLowerCase = newInputValue.toLowerCase();
+                if (optionLowerCase.includes(searchLowerCase)) {
+                    const firstIndex = optionLowerCase.indexOf(searchLowerCase);
+                    const lastIndex = firstIndex + searchLowerCase.length;
+                    const matchingCharacters = optionLabel.slice(firstIndex, lastIndex);
+                    return matchingCharacters;
+                }
+                return '';
+            },
+            [newInputValue],
+        );
 
         const getHighlighted = useCallback(
             (option) => {
                 if (!highlightMatch) return null;
-                if (!newInputValue) return null;
-                const matchingCharacters = getMatchingCharacters(option.label, newInputValue);
+                const matchingCharacters = getMatchingCharacters(option.label);
                 if (!matchingCharacters) return null;
                 const replaceable = `<br/>${matchingCharacters}<br/>`;
                 const newLabel = option.label;
@@ -461,13 +463,14 @@ const Select = memo(
                     </div>
                 );
             },
-            [getMatchingCharacters, newInputValue, classes, highlightMatch, override],
+            [getMatchingCharacters, classes, highlightMatch, override],
         );
 
         const formatOptionLabel = useCallback(
             (option) => {
-                if (customOption) return customOption(option);
-                else if (isMulti)
+                if (customOption) {
+                    return customOption(option, getMatchingCharacters);
+                } else if (isMulti)
                     return MenuMulti({
                         option,
                         value: newValue,
@@ -483,7 +486,16 @@ const Select = memo(
                         getHighlighted,
                     });
             },
-            [isMulti, classes, override, newValue, customOption, getHighlighted],
+            [
+                isMulti,
+                classes,
+                override,
+                newValue,
+                customOption,
+                getHighlighted,
+                newInputValue,
+                getMatchingCharacters,
+            ],
         );
 
         const formatGroupLabel = useCallback(
