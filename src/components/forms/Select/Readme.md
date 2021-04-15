@@ -843,6 +843,7 @@ const loadOptions = (text, cb) =>
         onChange={onChange}
         value={state.value}
         isFuzzy
+        highlightMatch
     />
 </div>;
 ```
@@ -955,6 +956,7 @@ const loadOptions = (text, cb) =>
         value={state.value}
         isFuzzy
         isMulti
+        highlightMatch
     />
 </div>;
 ```

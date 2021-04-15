@@ -304,4 +304,8 @@ export default (theme) => ({
             background: 'transparent',
         },
     },
+    highlightedContainer: {},
+    highlighted: {
+        backgroundColor: theme.colors.yellow200,
+    },
 });
