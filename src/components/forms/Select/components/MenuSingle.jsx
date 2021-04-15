@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../../../general/Icon';
 import Avatar from '../../../general/Avatar';
 
-export default ({ classes, option, override }) => {
+export default ({ classes, option, override, getHighlighted }) => {
     let textClasses = [classes.optionLabelText];
     let subtitleClasses = [classes.optionLabelSubtitle];
     let iconClasses = [classes.optionLabelIcon];
@@ -14,6 +14,7 @@ export default ({ classes, option, override }) => {
         iconClasses.push(classes.disabledIcon);
         customIconClasses.push(classes.disabledIcon);
     }
+
     return (
         <div className={classes.optionLabel} {...override.optionLabel}>
             {option.iconType && (
@@ -46,13 +47,13 @@ export default ({ classes, option, override }) => {
 
             {!option.subLabel && (
                 <div className={textClasses.join(' ')} {...override.label}>
-                    {option.label}
+                    {(getHighlighted && getHighlighted(option)) || option.label}
                 </div>
             )}
             {option.subLabel && (
                 <div className={classes.optionLabelBlock} {...override.optionLabelBlock}>
                     <div className={textClasses.join(' ')} {...override.optionLabelText}>
-                        {option.label}
+                        {(getHighlighted && getHighlighted(option)) || option.label}
                     </div>
                     <div className={subtitleClasses.join(' ')} {...override.optionLabelSubLabel}>
                         {option.subLabel}

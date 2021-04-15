@@ -82,6 +82,7 @@ const Select = memo(
         shouldSetValueOnChange,
         cacheOptions,
         focusDefaultOption,
+        highlightMatch,
         ...props
     }) => {
         const selectRef = useRef();
@@ -418,13 +419,71 @@ const Select = memo(
             } else return newStyles.indicatorSeparatorHidden;
         }, [isReadOnly, isMulti, newValue, isRequired]);
 
+        const getMatchingCharacters = useCallback((optionLabel, search) => {
+            if (!search) return '';
+            if (optionLabel.includes(search)) return search;
+            const optionLowerCase = optionLabel.toLowerCase();
+            const searchLowerCase = search.toLowerCase();
+            if (optionLowerCase.includes(searchLowerCase)) {
+                const firstIndex = optionLowerCase.indexOf(searchLowerCase);
+                const lastIndex = firstIndex + searchLowerCase.length;
+                const matchingCharacters = optionLabel.slice(firstIndex, lastIndex);
+                return matchingCharacters;
+            }
+            return '';
+        }, []);
+
+        const getHighlighted = useCallback(
+            (option) => {
+                if (!highlightMatch) return null;
+                if (!newInputValue) return null;
+                const matchingCharacters = getMatchingCharacters(option.label, newInputValue);
+                if (!matchingCharacters) return null;
+                const replaceable = `<br/>${matchingCharacters}<br/>`;
+                const newLabel = option.label;
+                const labelReplaced = newLabel.replace(matchingCharacters, replaceable);
+                const arr = labelReplaced.split('<br/>').filter((current) => current !== '');
+
+                return (
+                    <div
+                        className={classes.highlightedContainer}
+                        {...override.highlightedContainer}
+                    >
+                        {arr.map((current) => {
+                            if (current === matchingCharacters)
+                                return (
+                                    <span className={classes.highlighted} {...override.highlighted}>
+                                        {matchingCharacters}
+                                    </span>
+                                );
+                            else return current;
+                        })}
+                    </div>
+                );
+            },
+            [getMatchingCharacters, newInputValue, classes, highlightMatch, override],
+        );
+
         const formatOptionLabel = useCallback(
             (option) => {
                 if (customOption) return customOption(option);
-                else if (isMulti) return MenuMulti({ option, value: newValue, classes, override });
-                else return MenuSingle({ option, classes, override });
+                else if (isMulti)
+                    return MenuMulti({
+                        option,
+                        value: newValue,
+                        classes,
+                        override,
+                        getHighlighted,
+                    });
+                else
+                    return MenuSingle({
+                        option,
+                        classes,
+                        override,
+                        getHighlighted,
+                    });
             },
-            [isMulti, classes, override, newValue, customOption],
+            [isMulti, classes, override, newValue, customOption, getHighlighted],
         );
 
         const formatGroupLabel = useCallback(
@@ -730,6 +789,7 @@ const Select = memo(
             menuListStyles,
             multiValueLabelStyles,
             multiValueRemoveStyles,
+            withoutFilter,
         ]);
 
         let SelectComponent = RSelect;
@@ -900,6 +960,8 @@ Select.propTypes = {
     cacheOptions: PropTypes.bool,
     /** Enable/disable focusing first option of the select */
     focusDefaultOption: PropTypes.bool,
+    /** Highlights the first matching characters in the fuzzy result options */
+    highlightMatch: PropTypes.bool,
 };
 
 export default Select;
