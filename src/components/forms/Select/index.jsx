@@ -493,7 +493,6 @@ const Select = memo(
                 newValue,
                 customOption,
                 getHighlighted,
-                newInputValue,
                 getMatchingCharacters,
             ],
         );
