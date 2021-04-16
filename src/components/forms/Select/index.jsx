@@ -866,6 +866,7 @@ Select.overrides = [
     'actionIcon',
     'actionText',
     'actionTextWithIcon',
+    'styles',
 ];
 
 Select.defaultProps = {
