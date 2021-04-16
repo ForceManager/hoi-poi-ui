@@ -742,6 +742,7 @@ const Select = memo(
                         ...newStyles.loadingMessage,
                         ...(override.loadingMessage?.style || {}),
                     }),
+                    ...override.styles,
                 },
                 ...override['react-select'],
             };
