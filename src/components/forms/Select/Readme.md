@@ -15,6 +15,7 @@ const onChange = (value) => setState({ value });
         options={options}
         value={state.value}
         filterByKey
+        useMenuPortal={false}
     />
 </div>;
 ```

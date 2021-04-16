@@ -83,6 +83,8 @@ const Select = memo(
         cacheOptions,
         focusDefaultOption,
         highlightMatch,
+        menuPosition,
+        useMenuPortal,
         ...props
     }) => {
         const selectRef = useRef();
@@ -598,8 +600,8 @@ const Select = memo(
                 hideSelectedOptions: isMulti ? false : hideSelectedOptions,
                 closeMenuOnSelect: isMulti ? false : true,
                 menuPlacement: menuPlacementRef.current,
-                menuPosition: 'fixed',
-                menuPortalTarget: document.body,
+                menuPosition: menuPosition || 'fixed',
+                menuPortalTarget: useMenuPortal ? document.body : undefined,
                 loadOptions,
                 openMenuOnClick: !(loadOptions && isFuzzy),
                 openMenuOnFocus: !(loadOptions && isFuzzy),
@@ -801,6 +803,8 @@ const Select = memo(
             multiValueLabelStyles,
             multiValueRemoveStyles,
             withoutFilter,
+            menuPosition,
+            useMenuPortal,
         ]);
 
         let SelectComponent = RSelect;
@@ -884,6 +888,7 @@ Select.defaultProps = {
     cacheOptions: true,
     focusDefaultOption: true,
     withoutFilter: false,
+    useMenuPortal: true,
 };
 
 Select.propTypes = {
@@ -973,6 +978,9 @@ Select.propTypes = {
     focusDefaultOption: PropTypes.bool,
     /** Highlights the first matching characters in the fuzzy result options */
     highlightMatch: PropTypes.bool,
+    menuPosition: PropTypes.oneOf(['absolute', 'fixed']),
+    /** false prints the menu as a sibiling of the control element, true prints the menu in a portal*/
+    useMenuPortal: PropTypes.bool,
 };
 
 export default Select;
