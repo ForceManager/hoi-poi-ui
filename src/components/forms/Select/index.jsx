@@ -289,7 +289,7 @@ const Select = memo(
             [override],
         );
 
-        const optionsStyles = useCallback(
+        const optionStyles = useCallback(
             ({ isDisabled, isSelected, isFocused }) => {
                 let styles = {
                     ...newStyles.option,
@@ -693,7 +693,7 @@ const Select = memo(
                     }),
                     option: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
-                        ...optionsStyles({ data, isDisabled, isFocused, isSelected }),
+                        ...optionStyles({ data, isDisabled, isFocused, isSelected }),
                     }),
                     indicatorsContainer: (styles) => ({
                         ...styles,
@@ -798,7 +798,7 @@ const Select = memo(
             controlStyles,
             placeholderStyles,
             valueContainerStyles,
-            optionsStyles,
+            optionStyles,
             indicatorSeparatorStyles,
             menuListStyles,
             multiValueLabelStyles,
@@ -837,7 +837,7 @@ Select.overrides = [
     'inputComponents',
     'control',
     'controlFocused',
-    'options',
+    'option',
     'optionFocused',
     'optionSelected',
     'optionsDisabled',
