@@ -85,6 +85,7 @@ const Select = memo(
         highlightMatch,
         menuPosition,
         useMenuPortal,
+        forceMenuIsOpen,
         ...props
     }) => {
         const selectRef = useRef();
@@ -564,6 +565,7 @@ const Select = memo(
             let menuIsOpen =
                 (focused && (!(loadOptions && isFuzzy) || !!innerOptions?.length)) || false;
             if (useAsSimpleSearch) menuIsOpen = false;
+            if (forceMenuIsOpen) menuIsOpen = true;
             let Indicator = DropdownIndicator;
             let additionalComponents = {};
             if ((loadOptions && isFuzzy) || useAsSimpleSearch || hideDropdownIndicator)
@@ -806,6 +808,7 @@ const Select = memo(
             withoutFilter,
             menuPosition,
             useMenuPortal,
+            forceMenuIsOpen,
         ]);
 
         let SelectComponent = RSelect;
@@ -983,6 +986,7 @@ Select.propTypes = {
     menuPosition: PropTypes.oneOf(['absolute', 'fixed']),
     /** false prints the menu as a sibiling of the control element, true prints the menu in a portal*/
     useMenuPortal: PropTypes.bool,
+    forceMenuIsOpen: PropTypes.bool,
 };
 
 export default Select;
