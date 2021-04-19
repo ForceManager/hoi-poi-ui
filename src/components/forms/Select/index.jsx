@@ -86,10 +86,11 @@ const Select = memo(
         menuPosition,
         useMenuPortal,
         forceMenuIsOpen,
+        forceStartFocused,
         ...props
     }) => {
         const selectRef = useRef();
-        const [focused, setFocused] = useState(false);
+        const [focused, setFocused] = useState(forceStartFocused || false);
         const [newValue, setNewValue] = useState(defaultValue || value || null);
         const [newInputValue, setNewInputValue] = useState(inputValue || '');
         const [innerOptions, setInnerOptions] = useState(options || []);
@@ -987,6 +988,7 @@ Select.propTypes = {
     /** false prints the menu as a sibiling of the control element, true prints the menu in a portal*/
     useMenuPortal: PropTypes.bool,
     forceMenuIsOpen: PropTypes.bool,
+    forceStartFocused: PropTypes.bool,
 };
 
 export default Select;
