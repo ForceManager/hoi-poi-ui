@@ -29,6 +29,7 @@ import ThickDisabled from './icons/ThickDisabled';
 import Funnel from './icons/Funnel';
 import ThickEnabledFilled from './icons/ThickEnabledFilled';
 import Folder from './icons/Folder';
+import FolderOpen from './icons/FolderOpen';
 import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
@@ -259,6 +260,7 @@ const ICONS = {
     arrowBottom: ArrowBottom,
     funnel: Funnel,
     folder: Folder,
+    folderOpen: FolderOpen,
     calendar: Calendar,
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
