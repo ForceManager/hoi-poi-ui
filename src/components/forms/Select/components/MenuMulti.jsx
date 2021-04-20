@@ -1,7 +1,7 @@
 import React from 'react';
 import Checkbox from '../../../general/Checkbox';
 
-export default ({ option, value, classes, override }) => {
+export default ({ option, value, classes, override, getHighlighted }) => {
     const isSelected = value ? !!value.find((item) => item.value === option.value) : false;
     let bulletClasses = [classes.optionLabelBullet];
     let textClasses = [classes.optionLabelText];
@@ -31,7 +31,7 @@ export default ({ option, value, classes, override }) => {
                 <div className={bulletClasses.join(' ')} {...override.optionLabelBullet} />
             )}
             <div className={textClasses.join(' ')} {...override.optionLabelText}>
-                {option.label}
+                {(getHighlighted && getHighlighted(option)) || option.label}
             </div>
         </div>
     );
