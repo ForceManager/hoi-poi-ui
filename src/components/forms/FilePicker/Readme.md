@@ -330,7 +330,29 @@ const onRemove = (deletedFile) => {
 ---
 
 -   root - root element
--   input - Native input
--   error - Error wrapper
--   formControl - Input wrapper excluding label
 -   [Label](#/Forms?id=label)
+-   formControl - Input wrapper excluding label
+-   [react-dropzone](https://github.com/react-dropzone/react-dropzone)
+-   input - Native input
+-   [Title](#/Typography/Text)
+-   [Subtitle](#/Typography/Text)
+-   [Button](#/General/Button)
+-   info - Info text wrapper
+-   error - Error wrapper
+-   file - File wrapper
+-   fileDataContainer
+-   fileIconContainer
+-   [Loader](#/General/Loader)
+-   [Tooltip](#/General/Tooltip)
+-   fileTextContainer
+-   [FileName](#/Typography/Text)
+-   [FileSize](#/Typography/Text)
+-   [FileErrorText](#/Typography/Text)
+-   actions
+-   clear - Clear icon wrapper
+-   [Icon](#/General/Icon)
+-   progress
+-   crop - Crop modal wrapper
+-   [Modal](#/General/Modal)
+-   cropModalContent - crop content wrapper
+-   [react-image-crop](https://github.com/DominicTobias/react-image-crop)
