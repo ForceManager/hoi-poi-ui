@@ -82,10 +82,15 @@ const Select = memo(
         shouldSetValueOnChange,
         cacheOptions,
         focusDefaultOption,
+        highlightMatch,
+        menuPosition,
+        useMenuPortal,
+        forceMenuIsOpen,
+        forceStartFocused,
         ...props
     }) => {
         const selectRef = useRef();
-        const [focused, setFocused] = useState(false);
+        const [focused, setFocused] = useState(forceStartFocused || false);
         const [newValue, setNewValue] = useState(defaultValue || value || null);
         const [newInputValue, setNewInputValue] = useState(inputValue || '');
         const [innerOptions, setInnerOptions] = useState(options || []);
@@ -286,7 +291,7 @@ const Select = memo(
             [override],
         );
 
-        const optionsStyles = useCallback(
+        const optionStyles = useCallback(
             ({ isDisabled, isSelected, isFocused }) => {
                 let styles = {
                     ...newStyles.option,
@@ -418,13 +423,82 @@ const Select = memo(
             } else return newStyles.indicatorSeparatorHidden;
         }, [isReadOnly, isMulti, newValue, isRequired]);
 
+        const getMatchingCharacters = useCallback(
+            (optionLabel) => {
+                if (!optionLabel || !newInputValue) return '';
+                if (optionLabel.includes(newInputValue)) return newInputValue;
+                const optionLowerCase = optionLabel.toLowerCase();
+                const searchLowerCase = newInputValue.toLowerCase();
+                if (optionLowerCase.includes(searchLowerCase)) {
+                    const firstIndex = optionLowerCase.indexOf(searchLowerCase);
+                    const lastIndex = firstIndex + searchLowerCase.length;
+                    const matchingCharacters = optionLabel.slice(firstIndex, lastIndex);
+                    return matchingCharacters;
+                }
+                return '';
+            },
+            [newInputValue],
+        );
+
+        const getHighlighted = useCallback(
+            (option) => {
+                if (!highlightMatch) return null;
+                const matchingCharacters = getMatchingCharacters(option.label);
+                if (!matchingCharacters) return null;
+                const replaceable = `<br/>${matchingCharacters}<br/>`;
+                const newLabel = option.label;
+                const labelReplaced = newLabel.replace(matchingCharacters, replaceable);
+                const arr = labelReplaced.split('<br/>').filter((current) => current !== '');
+
+                return (
+                    <div
+                        className={classes.highlightedContainer}
+                        {...override.highlightedContainer}
+                    >
+                        {arr.map((current) => {
+                            if (current === matchingCharacters)
+                                return (
+                                    <span className={classes.highlighted} {...override.highlighted}>
+                                        {matchingCharacters}
+                                    </span>
+                                );
+                            else return current;
+                        })}
+                    </div>
+                );
+            },
+            [getMatchingCharacters, classes, highlightMatch, override],
+        );
+
         const formatOptionLabel = useCallback(
             (option) => {
-                if (customOption) return customOption(option);
-                else if (isMulti) return MenuMulti({ option, value: newValue, classes, override });
-                else return MenuSingle({ option, classes, override });
+                if (customOption) {
+                    return customOption(option, getMatchingCharacters);
+                } else if (isMulti)
+                    return MenuMulti({
+                        option,
+                        value: newValue,
+                        classes,
+                        override,
+                        getHighlighted,
+                    });
+                else
+                    return MenuSingle({
+                        option,
+                        classes,
+                        override,
+                        getHighlighted,
+                    });
             },
-            [isMulti, classes, override, newValue, customOption],
+            [
+                isMulti,
+                classes,
+                override,
+                newValue,
+                customOption,
+                getHighlighted,
+                getMatchingCharacters,
+            ],
         );
 
         const formatGroupLabel = useCallback(
@@ -492,6 +566,7 @@ const Select = memo(
             let menuIsOpen =
                 (focused && (!(loadOptions && isFuzzy) || !!innerOptions?.length)) || false;
             if (useAsSimpleSearch) menuIsOpen = false;
+            if (forceMenuIsOpen) menuIsOpen = true;
             let Indicator = DropdownIndicator;
             let additionalComponents = {};
             if ((loadOptions && isFuzzy) || useAsSimpleSearch || hideDropdownIndicator)
@@ -528,8 +603,8 @@ const Select = memo(
                 hideSelectedOptions: isMulti ? false : hideSelectedOptions,
                 closeMenuOnSelect: isMulti ? false : true,
                 menuPlacement: menuPlacementRef.current,
-                menuPosition: 'fixed',
-                menuPortalTarget: document.body,
+                menuPosition: menuPosition || 'fixed',
+                menuPortalTarget: useMenuPortal ? document.body : undefined,
                 loadOptions,
                 openMenuOnClick: !(loadOptions && isFuzzy),
                 openMenuOnFocus: !(loadOptions && isFuzzy),
@@ -621,7 +696,7 @@ const Select = memo(
                     }),
                     option: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
-                        ...optionsStyles({ data, isDisabled, isFocused, isSelected }),
+                        ...optionStyles({ data, isDisabled, isFocused, isSelected }),
                     }),
                     indicatorsContainer: (styles) => ({
                         ...styles,
@@ -670,6 +745,7 @@ const Select = memo(
                         ...newStyles.loadingMessage,
                         ...(override.loadingMessage?.style || {}),
                     }),
+                    ...override.styles,
                 },
                 ...override['react-select'],
             };
@@ -725,11 +801,15 @@ const Select = memo(
             controlStyles,
             placeholderStyles,
             valueContainerStyles,
-            optionsStyles,
+            optionStyles,
             indicatorSeparatorStyles,
             menuListStyles,
             multiValueLabelStyles,
             multiValueRemoveStyles,
+            withoutFilter,
+            menuPosition,
+            useMenuPortal,
+            forceMenuIsOpen,
         ]);
 
         let SelectComponent = RSelect;
@@ -761,7 +841,7 @@ Select.overrides = [
     'inputComponents',
     'control',
     'controlFocused',
-    'options',
+    'option',
     'optionFocused',
     'optionSelected',
     'optionsDisabled',
@@ -790,6 +870,7 @@ Select.overrides = [
     'actionIcon',
     'actionText',
     'actionTextWithIcon',
+    'styles',
 ];
 
 Select.defaultProps = {
@@ -813,6 +894,7 @@ Select.defaultProps = {
     cacheOptions: true,
     focusDefaultOption: true,
     withoutFilter: false,
+    useMenuPortal: true,
 };
 
 Select.propTypes = {
@@ -900,6 +982,13 @@ Select.propTypes = {
     cacheOptions: PropTypes.bool,
     /** Enable/disable focusing first option of the select */
     focusDefaultOption: PropTypes.bool,
+    /** Highlights the first matching characters in the fuzzy result options */
+    highlightMatch: PropTypes.bool,
+    menuPosition: PropTypes.oneOf(['absolute', 'fixed']),
+    /** false prints the menu as a sibiling of the control element, true prints the menu in a portal*/
+    useMenuPortal: PropTypes.bool,
+    forceMenuIsOpen: PropTypes.bool,
+    forceStartFocused: PropTypes.bool,
 };
 
 export default Select;
