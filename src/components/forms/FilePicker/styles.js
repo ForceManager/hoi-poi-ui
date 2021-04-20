@@ -217,4 +217,5 @@ export default (theme) => ({
             outline: 'none',
         },
     },
+    focused: {},
 });
