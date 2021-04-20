@@ -52,6 +52,7 @@ import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
 import Columns from './icons/Columns';
+import Crop from './icons/Crop';
 import Currency from './icons/Currency';
 import DateTime from './icons/DateTime';
 import Date from './icons/Date';
@@ -282,6 +283,7 @@ const ICONS = {
     draggableSort: DraggableSort,
     fileDownload: FileDownload,
     columns: Columns,
+    crop: Crop,
     currency: Currency,
     dateTime: DateTime,
     date: Date,

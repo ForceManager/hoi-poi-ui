@@ -129,6 +129,8 @@ Actions:
 <span> </span>
 <Icon name="workflow"/>
 <span> </span>
+<Icon name="crop"/>
+<span> </span>
 <Icon name="removeCircle"/>
 <span> </span>
 <Icon name="key"/>

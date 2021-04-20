@@ -27,6 +27,7 @@ export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
 export { default as DatePicker } from './components/forms/DatePicker';
 export { default as TimePicker } from './components/forms/TimePicker';
 export { default as FieldGroup } from './components/forms/FieldGroup';
+export { default as FilePicker } from './components/forms/FilePicker';
 export { default as Form } from './components/forms/Form';
 export { default as Input } from './components/forms/Input';
 export { default as Label } from './components/forms/Label';
