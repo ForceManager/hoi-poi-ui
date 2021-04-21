@@ -87,6 +87,7 @@ const Select = memo(
         useMenuPortal,
         forceMenuIsOpen,
         forceStartFocused,
+        getRef,
         ...props
     }) => {
         const selectRef = useRef();
@@ -579,7 +580,10 @@ const Select = memo(
             if (withoutFilter) filterOption = undefined;
 
             return {
-                ref: selectRef,
+                ref: (ref) => {
+                    getRef && getRef(ref);
+                    selectRef.current = ref;
+                },
                 className: selectClassName,
                 classNamePrefix: 'hoi-poi-select',
                 placeholder,
@@ -810,6 +814,7 @@ const Select = memo(
             menuPosition,
             useMenuPortal,
             forceMenuIsOpen,
+            getRef,
         ]);
 
         let SelectComponent = RSelect;
@@ -989,6 +994,7 @@ Select.propTypes = {
     useMenuPortal: PropTypes.bool,
     forceMenuIsOpen: PropTypes.bool,
     forceStartFocused: PropTypes.bool,
+    getRef: PropTypes.func,
 };
 
 export default Select;

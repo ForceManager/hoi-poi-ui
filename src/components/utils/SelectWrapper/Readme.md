@@ -758,6 +758,345 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+#### **Special Examples**
+
+SelectWrapper using Select Single as customOption with default open dropdown list and custom focus control:
+
+###### a) The popover will be closed after making a selection
+
+```jsx
+import { useState, useRef } from 'react';
+import { Chip, Select } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+const newSelectRef = useRef(null);
+const popoverRef = useRef(null);
+
+const onChange = (value) => {
+    setState({ value });
+    if (popoverRef && popoverRef.current) {
+        popoverRef.current.setPopupVisible(false);
+    }
+};
+
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+
+const getIsOpen = (isOpen) => {
+    setChipState({ isFolded: !isOpen });
+    if (newSelectRef && newSelectRef.current) {
+        if (isOpen)
+            setTimeout(() => {
+                newSelectRef.current.focus();
+            }, 50);
+    }
+};
+
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const getSelectRef = (ref) => {
+    if (ref) newSelectRef.current = ref;
+};
+
+const getPopoverRef = (ref) => {
+    if (ref) popoverRef.current = ref;
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <SelectWrapper
+        getIsOpen={getIsOpen}
+        getPopoverRef={getPopoverRef}
+        customOptions={
+            <Select
+                label="Lorem ipsum"
+                placeholder="Search"
+                loadOptions={loadOptions}
+                onChange={onChange}
+                value={state.value}
+                isFullWidth
+                highlightMatch
+                getRef={getSelectRef}
+                forceStartFocused={true}
+                forceMenuIsOpen={true}
+                useMenuPortal={false}
+                menuPosition="absolute"
+                autoFocus={true}
+                overrides={{
+                    styles: {
+                        menu: (base) => ({
+                            ...base,
+                            position: 'relative',
+                        }),
+                    },
+                }}
+            />
+        }
+    >
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+        >
+            Select One
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
+###### b) The popover will remain open after making a selection
+
+```jsx
+import { useState, useRef } from 'react';
+import { Chip, Select } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+const newSelectRef = useRef(null);
+
+const onChange = (value) => {
+    setState({ value });
+    if (newSelectRef && newSelectRef.current) {
+        setTimeout(() => {
+            newSelectRef.current.focus();
+        }, 50);
+    }
+};
+
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+
+const getIsOpen = (isOpen) => {
+    setChipState({ isFolded: !isOpen });
+    if (newSelectRef && newSelectRef.current) {
+        if (isOpen)
+            setTimeout(() => {
+                newSelectRef.current.focus();
+            }, 50);
+    }
+};
+
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const getSelectRef = (ref) => {
+    if (ref) newSelectRef.current = ref;
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <SelectWrapper
+        getIsOpen={getIsOpen}
+        customOptions={
+            <Select
+                label="Lorem ipsum"
+                placeholder="Search"
+                loadOptions={loadOptions}
+                onChange={onChange}
+                value={state.value}
+                isFullWidth
+                highlightMatch
+                getRef={getSelectRef}
+                forceStartFocused={true}
+                forceMenuIsOpen={true}
+                useMenuPortal={false}
+                menuPosition="absolute"
+                autoFocus={true}
+                overrides={{
+                    styles: {
+                        menu: (base) => ({
+                            ...base,
+                            position: 'relative',
+                        }),
+                    },
+                }}
+            />
+        }
+    >
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+        >
+            Select One
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
+SelectWrapper using Select Multi as customOption with default open dropdown list and custom focus control:
+
+```jsx
+import { useState, useRef } from 'react';
+import { Chip, Select } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+const newSelectRef = useRef(null);
+const popoverRef = useRef(null);
+
+const onChange = (value) => {
+    if (value.length > 0) setState({ value });
+    else setState({});
+};
+
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+
+const getIsOpen = (isOpen) => {
+    setChipState({ isFolded: !isOpen });
+    if (newSelectRef && newSelectRef.current) {
+        if (isOpen)
+            setTimeout(() => {
+                newSelectRef.current.focus();
+            }, 50);
+    }
+};
+
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const getSelectRef = (ref) => {
+    if (ref) newSelectRef.current = ref;
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <SelectWrapper
+        getIsOpen={getIsOpen}
+        customOptions={
+            <Select
+                label="Lorem ipsum"
+                placeholder="Search"
+                loadOptions={loadOptions}
+                onChange={onChange}
+                value={state.value}
+                isMulti
+                isFullWidth
+                highlightMatch
+                getRef={getSelectRef}
+                forceStartFocused={true}
+                forceMenuIsOpen={true}
+                useMenuPortal={false}
+                menuPosition="absolute"
+                autoFocus={true}
+                overrides={{
+                    styles: {
+                        menu: (base) => ({
+                            ...base,
+                            position: 'relative',
+                        }),
+                    },
+                }}
+            />
+        }
+    >
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+        >
+            Select One
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
 ### Component tree
 
 ---
