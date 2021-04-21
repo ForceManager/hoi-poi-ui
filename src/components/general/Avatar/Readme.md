@@ -204,3 +204,7 @@ import { Avatar } from 'hoi-poi-ui';
 ```
 
 ### Component tree
+
+-   root - root element
+-   [Icon](#/General?id=icon)
+-   [Text](#/Typography?id=text)
