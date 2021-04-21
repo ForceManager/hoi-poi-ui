@@ -37,6 +37,7 @@ module.exports = {
                 './src/components/forms/DatePicker/index.jsx',
                 './src/components/forms/TimePicker/index.jsx',
                 './src/components/forms/FieldGroup/index.jsx',
+                './src/components/forms/FilePicker/index.jsx',
                 './src/components/forms/Input/index.jsx',
                 './src/components/forms/Label/index.jsx',
                 './src/components/forms/Multiplier/index.jsx',

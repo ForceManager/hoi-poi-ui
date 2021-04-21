@@ -29,6 +29,7 @@ import ThickDisabled from './icons/ThickDisabled';
 import Funnel from './icons/Funnel';
 import ThickEnabledFilled from './icons/ThickEnabledFilled';
 import Folder from './icons/Folder';
+import FolderOpen from './icons/FolderOpen';
 import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
@@ -51,6 +52,17 @@ import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
 import Columns from './icons/Columns';
+import Crop from './icons/Crop';
+import Currency from './icons/Currency';
+import DateTime from './icons/DateTime';
+import Date from './icons/Date';
+import Decimals from './icons/Decimals';
+import ValueList from './icons/ValueList';
+import Integer from './icons/Integer';
+import CheckboxGroup from './icons/CheckboxGroup';
+import Percentage from './icons/Percentage';
+import Text from './icons/Text';
+import Switch from './icons/Switch';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -249,6 +261,7 @@ const ICONS = {
     arrowBottom: ArrowBottom,
     funnel: Funnel,
     folder: Folder,
+    folderOpen: FolderOpen,
     calendar: Calendar,
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
@@ -270,6 +283,18 @@ const ICONS = {
     draggableSort: DraggableSort,
     fileDownload: FileDownload,
     columns: Columns,
+    crop: Crop,
+    currency: Currency,
+    dateTime: DateTime,
+    date: Date,
+    decimals: Decimals,
+    valueList: ValueList,
+    integer: Integer,
+    checkboxGroup: CheckboxGroup,
+    percentage: Percentage,
+    text: Text,
+    switch: Switch,
+
     //Actions
     accountCheckin: AccountCheckin,
     accountDetails: AccountDetails,

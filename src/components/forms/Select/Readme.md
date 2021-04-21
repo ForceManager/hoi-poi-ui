@@ -138,6 +138,56 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Single with relative Menu display:
+
+```jsx
+import { useState } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        filterByKey
+        isRequired={true}
+        useMenuPortal={false}
+        menuPosition="absolute"
+        overrides={{
+            styles: {
+                menu: (base) => ({
+                    ...base,
+                    position: 'relative',
+                }),
+            },
+        }}
+    />
+</div>;
+```
+
 Single with custom dropdown icon:
 
 ```jsx
@@ -843,6 +893,7 @@ const loadOptions = (text, cb) =>
         onChange={onChange}
         value={state.value}
         isFuzzy
+        highlightMatch
     />
 </div>;
 ```
@@ -955,6 +1006,7 @@ const loadOptions = (text, cb) =>
         value={state.value}
         isFuzzy
         isMulti
+        highlightMatch
     />
 </div>;
 ```
