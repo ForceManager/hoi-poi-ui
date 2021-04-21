@@ -1,8 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getDataUri from './getDataUri';
 import { getOverrides, useClasses } from '../../../utils/overrides';
+import Icon from '../../general/Icon';
+import Text from '../../typography/Text';
+import { getFirstTwoInitials, removeAccents } from '../../../utils/string';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -12,8 +15,10 @@ function Avatar({
     classes: classesProp,
     overrides: overridesProps,
     className: classNameProps,
+    type,
     size,
     src,
+    icon,
     alt,
     placeholder,
     ...props
@@ -24,7 +29,7 @@ function Avatar({
     const [hadError, setHadError] = useState(false);
     const initialSrc = useRef(src).current;
 
-    const rootClassName = classnames(classes.root, classes[size], classNameProps);
+    const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProps);
     const override = getOverrides(overridesProps, Avatar.overrides);
     const rootProps = {
         ...props,
@@ -53,9 +58,23 @@ function Avatar({
         }
     }, [src, placeholder, initialSrc, defaultSrc, isImageLoaded, hadError]);
 
+    const content = useMemo(() => {
+        if (src || placeholder) {
+            return <img src={defaultSrc} alt={alt} />;
+        }
+        if (icon) {
+            return <Icon className={classes.icon} name={icon} />;
+        }
+        if (alt) {
+            const initials = getFirstTwoInitials(removeAccents(alt));
+            return <Text className={classes.initials}>{initials}</Text>;
+        }
+        return null;
+    }, [alt, classes.icon, classes.initials, defaultSrc, icon, placeholder, src]);
+
     return (
         <div {...rootProps} {...override.root}>
-            <img src={defaultSrc} alt={alt} />
+            {content}
         </div>
     );
 }
@@ -63,6 +82,7 @@ function Avatar({
 Avatar.overrides = ['root'];
 
 Avatar.defaultProps = {
+    type: 'round',
     size: 'medium',
 };
 
@@ -70,6 +90,8 @@ Avatar.propTypes = {
     src: PropTypes.string,
     placeholder: PropTypes.string,
     alt: PropTypes.string,
+    icon: PropTypes.string,
+    type: PropTypes.oneOf(['round', 'square']),
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
 };
 

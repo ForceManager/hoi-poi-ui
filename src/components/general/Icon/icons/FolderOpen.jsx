@@ -1,11 +1,10 @@
 import React from 'react';
 
 const FolderOpen = ({ color, ...props }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
         <path
-            d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"
+            d="M19 20H4a2 2 0 01-2-2V6c0-1.11.89-2 2-2h6l2 2h7a2 2 0 012 2H4v10l2.14-8h17.07l-2.28 8.5c-.23.87-1.01 1.5-1.93 1.5z"
             fill={color}
-            fillRule="evenodd"
         />
     </svg>
 );

@@ -172,7 +172,7 @@ function toggleState() {
 
 <div>
     <Checkbox onChange={toggleState} checked={state.checked} indeterminate={state.indeterminate} />
-</div>
+</div>;
 ```
 
 ### Component tree
