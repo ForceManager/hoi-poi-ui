@@ -45,7 +45,7 @@ let isOpen = state.isOpen || false;
 </div>;
 ```
 
-With buttons :
+With buttons:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
@@ -169,7 +169,7 @@ const [isOpen, setIsOpen] = useState({
 </div>;
 ```
 
-With buttons confirm disabled :
+With buttons confirm disabled:
 
 ```jsx
 import { Button, Text } from 'hoi-poi-ui';
@@ -418,6 +418,22 @@ const [isOpen, setIsOpen] = useState({
             duis nulla tortor volutpat. Sit aliquet iaculis posuere turpis. Magna orci, habitant
             cursus pellentesque vestibulum vitae. At pellentesque pharetra viverra quis erat integer
             pellentesque odio sed. Odio morbi aliquam in tortor pulvinar purus sed adipiscing mi.
+        </Text>
+    </Modal>
+    <span> </span>
+    <Button onClick={() => setIsOpen({ ...isOpen, full: !isOpen.full })}>Full</Button>
+    <Modal
+        title="Lorem modal ipsum dolor sit amet, consectetur adipiscing elit"
+        size="full"
+        isOpen={isOpen.full}
+        onRequestClose={() => setIsOpen({ ...isOpen, full: false })}
+    >
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui, morbi donec quis sed. Nisl
+            convallis enim quam arcu. Mi sapien mattis ut justo gravida diam nulla in. Tellus, donec
+            amet, urna praesent auctor. Cras nulla orci nisi, nunc venenatis massa. Ut est, lectus
+            adipiscing ut nunc augue proin nisi pellentesque. Molestie ac ac quis elit eu id est.
+            Enim et elementum quam accumsan.
         </Text>
     </Modal>
 </div>;

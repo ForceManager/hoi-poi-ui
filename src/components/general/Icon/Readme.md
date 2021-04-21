@@ -129,6 +129,8 @@ Actions:
 <span> </span>
 <Icon name="workflow"/>
 <span> </span>
+<Icon name="crop"/>
+<span> </span>
 <Icon name="removeCircle"/>
 <span> </span>
 <Icon name="key"/>
@@ -332,6 +334,8 @@ Icons:
 <Icon name="funnel" />
 <span> </span>
 <Icon name="folder" />
+<span> </span>
+<Icon name="folderOpen" />
 <span> </span>
 <Icon name="verticalDivider" />
 <span> </span>

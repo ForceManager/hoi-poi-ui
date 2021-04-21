@@ -9,17 +9,23 @@ describe('Modal', () => {
         const wrapper = mount(
             <HoiPoiProvider>
                 <Modal title="Lorem modal" isOpen={true}>
-                    Lorem ipsum
+                    Default
                 </Modal>
                 <Modal title="Lorem modal" size="small" isOpen={true}>
-                    Lorem ipsum
+                    Small
                 </Modal>
                 <Modal title="Lorem modal" size="large" isOpen={true}>
-                    Lorem ipsum
+                    Large
+                </Modal>
+                <Modal title="Lorem modal" size="big" isOpen={true}>
+                    Big
+                </Modal>
+                <Modal title="Lorem modal" size="full" isOpen={true}>
+                    Full
                 </Modal>
             </HoiPoiProvider>,
         );
-        expect(wrapper.find('.ReactModal__Content').contains('Lorem ipsum')).toEqual(true);
+        expect(wrapper.find('.ReactModal__Content').contains('Default')).toEqual(true);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
