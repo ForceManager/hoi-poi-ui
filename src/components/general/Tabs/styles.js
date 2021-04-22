@@ -98,7 +98,6 @@ export default (theme) => ({
             position: 'relative',
             '&::after': {
                 zIndex: 1,
-                boxSizing: 'border-box',
                 backgroundColor: theme.colors.neutral900,
                 height: 2,
                 top: '37px',
