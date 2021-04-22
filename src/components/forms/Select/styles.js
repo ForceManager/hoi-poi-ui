@@ -192,9 +192,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutral200,
         },
     },
-    optionSelected: {
-        backgroundColor: theme.colors.neutral200,
-    },
+    optionSelected: {},
     optionDisabled: {
         backgroundColor: 'none',
         cursor: 'default',
