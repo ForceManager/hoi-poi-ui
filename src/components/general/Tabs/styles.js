@@ -87,7 +87,6 @@ export default (theme) => ({
             lineHeight: '20px',
             cursor: 'pointer',
             ...theme.typography.defaultText,
-            textTransform: 'capitalize',
             color: theme.colors.neutral700,
             outline: 'none',
         },
