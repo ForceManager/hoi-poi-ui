@@ -17,16 +17,6 @@ export default (theme) => ({
             zoom: 1,
             transition: 'padding .45s',
         },
-        '& .hoi-poi-ui__tabs-ink-bar': {
-            zIndex: 1,
-            position: 'absolute',
-            boxSizing: 'border-box',
-            marginTop: '-3px',
-            backgroundColor: theme.colors.neutral900,
-            transformOrigin: '0 0',
-            width: 0,
-            height: 0,
-        },
         '& .hoi-poi-ui__tabs-tab-prev, & .hoi-poi-ui__tabs-tab-next': {
             WebkitUserSelect: 'none',
             MozUserSelect: 'none',
@@ -83,7 +73,7 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-nav:before': {
             display: 'table',
-            content: '" "',
+            content: '""',
         },
         '& .hoi-poi-ui__tabs-nav:after': {
             clear: 'both',
@@ -97,7 +87,6 @@ export default (theme) => ({
             lineHeight: '20px',
             cursor: 'pointer',
             ...theme.typography.defaultText,
-            textTransform: 'capitalize',
             color: theme.colors.neutral700,
             outline: 'none',
         },
@@ -105,6 +94,17 @@ export default (theme) => ({
             color: theme.colors.neutral900,
         },
         '& .hoi-poi-ui__tabs-tab-active, & .hoi-poi-ui__tabs-tab-active:hover': {
+            position: 'relative',
+            '&::after': {
+                zIndex: 1,
+                backgroundColor: theme.colors.neutral900,
+                height: 2,
+                top: '37px',
+                left: 0,
+                right: 0,
+                content: '""',
+                position: 'absolute',
+            },
             color: theme.colors.neutral900,
             cursor: 'default',
             transform: 'translateZ(0)',
