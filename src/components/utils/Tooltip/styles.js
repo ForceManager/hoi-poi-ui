@@ -1,4 +1,4 @@
-const arrowWidth = 3;
+const arrowWidth = 4;
 const distance = arrowWidth;
 
 export default (theme) => ({
@@ -9,14 +9,13 @@ export default (theme) => ({
             display: 'none',
         },
         '& .hoi-poi-tooltip-inner': {
-            padding: '3px 7px',
+            padding: '4px 8px',
             color: 'white',
-            ...theme.typography.defaultText,
-            fontSize: theme.typography.fontSizeSmall,
+            ...theme.typography.caption,
             textAlign: 'left',
             textDecoration: 'none',
-            backgroundColor: theme.colors.transparentBlack,
-            borderRadius: '3px',
+            backgroundColor: theme.colors.neutral800,
+            borderRadius: '4px',
         },
         '& .hoi-poi-tooltip-arrow': {
             position: 'absolute',
@@ -43,7 +42,7 @@ export default (theme) => ({
             bottom: distance - arrowWidth,
             marginLeft: -arrowWidth,
             borderWidth: `${arrowWidth}px ${arrowWidth}px  0`,
-            borderTopColor: theme.colors.transparentBlack,
+            borderTopColor: theme.colors.neutral800,
         },
         '&.hoi-poi-tooltip-placement-top .hoi-poi-tooltip-arrow': {
             left: '50%',
@@ -58,7 +57,7 @@ export default (theme) => ({
             left: distance - arrowWidth,
             marginTop: -arrowWidth,
             borderWidth: `${arrowWidth}px ${arrowWidth}px ${arrowWidth}px 0`,
-            borderRightColor: theme.colors.transparentBlack,
+            borderRightColor: theme.colors.neutral800,
         },
         '&.hoi-poi-tooltip-placement-right .hoi-poi-tooltip-arrow': {
             top: '50%',
@@ -74,7 +73,7 @@ export default (theme) => ({
             right: distance - arrowWidth,
             marginTop: -arrowWidth,
             borderWidth: `${arrowWidth}px 0 ${arrowWidth}px ${arrowWidth}px`,
-            borderLeftColor: theme.colors.transparentBlack,
+            borderLeftColor: theme.colors.neutral800,
         },
         '&.hoi-poi-tooltip-placement-left .hoi-poi-tooltip-arrow': {
             top: '50%',
@@ -91,7 +90,7 @@ export default (theme) => ({
             top: distance - arrowWidth,
             marginLeft: -arrowWidth,
             borderWidth: `0 ${arrowWidth}px ${arrowWidth}px`,
-            borderBottomColor: theme.colors.transparentBlack,
+            borderBottomColor: theme.colors.neutral800,
         },
         '&.hoi-poi-tooltip-placement-bottom .hoi-poi-tooltip-arrow': {
             left: '50%',
