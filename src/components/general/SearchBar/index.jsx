@@ -23,6 +23,7 @@ function SearchBar({
     forceBlurOnEnter,
     allowMultipleTypes,
     selectedTypesLiteral,
+    selectedTypesPlaceholder,
     onBlurSearch,
     useAsSimpleSearch,
     hideDropdownIndicator,
@@ -69,6 +70,7 @@ function SearchBar({
                     customOption={customTypeOption}
                     showNumSelected={allowMultipleTypes}
                     numSelectedLiteral={selectedTypesLiteral}
+                    placeholder={selectedTypesPlaceholder}
                     classes={{
                         inputComponents: classes.typeSelectorInput,
                         singleValue: classes.typeSingleValue,
@@ -87,13 +89,14 @@ function SearchBar({
         classes.typeSingleValue,
         classes.typeSmall,
         type,
+        allowMultipleTypes,
         override.typeDivider,
         override.TypeSelector,
         typeOptions,
         props.size,
-        allowMultipleTypes,
-        selectedTypesLiteral,
         customTypeOption,
+        selectedTypesLiteral,
+        selectedTypesPlaceholder,
     ]);
 
     // handleOnBlurSearch can be triggered in two differen scenarios
@@ -150,6 +153,7 @@ SearchBar.defaultProps = {
     forceBlurOnEnter: true,
     allowMultipleTypes: false,
     selectedTypesLiteral: '%@ Selected',
+    selectedTypesPlaceholder: 'Selected...',
     hideSelectedOptions: false,
     shouldSetValueOnChange: false,
     focusDefaultOption: true,
@@ -162,6 +166,7 @@ SearchBar.propTypes = {
     /** Allow multiple types selection */
     allowMultipleTypes: PropTypes.bool,
     selectedTypesLiteral: PropTypes.string,
+    selectedTypesPlaceholder: PropTypes.string,
     typeOptions: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
