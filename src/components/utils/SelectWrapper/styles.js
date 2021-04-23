@@ -50,7 +50,7 @@ export default (theme) => ({
     option: {
         width: '100%',
         minHeight: 36,
-        padding: '8px 12px',
+        padding: '8px 16px',
         boxSizing: 'border-box',
         display: 'flex',
         alignItems: 'center',
