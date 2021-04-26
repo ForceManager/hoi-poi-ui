@@ -183,20 +183,21 @@ export default (theme) => {
                 minHeight: '64px',
                 boxSizing: 'border-box',
                 marginBottom: '1rem',
-                padding: '20px',
+                padding: '12px 16px',
+                borderRadius: '8px',
                 display: 'flex',
                 justifyContent: 'space-between',
                 maxHeight: '800px',
                 overflow: 'hidden',
                 cursor: 'pointer',
                 direction: 'ltr',
-                background: theme.colors.text.black,
+                background: theme.colors.neutral900,
             },
             '& .Toastify__toast-body': {
                 margin: 'auto 0',
                 flex: '1',
-                ...theme.typography.defaultText,
-                color: theme.colors.text.white,
+                ...theme.typography.body,
+                color: theme.colors.neutralBase,
             },
             '& .Toastify__toast--rtl': {
                 direction: 'rtl',
@@ -204,10 +205,13 @@ export default (theme) => {
             '& .Toastify__toast--default': {},
             '& .Toastify__toast--info': {},
             '& .Toastify__toast--success': {
-                borderLeft: `3px solid ${theme.colors.green}`,
+                borderLeft: `8px solid ${theme.colors.green500}`,
             },
             '& .Toastify__toast--error': {
-                borderLeft: `3px solid ${theme.colors.red}`,
+                borderLeft: `8px solid ${theme.colors.red500}`,
+            },
+            '& .Toastify__toast--warning': {
+                borderLeft: `8px solid ${theme.colors.yellow500}`,
             },
         },
     };
