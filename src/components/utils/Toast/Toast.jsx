@@ -28,11 +28,26 @@ function Toast({
     // Classes
     const rootClassName = classnames(classes.root, {}, classNameProp);
 
+    const handleCloseToast = useCallback((closeToast) => {
+        return (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeToast();
+        };
+    }, []);
+
     const renderDefaultCloseButton = useCallback(
         ({ closeToast }) => {
-            return <Icon name="close" size="large" onClick={closeToast} {...override.close} />;
+            return (
+                <Icon
+                    name="close"
+                    size="large"
+                    onClick={handleCloseToast(closeToast)}
+                    {...override.close}
+                />
+            );
         },
-        [override.close],
+        [handleCloseToast, override.close],
     );
 
     let defaultCloseButton = useDefaultCloseButton ? renderDefaultCloseButton : null;
