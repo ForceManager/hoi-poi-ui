@@ -108,6 +108,7 @@ export default (theme) => ({
             color: theme.colors.neutral900,
             cursor: 'default',
             transform: 'translateZ(0)',
+            fontWeight: 500,
         },
         '& .hoi-poi-ui__tabs-tab-disabled, & .hoi-poi-ui__tabs-tab-disabled:hover': {
             cursor: 'default',
