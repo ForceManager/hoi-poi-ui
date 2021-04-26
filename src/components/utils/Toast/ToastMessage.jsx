@@ -36,7 +36,7 @@ ToastMessage.defaultProps = {
 ToastMessage.propTypes = {
     title: PropTypes.string,
     text: PropTypes.string,
-    type: PropTypes.oneOf(['info', 'success', 'error']),
+    type: PropTypes.oneOf(['info', 'success', 'error', 'warning']),
 };
 
 export default React.memo(ToastMessage);

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ToastContainer } from 'react-toastify';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
+import Icon from '../../general/Icon';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Toast');
 
@@ -17,6 +18,7 @@ function Toast({
     newestOnTop,
     position,
     autoClose,
+    useDefaultCloseButton,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -26,10 +28,19 @@ function Toast({
     // Classes
     const rootClassName = classnames(classes.root, {}, classNameProp);
 
+    const renderDefaultCloseButton = useCallback(
+        ({ closeToast }) => {
+            return <Icon name="close" size="large" onClick={closeToast} {...override.close} />;
+        },
+        [override.close],
+    );
+
+    let defaultCloseButton = useDefaultCloseButton ? renderDefaultCloseButton : null;
+
     const rootProps = {
         ...props,
         className: rootClassName,
-        closeButton: closeButton || false,
+        closeButton: defaultCloseButton || closeButton || false,
         closeButtonClassName: closeButtonClassName || '',
         hideProgressBar: true,
         autoClose: autoClose,
@@ -41,12 +52,13 @@ function Toast({
     return <ToastContainer {...rootProps} enableMultiContainer {...override['react-toastify']} />;
 }
 
-Toast.overrides = [];
+Toast.overrides = ['close'];
 
 Toast.defaultProps = {
     className: '',
     overrides: {},
     autoClose: 4000,
+    useDefaultCloseButton: false,
 };
 
 Toast.propTypes = {
@@ -60,6 +72,7 @@ Toast.propTypes = {
     newestOnTop: PropTypes.bool,
     position: PropTypes.oneOf(['top-right', 'top-left', 'bottom-right', 'bottom-left']),
     autoClose: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+    useDefaultCloseButton: PropTypes.bool,
 };
 
 export default React.memo(Toast);

@@ -13,6 +13,7 @@ const [state, setState] = useState({
     newestOnTop: false,
     closeOnClick: true,
     toastId: '',
+    useDefaultCloseButton: false,
 });
 
 let radioOptions = [
@@ -23,6 +24,10 @@ let radioOptions = [
     {
         label: 'Success',
         value: 'success',
+    },
+    {
+        label: 'Warning',
+        value: 'warning',
     },
     {
         label: 'Error',
@@ -90,17 +95,30 @@ let closeOnClickOptions = [
     },
 ];
 
-let onChange = (value) => setState({ type: value });
+let useDefaultCloseButton = [
+    {
+        label: 'false',
+        value: false,
+    },
+    {
+        label: 'true',
+        value: true,
+    },
+];
+
+let onChange = (value) => setState({ ...state, type: value });
 let onChangeTitle = (value) => {
     setState({ ...state, title: value });
 };
 let onChangeText = (value) => {
     setState({ ...state, text: value });
 };
-let onChangePosition = (value) => setState({ position: value });
-let onChangeAutoClose = (value) => setState({ autoClose: value });
-let onChangeNewestOnTop = (value) => setState({ newestOnTop: !state.newestOnTop });
-let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnClick });
+let onChangePosition = (value) => setState({ ...state, position: value });
+let onChangeAutoClose = (value) => setState({ ...state, autoClose: value });
+let onChangeNewestOnTop = (value) => setState({ ...state, newestOnTop: !state.newestOnTop });
+let onChangeCloseOnClick = (value) => setState({ ...state, closeOnClick: !state.closeOnClick });
+let onChangeUseDefaultCloseButton = (value) =>
+    setState({ ...state, useDefaultCloseButton: !state.useDefaultCloseButton });
 
 <div>
     <RadioGroup label="Toast type" options={radioOptions} onChange={onChange} value={state.type} />
@@ -130,11 +148,18 @@ let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnCli
         value={state.closeOnClick}
     />
     <RadioGroup
+        label="useDefaultCloseButton"
+        options={useDefaultCloseButton}
+        onChange={onChangeUseDefaultCloseButton}
+        value={state.useDefaultCloseButton}
+    />
+    <RadioGroup
         label="newestOnTop"
         options={newestOnTopOptions}
         onChange={onChangeNewestOnTop}
         value={state.newestOnTop}
     />
+
     <Toast position={state.position} autoClose={state.autoClose} newestOnTop={state.newestOnTop} />
     <br />
     <Button
@@ -144,6 +169,8 @@ let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnCli
                 type: state.type,
                 text: state.text,
                 title: state.title,
+                closeOnClick: state.closeOnClick,
+                useDefaultCloseButton: state.useDefaultCloseButton,
             })
         }
     >
@@ -155,6 +182,7 @@ let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnCli
         color="primary"
         onClick={() =>
             setState({
+                ...state,
                 toastId: toast({
                     content: <div className="custom-content">Component as content</div>,
                     closeButton: <div style={{ color: 'white' }}>close</div>,
@@ -163,6 +191,7 @@ let onChangeCloseOnClick = (value) => setState({ closeOnClick: !state.closeOnCli
                     autoClose: state.autoClose,
                     closeOnClick: state.closeOnClick,
                     className: 'custom-one',
+                    useDefaultCloseButton: state.useDefaultCloseButton,
                 }),
             })
         }

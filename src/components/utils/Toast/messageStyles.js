@@ -1,25 +1,31 @@
 export default (theme) => ({
     root: {
-        ...theme.typography.defaultText,
+        ...theme.typography.subtitle,
         fontWeight: '500',
         lineHeight: '20px',
     },
     title: {
-        color: theme.colors.text.white,
+        color: theme.colors.neutralBase,
         display: 'block',
     },
     message: {
-        color: theme.colors.text.white,
+        ...theme.typography.caption,
+        color: theme.colors.text.neutralBase,
         display: 'block',
     },
     success: {
         '&$title': {
-            color: theme.colors.text.green,
+            color: theme.colors.green500,
         },
     },
     error: {
         '&$title': {
-            color: theme.colors.text.red,
+            color: theme.colors.red500,
+        },
+    },
+    warning: {
+        '&$title': {
+            color: theme.colors.yellow500,
         },
     },
 });
