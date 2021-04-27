@@ -1,18 +1,32 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../general/Icon';
 
 const CustomCloseButton = memo(({ properties, closeToast }) => {
+    const handleCloseToast = useCallback(
+        (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeToast();
+        },
+        [closeToast],
+    );
+
     if (!properties.closeButton && !properties.useDefaultCloseButton) return null;
     let classes = ['HoiPoi__ToastCloseButton'];
     if (properties.closeButtonClassName) classes.push(properties.closeButtonClassName);
+
     return (
-        <div className={classes.join(' ')} onClick={closeToast}>
+        <>
             {properties.useDefaultCloseButton && (
-                <Icon name="close" size="large" onClick={closeToast} />
+                <Icon name="close" size="large" onClick={handleCloseToast} />
             )}
-            {!properties.useDefaultCloseButton && properties.closeButton}
-        </div>
+            {!properties.useDefaultCloseButton && (
+                <div className={classes.join(' ')} onClick={handleCloseToast}>
+                    {properties.closeButton}
+                </div>
+            )}
+        </>
     );
 });
 
