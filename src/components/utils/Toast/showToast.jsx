@@ -11,8 +11,16 @@ const TOAST_TYPES = {
     warning: toast.TYPE.WARNING,
 };
 
+const handleCloseToast = (closeToast) => {
+    return (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeToast();
+    };
+};
+
 const renderDefaultCloseButton = ({ closeToast }) => {
-    return <Icon name="close" size="large" onClick={closeToast} />;
+    return <Icon name="close" size="large" onClick={handleCloseToast(closeToast)} />;
 };
 
 const showToast = (props) => {
