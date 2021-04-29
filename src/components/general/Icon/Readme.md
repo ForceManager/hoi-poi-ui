@@ -139,6 +139,10 @@ Actions:
 <span> </span>
 <Icon name="powerOn"/>
 <span> </span>
+<Icon name="widget"/>
+<span> </span>
+<Icon name="report"/>
+<span> </span>
 ```
 
 Alert:
