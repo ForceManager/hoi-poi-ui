@@ -58,6 +58,7 @@ const Button = forwardRef(
                 [classes.fullWidth]: isFullWidth,
                 [classes.iconLeft]: icon && iconPosition === 'left',
                 [classes.iconRight]: icon && iconPosition === 'right',
+                [classes.iconOnly]: icon && !children,
             },
             classNameProp,
         );
