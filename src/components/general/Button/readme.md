@@ -118,6 +118,25 @@ Icon Right:
 <Button type="terciary" icon="cloudUpload" iconPosition="right">Push me</Button>
 ```
 
+Icon Only:
+
+```jsx
+<span> </span>
+<Button type="primary" icon="cloudUpload" />
+<span> </span>
+<Button type="primary-error" icon="cloudUpload" />
+<span> </span>
+<Button type="secondary" icon="cloudUpload" />
+<span> </span>
+<Button type="secondary-error" icon="cloudUpload" />
+<span> </span>
+<Button type="terciary" icon="cloudUpload" />
+<span> </span>
+<Button type="primary" icon="cloudUpload" size="small"/>
+<span> </span>
+<Button type="primary" icon="cloudUpload" size="big"/>
+```
+
 Full-width
 
 ```jsx

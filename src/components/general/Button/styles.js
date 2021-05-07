@@ -170,4 +170,18 @@ export default (theme) => ({
             marginLeft: 6,
         },
     },
+    iconOnly: {
+        '& $icon': {
+            margin: 0,
+        },
+        '&$big': {
+            padding: '0 13px',
+        },
+        '&$medium': {
+            padding: '0 8px',
+        },
+        '&$small': {
+            padding: '0 4px',
+        },
+    },
 });
