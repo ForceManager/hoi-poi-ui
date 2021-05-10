@@ -13,4 +13,16 @@ export default (theme) => ({
             textAlign: 'start',
         },
     },
+    isFullWidth: {
+        '& $Label': {
+            width: 'auto',
+            flex: 1,
+            flexShrink: 'initial',
+        },
+        '& $formControl': {
+            flex: 0,
+        },
+    },
+    Label: {},
+    formControl: {},
 });
