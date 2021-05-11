@@ -30,6 +30,8 @@ import Funnel from './icons/Funnel';
 import ThickEnabledFilled from './icons/ThickEnabledFilled';
 import Folder from './icons/Folder';
 import FolderOpen from './icons/FolderOpen';
+import FolderKey from './icons/FolderKey';
+import FolderKeyOpen from './icons/FolderKeyOpen';
 import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
@@ -264,6 +266,8 @@ const ICONS = {
     funnel: Funnel,
     folder: Folder,
     folderOpen: FolderOpen,
+    folderKey: FolderKey,
+    folderKeyOpen: FolderKeyOpen,
     calendar: Calendar,
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,

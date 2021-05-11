@@ -341,6 +341,10 @@ Icons:
 <span> </span>
 <Icon name="folderOpen" />
 <span> </span>
+<Icon name="folderKey" />
+<span> </span>
+<Icon name="folderKeyOpen" />
+<span> </span>
 <Icon name="verticalDivider" />
 <span> </span>
 <Icon name="cloudUpload" />
