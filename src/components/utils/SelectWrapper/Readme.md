@@ -48,19 +48,23 @@ const options = [
     {
         label: 'Lorem ipsum 1 with a really long label',
         value: 'lorem-ipsum-1',
+        className: 'lorem-ipsum--1',
     },
     {
         label: 'Lorem ipsum 2',
         value: 'lorem-ipsum-2',
+        className: 'lorem-ipsum--2',
     },
     {
         label: 'Lorem ipsum 3',
         value: 'lorem-ipsum-3',
+        className: 'lorem-ipsum--3',
         isDisabled: true,
     },
     {
         label: 'Lorem ipsum 4',
         value: 'lorem-ipsum-4',
+        className: 'lorem-ipsum--4',
     },
 ];
 

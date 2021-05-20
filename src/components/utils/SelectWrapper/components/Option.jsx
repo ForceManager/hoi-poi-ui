@@ -17,7 +17,7 @@ const Option = memo(
         checkBoxIsMonotone,
         isTruncated,
     }) => {
-        let rootClasses = [classes.option];
+        let rootClasses = [classes.option, option.className];
         if (option.isDisabled) rootClasses.push(classes.optionDisabled);
         if (option.subLabel) rootClasses.push(classes.optionTwoLines);
         if (isSelected) rootClasses.push(classes.optionSelected);
