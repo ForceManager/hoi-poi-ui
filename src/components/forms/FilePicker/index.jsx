@@ -54,6 +54,7 @@ function FilePicker({
     onRemove,
     overrides: overridesProp,
     previewImages,
+    singleImagePreview,
     title,
     subtitle,
     ...props
@@ -193,6 +194,19 @@ function FilePicker({
         maxFiles,
     ]);
 
+    const renderSingleImagePreview = useMemo(() => {
+        if (maxFiles !== 1 || !singleImagePreview || showDragzone) return;
+        return (
+            <div className={classes.singleImagePreview}>
+                <span
+                    style={{
+                        backgroundImage: `url("${URL.createObjectURL(files[0])}")`,
+                    }}
+                />
+            </div>
+        );
+    }, [classes.singleImagePreview, files, maxFiles, showDragzone, singleImagePreview]);
+
     let filePickerProps = {
         id,
         name,
@@ -204,6 +218,7 @@ function FilePicker({
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
+                {renderSingleImagePreview}
                 {showDragzone && (
                     <div className={dropZoneClassName} {...getRootProps()}>
                         <input {...getInputProps()} {...filePickerProps} />
