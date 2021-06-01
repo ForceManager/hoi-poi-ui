@@ -101,6 +101,8 @@ export default (theme) => ({
     },
     fileDataContainer: {
         display: 'flex',
+        marginRight: 20,
+        minWidth: 0,
     },
     fileIconContainer: {
         display: 'flex',
@@ -109,6 +111,7 @@ export default (theme) => ({
         width: 24,
         height: 24,
         marginRight: 8,
+        flexShrink: 0,
         '& span': {
             display: 'flex',
             width: '100%',
@@ -122,15 +125,27 @@ export default (theme) => ({
     fileTextContainer: {
         display: 'flex',
         alignItems: 'center',
+        minWidth: 0,
+    },
+    fileNameContainer: {
+        display: 'flex',
+        minWidth: 0,
     },
     fileName: {
         color: theme.colors.neutral900,
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: 'block',
     },
     fileSize: {
         marginLeft: 4,
         color: theme.colors.neutral700,
+        flexShrink: 0,
     },
-    actions: {},
+    actions: {
+        flexShrink: 0,
+    },
     clear: {
         cursor: 'pointer',
     },
