@@ -133,9 +133,6 @@ export default (theme) => ({
     },
     fileName: {
         color: theme.colors.neutral900,
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
         display: 'block',
     },
     fileSize: {

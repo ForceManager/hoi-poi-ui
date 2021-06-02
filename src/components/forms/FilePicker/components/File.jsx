@@ -76,9 +76,9 @@ function File({
                 <div className={classes.fileIconContainer}>{renderIcon}</div>
                 <div className={classes.fileTextContainer}>
                     <div className={classes.fileNameContainer}>
-                        <Tooltip placement="top" content={<span>{file.name}</span>}>
-                            <Text className={classes.fileName}>{file.name}</Text>
-                        </Tooltip>
+                        <Text className={classes.fileName} isTruncated useTooltip>
+                            {file.name}
+                        </Text>
                     </div>
                     {!error && <Text className={classes.fileSize}>({prettyBytes(file.size)})</Text>}
                     {error && error.length && (

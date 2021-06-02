@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import defaultTheme from '../../../utils/styles/defaultTheme';
 import { getOverrides, useClasses } from '../../../utils/overrides';
-
 import { createUseStyles } from '../../../utils/styles';
+import Tooltip from '../../utils/Tooltip';
+
 import styles from './styles';
+
 const useStyles = createUseStyles(styles, 'Text');
 
 function Text({
     children,
     isTruncated,
+    useTooltip,
     type,
     bold,
     color,
@@ -20,6 +23,8 @@ function Text({
     className: classNameProp,
     ...props
 }) {
+    const [tooltipContent, setTooltioContent] = useState(null);
+    const ref = useRef(null);
     const classes = useClasses(useStyles, classesProp);
     //Overrides
     const rootClassName = classnames(classes.root, classNameProp, classes[type], {
@@ -36,6 +41,20 @@ function Text({
 
     const style = {};
     if (color && defaultTheme.colors[color]) style.color = defaultTheme.colors[color];
+
+    useEffect(() => {
+        if (useTooltip && ref.current?.offsetWidth < ref.current?.scrollWidth)
+            setTooltioContent(<span>{children}</span>);
+    }, [children, useTooltip]);
+
+    if (useTooltip)
+        return (
+            <Tooltip placement="top" content={tooltipContent}>
+                <span ref={ref} className={rootClassName} {...rootProps} style={style}>
+                    {children}
+                </span>
+            </Tooltip>
+        );
 
     return (
         <span className={rootClassName} {...rootProps} style={style}>

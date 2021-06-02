@@ -104,6 +104,16 @@ Truncated:
 </Text>
 ```
 
+Tooltip:
+
+```jsx
+<Text isTruncated useTooltip>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat sit pellentesque tempor turpis
+    sed sollicitudin sit commodo. Nisi tristique etiam viverra nulla diam neque egestas. Pretium
+    enim tortor, donec pharetra neque erat at sit amet.
+</Text>
+```
+
 ### Component tree
 
 ---
