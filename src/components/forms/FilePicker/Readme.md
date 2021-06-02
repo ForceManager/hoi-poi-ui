@@ -160,7 +160,6 @@ const onRemove = (deletedFile) => {
         onRemove={onRemove}
         files={state}
         maxFiles={1}
-        isFullWidth
         previewImages
         singleImagePreview
         cropAspect={16 / 9}

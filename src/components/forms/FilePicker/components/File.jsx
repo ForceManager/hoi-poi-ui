@@ -75,8 +75,12 @@ function File({
             <div className={classes.fileDataContainer}>
                 <div className={classes.fileIconContainer}>{renderIcon}</div>
                 <div className={classes.fileTextContainer}>
-                    <Text className={classes.fileName}>{file.name}</Text>
-                    {!error && <Text className={classes.fileSize}>{prettyBytes(file.size)}</Text>}
+                    <div className={classes.fileNameContainer}>
+                        <Text className={classes.fileName} isTruncated useTooltip>
+                            {file.name}
+                        </Text>
+                    </div>
+                    {!error && <Text className={classes.fileSize}>({prettyBytes(file.size)})</Text>}
                     {error && error.length && (
                         <Text className={classes.fileErrorText}>{error}</Text>
                     )}
