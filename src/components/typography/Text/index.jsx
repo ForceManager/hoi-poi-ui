@@ -23,7 +23,7 @@ function Text({
     className: classNameProp,
     ...props
 }) {
-    const [tooltipContent, setTooltioContent] = useState(null);
+    const [tooltipContent, setTooltipContent] = useState(null);
     const ref = useRef(null);
     const classes = useClasses(useStyles, classesProp);
     //Overrides
@@ -44,7 +44,7 @@ function Text({
 
     useEffect(() => {
         if (useTooltip && ref.current?.offsetWidth < ref.current?.scrollWidth)
-            setTooltioContent(<span>{children}</span>);
+            setTooltipContent(<span>{children}</span>);
     }, [children, useTooltip]);
 
     if (useTooltip)
