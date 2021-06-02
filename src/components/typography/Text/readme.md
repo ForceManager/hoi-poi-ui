@@ -107,7 +107,7 @@ Truncated:
 Tooltip:
 
 ```jsx
-<Text tuseTooltip>Lorem Ipsum</Text>
+<Text useTooltip>Lorem Ipsum</Text>
 <br />
 <Text isTruncated useTooltip>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat sit pellentesque tempor turpis

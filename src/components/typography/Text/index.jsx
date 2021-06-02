@@ -163,6 +163,7 @@ Text.propTypes = {
     children: PropTypes.node,
     isTruncated: PropTypes.bool,
     bold: PropTypes.bool,
+    useTooltip: PropTypes.bool,
 };
 
 export default React.memo(Text);
