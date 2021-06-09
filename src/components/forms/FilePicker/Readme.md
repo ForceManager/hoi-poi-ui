@@ -113,13 +113,60 @@ const onRemove = (deletedFile) => {
         multiple
         isFullWidth
         previewImages
-        cropAspect={16 / 9}
         cropImages
     />
 </div>;
 ```
 
 Single Image Preview:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState([]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onCrop = (file, index) => {
+    const files = [...state];
+
+    files[index] = file;
+    setState(files);
+};
+
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
+};
+
+<div>
+    <FilePicker
+        label="File"
+        title="Drop files here"
+        subtitle="Logo image shouyld be at least 609x81px"
+        buttonLabel="Select file"
+        onCrop={onCrop}
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
+        maxFiles={1}
+        previewImages
+        singleImagePreview
+        cropImages
+    />
+</div>;
+```
+
+Crop aspect ratio:
 
 ```jsx
 import { useState } from 'react';

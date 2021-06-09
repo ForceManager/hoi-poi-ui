@@ -63,27 +63,39 @@ function FilePicker({
     const [crop, setCrop] = useState({ isOpen: false, file: null });
 
     const handleOnDrop = useCallback(
-        (droppedFiles) =>
-            onDrop &&
-            onDrop(
-                droppedFiles
-                    .map((file) =>
-                        Object.assign(file, {
-                            id: Date.now(),
-                        }),
-                    )
-                    .filter(
-                        (droppedFile) =>
-                            !files.some(
-                                (file) =>
-                                    (!filesData || !filesData[file.id]?.error) &&
-                                    file.name === droppedFile.name &&
-                                    file.size === droppedFile.size &&
-                                    file.type === droppedFile.type,
-                            ),
-                    ),
-            ),
-        [files, filesData, onDrop],
+        (droppedFiles) => {
+            if (
+                cropImages &&
+                onCrop &&
+                cropAspect &&
+                droppedFiles.length === 1 &&
+                imageTypes.includes(droppedFiles[0].type)
+            ) {
+                return setCrop({ isOpen: true, file: droppedFiles[0], index: -1 });
+            }
+            return (
+                onDrop &&
+                onDrop(
+                    droppedFiles
+                        .map((file) =>
+                            Object.assign(file, {
+                                id: Date.now(),
+                            }),
+                        )
+                        .filter(
+                            (droppedFile) =>
+                                !files.some(
+                                    (file) =>
+                                        (!filesData || !filesData[file.id]?.error) &&
+                                        file.name === droppedFile.name &&
+                                        file.size === droppedFile.size &&
+                                        file.type === droppedFile.type,
+                                ),
+                        ),
+                )
+            );
+        },
+        [cropAspect, cropImages, files, filesData, onCrop, onDrop],
     );
 
     const handleOnCrop = useCallback((file, index) => {
@@ -96,10 +108,10 @@ function FilePicker({
 
     const handleOnAcceptCrop = useCallback(
         (file) => {
-            onCrop && onCrop(file, crop.index);
+            crop.index === -1 ? onDrop && onDrop([file]) : onCrop && onCrop(file, crop.index);
             setCrop({ ...crop, isOpen: false });
         },
-        [crop, onCrop],
+        [crop, onCrop, onDrop],
     );
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
@@ -108,7 +120,7 @@ function FilePicker({
         disabled,
         maxSize,
         minSize,
-        multiple,
+        multiple: multiple && !cropAspect,
         ...props,
         noClick: true,
         noKeyboard: true,
