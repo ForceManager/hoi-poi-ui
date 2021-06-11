@@ -16,6 +16,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'FilePicker');
 
 const imageTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/bmp'];
+const imageExtensions = ['png', 'jpeg', 'jpg', 'webp', 'gif', 'bmp'];
 
 function FilePicker({
     accept,
@@ -60,7 +61,7 @@ function FilePicker({
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const [crop, setCrop] = useState({ isOpen: false, file: null });
+    const [crop, setCrop] = useState({ isOpen: false, file: null, isUrl: null });
 
     const handleOnDrop = useCallback(
         (droppedFiles) => {
@@ -98,8 +99,8 @@ function FilePicker({
         [cropAspect, cropImages, files, filesData, onCrop, onDrop],
     );
 
-    const handleOnCrop = useCallback((file, index) => {
-        setCrop({ isOpen: true, file, index });
+    const handleOnCrop = useCallback((file, index, isUrl) => {
+        setCrop({ isOpen: true, file, index, isUrl });
     }, []);
 
     const handleOnCancelCrop = useCallback(() => {
@@ -164,8 +165,12 @@ function FilePicker({
     const renderFiles = useMemo(() => {
         if (!files.length) return null;
         const filesList = files.map((file, i) => {
-            const preview = previewImages && imageTypes.includes(file.type);
-            const crop = cropImages && imageTypes.includes(file.type);
+            const isUrl = typeof file === 'string';
+            const isImage =
+                (!isUrl && imageTypes.includes(file.type)) ||
+                (isUrl && imageExtensions.includes(file.split('.').pop()));
+            const preview = previewImages && isImage;
+            const crop = cropImages && isImage;
             const data = filesData?.[file.id] || {};
 
             return (
@@ -179,6 +184,7 @@ function FilePicker({
                     error={data.error}
                     progress={data.progress}
                     file={file}
+                    isUrl={isUrl}
                     onCrop={handleOnCrop}
                     onRemove={onRemove}
                     overrides={overridesProp}
@@ -208,11 +214,15 @@ function FilePicker({
 
     const renderSingleImagePreview = useMemo(() => {
         if (maxFiles !== 1 || !singleImagePreview || showDragzone) return;
+        const isUrl = typeof files[0] === 'string';
+
         return (
             <div className={classes.singleImagePreview}>
                 <span
                     style={{
-                        backgroundImage: `url("${URL.createObjectURL(files[0])}")`,
+                        backgroundImage: `url("${
+                            isUrl ? files[0] : URL.createObjectURL(files[0])
+                        }")`,
                     }}
                 />
             </div>
@@ -262,6 +272,7 @@ function FilePicker({
                 classes={classesProp}
                 file={crop.file}
                 isOpen={crop.isOpen}
+                isUrl={crop.isUrl}
                 onAccept={handleOnAcceptCrop}
                 onCancel={handleOnCancelCrop}
                 confirmText={cropAcceptLabel}

@@ -19,6 +19,7 @@ function File({
     classes: classesProp,
     error,
     file,
+    isUrl,
     preview,
     crop,
     cropTooltip,
@@ -38,7 +39,12 @@ function File({
 
     const handleOnRemove = useCallback(() => onRemove(file), [file, onRemove]);
 
-    const handleOnCrop = useCallback(() => onCrop(file, index), [file, index, onCrop]);
+    const handleOnCrop = useCallback(() => onCrop(file, index, isUrl), [
+        file,
+        index,
+        isUrl,
+        onCrop,
+    ]);
 
     const renderIcon = useMemo(() => {
         if (error) return <Icon name="errorOutline" color={theme.colors.red500} />;
@@ -47,12 +53,12 @@ function File({
             return (
                 <span
                     style={{
-                        backgroundImage: `url("${URL.createObjectURL(file)}")`,
+                        backgroundImage: `url("${isUrl ? file : URL.createObjectURL(file)}")`,
                     }}
                 />
             );
         return <Icon name={FILE_TYPES[file.type] || 'file'} />;
-    }, [error, theme.colors.red500, loading, preview, file]);
+    }, [error, theme.colors.red500, loading, preview, isUrl, file]);
 
     const renderCrop = useMemo(() => {
         if (!crop) return null;
@@ -77,10 +83,12 @@ function File({
                 <div className={classes.fileTextContainer}>
                     <div className={classes.fileNameContainer}>
                         <Text className={classes.fileName} isTruncated useTooltip>
-                            {file.name}
+                            {isUrl ? file.split('/').pop() : file.name}
                         </Text>
                     </div>
-                    {!error && <Text className={classes.fileSize}>({prettyBytes(file.size)})</Text>}
+                    {!error && !isUrl && (
+                        <Text className={classes.fileSize}>({prettyBytes(file.size)})</Text>
+                    )}
                     {error && error.length && (
                         <Text className={classes.fileErrorText}>{error}</Text>
                     )}
