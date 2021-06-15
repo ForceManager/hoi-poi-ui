@@ -46,6 +46,7 @@ import AddMultipleUsers from './icons/AddMultipleUsers';
 import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
 import Clock from './icons/Clock';
+import ClockFilled from './icons/ClockFilled';
 import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
@@ -282,6 +283,7 @@ const ICONS = {
     smartPhone: SmartPhone,
     execute: ExecuteIcon,
     clock: Clock,
+    clockFilled: ClockFilled,
     videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,

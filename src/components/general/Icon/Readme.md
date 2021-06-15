@@ -373,6 +373,8 @@ Icons:
 <span> </span>
 <Icon name="clock" />
 <span> </span>
+<Icon name="clockFilled" />
+<span> </span>
 <Icon name="videoCamera" />
 <span> </span>
 <Icon name="chat"/>
