@@ -221,8 +221,7 @@ Preloaded Image from url:
 import { useState } from 'react';
 
 const imageUrl =
-    'https://fmcloudfrontsta.forcemanager.com/logos/59340-customerSidebarLogoSquareUrlWeb-20210610170245.png';
-// 'https://m.media-amazon.com/images/I/51v13RAJJ2L._AC_SR500,460_.jpg';
+    'https://www.vhv.rs/dpng/d/486-4864616_generic-company-logo-png-example-logo-png-transparent.png';
 const [state, setState] = useState([imageUrl]);
 const onDrop = (acceptedFiles) => {
     setState([...state, ...acceptedFiles]);
