@@ -46,7 +46,8 @@ function File({
                 .then((blob) => {
                     blob.name = file.split('/').pop();
                     onCrop(blob, index);
-                });
+                })
+                .catch(console.error);
         } else {
             onCrop(file, index);
         }
