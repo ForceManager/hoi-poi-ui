@@ -10,22 +10,12 @@ import styles from '../styles';
 
 const useStyles = createUseStyles(styles, 'FilePickerFile');
 
-const imageTypes = {
-    png: 'image/png',
-    jpeg: 'image/jpeg',
-    jpg: 'image/jpeg',
-    webp: 'image/webp',
-    gif: 'image/gif',
-    bmp: 'image/bmp',
-};
-
 function Crop({
     aspect,
     confirmText,
     cancelText,
     classes: classesProp,
     file,
-    isUrl,
     isOpen,
     onCancel,
     onAccept,
@@ -40,21 +30,16 @@ function Crop({
     // Overrides
     const override = getOverrides(overridesProp, Crop.overrides);
 
-    const image = useMemo(() => (isUrl ? file : file && URL.createObjectURL(file)) || null, [
-        file,
-        isUrl,
-    ]);
+    const src = useMemo(() => (file && URL.createObjectURL(file)) || null, [file]);
 
     const handleOnConfirm = useCallback(() => {
         const canvas = document.createElement('canvas');
-        const scaleX = imgRef.current.naturalWidth / imgRef.current.width + 200;
-        const scaleY = imgRef.current.naturalHeight / imgRef.current.height + 200;
+        const scaleX = imgRef.current.naturalWidth / imgRef.current.width;
+        const scaleY = imgRef.current.naturalHeight / imgRef.current.height;
         canvas.width = crop.width;
         canvas.height = crop.height;
         const ctx = canvas.getContext('2d');
-        const fileName = isUrl
-            ? file.split('/').pop()
-            : file.name.substr(0, file.name.lastIndexOf('.'));
+        const fileName = file.name.substr(0, file.name.lastIndexOf('.'));
         const fileExt = fileName.split('.').pop();
 
         ctx.drawImage(
@@ -68,16 +53,16 @@ function Crop({
             crop.width,
             crop.height,
         );
-        console.log(isUrl ? imageTypes[fileExt] : file.type);
+
         canvas.toBlob(
             (blob) => {
                 blob.name = `${fileName}_crop${fileExt}`;
                 onAccept(blob);
             },
-            isUrl ? imageTypes[fileExt] : file.type,
+            file.type,
             1,
         );
-    }, [crop.height, crop.width, crop.x, crop.y, file, isUrl, onAccept]);
+    }, [crop.height, crop.width, crop.x, crop.y, file, onAccept]);
 
     const onImageLoaded = useCallback((img) => {
         imgRef.current = img;
@@ -97,9 +82,9 @@ function Crop({
             {...override.crop}
         >
             <div className={classes.cropModalContent}>
-                {image && (
+                {src && (
                     <ReactCrop
-                        src={image}
+                        src={src}
                         crop={crop}
                         onImageLoaded={onImageLoaded}
                         onChange={setCrop}

@@ -39,12 +39,18 @@ function File({
 
     const handleOnRemove = useCallback(() => onRemove(file), [file, onRemove]);
 
-    const handleOnCrop = useCallback(() => onCrop(file, index, isUrl), [
-        file,
-        index,
-        isUrl,
-        onCrop,
-    ]);
+    const handleOnCrop = useCallback(() => {
+        if (isUrl) {
+            fetch(file)
+                .then((res) => res.blob())
+                .then((blob) => {
+                    blob.name = file.split('/').pop();
+                    onCrop(blob, index);
+                });
+        } else {
+            onCrop(file, index);
+        }
+    }, [file, index, isUrl, onCrop]);
 
     const renderIcon = useMemo(() => {
         if (error) return <Icon name="errorOutline" color={theme.colors.red500} />;

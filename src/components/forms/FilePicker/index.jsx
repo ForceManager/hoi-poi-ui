@@ -61,7 +61,7 @@ function FilePicker({
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const [crop, setCrop] = useState({ isOpen: false, file: null, isUrl: null });
+    const [crop, setCrop] = useState({ isOpen: false, file: null });
 
     const handleOnDrop = useCallback(
         (droppedFiles) => {
@@ -99,8 +99,8 @@ function FilePicker({
         [cropAspect, cropImages, files, filesData, onCrop, onDrop],
     );
 
-    const handleOnCrop = useCallback((file, index, isUrl) => {
-        setCrop({ isOpen: true, file, index, isUrl });
+    const handleOnCrop = useCallback((file, index) => {
+        setCrop({ isOpen: true, file, index });
     }, []);
 
     const handleOnCancelCrop = useCallback(() => {
@@ -272,7 +272,6 @@ function FilePicker({
                 classes={classesProp}
                 file={crop.file}
                 isOpen={crop.isOpen}
-                isUrl={crop.isUrl}
                 onAccept={handleOnAcceptCrop}
                 onCancel={handleOnCancelCrop}
                 confirmText={cropAcceptLabel}
