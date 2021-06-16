@@ -215,6 +215,57 @@ const onRemove = (deletedFile) => {
 </div>;
 ```
 
+Preloaded Image from url:
+
+```jsx
+import { useState } from 'react';
+
+const imageUrl =
+    'https://www.vhv.rs/dpng/d/486-4864616_generic-company-logo-png-example-logo-png-transparent.png';
+const [state, setState] = useState([imageUrl]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onCrop = (file, index) => {
+    const files = [...state];
+
+    files[index] = file;
+    setState(files);
+};
+
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
+};
+
+<div>
+    <FilePicker
+        label="File"
+        title="Drop files here"
+        subtitle="Logo image shouyld be at least 609x81px"
+        buttonLabel="Select file"
+        onCrop={onCrop}
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
+        maxFiles={1}
+        previewImages
+        singleImagePreview
+        cropAspect={16 / 9}
+        cropImages
+    />
+</div>;
+```
+
 Upload progress:
 
 ```jsx
