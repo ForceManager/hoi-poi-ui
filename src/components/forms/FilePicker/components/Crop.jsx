@@ -40,7 +40,7 @@ function Crop({
         canvas.height = crop.height;
         const ctx = canvas.getContext('2d');
         const fileName = file.name.substr(0, file.name.lastIndexOf('.'));
-        const fileExt = fileName.split('.').pop();
+        const fileExt = file.name.split('.').pop();
 
         ctx.drawImage(
             imgRef.current,
@@ -56,7 +56,7 @@ function Crop({
 
         canvas.toBlob(
             (blob) => {
-                blob.name = `${fileName}_crop${fileExt}`;
+                blob.name = `${fileName}_crop.${fileExt}`;
                 onAccept(blob);
             },
             file.type,
