@@ -68,6 +68,7 @@ import Text from './icons/Text';
 import Switch from './icons/Switch';
 import Report from './icons/Report';
 import Widget from './icons/Widget';
+import TableCog from './icons/TableCog';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -304,6 +305,7 @@ const ICONS = {
     switch: Switch,
     report: Report,
     widget: Widget,
+    tableCog: TableCog,
 
     //Actions
     accountCheckin: AccountCheckin,
