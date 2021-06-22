@@ -143,6 +143,8 @@ Actions:
 <span> </span>
 <Icon name="report"/>
 <span> </span>
+<Icon name="tableCog"/>
+<span> </span>
 ```
 
 Alert:
