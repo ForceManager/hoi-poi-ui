@@ -16,6 +16,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'FilePicker');
 
 const imageTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/bmp'];
+const imageExtensions = ['png', 'jpeg', 'jpg', 'webp', 'gif', 'bmp'];
 
 function FilePicker({
     accept,
@@ -54,6 +55,7 @@ function FilePicker({
     onRemove,
     overrides: overridesProp,
     previewImages,
+    singleImagePreview,
     title,
     subtitle,
     ...props
@@ -62,27 +64,39 @@ function FilePicker({
     const [crop, setCrop] = useState({ isOpen: false, file: null });
 
     const handleOnDrop = useCallback(
-        (droppedFiles) =>
-            onDrop &&
-            onDrop(
-                droppedFiles
-                    .map((file) =>
-                        Object.assign(file, {
-                            id: Date.now(),
-                        }),
-                    )
-                    .filter(
-                        (droppedFile) =>
-                            !files.some(
-                                (file) =>
-                                    (!filesData || !filesData[file.id]?.error) &&
-                                    file.name === droppedFile.name &&
-                                    file.size === droppedFile.size &&
-                                    file.type === droppedFile.type,
-                            ),
-                    ),
-            ),
-        [files, filesData, onDrop],
+        (droppedFiles) => {
+            if (
+                cropImages &&
+                onCrop &&
+                cropAspect &&
+                droppedFiles.length === 1 &&
+                imageTypes.includes(droppedFiles[0].type)
+            ) {
+                return setCrop({ isOpen: true, file: droppedFiles[0], index: -1 });
+            }
+            return (
+                onDrop &&
+                onDrop(
+                    droppedFiles
+                        .map((file) =>
+                            Object.assign(file, {
+                                id: Date.now(),
+                            }),
+                        )
+                        .filter(
+                            (droppedFile) =>
+                                !files.some(
+                                    (file) =>
+                                        (!filesData || !filesData[file.id]?.error) &&
+                                        file.name === droppedFile.name &&
+                                        file.size === droppedFile.size &&
+                                        file.type === droppedFile.type,
+                                ),
+                        ),
+                )
+            );
+        },
+        [cropAspect, cropImages, files, filesData, onCrop, onDrop],
     );
 
     const handleOnCrop = useCallback((file, index) => {
@@ -95,10 +109,10 @@ function FilePicker({
 
     const handleOnAcceptCrop = useCallback(
         (file) => {
-            onCrop && onCrop(file, crop.index);
+            crop.index === -1 ? onDrop && onDrop([file]) : onCrop && onCrop(file, crop.index);
             setCrop({ ...crop, isOpen: false });
         },
-        [crop, onCrop],
+        [crop, onCrop, onDrop],
     );
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
@@ -107,7 +121,7 @@ function FilePicker({
         disabled,
         maxSize,
         minSize,
-        multiple,
+        multiple: multiple && !cropAspect,
         ...props,
         noClick: true,
         noKeyboard: true,
@@ -151,8 +165,12 @@ function FilePicker({
     const renderFiles = useMemo(() => {
         if (!files.length) return null;
         const filesList = files.map((file, i) => {
-            const preview = previewImages && imageTypes.includes(file.type);
-            const crop = cropImages && imageTypes.includes(file.type);
+            const isUrl = typeof file === 'string';
+            const isImage =
+                (!isUrl && imageTypes.includes(file.type)) ||
+                (isUrl && imageExtensions.includes(file.split('.').pop()));
+            const preview = previewImages && isImage;
+            const crop = cropImages && isImage;
             const data = filesData?.[file.id] || {};
 
             return (
@@ -166,6 +184,7 @@ function FilePicker({
                     error={data.error}
                     progress={data.progress}
                     file={file}
+                    isUrl={isUrl}
                     onCrop={handleOnCrop}
                     onRemove={onRemove}
                     overrides={overridesProp}
@@ -193,6 +212,23 @@ function FilePicker({
         maxFiles,
     ]);
 
+    const renderSingleImagePreview = useMemo(() => {
+        if (maxFiles !== 1 || !singleImagePreview || showDragzone) return;
+        const isUrl = typeof files[0] === 'string';
+
+        return (
+            <div className={classes.singleImagePreview}>
+                <span
+                    style={{
+                        backgroundImage: `url("${
+                            isUrl ? files[0] : URL.createObjectURL(files[0])
+                        }")`,
+                    }}
+                />
+            </div>
+        );
+    }, [classes.singleImagePreview, files, maxFiles, showDragzone, singleImagePreview]);
+
     let filePickerProps = {
         id,
         name,
@@ -204,6 +240,7 @@ function FilePicker({
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
             <div className={classes.formControl} {...override.formControl}>
+                {renderSingleImagePreview}
                 {showDragzone && (
                     <div className={dropZoneClassName} {...getRootProps()}>
                         <input {...getInputProps()} {...filePickerProps} />

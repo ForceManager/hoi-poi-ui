@@ -30,7 +30,7 @@ function Crop({
     // Overrides
     const override = getOverrides(overridesProp, Crop.overrides);
 
-    const image = useMemo(() => (file && URL.createObjectURL(file)) || null, [file]);
+    const src = useMemo(() => (file && URL.createObjectURL(file)) || null, [file]);
 
     const handleOnConfirm = useCallback(() => {
         const canvas = document.createElement('canvas');
@@ -39,6 +39,8 @@ function Crop({
         canvas.width = crop.width;
         canvas.height = crop.height;
         const ctx = canvas.getContext('2d');
+        const fileName = file.name.substr(0, file.name.lastIndexOf('.'));
+        const fileExt = file.name.split('.').pop();
 
         ctx.drawImage(
             imgRef.current,
@@ -51,11 +53,10 @@ function Crop({
             crop.width,
             crop.height,
         );
+
         canvas.toBlob(
             (blob) => {
-                const fileName = file.name.substr(0, file.name.lastIndexOf('.'));
-                const fileExt = file.name.substr(file.name.lastIndexOf('.'), file.name.length);
-                blob.name = `${fileName}_crop${fileExt}`;
+                blob.name = `${fileName}_crop.${fileExt}`;
                 onAccept(blob);
             },
             file.type,
@@ -81,9 +82,9 @@ function Crop({
             {...override.crop}
         >
             <div className={classes.cropModalContent}>
-                {image && (
+                {src && (
                     <ReactCrop
-                        src={image}
+                        src={src}
                         crop={crop}
                         onImageLoaded={onImageLoaded}
                         onChange={setCrop}
@@ -102,7 +103,7 @@ Crop.propTypes = {
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
     classes: PropTypes.object,
-    file: PropTypes.object,
+    file: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     isOpen: PropTypes.bool,
     onCancel: PropTypes.func,
     onAccept: PropTypes.func,

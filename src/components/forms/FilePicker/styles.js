@@ -101,6 +101,8 @@ export default (theme) => ({
     },
     fileDataContainer: {
         display: 'flex',
+        marginRight: 20,
+        minWidth: 0,
     },
     fileIconContainer: {
         display: 'flex',
@@ -109,6 +111,7 @@ export default (theme) => ({
         width: 24,
         height: 24,
         marginRight: 8,
+        flexShrink: 0,
         '& span': {
             display: 'flex',
             width: '100%',
@@ -122,15 +125,24 @@ export default (theme) => ({
     fileTextContainer: {
         display: 'flex',
         alignItems: 'center',
+        minWidth: 0,
+    },
+    fileNameContainer: {
+        display: 'flex',
+        minWidth: 0,
     },
     fileName: {
         color: theme.colors.neutral900,
+        display: 'block',
     },
     fileSize: {
         marginLeft: 4,
         color: theme.colors.neutral700,
+        flexShrink: 0,
     },
-    actions: {},
+    actions: {
+        flexShrink: 0,
+    },
     clear: {
         cursor: 'pointer',
     },
@@ -218,4 +230,26 @@ export default (theme) => ({
         },
     },
     focused: {},
+    singleImagePreview: {
+        display: 'flex',
+        width: '100%',
+        height: 158,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 4,
+        boxSizing: 'border-box',
+        padding: 20,
+        marginBottom: 20,
+        border: `1px solid ${theme.colors.neutral400}`,
+        backgroundColor: theme.colors.neutral100,
+        '& span': {
+            display: 'flex',
+            width: '100%',
+            height: '100%',
+            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+        },
+    },
 });

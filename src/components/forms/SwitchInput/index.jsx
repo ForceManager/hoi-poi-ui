@@ -24,6 +24,7 @@ function SwitchInput({
     isRange,
     onChange,
     value,
+    isFullWidth,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -37,6 +38,7 @@ function SwitchInput({
         {
             [classes.isReadOnly]: isReadOnly,
             [classes.vertical]: labelMode === 'vertical',
+            [classes.isFullWidth]: isFullWidth,
         },
         classNameProp,
     );
@@ -58,9 +60,11 @@ function SwitchInput({
             {...props}
             error=""
             info=""
+            isFullWidth={isFullWidth}
             labelMode={labelMode}
             className={rootClassName}
             overrides={overridesProp}
+            classes={{ Label: classes.Label, formControl: classes.formControl }}
         >
             <Switch {...switchProps} />
         </InputWrapper>

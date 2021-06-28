@@ -30,6 +30,8 @@ import Funnel from './icons/Funnel';
 import ThickEnabledFilled from './icons/ThickEnabledFilled';
 import Folder from './icons/Folder';
 import FolderOpen from './icons/FolderOpen';
+import FolderKey from './icons/FolderKey';
+import FolderKeyOpen from './icons/FolderKeyOpen';
 import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
@@ -44,6 +46,7 @@ import AddMultipleUsers from './icons/AddMultipleUsers';
 import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
 import Clock from './icons/Clock';
+import ClockFilled from './icons/ClockFilled';
 import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
@@ -63,6 +66,9 @@ import CheckboxGroup from './icons/CheckboxGroup';
 import Percentage from './icons/Percentage';
 import Text from './icons/Text';
 import Switch from './icons/Switch';
+import Report from './icons/Report';
+import Widget from './icons/Widget';
+import TableCog from './icons/TableCog';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -262,6 +268,8 @@ const ICONS = {
     funnel: Funnel,
     folder: Folder,
     folderOpen: FolderOpen,
+    folderKey: FolderKey,
+    folderKeyOpen: FolderKeyOpen,
     calendar: Calendar,
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
@@ -276,6 +284,7 @@ const ICONS = {
     smartPhone: SmartPhone,
     execute: ExecuteIcon,
     clock: Clock,
+    clockFilled: ClockFilled,
     videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,
@@ -294,6 +303,9 @@ const ICONS = {
     percentage: Percentage,
     text: Text,
     switch: Switch,
+    report: Report,
+    widget: Widget,
+    tableCog: TableCog,
 
     //Actions
     accountCheckin: AccountCheckin,

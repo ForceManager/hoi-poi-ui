@@ -139,6 +139,12 @@ Actions:
 <span> </span>
 <Icon name="powerOn"/>
 <span> </span>
+<Icon name="widget"/>
+<span> </span>
+<Icon name="report"/>
+<span> </span>
+<Icon name="tableCog"/>
+<span> </span>
 ```
 
 Alert:
@@ -337,6 +343,10 @@ Icons:
 <span> </span>
 <Icon name="folderOpen" />
 <span> </span>
+<Icon name="folderKey" />
+<span> </span>
+<Icon name="folderKeyOpen" />
+<span> </span>
 <Icon name="verticalDivider" />
 <span> </span>
 <Icon name="cloudUpload" />
@@ -364,6 +374,8 @@ Icons:
 <Icon name="execute" />
 <span> </span>
 <Icon name="clock" />
+<span> </span>
+<Icon name="clockFilled" />
 <span> </span>
 <Icon name="videoCamera" />
 <span> </span>
