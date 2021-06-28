@@ -250,6 +250,13 @@ Navigation:
 <span> </span>
 ```
 
+Notification:
+
+```jsx
+<Icon name="rocket"/>
+<span> </span>
+```
+
 Content:
 
 ```jsx
