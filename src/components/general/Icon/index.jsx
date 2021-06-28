@@ -186,6 +186,9 @@ import SubdirectoryArrowLeft from './icons/navigation/SubdirectoryArrowLeft';
 import SubdirectoryArrowRight from './icons/navigation/SubdirectoryArrowRight';
 import UnfoldLess from './icons/navigation/UnfoldLess';
 
+// Notification
+import Rocket from './icons/notification/Rocket';
+
 //Content
 import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
@@ -419,6 +422,8 @@ const ICONS = {
     subdirectoryArrowLeft: SubdirectoryArrowLeft,
     subdirectoryArrowRight: SubdirectoryArrowRight,
     unfoldLess: UnfoldLess,
+    //Notification
+    rocket: Rocket,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
