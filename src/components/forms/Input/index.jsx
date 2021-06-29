@@ -22,6 +22,7 @@ function Input({
     id,
     name,
     type,
+    autoFocus,
     value,
     label,
     labelMode,
@@ -103,6 +104,7 @@ function Input({
             },
             [onEnter],
         ),
+        autoFocus,
         ...override.input,
     };
 

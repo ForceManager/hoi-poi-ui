@@ -60,6 +60,39 @@ let onChange = (value) => setState({ value });
 />;
 ```
 
+Focused
+
+```jsx
+import { useState } from 'react';
+
+let inputs = [
+    {
+        label: 'Lorem ipsum',
+        name: 'lorem',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        name: 'lorem2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        name: 'lorem3',
+    },
+];
+
+const [state, setState] = useState({});
+let onChange = (value) => setState({ value });
+<InputGroup
+    label="Lorem ipsum"
+    placeholder="Type here"
+    inputs={inputs}
+    onChange={onChange}
+    value={state.value}
+    isRequired
+    autoFocus
+/>;
+```
+
 Default vertical label
 
 ```jsx

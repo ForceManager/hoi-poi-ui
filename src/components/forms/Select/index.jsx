@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { default as RSelect } from 'react-select';
@@ -54,12 +54,13 @@ function Select({
     isFuzzy,
     isValueObject,
     filterByKey,
+    autoFocus,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     // State
     const [innerOptions, setInnerOptions] = useState(options);
-    const [focused, setFocused] = useState(false);
+    const [focused, setFocused] = useState(autoFocus);
     const [lazyOptions, setLazyOptions] = useState({
         areLoaded: false,
         options: null,
@@ -100,6 +101,8 @@ function Select({
         hint,
         ...override.Label,
     };
+
+    useEffect(() => setFocused(autoFocus), [autoFocus]);
 
     const onRemove = useCallback(
         (itemForRemove) => {
