@@ -22,6 +22,7 @@ function InputGroup({
     onBlur,
     onFocus,
     onEnter,
+    autoFocus,
     value,
     labelMode,
     isFullWidth,
@@ -119,6 +120,7 @@ function InputGroup({
         name: inputs[0].name,
         label: inputs[0].label,
         value: value[inputs[0].name],
+        autoFocus: autoFocus || inputs[0].autoFocus,
         onChange: onChangeInput,
         onFocus: onFocusInput,
         onBlur: onBlurInput,
@@ -158,6 +160,7 @@ function InputGroup({
                         name={input.name}
                         label={input.label}
                         value={value[input.name]}
+                        autoFocus={input.autoFocus}
                         onChange={onChangeInput}
                         onBlur={onBlurInput}
                         overrides={{ Label: { classes: { text: classes.hiddenInputLabel } } }}
