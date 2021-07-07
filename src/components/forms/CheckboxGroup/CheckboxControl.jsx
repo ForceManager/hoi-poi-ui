@@ -25,7 +25,7 @@ function CheckboxControl({
 
     const onChangeCheckbox = useCallback(
         (e) => {
-            e.stopPropagation();
+            e.stopPropagation && e.stopPropagation();
             onChange && onChange(option.value, e);
         },
         [onChange, option],
