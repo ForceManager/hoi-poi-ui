@@ -96,6 +96,26 @@ const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' })
 </div>;
 ```
 
+Bulk:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (e) => setState({ value: e && e.target ? e.target.value : '' });
+<div>
+    <Input
+        label="Lorem ipsum"
+        placeholder="Write here"
+        onChange={onChange}
+        value={state.value}
+        isBulk
+        bulkEditLabel="Click to edit"
+        bulkCancelLabel="Cancel"
+    />
+</div>;
+```
+
 Custom component:
 
 ```jsx

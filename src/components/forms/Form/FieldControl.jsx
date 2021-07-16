@@ -39,6 +39,11 @@ function FieldControl({
     value,
     error,
     customFields,
+    isBulk,
+    bulkEditLabel,
+    bulkCancelLabel,
+    onBulkEdit,
+    onBulkCancel,
     ...props
 }) {
     const onChangeField = useCallback(
@@ -73,6 +78,22 @@ function FieldControl({
         [onEnter, field],
     );
 
+    const onBulkEditField = useCallback(
+        (f) => {
+            console.log('onBulkEditField', f);
+            onBulkEdit && onBulkEdit(field);
+        },
+        [onBulkEdit, field],
+    );
+
+    const onBulkCancelField = useCallback(
+        (f) => {
+            console.log('onBulkCancelField', f);
+            onBulkCancel && onBulkCancel(field);
+        },
+        [onBulkCancel, field],
+    );
+
     if (!field || !field.type) return null;
     let Field = FIELD_MAP[field.type];
     let component = customFields && customFields[field.type];
@@ -93,6 +114,11 @@ function FieldControl({
         error,
         customFields,
         component,
+        isBulk,
+        bulkEditLabel,
+        bulkCancelLabel,
+        onBulkEdit: onBulkEditField,
+        onBulkCancel: onBulkCancelField,
         overrides: overridesProp,
     };
     let attrs = field.attrs || {};
