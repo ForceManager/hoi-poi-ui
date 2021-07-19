@@ -141,7 +141,11 @@ Actions:
 <span> </span>
 <Icon name="widget"/>
 <span> </span>
+<Icon name="newWidget"/>
+<span> </span>
 <Icon name="report"/>
+<span> </span>
+<Icon name="newReport"/>
 <span> </span>
 <Icon name="tableCog"/>
 <span> </span>
@@ -353,6 +357,8 @@ Icons:
 <Icon name="folderKey" />
 <span> </span>
 <Icon name="folderKeyOpen" />
+<span> </span>
+<Icon name="newFolder" />
 <span> </span>
 <Icon name="verticalDivider" />
 <span> </span>

@@ -32,6 +32,7 @@ import Folder from './icons/Folder';
 import FolderOpen from './icons/FolderOpen';
 import FolderKey from './icons/FolderKey';
 import FolderKeyOpen from './icons/FolderKeyOpen';
+import NewFolder from './icons/NewFolder';
 import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
@@ -66,7 +67,9 @@ import CheckboxGroup from './icons/CheckboxGroup';
 import Percentage from './icons/Percentage';
 import Text from './icons/Text';
 import Switch from './icons/Switch';
+import NewReport from './icons/NewReport';
 import Report from './icons/Report';
+import NewWidget from './icons/NewWidget';
 import Widget from './icons/Widget';
 import TableCog from './icons/TableCog';
 
@@ -273,6 +276,7 @@ const ICONS = {
     folderOpen: FolderOpen,
     folderKey: FolderKey,
     folderKeyOpen: FolderKeyOpen,
+    newFolder: NewFolder,
     calendar: Calendar,
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
@@ -307,7 +311,9 @@ const ICONS = {
     text: Text,
     switch: Switch,
     report: Report,
+    newReport: NewReport,
     widget: Widget,
+    newWidget: NewWidget,
     tableCog: TableCog,
 
     //Actions
