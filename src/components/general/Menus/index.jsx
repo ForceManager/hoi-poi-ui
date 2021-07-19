@@ -69,7 +69,10 @@ function Menus({
                                         : classnames(classes.menuItem, classes.clickable)
                                 }
                             >
-                                {item.title}
+                                <div className={classes.menuItemContent}>
+                                    {item.title}
+                                    {item.description}
+                                </div>
                             </MenuItem>
                         ))}
                 </SubMenu>
