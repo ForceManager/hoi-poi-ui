@@ -35,6 +35,7 @@ export default (theme) => {
             '& .rc-menu-sub': {
                 padding: '0',
                 margin: '0',
+                minWidth: 'auto !important',
             },
 
             '&.rc-menu-submenu-hidden': {
@@ -42,9 +43,7 @@ export default (theme) => {
             },
         },
         menuItem: {
-            height: '36px',
-            paddingLeft: '16px',
-            paddingRight: '16px',
+            padding: '8px 12px',
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'row-reverse',
@@ -57,7 +56,9 @@ export default (theme) => {
                 marginRight: '10px',
             },
         },
-
+        menuItemContent: {
+            flex: 1,
+        },
         clickable: {
             cursor: 'pointer',
             '&:hover': {
