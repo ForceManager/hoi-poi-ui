@@ -6,7 +6,11 @@ export default ({ option, value, classes, override, getHighlighted }) => {
     let bulletClasses = [classes.optionLabelBullet];
     let textClasses = [classes.optionLabelText];
 
-    if (option.isDisabled) {
+    let isDisabled = option.isDisabled;
+    if (override.optionLabel && override.optionLabel.getIsDisabled)
+        isDisabled = override.optionLabel.getIsDisabled(option, isDisabled);
+
+    if (isDisabled) {
         bulletClasses.push(classes.optionLabelBulletDisabled);
     } else if (option.type) {
         if (option.type === 'primary') bulletClasses.push(classes.optionLabelBulletPrimary);
@@ -14,7 +18,7 @@ export default ({ option, value, classes, override, getHighlighted }) => {
         if (option.type === 'success') bulletClasses.push(classes.optionLabelBulletSuccess);
     }
 
-    if (option.isDisabled) {
+    if (isDisabled) {
         textClasses.push(classes.disabledText);
     }
 
@@ -24,7 +28,7 @@ export default ({ option, value, classes, override, getHighlighted }) => {
                 className={classes.optionLabelCheckbox}
                 checked={isSelected}
                 color="orange"
-                isDisabled={option.isDisabled || false}
+                isDisabled={isDisabled || false}
                 {...override.optionLabelCheckbox}
             />
             {option.type && (

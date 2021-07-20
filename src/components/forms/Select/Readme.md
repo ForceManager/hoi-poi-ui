@@ -540,6 +540,145 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Multi With Custom Colors:
+
+```jsx
+import { useState } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: '1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: '2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: '3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: '4',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: '5',
+    },
+];
+const [state, setState] = useState([
+    {
+        label: 'Lorem ipsum 1',
+        value: '1',
+    },
+]);
+
+const onChange = (value) => setState({ value });
+const primary = {
+    1: '#FF521B',
+    2: '#820B8A',
+    3: '#7261A3',
+    4: '#4F5D75',
+    5: '#395756',
+};
+const secondary = {
+    1: '#FC9E4F',
+    2: '#AF9AB2',
+    3: '#8C7EB4',
+    4: '#637492',
+    5: '#496F6E',
+};
+
+const getCanChange = (data, action) => {
+    if (action.action === 'deselect-option' && data.length === 0) return false;
+    return true;
+};
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        isMulti={true}
+        isClearable={true}
+        getCanChange={getCanChange}
+        overrides={{
+            multiValue: {
+                getStyles: ({ data }) => {
+                    return {
+                        backgroundColor: primary[data.value],
+                        '&:hover': {
+                            backgroundColor: secondary[data.value],
+                        },
+                    };
+                },
+            },
+            multiValueLabel: {
+                getStyles: ({ data }) => {
+                    return {
+                        color: 'white',
+                    };
+                },
+            },
+            multiValueRemove: {
+                getStyles: ({ data }) => {
+                    let showClose = true;
+
+                    if (state.value.length > 1) showClose = true;
+                    else if (state.value.length > 0 && state.value[0].value === data.value) {
+                        showClose = false;
+                    }
+                    return {
+                        display: showClose ? 'flex' : 'none',
+                        '& svg path': {
+                            fill: 'white',
+                        },
+                        '&:hover': {
+                            backgroundColor: 'initial',
+                            '& svg path': {
+                                fill: 'white',
+                            },
+                        },
+                    };
+                },
+            },
+            clearIndicator: {
+                getStyles: () => {
+                    return {
+                        display: 'none',
+                    };
+                },
+            },
+            indicatorSeparator: {
+                getStyles: () => {
+                    return {
+                        display: 'none',
+                    };
+                },
+            },
+            optionLabel: {
+                getIsDisabled: (data, isDisabled) => {
+                    if (isDisabled && typeof isDisabled === 'boolean') return isDisabled;
+                    if (
+                        state.value &&
+                        state.value.length === 1 &&
+                        state.value[0].value === data.value
+                    ) {
+                        return true;
+                    }
+                    return false;
+                },
+            },
+        }}
+    />
+</div>;
+```
+
 Multi with num selected fields:
 
 ```jsx

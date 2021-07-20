@@ -88,6 +88,7 @@ const Select = memo(
         forceMenuIsOpen,
         forceStartFocused,
         getRef,
+        getCanChange,
         ...props
     }) => {
         const selectRef = useRef();
@@ -159,6 +160,7 @@ const Select = memo(
 
         const handleOnChange = useCallback(
             (data, action) => {
+                if (getCanChange && !getCanChange(data, action)) return;
                 if (shouldSetValueOnChange) setNewValue(data);
                 if (!isMulti) setFocused(false);
                 onChange && onChange(data, action);
@@ -170,7 +172,7 @@ const Select = memo(
                     setNewInputValue('');
                 }
             },
-            [isMulti, onChange, newInputValue, shouldSetValueOnChange],
+            [isMulti, onChange, newInputValue, shouldSetValueOnChange, getCanChange],
         );
 
         const setMenuPlacement = useCallback(
@@ -366,16 +368,28 @@ const Select = memo(
         );
 
         const multiValueLabelStyles = useCallback(
-            ({ isDisabled }) => {
+            ({ data, isDisabled, isFocused, isSelected }) => {
                 let styles = {
                     ...newStyles.multiValueLabel,
                     ...(override.multiValueLabel?.style || {}),
+                    ...(override.multiValueLabel?.getStyles?.({
+                        data,
+                        isDisabled,
+                        isFocused,
+                        isSelected,
+                    }) || {}),
                 };
                 if (isDisabled) {
                     styles = {
                         ...styles,
                         ...newStyles.multiValueLabelDisabled,
                         ...(override.multiValueLabelDisabled?.style || {}),
+                        ...(override.multiValueLabelDisabled?.getStyles?.({
+                            data,
+                            isDisabled,
+                            isFocused,
+                            isSelected,
+                        }) || {}),
                     };
                 }
 
@@ -385,16 +399,28 @@ const Select = memo(
         );
 
         const multiValueRemoveStyles = useCallback(
-            ({ isDisabled }) => {
+            ({ data, isDisabled, isFocused, isSelected }) => {
                 let styles = {
                     ...newStyles.multiValueRemove,
                     ...(override.multiValueRemove?.style || {}),
+                    ...(override.multiValueRemove?.getStyles?.({
+                        data,
+                        isDisabled,
+                        isFocused,
+                        isSelected,
+                    }) || {}),
                 };
                 if (isDisabled) {
                     styles = {
                         ...styles,
                         ...newStyles.multiValueRemoveDisabled,
                         ...(override.multiValueRemoveDisabled?.style || {}),
+                        ...(override.multiValueRemoveDisabled?.getStyles?.({
+                            data,
+                            isDisabled,
+                            isFocused,
+                            isSelected,
+                        }) || {}),
                     };
                 }
 
@@ -711,11 +737,13 @@ const Select = memo(
                         ...styles,
                         ...newStyles.clearIndicator,
                         ...(override.clearIndicator?.style || {}),
+                        ...(override.clearIndicator?.getStyles?.() || {}),
                     }),
                     indicatorSeparator: (styles) => ({
                         ...styles,
                         ...indicatorSeparatorStyles,
                         ...(override.indicatorSeparator?.style || {}),
+                        ...(override.indicatorSeparator?.getStyles?.() || {}),
                     }),
                     dropdownIndicator: (styles) => ({
                         ...styles,
@@ -726,11 +754,19 @@ const Select = memo(
                         ...styles,
                         ...menuListStyles,
                     }),
-                    multiValue: (styles) => ({
-                        ...styles,
-                        ...newStyles.multiValue,
-                        ...(override.multiValue?.style || {}),
-                    }),
+                    multiValue: (styles, { data, isDisabled, isFocused, isSelected }) => {
+                        return {
+                            ...styles,
+                            ...newStyles.multiValue,
+                            ...(override.multiValue?.style || {}),
+                            ...(override.multiValue?.getStyles?.({
+                                data,
+                                isDisabled,
+                                isFocused,
+                                isSelected,
+                            }) || {}),
+                        };
+                    },
                     multiValueLabel: (styles, { data, isDisabled, isFocused, isSelected }) => ({
                         ...styles,
                         ...multiValueLabelStyles({ data, isDisabled, isFocused, isSelected }),
@@ -852,12 +888,18 @@ Select.overrides = [
     'optionsDisabled',
     'valueContainer',
     'valueContainerDisabled',
+    'input',
+    'group',
+    'groupHeading',
+    'indicatorsContainer',
+    'clearIndicator',
     'placeholder',
     'placeholderDisabled',
-    'multipleValueLabel',
-    'multipleValueLabelDisabled',
-    'multipleValueRemove',
-    'multipleValueRemoveDisabled',
+    'multiValue',
+    'multiValueLabel',
+    'multiValueLabelDisabled',
+    'multiValueRemove',
+    'multiValueRemoveDisabled',
     'optionLabel',
     'optionLabelIcon',
     'optionLabelCustomIcon',
