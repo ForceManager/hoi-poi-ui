@@ -223,7 +223,7 @@ export default (theme) => ({
     },
     cropCanvas: {
         position: 'relative',
-        overflow: 'auto',
+        overflow: 'hidden',
         ...reactCropStyles(theme),
         '&:focus': {
             outline: 'none',

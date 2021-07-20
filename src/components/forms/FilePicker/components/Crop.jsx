@@ -24,7 +24,7 @@ function Crop({
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
-    const [crop, setCrop] = useState({ aspect });
+    const [crop, setCrop] = useState({});
     const imgRef = useRef();
 
     // Overrides
@@ -64,10 +64,70 @@ function Crop({
         );
     }, [crop.height, crop.width, crop.x, crop.y, file, onAccept]);
 
-    const onImageLoaded = useCallback((img) => {
-        imgRef.current = img;
-        return false;
-    }, []);
+    const onImageLoaded = useCallback(
+        (img) => {
+            imgRef.current = img;
+            const imageAspect = img.width / img.height;
+            let width;
+            let height;
+            if (aspect && imageAspect > 1) {
+                // Image landscape & aspect
+                if (aspect > 1) {
+                    // Crop landscape
+                    if (imageAspect < aspect) {
+                        // Crop more landscape than image
+                        width = img.width * 0.6;
+                        height = width / aspect;
+                    } else {
+                        // Crop less landscape or equal than image
+                        height = img.height * 0.6;
+                        width = height * aspect;
+                    }
+                } else {
+                    // Crop Portrait or square
+                    height = img.height * 0.6;
+                    width = height * aspect;
+                }
+            } else if (aspect) {
+                // Image Portrait or square & aspect
+                if (aspect < 1) {
+                    // Crop Portrait
+                    if (imageAspect > aspect) {
+                        // Crop more landscape than image
+                        height = img.height * 0.6;
+                        width = height / aspect;
+                    } else {
+                        // Crop less landscape or equal than image
+                        width = img.width * 0.6;
+                        height = width / aspect;
+                    }
+                } else {
+                    // Crop landscape or square
+                    width = img.width * 0.6;
+                    height = width / aspect;
+                }
+            } else if (imageAspect > 1) {
+                // Image landscape
+                width = img.height * 0.6;
+                height = img.height * 0.6;
+            } else {
+                // Image Portrait or square
+                width = img.width * 0.6;
+                height = img.width * 0.6;
+            }
+
+            setCrop({
+                aspect,
+                x: (img.width - width) / 2,
+                y: (img.height - height) / 2,
+                width,
+                height,
+                unit: 'px',
+            });
+            return false;
+        },
+        [aspect],
+    );
 
     return (
         <Modal
