@@ -2,10 +2,12 @@ import React, { useCallback, useMemo } from 'react';
 import { components } from 'react-select';
 import Link from '../../../typography/Link';
 import Icon from '../../../general/Icon';
-import defaultTheme from '../../../../utils/styles/defaultTheme';
 import Text from '../../../typography/Text';
 
+import { useTheme } from '../../../../utils/styles';
+
 export default React.memo(({ children, ...props }) => {
+    const theme = useTheme();
     const {
         className,
         actionContainerClassName,
@@ -26,8 +28,7 @@ export default React.memo(({ children, ...props }) => {
 
             let finalIcon;
             if (icon) finalIcon = icon;
-            else if (iconType)
-                finalIcon = <Icon name={iconType} color={defaultTheme.colors.orange500} />;
+            else if (iconType) finalIcon = <Icon name={iconType} color={theme.colors.orange500} />;
 
             let textClasses = [actionTextClassName];
             let textOverride = { ...override.actionText };
@@ -56,17 +57,25 @@ export default React.memo(({ children, ...props }) => {
                     )}
                     <div className={textClasses} {...textOverride}>
                         {action.isLink && <Link>{action.label}</Link>}
-                        {!action.isLink && <Text type="button">{action.label}</Text>}
+                        {!action.isLink && (
+                            <Text color="orange500" type="subtitle">
+                                {action.label}
+                            </Text>
+                        )}
                     </div>
                 </div>
             );
         },
         [
+            theme.colors.orange500,
+            actionTextClassName,
+            override.actionText,
+            override.action,
+            override.actionIcon,
+            override.actionTextWithIcon,
             actionClassName,
             actionIconClassName,
-            actionTextClassName,
             actionTextWithIconClassName,
-            override,
             onClickAction,
         ],
     );
