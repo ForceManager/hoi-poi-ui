@@ -73,6 +73,7 @@ import Report from './icons/Report';
 import NewWidget from './icons/NewWidget';
 import Widget from './icons/Widget';
 import TableCog from './icons/TableCog';
+import SandBox from './icons/SandBox';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -319,6 +320,7 @@ const ICONS = {
     widget: Widget,
     newWidget: NewWidget,
     tableCog: TableCog,
+    sandBox: SandBox,
 
     //Actions
     accountCheckin: AccountCheckin,
