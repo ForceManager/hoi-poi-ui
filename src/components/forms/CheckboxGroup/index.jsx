@@ -52,7 +52,9 @@ function CheckboxGroup({
     };
 
     const labelProps = {
-        className: classes.Label,
+        className: classnames(classes.Label, {
+            [classes.isFullWidth]: isFullWidth,
+        }),
         hint,
         ...override.Label,
     };
