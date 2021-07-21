@@ -16,7 +16,7 @@ export default React.memo((props) => {
 
         props.selectProps.onChange(newValue, {
             action: 'remove-value',
-            removedValue: props.data,
+            option: props.data,
         });
     };
 
