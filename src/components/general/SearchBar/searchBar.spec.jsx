@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';

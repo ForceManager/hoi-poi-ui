@@ -52,6 +52,7 @@ import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
 import Send from './icons/Send';
+import ScheduleSend from './icons/ScheduleSend';
 import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
@@ -102,6 +103,9 @@ import Email from './icons/actions/Email';
 import EmailLate from './icons/actions/EmailLate';
 import EmailReceive from './icons/actions/EmailReceive';
 import Event from './icons/actions/Event';
+import Weekly from './icons/actions/Weekly';
+import Monthly from './icons/actions/Monthly';
+import Branch from './icons/actions/Branch';
 import EventDetail from './icons/actions/EventDetail';
 import ExitToApp from './icons/actions/ExitToApp';
 import Expand from './icons/actions/Expand';
@@ -344,7 +348,10 @@ const ICONS = {
     email: Email,
     emailLate: EmailLate,
     emailReceive: EmailReceive,
+    branch: Branch,
     event: Event,
+    weekly: Weekly,
+    monthly: Monthly,
     eventDetail: EventDetail,
     exitToApp: ExitToApp,
     expand: Expand,
@@ -466,6 +473,7 @@ const ICONS = {
     starHalf: StarHalf,
     starsCircle: StarsCircle,
     send: Send,
+    scheduleSend: ScheduleSend,
     //Raw
     lockRaw: LockRaw,
     closeRaw: CloseRaw,

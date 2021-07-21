@@ -32,19 +32,6 @@ export default (theme) => ({
         alignItems: 'center',
         cursor: 'pointer',
         transition: 'all 0.15s ease',
-        '&:hover': {
-            '& $actionIcon': {
-                '& svg path': {
-                    fill: theme.colors.orange600,
-                },
-            },
-            '& $actionText': {
-                color: theme.colors.orange600,
-            },
-            '& $actionTextWithIcon': {
-                color: theme.colors.orange600,
-            },
-        },
     },
     actionIcon: {
         width: 20,
@@ -132,7 +119,7 @@ export default (theme) => ({
     groupLabel: {
         padding: '6px 0px',
         ...theme.typography.subtitle,
-        color: theme.colors.neutral700,
+        color: theme.colors.neutral900,
         textTransform: 'initial',
     },
     inputComponents: {
@@ -305,5 +292,12 @@ export default (theme) => ({
     highlightedContainer: {},
     highlighted: {
         backgroundColor: theme.colors.yellow200,
+    },
+    singleValueIcon: {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        marginRight: 8,
+        width: 18,
+        height: 18,
     },
 });

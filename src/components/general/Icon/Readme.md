@@ -53,7 +53,13 @@ Actions:
 <span> </span>
 <Icon name="emailReceive"/>
 <span> </span>
+<Icon name="branch"/>
+<span> </span>
 <Icon name="event"/>
+<span> </span>
+<Icon name="weekly"/>
+<span> </span>
+<Icon name="monthly"/>
 <span> </span>
 <Icon name="eventDetail"/>
 <span> </span>
@@ -397,6 +403,8 @@ Icons:
 <Icon name="chatFilled"/>
 <span> </span>
 <Icon name="send"/>
+<span> </span>
+<Icon name="scheduleSend"/>
 <span> </span>
 <Icon name="emptyAvatar"/>
 <span> </span>
