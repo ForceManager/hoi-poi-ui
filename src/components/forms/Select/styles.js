@@ -124,7 +124,7 @@ export default (theme) => ({
     },
     inputComponents: {
         width: 320,
-        minWidth: 150,
+        minWidth: 100,
     },
     control: {
         ...theme.typography.body,
