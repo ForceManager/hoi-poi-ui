@@ -3,7 +3,7 @@ export default (theme) => ({
     Label: {
         width: 153,
         marginRight: 17,
-        padding: '8px 0',
+        padding: '11px 0',
     },
     formControl: {
         position: 'relative',
@@ -24,6 +24,9 @@ export default (theme) => ({
         borderRadius: 4,
         border: `solid 1px ${theme.colors.neutral400}`,
         padding: 8,
+        '&:last-child': {
+            marginBottom: 0,
+        },
     },
     radioLabel: {
         marginLeft: 10,
@@ -44,13 +47,16 @@ export default (theme) => ({
     },
     verticalLabel: {
         display: 'block',
-        padding: '12px 0 11px 0',
+        padding: '8px 0',
         marginLeft: '0 !important',
+        '& $Label': {
+            padding: '0 0 8px 0',
+        },
     },
     horizontalLabel: {
         display: 'flex',
         alignItems: 'flex-start',
-        padding: '12px 0 11px 0',
+        padding: '8px 0',
     },
     vertical: {},
     horizontal: {
