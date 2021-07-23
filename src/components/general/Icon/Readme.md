@@ -129,6 +129,8 @@ Actions:
 <span> </span>
 <Icon name="thumbUp"/>
 <span> </span>
+<Icon name="sandBox"/>
+<span> </span>
 <Icon name="visibility"/>
 <span> </span>
 <Icon name="visibilityOff"/>
