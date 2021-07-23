@@ -54,7 +54,7 @@ function Text({
 
     const textContainer = useMemo(
         () => (
-            <span ref={ref} className={rootClassName} {...rootProps} style={style}>
+            <span ref={ref} className={rootClassName} style={style} {...rootProps}>
                 {children}
             </span>
         ),
