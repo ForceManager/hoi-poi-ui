@@ -3,7 +3,6 @@ export default (theme) => ({
     Label: {
         width: 153,
         marginRight: 17,
-        padding: '6px 0',
     },
     error: {
         ...theme.typography.smallText,
@@ -17,7 +16,6 @@ export default (theme) => ({
         display: 'flex',
         flexDirection: 'column',
         width: 290,
-        padding: '5px 0',
         cursor: 'pointer',
     },
     isFullWidth: {
@@ -28,6 +26,9 @@ export default (theme) => ({
         alignItems: 'center',
         lineHeight: '20px',
         marginBottom: 14,
+        '&:last-child': {
+            marginBottom: 0,
+        },
     },
     checkboxLabel: {
         marginLeft: 10,
@@ -47,7 +48,7 @@ export default (theme) => ({
     },
     vertical: {
         display: 'block',
-        padding: '12px 0 11px 0',
+        padding: '8px 0',
         marginLeft: '0 !important',
         '& $formControl': {
             marginTop: 10,
@@ -56,6 +57,6 @@ export default (theme) => ({
     horizontal: {
         display: 'flex',
         alignItems: 'flex-start',
-        padding: '12px 0 11px 0',
+        padding: '8px 0',
     },
 });
