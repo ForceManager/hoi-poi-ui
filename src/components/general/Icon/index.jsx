@@ -74,6 +74,7 @@ import NewWidget from './icons/NewWidget';
 import Widget from './icons/Widget';
 import TableCog from './icons/TableCog';
 import SandBox from './icons/SandBox';
+import Settings from './icons/Settings';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -145,6 +146,17 @@ import Impersonate from './icons/actions/Impersonate';
 import RemoveCircle from './icons/actions/RemoveCircle';
 import Key from './icons/actions/Key';
 import PowerOn from './icons/actions/PowerOn';
+import CalendarViewToday from './icons/actions/CalendarViewToday';
+import CalendarViewWeek from './icons/actions/CalendarViewWeek';
+import CalendarViewMonth from './icons/actions/CalendarViewMonth';
+import Update from './icons/actions/Update';
+
+//Communication
+import Message from './icons/communication/Message';
+import Comment from './icons/communication/Comment';
+
+//Map
+import TimeZone from './icons/map/TimeZone';
 
 //Alert
 import AddAlert from './icons/alert/AddAlert';
@@ -321,6 +333,7 @@ const ICONS = {
     newWidget: NewWidget,
     tableCog: TableCog,
     sandBox: SandBox,
+    settings: Settings,
 
     //Actions
     accountCheckin: AccountCheckin,
@@ -392,6 +405,15 @@ const ICONS = {
     removeCircle: RemoveCircle,
     key: Key,
     powerOn: PowerOn,
+    calendarViewToday: CalendarViewToday,
+    calendarViewWeek: CalendarViewWeek,
+    calendarViewMonth: CalendarViewMonth,
+    update: Update,
+    //Communication
+    message: Message,
+    comment: Comment,
+    //Map
+    timeZone: TimeZone,
     //Alert
     addAlert: AddAlert,
     asterisk: Asterisk,

@@ -157,6 +157,30 @@ Actions:
 <span> </span>
 <Icon name="tableCog"/>
 <span> </span>
+<Icon name="calendarViewToday"/>
+<span> </span>
+<Icon name="calendarViewWeek"/>
+<span> </span>
+<Icon name="calendarViewMonth"/>
+<span> </span>
+<Icon name="update"/>
+<span> </span>
+```
+
+Communication:
+
+```jsx
+<Icon name="message"/>
+<span> </span>
+<Icon name="comment"/>
+<span> </span>
+```
+
+Map
+
+```jsx
+<Icon name="timeZone"/>
+<span> </span>
 ```
 
 Alert:
@@ -435,6 +459,8 @@ Icons:
 <Icon name="text"/>
 <span> </span>
 <Icon name="switch"/>
+<span> </span>
+<Icon name="settings"/>
 <span> </span>
 ```
 
