@@ -436,6 +436,7 @@ exports[`Link is disabled 1`] = `
     >
       <Link
         isDisabled={true}
+        isTruncated={false}
         onClick={[Function]}
         overrides={Object {}}
         size="big"
@@ -891,6 +892,7 @@ exports[`Link is rendered as a link 1`] = `
     >
       <Link
         href="https://github.com/ForceManager/hoi-poi-ui"
+        isTruncated={false}
         overrides={Object {}}
         type="body"
       >
@@ -1341,6 +1343,7 @@ exports[`Link is rendered with different props 1`] = `
       }
     >
       <Link
+        isTruncated={false}
         overrides={Object {}}
         size="big"
         type="body"
@@ -1354,6 +1357,7 @@ exports[`Link is rendered with different props 1`] = `
         </button>
       </Link>
       <Link
+        isTruncated={false}
         overrides={Object {}}
         size="medium"
         type="body"
@@ -1367,6 +1371,7 @@ exports[`Link is rendered with different props 1`] = `
         </button>
       </Link>
       <Link
+        isTruncated={false}
         overrides={Object {}}
         size="small"
         type="body"
@@ -1819,6 +1824,7 @@ exports[`Link is rendered without crashes 1`] = `
       }
     >
       <Link
+        isTruncated={false}
         overrides={Object {}}
         type="body"
       >
