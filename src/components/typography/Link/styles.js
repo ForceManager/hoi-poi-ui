@@ -28,4 +28,10 @@ export default (theme) => ({
     },
     body: { ...theme.typography.body },
     caption: { ...theme.typography.caption },
+    truncated: {
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: 'inherit',
+    },
 });

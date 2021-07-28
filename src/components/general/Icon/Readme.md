@@ -163,6 +163,8 @@ Actions:
 <span> </span>
 <Icon name="calendarViewMonth"/>
 <span> </span>
+<Icon name="calendarViewWorkDay"/>
+<span> </span>
 <Icon name="update"/>
 <span> </span>
 ```
