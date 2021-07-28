@@ -16,6 +16,7 @@ function Link({
     href,
     type,
     target,
+    isTruncated,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -25,6 +26,7 @@ function Link({
     // Classes
     const rootClassName = classnames(classes.root, classNameProp, classes[type], {
         [classes.isDisabled]: isDisabled,
+        [classes.truncated]: href && isTruncated,
     });
 
     const rootProps = {
@@ -53,6 +55,7 @@ Link.overrides = ['root'];
 Link.defaultProps = {
     overrides: {},
     type: 'body',
+    isTruncated: false,
 };
 
 Link.propTypes = {
@@ -66,6 +69,7 @@ Link.propTypes = {
     href: PropTypes.string,
     /** native <a/> target */
     target: PropTypes.string,
+    isTruncated: PropTypes.bool,
 };
 
 export default React.memo(Link);

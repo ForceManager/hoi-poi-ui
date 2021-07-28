@@ -149,6 +149,7 @@ import PowerOn from './icons/actions/PowerOn';
 import CalendarViewToday from './icons/actions/CalendarViewToday';
 import CalendarViewWeek from './icons/actions/CalendarViewWeek';
 import CalendarViewMonth from './icons/actions/CalendarViewMonth';
+import CalendarViewWorkDay from './icons/actions/CalendarViewWorkDay';
 import Update from './icons/actions/Update';
 
 //Communication
@@ -408,6 +409,7 @@ const ICONS = {
     calendarViewToday: CalendarViewToday,
     calendarViewWeek: CalendarViewWeek,
     calendarViewMonth: CalendarViewMonth,
+    calendarViewWorkDay: CalendarViewWorkDay,
     update: Update,
     //Communication
     message: Message,
