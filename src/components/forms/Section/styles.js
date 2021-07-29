@@ -9,11 +9,11 @@ export default (theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        height: 40,
+        height: 36,
         boxSizing: 'border-box',
         '&:hover': {
             '& $Text': {
-                color: theme.colors.neutral800,
+                color: `${theme.colors.neutral800} !important`,
             },
             '& $icon': {
                 '& svg path': {
@@ -34,10 +34,16 @@ export default (theme) => ({
                 fill: theme.colors.neutral900,
             },
         },
+        '& $trashIcon': {
+            display: 'inherit',
+        },
+        '& $BadgeNotification': {
+            display: 'none',
+        },
     },
     headerActiveFields: {
         '& $Text': {
-            color: theme.colors.neutral900,
+            color: `${theme.colors.neutral900} !important`,
         },
         '& $icon': {
             '& svg path': {
@@ -48,6 +54,7 @@ export default (theme) => ({
     headerContent: {
         width: '100%',
         display: 'flex',
+        alignItems: 'center',
     },
     isExpandable: {
         cursor: 'pointer',
@@ -114,5 +121,18 @@ export default (theme) => ({
         '& [class*="formControl"] > div': {
             width: '100%',
         },
+    },
+    withRemove: {
+        '&:hover': {
+            '& $trashIcon': {
+                display: 'inherit',
+            },
+            '& $BadgeNotification': {
+                display: 'none',
+            },
+        },
+    },
+    trashIcon: {
+        display: 'none',
     },
 });
