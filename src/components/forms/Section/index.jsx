@@ -23,9 +23,9 @@ const Section = memo(
         isExpandable,
         defaultOpen,
         onChange,
+        onRemove,
         activeFields,
         orientation,
-        ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
         const [isOpen, setIsOpen] = useState(onChange ? isOpenProp : defaultOpen);
@@ -48,12 +48,22 @@ const Section = memo(
             [classes.isExpandable]: isExpandable,
             [classes.open]: isOpen,
             [classes.headerActiveFields]: !!activeFields,
+            [classes.withRemove]: !!onRemove,
         });
 
         const onToggle = useCallback(() => {
             onChange && onChange(!isOpen);
             !onChange && setIsOpen(!isOpen);
         }, [isOpen, onChange]);
+
+        const onInnerRemove = useCallback(
+            (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onRemove && onRemove();
+            },
+            [onRemove],
+        );
 
         const renderTitle = useMemo(() => {
             if (typeof title === 'string') {
@@ -93,6 +103,13 @@ const Section = memo(
                                 {renderTitle}
                             </div>
                             {newActiveFields}
+                            {onRemove && (
+                                <Icon
+                                    onClick={onInnerRemove}
+                                    className={classes.trashIcon}
+                                    name="delete"
+                                />
+                            )}
                         </div>
                     </div>
                     <AnimateHeight

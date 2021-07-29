@@ -42,6 +42,36 @@ const onChange = (value) => {
 </div>;
 ```
 
+Removable Section With ActiveFields
+
+```jsx
+import { Input } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({ value: 'Lorem ipsum', activeFields: 1 });
+const onChange = (value) => {
+    setState({ value, activeFields: value ? 1 : 0 });
+};
+
+const onRemove = () => console.log('Remove');
+
+<div style={{ padding: 20, backgroundColor: '#F4F5F6' }}>
+    <Section
+        title="Title here"
+        activeFields={state.activeFields}
+        onRemove={onRemove}
+        defaultOpen={false}
+    >
+        <Input
+            label="Lorem ipsum"
+            placeholder="Write here"
+            onChange={onChange}
+            value={state.value}
+        />
+    </Section>
+</div>;
+```
+
 Section Not Expandable
 
 ```jsx
