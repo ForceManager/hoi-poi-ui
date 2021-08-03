@@ -192,7 +192,7 @@ export const typography = {
         fontFamily,
         fontSize: 14,
         fontWeight: 500,
-        lineHeight: '24px',
+        lineHeight: '20px',
         letterSpacing: 0.09,
     },
     body1: {
