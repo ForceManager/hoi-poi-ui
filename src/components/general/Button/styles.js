@@ -150,6 +150,15 @@ export default (theme) => ({
             fontSize: 12,
             fontWeight: 400,
         },
+        '& $icon': {
+            marginRight: 4,
+            width: 14,
+            height: 14,
+            '& span': {
+                width: 14,
+                height: 14,
+            },
+        },
     },
 
     // States

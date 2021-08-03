@@ -92,7 +92,7 @@ Icon Left:
 
 ```jsx
 <span> </span>
-<Button type="primary" icon="cloudUpload">Push me</Button>
+<Button type="primary" size="small" icon="cloudUpload">Push me</Button>
 <span> </span>
 <Button type="primary-error" icon="cloudUpload">Push me</Button>
 <span> </span>
@@ -100,14 +100,14 @@ Icon Left:
 <span> </span>
 <Button type="secondary-error" icon="cloudUpload">Push me</Button>
 <span> </span>
-<Button type="terciary" icon="cloudUpload">Push me</Button>
+<Button type="terciary" size="big" icon="cloudUpload">Push me</Button>
 ```
 
 Icon Right:
 
 ```jsx
 <span> </span>
-<Button type="primary" icon="cloudUpload" iconPosition="right">Push me</Button>
+<Button type="primary" size="small" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
 <Button type="primary-error" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
@@ -115,7 +115,7 @@ Icon Right:
 <span> </span>
 <Button type="secondary-error" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
-<Button type="terciary" icon="cloudUpload" iconPosition="right">Push me</Button>
+<Button type="terciary" size="big" icon="cloudUpload" iconPosition="right">Push me</Button>
 ```
 
 Icon Only:
