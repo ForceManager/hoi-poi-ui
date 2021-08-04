@@ -65,8 +65,12 @@ function Menus({
                                 onClick={item.onClick}
                                 className={
                                     item.infoItem
-                                        ? classes.menuItem
-                                        : classnames(classes.menuItem, classes.clickable)
+                                        ? classnames(classes.menuItem, item.className)
+                                        : classnames(
+                                              classes.menuItem,
+                                              item.className,
+                                              classes.clickable,
+                                          )
                                 }
                             >
                                 <div className={classes.menuItemContent}>
