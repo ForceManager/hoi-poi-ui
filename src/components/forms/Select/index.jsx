@@ -123,6 +123,10 @@ const Select = memo(
         });
 
         useEffect(() => {
+            setNewInputValue(inputValue);
+        }, [inputValue]);
+
+        useEffect(() => {
             setNewValue(value);
         }, [value]);
 
