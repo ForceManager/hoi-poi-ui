@@ -21,6 +21,17 @@ export default (theme) => ({
         bottom: -21,
         color: theme.colors.red,
     },
+    bulkEdit: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        padding: '0 0 5px 0',
+        color: theme.colors.disabledGrey,
+    },
+    bulkCancel: {
+        position: 'absolute',
+        lineHeight: '20px',
+        bottom: -30,
+    },
     formControl: {
         position: 'relative',
         display: 'flex',
@@ -68,8 +79,23 @@ export default (theme) => ({
     },
     withTwoMessage: {
         paddingBottom: '45px !important',
-        '& $error': {
+        '& $bulkCancel': {
             bottom: -39,
+        },
+    },
+    withBulk: {
+        paddingBottom: '39px !important',
+    },
+    withMessageBulk: {
+        paddingBottom: '54px !important',
+        '& $bulkCancel': {
+            bottom: -49,
+        },
+    },
+    withTwoMessageBulk: {
+        paddingBottom: '69px !important',
+        '& $bulkCancel': {
+            bottom: -66,
         },
     },
     errored: {

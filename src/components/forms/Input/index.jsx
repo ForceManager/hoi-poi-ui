@@ -4,6 +4,8 @@ import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import Label from '../Label';
+import Text from '../../typography/Text';
+import Link from '../../typography/Link';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -37,11 +39,17 @@ function Input({
     postComponent,
     component,
     isCopyable,
+    isBulk,
+    bulkEditLabel,
+    bulkCancelLabel,
+    onBulkEdit,
+    onBulkCancel,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     // State
     const [focused, setFocused] = useState(false);
+    const [bulkEditable, setBulkEditable] = useState(false);
 
     // Overrides
     const override = getOverrides(overridesProp, Input.overrides);
@@ -59,6 +67,9 @@ function Input({
             [classes.custom]: component,
             [classes.withMessage]: (error || info) && !(error && info),
             [classes.withTwoMessage]: error && info,
+            [classes.withBulk]: bulkEditable,
+            [classes.withMessageBulk]: (error || info) && !(error && info) && bulkEditable,
+            [classes.withTwoMessageBulk]: error && info && bulkEditable,
         },
         classNameProp,
     );
@@ -132,6 +143,16 @@ function Input({
         onCopy && onCopy();
     }, [onCopy, value]);
 
+    const onClickBulkEdit = useCallback(() => {
+        setBulkEditable(true);
+        onBulkEdit && onBulkEdit();
+    }, [onBulkEdit]);
+
+    const onClickBulkCancel = useCallback(() => {
+        setBulkEditable(false);
+        onBulkCancel && onBulkCancel();
+    }, [onBulkCancel]);
+
     const compIsReadOnly = <Icon name="lock" />;
 
     const compIsCopyable = <Icon name="duplicate" onClick={copyValue} />;
@@ -179,30 +200,42 @@ function Input({
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
-            <div className={classes.formControl} {...override.formControl}>
-                {preComponent && (
-                    <div className={classes.preComponent} {...override.postComponent}>
-                        {preComponent}
-                    </div>
-                )}
-                {!component && <input {...inputProps} />}
-                {component && <Component {...inputProps} />}
-                {renderedPostComponent && (
-                    <div className={classes.postComponent} {...override.postComponent}>
-                        {renderedPostComponent}
-                    </div>
-                )}
-                {info && (
-                    <div className={classes.info} {...override.info}>
-                        {info}
-                    </div>
-                )}
-                {error && (
-                    <div className={classes.error} {...override.error}>
-                        {error}
-                    </div>
-                )}
-            </div>
+            {isBulk && !bulkEditable && (
+                <Text className={classes.bulkEdit} onClick={onClickBulkEdit}>
+                    {bulkEditLabel}
+                </Text>
+            )}
+            {(!isBulk || (isBulk && bulkEditable)) && (
+                <div className={classes.formControl} {...override.formControl}>
+                    {preComponent && (
+                        <div className={classes.preComponent} {...override.postComponent}>
+                            {preComponent}
+                        </div>
+                    )}
+                    {!component && <input {...inputProps} />}
+                    {component && <Component {...inputProps} />}
+                    {renderedPostComponent && (
+                        <div className={classes.postComponent} {...override.postComponent}>
+                            {renderedPostComponent}
+                        </div>
+                    )}
+                    {info && (
+                        <div className={classes.info} {...override.info}>
+                            {info}
+                        </div>
+                    )}
+                    {error && (
+                        <div className={classes.error} {...override.error}>
+                            {error}
+                        </div>
+                    )}
+                    {bulkEditable && (
+                        <Link className={classes.bulkCancel} onClick={onClickBulkCancel}>
+                            {bulkCancelLabel}
+                        </Link>
+                    )}
+                </div>
+            )}
         </div>
     );
 }

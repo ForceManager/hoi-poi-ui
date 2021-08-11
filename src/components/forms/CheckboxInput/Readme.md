@@ -28,6 +28,29 @@ function toggleState(value) {
 </div>;
 ```
 
+Bulk:
+
+```jsx
+import { useState } from 'react';
+const [state, setState] = useState({});
+function toggleState(value) {
+    setState({
+        value,
+    });
+}
+
+<div>
+    <CheckboxInput
+        label="Lorem Ipsum"
+        onChange={toggleState}
+        value={state.value}
+        isBulk
+        bulkEditLabel="Click to edit"
+        bulkCancelLabel="Cancel"
+    />
+</div>;
+```
+
 ### Component tree
 
 ---

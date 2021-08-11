@@ -1,10 +1,12 @@
-import React, { useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Label from '../Label';
 import Checkbox from '../../general/Checkbox';
+import Text from '../../typography/Text';
+import Link from '../../typography/Link';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -26,9 +28,16 @@ function CheckboxInput({
     isRequired,
     isReadOnly,
     isFullWidth,
+    isBulk,
+    bulkEditLabel,
+    bulkCancelLabel,
+    onBulkEdit,
+    onBulkCancel,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
+    // State
+    const [bulkEditable, setBulkEditable] = useState(false);
     // Overrides
     const override = getOverrides(overridesProp, CheckboxInput.overrides);
 
@@ -40,6 +49,8 @@ function CheckboxInput({
             [classes[labelMode]]: labelMode,
             [classes.errored]: error,
             [classes.isFullWidth]: isFullWidth,
+            [classes.withBulk]: bulkEditable,
+            [classes.withErrorBulk]: error && bulkEditable,
         },
         classNameProp,
     );
@@ -54,6 +65,16 @@ function CheckboxInput({
         hint,
         ...override.Label,
     };
+
+    const onClickBulkEdit = useCallback(() => {
+        setBulkEditable(true);
+        onBulkEdit && onBulkEdit();
+    }, [onBulkEdit]);
+
+    const onClickBulkCancel = useCallback(() => {
+        setBulkEditable(false);
+        onBulkCancel && onBulkCancel();
+    }, [onBulkCancel]);
 
     const onCheck = useCallback(() => {
         onChange && onChange(!value);
@@ -73,14 +94,26 @@ function CheckboxInput({
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
-            <div className={classes.formControl} {...override.formControl}>
-                <Checkbox {...checkboxProps} />
-                {error && (
-                    <div className={classes.error} {...override.error}>
-                        {error}
-                    </div>
-                )}
-            </div>
+            {isBulk && !bulkEditable && (
+                <Text className={classes.bulkEdit} onClick={onClickBulkEdit}>
+                    {bulkEditLabel}
+                </Text>
+            )}
+            {(!isBulk || (isBulk && bulkEditable)) && (
+                <div className={classes.formControl} {...override.formControl}>
+                    <Checkbox {...checkboxProps} />
+                    {error && (
+                        <div className={classes.error} {...override.error}>
+                            {error}
+                        </div>
+                    )}
+                    {bulkEditable && (
+                        <Link className={classes.bulkCancel} onClick={onClickBulkCancel}>
+                            {bulkCancelLabel}
+                        </Link>
+                    )}
+                </div>
+            )}
         </div>
     );
 }
