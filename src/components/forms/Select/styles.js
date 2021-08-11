@@ -14,6 +14,17 @@ export default (theme) => ({
         bottom: -21,
         color: theme.colors.red,
     },
+    bulkEdit: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        padding: '0 0 5px 0',
+        color: theme.colors.disabledGrey,
+    },
+    bulkCancel: {
+        position: 'absolute',
+        lineHeight: '20px',
+        bottom: -30,
+    },
     async: {
         '& .hoi-poi-select__control': {
             flexDirection: 'row-reverse',
@@ -292,6 +303,15 @@ export default (theme) => ({
         width: '100%',
         '& > div': {
             marginTop: 5,
+        },
+    },
+    withBulk: {
+        paddingBottom: '39px !important',
+    },
+    withErrorBulk: {
+        paddingBottom: '54px !important',
+        '& $bulkCancel': {
+            bottom: -49,
         },
     },
 });

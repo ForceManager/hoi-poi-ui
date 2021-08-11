@@ -1,0 +1,43 @@
+[
+    {
+        "title": "General",
+        "className": "tab-general",
+        "fields": [
+            {
+                "label": "Name",
+                "name": "name",
+                "type": "text",
+                "placeholder": "Your name",
+                "className": "field-name",
+                "isRequired": true
+            },
+            {
+                "label": "Gender",
+                "name": "gender",
+                "type": "select",
+                "placeholder": "Select your gender",
+                "attrs": {
+                    "options": [
+                        {
+                            "label": "Male",
+                            "value": "male"
+                        },
+                        {
+                            "label": "Female",
+                            "value": "female"
+                        },
+                        {
+                            "label": "Other",
+                            "value": "other"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Interested",
+                "name": "Interested",
+                "type": "checkbox"
+            }
+        ]
+    }
+]

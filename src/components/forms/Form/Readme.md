@@ -113,6 +113,45 @@ let onChange = (values, field) => setState({ values });
 <Form onChange={onChange} values={state.values} errors={errors} schema={schema} />;
 ```
 
+**Bulk:**
+
+```jsx
+import schema from './example.bulk.json';
+import { useState } from 'react';
+
+const errors = {
+    phone: 'Invalid phone',
+    multiplier: [{}, { email: 'This field is mandatory' }],
+};
+
+const [state, setState] = useState({});
+let onChange = (values, field) => setState({ values });
+let onBulkEdit = (field) => {
+    const values = {
+        ...state.values,
+        [field.name]: field.type === 'checkbox' ? false : null,
+    };
+    setState({ values });
+};
+let onBulkCancel = (field) => {
+    const values = { ...state.values };
+    delete values[field.name];
+    setState({ values });
+};
+
+<Form
+    onChange={onChange}
+    values={state.values}
+    errors={errors}
+    schema={schema}
+    isBulk
+    bulkEditLabel="Click to edit"
+    bulkCancelLabel="Cancel"
+    onBulkEdit={onBulkEdit}
+    onBulkCancel={onBulkCancel}
+/>;
+```
+
 **Check the example schema <a href="https://raw.githubusercontent.com/ForceManager/hoi-poi-ui/master/src/components/forms/Form/example.json" target="_blank">here</a>.**
 
 ### Component tree

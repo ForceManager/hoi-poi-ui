@@ -20,6 +20,11 @@ function Form({
     errors,
     customFields,
     useNativeForm,
+    isBulk,
+    bulkEditLabel,
+    bulkCancelLabel,
+    onBulkEdit,
+    onBulkCancel,
     ...props
 }) {
     // Overrides
@@ -117,6 +122,11 @@ function Form({
                         onBlur={onBlurField}
                         className={field.className}
                         customFields={customFields}
+                        isBulk
+                        bulkEditLabel={bulkEditLabel}
+                        bulkCancelLabel={bulkCancelLabel}
+                        onBulkEdit={onBulkEdit}
+                        onBulkCancel={onBulkCancel}
                         overrides={overridesProp}
                     />
                 );

@@ -15,8 +15,10 @@ import Menu from './Menu';
 import MenuList from './MenuList';
 import Checkbox from '../../general/Checkbox';
 import Chip from '../../general/Chip';
-
 import Label from '../Label';
+import Text from '../../typography/Text';
+import Link from '../../typography/Link';
+
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Select');
@@ -55,6 +57,11 @@ function Select({
     isValueObject,
     filterByKey,
     autoFocus,
+    isBulk,
+    bulkEditLabel,
+    bulkCancelLabel,
+    onBulkEdit,
+    onBulkCancel,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -66,6 +73,7 @@ function Select({
         options: null,
         isLoading: false,
     });
+    const [bulkEditable, setBulkEditable] = useState(false);
     const debounce = useRef(null);
 
     // Overrides
@@ -81,6 +89,8 @@ function Select({
             [classes.focused]: focused,
             [classes.errored]: error,
             [classes.async]: loadOptions && isFuzzy,
+            [classes.withBulk]: bulkEditable,
+            [classes.withErrorBulk]: error && bulkEditable,
         },
         classNameProp,
     );
@@ -112,6 +122,16 @@ function Select({
         },
         [onBlur, onChange, options, value],
     );
+
+    const onClickBulkEdit = useCallback(() => {
+        setBulkEditable(true);
+        onBulkEdit && onBulkEdit();
+    }, [onBulkEdit]);
+
+    const onClickBulkCancel = useCallback(() => {
+        setBulkEditable(false);
+        onBulkCancel && onBulkCancel();
+    }, [onBulkCancel]);
 
     const loadOptionsCb = useCallback(
         (text, cb) => {
@@ -296,14 +316,26 @@ function Select({
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
-            <div className={classes.formControl} {...override.formControl}>
-                <SelectComponent {...selectProps} />
-                {error && (
-                    <div className={classes.error} {...override.error}>
-                        {error}
-                    </div>
-                )}
-            </div>
+            {isBulk && !bulkEditable && (
+                <Text className={classes.bulkEdit} onClick={onClickBulkEdit}>
+                    {bulkEditLabel}
+                </Text>
+            )}
+            {(!isBulk || (isBulk && bulkEditable)) && (
+                <div className={classes.formControl} {...override.formControl}>
+                    <SelectComponent {...selectProps} />
+                    {error && (
+                        <div className={classes.error} {...override.error}>
+                            {error}
+                        </div>
+                    )}
+                    {bulkEditable && (
+                        <Link className={classes.bulkCancel} onClick={onClickBulkCancel}>
+                            {bulkCancelLabel}
+                        </Link>
+                    )}
+                </div>
+            )}
             {selectedOptions && <div className={classes.selectedOptions}>{selectedOptions}</div>}
         </div>
     );
