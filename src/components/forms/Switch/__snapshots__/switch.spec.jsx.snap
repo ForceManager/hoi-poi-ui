@@ -437,7 +437,7 @@ exports[`Switch checked match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -534,6 +534,7 @@ exports[`Switch checked match snapshot 1`] = `
                 }
               />
               <input
+                aria-checked={true}
                 checked={true}
                 disabled={false}
                 onBlur={[Function]}
@@ -1001,7 +1002,7 @@ exports[`Switch disabled match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1099,6 +1100,7 @@ exports[`Switch disabled match snapshot 1`] = `
                 }
               />
               <input
+                aria-checked={false}
                 checked={false}
                 disabled={true}
                 onBlur={[Function]}
@@ -1566,7 +1568,7 @@ exports[`Switch unchecked match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1663,6 +1665,7 @@ exports[`Switch unchecked match snapshot 1`] = `
                 }
               />
               <input
+                aria-checked={false}
                 checked={false}
                 disabled={false}
                 onBlur={[Function]}

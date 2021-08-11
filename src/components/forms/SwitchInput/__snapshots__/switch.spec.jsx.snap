@@ -437,7 +437,7 @@ exports[`SwitchInput checked match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -549,6 +549,7 @@ exports[`SwitchInput checked match snapshot 1`] = `
                       }
                     />
                     <input
+                      aria-checked={true}
                       checked={true}
                       disabled={false}
                       onBlur={[Function]}
@@ -1019,7 +1020,7 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1131,6 +1132,7 @@ exports[`SwitchInput unchecked match snapshot 1`] = `
                       }
                     />
                     <input
+                      aria-checked={false}
                       checked={false}
                       disabled={false}
                       onBlur={[Function]}

@@ -437,7 +437,7 @@ exports[`Label default match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -899,7 +899,7 @@ exports[`Label is required match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1364,7 +1364,7 @@ exports[`Label with hint match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -1394,12 +1394,7 @@ exports[`Label with hint match 1`] = `
               ]
             }
           >
-            <Tooltip
-              align={Object {}}
-              arrowContent={null}
-              destroyTooltipOnHide={false}
-              mouseEnterDelay={0}
-              mouseLeaveDelay={0.1}
+            <ForwardRef(Tooltip)
               overlay="I am a hint"
               overlayClassName="HoiPoi__Popover__root-3-15"
               placement="top"
@@ -1418,7 +1413,7 @@ exports[`Label with hint match 1`] = `
                   ]
                 }
                 afterPopupVisibleChange={[Function]}
-                arrowContent={null}
+                autoDestroy={false}
                 blurDelay={0.15}
                 builtinPlacements={
                   Object {
@@ -1695,7 +1690,7 @@ exports[`Label with hint match 1`] = `
                   </Icon>
                 </span>
               </Trigger>
-            </Tooltip>
+            </ForwardRef(Tooltip)>
           </Popover>
         </span>
       </Label>

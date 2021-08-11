@@ -437,7 +437,7 @@ exports[`Multiplier complete match 1`] = `
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.5.0",
         }
       }
     >
@@ -663,6 +663,7 @@ exports[`Multiplier complete match 1`] = `
                               "type": "select",
                             }
                           }
+                          isBulk={true}
                           isFullWidth={false}
                           key="activity"
                           labelMode="horizontal"
@@ -701,6 +702,7 @@ exports[`Multiplier complete match 1`] = `
                             filterByKey={false}
                             hideOptions={false}
                             hideSelectedOptions={true}
+                            isBulk={true}
                             isClearable={true}
                             isFullWidth={false}
                             isReadOnly={false}
@@ -709,6 +711,8 @@ exports[`Multiplier complete match 1`] = `
                             labelMode="horizontal"
                             name="activity"
                             onBlur={[Function]}
+                            onBulkCancel={[Function]}
+                            onBulkEdit={[Function]}
                             onChange={[Function]}
                             onEnter={[Function]}
                             onFocus={[Function]}
@@ -739,1743 +743,36 @@ exports[`Multiplier complete match 1`] = `
                             value=""
                           >
                             <div
-                              className="HoiPoi__Select__root-1-28 HoiPoi__Select__horizontal-1-37"
+                              className="HoiPoi__Select__root-1-28 HoiPoi__Select__horizontal-1-39"
                             >
                               <Label
                                 className="HoiPoi__Select__Label-1-29"
                               >
                                 <span
-                                  className="HoiPoi__Label__root-1-47 HoiPoi__Select__Label-1-29"
+                                  className="HoiPoi__Label__root-1-51 HoiPoi__Select__Label-1-29"
                                 >
                                   <Text
-                                    className="HoiPoi__Label__Text-1-48"
+                                    className="HoiPoi__Label__Text-1-52"
                                     overrides={Object {}}
                                   >
                                     <span
-                                      className="HoiPoi__Text__root-1-51 HoiPoi__Label__Text-1-48"
+                                      className="HoiPoi__Text__root-1-55 HoiPoi__Label__Text-1-52"
                                     >
                                       Activity
                                     </span>
                                   </Text>
                                 </span>
                               </Label>
-                              <div
-                                className="HoiPoi__Select__formControl-1-32"
+                              <Text
+                                className="HoiPoi__Select__bulkEdit-1-31"
+                                onClick={[Function]}
+                                overrides={Object {}}
                               >
-                                <StateManager
-                                  className="HoiPoi__Select__select-1-39"
-                                  classNamePrefix="hoi-poi-select"
-                                  closeMenuOnSelect={true}
-                                  components={
-                                    Object {
-                                      "ClearIndicator": [Function],
-                                      "DropdownIndicator": [Function],
-                                      "LoadingIndicator": [Function],
-                                      "Menu": [Function],
-                                      "MenuList": [Function],
-                                    }
-                                  }
-                                  defaultInputValue=""
-                                  defaultMenuIsOpen={false}
-                                  defaultOptions={null}
-                                  defaultValue={null}
-                                  filterOption={[Function]}
-                                  formatGroupLabel={[Function]}
-                                  formatOptionLabel={[Function]}
-                                  getOptionValue={[Function]}
-                                  hideSelectedOptions={true}
-                                  isClearable={true}
-                                  isDisabled={false}
-                                  isLoading={false}
-                                  loadingMessage={[Function]}
-                                  menuPlacement="auto"
-                                  menuPortalTarget={<body />}
-                                  name="activity"
-                                  noOptionsMessage={[Function]}
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  openMenuOnClick={true}
-                                  options={
-                                    Array [
-                                      Object {
-                                        "label": "A",
-                                        "value": "a",
-                                      },
-                                      Object {
-                                        "label": "B",
-                                        "value": "b",
-                                      },
-                                      Object {
-                                        "label": "C",
-                                        "value": "c",
-                                      },
-                                    ]
-                                  }
-                                  styles={
-                                    Object {
-                                      "menuPortal": [Function],
-                                    }
-                                  }
-                                  value=""
-                                >
-                                  <Select
-                                    backspaceRemovesValue={true}
-                                    blurInputOnSelect={true}
-                                    captureMenuScroll={false}
-                                    className="HoiPoi__Select__select-1-39"
-                                    classNamePrefix="hoi-poi-select"
-                                    closeMenuOnScroll={false}
-                                    closeMenuOnSelect={true}
-                                    components={
-                                      Object {
-                                        "ClearIndicator": [Function],
-                                        "DropdownIndicator": [Function],
-                                        "LoadingIndicator": [Function],
-                                        "Menu": [Function],
-                                        "MenuList": [Function],
-                                      }
-                                    }
-                                    controlShouldRenderValue={true}
-                                    defaultOptions={null}
-                                    escapeClearsValue={false}
-                                    filterOption={[Function]}
-                                    formatGroupLabel={[Function]}
-                                    formatOptionLabel={[Function]}
-                                    getOptionLabel={[Function]}
-                                    getOptionValue={[Function]}
-                                    hideSelectedOptions={true}
-                                    inputValue=""
-                                    isClearable={true}
-                                    isDisabled={false}
-                                    isLoading={false}
-                                    isMulti={false}
-                                    isOptionDisabled={[Function]}
-                                    isRtl={false}
-                                    isSearchable={true}
-                                    loadingMessage={[Function]}
-                                    maxMenuHeight={300}
-                                    menuIsOpen={false}
-                                    menuPlacement="auto"
-                                    menuPortalTarget={<body />}
-                                    menuPosition="absolute"
-                                    menuShouldBlockScroll={false}
-                                    menuShouldScrollIntoView={true}
-                                    minMenuHeight={140}
-                                    name="activity"
-                                    noOptionsMessage={[Function]}
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    onFocus={[Function]}
-                                    onInputChange={[Function]}
-                                    onMenuClose={[Function]}
-                                    onMenuOpen={[Function]}
-                                    openMenuOnClick={true}
-                                    openMenuOnFocus={false}
-                                    options={
-                                      Array [
-                                        Object {
-                                          "label": "A",
-                                          "value": "a",
-                                        },
-                                        Object {
-                                          "label": "B",
-                                          "value": "b",
-                                        },
-                                        Object {
-                                          "label": "C",
-                                          "value": "c",
-                                        },
-                                      ]
-                                    }
-                                    pageSize={5}
-                                    placeholder="Select..."
-                                    screenReaderStatus={[Function]}
-                                    styles={
-                                      Object {
-                                        "menuPortal": [Function],
-                                      }
-                                    }
-                                    tabIndex="0"
-                                    tabSelectsValue={true}
-                                    value=""
-                                  >
-                                    <SelectContainer
-                                      className="HoiPoi__Select__select-1-39"
-                                      clearValue={[Function]}
-                                      cx={[Function]}
-                                      getStyles={[Function]}
-                                      getValue={[Function]}
-                                      hasValue={false}
-                                      innerProps={
-                                        Object {
-                                          "id": undefined,
-                                          "onKeyDown": [Function],
-                                        }
-                                      }
-                                      isDisabled={false}
-                                      isFocused={false}
-                                      isMulti={false}
-                                      isRtl={false}
-                                      options={
-                                        Array [
-                                          Object {
-                                            "label": "A",
-                                            "value": "a",
-                                          },
-                                          Object {
-                                            "label": "B",
-                                            "value": "b",
-                                          },
-                                          Object {
-                                            "label": "C",
-                                            "value": "c",
-                                          },
-                                        ]
-                                      }
-                                      selectOption={[Function]}
-                                      selectProps={
-                                        Object {
-                                          "autoFocus": undefined,
-                                          "backspaceRemovesValue": true,
-                                          "blurInputOnSelect": true,
-                                          "captureMenuScroll": false,
-                                          "className": "HoiPoi__Select__select-1-39",
-                                          "classNamePrefix": "hoi-poi-select",
-                                          "closeMenuOnScroll": false,
-                                          "closeMenuOnSelect": true,
-                                          "components": Object {
-                                            "ClearIndicator": [Function],
-                                            "DropdownIndicator": [Function],
-                                            "LoadingIndicator": [Function],
-                                            "Menu": [Function],
-                                            "MenuList": [Function],
-                                          },
-                                          "controlShouldRenderValue": true,
-                                          "defaultOptions": null,
-                                          "escapeClearsValue": false,
-                                          "filterOption": [Function],
-                                          "formatGroupLabel": [Function],
-                                          "formatOptionLabel": [Function],
-                                          "getOptionLabel": [Function],
-                                          "getOptionValue": [Function],
-                                          "hideSelectedOptions": true,
-                                          "id": undefined,
-                                          "inputValue": "",
-                                          "isClearable": true,
-                                          "isDisabled": false,
-                                          "isLoading": false,
-                                          "isMulti": false,
-                                          "isOptionDisabled": [Function],
-                                          "isRtl": false,
-                                          "isSearchable": true,
-                                          "loadOptions": undefined,
-                                          "loadingMessage": [Function],
-                                          "maxMenuHeight": 300,
-                                          "menuIsOpen": false,
-                                          "menuPlacement": "auto",
-                                          "menuPortalTarget": <body />,
-                                          "menuPosition": "absolute",
-                                          "menuShouldBlockScroll": false,
-                                          "menuShouldScrollIntoView": true,
-                                          "minMenuHeight": 140,
-                                          "name": "activity",
-                                          "noOptionsMessage": [Function],
-                                          "onBlur": [Function],
-                                          "onChange": [Function],
-                                          "onFocus": [Function],
-                                          "onInputChange": [Function],
-                                          "onMenuClose": [Function],
-                                          "onMenuOpen": [Function],
-                                          "openMenuOnClick": true,
-                                          "openMenuOnFocus": false,
-                                          "options": Array [
-                                            Object {
-                                              "label": "A",
-                                              "value": "a",
-                                            },
-                                            Object {
-                                              "label": "B",
-                                              "value": "b",
-                                            },
-                                            Object {
-                                              "label": "C",
-                                              "value": "c",
-                                            },
-                                          ],
-                                          "pageSize": 5,
-                                          "placeholder": "Select...",
-                                          "screenReaderStatus": [Function],
-                                          "styles": Object {
-                                            "menuPortal": [Function],
-                                          },
-                                          "tabIndex": "0",
-                                          "tabSelectsValue": true,
-                                          "value": "",
-                                        }
-                                      }
-                                      setValue={[Function]}
-                                      theme={
-                                        Object {
-                                          "borderRadius": 4,
-                                          "colors": Object {
-                                            "danger": "#DE350B",
-                                            "dangerLight": "#FFBDAD",
-                                            "neutral0": "hsl(0, 0%, 100%)",
-                                            "neutral10": "hsl(0, 0%, 90%)",
-                                            "neutral20": "hsl(0, 0%, 80%)",
-                                            "neutral30": "hsl(0, 0%, 70%)",
-                                            "neutral40": "hsl(0, 0%, 60%)",
-                                            "neutral5": "hsl(0, 0%, 95%)",
-                                            "neutral50": "hsl(0, 0%, 50%)",
-                                            "neutral60": "hsl(0, 0%, 40%)",
-                                            "neutral70": "hsl(0, 0%, 30%)",
-                                            "neutral80": "hsl(0, 0%, 20%)",
-                                            "neutral90": "hsl(0, 0%, 10%)",
-                                            "primary": "#2684FF",
-                                            "primary25": "#DEEBFF",
-                                            "primary50": "#B2D4FF",
-                                            "primary75": "#4C9AFF",
-                                          },
-                                          "spacing": Object {
-                                            "baseUnit": 4,
-                                            "controlHeight": 38,
-                                            "menuGutter": 8,
-                                          },
-                                        }
-                                      }
-                                    >
-                                      <EmotionCssPropInternal
-                                        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="SelectContainer"
-                                        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                        className="HoiPoi__Select__select-1-39"
-                                        css={
-                                          Object {
-                                            "boxSizing": "border-box",
-                                            "direction": null,
-                                            "label": "container",
-                                            "pointerEvents": null,
-                                            "position": "relative",
-                                          }
-                                        }
-                                        onKeyDown={[Function]}
-                                      >
-                                        <div
-                                          className="HoiPoi__Select__select-1-39 css-2b097c-container"
-                                          onKeyDown={[Function]}
-                                        >
-                                          <Control
-                                            clearValue={[Function]}
-                                            cx={[Function]}
-                                            getStyles={[Function]}
-                                            getValue={[Function]}
-                                            hasValue={false}
-                                            innerProps={
-                                              Object {
-                                                "onMouseDown": [Function],
-                                                "onTouchEnd": [Function],
-                                              }
-                                            }
-                                            innerRef={[Function]}
-                                            isDisabled={false}
-                                            isFocused={false}
-                                            isMulti={false}
-                                            isRtl={false}
-                                            menuIsOpen={false}
-                                            options={
-                                              Array [
-                                                Object {
-                                                  "label": "A",
-                                                  "value": "a",
-                                                },
-                                                Object {
-                                                  "label": "B",
-                                                  "value": "b",
-                                                },
-                                                Object {
-                                                  "label": "C",
-                                                  "value": "c",
-                                                },
-                                              ]
-                                            }
-                                            selectOption={[Function]}
-                                            selectProps={
-                                              Object {
-                                                "autoFocus": undefined,
-                                                "backspaceRemovesValue": true,
-                                                "blurInputOnSelect": true,
-                                                "captureMenuScroll": false,
-                                                "className": "HoiPoi__Select__select-1-39",
-                                                "classNamePrefix": "hoi-poi-select",
-                                                "closeMenuOnScroll": false,
-                                                "closeMenuOnSelect": true,
-                                                "components": Object {
-                                                  "ClearIndicator": [Function],
-                                                  "DropdownIndicator": [Function],
-                                                  "LoadingIndicator": [Function],
-                                                  "Menu": [Function],
-                                                  "MenuList": [Function],
-                                                },
-                                                "controlShouldRenderValue": true,
-                                                "defaultOptions": null,
-                                                "escapeClearsValue": false,
-                                                "filterOption": [Function],
-                                                "formatGroupLabel": [Function],
-                                                "formatOptionLabel": [Function],
-                                                "getOptionLabel": [Function],
-                                                "getOptionValue": [Function],
-                                                "hideSelectedOptions": true,
-                                                "id": undefined,
-                                                "inputValue": "",
-                                                "isClearable": true,
-                                                "isDisabled": false,
-                                                "isLoading": false,
-                                                "isMulti": false,
-                                                "isOptionDisabled": [Function],
-                                                "isRtl": false,
-                                                "isSearchable": true,
-                                                "loadOptions": undefined,
-                                                "loadingMessage": [Function],
-                                                "maxMenuHeight": 300,
-                                                "menuIsOpen": false,
-                                                "menuPlacement": "auto",
-                                                "menuPortalTarget": <body />,
-                                                "menuPosition": "absolute",
-                                                "menuShouldBlockScroll": false,
-                                                "menuShouldScrollIntoView": true,
-                                                "minMenuHeight": 140,
-                                                "name": "activity",
-                                                "noOptionsMessage": [Function],
-                                                "onBlur": [Function],
-                                                "onChange": [Function],
-                                                "onFocus": [Function],
-                                                "onInputChange": [Function],
-                                                "onMenuClose": [Function],
-                                                "onMenuOpen": [Function],
-                                                "openMenuOnClick": true,
-                                                "openMenuOnFocus": false,
-                                                "options": Array [
-                                                  Object {
-                                                    "label": "A",
-                                                    "value": "a",
-                                                  },
-                                                  Object {
-                                                    "label": "B",
-                                                    "value": "b",
-                                                  },
-                                                  Object {
-                                                    "label": "C",
-                                                    "value": "c",
-                                                  },
-                                                ],
-                                                "pageSize": 5,
-                                                "placeholder": "Select...",
-                                                "screenReaderStatus": [Function],
-                                                "styles": Object {
-                                                  "menuPortal": [Function],
-                                                },
-                                                "tabIndex": "0",
-                                                "tabSelectsValue": true,
-                                                "value": "",
-                                              }
-                                            }
-                                            setValue={[Function]}
-                                            theme={
-                                              Object {
-                                                "borderRadius": 4,
-                                                "colors": Object {
-                                                  "danger": "#DE350B",
-                                                  "dangerLight": "#FFBDAD",
-                                                  "neutral0": "hsl(0, 0%, 100%)",
-                                                  "neutral10": "hsl(0, 0%, 90%)",
-                                                  "neutral20": "hsl(0, 0%, 80%)",
-                                                  "neutral30": "hsl(0, 0%, 70%)",
-                                                  "neutral40": "hsl(0, 0%, 60%)",
-                                                  "neutral5": "hsl(0, 0%, 95%)",
-                                                  "neutral50": "hsl(0, 0%, 50%)",
-                                                  "neutral60": "hsl(0, 0%, 40%)",
-                                                  "neutral70": "hsl(0, 0%, 30%)",
-                                                  "neutral80": "hsl(0, 0%, 20%)",
-                                                  "neutral90": "hsl(0, 0%, 10%)",
-                                                  "primary": "#2684FF",
-                                                  "primary25": "#DEEBFF",
-                                                  "primary50": "#B2D4FF",
-                                                  "primary75": "#4C9AFF",
-                                                },
-                                                "spacing": Object {
-                                                  "baseUnit": 4,
-                                                  "controlHeight": 38,
-                                                  "menuGutter": 8,
-                                                },
-                                              }
-                                            }
-                                          >
-                                            <EmotionCssPropInternal
-                                              __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Control"
-                                              __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                              className="hoi-poi-select__control"
-                                              css={
-                                                Object {
-                                                  "&:hover": Object {
-                                                    "borderColor": "hsl(0, 0%, 70%)",
-                                                  },
-                                                  "alignItems": "center",
-                                                  "backgroundColor": "hsl(0, 0%, 100%)",
-                                                  "borderColor": "hsl(0, 0%, 80%)",
-                                                  "borderRadius": 4,
-                                                  "borderStyle": "solid",
-                                                  "borderWidth": 1,
-                                                  "boxShadow": null,
-                                                  "boxSizing": "border-box",
-                                                  "cursor": "default",
-                                                  "display": "flex",
-                                                  "flexWrap": "wrap",
-                                                  "justifyContent": "space-between",
-                                                  "label": "control",
-                                                  "minHeight": 38,
-                                                  "outline": "0 !important",
-                                                  "position": "relative",
-                                                  "transition": "all 100ms",
-                                                }
-                                              }
-                                              onMouseDown={[Function]}
-                                              onTouchEnd={[Function]}
-                                            >
-                                              <div
-                                                className="hoi-poi-select__control css-yk16xz-control"
-                                                onMouseDown={[Function]}
-                                                onTouchEnd={[Function]}
-                                              >
-                                                <ValueContainer
-                                                  clearValue={[Function]}
-                                                  cx={[Function]}
-                                                  getStyles={[Function]}
-                                                  getValue={[Function]}
-                                                  hasValue={false}
-                                                  isDisabled={false}
-                                                  isMulti={false}
-                                                  isRtl={false}
-                                                  options={
-                                                    Array [
-                                                      Object {
-                                                        "label": "A",
-                                                        "value": "a",
-                                                      },
-                                                      Object {
-                                                        "label": "B",
-                                                        "value": "b",
-                                                      },
-                                                      Object {
-                                                        "label": "C",
-                                                        "value": "c",
-                                                      },
-                                                    ]
-                                                  }
-                                                  selectOption={[Function]}
-                                                  selectProps={
-                                                    Object {
-                                                      "autoFocus": undefined,
-                                                      "backspaceRemovesValue": true,
-                                                      "blurInputOnSelect": true,
-                                                      "captureMenuScroll": false,
-                                                      "className": "HoiPoi__Select__select-1-39",
-                                                      "classNamePrefix": "hoi-poi-select",
-                                                      "closeMenuOnScroll": false,
-                                                      "closeMenuOnSelect": true,
-                                                      "components": Object {
-                                                        "ClearIndicator": [Function],
-                                                        "DropdownIndicator": [Function],
-                                                        "LoadingIndicator": [Function],
-                                                        "Menu": [Function],
-                                                        "MenuList": [Function],
-                                                      },
-                                                      "controlShouldRenderValue": true,
-                                                      "defaultOptions": null,
-                                                      "escapeClearsValue": false,
-                                                      "filterOption": [Function],
-                                                      "formatGroupLabel": [Function],
-                                                      "formatOptionLabel": [Function],
-                                                      "getOptionLabel": [Function],
-                                                      "getOptionValue": [Function],
-                                                      "hideSelectedOptions": true,
-                                                      "id": undefined,
-                                                      "inputValue": "",
-                                                      "isClearable": true,
-                                                      "isDisabled": false,
-                                                      "isLoading": false,
-                                                      "isMulti": false,
-                                                      "isOptionDisabled": [Function],
-                                                      "isRtl": false,
-                                                      "isSearchable": true,
-                                                      "loadOptions": undefined,
-                                                      "loadingMessage": [Function],
-                                                      "maxMenuHeight": 300,
-                                                      "menuIsOpen": false,
-                                                      "menuPlacement": "auto",
-                                                      "menuPortalTarget": <body />,
-                                                      "menuPosition": "absolute",
-                                                      "menuShouldBlockScroll": false,
-                                                      "menuShouldScrollIntoView": true,
-                                                      "minMenuHeight": 140,
-                                                      "name": "activity",
-                                                      "noOptionsMessage": [Function],
-                                                      "onBlur": [Function],
-                                                      "onChange": [Function],
-                                                      "onFocus": [Function],
-                                                      "onInputChange": [Function],
-                                                      "onMenuClose": [Function],
-                                                      "onMenuOpen": [Function],
-                                                      "openMenuOnClick": true,
-                                                      "openMenuOnFocus": false,
-                                                      "options": Array [
-                                                        Object {
-                                                          "label": "A",
-                                                          "value": "a",
-                                                        },
-                                                        Object {
-                                                          "label": "B",
-                                                          "value": "b",
-                                                        },
-                                                        Object {
-                                                          "label": "C",
-                                                          "value": "c",
-                                                        },
-                                                      ],
-                                                      "pageSize": 5,
-                                                      "placeholder": "Select...",
-                                                      "screenReaderStatus": [Function],
-                                                      "styles": Object {
-                                                        "menuPortal": [Function],
-                                                      },
-                                                      "tabIndex": "0",
-                                                      "tabSelectsValue": true,
-                                                      "value": "",
-                                                    }
-                                                  }
-                                                  setValue={[Function]}
-                                                  theme={
-                                                    Object {
-                                                      "borderRadius": 4,
-                                                      "colors": Object {
-                                                        "danger": "#DE350B",
-                                                        "dangerLight": "#FFBDAD",
-                                                        "neutral0": "hsl(0, 0%, 100%)",
-                                                        "neutral10": "hsl(0, 0%, 90%)",
-                                                        "neutral20": "hsl(0, 0%, 80%)",
-                                                        "neutral30": "hsl(0, 0%, 70%)",
-                                                        "neutral40": "hsl(0, 0%, 60%)",
-                                                        "neutral5": "hsl(0, 0%, 95%)",
-                                                        "neutral50": "hsl(0, 0%, 50%)",
-                                                        "neutral60": "hsl(0, 0%, 40%)",
-                                                        "neutral70": "hsl(0, 0%, 30%)",
-                                                        "neutral80": "hsl(0, 0%, 20%)",
-                                                        "neutral90": "hsl(0, 0%, 10%)",
-                                                        "primary": "#2684FF",
-                                                        "primary25": "#DEEBFF",
-                                                        "primary50": "#B2D4FF",
-                                                        "primary75": "#4C9AFF",
-                                                      },
-                                                      "spacing": Object {
-                                                        "baseUnit": 4,
-                                                        "controlHeight": 38,
-                                                        "menuGutter": 8,
-                                                      },
-                                                    }
-                                                  }
-                                                >
-                                                  <EmotionCssPropInternal
-                                                    __EMOTION_LABEL_PLEASE_DO_NOT_USE__="ValueContainer"
-                                                    __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                                    className="hoi-poi-select__value-container"
-                                                    css={
-                                                      Object {
-                                                        "WebkitOverflowScrolling": "touch",
-                                                        "alignItems": "center",
-                                                        "boxSizing": "border-box",
-                                                        "display": "flex",
-                                                        "flex": 1,
-                                                        "flexWrap": "wrap",
-                                                        "overflow": "hidden",
-                                                        "padding": "2px 8px",
-                                                        "position": "relative",
-                                                      }
-                                                    }
-                                                  >
-                                                    <div
-                                                      className="hoi-poi-select__value-container css-g1d714-ValueContainer"
-                                                    >
-                                                      <Placeholder
-                                                        clearValue={[Function]}
-                                                        cx={[Function]}
-                                                        getStyles={[Function]}
-                                                        getValue={[Function]}
-                                                        hasValue={false}
-                                                        isDisabled={false}
-                                                        isFocused={false}
-                                                        isMulti={false}
-                                                        isRtl={false}
-                                                        key="placeholder"
-                                                        options={
-                                                          Array [
-                                                            Object {
-                                                              "label": "A",
-                                                              "value": "a",
-                                                            },
-                                                            Object {
-                                                              "label": "B",
-                                                              "value": "b",
-                                                            },
-                                                            Object {
-                                                              "label": "C",
-                                                              "value": "c",
-                                                            },
-                                                          ]
-                                                        }
-                                                        selectOption={[Function]}
-                                                        selectProps={
-                                                          Object {
-                                                            "autoFocus": undefined,
-                                                            "backspaceRemovesValue": true,
-                                                            "blurInputOnSelect": true,
-                                                            "captureMenuScroll": false,
-                                                            "className": "HoiPoi__Select__select-1-39",
-                                                            "classNamePrefix": "hoi-poi-select",
-                                                            "closeMenuOnScroll": false,
-                                                            "closeMenuOnSelect": true,
-                                                            "components": Object {
-                                                              "ClearIndicator": [Function],
-                                                              "DropdownIndicator": [Function],
-                                                              "LoadingIndicator": [Function],
-                                                              "Menu": [Function],
-                                                              "MenuList": [Function],
-                                                            },
-                                                            "controlShouldRenderValue": true,
-                                                            "defaultOptions": null,
-                                                            "escapeClearsValue": false,
-                                                            "filterOption": [Function],
-                                                            "formatGroupLabel": [Function],
-                                                            "formatOptionLabel": [Function],
-                                                            "getOptionLabel": [Function],
-                                                            "getOptionValue": [Function],
-                                                            "hideSelectedOptions": true,
-                                                            "id": undefined,
-                                                            "inputValue": "",
-                                                            "isClearable": true,
-                                                            "isDisabled": false,
-                                                            "isLoading": false,
-                                                            "isMulti": false,
-                                                            "isOptionDisabled": [Function],
-                                                            "isRtl": false,
-                                                            "isSearchable": true,
-                                                            "loadOptions": undefined,
-                                                            "loadingMessage": [Function],
-                                                            "maxMenuHeight": 300,
-                                                            "menuIsOpen": false,
-                                                            "menuPlacement": "auto",
-                                                            "menuPortalTarget": <body />,
-                                                            "menuPosition": "absolute",
-                                                            "menuShouldBlockScroll": false,
-                                                            "menuShouldScrollIntoView": true,
-                                                            "minMenuHeight": 140,
-                                                            "name": "activity",
-                                                            "noOptionsMessage": [Function],
-                                                            "onBlur": [Function],
-                                                            "onChange": [Function],
-                                                            "onFocus": [Function],
-                                                            "onInputChange": [Function],
-                                                            "onMenuClose": [Function],
-                                                            "onMenuOpen": [Function],
-                                                            "openMenuOnClick": true,
-                                                            "openMenuOnFocus": false,
-                                                            "options": Array [
-                                                              Object {
-                                                                "label": "A",
-                                                                "value": "a",
-                                                              },
-                                                              Object {
-                                                                "label": "B",
-                                                                "value": "b",
-                                                              },
-                                                              Object {
-                                                                "label": "C",
-                                                                "value": "c",
-                                                              },
-                                                            ],
-                                                            "pageSize": 5,
-                                                            "placeholder": "Select...",
-                                                            "screenReaderStatus": [Function],
-                                                            "styles": Object {
-                                                              "menuPortal": [Function],
-                                                            },
-                                                            "tabIndex": "0",
-                                                            "tabSelectsValue": true,
-                                                            "value": "",
-                                                          }
-                                                        }
-                                                        setValue={[Function]}
-                                                        theme={
-                                                          Object {
-                                                            "borderRadius": 4,
-                                                            "colors": Object {
-                                                              "danger": "#DE350B",
-                                                              "dangerLight": "#FFBDAD",
-                                                              "neutral0": "hsl(0, 0%, 100%)",
-                                                              "neutral10": "hsl(0, 0%, 90%)",
-                                                              "neutral20": "hsl(0, 0%, 80%)",
-                                                              "neutral30": "hsl(0, 0%, 70%)",
-                                                              "neutral40": "hsl(0, 0%, 60%)",
-                                                              "neutral5": "hsl(0, 0%, 95%)",
-                                                              "neutral50": "hsl(0, 0%, 50%)",
-                                                              "neutral60": "hsl(0, 0%, 40%)",
-                                                              "neutral70": "hsl(0, 0%, 30%)",
-                                                              "neutral80": "hsl(0, 0%, 20%)",
-                                                              "neutral90": "hsl(0, 0%, 10%)",
-                                                              "primary": "#2684FF",
-                                                              "primary25": "#DEEBFF",
-                                                              "primary50": "#B2D4FF",
-                                                              "primary75": "#4C9AFF",
-                                                            },
-                                                            "spacing": Object {
-                                                              "baseUnit": 4,
-                                                              "controlHeight": 38,
-                                                              "menuGutter": 8,
-                                                            },
-                                                          }
-                                                        }
-                                                      >
-                                                        <EmotionCssPropInternal
-                                                          __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Placeholder"
-                                                          __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                                          className="hoi-poi-select__placeholder"
-                                                          css={
-                                                            Object {
-                                                              "boxSizing": "border-box",
-                                                              "color": "hsl(0, 0%, 50%)",
-                                                              "label": "placeholder",
-                                                              "marginLeft": 2,
-                                                              "marginRight": 2,
-                                                              "position": "absolute",
-                                                              "top": "50%",
-                                                              "transform": "translateY(-50%)",
-                                                            }
-                                                          }
-                                                        >
-                                                          <div
-                                                            className="hoi-poi-select__placeholder css-1wa3eu0-placeholder"
-                                                          >
-                                                            Select...
-                                                          </div>
-                                                        </EmotionCssPropInternal>
-                                                      </Placeholder>
-                                                      <Input
-                                                        aria-autocomplete="list"
-                                                        autoCapitalize="none"
-                                                        autoComplete="off"
-                                                        autoCorrect="off"
-                                                        cx={[Function]}
-                                                        getStyles={[Function]}
-                                                        id="react-select-2-input"
-                                                        innerRef={[Function]}
-                                                        isDisabled={false}
-                                                        isHidden={false}
-                                                        onBlur={[Function]}
-                                                        onChange={[Function]}
-                                                        onFocus={[Function]}
-                                                        selectProps={
-                                                          Object {
-                                                            "autoFocus": undefined,
-                                                            "backspaceRemovesValue": true,
-                                                            "blurInputOnSelect": true,
-                                                            "captureMenuScroll": false,
-                                                            "className": "HoiPoi__Select__select-1-39",
-                                                            "classNamePrefix": "hoi-poi-select",
-                                                            "closeMenuOnScroll": false,
-                                                            "closeMenuOnSelect": true,
-                                                            "components": Object {
-                                                              "ClearIndicator": [Function],
-                                                              "DropdownIndicator": [Function],
-                                                              "LoadingIndicator": [Function],
-                                                              "Menu": [Function],
-                                                              "MenuList": [Function],
-                                                            },
-                                                            "controlShouldRenderValue": true,
-                                                            "defaultOptions": null,
-                                                            "escapeClearsValue": false,
-                                                            "filterOption": [Function],
-                                                            "formatGroupLabel": [Function],
-                                                            "formatOptionLabel": [Function],
-                                                            "getOptionLabel": [Function],
-                                                            "getOptionValue": [Function],
-                                                            "hideSelectedOptions": true,
-                                                            "id": undefined,
-                                                            "inputValue": "",
-                                                            "isClearable": true,
-                                                            "isDisabled": false,
-                                                            "isLoading": false,
-                                                            "isMulti": false,
-                                                            "isOptionDisabled": [Function],
-                                                            "isRtl": false,
-                                                            "isSearchable": true,
-                                                            "loadOptions": undefined,
-                                                            "loadingMessage": [Function],
-                                                            "maxMenuHeight": 300,
-                                                            "menuIsOpen": false,
-                                                            "menuPlacement": "auto",
-                                                            "menuPortalTarget": <body />,
-                                                            "menuPosition": "absolute",
-                                                            "menuShouldBlockScroll": false,
-                                                            "menuShouldScrollIntoView": true,
-                                                            "minMenuHeight": 140,
-                                                            "name": "activity",
-                                                            "noOptionsMessage": [Function],
-                                                            "onBlur": [Function],
-                                                            "onChange": [Function],
-                                                            "onFocus": [Function],
-                                                            "onInputChange": [Function],
-                                                            "onMenuClose": [Function],
-                                                            "onMenuOpen": [Function],
-                                                            "openMenuOnClick": true,
-                                                            "openMenuOnFocus": false,
-                                                            "options": Array [
-                                                              Object {
-                                                                "label": "A",
-                                                                "value": "a",
-                                                              },
-                                                              Object {
-                                                                "label": "B",
-                                                                "value": "b",
-                                                              },
-                                                              Object {
-                                                                "label": "C",
-                                                                "value": "c",
-                                                              },
-                                                            ],
-                                                            "pageSize": 5,
-                                                            "placeholder": "Select...",
-                                                            "screenReaderStatus": [Function],
-                                                            "styles": Object {
-                                                              "menuPortal": [Function],
-                                                            },
-                                                            "tabIndex": "0",
-                                                            "tabSelectsValue": true,
-                                                            "value": "",
-                                                          }
-                                                        }
-                                                        spellCheck="false"
-                                                        tabIndex="0"
-                                                        theme={
-                                                          Object {
-                                                            "borderRadius": 4,
-                                                            "colors": Object {
-                                                              "danger": "#DE350B",
-                                                              "dangerLight": "#FFBDAD",
-                                                              "neutral0": "hsl(0, 0%, 100%)",
-                                                              "neutral10": "hsl(0, 0%, 90%)",
-                                                              "neutral20": "hsl(0, 0%, 80%)",
-                                                              "neutral30": "hsl(0, 0%, 70%)",
-                                                              "neutral40": "hsl(0, 0%, 60%)",
-                                                              "neutral5": "hsl(0, 0%, 95%)",
-                                                              "neutral50": "hsl(0, 0%, 50%)",
-                                                              "neutral60": "hsl(0, 0%, 40%)",
-                                                              "neutral70": "hsl(0, 0%, 30%)",
-                                                              "neutral80": "hsl(0, 0%, 20%)",
-                                                              "neutral90": "hsl(0, 0%, 10%)",
-                                                              "primary": "#2684FF",
-                                                              "primary25": "#DEEBFF",
-                                                              "primary50": "#B2D4FF",
-                                                              "primary75": "#4C9AFF",
-                                                            },
-                                                            "spacing": Object {
-                                                              "baseUnit": 4,
-                                                              "controlHeight": 38,
-                                                              "menuGutter": 8,
-                                                            },
-                                                          }
-                                                        }
-                                                        type="text"
-                                                        value=""
-                                                      >
-                                                        <EmotionCssPropInternal
-                                                          __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Input"
-                                                          __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                                          css={
-                                                            Object {
-                                                              "boxSizing": "border-box",
-                                                              "color": "hsl(0, 0%, 20%)",
-                                                              "margin": 2,
-                                                              "paddingBottom": 2,
-                                                              "paddingTop": 2,
-                                                              "visibility": "visible",
-                                                            }
-                                                          }
-                                                        >
-                                                          <div
-                                                            className="css-b8ldur-Input"
-                                                          >
-                                                            <AutosizeInput
-                                                              aria-autocomplete="list"
-                                                              autoCapitalize="none"
-                                                              autoComplete="off"
-                                                              autoCorrect="off"
-                                                              className="hoi-poi-select__input"
-                                                              disabled={false}
-                                                              id="react-select-2-input"
-                                                              injectStyles={true}
-                                                              inputRef={[Function]}
-                                                              inputStyle={
-                                                                Object {
-                                                                  "background": 0,
-                                                                  "border": 0,
-                                                                  "color": "inherit",
-                                                                  "fontSize": "inherit",
-                                                                  "label": "input",
-                                                                  "opacity": 1,
-                                                                  "outline": 0,
-                                                                  "padding": 0,
-                                                                }
-                                                              }
-                                                              minWidth={1}
-                                                              onBlur={[Function]}
-                                                              onChange={[Function]}
-                                                              onFocus={[Function]}
-                                                              spellCheck="false"
-                                                              tabIndex="0"
-                                                              type="text"
-                                                              value=""
-                                                            >
-                                                              <div
-                                                                className="hoi-poi-select__input"
-                                                                style={
-                                                                  Object {
-                                                                    "display": "inline-block",
-                                                                  }
-                                                                }
-                                                              >
-                                                                <input
-                                                                  aria-autocomplete="list"
-                                                                  autoCapitalize="none"
-                                                                  autoComplete="off"
-                                                                  autoCorrect="off"
-                                                                  disabled={false}
-                                                                  id="react-select-2-input"
-                                                                  onBlur={[Function]}
-                                                                  onChange={[Function]}
-                                                                  onFocus={[Function]}
-                                                                  spellCheck="false"
-                                                                  style={
-                                                                    Object {
-                                                                      "background": 0,
-                                                                      "border": 0,
-                                                                      "boxSizing": "content-box",
-                                                                      "color": "inherit",
-                                                                      "fontSize": "inherit",
-                                                                      "label": "input",
-                                                                      "opacity": 1,
-                                                                      "outline": 0,
-                                                                      "padding": 0,
-                                                                      "width": "2px",
-                                                                    }
-                                                                  }
-                                                                  tabIndex="0"
-                                                                  type="text"
-                                                                  value=""
-                                                                />
-                                                                <div
-                                                                  style={
-                                                                    Object {
-                                                                      "height": 0,
-                                                                      "left": 0,
-                                                                      "overflow": "scroll",
-                                                                      "position": "absolute",
-                                                                      "top": 0,
-                                                                      "visibility": "hidden",
-                                                                      "whiteSpace": "pre",
-                                                                    }
-                                                                  }
-                                                                />
-                                                              </div>
-                                                            </AutosizeInput>
-                                                          </div>
-                                                        </EmotionCssPropInternal>
-                                                      </Input>
-                                                    </div>
-                                                  </EmotionCssPropInternal>
-                                                </ValueContainer>
-                                                <IndicatorsContainer
-                                                  clearValue={[Function]}
-                                                  cx={[Function]}
-                                                  getStyles={[Function]}
-                                                  getValue={[Function]}
-                                                  hasValue={false}
-                                                  isDisabled={false}
-                                                  isMulti={false}
-                                                  isRtl={false}
-                                                  options={
-                                                    Array [
-                                                      Object {
-                                                        "label": "A",
-                                                        "value": "a",
-                                                      },
-                                                      Object {
-                                                        "label": "B",
-                                                        "value": "b",
-                                                      },
-                                                      Object {
-                                                        "label": "C",
-                                                        "value": "c",
-                                                      },
-                                                    ]
-                                                  }
-                                                  selectOption={[Function]}
-                                                  selectProps={
-                                                    Object {
-                                                      "autoFocus": undefined,
-                                                      "backspaceRemovesValue": true,
-                                                      "blurInputOnSelect": true,
-                                                      "captureMenuScroll": false,
-                                                      "className": "HoiPoi__Select__select-1-39",
-                                                      "classNamePrefix": "hoi-poi-select",
-                                                      "closeMenuOnScroll": false,
-                                                      "closeMenuOnSelect": true,
-                                                      "components": Object {
-                                                        "ClearIndicator": [Function],
-                                                        "DropdownIndicator": [Function],
-                                                        "LoadingIndicator": [Function],
-                                                        "Menu": [Function],
-                                                        "MenuList": [Function],
-                                                      },
-                                                      "controlShouldRenderValue": true,
-                                                      "defaultOptions": null,
-                                                      "escapeClearsValue": false,
-                                                      "filterOption": [Function],
-                                                      "formatGroupLabel": [Function],
-                                                      "formatOptionLabel": [Function],
-                                                      "getOptionLabel": [Function],
-                                                      "getOptionValue": [Function],
-                                                      "hideSelectedOptions": true,
-                                                      "id": undefined,
-                                                      "inputValue": "",
-                                                      "isClearable": true,
-                                                      "isDisabled": false,
-                                                      "isLoading": false,
-                                                      "isMulti": false,
-                                                      "isOptionDisabled": [Function],
-                                                      "isRtl": false,
-                                                      "isSearchable": true,
-                                                      "loadOptions": undefined,
-                                                      "loadingMessage": [Function],
-                                                      "maxMenuHeight": 300,
-                                                      "menuIsOpen": false,
-                                                      "menuPlacement": "auto",
-                                                      "menuPortalTarget": <body />,
-                                                      "menuPosition": "absolute",
-                                                      "menuShouldBlockScroll": false,
-                                                      "menuShouldScrollIntoView": true,
-                                                      "minMenuHeight": 140,
-                                                      "name": "activity",
-                                                      "noOptionsMessage": [Function],
-                                                      "onBlur": [Function],
-                                                      "onChange": [Function],
-                                                      "onFocus": [Function],
-                                                      "onInputChange": [Function],
-                                                      "onMenuClose": [Function],
-                                                      "onMenuOpen": [Function],
-                                                      "openMenuOnClick": true,
-                                                      "openMenuOnFocus": false,
-                                                      "options": Array [
-                                                        Object {
-                                                          "label": "A",
-                                                          "value": "a",
-                                                        },
-                                                        Object {
-                                                          "label": "B",
-                                                          "value": "b",
-                                                        },
-                                                        Object {
-                                                          "label": "C",
-                                                          "value": "c",
-                                                        },
-                                                      ],
-                                                      "pageSize": 5,
-                                                      "placeholder": "Select...",
-                                                      "screenReaderStatus": [Function],
-                                                      "styles": Object {
-                                                        "menuPortal": [Function],
-                                                      },
-                                                      "tabIndex": "0",
-                                                      "tabSelectsValue": true,
-                                                      "value": "",
-                                                    }
-                                                  }
-                                                  setValue={[Function]}
-                                                  theme={
-                                                    Object {
-                                                      "borderRadius": 4,
-                                                      "colors": Object {
-                                                        "danger": "#DE350B",
-                                                        "dangerLight": "#FFBDAD",
-                                                        "neutral0": "hsl(0, 0%, 100%)",
-                                                        "neutral10": "hsl(0, 0%, 90%)",
-                                                        "neutral20": "hsl(0, 0%, 80%)",
-                                                        "neutral30": "hsl(0, 0%, 70%)",
-                                                        "neutral40": "hsl(0, 0%, 60%)",
-                                                        "neutral5": "hsl(0, 0%, 95%)",
-                                                        "neutral50": "hsl(0, 0%, 50%)",
-                                                        "neutral60": "hsl(0, 0%, 40%)",
-                                                        "neutral70": "hsl(0, 0%, 30%)",
-                                                        "neutral80": "hsl(0, 0%, 20%)",
-                                                        "neutral90": "hsl(0, 0%, 10%)",
-                                                        "primary": "#2684FF",
-                                                        "primary25": "#DEEBFF",
-                                                        "primary50": "#B2D4FF",
-                                                        "primary75": "#4C9AFF",
-                                                      },
-                                                      "spacing": Object {
-                                                        "baseUnit": 4,
-                                                        "controlHeight": 38,
-                                                        "menuGutter": 8,
-                                                      },
-                                                    }
-                                                  }
-                                                >
-                                                  <EmotionCssPropInternal
-                                                    __EMOTION_LABEL_PLEASE_DO_NOT_USE__="IndicatorsContainer"
-                                                    __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                                    className="hoi-poi-select__indicators"
-                                                    css={
-                                                      Object {
-                                                        "alignItems": "center",
-                                                        "alignSelf": "stretch",
-                                                        "boxSizing": "border-box",
-                                                        "display": "flex",
-                                                        "flexShrink": 0,
-                                                      }
-                                                    }
-                                                  >
-                                                    <div
-                                                      className="hoi-poi-select__indicators css-1hb7zxy-IndicatorsContainer"
-                                                    >
-                                                      <IndicatorSeparator
-                                                        clearValue={[Function]}
-                                                        cx={[Function]}
-                                                        getStyles={[Function]}
-                                                        getValue={[Function]}
-                                                        hasValue={false}
-                                                        isDisabled={false}
-                                                        isFocused={false}
-                                                        isMulti={false}
-                                                        isRtl={false}
-                                                        options={
-                                                          Array [
-                                                            Object {
-                                                              "label": "A",
-                                                              "value": "a",
-                                                            },
-                                                            Object {
-                                                              "label": "B",
-                                                              "value": "b",
-                                                            },
-                                                            Object {
-                                                              "label": "C",
-                                                              "value": "c",
-                                                            },
-                                                          ]
-                                                        }
-                                                        selectOption={[Function]}
-                                                        selectProps={
-                                                          Object {
-                                                            "autoFocus": undefined,
-                                                            "backspaceRemovesValue": true,
-                                                            "blurInputOnSelect": true,
-                                                            "captureMenuScroll": false,
-                                                            "className": "HoiPoi__Select__select-1-39",
-                                                            "classNamePrefix": "hoi-poi-select",
-                                                            "closeMenuOnScroll": false,
-                                                            "closeMenuOnSelect": true,
-                                                            "components": Object {
-                                                              "ClearIndicator": [Function],
-                                                              "DropdownIndicator": [Function],
-                                                              "LoadingIndicator": [Function],
-                                                              "Menu": [Function],
-                                                              "MenuList": [Function],
-                                                            },
-                                                            "controlShouldRenderValue": true,
-                                                            "defaultOptions": null,
-                                                            "escapeClearsValue": false,
-                                                            "filterOption": [Function],
-                                                            "formatGroupLabel": [Function],
-                                                            "formatOptionLabel": [Function],
-                                                            "getOptionLabel": [Function],
-                                                            "getOptionValue": [Function],
-                                                            "hideSelectedOptions": true,
-                                                            "id": undefined,
-                                                            "inputValue": "",
-                                                            "isClearable": true,
-                                                            "isDisabled": false,
-                                                            "isLoading": false,
-                                                            "isMulti": false,
-                                                            "isOptionDisabled": [Function],
-                                                            "isRtl": false,
-                                                            "isSearchable": true,
-                                                            "loadOptions": undefined,
-                                                            "loadingMessage": [Function],
-                                                            "maxMenuHeight": 300,
-                                                            "menuIsOpen": false,
-                                                            "menuPlacement": "auto",
-                                                            "menuPortalTarget": <body />,
-                                                            "menuPosition": "absolute",
-                                                            "menuShouldBlockScroll": false,
-                                                            "menuShouldScrollIntoView": true,
-                                                            "minMenuHeight": 140,
-                                                            "name": "activity",
-                                                            "noOptionsMessage": [Function],
-                                                            "onBlur": [Function],
-                                                            "onChange": [Function],
-                                                            "onFocus": [Function],
-                                                            "onInputChange": [Function],
-                                                            "onMenuClose": [Function],
-                                                            "onMenuOpen": [Function],
-                                                            "openMenuOnClick": true,
-                                                            "openMenuOnFocus": false,
-                                                            "options": Array [
-                                                              Object {
-                                                                "label": "A",
-                                                                "value": "a",
-                                                              },
-                                                              Object {
-                                                                "label": "B",
-                                                                "value": "b",
-                                                              },
-                                                              Object {
-                                                                "label": "C",
-                                                                "value": "c",
-                                                              },
-                                                            ],
-                                                            "pageSize": 5,
-                                                            "placeholder": "Select...",
-                                                            "screenReaderStatus": [Function],
-                                                            "styles": Object {
-                                                              "menuPortal": [Function],
-                                                            },
-                                                            "tabIndex": "0",
-                                                            "tabSelectsValue": true,
-                                                            "value": "",
-                                                          }
-                                                        }
-                                                        setValue={[Function]}
-                                                        theme={
-                                                          Object {
-                                                            "borderRadius": 4,
-                                                            "colors": Object {
-                                                              "danger": "#DE350B",
-                                                              "dangerLight": "#FFBDAD",
-                                                              "neutral0": "hsl(0, 0%, 100%)",
-                                                              "neutral10": "hsl(0, 0%, 90%)",
-                                                              "neutral20": "hsl(0, 0%, 80%)",
-                                                              "neutral30": "hsl(0, 0%, 70%)",
-                                                              "neutral40": "hsl(0, 0%, 60%)",
-                                                              "neutral5": "hsl(0, 0%, 95%)",
-                                                              "neutral50": "hsl(0, 0%, 50%)",
-                                                              "neutral60": "hsl(0, 0%, 40%)",
-                                                              "neutral70": "hsl(0, 0%, 30%)",
-                                                              "neutral80": "hsl(0, 0%, 20%)",
-                                                              "neutral90": "hsl(0, 0%, 10%)",
-                                                              "primary": "#2684FF",
-                                                              "primary25": "#DEEBFF",
-                                                              "primary50": "#B2D4FF",
-                                                              "primary75": "#4C9AFF",
-                                                            },
-                                                            "spacing": Object {
-                                                              "baseUnit": 4,
-                                                              "controlHeight": 38,
-                                                              "menuGutter": 8,
-                                                            },
-                                                          }
-                                                        }
-                                                      >
-                                                        <EmotionCssPropInternal
-                                                          __EMOTION_LABEL_PLEASE_DO_NOT_USE__="IndicatorSeparator"
-                                                          __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
-                                                          className="hoi-poi-select__indicator-separator"
-                                                          css={
-                                                            Object {
-                                                              "alignSelf": "stretch",
-                                                              "backgroundColor": "hsl(0, 0%, 80%)",
-                                                              "boxSizing": "border-box",
-                                                              "label": "indicatorSeparator",
-                                                              "marginBottom": 8,
-                                                              "marginTop": 8,
-                                                              "width": 1,
-                                                            }
-                                                          }
-                                                        >
-                                                          <span
-                                                            className="hoi-poi-select__indicator-separator css-1okebmr-indicatorSeparator"
-                                                          />
-                                                        </EmotionCssPropInternal>
-                                                      </IndicatorSeparator>
-                                                      <Component
-                                                        clearValue={[Function]}
-                                                        cx={[Function]}
-                                                        getStyles={[Function]}
-                                                        getValue={[Function]}
-                                                        hasValue={false}
-                                                        innerProps={
-                                                          Object {
-                                                            "aria-hidden": "true",
-                                                            "onMouseDown": [Function],
-                                                            "onTouchEnd": [Function],
-                                                          }
-                                                        }
-                                                        isDisabled={false}
-                                                        isFocused={false}
-                                                        isMulti={false}
-                                                        isRtl={false}
-                                                        options={
-                                                          Array [
-                                                            Object {
-                                                              "label": "A",
-                                                              "value": "a",
-                                                            },
-                                                            Object {
-                                                              "label": "B",
-                                                              "value": "b",
-                                                            },
-                                                            Object {
-                                                              "label": "C",
-                                                              "value": "c",
-                                                            },
-                                                          ]
-                                                        }
-                                                        selectOption={[Function]}
-                                                        selectProps={
-                                                          Object {
-                                                            "autoFocus": undefined,
-                                                            "backspaceRemovesValue": true,
-                                                            "blurInputOnSelect": true,
-                                                            "captureMenuScroll": false,
-                                                            "className": "HoiPoi__Select__select-1-39",
-                                                            "classNamePrefix": "hoi-poi-select",
-                                                            "closeMenuOnScroll": false,
-                                                            "closeMenuOnSelect": true,
-                                                            "components": Object {
-                                                              "ClearIndicator": [Function],
-                                                              "DropdownIndicator": [Function],
-                                                              "LoadingIndicator": [Function],
-                                                              "Menu": [Function],
-                                                              "MenuList": [Function],
-                                                            },
-                                                            "controlShouldRenderValue": true,
-                                                            "defaultOptions": null,
-                                                            "escapeClearsValue": false,
-                                                            "filterOption": [Function],
-                                                            "formatGroupLabel": [Function],
-                                                            "formatOptionLabel": [Function],
-                                                            "getOptionLabel": [Function],
-                                                            "getOptionValue": [Function],
-                                                            "hideSelectedOptions": true,
-                                                            "id": undefined,
-                                                            "inputValue": "",
-                                                            "isClearable": true,
-                                                            "isDisabled": false,
-                                                            "isLoading": false,
-                                                            "isMulti": false,
-                                                            "isOptionDisabled": [Function],
-                                                            "isRtl": false,
-                                                            "isSearchable": true,
-                                                            "loadOptions": undefined,
-                                                            "loadingMessage": [Function],
-                                                            "maxMenuHeight": 300,
-                                                            "menuIsOpen": false,
-                                                            "menuPlacement": "auto",
-                                                            "menuPortalTarget": <body />,
-                                                            "menuPosition": "absolute",
-                                                            "menuShouldBlockScroll": false,
-                                                            "menuShouldScrollIntoView": true,
-                                                            "minMenuHeight": 140,
-                                                            "name": "activity",
-                                                            "noOptionsMessage": [Function],
-                                                            "onBlur": [Function],
-                                                            "onChange": [Function],
-                                                            "onFocus": [Function],
-                                                            "onInputChange": [Function],
-                                                            "onMenuClose": [Function],
-                                                            "onMenuOpen": [Function],
-                                                            "openMenuOnClick": true,
-                                                            "openMenuOnFocus": false,
-                                                            "options": Array [
-                                                              Object {
-                                                                "label": "A",
-                                                                "value": "a",
-                                                              },
-                                                              Object {
-                                                                "label": "B",
-                                                                "value": "b",
-                                                              },
-                                                              Object {
-                                                                "label": "C",
-                                                                "value": "c",
-                                                              },
-                                                            ],
-                                                            "pageSize": 5,
-                                                            "placeholder": "Select...",
-                                                            "screenReaderStatus": [Function],
-                                                            "styles": Object {
-                                                              "menuPortal": [Function],
-                                                            },
-                                                            "tabIndex": "0",
-                                                            "tabSelectsValue": true,
-                                                            "value": "",
-                                                          }
-                                                        }
-                                                        setValue={[Function]}
-                                                        theme={
-                                                          Object {
-                                                            "borderRadius": 4,
-                                                            "colors": Object {
-                                                              "danger": "#DE350B",
-                                                              "dangerLight": "#FFBDAD",
-                                                              "neutral0": "hsl(0, 0%, 100%)",
-                                                              "neutral10": "hsl(0, 0%, 90%)",
-                                                              "neutral20": "hsl(0, 0%, 80%)",
-                                                              "neutral30": "hsl(0, 0%, 70%)",
-                                                              "neutral40": "hsl(0, 0%, 60%)",
-                                                              "neutral5": "hsl(0, 0%, 95%)",
-                                                              "neutral50": "hsl(0, 0%, 50%)",
-                                                              "neutral60": "hsl(0, 0%, 40%)",
-                                                              "neutral70": "hsl(0, 0%, 30%)",
-                                                              "neutral80": "hsl(0, 0%, 20%)",
-                                                              "neutral90": "hsl(0, 0%, 10%)",
-                                                              "primary": "#2684FF",
-                                                              "primary25": "#DEEBFF",
-                                                              "primary50": "#B2D4FF",
-                                                              "primary75": "#4C9AFF",
-                                                            },
-                                                            "spacing": Object {
-                                                              "baseUnit": 4,
-                                                              "controlHeight": 38,
-                                                              "menuGutter": 8,
-                                                            },
-                                                          }
-                                                        }
-                                                      >
-                                                        <DropdownIndicator
-                                                          clearValue={[Function]}
-                                                          cx={[Function]}
-                                                          getStyles={[Function]}
-                                                          getValue={[Function]}
-                                                          hasValue={false}
-                                                          innerProps={
-                                                            Object {
-                                                              "aria-hidden": "true",
-                                                              "onMouseDown": [Function],
-                                                              "onTouchEnd": [Function],
-                                                            }
-                                                          }
-                                                          isDisabled={false}
-                                                          isFocused={false}
-                                                          isMulti={false}
-                                                          isRtl={false}
-                                                          options={
-                                                            Array [
-                                                              Object {
-                                                                "label": "A",
-                                                                "value": "a",
-                                                              },
-                                                              Object {
-                                                                "label": "B",
-                                                                "value": "b",
-                                                              },
-                                                              Object {
-                                                                "label": "C",
-                                                                "value": "c",
-                                                              },
-                                                            ]
-                                                          }
-                                                          selectOption={[Function]}
-                                                          selectProps={
-                                                            Object {
-                                                              "autoFocus": undefined,
-                                                              "backspaceRemovesValue": true,
-                                                              "blurInputOnSelect": true,
-                                                              "captureMenuScroll": false,
-                                                              "className": "HoiPoi__Select__select-1-39",
-                                                              "classNamePrefix": "hoi-poi-select",
-                                                              "closeMenuOnScroll": false,
-                                                              "closeMenuOnSelect": true,
-                                                              "components": Object {
-                                                                "ClearIndicator": [Function],
-                                                                "DropdownIndicator": [Function],
-                                                                "LoadingIndicator": [Function],
-                                                                "Menu": [Function],
-                                                                "MenuList": [Function],
-                                                              },
-                                                              "controlShouldRenderValue": true,
-                                                              "defaultOptions": null,
-                                                              "escapeClearsValue": false,
-                                                              "filterOption": [Function],
-                                                              "formatGroupLabel": [Function],
-                                                              "formatOptionLabel": [Function],
-                                                              "getOptionLabel": [Function],
-                                                              "getOptionValue": [Function],
-                                                              "hideSelectedOptions": true,
-                                                              "id": undefined,
-                                                              "inputValue": "",
-                                                              "isClearable": true,
-                                                              "isDisabled": false,
-                                                              "isLoading": false,
-                                                              "isMulti": false,
-                                                              "isOptionDisabled": [Function],
-                                                              "isRtl": false,
-                                                              "isSearchable": true,
-                                                              "loadOptions": undefined,
-                                                              "loadingMessage": [Function],
-                                                              "maxMenuHeight": 300,
-                                                              "menuIsOpen": false,
-                                                              "menuPlacement": "auto",
-                                                              "menuPortalTarget": <body />,
-                                                              "menuPosition": "absolute",
-                                                              "menuShouldBlockScroll": false,
-                                                              "menuShouldScrollIntoView": true,
-                                                              "minMenuHeight": 140,
-                                                              "name": "activity",
-                                                              "noOptionsMessage": [Function],
-                                                              "onBlur": [Function],
-                                                              "onChange": [Function],
-                                                              "onFocus": [Function],
-                                                              "onInputChange": [Function],
-                                                              "onMenuClose": [Function],
-                                                              "onMenuOpen": [Function],
-                                                              "openMenuOnClick": true,
-                                                              "openMenuOnFocus": false,
-                                                              "options": Array [
-                                                                Object {
-                                                                  "label": "A",
-                                                                  "value": "a",
-                                                                },
-                                                                Object {
-                                                                  "label": "B",
-                                                                  "value": "b",
-                                                                },
-                                                                Object {
-                                                                  "label": "C",
-                                                                  "value": "c",
-                                                                },
-                                                              ],
-                                                              "pageSize": 5,
-                                                              "placeholder": "Select...",
-                                                              "screenReaderStatus": [Function],
-                                                              "styles": Object {
-                                                                "menuPortal": [Function],
-                                                              },
-                                                              "tabIndex": "0",
-                                                              "tabSelectsValue": true,
-                                                              "value": "",
-                                                            }
-                                                          }
-                                                          setValue={[Function]}
-                                                          theme={
-                                                            Object {
-                                                              "borderRadius": 4,
-                                                              "colors": Object {
-                                                                "danger": "#DE350B",
-                                                                "dangerLight": "#FFBDAD",
-                                                                "neutral0": "hsl(0, 0%, 100%)",
-                                                                "neutral10": "hsl(0, 0%, 90%)",
-                                                                "neutral20": "hsl(0, 0%, 80%)",
-                                                                "neutral30": "hsl(0, 0%, 70%)",
-                                                                "neutral40": "hsl(0, 0%, 60%)",
-                                                                "neutral5": "hsl(0, 0%, 95%)",
-                                                                "neutral50": "hsl(0, 0%, 50%)",
-                                                                "neutral60": "hsl(0, 0%, 40%)",
-                                                                "neutral70": "hsl(0, 0%, 30%)",
-                                                                "neutral80": "hsl(0, 0%, 20%)",
-                                                                "neutral90": "hsl(0, 0%, 10%)",
-                                                                "primary": "#2684FF",
-                                                                "primary25": "#DEEBFF",
-                                                                "primary50": "#B2D4FF",
-                                                                "primary75": "#4C9AFF",
-                                                              },
-                                                              "spacing": Object {
-                                                                "baseUnit": 4,
-                                                                "controlHeight": 38,
-                                                                "menuGutter": 8,
-                                                              },
-                                                            }
-                                                          }
-                                                        >
-                                                          <EmotionCssPropInternal
-                                                            __EMOTION_LABEL_PLEASE_DO_NOT_USE__="DropdownIndicator"
-                                                            __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
-                                                            aria-hidden="true"
-                                                            className="hoi-poi-select__indicator hoi-poi-select__dropdown-indicator"
-                                                            css={
-                                                              Object {
-                                                                ":hover": Object {
-                                                                  "color": "hsl(0, 0%, 60%)",
-                                                                },
-                                                                "boxSizing": "border-box",
-                                                                "color": "hsl(0, 0%, 80%)",
-                                                                "display": "flex",
-                                                                "label": "indicatorContainer",
-                                                                "padding": 8,
-                                                                "transition": "color 150ms",
-                                                              }
-                                                            }
-                                                            onMouseDown={[Function]}
-                                                            onTouchEnd={[Function]}
-                                                          >
-                                                            <div
-                                                              aria-hidden="true"
-                                                              className="hoi-poi-select__indicator hoi-poi-select__dropdown-indicator css-tlfecz-indicatorContainer"
-                                                              onMouseDown={[Function]}
-                                                              onTouchEnd={[Function]}
-                                                            >
-                                                              <Icon
-                                                                name="chevron"
-                                                                overrides={Object {}}
-                                                                size="small"
-                                                              >
-                                                                <span
-                                                                  className="HoiPoi__Icon__root-1-62 HoiPoi__Icon__small-1-63"
-                                                                >
-                                                                  <Chevron
-                                                                    color="#788590"
-                                                                  >
-                                                                    <svg
-                                                                      viewBox="0 0 10 10"
-                                                                      xmlns="http://www.w3.org/2000/svg"
-                                                                    >
-                                                                      <path
-                                                                        d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                                                                        fill="#788590"
-                                                                        fillRule="evenodd"
-                                                                      />
-                                                                    </svg>
-                                                                  </Chevron>
-                                                                </span>
-                                                              </Icon>
-                                                            </div>
-                                                          </EmotionCssPropInternal>
-                                                        </DropdownIndicator>
-                                                      </Component>
-                                                    </div>
-                                                  </EmotionCssPropInternal>
-                                                </IndicatorsContainer>
-                                              </div>
-                                            </EmotionCssPropInternal>
-                                          </Control>
-                                          <input
-                                            name="activity"
-                                            type="hidden"
-                                            value=""
-                                          />
-                                        </div>
-                                      </EmotionCssPropInternal>
-                                    </SelectContainer>
-                                  </Select>
-                                </StateManager>
-                              </div>
+                                <span
+                                  className="HoiPoi__Text__root-1-55 HoiPoi__Select__bulkEdit-1-31"
+                                  onClick={[Function]}
+                                />
+                              </Text>
                             </div>
                           </Select>
                         </FieldControl>
@@ -2489,6 +786,7 @@ exports[`Multiplier complete match 1`] = `
                               "type": "text",
                             }
                           }
+                          isBulk={true}
                           isFullWidth={false}
                           key="name"
                           labelMode="horizontal"
@@ -2506,6 +804,7 @@ exports[`Multiplier complete match 1`] = `
                         >
                           <Input
                             error=""
+                            isBulk={true}
                             isCopyable={false}
                             isFullWidth={false}
                             isReadOnly={false}
@@ -2514,6 +813,8 @@ exports[`Multiplier complete match 1`] = `
                             labelMode="horizontal"
                             name="name"
                             onBlur={[Function]}
+                            onBulkCancel={[Function]}
+                            onBulkEdit={[Function]}
                             onChange={[Function]}
                             onEnter={[Function]}
                             onFocus={[Function]}
@@ -2529,21 +830,21 @@ exports[`Multiplier complete match 1`] = `
                             value=""
                           >
                             <div
-                              className="HoiPoi__Input__root-1-69 HoiPoi__Input__horizontal-1-85"
+                              className="HoiPoi__Input__root-1-66 HoiPoi__Input__horizontal-1-87"
                             >
                               <Label
-                                className="HoiPoi__Input__Label-1-70"
+                                className="HoiPoi__Input__Label-1-67"
                                 isRequired={true}
                               >
                                 <span
-                                  className="HoiPoi__Label__root-1-47 HoiPoi__Input__Label-1-70"
+                                  className="HoiPoi__Label__root-1-51 HoiPoi__Input__Label-1-67"
                                 >
                                   <Text
-                                    className="HoiPoi__Label__Text-1-48"
+                                    className="HoiPoi__Label__Text-1-52"
                                     overrides={Object {}}
                                   >
                                     <span
-                                      className="HoiPoi__Text__root-1-51 HoiPoi__Label__Text-1-48"
+                                      className="HoiPoi__Text__root-1-55 HoiPoi__Label__Text-1-52"
                                     >
                                       Name
                                       *
@@ -2551,21 +852,16 @@ exports[`Multiplier complete match 1`] = `
                                   </Text>
                                 </span>
                               </Label>
-                              <div
-                                className="HoiPoi__Input__formControl-1-73"
+                              <Text
+                                className="HoiPoi__Input__bulkEdit-1-70"
+                                onClick={[Function]}
+                                overrides={Object {}}
                               >
-                                <input
-                                  className="HoiPoi__Input__input-1-74"
-                                  name="name"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  readOnly={false}
-                                  type="text"
-                                  value=""
+                                <span
+                                  className="HoiPoi__Text__root-1-55 HoiPoi__Input__bulkEdit-1-70"
+                                  onClick={[Function]}
                                 />
-                              </div>
+                              </Text>
                             </div>
                           </Input>
                         </FieldControl>
@@ -2579,6 +875,7 @@ exports[`Multiplier complete match 1`] = `
                               "type": "text",
                             }
                           }
+                          isBulk={true}
                           isFullWidth={false}
                           key="email"
                           labelMode="horizontal"
@@ -2596,6 +893,7 @@ exports[`Multiplier complete match 1`] = `
                         >
                           <Input
                             error=""
+                            isBulk={true}
                             isCopyable={false}
                             isFullWidth={false}
                             isReadOnly={false}
@@ -2604,6 +902,8 @@ exports[`Multiplier complete match 1`] = `
                             labelMode="horizontal"
                             name="email"
                             onBlur={[Function]}
+                            onBulkCancel={[Function]}
+                            onBulkEdit={[Function]}
                             onChange={[Function]}
                             onEnter={[Function]}
                             onFocus={[Function]}
@@ -2619,21 +919,21 @@ exports[`Multiplier complete match 1`] = `
                             value=""
                           >
                             <div
-                              className="HoiPoi__Input__root-1-69 HoiPoi__Input__horizontal-1-85"
+                              className="HoiPoi__Input__root-1-66 HoiPoi__Input__horizontal-1-87"
                             >
                               <Label
-                                className="HoiPoi__Input__Label-1-70"
+                                className="HoiPoi__Input__Label-1-67"
                                 isRequired={true}
                               >
                                 <span
-                                  className="HoiPoi__Label__root-1-47 HoiPoi__Input__Label-1-70"
+                                  className="HoiPoi__Label__root-1-51 HoiPoi__Input__Label-1-67"
                                 >
                                   <Text
-                                    className="HoiPoi__Label__Text-1-48"
+                                    className="HoiPoi__Label__Text-1-52"
                                     overrides={Object {}}
                                   >
                                     <span
-                                      className="HoiPoi__Text__root-1-51 HoiPoi__Label__Text-1-48"
+                                      className="HoiPoi__Text__root-1-55 HoiPoi__Label__Text-1-52"
                                     >
                                       Email
                                       *
@@ -2641,21 +941,16 @@ exports[`Multiplier complete match 1`] = `
                                   </Text>
                                 </span>
                               </Label>
-                              <div
-                                className="HoiPoi__Input__formControl-1-73"
+                              <Text
+                                className="HoiPoi__Input__bulkEdit-1-70"
+                                onClick={[Function]}
+                                overrides={Object {}}
                               >
-                                <input
-                                  className="HoiPoi__Input__input-1-74"
-                                  name="email"
-                                  onBlur={[Function]}
-                                  onChange={[Function]}
-                                  onFocus={[Function]}
-                                  onKeyDown={[Function]}
-                                  readOnly={false}
-                                  type="text"
-                                  value=""
+                                <span
+                                  className="HoiPoi__Text__root-1-55 HoiPoi__Input__bulkEdit-1-70"
+                                  onClick={[Function]}
                                 />
-                              </div>
+                              </Text>
                             </div>
                           </Input>
                         </FieldControl>
@@ -2677,7 +972,7 @@ exports[`Multiplier complete match 1`] = `
               type="squared-outlined"
             >
               <button
-                className="HoiPoi__Button__root-1-91 HoiPoi__Button__squared-outlined-1-97 HoiPoi__Button__white-1-99 HoiPoi__Multiplier__button-1-6 addButton"
+                className="HoiPoi__Button__root-1-93 HoiPoi__Button__squared-outlined-1-99 HoiPoi__Button__white-1-101 HoiPoi__Multiplier__button-1-6 addButton"
                 onClick={[Function]}
                 type="button"
               >
@@ -2685,11 +980,11 @@ exports[`Multiplier complete match 1`] = `
                   className=""
                 >
                   <Text
-                    className="HoiPoi__Button__Text-1-92"
+                    className="HoiPoi__Button__Text-1-94"
                     overrides={Object {}}
                   >
                     <span
-                      className="HoiPoi__Text__root-1-51 HoiPoi__Button__Text-1-92"
+                      className="HoiPoi__Text__root-1-55 HoiPoi__Button__Text-1-94"
                     >
                       Add
                     </span>
