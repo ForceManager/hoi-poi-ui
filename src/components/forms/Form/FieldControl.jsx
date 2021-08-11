@@ -78,21 +78,15 @@ function FieldControl({
         [onEnter, field],
     );
 
-    const onBulkEditField = useCallback(
-        (f) => {
-            console.log('onBulkEditField', f);
-            onBulkEdit && onBulkEdit(field);
-        },
-        [onBulkEdit, field],
-    );
+    const onBulkEditField = useCallback((f) => onBulkEdit && onBulkEdit(field), [
+        onBulkEdit,
+        field,
+    ]);
 
-    const onBulkCancelField = useCallback(
-        (f) => {
-            console.log('onBulkCancelField', f);
-            onBulkCancel && onBulkCancel(field);
-        },
-        [onBulkCancel, field],
-    );
+    const onBulkCancelField = useCallback((f) => onBulkCancel && onBulkCancel(field), [
+        onBulkCancel,
+        field,
+    ]);
 
     if (!field || !field.type) return null;
     let Field = FIELD_MAP[field.type];
