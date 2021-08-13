@@ -151,6 +151,10 @@ import CalendarViewWeek from './icons/actions/CalendarViewWeek';
 import CalendarViewMonth from './icons/actions/CalendarViewMonth';
 import CalendarViewWorkDay from './icons/actions/CalendarViewWorkDay';
 import Update from './icons/actions/Update';
+import TaskChecked from './icons/actions/TaskChecked';
+import TaskUnchecked from './icons/actions/TaskUnchecked';
+import TaskCheckedStroke from './icons/actions/TaskCheckedStroke';
+import TaskCheckedOutline from './icons/actions/TaskCheckedOutline';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -411,6 +415,10 @@ const ICONS = {
     calendarViewMonth: CalendarViewMonth,
     calendarViewWorkDay: CalendarViewWorkDay,
     update: Update,
+    taskChecked: TaskChecked,
+    taskUnchecked: TaskUnchecked,
+    taskCheckedStroke: TaskCheckedStroke,
+    taskCheckedOutline: TaskCheckedOutline,
     //Communication
     message: Message,
     comment: Comment,
