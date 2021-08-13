@@ -167,6 +167,14 @@ Actions:
 <span> </span>
 <Icon name="update"/>
 <span> </span>
+<Icon name="taskChecked"/>
+<span> </span>
+<Icon name="taskUnchecked"/>
+<span> </span>
+<Icon name="taskCheckedStroke"/>
+<span> </span>
+<Icon name="taskCheckedOutline"/>
+<span> </span>
 ```
 
 Communication:
