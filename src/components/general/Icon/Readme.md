@@ -212,6 +212,7 @@ Alert:
 <span> </span>
 <Icon name="warningOutlineTwoToned"/>
 <span> </span>
+
 ```
 
 Logos:
@@ -471,6 +472,8 @@ Icons:
 <Icon name="switch"/>
 <span> </span>
 <Icon name="settings"/>
+<span> </span>
+<Icon name="activities"/>
 <span> </span>
 ```
 

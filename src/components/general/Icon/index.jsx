@@ -75,6 +75,7 @@ import Widget from './icons/Widget';
 import TableCog from './icons/TableCog';
 import SandBox from './icons/SandBox';
 import Settings from './icons/Settings';
+import Activities from './icons/Activities';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -339,6 +340,7 @@ const ICONS = {
     tableCog: TableCog,
     sandBox: SandBox,
     settings: Settings,
+    activities: Activities,
 
     //Actions
     accountCheckin: AccountCheckin,
