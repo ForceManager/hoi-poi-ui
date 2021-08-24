@@ -156,6 +156,11 @@ import TaskChecked from './icons/actions/TaskChecked';
 import TaskUnchecked from './icons/actions/TaskUnchecked';
 import TaskCheckedStroke from './icons/actions/TaskCheckedStroke';
 import TaskCheckedOutline from './icons/actions/TaskCheckedOutline';
+import AttachFile from './icons/actions/AttachFile';
+import PhonecallOut from './icons/actions/PhonecallOut';
+import PhonecallMissed from './icons/actions/PhonecallMissed';
+import VideoCheckin from './icons/actions/VideoCheckin';
+import EventNote from './icons/actions/EventNote';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -341,6 +346,11 @@ const ICONS = {
     sandBox: SandBox,
     settings: Settings,
     activities: Activities,
+    attachFile: AttachFile,
+    phonecallOut: PhonecallOut,
+    phonecallMissed: PhonecallMissed,
+    videoCheckin: VideoCheckin,
+    eventNote: EventNote,
 
     //Actions
     accountCheckin: AccountCheckin,
