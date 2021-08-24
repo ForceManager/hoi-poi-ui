@@ -175,6 +175,16 @@ Actions:
 <span> </span>
 <Icon name="taskCheckedOutline"/>
 <span> </span>
+<Icon name="attachFile"/>
+<span> </span>
+<Icon name="phonecallOut"/>
+<span> </span>
+<Icon name="phonecallMissed"/>
+<span> </span>
+<Icon name="videoCheckin"/>
+<span> </span>
+<Icon name="eventNote"/>
+<span> </span>
 ```
 
 Communication:
