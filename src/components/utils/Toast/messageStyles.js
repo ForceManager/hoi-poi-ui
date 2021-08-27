@@ -12,6 +12,7 @@ export default (theme) => ({
         ...theme.typography.caption,
         color: theme.colors.text.neutralBase,
         display: 'block',
+        whiteSpace: 'pre-wrap',
     },
     success: {
         '&$title': {
