@@ -4,16 +4,94 @@ Default:
 <Link>Click me</Link>
 ```
 
+H1:
+
+```jsx
+<Link type="h1">Lorem Ipsum</Link>
+```
+
+H2:
+
+```jsx
+<Link type="h2">Lorem Ipsum</Link>
+```
+
+H3:
+
+```jsx
+<Link type="h3">Lorem Ipsum</Link>
+```
+
+H4:
+
+```jsx
+<Link type="h4">Lorem Ipsum</Link>
+```
+
+H5:
+
+```jsx
+<Link type="h5">Lorem Ipsum</Link>
+```
+
+H6:
+
+```jsx
+<Link type="h6">Lorem Ipsum</Link>
+```
+
+Subtitle1:
+
+```jsx
+<Link type="subtitle1">Lorem Ipsum</Link>
+```
+
+Subtitle:
+
+```jsx
+<Link type="subtitle">Lorem Ipsum</Link>
+```
+
+Body1:
+
+```jsx
+<Link type="body1">Lorem Ipsum</Link>
+```
+
 Body:
 
 ```jsx
-<Link type="body">Click me</Link>
+<Link type="body">Lorem Ipsum</Link>
+```
+
+Button:
+
+```jsx
+<Link type="button">Lorem Ipsum</Link>
 ```
 
 Caption:
 
 ```jsx
-<Link type="caption">Click me</Link>
+<Link type="caption">Lorem Ipsum</Link>
+```
+
+CaptionMedium:
+
+```jsx
+<Link type="captionMedium">Lorem Ipsum</Link>
+```
+
+Badges:
+
+```jsx
+<Link type="badges">Lorem Ipsum</Link>
+```
+
+Overline:
+
+```jsx
+<Link type="overline">Lorem Ipsum</Link>
 ```
 
 Link:
