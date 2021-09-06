@@ -81,6 +81,7 @@ export default (theme) => ({
     },
     dividerIcon: {
         padding: '0 2px',
+        boxSizing: 'content-box',
     },
     isFilled: {
         backgroundColor: theme.colors.blue100,
