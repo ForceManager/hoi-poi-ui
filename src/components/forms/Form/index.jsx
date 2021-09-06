@@ -122,7 +122,7 @@ function Form({
                         onBlur={onBlurField}
                         className={field.className}
                         customFields={customFields}
-                        isBulk
+                        isBulk={isBulk}
                         bulkEditLabel={bulkEditLabel}
                         bulkCancelLabel={bulkCancelLabel}
                         onBulkEdit={onBulkEdit}
