@@ -26,6 +26,7 @@ const Section = memo(
         onRemove,
         activeFields,
         orientation,
+        headerPostComponent,
     }) => {
         const classes = useClasses(useStyles, classesProp);
         const [isOpen, setIsOpen] = useState(onChange ? isOpenProp : defaultOpen);
@@ -103,6 +104,7 @@ const Section = memo(
                                 {renderTitle}
                             </div>
                             {newActiveFields}
+                            {headerPostComponent}
                             {onRemove && (
                                 <Icon
                                     onClick={onInnerRemove}
@@ -153,6 +155,7 @@ Section.defaultProps = {
 Section.propTypes = {
     className: PropTypes.string,
     title: PropTypes.any,
+    headerPostComponent: PropTypes.any,
     defaultOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
     activeFields: PropTypes.number,
