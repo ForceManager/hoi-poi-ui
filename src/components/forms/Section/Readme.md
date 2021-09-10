@@ -155,6 +155,34 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+With header post component
+
+```jsx
+import { Input, Icon } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+
+<div style={{ padding: 20, backgroundColor: '#F4F5F6' }}>
+    <Section
+        title="Title here"
+        headerPostComponent={
+            <div>
+                <Icon name="apps" />
+            </div>
+        }
+    >
+        <Input
+            label="Lorem ipsum"
+            placeholder="Write here"
+            onChange={onChange}
+            value={state.value}
+        />
+    </Section>
+</div>;
+```
+
 ### Component tree
 
 ---
