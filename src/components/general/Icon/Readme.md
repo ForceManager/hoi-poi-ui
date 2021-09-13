@@ -185,6 +185,10 @@ Actions:
 <span> </span>
 <Icon name="eventNote"/>
 <span> </span>
+<Icon name="pin"/>
+<span> </span>
+<Icon name="unpin"/>
+<span> </span>
 ```
 
 Communication:

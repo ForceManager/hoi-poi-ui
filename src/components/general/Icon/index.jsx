@@ -161,6 +161,8 @@ import PhonecallOut from './icons/actions/PhonecallOut';
 import PhonecallMissed from './icons/actions/PhonecallMissed';
 import VideoCheckin from './icons/actions/VideoCheckin';
 import EventNote from './icons/actions/EventNote';
+import Pin from './icons/actions/Pin';
+import UnPin from './icons/actions/UnPin';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -431,6 +433,8 @@ const ICONS = {
     taskUnchecked: TaskUnchecked,
     taskCheckedStroke: TaskCheckedStroke,
     taskCheckedOutline: TaskCheckedOutline,
+    pin: Pin,
+    unpin: UnPin,
     //Communication
     message: Message,
     comment: Comment,

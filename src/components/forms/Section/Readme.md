@@ -155,7 +155,7 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
-With header post component
+With header pre/post component
 
 ```jsx
 import { Input, Icon } from 'hoi-poi-ui';
@@ -167,6 +167,11 @@ const onChange = (value) => setState({ value });
 <div style={{ padding: 20, backgroundColor: '#F4F5F6' }}>
     <Section
         title="Title here"
+        headerPreComponent={
+            <div>
+                <Icon name="apps" />
+            </div>
+        }
         headerPostComponent={
             <div>
                 <Icon name="apps" />

@@ -26,6 +26,7 @@ const Section = memo(
         onRemove,
         activeFields,
         orientation,
+        headerPreComponent,
         headerPostComponent,
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -97,6 +98,7 @@ const Section = memo(
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} onClick={onToggle} {...override.header}>
                         <div className={classes.headerContent} {...override.headerContent}>
+                            {headerPreComponent}
                             <div className={classes.titleContainer} {...override.titleContainer}>
                                 <div className={classes.icon} {...override.icon}>
                                     <Icon name="arrowDropDown" />
@@ -155,6 +157,7 @@ Section.defaultProps = {
 Section.propTypes = {
     className: PropTypes.string,
     title: PropTypes.any,
+    headerPreComponent: PropTypes.any,
     headerPostComponent: PropTypes.any,
     defaultOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
