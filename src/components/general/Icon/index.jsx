@@ -168,8 +168,56 @@ import UnPin from './icons/actions/UnPin';
 import Message from './icons/communication/Message';
 import Comment from './icons/communication/Comment';
 
+//Social
+import Group from './icons/social/Group';
+import GroupAdd from './icons/social/GroupAdd';
+import LocationCity from './icons/social/LocationCity';
+import Mood from './icons/social/Mood';
+import MoodBad from './icons/social/MoodBad';
+import PeopleOutline from './icons/social/PeopleOutline';
+import Person from './icons/social/Person';
+import PersonAdd from './icons/social/PersonAdd';
+import PersonOutline from './icons/social/PersonOutline';
+import PlusOne from './icons/social/PlusOne';
+import SupervisorAccount from './icons/social/SupervisorAccount';
+
+//Image
+import Timer from './icons/image/Timer';
+import TimerOff from './icons/image/TimerOff';
+
 //Map
 import TimeZone from './icons/map/TimeZone';
+
+//Menu
+import Accounts from './icons/menu/Accounts';
+import AddWidgetsOutline from './icons/menu/AddWidgetsOutline';
+import AnalyticsPro from './icons/menu/AnalyticsPro';
+import BubleChart from './icons/menu/BubleChart';
+import Campaigns from './icons/menu/Campaigns';
+import Contacts from './icons/menu/Contacts';
+import Credentials from './icons/menu/Credentials';
+import Cron from './icons/menu/Cron';
+import CustomPage from './icons/menu/CustomPage';
+import ExternalApps from './icons/menu/ExternalApps';
+import Fields from './icons/menu/Fields';
+import Goals from './icons/menu/Goals';
+import Imports from './icons/menu/Imports';
+import Literals from './icons/menu/Literals';
+import News from './icons/menu/News';
+import Opportunities from './icons/menu/Opportunities';
+import Orders from './icons/menu/Orders';
+import Parameters from './icons/menu/Parameters';
+import Plans from './icons/menu/Plans';
+import Products from './icons/menu/Products';
+import Quotes from './icons/menu/Quotes';
+import Reports from './icons/menu/Reports';
+import Roles from './icons/menu/Roles';
+import SalesForce from './icons/menu/SalesForce';
+import SalesOrders from './icons/menu/SalesOrders';
+import Sandbox from './icons/menu/Sandbox';
+import Support from './icons/menu/Support';
+import Tasks from './icons/menu/Tasks';
+import Workspace from './icons/menu/Workspace';
 
 //Alert
 import AddAlert from './icons/alert/AddAlert';
@@ -209,6 +257,8 @@ import Fullscreen from './icons/navigation/Fullscreen';
 import FullscreenExit from './icons/navigation/FullscreenExit';
 import FullscreenArrows from './icons/navigation/FullscreenArrows';
 import FullscreenArrowsExit from './icons/navigation/FullscreenArrowsExit';
+import OpenInFull from './icons/navigation/OpenInFull';
+import CloseFullscreen from './icons/navigation/CloseFullscreen';
 import Menu from './icons/navigation/Menu';
 import MoreHoriz from './icons/navigation/MoreHoriz';
 import MoreVert from './icons/navigation/MoreVert';
@@ -307,7 +357,6 @@ const ICONS = {
     folderKey: FolderKey,
     folderKeyOpen: FolderKeyOpen,
     newFolder: NewFolder,
-    calendar: Calendar,
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
     sync: Sync,
@@ -347,7 +396,6 @@ const ICONS = {
     tableCog: TableCog,
     sandBox: SandBox,
     settings: Settings,
-    activities: Activities,
     attachFile: AttachFile,
     phonecallOut: PhonecallOut,
     phonecallMissed: PhonecallMissed,
@@ -438,8 +486,55 @@ const ICONS = {
     //Communication
     message: Message,
     comment: Comment,
+    //Social
+    group: Group,
+    groupAdd: GroupAdd,
+    locationCity: LocationCity,
+    mood: Mood,
+    moodBad: MoodBad,
+    peopleOutline: PeopleOutline,
+    person: Person,
+    personAdd: PersonAdd,
+    personOutline: PersonOutline,
+    plusOne: PlusOne,
+    supervisorAccount: SupervisorAccount,
+    //Image
+    timer: Timer,
+    timerOff: TimerOff,
     //Map
     timeZone: TimeZone,
+    //Menu
+    accounts: Accounts,
+    activities: Activities,
+    addWidgetsOutline: AddWidgetsOutline,
+    analyticsPro: AnalyticsPro,
+    bubleChart: BubleChart,
+    calendar: Calendar,
+    campaigns: Campaigns,
+    contacts: Contacts,
+    credentials: Credentials,
+    cron: Cron,
+    customPage: CustomPage,
+    externalApps: ExternalApps,
+    fields: Fields,
+    goals: Goals,
+    imports: Imports,
+    literals: Literals,
+    news: News,
+    opportunities: Opportunities,
+    orders: Orders,
+    parameters: Parameters,
+    plans: Plans,
+    products: Products,
+    quotes: Quotes,
+    reports: Reports,
+    roles: Roles,
+    salesForce: SalesForce,
+    salesOrders: SalesOrders,
+    sandbox: Sandbox,
+    support: Support,
+    tasks: Tasks,
+    workspace: Workspace,
     //Alert
     addAlert: AddAlert,
     asterisk: Asterisk,
@@ -476,6 +571,8 @@ const ICONS = {
     fullscreenExit: FullscreenExit,
     fullscreenArrows: FullscreenArrows,
     fullscreenArrowsExit: FullscreenArrowsExit,
+    openInFull: OpenInFull,
+    closeFullscreen: CloseFullscreen,
     menu: Menu,
     moreHoriz: MoreHoriz,
     moreVert: MoreVert,
