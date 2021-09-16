@@ -175,6 +175,20 @@ Actions:
 <span> </span>
 <Icon name="taskCheckedOutline"/>
 <span> </span>
+<Icon name="attachFile"/>
+<span> </span>
+<Icon name="phonecallOut"/>
+<span> </span>
+<Icon name="phonecallMissed"/>
+<span> </span>
+<Icon name="videoCheckin"/>
+<span> </span>
+<Icon name="eventNote"/>
+<span> </span>
+<Icon name="pin"/>
+<span> </span>
+<Icon name="unpin"/>
+<span> </span>
 ```
 
 Communication:
@@ -212,6 +226,7 @@ Alert:
 <span> </span>
 <Icon name="warningOutlineTwoToned"/>
 <span> </span>
+
 ```
 
 Logos:
@@ -471,6 +486,8 @@ Icons:
 <Icon name="switch"/>
 <span> </span>
 <Icon name="settings"/>
+<span> </span>
+<Icon name="activities"/>
 <span> </span>
 ```
 

@@ -15,6 +15,7 @@ const typographies = [
     'badges',
     'overline',
 ];
+
 export default (theme) => ({
     root: {
         display: 'inherit',

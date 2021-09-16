@@ -1,3 +1,21 @@
+const typographies = [
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'subtitle1',
+    'subtitle',
+    'body1',
+    'body',
+    'button',
+    'caption',
+    'captionMedium',
+    'badges',
+    'overline',
+];
+
 export default (theme) => ({
     root: {
         display: 'inline-block',
@@ -26,8 +44,8 @@ export default (theme) => ({
             cursor: 'not-allowed',
         },
     },
-    body: { ...theme.typography.body },
-    caption: { ...theme.typography.caption },
+    ...typographies.reduce((obj, key) => ({ ...obj, [key]: { ...theme.typography[key] } }), {}),
+    bold: { fontWeight: 500 },
     truncated: {
         whiteSpace: 'nowrap',
         overflow: 'hidden',

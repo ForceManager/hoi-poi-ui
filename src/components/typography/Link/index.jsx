@@ -17,6 +17,7 @@ function Link({
     type,
     target,
     isTruncated,
+    bold,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -27,6 +28,7 @@ function Link({
     const rootClassName = classnames(classes.root, classNameProp, classes[type], {
         [classes.isDisabled]: isDisabled,
         [classes.truncated]: href && isTruncated,
+        [classes.bold]: bold,
     });
 
     const rootProps = {
@@ -63,13 +65,30 @@ Link.propTypes = {
     overrides: PropTypes.object,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
-    type: PropTypes.oneOf(['body', 'caption']),
+    type: PropTypes.oneOf([
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'subtitle1',
+        'subtitle',
+        'body1',
+        'body',
+        'button',
+        'caption',
+        'captionMedium',
+        'badges',
+        'overline',
+    ]),
     isDisabled: PropTypes.bool,
     /** Render the component as a tag <a/> with href */
     href: PropTypes.string,
     /** native <a/> target */
     target: PropTypes.string,
     isTruncated: PropTypes.bool,
+    bold: PropTypes.bool,
 };
 
 export default React.memo(Link);

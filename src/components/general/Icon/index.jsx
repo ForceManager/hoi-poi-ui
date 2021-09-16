@@ -75,6 +75,7 @@ import Widget from './icons/Widget';
 import TableCog from './icons/TableCog';
 import SandBox from './icons/SandBox';
 import Settings from './icons/Settings';
+import Activities from './icons/Activities';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -155,6 +156,13 @@ import TaskChecked from './icons/actions/TaskChecked';
 import TaskUnchecked from './icons/actions/TaskUnchecked';
 import TaskCheckedStroke from './icons/actions/TaskCheckedStroke';
 import TaskCheckedOutline from './icons/actions/TaskCheckedOutline';
+import AttachFile from './icons/actions/AttachFile';
+import PhonecallOut from './icons/actions/PhonecallOut';
+import PhonecallMissed from './icons/actions/PhonecallMissed';
+import VideoCheckin from './icons/actions/VideoCheckin';
+import EventNote from './icons/actions/EventNote';
+import Pin from './icons/actions/Pin';
+import UnPin from './icons/actions/UnPin';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -339,6 +347,12 @@ const ICONS = {
     tableCog: TableCog,
     sandBox: SandBox,
     settings: Settings,
+    activities: Activities,
+    attachFile: AttachFile,
+    phonecallOut: PhonecallOut,
+    phonecallMissed: PhonecallMissed,
+    videoCheckin: VideoCheckin,
+    eventNote: EventNote,
 
     //Actions
     accountCheckin: AccountCheckin,
@@ -419,6 +433,8 @@ const ICONS = {
     taskUnchecked: TaskUnchecked,
     taskCheckedStroke: TaskCheckedStroke,
     taskCheckedOutline: TaskCheckedOutline,
+    pin: Pin,
+    unpin: UnPin,
     //Communication
     message: Message,
     comment: Comment,

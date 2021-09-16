@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import { useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 import styles from './messageStyles';
-const useStyles = createUseStyles(styles, 'ToatMessage');
+const useStyles = createUseStyles(styles, 'ToastMessage');
 
 function ToastMessage({ classes: classesProp, title, text, type }) {
     const classes = useClasses(useStyles, classesProp);
