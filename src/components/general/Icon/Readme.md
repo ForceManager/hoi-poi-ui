@@ -200,10 +200,111 @@ Communication:
 <span> </span>
 ```
 
+Social
+
+```jsx
+<Icon name="group"/>
+<span> </span>
+<Icon name="supervisorAccount"/>
+<span> </span>
+<Icon name="groupAdd"/>
+<span> </span>
+<Icon name="person"/>
+<span> </span>
+<Icon name="personAdd"/>
+<span> </span>
+<Icon name="peopleOutline"/>
+<span> </span>
+<Icon name="personOutline"/>
+<span> </span>
+<Icon name="plusOne"/>
+<span> </span>
+<Icon name="locationCity"/>
+<span> </span>
+<Icon name="mood"/>
+<span> </span>
+<Icon name="moodBad"/>
+<span> </span>
+```
+
+Map
+
+```jsx
+<Icon name="timer"/>
+<span> </span>
+<Icon name="timerOff"/>
+<span> </span>
+```
+
 Map
 
 ```jsx
 <Icon name="timeZone"/>
+<span> </span>
+```
+
+Menu
+
+```jsx
+<Icon name="accounts"/>
+<span> </span>
+<Icon name="activities"/>
+<span> </span>
+<Icon name="addWidgetsOutline"/>
+<span> </span>
+<Icon name="analyticsPro"/>
+<span> </span>
+<Icon name="bubleChart"/>
+<span> </span>
+<Icon name="calendar"/>
+<span> </span>
+<Icon name="campaigns"/>
+<span> </span>
+<Icon name="contacts"/>
+<span> </span>
+<Icon name="credentials"/>
+<span> </span>
+<Icon name="cron"/>
+<span> </span>
+<Icon name="externalApps"/>
+<span> </span>
+<Icon name="fields"/>
+<span> </span>
+<Icon name="goals"/>
+<span> </span>
+<Icon name="imports"/>
+<span> </span>
+<Icon name="literals"/>
+<span> </span>
+<Icon name="news"/>
+<span> </span>
+<Icon name="opportunities"/>
+<span> </span>
+<Icon name="orders"/>
+<span> </span>
+<Icon name="parameters"/>
+<span> </span>
+<Icon name="plans"/>
+<span> </span>
+<Icon name="products"/>
+<span> </span>
+<Icon name="quotes"/>
+<span> </span>
+<Icon name="reports"/>
+<span> </span>
+<Icon name="roles"/>
+<span> </span>
+<Icon name="salesForce"/>
+<span> </span>
+<Icon name="salesOrders"/>
+<span> </span>
+<Icon name="sandbox"/>
+<span> </span>
+<Icon name="support"/>
+<span> </span>
+<Icon name="tasks"/>
+<span> </span>
+<Icon name="workspace"/>
 <span> </span>
 ```
 
@@ -290,6 +391,10 @@ Navigation:
 <Icon name="fullscreenArrows"/>
 <span> </span>
 <Icon name="fullscreenArrowsExit"/>
+<span> </span>
+<Icon name="openInFull"/>
+<span> </span>
+<Icon name="closeFullscreen"/>
 <span> </span>
 <Icon name="menu"/>
 <span> </span>
