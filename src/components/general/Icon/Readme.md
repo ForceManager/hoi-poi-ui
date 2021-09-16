@@ -227,7 +227,7 @@ Social
 <span> </span>
 ```
 
-Map
+Image
 
 ```jsx
 <Icon name="timer"/>
