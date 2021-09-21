@@ -41,6 +41,7 @@ function DatePicker({
     placeholder,
     minDate,
     maxDate,
+    customComponent,
     ...props
 }) {
     const flatpickrRef = useRef();
@@ -172,6 +173,18 @@ function DatePicker({
                         ? formatDate(value, flatpickrOptions.dateFormat)
                         : flatpickr.formatDate(value, flatpickrOptions.dateFormat)
                     : value;
+            if (customComponent) {
+                const CustomComponent = customComponent;
+                return (
+                    <CustomComponent
+                        {...props}
+                        inputRef={ref}
+                        value={formatValue}
+                        className={className}
+                        onClick={onClick}
+                    />
+                );
+            }
             return (
                 <Input
                     {...props}
@@ -204,6 +217,7 @@ function DatePicker({
             outputType,
             placeholder,
             props,
+            customComponent,
         ],
     );
 
@@ -274,6 +288,7 @@ DatePicker.propTypes = {
     calendarButtonLabel: PropTypes.string,
     minDate: PropTypes.instanceOf(Date),
     maxDate: PropTypes.instanceOf(Date),
+    customComponent: PropTypes.element,
 };
 
 export default React.memo(DatePicker);

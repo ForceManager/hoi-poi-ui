@@ -94,6 +94,28 @@ const formatDate = (value, format) => {
 </div>;
 ```
 
+Custom Component
+
+```jsx
+import { useState } from 'react';
+import CustomComponent from './CustomComponent';
+const [state, setState] = useState({});
+const onChange = (e) => setState({ value: e });
+const formatDate = (value, format) => {
+    return value;
+};
+
+<div>
+    <DatePicker
+        label="Lorem ipsum"
+        formatDate={formatDate}
+        onChange={onChange}
+        value={state.value}
+        customComponent={CustomComponent}
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
