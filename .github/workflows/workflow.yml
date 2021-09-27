@@ -20,9 +20,12 @@ jobs:
               run: yarn build:styleguidist
 
             - name: Deploy
-              uses: lbertenasco/s3-deploy@v1
-              with:
-                  folder: styleguidist
-                  bucket: ${{ secrets.S3_BUCKET }}
-                  dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-                  invalidation: / *
+            uses: reggionick/s3-deploy@v3
+            with:
+                folder: styleguidist
+                bucket: ${{ secrets.S3_BUCKET }}
+                bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+                dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+                invalidation: /*
+                delete-removed: true
+                no-cache: true
