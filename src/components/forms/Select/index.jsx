@@ -608,8 +608,6 @@ const Select = memo(
             if (isReadOnly) Indicator = LockIndicator;
             if (dropDownIcon) Indicator = CustomIndicator;
             if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
-            // if (hideMultivalueChips)
-            //     additionalComponents = { ...additionalComponents, MultiValueContainer: null };
             let filterOption = filterByKey ? filterKeyValue : createFilter;
             if (withoutFilter) filterOption = undefined;
 
