@@ -1051,7 +1051,7 @@ Select.propTypes = {
     forceStartFocused: PropTypes.bool,
     getRef: PropTypes.func,
     /** Hide chips in multiselect */
-    hideChips: PropTypes.bool,
+    hideMultivalueChips: PropTypes.bool,
 };
 
 export default Select;
