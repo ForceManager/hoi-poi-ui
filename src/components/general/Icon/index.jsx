@@ -276,6 +276,7 @@ import Rocket from './icons/notification/Rocket';
 import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
 import ContentPaste from './icons/content/ContentPaste';
+import ContentLink from './icons/content/ContentLink';
 
 //Toggle
 import CheckBox from './icons/toggle/CheckBox';
@@ -588,6 +589,7 @@ const ICONS = {
     contentCopy: ContentCopy,
     contentCut: ContentCut,
     contentPaste: ContentPaste,
+    contentLink: ContentLink,
     //File Icons
     file: File,
     img: Img,
