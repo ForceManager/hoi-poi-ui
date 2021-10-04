@@ -89,6 +89,7 @@ const Select = memo(
         forceStartFocused,
         getRef,
         getCanChange,
+        hideMultivalueChips,
         ...props
     }) => {
         const selectRef = useRef();
@@ -443,7 +444,7 @@ const Select = memo(
         }, [override]);
 
         const indicatorSeparatorStyles = useMemo(() => {
-            if (isRequired && !isMulti) {
+            if ((isRequired && !isMulti) || (isMulti && hideMultivalueChips)) {
                 return newStyles.indicatorSeparatorHidden;
             } else if (
                 !isReadOnly &&
@@ -452,7 +453,7 @@ const Select = memo(
             ) {
                 return newStyles.indicatorSeparator;
             } else return newStyles.indicatorSeparatorHidden;
-        }, [isReadOnly, isMulti, newValue, isRequired]);
+        }, [isRequired, isMulti, hideMultivalueChips, isReadOnly, newValue]);
 
         const getMatchingCharacters = useCallback(
             (optionLabel) => {
@@ -555,9 +556,10 @@ const Select = memo(
         );
 
         const newIsClearable = useMemo(() => {
-            if (isRequired) return false;
+            if (isMulti && !hideMultivalueChips) return true;
+            if (isRequired || hideMultivalueChips) return false;
             else return isClearable;
-        }, [isRequired, isClearable]);
+        }, [isMulti, hideMultivalueChips, isRequired, isClearable]);
 
         const handleOnKeyDown = useCallback(
             (e) => {
@@ -629,7 +631,7 @@ const Select = memo(
                 actions,
                 isMulti,
                 isDisabled: isReadOnly,
-                isClearable: showNumSelected ? false : isMulti ? true : newIsClearable,
+                isClearable: showNumSelected ? false : newIsClearable,
                 isSearchable: showNumSelected ? false : isSearchable,
                 isLoading: lazyOptions.isLoading,
                 autoFocus: focused,
@@ -760,9 +762,14 @@ const Select = memo(
                         ...menuListStyles,
                     }),
                     multiValue: (styles, { data, isDisabled, isFocused, isSelected }) => {
+                        const hideMultivalueChipsStyles = hideMultivalueChips
+                            ? newStyles.hideMultivalueChips
+                            : {};
+
                         return {
                             ...styles,
                             ...newStyles.multiValue,
+                            ...hideMultivalueChipsStyles,
                             ...(override.multiValue?.style || {}),
                             ...(override.multiValue?.getStyles?.({
                                 data,
@@ -1043,6 +1050,8 @@ Select.propTypes = {
     forceMenuIsOpen: PropTypes.bool,
     forceStartFocused: PropTypes.bool,
     getRef: PropTypes.func,
+    /** Hide chips in multiselect */
+    hideMultivalueChips: PropTypes.bool,
 };
 
 export default Select;

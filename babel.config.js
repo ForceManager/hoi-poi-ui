@@ -16,8 +16,8 @@ if (process.env.BABEL_ENV === 'es') {
 module.exports = {
     presets: defaultPresets.concat(['@babel/preset-react']),
     plugins: [
-        ['@babel/plugin-proposal-class-properties', { loose: true }],
-        ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
+        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-proposal-private-methods',
         '@babel/plugin-transform-object-assign',
         '@babel/plugin-transform-runtime',
         'babel-plugin-transform-react-constant-elements',

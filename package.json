@@ -1,6 +1,6 @@
 {
     "name": "hoi-poi-ui",
-    "version": "1.0.160",
+    "version": "1.0.162",
     "main": "dist/index.js",
     "module": "dist/esm/index.js",
     "scripts": {
@@ -19,7 +19,7 @@
         "release-next": "yarn build && cp package.json dist/ && cp postinstall.js dist/ && cp README.md dist/ && yarn publish dist -f --tag next",
         "test": " cross-env NODE_ENV=test jest",
         "test:snapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
-        "gh-pages": "cross-env NODE_ENV=production styleguidist build && gh-pages -d styleguide --repo https://$GH_TOKEN@github.com/ForceManager/hoi-poi-ui.git"
+        "build:styleguidist": "cross-env NODE_ENV=production styleguidist build"
     },
     "husky": {
         "hooks": {
@@ -100,7 +100,7 @@
         "process": "^0.11.10",
         "react": "^16.13.1",
         "react-app-polyfill": "^2.0.0",
-        "react-dev-utils": "^11.0.1",
+        "react-dev-utils": "^11.0.4",
         "react-dom": "^16.13.1",
         "react-styleguidist": "^11.1.5",
         "react-test-renderer": "^17.0.1",

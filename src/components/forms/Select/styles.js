@@ -165,6 +165,9 @@ export default (theme) => ({
     valueContainerDisabled: {
         color: theme.colors.neutral700,
     },
+    hideMultivalueChips: {
+        display: 'none',
+    },
     option: {
         ...theme.typography.body,
         padding: '8px 16px',
