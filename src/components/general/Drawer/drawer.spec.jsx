@@ -24,9 +24,11 @@ describe('Drawer', () => {
             </HoiPoiProvider>,
         );
 
-        expect(wrapper.exists('.ReactModal__Content--after-open')).toEqual(true);
-        expect(wrapper.find('.ReactModal__Content').contains('Lorem Ipsum')).toEqual(true);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        setTimeout(() => {
+            expect(wrapper.exists('.ReactModal__Content--after-open')).toEqual(true);
+            expect(wrapper.find('.ReactModal__Content').contains('Lorem Ipsum')).toEqual(true);
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }, 500);
     });
 
     test('pass width and classnames to modal', () => {
