@@ -432,6 +432,8 @@ Content:
 <span> </span>
 <Icon name="contentPaste"/>
 <span> </span>
+<Icon name="contentLink"/>
+<span> </span>
 ```
 
 Toggle:
