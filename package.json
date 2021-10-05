@@ -4,7 +4,7 @@
     "main": "dist/index.js",
     "module": "dist/esm/index.js",
     "scripts": {
-        "postinstall": "node postinstall.js",
+        "postinstall": "node postinstall.js && husky install",
         "prebuild": "rm -rf dist",
         "precommit": "cross-env NODE_ENV=production lint-staged",
         "lint": "eslint --config .eslintrc --ext .js,.jsx src/**",
@@ -19,8 +19,7 @@
         "release-next": "yarn build && cp package.json dist/ && cp postinstall.js dist/ && cp README.md dist/ && yarn publish dist -f --tag next",
         "test": " cross-env NODE_ENV=test jest",
         "test:snapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
-        "build:styleguidist": "cross-env NODE_ENV=production styleguidist build",
-        "prepare": "husky install"
+        "build:styleguidist": "cross-env NODE_ENV=production styleguidist build"
     },
     "lint-staged": {
         "*.{js,jsx}": [

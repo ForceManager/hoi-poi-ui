@@ -13,9 +13,7 @@ const fixFormatWebpackMessages = async () => {
     lines = message['message'].split('\\n');
   }`,
         });
-    } catch (e) {
-        console.log('error while trying to fix  "formatWebpackMessages.js"', e);
-    }
+    } catch (e) {}
 };
 
 fixFormatWebpackMessages();
