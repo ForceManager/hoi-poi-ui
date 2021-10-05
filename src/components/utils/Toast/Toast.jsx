@@ -62,6 +62,7 @@ function Toast({
         containerId: containerId || 'hoi-poi-ui',
         newestOnTop: newestOnTop || false,
         position: position,
+        icon: false,
     };
 
     return <ToastContainer {...rootProps} enableMultiContainer {...override['react-toastify']} />;
