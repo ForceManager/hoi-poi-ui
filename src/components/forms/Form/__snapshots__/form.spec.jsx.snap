@@ -1669,7 +1669,7 @@ exports[`Form complete match 1`] = `
                                 <div
                                   className="HoiPoi__Select__inputComponents-1-109"
                                 >
-                                  <StateManager
+                                  <ForwardRef
                                     autoFocus={false}
                                     blurInputOnSelect={true}
                                     cacheOptions={true}
@@ -1690,7 +1690,6 @@ exports[`Form complete match 1`] = `
                                         "SingleValue": [Function],
                                       }
                                     }
-                                    defaultInputValue=""
                                     defaultMenuIsOpen={false}
                                     defaultOptions={
                                       Array [
@@ -1794,6 +1793,7 @@ exports[`Form complete match 1`] = `
                                     value=""
                                   >
                                     <Select
+                                      aria-live="polite"
                                       autoFocus={false}
                                       backspaceRemovesValue={true}
                                       blurInputOnSelect={true}
@@ -1933,7 +1933,7 @@ exports[`Form complete match 1`] = `
                                           "valueContainer": [Function],
                                         }
                                       }
-                                      tabIndex="0"
+                                      tabIndex={0}
                                       tabSelectsValue={true}
                                       value=""
                                     >
@@ -1975,6 +1975,7 @@ exports[`Form complete match 1`] = `
                                           Object {
                                             "actions": undefined,
                                             "afterControl": undefined,
+                                            "aria-live": "polite",
                                             "autoFocus": false,
                                             "backspaceRemovesValue": true,
                                             "beforeControl": undefined,
@@ -2108,7 +2109,7 @@ exports[`Form complete match 1`] = `
                                               "placeholder": [Function],
                                               "valueContainer": [Function],
                                             },
-                                            "tabIndex": "0",
+                                            "tabIndex": 0,
                                             "tabSelectsValue": true,
                                             "value": "",
                                           }
@@ -2151,36 +2152,31 @@ exports[`Form complete match 1`] = `
                                           css={
                                             Object {
                                               "boxSizing": "border-box",
-                                              "direction": null,
+                                              "direction": undefined,
                                               "label": "container",
-                                              "pointerEvents": null,
+                                              "pointerEvents": undefined,
                                               "position": "relative",
                                             }
                                           }
                                           onKeyDown={[Function]}
                                         >
                                           <div
-                                            className="HoiPoi__Select__select-1-82 css-2b097c-container"
+                                            className="HoiPoi__Select__select-1-82 css-b62m3t-container"
                                             onKeyDown={[Function]}
                                           >
-                                            <Control
+                                            <LiveRegion
+                                              ariaSelection={null}
                                               clearValue={[Function]}
                                               cx={[Function]}
+                                              focusableOptions={Array []}
+                                              focusedValue={null}
                                               getStyles={[Function]}
                                               getValue={[Function]}
                                               hasValue={false}
-                                              innerProps={
-                                                Object {
-                                                  "onMouseDown": [Function],
-                                                  "onTouchEnd": [Function],
-                                                }
-                                              }
-                                              innerRef={[Function]}
-                                              isDisabled={false}
+                                              id="react-select-2-live-region"
                                               isFocused={false}
                                               isMulti={false}
                                               isRtl={false}
-                                              menuIsOpen={false}
                                               options={
                                                 Array [
                                                   Object {
@@ -2202,6 +2198,7 @@ exports[`Form complete match 1`] = `
                                                 Object {
                                                   "actions": undefined,
                                                   "afterControl": undefined,
+                                                  "aria-live": "polite",
                                                   "autoFocus": false,
                                                   "backspaceRemovesValue": true,
                                                   "beforeControl": undefined,
@@ -2335,7 +2332,268 @@ exports[`Form complete match 1`] = `
                                                     "placeholder": [Function],
                                                     "valueContainer": [Function],
                                                   },
-                                                  "tabIndex": "0",
+                                                  "tabIndex": 0,
+                                                  "tabSelectsValue": true,
+                                                  "value": "",
+                                                }
+                                              }
+                                              selectValue={Array []}
+                                              setValue={[Function]}
+                                              theme={
+                                                Object {
+                                                  "borderRadius": 4,
+                                                  "colors": Object {
+                                                    "danger": "#DE350B",
+                                                    "dangerLight": "#FFBDAD",
+                                                    "neutral0": "hsl(0, 0%, 100%)",
+                                                    "neutral10": "hsl(0, 0%, 90%)",
+                                                    "neutral20": "hsl(0, 0%, 80%)",
+                                                    "neutral30": "hsl(0, 0%, 70%)",
+                                                    "neutral40": "hsl(0, 0%, 60%)",
+                                                    "neutral5": "hsl(0, 0%, 95%)",
+                                                    "neutral50": "hsl(0, 0%, 50%)",
+                                                    "neutral60": "hsl(0, 0%, 40%)",
+                                                    "neutral70": "hsl(0, 0%, 30%)",
+                                                    "neutral80": "hsl(0, 0%, 20%)",
+                                                    "neutral90": "hsl(0, 0%, 10%)",
+                                                    "primary": "#2684FF",
+                                                    "primary25": "#DEEBFF",
+                                                    "primary50": "#B2D4FF",
+                                                    "primary75": "#4C9AFF",
+                                                  },
+                                                  "spacing": Object {
+                                                    "baseUnit": 4,
+                                                    "controlHeight": 38,
+                                                    "menuGutter": 8,
+                                                  },
+                                                }
+                                              }
+                                            >
+                                              <A11yText
+                                                id="react-select-2-live-region"
+                                              >
+                                                <EmotionCssPropInternal
+                                                  __EMOTION_LABEL_PLEASE_DO_NOT_USE__="A11yText"
+                                                  __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+                                                  css={
+                                                    Object {
+                                                      "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkExMXlUZXh0LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNSSIsImZpbGUiOiJBMTF5VGV4dC50c3giLCJzb3VyY2VzQ29udGVudCI6WyIvKiogQGpzeCBqc3ggKi9cbmltcG9ydCB7IGpzeCB9IGZyb20gJ0BlbW90aW9uL3JlYWN0JztcblxuLy8gQXNzaXN0aXZlIHRleHQgdG8gZGVzY3JpYmUgdmlzdWFsIGVsZW1lbnRzLiBIaWRkZW4gZm9yIHNpZ2h0ZWQgdXNlcnMuXG5jb25zdCBBMTF5VGV4dCA9IChwcm9wczogSlNYLkludHJpbnNpY0VsZW1lbnRzWydzcGFuJ10pID0+IChcbiAgPHNwYW5cbiAgICBjc3M9e3tcbiAgICAgIGxhYmVsOiAnYTExeVRleHQnLFxuICAgICAgekluZGV4OiA5OTk5LFxuICAgICAgYm9yZGVyOiAwLFxuICAgICAgY2xpcDogJ3JlY3QoMXB4LCAxcHgsIDFweCwgMXB4KScsXG4gICAgICBoZWlnaHQ6IDEsXG4gICAgICB3aWR0aDogMSxcbiAgICAgIHBvc2l0aW9uOiAnYWJzb2x1dGUnLFxuICAgICAgb3ZlcmZsb3c6ICdoaWRkZW4nLFxuICAgICAgcGFkZGluZzogMCxcbiAgICAgIHdoaXRlU3BhY2U6ICdub3dyYXAnLFxuICAgIH19XG4gICAgey4uLnByb3BzfVxuICAvPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgQTExeVRleHQ7XG4iXX0= */",
+                                                      "name": "1f43avz-a11yText-A11yText",
+                                                      "styles": "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap;label:A11yText;",
+                                                      "toString": [Function],
+                                                    }
+                                                  }
+                                                  id="react-select-2-live-region"
+                                                >
+                                                  <span
+                                                    className="css-1f43avz-a11yText-A11yText"
+                                                    id="react-select-2-live-region"
+                                                  />
+                                                </EmotionCssPropInternal>
+                                              </A11yText>
+                                              <A11yText
+                                                aria-atomic="false"
+                                                aria-live="polite"
+                                                aria-relevant="additions text"
+                                              >
+                                                <EmotionCssPropInternal
+                                                  __EMOTION_LABEL_PLEASE_DO_NOT_USE__="A11yText"
+                                                  __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+                                                  aria-atomic="false"
+                                                  aria-live="polite"
+                                                  aria-relevant="additions text"
+                                                  css={
+                                                    Object {
+                                                      "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkExMXlUZXh0LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNSSIsImZpbGUiOiJBMTF5VGV4dC50c3giLCJzb3VyY2VzQ29udGVudCI6WyIvKiogQGpzeCBqc3ggKi9cbmltcG9ydCB7IGpzeCB9IGZyb20gJ0BlbW90aW9uL3JlYWN0JztcblxuLy8gQXNzaXN0aXZlIHRleHQgdG8gZGVzY3JpYmUgdmlzdWFsIGVsZW1lbnRzLiBIaWRkZW4gZm9yIHNpZ2h0ZWQgdXNlcnMuXG5jb25zdCBBMTF5VGV4dCA9IChwcm9wczogSlNYLkludHJpbnNpY0VsZW1lbnRzWydzcGFuJ10pID0+IChcbiAgPHNwYW5cbiAgICBjc3M9e3tcbiAgICAgIGxhYmVsOiAnYTExeVRleHQnLFxuICAgICAgekluZGV4OiA5OTk5LFxuICAgICAgYm9yZGVyOiAwLFxuICAgICAgY2xpcDogJ3JlY3QoMXB4LCAxcHgsIDFweCwgMXB4KScsXG4gICAgICBoZWlnaHQ6IDEsXG4gICAgICB3aWR0aDogMSxcbiAgICAgIHBvc2l0aW9uOiAnYWJzb2x1dGUnLFxuICAgICAgb3ZlcmZsb3c6ICdoaWRkZW4nLFxuICAgICAgcGFkZGluZzogMCxcbiAgICAgIHdoaXRlU3BhY2U6ICdub3dyYXAnLFxuICAgIH19XG4gICAgey4uLnByb3BzfVxuICAvPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgQTExeVRleHQ7XG4iXX0= */",
+                                                      "name": "1f43avz-a11yText-A11yText",
+                                                      "styles": "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap;label:A11yText;",
+                                                      "toString": [Function],
+                                                    }
+                                                  }
+                                                >
+                                                  <span
+                                                    aria-atomic="false"
+                                                    aria-live="polite"
+                                                    aria-relevant="additions text"
+                                                    className="css-1f43avz-a11yText-A11yText"
+                                                  />
+                                                </EmotionCssPropInternal>
+                                              </A11yText>
+                                            </LiveRegion>
+                                            <Control
+                                              clearValue={[Function]}
+                                              cx={[Function]}
+                                              getStyles={[Function]}
+                                              getValue={[Function]}
+                                              hasValue={false}
+                                              innerProps={
+                                                Object {
+                                                  "onMouseDown": [Function],
+                                                  "onTouchEnd": [Function],
+                                                }
+                                              }
+                                              innerRef={[Function]}
+                                              isDisabled={false}
+                                              isFocused={false}
+                                              isMulti={false}
+                                              isRtl={false}
+                                              menuIsOpen={false}
+                                              options={
+                                                Array [
+                                                  Object {
+                                                    "label": "Male",
+                                                    "value": "male",
+                                                  },
+                                                  Object {
+                                                    "label": "Female",
+                                                    "value": "female",
+                                                  },
+                                                  Object {
+                                                    "label": "Other",
+                                                    "value": "other",
+                                                  },
+                                                ]
+                                              }
+                                              selectOption={[Function]}
+                                              selectProps={
+                                                Object {
+                                                  "actions": undefined,
+                                                  "afterControl": undefined,
+                                                  "aria-live": "polite",
+                                                  "autoFocus": false,
+                                                  "backspaceRemovesValue": true,
+                                                  "beforeControl": undefined,
+                                                  "blurInputOnSelect": true,
+                                                  "cacheOptions": true,
+                                                  "captureMenuScroll": false,
+                                                  "className": "HoiPoi__Select__select-1-82",
+                                                  "classNamePrefix": "hoi-poi-select",
+                                                  "closeMenuOnScroll": false,
+                                                  "closeMenuOnSelect": true,
+                                                  "components": Object {
+                                                    "ClearIndicator": [Function],
+                                                    "Control": [Function],
+                                                    "DropdownIndicator": [Function],
+                                                    "Group": [Function],
+                                                    "LoadingIndicator": [Function],
+                                                    "Menu": [Function],
+                                                    "MultiValueLabel": [Function],
+                                                    "MultiValueRemove": [Function],
+                                                    "Option": [Function],
+                                                    "SingleValue": [Function],
+                                                  },
+                                                  "controlShouldRenderValue": true,
+                                                  "defaultOptions": Array [
+                                                    Object {
+                                                      "label": "Male",
+                                                      "value": "male",
+                                                    },
+                                                    Object {
+                                                      "label": "Female",
+                                                      "value": "female",
+                                                    },
+                                                    Object {
+                                                      "label": "Other",
+                                                      "value": "other",
+                                                    },
+                                                  ],
+                                                  "dropDownIcon": undefined,
+                                                  "escapeClearsValue": false,
+                                                  "filterOption": [Function],
+                                                  "formatGroupLabel": [Function],
+                                                  "formatOptionLabel": [Function],
+                                                  "getOptionLabel": [Function],
+                                                  "getOptionValue": [Function],
+                                                  "hideSelectedOptions": true,
+                                                  "inputValue": "",
+                                                  "isClearable": true,
+                                                  "isDisabled": false,
+                                                  "isFuzzy": undefined,
+                                                  "isLoading": false,
+                                                  "isMulti": false,
+                                                  "isOptionDisabled": [Function],
+                                                  "isRtl": false,
+                                                  "isSearchable": true,
+                                                  "loadOptions": undefined,
+                                                  "loadingMessage": [Function],
+                                                  "maxMenuHeight": 300,
+                                                  "menuIsOpen": false,
+                                                  "menuPlacement": "bottom",
+                                                  "menuPortalTarget": <body />,
+                                                  "menuPosition": "fixed",
+                                                  "menuProps": Object {
+                                                    "actionClassName": "HoiPoi__Select__action-1-87",
+                                                    "actionContainerClassName": "HoiPoi__Select__actionContainer-1-86",
+                                                    "actionIconClassName": "HoiPoi__Select__actionIcon-1-88",
+                                                    "actionTextClassName": "HoiPoi__Select__actionText-1-89",
+                                                    "actionTextWithIconClassName": "HoiPoi__Select__actionTextWithIcon-1-90",
+                                                    "actions": undefined,
+                                                    "className": "HoiPoi__Select__menu-1-84",
+                                                    "dropdownWidth": undefined,
+                                                    "onClickAction": undefined,
+                                                    "override": Object {
+                                                      "action": Object {},
+                                                      "actionContainer": Object {},
+                                                      "actionIcon": Object {},
+                                                      "actionText": Object {},
+                                                      "actionTextWithIcon": Object {},
+                                                      "menu": Object {},
+                                                    },
+                                                    "singleValueIconClassName": "HoiPoi__Select__singleValueIcon-1-140",
+                                                  },
+                                                  "menuShouldBlockScroll": false,
+                                                  "menuShouldScrollIntoView": true,
+                                                  "minMenuHeight": 140,
+                                                  "noOptionsMessage": [Function],
+                                                  "numSelectedLiteral": "%@ Selected",
+                                                  "onBlur": [Function],
+                                                  "onChange": [Function],
+                                                  "onFocus": [Function],
+                                                  "onInputChange": [Function],
+                                                  "onKeyDown": [Function],
+                                                  "onMenuClose": [Function],
+                                                  "onMenuOpen": [Function],
+                                                  "onMouseDown": [Function],
+                                                  "openMenuOnClick": true,
+                                                  "openMenuOnFocus": true,
+                                                  "options": Array [
+                                                    Object {
+                                                      "label": "Male",
+                                                      "value": "male",
+                                                    },
+                                                    Object {
+                                                      "label": "Female",
+                                                      "value": "female",
+                                                    },
+                                                    Object {
+                                                      "label": "Other",
+                                                      "value": "other",
+                                                    },
+                                                  ],
+                                                  "pageSize": 5,
+                                                  "placeholder": "Select your gender",
+                                                  "screenReaderStatus": [Function],
+                                                  "styles": Object {
+                                                    "clearIndicator": [Function],
+                                                    "control": [Function],
+                                                    "dropdownIndicator": [Function],
+                                                    "group": [Function],
+                                                    "groupHeading": [Function],
+                                                    "indicatorSeparator": [Function],
+                                                    "indicatorsContainer": [Function],
+                                                    "input": [Function],
+                                                    "loadingMessage": [Function],
+                                                    "menuList": [Function],
+                                                    "menuPortal": [Function],
+                                                    "multiValue": [Function],
+                                                    "multiValueLabel": [Function],
+                                                    "multiValueRemove": [Function],
+                                                    "noOptionsMessage": [Function],
+                                                    "option": [Function],
+                                                    "placeholder": [Function],
+                                                    "valueContainer": [Function],
+                                                  },
+                                                  "tabIndex": 0,
                                                   "tabSelectsValue": true,
                                                   "value": "",
                                                 }
@@ -2410,6 +2668,7 @@ exports[`Form complete match 1`] = `
                                                   Object {
                                                     "actions": undefined,
                                                     "afterControl": undefined,
+                                                    "aria-live": "polite",
                                                     "autoFocus": false,
                                                     "backspaceRemovesValue": true,
                                                     "beforeControl": undefined,
@@ -2543,7 +2802,7 @@ exports[`Form complete match 1`] = `
                                                       "placeholder": [Function],
                                                       "valueContainer": [Function],
                                                     },
-                                                    "tabIndex": "0",
+                                                    "tabIndex": 0,
                                                     "tabSelectsValue": true,
                                                     "value": "",
                                                   }
@@ -2603,7 +2862,7 @@ exports[`Form complete match 1`] = `
                                                       "borderRadius": "4px",
                                                       "borderStyle": "solid",
                                                       "borderWidth": 1,
-                                                      "boxShadow": null,
+                                                      "boxShadow": undefined,
                                                       "boxSizing": "border-box",
                                                       "cursor": "default",
                                                       "display": "flex",
@@ -2626,7 +2885,7 @@ exports[`Form complete match 1`] = `
                                                   onTouchEnd={[Function]}
                                                 >
                                                   <div
-                                                    className="hoi-poi-select__control css-z1h4qh-control"
+                                                    className="hoi-poi-select__control css-10gotnp-control"
                                                     onMouseDown={[Function]}
                                                     onTouchEnd={[Function]}
                                                   >
@@ -2660,6 +2919,7 @@ exports[`Form complete match 1`] = `
                                                         Object {
                                                           "actions": undefined,
                                                           "afterControl": undefined,
+                                                          "aria-live": "polite",
                                                           "autoFocus": false,
                                                           "backspaceRemovesValue": true,
                                                           "beforeControl": undefined,
@@ -2793,7 +3053,7 @@ exports[`Form complete match 1`] = `
                                                             "placeholder": [Function],
                                                             "valueContainer": [Function],
                                                           },
-                                                          "tabIndex": "0",
+                                                          "tabIndex": 0,
                                                           "tabSelectsValue": true,
                                                           "value": "",
                                                         }
@@ -2839,7 +3099,7 @@ exports[`Form complete match 1`] = `
                                                             "alignItems": "center",
                                                             "boxSizing": "border-box",
                                                             "color": "#273c50",
-                                                            "display": "flex",
+                                                            "display": "grid",
                                                             "flex": 1,
                                                             "flexWrap": "wrap",
                                                             "overflow": "hidden",
@@ -2849,7 +3109,7 @@ exports[`Form complete match 1`] = `
                                                         }
                                                       >
                                                         <div
-                                                          className="hoi-poi-select__value-container css-1dtip7w-ValueContainer"
+                                                          className="hoi-poi-select__value-container css-1jv5527-ValueContainer"
                                                         >
                                                           <Placeholder
                                                             clearValue={[Function]}
@@ -2857,6 +3117,11 @@ exports[`Form complete match 1`] = `
                                                             getStyles={[Function]}
                                                             getValue={[Function]}
                                                             hasValue={false}
+                                                            innerProps={
+                                                              Object {
+                                                                "id": "react-select-2-placeholder",
+                                                              }
+                                                            }
                                                             isDisabled={false}
                                                             isFocused={false}
                                                             isMulti={false}
@@ -2883,6 +3148,7 @@ exports[`Form complete match 1`] = `
                                                               Object {
                                                                 "actions": undefined,
                                                                 "afterControl": undefined,
+                                                                "aria-live": "polite",
                                                                 "autoFocus": false,
                                                                 "backspaceRemovesValue": true,
                                                                 "beforeControl": undefined,
@@ -3016,7 +3282,7 @@ exports[`Form complete match 1`] = `
                                                                   "placeholder": [Function],
                                                                   "valueContainer": [Function],
                                                                 },
-                                                                "tabIndex": "0",
+                                                                "tabIndex": 0,
                                                                 "tabSelectsValue": true,
                                                                 "value": "",
                                                               }
@@ -3060,17 +3326,17 @@ exports[`Form complete match 1`] = `
                                                                 Object {
                                                                   "boxSizing": "border-box",
                                                                   "color": "#a9b1b9",
+                                                                  "gridArea": "1 / 1 / 2 / 3",
                                                                   "label": "placeholder",
                                                                   "marginLeft": 2,
                                                                   "marginRight": 2,
-                                                                  "position": "absolute",
-                                                                  "top": "50%",
-                                                                  "transform": "translateY(-50%)",
                                                                 }
                                                               }
+                                                              id="react-select-2-placeholder"
                                                             >
                                                               <div
-                                                                className="hoi-poi-select__placeholder css-h3dsdr-placeholder"
+                                                                className="hoi-poi-select__placeholder css-k6ynnq-placeholder"
+                                                                id="react-select-2-placeholder"
                                                               >
                                                                 Select your gender
                                                               </div>
@@ -3078,22 +3344,51 @@ exports[`Form complete match 1`] = `
                                                           </Placeholder>
                                                           <Input
                                                             aria-autocomplete="list"
+                                                            aria-controls="react-select-2-listbox"
+                                                            aria-describedby="react-select-2-placeholder"
+                                                            aria-expanded={false}
+                                                            aria-haspopup={true}
+                                                            aria-owns="react-select-2-listbox"
                                                             autoCapitalize="none"
                                                             autoComplete="off"
                                                             autoCorrect="off"
+                                                            clearValue={[Function]}
                                                             cx={[Function]}
                                                             getStyles={[Function]}
+                                                            getValue={[Function]}
+                                                            hasValue={false}
                                                             id="react-select-2-input"
                                                             innerRef={[Function]}
                                                             isDisabled={false}
                                                             isHidden={false}
+                                                            isMulti={false}
+                                                            isRtl={false}
                                                             onBlur={[Function]}
                                                             onChange={[Function]}
                                                             onFocus={[Function]}
+                                                            options={
+                                                              Array [
+                                                                Object {
+                                                                  "label": "Male",
+                                                                  "value": "male",
+                                                                },
+                                                                Object {
+                                                                  "label": "Female",
+                                                                  "value": "female",
+                                                                },
+                                                                Object {
+                                                                  "label": "Other",
+                                                                  "value": "other",
+                                                                },
+                                                              ]
+                                                            }
+                                                            role="combobox"
+                                                            selectOption={[Function]}
                                                             selectProps={
                                                               Object {
                                                                 "actions": undefined,
                                                                 "afterControl": undefined,
+                                                                "aria-live": "polite",
                                                                 "autoFocus": false,
                                                                 "backspaceRemovesValue": true,
                                                                 "beforeControl": undefined,
@@ -3227,13 +3522,14 @@ exports[`Form complete match 1`] = `
                                                                   "placeholder": [Function],
                                                                   "valueContainer": [Function],
                                                                 },
-                                                                "tabIndex": "0",
+                                                                "tabIndex": 0,
                                                                 "tabSelectsValue": true,
                                                                 "value": "",
                                                               }
                                                             }
+                                                            setValue={[Function]}
                                                             spellCheck="false"
-                                                            tabIndex="0"
+                                                            tabIndex={0}
                                                             theme={
                                                               Object {
                                                                 "borderRadius": 4,
@@ -3269,10 +3565,27 @@ exports[`Form complete match 1`] = `
                                                             <EmotionCssPropInternal
                                                               __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Input"
                                                               __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
+                                                              className="hoi-poi-select__input-container"
                                                               css={
                                                                 Object {
+                                                                  "&:after": Object {
+                                                                    "border": 0,
+                                                                    "content": "attr(data-value) \\" \\"",
+                                                                    "font": "inherit",
+                                                                    "gridArea": "1 / 2",
+                                                                    "margin": 0,
+                                                                    "minWidth": "2px",
+                                                                    "outline": 0,
+                                                                    "padding": 0,
+                                                                    "visibility": "hidden",
+                                                                    "whiteSpace": "pre",
+                                                                  },
                                                                   "boxSizing": "border-box",
                                                                   "color": "hsl(0, 0%, 20%)",
+                                                                  "display": "inline-grid",
+                                                                  "flex": "1 1 auto",
+                                                                  "gridArea": "1 / 1 / 2 / 3",
+                                                                  "gridTemplateColumns": "0 min-content",
                                                                   "margin": 2,
                                                                   "padding": 0,
                                                                   "paddingBottom": 2,
@@ -3280,93 +3593,50 @@ exports[`Form complete match 1`] = `
                                                                   "visibility": "visible",
                                                                 }
                                                               }
+                                                              data-value=""
                                                             >
                                                               <div
-                                                                className="css-136ujhp-Input"
+                                                                className="hoi-poi-select__input-container css-1c130sp-Input"
+                                                                data-value=""
                                                               >
-                                                                <AutosizeInput
+                                                                <input
                                                                   aria-autocomplete="list"
+                                                                  aria-controls="react-select-2-listbox"
+                                                                  aria-describedby="react-select-2-placeholder"
+                                                                  aria-expanded={false}
+                                                                  aria-haspopup={true}
+                                                                  aria-owns="react-select-2-listbox"
                                                                   autoCapitalize="none"
                                                                   autoComplete="off"
                                                                   autoCorrect="off"
                                                                   className="hoi-poi-select__input"
                                                                   disabled={false}
                                                                   id="react-select-2-input"
-                                                                  injectStyles={true}
-                                                                  inputRef={[Function]}
-                                                                  inputStyle={
+                                                                  onBlur={[Function]}
+                                                                  onChange={[Function]}
+                                                                  onFocus={[Function]}
+                                                                  role="combobox"
+                                                                  spellCheck="false"
+                                                                  style={
                                                                     Object {
                                                                       "background": 0,
                                                                       "border": 0,
                                                                       "color": "inherit",
-                                                                      "fontSize": "inherit",
+                                                                      "font": "inherit",
+                                                                      "gridArea": "1 / 2",
                                                                       "label": "input",
+                                                                      "margin": 0,
+                                                                      "minWidth": "2px",
                                                                       "opacity": 1,
                                                                       "outline": 0,
                                                                       "padding": 0,
+                                                                      "width": "100%",
                                                                     }
                                                                   }
-                                                                  minWidth={1}
-                                                                  onBlur={[Function]}
-                                                                  onChange={[Function]}
-                                                                  onFocus={[Function]}
-                                                                  spellCheck="false"
-                                                                  tabIndex="0"
+                                                                  tabIndex={0}
                                                                   type="text"
                                                                   value=""
-                                                                >
-                                                                  <div
-                                                                    className="hoi-poi-select__input"
-                                                                    style={
-                                                                      Object {
-                                                                        "display": "inline-block",
-                                                                      }
-                                                                    }
-                                                                  >
-                                                                    <input
-                                                                      aria-autocomplete="list"
-                                                                      autoCapitalize="none"
-                                                                      autoComplete="off"
-                                                                      autoCorrect="off"
-                                                                      disabled={false}
-                                                                      id="react-select-2-input"
-                                                                      onBlur={[Function]}
-                                                                      onChange={[Function]}
-                                                                      onFocus={[Function]}
-                                                                      spellCheck="false"
-                                                                      style={
-                                                                        Object {
-                                                                          "background": 0,
-                                                                          "border": 0,
-                                                                          "boxSizing": "content-box",
-                                                                          "color": "inherit",
-                                                                          "fontSize": "inherit",
-                                                                          "label": "input",
-                                                                          "opacity": 1,
-                                                                          "outline": 0,
-                                                                          "padding": 0,
-                                                                          "width": "2px",
-                                                                        }
-                                                                      }
-                                                                      tabIndex="0"
-                                                                      type="text"
-                                                                      value=""
-                                                                    />
-                                                                    <div
-                                                                      style={
-                                                                        Object {
-                                                                          "height": 0,
-                                                                          "left": 0,
-                                                                          "overflow": "scroll",
-                                                                          "position": "absolute",
-                                                                          "top": 0,
-                                                                          "visibility": "hidden",
-                                                                          "whiteSpace": "pre",
-                                                                        }
-                                                                      }
-                                                                    />
-                                                                  </div>
-                                                                </AutosizeInput>
+                                                                />
                                                               </div>
                                                             </EmotionCssPropInternal>
                                                           </Input>
@@ -3403,6 +3673,7 @@ exports[`Form complete match 1`] = `
                                                         Object {
                                                           "actions": undefined,
                                                           "afterControl": undefined,
+                                                          "aria-live": "polite",
                                                           "autoFocus": false,
                                                           "backspaceRemovesValue": true,
                                                           "beforeControl": undefined,
@@ -3536,7 +3807,7 @@ exports[`Form complete match 1`] = `
                                                             "placeholder": [Function],
                                                             "valueContainer": [Function],
                                                           },
-                                                          "tabIndex": "0",
+                                                          "tabIndex": 0,
                                                           "tabSelectsValue": true,
                                                           "value": "",
                                                         }
@@ -3622,6 +3893,7 @@ exports[`Form complete match 1`] = `
                                                               Object {
                                                                 "actions": undefined,
                                                                 "afterControl": undefined,
+                                                                "aria-live": "polite",
                                                                 "autoFocus": false,
                                                                 "backspaceRemovesValue": true,
                                                                 "beforeControl": undefined,
@@ -3755,7 +4027,7 @@ exports[`Form complete match 1`] = `
                                                                   "placeholder": [Function],
                                                                   "valueContainer": [Function],
                                                                 },
-                                                                "tabIndex": "0",
+                                                                "tabIndex": 0,
                                                                 "tabSelectsValue": true,
                                                                 "value": "",
                                                               }
@@ -3851,6 +4123,7 @@ exports[`Form complete match 1`] = `
                                                               Object {
                                                                 "actions": undefined,
                                                                 "afterControl": undefined,
+                                                                "aria-live": "polite",
                                                                 "autoFocus": false,
                                                                 "backspaceRemovesValue": true,
                                                                 "beforeControl": undefined,
@@ -3984,7 +4257,7 @@ exports[`Form complete match 1`] = `
                                                                   "placeholder": [Function],
                                                                   "valueContainer": [Function],
                                                                 },
-                                                                "tabIndex": "0",
+                                                                "tabIndex": 0,
                                                                 "tabSelectsValue": true,
                                                                 "value": "",
                                                               }
@@ -4058,6 +4331,7 @@ exports[`Form complete match 1`] = `
                                                                 Object {
                                                                   "actions": undefined,
                                                                   "afterControl": undefined,
+                                                                  "aria-live": "polite",
                                                                   "autoFocus": false,
                                                                   "backspaceRemovesValue": true,
                                                                   "beforeControl": undefined,
@@ -4191,7 +4465,7 @@ exports[`Form complete match 1`] = `
                                                                     "placeholder": [Function],
                                                                     "valueContainer": [Function],
                                                                   },
-                                                                  "tabIndex": "0",
+                                                                  "tabIndex": 0,
                                                                   "tabSelectsValue": true,
                                                                   "value": "",
                                                                 }
@@ -4302,7 +4576,7 @@ exports[`Form complete match 1`] = `
                                         </EmotionCssPropInternal>
                                       </SelectContainer>
                                     </Select>
-                                  </StateManager>
+                                  </ForwardRef>
                                 </div>
                               </div>
                             </div>
@@ -6243,7 +6517,7 @@ exports[`Form complete match 1`] = `
                                                     <div
                                                       className="HoiPoi__Select__inputComponents-1-109"
                                                     >
-                                                      <StateManager
+                                                      <ForwardRef
                                                         autoFocus={false}
                                                         blurInputOnSelect={true}
                                                         cacheOptions={true}
@@ -6264,7 +6538,6 @@ exports[`Form complete match 1`] = `
                                                             "SingleValue": [Function],
                                                           }
                                                         }
-                                                        defaultInputValue=""
                                                         defaultMenuIsOpen={false}
                                                         defaultOptions={
                                                           Array [
@@ -6367,6 +6640,7 @@ exports[`Form complete match 1`] = `
                                                         value=""
                                                       >
                                                         <Select
+                                                          aria-live="polite"
                                                           autoFocus={false}
                                                           backspaceRemovesValue={true}
                                                           blurInputOnSelect={true}
@@ -6506,7 +6780,7 @@ exports[`Form complete match 1`] = `
                                                               "valueContainer": [Function],
                                                             }
                                                           }
-                                                          tabIndex="0"
+                                                          tabIndex={0}
                                                           tabSelectsValue={true}
                                                           value=""
                                                         >
@@ -6548,6 +6822,7 @@ exports[`Form complete match 1`] = `
                                                               Object {
                                                                 "actions": undefined,
                                                                 "afterControl": undefined,
+                                                                "aria-live": "polite",
                                                                 "autoFocus": false,
                                                                 "backspaceRemovesValue": true,
                                                                 "beforeControl": undefined,
@@ -6681,7 +6956,7 @@ exports[`Form complete match 1`] = `
                                                                   "placeholder": [Function],
                                                                   "valueContainer": [Function],
                                                                 },
-                                                                "tabIndex": "0",
+                                                                "tabIndex": 0,
                                                                 "tabSelectsValue": true,
                                                                 "value": "",
                                                               }
@@ -6724,36 +6999,31 @@ exports[`Form complete match 1`] = `
                                                               css={
                                                                 Object {
                                                                   "boxSizing": "border-box",
-                                                                  "direction": null,
+                                                                  "direction": undefined,
                                                                   "label": "container",
-                                                                  "pointerEvents": null,
+                                                                  "pointerEvents": undefined,
                                                                   "position": "relative",
                                                                 }
                                                               }
                                                               onKeyDown={[Function]}
                                                             >
                                                               <div
-                                                                className="HoiPoi__Select__select-1-82 css-2b097c-container"
+                                                                className="HoiPoi__Select__select-1-82 css-b62m3t-container"
                                                                 onKeyDown={[Function]}
                                                               >
-                                                                <Control
+                                                                <LiveRegion
+                                                                  ariaSelection={null}
                                                                   clearValue={[Function]}
                                                                   cx={[Function]}
+                                                                  focusableOptions={Array []}
+                                                                  focusedValue={null}
                                                                   getStyles={[Function]}
                                                                   getValue={[Function]}
                                                                   hasValue={false}
-                                                                  innerProps={
-                                                                    Object {
-                                                                      "onMouseDown": [Function],
-                                                                      "onTouchEnd": [Function],
-                                                                    }
-                                                                  }
-                                                                  innerRef={[Function]}
-                                                                  isDisabled={false}
+                                                                  id="react-select-3-live-region"
                                                                   isFocused={false}
                                                                   isMulti={false}
                                                                   isRtl={false}
-                                                                  menuIsOpen={false}
                                                                   options={
                                                                     Array [
                                                                       Object {
@@ -6775,6 +7045,7 @@ exports[`Form complete match 1`] = `
                                                                     Object {
                                                                       "actions": undefined,
                                                                       "afterControl": undefined,
+                                                                      "aria-live": "polite",
                                                                       "autoFocus": false,
                                                                       "backspaceRemovesValue": true,
                                                                       "beforeControl": undefined,
@@ -6908,7 +7179,268 @@ exports[`Form complete match 1`] = `
                                                                         "placeholder": [Function],
                                                                         "valueContainer": [Function],
                                                                       },
-                                                                      "tabIndex": "0",
+                                                                      "tabIndex": 0,
+                                                                      "tabSelectsValue": true,
+                                                                      "value": "",
+                                                                    }
+                                                                  }
+                                                                  selectValue={Array []}
+                                                                  setValue={[Function]}
+                                                                  theme={
+                                                                    Object {
+                                                                      "borderRadius": 4,
+                                                                      "colors": Object {
+                                                                        "danger": "#DE350B",
+                                                                        "dangerLight": "#FFBDAD",
+                                                                        "neutral0": "hsl(0, 0%, 100%)",
+                                                                        "neutral10": "hsl(0, 0%, 90%)",
+                                                                        "neutral20": "hsl(0, 0%, 80%)",
+                                                                        "neutral30": "hsl(0, 0%, 70%)",
+                                                                        "neutral40": "hsl(0, 0%, 60%)",
+                                                                        "neutral5": "hsl(0, 0%, 95%)",
+                                                                        "neutral50": "hsl(0, 0%, 50%)",
+                                                                        "neutral60": "hsl(0, 0%, 40%)",
+                                                                        "neutral70": "hsl(0, 0%, 30%)",
+                                                                        "neutral80": "hsl(0, 0%, 20%)",
+                                                                        "neutral90": "hsl(0, 0%, 10%)",
+                                                                        "primary": "#2684FF",
+                                                                        "primary25": "#DEEBFF",
+                                                                        "primary50": "#B2D4FF",
+                                                                        "primary75": "#4C9AFF",
+                                                                      },
+                                                                      "spacing": Object {
+                                                                        "baseUnit": 4,
+                                                                        "controlHeight": 38,
+                                                                        "menuGutter": 8,
+                                                                      },
+                                                                    }
+                                                                  }
+                                                                >
+                                                                  <A11yText
+                                                                    id="react-select-3-live-region"
+                                                                  >
+                                                                    <EmotionCssPropInternal
+                                                                      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="A11yText"
+                                                                      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+                                                                      css={
+                                                                        Object {
+                                                                          "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkExMXlUZXh0LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNSSIsImZpbGUiOiJBMTF5VGV4dC50c3giLCJzb3VyY2VzQ29udGVudCI6WyIvKiogQGpzeCBqc3ggKi9cbmltcG9ydCB7IGpzeCB9IGZyb20gJ0BlbW90aW9uL3JlYWN0JztcblxuLy8gQXNzaXN0aXZlIHRleHQgdG8gZGVzY3JpYmUgdmlzdWFsIGVsZW1lbnRzLiBIaWRkZW4gZm9yIHNpZ2h0ZWQgdXNlcnMuXG5jb25zdCBBMTF5VGV4dCA9IChwcm9wczogSlNYLkludHJpbnNpY0VsZW1lbnRzWydzcGFuJ10pID0+IChcbiAgPHNwYW5cbiAgICBjc3M9e3tcbiAgICAgIGxhYmVsOiAnYTExeVRleHQnLFxuICAgICAgekluZGV4OiA5OTk5LFxuICAgICAgYm9yZGVyOiAwLFxuICAgICAgY2xpcDogJ3JlY3QoMXB4LCAxcHgsIDFweCwgMXB4KScsXG4gICAgICBoZWlnaHQ6IDEsXG4gICAgICB3aWR0aDogMSxcbiAgICAgIHBvc2l0aW9uOiAnYWJzb2x1dGUnLFxuICAgICAgb3ZlcmZsb3c6ICdoaWRkZW4nLFxuICAgICAgcGFkZGluZzogMCxcbiAgICAgIHdoaXRlU3BhY2U6ICdub3dyYXAnLFxuICAgIH19XG4gICAgey4uLnByb3BzfVxuICAvPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgQTExeVRleHQ7XG4iXX0= */",
+                                                                          "name": "1f43avz-a11yText-A11yText",
+                                                                          "styles": "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap;label:A11yText;",
+                                                                          "toString": [Function],
+                                                                        }
+                                                                      }
+                                                                      id="react-select-3-live-region"
+                                                                    >
+                                                                      <span
+                                                                        className="css-1f43avz-a11yText-A11yText"
+                                                                        id="react-select-3-live-region"
+                                                                      />
+                                                                    </EmotionCssPropInternal>
+                                                                  </A11yText>
+                                                                  <A11yText
+                                                                    aria-atomic="false"
+                                                                    aria-live="polite"
+                                                                    aria-relevant="additions text"
+                                                                  >
+                                                                    <EmotionCssPropInternal
+                                                                      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="A11yText"
+                                                                      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+                                                                      aria-atomic="false"
+                                                                      aria-live="polite"
+                                                                      aria-relevant="additions text"
+                                                                      css={
+                                                                        Object {
+                                                                          "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkExMXlUZXh0LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNSSIsImZpbGUiOiJBMTF5VGV4dC50c3giLCJzb3VyY2VzQ29udGVudCI6WyIvKiogQGpzeCBqc3ggKi9cbmltcG9ydCB7IGpzeCB9IGZyb20gJ0BlbW90aW9uL3JlYWN0JztcblxuLy8gQXNzaXN0aXZlIHRleHQgdG8gZGVzY3JpYmUgdmlzdWFsIGVsZW1lbnRzLiBIaWRkZW4gZm9yIHNpZ2h0ZWQgdXNlcnMuXG5jb25zdCBBMTF5VGV4dCA9IChwcm9wczogSlNYLkludHJpbnNpY0VsZW1lbnRzWydzcGFuJ10pID0+IChcbiAgPHNwYW5cbiAgICBjc3M9e3tcbiAgICAgIGxhYmVsOiAnYTExeVRleHQnLFxuICAgICAgekluZGV4OiA5OTk5LFxuICAgICAgYm9yZGVyOiAwLFxuICAgICAgY2xpcDogJ3JlY3QoMXB4LCAxcHgsIDFweCwgMXB4KScsXG4gICAgICBoZWlnaHQ6IDEsXG4gICAgICB3aWR0aDogMSxcbiAgICAgIHBvc2l0aW9uOiAnYWJzb2x1dGUnLFxuICAgICAgb3ZlcmZsb3c6ICdoaWRkZW4nLFxuICAgICAgcGFkZGluZzogMCxcbiAgICAgIHdoaXRlU3BhY2U6ICdub3dyYXAnLFxuICAgIH19XG4gICAgey4uLnByb3BzfVxuICAvPlxuKTtcblxuZXhwb3J0IGRlZmF1bHQgQTExeVRleHQ7XG4iXX0= */",
+                                                                          "name": "1f43avz-a11yText-A11yText",
+                                                                          "styles": "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap;label:A11yText;",
+                                                                          "toString": [Function],
+                                                                        }
+                                                                      }
+                                                                    >
+                                                                      <span
+                                                                        aria-atomic="false"
+                                                                        aria-live="polite"
+                                                                        aria-relevant="additions text"
+                                                                        className="css-1f43avz-a11yText-A11yText"
+                                                                      />
+                                                                    </EmotionCssPropInternal>
+                                                                  </A11yText>
+                                                                </LiveRegion>
+                                                                <Control
+                                                                  clearValue={[Function]}
+                                                                  cx={[Function]}
+                                                                  getStyles={[Function]}
+                                                                  getValue={[Function]}
+                                                                  hasValue={false}
+                                                                  innerProps={
+                                                                    Object {
+                                                                      "onMouseDown": [Function],
+                                                                      "onTouchEnd": [Function],
+                                                                    }
+                                                                  }
+                                                                  innerRef={[Function]}
+                                                                  isDisabled={false}
+                                                                  isFocused={false}
+                                                                  isMulti={false}
+                                                                  isRtl={false}
+                                                                  menuIsOpen={false}
+                                                                  options={
+                                                                    Array [
+                                                                      Object {
+                                                                        "label": "A",
+                                                                        "value": "a",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "B",
+                                                                        "value": "b",
+                                                                      },
+                                                                      Object {
+                                                                        "label": "C",
+                                                                        "value": "c",
+                                                                      },
+                                                                    ]
+                                                                  }
+                                                                  selectOption={[Function]}
+                                                                  selectProps={
+                                                                    Object {
+                                                                      "actions": undefined,
+                                                                      "afterControl": undefined,
+                                                                      "aria-live": "polite",
+                                                                      "autoFocus": false,
+                                                                      "backspaceRemovesValue": true,
+                                                                      "beforeControl": undefined,
+                                                                      "blurInputOnSelect": true,
+                                                                      "cacheOptions": true,
+                                                                      "captureMenuScroll": false,
+                                                                      "className": "HoiPoi__Select__select-1-82",
+                                                                      "classNamePrefix": "hoi-poi-select",
+                                                                      "closeMenuOnScroll": false,
+                                                                      "closeMenuOnSelect": true,
+                                                                      "components": Object {
+                                                                        "ClearIndicator": [Function],
+                                                                        "Control": [Function],
+                                                                        "DropdownIndicator": [Function],
+                                                                        "Group": [Function],
+                                                                        "LoadingIndicator": [Function],
+                                                                        "Menu": [Function],
+                                                                        "MultiValueLabel": [Function],
+                                                                        "MultiValueRemove": [Function],
+                                                                        "Option": [Function],
+                                                                        "SingleValue": [Function],
+                                                                      },
+                                                                      "controlShouldRenderValue": true,
+                                                                      "defaultOptions": Array [
+                                                                        Object {
+                                                                          "label": "A",
+                                                                          "value": "a",
+                                                                        },
+                                                                        Object {
+                                                                          "label": "B",
+                                                                          "value": "b",
+                                                                        },
+                                                                        Object {
+                                                                          "label": "C",
+                                                                          "value": "c",
+                                                                        },
+                                                                      ],
+                                                                      "dropDownIcon": undefined,
+                                                                      "escapeClearsValue": false,
+                                                                      "filterOption": [Function],
+                                                                      "formatGroupLabel": [Function],
+                                                                      "formatOptionLabel": [Function],
+                                                                      "getOptionLabel": [Function],
+                                                                      "getOptionValue": [Function],
+                                                                      "hideSelectedOptions": true,
+                                                                      "inputValue": "",
+                                                                      "isClearable": true,
+                                                                      "isDisabled": false,
+                                                                      "isFuzzy": undefined,
+                                                                      "isLoading": false,
+                                                                      "isMulti": false,
+                                                                      "isOptionDisabled": [Function],
+                                                                      "isRtl": false,
+                                                                      "isSearchable": true,
+                                                                      "loadOptions": undefined,
+                                                                      "loadingMessage": [Function],
+                                                                      "maxMenuHeight": 300,
+                                                                      "menuIsOpen": false,
+                                                                      "menuPlacement": "bottom",
+                                                                      "menuPortalTarget": <body />,
+                                                                      "menuPosition": "fixed",
+                                                                      "menuProps": Object {
+                                                                        "actionClassName": "HoiPoi__Select__action-1-87",
+                                                                        "actionContainerClassName": "HoiPoi__Select__actionContainer-1-86",
+                                                                        "actionIconClassName": "HoiPoi__Select__actionIcon-1-88",
+                                                                        "actionTextClassName": "HoiPoi__Select__actionText-1-89",
+                                                                        "actionTextWithIconClassName": "HoiPoi__Select__actionTextWithIcon-1-90",
+                                                                        "actions": undefined,
+                                                                        "className": "HoiPoi__Select__menu-1-84",
+                                                                        "dropdownWidth": undefined,
+                                                                        "onClickAction": undefined,
+                                                                        "override": Object {
+                                                                          "action": Object {},
+                                                                          "actionContainer": Object {},
+                                                                          "actionIcon": Object {},
+                                                                          "actionText": Object {},
+                                                                          "actionTextWithIcon": Object {},
+                                                                          "menu": Object {},
+                                                                        },
+                                                                        "singleValueIconClassName": "HoiPoi__Select__singleValueIcon-1-140",
+                                                                      },
+                                                                      "menuShouldBlockScroll": false,
+                                                                      "menuShouldScrollIntoView": true,
+                                                                      "minMenuHeight": 140,
+                                                                      "noOptionsMessage": [Function],
+                                                                      "numSelectedLiteral": "%@ Selected",
+                                                                      "onBlur": [Function],
+                                                                      "onChange": [Function],
+                                                                      "onFocus": [Function],
+                                                                      "onInputChange": [Function],
+                                                                      "onKeyDown": [Function],
+                                                                      "onMenuClose": [Function],
+                                                                      "onMenuOpen": [Function],
+                                                                      "onMouseDown": [Function],
+                                                                      "openMenuOnClick": true,
+                                                                      "openMenuOnFocus": true,
+                                                                      "options": Array [
+                                                                        Object {
+                                                                          "label": "A",
+                                                                          "value": "a",
+                                                                        },
+                                                                        Object {
+                                                                          "label": "B",
+                                                                          "value": "b",
+                                                                        },
+                                                                        Object {
+                                                                          "label": "C",
+                                                                          "value": "c",
+                                                                        },
+                                                                      ],
+                                                                      "pageSize": 5,
+                                                                      "placeholder": "Select...",
+                                                                      "screenReaderStatus": [Function],
+                                                                      "styles": Object {
+                                                                        "clearIndicator": [Function],
+                                                                        "control": [Function],
+                                                                        "dropdownIndicator": [Function],
+                                                                        "group": [Function],
+                                                                        "groupHeading": [Function],
+                                                                        "indicatorSeparator": [Function],
+                                                                        "indicatorsContainer": [Function],
+                                                                        "input": [Function],
+                                                                        "loadingMessage": [Function],
+                                                                        "menuList": [Function],
+                                                                        "menuPortal": [Function],
+                                                                        "multiValue": [Function],
+                                                                        "multiValueLabel": [Function],
+                                                                        "multiValueRemove": [Function],
+                                                                        "noOptionsMessage": [Function],
+                                                                        "option": [Function],
+                                                                        "placeholder": [Function],
+                                                                        "valueContainer": [Function],
+                                                                      },
+                                                                      "tabIndex": 0,
                                                                       "tabSelectsValue": true,
                                                                       "value": "",
                                                                     }
@@ -6983,6 +7515,7 @@ exports[`Form complete match 1`] = `
                                                                       Object {
                                                                         "actions": undefined,
                                                                         "afterControl": undefined,
+                                                                        "aria-live": "polite",
                                                                         "autoFocus": false,
                                                                         "backspaceRemovesValue": true,
                                                                         "beforeControl": undefined,
@@ -7116,7 +7649,7 @@ exports[`Form complete match 1`] = `
                                                                           "placeholder": [Function],
                                                                           "valueContainer": [Function],
                                                                         },
-                                                                        "tabIndex": "0",
+                                                                        "tabIndex": 0,
                                                                         "tabSelectsValue": true,
                                                                         "value": "",
                                                                       }
@@ -7176,7 +7709,7 @@ exports[`Form complete match 1`] = `
                                                                           "borderRadius": "4px",
                                                                           "borderStyle": "solid",
                                                                           "borderWidth": 1,
-                                                                          "boxShadow": null,
+                                                                          "boxShadow": undefined,
                                                                           "boxSizing": "border-box",
                                                                           "cursor": "default",
                                                                           "display": "flex",
@@ -7199,7 +7732,7 @@ exports[`Form complete match 1`] = `
                                                                       onTouchEnd={[Function]}
                                                                     >
                                                                       <div
-                                                                        className="hoi-poi-select__control css-z1h4qh-control"
+                                                                        className="hoi-poi-select__control css-10gotnp-control"
                                                                         onMouseDown={[Function]}
                                                                         onTouchEnd={[Function]}
                                                                       >
@@ -7233,6 +7766,7 @@ exports[`Form complete match 1`] = `
                                                                             Object {
                                                                               "actions": undefined,
                                                                               "afterControl": undefined,
+                                                                              "aria-live": "polite",
                                                                               "autoFocus": false,
                                                                               "backspaceRemovesValue": true,
                                                                               "beforeControl": undefined,
@@ -7366,7 +7900,7 @@ exports[`Form complete match 1`] = `
                                                                                 "placeholder": [Function],
                                                                                 "valueContainer": [Function],
                                                                               },
-                                                                              "tabIndex": "0",
+                                                                              "tabIndex": 0,
                                                                               "tabSelectsValue": true,
                                                                               "value": "",
                                                                             }
@@ -7412,7 +7946,7 @@ exports[`Form complete match 1`] = `
                                                                                 "alignItems": "center",
                                                                                 "boxSizing": "border-box",
                                                                                 "color": "#273c50",
-                                                                                "display": "flex",
+                                                                                "display": "grid",
                                                                                 "flex": 1,
                                                                                 "flexWrap": "wrap",
                                                                                 "overflow": "hidden",
@@ -7422,7 +7956,7 @@ exports[`Form complete match 1`] = `
                                                                             }
                                                                           >
                                                                             <div
-                                                                              className="hoi-poi-select__value-container css-1dtip7w-ValueContainer"
+                                                                              className="hoi-poi-select__value-container css-1jv5527-ValueContainer"
                                                                             >
                                                                               <Placeholder
                                                                                 clearValue={[Function]}
@@ -7430,6 +7964,11 @@ exports[`Form complete match 1`] = `
                                                                                 getStyles={[Function]}
                                                                                 getValue={[Function]}
                                                                                 hasValue={false}
+                                                                                innerProps={
+                                                                                  Object {
+                                                                                    "id": "react-select-3-placeholder",
+                                                                                  }
+                                                                                }
                                                                                 isDisabled={false}
                                                                                 isFocused={false}
                                                                                 isMulti={false}
@@ -7456,6 +7995,7 @@ exports[`Form complete match 1`] = `
                                                                                   Object {
                                                                                     "actions": undefined,
                                                                                     "afterControl": undefined,
+                                                                                    "aria-live": "polite",
                                                                                     "autoFocus": false,
                                                                                     "backspaceRemovesValue": true,
                                                                                     "beforeControl": undefined,
@@ -7589,7 +8129,7 @@ exports[`Form complete match 1`] = `
                                                                                       "placeholder": [Function],
                                                                                       "valueContainer": [Function],
                                                                                     },
-                                                                                    "tabIndex": "0",
+                                                                                    "tabIndex": 0,
                                                                                     "tabSelectsValue": true,
                                                                                     "value": "",
                                                                                   }
@@ -7633,17 +8173,17 @@ exports[`Form complete match 1`] = `
                                                                                     Object {
                                                                                       "boxSizing": "border-box",
                                                                                       "color": "#a9b1b9",
+                                                                                      "gridArea": "1 / 1 / 2 / 3",
                                                                                       "label": "placeholder",
                                                                                       "marginLeft": 2,
                                                                                       "marginRight": 2,
-                                                                                      "position": "absolute",
-                                                                                      "top": "50%",
-                                                                                      "transform": "translateY(-50%)",
                                                                                     }
                                                                                   }
+                                                                                  id="react-select-3-placeholder"
                                                                                 >
                                                                                   <div
-                                                                                    className="hoi-poi-select__placeholder css-h3dsdr-placeholder"
+                                                                                    className="hoi-poi-select__placeholder css-k6ynnq-placeholder"
+                                                                                    id="react-select-3-placeholder"
                                                                                   >
                                                                                     Select...
                                                                                   </div>
@@ -7651,22 +8191,51 @@ exports[`Form complete match 1`] = `
                                                                               </Placeholder>
                                                                               <Input
                                                                                 aria-autocomplete="list"
+                                                                                aria-controls="react-select-3-listbox"
+                                                                                aria-describedby="react-select-3-placeholder"
+                                                                                aria-expanded={false}
+                                                                                aria-haspopup={true}
+                                                                                aria-owns="react-select-3-listbox"
                                                                                 autoCapitalize="none"
                                                                                 autoComplete="off"
                                                                                 autoCorrect="off"
+                                                                                clearValue={[Function]}
                                                                                 cx={[Function]}
                                                                                 getStyles={[Function]}
+                                                                                getValue={[Function]}
+                                                                                hasValue={false}
                                                                                 id="react-select-3-input"
                                                                                 innerRef={[Function]}
                                                                                 isDisabled={false}
                                                                                 isHidden={false}
+                                                                                isMulti={false}
+                                                                                isRtl={false}
                                                                                 onBlur={[Function]}
                                                                                 onChange={[Function]}
                                                                                 onFocus={[Function]}
+                                                                                options={
+                                                                                  Array [
+                                                                                    Object {
+                                                                                      "label": "A",
+                                                                                      "value": "a",
+                                                                                    },
+                                                                                    Object {
+                                                                                      "label": "B",
+                                                                                      "value": "b",
+                                                                                    },
+                                                                                    Object {
+                                                                                      "label": "C",
+                                                                                      "value": "c",
+                                                                                    },
+                                                                                  ]
+                                                                                }
+                                                                                role="combobox"
+                                                                                selectOption={[Function]}
                                                                                 selectProps={
                                                                                   Object {
                                                                                     "actions": undefined,
                                                                                     "afterControl": undefined,
+                                                                                    "aria-live": "polite",
                                                                                     "autoFocus": false,
                                                                                     "backspaceRemovesValue": true,
                                                                                     "beforeControl": undefined,
@@ -7800,13 +8369,14 @@ exports[`Form complete match 1`] = `
                                                                                       "placeholder": [Function],
                                                                                       "valueContainer": [Function],
                                                                                     },
-                                                                                    "tabIndex": "0",
+                                                                                    "tabIndex": 0,
                                                                                     "tabSelectsValue": true,
                                                                                     "value": "",
                                                                                   }
                                                                                 }
+                                                                                setValue={[Function]}
                                                                                 spellCheck="false"
-                                                                                tabIndex="0"
+                                                                                tabIndex={0}
                                                                                 theme={
                                                                                   Object {
                                                                                     "borderRadius": 4,
@@ -7842,10 +8412,27 @@ exports[`Form complete match 1`] = `
                                                                                 <EmotionCssPropInternal
                                                                                   __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Input"
                                                                                   __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
+                                                                                  className="hoi-poi-select__input-container"
                                                                                   css={
                                                                                     Object {
+                                                                                      "&:after": Object {
+                                                                                        "border": 0,
+                                                                                        "content": "attr(data-value) \\" \\"",
+                                                                                        "font": "inherit",
+                                                                                        "gridArea": "1 / 2",
+                                                                                        "margin": 0,
+                                                                                        "minWidth": "2px",
+                                                                                        "outline": 0,
+                                                                                        "padding": 0,
+                                                                                        "visibility": "hidden",
+                                                                                        "whiteSpace": "pre",
+                                                                                      },
                                                                                       "boxSizing": "border-box",
                                                                                       "color": "hsl(0, 0%, 20%)",
+                                                                                      "display": "inline-grid",
+                                                                                      "flex": "1 1 auto",
+                                                                                      "gridArea": "1 / 1 / 2 / 3",
+                                                                                      "gridTemplateColumns": "0 min-content",
                                                                                       "margin": 2,
                                                                                       "padding": 0,
                                                                                       "paddingBottom": 2,
@@ -7853,93 +8440,50 @@ exports[`Form complete match 1`] = `
                                                                                       "visibility": "visible",
                                                                                     }
                                                                                   }
+                                                                                  data-value=""
                                                                                 >
                                                                                   <div
-                                                                                    className="css-136ujhp-Input"
+                                                                                    className="hoi-poi-select__input-container css-1c130sp-Input"
+                                                                                    data-value=""
                                                                                   >
-                                                                                    <AutosizeInput
+                                                                                    <input
                                                                                       aria-autocomplete="list"
+                                                                                      aria-controls="react-select-3-listbox"
+                                                                                      aria-describedby="react-select-3-placeholder"
+                                                                                      aria-expanded={false}
+                                                                                      aria-haspopup={true}
+                                                                                      aria-owns="react-select-3-listbox"
                                                                                       autoCapitalize="none"
                                                                                       autoComplete="off"
                                                                                       autoCorrect="off"
                                                                                       className="hoi-poi-select__input"
                                                                                       disabled={false}
                                                                                       id="react-select-3-input"
-                                                                                      injectStyles={true}
-                                                                                      inputRef={[Function]}
-                                                                                      inputStyle={
+                                                                                      onBlur={[Function]}
+                                                                                      onChange={[Function]}
+                                                                                      onFocus={[Function]}
+                                                                                      role="combobox"
+                                                                                      spellCheck="false"
+                                                                                      style={
                                                                                         Object {
                                                                                           "background": 0,
                                                                                           "border": 0,
                                                                                           "color": "inherit",
-                                                                                          "fontSize": "inherit",
+                                                                                          "font": "inherit",
+                                                                                          "gridArea": "1 / 2",
                                                                                           "label": "input",
+                                                                                          "margin": 0,
+                                                                                          "minWidth": "2px",
                                                                                           "opacity": 1,
                                                                                           "outline": 0,
                                                                                           "padding": 0,
+                                                                                          "width": "100%",
                                                                                         }
                                                                                       }
-                                                                                      minWidth={1}
-                                                                                      onBlur={[Function]}
-                                                                                      onChange={[Function]}
-                                                                                      onFocus={[Function]}
-                                                                                      spellCheck="false"
-                                                                                      tabIndex="0"
+                                                                                      tabIndex={0}
                                                                                       type="text"
                                                                                       value=""
-                                                                                    >
-                                                                                      <div
-                                                                                        className="hoi-poi-select__input"
-                                                                                        style={
-                                                                                          Object {
-                                                                                            "display": "inline-block",
-                                                                                          }
-                                                                                        }
-                                                                                      >
-                                                                                        <input
-                                                                                          aria-autocomplete="list"
-                                                                                          autoCapitalize="none"
-                                                                                          autoComplete="off"
-                                                                                          autoCorrect="off"
-                                                                                          disabled={false}
-                                                                                          id="react-select-3-input"
-                                                                                          onBlur={[Function]}
-                                                                                          onChange={[Function]}
-                                                                                          onFocus={[Function]}
-                                                                                          spellCheck="false"
-                                                                                          style={
-                                                                                            Object {
-                                                                                              "background": 0,
-                                                                                              "border": 0,
-                                                                                              "boxSizing": "content-box",
-                                                                                              "color": "inherit",
-                                                                                              "fontSize": "inherit",
-                                                                                              "label": "input",
-                                                                                              "opacity": 1,
-                                                                                              "outline": 0,
-                                                                                              "padding": 0,
-                                                                                              "width": "2px",
-                                                                                            }
-                                                                                          }
-                                                                                          tabIndex="0"
-                                                                                          type="text"
-                                                                                          value=""
-                                                                                        />
-                                                                                        <div
-                                                                                          style={
-                                                                                            Object {
-                                                                                              "height": 0,
-                                                                                              "left": 0,
-                                                                                              "overflow": "scroll",
-                                                                                              "position": "absolute",
-                                                                                              "top": 0,
-                                                                                              "visibility": "hidden",
-                                                                                              "whiteSpace": "pre",
-                                                                                            }
-                                                                                          }
-                                                                                        />
-                                                                                      </div>
-                                                                                    </AutosizeInput>
+                                                                                    />
                                                                                   </div>
                                                                                 </EmotionCssPropInternal>
                                                                               </Input>
@@ -7976,6 +8520,7 @@ exports[`Form complete match 1`] = `
                                                                             Object {
                                                                               "actions": undefined,
                                                                               "afterControl": undefined,
+                                                                              "aria-live": "polite",
                                                                               "autoFocus": false,
                                                                               "backspaceRemovesValue": true,
                                                                               "beforeControl": undefined,
@@ -8109,7 +8654,7 @@ exports[`Form complete match 1`] = `
                                                                                 "placeholder": [Function],
                                                                                 "valueContainer": [Function],
                                                                               },
-                                                                              "tabIndex": "0",
+                                                                              "tabIndex": 0,
                                                                               "tabSelectsValue": true,
                                                                               "value": "",
                                                                             }
@@ -8195,6 +8740,7 @@ exports[`Form complete match 1`] = `
                                                                                   Object {
                                                                                     "actions": undefined,
                                                                                     "afterControl": undefined,
+                                                                                    "aria-live": "polite",
                                                                                     "autoFocus": false,
                                                                                     "backspaceRemovesValue": true,
                                                                                     "beforeControl": undefined,
@@ -8328,7 +8874,7 @@ exports[`Form complete match 1`] = `
                                                                                       "placeholder": [Function],
                                                                                       "valueContainer": [Function],
                                                                                     },
-                                                                                    "tabIndex": "0",
+                                                                                    "tabIndex": 0,
                                                                                     "tabSelectsValue": true,
                                                                                     "value": "",
                                                                                   }
@@ -8424,6 +8970,7 @@ exports[`Form complete match 1`] = `
                                                                                   Object {
                                                                                     "actions": undefined,
                                                                                     "afterControl": undefined,
+                                                                                    "aria-live": "polite",
                                                                                     "autoFocus": false,
                                                                                     "backspaceRemovesValue": true,
                                                                                     "beforeControl": undefined,
@@ -8557,7 +9104,7 @@ exports[`Form complete match 1`] = `
                                                                                       "placeholder": [Function],
                                                                                       "valueContainer": [Function],
                                                                                     },
-                                                                                    "tabIndex": "0",
+                                                                                    "tabIndex": 0,
                                                                                     "tabSelectsValue": true,
                                                                                     "value": "",
                                                                                   }
@@ -8631,6 +9178,7 @@ exports[`Form complete match 1`] = `
                                                                                     Object {
                                                                                       "actions": undefined,
                                                                                       "afterControl": undefined,
+                                                                                      "aria-live": "polite",
                                                                                       "autoFocus": false,
                                                                                       "backspaceRemovesValue": true,
                                                                                       "beforeControl": undefined,
@@ -8764,7 +9312,7 @@ exports[`Form complete match 1`] = `
                                                                                         "placeholder": [Function],
                                                                                         "valueContainer": [Function],
                                                                                       },
-                                                                                      "tabIndex": "0",
+                                                                                      "tabIndex": 0,
                                                                                       "tabSelectsValue": true,
                                                                                       "value": "",
                                                                                     }
@@ -8875,7 +9423,7 @@ exports[`Form complete match 1`] = `
                                                             </EmotionCssPropInternal>
                                                           </SelectContainer>
                                                         </Select>
-                                                      </StateManager>
+                                                      </ForwardRef>
                                                     </div>
                                                   </div>
                                                 </div>

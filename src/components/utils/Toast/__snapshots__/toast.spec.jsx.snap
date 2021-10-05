@@ -450,21 +450,24 @@ exports[`Toast default match 1`] = `
       >
         <ToastContainer
           autoClose={4000}
-          className="HoiPoi__Toast__root-1-9"
+          className=""
           closeButton={false}
           closeButtonClassName=""
           closeOnClick={true}
           containerId="hoi-poi-ui"
           draggable={true}
+          draggableDirection="x"
           draggablePercent={80}
           enableMultiContainer={true}
           hideProgressBar={true}
+          icon={false}
           newestOnTop={false}
           pauseOnFocusLoss={true}
           pauseOnHover={true}
           position="top-right"
           role="alert"
           rtl={false}
+          theme="light"
           transition={[Function]}
         >
           <div
