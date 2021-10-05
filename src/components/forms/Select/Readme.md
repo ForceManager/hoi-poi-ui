@@ -19,6 +19,14 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Single ReadOnly with input value:
+
+```jsx
+<div>
+    <Select label="Lorem ipsum" placeholder="Select one" inputValue="Lorem ipsum" isReadOnly />
+</div>
+```
+
 Single ReadOnly:
 
 ```jsx

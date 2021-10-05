@@ -25,6 +25,7 @@ export default (theme) => {
         subMenu: {
             position: 'relative',
             width: (props) => props.popupSize,
+            minWidth: 'auto !important',
             overflow: 'hidden',
             paddingTop: '8px',
             paddingBottom: '8px',

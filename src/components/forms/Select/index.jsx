@@ -862,6 +862,7 @@ const Select = memo(
             optionStyles,
             indicatorSeparatorStyles,
             menuListStyles,
+            hideMultivalueChips,
             multiValueLabelStyles,
             multiValueRemoveStyles,
         ]);
