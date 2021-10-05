@@ -32,6 +32,8 @@ const SelectWrapper = memo(
         noOptionsPlaceholder,
         truncateOptions,
         popoverWide,
+        overlayStyle,
+        overlayInnerStyle,
         getPopoverRef,
     }) => {
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
@@ -170,6 +172,8 @@ const SelectWrapper = memo(
                     trigger={trigger}
                     className={popoverClassName}
                     onVisibleChange={onChangeOpen}
+                    overlayStyle={overlayStyle}
+                    overlayInnerStyle={overlayInnerStyle}
                     overrides={override.Popover || {}}
                 >
                     {children && children}
@@ -227,6 +231,8 @@ SelectWrapper.propTypes = {
     truncateOptions: PropTypes.bool,
     /** Enable popover extra width (344px) */
     popoverWide: PropTypes.bool,
+    overlayStyle: PropTypes.object,
+    overlayInnerStyle: PropTypes.object,
     getPopoverRef: PropTypes.func,
 };
 
