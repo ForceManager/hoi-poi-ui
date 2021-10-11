@@ -70,6 +70,7 @@ export default (theme) => ({
             flex: 1,
             '&:last-child': {
                 marginRight: 0,
+                marginBottom: 16,
             },
         },
     },
