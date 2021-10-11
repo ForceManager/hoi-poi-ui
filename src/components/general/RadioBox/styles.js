@@ -24,6 +24,10 @@ export default (theme) => ({
         height: 36,
         width: 36,
         marginRight: 16,
+        '& svg': {
+            height: 36,
+            width: 36,
+        },
     },
     title: {},
     text: {},
