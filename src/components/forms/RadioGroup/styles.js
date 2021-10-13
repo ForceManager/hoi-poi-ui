@@ -63,13 +63,14 @@ export default (theme) => ({
         '& $formControl': {
             flexFlow: 'row nowrap',
             width: '100%',
-        },
-        '& [class*="RadioControl"]': {
-            marginRight: 16,
-            width: 'auto',
-            flex: 1,
-            '&:last-child': {
-                marginRight: 0,
+            '& $radioControl': {
+                marginRight: 16,
+                marginBottom: 16,
+                width: 'auto',
+                flex: 1,
+                '&:last-child': {
+                    marginRight: 0,
+                },
             },
         },
     },
