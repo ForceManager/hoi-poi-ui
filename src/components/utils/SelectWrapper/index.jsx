@@ -35,6 +35,7 @@ const SelectWrapper = memo(
         overlayStyle,
         overlayInnerStyle,
         getPopoverRef,
+        closeOnChangeSingle,
     }) => {
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
         const classes = useClasses(useStyles, classesProp);
@@ -86,10 +87,13 @@ const SelectWrapper = memo(
                         } else {
                             onChange(option);
                         }
+                        if (closeOnChangeSingle) {
+                            document.dispatchEvent(new Event('mousedown'));
+                        }
                     }
                 };
             },
-            [isMulti, onChange, value, mappedValue],
+            [isMulti, onChange, value, mappedValue, closeOnChangeSingle],
         );
 
         const finalOptions = useMemo(() => {
@@ -219,6 +223,7 @@ SelectWrapper.defaultProps = {
     checkBoxIsMonotone: false,
     truncateOptions: true,
     popoverWide: false,
+    closeOnChangeSingle: true,
 };
 
 SelectWrapper.propTypes = {
@@ -234,6 +239,8 @@ SelectWrapper.propTypes = {
     overlayStyle: PropTypes.object,
     overlayInnerStyle: PropTypes.object,
     getPopoverRef: PropTypes.func,
+    /** Enable to close the valuelist after changing the selection */
+    closeOnChangeSingle: PropTypes.bool,
 };
 
 export default SelectWrapper;
