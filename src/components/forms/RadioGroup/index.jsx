@@ -70,6 +70,8 @@ function RadioGroup({
                         value={value}
                         onChange={onChange}
                         onBlur={onBlur}
+                        classes={classesProp}
+                        className={classes.radioControl}
                     />
                 ))}
             </div>
