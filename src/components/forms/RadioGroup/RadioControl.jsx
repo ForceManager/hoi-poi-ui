@@ -5,7 +5,7 @@ import Radio from '../Radio';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
-const useStyles = createUseStyles(styles, 'RadioControl');
+const useStyles = createUseStyles(styles);
 
 function RadioControl({
     children,
@@ -36,7 +36,7 @@ function RadioControl({
 
     return (
         <div
-            className={classes.radioControl}
+            className={classNameProp}
             onClick={isReadOnly ? undefined : onChangeRadio}
             {...override.radioControl}
         >
