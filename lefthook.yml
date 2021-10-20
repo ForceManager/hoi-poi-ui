@@ -1,0 +1,10 @@
+pre-commit:
+    commands:
+        eslint:
+            run: yarn lint-staged
+
+pre-push:
+    commands:
+        test:
+            tags: frontend security
+            run: yarn test
