@@ -163,6 +163,7 @@ import VideoCheckin from './icons/actions/VideoCheckin';
 import EventNote from './icons/actions/EventNote';
 import Pin from './icons/actions/Pin';
 import UnPin from './icons/actions/UnPin';
+import Merge from './icons/actions/Merge';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -484,6 +485,7 @@ const ICONS = {
     taskCheckedOutline: TaskCheckedOutline,
     pin: Pin,
     unpin: UnPin,
+    merge: Merge,
     //Communication
     message: Message,
     comment: Comment,

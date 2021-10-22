@@ -189,6 +189,8 @@ Actions:
 <span> </span>
 <Icon name="unpin"/>
 <span> </span>
+<Icon name="merge"/>
+<span> </span>
 ```
 
 Communication:
