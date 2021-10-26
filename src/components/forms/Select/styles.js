@@ -205,6 +205,7 @@ export default (theme) => ({
         padding: 0,
         paddingLeft: 0,
         paddingRight: 4,
+        lineHeight: '18px',
     },
     multiValueLabelDisabled: {
         color: theme.colors.blue200,
