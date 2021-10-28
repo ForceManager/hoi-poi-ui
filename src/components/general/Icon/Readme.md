@@ -286,6 +286,8 @@ Menu
 <span> </span>
 <Icon name="parameters"/>
 <span> </span>
+<Icon name="authentication"/>
+<span> </span>
 <Icon name="plans"/>
 <span> </span>
 <Icon name="products"/>

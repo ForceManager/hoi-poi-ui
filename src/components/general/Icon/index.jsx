@@ -193,6 +193,7 @@ import TimeZone from './icons/map/TimeZone';
 import Accounts from './icons/menu/Accounts';
 import AddWidgetsOutline from './icons/menu/AddWidgetsOutline';
 import AnalyticsPro from './icons/menu/AnalyticsPro';
+import Authentication from './icons/menu/Authentication';
 import BubleChart from './icons/menu/BubleChart';
 import Campaigns from './icons/menu/Campaigns';
 import Contacts from './icons/menu/Contacts';
@@ -511,6 +512,7 @@ const ICONS = {
     activities: Activities,
     addWidgetsOutline: AddWidgetsOutline,
     analyticsPro: AnalyticsPro,
+    authentication: Authentication,
     bubleChart: BubleChart,
     calendar: Calendar,
     campaigns: Campaigns,
