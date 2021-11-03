@@ -2,10 +2,10 @@ export default (theme) => ({
     root: {
         height: '20px',
         minWidth: '70px',
-        padding: '0px 8px',
+        padding: '2px 8px',
         borderRadius: '4px',
         display: 'inline-block',
-        alignText: 'center',
+        textAlign: 'center',
     },
     Text: {
         display: 'inline-block',
