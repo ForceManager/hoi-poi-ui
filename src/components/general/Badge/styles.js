@@ -7,7 +7,9 @@ export default (theme) => ({
         display: 'inline-block',
         alignText: 'center',
     },
-    Text: {},
+    Text: {
+        display: 'inline-block',
+    },
     // Types
     default: {
         backgroundColor: theme.colors.neutral300,
