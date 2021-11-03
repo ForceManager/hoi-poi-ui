@@ -4,7 +4,6 @@
     "main": "dist/index.js",
     "module": "dist/esm/index.js",
     "scripts": {
-        "postinstall": "husky install",
         "prepublishOnly": "pinst --disable",
         "postpublish": "pinst --enable",
         "prebuild": "rm -rf dist",
@@ -18,7 +17,7 @@
         "build:umd": "cross-env BABEL_ENV=umd rollup -c rollup.config.js",
         "build:watch": "yarn build:esm --watch",
         "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn npm login && yarn npm publish && yarn npm logout",
-        "release-next": "yarn build && cp package.json dist/ && cp postinstall.js dist/ && cp README.md dist/ && yarn npm login && yarn npm publish --tag next && yarn npm logout",
+        "release-next": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn npm login && yarn npm publish --tag next && yarn npm logout",
         "test": " cross-env NODE_ENV=test jest",
         "test:snapshots": "cross-env NODE_ENV=test jest --updateSnapshot",
         "build:styleguidist": "cross-env NODE_ENV=production styleguidist build"
