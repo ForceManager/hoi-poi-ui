@@ -487,7 +487,7 @@ exports[`Select default match 1`] = `
         value="lorem-ipsum-2"
         withoutFilter={false}
       >
-        <Component
+        <ForwardRef
           className="HoiPoi__Select__root-1-0 HoiPoi__Select__medium-1-57"
           hideOptions={false}
           label="Lorem ipsum"
@@ -3593,7 +3593,7 @@ exports[`Select default match 1`] = `
               overrides={Object {}}
             />
           </div>
-        </Component>
+        </ForwardRef>
       </Component>
     </JssProvider>
   </ThemeProvider>
@@ -4089,7 +4089,7 @@ exports[`Select with disabled options match 1`] = `
         value="lorem-ipsum-2"
         withoutFilter={false}
       >
-        <Component
+        <ForwardRef
           className="HoiPoi__Select__root-2-0 HoiPoi__Select__medium-2-57"
           hideOptions={false}
           label="Lorem ipsum"
@@ -7269,7 +7269,7 @@ exports[`Select with disabled options match 1`] = `
               overrides={Object {}}
             />
           </div>
-        </Component>
+        </ForwardRef>
       </Component>
     </JssProvider>
   </ThemeProvider>
