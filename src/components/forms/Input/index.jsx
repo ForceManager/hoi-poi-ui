@@ -320,6 +320,7 @@ const Input = forwardRef(
                 labelMode={labelMode}
                 error={error}
                 className={rootClassName}
+                classes={classesProp}
                 overrides={overridesProp}
                 isFullWidth={isFullWidth}
                 isRequired={isRequired}
