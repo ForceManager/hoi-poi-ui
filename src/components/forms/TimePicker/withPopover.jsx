@@ -1,10 +1,11 @@
-import React, { memo, useEffect, useCallback, useState, useRef } from 'react';
+import React, { memo, useEffect, useCallback, useMemo, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
-import Select from '../Select';
+import Input from '../Input';
+import SelectWrapper from '../../utils/SelectWrapper';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -31,6 +32,8 @@ const TimePicker = memo(
         maxTime, // HH:mm:ss
         isMinTimeNow,
         isMaxTimeNow,
+        formatLabel,
+        formatDate,
         formatOption,
         ...props
     }) => {
@@ -43,6 +46,7 @@ const TimePicker = memo(
         const [timeValue, setTimeValue] = useState(null);
         const [inputValue, setInputValue] = useState('');
         const innerDateValueRef = useRef(dateValue || new Date());
+        const wrapperRef = useRef(null);
 
         const getMinMax = useCallback(() => {
             const date = new Date();
@@ -107,17 +111,27 @@ const TimePicker = memo(
             [newOptions],
         );
 
-        const getTimeLabel = useCallback((date) => {
-            const hours = `0${date.getHours()}`.slice(-2);
-            const minutes = `0${date.getMinutes()}`.slice(-2);
-            const label = `${hours}:${minutes}`;
-            return label;
-        }, []);
-
         const getTimeValue = useCallback(
             (options) => {
                 if (!dateValue || !options || options.length === 0) return null;
                 if (!dateValue) return null;
+
+                const hours = dateValue.getHours();
+                const minutes = dateValue.getMinutes();
+
+                let optionNow = null;
+
+                options.forEach((current, index) => {
+                    if (isRequired) {
+                        const currentHours = current.value.getHours();
+                        const currentMinutes = current.value.getMinutes();
+                        const currentTime = `${currentHours}:${currentMinutes}`;
+                        const dateTime = `${hours}:${minutes}`;
+                        if (dateTime === currentTime) {
+                            optionNow = current;
+                        }
+                    }
+                });
 
                 const minMax = getMinMax();
 
@@ -132,42 +146,27 @@ const TimePicker = memo(
 
                 if (isDisabled) return;
 
-                const hours = dateValue.getHours();
-                const minutes = dateValue.getMinutes();
-
-                let timeOption = null;
-
-                if (isRequired) {
-                    options.forEach((current, index) => {
-                        const currentHours = current.value.getHours();
-                        const currentMinutes = current.value.getMinutes();
-                        const currentTime = `${currentHours}:${currentMinutes}`;
-                        const dateTime = `${hours}:${minutes}`;
-                        if (dateTime === currentTime) {
-                            timeOption = current;
-                        }
-                    });
-                    if (!timeOption) {
-                        timeOption = {
-                            label: getTimeLabel(dateValue),
-                            value: dateValue,
-                        };
-                    }
+                if (optionNow) {
+                    setTimeValue(optionNow);
                 }
 
-                setTimeValue(timeOption);
-
-                const valueLabel = getTimeLabel(dateValue);
-                setInputValue(valueLabel);
+                const inputHours = `0${dateValue.getHours()}`.slice(-2);
+                const inputMinutes = `0${dateValue.getMinutes()}`.slice(-2);
+                setInputValue(`${inputHours}:${inputMinutes}`);
             },
-            [
-                dateValue,
-                isRequired,
-                getMinMax,
-                getIfOptionIsOutOfRange,
-                getIfInputDateIsDisabled,
-                getTimeLabel,
-            ],
+            [dateValue, isRequired, getMinMax, getIfOptionIsOutOfRange, getIfInputDateIsDisabled],
+        );
+
+        const getOptionLabel = useCallback(
+            (date) => {
+                const hours = `0${date.getHours()}`.slice(-2);
+                const minutes = `0${date.getMinutes()}`.slice(-2);
+                const amPm = hours >= 12 ? 'PM' : 'AM';
+                const label = `${hours}:${minutes} ${amPm}`;
+                const newLabel = formatLabel ? formatLabel(date, label) : label;
+                return newLabel;
+            },
+            [formatLabel],
         );
 
         const getNewOptions = useCallback(() => {
@@ -180,7 +179,16 @@ const TimePicker = memo(
             const minMax = getMinMax() || null;
 
             for (let i = 0; i < iterations; i++) {
+                let hours;
+                let minutes;
+                let ampm;
                 if (i === 0) {
+                    hours = date.getHours();
+                    minutes = date.getMinutes();
+                    hours = `0${hours}`.slice(-2);
+                    minutes = `0${minutes}`.slice(-2);
+                    ampm = hours >= 12 ? 'PM' : 'AM';
+
                     let isDisabled = false;
 
                     if (minMax) {
@@ -191,11 +199,13 @@ const TimePicker = memo(
                         );
                     }
 
-                    const newLabel = getTimeLabel(date);
+                    const newValue = formatDate ? formatDate(date) : date;
+                    const label = `${hours}:${minutes} ${ampm}`;
+                    const newLabel = formatLabel ? formatLabel(newValue, label) : label;
 
                     let option = {
                         label: newLabel,
-                        value: date,
+                        value: newValue,
                     };
 
                     if (formatOption) option = formatOption(option);
@@ -205,6 +215,11 @@ const TimePicker = memo(
                 }
 
                 date = new Date(date.getTime() + interval * 60000);
+                hours = date.getHours();
+                minutes = date.getMinutes();
+                hours = `0${hours}`.slice(-2);
+                minutes = `0${minutes}`.slice(-2);
+                ampm = hours >= 12 ? 'PM' : 'AM';
 
                 let isDisabled = false;
 
@@ -216,11 +231,13 @@ const TimePicker = memo(
                     );
                 }
 
-                const newLabel = getTimeLabel(date);
+                const newValue = formatDate ? formatDate(date) : date;
+                const label = `${hours}:${minutes} ${ampm}`;
+                const newLabel = formatLabel ? formatLabel(newValue, label) : label;
 
                 let option = {
                     label: newLabel,
-                    value: date,
+                    value: newValue,
                 };
 
                 if (formatOption) option = formatOption(option);
@@ -237,7 +254,8 @@ const TimePicker = memo(
             getIfOptionIsOutOfRange,
             getMinMax,
             formatOption,
-            getTimeLabel,
+            formatDate,
+            formatLabel,
         ]);
 
         useEffect(() => {
@@ -248,7 +266,7 @@ const TimePicker = memo(
             }
         }, [options, getNewOptions, getTimeValue, newOptions]);
 
-        const handleOnChange = useCallback(
+        const handleOnChangeInput = useCallback(
             (value) => {
                 if (!value) {
                     setInputValue('');
@@ -256,18 +274,14 @@ const TimePicker = memo(
                     onChange && onChange(null);
                     return;
                 }
-
-                const valueLabel = getTimeLabel(value.value);
-                setInputValue(valueLabel);
-                onChange && onChange(value.value);
+                setInputValue(value);
             },
-            [onChange, getTimeLabel],
+            [onChange],
         );
 
         const onCompleteChange = useCallback(
             (value) => {
-                const timeRegEx = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/g;
-
+                const timeRegEx = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/;
                 if (!timeRegEx.test(value)) {
                     setInputValue('');
                     return;
@@ -275,7 +289,6 @@ const TimePicker = memo(
 
                 const valueArr = value.split(':');
                 let finalDate = innerDateValueRef.current;
-
                 finalDate.setHours(valueArr[0], valueArr[1], 0, 0);
 
                 const minMax = getMinMax() || null;
@@ -295,33 +308,50 @@ const TimePicker = memo(
                     return;
                 }
 
-                const valueLabel = getTimeLabel(finalDate);
-                setInputValue(valueLabel);
+                setInputValue(value);
 
                 const newTimeValue = {
-                    label: getTimeLabel(finalDate),
+                    label: getOptionLabel(finalDate),
                     value: finalDate,
                 };
 
                 setTimeValue(newTimeValue);
                 onChange && onChange(finalDate);
             },
-            [onChange, getTimeLabel, getMinMax, getIfInputDateIsDisabled],
+            [onChange, getOptionLabel, getMinMax, getIfInputDateIsDisabled],
         );
 
-        const handleOnBlur = useCallback(
+        const onBlur = useCallback(
             (value) => {
                 onCompleteChange(value);
             },
             [onCompleteChange],
         );
 
-        const handleOnEnter = useCallback(
+        const onEnter = useCallback(
             (value) => {
                 onCompleteChange(value);
             },
             [onCompleteChange],
         );
+
+        const handleOnChange = useCallback(
+            (value) => {
+                setTimeValue(value);
+                onChange && onChange(value?.value || null);
+            },
+            [onChange],
+        );
+
+        const overlayStyles = () => {
+            if (wrapperRef?.current) {
+                return {
+                    overlayStyle: { maxWidth: 'initial' },
+                    overlayInnerStyle: { width: wrapperRef.current.firstChild.offsetWidth },
+                };
+            }
+            return {};
+        };
 
         return (
             <InputWrapper
@@ -335,22 +365,28 @@ const TimePicker = memo(
                 hint={hint}
                 info={info}
                 isRequired={isRequired}
+                ref={wrapperRef}
             >
-                <Select
-                    overrides={override.timePicker}
-                    dropDownIcon={<Icon className={classes.clockIcon} name="clock" />}
+                <SelectWrapper
+                    className=""
+                    // placement="bottom"
                     options={newOptions}
-                    value={timeValue}
-                    inputValue={inputValue}
-                    hideSelectedOptions={false}
-                    isSearchable={true}
                     onChange={handleOnChange}
-                    onBlurSearch={handleOnBlur}
-                    onEnter={handleOnEnter}
-                    isFullWidth={isFullWidth}
-                    keepInputValueOnBlur={true}
-                    {...props}
-                />
+                    value={timeValue || null}
+                    overrides={override.selectWrapper}
+                    {...overlayStyles()}
+                >
+                    <Input
+                        placeholder="Write here"
+                        onChange={handleOnChangeInput}
+                        onBlur={onBlur}
+                        onEnter={onEnter}
+                        value={inputValue}
+                        isFullWidth
+                        overrides={override.input}
+                        postComponent={<Icon name="accessTime" />}
+                    />
+                </SelectWrapper>
             </InputWrapper>
         );
     },
@@ -358,20 +394,15 @@ const TimePicker = memo(
 
 TimePicker.propTypes = {
     interval: PropTypes.number,
+    /** HH:mm:ss */
     minTime: PropTypes.string,
     /** HH:mm:ss */
     maxTime: PropTypes.string,
-    /** HH:mm:ss */
     isMinTimeNow: PropTypes.bool,
     isMaxTimeNow: PropTypes.bool,
+    formatLabel: PropTypes.func,
+    formatDate: PropTypes.func,
     formatOption: PropTypes.func,
-    options: PropTypes.arrayOf(
-        PropTypes.shape({
-            label: PropTypes.string,
-            value: PropTypes.object, //Date
-            isDisabled: PropTypes.bool,
-        }),
-    ),
 };
 
 export default TimePicker;

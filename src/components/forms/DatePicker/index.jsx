@@ -288,7 +288,7 @@ DatePicker.propTypes = {
     calendarButtonLabel: PropTypes.string,
     minDate: PropTypes.instanceOf(Date),
     maxDate: PropTypes.instanceOf(Date),
-    customComponent: PropTypes.element,
+    customComponent: PropTypes.elementType,
 };
 
 export default React.memo(DatePicker);

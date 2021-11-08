@@ -223,9 +223,10 @@ const Input = forwardRef(
 
         const compIsReadOnly = useMemo(() => <Icon name="lockOutline" size="medium" />, []);
 
-        const compIsCopyable = useMemo(() => <Icon name="contentCopy" onClick={copyValue} />, [
-            copyValue,
-        ]);
+        const compIsCopyable = useMemo(
+            () => <Icon name="contentCopy" onClick={copyValue} />,
+            [copyValue],
+        );
 
         const shouldSeparate = isCopyable || isReadOnly || postComponent;
 

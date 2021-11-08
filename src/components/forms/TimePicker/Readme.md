@@ -8,20 +8,20 @@ let date = new Date();
 
 const options = [
     {
-        label: '09:00 AM',
+        label: '09:00',
         value: new Date(date.setHours(9, 0, 0, 0)),
     },
     {
-        label: '09:30 AM',
+        label: '09:30',
         value: new Date(date.setHours(9, 30, 0, 0)),
         isDisabled: true,
     },
     {
-        label: '10:00 AM',
+        label: '10:00',
         value: new Date(date.setHours(10, 0, 0, 0)),
     },
     {
-        label: '10:30 AM',
+        label: '10:30',
         value: new Date(date.setHours(10, 30, 0, 0)),
     },
 ];
@@ -35,51 +35,6 @@ const onChange = (value) => setState(value);
         onChange={onChange}
         options={options}
         value={state}
-        filterByKey
-        isRequired={true}
-    />
-</div>;
-```
-
-Simple With Format:
-
-```jsx
-import { useState } from 'react';
-import { Icon } from 'hoi-poi-ui';
-
-let date = new Date();
-
-const options = [
-    {
-        label: '09:00 AM',
-        value: new Date(date.setHours(9, 0, 0, 0)),
-    },
-    {
-        label: '09:30 AM',
-        value: new Date(date.setHours(9, 30, 0, 0)),
-        isDisabled: true,
-    },
-    {
-        label: '10:00 AM',
-        value: new Date(date.setHours(10, 0, 0, 0)),
-    },
-    {
-        label: '10:30 AM',
-        value: new Date(date.setHours(10, 30, 0, 0)),
-    },
-];
-const [state, setState] = useState('26/3/2021 10:30:00');
-const onChange = (value) => setState(value);
-
-<div>
-    <TimePicker
-        label="Lorem ipsum"
-        placeholder="Select one"
-        onChange={onChange}
-        options={options}
-        value={state}
-        format="dd/mm/yyyy hh:mm:ss"
-        filterByKey
         isRequired={true}
     />
 </div>;
@@ -100,7 +55,6 @@ const onChange = (value) => setState(value);
         placeholder="Select one"
         onChange={onChange}
         value={state}
-        filterByKey
         isRequired={true}
     />
 </div>;
@@ -121,7 +75,6 @@ const onChange = (value) => setState(value);
         placeholder="Select one"
         onChange={onChange}
         value={state}
-        filterByKey
         isRequired={true}
         minTime="11:00:00"
         maxTime="12:10:00"
@@ -144,7 +97,6 @@ const onChange = (value) => setState(value);
         placeholder="Select one"
         onChange={onChange}
         value={state}
-        filterByKey
         isRequired={true}
         isMinTimeNow={true}
     />
@@ -166,7 +118,6 @@ const onChange = (value) => setState(value);
         placeholder="Select one"
         onChange={onChange}
         value={state}
-        filterByKey
         isRequired={true}
         isMaxTimeNow={true}
     />
@@ -192,7 +143,6 @@ const formatLabel = (date, label) => {
         placeholder="Select one"
         onChange={onChange}
         value={state}
-        filterByKey
         isRequired={true}
         formatLabel={formatLabel}
         isFullWidth
@@ -204,4 +154,5 @@ const formatLabel = (date, label) => {
 
 ---
 
--   [Select](#/Forms?id=select)
+-   [Input](#/Forms?id=input)
+-   [SelectWrapper](#/Utils?id=selectWrapper)

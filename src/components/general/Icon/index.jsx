@@ -280,6 +280,13 @@ import ContentCut from './icons/content/ContentCut';
 import ContentPaste from './icons/content/ContentPaste';
 import ContentLink from './icons/content/ContentLink';
 
+//Device
+import AccessAlarms from './icons/device/AccessAlarms';
+import AccessTime from './icons/device/AccessTime';
+import AccessTimeFilled from './icons/device/AccessTimeFilled';
+import AddAlarm from './icons/device/AddAlarm';
+import BrightnessHight from './icons/device/BrightnessHight';
+
 //Toggle
 import CheckBox from './icons/toggle/CheckBox';
 import CheckBoxOutlineBlank from './icons/toggle/CheckBoxOutlineBlank';
@@ -594,6 +601,12 @@ const ICONS = {
     contentCut: ContentCut,
     contentPaste: ContentPaste,
     contentLink: ContentLink,
+    //Device
+    accessAlarms: AccessAlarms,
+    accessTime: AccessTime,
+    accessTimeFilled: AccessTimeFilled,
+    addAlarm: AddAlarm,
+    brightnessHight: BrightnessHight,
     //File Icons
     file: File,
     img: Img,

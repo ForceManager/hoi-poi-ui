@@ -440,6 +440,21 @@ Content:
 <span> </span>
 ```
 
+Device:
+
+```jsx
+<Icon name="accessAlarms"/>
+<span> </span>
+<Icon name="accessTime"/>
+<span> </span>
+<Icon name="accessTimeFilled"/>
+<span> </span>
+<Icon name="addAlarm"/>
+<span> </span>
+<Icon name="brightnessHight"/>
+<span> </span>
+```
+
 Toggle:
 
 ```jsx
