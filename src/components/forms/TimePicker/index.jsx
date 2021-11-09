@@ -266,6 +266,7 @@ const TimePicker = memo(
 
         const onCompleteChange = useCallback(
             (value) => {
+                if (!value) return;
                 const timeRegEx = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/g;
 
                 if (!timeRegEx.test(value)) {
@@ -349,6 +350,7 @@ const TimePicker = memo(
                     onEnter={handleOnEnter}
                     isFullWidth={isFullWidth}
                     keepInputValueOnBlur={true}
+                    // keepInputValueOnChange={true}
                     {...props}
                 />
             </InputWrapper>

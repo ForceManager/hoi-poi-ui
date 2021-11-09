@@ -40,6 +40,7 @@ const onChange = (value) => setState(value);
 </div>;
 ```
 
+<!--
 Simple No Options Prop:
 
 ```jsx
@@ -148,7 +149,7 @@ const formatLabel = (date, label) => {
         isFullWidth
     />
 </div>;
-```
+``` -->
 
 ### Component tree
 
