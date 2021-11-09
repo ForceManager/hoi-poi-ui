@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../../utils/overrides';
@@ -10,22 +10,25 @@ import { createUseStyles } from '../../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'InputWrapper');
 
-const InputWrapper = memo(
-    ({
-        children,
-        classes: classesProp,
-        overrides: overridesProp,
-        className: classNameProp,
-        label,
-        labelMode,
-        isFullWidth,
-        placeholder,
-        hint,
-        error,
-        info,
-        isRequired,
-        ...props
-    }) => {
+const InputWrapper = forwardRef(
+    (
+        {
+            children,
+            classes: classesProp,
+            overrides: overridesProp,
+            className: classNameProp,
+            label,
+            labelMode,
+            isFullWidth,
+            placeholder,
+            hint,
+            error,
+            info,
+            isRequired,
+            ...props
+        },
+        ref,
+    ) => {
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, InputWrapper.overrides);
 
@@ -56,7 +59,7 @@ const InputWrapper = memo(
                             {label}
                         </Label>
                     )}
-                    <div className={classes.formControl} {...override.formControl}>
+                    <div className={classes.formControl} {...override.formControl} ref={ref}>
                         {children}
                     </div>
                 </div>

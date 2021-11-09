@@ -750,7 +750,7 @@ exports[`Multiplier complete match 1`] = `
                             value=""
                             withoutFilter={false}
                           >
-                            <Component
+                            <ForwardRef
                               attrs={
                                 Object {
                                   "options": Array [
@@ -2716,6 +2716,9 @@ exports[`Multiplier complete match 1`] = `
                                                                   className="hoi-poi-select__input-container"
                                                                   css={
                                                                     Object {
+                                                                      "& input": Object {
+                                                                        "opacity": "1 !important",
+                                                                      },
                                                                       "&:after": Object {
                                                                         "border": 0,
                                                                         "content": "attr(data-value) \\" \\"",
@@ -2744,7 +2747,7 @@ exports[`Multiplier complete match 1`] = `
                                                                   data-value=""
                                                                 >
                                                                   <div
-                                                                    className="hoi-poi-select__input-container css-1924ora-Input"
+                                                                    className="hoi-poi-select__input-container css-d6dhb1-Input"
                                                                     data-value=""
                                                                   >
                                                                     <input
@@ -3741,7 +3744,7 @@ exports[`Multiplier complete match 1`] = `
                                   }
                                 />
                               </div>
-                            </Component>
+                            </ForwardRef>
                           </Component>
                         </FieldControl>
                         <FieldControl
@@ -3794,7 +3797,7 @@ exports[`Multiplier complete match 1`] = `
                             type="text"
                             value=""
                           >
-                            <Component
+                            <ForwardRef
                               className="HoiPoi__Input__root-1-146"
                               error=""
                               isFullWidth={false}
@@ -3871,7 +3874,7 @@ exports[`Multiplier complete match 1`] = `
                                   }
                                 />
                               </div>
-                            </Component>
+                            </ForwardRef>
                           </ForwardRef>
                         </FieldControl>
                         <FieldControl
@@ -3924,7 +3927,7 @@ exports[`Multiplier complete match 1`] = `
                             type="text"
                             value=""
                           >
-                            <Component
+                            <ForwardRef
                               className="HoiPoi__Input__root-1-146"
                               error=""
                               isFullWidth={false}
@@ -4001,7 +4004,7 @@ exports[`Multiplier complete match 1`] = `
                                   }
                                 />
                               </div>
-                            </Component>
+                            </ForwardRef>
                           </ForwardRef>
                         </FieldControl>
                       </div>

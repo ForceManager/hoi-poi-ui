@@ -7,6 +7,7 @@ import OptionList from './components/OptionList';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
+import { useEffect } from 'react';
 const useStyles = createUseStyles(styles, 'SelectWrapper');
 
 const SelectWrapper = memo(
@@ -42,6 +43,12 @@ const SelectWrapper = memo(
         const rootClassName = classnames(classes.root, {}, classNameProp);
         const [innerOptions, setInnerOptions] = useState(options || []);
         const [isLoading, setIsLoading] = useState(false);
+
+        useEffect(() => {
+            if (!loadOptions && innerOptions?.length !== options?.length) {
+                setInnerOptions(options);
+            }
+        }, [loadOptions, innerOptions, options]);
 
         const mappedValue = useMemo(() => {
             if (

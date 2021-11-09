@@ -272,6 +272,9 @@ export default (theme) => ({
         padding: 0,
         visibility: 'inherit',
         color: 'inherit',
+        '& input': {
+            opacity: '1 !important',
+        },
     },
     small: {
         '& .hoi-poi-select__control': {

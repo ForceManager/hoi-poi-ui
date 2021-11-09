@@ -573,7 +573,7 @@ exports[`SearchBar default match 1`] = `
             value=""
             withoutFilter={true}
           >
-            <Component
+            <ForwardRef
               className="HoiPoi__Select__root-1-6 HoiPoi__Select__isFullWidth-1-7 HoiPoi__Select__async-1-8 HoiPoi__Select__medium-1-63"
               hideOptions={false}
               isFullWidth={true}
@@ -2684,6 +2684,9 @@ exports[`SearchBar default match 1`] = `
                                                   className="hoi-poi-select__input-container"
                                                   css={
                                                     Object {
+                                                      "& input": Object {
+                                                        "opacity": "1 !important",
+                                                      },
                                                       "&:after": Object {
                                                         "border": 0,
                                                         "content": "attr(data-value) \\" \\"",
@@ -2712,7 +2715,7 @@ exports[`SearchBar default match 1`] = `
                                                   data-value=""
                                                 >
                                                   <div
-                                                    className="hoi-poi-select__input-container css-1924ora-Input"
+                                                    className="hoi-poi-select__input-container css-d6dhb1-Input"
                                                     data-value=""
                                                   >
                                                     <input
@@ -3051,7 +3054,7 @@ exports[`SearchBar default match 1`] = `
                                           value="lorem-ipsum-1"
                                           withoutFilter={false}
                                         >
-                                          <Component
+                                          <ForwardRef
                                             className="HoiPoi__Select__root-1-6 HoiPoi__Select__medium-1-63 HoiPoi__Select__onlyText-1-64 HoiPoi__SearchBar__typeSelector-1-1 HoiPoi__SearchBar__typeSelectorWithValue-1-3"
                                             hideOptions={false}
                                             labelMode="vertical"
@@ -5896,7 +5899,7 @@ exports[`SearchBar default match 1`] = `
                                                 overrides={Object {}}
                                               />
                                             </div>
-                                          </Component>
+                                          </ForwardRef>
                                         </Component>
                                       </div>
                                     </EmotionCssPropInternal>
@@ -5916,7 +5919,7 @@ exports[`SearchBar default match 1`] = `
                   overrides={Object {}}
                 />
               </div>
-            </Component>
+            </ForwardRef>
           </Component>
         </div>
       </SearchBar>
@@ -6500,7 +6503,7 @@ exports[`SearchBar small match 1`] = `
             value=""
             withoutFilter={true}
           >
-            <Component
+            <ForwardRef
               className="HoiPoi__Select__root-2-6 HoiPoi__Select__isFullWidth-2-7 HoiPoi__Select__async-2-8 HoiPoi__Select__small-2-62"
               hideOptions={false}
               isFullWidth={true}
@@ -8611,6 +8614,9 @@ exports[`SearchBar small match 1`] = `
                                                   className="hoi-poi-select__input-container"
                                                   css={
                                                     Object {
+                                                      "& input": Object {
+                                                        "opacity": "1 !important",
+                                                      },
                                                       "&:after": Object {
                                                         "border": 0,
                                                         "content": "attr(data-value) \\" \\"",
@@ -8639,7 +8645,7 @@ exports[`SearchBar small match 1`] = `
                                                   data-value=""
                                                 >
                                                   <div
-                                                    className="hoi-poi-select__input-container css-1924ora-Input"
+                                                    className="hoi-poi-select__input-container css-d6dhb1-Input"
                                                     data-value=""
                                                   >
                                                     <input
@@ -8978,7 +8984,7 @@ exports[`SearchBar small match 1`] = `
                                           value="lorem-ipsum-1"
                                           withoutFilter={false}
                                         >
-                                          <Component
+                                          <ForwardRef
                                             className="HoiPoi__Select__root-2-6 HoiPoi__Select__small-2-62 HoiPoi__SearchBar__typeSmall-2-2 HoiPoi__Select__onlyText-2-64 HoiPoi__SearchBar__typeSelector-2-1 HoiPoi__SearchBar__typeSelectorWithValue-2-3"
                                             hideOptions={false}
                                             labelMode="vertical"
@@ -11823,7 +11829,7 @@ exports[`SearchBar small match 1`] = `
                                                 overrides={Object {}}
                                               />
                                             </div>
-                                          </Component>
+                                          </ForwardRef>
                                         </Component>
                                       </div>
                                     </EmotionCssPropInternal>
@@ -11843,7 +11849,7 @@ exports[`SearchBar small match 1`] = `
                   overrides={Object {}}
                 />
               </div>
-            </Component>
+            </ForwardRef>
           </Component>
         </div>
       </SearchBar>
