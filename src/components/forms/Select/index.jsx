@@ -177,7 +177,7 @@ const Select = memo(
                     setNewInputValue('');
                 }
             },
-            [isMulti, onChange, shouldSetValueOnChange, getCanChange, newInputValue],
+            [isMulti, onChange, newInputValue, shouldSetValueOnChange, getCanChange],
         );
 
         const setMenuPlacement = useCallback(

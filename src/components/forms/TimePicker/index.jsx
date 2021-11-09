@@ -350,7 +350,6 @@ const TimePicker = memo(
                     onEnter={handleOnEnter}
                     isFullWidth={isFullWidth}
                     keepInputValueOnBlur={true}
-                    // keepInputValueOnChange={true}
                     {...props}
                 />
             </InputWrapper>
