@@ -40,7 +40,6 @@ const onChange = (value) => setState(value);
 </div>;
 ```
 
-<!--
 Simple No Options Prop:
 
 ```jsx
@@ -149,11 +148,11 @@ const formatLabel = (date, label) => {
         isFullWidth
     />
 </div>;
-``` -->
+```
 
 ### Component tree
 
 ---
 
--   [Input](#/Forms?id=input)
--   [SelectWrapper](#/Utils?id=selectWrapper)
+-   [Select](#/Forms?id=select)
+-   inputWrapper - Wrapper around Label and input components
