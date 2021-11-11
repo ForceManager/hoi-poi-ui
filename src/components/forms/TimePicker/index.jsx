@@ -155,7 +155,15 @@ const TimePicker = memo(
                     }
                 }
 
-                setTimeValue(timeOption);
+                if (timeOption) {
+                    setTimeValue(timeOption);
+                } else if (dateValue) {
+                    const initialOption = {
+                        label: getTimeLabel(dateValue),
+                        value: dateValue,
+                    };
+                    setTimeValue(initialOption);
+                }
 
                 const valueLabel = getTimeLabel(dateValue);
                 setInputValue(valueLabel);
@@ -256,7 +264,6 @@ const TimePicker = memo(
                     onChange && onChange(null);
                     return;
                 }
-
                 const valueLabel = getTimeLabel(value.value);
                 setInputValue(valueLabel);
                 onChange && onChange(value.value);
@@ -271,6 +278,7 @@ const TimePicker = memo(
 
                 if (!timeRegEx.test(value)) {
                     setInputValue('');
+                    setTimeValue(null);
                     return;
                 }
 
@@ -350,6 +358,7 @@ const TimePicker = memo(
                     onEnter={handleOnEnter}
                     isFullWidth={isFullWidth}
                     keepInputValueOnBlur={true}
+                    keepValueOnInputChange={true}
                     {...props}
                 />
             </InputWrapper>
