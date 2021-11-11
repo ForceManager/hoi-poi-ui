@@ -35,7 +35,7 @@ const onChange = (value) => setState(value);
         onChange={onChange}
         options={options}
         value={state}
-        isRequired={true}
+        isRequired={false}
     />
 </div>;
 ```

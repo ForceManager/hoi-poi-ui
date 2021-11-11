@@ -52,6 +52,7 @@ const Select = memo(
         inputValue,
         forceBlurOnEnter,
         keepInputValueOnBlur,
+        keepValueOnInputChange,
         useAsSimpleSearch,
         onChange,
         onBlur,
@@ -584,7 +585,12 @@ const Select = memo(
             (inputValue, action) => {
                 if (action.action === 'input-change') {
                     setNewInputValue(inputValue);
-                    if (keepInputValueOnBlur && !isMulti && newValue?.value) {
+                    if (
+                        !keepValueOnInputChange &&
+                        keepInputValueOnBlur &&
+                        !isMulti &&
+                        newValue?.value
+                    ) {
                         setNewValue(null);
                     }
                 } else {
@@ -592,7 +598,14 @@ const Select = memo(
                     onBlurSearch && onBlurSearch(newInputValue, action);
                 }
             },
-            [keepInputValueOnBlur, isMulti, newValue, onBlurSearch, newInputValue],
+            [
+                keepValueOnInputChange,
+                keepInputValueOnBlur,
+                isMulti,
+                newValue,
+                onBlurSearch,
+                newInputValue,
+            ],
         );
 
         const selectProps = useMemo(() => {
