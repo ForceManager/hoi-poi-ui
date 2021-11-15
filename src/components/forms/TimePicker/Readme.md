@@ -25,7 +25,7 @@ const options = [
         value: new Date(date.setHours(10, 30, 0, 0)),
     },
 ];
-const [state, setState] = useState();
+const [state, setState] = useState(new Date());
 const onChange = (value) => setState(value);
 
 <div>

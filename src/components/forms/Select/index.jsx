@@ -91,6 +91,8 @@ const Select = memo(
         getRef,
         getCanChange,
         hideMultivalueChips,
+        customOnChange,
+        customOnChangeInput,
         ...props
     }) => {
         const selectRef = useRef();
@@ -166,6 +168,16 @@ const Select = memo(
 
         const handleOnChange = useCallback(
             (data, action) => {
+                if (customOnChange) {
+                    customOnChange({
+                        value: data,
+                        action,
+                        setNewValue,
+                        setNewInputValue,
+                    });
+                    return;
+                }
+
                 if (getCanChange && !getCanChange(data, action)) return;
                 if (shouldSetValueOnChange) setNewValue(data);
                 if (!isMulti) setFocused(false);
@@ -178,7 +190,14 @@ const Select = memo(
                     setNewInputValue('');
                 }
             },
-            [isMulti, onChange, newInputValue, shouldSetValueOnChange, getCanChange],
+            [
+                isMulti,
+                onChange,
+                newInputValue,
+                shouldSetValueOnChange,
+                getCanChange,
+                customOnChange,
+            ],
         );
 
         const setMenuPlacement = useCallback(
@@ -583,6 +602,17 @@ const Select = memo(
 
         const handleOnInputChange = useCallback(
             (inputValue, action) => {
+                if (customOnChangeInput) {
+                    customOnChangeInput({
+                        value: newValue,
+                        inputValue,
+                        action,
+                        setNewValue,
+                        setNewInputValue,
+                    });
+                    return;
+                }
+
                 if (action.action === 'input-change') {
                     setNewInputValue(inputValue);
                     if (
@@ -605,6 +635,7 @@ const Select = memo(
                 newValue,
                 onBlurSearch,
                 newInputValue,
+                customOnChangeInput,
             ],
         );
 
