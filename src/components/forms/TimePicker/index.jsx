@@ -43,6 +43,8 @@ const TimePicker = memo(
         const [timeValue, setTimeValue] = useState(null);
         const [inputValue, setInputValue] = useState('');
         const innerDateValueRef = useRef(dateValue || new Date());
+        const isSelectionRef = useRef(false);
+        const inputValueControlRef = useRef('');
 
         const getMinMax = useCallback(() => {
             const date = new Date();
@@ -79,6 +81,7 @@ const TimePicker = memo(
 
         const getIfOptionIsOutOfRange = useCallback((date, minTime, maxTime) => {
             if (!minTime && !maxTime) return false;
+
             const dateInMiliseconds = date.getTime();
 
             if (minTime && dateInMiliseconds < minTime.getTime()) return true;
@@ -256,80 +259,86 @@ const TimePicker = memo(
             }
         }, [options, getNewOptions, getTimeValue, newOptions]);
 
-        const handleOnChange = useCallback(
-            (value) => {
-                if (!value) {
-                    setInputValue('');
-                    setTimeValue(null);
+        const customOnChange = useCallback(
+            ({ value, action, setNewValue, setNewInputValue }) => {
+                if (action?.action === 'clear') {
+                    setNewInputValue('');
+                    setNewValue(null);
+                    inputValueControlRef.current = '';
                     onChange && onChange(null);
-                    return;
+                } else if (value) {
+                    if (action?.action === 'select-option') isSelectionRef.current = true;
+                    setNewInputValue(value.label);
+                    setNewValue(value);
+                    inputValueControlRef.current = value.label;
+                    onChange && onChange(value.value);
                 }
-                const valueLabel = getTimeLabel(value.value);
-                setInputValue(valueLabel);
-                onChange && onChange(value.value);
             },
-            [onChange, getTimeLabel],
+            [onChange],
         );
 
-        const onCompleteChange = useCallback(
-            (value) => {
-                if (!value) return;
-                const timeRegEx = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/g;
+        const customOnChangeInput = useCallback(
+            ({ value, inputValue, action, setNewValue, setNewInputValue }) => {
+                if (action?.action === 'input-change') {
+                    if ((!inputValue && !value) || (!inputValue && value)) {
+                        setNewInputValue('');
+                        setNewValue(null);
+                        onChange && onChange(null);
+                        inputValueControlRef.current = '';
+                    } else {
+                        setNewInputValue(inputValue);
+                        inputValueControlRef.current = inputValue;
+                    }
+                } else if (action?.action === 'input-blur') {
+                    if (isSelectionRef.current) {
+                        isSelectionRef.current = false;
+                        return;
+                    }
 
-                if (!timeRegEx.test(value)) {
-                    setInputValue('');
-                    setTimeValue(null);
-                    return;
+                    let finalDate = null;
+                    const timeRegEx = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/g;
+                    if (timeRegEx.test(inputValueControlRef.current)) {
+                        const valueArr = inputValueControlRef.current.split(':');
+                        finalDate = innerDateValueRef.current;
+                        finalDate.setHours(valueArr[0], valueArr[1], 0, 0);
+                    }
+
+                    if (inputValueControlRef.current) {
+                        if (!finalDate) {
+                            setNewInputValue('');
+                            setNewValue(null);
+                            onChange && onChange(null);
+                        } else {
+                            const minMax = getMinMax() || null;
+
+                            const isValueDisabled =
+                                getIfInputDateIsDisabled(
+                                    finalDate,
+                                    minMax?.minTime || null,
+                                    minMax?.maxTime || null,
+                                ) ||
+                                getIfInputDateIsDisabled(finalDate) ||
+                                false;
+
+                            if (isValueDisabled) {
+                                setNewInputValue('');
+                                setNewValue(null);
+                                onChange && onChange(null);
+                                return;
+                            }
+
+                            const newTimeValue = {
+                                label: getTimeLabel(finalDate),
+                                value: finalDate,
+                            };
+
+                            setNewValue(newTimeValue);
+                            onChange && onChange(finalDate);
+                        }
+                    }
                 }
-
-                const valueArr = value.split(':');
-                let finalDate = innerDateValueRef.current;
-
-                finalDate.setHours(valueArr[0], valueArr[1], 0, 0);
-
-                const minMax = getMinMax() || null;
-
-                const isValueDisabled =
-                    getIfInputDateIsDisabled(
-                        finalDate,
-                        minMax?.minTime || null,
-                        minMax?.maxTime || null,
-                    ) ||
-                    getIfInputDateIsDisabled(finalDate) ||
-                    false;
-
-                if (isValueDisabled) {
-                    setInputValue('');
-                    setTimeValue(null);
-                    return;
-                }
-
-                const valueLabel = getTimeLabel(finalDate);
-                setInputValue(valueLabel);
-
-                const newTimeValue = {
-                    label: getTimeLabel(finalDate),
-                    value: finalDate,
-                };
-
-                setTimeValue(newTimeValue);
-                onChange && onChange(finalDate);
             },
-            [onChange, getTimeLabel, getMinMax, getIfInputDateIsDisabled],
-        );
-
-        const handleOnBlur = useCallback(
-            (value) => {
-                onCompleteChange(value);
-            },
-            [onCompleteChange],
-        );
-
-        const handleOnEnter = useCallback(
-            (value) => {
-                onCompleteChange(value);
-            },
-            [onCompleteChange],
+            [getIfInputDateIsDisabled, getMinMax, getTimeLabel, onChange],
         );
 
         return (
@@ -353,12 +362,11 @@ const TimePicker = memo(
                     inputValue={inputValue}
                     hideSelectedOptions={false}
                     isSearchable={true}
-                    onChange={handleOnChange}
-                    onBlurSearch={handleOnBlur}
-                    onEnter={handleOnEnter}
                     isFullWidth={isFullWidth}
                     keepInputValueOnBlur={true}
                     keepValueOnInputChange={true}
+                    customOnChange={customOnChange}
+                    customOnChangeInput={customOnChangeInput}
                     {...props}
                 />
             </InputWrapper>
