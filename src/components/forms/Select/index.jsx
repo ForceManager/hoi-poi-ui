@@ -1097,6 +1097,10 @@ Select.propTypes = {
     getRef: PropTypes.func,
     /** Hide chips in multiselect */
     hideMultivalueChips: PropTypes.bool,
+    /** Control change events from outside the component */
+    customOnChange: PropTypes.func,
+    /** Control change input events from outside the component */
+    customOnChangeInput: PropTypes.func,
 };
 
 export default Select;
