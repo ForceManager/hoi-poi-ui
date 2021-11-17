@@ -1,10 +1,11 @@
-import React, { memo, useEffect, useCallback, useState, useRef } from 'react';
+import React, { memo, useEffect, useCallback, useMemo, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
 import Select from '../Select';
+import { filterKeyValue } from '../Select/utils';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -32,6 +33,7 @@ const TimePicker = memo(
         isMinTimeNow,
         isMaxTimeNow,
         formatOption,
+        dropDownIcon,
         ...props
     }) => {
         const override = getOverrides(overridesProp, TimePicker.overrides);
@@ -45,6 +47,7 @@ const TimePicker = memo(
         const innerDateValueRef = useRef(dateValue || new Date());
         const isSelectionRef = useRef(false);
         const inputValueControlRef = useRef('');
+        const shouldFilterRef = useRef(false);
 
         const getMinMax = useCallback(() => {
             const date = new Date();
@@ -266,16 +269,23 @@ const TimePicker = memo(
                     setNewValue(null);
                     inputValueControlRef.current = '';
                     onChange && onChange(null);
+                    shouldFilterRef.current = true;
                 } else if (value) {
                     if (action?.action === 'select-option') isSelectionRef.current = true;
                     setNewInputValue(value.label);
                     setNewValue(value);
                     inputValueControlRef.current = value.label;
                     onChange && onChange(value.value);
+                    shouldFilterRef.current = false;
                 }
             },
             [onChange],
         );
+
+        const customFilter = useCallback((option, rawInput) => {
+            if (!shouldFilterRef.current) return true;
+            return filterKeyValue(option, rawInput);
+        }, []);
 
         const customOnChangeInput = useCallback(
             ({ value, inputValue, action, setNewValue, setNewInputValue }) => {
@@ -289,6 +299,7 @@ const TimePicker = memo(
                         setNewInputValue(inputValue);
                         inputValueControlRef.current = inputValue;
                     }
+                    if (!shouldFilterRef.current) shouldFilterRef.current = true;
                 } else if (action?.action === 'input-blur') {
                     if (isSelectionRef.current) {
                         isSelectionRef.current = false;
@@ -308,6 +319,7 @@ const TimePicker = memo(
                             setNewInputValue('');
                             setNewValue(null);
                             onChange && onChange(null);
+                            shouldFilterRef.current = true;
                         } else {
                             const minMax = getMinMax() || null;
 
@@ -324,6 +336,7 @@ const TimePicker = memo(
                                 setNewInputValue('');
                                 setNewValue(null);
                                 onChange && onChange(null);
+                                shouldFilterRef.current = true;
                                 return;
                             }
 
@@ -334,12 +347,18 @@ const TimePicker = memo(
 
                             setNewValue(newTimeValue);
                             onChange && onChange(finalDate);
+                            shouldFilterRef.current = false;
                         }
                     }
                 }
             },
             [getIfInputDateIsDisabled, getMinMax, getTimeLabel, onChange],
         );
+
+        const iconDropDown = useMemo(() => {
+            if (dropDownIcon) return dropDownIcon;
+            return <Icon className={classes.clockIcon} name="clock" />;
+        }, [dropDownIcon, classes.clockIcon]);
 
         return (
             <InputWrapper
@@ -356,7 +375,7 @@ const TimePicker = memo(
             >
                 <Select
                     overrides={override.timePicker}
-                    dropDownIcon={<Icon className={classes.clockIcon} name="clock" />}
+                    dropDownIcon={iconDropDown}
                     options={newOptions}
                     value={timeValue}
                     inputValue={inputValue}
@@ -367,6 +386,8 @@ const TimePicker = memo(
                     keepValueOnInputChange={true}
                     customOnChange={customOnChange}
                     customOnChangeInput={customOnChangeInput}
+                    customFilter={customFilter}
+                    menuShouldScrollIntoView={true}
                     {...props}
                 />
             </InputWrapper>
@@ -375,11 +396,12 @@ const TimePicker = memo(
 );
 
 TimePicker.propTypes = {
+    /** Interval time between values in the list */
     interval: PropTypes.number,
+    /** HH:mm:ss */
     minTime: PropTypes.string,
     /** HH:mm:ss */
     maxTime: PropTypes.string,
-    /** HH:mm:ss */
     isMinTimeNow: PropTypes.bool,
     isMaxTimeNow: PropTypes.bool,
     formatOption: PropTypes.func,
@@ -390,6 +412,8 @@ TimePicker.propTypes = {
             isDisabled: PropTypes.bool,
         }),
     ),
+    /** Custom dropDown icon */
+    dropDownIcon: PropTypes.element,
 };
 
 export default TimePicker;
