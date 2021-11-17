@@ -61,6 +61,7 @@ const Select = memo(
         onKeyDown,
         hideSelectedOptions,
         filterByKey,
+        customFilter,
         withoutFilter,
         defaultMenuIsOpen,
         loadOptions,
@@ -71,6 +72,8 @@ const Select = memo(
         actions,
         onClickAction,
         dropDownIcon,
+        clearIcon,
+        lockIcon,
         size,
         onlyText,
         dropdownWidth,
@@ -654,6 +657,7 @@ const Select = memo(
             if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
             let filterOption = filterByKey ? filterKeyValue : createFilter;
             if (withoutFilter) filterOption = undefined;
+            if (customFilter) filterOption = customFilter;
 
             return {
                 ref: (ref) => {
@@ -698,6 +702,8 @@ const Select = memo(
                 formatOptionLabel,
                 formatGroupLabel,
                 dropDownIcon,
+                clearIcon,
+                lockIcon,
                 isFuzzy,
                 beforeControl,
                 afterControl,
@@ -858,9 +864,12 @@ const Select = memo(
             keepInputValueOnBlur,
             isReadOnly,
             dropDownIcon,
+            clearIcon,
+            lockIcon,
             showNumSelected,
             filterByKey,
             withoutFilter,
+            customFilter,
             selectClassName,
             placeholder,
             lazyOptions.options,
@@ -1071,7 +1080,12 @@ Select.propTypes = {
     /** Filter by keys as well */
     filterByKey: PropTypes.bool,
     defaultMenuIsOpen: PropTypes.bool,
+    /** Custom dropDown icon */
     dropDownIcon: PropTypes.element,
+    /** Custom clear icon */
+    clearIcon: PropTypes.element,
+    /** Custom lock icon */
+    lockIcon: PropTypes.element,
     hideDropdownIndicator: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'medium']),
     onlyText: PropTypes.bool,

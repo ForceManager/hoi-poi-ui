@@ -12,11 +12,14 @@ export default React.memo((props) => {
 
     props.innerProps.onMouseDown = onClick;
 
+    let icon = <Icon name="closeSmall" size="large" />;
+    if (props?.selectProps?.clearIcon) {
+        icon = props?.selectProps?.clearIcon;
+    }
+
     return (
         components.ClearIndicator && (
-            <components.ClearIndicator {...props}>
-                <Icon name="closeSmall" size="large" />
-            </components.ClearIndicator>
+            <components.ClearIndicator {...props}>{icon}</components.ClearIndicator>
         )
     );
 });
