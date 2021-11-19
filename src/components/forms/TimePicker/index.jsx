@@ -121,25 +121,25 @@ const TimePicker = memo(
         }, []);
 
         const getTimeValue = useCallback(
-            (options) => {
-                if (!dateValue || !options || options.length === 0) return null;
-                if (!dateValue) return null;
-
+            (options, newDateValue) => {
+                if (!newDateValue || !options || options.length === 0) return null;
+                if (!newDateValue) return null;
+                innerDateValueRef.current = newDateValue;
                 const minMax = getMinMax();
 
                 const isDisabled =
                     getIfOptionIsOutOfRange(
-                        dateValue,
+                        newDateValue,
                         minMax?.minTime || null,
                         minMax?.maxTime || null,
                     ) ||
-                    getIfInputDateIsDisabled(dateValue) ||
+                    getIfInputDateIsDisabled(newDateValue) ||
                     false;
 
                 if (isDisabled) return;
 
-                const hours = dateValue.getHours();
-                const minutes = dateValue.getMinutes();
+                const hours = newDateValue.getHours();
+                const minutes = newDateValue.getMinutes();
 
                 let timeOption = null;
 
@@ -155,27 +155,26 @@ const TimePicker = memo(
                     });
                     if (!timeOption) {
                         timeOption = {
-                            label: getTimeLabel(dateValue),
-                            value: dateValue,
+                            label: getTimeLabel(newDateValue),
+                            value: newDateValue,
                         };
                     }
                 }
 
                 if (timeOption) {
                     setTimeValue(timeOption);
-                } else if (dateValue) {
+                } else if (newDateValue) {
                     const initialOption = {
-                        label: getTimeLabel(dateValue),
-                        value: dateValue,
+                        label: getTimeLabel(newDateValue),
+                        value: newDateValue,
                     };
                     setTimeValue(initialOption);
                 }
 
-                const valueLabel = getTimeLabel(dateValue);
+                const valueLabel = getTimeLabel(newDateValue);
                 setInputValue(valueLabel);
             },
             [
-                dateValue,
                 isRequired,
                 getMinMax,
                 getIfOptionIsOutOfRange,
@@ -184,17 +183,45 @@ const TimePicker = memo(
             ],
         );
 
-        const getNewOptions = useCallback(() => {
-            const today = new Date();
-            let date = new Date(today.setHours(0, 0, 0, 0));
-            const minutesInADay = 24 * 60;
-            let iterations = minutesInADay / interval;
-            iterations = iterations % 2 === 0 ? iterations - 1 : iterations;
-            let datesList = [];
-            const minMax = getMinMax() || null;
+        const getNewOptions = useCallback(
+            (newDateValue) => {
+                const today = new Date();
+                let date = newDateValue
+                    ? new Date(new Date(newDateValue).setHours(0, 0, 0, 0))
+                    : new Date(today.setHours(0, 0, 0, 0));
+                const minutesInADay = 24 * 60;
+                let iterations = minutesInADay / interval;
+                iterations = iterations % 2 === 0 ? iterations - 1 : iterations;
+                let datesList = [];
+                const minMax = getMinMax() || null;
 
-            for (let i = 0; i < iterations; i++) {
-                if (i === 0) {
+                for (let i = 0; i < iterations; i++) {
+                    if (i === 0) {
+                        let isDisabled = false;
+
+                        if (minMax) {
+                            isDisabled = getIfOptionIsOutOfRange(
+                                date,
+                                minMax?.minTime || null,
+                                minMax?.maxTime || null,
+                            );
+                        }
+
+                        const newLabel = getTimeLabel(date);
+
+                        let option = {
+                            label: newLabel,
+                            value: date,
+                        };
+
+                        if (formatOption) option = formatOption(option);
+                        if (isDisabled) option.isDisabled = isDisabled;
+
+                        datesList.push(option);
+                    }
+
+                    date = new Date(date.getTime() + interval * 60000);
+
                     let isDisabled = false;
 
                     if (minMax) {
@@ -218,49 +245,29 @@ const TimePicker = memo(
                     datesList.push(option);
                 }
 
-                date = new Date(date.getTime() + interval * 60000);
-
-                let isDisabled = false;
-
-                if (minMax) {
-                    isDisabled = getIfOptionIsOutOfRange(
-                        date,
-                        minMax?.minTime || null,
-                        minMax?.maxTime || null,
-                    );
-                }
-
-                const newLabel = getTimeLabel(date);
-
-                let option = {
-                    label: newLabel,
-                    value: date,
-                };
-
-                if (formatOption) option = formatOption(option);
-                if (isDisabled) option.isDisabled = isDisabled;
-
-                datesList.push(option);
-            }
-
-            getTimeValue(datesList);
-            setNewOptions(datesList);
-        }, [
-            interval,
-            getTimeValue,
-            getIfOptionIsOutOfRange,
-            getMinMax,
-            formatOption,
-            getTimeLabel,
-        ]);
+                getTimeValue(datesList, newDateValue);
+                setNewOptions(datesList);
+            },
+            [
+                interval,
+                getTimeValue,
+                getIfOptionIsOutOfRange,
+                getMinMax,
+                formatOption,
+                getTimeLabel,
+            ],
+        );
 
         useEffect(() => {
-            if (!options && newOptions?.length === 0) {
-                getNewOptions();
+            if (
+                (!options && newOptions?.length === 0) ||
+                (!options && dateValue && innerDateValueRef.current !== dateValue)
+            ) {
+                getNewOptions(dateValue);
             } else {
-                getTimeValue(newOptions);
+                getTimeValue(newOptions, dateValue);
             }
-        }, [options, getNewOptions, getTimeValue, newOptions]);
+        }, [options, getNewOptions, getTimeValue, newOptions, dateValue]);
 
         const customOnChange = useCallback(
             ({ value, action, setNewValue, setNewInputValue }) => {
