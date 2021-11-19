@@ -275,14 +275,14 @@ const TimePicker = memo(
                     setNewInputValue('');
                     setNewValue(null);
                     inputValueControlRef.current = '';
-                    onChange && onChange(null);
+                    onChange && onChange(null, action);
                     shouldFilterRef.current = true;
                 } else if (value) {
                     if (action?.action === 'select-option') isSelectionRef.current = true;
                     setNewInputValue(value.label);
                     setNewValue(value);
                     inputValueControlRef.current = value.label;
-                    onChange && onChange(value.value);
+                    onChange && onChange(value.value, action);
                     shouldFilterRef.current = false;
                 }
             },
@@ -300,7 +300,7 @@ const TimePicker = memo(
                     if ((!inputValue && !value) || (!inputValue && value)) {
                         setNewInputValue('');
                         setNewValue(null);
-                        onChange && onChange(null);
+                        onChange && onChange(null, action);
                         inputValueControlRef.current = '';
                     } else {
                         setNewInputValue(inputValue);
@@ -325,7 +325,7 @@ const TimePicker = memo(
                         if (!finalDate) {
                             setNewInputValue('');
                             setNewValue(null);
-                            onChange && onChange(null);
+                            onChange && onChange(null, action);
                             shouldFilterRef.current = true;
                         } else {
                             const minMax = getMinMax() || null;
@@ -342,7 +342,7 @@ const TimePicker = memo(
                             if (isValueDisabled) {
                                 setNewInputValue('');
                                 setNewValue(null);
-                                onChange && onChange(null);
+                                onChange && onChange(null, action);
                                 shouldFilterRef.current = true;
                                 return;
                             }
@@ -353,7 +353,7 @@ const TimePicker = memo(
                             };
 
                             setNewValue(newTimeValue);
-                            onChange && onChange(finalDate);
+                            onChange && onChange(finalDate, action);
                             shouldFilterRef.current = false;
                         }
                     }
