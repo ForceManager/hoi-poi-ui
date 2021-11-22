@@ -60,6 +60,55 @@ const onChange = (value) => setState(value);
 </div>;
 ```
 
+Simple No Options Prop with Start and End:
+
+```jsx
+import { useState } from 'react';
+import { Icon } from 'hoi-poi-ui';
+
+const interval = 30;
+const [start, setStart] = useState(new Date());
+const endTime = new Date(new Date().getTime() + 1000 * 60 * interval);
+const [end, setEnd] = useState(endTime);
+
+const onChange = (field) => {
+    return (value, action) => {
+        if (field === 'start') {
+            setStart(value, end);
+            if (value && value.getTime() >= new Date(end).getTime()) {
+                const newTimeMs = value.getTime() + 1000 * 60 * interval;
+                setEnd(new Date(newTimeMs));
+            }
+        }
+        if (field === 'end') {
+            setEnd(value);
+            if (value && value.getTime() <= new Date(start).getTime()) {
+                const newTimeMs = value.getTime() - 1000 * 60 * interval;
+                setStart(new Date(newTimeMs));
+            }
+        }
+    };
+};
+
+<div style={{ display: 'flex' }}>
+    <TimePicker
+        label="Start Time"
+        placeholder="Select one"
+        onChange={onChange('start')}
+        value={start}
+        isRequired={true}
+    />
+    <div style={{ width: '10px' }} />
+    <TimePicker
+        label="End Time"
+        placeholder="Select one"
+        onChange={onChange('end')}
+        value={end}
+        isRequired={true}
+    />
+</div>;
+```
+
 Simple Min and Max Time:
 
 ```jsx
