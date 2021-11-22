@@ -173,6 +173,8 @@ const TimePicker = memo(
 
                 const valueLabel = getTimeLabel(newDateValue);
                 setInputValue(valueLabel);
+
+                inputValueControlRef.current = valueLabel;
             },
             [
                 isRequired,
