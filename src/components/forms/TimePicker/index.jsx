@@ -185,6 +185,32 @@ const TimePicker = memo(
             ],
         );
 
+        const getOption = useCallback(
+            (date, minMax) => {
+                let isDisabled = false;
+
+                if (minMax) {
+                    isDisabled = getIfOptionIsOutOfRange(
+                        date,
+                        minMax?.minTime || null,
+                        minMax?.maxTime || null,
+                    );
+                }
+
+                const newLabel = getTimeLabel(date);
+
+                let option = {
+                    label: newLabel,
+                    value: date,
+                };
+
+                if (formatOption) option = formatOption(option);
+                if (isDisabled) option.isDisabled = isDisabled;
+                return option;
+            },
+            [formatOption, getIfOptionIsOutOfRange, getTimeLabel],
+        );
+
         const getNewOptions = useCallback(
             (newDateValue) => {
                 const today = new Date();
@@ -199,65 +225,19 @@ const TimePicker = memo(
 
                 for (let i = 0; i < iterations; i++) {
                     if (i === 0) {
-                        let isDisabled = false;
-
-                        if (minMax) {
-                            isDisabled = getIfOptionIsOutOfRange(
-                                date,
-                                minMax?.minTime || null,
-                                minMax?.maxTime || null,
-                            );
-                        }
-
-                        const newLabel = getTimeLabel(date);
-
-                        let option = {
-                            label: newLabel,
-                            value: date,
-                        };
-
-                        if (formatOption) option = formatOption(option);
-                        if (isDisabled) option.isDisabled = isDisabled;
-
+                        const option = getOption(date, minMax);
                         datesList.push(option);
                     }
 
                     date = new Date(date.getTime() + interval * 60000);
-
-                    let isDisabled = false;
-
-                    if (minMax) {
-                        isDisabled = getIfOptionIsOutOfRange(
-                            date,
-                            minMax?.minTime || null,
-                            minMax?.maxTime || null,
-                        );
-                    }
-
-                    const newLabel = getTimeLabel(date);
-
-                    let option = {
-                        label: newLabel,
-                        value: date,
-                    };
-
-                    if (formatOption) option = formatOption(option);
-                    if (isDisabled) option.isDisabled = isDisabled;
-
+                    const option = getOption(date, minMax);
                     datesList.push(option);
                 }
 
                 getTimeValue(datesList, newDateValue);
                 setNewOptions(datesList);
             },
-            [
-                interval,
-                getTimeValue,
-                getIfOptionIsOutOfRange,
-                getMinMax,
-                formatOption,
-                getTimeLabel,
-            ],
+            [interval, getTimeValue, getMinMax, getOption],
         );
 
         useEffect(() => {
