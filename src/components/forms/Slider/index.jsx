@@ -28,6 +28,7 @@ function Slider({
     isPercentage,
     size,
     onChange,
+    reverse,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -61,7 +62,9 @@ function Slider({
     const handle = useCallback(
         (props) => {
             const { offset, dragging, index, ...restProps } = props;
-            const positionStyle = { left: `${offset}%` };
+            const positionStyle = reverse
+                ? { right: `${offset}%`, transform: 'translateX(50%)' }
+                : { left: `${offset}%` };
             const handlerValue = Array.isArray(innerValue) ? innerValue[index] : innerValue;
             let finalValue;
             if (tipFormatter) finalValue = tipFormatter(handlerValue);
@@ -101,6 +104,7 @@ function Slider({
             override.overlayHandler,
             override.overlayLabel,
             tipFormatter,
+            reverse,
         ],
     );
 
@@ -129,6 +133,7 @@ function Slider({
         step,
         defaultValue: isRange ? [min, max] : min,
         handle,
+        reverse,
         ...override['rc-slider'],
     };
 
@@ -152,6 +157,7 @@ Slider.defaultProps = {
     step: 1,
     isRange: false,
     isPercentage: false,
+    reverse: false,
 };
 
 Slider.propTypes = {
@@ -179,6 +185,8 @@ Slider.propTypes = {
     step: PropTypes.number,
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
+    /** If the value is true, it means the component is rendered reverse. (Handle moves from right to left) */
+    reverse: PropTypes.bool,
 };
 
 export default React.memo(Slider);

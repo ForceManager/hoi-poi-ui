@@ -98,6 +98,20 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Reversed Slider
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+
+<div>
+    <Slider label="Lorem ipsum" onChange={onChange} value={state.value} reverse />
+</div>;
+````
+
 ### Component tree
 
 ---
