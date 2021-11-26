@@ -8256,7 +8256,7 @@ __metadata:
     pretty-quick: ^3.1.1
     process: ^0.11.10
     prop-types: ^15.7.2
-    rc-menu: 9.0.14
+    rc-menu: 8.9.0
     rc-slider: ^9.7.4
     rc-tabs: 10.1.1
     rc-tooltip: ^5.1.1
@@ -8293,7 +8293,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"hoist-non-react-statics@npm:^3.2.0, hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1":
+"hoist-non-react-statics@npm:^3.2.0, hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -11297,6 +11297,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mini-store@npm:^3.0.1":
+  version: 3.0.6
+  resolution: "mini-store@npm:3.0.6"
+  dependencies:
+    hoist-non-react-statics: ^3.3.2
+    shallowequal: ^1.0.2
+  peerDependencies:
+    react: ">=16.9.0"
+    react-dom: ">=16.9.0"
+  checksum: bf5d9288535a49a1a41398b2769ec2fd6b88aa94280b68f7473fdfae4853d84bbabe8963b7790e11059140bda4c73b7fd1547e360298ef48d002c5de8b21d50a
+  languageName: node
+  linkType: hard
+
 "minimalistic-assert@npm:^1.0.0, minimalistic-assert@npm:^1.0.1":
   version: 1.0.1
   resolution: "minimalistic-assert@npm:1.0.1"
@@ -11963,6 +11976,13 @@ __metadata:
   version: 1.1.2
   resolution: "obuf@npm:1.1.2"
   checksum: 41a2ba310e7b6f6c3b905af82c275bf8854896e2e4c5752966d64cbcd2f599cfffd5932006bcf3b8b419dfdacebb3a3912d5d94e10f1d0acab59876c8757f27f
+  languageName: node
+  linkType: hard
+
+"omit.js@npm:^2.0.0":
+  version: 2.0.2
+  resolution: "omit.js@npm:2.0.2"
+  checksum: 5d802b9fd7640250aada82f3b9b7243b554b38911f29b3de0d1066c00f24dd4ee72d3b9c94c582e373fb6511bd21e107917d419a7b2a04287f26c31133b48a15
   languageName: node
   linkType: hard
 
@@ -12992,25 +13012,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rc-menu@npm:9.0.14":
-  version: 9.0.14
-  resolution: "rc-menu@npm:9.0.14"
+"rc-menu@npm:8.9.0":
+  version: 8.9.0
+  resolution: "rc-menu@npm:8.9.0"
   dependencies:
     "@babel/runtime": ^7.10.1
     classnames: 2.x
-    rc-motion: ^2.4.3
-    rc-overflow: ^1.2.0
-    rc-trigger: ^5.1.2
-    rc-util: ^5.12.0
+    mini-store: ^3.0.1
+    omit.js: ^2.0.0
+    rc-motion: ^2.0.1
+    rc-trigger: ^5.0.4
+    rc-util: ^5.0.1
+    resize-observer-polyfill: ^1.5.0
     shallowequal: ^1.1.0
   peerDependencies:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
-  checksum: dc798724f5192bc7bfa4a2d71e44aaea17119f3612b133dd58585795d96fba2b7c83bf44c9373da84c9e27409a4a5fcd05806f88edf8a5cab1b0a628145eff9e
+  checksum: 7a3512a8f6d96b4c8eae9936dfc85d1d458a8cb4d00b6e38dfe5544aba3340f5bae62438c6644c3d85beb0b5e859779b8b901ca2988ab4d0ab6428f81506b927
   languageName: node
   linkType: hard
 
-"rc-motion@npm:^2.0.0, rc-motion@npm:^2.4.3":
+"rc-motion@npm:^2.0.0, rc-motion@npm:^2.0.1":
   version: 2.4.4
   resolution: "rc-motion@npm:2.4.4"
   dependencies:
@@ -13021,36 +13043,6 @@ __metadata:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
   checksum: efbb27be05af062aac82c4b5b2a12067d5822f48ebfa813d3c861f9ae5983ea199a6bd9c4d7140f8963ff5f15ebf4c59546f426682f6576a34003aceb1170cfd
-  languageName: node
-  linkType: hard
-
-"rc-overflow@npm:^1.2.0":
-  version: 1.2.2
-  resolution: "rc-overflow@npm:1.2.2"
-  dependencies:
-    "@babel/runtime": ^7.11.1
-    classnames: ^2.2.1
-    rc-resize-observer: ^1.0.0
-    rc-util: ^5.5.1
-  peerDependencies:
-    react: ">=16.9.0"
-    react-dom: ">=16.9.0"
-  checksum: e8c0a0689fca6cb899ff3a2bdc19add737c22e9fa2d6dd9a446e1fa4e356d927041f07a29e3043aac1a53d838768404db66b5eca9dd00186286adba0eb94356b
-  languageName: node
-  linkType: hard
-
-"rc-resize-observer@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "rc-resize-observer@npm:1.0.1"
-  dependencies:
-    "@babel/runtime": ^7.10.1
-    classnames: ^2.2.1
-    rc-util: ^5.0.0
-    resize-observer-polyfill: ^1.5.1
-  peerDependencies:
-    react: ">=16.9.0"
-    react-dom: ">=16.9.0"
-  checksum: 4e7fc2a1f5e20776d35198ff7532cc5b8944f646010f91e7edeb4233d65bfac3ce962adf5f88a88bb7cd456105d46ce79c1e103fdc9d6513aeb773d1de2e346b
   languageName: node
   linkType: hard
 
@@ -13096,7 +13088,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rc-trigger@npm:^5.0.0, rc-trigger@npm:^5.1.2":
+"rc-trigger@npm:^5.0.0, rc-trigger@npm:^5.0.4":
   version: 5.2.10
   resolution: "rc-trigger@npm:5.2.10"
   dependencies:
@@ -13112,7 +13104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rc-util@npm:^5.0.0, rc-util@npm:^5.12.0, rc-util@npm:^5.2.1, rc-util@npm:^5.3.0, rc-util@npm:^5.5.0, rc-util@npm:^5.5.1":
+"rc-util@npm:^5.0.0, rc-util@npm:^5.2.1, rc-util@npm:^5.3.0, rc-util@npm:^5.5.0":
   version: 5.14.0
   resolution: "rc-util@npm:5.14.0"
   dependencies:
@@ -13123,6 +13115,20 @@ __metadata:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
   checksum: 9cf41398dbdcb55c94ec193fb234df211677390c6f9c273048d5a3923951930a99f3e0f293c0fb813858901f9590265d102ce3f892e7ce12b052d6128588cd72
+  languageName: node
+  linkType: hard
+
+"rc-util@npm:^5.0.1":
+  version: 5.15.0
+  resolution: "rc-util@npm:5.15.0"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    react-is: ^16.12.0
+    shallowequal: ^1.1.0
+  peerDependencies:
+    react: ">=16.9.0"
+    react-dom: ">=16.9.0"
+  checksum: b4928a529d0fa0bf351b1f8658ee2f3d67567d047561b08358d58ab7280c23b0272e368e62ed217573f785e7cd8730dabba670a02fb53f934786391a56e98bb5
   languageName: node
   linkType: hard
 
@@ -13971,7 +13977,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resize-observer-polyfill@npm:^1.5.1":
+"resize-observer-polyfill@npm:^1.5.0, resize-observer-polyfill@npm:^1.5.1":
   version: 1.5.1
   resolution: "resize-observer-polyfill@npm:1.5.1"
   checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
@@ -14609,7 +14615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shallowequal@npm:^1.1.0":
+"shallowequal@npm:^1.0.2, shallowequal@npm:^1.1.0":
   version: 1.1.0
   resolution: "shallowequal@npm:1.1.0"
   checksum: f4c1de0837f106d2dbbfd5d0720a5d059d1c66b42b580965c8f06bb1db684be8783538b684092648c981294bf817869f743a066538771dbecb293df78f765e00

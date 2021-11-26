@@ -26,6 +26,7 @@ module.exports = {
                 './src/components/general/RadioBox/index.jsx',
                 './src/components/general/RadioBoxGroup/index.jsx',
                 './src/components/general/SearchBar/index.jsx',
+                './src/components/general/BasicTable/index.jsx',
                 './src/components/general/Tabs/index.jsx',
             ],
         },
