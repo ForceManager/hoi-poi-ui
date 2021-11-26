@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
-import Form from '../Form';
-import FieldControl from '../components/FieldControl';
+import MultiplierFieldControl from './MultiplierFieldControl';
+import MultiplierForm from './MultiplierForm';
 import Icon from '../../general/Icon';
 
 import { createUseStyles } from '../../../utils/styles';
@@ -50,7 +50,7 @@ function MultiplierControl({
     let component;
     if (type === 'form') {
         component = (
-            <Form
+            <MultiplierForm
                 className={classes.form}
                 overrides={overridesProp}
                 schema={schema}
@@ -79,7 +79,7 @@ function MultiplierControl({
         });
 
         component = (
-            <FieldControl
+            <MultiplierFieldControl
                 className={fieldClasses}
                 labelMode={labelMode}
                 isFullWidth={isFullWidth}

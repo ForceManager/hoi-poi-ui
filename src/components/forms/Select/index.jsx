@@ -52,6 +52,7 @@ const Select = memo(
         inputValue,
         forceBlurOnEnter,
         keepInputValueOnBlur,
+        keepValueOnInputChange,
         useAsSimpleSearch,
         onChange,
         onBlur,
@@ -60,6 +61,7 @@ const Select = memo(
         onKeyDown,
         hideSelectedOptions,
         filterByKey,
+        customFilter,
         withoutFilter,
         defaultMenuIsOpen,
         loadOptions,
@@ -70,6 +72,8 @@ const Select = memo(
         actions,
         onClickAction,
         dropDownIcon,
+        clearIcon,
+        lockIcon,
         size,
         onlyText,
         dropdownWidth,
@@ -90,6 +94,8 @@ const Select = memo(
         getRef,
         getCanChange,
         hideMultivalueChips,
+        customOnChange,
+        customOnChangeInput,
         ...props
     }) => {
         const selectRef = useRef();
@@ -165,6 +171,16 @@ const Select = memo(
 
         const handleOnChange = useCallback(
             (data, action) => {
+                if (customOnChange) {
+                    customOnChange({
+                        value: data,
+                        action,
+                        setNewValue,
+                        setNewInputValue,
+                    });
+                    return;
+                }
+
                 if (getCanChange && !getCanChange(data, action)) return;
                 if (shouldSetValueOnChange) setNewValue(data);
                 if (!isMulti) setFocused(false);
@@ -177,7 +193,14 @@ const Select = memo(
                     setNewInputValue('');
                 }
             },
-            [isMulti, onChange, newInputValue, shouldSetValueOnChange, getCanChange],
+            [
+                isMulti,
+                onChange,
+                newInputValue,
+                shouldSetValueOnChange,
+                getCanChange,
+                customOnChange,
+            ],
         );
 
         const setMenuPlacement = useCallback(
@@ -582,9 +605,25 @@ const Select = memo(
 
         const handleOnInputChange = useCallback(
             (inputValue, action) => {
+                if (customOnChangeInput) {
+                    customOnChangeInput({
+                        value: newValue,
+                        inputValue,
+                        action,
+                        setNewValue,
+                        setNewInputValue,
+                    });
+                    return;
+                }
+
                 if (action.action === 'input-change') {
                     setNewInputValue(inputValue);
-                    if (keepInputValueOnBlur && !isMulti && newValue?.value) {
+                    if (
+                        !keepValueOnInputChange &&
+                        keepInputValueOnBlur &&
+                        !isMulti &&
+                        newValue?.value
+                    ) {
                         setNewValue(null);
                     }
                 } else {
@@ -592,7 +631,15 @@ const Select = memo(
                     onBlurSearch && onBlurSearch(newInputValue, action);
                 }
             },
-            [keepInputValueOnBlur, isMulti, newValue, onBlurSearch, newInputValue],
+            [
+                keepValueOnInputChange,
+                keepInputValueOnBlur,
+                isMulti,
+                newValue,
+                onBlurSearch,
+                newInputValue,
+                customOnChangeInput,
+            ],
         );
 
         const selectProps = useMemo(() => {
@@ -610,6 +657,7 @@ const Select = memo(
             if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
             let filterOption = filterByKey ? filterKeyValue : createFilter;
             if (withoutFilter) filterOption = undefined;
+            if (customFilter) filterOption = customFilter;
 
             return {
                 ref: (ref) => {
@@ -654,6 +702,8 @@ const Select = memo(
                 formatOptionLabel,
                 formatGroupLabel,
                 dropDownIcon,
+                clearIcon,
+                lockIcon,
                 isFuzzy,
                 beforeControl,
                 afterControl,
@@ -814,9 +864,12 @@ const Select = memo(
             keepInputValueOnBlur,
             isReadOnly,
             dropDownIcon,
+            clearIcon,
+            lockIcon,
             showNumSelected,
             filterByKey,
             withoutFilter,
+            customFilter,
             selectClassName,
             placeholder,
             lazyOptions.options,
@@ -1027,7 +1080,12 @@ Select.propTypes = {
     /** Filter by keys as well */
     filterByKey: PropTypes.bool,
     defaultMenuIsOpen: PropTypes.bool,
+    /** Custom dropDown icon */
     dropDownIcon: PropTypes.element,
+    /** Custom clear icon */
+    clearIcon: PropTypes.element,
+    /** Custom lock icon */
+    lockIcon: PropTypes.element,
     hideDropdownIndicator: PropTypes.bool,
     size: PropTypes.oneOf(['small', 'medium']),
     onlyText: PropTypes.bool,
@@ -1053,6 +1111,10 @@ Select.propTypes = {
     getRef: PropTypes.func,
     /** Hide chips in multiselect */
     hideMultivalueChips: PropTypes.bool,
+    /** Control change events from outside the component */
+    customOnChange: PropTypes.func,
+    /** Control change input events from outside the component */
+    customOnChangeInput: PropTypes.func,
 };
 
 export default Select;

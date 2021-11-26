@@ -53,6 +53,9 @@ export default (theme) => ({
     },
     icon: {
         height: 18,
+        '& svg': {
+            verticalAlign: 'initial',
+        },
     },
     // Types
     primary: {

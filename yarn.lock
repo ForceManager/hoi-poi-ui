@@ -3273,7 +3273,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:8.5.0, acorn@npm:^8.0.4, acorn@npm:^8.2.4":
+"acorn@npm:8.5.0, acorn@npm:^8.2.4":
   version: 8.5.0
   resolution: "acorn@npm:8.5.0"
   bin:
@@ -3306,6 +3306,15 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 1860f23c2107c910c6177b7b7be71be350db9e1080d814493fae143ae37605189504152d1ba8743ba3178d0b37269ce1ffc42b101547fdc1827078f82671e407
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.0.4":
+  version: 8.6.0
+  resolution: "acorn@npm:8.6.0"
+  bin:
+    acorn: bin/acorn
+  checksum: 9d0de73b73cb6ea8ccd8263a8144d9e2c4b6af90ea0c429997538af0ebbe83c5addecee814b2a7f91f7f615d0bd1547cc7137b3fa236ce058adc64feccee850b
   languageName: node
   linkType: hard
 
@@ -12124,7 +12133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"p-limit@npm:^3.0.2, p-limit@npm:^3.1.0":
+"p-limit@npm:^3.0.2":
   version: 3.1.0
   resolution: "p-limit@npm:3.1.0"
   dependencies:
@@ -15475,11 +15484,10 @@ __metadata:
   linkType: hard
 
 "terser-webpack-plugin@npm:^5.1.1":
-  version: 5.2.4
-  resolution: "terser-webpack-plugin@npm:5.2.4"
+  version: 5.2.5
+  resolution: "terser-webpack-plugin@npm:5.2.5"
   dependencies:
     jest-worker: ^27.0.6
-    p-limit: ^3.1.0
     schema-utils: ^3.1.1
     serialize-javascript: ^6.0.0
     source-map: ^0.6.1
@@ -15493,7 +15501,7 @@ __metadata:
       optional: true
     uglify-js:
       optional: true
-  checksum: ddbcdd28f9620ecacc9b50ff31776485ad012c7f1cbef53825e4fc334a78d82e2344346e5595751916494951bc64717004c07b03ad88deeb3df4a5f76c559cc9
+  checksum: 2a9616466becf2e968bfc0f585678581b5c83a9dd96723c49329b11a8ccc1aaa41701877fbad2b0ce570364fde58c558fb6e7e053171512624e644b99b2f83af
   languageName: node
   linkType: hard
 
