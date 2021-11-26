@@ -21,7 +21,7 @@ function BasicTable({
     cellClass,
     withHeaders,
     loadingComp,
-    emptyTable = 'Polleteeeeeeee',
+    emptyTable,
 }) {
     const classes = useClasses(useStyles, classesProp);
     const override = getOverrides(overridesProp, BasicTable.overrides);
