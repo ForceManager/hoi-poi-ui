@@ -938,7 +938,6 @@ const Select = memo(
             SelectComponent = AsyncSelect;
             selectProps.loadOptions = loadOptionsCb;
         }
-        console.log('render Select', props.data.name);
 
         return (
             <InputWrapper
