@@ -138,7 +138,20 @@ const Select = memo(
         }, [value]);
 
         useEffect(() => {
-            if (!isFuzzy && !isEqual(options, innerOptions)) setInnerOptions(options);
+            const optionsAreGrouped = options?.[0].options;
+
+            function groupsAreEqual(options, innerOptions) {
+                return options
+                    .map((group, i) => isEqual(group.options, innerOptions[i].options))
+                    .reduce((allEqual, el) => allEqual && el, true);
+            }
+
+            if (
+                !isFuzzy &&
+                ((optionsAreGrouped && !groupsAreEqual(options, innerOptions)) ||
+                    (!optionsAreGrouped && !isEqual(options, innerOptions)))
+            )
+                setInnerOptions(options);
         }, [options, innerOptions, isFuzzy]);
 
         useEffect(() => {
@@ -925,6 +938,7 @@ const Select = memo(
             SelectComponent = AsyncSelect;
             selectProps.loadOptions = loadOptionsCb;
         }
+        console.log('render Select', props.data.name);
 
         return (
             <InputWrapper
