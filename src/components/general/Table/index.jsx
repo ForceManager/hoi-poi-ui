@@ -80,7 +80,7 @@ function Table({
                     {emptyTable}
                 </div>
             )}
-            {rows.length && showRows}
+            {!!rows.length && showRows}
         </div>
     );
 }
