@@ -144,7 +144,7 @@ const Select = memo(
         }, [value]);
 
         useEffect(() => {
-            const optionsAreGrouped = options?.[0].options;
+            const optionsAreGrouped = options?.length ? options[0].options : false;
 
             if (
                 !isFuzzy &&
