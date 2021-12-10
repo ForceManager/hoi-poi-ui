@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCSlider, { Range } from 'rc-slider';
@@ -114,6 +114,7 @@ function Slider({
         },
         [props],
     );
+
     const onChangeRange = useCallback(
         (value) => {
             setInnerValue(value);
@@ -121,21 +122,43 @@ function Slider({
         },
         [onChange],
     );
-    const sliderProps = {
-        className: classes.slider,
-        value: innerValue,
-        onChange: onChangeRange,
-        onAfterChange: onAfterChange,
-        disabled: isReadOnly,
-        labelMode: 'vertical',
-        max,
-        min,
-        step,
-        defaultValue: isRange ? [min, max] : min,
-        handle,
-        reverse,
-        ...override['rc-slider'],
-    };
+
+    const getValue = useMemo(
+        () => (!isRange ? innerValue : Array.isArray(innerValue) ? innerValue : [min, max]),
+        [innerValue, isRange, min, max],
+    );
+
+    const sliderProps = useMemo(
+        () => ({
+            className: classes.slider,
+            value: getValue,
+            onChange: onChangeRange,
+            onAfterChange: onAfterChange,
+            disabled: isReadOnly,
+            labelMode: 'vertical',
+            max,
+            min,
+            step,
+            defaultValue: isRange ? [min, max] : min,
+            handle,
+            reverse,
+            ...override['rc-slider'],
+        }),
+        [
+            classes.slider,
+            getValue,
+            onChangeRange,
+            onAfterChange,
+            isReadOnly,
+            max,
+            min,
+            step,
+            isRange,
+            handle,
+            reverse,
+            override,
+        ],
+    );
 
     const Component = isRange ? Range : RCSlider;
 
