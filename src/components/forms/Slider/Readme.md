@@ -110,7 +110,89 @@ const onChange = (value) => setState({ value });
 <div>
     <Slider label="Lorem ipsum" onChange={onChange} value={state.value} reverse />
 </div>;
-````
+```
+
+Dynamic (toggles between Slider & Range components depending on condition)
+
+```jsx
+import { useMemo, useState } from 'react';
+import { Select } from 'hoi-poi-ui';
+
+const options = [
+    {
+        label: 'Less Than',
+        value: 'LessThan',
+    },
+    {
+        label: 'In Range',
+        value: 'InRange',
+    },
+    {
+        label: 'Greater Than',
+        value: 'GreaterThan',
+    },
+];
+
+const [state, setState] = useState({
+    isRange: true,
+    operator: {
+        label: 'In Range',
+        value: 'InRange',
+    },
+    value: [0, 100],
+});
+
+const onChange = (value) => {
+    let newValue;
+    const currentValue = state.value;
+    switch (state.operator.value) {
+        case 'LessThan':
+            newValue = [value, currentValue[1]];
+            break;
+        case 'GreaterThan':
+            newValue = [currentValue[0], value];
+            break;
+        default:
+            newValue = value;
+    };
+    setState({ ...state, value: newValue });
+};
+
+const onToggle = (payload) => {
+    setState({
+        ...state,
+        isRange: payload.value === 'InRange',
+        operator: payload,
+    });
+};
+
+const getValue = useMemo(() => {
+    switch (state.operator.value) {
+        case 'LessThan':
+            return state.value[0];
+        case 'GreaterThan':
+            return state.value[1];
+        default:
+            return state.value;
+    };
+}, [state]);
+
+<div>
+    <Select
+        label="Operator"
+        value={state.operator}
+        options={options}
+        onChange={onToggle}
+        isClearable={false}
+    />
+    <Slider
+        onChange={onChange}
+        value={getValue}
+        isRange={state.isRange}
+        reverse={state.operator.value === 'GreaterThan'}
+    />
+</div>;
+```
 
 ### Component tree
 
