@@ -102,6 +102,7 @@ const Select = memo(
         hideMultivalueChips,
         customOnChange,
         customOnChangeInput,
+        menuShouldScrollIntoView,
         ...props
     }) => {
         const selectRef = useRef();
@@ -706,6 +707,7 @@ const Select = memo(
                 openMenuOnClick: !(loadOptions && isFuzzy),
                 openMenuOnFocus: !(loadOptions && isFuzzy),
                 menuIsOpen,
+                menuShouldScrollIntoView,
                 onChange: handleOnChange,
                 onInputChange: handleOnInputChange,
                 onFocus: handleOnFocus,
@@ -931,6 +933,7 @@ const Select = memo(
             hideMultivalueChips,
             multiValueLabelStyles,
             multiValueRemoveStyles,
+            menuShouldScrollIntoView,
         ]);
 
         let SelectComponent = RSelect;

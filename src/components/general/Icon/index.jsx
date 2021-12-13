@@ -233,7 +233,7 @@ import WarningOutlineTwoToned from './icons/alert/WarningOutlineTwoToned';
 
 //Logos
 import Mailchimp from './icons/logos/Mailchimp';
-import MicrosoftTeams from './icons/logos/MicrosofTeams';
+import MicrosoftTeams from './icons/logos/MicrosoftTeams';
 import ZoomCam from './icons/logos/ZoomCam';
 import ZoomList from './icons/logos/ZoomList';
 
@@ -558,7 +558,7 @@ const ICONS = {
     warningOutlineTwoToned: WarningOutlineTwoToned,
     //Logos
     mailchimp: Mailchimp,
-    microsofTeams: MicrosoftTeams,
+    microsoftTeams: MicrosoftTeams,
     zoomCam: ZoomCam,
     zoomList: ZoomList,
     //Navigation

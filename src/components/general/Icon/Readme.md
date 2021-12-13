@@ -339,7 +339,7 @@ Logos:
 ```jsx
 <Icon name="mailchimp"/>
 <span> </span>
-<Icon name="microsofTeams"/>
+<Icon name="microsoftTeams"/>
 <span> </span>
 <Icon name="zoomCam"/>
 <span> </span>
