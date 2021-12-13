@@ -31,6 +31,12 @@ import defaultTheme from '../../../utils/styles/defaultTheme';
 const useStyles = createUseStyles(styles, 'Select');
 const newStyles = styles(defaultTheme);
 
+function groupsAreEqual(options, innerOptions) {
+    return options
+        .map((group, i) => isEqual(group.options, innerOptions[i].options))
+        .reduce((allEqual, el) => allEqual && el, true);
+}
+
 const Select = memo(
     ({
         error,
@@ -138,7 +144,14 @@ const Select = memo(
         }, [value]);
 
         useEffect(() => {
-            if (!isFuzzy && !isEqual(options, innerOptions)) setInnerOptions(options);
+            const optionsAreGrouped = options?.length ? options[0].options : false;
+
+            if (
+                !isFuzzy &&
+                ((optionsAreGrouped && !groupsAreEqual(options, innerOptions)) ||
+                    (!optionsAreGrouped && !isEqual(options, innerOptions)))
+            )
+                setInnerOptions(options);
         }, [options, innerOptions, isFuzzy]);
 
         useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCSlider, { Range } from 'rc-slider';
@@ -28,6 +28,7 @@ function Slider({
     isPercentage,
     size,
     onChange,
+    reverse,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -61,7 +62,9 @@ function Slider({
     const handle = useCallback(
         (props) => {
             const { offset, dragging, index, ...restProps } = props;
-            const positionStyle = { left: `${offset}%` };
+            const positionStyle = reverse
+                ? { right: `${offset}%`, transform: 'translateX(50%)' }
+                : { left: `${offset}%` };
             const handlerValue = Array.isArray(innerValue) ? innerValue[index] : innerValue;
             let finalValue;
             if (tipFormatter) finalValue = tipFormatter(handlerValue);
@@ -101,6 +104,7 @@ function Slider({
             override.overlayHandler,
             override.overlayLabel,
             tipFormatter,
+            reverse,
         ],
     );
 
@@ -110,6 +114,7 @@ function Slider({
         },
         [props],
     );
+
     const onChangeRange = useCallback(
         (value) => {
             setInnerValue(value);
@@ -117,20 +122,43 @@ function Slider({
         },
         [onChange],
     );
-    const sliderProps = {
-        className: classes.slider,
-        value: innerValue,
-        onChange: onChangeRange,
-        onAfterChange: onAfterChange,
-        disabled: isReadOnly,
-        labelMode: 'vertical',
-        max,
-        min,
-        step,
-        defaultValue: isRange ? [min, max] : min,
-        handle,
-        ...override['rc-slider'],
-    };
+
+    const getValue = useMemo(
+        () => (!isRange ? innerValue : Array.isArray(innerValue) ? innerValue : [min, max]),
+        [innerValue, isRange, min, max],
+    );
+
+    const sliderProps = useMemo(
+        () => ({
+            className: classes.slider,
+            value: getValue,
+            onChange: onChangeRange,
+            onAfterChange: onAfterChange,
+            disabled: isReadOnly,
+            labelMode: 'vertical',
+            max,
+            min,
+            step,
+            defaultValue: isRange ? [min, max] : min,
+            handle,
+            reverse,
+            ...override['rc-slider'],
+        }),
+        [
+            classes.slider,
+            getValue,
+            onChangeRange,
+            onAfterChange,
+            isReadOnly,
+            max,
+            min,
+            step,
+            isRange,
+            handle,
+            reverse,
+            override,
+        ],
+    );
 
     const Component = isRange ? Range : RCSlider;
 
@@ -152,6 +180,7 @@ Slider.defaultProps = {
     step: 1,
     isRange: false,
     isPercentage: false,
+    reverse: false,
 };
 
 Slider.propTypes = {
@@ -179,6 +208,8 @@ Slider.propTypes = {
     step: PropTypes.number,
     /** Info will be displayed below the component with style changes */
     info: PropTypes.string,
+    /** If the value is true, it means the component is rendered reverse. (Handle moves from right to left) */
+    reverse: PropTypes.bool,
 };
 
 export default React.memo(Slider);
