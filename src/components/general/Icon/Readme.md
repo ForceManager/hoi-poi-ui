@@ -272,6 +272,8 @@ Menu
 <span> </span>
 <Icon name="fields"/>
 <span> </span>
+<Icon name="fieldsValidations"/>
+<span> </span>
 <Icon name="goals"/>
 <span> </span>
 <Icon name="imports"/>

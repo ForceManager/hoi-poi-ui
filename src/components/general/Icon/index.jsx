@@ -202,6 +202,7 @@ import Cron from './icons/menu/Cron';
 import CustomPage from './icons/menu/CustomPage';
 import ExternalApps from './icons/menu/ExternalApps';
 import Fields from './icons/menu/Fields';
+import FieldsValidations from './icons/menu/FieldsValidations';
 import Goals from './icons/menu/Goals';
 import Imports from './icons/menu/Imports';
 import Literals from './icons/menu/Literals';
@@ -529,6 +530,7 @@ const ICONS = {
     customPage: CustomPage,
     externalApps: ExternalApps,
     fields: Fields,
+    fieldsValidations: FieldsValidations,
     goals: Goals,
     imports: Imports,
     literals: Literals,
