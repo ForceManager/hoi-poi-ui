@@ -91,6 +91,9 @@ import ValueListEdit from './icons/actions/ValueListEdit';
 import AddActivity from './icons/actions/AddActivity';
 import AddEvent from './icons/actions/AddEvent';
 import Autorenew from './icons/actions/Autorenew';
+import Cancel from './icons/actions/Cancel';
+import CheckCircle from './icons/actions/CheckCircle';
+import HelpOutline from './icons/actions/HelpOutline';
 import Cached from './icons/actions/Cached';
 import Cognitive from './icons/actions/Cognitive';
 import CognitiveTwoToned from './icons/actions/CognitiveTwoToned';
@@ -427,6 +430,9 @@ const ICONS = {
     addActivity: AddActivity,
     addEvent: AddEvent,
     autorenew: Autorenew,
+    cancel: Cancel,
+    checkCircle: CheckCircle,
+    helpOutline: HelpOutline,
     cached: Cached,
     cognitive: Cognitive,
     cognitiveTwoToned: CognitiveTwoToned,
