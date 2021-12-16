@@ -25,6 +25,7 @@ export { default as SearchBar } from './components/general/SearchBar';
 export { default as Table } from './components/general/Table';
 export { default as Tabs } from './components/general/Tabs';
 
+export { default as Code } from './components/forms/Code';
 export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
 export { default as DatePicker } from './components/forms/DatePicker';
 export { default as TimePicker } from './components/forms/TimePicker';

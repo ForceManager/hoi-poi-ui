@@ -35,6 +35,7 @@ module.exports = {
             description: 'Components related (but not exclusively) to build forms.',
             sectionDepth: 0,
             components: [
+                './src/components/forms/Code/index.jsx',
                 './src/components/forms/CheckboxGroup/index.jsx',
                 './src/components/forms/DatePicker/index.jsx',
                 './src/components/forms/TimePicker/index.jsx',
