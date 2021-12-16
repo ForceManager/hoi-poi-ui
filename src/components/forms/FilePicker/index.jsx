@@ -283,7 +283,7 @@ function FilePicker({
     );
 }
 
-FilePicker.overrides = ['root', 'filePicker', 'error', 'info', 'formControl', 'label'];
+FilePicker.overrides = ['root', 'filePicker', 'error', 'info', 'formControl', 'Label'];
 
 FilePicker.defaultProps = {
     labelMode: 'vertical',
