@@ -21,6 +21,7 @@ import ThreeDots from './icons/ThreeDots';
 import Download from './icons/Download';
 import DownloadAlt from './icons/DownloadAlt';
 import Duplicate from './icons/Duplicate';
+import Duplicates from './icons/Duplicates';
 import ArrowRight from './icons/ArrowRight';
 import ArrowLeft from './icons/ArrowLeft';
 import ArrowTop from './icons/ArrowTop';
@@ -358,6 +359,7 @@ const ICONS = {
     visibilityOn: VisibilityOn,
     visibilityOff: VisibilityOff,
     duplicate: Duplicate,
+    duplicates: Duplicates,
     threeDots: ThreeDots,
     download: Download,
     downloadAlt: DownloadAlt,

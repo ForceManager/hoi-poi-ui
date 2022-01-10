@@ -531,6 +531,8 @@ Icons:
 <span> </span>
 <Icon name="duplicate" />
 <span> </span>
+<Icon name="duplicates" />
+<span> </span>
 <Icon name="arrowRight" />
 <span> </span>
 <Icon name="arrowLeft" />
