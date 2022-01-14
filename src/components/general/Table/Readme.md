@@ -15,6 +15,9 @@ const rows = [
         label: <Text color="neutral700">Cell1</Text>,
         value: 1,
         isFeatured: <Icon name="starBorder" />,
+        props: {
+            onClick: () => console.log('click'),
+        },
     },
     {
         value: 2,

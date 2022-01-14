@@ -50,7 +50,7 @@ function Table({
     const showRows = useMemo(() => {
         return rows.map((row, key) => {
             return (
-                <div key={key} className={rowClassName} {...override.row}>
+                <div key={key} className={rowClassName} {...row.props} {...override.row}>
                     {columns.map((column, key) => {
                         if (typeof row[column.id] === 'function') {
                             return (
@@ -69,7 +69,7 @@ function Table({
                 </div>
             );
         });
-    }, [rows, override.row, override.cell, rowClassName, columns, cellClassName]);
+    }, [rows, rowClassName, override.row, override.cell, columns, cellClassName]);
 
     return (
         <div className={rootClassName} {...override.root}>
