@@ -123,6 +123,11 @@ function Select({
         [onBlur, onChange, options, value],
     );
 
+    const onRemoveSingle = useCallback(() => {
+        onChange && onChange(null);
+        onBlur && onBlur(null);
+    }, [onBlur, onChange]);
+
     const onClickBulkEdit = useCallback(() => {
         setBulkEditable(true);
         onBulkEdit && onBulkEdit();
@@ -313,15 +318,27 @@ function Select({
         selectProps.loadOptions = loadOptionsCb;
     }
 
+    const shouldRenderSingleChip = useMemo(() => {
+        if (loadOptions && isFuzzy && !isMulti && selectedValue) return true;
+        return false;
+    }, [loadOptions, isFuzzy, isMulti, selectedValue]);
+
+    const renderSingleOption = useMemo(() => {
+        if (!selectedValue?.value) return null;
+        return <Chip onClose={() => onRemoveSingle(selectedValue)}>{selectedValue.label}</Chip>;
+    }, [onRemove]);
+
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
+
             {isBulk && !bulkEditable && (
                 <Text className={classes.bulkEdit} onClick={onClickBulkEdit}>
                     {bulkEditLabel}
                 </Text>
             )}
-            {(!isBulk || (isBulk && bulkEditable)) && (
+            {shouldRenderSingleChip && renderSingleOption}
+            {!shouldRenderSingleChip && (!isBulk || (isBulk && bulkEditable)) && (
                 <div className={classes.formControl} {...override.formControl}>
                     <SelectComponent {...selectProps} />
                     {error && (
@@ -336,7 +353,9 @@ function Select({
                     )}
                 </div>
             )}
-            {selectedOptions && <div className={classes.selectedOptions}>{selectedOptions}</div>}
+            {!shouldRenderSingleChip && selectedOptions && (
+                <div className={classes.selectedOptions}>{selectedOptions}</div>
+            )}
         </div>
     );
 }
