@@ -319,7 +319,7 @@ function Select({
     const renderSingleOption = useMemo(() => {
         if (!selectedValue?.value) return null;
         return <Chip onClose={() => onRemoveSingle(selectedValue)}>{selectedValue.label}</Chip>;
-    }, [onRemove, selectedValue]);
+    }, [onRemoveSingle, selectedValue]);
 
     // Async/sync
     let SelectComponent = RSelect;
