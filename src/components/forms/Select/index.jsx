@@ -116,9 +116,11 @@ function Select({
 
     const onRemove = useCallback(
         (itemForRemove) => {
-            const result = value.filter((item) => item.value !== itemForRemove.value);
-            onChange && onChange(result, options);
-            onBlur && onBlur(result, options);
+            return () => {
+                const result = value.filter((item) => item.value !== itemForRemove.value);
+                onChange && onChange(result, options);
+                onBlur && onBlur(result, options);
+            };
         },
         [onBlur, onChange, options, value],
     );
@@ -305,11 +307,11 @@ function Select({
     const selectedOptions = useMemo(() => {
         if (!isMulti || !selectedValue || hideOptions) return null;
         return selectedValue.map((item) => (
-            <Chip key={item.value} onClose={() => onRemove(item)}>
+            <Chip key={item.value} onClose={!isReadOnly && onRemove(item)}>
                 {item.label}
             </Chip>
         ));
-    }, [isMulti, onRemove, selectedValue, hideOptions]);
+    }, [isMulti, onRemove, selectedValue, hideOptions, isReadOnly]);
 
     const shouldRenderSingleChip = useMemo(() => {
         if (loadOptions && isFuzzy && !isMulti && selectedValue) return true;
@@ -317,9 +319,9 @@ function Select({
     }, [loadOptions, isFuzzy, isMulti, selectedValue]);
 
     const renderSingleOption = useMemo(() => {
-        if (!selectedValue?.value) return null;
-        return <Chip onClose={() => onRemoveSingle(selectedValue)}>{selectedValue.label}</Chip>;
-    }, [onRemoveSingle, selectedValue]);
+        if (!selectedValue || !selectedValue.value) return null;
+        return <Chip onClose={!isReadOnly && onRemoveSingle}>{selectedValue.label}</Chip>;
+    }, [onRemoveSingle, isReadOnly, selectedValue]);
 
     // Async/sync
     let SelectComponent = RSelect;
