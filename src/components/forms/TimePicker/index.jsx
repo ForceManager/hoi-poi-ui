@@ -344,6 +344,10 @@ const TimePicker = memo(
             [getIfInputDateIsDisabled, getMinMax, getTimeLabel, onChange],
         );
 
+        const isOptionSelected = useCallback((option, selectedValues) => {
+            return option.label === selectedValues[0]?.label;
+        }, []);
+
         const iconDropDown = useMemo(() => {
             if (dropDownIcon) return dropDownIcon;
             return <Icon className={classes.clockIcon} name="clock" />;
@@ -377,6 +381,7 @@ const TimePicker = memo(
                     customOnChangeInput={customOnChangeInput}
                     customFilter={customFilter}
                     menuShouldScrollIntoView={true}
+                    isOptionSelected={isOptionSelected}
                     {...props}
                 />
             </InputWrapper>
