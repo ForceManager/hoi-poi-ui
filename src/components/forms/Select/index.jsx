@@ -103,6 +103,7 @@ const Select = memo(
         customOnChange,
         customOnChangeInput,
         menuShouldScrollIntoView,
+        isOptionSelected,
         ...props
     }) => {
         const selectRef = useRef();
@@ -739,6 +740,7 @@ const Select = memo(
                 onMouseDown,
                 numSelectedLiteral,
                 onMenuOpen,
+                isOptionSelected,
                 menuProps: {
                     dropdownWidth,
                     className: classes.menu,
@@ -894,8 +896,6 @@ const Select = memo(
             keepInputValueOnBlur,
             isReadOnly,
             dropDownIcon,
-            clearIcon,
-            lockIcon,
             showNumSelected,
             filterByKey,
             withoutFilter,
@@ -915,6 +915,7 @@ const Select = memo(
             hideSelectedOptions,
             menuPosition,
             useMenuPortal,
+            menuShouldScrollIntoView,
             handleOnChange,
             handleOnInputChange,
             handleOnFocus,
@@ -922,10 +923,14 @@ const Select = memo(
             handleOnKeyDown,
             formatOptionLabel,
             formatGroupLabel,
+            clearIcon,
+            lockIcon,
             beforeControl,
             afterControl,
             onMouseDown,
             numSelectedLiteral,
+            onMenuOpen,
+            isOptionSelected,
             dropdownWidth,
             classes.menu,
             classes.actionContainer,
@@ -948,7 +953,6 @@ const Select = memo(
             hideMultivalueChips,
             multiValueLabelStyles,
             multiValueRemoveStyles,
-            menuShouldScrollIntoView,
         ]);
 
         let SelectComponent = RSelect;
