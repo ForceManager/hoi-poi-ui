@@ -656,6 +656,20 @@ const Select = memo(
             ],
         );
 
+        const onMenuOpen = useCallback(() => {
+            setTimeout(() => {
+                const selectedEl = document.getElementsByClassName(
+                    'hoi-poi-select__option--is-selected',
+                )?.[0];
+                if (selectedEl) {
+                    selectedEl.scrollIntoView({
+                        block: 'nearest',
+                        inline: 'start',
+                    });
+                }
+            });
+        }, []);
+
         const selectProps = useMemo(() => {
             let menuIsOpen =
                 (focused && (!(loadOptions && isFuzzy) || !!innerOptions?.length)) || false;
@@ -724,6 +738,7 @@ const Select = memo(
                 afterControl,
                 onMouseDown,
                 numSelectedLiteral,
+                onMenuOpen,
                 menuProps: {
                     dropdownWidth,
                     className: classes.menu,
