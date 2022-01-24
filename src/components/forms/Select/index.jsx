@@ -58,6 +58,7 @@ const Select = memo(
         inputValue,
         forceBlurOnEnter,
         keepInputValueOnBlur,
+        keepInputFocused,
         keepValueOnInputChange,
         useAsSimpleSearch,
         onChange,
@@ -104,6 +105,7 @@ const Select = memo(
         customOnChangeInput,
         menuShouldScrollIntoView,
         isOptionSelected,
+        notSelectingDefaultOption,
         ...props
     }) => {
         const selectRef = useRef();
@@ -325,7 +327,7 @@ const Select = memo(
                     ...(override.control?.style || {}),
                 };
 
-                if (isFocused) {
+                if (isFocused || (keepInputFocused && newInputValue)) {
                     styles = {
                         ...styles,
                         ...newStyles.controlFocused,
@@ -334,7 +336,7 @@ const Select = memo(
                 }
                 return styles;
             },
-            [override],
+            [override, keepInputFocused, newInputValue],
         );
 
         const optionStyles = useCallback(
@@ -602,6 +604,7 @@ const Select = memo(
         const handleOnKeyDown = useCallback(
             (e) => {
                 if (e.key === 'Enter') {
+                    if (notSelectingDefaultOption) e.preventDefault();
                     if (forceBlurOnEnter) {
                         selectRef.current.blur();
                         setFocused(false);
@@ -615,7 +618,14 @@ const Select = memo(
                 }
                 onKeyDown && onKeyDown(e);
             },
-            [onKeyDown, onEnter, forceBlurOnEnter, keepInputValueOnBlur, isMulti],
+            [
+                onKeyDown,
+                notSelectingDefaultOption,
+                forceBlurOnEnter,
+                keepInputValueOnBlur,
+                isMulti,
+                onEnter,
+            ],
         );
 
         const handleOnInputChange = useCallback(
@@ -1150,6 +1160,10 @@ Select.propTypes = {
     customOnChange: PropTypes.func,
     /** Control change input events from outside the component */
     customOnChangeInput: PropTypes.func,
+    /** Prevent to select first option from menu with enter key */
+    notSelectingDefaultOption: PropTypes.bool,
+    /** Keep input focused when there is a value on it*/
+    keepInputFocused: PropTypes.bool,
 };
 
 export default Select;
