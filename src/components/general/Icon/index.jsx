@@ -172,6 +172,11 @@ import Merge from './icons/actions/Merge';
 //Communication
 import Message from './icons/communication/Message';
 import Comment from './icons/communication/Comment';
+import Call from './icons/communication/Call';
+import EmailSend from './icons/communication/EmailSend';
+import PhoneIncoming from './icons/communication/PhoneIncoming';
+import PhoneOutgoing from './icons/communication/PhoneOutgoing';
+import RingVolume from './icons/communication/RingVolume';
 
 //Social
 import Group from './icons/social/Group';
@@ -278,6 +283,13 @@ import UnfoldLess from './icons/navigation/UnfoldLess';
 
 // Notification
 import Rocket from './icons/notification/Rocket';
+import PenGeneric from './icons/notification/PenGeneric';
+import PhoneBluetoothSpeaker from './icons/notification/PhoneBluetoothSpeaker';
+import PhoneForwarded from './icons/notification/PhoneForwarded';
+import PhoneInTalk from './icons/notification/PhoneInTalk';
+import PhoneLocked from './icons/notification/PhoneLocked';
+import PhoneMissed from './icons/notification/PhoneMissed';
+import PhonePaused from './icons/notification/PhonePaused';
 
 //Content
 import ContentCopy from './icons/content/ContentCopy';
@@ -506,6 +518,11 @@ const ICONS = {
     //Communication
     message: Message,
     comment: Comment,
+    call: Call,
+    emailSend: EmailSend,
+    phoneIncoming: PhoneIncoming,
+    phoneOutgoing: PhoneOutgoing,
+    ringVolume: RingVolume,
     //Social
     group: Group,
     groupAdd: GroupAdd,
@@ -606,6 +623,13 @@ const ICONS = {
     unfoldLess: UnfoldLess,
     //Notification
     rocket: Rocket,
+    penGeneric: PenGeneric,
+    phoneBluetoothSpeaker: PhoneBluetoothSpeaker,
+    phoneForwarded: PhoneForwarded,
+    phoneInTalk: PhoneInTalk,
+    phoneLocked: PhoneLocked,
+    phoneMissed: PhoneMissed,
+    phonePaused: PhonePaused,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
