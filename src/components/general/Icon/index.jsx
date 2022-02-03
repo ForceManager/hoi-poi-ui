@@ -49,7 +49,6 @@ import SmartPhone from './icons/SmartPhone';
 import ExecuteIcon from './icons/ExecuteIcon';
 import Clock from './icons/Clock';
 import ClockFilled from './icons/ClockFilled';
-import VideoCamera from './icons/VideoCamera';
 import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
 import Send from './icons/Send';
@@ -163,11 +162,12 @@ import TaskCheckedOutline from './icons/actions/TaskCheckedOutline';
 import AttachFile from './icons/actions/AttachFile';
 import PhonecallOut from './icons/actions/PhonecallOut';
 import PhonecallMissed from './icons/actions/PhonecallMissed';
-import VideoCheckin from './icons/actions/VideoCheckin';
 import EventNote from './icons/actions/EventNote';
 import Pin from './icons/actions/Pin';
 import UnPin from './icons/actions/UnPin';
 import Merge from './icons/actions/Merge';
+import OpportunityLink from './icons/actions/OpportunityLink';
+import OpportunityUnlink from './icons/actions/OpportunityUnlink';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -293,9 +293,10 @@ import PhoneMissed from './icons/notification/PhoneMissed';
 import PhonePaused from './icons/notification/PhonePaused';
 
 //Audiovisual
-import OpportunityLink from './icons/audiovisual/OpportunityLink';
-import OpportunityUnlink from './icons/audiovisual/OpportunityUnlink';
-
+import VideoCheckin from './icons/audiovisual/VideoCheckin';
+import VideoCamera from './icons/audiovisual/VideoCamera';
+import VideoCamOff from './icons/audiovisual/VideoCamOff';
+import VideoCamOutline from './icons/audiovisual/VideoCamOutline';
 //Content
 import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
@@ -404,7 +405,6 @@ const ICONS = {
     execute: ExecuteIcon,
     clock: Clock,
     clockFilled: ClockFilled,
-    videoCamera: VideoCamera,
     chat: Chat,
     chatFilled: ChatFilled,
     emptyAvatar: EmptyAvatar,
@@ -432,7 +432,6 @@ const ICONS = {
     attachFile: AttachFile,
     phonecallOut: PhonecallOut,
     phonecallMissed: PhonecallMissed,
-    videoCheckin: VideoCheckin,
     eventNote: EventNote,
 
     //Actions
@@ -520,6 +519,8 @@ const ICONS = {
     pin: Pin,
     unpin: UnPin,
     merge: Merge,
+    opportunityLink: OpportunityLink,
+    opportunityUnlink: OpportunityUnlink,
     //Communication
     message: Message,
     comment: Comment,
@@ -637,8 +638,10 @@ const ICONS = {
     phoneMissed: PhoneMissed,
     phonePaused: PhonePaused,
     //Audiovisual
-    opportunityLink: OpportunityLink,
-    opportunityUnlink: OpportunityUnlink,
+    videoCheckin: VideoCheckin,
+    videoCamera: VideoCamera,
+    videoCamOff: VideoCamOff,
+    videoCamOutline: VideoCamOutline,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
