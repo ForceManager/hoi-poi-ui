@@ -243,6 +243,8 @@ Social
 <span> </span>
 <Icon name="moodBad"/>
 <span> </span>
+<Icon name="share"/>
+<span> </span>
 ```
 
 Image
@@ -435,6 +437,15 @@ Navigation:
 <Icon name="subdirectoryArrowRight"/>
 <span> </span>
 <Icon name="unfoldLess"/>
+<span> </span>
+```
+
+Audiovisual:
+
+```jsx
+<Icon name="opportunityLink"/>
+<span> </span>
+<Icon name="opportunityUnlink"/>
 <span> </span>
 ```
 

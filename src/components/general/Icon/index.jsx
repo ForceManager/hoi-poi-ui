@@ -190,6 +190,7 @@ import PersonAdd from './icons/social/PersonAdd';
 import PersonOutline from './icons/social/PersonOutline';
 import PlusOne from './icons/social/PlusOne';
 import SupervisorAccount from './icons/social/SupervisorAccount';
+import Share from './icons/social/Share';
 
 //Image
 import Timer from './icons/image/Timer';
@@ -290,6 +291,10 @@ import PhoneInTalk from './icons/notification/PhoneInTalk';
 import PhoneLocked from './icons/notification/PhoneLocked';
 import PhoneMissed from './icons/notification/PhoneMissed';
 import PhonePaused from './icons/notification/PhonePaused';
+
+//Audiovisual
+import OpportunityLink from './icons/audiovisual/OpportunityLink';
+import OpportunityUnlink from './icons/audiovisual/OpportunityUnlink';
 
 //Content
 import ContentCopy from './icons/content/ContentCopy';
@@ -535,6 +540,7 @@ const ICONS = {
     personOutline: PersonOutline,
     plusOne: PlusOne,
     supervisorAccount: SupervisorAccount,
+    share: Share,
     //Image
     timer: Timer,
     timerOff: TimerOff,
@@ -630,6 +636,9 @@ const ICONS = {
     phoneLocked: PhoneLocked,
     phoneMissed: PhoneMissed,
     phonePaused: PhonePaused,
+    //Audiovisual
+    opportunityLink: OpportunityLink,
+    opportunityUnlink: OpportunityUnlink,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
