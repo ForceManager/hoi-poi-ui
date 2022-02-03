@@ -187,8 +187,6 @@ Actions:
 <span> </span>
 <Icon name="phonecallMissed"/>
 <span> </span>
-<Icon name="videoCheckin"/>
-<span> </span>
 <Icon name="eventNote"/>
 <span> </span>
 <Icon name="pin"/>
@@ -196,6 +194,10 @@ Actions:
 <Icon name="unpin"/>
 <span> </span>
 <Icon name="merge"/>
+<span> </span>
+<Icon name="opportunityLink"/>
+<span> </span>
+<Icon name="opportunityUnlink"/>
 <span> </span>
 ```
 
@@ -443,10 +445,15 @@ Navigation:
 Audiovisual:
 
 ```jsx
-<Icon name="opportunityLink"/>
+<Icon name="videoCheckin"/>
 <span> </span>
-<Icon name="opportunityUnlink"/>
+<Icon name="videoCamera" />
 <span> </span>
+<Icon name="videoCamOff"/>
+<span> </span>
+<Icon name="videoCamOutline"/>
+<span> </span>
+
 ```
 
 Notification:
@@ -617,8 +624,6 @@ Icons:
 <Icon name="clock" />
 <span> </span>
 <Icon name="clockFilled" />
-<span> </span>
-<Icon name="videoCamera" />
 <span> </span>
 <Icon name="chat"/>
 <span> </span>
