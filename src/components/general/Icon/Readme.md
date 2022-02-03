@@ -206,6 +206,16 @@ Communication:
 <span> </span>
 <Icon name="comment"/>
 <span> </span>
+<Icon name="call"/>
+<span> </span>
+<Icon name="emailSend"/>
+<span> </span>
+<Icon name="phoneIncoming"/>
+<span> </span>
+<Icon name="phoneOutgoing"/>
+<span> </span>
+<Icon name="ringVolume"/>
+<span> </span>
 ```
 
 Social
@@ -232,6 +242,8 @@ Social
 <Icon name="mood"/>
 <span> </span>
 <Icon name="moodBad"/>
+<span> </span>
+<Icon name="share"/>
 <span> </span>
 ```
 
@@ -428,10 +440,33 @@ Navigation:
 <span> </span>
 ```
 
+Audiovisual:
+
+```jsx
+<Icon name="opportunityLink"/>
+<span> </span>
+<Icon name="opportunityUnlink"/>
+<span> </span>
+```
+
 Notification:
 
 ```jsx
 <Icon name="rocket"/>
+<span> </span>
+<Icon name="penGeneric"/>
+<span> </span>
+<Icon name="phoneBluetoothSpeaker"/>
+<span> </span>
+<Icon name="phoneForwarded"/>
+<span> </span>
+<Icon name="phoneInTalk"/>
+<span> </span>
+<Icon name="phoneLocked"/>
+<span> </span>
+<Icon name="phoneMissed"/>
+<span> </span>
+<Icon name="phonePaused"/>
 <span> </span>
 ```
 
