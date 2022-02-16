@@ -218,6 +218,8 @@ Communication:
 <span> </span>
 <Icon name="ringVolume"/>
 <span> </span>
+<Icon name="textInfo"/>
+<span> </span>
 ```
 
 Social
