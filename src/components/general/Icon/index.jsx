@@ -177,6 +177,7 @@ import EmailSend from './icons/communication/EmailSend';
 import PhoneIncoming from './icons/communication/PhoneIncoming';
 import PhoneOutgoing from './icons/communication/PhoneOutgoing';
 import RingVolume from './icons/communication/RingVolume';
+import TextInfo from './icons/communication/TextInfo';
 
 //Social
 import Group from './icons/social/Group';
@@ -529,6 +530,7 @@ const ICONS = {
     phoneIncoming: PhoneIncoming,
     phoneOutgoing: PhoneOutgoing,
     ringVolume: RingVolume,
+    textInfo: TextInfo,
     //Social
     group: Group,
     groupAdd: GroupAdd,
