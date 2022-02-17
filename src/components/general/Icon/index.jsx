@@ -188,6 +188,7 @@ import MoodBad from './icons/social/MoodBad';
 import PeopleOutline from './icons/social/PeopleOutline';
 import Person from './icons/social/Person';
 import PersonAdd from './icons/social/PersonAdd';
+import PersonRemove from './icons/social/PersonRemove';
 import PersonOutline from './icons/social/PersonOutline';
 import PlusOne from './icons/social/PlusOne';
 import SupervisorAccount from './icons/social/SupervisorAccount';
@@ -540,6 +541,7 @@ const ICONS = {
     peopleOutline: PeopleOutline,
     person: Person,
     personAdd: PersonAdd,
+    personRemove: PersonRemove,
     personOutline: PersonOutline,
     plusOne: PlusOne,
     supervisorAccount: SupervisorAccount,

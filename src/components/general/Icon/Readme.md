@@ -157,8 +157,6 @@ Actions:
 <span> </span>
 <Icon name="key"/>
 <span> </span>
-<Icon name="activate"/>
-<span> </span>
 <Icon name="powerOn"/>
 <span> </span>
 <Icon name="widget"/>
@@ -234,6 +232,8 @@ Social
 <Icon name="person"/>
 <span> </span>
 <Icon name="personAdd"/>
+<span> </span>
+<Icon name="personRemove" />
 <span> </span>
 <Icon name="peopleOutline"/>
 <span> </span>
