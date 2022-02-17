@@ -323,6 +323,14 @@ import StarBorder from './icons/toggle/StarBorder';
 import StarHalf from './icons/toggle/StarHalf';
 import StarsCircle from './icons/toggle/StarsCircle';
 
+//File
+import ExcelAvatar from './icons/file/ExcelAvatar';
+import FileAvatar from './icons/file/FileAvatar';
+import PdfAvatar from './icons/file/PdfAvatar';
+import PowerpointAvatar from './icons/file/PowerpointAvatar';
+import WordAvatar from './icons/file/WordAvatar';
+import ZipAvatar from './icons/file/ZipAvatar';
+
 //File Icons
 import File from './fileIcons/File';
 import Img from './fileIcons/Img';
@@ -657,6 +665,13 @@ const ICONS = {
     accessTimeFilled: AccessTimeFilled,
     addAlarm: AddAlarm,
     brightnessHight: BrightnessHight,
+    //File
+    excelAvatar: ExcelAvatar,
+    fileAvatar: FileAvatar,
+    pdfAvatar: PdfAvatar,
+    powerpointAvatar: PowerpointAvatar,
+    wordAvatar: WordAvatar,
+    zipAvatar: ZipAvatar,
     //File Icons
     file: File,
     img: Img,
