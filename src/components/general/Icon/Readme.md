@@ -693,6 +693,23 @@ Raw Icons:
 <Icon name="arrowLeftRaw" size="raw" />
 ```
 
+File:
+
+```jsx
+<Icon name="excelAvatar" />
+<span> </span>
+<Icon name="fileAvatar" />
+<span> </span>
+<Icon name="pdfAvatar" />
+<span> </span>
+<Icon name="powerpointAvatar" />
+<span> </span>
+<Icon name="wordAvatar" />
+<span> </span>
+<Icon name="zipAvatar" />
+<span> </span>
+```
+
 File Icons:
 
 ```jsx
