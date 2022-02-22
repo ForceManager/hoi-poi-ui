@@ -16,8 +16,6 @@ const Password = ({ classes: classesProp, ...props }) => {
             name={type === 'password' ? 'visibilityOn' : 'visibilityOff'}
         />
     );
-
-    console.log(type);
     return <Input {...props} classes={classesProp} type={type} postComponent={icon}></Input>;
 };
 
