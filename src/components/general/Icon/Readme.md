@@ -145,7 +145,7 @@ Actions:
 <span> </span>
 <Icon name="sandBox"/>
 <span> </span>
-<Icon name="visibility"/>
+<Icon name="visibilityOn"/>
 <span> </span>
 <Icon name="visibilityOff"/>
 <span> </span>
