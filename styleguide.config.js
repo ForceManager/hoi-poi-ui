@@ -47,6 +47,7 @@ module.exports = {
                 './src/components/forms/RichText/index.jsx',
                 './src/components/forms/Radio/index.jsx',
                 './src/components/forms/RadioGroup/index.jsx',
+                './src/components/forms/Password/index.jsx',
                 './src/components/forms/Section/index.jsx',
                 './src/components/forms/Select/index.jsx',
                 './src/components/forms/Slider/index.jsx',
