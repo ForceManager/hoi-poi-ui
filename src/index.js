@@ -22,6 +22,7 @@ export { default as Menus } from './components/general/Menus';
 export { default as RadioBox } from './components/general/RadioBox';
 export { default as RadioBoxGroup } from './components/general/RadioBoxGroup';
 export { default as SearchBar } from './components/general/SearchBar';
+export { default as Stepper } from './components/general/Stepper';
 export { default as Table } from './components/general/Table';
 export { default as Tabs } from './components/general/Tabs';
 
