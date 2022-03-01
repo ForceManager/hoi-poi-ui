@@ -31,6 +31,58 @@ describe('Tabs', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('with vertical labels', () => {
+        let steps = [
+            {
+                title: 'Step 1',
+            },
+            {
+                title: 'Step 2',
+            },
+            {
+                title: 'Step 3',
+            },
+            {
+                title: 'Step 4',
+            },
+            {
+                title: 'Step 5',
+            },
+        ];
+
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Stepper currentStep={0} steps={steps} labelPlacement="vertical" />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    test('without labels', () => {
+        let steps = [
+            {
+                title: 'Step 1',
+            },
+            {
+                title: 'Step 2',
+            },
+            {
+                title: 'Step 3',
+            },
+            {
+                title: 'Step 4',
+            },
+            {
+                title: 'Step 5',
+            },
+        ];
+
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Stepper currentStep={0} steps={steps} withoutLabels />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
     test('with completed', () => {
         let steps = [
             {
