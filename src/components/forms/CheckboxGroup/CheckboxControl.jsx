@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { Fragment, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { createUseStyles } from '../../../utils/styles';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -17,6 +17,7 @@ function CheckboxControl({
     value,
     isReadOnly,
     color,
+    error,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -32,17 +33,24 @@ function CheckboxControl({
     );
 
     return (
-        <div
-            key={option.value}
-            className={classes.checkboxControl}
-            onClick={isReadOnly ? undefined : () => onChangeCheckbox(option.value)}
-            {...override.checkboxControl}
-        >
-            <Checkbox checked={value} isDisabled={isReadOnly} color={color} />
-            <span className={classes.checkboxLabel} {...override.checkboxLabel}>
-                {option.label}
-            </span>
-        </div>
+        <Fragment>
+            <div
+                key={option.value}
+                className={classes.checkboxControl}
+                onClick={isReadOnly ? undefined : () => onChangeCheckbox(option.value)}
+                {...override.checkboxControl}
+            >
+                <Checkbox checked={value} isDisabled={isReadOnly} color={color} />
+                <span className={classes.checkboxLabel} {...override.checkboxLabel}>
+                    {option.label}
+                </span>
+            </div>
+            {error && (
+                <div className={classes.errorPerCheck} {...override.errorPerCheck}>
+                    {error}
+                </div>
+            )}
+        </Fragment>
     );
 }
 
