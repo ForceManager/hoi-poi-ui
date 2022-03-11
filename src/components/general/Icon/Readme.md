@@ -601,6 +601,8 @@ Icons:
 <span> </span>
 <Icon name="cloudUpload" />
 <span> </span>
+<Icon name="cloudDownload" />
+<span> </span>
 <Icon name="sync" />
 <span> </span>
 <Icon name="asterisk" />
