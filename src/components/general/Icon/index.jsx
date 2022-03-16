@@ -371,7 +371,7 @@ import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Icon');
 
-const ICONS = {
+export const ICONS = {
     chevron: Chevron,
     info: Info,
     infoOutlined: InfoOutlined,

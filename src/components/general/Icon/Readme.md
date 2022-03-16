@@ -1,3 +1,11 @@
+Usage:
+
+```jsx
+import IconGrid from './IconGrid';
+
+<IconGrid />
+```
+
 Actions:
 
 ```jsx
