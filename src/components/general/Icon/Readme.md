@@ -1,4 +1,4 @@
-Usage:
+Icon Search:
 
 ```jsx
 import IconGrid from './IconGrid';
