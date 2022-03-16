@@ -11,6 +11,11 @@ export default (theme) => ({
         bottom: -21,
         color: theme.colors.red,
     },
+    errorPerCheck: {
+        ...theme.typography.smallText,
+        color: theme.colors.red,
+        margin: '-6px 0 14px',
+    },
     formControl: {
         position: 'relative',
         display: 'flex',

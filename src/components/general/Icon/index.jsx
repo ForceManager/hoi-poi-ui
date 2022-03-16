@@ -37,6 +37,7 @@ import NewFolder from './icons/NewFolder';
 import Calendar from './icons/Calendar';
 import VerticalDivider from './icons/VerticalDivider';
 import CloudUpload from './icons/CloudUpload';
+import CloudDownload from './icons/CloudDownload';
 import Sync from './icons/Sync';
 import AddButton from './icons/AddButton';
 import LessButton from './icons/LessButton';
@@ -403,6 +404,7 @@ const ICONS = {
     newFolder: NewFolder,
     verticalDivider: VerticalDivider,
     cloudUpload: CloudUpload,
+    cloudDownload: CloudDownload,
     sync: Sync,
     add: AddButton,
     less: LessButton,

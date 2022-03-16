@@ -145,7 +145,7 @@ Actions:
 <span> </span>
 <Icon name="sandBox"/>
 <span> </span>
-<Icon name="visibility"/>
+<Icon name="visibilityOn"/>
 <span> </span>
 <Icon name="visibilityOff"/>
 <span> </span>
@@ -600,6 +600,8 @@ Icons:
 <Icon name="verticalDivider" />
 <span> </span>
 <Icon name="cloudUpload" />
+<span> </span>
+<Icon name="cloudDownload" />
 <span> </span>
 <Icon name="sync" />
 <span> </span>

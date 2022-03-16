@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -75,6 +75,10 @@ function CheckboxGroup({
         [onBlur, onChange, value],
     );
 
+    const hasErrorObj = useMemo(() => {
+        return !error || typeof error !== 'object' ? false : Object.entries(error).length > 0;
+    }, [error]);
+
     return (
         <div {...rootProps} {...override.root}>
             {label && <Label {...labelProps}>{label}</Label>}
@@ -88,9 +92,10 @@ function CheckboxGroup({
                         onChange={onChangeCheckbox}
                         color={color}
                         overrides={overridesProp}
+                        error={hasErrorObj ? error[option.value] : undefined}
                     />
                 ))}
-                {error && (
+                {error && !hasErrorObj && (
                     <div className={classes.error} {...override.error}>
                         {error}
                     </div>

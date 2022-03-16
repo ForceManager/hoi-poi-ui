@@ -22,6 +22,7 @@ export { default as Menus } from './components/general/Menus';
 export { default as RadioBox } from './components/general/RadioBox';
 export { default as RadioBoxGroup } from './components/general/RadioBoxGroup';
 export { default as SearchBar } from './components/general/SearchBar';
+export { default as Stepper } from './components/general/Stepper';
 export { default as Table } from './components/general/Table';
 export { default as Tabs } from './components/general/Tabs';
 
@@ -44,6 +45,7 @@ export { default as Slider } from './components/forms/Slider';
 export { default as Switch } from './components/forms/Switch';
 export { default as SwitchInput } from './components/forms/SwitchInput';
 export { default as Textarea } from './components/forms/Textarea';
+export { default as Password } from './components/forms/Password';
 
 export { default as Popover } from './components/utils/Popover';
 export { default as ScrollBar } from './components/utils/ScrollBar';
