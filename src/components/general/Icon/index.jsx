@@ -123,6 +123,9 @@ import FilterList from './icons/actions/FilterList';
 import FilterListActive from './icons/actions/FilterListActive';
 import Forms from './icons/actions/Forms';
 import Help from './icons/actions/Help';
+import HelpCenterFilled from './icons/actions/HelpCenterFilled';
+import ContactSupport from './icons/actions/ContactSupport';
+import Webinar from './icons/actions/Webinar';
 import HighlightOff from './icons/actions/HighlightOff';
 import HourglassEmpty from './icons/actions/HourglassEmpty';
 import HourglassFull from './icons/actions/HourglassFull';
@@ -491,6 +494,9 @@ export const ICONS = {
     filterListActive: FilterListActive,
     forms: Forms,
     help: Help,
+    helpCenterFilled: HelpCenterFilled,
+    contactSupport: ContactSupport,
+    webinar: Webinar,
     highlightOff: HighlightOff,
     hourglassEmpty: HourglassEmpty,
     hourglassFull: HourglassFull,
