@@ -96,6 +96,12 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="helpOutline"/>
     <span> </span>
+    <Icon name="helpCenterFilled" />
+    <span> </span>
+    <Icon name="contactSupport" />
+    <span> </span>
+    <Icon name="webinar" />
+    <span> </span>
     <Icon name="cancel"/>
     <span> </span>
     <Icon name="highlightOff"/>
