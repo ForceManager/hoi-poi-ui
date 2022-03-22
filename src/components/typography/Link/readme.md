@@ -127,7 +127,7 @@ Truncated link (only with href):
 Underline:
 
 ```jsx
-<Link type="underline">Lorem Ipsum</Link>
+<Link underline>Lorem Ipsum</Link>
 ```
 
 ### Component tree
