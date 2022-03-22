@@ -124,6 +124,12 @@ Truncated link (only with href):
 </Link>
 ```
 
+Underline:
+
+```jsx
+<Link type="underline">Lorem Ipsum</Link>
+```
+
 ### Component tree
 
 ---

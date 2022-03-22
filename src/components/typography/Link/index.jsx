@@ -18,6 +18,7 @@ function Link({
     target,
     isTruncated,
     bold,
+    underline,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -29,6 +30,7 @@ function Link({
         [classes.isDisabled]: isDisabled,
         [classes.truncated]: href && isTruncated,
         [classes.bold]: bold,
+        [classes.underline]: underline,
     });
 
     const rootProps = {
@@ -58,6 +60,7 @@ Link.defaultProps = {
     overrides: {},
     type: 'body',
     isTruncated: false,
+    underline: false,
 };
 
 Link.propTypes = {
@@ -89,6 +92,7 @@ Link.propTypes = {
     target: PropTypes.string,
     isTruncated: PropTypes.bool,
     bold: PropTypes.bool,
+    underline: PropTypes.bool,
 };
 
 export default React.memo(Link);
