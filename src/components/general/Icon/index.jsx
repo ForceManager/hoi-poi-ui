@@ -197,6 +197,7 @@ import PersonOutline from './icons/social/PersonOutline';
 import PlusOne from './icons/social/PlusOne';
 import SupervisorAccount from './icons/social/SupervisorAccount';
 import Share from './icons/social/Share';
+import Whatsapp from './icons/social/Whatsapp';
 
 //Image
 import Timer from './icons/image/Timer';
@@ -562,6 +563,7 @@ export const ICONS = {
     plusOne: PlusOne,
     supervisorAccount: SupervisorAccount,
     share: Share,
+    whatsapp: Whatsapp,
     //Image
     timer: Timer,
     timerOff: TimerOff,
