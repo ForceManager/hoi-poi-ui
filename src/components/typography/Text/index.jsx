@@ -102,6 +102,7 @@ Text.propTypes = {
     color: PropTypes.oneOf([
         'neutralBase',
         'neutral100',
+        'neutral150',
         'neutral200',
         'neutral300',
         'neutral400',

@@ -1,7 +1,7 @@
 ```jsx
 import IconGrid from './IconGrid';
 
-<IconGrid />
+<IconGrid />;
 ```
 
 Actions:
@@ -12,89 +12,89 @@ Actions:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="accountCheckin"/>
+    <Icon name="accountCheckin" />
     <span> </span>
-    <Icon name="accountDetails"/>
+    <Icon name="accountDetails" />
     <span> </span>
-    <Icon name="accountsAdd"/>
+    <Icon name="accountsAdd" />
     <span> </span>
-    <Icon name="sccountsEdit"/>
+    <Icon name="sccountsEdit" />
     <span> </span>
-    <Icon name="contactAdd"/>
+    <Icon name="contactAdd" />
     <span> </span>
-    <Icon name="contactEdit"/>
+    <Icon name="contactEdit" />
     <span> </span>
-    <Icon name="opportunityAdd"/>
+    <Icon name="opportunityAdd" />
     <span> </span>
-    <Icon name="opportunityEdit"/>
+    <Icon name="opportunityEdit" />
     <span> </span>
-    <Icon name="valueListAdd"/>
+    <Icon name="valueListAdd" />
     <span> </span>
-    <Icon name="valueListEdit"/>
+    <Icon name="valueListEdit" />
     <span> </span>
-    <Icon name="addActivity"/>
+    <Icon name="addActivity" />
     <span> </span>
-    <Icon name="addEvent"/>
+    <Icon name="addEvent" />
     <span> </span>
-    <Icon name="cached"/>
+    <Icon name="cached" />
     <span> </span>
-    <Icon name="cognitive"/>
+    <Icon name="cognitive" />
     <span> </span>
-    <Icon name="cognitiveTwoToned"/>
+    <Icon name="cognitiveTwoToned" />
     <span> </span>
-    <Icon name="creditCard"/>
+    <Icon name="creditCard" />
     <span> </span>
-    <Icon name="dashboard"/>
+    <Icon name="dashboard" />
     <span> </span>
-    <Icon name="dateRange"/>
+    <Icon name="dateRange" />
     <span> </span>
-    <Icon name="delete"/>
+    <Icon name="delete" />
     <span> </span>
-    <Icon name="documents"/>
+    <Icon name="documents" />
     <span> </span>
-    <Icon name="done"/>
+    <Icon name="done" />
     <span> </span>
-    <Icon name="doneAll"/>
+    <Icon name="doneAll" />
     <span> </span>
-    <Icon name="editArea"/>
+    <Icon name="editArea" />
     <span> </span>
-    <Icon name="email"/>
+    <Icon name="email" />
     <span> </span>
-    <Icon name="emailLate"/>
+    <Icon name="emailLate" />
     <span> </span>
-    <Icon name="emailReceive"/>
+    <Icon name="emailReceive" />
     <span> </span>
-    <Icon name="branch"/>
+    <Icon name="branch" />
     <span> </span>
-    <Icon name="event"/>
+    <Icon name="event" />
     <span> </span>
-    <Icon name="weekly"/>
+    <Icon name="weekly" />
     <span> </span>
-    <Icon name="monthly"/>
+    <Icon name="monthly" />
     <span> </span>
-    <Icon name="eventDetail"/>
+    <Icon name="eventDetail" />
     <span> </span>
-    <Icon name="exitToApp"/>
+    <Icon name="exitToApp" />
     <span> </span>
-    <Icon name="expand"/>
+    <Icon name="expand" />
     <span> </span>
-    <Icon name="fastCheckin"/>
+    <Icon name="fastCheckin" />
     <span> </span>
-    <Icon name="favorite"/>
+    <Icon name="favorite" />
     <span> </span>
-    <Icon name="favoriteBorder"/>
+    <Icon name="favoriteBorder" />
     <span> </span>
-    <Icon name="impersonate"/>
+    <Icon name="impersonate" />
     <span> </span>
-    <Icon name="filterList"/>
+    <Icon name="filterList" />
     <span> </span>
-    <Icon name="filterListActive"/>
+    <Icon name="filterListActive" />
     <span> </span>
-    <Icon name="forms"/>
+    <Icon name="forms" />
     <span> </span>
-    <Icon name="help"/>
+    <Icon name="help" />
     <span> </span>
-    <Icon name="helpOutline"/>
+    <Icon name="helpOutline" />
     <span> </span>
     <Icon name="helpCenterFilled" />
     <span> </span>
@@ -102,119 +102,119 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="webinar" />
     <span> </span>
-    <Icon name="cancel"/>
+    <Icon name="cancel" />
     <span> </span>
-    <Icon name="highlightOff"/>
+    <Icon name="highlightOff" />
     <span> </span>
-    <Icon name="checkCircle"/>
+    <Icon name="checkCircle" />
     <span> </span>
-    <Icon name="taskChecked"/>
+    <Icon name="taskChecked" />
     <span> </span>
-    <Icon name="taskUnchecked"/>
+    <Icon name="taskUnchecked" />
     <span> </span>
-    <Icon name="taskCheckedStroke"/>
+    <Icon name="taskCheckedStroke" />
     <span> </span>
-    <Icon name="taskCheckedOutline"/>
+    <Icon name="taskCheckedOutline" />
     <span> </span>
-    <Icon name="hourglassEmpty"/>
+    <Icon name="hourglassEmpty" />
     <span> </span>
-    <Icon name="hourglassFull"/>
+    <Icon name="hourglassFull" />
     <span> </span>
-    <Icon name="input"/>
+    <Icon name="input" />
     <span> </span>
-    <Icon name="launch"/>
+    <Icon name="launch" />
     <span> </span>
-    <Icon name="locationSearching"/>
+    <Icon name="locationSearching" />
     <span> </span>
-    <Icon name="lock"/>
+    <Icon name="lock" />
     <span> </span>
-    <Icon name="lockOpen"/>
+    <Icon name="lockOpen" />
     <span> </span>
-    <Icon name="lockOutline"/>
+    <Icon name="lockOutline" />
     <span> </span>
-    <Icon name="opportunityCheckin"/>
+    <Icon name="opportunityCheckin" />
     <span> </span>
-    <Icon name="opportunityThumbsDown"/>
+    <Icon name="opportunityThumbsDown" />
     <span> </span>
-    <Icon name="opportunityThumbsUp"/>
+    <Icon name="opportunityThumbsUp" />
     <span> </span>
-    <Icon name="relatedContact"/>
+    <Icon name="relatedContact" />
     <span> </span>
-    <Icon name="route"/>
+    <Icon name="route" />
     <span> </span>
-    <Icon name="search"/>
+    <Icon name="search" />
     <span> </span>
-    <Icon name="shoppingBasketThumbsDown"/>
+    <Icon name="shoppingBasketThumbsDown" />
     <span> </span>
-    <Icon name="shoppingBasketThumbsUp"/>
+    <Icon name="shoppingBasketThumbsUp" />
     <span> </span>
-    <Icon name="shoppingThumbsDown"/>
+    <Icon name="shoppingThumbsDown" />
     <span> </span>
-    <Icon name="shoppingThumbsUp"/>
+    <Icon name="shoppingThumbsUp" />
     <span> </span>
-    <Icon name="signature"/>
+    <Icon name="signature" />
     <span> </span>
-    <Icon name="switchOff"/>
+    <Icon name="switchOff" />
     <span> </span>
-    <Icon name="thumbDown"/>
+    <Icon name="thumbDown" />
     <span> </span>
-    <Icon name="thumbUp"/>
+    <Icon name="thumbUp" />
     <span> </span>
-    <Icon name="sandBox"/>
+    <Icon name="sandBox" />
     <span> </span>
-    <Icon name="visibilityOn"/>
+    <Icon name="visibilityOn" />
     <span> </span>
-    <Icon name="visibilityOff"/>
+    <Icon name="visibilityOff" />
     <span> </span>
-    <Icon name="workflow"/>
+    <Icon name="workflow" />
     <span> </span>
-    <Icon name="crop"/>
+    <Icon name="crop" />
     <span> </span>
-    <Icon name="removeCircle"/>
+    <Icon name="removeCircle" />
     <span> </span>
-    <Icon name="key"/>
+    <Icon name="key" />
     <span> </span>
-    <Icon name="powerOn"/>
+    <Icon name="powerOn" />
     <span> </span>
-    <Icon name="widget"/>
+    <Icon name="widget" />
     <span> </span>
-    <Icon name="newWidget"/>
+    <Icon name="newWidget" />
     <span> </span>
-    <Icon name="report"/>
+    <Icon name="report" />
     <span> </span>
-    <Icon name="newReport"/>
+    <Icon name="newReport" />
     <span> </span>
-    <Icon name="tableCog"/>
+    <Icon name="tableCog" />
     <span> </span>
-    <Icon name="calendarViewToday"/>
+    <Icon name="calendarViewToday" />
     <span> </span>
-    <Icon name="calendarViewWeek"/>
+    <Icon name="calendarViewWeek" />
     <span> </span>
-    <Icon name="calendarViewMonth"/>
+    <Icon name="calendarViewMonth" />
     <span> </span>
-    <Icon name="calendarViewWorkDay"/>
+    <Icon name="calendarViewWorkDay" />
     <span> </span>
-    <Icon name="update"/>
+    <Icon name="update" />
     <span> </span>
-    <Icon name="attachFile"/>
+    <Icon name="attachFile" />
     <span> </span>
-    <Icon name="phonecallOut"/>
+    <Icon name="phonecallOut" />
     <span> </span>
-    <Icon name="phonecallMissed"/>
+    <Icon name="phonecallMissed" />
     <span> </span>
-    <Icon name="eventNote"/>
+    <Icon name="eventNote" />
     <span> </span>
-    <Icon name="pin"/>
+    <Icon name="pin" />
     <span> </span>
-    <Icon name="unpin"/>
+    <Icon name="unpin" />
     <span> </span>
-    <Icon name="merge"/>
+    <Icon name="merge" />
     <span> </span>
-    <Icon name="opportunityLink"/>
+    <Icon name="opportunityLink" />
     <span> </span>
-    <Icon name="opportunityUnlink"/>
+    <Icon name="opportunityUnlink" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Communication:
@@ -225,23 +225,23 @@ Communication:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="message"/>
+    <Icon name="message" />
     <span> </span>
-    <Icon name="comment"/>
+    <Icon name="comment" />
     <span> </span>
-    <Icon name="call"/>
+    <Icon name="call" />
     <span> </span>
-    <Icon name="emailSend"/>
+    <Icon name="emailSend" />
     <span> </span>
-    <Icon name="phoneIncoming"/>
+    <Icon name="phoneIncoming" />
     <span> </span>
-    <Icon name="phoneOutgoing"/>
+    <Icon name="phoneOutgoing" />
     <span> </span>
-    <Icon name="ringVolume"/>
+    <Icon name="ringVolume" />
     <span> </span>
-    <Icon name="textInfo"/>
+    <Icon name="textInfo" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Social
@@ -252,33 +252,35 @@ Social
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="group"/>
+    <Icon name="group" />
     <span> </span>
-    <Icon name="supervisorAccount"/>
+    <Icon name="supervisorAccount" />
     <span> </span>
-    <Icon name="groupAdd"/>
+    <Icon name="groupAdd" />
     <span> </span>
-    <Icon name="person"/>
+    <Icon name="person" />
     <span> </span>
-    <Icon name="personAdd"/>
+    <Icon name="personAdd" />
     <span> </span>
     <Icon name="personRemove" />
     <span> </span>
-    <Icon name="peopleOutline"/>
+    <Icon name="peopleOutline" />
     <span> </span>
-    <Icon name="personOutline"/>
+    <Icon name="personOutline" />
     <span> </span>
-    <Icon name="plusOne"/>
+    <Icon name="plusOne" />
     <span> </span>
-    <Icon name="locationCity"/>
+    <Icon name="locationCity" />
     <span> </span>
-    <Icon name="mood"/>
+    <Icon name="mood" />
     <span> </span>
-    <Icon name="moodBad"/>
+    <Icon name="moodBad" />
     <span> </span>
-    <Icon name="share"/>
+    <Icon name="share" />
     <span> </span>
-</div>
+    <Icon name="whatsapp" />
+    <span> </span>
+</div>;
 ```
 
 Image
@@ -289,11 +291,11 @@ Image
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="timer"/>
+    <Icon name="timer" />
     <span> </span>
-    <Icon name="timerOff"/>
+    <Icon name="timerOff" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Map
@@ -304,9 +306,9 @@ Map
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="timeZone"/>
+    <Icon name="timeZone" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Menu
@@ -317,71 +319,71 @@ Menu
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="accounts"/>
+    <Icon name="accounts" />
     <span> </span>
-    <Icon name="activities"/>
+    <Icon name="activities" />
     <span> </span>
-    <Icon name="addWidgetsOutline"/>
+    <Icon name="addWidgetsOutline" />
     <span> </span>
-    <Icon name="analyticsPro"/>
+    <Icon name="analyticsPro" />
     <span> </span>
-    <Icon name="bubleChart"/>
+    <Icon name="bubleChart" />
     <span> </span>
-    <Icon name="calendar"/>
+    <Icon name="calendar" />
     <span> </span>
-    <Icon name="campaigns"/>
+    <Icon name="campaigns" />
     <span> </span>
-    <Icon name="contacts"/>
+    <Icon name="contacts" />
     <span> </span>
-    <Icon name="credentials"/>
+    <Icon name="credentials" />
     <span> </span>
-    <Icon name="cron"/>
+    <Icon name="cron" />
     <span> </span>
-    <Icon name="externalApps"/>
+    <Icon name="externalApps" />
     <span> </span>
-    <Icon name="fields"/>
+    <Icon name="fields" />
     <span> </span>
-    <Icon name="fieldsValidations"/>
+    <Icon name="fieldsValidations" />
     <span> </span>
-    <Icon name="goals"/>
+    <Icon name="goals" />
     <span> </span>
-    <Icon name="imports"/>
+    <Icon name="imports" />
     <span> </span>
-    <Icon name="literals"/>
+    <Icon name="literals" />
     <span> </span>
-    <Icon name="news"/>
+    <Icon name="news" />
     <span> </span>
-    <Icon name="opportunities"/>
+    <Icon name="opportunities" />
     <span> </span>
-    <Icon name="orders"/>
+    <Icon name="orders" />
     <span> </span>
-    <Icon name="parameters"/>
+    <Icon name="parameters" />
     <span> </span>
-    <Icon name="authentication"/>
+    <Icon name="authentication" />
     <span> </span>
-    <Icon name="plans"/>
+    <Icon name="plans" />
     <span> </span>
-    <Icon name="products"/>
+    <Icon name="products" />
     <span> </span>
-    <Icon name="quotes"/>
+    <Icon name="quotes" />
     <span> </span>
-    <Icon name="reports"/>
+    <Icon name="reports" />
     <span> </span>
-    <Icon name="roles"/>
+    <Icon name="roles" />
     <span> </span>
-    <Icon name="salesForce"/>
+    <Icon name="salesForce" />
     <span> </span>
-    <Icon name="salesOrders"/>
+    <Icon name="salesOrders" />
     <span> </span>
-    <Icon name="sandbox"/>
+    <Icon name="sandbox" />
     <span> </span>
-    <Icon name="support"/>
+    <Icon name="support" />
     <span> </span>
-    <Icon name="tasks"/>
+    <Icon name="tasks" />
     <span> </span>
-    <Icon name="workspace"/>
+    <Icon name="workspace" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Alert:
@@ -392,23 +394,23 @@ Alert:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="addAlert"/>
+    <Icon name="addAlert" />
     <span> </span>
-    <Icon name="asterisk"/>
+    <Icon name="asterisk" />
     <span> </span>
-    <Icon name="error"/>
+    <Icon name="error" />
     <span> </span>
-    <Icon name="errorOutline"/>
+    <Icon name="errorOutline" />
     <span> </span>
-    <Icon name="errorOutlineTwoToned"/>
+    <Icon name="errorOutlineTwoToned" />
     <span> </span>
-    <Icon name="warning"/>
+    <Icon name="warning" />
     <span> </span>
-    <Icon name="warningOutline"/>
+    <Icon name="warningOutline" />
     <span> </span>
-    <Icon name="warningOutlineTwoToned"/>
+    <Icon name="warningOutlineTwoToned" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Logos:
@@ -419,15 +421,15 @@ Logos:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="mailchimp"/>
+    <Icon name="mailchimp" />
     <span> </span>
-    <Icon name="microsoftTeams"/>
+    <Icon name="microsoftTeams" />
     <span> </span>
-    <Icon name="zoomCam"/>
+    <Icon name="zoomCam" />
     <span> </span>
-    <Icon name="zoomList"/>
+    <Icon name="zoomList" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Navigation:
@@ -438,75 +440,75 @@ Navigation:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="apps"/>
+    <Icon name="apps" />
     <span> </span>
-    <Icon name="arrowBack"/>
+    <Icon name="arrowBack" />
     <span> </span>
-    <Icon name="close"/>
+    <Icon name="close" />
     <span> </span>
-    <Icon name="closeSmall"/>
+    <Icon name="closeSmall" />
     <span> </span>
-    <Icon name="arrowDownward"/>
+    <Icon name="arrowDownward" />
     <span> </span>
-    <Icon name="arrowDropDownCircle"/>
+    <Icon name="arrowDropDownCircle" />
     <span> </span>
-    <Icon name="arrowDropDown"/>
+    <Icon name="arrowDropDown" />
     <span> </span>
-    <Icon name="arrowDropUp"/>
+    <Icon name="arrowDropUp" />
     <span> </span>
-    <Icon name="arrowForward"/>
+    <Icon name="arrowForward" />
     <span> </span>
-    <Icon name="arrowUpward"/>
+    <Icon name="arrowUpward" />
     <span> </span>
-    <Icon name="check"/>
+    <Icon name="check" />
     <span> </span>
-    <Icon name="chevronLeft"/>
+    <Icon name="chevronLeft" />
     <span> </span>
-    <Icon name="chevronRight"/>
+    <Icon name="chevronRight" />
     <span> </span>
-    <Icon name="close"/>
+    <Icon name="close" />
     <span> </span>
-    <Icon name="closeSmall"/>
+    <Icon name="closeSmall" />
     <span> </span>
-    <Icon name="dragAndDrop"/>
+    <Icon name="dragAndDrop" />
     <span> </span>
-    <Icon name="plus"/>
+    <Icon name="plus" />
     <span> </span>
-    <Icon name="expandLess"/>
+    <Icon name="expandLess" />
     <span> </span>
-    <Icon name="expandMore"/>
+    <Icon name="expandMore" />
     <span> </span>
-    <Icon name="fullscreen"/>
+    <Icon name="fullscreen" />
     <span> </span>
-    <Icon name="fullscreenExit"/>
+    <Icon name="fullscreenExit" />
     <span> </span>
-    <Icon name="fullscreenArrows"/>
+    <Icon name="fullscreenArrows" />
     <span> </span>
-    <Icon name="fullscreenArrowsExit"/>
+    <Icon name="fullscreenArrowsExit" />
     <span> </span>
-    <Icon name="openInFull"/>
+    <Icon name="openInFull" />
     <span> </span>
-    <Icon name="closeFullscreen"/>
+    <Icon name="closeFullscreen" />
     <span> </span>
-    <Icon name="menu"/>
+    <Icon name="menu" />
     <span> </span>
-    <Icon name="moreHoriz"/>
+    <Icon name="moreHoriz" />
     <span> </span>
-    <Icon name="moreVert"/>
+    <Icon name="moreVert" />
     <span> </span>
-    <Icon name="refresh"/>
+    <Icon name="refresh" />
     <span> </span>
-    <Icon name="sortArrowDownward"/>
+    <Icon name="sortArrowDownward" />
     <span> </span>
-    <Icon name="sortArrowUpward"/>
+    <Icon name="sortArrowUpward" />
     <span> </span>
-    <Icon name="subdirectoryArrowLeft"/>
+    <Icon name="subdirectoryArrowLeft" />
     <span> </span>
-    <Icon name="subdirectoryArrowRight"/>
+    <Icon name="subdirectoryArrowRight" />
     <span> </span>
-    <Icon name="unfoldLess"/>
+    <Icon name="unfoldLess" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Audiovisual:
@@ -517,15 +519,15 @@ Audiovisual:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="videoCheckin"/>
+    <Icon name="videoCheckin" />
     <span> </span>
     <Icon name="videoCamera" />
     <span> </span>
-    <Icon name="videoCamOff"/>
+    <Icon name="videoCamOff" />
     <span> </span>
-    <Icon name="videoCamOutline"/>
+    <Icon name="videoCamOutline" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Notification:
@@ -536,23 +538,23 @@ Notification:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="rocket"/>
+    <Icon name="rocket" />
     <span> </span>
-    <Icon name="penGeneric"/>
+    <Icon name="penGeneric" />
     <span> </span>
-    <Icon name="phoneBluetoothSpeaker"/>
+    <Icon name="phoneBluetoothSpeaker" />
     <span> </span>
-    <Icon name="phoneForwarded"/>
+    <Icon name="phoneForwarded" />
     <span> </span>
-    <Icon name="phoneInTalk"/>
+    <Icon name="phoneInTalk" />
     <span> </span>
-    <Icon name="phoneLocked"/>
+    <Icon name="phoneLocked" />
     <span> </span>
-    <Icon name="phoneMissed"/>
+    <Icon name="phoneMissed" />
     <span> </span>
-    <Icon name="phonePaused"/>
+    <Icon name="phonePaused" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Content:
@@ -563,15 +565,15 @@ Content:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="contentCopy"/>
+    <Icon name="contentCopy" />
     <span> </span>
-    <Icon name="contentCut"/>
+    <Icon name="contentCut" />
     <span> </span>
-    <Icon name="contentPaste"/>
+    <Icon name="contentPaste" />
     <span> </span>
-    <Icon name="contentLink"/>
+    <Icon name="contentLink" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Device:
@@ -582,17 +584,17 @@ Device:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="accessAlarms"/>
+    <Icon name="accessAlarms" />
     <span> </span>
-    <Icon name="accessTime"/>
+    <Icon name="accessTime" />
     <span> </span>
-    <Icon name="accessTimeFilled"/>
+    <Icon name="accessTimeFilled" />
     <span> </span>
-    <Icon name="addAlarm"/>
+    <Icon name="addAlarm" />
     <span> </span>
-    <Icon name="brightnessHight"/>
+    <Icon name="brightnessHight" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Toggle:
@@ -603,25 +605,25 @@ Toggle:
 import Icon from './IconWithTooltip';
 
 <div>
-    <Icon name="checkBox"/>
+    <Icon name="checkBox" />
     <span> </span>
-    <Icon name="checkBoxOutlineBlank"/>
+    <Icon name="checkBoxOutlineBlank" />
     <span> </span>
-    <Icon name="indeterminateCheckBox"/>
+    <Icon name="indeterminateCheckBox" />
     <span> </span>
-    <Icon name="radioButtonChecked"/>
+    <Icon name="radioButtonChecked" />
     <span> </span>
-    <Icon name="radioButtonUnchecked"/>
+    <Icon name="radioButtonUnchecked" />
     <span> </span>
-    <Icon name="star"/>
+    <Icon name="star" />
     <span> </span>
-    <Icon name="starBorder"/>
+    <Icon name="starBorder" />
     <span> </span>
-    <Icon name="starHalf"/>
+    <Icon name="starHalf" />
     <span> </span>
-    <Icon name="starsCircle"/>
+    <Icon name="starsCircle" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Icons:
@@ -642,7 +644,7 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="lock" />
     <span> </span>
-    <Icon name="tick"/>
+    <Icon name="tick" />
     <span> </span>
     <Icon name="thickEnabledFilled" />
     <span> </span>
@@ -728,47 +730,47 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="clockFilled" />
     <span> </span>
-    <Icon name="chat"/>
+    <Icon name="chat" />
     <span> </span>
-    <Icon name="chatFilled"/>
+    <Icon name="chatFilled" />
     <span> </span>
-    <Icon name="send"/>
+    <Icon name="send" />
     <span> </span>
-    <Icon name="scheduleSend"/>
+    <Icon name="scheduleSend" />
     <span> </span>
-    <Icon name="emptyAvatar"/>
+    <Icon name="emptyAvatar" />
     <span> </span>
-    <Icon name="draggableSort"/>
+    <Icon name="draggableSort" />
     <span> </span>
-    <Icon name="fileDownload"/>
+    <Icon name="fileDownload" />
     <span> </span>
-    <Icon name="columns"/>
+    <Icon name="columns" />
     <span> </span>
-    <Icon name="currency"/>
+    <Icon name="currency" />
     <span> </span>
-    <Icon name="dateTime"/>
+    <Icon name="dateTime" />
     <span> </span>
-    <Icon name="date"/>
+    <Icon name="date" />
     <span> </span>
-    <Icon name="decimals"/>
+    <Icon name="decimals" />
     <span> </span>
-    <Icon name="valueList"/>
+    <Icon name="valueList" />
     <span> </span>
-    <Icon name="integer"/>
+    <Icon name="integer" />
     <span> </span>
-    <Icon name="checkboxGroup"/>
+    <Icon name="checkboxGroup" />
     <span> </span>
-    <Icon name="percentage"/>
+    <Icon name="percentage" />
     <span> </span>
-    <Icon name="text"/>
+    <Icon name="text" />
     <span> </span>
-    <Icon name="switch"/>
+    <Icon name="switch" />
     <span> </span>
-    <Icon name="settings"/>
+    <Icon name="settings" />
     <span> </span>
-    <Icon name="activities"/>
+    <Icon name="activities" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Raw Icons:
@@ -798,7 +800,7 @@ import Icon from './IconWithTooltip';
     <Icon name="arrowRightRaw" size="raw" />
     <span> </span>
     <Icon name="arrowLeftRaw" size="raw" />
-</div>
+</div>;
 ```
 
 File:
@@ -821,7 +823,7 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="zipAvatar" />
     <span> </span>
-</div>
+</div>;
 ```
 
 File Icons:
@@ -872,7 +874,7 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="link" />
     <span> </span>
-</div>
+</div>;
 ```
 
 Sizes:

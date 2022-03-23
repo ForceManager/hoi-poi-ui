@@ -74,6 +74,7 @@ function alphaColor(hex, a) {
 export const colors = {
     neutralBase: '#ffffff',
     neutral100: '#f9f9fa',
+    neutral150: '#f6f7f9',
     neutral200: '#f4f5f6',
     neutral300: '#e9ecee',
     neutral400: '#dfe2e5',
