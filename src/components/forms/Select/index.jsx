@@ -315,9 +315,9 @@ const Select = memo(
             (e) => {
                 setFocused(false);
                 if (!keepInputValueOnBlur || isMulti) setNewInputValue('');
-                onBlur && onBlur(e);
+                onBlur && onBlur(e, value);
             },
-            [onBlur, keepInputValueOnBlur, isMulti],
+            [onBlur, keepInputValueOnBlur, isMulti, value],
         );
 
         const controlStyles = useCallback(

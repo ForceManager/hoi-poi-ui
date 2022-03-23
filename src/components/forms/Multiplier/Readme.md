@@ -193,7 +193,7 @@ let onChange = (value, newValue, index, schema) => {
     buttonLabel="Add"
     buttonClassName="time-allocation-add-button"
     value={state.value}
-    errors={errors}
+    error={errors}
     schema={schema}
     max={5}
     separator={true}
@@ -220,7 +220,7 @@ let onChange = (value, newValue, index, schema) => {
     isFullWidth={true}
     buttonLabel="Add"
     value={state.value}
-    errors={errors}
+    error={errors}
     schema={schema}
     max={5}
     separator={true}
@@ -246,7 +246,7 @@ let onChange = (value, newValue, index, schema) => {
     name="vertical-example"
     buttonLabel="Add"
     value={state.value}
-    errors={errors}
+    error={errors}
     schema={schema}
     max={5}
     separator={true}
@@ -261,9 +261,9 @@ Horizontal mode
 import { useState } from 'react';
 import schema from './example.horizontal.json';
 
-const errors = {
+const errors = [{
     email: 'Invalid email',
-};
+}];
 const [state, setState] = useState({});
 let onChange = (value, newValue, index, schema) => {
     setState({ value });
@@ -273,14 +273,14 @@ let onChange = (value, newValue, index, schema) => {
     name="vertical-example"
     buttonLabel="Add"
     value={state.value}
-    errors={errors}
+    error={errors}
     schema={schema}
     max={5}
     separator={true}
     onChange={onChange}
     labelMode="vertical"
     orientation="horizontal"
-/>;
+/>
 ```
 
 Without label
