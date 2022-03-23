@@ -56,8 +56,9 @@ function MultiplierFieldControl({
     );
 
     const onBlurField = useCallback(
-        (input) => {
-            const value = input && input.target ? input.target.value : input;
+        (input, select) => {
+            const control = select || input;
+            const value = control && control.target ? control.target.value : control;
             onBlur && onBlur(value, field);
         },
         [onBlur, field],

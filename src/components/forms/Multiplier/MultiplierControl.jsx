@@ -43,6 +43,13 @@ function MultiplierControl({
         [onChange, schema, index],
     );
 
+    const onBlurMultiplier = useCallback(
+        (value) => {
+            onBlur && onBlur(value, schema, index);
+        },
+        [onBlur, schema, index],
+    );
+
     const onClickRemove = useCallback(() => {
         onRemove(schema, index);
     }, [onRemove, schema, index]);
@@ -58,7 +65,7 @@ function MultiplierControl({
                 errors={errors}
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
-                onBlur={onBlur}
+                onBlur={onBlurMultiplier}
                 isFullWidth={isFullWidth}
                 isReadOnly={isReadOnly}
                 labelMode={labelMode}
@@ -89,7 +96,7 @@ function MultiplierControl({
                 error={errors}
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
-                onBlur={onBlur}
+                onBlur={onBlurMultiplier}
                 customFields={customFields}
                 {...override.fieldControl}
             />
