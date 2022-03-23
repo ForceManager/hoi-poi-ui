@@ -52,4 +52,9 @@ export default (theme) => ({
         textOverflow: 'ellipsis',
         display: 'inherit',
     },
+    underline: {
+        '&:hover': {
+            textDecoration: 'underline',
+        },
+    },
 });
