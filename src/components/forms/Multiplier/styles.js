@@ -68,6 +68,9 @@ export default (theme) => ({
             '&:first-child': {
                 '& $removeIcon': { marginTop: 44 },
             },
+            '& [class*="FieldBottom"]': {
+                width: '100%',
+            },
         },
         '& $item': {
             '&:first-child': {

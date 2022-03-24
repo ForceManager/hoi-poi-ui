@@ -78,6 +78,12 @@ function Multiplier({
         [onChange, value],
     );
 
+    const onBlurMultiplier = useCallback((newValue, schema, index, field) => {
+        const newValues = [...value];
+        newValues[index] = newValue;
+        onBlur && onBlur(newValues, newValue, index, schema, field);
+    }, [onBlur, value]);
+
     const type = Array.isArray(schema) ? 'form' : 'field';
     const items = [];
 
@@ -97,7 +103,7 @@ function Multiplier({
                 errors={error[index]}
                 onChange={onChangeMultiplier}
                 onFocus={onFocus}
-                onBlur={onBlur}
+                onBlur={onBlurMultiplier}
                 onRemove={size > 1 ? onClickRemove : undefined}
                 className={multiplierItemClassNames}
                 customFields={customFields}
