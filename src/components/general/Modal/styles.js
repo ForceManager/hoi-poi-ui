@@ -42,7 +42,7 @@ export default (theme) => ({
         paddingBottom: 16,
     },
     title: {
-        color: theme.colors.text.black,
+        color: theme.colors.black,
     },
     footer: {
         display: 'flex',

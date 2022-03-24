@@ -46,10 +46,10 @@ export default (theme) => ({
                 backgroundColor: theme.colors.neutral400,
             },
             '& .rc-steps-item-finish .rc-steps-item-title:after': {
-                backgroundColor: theme.colors.primary,
+                backgroundColor: theme.colors.orange500,
             },
             '& .rc-steps-item-active .rc-steps-item-title:after': {
-                background: `transparent linear-gradient(to right, ${theme.colors.primary} 48px, ${theme.colors.neutral400} 48px)`,
+                background: `transparent linear-gradient(to right, ${theme.colors.orange500} 48px, ${theme.colors.neutral400} 48px)`,
             },
         },
         // Label vertical
@@ -76,10 +76,10 @@ export default (theme) => ({
                 backgroundColor: theme.colors.neutral400,
             },
             '& .rc-steps-item-finish .rc-steps-item-tail': {
-                backgroundColor: theme.colors.primary,
+                backgroundColor: theme.colors.orange500,
             },
             '& .rc-steps-item-active .rc-steps-item-tail': {
-                background: `transparent linear-gradient(to right, ${theme.colors.primary} 50%, ${theme.colors.neutral400} 50%)`,
+                background: `transparent linear-gradient(to right, ${theme.colors.orange500} 50%, ${theme.colors.neutral400} 50%)`,
             },
             '& .rc-steps-item:last-child .rc-steps-item-tail': {
                 display: 'none',
@@ -101,10 +101,10 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutral400,
         },
         '& .rc-steps-item-finish .rc-steps-item-tail': {
-            backgroundColor: theme.colors.primary,
+            backgroundColor: theme.colors.orange500,
         },
         '& .rc-steps-item-active .rc-steps-item-tail': {
-            background: `transparent linear-gradient(to right, ${theme.colors.primary} 50%, ${theme.colors.neutral400} 50%)`,
+            background: `transparent linear-gradient(to right, ${theme.colors.orange500} 50%, ${theme.colors.neutral400} 50%)`,
         },
         '& .rc-steps-item:last-child .rc-steps-item-tail': {
             display: 'none',
@@ -125,14 +125,14 @@ export default (theme) => ({
     },
     active: {
         '& $icon': {
-            backgroundColor: theme.colors.primary,
+            backgroundColor: theme.colors.orange500,
             borderColor: 'transparent',
             color: theme.colors.neutralBase,
         },
     },
     completed: {
         '& $icon': {
-            backgroundColor: theme.colors.primary,
+            backgroundColor: theme.colors.orange500,
             borderColor: 'transparent',
         },
         '& .rc-steps-item-icon, & .rc-steps-item-content': {

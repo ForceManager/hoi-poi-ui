@@ -38,10 +38,10 @@ export default (theme) => ({
         '& $formControl': {
             cursor: 'not-allowed',
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
+                borderBottom: `1px solid ${theme.colors.neutral400}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
+                borderBottom: `1px solid ${theme.colors.neutral400}`,
             },
         },
     },

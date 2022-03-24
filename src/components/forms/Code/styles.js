@@ -15,14 +15,14 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral700,
     },
     error: {
         ...theme.typography.smallText,
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red,
+        color: theme.colors.red500,
     },
     formControl: {
         position: 'relative',

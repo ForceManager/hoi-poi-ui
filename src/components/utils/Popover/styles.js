@@ -15,7 +15,7 @@ export default (theme) => ({
             color: theme.colors.neutral900,
             lineHeight: 1.4285714,
             textDecoration: 'none',
-            backgroundColor: theme.colors.white,
+            backgroundColor: theme.colors.neutralBase,
             boxShadow: theme.effects.boxShadow,
             borderRadius: 16,
         },
@@ -23,18 +23,22 @@ export default (theme) => ({
             display: 'none',
         },
         // Placements
-        '&.hoi-poi-popover-placement-top, &.hoi-poi-popover-placement-topLeft, &.hoi-poi-popover-placement-topRight': {
-            padding: `${arrowWidth}px 0 ${distance}px 0`,
-        },
-        '&.hoi-poi-popover-placement-right, &.hoi-poi-popover-placement-rightTop, &.hoi-poi-popover-placement-rightBottom': {
-            padding: `0 ${arrowWidth}px 0 ${distance}px`,
-        },
-        '&.hoi-poi-popover-placement-bottom, &.hoi-poi-popover-placement-bottomLeft, &.hoi-poi-popover-placement-bottomRight': {
-            padding: `${distance}px 0 ${arrowWidth}px 0`,
-        },
-        '&.hoi-poi-popover-placement-left, &.hoi-poi-popover-placement-leftTop, &.hoi-poi-popover-placement-leftBottom': {
-            padding: `0 ${distance}px 0 ${arrowWidth}px`,
-        },
+        '&.hoi-poi-popover-placement-top, &.hoi-poi-popover-placement-topLeft, &.hoi-poi-popover-placement-topRight':
+            {
+                padding: `${arrowWidth}px 0 ${distance}px 0`,
+            },
+        '&.hoi-poi-popover-placement-right, &.hoi-poi-popover-placement-rightTop, &.hoi-poi-popover-placement-rightBottom':
+            {
+                padding: `0 ${arrowWidth}px 0 ${distance}px`,
+            },
+        '&.hoi-poi-popover-placement-bottom, &.hoi-poi-popover-placement-bottomLeft, &.hoi-poi-popover-placement-bottomRight':
+            {
+                padding: `${distance}px 0 ${arrowWidth}px 0`,
+            },
+        '&.hoi-poi-popover-placement-left, &.hoi-poi-popover-placement-leftTop, &.hoi-poi-popover-placement-leftBottom':
+            {
+                padding: `0 ${distance}px 0 ${arrowWidth}px`,
+            },
         // Transition
         '&.hoi-poi-popover--fade-appear': {
             opacity: 0,

@@ -10,7 +10,7 @@ export default (theme) => ({
     },
     message: {
         ...theme.typography.caption,
-        color: theme.colors.text.neutralBase,
+        color: theme.colors.neutralBase,
         display: 'block',
         whiteSpace: 'pre-wrap',
     },

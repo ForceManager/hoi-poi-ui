@@ -14,14 +14,14 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral700,
     },
     error: {
         ...theme.typography.smallText,
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red,
+        color: theme.colors.red500,
     },
     formControl: {
         position: 'relative',
@@ -162,20 +162,20 @@ export default (theme) => ({
     errored: {
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.red} !important`,
+                borderBottom: `1px solid ${theme.colors.red500} !important`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.red} !important`,
+                borderBottom: `1px solid ${theme.colors.red500} !important`,
             },
         },
     },
     isReadOnly: {
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
+                borderBottom: `1px solid ${theme.colors.neutral400}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
+                borderBottom: `1px solid ${theme.colors.neutral400}`,
             },
         },
         '&$focused': {
