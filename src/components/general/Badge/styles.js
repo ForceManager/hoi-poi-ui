@@ -30,9 +30,9 @@ export default (theme) => ({
         },
     },
     error: {
-        backgroundColor: theme.colors.redLight,
+        backgroundColor: theme.colors.red100,
         '& $Text': {
-            color: theme.colors.text.red,
+            color: theme.colors.red500,
         },
     },
     info: {

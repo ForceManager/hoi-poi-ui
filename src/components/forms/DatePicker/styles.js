@@ -506,7 +506,7 @@ export default (theme) => ({
         },
         '& .flatpickr-day.flatpickr-disabled, & .flatpickr-day.flatpickr-disabled:hover, & .flatpickr-day.prevMonthDay, & .flatpickr-day.nextMonthDay, & .flatpickr-day.notAllowed, & .flatpickr-day.notAllowed.prevMonthDay, & .flatpickr-day.notAllowed.nextMonthDay':
             {
-                color: theme.colors.disabledGrey,
+                color: theme.colors.neutral500,
                 background: 'transparent',
                 borderColor: 'transparent',
                 cursor: 'default',

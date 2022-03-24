@@ -25,7 +25,7 @@ export default (theme) => ({
         },
     },
     separator: {
-        borderBottom: `1px solid ${theme.colors.greyLight}`,
+        borderBottom: `1px solid ${theme.colors.neutral200}`,
         '&:first-child': {
             paddingTop: '0',
         },

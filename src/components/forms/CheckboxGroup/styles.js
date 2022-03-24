@@ -9,11 +9,11 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red,
+        color: theme.colors.red500,
     },
     errorPerCheck: {
         ...theme.typography.smallText,
-        color: theme.colors.red,
+        color: theme.colors.red500,
         margin: '-6px 0 14px',
     },
     formControl: {
@@ -38,16 +38,16 @@ export default (theme) => ({
     checkboxLabel: {
         marginLeft: 10,
         ...theme.typography.defaultText,
-        color: theme.colors.greySoft,
+        color: theme.colors.neutral700,
     },
     isReadOnly: {
         '& $formControl': {
             cursor: 'not-allowed',
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
+                borderBottom: `1px solid ${theme.colors.neutral400}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.lines}`,
+                borderBottom: `1px solid ${theme.colors.neutral400}`,
             },
         },
     },
