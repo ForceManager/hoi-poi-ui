@@ -78,10 +78,10 @@ function Multiplier({
         [onChange, value],
     );
 
-    const onBlurMultiplier = useCallback((newValue, schema, index) => {
+    const onBlurMultiplier = useCallback((newValue, schema, index, field) => {
         const newValues = [...value];
         newValues[index] = newValue;
-        onBlur && onBlur(newValues, newValue, index, schema);
+        onBlur && onBlur(newValues, newValue, index, schema, field);
     }, [onBlur, value]);
 
     const type = Array.isArray(schema) ? 'form' : 'field';
