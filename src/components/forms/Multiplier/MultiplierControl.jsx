@@ -44,8 +44,8 @@ function MultiplierControl({
     );
 
     const onBlurMultiplier = useCallback(
-        (value) => {
-            onBlur && onBlur(value, schema, index);
+        (value, field) => {
+            onBlur && onBlur(value, schema, index, field);
         },
         [onBlur, schema, index],
     );
