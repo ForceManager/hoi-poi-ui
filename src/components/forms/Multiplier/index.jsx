@@ -64,7 +64,7 @@ function Multiplier({
     const onClickRemove = useCallback(
         (schema, index) => {
             const newValues = [...value.slice(0, index), ...value.slice(index + 1)];
-            onChange && onChange(newValues, value[index], index, schema);
+            onChange && onChange(newValues, value[index], index, schema, 'remove');
         },
         [onChange, value],
     );
