@@ -70,19 +70,22 @@ function Multiplier({
     );
 
     const onChangeMultiplier = useCallback(
-        (newValue, schema, index) => {
+        (newValue, schema, index, field) => {
             const newValues = [...value];
             newValues[index] = newValue;
-            onChange && onChange(newValues, newValue, index, schema);
+            onChange && onChange(newValues, newValue, index, schema, field);
         },
         [onChange, value],
     );
 
-    const onBlurMultiplier = useCallback((newValue, schema, index, field) => {
-        const newValues = [...value];
-        newValues[index] = newValue;
-        onBlur && onBlur(newValues, newValue, index, schema, field);
-    }, [onBlur, value]);
+    const onBlurMultiplier = useCallback(
+        (newValue, schema, index, field) => {
+            const newValues = [...value];
+            newValues[index] = newValue;
+            onBlur && onBlur(newValues, newValue, index, schema, field);
+        },
+        [onBlur, value],
+    );
 
     const type = Array.isArray(schema) ? 'form' : 'field';
     const items = [];

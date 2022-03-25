@@ -37,8 +37,8 @@ function MultiplierControl({
     const override = getOverrides(overridesProp, MultiplierControl.overrides);
 
     const onChangeMultiplier = useCallback(
-        (value) => {
-            onChange && onChange(value, schema, index);
+        (value, field) => {
+            onChange && onChange(value, schema, index, field);
         },
         [onChange, schema, index],
     );
