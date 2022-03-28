@@ -58,7 +58,7 @@ function Multiplier({
     const onClickAdd = useCallback(() => {
         const newValues = [...value];
         newValues.push(null);
-        onChange && onChange(newValues, null);
+        onChange && onChange(newValues, null, null, null, 'add');
     }, [onChange, value]);
 
     const onClickRemove = useCallback(
