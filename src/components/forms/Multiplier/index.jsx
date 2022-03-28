@@ -58,13 +58,13 @@ function Multiplier({
     const onClickAdd = useCallback(() => {
         const newValues = [...value];
         newValues.push(null);
-        onChange && onChange(newValues, null, null, null, 'add');
+        onChange && onChange(newValues, null, null, null, null, 'add');
     }, [onChange, value]);
 
     const onClickRemove = useCallback(
         (schema, index) => {
             const newValues = [...value.slice(0, index), ...value.slice(index + 1)];
-            onChange && onChange(newValues, value[index], index, schema, 'remove');
+            onChange && onChange(newValues, value[index], index, schema, null, 'remove');
         },
         [onChange, value],
     );
