@@ -77,6 +77,9 @@ import TableCog from './icons/TableCog';
 import SandBox from './icons/SandBox';
 import Settings from './icons/Settings';
 import Activities from './icons/Activities';
+import BranchCheck from './icons/BranchCheck';
+import QuotesOutlined from './icons/QuotesOutlined';
+import DatabaseExport from './icons/DatabaseExport';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -178,6 +181,7 @@ import Message from './icons/communication/Message';
 import Comment from './icons/communication/Comment';
 import Call from './icons/communication/Call';
 import EmailSend from './icons/communication/EmailSend';
+import EmailSendOutline from './icons/communication/EmailSendOutline';
 import PhoneIncoming from './icons/communication/PhoneIncoming';
 import PhoneOutgoing from './icons/communication/PhoneOutgoing';
 import RingVolume from './icons/communication/RingVolume';
@@ -449,6 +453,9 @@ export const ICONS = {
     phonecallOut: PhonecallOut,
     phonecallMissed: PhonecallMissed,
     eventNote: EventNote,
+    branchCheck: BranchCheck,
+    quotesOutlined: QuotesOutlined,
+    databaseExport: DatabaseExport,
 
     //Actions
     accountCheckin: AccountCheckin,
@@ -545,6 +552,7 @@ export const ICONS = {
     comment: Comment,
     call: Call,
     emailSend: EmailSend,
+    emailSendOutline: EmailSendOutline,
     phoneIncoming: PhoneIncoming,
     phoneOutgoing: PhoneOutgoing,
     ringVolume: RingVolume,
