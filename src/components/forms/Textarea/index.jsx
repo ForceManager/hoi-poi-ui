@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
+import Tooltip from '../../utils/Tooltip';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -35,6 +36,7 @@ const Textarea = forwardRef(
             labelMode,
             isRequired,
             minRows,
+            readOnlyTooltip,
             ...props
         },
         ref,
@@ -132,7 +134,7 @@ const Textarea = forwardRef(
                 id,
                 name,
                 className: classes.textarea,
-                placeholder,
+                placeholder: isReadOnly ? null : placeholder,
                 value: value,
                 onChange: isReadOnly ? undefined : handleOnChange,
                 onFocus: handleOnFocus,
@@ -185,9 +187,10 @@ const Textarea = forwardRef(
 
         const compIsReadOnly = useMemo(() => <Icon name="lockOutline" size="medium" />, []);
 
-        const compIsCopyable = useMemo(() => <Icon name="contentCopy" onClick={copyValue} />, [
-            copyValue,
-        ]);
+        const compIsCopyable = useMemo(
+            () => <Icon name="contentCopy" onClick={copyValue} />,
+            [copyValue],
+        );
 
         const shouldSeparate = isCopyable || isReadOnly;
 
@@ -221,15 +224,27 @@ const Textarea = forwardRef(
             }
 
             if (isReadOnly) {
-                postComponentsArray.push(
+                const readOnlyComp = readOnlyTooltip ? (
+                    <Tooltip placement="top" content={<span>{readOnlyTooltip}</span>}>
+                        <div
+                            key="readOnly"
+                            className={classes.postComponentReadOnly}
+                            {...override.postComponentReadOnly}
+                        >
+                            {compIsReadOnly}
+                        </div>
+                    </Tooltip>
+                ) : (
                     <div
                         key="readOnly"
                         className={classes.postComponentReadOnly}
                         {...override.postComponentReadOnly}
                     >
                         {compIsReadOnly}
-                    </div>,
+                    </div>
                 );
+
+                postComponentsArray.push(readOnlyComp);
             }
 
             return postComponentsArray;
@@ -251,6 +266,7 @@ const Textarea = forwardRef(
             postComponentClick,
             shouldSeparate,
             compIsCopyable,
+            readOnlyTooltip,
             compIsReadOnly,
         ]);
 
@@ -316,6 +332,8 @@ Textarea.propTypes = {
     placeholder: PropTypes.string,
     onCopy: PropTypes.func,
     isReadOnly: PropTypes.bool,
+    /** In order to add a tooltip to lock icon*/
+    readOnlyTooltip: PropTypes.string,
     isCopyable: PropTypes.bool,
     hideClear: PropTypes.bool,
     ref: PropTypes.func,

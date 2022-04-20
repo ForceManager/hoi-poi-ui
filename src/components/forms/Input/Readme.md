@@ -177,7 +177,13 @@ const onCopy = () => window.alert('Copied to Clipboard');
         info="I am an info message"
         error="I am an error"
     />
-    <Input label="Disabled" placeholder="Write here" value="I am disabled" isReadOnly={true} />
+    <Input
+        label="Disabled"
+        placeholder="Write here"
+        readOnlyTooltip="Is ReadOnly"
+        value="I am disabled"
+        isReadOnly={true}
+    />
     <Input
         label="Copy"
         placeholder="Write here"

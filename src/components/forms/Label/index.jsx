@@ -55,13 +55,13 @@ function Label({
     );
 }
 
-Text.overrides = ['root', 'Popover', 'Text'];
+Label.overrides = ['root', 'Popover', 'Text'];
 
-Text.defaultProps = {
+Label.defaultProps = {
     overrides: {},
 };
 
-Text.propTypes = {
+Label.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
     isRequired: PropTypes.bool,

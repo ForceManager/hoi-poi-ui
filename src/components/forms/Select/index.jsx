@@ -705,7 +705,7 @@ const Select = memo(
                 },
                 className: selectClassName,
                 classNamePrefix: 'hoi-poi-select',
-                placeholder,
+                placeholder: isReadOnly ? null : placeholder,
                 options: lazyOptions.options || innerOptions,
                 defaultOptions: innerOptions,
                 cacheOptions,
