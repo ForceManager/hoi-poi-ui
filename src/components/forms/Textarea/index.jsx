@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
-import Tooltip from '../../utils/Tooltip';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -36,7 +35,6 @@ const Textarea = forwardRef(
             labelMode,
             isRequired,
             minRows,
-            readOnlyTooltip,
             ...props
         },
         ref,
@@ -224,27 +222,15 @@ const Textarea = forwardRef(
             }
 
             if (isReadOnly) {
-                const readOnlyComp = readOnlyTooltip ? (
-                    <Tooltip placement="top" content={<span>{readOnlyTooltip}</span>}>
-                        <div
-                            key="readOnly"
-                            className={classes.postComponentReadOnly}
-                            {...override.postComponentReadOnly}
-                        >
-                            {compIsReadOnly}
-                        </div>
-                    </Tooltip>
-                ) : (
+                postComponentsArray.push(
                     <div
                         key="readOnly"
                         className={classes.postComponentReadOnly}
                         {...override.postComponentReadOnly}
                     >
                         {compIsReadOnly}
-                    </div>
+                    </div>,
                 );
-
-                postComponentsArray.push(readOnlyComp);
             }
 
             return postComponentsArray;
@@ -266,7 +252,6 @@ const Textarea = forwardRef(
             postComponentClick,
             shouldSeparate,
             compIsCopyable,
-            readOnlyTooltip,
             compIsReadOnly,
         ]);
 

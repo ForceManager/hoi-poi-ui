@@ -6,7 +6,6 @@ import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
 
 import { createUseStyles } from '../../../utils/styles';
-import Tooltip from '../../utils/Tooltip';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Input');
 
@@ -50,7 +49,6 @@ const Input = forwardRef(
             label,
             labelMode,
             isRequired,
-            readOnlyTooltip = null,
             ...props
         },
         ref,
@@ -266,27 +264,15 @@ const Input = forwardRef(
             }
 
             if (isReadOnly) {
-                const readOnlyComp = readOnlyTooltip ? (
-                    <Tooltip placement="top" content={<span>{readOnlyTooltip}</span>}>
-                        <div
-                            key="readOnly"
-                            className={classes.postComponentReadOnly}
-                            {...override.postComponentReadOnly}
-                        >
-                            {compIsReadOnly}
-                        </div>
-                    </Tooltip>
-                ) : (
+                postComponentsArray.push(
                     <div
                         key="readOnly"
                         className={classes.postComponentReadOnly}
                         {...override.postComponentReadOnly}
                     >
                         {compIsReadOnly}
-                    </div>
+                    </div>,
                 );
-
-                postComponentsArray.push(readOnlyComp);
             }
 
             if (postComponent) {
@@ -323,7 +309,6 @@ const Input = forwardRef(
             postComponentClick,
             shouldSeparate,
             compIsCopyable,
-            readOnlyTooltip,
             compIsReadOnly,
         ]);
 
@@ -401,8 +386,6 @@ Input.propTypes = {
     numberDecimals: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     onCopy: PropTypes.func,
     isReadOnly: PropTypes.bool,
-    /** In order to add a tooltip to lock icon*/
-    readOnlyTooltip: PropTypes.string,
     isCopyable: PropTypes.bool,
     hideClear: PropTypes.bool,
     ref: PropTypes.func,
