@@ -66,7 +66,12 @@ const onCopy = () => window.alert('Copied to Clipboard');
         info="I am an info message"
         error="I am an error"
     />
-    <Textarea label="Disabled" placeholder="Write here" value="I am disabled" isReadOnly={true} />
+    <Textarea
+        label="Disabled"
+        placeholder="Write here"
+        readOnlyTooltip="Read Only"
+        isReadOnly={true}
+    />
     <Textarea
         label="Copy"
         placeholder="Write here"

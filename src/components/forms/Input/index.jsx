@@ -172,7 +172,7 @@ const Input = forwardRef(
                 name,
                 className: classes.input,
                 type: types[type] || type,
-                placeholder,
+                placeholder: isReadOnly ? null : placeholder,
                 value: value,
                 onChange: isReadOnly ? undefined : handleOnChange,
                 onFocus: handleOnFocus,

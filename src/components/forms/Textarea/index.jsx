@@ -132,7 +132,7 @@ const Textarea = forwardRef(
                 id,
                 name,
                 className: classes.textarea,
-                placeholder,
+                placeholder: isReadOnly ? null : placeholder,
                 value: value,
                 onChange: isReadOnly ? undefined : handleOnChange,
                 onFocus: handleOnFocus,
@@ -185,9 +185,10 @@ const Textarea = forwardRef(
 
         const compIsReadOnly = useMemo(() => <Icon name="lockOutline" size="medium" />, []);
 
-        const compIsCopyable = useMemo(() => <Icon name="contentCopy" onClick={copyValue} />, [
-            copyValue,
-        ]);
+        const compIsCopyable = useMemo(
+            () => <Icon name="contentCopy" onClick={copyValue} />,
+            [copyValue],
+        );
 
         const shouldSeparate = isCopyable || isReadOnly;
 
@@ -316,6 +317,8 @@ Textarea.propTypes = {
     placeholder: PropTypes.string,
     onCopy: PropTypes.func,
     isReadOnly: PropTypes.bool,
+    /** In order to add a tooltip to lock icon*/
+    readOnlyTooltip: PropTypes.string,
     isCopyable: PropTypes.bool,
     hideClear: PropTypes.bool,
     ref: PropTypes.func,
