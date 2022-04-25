@@ -21,6 +21,7 @@ function Tabs({
     activeKey,
     position,
     postComponent,
+    vertical,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -32,6 +33,7 @@ function Tabs({
         classes.root,
         {
             [classes.withPostComponent]: postComponent,
+            [classes.vertical]: vertical,
         },
         classNameProp,
     );

@@ -15,6 +15,16 @@ describe('Tabs', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('vertical', () => {
+        let tabs = [...Array(5)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` }));
+        const activeKey = 'tab-2';
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Tabs activeKey={activeKey} tabs={tabs} vertical />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
     test('with scrolling', () => {
         let tabs = [...Array(100)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` }));
         const activeKey = 'tab-2';

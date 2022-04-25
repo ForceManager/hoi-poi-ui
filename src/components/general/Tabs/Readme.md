@@ -16,6 +16,24 @@ function onChange(key) {
 <Tabs onChange={onChange} activeKey={activeKey} tabs={tabs} />;
 ```
 
+Vertical:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+let tabs = [...Array(5)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` }));
+const activeKey = state.activeKey || 'tab-1';
+
+function onChange(key) {
+    setState({
+        activeKey: key,
+    });
+}
+
+<Tabs onChange={onChange} activeKey={activeKey} tabs={tabs} vertical />;
+```
+
 Scrolling:
 
 ```jsx

@@ -481,4 +481,36 @@ export default (theme) => ({
     postComponent: {
         paddingBottom: '10px',
     },
+    vertical: {
+        borderBottom: 'none', 
+        '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-scroll': {
+            width: '100%',
+        },
+        '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-tab': {
+            float: 'none',
+            margin: 0,
+            width: '100%',
+            textAlign: 'center',
+        },
+        '& .hoi-poi-ui__tabs-tab': {
+            padding: '14px 0',
+            borderBottom: `1px solid ${theme.colors.neutral400}`
+        },
+        '& .hoi-poi-ui__tabs-nav': {
+            float: 'none',
+            display: 'block',
+        },
+        '& .hoi-poi-ui__tabs-nav > *': {
+            display: 'flex',
+            flexFlow: 'column nowrap',
+            alignItems: 'center',
+        },
+        '& .hoi-poi-ui__tabs-tab-active': {
+            borderBottom: `2px solid ${theme.colors.neutral900}`,
+            paddingBottom: 13,
+            '&::after, &:hover::after': {
+                content: 'none',
+            },
+        },
+    },
 });
