@@ -29,6 +29,7 @@ function Slider({
     size,
     onChange,
     reverse,
+    showValue,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -70,9 +71,10 @@ function Slider({
             if (tipFormatter) finalValue = tipFormatter(handlerValue);
             else if (isPercentage) finalValue = `${handlerValue}%`;
             else finalValue = handlerValue;
+
             return (
                 <div key={index} className={classes.overlay} {...override.overlay}>
-                    {!isReadOnly && (
+                    {(showValue || !isReadOnly) && (
                         <span
                             style={positionStyle}
                             className={classes.overlayLabel}
@@ -94,17 +96,18 @@ function Slider({
             );
         },
         [
-            classes.overlay,
-            classes.overlayHandler,
-            classes.overlayLabel,
-            innerValue,
-            isPercentage,
-            isReadOnly,
-            override.overlay,
-            override.overlayHandler,
-            override.overlayLabel,
-            tipFormatter,
             reverse,
+            innerValue,
+            tipFormatter,
+            isPercentage,
+            classes.overlay,
+            classes.overlayLabel,
+            classes.overlayHandler,
+            override.overlay,
+            override.overlayLabel,
+            override.overlayHandler,
+            showValue,
+            isReadOnly,
         ],
     );
 

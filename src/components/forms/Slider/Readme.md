@@ -91,7 +91,8 @@ const onChange = (value) => setState({ value });
         onChange={onChange}
         value={state.value}
         isReadOnly
-        isRange
+        isPercentage
+        showValue
         error="Error text here"
         info="Info text here"
     />
