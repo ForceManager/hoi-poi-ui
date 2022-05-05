@@ -1,3 +1,5 @@
+import FullscreenExit from '../../general/Icon/icons/navigation/FullscreenExit';
+
 export default (theme) => ({
     root: {},
     isFullWidth: {
@@ -167,6 +169,17 @@ export default (theme) => ({
     },
     hideMultivalueChips: {
         display: 'none',
+    },
+    optionAll: {
+        ...theme.typography.body,
+        padding: '8px 16px 4px',
+        display: 'flex',
+        color: theme.colors.neutral900,
+        backgroundColor: theme.colors.neutralBase,
+        transition: 'all 0.15s ease',
+        '&:hover': {
+            backgroundColor: theme.colors.orange100,
+        },
     },
     option: {
         ...theme.typography.body,

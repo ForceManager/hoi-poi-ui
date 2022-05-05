@@ -106,6 +106,7 @@ const Select = memo(
         menuShouldScrollIntoView,
         isOptionSelected,
         notSelectingDefaultOption,
+        optionAllLabel,
         ...props
     }) => {
         const selectRef = useRef();
@@ -197,7 +198,8 @@ const Select = memo(
                     });
                     return;
                 }
-
+                console.log(selectRef.current.getValue());
+                console.log('hey', data);
                 if (getCanChange && !getCanChange(data, action)) return;
                 if (shouldSetValueOnChange) setNewValue(data);
                 if (!isMulti) setFocused(false);
@@ -553,6 +555,7 @@ const Select = memo(
                         classes,
                         override,
                         getHighlighted,
+                        hasAll: !!optionAllLabel,
                     });
                 else
                     return MenuSingle({
@@ -570,6 +573,7 @@ const Select = memo(
                 customOption,
                 getHighlighted,
                 getMatchingCharacters,
+                optionAllLabel,
             ],
         );
 
@@ -760,8 +764,10 @@ const Select = memo(
                     actionTextClassName: classes.actionText,
                     actionTextWithIconClassName: classes.actionTextWithIcon,
                     singleValueIconClassName: classes.singleValueIcon,
+                    optionAllClassName: classes.optionAll,
                     actions,
                     onClickAction,
+                    optionAllLabel,
                     override: {
                         menu: override.menu,
                         actionContainer: override.actionContainer,
@@ -951,6 +957,8 @@ const Select = memo(
             classes.singleValueIcon,
             classes.group,
             classes.option,
+            classes.optionAll,
+            optionAllLabel,
             onClickAction,
             override,
             getRef,

@@ -548,6 +548,67 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Multi With All:
+
+```jsx
+import { useState } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: 'lorem-ipsum-5',
+    },
+    {
+        label: 'Lorem ipsum 6',
+        value: 'lorem-ipsum-6',
+    },
+    {
+        label: 'Lorem ipsum 7',
+        value: 'lorem-ipsum-7',
+    },
+];
+const [state, setState] = useState([
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+]);
+const onChange = (value) => {
+    setState({ value });
+};
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        isMulti={true}
+        isClearable
+        optionAllLabel="Select All"
+    />
+</div>;
+```
+
 Multi With Custom Colors:
 
 ```jsx

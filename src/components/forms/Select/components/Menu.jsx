@@ -1,8 +1,9 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { components } from 'react-select';
 import Link from '../../../typography/Link';
 import Icon from '../../../general/Icon';
 import Text from '../../../typography/Text';
+import Checkbox from '../../../general/Checkbox';
 
 import { useTheme } from '../../../../utils/styles';
 
@@ -15,11 +16,15 @@ export default React.memo(({ children, ...props }) => {
         actionIconClassName,
         actionTextClassName,
         actionTextWithIconClassName,
+        optionAllClassName,
         override,
         actions,
         onClickAction,
         dropdownWidth,
+        // optionAllLabel,
     } = props.selectProps.menuProps;
+
+    const [isAllSelected, setIsAllSelected] = useState(false);
 
     const linkRow = useCallback(
         (action, index) => {
@@ -80,6 +85,27 @@ export default React.memo(({ children, ...props }) => {
         ],
     );
 
+    const onClickAll = useCallback(() => {
+        setIsAllSelected(!isAllSelected);
+    }, [isAllSelected]);
+
+    const allRow = useMemo(() => {
+        // if (!optionAllLabel) return null;
+        let isIndeterminate = false;
+        // if (hasAll && isSelected) isIndeterminate = true;
+        return (
+            <div className={optionAllClassName}>
+                <Checkbox
+                    checked={isAllSelected}
+                    color="orange"
+                    indeterminate={isIndeterminate}
+                    onChange={onClickAll}
+                />
+                {/* <Text>{optionAllLabel}</Text> */}
+            </div>
+        );
+    }, [optionAllClassName, isAllSelected, onClickAll]);
+
     const innerProps = useMemo(() => {
         if (dropdownWidth) return { ...props.innerProps, style: { width: dropdownWidth } };
         return props.innerProps;
@@ -93,6 +119,7 @@ export default React.memo(({ children, ...props }) => {
                 innerProps={innerProps}
                 {...override.menu}
             >
+                {allRow}
                 {children}
                 {actions && (
                     <div className={actionContainerClassName} {...override.actionContainer}>
