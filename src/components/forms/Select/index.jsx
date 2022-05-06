@@ -206,7 +206,7 @@ const Select = memo(
                 if (shouldSetValueOnChange || shouldRenderOptionAll) setNewValue(data);
                 if (!isMulti) setFocused(false);
                 if (shouldRenderOptionAll) {
-                    if (!data.length) {
+                    if (!data?.length) {
                         setIsAllSelected(false);
                     } else {
                         setIsAllSelected(true);
