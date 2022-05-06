@@ -168,6 +168,21 @@ export default (theme) => ({
     hideMultivalueChips: {
         display: 'none',
     },
+    optionAll: {
+        ...theme.typography.body,
+        marginTop: '4px',
+        padding: '8px 16px',
+        display: 'flex',
+        color: theme.colors.neutral900,
+        backgroundColor: theme.colors.orange100,
+        cursor: 'pointer',
+        '&:hover': {
+            backgroundColor: theme.colors.orange200,
+        },
+    },
+    optionAllCheckbox: {
+        marginRight: '10px',
+    },
     option: {
         ...theme.typography.body,
         padding: '8px 16px',

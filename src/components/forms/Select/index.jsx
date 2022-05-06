@@ -106,6 +106,7 @@ const Select = memo(
         menuShouldScrollIntoView,
         isOptionSelected,
         notSelectingDefaultOption,
+        optionAllLabel,
         ...props
     }) => {
         const selectRef = useRef();
@@ -118,10 +119,13 @@ const Select = memo(
             options: null,
             isLoading: false,
         });
+        const [isAllSelected, setIsAllSelected] = useState(false);
         const debounce = useRef(null);
         const menuPlacementRef = useRef('bottom');
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
+        const shouldRenderOptionAll =
+            optionAllLabel && isMulti && !isFuzzy && !innerOptions?.[0]?.options;
 
         const rootClassName = classnames(
             classes.root,
@@ -199,9 +203,17 @@ const Select = memo(
                 }
 
                 if (getCanChange && !getCanChange(data, action)) return;
-                if (shouldSetValueOnChange) setNewValue(data);
+                if (shouldSetValueOnChange || shouldRenderOptionAll) setNewValue(data);
                 if (!isMulti) setFocused(false);
+                if (shouldRenderOptionAll) {
+                    if (!data?.length) {
+                        setIsAllSelected(false);
+                    } else {
+                        setIsAllSelected(true);
+                    }
+                }
                 onChange && onChange(data, action);
+
                 if (
                     isMulti ||
                     (data && data.value) ||
@@ -217,6 +229,8 @@ const Select = memo(
                 shouldSetValueOnChange,
                 getCanChange,
                 customOnChange,
+                setIsAllSelected,
+                shouldRenderOptionAll,
             ],
         );
 
@@ -760,8 +774,15 @@ const Select = memo(
                     actionTextClassName: classes.actionText,
                     actionTextWithIconClassName: classes.actionTextWithIcon,
                     singleValueIconClassName: classes.singleValueIcon,
+                    optionAllClassName: classes.optionAll,
+                    optionAllCheckboxClassName: classes.optionAllCheckbox,
                     actions,
                     onClickAction,
+                    optionAllLabel: shouldRenderOptionAll && optionAllLabel,
+                    selectRef: selectRef.current,
+                    value: newValue,
+                    isAllSelected,
+                    setIsAllSelected,
                     override: {
                         menu: override.menu,
                         actionContainer: override.actionContainer,
@@ -951,6 +972,8 @@ const Select = memo(
             classes.singleValueIcon,
             classes.group,
             classes.option,
+            classes.optionAll,
+            classes.optionAllCheckbox,
             onClickAction,
             override,
             getRef,
@@ -963,6 +986,10 @@ const Select = memo(
             hideMultivalueChips,
             multiValueLabelStyles,
             multiValueRemoveStyles,
+            optionAllLabel,
+            isAllSelected,
+            setIsAllSelected,
+            shouldRenderOptionAll,
         ]);
 
         let SelectComponent = RSelect;
