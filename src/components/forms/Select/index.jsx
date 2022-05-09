@@ -1191,6 +1191,8 @@ Select.propTypes = {
     notSelectingDefaultOption: PropTypes.bool,
     /** Keep input focused when there is a value on it*/
     keepInputFocused: PropTypes.bool,
+    /** Defines wether it should have Select All option and also the label that should be printed in the option row */
+    optionAllLabel: PropTypes.string,
 };
 
 export default Select;

@@ -88,25 +88,27 @@ export default React.memo(({ children, ...props }) => {
         ],
     );
 
+    const options = useMemo(() => {
+        return selectRef.commonProps.options.filter((current) => !current.isDisabled);
+    }, [selectRef]);
+
     const onClickAll = useCallback(() => {
-        const realOptions = selectRef.commonProps.options.filter((current) => !current.isDisabled);
         if (isAllSelected) {
             selectRef.clearValue();
         } else {
-            selectRef.setValue(realOptions, 'set-value');
+            selectRef.setValue(options, 'set-value');
         }
 
         setIsAllSelected(!isAllSelected);
-    }, [isAllSelected, setIsAllSelected, selectRef]);
+    }, [isAllSelected, setIsAllSelected, options, selectRef]);
 
     const isIndeterminate = useMemo(() => {
-        const realOptions = selectRef.commonProps.options.filter((current) => !current.isDisabled);
-        if (value?.length && realOptions?.length !== value?.length) return true;
+        if (value?.length && options?.length !== value?.length) return true;
         return false;
-    }, [selectRef, value]);
+    }, [value, options]);
 
     const allRow = useMemo(() => {
-        if (!optionAllLabel) return null;
+        if (!optionAllLabel || !options.length) return null;
         return (
             <div className={optionAllClassName} onClick={onClickAll}>
                 <Checkbox
@@ -125,6 +127,7 @@ export default React.memo(({ children, ...props }) => {
         onClickAll,
         isAllSelected,
         isIndeterminate,
+        options,
     ]);
 
     const innerProps = useMemo(() => {
@@ -140,7 +143,7 @@ export default React.memo(({ children, ...props }) => {
                 innerProps={innerProps}
                 {...override.menu}
             >
-                {optionAllLabel && allRow}
+                {allRow}
                 {children}
                 {actions && (
                     <div className={actionContainerClassName} {...override.actionContainer}>
