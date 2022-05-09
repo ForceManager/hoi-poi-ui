@@ -169,10 +169,10 @@ export default (theme) => ({
         display: 'none',
     },
     optionAll: {
-        ...theme.typography.body,
         marginTop: '4px',
         padding: '8px 16px',
         display: 'flex',
+        alignItems: 'center',
         color: theme.colors.neutral900,
         backgroundColor: theme.colors.orange100,
         cursor: 'pointer',
@@ -182,6 +182,9 @@ export default (theme) => ({
     },
     optionAllCheckbox: {
         marginRight: '10px',
+    },
+    optionAllText: {
+        ...theme.typography.subtitle,
     },
     option: {
         ...theme.typography.body,

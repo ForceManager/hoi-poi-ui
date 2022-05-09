@@ -776,6 +776,7 @@ const Select = memo(
                     singleValueIconClassName: classes.singleValueIcon,
                     optionAllClassName: classes.optionAll,
                     optionAllCheckboxClassName: classes.optionAllCheckbox,
+                    optionAllTextClassName: classes.optionAllText,
                     actions,
                     onClickAction,
                     optionAllLabel: shouldRenderOptionAll && optionAllLabel,
