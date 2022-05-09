@@ -18,6 +18,7 @@ export default React.memo(({ children, ...props }) => {
         actionTextWithIconClassName,
         optionAllClassName,
         optionAllCheckboxClassName,
+        optionAllTextClassName,
         override,
         actions,
         onClickAction,
@@ -117,12 +118,13 @@ export default React.memo(({ children, ...props }) => {
                     color="orange"
                     indeterminate={isIndeterminate}
                 />
-                <Text>{optionAllLabel}</Text>
+                <Text className={optionAllTextClassName}>{optionAllLabel}</Text>
             </div>
         );
     }, [
         optionAllClassName,
         optionAllCheckboxClassName,
+        optionAllTextClassName,
         optionAllLabel,
         onClickAll,
         isAllSelected,
