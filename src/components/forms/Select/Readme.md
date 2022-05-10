@@ -598,7 +598,6 @@ const [state, setState] = useState([
     },
 ]);
 const onChange = (value) => {
-    console.log('onChange', value);
     setState({ value });
 };
 
