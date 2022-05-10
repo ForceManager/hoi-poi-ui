@@ -26,6 +26,7 @@ export default React.memo(({ children, ...props }) => {
         optionAllLabel,
         selectRef,
         value,
+        options,
         isAllSelected,
         setIsAllSelected,
     } = props.selectProps.menuProps;
@@ -89,27 +90,27 @@ export default React.memo(({ children, ...props }) => {
         ],
     );
 
-    const options = useMemo(() => {
-        return selectRef.commonProps.options.filter((current) => !current.isDisabled);
-    }, [selectRef]);
+    const filteredOptions = useMemo(() => {
+        return options.filter((current) => !current.isDisabled);
+    }, [options]);
 
     const onClickAll = useCallback(() => {
         if (isAllSelected) {
             selectRef.clearValue();
         } else {
-            selectRef.setValue(options, 'set-value');
+            selectRef.setValue(filteredOptions, 'set-value');
         }
 
         setIsAllSelected(!isAllSelected);
-    }, [isAllSelected, setIsAllSelected, options, selectRef]);
+    }, [isAllSelected, setIsAllSelected, filteredOptions, selectRef]);
 
     const isIndeterminate = useMemo(() => {
-        if (value?.length && options?.length !== value?.length) return true;
+        if (value?.length && filteredOptions?.length !== value?.length) return true;
         return false;
-    }, [value, options]);
+    }, [value, filteredOptions]);
 
     const allRow = useMemo(() => {
-        if (!optionAllLabel || !options.length) return null;
+        if (!optionAllLabel || !filteredOptions?.length) return null;
         return (
             <div className={optionAllClassName} onClick={onClickAll}>
                 <Checkbox
@@ -129,7 +130,7 @@ export default React.memo(({ children, ...props }) => {
         onClickAll,
         isAllSelected,
         isIndeterminate,
-        options,
+        filteredOptions,
     ]);
 
     const innerProps = useMemo(() => {
