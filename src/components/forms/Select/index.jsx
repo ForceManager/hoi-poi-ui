@@ -782,6 +782,7 @@ const Select = memo(
                     optionAllLabel: shouldRenderOptionAll && optionAllLabel,
                     selectRef: selectRef.current,
                     value: newValue,
+                    options: lazyOptions.options || innerOptions || [],
                     isAllSelected,
                     setIsAllSelected,
                     override: {
@@ -975,6 +976,7 @@ const Select = memo(
             classes.option,
             classes.optionAll,
             classes.optionAllCheckbox,
+            classes.optionAllText,
             onClickAction,
             override,
             getRef,

@@ -581,6 +581,16 @@ const options = [
         value: 'lorem-ipsum-6',
     },
 ];
+
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(options);
+            }, 1000),
+        [],
+    );
+
 const [state, setState] = useState([
     {
         label: 'Lorem ipsum 1',
@@ -588,7 +598,6 @@ const [state, setState] = useState([
     },
 ]);
 const onChange = (value) => {
-    console.log('onChange', value);
     setState({ value });
 };
 
@@ -597,7 +606,7 @@ const onChange = (value) => {
         label="Lorem ipsum"
         placeholder="Select one"
         onChange={onChange}
-        options={options}
+        loadOptions={loadOptions}
         value={state.value}
         isMulti={true}
         isClearable
