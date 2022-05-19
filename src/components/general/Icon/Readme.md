@@ -429,6 +429,14 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="zoomList" />
     <span> </span>
+    <Icon name="zendesk" />
+    <span> </span>
+    <Icon name="salesforce" />
+    <span> </span>
+    <Icon name="softland" />
+    <span> </span>
+    <Icon name="sage" />
+    <span> </span>
 </div>;
 ```
 

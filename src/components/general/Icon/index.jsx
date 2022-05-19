@@ -258,6 +258,10 @@ import Mailchimp from './icons/logos/Mailchimp';
 import MicrosoftTeams from './icons/logos/MicrosoftTeams';
 import ZoomCam from './icons/logos/ZoomCam';
 import ZoomList from './icons/logos/ZoomList';
+import Zendesk from './icons/logos/Zendesk';
+import Salesforce from './icons/logos/Salesforce';
+import Softland from './icons/logos/Softland';
+import Sage from './icons/logos/Sage';
 
 //Navigation
 import Apps from './icons/navigation/Apps';
@@ -625,6 +629,10 @@ export const ICONS = {
     microsoftTeams: MicrosoftTeams,
     zoomCam: ZoomCam,
     zoomList: ZoomList,
+    zendesk: Zendesk,
+    salesforce: Salesforce,
+    softland: Softland,
+    sage: Sage,
     //Navigation
     apps: Apps,
     arrowBack: ArrowBack,
