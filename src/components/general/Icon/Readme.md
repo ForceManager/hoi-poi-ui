@@ -154,6 +154,10 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="signature" />
     <span> </span>
+    <Icon name="syncCalendar" />
+    <span> </span>
+    <Icon name="syncEmail" />
+    <span> </span>
     <Icon name="switchOff" />
     <span> </span>
     <Icon name="thumbDown" />

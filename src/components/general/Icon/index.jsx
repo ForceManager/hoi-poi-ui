@@ -148,6 +148,8 @@ import ShoppingBasketThumbsUp from './icons/actions/ShoppingBasketThumbsUp';
 import ShoppingThumbsDown from './icons/actions/ShoppingThumbsDown';
 import ShoppingThumbsUp from './icons/actions/ShoppingThumbsUp';
 import Signature from './icons/actions/Signature';
+import SyncCalendar from './icons/actions/SyncCalendar';
+import SyncEmail from './icons/actions/SyncEmail';
 import SwitchOff from './icons/actions/SwitchOff';
 import ThumbDown from './icons/actions/ThumbDown';
 import ThumbUp from './icons/actions/ThumbUp';
@@ -528,6 +530,8 @@ export const ICONS = {
     shoppingThumbsDown: ShoppingThumbsDown,
     shoppingThumbsUp: ShoppingThumbsUp,
     signature: Signature,
+    syncCalendar: SyncCalendar,
+    syncEmail: SyncEmail,
     switchOff: SwitchOff,
     thumbDown: ThumbDown,
     thumbUp: ThumbUp,
