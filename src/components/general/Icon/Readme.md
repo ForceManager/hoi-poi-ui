@@ -722,6 +722,8 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="add" />
     <span> </span>
+    <Icon name="addPlus" />
+    <span> </span>
     <Icon name="less" />
     <span> </span>
     <Icon name="dash" />

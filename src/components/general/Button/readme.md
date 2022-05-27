@@ -11,6 +11,8 @@ Types:
 <Button type="secondary-error">Push me</Button>
 <span> </span>
 <Button type="terciary">Push me</Button>
+<span> </span>
+<Button type="dashed">Push me</Button>
 ```
 
 Sizes:
@@ -35,6 +37,8 @@ Disabled:
 <Button type="secondary-error" isDisabled>Push me</Button>
 <span> </span>
 <Button type="terciary" isDisabled>Push me</Button>
+<span> </span>
+<Button type="dashed" isDisabled>Push me</Button>
 ```
 
 Loading:
@@ -101,6 +105,8 @@ Icon Left:
 <Button type="secondary-error" icon="cloudUpload">Push me</Button>
 <span> </span>
 <Button type="terciary" size="big" icon="cloudUpload">Push me</Button>
+<span> </span>
+<Button type="dashed" size="big" icon="cloudUpload">Push me</Button>
 ```
 
 Icon Right:
@@ -116,6 +122,8 @@ Icon Right:
 <Button type="secondary-error" icon="cloudUpload" iconPosition="right">Push me</Button>
 <span> </span>
 <Button type="terciary" size="big" icon="cloudUpload" iconPosition="right">Push me</Button>
+<span> </span>
+<Button type="dashed" size="big" icon="cloudUpload" iconPosition="right">Push me</Button>
 ```
 
 Icon Only:
@@ -131,6 +139,8 @@ Icon Only:
 <Button type="secondary-error" icon="cloudUpload" />
 <span> </span>
 <Button type="terciary" icon="cloudUpload" />
+<span> </span>
+<Button type="dashed" icon="cloudUpload" />
 <span> </span>
 <Button type="primary" icon="cloudUpload" size="small"/>
 <span> </span>
