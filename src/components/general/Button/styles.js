@@ -129,17 +129,33 @@ export default (theme) => ({
                 color: theme.colors.neutral700,
             },
             '&:active': {
-                borderColor: theme.colors.neutral300,
+                borderColor: theme.colors.neutral500,
+                backgroundColor: theme.colors.neutral400,
+                color: theme.colors.neutral700,
+            },
+        },
+    },
+    dashed: {
+        border: `1px dashed ${theme.colors.neutral500}`,
+        backgroundColor: 'transparent',
+        color: theme.colors.neutral700,
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                borderColor: theme.colors.neutral500,
                 backgroundColor: theme.colors.neutral300,
-                color: theme.colors.neutral600,
-                '& path': { fill: theme.colors.neutral600 },
+                color: theme.colors.neutral700,
+            },
+            '&:active': {
+                borderColor: theme.colors.neutral600,
+                backgroundColor: theme.colors.neutral400,
+                color: theme.colors.neutral700,
             },
         },
     },
 
     // Sizes
     big: {
-        height: 44,
+        height: 40,
         padding: '0 17px',
     },
     medium: {

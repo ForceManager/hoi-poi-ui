@@ -40,6 +40,7 @@ import CloudUpload from './icons/CloudUpload';
 import CloudDownload from './icons/CloudDownload';
 import Sync from './icons/Sync';
 import AddButton from './icons/AddButton';
+import AddPlus from './icons/AddPlus';
 import LessButton from './icons/LessButton';
 import Dash from './icons/Dash';
 import AddUser from './icons/AddUser';
@@ -421,6 +422,7 @@ export const ICONS = {
     cloudDownload: CloudDownload,
     sync: Sync,
     add: AddButton,
+    addPlus: AddPlus,
     less: LessButton,
     dash: Dash,
     addUser: AddUser,
