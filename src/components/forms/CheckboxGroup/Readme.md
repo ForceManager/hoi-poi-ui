@@ -122,24 +122,56 @@ Full width
 import { useState } from 'react';
 let options = [
     {
-        label:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat. ',
+        label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat. ',
         value: 'lorem',
     },
     {
-        label:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  2',
+        label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  2',
         value: 'lorem2',
     },
     {
-        label:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  3',
+        label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat.  3',
         value: 'lorem3',
     },
 ];
 const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <CheckboxGroup options={options} onChange={onChange} value={state.value} isFullWidth />;
+```
+
+Info hint
+
+```jsx
+import { useState } from 'react';
+let options = [
+    {
+        label: 'Lorem ipsum',
+        value: 'lorem',
+        hint: {
+            title: 'Lorem ipsum dolor sit amet, proin mattis vestibulum 1',
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat 1.',
+        },
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem2',
+        hint: {
+            title: 'Lorem ipsum dolor sit amet, proin mattis vestibulum 2',
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat 2.',
+        },
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem3',
+        hint: {
+            title: 'Lorem ipsum dolor sit amet, proin mattis vestibulum 3',
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in auctor neque, sit amet malesuada massa. Proin mattis vestibulum consequat 3.',
+        },
+    },
+];
+const [state, setState] = useState({});
+let onChange = (value) => setState({ value });
+<CheckboxGroup options={options} onChange={onChange} value={state.value} />;
 ```
 
 ### Component tree

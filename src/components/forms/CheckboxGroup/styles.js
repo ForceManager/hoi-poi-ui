@@ -21,16 +21,23 @@ export default (theme) => ({
         display: 'flex',
         flexDirection: 'column',
         width: 290,
-        cursor: 'pointer',
     },
     isFullWidth: {
         width: '100%',
+    },
+    checkboxWrapper: {
+        display: 'flex',
+        alignItems: 'center',
+        marginBottom: 14,
+        '&:hover $info': {
+            display: 'block',
+        },
     },
     checkboxControl: {
         display: 'flex',
         alignItems: 'center',
         lineHeight: '20px',
-        marginBottom: 14,
+        cursor: 'pointer',
         '&:last-child': {
             marginBottom: 0,
         },
@@ -39,6 +46,23 @@ export default (theme) => ({
         marginLeft: 10,
         ...theme.typography.defaultText,
         color: theme.colors.neutral700,
+    },
+    iconContainer: {
+        height: 18,
+        width: 18,
+        marginLeft: 5,
+    },
+    info: {
+        display: 'none',
+        width: '100%',
+        height: '100%',
+        cursor: 'pointer',
+        '& path': {
+            fill: theme.colors.neutral600,
+        },
+    },
+    popoverTitle: {
+        marginBottom: 5,
     },
     isReadOnly: {
         '& $formControl': {
