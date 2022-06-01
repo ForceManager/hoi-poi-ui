@@ -49,9 +49,8 @@ function CheckboxControl({
 
     return (
         <Fragment>
-            <div className={classes.checkboxWrapper}>
+            <div className={classes.checkboxWrapper} key={option.value}>
                 <div
-                    key={option.value}
                     className={classes.checkboxControl}
                     onClick={isReadOnly ? undefined : () => onChangeCheckbox(option.value)}
                     {...override.checkboxControl}
