@@ -45,7 +45,7 @@ export default (theme) => ({
         position: 'relative',
         width: 465,
         marginLeft: 167,
-        marginTop: 0,
+        marginTop: 8,
         display: 'flex',
         justifyContent: 'flex-start',
     },
