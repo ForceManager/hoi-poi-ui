@@ -1,10 +1,10 @@
 import React from 'react';
 
-function PhonecallMissed({ color = '#7D8A96', ...props }) {
+function PhonecallMissed({ color = '#788590', color2 = '#FF8C00', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" {...props}>
             <path
-                fill="#FF8C00"
+                fill={color2}
                 fillRule="evenodd"
                 d="M6.24 5.5l5.28 5.5 6.72-7-.96-1-5.76 6L7.2 4.5h3.36V3H4.8v6h1.44V5.5z"
                 clipRule="evenodd"
