@@ -315,7 +315,7 @@ import VideoCheckin from './icons/audiovisual/VideoCheckin';
 import VideoCamera from './icons/audiovisual/VideoCamera';
 import VideoCamOff from './icons/audiovisual/VideoCamOff';
 import VideoCamOutline from './icons/audiovisual/VideoCamOutline';
-import VideoLeft from './icons/VideoLeft';
+import VideoLeft from './icons/audiovisual/VideoLeft';
 //Content
 import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
