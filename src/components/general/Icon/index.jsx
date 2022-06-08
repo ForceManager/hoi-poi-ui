@@ -315,6 +315,7 @@ import VideoCheckin from './icons/audiovisual/VideoCheckin';
 import VideoCamera from './icons/audiovisual/VideoCamera';
 import VideoCamOff from './icons/audiovisual/VideoCamOff';
 import VideoCamOutline from './icons/audiovisual/VideoCamOutline';
+import VideoLeft from './icons/VideoLeft';
 //Content
 import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
@@ -686,6 +687,7 @@ export const ICONS = {
     videoCamera: VideoCamera,
     videoCamOff: VideoCamOff,
     videoCamOutline: VideoCamOutline,
+    videoLeft: VideoLeft,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
