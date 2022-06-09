@@ -11,7 +11,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Button');
 
 const LOADER_SIZES = {
-    big: 'small',
+    big: 'tiny',
     medium: 'tiny',
     small: 'mini',
 };
@@ -52,6 +52,7 @@ const Button = forwardRef(
                 [classes.secondary]: type === 'secondary',
                 [classes.secondaryError]: type === 'secondary-error',
                 [classes.terciary]: type === 'terciary',
+                [classes.dashed]: type === 'dashed',
                 [classes[size]]: size,
                 [classes.disabled]: isDisabled,
                 [classes.loading]: isLoading && ALLOWED_LOADING_TYPES.includes(type),
@@ -86,6 +87,7 @@ const Button = forwardRef(
                         ...properties,
                         color: theme.colors.red500,
                     };
+                case 'dashed':
                 case 'terciary':
                     return {
                         ...properties,
@@ -162,7 +164,14 @@ Button.propTypes = {
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['big', 'medium', 'small']),
-    type: PropTypes.oneOf(['primary', 'primary-error', 'secondary', 'secondary-error', 'terciary']),
+    type: PropTypes.oneOf([
+        'primary',
+        'primary-error',
+        'secondary',
+        'secondary-error',
+        'terciary',
+        'dashed',
+    ]),
     isDisabled: PropTypes.bool,
     /** Use the whole container */
     isFullWidth: PropTypes.bool,

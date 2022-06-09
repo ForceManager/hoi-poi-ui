@@ -40,6 +40,7 @@ import CloudUpload from './icons/CloudUpload';
 import CloudDownload from './icons/CloudDownload';
 import Sync from './icons/Sync';
 import AddButton from './icons/AddButton';
+import AddPlus from './icons/AddPlus';
 import LessButton from './icons/LessButton';
 import Dash from './icons/Dash';
 import AddUser from './icons/AddUser';
@@ -148,6 +149,8 @@ import ShoppingBasketThumbsUp from './icons/actions/ShoppingBasketThumbsUp';
 import ShoppingThumbsDown from './icons/actions/ShoppingThumbsDown';
 import ShoppingThumbsUp from './icons/actions/ShoppingThumbsUp';
 import Signature from './icons/actions/Signature';
+import SyncCalendar from './icons/actions/SyncCalendar';
+import SyncEmail from './icons/actions/SyncEmail';
 import SwitchOff from './icons/actions/SwitchOff';
 import ThumbDown from './icons/actions/ThumbDown';
 import ThumbUp from './icons/actions/ThumbUp';
@@ -312,6 +315,7 @@ import VideoCheckin from './icons/audiovisual/VideoCheckin';
 import VideoCamera from './icons/audiovisual/VideoCamera';
 import VideoCamOff from './icons/audiovisual/VideoCamOff';
 import VideoCamOutline from './icons/audiovisual/VideoCamOutline';
+import VideoLeft from './icons/audiovisual/VideoLeft';
 //Content
 import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
@@ -419,6 +423,7 @@ export const ICONS = {
     cloudDownload: CloudDownload,
     sync: Sync,
     add: AddButton,
+    addPlus: AddPlus,
     less: LessButton,
     dash: Dash,
     addUser: AddUser,
@@ -528,6 +533,8 @@ export const ICONS = {
     shoppingThumbsDown: ShoppingThumbsDown,
     shoppingThumbsUp: ShoppingThumbsUp,
     signature: Signature,
+    syncCalendar: SyncCalendar,
+    syncEmail: SyncEmail,
     switchOff: SwitchOff,
     thumbDown: ThumbDown,
     thumbUp: ThumbUp,
@@ -680,6 +687,7 @@ export const ICONS = {
     videoCamera: VideoCamera,
     videoCamOff: VideoCamOff,
     videoCamOutline: VideoCamOutline,
+    videoLeft: VideoLeft,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,

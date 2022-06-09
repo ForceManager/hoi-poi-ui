@@ -154,6 +154,10 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="signature" />
     <span> </span>
+    <Icon name="syncCalendar" />
+    <span> </span>
+    <Icon name="syncEmail" />
+    <span> </span>
     <Icon name="switchOff" />
     <span> </span>
     <Icon name="thumbDown" />
@@ -717,6 +721,8 @@ import Icon from './IconWithTooltip';
     <Icon name="asterisk" />
     <span> </span>
     <Icon name="add" />
+    <span> </span>
+    <Icon name="addPlus" />
     <span> </span>
     <Icon name="less" />
     <span> </span>
