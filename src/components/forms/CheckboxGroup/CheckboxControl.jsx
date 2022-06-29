@@ -1,6 +1,6 @@
 import React, { Fragment, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import Popover from '../../utils/Popover';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Checkbox from '../../general/Checkbox';
@@ -24,6 +24,7 @@ function CheckboxControl({
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
+    const theme = useTheme();
     // Overrides
     const override = getOverrides(overridesProp, CheckboxControl.overrides);
 
@@ -68,7 +69,12 @@ function CheckboxControl({
                             content={infoDetails}
                             {...override.Popover}
                         >
-                            <Icon className={classes.info} name="info" />
+                            <Icon
+                                className={classes.info}
+                                color={theme.colors.neutral600}
+                                name="info"
+                                size="small"
+                            />
                         </Popover>
                     </div>
                 )}

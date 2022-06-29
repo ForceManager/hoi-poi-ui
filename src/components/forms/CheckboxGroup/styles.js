@@ -30,7 +30,9 @@ export default (theme) => ({
         alignItems: 'center',
         marginBottom: 14,
         '&:hover $info': {
-            display: 'block',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
         },
     },
     checkboxControl: {
@@ -57,9 +59,6 @@ export default (theme) => ({
         width: '100%',
         height: '100%',
         cursor: 'pointer',
-        '& path': {
-            fill: theme.colors.neutral600,
-        },
     },
     popoverTitle: {
         marginBottom: 5,
