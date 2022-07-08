@@ -113,6 +113,16 @@ const TimePicker = memo(
             [newOptions],
         );
 
+        const getIfInputDateIsOutOfRange = useCallback((date, minTime, maxTime) => {
+            if (!minTime && !maxTime) return false;
+
+            const dateInMiliseconds = date.getTime();
+
+            if (minTime && dateInMiliseconds < minTime.getTime()) return true;
+            if (maxTime && dateInMiliseconds > maxTime.getTime()) return true;
+            return false;
+        }, []);
+
         const getTimeLabel = useCallback((date) => {
             const hours = `0${date.getHours()}`.slice(-2);
             const minutes = `0${date.getMinutes()}`.slice(-2);
@@ -319,6 +329,11 @@ const TimePicker = memo(
                                     minMax?.maxTime || null,
                                 ) ||
                                 getIfInputDateIsDisabled(finalDate) ||
+                                getIfInputDateIsOutOfRange(
+                                    finalDate,
+                                    minMax?.minTime || null,
+                                    minMax?.maxTime || null,
+                                ) ||
                                 false;
 
                             if (isValueDisabled) {
@@ -341,7 +356,7 @@ const TimePicker = memo(
                     }
                 }
             },
-            [getIfInputDateIsDisabled, getMinMax, getTimeLabel, onChange],
+            [getIfInputDateIsDisabled, getIfInputDateIsOutOfRange, getMinMax, getTimeLabel, onChange],
         );
 
         const isOptionSelected = useCallback((option, selectedValues) => {
