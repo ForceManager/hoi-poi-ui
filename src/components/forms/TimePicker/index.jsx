@@ -116,8 +116,6 @@ const TimePicker = memo(
         const getIfInputDateIsOutOfRange = useCallback((date, minTime, maxTime) => {
             if (!minTime && !maxTime) return false;
 
-            console.log(date);
-
             const dateInMiliseconds = date.getTime();
 
             if (minTime && dateInMiliseconds < minTime.getTime()) return true;
@@ -357,9 +355,6 @@ const TimePicker = memo(
                         }
                     }
                 }
-
-                const minMax = getMinMax();
-                console.log(value, inputValue, minMax);
             },
             [getIfInputDateIsDisabled, getIfInputDateIsOutOfRange, getMinMax, getTimeLabel, onChange],
         );
