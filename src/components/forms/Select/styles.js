@@ -200,7 +200,13 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutral200,
         },
     },
-    optionSelected: {},
+    optionSelected: {
+        backgroundColor: theme.colors.neutral200,
+        cursor: 'pointer',
+        '&:hover': {
+            backgroundColor: theme.colors.neutral200,
+        },        
+    },
     optionDisabled: {
         backgroundColor: 'none',
         cursor: 'default',

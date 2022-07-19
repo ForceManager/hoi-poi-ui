@@ -356,12 +356,36 @@ const TimePicker = memo(
                     }
                 }
             },
-            [getIfInputDateIsDisabled, getIfInputDateIsOutOfRange, getMinMax, getTimeLabel, onChange],
+            [
+                getIfInputDateIsDisabled,
+                getIfInputDateIsOutOfRange,
+                getMinMax,
+                getTimeLabel,
+                onChange,
+            ],
         );
 
-        const isOptionSelected = useCallback((option, selectedValues) => {
-            return option.label === selectedValues[0]?.label;
-        }, []);
+        const isOptionSelected = useCallback(
+            (option, selectedValues) => {
+                let nearestPastInterval = null;
+
+                if (timeValue && interval) {
+                    nearestPastInterval = new Date(timeValue.value);
+                    nearestPastInterval = new Date(nearestPastInterval.setSeconds(0));
+                    nearestPastInterval = new Date(
+                        nearestPastInterval.setMinutes(
+                            Math.floor(nearestPastInterval.getMinutes() / interval) * interval,
+                        ),
+                    );
+                }
+
+                return (
+                    option.label === selectedValues[0]?.label ||
+                    (nearestPastInterval && option.value.toString() === nearestPastInterval.toString())
+                );
+            },
+            [interval, timeValue],
+        );
 
         const iconDropDown = useMemo(() => {
             if (dropDownIcon) return dropDownIcon;
