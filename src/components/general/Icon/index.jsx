@@ -81,6 +81,7 @@ import Activities from './icons/Activities';
 import BranchCheck from './icons/BranchCheck';
 import QuotesOutlined from './icons/QuotesOutlined';
 import DatabaseExport from './icons/DatabaseExport';
+import Bill from './icons/Bill';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -113,6 +114,7 @@ import EditArea from './icons/actions/EditArea';
 import Email from './icons/actions/Email';
 import EmailLate from './icons/actions/EmailLate';
 import EmailReceive from './icons/actions/EmailReceive';
+import EmailRefresh from './icons/actions/EmailRefresh';
 import Event from './icons/actions/Event';
 import Weekly from './icons/actions/Weekly';
 import Monthly from './icons/actions/Monthly';
@@ -135,6 +137,7 @@ import HourglassEmpty from './icons/actions/HourglassEmpty';
 import HourglassFull from './icons/actions/HourglassFull';
 import Input from './icons/actions/Input';
 import Launch from './icons/actions/Launch';
+import LocationFound from './icons/actions/LocationFound';
 import LocationSearching from './icons/actions/LocationSearching';
 import LockOpen from './icons/actions/LockOpen';
 import LockOutline from './icons/actions/LockOutline';
@@ -154,6 +157,8 @@ import SyncEmail from './icons/actions/SyncEmail';
 import SwitchOff from './icons/actions/SwitchOff';
 import ThumbDown from './icons/actions/ThumbDown';
 import ThumbUp from './icons/actions/ThumbUp';
+import ThumbDownOutline from './icons/actions/ThumbDownOutline';
+import ThumbUpOutline from './icons/actions/ThumbUpOutline';
 import Visibility from './icons/actions/Visibility';
 import Workflow from './icons/actions/Workflow';
 import Impersonate from './icons/actions/Impersonate';
@@ -189,6 +194,7 @@ import PhoneIncoming from './icons/communication/PhoneIncoming';
 import PhoneOutgoing from './icons/communication/PhoneOutgoing';
 import RingVolume from './icons/communication/RingVolume';
 import TextInfo from './icons/communication/TextInfo';
+import QuotationMark from './icons/communication/quotationMark';
 
 //Social
 import Group from './icons/social/Group';
@@ -465,6 +471,7 @@ export const ICONS = {
     branchCheck: BranchCheck,
     quotesOutlined: QuotesOutlined,
     databaseExport: DatabaseExport,
+    bill: Bill,
 
     //Actions
     accountCheckin: AccountCheckin,
@@ -497,6 +504,7 @@ export const ICONS = {
     email: Email,
     emailLate: EmailLate,
     emailReceive: EmailReceive,
+    emailRefresh: EmailRefresh,
     branch: Branch,
     event: Event,
     weekly: Weekly,
@@ -519,6 +527,7 @@ export const ICONS = {
     hourglassFull: HourglassFull,
     input: Input,
     launch: Launch,
+    locationFound: LocationFound,
     locationSearching: LocationSearching,
     lockOpen: LockOpen,
     lockOutline: LockOutline,
@@ -538,6 +547,8 @@ export const ICONS = {
     switchOff: SwitchOff,
     thumbDown: ThumbDown,
     thumbUp: ThumbUp,
+    thumbDownOutline: ThumbDownOutline,
+    thumbUpOutline: ThumbUpOutline,
     visibility: Visibility,
     workflow: Workflow,
     impersonate: Impersonate,
@@ -568,6 +579,7 @@ export const ICONS = {
     phoneOutgoing: PhoneOutgoing,
     ringVolume: RingVolume,
     textInfo: TextInfo,
+    quotationMark: QuotationMark,
     //Social
     group: Group,
     groupAdd: GroupAdd,
