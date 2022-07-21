@@ -64,6 +64,8 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="emailReceive" />
     <span> </span>
+    <Icon name="emailRefresh" />
+    <span> </span>
     <Icon name="branch" />
     <span> </span>
     <Icon name="event" />
@@ -124,6 +126,8 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="launch" />
     <span> </span>
+    <Icon name="locationFound" />
+    <span> </span>
     <Icon name="locationSearching" />
     <span> </span>
     <Icon name="lock" />
@@ -163,6 +167,10 @@ import Icon from './IconWithTooltip';
     <Icon name="thumbDown" />
     <span> </span>
     <Icon name="thumbUp" />
+    <span> </span>
+    <Icon name="thumbDownOutline" />
+    <span> </span>
+    <Icon name="thumbUpOutline" />
     <span> </span>
     <Icon name="sandBox" />
     <span> </span>
@@ -244,6 +252,8 @@ import Icon from './IconWithTooltip';
     <Icon name="ringVolume" />
     <span> </span>
     <Icon name="textInfo" />
+    <span> </span>
+    <Icon name="quotationMark" />
     <span> </span>
 </div>;
 ```
@@ -782,7 +792,7 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="settings" />
     <span> </span>
-    <Icon name="activities" />
+    <Icon name="bill" />
     <span> </span>
 </div>;
 ```

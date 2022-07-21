@@ -13,14 +13,14 @@ const IconGrid = ({ classes: classesProp }) => {
 
     const onChange = useCallback((value) => {
         const newSearch = value?.target?.value || value;
-        setSearch(newSearch);
+        setSearch(newSearch ? newSearch.toLowerCase() : newSearch);
     }, []);
 
     const icons = useMemo(() => Object.keys(ICONS), []);
 
     const iconCells = useMemo(() => {
         return icons
-            .filter((icon) => (search ? icon.indexOf(search) !== -1 : true))
+            .filter((icon) => (search ? icon.toLowerCase().indexOf(search) !== -1 : true))
             .sort()
             .map((icon) => (
                 <div className={classes.cell}>
