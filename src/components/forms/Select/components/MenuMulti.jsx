@@ -1,10 +1,13 @@
 import React from 'react';
 import Checkbox from '../../../general/Checkbox';
+import Icon from '../../../general/Icon';
 
 export default ({ option, value, classes, override, getHighlighted }) => {
     const isSelected = value ? !!value.find((item) => item.value === option.value) : false;
     let bulletClasses = [classes.optionLabelBullet];
     let textClasses = [classes.optionLabelText];
+    let iconClasses = [classes.optionLabelIcon];
+    let customIconClasses = [classes.optionLabelCustomIcon];
 
     let isDisabled = option.isDisabled;
     if (override.optionLabel && override.optionLabel.getIsDisabled)
@@ -20,6 +23,8 @@ export default ({ option, value, classes, override, getHighlighted }) => {
 
     if (isDisabled) {
         textClasses.push(classes.disabledText);
+        if (option.iconType) iconClasses.push(classes.disabledIcon);
+        if (option.customIcon) customIconClasses.push(classes.disabledIcon);
     }
 
     return (
@@ -33,6 +38,20 @@ export default ({ option, value, classes, override, getHighlighted }) => {
             />
             {option.type && (
                 <div className={bulletClasses.join(' ')} {...override.optionLabelBullet} />
+            )}
+            {option.iconType && (
+                <Icon
+                    className={iconClasses.join(' ')}
+                    name={option.iconType}
+                    color={option.iconColor || null}
+                    size="medium"
+                    {...override.optionLabelIcon}
+                />
+            )}
+            {option.icon && (
+                <div className={customIconClasses.join(' ')} {...override.optionLabelCustomIcon}>
+                    {option.icon}
+                </div>
             )}
             <div className={textClasses.join(' ')} {...override.optionLabelText}>
                 {(getHighlighted && getHighlighted(option)) || option.label}
