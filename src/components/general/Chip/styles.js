@@ -133,9 +133,57 @@ export default (theme) => ({
     isOutlined: {
         border: '1px solid',
         borderColor: theme.colors.neutral400,
-        transition: 'border-color 0.15s ease',
+        transition: 'border-color 0.15s ease-in-out',
         '&$clickable:hover': {
             borderColor: theme.colors.neutral300,
+        },
+    },
+    isOutlinedColor: {
+        border: '1px solid',
+        borderColor: theme.colors.blue400,
+        transition: 'border-color 0.15s ease',
+        '& $Text': {
+            color: theme.colors.blue500,
+        },
+        '& $icon path, & $icon rect': {
+            fill: theme.colors.blue500,
+        },
+        '&$clickable:hover': {
+            borderColor: 'transparent',
+            backgroundColor: theme.colors.blue200,
+            '& $Text': {
+                color: theme.colors.blue500,
+            },
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.blue500,
+            },
+        },
+        '&$isActive': {
+            borderColor: 'transparent',
+            backgroundColor: theme.colors.blue200,
+            '& $Text': {
+                color: theme.colors.blue500,
+            },
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.blue500,
+            },
+        },
+        '&$isDisabled': {
+            '& $Text': {
+                color: theme.colors.blue200,
+            },
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.blue200,
+            },
+        },
+        '&$isReadOnly': {
+            '& $Text': {
+                color: theme.colors.blue200,
+            },
+
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.blue200,
+            },
         },
     },
 });

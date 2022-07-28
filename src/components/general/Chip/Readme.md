@@ -234,6 +234,86 @@ Outlined:
 <Chip onClick={() => {}} icon="send" isOutlined isFolded onRemove={() => {}}  isReadOnly>Lorem ipsum</Chip>
 ```
 
+Outlined Color:
+
+```jsx
+<Chip onClick={() => {}} isOutlinedColor>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} isOutlinedColor isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} isOutlinedColor isDisabled>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} isOutlinedColor isReadOnly>Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip onRemove={() => {}} isOutlinedColor>Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isOutlinedColor isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isOutlinedColor isDisabled>Lorem ipsum</Chip>
+<span> </span>
+<br/>
+<br/>
+<Chip onRemove={() => {}} isFolded isOutlinedColor>Lorem ipsum</Chip>
+<span> </span>
+<Chip onRemove={() => {}} isFolded isOutlinedColor isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip isFolded onRemove={() => {}} isOutlinedColor isDisabled>Lorem ipsum</Chip>
+<br/>
+<br/>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isOutlinedColor
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isActive
+  isOutlinedColor
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isDisabled
+  isOutlinedColor
+>
+  Lorem ipsum
+</Chip>
+<span> </span>
+<Chip src="https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg"
+  placeholder="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+  alt="image"
+  onRemove={() => {}}
+  isFolded
+  isReadOnly
+  isOutlinedColor
+>
+  Lorem ipsum
+</Chip>
+<br/>
+<br/>
+<Chip onClick={() => {}} icon="send" isOutlinedColor isFolded onRemove={() => {}}>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isOutlinedColor onRemove={() => {}} isFolded isActive>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isOutlinedColor isFolded onRemove={() => {}}  isDisabled>Lorem ipsum</Chip>
+<span> </span>
+<Chip onClick={() => {}} icon="send" isOutlinedColor isFolded onRemove={() => {}}  isReadOnly>Lorem ipsum</Chip>
+```
+
 Interactive:
 
 ```jsx
@@ -263,6 +343,19 @@ const [state, setState] = useState({
             })
         }
         isOutlined
+        isFolded={state.isFolded}
+        isUnfolded={!state.isFolded}
+    >
+        Lorem ipsum
+    </Chip>
+    <span> </span>
+    <Chip
+        onClick={() =>
+            setState({
+                isFolded: !state.isFolded,
+            })
+        }
+        isOutlinedColor
         isFolded={state.isFolded}
         isUnfolded={!state.isFolded}
     >
