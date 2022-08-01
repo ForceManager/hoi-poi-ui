@@ -595,6 +595,10 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="contentLink" />
     <span> </span>
+    <Icon name="flag" />
+    <span> </span>
+    <Icon name="flagOutline" />
+    <span> </span>
 </div>;
 ```
 

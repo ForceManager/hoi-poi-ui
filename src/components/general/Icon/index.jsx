@@ -327,6 +327,8 @@ import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
 import ContentPaste from './icons/content/ContentPaste';
 import ContentLink from './icons/content/ContentLink';
+import Flag from './icons/content/Flag';
+import FlagOutline from './icons/content/FlagOutline';
 
 //Device
 import AccessAlarms from './icons/device/AccessAlarms';
@@ -705,6 +707,8 @@ export const ICONS = {
     contentCut: ContentCut,
     contentPaste: ContentPaste,
     contentLink: ContentLink,
+    flag: Flag,
+    flagOutline: FlagOutline,
     //Device
     accessAlarms: AccessAlarms,
     accessTime: AccessTime,
