@@ -15,7 +15,7 @@ export default (theme) => ({
         paddingBottom: 4,
         marginTop: 8,
         marginBottom: 8,
-        '& [class*="Divider"]:last-child': {
+        '& [class*="Divider"]:last-child, & [class*="Divider"] + [class*="Divider"]': {
             display: 'none',
         },
     },
@@ -208,7 +208,7 @@ export default (theme) => ({
         cursor: 'pointer',
         '&:hover': {
             backgroundColor: theme.colors.neutral200,
-        },        
+        },
     },
     optionDisabled: {
         backgroundColor: 'none',
