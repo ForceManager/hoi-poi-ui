@@ -15,6 +15,9 @@ export default (theme) => ({
         paddingBottom: 4,
         marginTop: 8,
         marginBottom: 8,
+        '& [class*="Divider"]:last-child': {
+            display: 'none',
+        },
     },
     menuList: {
         ...theme.utils.scrollbar,
