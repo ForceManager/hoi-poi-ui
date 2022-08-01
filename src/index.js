@@ -14,6 +14,7 @@ export { default as Breadcrumbs } from './components/general/Breadcrumbs';
 export { default as Button } from './components/general/Button';
 export { default as Checkbox } from './components/general/Checkbox';
 export { default as Chip } from './components/general/Chip';
+export { default as Divider } from './components/general/Divider';
 export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
 export { default as Loader } from './components/general/Loader';

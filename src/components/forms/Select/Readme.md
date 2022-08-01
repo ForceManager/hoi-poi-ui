@@ -1588,6 +1588,9 @@ const options = [
         label: 'Lorem ipsum 4',
         value: 'lorem-ipsum-4',
     },
+    {
+        divider: true,
+    },
 ];
 const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
