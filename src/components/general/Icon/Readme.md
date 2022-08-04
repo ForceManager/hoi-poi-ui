@@ -599,6 +599,10 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="flagOutline" />
     <span> </span>
+    <Icon name="addCircle" />
+    <span> </span>
+    <Icon name="addCircleOutline" />
+    <span> </span>
 </div>;
 ```
 
