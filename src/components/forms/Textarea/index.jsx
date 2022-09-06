@@ -1,4 +1,4 @@
-import React, { forwardRef, memo, useState, useCallback, useMemo, useRef } from 'react';
+import React, { forwardRef, memo, useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -35,6 +35,7 @@ const Textarea = forwardRef(
             labelMode,
             isRequired,
             minRows,
+            autofocus,
             ...props
         },
         ref,
@@ -45,6 +46,10 @@ const Textarea = forwardRef(
 
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Textarea.overrides);
+
+        useEffect(() => {
+            if (autofocus) textAreaRef.current.focus();
+        }, [autofocus]);
 
         const rootClassName = classnames(
             classes.root,
