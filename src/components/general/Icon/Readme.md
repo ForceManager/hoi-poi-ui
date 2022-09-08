@@ -832,6 +832,8 @@ import Icon from './IconWithTooltip';
     <Icon name="arrowRightRaw" size="raw" />
     <span> </span>
     <Icon name="arrowLeftRaw" size="raw" />
+    <span> </span>
+    <Icon name="deleteRaw" size="raw" />
 </div>;
 ```
 

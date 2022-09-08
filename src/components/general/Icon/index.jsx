@@ -392,6 +392,7 @@ import ArrowDownRaw from './rawIcons/ArrowDown';
 import ArrowLeftRaw from './rawIcons/ArrowLeft';
 import ArrowRightRaw from './rawIcons/ArrowRight';
 import SearchRaw from './rawIcons/Search';
+import DeleteRaw from './rawIcons/Delete';
 
 import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
@@ -771,6 +772,7 @@ export const ICONS = {
     arrowLeftRaw: ArrowLeftRaw,
     arrowRightRaw: ArrowRightRaw,
     searchRaw: SearchRaw,
+    deleteRaw: DeleteRaw,
 };
 
 function Icon({
