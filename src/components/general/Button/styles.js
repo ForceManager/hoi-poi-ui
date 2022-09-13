@@ -28,6 +28,7 @@ export default (theme) => ({
     content: {
         display: 'flex',
         alignItems: 'center',
+        gap: 6,
         justifyContent: 'center',
     },
     Text: {
@@ -153,14 +154,27 @@ export default (theme) => ({
         },
     },
 
+    iconOnly: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
     // Sizes
     big: {
         height: 40,
         padding: '0 17px',
+        '&$iconOnly': {
+            width: 40,
+            padding: 0,
+        },
     },
     medium: {
         height: 32,
         padding: '0 16px',
+        '&$iconOnly': {
+            width: 32,
+            padding: 0,
+        },
     },
     small: {
         height: 24,
@@ -181,15 +195,9 @@ export default (theme) => ({
                 height: 15,
             },
         },
-        '&$iconLeft': {
-            '& $icon': {
-                marginRight: 4,
-            },
-        },
-        '&$iconRight': {
-            '& $icon': {
-                marginLeft: 4,
-            },
+        '&$iconOnly': {
+            width: 24,
+            padding: 0,
         },
     },
 
@@ -201,28 +209,4 @@ export default (theme) => ({
         },
     },
     fullWidth: {},
-    iconLeft: {
-        '& $icon': {
-            marginRight: 6,
-        },
-    },
-    iconRight: {
-        '& $icon': {
-            marginLeft: 6,
-        },
-    },
-    iconOnly: {
-        '& $icon': {
-            margin: 0,
-        },
-        '&$big': {
-            padding: '0 13px',
-        },
-        '&$medium': {
-            padding: '0 8px',
-        },
-        '&$small': {
-            padding: '0 4px',
-        },
-    },
 });
