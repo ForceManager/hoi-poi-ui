@@ -181,11 +181,6 @@ export default (theme) => ({
                 height: 15,
             },
         },
-        '&$iconLeft': {
-            '& $icon': {
-                marginRight: 4,
-            },
-        },
         '&$iconRight': {
             '& $icon': {
                 marginLeft: 4,
