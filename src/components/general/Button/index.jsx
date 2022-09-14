@@ -122,9 +122,11 @@ const Button = forwardRef(
                         <Icon {...iconProps} />
                     </div>
                 )}
-                <Text className={classes.Text} {...override.Text}>
-                    {children}
-                </Text>
+                {children && (
+                    <Text className={classes.Text} {...override.Text}>
+                        {children}
+                    </Text>
+                )}
                 {icon && iconPosition === 'right' && (
                     <div className={classes.icon} {...override.icon}>
                         <Icon {...iconProps} />
