@@ -253,6 +253,7 @@ import Tasks from './icons/menu/Tasks';
 import Workspace from './icons/menu/Workspace';
 
 //Alert
+import Alert from './icons/alert/Alert';
 import AddAlert from './icons/alert/AddAlert';
 import Asterisk from './icons/alert/Asterisk';
 import Error from './icons/alert/Error';
@@ -640,6 +641,7 @@ export const ICONS = {
     tasks: Tasks,
     workspace: Workspace,
     //Alert
+    alert: Alert,
     addAlert: AddAlert,
     asterisk: Asterisk,
     error: Error,

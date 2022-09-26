@@ -408,6 +408,8 @@ Alert:
 import Icon from './IconWithTooltip';
 
 <div>
+    <Icon name="alert" />
+    <span> </span>
     <Icon name="addAlert" />
     <span> </span>
     <Icon name="asterisk" />
