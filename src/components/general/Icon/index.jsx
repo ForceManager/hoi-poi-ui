@@ -211,6 +211,7 @@ import PlusOne from './icons/social/PlusOne';
 import SupervisorAccount from './icons/social/SupervisorAccount';
 import Share from './icons/social/Share';
 import Whatsapp from './icons/social/Whatsapp';
+import WhatsappGreen from './icons/social/WhatsappGreen';
 
 //Image
 import Timer from './icons/image/Timer';
@@ -601,6 +602,7 @@ export const ICONS = {
     supervisorAccount: SupervisorAccount,
     share: Share,
     whatsapp: Whatsapp,
+    whatsappGreen: WhatsappGreen,
     //Image
     timer: Timer,
     timerOff: TimerOff,

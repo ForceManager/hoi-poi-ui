@@ -294,6 +294,8 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="whatsapp" />
     <span> </span>
+    <Icon name="whatsappGreen" />
+    <span> </span>
 </div>;
 ```
 
