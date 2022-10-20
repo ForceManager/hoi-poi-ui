@@ -14,6 +14,14 @@ Small
 <BadgeNotification size="small">12345</BadgeNotification>
 ```
 
+Tiny
+
+```jsx
+<BadgeNotification size="tiny">1</BadgeNotification>
+<span> </span>
+<BadgeNotification size="tiny">12345</BadgeNotification>
+```
+
 ### Component tree
 
 ---

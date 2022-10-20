@@ -9,6 +9,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Badge');
 
 const fontBySize = {
+    tiny: 'badges',
     small: 'badges',
     medium: 'caption',
 };
@@ -64,7 +65,7 @@ BadgeNotification.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    size: PropTypes.oneOf(['small', 'medium']),
+    size: PropTypes.oneOf(['tiny', 'small', 'medium']),
 };
 
 export default React.memo(BadgeNotification);
