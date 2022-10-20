@@ -1,7 +1,8 @@
 export default (theme) => ({
     root: {
-        display: 'inline-block',
-        textAlign: 'center',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: theme.colors.orange500,
         position: 'relative',
     },
@@ -12,16 +13,28 @@ export default (theme) => ({
     },
     medium: {
         height: 24,
-        borderRadius: 24,
+        minWidth: 24,
+        borderRadius: 12,
         '& $Text': {
             lineHeight: '24px',
         },
     },
     small: {
         height: 18,
-        borderRadius: 18,
+        minWidth: 18,
+        borderRadius: 9,
         '& $Text': {
+            padding: '0px 4px',
             lineHeight: '18px',
         },
     },
+    tiny: {
+        height: 16,
+        minWidth: 16,
+        borderRadius: 8,
+        '& $Text': {
+            padding: '0px 4px',
+            lineHeight: '16px',
+        },
+    }
 });
