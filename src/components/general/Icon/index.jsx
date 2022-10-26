@@ -382,6 +382,14 @@ import Html from './fileIcons/Html';
 import Zip from './fileIcons/Zip';
 import Link from './fileIcons/Link';
 
+//Editor
+import Bold from './icons/editor/Bold';
+import Italic from './icons/editor/Italic';
+import Underline from './icons/editor/Underline';
+import Strikethrough from './icons/editor/Strikethrough';
+import OrderedList from './icons/editor/OrderedList';
+import UnorderedList from './icons/editor/UnorderedList';
+
 // Raw icons
 import LockRaw from './rawIcons/Lock';
 import CloseRaw from './rawIcons/Close';
@@ -764,6 +772,13 @@ export const ICONS = {
     starsCircle: StarsCircle,
     send: Send,
     scheduleSend: ScheduleSend,
+    //Editor
+    bold: Bold,
+    italic: Italic,
+    underline: Underline,
+    strikethrough: Strikethrough,
+    orderedList: OrderedList,
+    unorderedList: UnorderedList,
     //Raw
     lockRaw: LockRaw,
     closeRaw: CloseRaw,

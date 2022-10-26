@@ -1,24 +1,16 @@
-import React, { Fragment, memo, useCallback, useMemo, useRef, useState } from 'react';
+import React, { memo, useCallback, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { ContentState, EditorState } from 'draft-js';
-import Editor from 'draft-js-plugins-editor';
-import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
-import {
-    BoldButton,
-    ItalicButton,
-    UnderlineButton,
-    OrderedListButton,
-    UnorderedListButton,
-} from 'draft-js-buttons';
-import { stateFromHTML } from 'draft-js-import-html';
-import { stateToHTML } from 'draft-js-export-html';
-import { useClasses } from '../../../utils/overrides';
-import InputWrapper from '../components/InputWrapper';
-import Tooltip from '../../utils/Tooltip';
+import classNames from 'classnames';
+import { BubbleMenu, EditorContent, useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Placeholder from '@tiptap/extension-placeholder';
+import Underline from '@tiptap/extension-underline';
 import Icon from '../../general/Icon';
-
+import InputWrapper from '../components/InputWrapper';
+import ToolbarItem from './components/ToolbarItem';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../utils/styles';
+
 import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'RichText');
@@ -35,168 +27,169 @@ const RichText = memo(
         onChange,
         onClick,
         onFocus,
+        overrides: overridesProp,
         placeholder,
         toolbar,
+        toolbarStyle,
         value,
-        ...props
+        ...otherProps
     }) => {
-        const editorEl = useRef(null);
-
+        const theme = useTheme();
+        const classes = useClasses(useStyles, classesProp);
+        const override = getOverrides(overridesProp, RichText.overrides);
         const [focused, setFocused] = useState(false);
-        const [editorState, setEditorState] = useState(() =>
-            EditorState.createWithContent(stateFromHTML(value)),
-        );
         const [editorContent, setEditorContent] = useState({});
 
-        const [{ plugins, InlineToolbar }] = useState(() => {
-            const inlineToolbarPlugin = createInlineToolbarPlugin();
-            const { InlineToolbar } = inlineToolbarPlugin;
-            const plugins = [inlineToolbarPlugin];
-            return {
-                plugins,
-                InlineToolbar,
-            };
-        });
-
-        const classes = useClasses(useStyles, classesProp);
-        const theme = useTheme();
-
-        const rootClassName = classnames(
-            classes.root,
-            {
-                [classes.focused]: focused,
-                [classes.error]: error,
-                [classes.isFullWidth]: isFullWidth,
-                [classes.isReadOnly]: isReadOnly,
+        const editor = useEditor({
+            editable: !isReadOnly,
+            extensions: [
+                Placeholder.configure({ placeholder: () => placeholder || null }),
+                StarterKit,
+                Underline,
+            ],
+            content: value,
+            onUpdate: ({ editor }) => {
+                const content = {
+                    text: editor.getText(),
+                    html: editor.getHTML(),
+                    json: editor.getJSON(),
+                };
+                setEditorContent(content);
+                onChange && onChange(content);
             },
-            classNameProp,
-        );
+            onFocus: ({ event }) => {
+                setFocused(true);
+                onFocus && onFocus(event);
+            },
+            onBlur: ({ event }) => {
+                setFocused(false);
+                onBlur && onBlur(event);
+            },
+        });
 
         const handleClear = useCallback(
             (e) => {
                 e.stopPropagation();
-                setEditorState((editorState) => {
-                    let newState = EditorState.push(
-                        editorState,
-                        ContentState.createFromText(''),
-                        'remove-range',
-                    );
-                    newState = EditorState.moveFocusToEnd(newState);
-                    setFocused(true);
-                    return newState;
-                });
-                setEditorContent({});
+                editor.commands.clearContent(true);
+                editor.commands.focus();
             },
-            [setEditorContent, setEditorState, setFocused],
+            [editor],
         );
 
         const handleClick = useCallback(
             (e) => {
                 if (!focused && !isReadOnly) {
-                    editorEl.current.focus();
+                    editor.commands.focus();
                     setFocused(true);
                 }
                 onClick && onClick(e);
             },
-            [focused, isReadOnly, onClick],
+            [editor, focused, isReadOnly, onClick],
         );
 
-        const handleOnBlur = useCallback(
-            (e) => {
-                setFocused(false);
-                onBlur && onBlur(e);
-            },
-            [onBlur],
-        );
-
-        const handleOnChange = useCallback(
-            (e) => {
-                const rawContent = e.getCurrentContent();
-
-                const content = {
-                    html: stateToHTML(rawContent),
-                    text: rawContent.getPlainText(),
-                };
-
-                setEditorState(e);
-                setEditorContent(content);
-                onChange(content);
-            },
-            [onChange, setEditorContent, setEditorState],
-        );
-
-        const handleOnFocus = useCallback(
-            (e) => {
-                setFocused(true);
-                onFocus && onFocus(e);
-            },
-            [onFocus],
-        );
-
-        const getToolbarItem = (externalProps, item) =>
-            ({
-                b: <BoldButton {...externalProps} />,
-                i: <ItalicButton {...externalProps} />,
-                u: <UnderlineButton {...externalProps} />,
-                ol: <OrderedListButton {...externalProps} />,
-                ul: <UnorderedListButton {...externalProps} />,
-            }[item]);
-
-        const getToolbar = (externalProps, toolbar) =>
-            toolbar.map(({ hint, item }, i) => (
-                <Tooltip placement="top" content={<span>{hint}</span>} key={i}>
-                    {/* SPAN needed to make the tooltip work */}
-                    <span>{getToolbarItem(externalProps, item)}</span>
-                </Tooltip>
-            ));
-
-        let inputProps = useMemo(() => {
-            return {
-                className: classes.editor,
-                editorState: editorState,
-                onBlur: handleOnBlur,
-                onChange: handleOnChange,
-                onFocus: handleOnFocus,
-                placeholder: placeholder,
-                plugins: plugins,
-                readOnly: isReadOnly,
+        const getToolbar = useMemo(() => {
+            const toolbarItemClassNames = {
+                floating: classes.bubbleMenuItem,
             };
-        }, [
-            classes.editor,
-            editorState,
-            handleOnBlur,
-            handleOnChange,
-            handleOnFocus,
-            isReadOnly,
-            placeholder,
-            plugins,
-        ]);
+            const toolbarItems = toolbar.map((item, index) => (
+                <ToolbarItem
+                    className={toolbarItemClassNames[toolbarStyle]}
+                    editor={editor}
+                    key={index}
+                    {...item}
+                />
+            ));
+            switch (true) {
+                case editor && toolbarStyle === 'floating':
+                    return (
+                        <BubbleMenu
+                            tippyOptions={{ duration: 100 }}
+                            editor={editor}
+                            className={classes.bubbleMenu}
+                        >
+                            {toolbarItems}
+                        </BubbleMenu>
+                    );
+                default:
+                    return null;
+            }
+        }, [editor, toolbar, toolbarStyle, classes]);
 
-        return (
-            <InputWrapper {...props} className={rootClassName} error={error} info={info}>
-                <div className={classes.editorWrapper} onClick={handleClick}>
-                    <Editor {...inputProps} ref={editorEl} />
-                    <InlineToolbar>
-                        {(externalProps) => (
-                            <Fragment>{getToolbar(externalProps, toolbar)}</Fragment>
-                        )}
-                    </InlineToolbar>
-                    {editorContent.text && !isReadOnly && (
+        const getIcons = useMemo(() => {
+            switch (true) {
+                case editorContent?.text && !isReadOnly:
+                    return (
                         <Icon
                             name="closeSmall"
                             size="large"
-                            className={classes.closeIcon}
+                            className={classes.actionIcon}
                             onClick={handleClear}
                         />
-                    )}
-                    {isReadOnly && (
+                    );
+                case isReadOnly:
+                    return (
                         <Icon
                             name="lockOutline"
                             size="large"
-                            className={classes.closeIcon}
+                            className={classes.actionIcon}
                             color={theme.colors.neutral600}
                         />
-                    )}
+                    );
+                default:
+                    return null;
+            }
+        }, [
+            classes.actionIcon,
+            editorContent?.text,
+            handleClear,
+            isReadOnly,
+            theme.colors.neutral600,
+        ]);
+
+        const inputWrapperProps = useMemo(
+            () => ({
+                className: classNames(
+                    classes.root,
+                    {
+                        [classes.focused]: focused,
+                        [classes.error]: error,
+                        [classes.isFullWidth]: isFullWidth,
+                        [classes.isReadOnly]: isReadOnly,
+                    },
+                    classNameProp,
+                ),
+                error,
+                info,
+                ...otherProps,
+                ...override.root,
+            }),
+            [
+                classNameProp,
+                classes,
+                error,
+                focused,
+                info,
+                isFullWidth,
+                isReadOnly,
+                otherProps,
+                override,
+            ],
+        );
+
+        const editorProps = useMemo(
+            () => ({
+                editor,
+                className: classes.editor,
+            }),
+            [editor, classes.editor],
+        );
+
+        return (
+            <InputWrapper {...inputWrapperProps}>
+                <div className={classes.editorWrapper} onClick={handleClick}>
+                    <EditorContent {...editorProps} />
+                    {getToolbar}
+                    {getIcons}
                 </div>
             </InputWrapper>
         );
@@ -225,14 +218,19 @@ RichText.defaultProps = {
             item: 'u',
         },
         {
-            hint: 'Ordered List',
-            item: 'ol',
+            hint: 'Strike',
+            item: 'del',
         },
         {
             hint: 'Unordered List',
             item: 'ul',
         },
+        {
+            hint: 'Ordered List',
+            item: 'ol',
+        },
     ],
+    toolbarStyle: 'floating',
     value: '',
 };
 
@@ -252,9 +250,10 @@ RichText.propTypes = {
     toolbar: PropTypes.arrayOf(
         PropTypes.shape({
             hint: PropTypes.string,
-            item: PropTypes.oneOf(['b', 'i', 'u', 'ol', 'ul']),
+            item: PropTypes.oneOf(['b', 'i', 'u', 'ol', 'ul', 'del']),
         }),
     ),
+    toolbarStyle: PropTypes.oneOf(['floating', 'fixed']),
     /** An HTML string */
     value: PropTypes.string,
 };
