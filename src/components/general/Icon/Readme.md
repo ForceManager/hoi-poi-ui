@@ -915,6 +915,29 @@ import Icon from './IconWithTooltip';
 </div>;
 ```
 
+Editor Icons:
+
+```jsx
+// Using IconWithTooltip here just for styleguide purpose,
+// import the normal hoi-poi-ui's Icon component in your projects
+import Icon from './IconWithTooltip';
+
+<div>
+    <Icon name="bold" />
+    <span> </span>
+    <Icon name="italic" />
+    <span> </span>
+    <Icon name="underline" />
+    <span> </span>
+    <Icon name="strikethrough" />
+    <span> </span>
+    <Icon name="orderedList" />
+    <span> </span>
+    <Icon name="unorderedList" />
+    <span> </span>
+</div>;
+```
+
 Sizes:
 
 ```jsx
