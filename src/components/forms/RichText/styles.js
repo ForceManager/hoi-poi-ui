@@ -1,88 +1,26 @@
 export default (theme) => ({
     root: {
-        outline: 'none',
-        width: '100%',
-        height: '100%',
-        cursor: 'text',
-        '& .DraftEditor-root': {
-            ...theme.typography.body,
-            ...theme.utils.selection,
-            color: theme.colors.neutral900,
-            cursor: 'text',
+        '& .ProseMirror': {
             width: '100%',
-        },
-        '& .DraftEditor-editorContainer': {
-            height: '100%',
-        },
-        '& .public-DraftEditor-content': {
             height: '100%',
             padding: '10px 36px 10px 12px',
-        },
-        '& [class^="draftJsToolbar__toolbar"]': {
-            position: 'absolute',
-            zIndex: 1,
-            padding: '6px',
-            backgroundColor: theme.colors.neutral800,
-            borderRadius: '2px',
-            display: 'flex',
-            '& > span:not(:first-child)': {
-                marginLeft: '6px',
+            boxSizing: 'border-box',
+            '& p, & ol, & ul': {
+                margin: 0,
             },
         },
-        '& [class^="draftJsToolbar__toolbar"]::after': {
-            content: '""',
-            display: 'block',
-            width: 0,
-            height: 0,
-            borderStyle: 'solid',
-            borderWidth: '4px 4px 0 4px',
-            borderColor: `${theme.colors.neutral800} transparent transparent`,
-            position: 'absolute',
-            bottom: '-4px',
-            left: '50%',
-            marginLeft: '-4px',
+        '& .ProseMirror:focus': {
+            outline: 'none !important',
         },
-        '& [class^="draftJsToolbar__buttonWrapper"]': {
-            width: '20px',
-            height: '20px',
-        },
-        '& [class^="draftJsToolbar__button__"]': {
-            appearance: 'none',
-            backgroundColor: 'transparent',
-            border: 'none',
-            borderRadius: '2px',
-            cursor: 'pointer',
-            fontSize: '16px',
-            padding: '2px',
-            transition: 'all .2s ease',
-            '&:hover': {
-                backgroundColor: theme.colors.neutral700,
-            },
-            '& svg': {
-                fill: theme.colors.neutralBase,
-                display: 'block',
-                width: '1em',
-                height: '1em',
-            },
-        },
-        '& .public-DraftEditorPlaceholder-root': {
-            position: 'absolute',
-            top: '10px',
-            left: '12px',
-            right: '12px',
-            pointerEvents: 'none',
+        '& .ProseMirror:not(:focus) p.is-editor-empty:first-child::before': {
+            content: 'attr(data-placeholder)',
             color: theme.colors.neutral600,
         },
     },
-    closeIcon: {
+    actionIcon: {
         position: 'absolute',
-        top: '9px',
-        right: '9px',
-    },
-    lockedIcon: {
-        position: 'absolute',
-        top: '9px',
-        right: '9px',
+        top: 9,
+        right: 9,
     },
     editorWrapper: {
         position: 'relative',
@@ -92,10 +30,62 @@ export default (theme) => ({
         alignItems: 'stretch',
         boxSizing: 'border-box',
         padding: 0,
-        borderRadius: '4px',
+        borderRadius: 4,
         border: '1px solid transparent',
         backgroundColor: theme.colors.neutral200,
         transition: 'all 0.15s ease',
+    },
+    editor: {
+        ...theme.typography.body,
+        ...theme.utils.selection,
+        color: theme.colors.neutral900,
+        cursor: 'text',
+        width: '100%',
+        height: '100%',
+    },
+    bubbleMenu: {
+        position: 'relative',
+        padding: 6,
+        backgroundColor: theme.colors.neutral800,
+        borderRadius: 2,
+        display: 'flex',
+        flexFlow: 'row nowrap',
+        gap: 6,
+        '&::after': {
+            content: '""',
+            display: 'block',
+            width: 0,
+            height: 0,
+            borderStyle: 'solid',
+            borderWidth: '4px 4px 0 4px',
+            borderColor: `${theme.colors.neutral800} transparent transparent`,
+            position: 'absolute',
+            bottom: -4,
+            left: '50%',
+            marginLeft: -4,
+        },
+    },
+    bubbleMenuItem: {
+        boxSizing: 'border-box',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+        border: 'none',
+        borderRadius: 2,
+        padding: 2,
+        cursor: 'pointer',
+        transition: 'all .2s ease',
+        width: 20,
+        height: 20,
+        fontSize: 16,
+        '& svg': {
+            width: '1em !important',
+            height: '1em !important',
+        },
+        '&:hover': {
+            backgroundColor: theme.colors.neutral700,
+        },
     },
     error: {
         '& $editorWrapper': {
@@ -124,7 +114,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutralBase,
             borderColor: `${theme.colors.neutral500}`,
         },
-        '& .DraftEditor-root': {
+        '& $editor': {
             color: theme.colors.neutral700,
         },
     },
