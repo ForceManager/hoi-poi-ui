@@ -24,6 +24,7 @@ function File({
     crop,
     cropTooltip,
     index,
+    id,
     loading,
     onRemove,
     onCrop,
@@ -37,7 +38,13 @@ function File({
     // Overrides
     const override = getOverrides(overridesProp, File.overrides);
 
-    const handleOnRemove = useCallback(() => onRemove(file), [file, onRemove]);
+    const handleOnRemove = useCallback(() => {
+        if (id) {
+            onRemove({ id, file });
+        } else {
+            onRemove(file);
+        }
+    }, [file, onRemove, id]);
 
     const handleOnCrop = useCallback(() => {
         if (isUrl) {
@@ -45,13 +52,13 @@ function File({
                 .then((res) => res.blob())
                 .then((blob) => {
                     blob.name = file.split('/').pop();
-                    onCrop(blob, index);
+                    onCrop(blob, index, id);
                 })
                 .catch(console.error);
         } else {
-            onCrop(file, index);
+            onCrop(file, index, id);
         }
-    }, [file, index, isUrl, onCrop]);
+    }, [file, index, id, isUrl, onCrop]);
 
     const renderIcon = useMemo(() => {
         if (error) return <Icon name="errorOutline" color={theme.colors.red500} />;
