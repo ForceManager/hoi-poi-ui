@@ -99,8 +99,8 @@ function FilePicker({
         [cropAspect, cropImages, files, filesData, onCrop, onDrop],
     );
 
-    const handleOnCrop = useCallback((file, index) => {
-        setCrop({ isOpen: true, file, index });
+    const handleOnCrop = useCallback((file, index, id) => {
+        setCrop({ isOpen: true, file, index, id });
     }, []);
 
     const handleOnCancelCrop = useCallback(() => {
@@ -109,7 +109,8 @@ function FilePicker({
 
     const handleOnAcceptCrop = useCallback(
         (file) => {
-            crop.index === -1 ? onDrop && onDrop([file]) : onCrop && onCrop(file, crop.index);
+            const newFile = crop.id ? { id: crop.id, file } : file;
+            crop.index === -1 ? onDrop && onDrop([file]) : onCrop && onCrop(newFile, crop.index);
             setCrop({ ...crop, isOpen: false });
         },
         [crop, onCrop, onDrop],
@@ -164,26 +165,34 @@ function FilePicker({
 
     const renderFiles = useMemo(() => {
         if (!files.length) return null;
+
         const filesList = files.map((file, i) => {
-            const isUrl = typeof file === 'string';
+            let newFile = file;
+            let fileId = '';
+            if (file.file) newFile = file.file;
+            // if there is file.file then file.id will be used to keep tracking of the file
+            // and the file will be returned with the same format in onRemove and onCrop {id, file}
+            if (file.id && file.file) fileId = file.id;
+            const isUrl = typeof newFile === 'string';
             const isImage =
-                (!isUrl && imageTypes.includes(file.type)) ||
-                (isUrl && imageExtensions.includes(file.split('.').pop()));
+                (!isUrl && imageTypes.includes(newFile.type)) ||
+                (isUrl && imageExtensions.includes(newFile.split('.').pop()));
             const preview = previewImages && isImage;
             const crop = cropImages && isImage;
-            const data = filesData?.[file.id] || {};
+            const data = filesData?.[newFile.id] || {};
 
             return (
                 <File
                     key={i}
                     index={i}
+                    id={fileId}
                     classes={classesProp}
                     crop={crop}
                     cropTooltip={cropTooltip}
                     loading={data.loading}
                     error={data.error}
                     progress={data.progress}
-                    file={file}
+                    file={newFile}
                     isUrl={isUrl}
                     onCrop={handleOnCrop}
                     onRemove={onRemove}
@@ -207,22 +216,24 @@ function FilePicker({
         previewImages,
     ]);
 
-    const showDragzone = useMemo(() => !(maxFiles && files.length === maxFiles), [
-        files.length,
-        maxFiles,
-    ]);
+    const showDragzone = useMemo(
+        () => !(maxFiles && files.length === maxFiles),
+        [files.length, maxFiles],
+    );
 
     const renderSingleImagePreview = useMemo(() => {
         if (maxFiles !== 1 || !singleImagePreview || showDragzone) return;
-        const isUrl = typeof files[0] === 'string';
+        let newFile = null;
+        if (files[0]?.file) newFile = files[0]?.file;
+        else newFile = files[0];
+
+        const isUrl = typeof newFile === 'string';
 
         return (
             <div className={classes.singleImagePreview}>
                 <span
                     style={{
-                        backgroundImage: `url("${
-                            isUrl ? files[0] : URL.createObjectURL(files[0])
-                        }")`,
+                        backgroundImage: `url("${isUrl ? newFile : URL.createObjectURL(newFile)}")`,
                     }}
                 />
             </div>
@@ -317,7 +328,15 @@ FilePicker.propTypes = {
     disabled: PropTypes.bool,
     /** Error will be displayed below the component with style changes */
     error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-    files: PropTypes.array,
+    files: PropTypes.arrayOf(
+        PropTypes.oneOfType([
+            PropTypes.object,
+            PropTypes.shape({
+                id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+                file: PropTypes.object,
+            }),
+        ]),
+    ),
     filesData: PropTypes.object,
     /** Info popover */
     hint: PropTypes.string,

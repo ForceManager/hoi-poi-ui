@@ -266,6 +266,100 @@ const onRemove = (deletedFile) => {
 </div>;
 ```
 
+Preloaded Image from file with with id:
+
+```jsx
+import { useState, useEffect, useRef } from 'react';
+import Loader from '../../general/Loader';
+
+const images = [
+    {
+        id: '15',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvCRxRlrCGOjsiBnFL_Q6iIc4ylwlD9wPXoD-xnf6tp8gPsz6ifRrQD6cuzYNF6ipKsZc&usqp=CAU',
+    },
+    {
+        id: '72',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg/260px-1794_Samuel_Dunn_Wall_Map_of_the_World_in_Hemispheres_-_Geographicus_-_World2-dunn-1794.jpg',
+    },
+    {
+        id: '134',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzhniiUEqnWVhqx-DGK8oj4siB2w2qkquhWSkd6DqM-z5sE4g2_DMW-t_EGOMVowhSkI8&usqp=CAU',
+    },
+];
+
+const [state, setState] = useState([]);
+const [isLoading, setIsLoading] = useState(false);
+const isFirstRender = useRef(true);
+
+useEffect(() => {
+    if (isFirstRender.current) {
+        isFirstRender.current = false;
+
+        setIsLoading(true);
+        const promises = images.map((current, index) => {
+            return fetch(current.url)
+                .then((res) => res.blob())
+                .then((blob) => {
+                    const file = new File([blob], `testImage_${index}`, {
+                        type: 'image/png',
+                    });
+                    return { id: current.id, file: file };
+                });
+        });
+
+        Promise.all(promises)
+            .then((result) => setState(result))
+            .finally(() => setIsLoading(false));
+    }
+}, []);
+
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onCrop = (file, index) => {
+    const files = [...state];
+    files[index] = file;
+    setState(files);
+};
+
+const onRemove = (deletedFile) => {
+    setState(state.filter((file) => file.id !== deletedFile.id));
+};
+
+<div>
+    {isLoading && (
+        <div
+            style={{
+                width: '100%',
+                height: '240px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <Loader />
+        </div>
+    )}
+    {!isLoading && (
+        <FilePicker
+            label="File"
+            title="Drop files here"
+            subtitle="Logo image shouyld be at least 609x81px"
+            buttonLabel="Select file"
+            onCrop={onCrop}
+            onDrop={onDrop}
+            onRemove={onRemove}
+            files={state}
+            maxFiles={1}
+            previewImages
+            singleImagePreview
+            cropImages
+        />
+    )}
+</div>;
+```
+
 Upload progress:
 
 ```jsx

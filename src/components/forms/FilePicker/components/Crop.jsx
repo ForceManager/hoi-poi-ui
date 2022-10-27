@@ -39,8 +39,16 @@ function Crop({
         canvas.width = crop.width;
         canvas.height = crop.height;
         const ctx = canvas.getContext('2d');
-        const fileName = file.name.substr(0, file.name.lastIndexOf('.'));
-        const fileExt = file.name.split('.').pop();
+        const hasExtension = file.name.split('.').length > 1;
+        let fileName = '';
+        let fileExt = '';
+
+        if (hasExtension) {
+            fileName = file.name.substr(0, file.name.lastIndexOf('.'));
+            fileExt = file.name.split('.').pop();
+        } else {
+            fileName = file.name;
+        }
 
         ctx.drawImage(
             imgRef.current,
@@ -56,7 +64,16 @@ function Crop({
 
         canvas.toBlob(
             (blob) => {
-                blob.name = `${fileName}_crop.${fileExt}`;
+                let newFileName = '';
+                if (hasExtension) {
+                    newFileName = fileName.includes('_crop')
+                        ? `${fileName}.${fileExt}`
+                        : `${fileName}_crop.${fileExt}`;
+                } else {
+                    newFileName = fileName.includes('_crop') ? `${fileName}` : `${fileName}_crop`;
+                }
+
+                blob.name = newFileName;
                 onAccept(blob);
             },
             file.type,
