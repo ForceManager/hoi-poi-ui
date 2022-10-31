@@ -59,7 +59,7 @@ const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
     return (
         <Tooltip {...tooltipProps}>
             <span className={className}>
-                <Icon {...iconProps} className="ojete" />
+                <Icon {...iconProps} />
             </span>
         </Tooltip>
     );
