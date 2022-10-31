@@ -25,8 +25,8 @@ export default (theme) => ({
     editorWrapper: {
         position: 'relative',
         display: 'flex',
+        flexFlow: 'column nowrap',
         width: '100%',
-        minHeight: '80px',
         alignItems: 'stretch',
         boxSizing: 'border-box',
         padding: 0,
@@ -41,9 +41,29 @@ export default (theme) => ({
         color: theme.colors.neutral900,
         cursor: 'text',
         width: '100%',
-        height: '100%',
+        minHeight: 80,
     },
-    bubbleMenu: {
+    toolbar: {
+        backgroundColor: theme.colors.neutralBase,
+        display: 'flex',
+        flexFlow: 'row nowrap',
+        alignItems: 'center',
+        gap: 4,
+        padding: 8,
+    },
+    toolbarDivider: {
+        width: 1,
+        height: 20,
+        backgroundColor: theme.colors.neutral700,
+        margin: '0 2px',
+    },
+    toolbarCustomActions:{
+        display: 'flex',
+        flexFlow: 'row nowrap',
+        marginLeft: 'auto',
+        gap: 8,
+    },
+    floatingToolbar: {
         position: 'relative',
         padding: 6,
         backgroundColor: theme.colors.neutral800,
@@ -65,7 +85,7 @@ export default (theme) => ({
             marginLeft: -4,
         },
     },
-    bubbleMenuItem: {
+    toolbarItem: {
         boxSizing: 'border-box',
         display: 'inline-flex',
         alignItems: 'center',
@@ -76,16 +96,45 @@ export default (theme) => ({
         padding: 2,
         cursor: 'pointer',
         transition: 'all .2s ease',
-        width: 20,
-        height: 20,
-        fontSize: 16,
-        '& svg': {
+        width: 18,
+        height: 18,
+        fontSize: 14,
+        '& [class*="Icon"], & svg': {
+            width: '1em !important',
+            height: '1em !important',
+        },
+        '&:hover': {
+            backgroundColor: theme.colors.neutral400,
+        },
+    },
+    floatingToolbarItem: {
+        boxSizing: 'border-box',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+        border: 'none',
+        borderRadius: 2,
+        padding: 2,
+        cursor: 'pointer',
+        transition: 'all .2s ease',
+        width: 18,
+        height: 18,
+        fontSize: 14,
+        '& [class*="Icon"], & svg': {
             width: '1em !important',
             height: '1em !important',
         },
         '&:hover': {
             backgroundColor: theme.colors.neutral700,
         },
+    },
+    mention: {
+        display: 'inline-block',
+        backgroundColor: theme.colors.blue500,
+        color: theme.colors.neutralBase,
+        padding: '0 4px',
+        borderRadius: 10,
     },
     error: {
         '& $editorWrapper': {
@@ -116,6 +165,11 @@ export default (theme) => ({
         },
         '& $editor': {
             color: theme.colors.neutral700,
+        },
+    },
+    hasFixedToolbar: {
+        '& $editorWrapper': {
+            border: 'none',
         },
     },
 });

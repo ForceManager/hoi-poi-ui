@@ -389,6 +389,7 @@ import Underline from './icons/editor/Underline';
 import Strikethrough from './icons/editor/Strikethrough';
 import OrderedList from './icons/editor/OrderedList';
 import UnorderedList from './icons/editor/UnorderedList';
+import Mention from './icons/editor/Mention';
 
 // Raw icons
 import LockRaw from './rawIcons/Lock';
@@ -779,6 +780,7 @@ export const ICONS = {
     strikethrough: Strikethrough,
     orderedList: OrderedList,
     unorderedList: UnorderedList,
+    mention: Mention,
     //Raw
     lockRaw: LockRaw,
     closeRaw: CloseRaw,

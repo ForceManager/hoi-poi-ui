@@ -1,11 +1,8 @@
 import React, { memo, useMemo } from 'react';
 import Tooltip from '../../../utils/Tooltip';
 import Icon from '../../../general/Icon';
-import { useTheme } from '../../../../utils/styles';
 
-const ToolbarItem = memo(({ className, item, hint, editor, key }) => {
-    const theme = useTheme();
-
+const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
     const tooltipProps = useMemo(
         () => ({
             placement: 'top',
@@ -16,52 +13,53 @@ const ToolbarItem = memo(({ className, item, hint, editor, key }) => {
     );
 
     const iconProps = useMemo(() => {
-        const propsObj = {
-            color: theme.colors.neutralBase,
+        let name, onClick;
+
+        const commonProps = {
+            color,
         };
+
         switch (item) {
             case 'b':
-                propsObj.name = 'bold';
-                propsObj.onClick = () => editor.chain().focus().toggleBold().run();
-                propsObj.className = editor.isActive('bold') ? 'is-active' : '';
+                name = 'bold';
+                onClick = () => editor.chain().focus().toggleBold().run();
                 break;
             case 'i':
-                propsObj.name = 'italic';
-                propsObj.onClick = () => editor.chain().focus().toggleItalic().run();
-                propsObj.className = editor.isActive('italic') ? 'is-active' : '';
+                name = 'italic';
+                onClick = () => editor.chain().focus().toggleItalic().run();
                 break;
             case 'u':
-                propsObj.name = 'underline';
-                propsObj.onClick = () => editor.chain().focus().toggleUnderline().run();
-                propsObj.className = editor.isActive('underline') ? 'is-active' : '';
+                name = 'underline';
+                onClick = () => editor.chain().focus().toggleUnderline().run();
                 break;
             case 'del':
-                propsObj.name = 'strikethrough';
-                propsObj.onClick = () => editor.chain().focus().toggleStrike().run();
-                propsObj.className = editor.isActive('strike') ? 'is-active' : '';
+                name = 'strikethrough';
+                onClick = () => editor.chain().focus().toggleStrike().run();
                 break;
             case 'ol':
-                propsObj.name = 'orderedList';
-                propsObj.onClick = () => editor.chain().focus().toggleOrderedList().run();
-                propsObj.className = editor.isActive('orderedList') ? 'is-active' : '';
+                name = 'orderedList';
+                onClick = () => editor.chain().focus().toggleOrderedList().run();
                 break;
             case 'ul':
-                propsObj.name = 'unorderedList';
-                propsObj.onClick = () => editor.chain().focus().toggleBulletList().run();
-                propsObj.className = editor.isActive('bulletList') ? 'is-active' : '';
+                name = 'unorderedList';
+                onClick = () => editor.chain().focus().toggleBulletList().run();
+                break;
+            case 'mention':
+                name = 'mention';
+                onClick = () => editor.chain().insertContent('@').run();
                 break;
             default:
                 break;
         }
-        return propsObj;
-    }, [editor, item, theme]);
+        return { name, onClick, className, ...commonProps };
+    }, [className, color, editor, item]);
 
     if (!editor) return null;
 
     return (
         <Tooltip {...tooltipProps}>
             <span className={className}>
-                <Icon {...iconProps} />
+                <Icon {...iconProps} className="ojete" />
             </span>
         </Tooltip>
     );
