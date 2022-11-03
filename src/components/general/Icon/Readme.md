@@ -935,6 +935,8 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="unorderedList" />
     <span> </span>
+    <Icon name="mention" />
+    <span> </span>
 </div>;
 ```
 

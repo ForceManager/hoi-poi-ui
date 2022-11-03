@@ -2397,6 +2397,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extension-mention@npm:^2.0.0-beta.199":
+  version: 2.0.0-beta.199
+  resolution: "@tiptap/extension-mention@npm:2.0.0-beta.199"
+  dependencies:
+    prosemirror-model: ^1.18.1
+    prosemirror-state: ^1.4.1
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.193
+    "@tiptap/suggestion": ^2.0.0-beta.193
+  checksum: e15f9fb6804f8b58dc060e5000c59d10fdfbbec8fbaee28d9339a06e16f3373f605782b46881a44d1bc7e155f60f75571417ad9765def2101ba895e717d7cd0b
+  languageName: node
+  linkType: hard
+
 "@tiptap/extension-ordered-list@npm:^2.0.0-beta.199":
   version: 2.0.0-beta.199
   resolution: "@tiptap/extension-ordered-list@npm:2.0.0-beta.199"
@@ -2494,6 +2507,19 @@ __metadata:
     "@tiptap/extension-strike": ^2.0.0-beta.199
     "@tiptap/extension-text": ^2.0.0-beta.199
   checksum: 4a8c8d4488ea628bc75187c8bbdb8b97b70ebdab73ea759a68b9c289f728e47b86130ed21e918e1a77ad55af61b5601be145d7c8cbd869040264155179ee32c8
+  languageName: node
+  linkType: hard
+
+"@tiptap/suggestion@npm:^2.0.0-beta.199":
+  version: 2.0.0-beta.199
+  resolution: "@tiptap/suggestion@npm:2.0.0-beta.199"
+  dependencies:
+    prosemirror-model: ^1.18.1
+    prosemirror-state: ^1.4.1
+    prosemirror-view: ^1.28.2
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.193
+  checksum: 0cc0543eff9b570efd2dc304dd50b08156224302d58ed8c9720e10eeae09b77bebc91d195924a3c1a915e19faf8ac5b38e773d17a95f10cb23ce2c7eaf7074ee
   languageName: node
   linkType: hard
 
@@ -4812,9 +4838,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001125, caniuse-lite@npm:^1.0.30001332":
-  version: 1.0.30001336
-  resolution: "caniuse-lite@npm:1.0.30001336"
-  checksum: 05577b295f2c3780f4a2c814c4255b8b73353ff5a7238f5f97fe3b2bb61b78d77be7df52e9646b829bbde8f0efbfbad971324001086f9069ec144e4fc88ed5b8
+  version: 1.0.30001426
+  resolution: "caniuse-lite@npm:1.0.30001426"
+  checksum: e8b9c14ee33410d95b27da619f50648f373a7be712748970643f25d95fa80687b4755ba365f34a7a1cea00f9137193943aa6e742eedf0a4d7857f83809f49435
   languageName: node
   linkType: hard
 
@@ -8352,10 +8378,12 @@ __metadata:
     "@babel/preset-env": ^7.15.8
     "@babel/preset-react": ^7.14.5
     "@babel/runtime": ^7.15.4
+    "@tiptap/extension-mention": ^2.0.0-beta.199
     "@tiptap/extension-placeholder": ^2.0.0-beta.199
     "@tiptap/extension-underline": ^2.0.0-beta.199
     "@tiptap/react": ^2.0.0-beta.199
     "@tiptap/starter-kit": ^2.0.0-beta.199
+    "@tiptap/suggestion": ^2.0.0-beta.199
     ace-builds: ^1.4.13
     acorn: 8.5.0
     babel-eslint: 10.1.0
@@ -8427,6 +8455,7 @@ __metadata:
     rollup-plugin-replace: ^2.2.0
     rollup-plugin-size-snapshot: ^0.12.0
     rollup-plugin-terser: ^7.0.2
+    tippy.js: ^6.3.7
     webpack: 5.13.0
     webpack-cli: ^4.3.1
   peerDependencies:
