@@ -17,7 +17,8 @@ export default (theme) => {
             alignItems: 'center',
             gap: 8,
             cursor: 'pointer',
-            padding: 8,
+            padding: '4px 8px',
+            borderRadius: 4,
         },
         selected: {
             backgroundColor: theme.colors.neutral200,

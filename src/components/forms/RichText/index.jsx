@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useMemo, useState, useRef } from 'react';
+import React, { memo, useCallback, useMemo, useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { BubbleMenu, EditorContent, useEditor, ReactRenderer } from '@tiptap/react';
@@ -30,6 +30,7 @@ const RichText = memo(
         onChange,
         onClick,
         onFocus,
+        onSubmit,
         overrides: overridesProp,
         placeholder,
         toolbar,
@@ -37,6 +38,7 @@ const RichText = memo(
         value,
         mention,
         customActions,
+        compactMode,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -44,7 +46,6 @@ const RichText = memo(
         const override = getOverrides(overridesProp, RichText.overrides);
         const [focused, setFocused] = useState(false);
         const [editorContent, setEditorContent] = useState({});
-        const popup = useRef(null);
 
         const getExtensions = useMemo(() => {
             const extensions = [
@@ -60,12 +61,15 @@ const RichText = memo(
             ) {
                 const suggestionConfig = {
                     items: ({ query }) => mention.fetchSuggestions(query),
+                    allowedPrefixes: [' '],
+                    char: '@',
                     render: () => {
                         let reactRenderer;
                         let popup;
                         return {
                             onStart: (props) => {
                                 props.texts = mention.texts || {};
+
                                 reactRenderer = new ReactRenderer(MentionList, {
                                     props,
                                     editor: props.editor,
@@ -111,19 +115,16 @@ const RichText = memo(
                 };
                 extensions.push(
                     Mention.configure({
-                        HTMLAttributes: {
-                            class: classes.mention,
-                        },
                         suggestion: suggestionConfig,
-                        renderLabel: ({ options, node }) => {
-                            return `${options.suggestion.char}${node.attrs.label}`;
+                        renderLabel: ({ node }) => {
+                            return `${node.attrs.label}`;
                         },
                     }),
                 );
             }
 
             return extensions;
-        }, [mention, placeholder, classes.mention]);
+        }, [mention, placeholder]);
 
         const editor = useEditor({
             editable: !isReadOnly,
@@ -170,23 +171,24 @@ const RichText = memo(
 
         const getToolbar = useMemo(() => {
             const toolbarItemProps = {
+                fixed: { className: classes.toolbarItem, color: theme.colors.neutral700 },
                 floating: {
-                    className: classes.floatingToolbarItem,
+                    className: classNames(classes.toolbarItem, classes.floatingToolbarItem),
                     color: theme.colors.neutralBase,
                 },
-                fixed: { className: classes.toolbarItem, color: theme.colors.neutral700 },
+                compact: {
+                    className: classNames(classes.toolbarItem, classes.compactToolbarItem),
+                    color: theme.colors.neutral700,
+                },
             };
 
+            const toolbarItemStyle = toolbarItemProps[toolbarStyle];
+
             const toolbarItems = toolbar.map((item, index) => (
-                <ToolbarItem
-                    editor={editor}
-                    key={index}
-                    {...item}
-                    {...toolbarItemProps[toolbarStyle]}
-                />
+                <ToolbarItem editor={editor} key={index} {...item} {...toolbarItemStyle} />
             ));
 
-            if (mention) {
+            if (mention && toolbarStyle === 'fixed') {
                 toolbarItems.push(<span className={classes.toolbarDivider}></span>);
                 toolbarItems.push(
                     <ToolbarItem
@@ -194,12 +196,48 @@ const RichText = memo(
                         key="mention"
                         hint={mention.tooltip}
                         item="mention"
-                        {...toolbarItemProps[toolbarStyle]}
+                        {...toolbarItemStyle}
                     />,
                 );
             }
 
             switch (true) {
+                case compactMode:
+                    return (
+                        <Fragment>
+                            <BubbleMenu
+                                tippyOptions={{ duration: 100 }}
+                                editor={editor}
+                                className={classes.floatingToolbar}
+                            >
+                                {toolbarItems}
+                            </BubbleMenu>
+                            <div className={classes.toolbar}>
+                                {mention && (
+                                    <Fragment>
+                                        <ToolbarItem
+                                            editor={editor}
+                                            key="mention"
+                                            hint={mention.tooltip}
+                                            item="mention"
+                                            {...toolbarItemProps.compact}
+                                        />
+                                        <span className={classes.toolbarDivider}></span>
+                                        <Icon
+                                            name="send"
+                                            size="large"
+                                            color={
+                                                !!editorContent?.text?.length
+                                                    ? theme.colors.orange500
+                                                    : theme.colors.neutral700
+                                            }
+                                            onClick={() => onSubmit && onSubmit()}
+                                        />
+                                    </Fragment>
+                                )}
+                            </div>
+                        </Fragment>
+                    );
                 case editor && toolbarStyle === 'floating':
                     return (
                         <BubbleMenu
@@ -222,11 +260,22 @@ const RichText = memo(
                 default:
                     return null;
             }
-        }, [editor, toolbar, toolbarStyle, classes, theme, mention, customActions]);
+        }, [
+            classes,
+            theme,
+            toolbarStyle,
+            toolbar,
+            mention,
+            editor,
+            editorContent,
+            compactMode,
+            customActions,
+            onSubmit,
+        ]);
 
         const getIcons = useMemo(() => {
             switch (true) {
-                case editorContent?.text && !isReadOnly:
+                case editorContent?.text && !isReadOnly && !compactMode:
                     return (
                         <Icon
                             name="closeSmall"
@@ -253,6 +302,7 @@ const RichText = memo(
             handleClear,
             isReadOnly,
             theme.colors.neutral600,
+            compactMode,
         ]);
 
         const inputWrapperProps = useMemo(
@@ -265,6 +315,9 @@ const RichText = memo(
                         [classes.isFullWidth]: isFullWidth,
                         [classes.isReadOnly]: isReadOnly,
                         [classes.hasFixedToolbar]: toolbarStyle === 'fixed',
+                        [classes.compactMode]: compactMode && !focused,
+                        [classes.compactModeFocused]:
+                            compactMode && (focused || !!editorContent?.text?.length),
                     },
                     classNameProp,
                 ),
@@ -276,6 +329,8 @@ const RichText = memo(
             [
                 classNameProp,
                 classes,
+                compactMode,
+                editorContent,
                 error,
                 focused,
                 info,
@@ -311,12 +366,13 @@ const RichText = memo(
                     <EditorContent {...editorProps} />
                     {getToolbar}
                     {getIcons}
-                    {popup.current}
                 </div>
             </InputWrapper>
         );
     },
 );
+
+RichText.overrides = ['root', 'editorWrapper', 'editor'];
 
 RichText.defaultProps = {
     ...InputWrapper.defaultProps,
@@ -354,6 +410,7 @@ RichText.defaultProps = {
     ],
     toolbarStyle: 'floating',
     value: '',
+    compactMode: false,
 };
 
 RichText.propTypes = {
@@ -368,6 +425,7 @@ RichText.propTypes = {
     onChange: PropTypes.func,
     onClick: PropTypes.func,
     onFocus: PropTypes.func,
+    onSubmit: PropTypes.func,
     placeholder: PropTypes.string,
     toolbar: PropTypes.arrayOf(
         PropTypes.shape({
@@ -379,13 +437,19 @@ RichText.propTypes = {
     /** An HTML string */
     value: PropTypes.string,
     mention: PropTypes.shape({
+        /** Fetch suggestions for the mentions feature */
         fetchSuggestions: PropTypes.func,
+        /** Tooltip text for the mentions button in the toolbar */
         tooltip: PropTypes.string,
         texts: PropTypes.shape({
+            /** Text advice to show at the top of the mentions popover */
             advice: PropTypes.string,
+            /** Text to show if the mentions search can't find a match */
             noResults: PropTypes.string,
         }),
     }),
+    /** Enable compact mode: 'Single line height' editor with action buttons on the right that expands on focus */
+    compactMode: PropTypes.bool,
 };
 
 export default RichText;
