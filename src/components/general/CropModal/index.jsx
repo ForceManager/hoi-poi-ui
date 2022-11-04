@@ -2,15 +2,15 @@ import React, { useState, useMemo, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import ReactCrop from 'react-image-crop';
 
-import { getOverrides, useClasses } from '../../../../utils/overrides';
-import Modal from '../../../general/Modal';
+import { useClasses } from '../../../utils/overrides';
+import Modal from '../Modal';
 
-import { createUseStyles } from '../../../../utils/styles';
-import styles from '../styles';
+import { createUseStyles } from '../../../utils/styles';
+import styles from './styles';
 
-const useStyles = createUseStyles(styles, 'FilePickerFile');
+const useStyles = createUseStyles(styles, 'CropModal');
 
-function Crop({
+function CropModal({
     aspect,
     confirmText,
     cancelText,
@@ -20,15 +20,12 @@ function Crop({
     onCancel,
     onAccept,
     title,
-    overrides: overridesProp,
+    overrides,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     const [crop, setCrop] = useState({});
     const imgRef = useRef();
-
-    // Overrides
-    const override = getOverrides(overridesProp, Crop.overrides);
 
     const src = useMemo(() => (file && URL.createObjectURL(file)) || null, [file]);
 
@@ -156,7 +153,7 @@ function Crop({
             onCancel={onCancel}
             onConfirm={handleOnConfirm}
             useCornerClose={false}
-            {...override.crop}
+            overrides={overrides}
         >
             <div className={classes.cropModalContent}>
                 {src && (
@@ -173,9 +170,9 @@ function Crop({
     );
 }
 
-Crop.defaultProps = {};
+CropModal.defaultProps = {};
 
-Crop.propTypes = {
+CropModal.propTypes = {
     aspect: PropTypes.number,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
@@ -188,4 +185,4 @@ Crop.propTypes = {
     overrides: PropTypes.object,
 };
 
-export default React.memo(Crop);
+export default React.memo(CropModal);

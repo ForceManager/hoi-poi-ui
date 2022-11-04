@@ -1,5 +1,3 @@
-import reactCropStyles from './reactCrop.styles';
-
 export default (theme) => ({
     root: {
         outline: 'none',
@@ -207,26 +205,6 @@ export default (theme) => ({
         },
         '&$vertical $Label': {
             width: '100%',
-        },
-    },
-    cropModal: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    cropModalContent: {
-        position: 'relative',
-        borderRadius: 4,
-        padding: 22,
-        border: `1px dashed ${theme.colors.neutral400}`,
-        backgroundColor: theme.colors.neutral300,
-    },
-    cropCanvas: {
-        position: 'relative',
-        overflow: 'hidden',
-        ...reactCropStyles(theme),
-        '&:focus': {
-            outline: 'none',
         },
     },
     focused: {},

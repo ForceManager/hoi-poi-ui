@@ -34,12 +34,13 @@ export default (theme) => ({
         boxShadow: '0px 0px 1px 1px white, 0 0 0 9999em rgba(0, 0, 0, 0.5)',
     },
     '& .ReactCrop--invisible-crop .ReactCrop__crop-selection': { display: 'none' },
-    '& .ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after, .ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after': {
-        content: "''",
-        display: 'block',
-        position: 'absolute',
-        backgroundColor: 'rgba(255, 255, 255, 0.4)',
-    },
+    '& .ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after, .ReactCrop__rule-of-thirds-hz::before, .ReactCrop__rule-of-thirds-hz::after':
+        {
+            content: "''",
+            display: 'block',
+            position: 'absolute',
+            backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        },
     '& .ReactCrop__rule-of-thirds-vt::before, .ReactCrop__rule-of-thirds-vt::after': {
         width: '1px',
         height: '100%',
@@ -166,16 +167,19 @@ export default (theme) => ({
         height: '100%',
         marginLeft: '-3px',
     },
-    '& .ReactCrop--new-crop .ReactCrop__drag-bar,\n  .ReactCrop--new-crop .ReactCrop__drag-handle,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-bar': {
-        display: 'none',
-    },
-    '& .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-n,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-e,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-s,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-w': {
-        display: 'none',
-    },
-    '@media (pointer: coarse)': {
-        '& .ReactCrop .ord-n,\n    .ReactCrop .ord-e,\n    .ReactCrop .ord-s,\n    .ReactCrop .ord-w': {
+    '& .ReactCrop--new-crop .ReactCrop__drag-bar,\n  .ReactCrop--new-crop .ReactCrop__drag-handle,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-bar':
+        {
             display: 'none',
         },
+    '& .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-n,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-e,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-s,\n  .ReactCrop--fixed-aspect .ReactCrop__drag-handle.ord-w':
+        {
+            display: 'none',
+        },
+    '@media (pointer: coarse)': {
+        '& .ReactCrop .ord-n,\n    .ReactCrop .ord-e,\n    .ReactCrop .ord-s,\n    .ReactCrop .ord-w':
+            {
+                display: 'none',
+            },
         '& .ReactCrop__drag-handle': { width: '24px', height: '24px' },
     },
 });
