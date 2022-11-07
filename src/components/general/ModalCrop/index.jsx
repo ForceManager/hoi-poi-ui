@@ -8,9 +8,9 @@ import Modal from '../Modal';
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 
-const useStyles = createUseStyles(styles, 'CropModal');
+const useStyles = createUseStyles(styles, 'ModalCrop');
 
-function CropModal({
+function ModalCrop({
     aspect,
     confirmText,
     cancelText,
@@ -154,6 +154,7 @@ function CropModal({
             onConfirm={handleOnConfirm}
             useCornerClose={false}
             overrides={overrides}
+            {...props}
         >
             <div className={classes.cropModalContent}>
                 {src && (
@@ -170,9 +171,9 @@ function CropModal({
     );
 }
 
-CropModal.defaultProps = {};
+ModalCrop.defaultProps = {};
 
-CropModal.propTypes = {
+ModalCrop.propTypes = {
     aspect: PropTypes.number,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
@@ -185,4 +186,4 @@ CropModal.propTypes = {
     overrides: PropTypes.object,
 };
 
-export default React.memo(CropModal);
+export default React.memo(ModalCrop);

@@ -70,7 +70,7 @@ useEffect(() => {
         Show
     </Button>
     <span> </span>
-    <CropModal
+    <ModalCrop
         title="Lorem modal"
         isOpen={isOpen}
         onRequestClose={() => setIsOpen(false)}

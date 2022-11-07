@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { useDropzone } from 'react-dropzone';
 
 import File from './components/File';
-import CropModal from '../../general/CropModal';
+import ModalCrop from '../../general/ModalCrop';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Button from '../../general/Button';
 import Label from '../Label';
@@ -278,7 +278,7 @@ function FilePicker({
                     </div>
                 )}
             </div>
-            <CropModal
+            <ModalCrop
                 aspect={cropAspect}
                 classes={classesProp}
                 file={crop.file}

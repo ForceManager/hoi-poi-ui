@@ -19,7 +19,7 @@ export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
 export { default as Loader } from './components/general/Loader';
 export { default as Modal } from './components/general/Modal';
-export { default as CropModal } from './components/general/CropModal';
+export { default as ModalCrop } from './components/general/ModalCrop';
 export { default as Menus } from './components/general/Menus';
 export { default as RadioBox } from './components/general/RadioBox';
 export { default as RadioBoxGroup } from './components/general/RadioBoxGroup';
