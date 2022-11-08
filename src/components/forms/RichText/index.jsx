@@ -31,6 +31,7 @@ const RichText = memo(
         onClick,
         onFocus,
         onSubmit,
+        onEsc,
         overrides: overridesProp,
         placeholder,
         toolbar,
@@ -167,6 +168,17 @@ const RichText = memo(
                 onClick && onClick(e);
             },
             [editor, focused, isReadOnly, onClick],
+        );
+
+        const handleKeyDown = useCallback(
+            (e) => {
+                if (e.keyCode === 27) {
+                    editor.commands.blur();
+                    setFocused(false);
+                    onEsc && onEsc(e);
+                }
+            },
+            [onEsc, editor],
         );
 
         const getToolbar = useMemo(() => {
@@ -346,9 +358,10 @@ const RichText = memo(
             () => ({
                 className: classes.editorWrapper,
                 onClick: handleClick,
+                onKeyDown: handleKeyDown,
                 ...override.editorWrapper,
             }),
-            [classes, handleClick, override],
+            [classes, handleClick, override, handleKeyDown],
         );
 
         const editorProps = useMemo(
