@@ -216,6 +216,7 @@ import WhatsappGreen from './icons/social/WhatsappGreen';
 //Image
 import Timer from './icons/image/Timer';
 import TimerOff from './icons/image/TimerOff';
+import Image from './icons/image/Image';
 
 //Map
 import TimeZone from './icons/map/TimeZone';
@@ -615,6 +616,7 @@ export const ICONS = {
     //Image
     timer: Timer,
     timerOff: TimerOff,
+    image: Image,
     //Map
     timeZone: TimeZone,
     //Menu

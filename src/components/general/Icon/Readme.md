@@ -311,6 +311,8 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="timerOff" />
     <span> </span>
+    <Icon name="image" />
+    <span> </span>
 </div>;
 ```
 
