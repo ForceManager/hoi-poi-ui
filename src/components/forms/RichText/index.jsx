@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useMemo, useState, Fragment } from 'react';
+import React, { memo, useCallback, useEffect, useMemo, useState, useRef, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { BubbleMenu, EditorContent, useEditor, ReactRenderer } from '@tiptap/react';
@@ -40,6 +40,9 @@ const RichText = memo(
         mention,
         customActions,
         compactMode,
+        autofocus,
+        canSubmit,
+        onChangeFocus,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -47,6 +50,7 @@ const RichText = memo(
         const override = getOverrides(overridesProp, RichText.overrides);
         const [focused, setFocused] = useState(false);
         const [editorContent, setEditorContent] = useState({});
+        const showingMention = useRef(false);
 
         const getExtensions = useMemo(() => {
             const extensions = [
@@ -77,6 +81,8 @@ const RichText = memo(
                                 });
 
                                 if (!props.clientRect) return;
+
+                                showingMention.current = true;
 
                                 popup = tippy('body', {
                                     getReferenceClientRect: props.clientRect,
@@ -143,12 +149,21 @@ const RichText = memo(
             onFocus: ({ event }) => {
                 setFocused(true);
                 onFocus && onFocus(event);
+                onChangeFocus && onChangeFocus(true);
             },
             onBlur: ({ event }) => {
                 setFocused(false);
                 onBlur && onBlur(event);
+                onChangeFocus && onChangeFocus(false);
             },
         });
+
+        useEffect(() => {
+            if (autofocus && editor) {
+                editor.commands.focus();
+                setFocused(true);
+            }
+        }, [autofocus, editor]);
 
         const handleClear = useCallback(
             (e) => {
@@ -170,6 +185,10 @@ const RichText = memo(
             [editor, focused, isReadOnly, onClick],
         );
 
+        const handleSubmit = useCallback(() => {
+            onSubmit && onSubmit();
+        }, [onSubmit]);
+
         const handleKeyDown = useCallback(
             (e) => {
                 if (e.keyCode === 27) {
@@ -177,8 +196,18 @@ const RichText = memo(
                     setFocused(false);
                     onEsc && onEsc(e);
                 }
+
+                if (e.keyCode === 13 && !e.shiftKey) {
+                    e.preventDefault();
+                    if (showingMention.current) {
+                        showingMention.current = false;
+                        return;
+                    } 
+                    if (canSubmit && !canSubmit(value)) return;
+                    handleSubmit();
+                }
             },
-            [onEsc, editor],
+            [editor, onEsc, canSubmit, value, handleSubmit],
         );
 
         const getToolbar = useMemo(() => {
@@ -243,7 +272,7 @@ const RichText = memo(
                                                     ? theme.colors.orange500
                                                     : theme.colors.neutral700
                                             }
-                                            onClick={() => onSubmit && onSubmit()}
+                                            onClick={handleSubmit}
                                         />
                                     </Fragment>
                                 )}
@@ -282,7 +311,7 @@ const RichText = memo(
             editorContent,
             compactMode,
             customActions,
-            onSubmit,
+            handleSubmit,
         ]);
 
         const getIcons = useMemo(() => {
@@ -424,6 +453,7 @@ RichText.defaultProps = {
     toolbarStyle: 'floating',
     value: '',
     compactMode: false,
+    autofocus: false,
 };
 
 RichText.propTypes = {
@@ -463,6 +493,10 @@ RichText.propTypes = {
     }),
     /** Enable compact mode: 'Single line height' editor with action buttons on the right that expands on focus */
     compactMode: PropTypes.bool,
+    /** Enable autofocus */
+    autofocus: PropTypes.bool,
+    canSubmit: PropTypes.func,
+    onChangeFocus: PropTypes.func,
 };
 
 export default RichText;
