@@ -186,8 +186,11 @@ const RichText = memo(
         );
 
         const handleSubmit = useCallback(() => {
-            onSubmit && onSubmit();
-        }, [onSubmit]);
+            if (!onSubmit) return;
+            onSubmit();
+            editor.commands.blur();
+            editor.commands.clearContent(true);
+        }, [editor, onSubmit]);
 
         const handleKeyDown = useCallback(
             (e) => {
@@ -202,7 +205,7 @@ const RichText = memo(
                     if (showingMention.current) {
                         showingMention.current = false;
                         return;
-                    } 
+                    }
                     if (canSubmit && !canSubmit(value)) return;
                     handleSubmit();
                 }
