@@ -152,6 +152,7 @@ const fetchSuggestions = (query) =>
                     },
                 },
             }}
+            onSubmit={() => console.log('SUBMIT!')}
         />
     </div>
 </div>;

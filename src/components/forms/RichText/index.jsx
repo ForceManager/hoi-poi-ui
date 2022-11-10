@@ -6,6 +6,7 @@ import StarterKit from '@tiptap/starter-kit';
 import Placeholder from '@tiptap/extension-placeholder';
 import Underline from '@tiptap/extension-underline';
 import Mention from '@tiptap/extension-mention';
+import HardBreak from '@tiptap/extension-hard-break';
 import tippy from 'tippy.js';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
@@ -57,6 +58,22 @@ const RichText = memo(
                 Placeholder.configure({ placeholder: () => placeholder || null }),
                 StarterKit,
                 Underline,
+                HardBreak.extend({
+                    addKeyboardShortcuts() {
+                        const handleEnter = () =>
+                            this.editor.commands.first(({ commands }) => [
+                                () => commands.newlineInCode(),
+                                () => commands.createParagraphNear(),
+                                () => commands.liftEmptyBlock(),
+                                () => commands.splitBlock(),
+                            ]);
+
+                        return {
+                            Enter: () => true, // Prevent extra line-break on submiting via Enter
+                            'Shift-Enter': handleEnter,
+                        };
+                    },
+                }),
             ];
 
             if (
@@ -145,6 +162,7 @@ const RichText = memo(
                 };
                 setEditorContent(content);
                 onChange && onChange(content);
+                setTimeout(() => (showingMention.current = false));
             },
             onFocus: ({ event }) => {
                 setFocused(true);
@@ -194,14 +212,17 @@ const RichText = memo(
 
         const handleKeyDown = useCallback(
             (e) => {
-                if (e.keyCode === 27) {
+                if (e.keyCode === 27 && !showingMention.current) {
                     editor.commands.blur();
                     setFocused(false);
                     onEsc && onEsc(e);
                 }
 
+                if (e.keyCode === 27 && showingMention.current) {
+                    showingMention.current = false;
+                }
+
                 if (e.keyCode === 13 && !e.shiftKey) {
-                    e.preventDefault();
                     if (showingMention.current) {
                         showingMention.current = false;
                         return;
