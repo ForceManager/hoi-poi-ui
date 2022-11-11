@@ -227,11 +227,11 @@ const RichText = memo(
                         showingMention.current = false;
                         return;
                     }
-                    if (canSubmit && !canSubmit(value)) return;
+                    if (canSubmit && !canSubmit(editorContent)) return;
                     handleSubmit();
                 }
             },
-            [editor, onEsc, canSubmit, value, handleSubmit],
+            [editor, onEsc, canSubmit, editorContent, handleSubmit],
         );
 
         const getToolbar = useMemo(() => {
