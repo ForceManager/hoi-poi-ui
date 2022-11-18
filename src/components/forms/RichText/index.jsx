@@ -254,7 +254,9 @@ const RichText = memo(
             ));
 
             if (mention && toolbarStyle === 'fixed') {
-                toolbarItems.push(<span className={classes.toolbarDivider}></span>);
+                toolbarItems.push(
+                    <span key="toolbar-divider" className={classes.toolbarDivider}></span>,
+                );
                 toolbarItems.push(
                     <ToolbarItem
                         editor={editor}

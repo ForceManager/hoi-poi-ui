@@ -23,7 +23,7 @@ const IconGrid = ({ classes: classesProp }) => {
             .filter((icon) => (search ? icon.toLowerCase().indexOf(search) !== -1 : true))
             .sort()
             .map((icon) => (
-                <div className={classes.cell}>
+                <div key={icon} className={classes.cell}>
                     <Icon name={icon} />
                     <Text type="caption">{icon}</Text>
                 </div>

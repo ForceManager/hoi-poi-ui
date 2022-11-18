@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const srcPath = path.resolve(__dirname, './src');
 const indexPath = path.resolve(__dirname, './src/index.js');
@@ -26,20 +27,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.(js|jsx)$/,
-                enforce: 'pre',
-                use: [
-                    {
-                        options: {
-                            formatter: require.resolve('react-dev-utils/eslintFormatter'),
-                            eslintPath: require.resolve('eslint'),
-                        },
-                        loader: require.resolve('eslint-loader'),
-                    },
-                ],
-                include: srcPath,
-            },
             {
                 oneOf: [
                     {
@@ -78,9 +65,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': 'development',
-        }),
+        new ESLintPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({ process: 'process/browser' }),
     ].filter(Boolean),

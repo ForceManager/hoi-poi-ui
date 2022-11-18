@@ -98,10 +98,10 @@ RadioGroup.propTypes = {
     options: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
-            value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+            value: PropTypes.any,
         }),
     ),
-    value: PropTypes.string,
+    value: PropTypes.any,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
     orientation: PropTypes.oneOf(['horizontal', 'vertical']),

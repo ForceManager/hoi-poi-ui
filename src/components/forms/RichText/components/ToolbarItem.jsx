@@ -2,14 +2,13 @@ import React, { memo, useMemo } from 'react';
 import Tooltip from '../../../utils/Tooltip';
 import Icon from '../../../general/Icon';
 
-const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
+const ToolbarItem = memo(({ className, color, item, hint, editor }) => {
     const tooltipProps = useMemo(
         () => ({
             placement: 'top',
             content: <span>{hint}</span>,
-            key,
         }),
-        [hint, key],
+        [hint],
     );
 
     const iconProps = useMemo(() => {

@@ -330,7 +330,7 @@ FilePicker.propTypes = {
     error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     files: PropTypes.arrayOf(
         PropTypes.oneOfType([
-            PropTypes.object,
+            PropTypes.any,
             PropTypes.shape({
                 id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
                 file: PropTypes.object,
