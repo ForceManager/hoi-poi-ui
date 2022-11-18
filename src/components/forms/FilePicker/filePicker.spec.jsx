@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
-import FilePicker from '../FilePicker';
+import FilePicker from '.';
 
 describe('Input', () => {
     test('default match', () => {

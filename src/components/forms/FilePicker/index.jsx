@@ -6,6 +6,7 @@ import { useDropzone } from 'react-dropzone';
 import File from './components/File';
 import ModalCrop from '../../general/ModalCrop';
 import { getOverrides, useClasses } from '../../../utils/overrides';
+
 import Button from '../../general/Button';
 import Label from '../Label';
 import Text from '../../typography/Text';
