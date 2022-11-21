@@ -119,7 +119,12 @@ function FilePicker({
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
         onDrop: handleOnDrop,
-        accept,
+        accept: accept
+            ? accept.reduce((fileTypes, fileType) => {
+                  fileTypes[fileType] = [];
+                  return fileTypes;
+              }, {})
+            : {},
         disabled,
         maxSize,
         minSize,
@@ -315,7 +320,7 @@ FilePicker.defaultProps = {
 
 FilePicker.propTypes = {
     /** Set accepted file types */
-    accept: PropTypes.object,
+    accept: PropTypes.array,
     activePlaceholder: PropTypes.string,
     buttonLabel: PropTypes.string,
     classes: PropTypes.object,
