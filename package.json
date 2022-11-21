@@ -10,7 +10,7 @@
         "precommit": "cross-env NODE_ENV=production lint-staged",
         "lint": "eslint --config .eslintrc --ext .js,.jsx src/**",
         "start": "styleguidist server",
-        "build": "yarn build:cjs && yarn build:esm && yarn build:es && yarn build:umd",
+        "build": "yarn build:cjs && yarn build:esm && yarn build:es",
         "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel --config-file ./babel.config.js ./src --out-dir ./dist --ignore \"**/*.spec.jsx\"",
         "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel --config-file ./babel.config.js ./src --out-dir ./dist/esm --ignore \"**/*.spec.jsx\"",
         "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./babel.config.js ./src --out-dir ./dist/es --ignore \"**/*.spec.jsx\"",
