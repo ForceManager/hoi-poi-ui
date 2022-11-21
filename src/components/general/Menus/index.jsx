@@ -39,7 +39,6 @@ function Menus({
         mode: 'horizontal',
         className: classes.menu,
         triggerSubMenuAction: triggerAction,
-        openAnimation: 'slide-up',
         ...override['rc-menu'],
     };
 
@@ -56,7 +55,7 @@ function Menus({
     return (
         <div className={rootClassName} {...override.root}>
             <RCMenu {...menuProps}>
-                <SubMenu {...subMenuProps}>
+                <SubMenu key="rc-menu-sub-menu" {...subMenuProps}>
                     {items &&
                         items.map((item, id) => (
                             <MenuItem

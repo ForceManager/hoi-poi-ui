@@ -46,7 +46,7 @@ describe('Input', () => {
                     onDrop={() => {}}
                     onRemove={() => {}}
                     files={[]}
-                    accept={['application/zip', 'application/vnd.rar']}
+                    accept={{ 'application/zip': [], 'application/vnd.rar': [] }}
                 />
             </HoiPoiProvider>,
         );
