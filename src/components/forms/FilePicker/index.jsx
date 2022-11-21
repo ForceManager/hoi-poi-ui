@@ -315,7 +315,7 @@ FilePicker.defaultProps = {
 
 FilePicker.propTypes = {
     /** Set accepted file types */
-    accept: PropTypes.array,
+    accept: PropTypes.object,
     activePlaceholder: PropTypes.string,
     buttonLabel: PropTypes.string,
     classes: PropTypes.object,

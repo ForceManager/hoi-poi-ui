@@ -453,10 +453,9 @@ exports[`Input default match 1`] = `
               onDrop={[Function]}
               onFocus={null}
               onKeyDown={null}
-              role="button"
+              role="presentation"
             >
               <input
-                autoComplete="off"
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -1120,10 +1119,9 @@ exports[`Input is full width match 1`] = `
               onDrop={[Function]}
               onFocus={null}
               onKeyDown={null}
-              role="button"
+              role="presentation"
             >
               <input
-                autoComplete="off"
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -1786,10 +1784,9 @@ exports[`Input vertical label mode match 1`] = `
               onDrop={[Function]}
               onFocus={null}
               onKeyDown={null}
-              role="button"
+              role="presentation"
             >
               <input
-                autoComplete="off"
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -2397,10 +2394,10 @@ exports[`Input with accept 1`] = `
     >
       <FilePicker
         accept={
-          [
-            "application/zip",
-            "application/vnd.rar",
-          ]
+          {
+            "application/vnd.rar": [],
+            "application/zip": [],
+          }
         }
         buttonLabel="Select file"
         cropAcceptLabel="Crop"
@@ -2458,16 +2455,10 @@ exports[`Input with accept 1`] = `
               onDrop={[Function]}
               onFocus={null}
               onKeyDown={null}
-              role="button"
+              role="presentation"
             >
               <input
-                accept={
-                  [
-                    "application/zip",
-                    "application/vnd.rar",
-                  ]
-                }
-                autoComplete="off"
+                accept="application/zip,application/vnd.rar"
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -3131,10 +3122,9 @@ exports[`Input with limit 1`] = `
               onDrop={[Function]}
               onFocus={null}
               onKeyDown={null}
-              role="button"
+              role="presentation"
             >
               <input
-                autoComplete="off"
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
