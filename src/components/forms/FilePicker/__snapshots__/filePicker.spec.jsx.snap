@@ -456,6 +456,7 @@ exports[`Input default match 1`] = `
               role="presentation"
             >
               <input
+                accept=""
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -1122,6 +1123,7 @@ exports[`Input is full width match 1`] = `
               role="presentation"
             >
               <input
+                accept=""
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -1787,6 +1789,7 @@ exports[`Input vertical label mode match 1`] = `
               role="presentation"
             >
               <input
+                accept=""
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
@@ -2394,10 +2397,10 @@ exports[`Input with accept 1`] = `
     >
       <FilePicker
         accept={
-          {
-            "application/vnd.rar": [],
-            "application/zip": [],
-          }
+          [
+            "application/zip",
+            "application/vnd.rar",
+          ]
         }
         buttonLabel="Select file"
         cropAcceptLabel="Crop"
@@ -3125,6 +3128,7 @@ exports[`Input with limit 1`] = `
               role="presentation"
             >
               <input
+                accept=""
                 onChange={[Function]}
                 onClick={[Function]}
                 style={
