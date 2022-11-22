@@ -5,7 +5,11 @@ import { useState } from 'react';
 
 const [state, setState] = useState([]);
 const onDrop = (acceptedFiles) => {
-    setState([...state, ...acceptedFiles]);
+    const dropped = [...state, ...acceptedFiles].map((current, index) => {
+        if (index % 2 !== 0) current.canRemove = false;
+        return current;
+    });
+    setState([...dropped]);
 };
 
 const onRemove = (deletedFile) => {
