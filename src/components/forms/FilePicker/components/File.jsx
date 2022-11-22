@@ -38,13 +38,19 @@ function File({
     // Overrides
     const override = getOverrides(overridesProp, File.overrides);
 
+    const canRemove = useMemo(() => {
+        if (typeof file?.canRemove === 'boolean' && !file.canRemove) return false;
+        return true;
+    }, [file]);
+
     const handleOnRemove = useCallback(() => {
+        if (!canRemove) return;
         if (id) {
             onRemove({ id, file });
         } else {
             onRemove(file);
         }
-    }, [file, onRemove, id]);
+    }, [file, onRemove, id, canRemove]);
 
     const handleOnCrop = useCallback(() => {
         if (isUrl) {
@@ -110,7 +116,7 @@ function File({
             </div>
             <div className={classes.actions}>
                 {renderCrop}
-                {!loading && (
+                {!loading && canRemove && (
                     <span onClick={handleOnRemove} className={classes.clear}>
                         <Icon name="close" />
                     </span>
