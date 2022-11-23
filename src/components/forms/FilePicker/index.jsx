@@ -77,26 +77,15 @@ function FilePicker({
             return (
                 onDrop &&
                 onDrop(
-                    droppedFiles
-                        .map((file) =>
-                            Object.assign(file, {
-                                id: Date.now(),
-                            }),
-                        )
-                        .filter(
-                            (droppedFile) =>
-                                !files.some(
-                                    (file) =>
-                                        (!filesData || !filesData[file.id]?.error) &&
-                                        file.name === droppedFile.name &&
-                                        file.size === droppedFile.size &&
-                                        file.type === droppedFile.type,
-                                ),
-                        ),
+                    droppedFiles.map((file) =>
+                        Object.assign(file, {
+                            id: Date.now(),
+                        }),
+                    ),
                 )
             );
         },
-        [cropAspect, cropImages, files, filesData, onCrop, onDrop],
+        [cropAspect, cropImages, onCrop, onDrop],
     );
 
     const handleOnCrop = useCallback((file, index, id) => {
