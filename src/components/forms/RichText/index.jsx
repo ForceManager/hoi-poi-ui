@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect, useMemo, useState, useRef, Fragment } from 'react';
+import React, { memo, useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { BubbleMenu, EditorContent, useEditor, ReactRenderer } from '@tiptap/react';
@@ -241,19 +241,17 @@ const RichText = memo(
                     className: classNames(classes.toolbarItem, classes.floatingToolbarItem),
                     color: theme.colors.neutralBase,
                 },
-                compact: {
-                    className: classNames(classes.toolbarItem, classes.compactToolbarItem),
-                    color: theme.colors.neutral700,
-                },
             };
 
-            const toolbarItemStyle = toolbarItemProps[toolbarStyle];
+            const toolbarItemStyle = compactMode
+                ? toolbarItemProps.fixed
+                : toolbarItemProps[toolbarStyle];
 
             const toolbarItems = toolbar.map((item, index) => (
                 <ToolbarItem editor={editor} key={index} {...item} {...toolbarItemStyle} />
             ));
 
-            if (mention && toolbarStyle === 'fixed') {
+            if (mention && (toolbarStyle === 'fixed' || compactMode)) {
                 toolbarItems.push(<span className={classes.toolbarDivider}></span>);
                 toolbarItems.push(
                     <ToolbarItem
@@ -269,39 +267,19 @@ const RichText = memo(
             switch (true) {
                 case compactMode:
                     return (
-                        <Fragment>
-                            <BubbleMenu
-                                tippyOptions={{ duration: 100 }}
-                                editor={editor}
-                                className={classes.floatingToolbar}
-                            >
-                                {toolbarItems}
-                            </BubbleMenu>
-                            <div className={classes.toolbar}>
-                                {mention && (
-                                    <Fragment>
-                                        <ToolbarItem
-                                            editor={editor}
-                                            key="mention"
-                                            hint={mention.tooltip}
-                                            item="mention"
-                                            {...toolbarItemProps.compact}
-                                        />
-                                        <span className={classes.toolbarDivider}></span>
-                                        <Icon
-                                            name="send"
-                                            size="large"
-                                            color={
-                                                !!editorContent?.text?.length
-                                                    ? theme.colors.orange500
-                                                    : theme.colors.neutral700
-                                            }
-                                            onClick={handleSubmit}
-                                        />
-                                    </Fragment>
-                                )}
-                            </div>
-                        </Fragment>
+                        <div className={classes.toolbar}>
+                            <div className={classes.toolbarItems}>{toolbarItems}</div>
+                            <Icon
+                                name="send"
+                                size="large"
+                                color={
+                                    !!editorContent?.text?.length
+                                        ? theme.colors.orange500
+                                        : theme.colors.neutral700
+                                }
+                                onClick={handleSubmit}
+                            />
+                        </div>
                     );
                 case editor && toolbarStyle === 'floating':
                     return (

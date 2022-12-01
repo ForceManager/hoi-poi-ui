@@ -10,7 +10,7 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'MentionList');
 
-const MentionList = forwardRef(({ texts, command, classes: classesProp, items }, ref) => {
+const MentionList = forwardRef(({ texts, command, classes: classesProp, items = [] }, ref) => {
     const classes = useClasses(useStyles, classesProp);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -28,11 +28,11 @@ const MentionList = forwardRef(({ texts, command, classes: classesProp, items },
 
     const upHandler = useCallback(() => {
         setSelectedIndex((selectedIndex + items.length - 1) % items.length);
-    }, [items.length, selectedIndex]);
+    }, [items, selectedIndex]);
 
     const downHandler = useCallback(() => {
         setSelectedIndex((selectedIndex + 1) % items.length);
-    }, [items.length, selectedIndex]);
+    }, [items, selectedIndex]);
 
     const enterHandler = useCallback(() => {
         selectItem(selectedIndex);
@@ -77,7 +77,7 @@ const MentionList = forwardRef(({ texts, command, classes: classesProp, items },
                         key={index}
                         onClick={() => selectItem(index)}
                     >
-                        <Avatar src={item.avatarSrc} />
+                        <Avatar src={item.avatar.src} placeholder={item.avatar.placeholder} />
                         <Text color="neutral900" type="body">
                             {item.name}
                         </Text>
