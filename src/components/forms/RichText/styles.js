@@ -72,6 +72,12 @@ export default (theme) => ({
         gap: 4,
         padding: 8,
     },
+    toolbarItems: {
+        display: 'flex',
+        flexFlow: 'row nowrap',
+        alignItems: 'center',
+        gap: 4,
+    },
     floatingToolbar: {
         position: 'relative',
         padding: 6,
@@ -185,12 +191,19 @@ export default (theme) => ({
             bottom: 0,
             right: 0,
             padding: '3px 12px',
+            width: '100%',
+            boxSizing: 'border-box',
+            justifyContent: 'space-between',
+            pointerEvents: 'none',
         },
         '& $toolbarDivider': {
             width: 1,
-            height: 8,
-            backgroundColor: theme.colors.neutral400,
+            height: 20,
+            backgroundColor: theme.colors.neutral700,
             margin: '0 2px',
+        },
+        '& $toolbarItems': {
+            opacity: 0,
         },
     },
     compactModeFocused: {
@@ -216,12 +229,19 @@ export default (theme) => ({
             bottom: 0,
             right: 0,
             padding: '3px 12px',
+            width: '100%',
+            boxSizing: 'border-box',
+            justifyContent: 'space-between',
+            pointerEvents: 'auto',
         },
         '& $toolbarDivider': {
             width: 1,
-            height: 8,
-            backgroundColor: theme.colors.neutral400,
+            height: 20,
+            backgroundColor: theme.colors.neutral700,
             margin: '0 2px',
+        },
+        '& $toolbarItems': {
+            opacity: 1,
         },
     },
 });

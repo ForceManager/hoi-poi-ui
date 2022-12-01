@@ -30,52 +30,92 @@ const fetchSuggestions = (query) =>
                     {
                         id: 0,
                         name: 'Lea Thompson',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 1,
                         name: 'Cyndi Lauper',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 2,
                         name: 'Tom Cruise',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 3,
                         name: 'Jerry Hall',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 4,
                         name: 'Madonna',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 5,
                         name: 'Joan Collins',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 6,
                         name: 'Winona Ryder',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 7,
                         name: 'Christina Applegate',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 8,
                         name: 'Alyssa Milano',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                     {
                         id: 9,
                         name: 'Molly Ringwald',
-                        avatarSrc: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        avatar: {
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            placeholder:
+                                'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                        },
                     },
                 ]
                     .filter((item) => item.name.toLowerCase().startsWith(query.toLowerCase()))
@@ -103,6 +143,7 @@ const fetchSuggestions = (query) =>
     <RichText
         label="Editor with fixed toolbar, mentions & custom actions"
         toolbarStyle="fixed"
+        isFullWidth
         mention={{
             fetchSuggestions,
             tooltip: 'Mention',
@@ -121,6 +162,9 @@ const fetchSuggestions = (query) =>
                 </Button>
             </Fragment>
         }
+        onSubmit={() => console.log('SUBMIT!')}
+        onChange={(value) => console.log('CHANGE!', value)}
+        onEsc={() => console.log('ESCAPE!')}
     />
 
     <Text>Editor in 'compact' mode with mentions</Text>
