@@ -52,6 +52,7 @@ const RichText = memo(
         const [focused, setFocused] = useState(false);
         const [editorContent, setEditorContent] = useState({});
         const showingMention = useRef(false);
+        const editorDivRef = useRef(null);
 
         const getExtensions = useMemo(() => {
             const extensions = [
@@ -170,6 +171,7 @@ const RichText = memo(
                 onChangeFocus && onChangeFocus(true);
             },
             onBlur: ({ event }) => {
+                if (compactMode) return;
                 setFocused(false);
                 onBlur && onBlur(event);
                 onChangeFocus && onChangeFocus(false);
@@ -183,6 +185,20 @@ const RichText = memo(
             }
         }, [autofocus, editor]);
 
+        useEffect(() => {
+            const handleClickOutside = (event) => {
+                if (!editorDivRef?.current.contains(event.target)) {
+                    setFocused(false);
+                    onBlur && onBlur(event);
+                    onChangeFocus && onChangeFocus(false);
+                }
+            };
+            document.addEventListener('click', handleClickOutside, true);
+            return () => {
+                document.removeEventListener('click', handleClickOutside, true);
+            };
+        }, [onBlur, onChangeFocus]);
+
         const handleClear = useCallback(
             (e) => {
                 e.stopPropagation();
@@ -194,13 +210,14 @@ const RichText = memo(
 
         const handleClick = useCallback(
             (e) => {
+                if (compactMode) e.stopPropagation();
                 if (!focused && !isReadOnly) {
                     editor.commands.focus();
                     setFocused(true);
                 }
                 onClick && onClick(e);
             },
-            [editor, focused, isReadOnly, onClick],
+            [editor, focused, isReadOnly, onClick, compactMode],
         );
 
         const handleSubmit = useCallback(() => {
@@ -268,7 +285,12 @@ const RichText = memo(
                 case compactMode:
                     return (
                         <div className={classes.toolbar}>
-                            <div className={classes.toolbarItems}>{toolbarItems}</div>
+                            <div
+                                className={classes.toolbarItems}
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                {toolbarItems}
+                            </div>
                             <Icon
                                 name="send"
                                 size="large"
@@ -390,6 +412,7 @@ const RichText = memo(
                 className: classes.editorWrapper,
                 onClick: handleClick,
                 onKeyDown: handleKeyDown,
+                ref: editorDivRef,
                 ...override.editorWrapper,
             }),
             [classes, handleClick, override, handleKeyDown],
