@@ -8,6 +8,7 @@ const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
             placement: 'top',
             content: <span>{hint}</span>,
             key,
+            mouseEnterDelay: 0.2,
         }),
         [hint, key],
     );
