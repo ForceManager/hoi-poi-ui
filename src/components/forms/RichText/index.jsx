@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { BubbleMenu, EditorContent, useEditor, ReactRenderer } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Placeholder from '@tiptap/extension-placeholder';
+import Placeholder from './components/placeholderExtensions';
 import Underline from '@tiptap/extension-underline';
 import Mention from '@tiptap/extension-mention';
 import HardBreak from '@tiptap/extension-hard-break';
@@ -56,8 +56,12 @@ const RichText = memo(
 
         const getExtensions = useMemo(() => {
             const extensions = [
-                Placeholder.configure({ placeholder: () => placeholder || null }),
-                StarterKit,
+                Placeholder.configure({
+                    placeholder: () => placeholder || null,
+                }),
+                StarterKit.configure({
+                    hardBreak: false,
+                }),
                 Underline,
                 HardBreak.extend({
                     addKeyboardShortcuts() {
@@ -140,6 +144,7 @@ const RichText = memo(
                 };
                 extensions.push(
                     Mention.configure({
+                        pluginKey: 'polloloco',
                         suggestion: suggestionConfig,
                         renderLabel: ({ node }) => {
                             return `${node.attrs.label}`;
