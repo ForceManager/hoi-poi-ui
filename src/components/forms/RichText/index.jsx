@@ -365,7 +365,6 @@ const RichText = memo(
                 mention,
                 toolbar,
                 toolbarStyle,
-                showingMention: showingMention.current,
             }),
             [
                 compactMode,

@@ -30,7 +30,6 @@ const Menu = ({
     mention,
     toolbar,
     toolbarStyle,
-    showingMention,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -71,7 +70,6 @@ const Menu = ({
                 <ToolbarItem
                     editor={editor}
                     key="mention"
-                    active={showingMention}
                     hint={mention.tooltip}
                     item="mention"
                     {...toolbarItemStyle}
@@ -80,7 +78,7 @@ const Menu = ({
         }
 
         return toolbarItems;
-    }, [classes, compactMode, editor, mention, theme, toolbar, toolbarStyle, showingMention]);
+    }, [classes, compactMode, editor, mention, theme, toolbar, toolbarStyle]);
 
     const toolbarClassNames = classNames(classes.toolbar, {
         [classes.compactMode]: compactMode && !focused,
