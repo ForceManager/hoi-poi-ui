@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { BubbleMenu, EditorContent, useEditor, ReactRenderer } from '@tiptap/react';
+import { EditorContent, useEditor, ReactRenderer } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Placeholder from './components/placeholderExtensions';
 import Underline from '@tiptap/extension-underline';
@@ -11,7 +11,7 @@ import tippy from 'tippy.js';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
 import MentionList from './components/MentionList';
-import ToolbarItem from './components/ToolbarItem';
+import Menu from './components/Menu';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../utils/styles';
 
@@ -65,17 +65,27 @@ const RichText = memo(
                 Underline,
                 HardBreak.extend({
                     addKeyboardShortcuts() {
-                        const handleEnter = () =>
-                            this.editor.commands.first(({ commands }) => [
-                                () => commands.newlineInCode(),
-                                () => commands.createParagraphNear(),
-                                () => commands.liftEmptyBlock(),
-                                () => commands.splitBlock(),
-                            ]);
+                        const handleShiftEnter = () => {
+                            if (
+                                this.editor.isActive('bulletList') ||
+                                this.editor.isActive('orderedList')
+                            ) {
+                                this.editor.commands.first(({ commands }) => [
+                                    () => commands.splitListItem('listItem'),
+                                ]);
+                            } else {
+                                this.editor.commands.first(({ commands }) => [
+                                    () => commands.newlineInCode(),
+                                    () => commands.createParagraphNear(),
+                                    () => commands.liftEmptyBlock(),
+                                    () => commands.splitBlock(),
+                                ]);
+                            }
+                        };
 
                         return {
                             Enter: () => true, // Prevent extra line-break on submiting via Enter
-                            'Shift-Enter': handleEnter,
+                            'Shift-Enter': handleShiftEnter,
                         };
                     },
                 }),
@@ -168,7 +178,6 @@ const RichText = memo(
                 };
                 setEditorContent(content);
                 onChange && onChange(content);
-                setTimeout(() => (showingMention.current = false));
             },
             onFocus: ({ event }) => {
                 setFocused(true);
@@ -256,93 +265,6 @@ const RichText = memo(
             [editor, onEsc, canSubmit, editorContent, handleSubmit],
         );
 
-        const getToolbar = useMemo(() => {
-            const toolbarItemProps = {
-                fixed: { className: classes.toolbarItem, color: theme.colors.neutral700 },
-                floating: {
-                    className: classNames(classes.toolbarItem, classes.floatingToolbarItem),
-                    color: theme.colors.neutralBase,
-                },
-            };
-
-            const toolbarItemStyle = compactMode
-                ? toolbarItemProps.fixed
-                : toolbarItemProps[toolbarStyle];
-
-            const toolbarItems = toolbar.map((item, index) => (
-                <ToolbarItem editor={editor} key={index} {...item} {...toolbarItemStyle} />
-            ));
-
-            if (mention && (toolbarStyle === 'fixed' || compactMode)) {
-                toolbarItems.push(<span className={classes.toolbarDivider}></span>);
-                toolbarItems.push(
-                    <ToolbarItem
-                        editor={editor}
-                        key="mention"
-                        hint={mention.tooltip}
-                        item="mention"
-                        {...toolbarItemStyle}
-                    />,
-                );
-            }
-
-            switch (true) {
-                case compactMode:
-                    return (
-                        <div className={classes.toolbar}>
-                            <div
-                                className={classes.toolbarItems}
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                {toolbarItems}
-                            </div>
-                            <Icon
-                                name="send"
-                                size="large"
-                                color={
-                                    !!editorContent?.text?.length
-                                        ? theme.colors.orange500
-                                        : theme.colors.neutral700
-                                }
-                                onClick={handleSubmit}
-                            />
-                        </div>
-                    );
-                case editor && toolbarStyle === 'floating':
-                    return (
-                        <BubbleMenu
-                            tippyOptions={{ duration: 100 }}
-                            editor={editor}
-                            className={classes.floatingToolbar}
-                        >
-                            {toolbarItems}
-                        </BubbleMenu>
-                    );
-                case editor && toolbarStyle === 'fixed':
-                    return (
-                        <div className={classes.toolbar}>
-                            {toolbarItems}
-                            {customActions && (
-                                <div className={classes.toolbarCustomActions}>{customActions}</div>
-                            )}
-                        </div>
-                    );
-                default:
-                    return null;
-            }
-        }, [
-            classes,
-            theme,
-            toolbarStyle,
-            toolbar,
-            mention,
-            editor,
-            editorContent,
-            compactMode,
-            customActions,
-            handleSubmit,
-        ]);
-
         const getIcons = useMemo(() => {
             switch (true) {
                 case editorContent?.text && !isReadOnly && !compactMode:
@@ -429,14 +351,39 @@ const RichText = memo(
                 className: classes.editor,
                 ...override.editor,
             }),
-            [editor, classes.editor, override],
+            [classes, editor, override],
+        );
+
+        const menuProps = useMemo(
+            () => ({
+                compactMode,
+                customActions,
+                editor,
+                editorContent,
+                focused,
+                handleSubmit,
+                mention,
+                toolbar,
+                toolbarStyle,
+            }),
+            [
+                compactMode,
+                customActions,
+                editor,
+                editorContent,
+                focused,
+                handleSubmit,
+                mention,
+                toolbar,
+                toolbarStyle,
+            ],
         );
 
         return (
             <InputWrapper {...inputWrapperProps}>
                 <div {...editorWrapperProps}>
                     <EditorContent {...editorProps} />
-                    {getToolbar}
+                    <Menu {...menuProps} />
                     {getIcons}
                 </div>
             </InputWrapper>

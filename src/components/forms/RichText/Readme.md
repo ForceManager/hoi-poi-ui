@@ -118,7 +118,7 @@ const fetchSuggestions = (query) =>
                         },
                     },
                 ]
-                    .filter((item) => item.name.toLowerCase().startsWith(query.toLowerCase()))
+                    .filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
                     .slice(0, 5);
                 resolve(options);
             }, 500),
@@ -163,7 +163,6 @@ const fetchSuggestions = (query) =>
             </Fragment>
         }
         onSubmit={() => console.log('SUBMIT!')}
-        onChange={(value) => console.log('CHANGE!', value)}
         onEsc={() => console.log('ESCAPE!')}
     />
 
@@ -197,6 +196,7 @@ const fetchSuggestions = (query) =>
                 },
             }}
             onSubmit={() => console.log('SUBMIT!')}
+            onEsc={() => console.log('ESCAPE!')}
         />
     </div>
 </div>;
