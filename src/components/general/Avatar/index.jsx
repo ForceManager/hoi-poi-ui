@@ -37,15 +37,19 @@ function Avatar({
     };
 
     useEffect(() => {
+        let willUnmount = false;
+        
         if (!isImageLoaded || initialSrc !== src) {
             if (src && !hadError) {
                 getDataUri(src)
                     .then((dataUri) => {
-                        if (dataUri) setDefaultSrc(dataUri);
-                        setIsImageLoaded(true);
+                        if (!willUnmount) {
+                            if (dataUri) setDefaultSrc(dataUri);
+                            setIsImageLoaded(true);
+                        }
                     })
                     .catch(() => {
-                        if (placeholder) {
+                        if (placeholder && !willUnmount) {
                             setDefaultSrc(placeholder);
                             setHadError(true);
                             setIsImageLoaded(true);
@@ -56,6 +60,9 @@ function Avatar({
                 setIsImageLoaded(true);
             }
         }
+        return () => {
+            willUnmount = true;
+        };
     }, [src, placeholder, initialSrc, defaultSrc, isImageLoaded, hadError]);
 
     const content = useMemo(() => {

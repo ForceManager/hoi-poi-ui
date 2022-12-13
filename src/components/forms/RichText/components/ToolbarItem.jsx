@@ -1,16 +1,26 @@
-import React, { memo, useMemo } from 'react';
+import React, { useMemo, Fragment } from 'react';
+import classNames from 'classnames';
 import Tooltip from '../../../utils/Tooltip';
 import Icon from '../../../general/Icon';
 
-const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
+const ToolbarItem = ({
+    className: classNameProp,
+    classNameActive,
+    color,
+    item,
+    hint,
+    editor,
+    active,
+}) => {
+    const className = classNames(classNameProp, { [classNameActive]: active });
+
     const tooltipProps = useMemo(
         () => ({
             placement: 'top',
-            content: <span>{hint}</span>,
-            key,
+            content: <Fragment>{hint}</Fragment>,
             mouseEnterDelay: 0.2,
         }),
-        [hint, key],
+        [hint],
     );
 
     const iconProps = useMemo(() => {
@@ -18,6 +28,7 @@ const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
 
         const commonProps = {
             color,
+            className,
         };
 
         switch (item) {
@@ -47,13 +58,17 @@ const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
                 break;
             case 'mention':
                 name = 'mention';
-                onClick = () => editor.chain().insertContent('@').run();
+                onClick = () => editor.chain().focus().insertContent('@').run();
                 break;
             default:
                 break;
         }
-        return { name, onClick, className, ...commonProps };
-    }, [className, color, editor, item]);
+        return {
+            name,
+            onClick,
+            ...commonProps,
+        };
+    }, [color, item, editor, className]);
 
     if (!editor) return null;
 
@@ -64,6 +79,6 @@ const ToolbarItem = memo(({ className, color, item, hint, editor, key }) => {
             </span>
         </Tooltip>
     );
-});
+};
 
 export default ToolbarItem;
