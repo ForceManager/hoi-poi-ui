@@ -396,7 +396,7 @@ exports[`ScrollBar match snapshot 1`] = `
         }
       }
     >
-      <ScrollBar
+      <ForwardRef
         autoHide={true}
         overrides={Object {}}
       >
@@ -508,7 +508,7 @@ exports[`ScrollBar match snapshot 1`] = `
             </div>
           </div>
         </Scrollbars>
-      </ScrollBar>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
