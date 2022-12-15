@@ -67,9 +67,9 @@ RadioControl.propTypes = {
     onChange: PropTypes.func,
     option: PropTypes.shape({
         label: PropTypes.string,
-        value: PropTypes.string,
+        value: PropTypes.any,
     }),
-    value: PropTypes.string,
+    value: PropTypes.any,
     isReadOnly: PropTypes.bool,
 };
 

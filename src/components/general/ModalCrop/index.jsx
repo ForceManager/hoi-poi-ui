@@ -80,6 +80,7 @@ function ModalCrop({
 
     const onImageLoaded = useCallback(
         (img) => {
+            img = img.target;
             imgRef.current = img;
             const imageAspect = img.width / img.height;
             let width;
@@ -131,7 +132,6 @@ function ModalCrop({
             }
 
             setCrop({
-                aspect,
                 x: (img.width - width) / 2,
                 y: (img.height - height) / 2,
                 width,
@@ -159,12 +159,13 @@ function ModalCrop({
             <div className={classes.cropModalContent}>
                 {src && (
                     <ReactCrop
-                        src={src}
                         crop={crop}
-                        onImageLoaded={onImageLoaded}
+                        aspect={aspect}
                         onChange={setCrop}
                         className={classes.cropCanvas}
-                    />
+                    >
+                        <img className="ReactCrop__image" src={src} onLoad={onImageLoaded} alt="" />
+                    </ReactCrop>
                 )}
             </div>
         </Modal>

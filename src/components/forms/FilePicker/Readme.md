@@ -529,7 +529,7 @@ const onRemove = (deletedFile) => {
         onDrop={onDrop}
         onRemove={onRemove}
         files={state}
-        accept={['application/zip', 'application/x-zip-compressed', 'application/vnd.rar']}
+        accept={['application/zip', 'application/vnd.rar']}
     />
 </div>;
 ```

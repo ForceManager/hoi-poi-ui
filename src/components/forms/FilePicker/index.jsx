@@ -6,6 +6,7 @@ import { useDropzone } from 'react-dropzone';
 import File from './components/File';
 import ModalCrop from '../../general/ModalCrop';
 import { getOverrides, useClasses } from '../../../utils/overrides';
+
 import Button from '../../general/Button';
 import Label from '../Label';
 import Text from '../../typography/Text';
@@ -107,7 +108,12 @@ function FilePicker({
 
     const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
         onDrop: handleOnDrop,
-        accept,
+        accept: accept
+            ? accept.reduce((fileTypes, fileType) => {
+                  fileTypes[fileType] = [];
+                  return fileTypes;
+              }, {})
+            : {},
         disabled,
         maxSize,
         minSize,
@@ -319,7 +325,7 @@ FilePicker.propTypes = {
     error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     files: PropTypes.arrayOf(
         PropTypes.oneOfType([
-            PropTypes.object,
+            PropTypes.any,
             PropTypes.shape({
                 id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
                 file: PropTypes.object,
