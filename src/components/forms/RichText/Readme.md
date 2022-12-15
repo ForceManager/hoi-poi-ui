@@ -151,6 +151,7 @@ const fetchSuggestions = (query) =>
                 advice: 'Lorem ipsum dolor sit amet',
                 noResults: 'No Results...',
             },
+            maxVisibleItems: 3,
         }}
         customActions={
             <Fragment>

@@ -25,6 +25,12 @@ export default (theme) => {
         },
         advice: {
             marginBottom: 16,
-        }
+        },
+        avatar: {
+            flexShrink: 0,
+        },
+        name: {
+            display: 'inline-block',
+        },
     };
 };
