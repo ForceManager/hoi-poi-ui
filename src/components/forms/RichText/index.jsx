@@ -106,6 +106,7 @@ const RichText = memo(
                         return {
                             onStart: (props) => {
                                 props.texts = mention.texts || {};
+                                props.maxVisibleItems = mention.maxVisibleItems;
 
                                 reactRenderer = new ReactRenderer(MentionList, {
                                     props,

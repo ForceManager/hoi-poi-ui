@@ -8,6 +8,7 @@ export default (theme) => {
             borderRadius: 8,
             padding: 16,
             maxWidth: '100%',
+            maxHeight: '50vh',
             width: 300,
         },
         item: {
@@ -25,6 +26,12 @@ export default (theme) => {
         },
         advice: {
             marginBottom: 16,
-        }
+        },
+        avatar: {
+            flexShrink: 0,
+        },
+        name: {
+            display: 'inline-block',
+        },
     };
 };

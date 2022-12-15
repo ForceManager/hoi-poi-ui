@@ -1,3 +1,5 @@
+import { alphaColor } from "../../../utils/styles/defaultTheme"; 
+
 export default (theme) => ({
     root: {
         '& .ProseMirror': {
@@ -24,8 +26,8 @@ export default (theme) => ({
         },
         '& [data-type="mention"]': {
             display: 'inline-block',
-            backgroundColor: theme.colors.blue500,
-            color: theme.colors.neutralBase,
+            backgroundColor: alphaColor(theme.colors.blue500, 0.1),
+            color: theme.colors.blue500,
             padding: '0 6px',
             borderRadius: 10,
             '&::before': {

@@ -13,7 +13,7 @@ const secondaryOverlay = 'rgba(2,168,189,0.10)';
 const shadow = 'rgba(0, 0, 0, 0.25)';
 const boxShadow = `0 3px 9px 0 ${shadow}`;
 
-function alphaColor(hex, a) {
+export const alphaColor = (hex, a) => {
     const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     if (!rgb) return '';
     return `rgba(${parseInt(rgb[1], 16)}, ${parseInt(rgb[2], 16)}, ${parseInt(rgb[3], 16)}, ${a})`;
