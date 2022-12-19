@@ -60,6 +60,10 @@ const ToolbarItem = ({
                 name = 'mention';
                 onClick = () => editor.chain().focus().insertContent('@').run();
                 break;
+            case 'emoji':
+                name = 'mood';
+                onClick = () => editor.chain().focus().insertContent(':').run();
+                break;
             default:
                 break;
         }

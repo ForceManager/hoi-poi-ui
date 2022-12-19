@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 import { Button, Text } from 'hoi-poi-ui';
 
 const lorem =
-    '<p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur <em>adipiscing elit</em>.</p>';
+    '<p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur <em>adipiscing elit</em>.</p><p>👾</p>';
 
 const toolbar = [
     {
@@ -153,6 +153,10 @@ const fetchSuggestions = (query) =>
             },
             maxVisibleItems: 3,
         }}
+        emoji={{
+            tooltip: 'Emoji',
+            maxVisibleItems: 7,
+        }}
         customActions={
             <Fragment>
                 <Button size="small" type="secondary">
@@ -165,6 +169,7 @@ const fetchSuggestions = (query) =>
         }
         onSubmit={() => console.log('SUBMIT!')}
         onEsc={() => console.log('ESCAPE!')}
+        value={lorem}
     />
 
     <Text>Editor in 'compact' mode with mentions</Text>
@@ -188,6 +193,11 @@ const fetchSuggestions = (query) =>
                     advice: 'Lorem ipsum dolor sit amet',
                     noResults: 'No Results...',
                 },
+                maxVisibleItems: 7,
+            }}
+            emoji={{
+                tooltip: 'Emoji',
+                maxVisibleItems: 7,
             }}
             overrides={{
                 editorWrapper: {

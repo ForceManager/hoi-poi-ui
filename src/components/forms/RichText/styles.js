@@ -24,6 +24,10 @@ export default (theme) => ({
             height: 0,
             pointerEvents: 'none',
         },
+        '& [data-type="emoji"]': {
+            fontSize: 17,
+            lineHeight: 1,
+        },
         '& [data-type="mention"]': {
             display: 'inline-block',
             backgroundColor: alphaColor(theme.colors.blue500, 0.1),

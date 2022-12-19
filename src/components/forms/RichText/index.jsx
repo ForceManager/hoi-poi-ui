@@ -1,17 +1,17 @@
 import React, { memo, useCallback, useEffect, useMemo, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { EditorContent, useEditor, ReactRenderer } from '@tiptap/react';
+import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Placeholder from './components/placeholderExtensions';
+import Placeholder from './components/placeholderExtension';
 import Underline from '@tiptap/extension-underline';
 import Mention from '@tiptap/extension-mention';
 import HardBreak from '@tiptap/extension-hard-break';
-import tippy from 'tippy.js';
+import Emoji from '@tiptap-pro/extension-emoji';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
-import MentionList from './components/MentionList';
 import Menu from './components/Menu';
+import { getEmojiConfig, getSuggestionsConfig } from './components/extensionsConfig';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../utils/styles';
 
@@ -44,6 +44,7 @@ const RichText = memo(
         autofocus,
         canSubmit,
         onChangeFocus,
+        emoji,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -52,6 +53,7 @@ const RichText = memo(
         const [focused, setFocused] = useState(false);
         const [editorContent, setEditorContent] = useState({});
         const showingMention = useRef(false);
+        const showingEmoji = useRef(false);
         const editorDivRef = useRef(null);
 
         const getExtensions = useMemo(() => {
@@ -91,72 +93,23 @@ const RichText = memo(
                 }),
             ];
 
+            if (emoji) {
+                extensions.push(
+                    Emoji.configure({
+                        enableEmoticons: true,
+                        suggestion: getEmojiConfig({ emoji, showingEmoji }),
+                    }),
+                );
+            }
+
             if (
                 mention &&
                 mention.fetchSuggestions &&
                 typeof mention.fetchSuggestions === 'function'
             ) {
-                const suggestionConfig = {
-                    items: ({ query }) => mention.fetchSuggestions(query),
-                    allowedPrefixes: [' '],
-                    char: '@',
-                    render: () => {
-                        let reactRenderer;
-                        let popup;
-                        return {
-                            onStart: (props) => {
-                                props.texts = mention.texts || {};
-                                props.maxVisibleItems = mention.maxVisibleItems;
-
-                                reactRenderer = new ReactRenderer(MentionList, {
-                                    props,
-                                    editor: props.editor,
-                                });
-
-                                if (!props.clientRect) return;
-
-                                showingMention.current = true;
-
-                                popup = tippy('body', {
-                                    getReferenceClientRect: props.clientRect,
-                                    appendTo: () => document.body,
-                                    content: reactRenderer.element,
-                                    showOnCreate: true,
-                                    interactive: true,
-                                    trigger: 'manual',
-                                    placement: 'top-start',
-                                });
-                            },
-                            onUpdate: (props) => {
-                                reactRenderer.updateProps(props);
-
-                                if (!props.clientRect) {
-                                    return;
-                                }
-
-                                popup[0].setProps({
-                                    getReferenceClientRect: props.clientRect,
-                                });
-                            },
-                            onKeyDown: (props) => {
-                                if (props.event.key === 'Escape') {
-                                    popup[0].hide();
-                                    return true;
-                                }
-
-                                return reactRenderer.ref?.onKeyDown(props);
-                            },
-                            onExit: () => {
-                                popup[0].destroy();
-                                reactRenderer.destroy();
-                            },
-                        };
-                    },
-                };
                 extensions.push(
                     Mention.configure({
-                        pluginKey: 'polloloco',
-                        suggestion: suggestionConfig,
+                        suggestion: getSuggestionsConfig({ mention, showingMention }),
                         renderLabel: ({ node }) => {
                             return `${node.attrs.label}`;
                         },
@@ -165,7 +118,7 @@ const RichText = memo(
             }
 
             return extensions;
-        }, [mention, placeholder]);
+        }, [emoji, mention, placeholder]);
 
         const editor = useEditor({
             editable: !isReadOnly,
@@ -244,19 +197,21 @@ const RichText = memo(
 
         const handleKeyDown = useCallback(
             (e) => {
-                if (e.keyCode === 27 && !showingMention.current) {
+                if (e.keyCode === 27 && !showingMention.current && !showingEmoji.current) {
                     editor.commands.blur();
                     setFocused(false);
                     onEsc && onEsc(e);
                 }
 
-                if (e.keyCode === 27 && showingMention.current) {
+                if (e.keyCode === 27 && (showingMention.current || showingEmoji.current)) {
                     showingMention.current = false;
+                    showingEmoji.current = false;
                 }
 
                 if (e.keyCode === 13 && !e.shiftKey) {
-                    if (showingMention.current) {
+                    if (showingMention.emoji || showingEmoji.current) {
                         showingMention.current = false;
+                        showingEmoji.current = false;
                         return;
                     }
                     if (canSubmit && !canSubmit(editorContent)) return;
@@ -366,6 +321,7 @@ const RichText = memo(
                 mention,
                 toolbar,
                 toolbarStyle,
+                emoji,
             }),
             [
                 compactMode,
@@ -377,6 +333,7 @@ const RichText = memo(
                 mention,
                 toolbar,
                 toolbarStyle,
+                emoji,
             ],
         );
 
@@ -468,6 +425,8 @@ RichText.propTypes = {
             /** Text to show if the mentions search can't find a match */
             noResults: PropTypes.string,
         }),
+        /** Max visible items in the suggestions list */
+        maxVisibleItems: PropTypes.number,
     }),
     /** Enable compact mode: 'Single line height' editor with action buttons on the right that expands on focus */
     compactMode: PropTypes.bool,
@@ -475,6 +434,12 @@ RichText.propTypes = {
     autofocus: PropTypes.bool,
     canSubmit: PropTypes.func,
     onChangeFocus: PropTypes.func,
+    emoji: PropTypes.shape({
+        /** Tooltip text for the mentions button in the toolbar */
+        tooltip: PropTypes.string,
+        /** Max visible items in the suggestions list */
+        maxVisibleItems: PropTypes.number,
+    }),
 };
 
 export default RichText;
