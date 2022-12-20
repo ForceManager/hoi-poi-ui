@@ -70,6 +70,7 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
             },
 
             onUpdate(props) {
+                if (!reactRenderer) return;
                 reactRenderer.updateProps(props);
 
                 popup[0].setProps({
@@ -78,6 +79,7 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
             },
 
             onKeyDown(props) {
+                if (!reactRenderer) return;
                 if (props.event.key === 'Escape') {
                     popup[0].hide();
                     reactRenderer.destroy();
@@ -89,6 +91,7 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
             },
 
             onExit() {
+                if (!reactRenderer) return;
                 popup[0].destroy();
                 reactRenderer.destroy();
             },
@@ -120,17 +123,19 @@ export const getSuggestionsConfig = ({ mention, showingMention }) => ({
                 popup = getTippy({ props, reactRenderer, placement: 'top-start' });
             },
             onUpdate: (props) => {
+                if (!reactRenderer) return;
                 reactRenderer.updateProps(props);
 
                 if (!props.clientRect) {
                     return;
                 }
 
-                popup[0].setProps({
+                popup?.[0]?.setProps({
                     getReferenceClientRect: props.clientRect,
                 });
             },
             onKeyDown: (props) => {
+                if (!reactRenderer) return;
                 if (props.event.key === 'Escape') {
                     popup[0].hide();
                     return true;
@@ -139,7 +144,8 @@ export const getSuggestionsConfig = ({ mention, showingMention }) => ({
                 return reactRenderer.ref?.onKeyDown(props);
             },
             onExit: () => {
-                popup[0].destroy();
+                if (!reactRenderer) return;
+                popup?.[0]?.destroy();
                 reactRenderer.destroy();
             },
         };
