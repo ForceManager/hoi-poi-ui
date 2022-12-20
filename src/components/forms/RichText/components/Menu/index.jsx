@@ -30,6 +30,7 @@ const Menu = ({
     mention,
     toolbar,
     toolbarStyle,
+    emoji,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -64,21 +65,35 @@ const Menu = ({
             );
         });
 
-        if (mention && (toolbarStyle === 'fixed' || compactMode)) {
+        if ((mention || emoji) && (toolbarStyle === 'fixed' || compactMode)) {
             toolbarItems.push(<span key="divider" className={classes.toolbarDivider}></span>);
-            toolbarItems.push(
-                <ToolbarItem
-                    editor={editor}
-                    key="mention"
-                    hint={mention.tooltip}
-                    item="mention"
-                    {...toolbarItemStyle}
-                />,
-            );
+            if (mention) {
+                toolbarItems.push(
+                    <ToolbarItem
+                        editor={editor}
+                        key="mention"
+                        hint={mention.tooltip}
+                        item="mention"
+                        {...toolbarItemStyle}
+                    />,
+                );
+            }
+
+            if (emoji) {
+                toolbarItems.push(
+                    <ToolbarItem
+                        editor={editor}
+                        key="emoji"
+                        hint={emoji.tooltip}
+                        item="emoji"
+                        {...toolbarItemStyle}
+                    />,
+                );
+            }
         }
 
         return toolbarItems;
-    }, [classes, compactMode, editor, mention, theme, toolbar, toolbarStyle]);
+    }, [classes, compactMode, editor, mention, theme, toolbar, toolbarStyle, emoji]);
 
     const toolbarClassNames = classNames(classes.toolbar, {
         [classes.compactMode]: compactMode && !focused,
@@ -122,7 +137,9 @@ const Menu = ({
                 <div className={toolbarClassNames}>
                     {toolbarItems()}
                     {customActions && (
-                        <div key="customActions" className={classes.toolbarCustomActions}>{customActions}</div>
+                        <div key="customActions" className={classes.toolbarCustomActions}>
+                            {customActions}
+                        </div>
                     )}
                 </div>
             );
