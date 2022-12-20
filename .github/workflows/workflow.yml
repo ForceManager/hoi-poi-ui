@@ -16,10 +16,10 @@ jobs:
                   node-version: 16.x
 
             - name: Set up private registry
-              run: yarn config set registry https://registry.tiptap.dev
-
-            - name: Set up private registry authentication
-              run: yarn config set //registry.tiptap.dev/:_authToken ${{ secrets.TIPTAP_AUTH_TOKEN }}
+              run: yarn config set npmScopes.tiptap-pro.npmAlwaysAuth "true"
+              run: yarn config set npmScopes.tiptap-pro.npmAuthToken "${{ secrets.TIPTAP_AUTH_TOKEN }}"
+              run: yarn config set npmScopes.tiptap-pro.npmPublishRegistry "https://registry.tiptap.dev/"
+              run: yarn config set npmScopes.tiptap-pro.npmRegistryServer "https://registry.tiptap.dev/"
 
             - name: Install dependencies
               run: yarn install && node postinstall.js
