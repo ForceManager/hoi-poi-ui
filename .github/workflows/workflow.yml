@@ -15,14 +15,14 @@ jobs:
               with:
                   node-version: 16.x
 
+            - name: Set up private registry
+              run: yarn config set registry https://registry.tiptap.dev
+
+            - name: Set up private registry authentication
+              run: yarn config set //registry.tiptap.dev/:_authToken ${{ secrets.TIPTAP_AUTH_TOKEN }}
+
             - name: Install dependencies
               run: yarn install && node postinstall.js
-
-            - name: Set up private registry
-              run: yarn config set //registry.tiptap.dev/:_authToken ${{ secrets.TIPTAP_AUTH_TOKEN }}
-    
-            - name: Install private dependency
-              run: yarn add @tiptap-pro/extension-emoji
 
             - name: Build Styleguidist
               run: yarn build:styleguidist
