@@ -48,7 +48,7 @@ const EmojiList = forwardRef(
         );
 
         const scrollHandler = useCallback((index) => {
-            scrollBarRef.current.scrollTop(index * EMOJI_LIST_ITEM_HEIGHT);
+            scrollBarRef?.current?.scrollTop(index * EMOJI_LIST_ITEM_HEIGHT);
         }, []);
 
         const upHandler = useCallback(() => {
