@@ -20,7 +20,7 @@ jobs:
             - name: Install dependencies
               run: yarn install && node postinstall.js
               env:
-                  NODE_AUTH_TOKEN: ${{secrets.TIPTAP_AUTH_TOKEN}}
+                  NODE_AUTH_TOKEN: ${{ secrets.TIPTAP_AUTH_TOKEN }}
 
             - name: Build Styleguidist
               run: yarn build:styleguidist
