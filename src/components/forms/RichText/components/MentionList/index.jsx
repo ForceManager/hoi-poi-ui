@@ -50,7 +50,7 @@ const MentionList = forwardRef(
         );
 
         const scrollHandler = useCallback((index) => {
-            scrollBarRef.current.scrollTop(index * MENTION_LIST_ITEM_HEIGHT);
+            scrollBarRef?.current?.scrollTop(index * MENTION_LIST_ITEM_HEIGHT);
         }, []);
 
         const upHandler = useCallback(() => {

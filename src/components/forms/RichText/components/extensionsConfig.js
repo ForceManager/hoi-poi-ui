@@ -56,6 +56,7 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
 
         return {
             onStart: (props) => {
+                props.texts = emoji.texts || {};
                 props.maxVisibleItems = emoji.maxVisibleItems;
                 reactRenderer = new ReactRenderer(EmojiList, {
                     props,
@@ -66,7 +67,7 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
 
                 showingEmoji.current = true;
 
-                popup = getTippy({ props, reactRenderer, placement: 'bottom-start' });
+                popup = getTippy({ props, reactRenderer, placement: 'top-start' });
             },
 
             onUpdate(props) {
