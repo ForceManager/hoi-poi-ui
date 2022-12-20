@@ -11,9 +11,16 @@ jobs:
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         steps:
             - uses: actions/checkout@v1
+            — uses: actions/setup-node@v1
+              with:
+                  node-version: 16
+                  registry-url: https://registry.tiptap.dev/
+              
 
             - name: Install dependencies
               run: yarn install && node postinstall.js
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.TIPTAP_AUTH_TOKEN}}
 
             - name: Build Styleguidist
               run: yarn build:styleguidist
