@@ -51,6 +51,7 @@ const RichText = memo(
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, RichText.overrides);
         const [focused, setFocused] = useState(false);
+        const [showingMenuPopover, setShowingMenuPopover] = useState(false);
         const [editorContent, setEditorContent] = useState({});
         const showingMention = useRef(false);
         const showingEmoji = useRef(false);
@@ -147,15 +148,15 @@ const RichText = memo(
         });
 
         useEffect(() => {
-            if (autofocus && editor) {
+            if (autofocus && editor && !showingMenuPopover) {
                 editor.commands.focus();
                 setFocused(true);
             }
-        }, [autofocus, editor]);
+        }, [autofocus, editor, showingMenuPopover]);
 
         useEffect(() => {
             const handleClickOutside = (event) => {
-                if (!editorDivRef?.current.contains(event.target)) {
+                if (!editorDivRef?.current.contains(event.target) && !showingMenuPopover) {
                     setFocused(false);
                     onBlur && onBlur(event);
                     onChangeFocus && onChangeFocus(false);
@@ -165,7 +166,7 @@ const RichText = memo(
             return () => {
                 document.removeEventListener('click', handleClickOutside, true);
             };
-        }, [onBlur, onChangeFocus]);
+        }, [onBlur, onChangeFocus, showingMenuPopover]);
 
         const handleClear = useCallback(
             (e) => {
@@ -179,13 +180,13 @@ const RichText = memo(
         const handleClick = useCallback(
             (e) => {
                 if (compactMode) e.stopPropagation();
-                if (!focused && !isReadOnly) {
+                if (!focused && !isReadOnly && !showingMenuPopover) {
                     editor.commands.focus();
                     setFocused(true);
                 }
                 onClick && onClick(e);
             },
-            [editor, focused, isReadOnly, onClick, compactMode],
+            [editor, focused, isReadOnly, onClick, compactMode, showingMenuPopover],
         );
 
         const handleSubmit = useCallback(() => {
@@ -197,7 +198,7 @@ const RichText = memo(
 
         const handleKeyDown = useCallback(
             (e) => {
-                if (e.keyCode === 27 && !showingMention.current && !showingEmoji.current) {
+                if (e.keyCode === 27 && !showingMention.current && !showingEmoji.current && !showingMenuPopover) {
                     editor.commands.blur();
                     setFocused(false);
                     onEsc && onEsc(e);
@@ -209,7 +210,7 @@ const RichText = memo(
                 }
 
                 if (e.keyCode === 13 && !e.shiftKey) {
-                    if (showingMention.emoji || showingEmoji.current) {
+                    if (showingMention.emoji || showingEmoji.current || showingMenuPopover) {
                         showingMention.current = false;
                         showingEmoji.current = false;
                         return;
@@ -218,7 +219,7 @@ const RichText = memo(
                     handleSubmit();
                 }
             },
-            [editor, onEsc, canSubmit, editorContent, handleSubmit],
+            [editor, onEsc, canSubmit, editorContent, handleSubmit, showingMenuPopover],
         );
 
         const getIcons = useMemo(() => {
@@ -322,6 +323,7 @@ const RichText = memo(
                 toolbar,
                 toolbarStyle,
                 emoji,
+                setShowingMenuPopover,
             }),
             [
                 compactMode,
@@ -334,6 +336,7 @@ const RichText = memo(
                 toolbar,
                 toolbarStyle,
                 emoji,
+                setShowingMenuPopover,
             ],
         );
 

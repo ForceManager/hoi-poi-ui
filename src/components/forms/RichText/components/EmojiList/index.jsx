@@ -28,6 +28,7 @@ const EmojiList = forwardRef(
             classes: classesProp,
             items = [],
             maxVisibleItems = MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL,
+            query,
         },
         ref,
     ) => {
@@ -92,12 +93,13 @@ const EmojiList = forwardRef(
             () => ({
                 autoHeight: true,
                 autoHeightMax: EMOJI_LIST_ITEM_HEIGHT * maxVisibleItems,
+                autoHide: false,
                 ref: scrollBarRef,
             }),
             [maxVisibleItems],
         );
 
-        return (
+        return query.length >= 3 ? (
             <div className={classes.root}>
                 {items.length ? (
                     <ScrollBar {...scrollBarProps}>
@@ -131,7 +133,7 @@ const EmojiList = forwardRef(
                     <Text>{texts?.noResults || 'No Results'}</Text>
                 )}
             </div>
-        );
+        ) : null;
     },
 );
 

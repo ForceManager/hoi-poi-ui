@@ -94,6 +94,7 @@ const MentionList = forwardRef(
             () => ({
                 autoHeight: true,
                 autoHeightMax: MENTION_LIST_ITEM_HEIGHT * maxVisibleItems,
+                autoHide: false,
                 ref: scrollBarRef,
             }),
             [maxVisibleItems],
