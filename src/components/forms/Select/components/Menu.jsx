@@ -33,6 +33,26 @@ export default React.memo(({ children, ...props }) => {
 
     const linkRow = useCallback(
         (action, index) => {
+            if (action.component) {
+                const onClick = action.onClick
+                    ? () => {
+                          onClickAction && onClickAction(action);
+                          action.onClick && action.onClick();
+                      }
+                    : null;
+
+                return (
+                    <div
+                        key={index}
+                        className={actionClassName}
+                        {...override.action}
+                        onClick={onClick}
+                    >
+                        {action.component}
+                    </div>
+                );
+            }
+
             const icon = action.icon;
             const iconType = action.iconType;
 
