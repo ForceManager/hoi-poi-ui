@@ -2,10 +2,11 @@ import React, {
     forwardRef,
     memo,
     useCallback,
+    useEffect,
     useImperativeHandle,
     useMemo,
+    useReducer,
     useRef,
-    useState,
     Fragment,
 } from 'react';
 import classNames from 'classnames';
@@ -24,6 +25,60 @@ const useStyles = createUseStyles(styles, 'EmojiMenu');
 const GRID_COLUMN_WIDTH = 36;
 const GRID_ROW_HEIGHT = 32;
 const GRID_COLS = 9;
+const FREQUENTLY_USED_ITEMS_TO_SHOW = 36;
+
+const CLEAR_SEARCH = 'CLEAR_SEARCH';
+const SET_SEARCH = 'SET_SEARCH';
+const SET_SELECTED = 'SET_SELECTED';
+const SET_ACTIVE_SECTION = 'SET_ACTIVE_SECTION';
+const SET_LOCAL_CACHE = 'SET_LOCAL_CACHE';
+
+const initialState = {
+    search: undefined,
+    section: null,
+    selectedIndex: null,
+    columnIndex: 0,
+    rowIndex: 0,
+    cache: [],
+};
+
+const reducer = (state, action) => {
+    switch (action.type) {
+        case SET_ACTIVE_SECTION:
+            return {
+                ...state,
+                section: action.payload,
+            };
+        case CLEAR_SEARCH:
+            return {
+                ...state,
+                search: undefined,
+                selectedIndex: null,
+                columnIndex: 0,
+                rowIndex: 0,
+            };
+        case SET_SEARCH:
+            return {
+                ...state,
+                search: action.payload,
+                selectedIndex: null,
+                columnIndex: 0,
+                rowIndex: 0,
+            };
+        case SET_SELECTED:
+            return {
+                ...state,
+                ...action.payload,
+            };
+        case SET_LOCAL_CACHE:
+            return {
+                ...state,
+                cache: action.payload,
+            };
+        default:
+            throw new Error();
+    }
+};
 
 const EmojiMenu = forwardRef(
     (
@@ -33,48 +88,47 @@ const EmojiMenu = forwardRef(
             editor,
             onVisibleChange,
             popoverVisible,
-            texts = {
-                search_placeholder: 'Search all emoji',
-            },
+            texts,
+            cache,
+            saveCache,
         },
         ref,
     ) => {
-        const [search, setSearch] = useState(undefined);
-        const [selectedIndex, setSelectedIndex] = useState(null);
-        const isFirstLoad = useRef(true);
+        const [state, dispatch] = useReducer(reducer, initialState);
         const searchBarRef = useRef();
         const gridRef = useRef();
 
         const classes = useClasses(useStyles, classesProp);
 
-        const handleVisibleChange = useCallback((visible) => {
-            if (visible) {
-                if (isFirstLoad.current) {
-                    isFirstLoad.current = false;
-                    setTimeout(() => searchBarRef?.current?.focus(), 500);
-                }
-            } else {
-                setSearch(undefined);
-                setSelectedIndex(null);
-                isFirstLoad.current = true;
-            }
+        useEffect(() => {
+            dispatch({ type: SET_LOCAL_CACHE, payload: cache });
+        }, [cache]);
+
+        const handleChange = useCallback((value) => {
+            let newSearch = value?.target?.value || value;
+            newSearch = typeof newSearch === 'string' ? newSearch.toLowerCase() : undefined;
+            dispatch({ type: SET_SEARCH, payload: newSearch });
         }, []);
 
-        const onChange = useCallback((value) => {
-            const newSearch = value?.target?.value || value;
-            setSearch(
-                newSearch && typeof newSearch === 'string' ? newSearch.toLowerCase() : undefined,
-            );
-            setSelectedIndex(null);
-        }, []);
+        const handleVisibleChange = useCallback(
+            (visible) => {
+                onVisibleChange && onVisibleChange(visible);
+                if (visible) {
+                    setTimeout(() => searchBarRef?.current?.focus(), 500);
+                } else {
+                    dispatch({ type: CLEAR_SEARCH });
+                }
+            },
+            [onVisibleChange],
+        );
 
         const groupedEmojiObj = useMemo(() => {
             const emoji = editor?.storage?.emoji?.emojis || [];
-            return emoji
+            let emojiObj = emoji
                 .filter(({ shortcodes, tags }) => {
-                    return search
-                        ? shortcodes.find((shortcode) => shortcode.startsWith(search)) ||
-                              tags.find((tag) => tag.startsWith(search))
+                    return state.search
+                        ? shortcodes.find((shortcode) => shortcode.startsWith(state.search)) ||
+                              tags.find((tag) => tag.startsWith(state.search))
                         : true;
                 })
                 .reduce((obj, item) => {
@@ -83,26 +137,68 @@ const EmojiMenu = forwardRef(
                     obj[item.group].push(item);
                     return obj;
                 }, {});
-        }, [editor, search]);
+
+            if (!state.search && saveCache && state.cache && Object.entries(state.cache).length) {
+                const cachedEmojiArr = Object.keys(state.cache).reduce((arr, item) => {
+                    const cachedEmoji = emoji.find(({ name }) => name === item);
+                    return [...arr, cachedEmoji];
+                }, []);
+                emojiObj = {
+                    [texts?.frequently_used_emoji || 'Frequently Used']: cachedEmojiArr,
+                    ...emojiObj,
+                };
+            }
+
+            return emojiObj;
+        }, [
+            editor?.storage?.emoji?.emojis,
+            saveCache,
+            state.cache,
+            state.search,
+            texts?.frequently_used_emoji,
+        ]);
 
         const emojiGrid = useMemo(() => {
             return Object.keys(groupedEmojiObj).reduce((arr, groupName) => {
                 const newEmojis = groupedEmojiObj[groupName];
-                const newGroup = !search
+                const newGroup = !state.search
                     ? [groupName, ...Array(GRID_COLS - 1).fill('dummy'), ...newEmojis]
                     : newEmojis;
                 const n = GRID_COLS - (newEmojis.length % GRID_COLS);
-                const dummyItems = n < GRID_COLS && !search ? Array(n).fill('dummy') : [];
+                const dummyItems = n < GRID_COLS && !state.search ? Array(n).fill('dummy') : [];
                 return [...arr, ...newGroup, ...dummyItems];
             }, []);
-        }, [groupedEmojiObj, search]);
+        }, [groupedEmojiObj, state.search]);
+
+        const emojiGridRowsCount = useMemo(
+            () => Math.floor(emojiGrid.length / GRID_COLS) + (emojiGrid.length % GRID_COLS ? 1 : 0),
+            [emojiGrid.length],
+        );
+
+        const handleCache = useCallback(
+            (name) => {
+                if (!saveCache) return;
+                let newCache = { ...state.cache };
+                newCache[name] = newCache[name] ? newCache[name] + 1 : 1;
+                newCache = Object.fromEntries(
+                    Object.entries(newCache)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, FREQUENTLY_USED_ITEMS_TO_SHOW),
+                );
+                dispatch({ type: SET_LOCAL_CACHE, payload: newCache });
+                saveCache(newCache);
+            },
+            [saveCache, state.cache],
+        );
 
         const handleClick = useCallback(
             (name) => {
                 editor.chain().focus().setEmoji(name).run();
                 onVisibleChange(false);
+                dispatch({ type: CLEAR_SEARCH });
+                handleCache(name);
             },
-            [editor, onVisibleChange],
+            [editor, onVisibleChange, handleCache],
         );
 
         const GridItem = useCallback(
@@ -126,7 +222,7 @@ const EmojiMenu = forwardRef(
                         cellContent = (
                             <span
                                 className={classNames(classes.emojiItem, {
-                                    [classes.emojiItemActive]: index === selectedIndex,
+                                    [classes.emojiItemActive]: index === state.selectedIndex,
                                 })}
                                 onClick={() => handleClick(gridItem.name)}
                             >
@@ -141,49 +237,91 @@ const EmojiMenu = forwardRef(
                 }
                 return <div style={style}>{cellContent}</div>;
             },
-            [classes, emojiGrid, handleClick, selectedIndex],
+            [classes, emojiGrid, handleClick, state.selectedIndex],
         );
 
         const selectedEmoji = useMemo(
-            () => emojiGrid[selectedIndex] || null,
-            [emojiGrid, selectedIndex],
+            () => emojiGrid[state.selectedIndex] || null,
+            [emojiGrid, state.selectedIndex],
         );
 
-        const enterHandler = useCallback(() => {
-            if (selectedEmoji) handleClick(selectedEmoji.name);
-        }, [selectedEmoji, handleClick]);
+        const handleEnter = useCallback(
+            (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                if (selectedEmoji) handleClick(selectedEmoji.name);
+            },
+            [selectedEmoji, handleClick],
+        );
 
-        const directionKeyHandler = useCallback((event) => {
-            event.preventDefault();
-            event.stopPropagation();
+        const handleDirectionKey = useCallback(
+            (event) => {
+                event.preventDefault();
+                event.stopPropagation();
 
-            const { key } = event;
-            let newIndex;
+                const { key } = event;
+                let { selectedIndex, columnIndex, rowIndex } = state;
 
-            switch (true) {
-                case key === 'ArrowDown' && typeof selectedIndex === 'number':
-                    newIndex = selectedIndex + GRID_COLS;
-                    break;
-                case key === 'ArrowDown':
-                    searchBarRef?.current?.blur();
-                    newIndex = search ? 0 : 9;
-                    break;
-                case key === 'ArrowUp':
-                    newIndex = selectedIndex - GRID_COLS;
-                    break;
-                case key === 'ArrowRight':
-                    newIndex = selectedIndex + 1;
-                    break;
-                case key === 'ArrowLeft':
-                    newIndex = selectedIndex - 1;
-                    break;
-                default:
-                    break;
-            }
+                do {
+                    switch (true) {
+                        case key === 'ArrowDown' && typeof selectedIndex === 'number':
+                            searchBarRef?.current?.blur();
+                            if (rowIndex < emojiGridRowsCount - 1) {
+                                rowIndex++;
+                            } else {
+                                rowIndex = 0;
+                            }
+                            break;
+                        case key === 'ArrowDown':
+                            searchBarRef?.current?.blur();
+                            rowIndex = state.search ? 0 : 1;
+                            break;
+                        case key === 'ArrowUp':
+                            if (rowIndex === 0) {
+                                rowIndex = emojiGridRowsCount - 1;
+                            } else {
+                                rowIndex--;
+                            }
+                            break;
+                        case key === 'ArrowRight':
+                            if (columnIndex < GRID_COLS - 1) {
+                                columnIndex++;
+                            } else {
+                                if (rowIndex < emojiGridRowsCount - 1) {
+                                    rowIndex++;
+                                } else {
+                                    rowIndex = 0;
+                                }
+                                columnIndex = 0;
+                            }
+                            break;
+                        case key === 'ArrowLeft':
+                            if (columnIndex > 0) {
+                                columnIndex--;
+                            } else {
+                                if (rowIndex === 0) {
+                                    rowIndex = emojiGridRowsCount - 1;
+                                } else {
+                                    rowIndex--;
+                                }
+                                columnIndex = GRID_COLS - 1;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
 
-            gridRef.current.scrollToItem(newIndex);
-            setSelectedIndex(newIndex);
-        }, [search, selectedIndex]);
+                    selectedIndex = rowIndex * GRID_COLS + columnIndex;
+                } while (
+                    // Skip section titles or dummy grid items
+                    typeof emojiGrid[selectedIndex] !== 'object'
+                );
+
+                gridRef.current.scrollToItem({ align: 'center', columnIndex, rowIndex });
+                dispatch({ type: SET_SELECTED, payload: { selectedIndex, columnIndex, rowIndex } });
+            },
+            [emojiGrid, state, emojiGridRowsCount],
+        );
 
         useImperativeHandle(
             ref,
@@ -195,20 +333,42 @@ const EmojiMenu = forwardRef(
                             editor.commands.focus();
                             return true;
                         case 'Enter':
-                            enterHandler(event);
+                        case 'Tab':
+                            handleEnter(event);
                             return true;
                         case 'ArrowDown':
                         case 'ArrowUp':
                         case 'ArrowRight':
                         case 'ArrowLeft':
-                            directionKeyHandler(event);
+                            handleDirectionKey(event);
                             return true;
                         default:
                             return false;
                     }
                 },
             }),
-            [onVisibleChange, editor.commands, enterHandler, directionKeyHandler],
+            [onVisibleChange, editor.commands, handleEnter, handleDirectionKey],
+        );
+
+        const gridSectionsHeights = useMemo(() => {
+            let scrollTop = 0;
+            return Object.keys(groupedEmojiObj).reduce((obj, key) => {
+                let rows = Math.floor(groupedEmojiObj[key].length / GRID_COLS) + 1; // +1 for the row with the section's title
+                const extraRow = groupedEmojiObj[key].length % GRID_COLS ? 1 : 0;
+                rows = rows + extraRow;
+                scrollTop = scrollTop + rows * GRID_ROW_HEIGHT;
+                return { ...obj, [key]: scrollTop };
+            }, {});
+        }, [groupedEmojiObj]);
+
+        const handleScroll = useCallback(
+            ({ scrollTop }) => {
+                const section = Object.entries(gridSectionsHeights).filter(
+                    ([key, value]) => scrollTop + 10 <= value,
+                )[0][0];
+                dispatch({ type: SET_ACTIVE_SECTION, payload: section });
+            },
+            [gridSectionsHeights],
         );
 
         const popoverContent = useMemo(() => {
@@ -216,9 +376,9 @@ const EmojiMenu = forwardRef(
                 <div className={classes.root}>
                     <SearchBar
                         className={classes.searchBar}
-                        placeholder={texts.search_placeholder}
+                        placeholder={texts?.search_placeholder || 'Search all emoji'}
                         useAsSimpleSearch
-                        onChange={onChange}
+                        onChange={handleChange}
                         overrides={{
                             Select: {
                                 getRef: (ref) => {
@@ -228,22 +388,23 @@ const EmojiMenu = forwardRef(
                         }}
                     />
                     <div className={classes.gridWrapper}>
-                        {!search && (
+                        {!state.search && (
                             <Text
                                 type="captionMedium"
                                 className={classNames(classes.section, classes.sectionSticky)}
                             >
-                                Smileys & Emotion
+                                {state.section}
                             </Text>
                         )}
                         <Grid
                             ref={gridRef}
                             columnCount={GRID_COLS}
                             columnWidth={GRID_COLUMN_WIDTH}
-                            rowCount={emojiGrid.length / GRID_COLS}
+                            rowCount={emojiGridRowsCount}
                             rowHeight={GRID_ROW_HEIGHT}
                             width={GRID_COLUMN_WIDTH * GRID_COLS}
                             height={GRID_ROW_HEIGHT * 5.5}
+                            onScroll={handleScroll}
                             outerElementType={CustomScrollbarsVirtualList}
                         >
                             {GridItem}
@@ -271,19 +432,20 @@ const EmojiMenu = forwardRef(
         }, [
             popoverVisible,
             classes,
-            texts.search_placeholder,
-            onChange,
-            emojiGrid.length,
+            texts,
+            handleChange,
             GridItem,
             selectedEmoji,
-            search,
+            state.search,
+            state.section,
+            handleScroll,
+            emojiGridRowsCount,
         ]);
 
         return (
             <Popover
                 placement="top"
-                onVisibleChange={(visible) => onVisibleChange(visible)}
-                afterVisibleChange={handleVisibleChange}
+                onVisibleChange={handleVisibleChange}
                 content={popoverContent}
                 className={classes.popover}
                 visible={popoverVisible}

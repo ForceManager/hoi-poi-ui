@@ -88,6 +88,7 @@ const Menu = ({
                         hint={emoji.tooltip}
                         item="emoji"
                         setShowingMenuPopover={setShowingMenuPopover}
+                        emoji={emoji}
                         {...toolbarItemStyle}
                     />,
                 );

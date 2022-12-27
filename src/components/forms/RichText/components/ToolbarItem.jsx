@@ -13,6 +13,7 @@ const ToolbarItem = ({
     editor,
     active,
     setShowingMenuPopover,
+    emoji,
 }) => {
     const [visible, setVisible] = useState(false);
     const [popoverVisible, setPopoverVisible] = useState(false);
@@ -25,7 +26,7 @@ const ToolbarItem = ({
                 emojiMenuRef?.current?.onKeyDown(event);
             };
             document.addEventListener('keydown', handleKeyDown, true);
-            
+
             return () => {
                 document.removeEventListener('keydown', handleKeyDown, true);
             };
@@ -109,6 +110,9 @@ const ToolbarItem = ({
                     popoverVisible={popoverVisible}
                     onVisibleChange={handlePopoverVisibility}
                     ref={emojiMenuRef}
+                    texts={emoji?.texts}
+                    cache={emoji?.cache}
+                    saveCache={emoji?.saveCache}
                 >
                     <Tooltip visible={!popoverVisible && visible} {...tooltipProps}>
                         <span
