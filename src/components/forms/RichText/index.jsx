@@ -198,18 +198,28 @@ const RichText = memo(
 
         const handleKeyDown = useCallback(
             (e) => {
-                if (e.keyCode === 27 && !showingMention.current && !showingEmoji.current && !showingMenuPopover) {
+                if (
+                    e.key === 'Escape' &&
+                    !showingMention.current &&
+                    !showingEmoji.current &&
+                    !showingMenuPopover
+                ) {
                     editor.commands.blur();
                     setFocused(false);
                     onEsc && onEsc(e);
                 }
 
-                if (e.keyCode === 27 && (showingMention.current || showingEmoji.current)) {
+                if (e.key === 'Escape' && (showingMention.current || showingEmoji.current)) {
                     showingMention.current = false;
                     showingEmoji.current = false;
                 }
 
-                if (e.keyCode === 13 && !e.shiftKey) {
+                if (e.key === 'Tab' && (showingEmoji.current || showingMenuPopover)) {
+                    showingEmoji.current = false;
+                    return;
+                }
+
+                if (e.key === 'Enter' && !e.shiftKey) {
                     if (showingMention.emoji || showingEmoji.current || showingMenuPopover) {
                         showingMention.current = false;
                         showingEmoji.current = false;

@@ -55,11 +55,12 @@ export default (theme) => {
             whiteSpace: 'nowrap',
         },
         sectionSticky: {
+            pointerEvents: 'none',
             position: 'absolute',
             top: 0,
             left: 0,
             zIndex: 1,
-            width: '100%',
+            width: 'calc(100% - 8px)',
             backgroundColor: theme.colors.neutralBase,
         },
         hint: {

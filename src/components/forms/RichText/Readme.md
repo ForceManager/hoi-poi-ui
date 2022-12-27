@@ -198,6 +198,13 @@ const fetchSuggestions = (query) =>
             emoji={{
                 tooltip: 'Emoji',
                 maxVisibleItems: 7,
+                texts: {
+                    search_placeholder: 'Search all emoji',
+                    frequently_used_emoji: 'Frequently Used',
+                },
+                cache: JSON.parse(localStorage.getItem('frequently_used_emoji')) || {},
+                saveCache: (payload) =>
+                    localStorage.setItem('frequently_used_emoji', JSON.stringify(payload)),
             }}
             overrides={{
                 editorWrapper: {
