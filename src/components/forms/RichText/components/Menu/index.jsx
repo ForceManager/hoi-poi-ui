@@ -31,6 +31,7 @@ const Menu = ({
     toolbar,
     toolbarStyle,
     emoji,
+    setShowingMenuPopover,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -86,6 +87,8 @@ const Menu = ({
                         key="emoji"
                         hint={emoji.tooltip}
                         item="emoji"
+                        setShowingMenuPopover={setShowingMenuPopover}
+                        emoji={emoji}
                         {...toolbarItemStyle}
                     />,
                 );
@@ -93,7 +96,17 @@ const Menu = ({
         }
 
         return toolbarItems;
-    }, [classes, compactMode, editor, mention, theme, toolbar, toolbarStyle, emoji]);
+    }, [
+        classes,
+        compactMode,
+        editor,
+        mention,
+        theme,
+        toolbar,
+        toolbarStyle,
+        emoji,
+        setShowingMenuPopover,
+    ]);
 
     const toolbarClassNames = classNames(classes.toolbar, {
         [classes.compactMode]: compactMode && !focused,

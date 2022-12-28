@@ -50,7 +50,7 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
             ])
             .run();
     },
-    render: () => {
+    render: (props) => {
         let reactRenderer;
         let popup;
 

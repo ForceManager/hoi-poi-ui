@@ -28,6 +28,7 @@ const EmojiList = forwardRef(
             classes: classesProp,
             items = [],
             maxVisibleItems = MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL,
+            query,
         },
         ref,
     ) => {
@@ -69,22 +70,20 @@ const EmojiList = forwardRef(
 
         useImperativeHandle(ref, () => ({
             onKeyDown: ({ event }) => {
-                if (event.key === 'ArrowUp') {
-                    upHandler();
-                    return true;
+                switch (event.key) {
+                    case 'ArrowUp':
+                        upHandler();
+                        return true;
+                    case 'ArrowDown':
+                        downHandler();
+                        return true;
+                    case 'Enter':
+                    case 'Tab':
+                        enterHandler();
+                        return true;
+                    default:
+                        return false;
                 }
-
-                if (event.key === 'ArrowDown') {
-                    downHandler();
-                    return true;
-                }
-
-                if (event.key === 'Enter') {
-                    enterHandler();
-                    return true;
-                }
-
-                return false;
             },
         }));
 
@@ -92,12 +91,13 @@ const EmojiList = forwardRef(
             () => ({
                 autoHeight: true,
                 autoHeightMax: EMOJI_LIST_ITEM_HEIGHT * maxVisibleItems,
+                autoHide: false,
                 ref: scrollBarRef,
             }),
             [maxVisibleItems],
         );
 
-        return (
+        return query.length >= 3 ? (
             <div className={classes.root}>
                 {items.length ? (
                     <ScrollBar {...scrollBarProps}>
@@ -131,7 +131,7 @@ const EmojiList = forwardRef(
                     <Text>{texts?.noResults || 'No Results'}</Text>
                 )}
             </div>
-        );
+        ) : null;
     },
 );
 
