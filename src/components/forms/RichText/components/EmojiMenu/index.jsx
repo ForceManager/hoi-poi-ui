@@ -2,7 +2,6 @@ import React, {
     forwardRef,
     memo,
     useCallback,
-    useEffect,
     useImperativeHandle,
     useMemo,
     useReducer,
@@ -31,7 +30,6 @@ const CLEAR_SEARCH = 'CLEAR_SEARCH';
 const SET_SEARCH = 'SET_SEARCH';
 const SET_SELECTED = 'SET_SELECTED';
 const SET_ACTIVE_SECTION = 'SET_ACTIVE_SECTION';
-const SET_LOCAL_CACHE = 'SET_LOCAL_CACHE';
 const SET_SEARCH_FOCUS = 'SET_SEARCH_FOCUS';
 
 const initialState = {
@@ -42,7 +40,6 @@ const initialState = {
     columnIndex: 0,
     rowIndex: 0,
     hovered: false,
-    cache: [],
 };
 
 const reducer = (state, action) => {
@@ -75,11 +72,6 @@ const reducer = (state, action) => {
                 ...state,
                 ...action.payload,
             };
-        case SET_LOCAL_CACHE:
-            return {
-                ...state,
-                cache: action.payload,
-            };
         case SET_SEARCH_FOCUS:
             return {
                 ...state,
@@ -110,10 +102,6 @@ const EmojiMenu = forwardRef(
         const gridRef = useRef();
 
         const classes = useClasses(useStyles, classesProp);
-
-        useEffect(() => {
-            dispatch({ type: SET_LOCAL_CACHE, payload: cache });
-        }, [cache]);
 
         const handleChange = useCallback((value) => {
             let newSearch = value?.target?.value || value;
@@ -157,8 +145,8 @@ const EmojiMenu = forwardRef(
             ) {
                 let frequentlyUsedEmoji = { ...defaultFrequentlyUsed };
 
-                if (state.cache && Object.entries(state.cache).length && saveCache) {
-                    frequentlyUsedEmoji = { ...frequentlyUsedEmoji, ...state.cache };
+                if (cache && Object.entries(cache).length && saveCache) {
+                    frequentlyUsedEmoji = { ...frequentlyUsedEmoji, ...cache };
                 }
 
                 frequentlyUsedEmoji = Object.fromEntries(
@@ -182,8 +170,8 @@ const EmojiMenu = forwardRef(
         }, [
             defaultFrequentlyUsed,
             editor?.storage?.emoji?.emojis,
+            cache,
             saveCache,
-            state.cache,
             state.search,
             texts?.frequently_used_emoji,
         ]);
@@ -205,30 +193,14 @@ const EmojiMenu = forwardRef(
             [emojiGrid.length],
         );
 
-        const handleCache = useCallback(
-            (name) => {
-                if (!saveCache) return;
-                let newCache = { ...state.cache };
-                newCache[name] = newCache[name] ? newCache[name] + 1 : 1;
-                newCache = Object.fromEntries(
-                    Object.entries(newCache)
-                        .sort((a, b) => b[1] - a[1])
-                        .slice(0, FREQUENTLY_USED_ITEMS_TO_SHOW),
-                );
-                dispatch({ type: SET_LOCAL_CACHE, payload: newCache });
-                saveCache(newCache);
-            },
-            [saveCache, state.cache],
-        );
-
         const handleClick = useCallback(
             (name) => {
                 editor.chain().focus().setEmoji(name).run();
                 onVisibleChange(false);
                 dispatch({ type: CLEAR_SEARCH });
-                handleCache(name);
+                saveCache(name);
             },
-            [editor, onVisibleChange, handleCache],
+            [editor, onVisibleChange, saveCache],
         );
 
         const handleHover = useCallback(

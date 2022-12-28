@@ -14,7 +14,7 @@ const getTippy = ({ props, reactRenderer, placement }) =>
         placement,
     });
 
-export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions = 30 }) => ({
+export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions = 30, handleCache }) => ({
     items: ({ editor, query }) => {
         return editor.storage.emoji.emojis
             .filter(({ shortcodes, tags }) => {
@@ -58,6 +58,8 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
             onStart: (props) => {
                 props.texts = emoji.texts || {};
                 props.maxVisibleItems = emoji.maxVisibleItems;
+                props.saveCache = handleCache;
+
                 reactRenderer = new ReactRenderer(EmojiList, {
                     props,
                     editor: props.editor,

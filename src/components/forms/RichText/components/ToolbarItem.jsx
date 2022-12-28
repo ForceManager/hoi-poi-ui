@@ -14,6 +14,8 @@ const ToolbarItem = ({
     active,
     setShowingMenuPopover,
     emoji,
+    emojiCache,
+    handleEmojiCache,
 }) => {
     const [visible, setVisible] = useState(false);
     const [popoverVisible, setPopoverVisible] = useState(false);
@@ -111,8 +113,8 @@ const ToolbarItem = ({
                     onVisibleChange={handlePopoverVisibility}
                     ref={emojiMenuRef}
                     texts={emoji?.texts}
-                    cache={emoji?.cache}
-                    saveCache={emoji?.saveCache}
+                    cache={emojiCache}
+                    saveCache={handleEmojiCache}
                     defaultFrequentlyUsed={emoji?.defaultFrequentlyUsed}
                 >
                     <Tooltip visible={!popoverVisible && visible} {...tooltipProps}>
