@@ -29,6 +29,7 @@ const EmojiList = forwardRef(
             items = [],
             maxVisibleItems = MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL,
             query,
+            saveCache,
         },
         ref,
     ) => {
@@ -43,9 +44,10 @@ const EmojiList = forwardRef(
                 const item = items[index];
                 if (item) {
                     command({ name: item.name });
+                    saveCache && saveCache(item.name);
                 }
             },
-            [command, items],
+            [command, items, saveCache],
         );
 
         const scrollHandler = useCallback((index) => {

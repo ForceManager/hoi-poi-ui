@@ -31,6 +31,8 @@ const Menu = ({
     toolbar,
     toolbarStyle,
     emoji,
+    emojiCache,
+    handleEmojiCache,
     setShowingMenuPopover,
 }) => {
     const theme = useTheme();
@@ -89,6 +91,8 @@ const Menu = ({
                         item="emoji"
                         setShowingMenuPopover={setShowingMenuPopover}
                         emoji={emoji}
+                        emojiCache={emojiCache}
+                        handleEmojiCache={handleEmojiCache}
                         {...toolbarItemStyle}
                     />,
                 );
@@ -105,6 +109,8 @@ const Menu = ({
         toolbar,
         toolbarStyle,
         emoji,
+        emojiCache,
+        handleEmojiCache,
         setShowingMenuPopover,
     ]);
 

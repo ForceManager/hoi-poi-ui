@@ -17,6 +17,8 @@ import { createUseStyles, useTheme } from '../../../utils/styles';
 
 import styles from './styles';
 
+const FREQUENTLY_USED_ITEMS_TO_SHOW = 36;
+
 const useStyles = createUseStyles(styles, 'RichText');
 
 const RichText = memo(
@@ -53,9 +55,26 @@ const RichText = memo(
         const [focused, setFocused] = useState(false);
         const [showingMenuPopover, setShowingMenuPopover] = useState(false);
         const [editorContent, setEditorContent] = useState({});
+        const [emojiCache, setEmojiCache] = useState(() => emoji?.cache || {});
         const showingMention = useRef(false);
         const showingEmoji = useRef(false);
         const editorDivRef = useRef(null);
+
+        const handleEmojiCache = useCallback(
+            (name) => {
+                if (!emoji?.saveCache) return;
+                let newCache = { ...emojiCache };
+                newCache[name] = newCache[name] ? newCache[name] + 1 : 1;
+                newCache = Object.fromEntries(
+                    Object.entries(newCache)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, FREQUENTLY_USED_ITEMS_TO_SHOW),
+                );
+                setEmojiCache(newCache);
+                emoji.saveCache(newCache);
+            },
+            [emoji, emojiCache],
+        );
 
         const getExtensions = useMemo(() => {
             const extensions = [
@@ -98,7 +117,11 @@ const RichText = memo(
                 extensions.push(
                     Emoji.configure({
                         enableEmoticons: true,
-                        suggestion: getEmojiConfig({ emoji, showingEmoji }),
+                        suggestion: getEmojiConfig({
+                            emoji,
+                            showingEmoji,
+                            handleCache: handleEmojiCache,
+                        }),
                     }),
                 );
             }
@@ -119,7 +142,7 @@ const RichText = memo(
             }
 
             return extensions;
-        }, [emoji, mention, placeholder]);
+        }, [emoji, handleEmojiCache, mention, placeholder]);
 
         const editor = useEditor({
             editable: !isReadOnly,
@@ -333,6 +356,8 @@ const RichText = memo(
                 toolbar,
                 toolbarStyle,
                 emoji,
+                emojiCache,
+                handleEmojiCache,
                 setShowingMenuPopover,
             }),
             [
@@ -346,6 +371,8 @@ const RichText = memo(
                 toolbar,
                 toolbarStyle,
                 emoji,
+                emojiCache,
+                handleEmojiCache,
                 setShowingMenuPopover,
             ],
         );
