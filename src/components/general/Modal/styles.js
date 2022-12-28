@@ -51,7 +51,10 @@ export default (theme) => ({
         paddingTop: 16,
     },
     footerLeft: {},
-    footerRight: {},
+    footerRight: {
+        display: 'flex',
+        gap: '20px',
+    },
     content: {
         position: 'relative',
         overflow: 'auto',
@@ -67,9 +70,7 @@ export default (theme) => ({
         flexShrink: 0,
     },
     confirmButton: {},
-    cancelButton: {
-        marginRight: 20,
-    },
+    cancelButton: {},
     deleteButton: {
         color: theme.colors.red500,
         '&:hover': {
