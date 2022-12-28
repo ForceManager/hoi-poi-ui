@@ -38,11 +38,15 @@ function Modal({
     size,
     width,
     cancelText,
+    middleButtonText,
     confirmText,
     deleteText,
     onCancel,
+    onMiddleButton,
     onConfirm,
     onDelete,
+    isMiddleButtonDisabled,
+    isMiddleButtonLoading,
     isConfirmDisabled,
     isConfirmLoading,
     onAfterOpen,
@@ -230,6 +234,18 @@ function Modal({
                                     {cancelText}
                                 </Button>
                             )}
+                            {onMiddleButton && (
+                                <Button
+                                    type="secondary"
+                                    className={classes.middleButton}
+                                    onClick={onMiddleButton}
+                                    isDisabled={isMiddleButtonDisabled || false}
+                                    isLoading={isMiddleButtonLoading}
+                                    {...override.middleButton}
+                                >
+                                    {middleButtonText}
+                                </Button>
+                            )}
                             {onConfirm && (
                                 <Button
                                     className={classes.confirmButton}
@@ -262,6 +278,7 @@ Modal.overrides = [
     'footerRight',
     'closeIcon',
     'cancelButton',
+    'middleButton',
     'confirmButton',
     'deleteButton',
 ];
@@ -292,10 +309,14 @@ Modal.propTypes = {
     useContentStaticHeight: PropTypes.bool,
     onCancel: PropTypes.func,
     onConfirm: PropTypes.func,
+    onMiddleButton: PropTypes.func,
     onDelete: PropTypes.func,
     confirmText: PropTypes.string,
+    middleButtonText: PropTypes.string,
     cancelText: PropTypes.string,
     deleteText: PropTypes.string,
+    isMiddleButtonDisabled: PropTypes.bool,
+    isMiddleButtonLoading: PropTypes.bool,
     isConfirmDisabled: PropTypes.bool,
     /** Function that will be called after the drawer has opened */
     isConfirmLoading: PropTypes.bool,

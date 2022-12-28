@@ -663,6 +663,57 @@ const [isOpen, setIsOpen] = useState({
 </div>;
 ```
 
+With middle button:
+
+```jsx
+import { Button, Text } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [isOpen, setIsOpen] = useState({
+    medium: false,
+});
+
+<div>
+    <Button onClick={() => setIsOpen({ ...isOpen, medium: !isOpen.medium })}>
+        With Middle Button
+    </Button>
+    <Modal
+        title="Lorem modal"
+        size="medium"
+        isOpen={isOpen.medium}
+        onRequestClose={() => setIsOpen({ ...isOpen, medium: false })}
+        onCancel={() => setIsOpen({ ...isOpen, medium: false })}
+        onConfirm={() => {
+            setIsOpen({ ...isOpen, medium: false });
+        }}
+        confirmText="Confirm"
+        cancelText="Cancel"
+        onMiddleButton={() => setIsOpen({ ...isOpen, medium: false })}
+        middleButtonText="Middle Button"
+    >
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh nulla a lacinia in
+            fermentum elit. Vitae, magna elit, vitae in enim. Ullamcorper id neque mauris massa
+            vitae laoreet gravida amet. Velit quam quis adipiscing tincidunt. Amet nisi, arcu lorem
+            tellus ut enim, eleifend porttitor. Eros, lectus molestie facilisis velit vitae at.
+            Lacus, posuere quis massa, quis quis non. Consequat, pulvinar varius eget pulvinar quis.
+            Nunc placerat sed justo quis ligula. Elementum interdum non vulputate massa. Amet quis
+            scelerisque morbi nunc ut congue a pellentesque sed. Sed integer at tincidunt sed morbi
+            ac augue feugiat semper. Orci massa id et mauris nibh aliquet. Facilisi nec, sed at
+            integer orci. Nunc nunc tempus augue ac sit sed. Dis viverra vitae id ut sapien sem.
+            Elementum augue diam ipsum pellentesque ac. Placerat nam amet velit viverra tempor
+            mattis varius amet. Tellus malesuada odio sed nibh ut venenatis, tortor. Tellus, eu,
+            orci orci eu cursus praesent dui velit vel. Eget viverra suspendisse morbi sapien. Et
+            sit ac iaculis pharetra, commodo diam pharetra. Varius arcu blandit at sed donec proin
+            euismod vestibulum. Tristique commodo sed pellentesque sollicitudin. Diam est ut fusce
+            ut donec commodo. Volutpat dolor cras augue ipsum vel erat vel morbi convallis. Id eget
+            sit vel lectus tristique tellus. Nulla et nisi montes, augue morbi arcu suspendisse est
+            habitant.
+        </Text>
+    </Modal>
+</div>;
+```
+
 Without close icon:
 
 ```jsx
