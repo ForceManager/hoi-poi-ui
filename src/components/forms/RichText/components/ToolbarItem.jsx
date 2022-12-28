@@ -113,6 +113,7 @@ const ToolbarItem = ({
                     texts={emoji?.texts}
                     cache={emoji?.cache}
                     saveCache={emoji?.saveCache}
+                    defaultFrequentlyUsed={emoji?.defaultFrequentlyUsed}
                 >
                     <Tooltip visible={!popoverVisible && visible} {...tooltipProps}>
                         <span

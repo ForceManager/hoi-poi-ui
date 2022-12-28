@@ -14,7 +14,7 @@ const CustomScrollbars = ({ onScroll, forwardedRef, style, children }) => {
     );
 
     return (
-        <ScrollBar ref={refSetter} style={{ ...style, overflow: 'hidden' }} onScroll={onScroll}>
+        <ScrollBar ref={refSetter} style={{ ...style, paddingRight: 10, overflow: 'hidden' }} onScroll={onScroll}>
             {children}
         </ScrollBar>
     );
