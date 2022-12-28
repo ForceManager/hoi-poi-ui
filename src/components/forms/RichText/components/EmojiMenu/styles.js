@@ -40,13 +40,13 @@ export default (theme) => {
                 width: 'auto',
                 height: 20,
             },
-            '&:hover': {
-                backgroundColor: theme.colors.blue100,
-            },
         },
         emojiItemActive: {
             backgroundColor: theme.colors.blue100,
             boxShadow: `inset 0 0 1px 1px ${theme.colors.blue300}`,
+        },
+        emojiItemHover: {
+            backgroundColor: theme.colors.blue100,
         },
         section: {
             textTransform: 'capitalize',
@@ -60,7 +60,7 @@ export default (theme) => {
             top: 0,
             left: 0,
             zIndex: 1,
-            width: 'calc(100% - 8px)',
+            width: 'calc(100% - 10px)',
             backgroundColor: theme.colors.neutralBase,
         },
         hint: {

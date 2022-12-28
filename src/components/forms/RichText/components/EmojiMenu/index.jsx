@@ -39,6 +39,7 @@ const initialState = {
     selectedIndex: null,
     columnIndex: 0,
     rowIndex: 0,
+    hovered: false,
     cache: [],
 };
 
@@ -56,6 +57,7 @@ const reducer = (state, action) => {
                 selectedIndex: null,
                 columnIndex: 0,
                 rowIndex: 0,
+                hovered: false,
             };
         case SET_SEARCH:
             return {
@@ -64,6 +66,7 @@ const reducer = (state, action) => {
                 selectedIndex: null,
                 columnIndex: 0,
                 rowIndex: 0,
+                hovered: false,
             };
         case SET_SELECTED:
             return {
@@ -91,6 +94,7 @@ const EmojiMenu = forwardRef(
             texts,
             cache,
             saveCache,
+            defaultFrequentlyUsed,
         },
         ref,
     ) => {
@@ -138,11 +142,29 @@ const EmojiMenu = forwardRef(
                     return obj;
                 }, {});
 
-            if (!state.search && saveCache && state.cache && Object.entries(state.cache).length) {
-                const cachedEmojiArr = Object.keys(state.cache).reduce((arr, item) => {
+            // "Prepend" "Frequently Used" emoji section if no search is active
+            if (
+                !state.search &&
+                defaultFrequentlyUsed &&
+                Object.entries(defaultFrequentlyUsed).length
+            ) {
+                let frequentlyUsedEmoji = { ...defaultFrequentlyUsed };
+
+                if (state.cache && Object.entries(state.cache).length && saveCache) {
+                    frequentlyUsedEmoji = { ...frequentlyUsedEmoji, ...state.cache };
+                }
+
+                frequentlyUsedEmoji = Object.fromEntries(
+                    Object.entries(frequentlyUsedEmoji)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, FREQUENTLY_USED_ITEMS_TO_SHOW),
+                );
+
+                const cachedEmojiArr = Object.keys(frequentlyUsedEmoji).reduce((arr, item) => {
                     const cachedEmoji = emoji.find(({ name }) => name === item);
                     return [...arr, cachedEmoji];
                 }, []);
+
                 emojiObj = {
                     [texts?.frequently_used_emoji || 'Frequently Used']: cachedEmojiArr,
                     ...emojiObj,
@@ -151,6 +173,7 @@ const EmojiMenu = forwardRef(
 
             return emojiObj;
         }, [
+            defaultFrequentlyUsed,
             editor?.storage?.emoji?.emojis,
             saveCache,
             state.cache,
@@ -201,6 +224,20 @@ const EmojiMenu = forwardRef(
             [editor, onVisibleChange, handleCache],
         );
 
+        const handleHover = useCallback(
+            ({ selectedIndex = null, columnIndex = 0, rowIndex = 0, hovered = false } = {}) =>
+                dispatch({
+                    type: SET_SELECTED,
+                    payload: {
+                        selectedIndex,
+                        columnIndex,
+                        rowIndex,
+                        hovered,
+                    },
+                }),
+            [],
+        );
+
         const GridItem = useCallback(
             ({ columnIndex, rowIndex, style }) => {
                 let cellContent;
@@ -219,13 +256,25 @@ const EmojiMenu = forwardRef(
                         );
                         break;
                     default:
+                        const emojiItemProps = {
+                            className: classNames(classes.emojiItem, {
+                                [classes.emojiItemActive]:
+                                    index === state.selectedIndex && !state.hovered,
+                                [classes.emojiItemHover]:
+                                    index === state.selectedIndex && state.hovered,
+                            }),
+                            onClick: () => handleClick(gridItem.name),
+                            onMouseEnter: () =>
+                                handleHover({
+                                    selectedIndex: index,
+                                    columnIndex,
+                                    rowIndex,
+                                    hovered: true,
+                                }),
+                            onMouseLeave: () => handleHover(),
+                        };
                         cellContent = (
-                            <span
-                                className={classNames(classes.emojiItem, {
-                                    [classes.emojiItemActive]: index === state.selectedIndex,
-                                })}
-                                onClick={() => handleClick(gridItem.name)}
-                            >
+                            <span {...emojiItemProps}>
                                 {gridItem?.fallbackImage ? (
                                     <img src={gridItem.fallbackImage} alt={gridItem.name} />
                                 ) : (
@@ -237,7 +286,7 @@ const EmojiMenu = forwardRef(
                 }
                 return <div style={style}>{cellContent}</div>;
             },
-            [classes, emojiGrid, handleClick, state.selectedIndex],
+            [emojiGrid, classes, state.selectedIndex, state.hovered, handleClick, handleHover],
         );
 
         const selectedEmoji = useMemo(
@@ -318,7 +367,10 @@ const EmojiMenu = forwardRef(
                 );
 
                 gridRef.current.scrollToItem({ align: 'center', columnIndex, rowIndex });
-                dispatch({ type: SET_SELECTED, payload: { selectedIndex, columnIndex, rowIndex } });
+                dispatch({
+                    type: SET_SELECTED,
+                    payload: { selectedIndex, columnIndex, rowIndex, hovered: false },
+                });
             },
             [emojiGrid, state, emojiGridRowsCount],
         );
