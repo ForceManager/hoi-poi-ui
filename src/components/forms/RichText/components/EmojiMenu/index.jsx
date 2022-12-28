@@ -32,9 +32,11 @@ const SET_SEARCH = 'SET_SEARCH';
 const SET_SELECTED = 'SET_SELECTED';
 const SET_ACTIVE_SECTION = 'SET_ACTIVE_SECTION';
 const SET_LOCAL_CACHE = 'SET_LOCAL_CACHE';
+const SET_SEARCH_FOCUS = 'SET_SEARCH_FOCUS';
 
 const initialState = {
     search: undefined,
+    searchFocus: false,
     section: null,
     selectedIndex: null,
     columnIndex: 0,
@@ -78,6 +80,11 @@ const reducer = (state, action) => {
                 ...state,
                 cache: action.payload,
             };
+        case SET_SEARCH_FOCUS:
+            return {
+                ...state,
+                searchFocus: action.payload,
+            };
         default:
             throw new Error();
     }
@@ -118,7 +125,7 @@ const EmojiMenu = forwardRef(
             (visible) => {
                 onVisibleChange && onVisibleChange(visible);
                 if (visible) {
-                    setTimeout(() => searchBarRef?.current?.focus(), 500);
+                    setTimeout(() => searchBarRef?.current?.focus(), 400);
                 } else {
                     dispatch({ type: CLEAR_SEARCH });
                 }
@@ -240,7 +247,7 @@ const EmojiMenu = forwardRef(
 
         const GridItem = useCallback(
             ({ columnIndex, rowIndex, style }) => {
-                let cellContent;
+                let cellContent = null;
                 const index = GRID_COLS * rowIndex + columnIndex;
                 const gridItem = emojiGrid[index];
                 switch (true) {
@@ -255,7 +262,7 @@ const EmojiMenu = forwardRef(
                             </Text>
                         );
                         break;
-                    default:
+                    case typeof gridItem === 'object':
                         const emojiItemProps = {
                             className: classNames(classes.emojiItem, {
                                 [classes.emojiItemActive]:
@@ -282,6 +289,8 @@ const EmojiMenu = forwardRef(
                                 )}
                             </span>
                         );
+                        break;
+                    default:
                         break;
                 }
                 return <div style={style}>{cellContent}</div>;
@@ -379,27 +388,32 @@ const EmojiMenu = forwardRef(
             ref,
             () => ({
                 onKeyDown: (event) => {
-                    switch (event.key) {
-                        case 'Escape':
+                    switch (true) {
+                        case event.key === 'ArrowRight' && state.searchFocus:
+                        case event.key === 'ArrowLeft' && state.searchFocus:
+                        case event.shiftKey:
+                            return false;
+                        case event.key === 'Escape':
                             onVisibleChange(false);
                             editor.commands.focus();
                             return true;
-                        case 'Enter':
-                        case 'Tab':
+                        case event.key === 'Enter':
+                        case event.key === 'Tab':
                             handleEnter(event);
                             return true;
-                        case 'ArrowDown':
-                        case 'ArrowUp':
-                        case 'ArrowRight':
-                        case 'ArrowLeft':
+                        case event.key === 'ArrowDown':
+                        case event.key === 'ArrowUp':
+                        case event.key === 'ArrowRight':
+                        case event.key === 'ArrowLeft':
                             handleDirectionKey(event);
                             return true;
                         default:
+                            searchBarRef?.current?.focus();
                             return false;
                     }
                 },
             }),
-            [onVisibleChange, editor.commands, handleEnter, handleDirectionKey],
+            [onVisibleChange, editor.commands, handleEnter, handleDirectionKey, state.searchFocus],
         );
 
         const gridSectionsHeights = useMemo(() => {
@@ -431,6 +445,8 @@ const EmojiMenu = forwardRef(
                         placeholder={texts?.search_placeholder || 'Search all emoji'}
                         useAsSimpleSearch
                         onChange={handleChange}
+                        onBlur={() => dispatch({ type: SET_SEARCH_FOCUS, payload: false })}
+                        onFocus={() => dispatch({ type: SET_SEARCH_FOCUS, payload: true })}
                         overrides={{
                             Select: {
                                 getRef: (ref) => {
@@ -448,19 +464,25 @@ const EmojiMenu = forwardRef(
                                 {state.section}
                             </Text>
                         )}
-                        <Grid
-                            ref={gridRef}
-                            columnCount={GRID_COLS}
-                            columnWidth={GRID_COLUMN_WIDTH}
-                            rowCount={emojiGridRowsCount}
-                            rowHeight={GRID_ROW_HEIGHT}
-                            width={GRID_COLUMN_WIDTH * GRID_COLS}
-                            height={GRID_ROW_HEIGHT * 5.5}
-                            onScroll={handleScroll}
-                            outerElementType={CustomScrollbarsVirtualList}
-                        >
-                            {GridItem}
-                        </Grid>
+                        {emojiGridRowsCount ? (
+                            <Grid
+                                ref={gridRef}
+                                columnCount={GRID_COLS}
+                                columnWidth={GRID_COLUMN_WIDTH}
+                                rowCount={emojiGridRowsCount}
+                                rowHeight={GRID_ROW_HEIGHT}
+                                width={GRID_COLUMN_WIDTH * GRID_COLS}
+                                height={GRID_ROW_HEIGHT * 5.5}
+                                onScroll={handleScroll}
+                                outerElementType={CustomScrollbarsVirtualList}
+                            >
+                                {GridItem}
+                            </Grid>
+                        ) : (
+                            <div className={classes.empty}>
+                                <Text>{texts?.noResults || 'No Results'}</Text>
+                            </div>
+                        )}
                     </div>
                     <div className={classes.hint}>
                         {selectedEmoji && (

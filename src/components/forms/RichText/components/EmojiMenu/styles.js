@@ -60,7 +60,7 @@ export default (theme) => {
             top: 0,
             left: 0,
             zIndex: 1,
-            width: 'calc(100% - 10px)',
+            width: 'calc(100% - 12px)', // 100% - the scrollbar track width
             backgroundColor: theme.colors.neutralBase,
         },
         hint: {
@@ -83,6 +83,13 @@ export default (theme) => {
                 width: 'auto',
                 height: 32,
             }
+        },
+        empty: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: 176,
+            width: 336,
         }
     };
 };
