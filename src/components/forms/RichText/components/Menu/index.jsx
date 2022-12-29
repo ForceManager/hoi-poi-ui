@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { BubbleMenu } from '@tiptap/react';
 import classNames from 'classnames';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../../../utils/styles';
 import Icon from '../../../../general/Icon';
 import ToolbarItem from '../ToolbarItem';
+import { RichTextContext } from '../..';
 
 import styles from './styles';
 
@@ -23,20 +24,15 @@ const Menu = ({
     classes: classesProp,
     compactMode,
     customActions,
-    editor,
     editorContent,
     focused,
     handleSubmit,
-    mention,
     toolbar,
     toolbarStyle,
-    emoji,
-    emojiCache,
-    handleEmojiCache,
-    setShowingMenuPopover,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
+    const { editor, emoji, mention } = useContext(RichTextContext);
 
     const toolbarItems = useCallback(() => {
         const toolbarItemProps = {
@@ -59,7 +55,6 @@ const Menu = ({
         const toolbarItems = toolbar.map((item) => {
             return (
                 <ToolbarItem
-                    editor={editor}
                     key={item.item}
                     active={editor?.isActive(editorFormatsMapping[item.item])}
                     {...item}
@@ -73,7 +68,6 @@ const Menu = ({
             if (mention) {
                 toolbarItems.push(
                     <ToolbarItem
-                        editor={editor}
                         key="mention"
                         hint={mention.tooltip}
                         item="mention"
@@ -85,14 +79,9 @@ const Menu = ({
             if (emoji) {
                 toolbarItems.push(
                     <ToolbarItem
-                        editor={editor}
                         key="emoji"
                         hint={emoji.tooltip}
                         item="emoji"
-                        setShowingMenuPopover={setShowingMenuPopover}
-                        emoji={emoji}
-                        emojiCache={emojiCache}
-                        handleEmojiCache={handleEmojiCache}
                         {...toolbarItemStyle}
                     />,
                 );
@@ -109,9 +98,6 @@ const Menu = ({
         toolbar,
         toolbarStyle,
         emoji,
-        emojiCache,
-        handleEmojiCache,
-        setShowingMenuPopover,
     ]);
 
     const toolbarClassNames = classNames(classes.toolbar, {

@@ -160,7 +160,7 @@ const fetchSuggestions = (query) =>
                 search_placeholder: 'Search all emoji',
                 frequently_used_emoji: 'Frequently Used',
             },
-            cache: JSON.parse(localStorage.getItem('frequently_used_emoji')) || {},
+            cache: () => JSON.parse(localStorage.getItem('frequently_used_emoji')) || {},
             saveCache: (payload) =>
                 localStorage.setItem('frequently_used_emoji', JSON.stringify(payload)),
             defaultFrequentlyUsed: {
@@ -220,7 +220,7 @@ const fetchSuggestions = (query) =>
                     search_placeholder: 'Search all emoji',
                     frequently_used_emoji: 'Frequently Used',
                 },
-                cache: JSON.parse(localStorage.getItem('frequently_used_emoji')) || {},
+                cache: () => JSON.parse(localStorage.getItem('frequently_used_emoji')) || {},
                 saveCache: (payload) =>
                     localStorage.setItem('frequently_used_emoji', JSON.stringify(payload)),
                 defaultFrequentlyUsed: {

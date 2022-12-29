@@ -1,8 +1,17 @@
-import React, { useCallback, useMemo, useState, Fragment, useRef, useEffect } from 'react';
+import React, {
+    useCallback,
+    useContext,
+    useMemo,
+    useState,
+    Fragment,
+    useRef,
+    useEffect,
+} from 'react';
 import classNames from 'classnames';
 import Tooltip from '../../../utils/Tooltip';
 import Icon from '../../../general/Icon';
 import EmojiMenu from './EmojiMenu';
+import { RichTextContext } from '..';
 
 const ToolbarItem = ({
     className: classNameProp,
@@ -10,13 +19,9 @@ const ToolbarItem = ({
     color,
     item,
     hint,
-    editor,
     active,
-    setShowingMenuPopover,
-    emoji,
-    emojiCache,
-    handleEmojiCache,
 }) => {
+    const { editor, setShowingMenuPopover } = useContext(RichTextContext);
     const [visible, setVisible] = useState(false);
     const [popoverVisible, setPopoverVisible] = useState(false);
     const className = classNames(classNameProp, { [classNameActive]: active });
@@ -108,14 +113,9 @@ const ToolbarItem = ({
         case item === 'emoji':
             return (
                 <EmojiMenu
-                    editor={editor}
                     popoverVisible={popoverVisible}
                     onVisibleChange={handlePopoverVisibility}
                     ref={emojiMenuRef}
-                    texts={emoji?.texts}
-                    cache={emojiCache}
-                    saveCache={handleEmojiCache}
-                    defaultFrequentlyUsed={emoji?.defaultFrequentlyUsed}
                 >
                     <Tooltip visible={!popoverVisible && visible} {...tooltipProps}>
                         <span
