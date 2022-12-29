@@ -1,4 +1,12 @@
-import React, { memo, useCallback, useEffect, useMemo, useState, useRef } from 'react';
+import React, {
+    memo,
+    createContext,
+    useCallback,
+    useEffect,
+    useMemo,
+    useState,
+    useRef,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { EditorContent, useEditor } from '@tiptap/react';
@@ -20,6 +28,8 @@ import styles from './styles';
 const FREQUENTLY_USED_ITEMS_TO_SHOW = 36;
 
 const useStyles = createUseStyles(styles, 'RichText');
+
+export const RichTextContext = createContext();
 
 const RichText = memo(
     ({
@@ -55,26 +65,9 @@ const RichText = memo(
         const [focused, setFocused] = useState(false);
         const [showingMenuPopover, setShowingMenuPopover] = useState(false);
         const [editorContent, setEditorContent] = useState({});
-        const [emojiCache, setEmojiCache] = useState(() => emoji?.cache || {});
         const showingMention = useRef(false);
         const showingEmoji = useRef(false);
         const editorDivRef = useRef(null);
-
-        const handleEmojiCache = useCallback(
-            (name) => {
-                if (!emoji?.saveCache) return;
-                let newCache = { ...emojiCache };
-                newCache[name] = newCache[name] ? newCache[name] + 1 : 1;
-                newCache = Object.fromEntries(
-                    Object.entries(newCache)
-                        .sort((a, b) => b[1] - a[1])
-                        .slice(0, FREQUENTLY_USED_ITEMS_TO_SHOW),
-                );
-                setEmojiCache(newCache);
-                emoji.saveCache(newCache);
-            },
-            [emoji, emojiCache],
-        );
 
         const getExtensions = useMemo(() => {
             const extensions = [
@@ -120,7 +113,6 @@ const RichText = memo(
                         suggestion: getEmojiConfig({
                             emoji,
                             showingEmoji,
-                            handleCache: handleEmojiCache,
                         }),
                     }),
                 );
@@ -142,7 +134,7 @@ const RichText = memo(
             }
 
             return extensions;
-        }, [emoji, handleEmojiCache, mention, placeholder]);
+        }, [emoji, mention, placeholder]);
 
         const editor = useEditor({
             editable: !isReadOnly,
@@ -190,6 +182,21 @@ const RichText = memo(
                 document.removeEventListener('click', handleClickOutside, true);
             };
         }, [onBlur, onChangeFocus, showingMenuPopover]);
+
+        const handleEmojiCache = useCallback(
+            (name) => {
+                if (!emoji?.cache && !emoji?.saveCache) return;
+                let newCache = { ...emoji.cache() };
+                newCache[name] = newCache[name] ? newCache[name] + 1 : 1;
+                newCache = Object.fromEntries(
+                    Object.entries(newCache)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, FREQUENTLY_USED_ITEMS_TO_SHOW),
+                );
+                emoji.saveCache(newCache);
+            },
+            [emoji],
+        );
 
         const handleClear = useCallback(
             (e) => {
@@ -243,7 +250,7 @@ const RichText = memo(
                 }
 
                 if (e.key === 'Enter' && !e.shiftKey) {
-                    if (showingMention.emoji || showingEmoji.current || showingMenuPopover) {
+                    if (showingMention.current || showingEmoji.current || showingMenuPopover) {
                         showingMention.current = false;
                         showingEmoji.current = false;
                         return;
@@ -348,43 +355,42 @@ const RichText = memo(
             () => ({
                 compactMode,
                 customActions,
-                editor,
                 editorContent,
                 focused,
                 handleSubmit,
-                mention,
                 toolbar,
                 toolbarStyle,
-                emoji,
-                emojiCache,
-                handleEmojiCache,
-                setShowingMenuPopover,
             }),
             [
                 compactMode,
                 customActions,
-                editor,
                 editorContent,
                 focused,
                 handleSubmit,
-                mention,
                 toolbar,
                 toolbarStyle,
-                emoji,
-                emojiCache,
-                handleEmojiCache,
-                setShowingMenuPopover,
             ],
         );
 
         return (
-            <InputWrapper {...inputWrapperProps}>
-                <div {...editorWrapperProps}>
-                    <EditorContent {...editorProps} />
-                    <Menu {...menuProps} />
-                    {getIcons}
-                </div>
-            </InputWrapper>
+            <RichTextContext.Provider
+                value={{
+                    editor,
+                    emoji,
+                    mention,
+                    cache: emoji?.cache() || {},
+                    saveCache: handleEmojiCache,
+                    setShowingMenuPopover,
+                }}
+            >
+                <InputWrapper {...inputWrapperProps}>
+                    <div {...editorWrapperProps}>
+                        <EditorContent {...editorProps} />
+                        <Menu {...menuProps} />
+                        {getIcons}
+                    </div>
+                </InputWrapper>
+            </RichTextContext.Provider>
         );
     },
 );

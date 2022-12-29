@@ -1,6 +1,7 @@
 import React, {
     forwardRef,
     useCallback,
+    useContext,
     useEffect,
     useImperativeHandle,
     useMemo,
@@ -12,6 +13,7 @@ import Text from '../../../../typography/Text';
 import ScrollBar from '../../../../utils/ScrollBar';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles } from '../../../../../utils/styles';
+import { RichTextContext } from '../../';
 
 import styles from './styles';
 
@@ -29,10 +31,10 @@ const EmojiList = forwardRef(
             items = [],
             maxVisibleItems = MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL,
             query,
-            saveCache,
         },
         ref,
     ) => {
+        const { saveCache } = useContext(RichTextContext);
         const classes = useClasses(useStyles, classesProp);
         const [selectedIndex, setSelectedIndex] = useState(0);
         const scrollBarRef = useRef();
@@ -44,7 +46,7 @@ const EmojiList = forwardRef(
                 const item = items[index];
                 if (item) {
                     command({ name: item.name });
-                    saveCache && saveCache(item.name);
+                    saveCache(item.name);
                 }
             },
             [command, items, saveCache],

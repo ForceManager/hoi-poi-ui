@@ -2,6 +2,7 @@ import React, {
     forwardRef,
     memo,
     useCallback,
+    useContext,
     useImperativeHandle,
     useMemo,
     useReducer,
@@ -15,7 +16,9 @@ import SearchBar from '../../../../general/SearchBar';
 import Text from '../../../../typography/Text';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles } from '../../../../../utils/styles';
+import { RichTextContext } from '../..';
 import CustomScrollbarsVirtualList from './components/CustomScrollbarsVirtualList';
+
 
 import styles from './styles';
 
@@ -87,16 +90,13 @@ const EmojiMenu = forwardRef(
         {
             children,
             classes: classesProp,
-            editor,
             onVisibleChange,
             popoverVisible,
-            texts,
-            cache,
-            saveCache,
-            defaultFrequentlyUsed,
         },
         ref,
     ) => {
+        const { cache, editor, emoji, saveCache } = useContext(RichTextContext);
+        const { texts, defaultFrequentlyUsed } = emoji;
         const [state, dispatch] = useReducer(reducer, initialState);
         const searchBarRef = useRef();
         const gridRef = useRef();
