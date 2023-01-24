@@ -15,7 +15,7 @@ import Placeholder from './components/placeholderExtension';
 import Underline from '@tiptap/extension-underline';
 import Mention from '@tiptap/extension-mention';
 import HardBreak from '@tiptap/extension-hard-break';
-import Emoji from '@tiptap-pro/extension-emoji';
+import Emoji from './components/emojiExtension.js';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
 import Menu from './components/Menu';
