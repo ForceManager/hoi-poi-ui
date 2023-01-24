@@ -26,6 +26,7 @@ export const getEmojiConfig = ({ emoji, showingEmoji, emojisToShowInSuggestions 
             .slice(0, emojisToShowInSuggestions);
     },
     allowSpaces: false,
+    allowedPrefixes: [' '],
     char: ':',
     // Override extension's default functionality to remove extra trailing space after inserting an emoji
     command: ({ editor, range, props }) => {
