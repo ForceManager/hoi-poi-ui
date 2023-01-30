@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 import { Button, Text } from 'hoi-poi-ui';
 
 const lorem =
-    '<p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur <em>adipiscing elit</em>.</p>';
+    '<p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur <em>adipiscing elit</em>.</p><p>👾</p>';
 
 const toolbar = [
     {
@@ -151,6 +151,29 @@ const fetchSuggestions = (query) =>
                 advice: 'Lorem ipsum dolor sit amet',
                 noResults: 'No Results...',
             },
+            maxVisibleItems: 3,
+        }}
+        emoji={{
+            tooltip: 'Emoji',
+            maxVisibleItems: 7,
+            texts: {
+                search_placeholder: 'Search all emoji',
+                frequently_used_emoji: 'Frequently Used',
+            },
+            cache: () => JSON.parse(localStorage.getItem('frequently_used_emoji')) || {},
+            saveCache: (payload) =>
+                localStorage.setItem('frequently_used_emoji', JSON.stringify(payload)),
+            defaultFrequentlyUsed: {
+                slightly_smiling_face: 0,
+                smile: 0,
+                scream: 0,
+                heart_eyes: 0,
+                '+1': 0,
+                raised_hands: 0,
+                ok_hand: 0,
+                rocket: 0,
+                tada: 0,
+            },
         }}
         customActions={
             <Fragment>
@@ -164,6 +187,7 @@ const fetchSuggestions = (query) =>
         }
         onSubmit={() => console.log('SUBMIT!')}
         onEsc={() => console.log('ESCAPE!')}
+        value={lorem}
     />
 
     <Text>Editor in 'compact' mode with mentions</Text>
@@ -186,6 +210,29 @@ const fetchSuggestions = (query) =>
                 texts: {
                     advice: 'Lorem ipsum dolor sit amet',
                     noResults: 'No Results...',
+                },
+                maxVisibleItems: 7,
+            }}
+            emoji={{
+                tooltip: 'Emoji',
+                maxVisibleItems: 7,
+                texts: {
+                    search_placeholder: 'Search all emoji',
+                    frequently_used_emoji: 'Frequently Used',
+                },
+                cache: () => JSON.parse(localStorage.getItem('frequently_used_emoji')) || {},
+                saveCache: (payload) =>
+                    localStorage.setItem('frequently_used_emoji', JSON.stringify(payload)),
+                defaultFrequentlyUsed: {
+                    slightly_smiling_face: 0,
+                    smile: 0,
+                    scream: 0,
+                    heart_eyes: 0,
+                    '+1': 0,
+                    raised_hands: 0,
+                    ok_hand: 0,
+                    rocket: 0,
+                    tada: 0,
                 },
             }}
             overrides={{

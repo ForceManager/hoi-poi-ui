@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { BubbleMenu } from '@tiptap/react';
 import classNames from 'classnames';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../../../utils/styles';
 import Icon from '../../../../general/Icon';
 import ToolbarItem from '../ToolbarItem';
+import { RichTextContext } from '../..';
 
 import styles from './styles';
 
@@ -23,16 +24,15 @@ const Menu = ({
     classes: classesProp,
     compactMode,
     customActions,
-    editor,
     editorContent,
     focused,
     handleSubmit,
-    mention,
     toolbar,
     toolbarStyle,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
+    const { editor, emoji, mention } = useContext(RichTextContext);
 
     const toolbarItems = useCallback(() => {
         const toolbarItemProps = {
@@ -55,7 +55,6 @@ const Menu = ({
         const toolbarItems = toolbar.map((item) => {
             return (
                 <ToolbarItem
-                    editor={editor}
                     key={item.item}
                     active={editor?.isActive(editorFormatsMapping[item.item])}
                     {...item}
@@ -64,21 +63,42 @@ const Menu = ({
             );
         });
 
-        if (mention && (toolbarStyle === 'fixed' || compactMode)) {
+        if ((mention || emoji) && (toolbarStyle === 'fixed' || compactMode)) {
             toolbarItems.push(<span key="divider" className={classes.toolbarDivider}></span>);
-            toolbarItems.push(
-                <ToolbarItem
-                    editor={editor}
-                    key="mention"
-                    hint={mention.tooltip}
-                    item="mention"
-                    {...toolbarItemStyle}
-                />,
-            );
+            if (mention) {
+                toolbarItems.push(
+                    <ToolbarItem
+                        key="mention"
+                        hint={mention.tooltip}
+                        item="mention"
+                        {...toolbarItemStyle}
+                    />,
+                );
+            }
+
+            if (emoji) {
+                toolbarItems.push(
+                    <ToolbarItem
+                        key="emoji"
+                        hint={emoji.tooltip}
+                        item="emoji"
+                        {...toolbarItemStyle}
+                    />,
+                );
+            }
         }
 
         return toolbarItems;
-    }, [classes, compactMode, editor, mention, theme, toolbar, toolbarStyle]);
+    }, [
+        classes,
+        compactMode,
+        editor,
+        mention,
+        theme,
+        toolbar,
+        toolbarStyle,
+        emoji,
+    ]);
 
     const toolbarClassNames = classNames(classes.toolbar, {
         [classes.compactMode]: compactMode && !focused,
@@ -122,7 +142,9 @@ const Menu = ({
                 <div className={toolbarClassNames}>
                     {toolbarItems()}
                     {customActions && (
-                        <div key="customActions" className={classes.toolbarCustomActions}>{customActions}</div>
+                        <div key="customActions" className={classes.toolbarCustomActions}>
+                            {customActions}
+                        </div>
                     )}
                 </div>
             );

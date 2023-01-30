@@ -1440,6 +1440,88 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Select with custom actions
+
+```jsx
+import { useState, useMemo } from 'react';
+import Switch from '../Switch';
+import Text from '../../typography/Text';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+    },
+];
+const [state, setState] = useState({});
+const [isChecked, setIsChecked] = useState(false);
+const onChange = (value) => setState({ value });
+
+const onChangeChecked = (focus) => {
+    setIsChecked(!isChecked);
+};
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        actions={[
+            {
+                onClick: onChangeChecked,
+                component: (
+                    <div
+                        style={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            pointerEvents: 'none',
+                        }}
+                    >
+                        <Text>Toggle me</Text>
+                        <Switch checked={isChecked} />
+                    </div>
+                ),
+            },
+            {
+                component: (
+                    <div
+                        style={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                        }}
+                        onClick={onChangeChecked}
+                    >
+                        <Text>Toggle me</Text>
+                        <Switch checked={isChecked} />
+                    </div>
+                ),
+            },
+        ]}
+    />
+</div>;
+```
+
 Select only text:
 
 ```jsx

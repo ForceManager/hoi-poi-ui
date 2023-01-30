@@ -1,6 +1,7 @@
 import React, {
     forwardRef,
     useCallback,
+    useContext,
     useEffect,
     useImperativeHandle,
     useMemo,
@@ -8,21 +9,20 @@ import React, {
     useRef,
 } from 'react';
 import classNames from 'classnames';
-import Advice from '../../../../general/Advice';
-import Avatar from '../../../../general/Avatar';
 import Text from '../../../../typography/Text';
 import ScrollBar from '../../../../utils/ScrollBar';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles } from '../../../../../utils/styles';
+import { RichTextContext } from '../../';
 
 import styles from './styles';
 
-const useStyles = createUseStyles(styles, 'MentionList');
+const useStyles = createUseStyles(styles, 'EmojiList');
 
-const MENTION_LIST_ITEM_HEIGHT = 33;
+const EMOJI_LIST_ITEM_HEIGHT = 28;
 const MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL = 8;
 
-const MentionList = forwardRef(
+const EmojiList = forwardRef(
     (
         {
             texts,
@@ -30,9 +30,11 @@ const MentionList = forwardRef(
             classes: classesProp,
             items = [],
             maxVisibleItems = MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL,
+            query,
         },
         ref,
     ) => {
+        const { saveCache } = useContext(RichTextContext);
         const classes = useClasses(useStyles, classesProp);
         const [selectedIndex, setSelectedIndex] = useState(0);
         const scrollBarRef = useRef();
@@ -43,14 +45,15 @@ const MentionList = forwardRef(
             (index) => {
                 const item = items[index];
                 if (item) {
-                    command({ id: item.id, label: item.name });
+                    command({ name: item.name });
+                    saveCache(item.name);
                 }
             },
-            [command, items],
+            [command, items, saveCache],
         );
 
         const scrollHandler = useCallback((index) => {
-            scrollBarRef?.current?.scrollTop(index * MENTION_LIST_ITEM_HEIGHT);
+            scrollBarRef?.current?.scrollTop(index * EMOJI_LIST_ITEM_HEIGHT);
         }, []);
 
         const upHandler = useCallback(() => {
@@ -91,22 +94,15 @@ const MentionList = forwardRef(
         const scrollBarProps = useMemo(
             () => ({
                 autoHeight: true,
-                autoHeightMax: MENTION_LIST_ITEM_HEIGHT * maxVisibleItems,
+                autoHeightMax: EMOJI_LIST_ITEM_HEIGHT * maxVisibleItems,
                 autoHide: false,
                 ref: scrollBarRef,
             }),
             [maxVisibleItems],
         );
 
-        return (
+        return query.length >= 3 ? (
             <div className={classes.root}>
-                {texts?.advice && (
-                    <Advice type="info" showIcon showCollapse={false} className={classes.advice}>
-                        <Text type="caption" color="aqua700">
-                            {texts.advice}
-                        </Text>
-                    </Advice>
-                )}
                 {items.length ? (
                     <ScrollBar {...scrollBarProps}>
                         {items.map((item, index) => (
@@ -117,18 +113,20 @@ const MentionList = forwardRef(
                                 key={index}
                                 onClick={() => selectItem(index)}
                             >
-                                <Avatar
-                                    src={item.avatar.src}
-                                    placeholder={item.avatar.placeholder}
-                                    className={classes.avatar}
-                                />
                                 <Text
                                     color="neutral900"
                                     type="body"
-                                    className={classes.name}
+                                    className={classes.emojiItem}
                                     isTruncated
                                 >
-                                    {item.name}
+                                    <span>
+                                        {item.fallbackImage ? (
+                                            <img src={item.fallbackImage} alt={item.name} />
+                                        ) : (
+                                            item.emoji
+                                        )}
+                                    </span>
+                                    <span>:{item.name}:</span>
                                 </Text>
                             </div>
                         ))}
@@ -137,8 +135,8 @@ const MentionList = forwardRef(
                     <Text>{texts?.noResults || 'No Results'}</Text>
                 )}
             </div>
-        );
+        ) : null;
     },
 );
 
-export default MentionList;
+export default EmojiList;

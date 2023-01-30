@@ -1,3 +1,5 @@
+import { alphaColor } from "../../../utils/styles/defaultTheme"; 
+
 export default (theme) => ({
     root: {
         '& .ProseMirror': {
@@ -22,10 +24,14 @@ export default (theme) => ({
             height: 0,
             pointerEvents: 'none',
         },
+        '& [data-type="emoji"]': {
+            fontSize: 17,
+            lineHeight: 1,
+        },
         '& [data-type="mention"]': {
             display: 'inline-block',
-            backgroundColor: theme.colors.blue500,
-            color: theme.colors.neutralBase,
+            backgroundColor: alphaColor(theme.colors.blue500, 0.1),
+            color: theme.colors.blue500,
             padding: '0 6px',
             borderRadius: 10,
             '&::before': {
