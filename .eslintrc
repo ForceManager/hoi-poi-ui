@@ -15,7 +15,10 @@
         "Blob": true,
         "navigator": true
     },
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "requireConfigFile": false
+    },
     "rules": {
         "import/no-anonymous-default-export": 0
     }

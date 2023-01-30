@@ -301,7 +301,7 @@ Modal.propTypes = {
     overrides: PropTypes.object,
     children: PropTypes.any,
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    isOpen: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool,
     width: PropTypes.string,
     size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big', 'full']),
     useAutoHeight: PropTypes.bool,

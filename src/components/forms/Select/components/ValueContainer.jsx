@@ -10,7 +10,7 @@ export default React.memo(({ children, selectProps, ...props }) => {
     }
 
     return (
-        <components.ValueContainer {...props}>
+        <components.ValueContainer {...props} selectProps={selectProps}>
             <components.SingleValue {...props}>{values}</components.SingleValue>
             {input}
         </components.ValueContainer>

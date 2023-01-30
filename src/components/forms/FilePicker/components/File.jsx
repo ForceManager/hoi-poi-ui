@@ -1,8 +1,7 @@
 import React, { useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import prettyBytes from 'pretty-bytes';
-
+import prettyBytes from '../../../../utils/prettyBytes';
 import { getOverrides, useClasses } from '../../../../utils/overrides';
 import Icon from '../../../general/Icon';
 import Loader from '../../../general/Loader';
