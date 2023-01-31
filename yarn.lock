@@ -1582,21 +1582,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.20.13":
+  version: 7.20.13
+  resolution: "@babel/runtime@npm:7.20.13"
+  dependencies:
+    regenerator-runtime: ^0.13.11
+  checksum: 09b7a97a05c80540db6c9e4ddf8c5d2ebb06cae5caf3a87e33c33f27f8c4d49d9c67a2d72f1570e796045288fad569f98a26ceba0c4f5fad2af84b6ad855c4fb
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.10.1, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.1, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.9, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
   version: 7.20.6
   resolution: "@babel/runtime@npm:7.20.6"
   dependencies:
     regenerator-runtime: ^0.13.11
   checksum: 42a8504db21031b1859fbc0f52d698a3d2f5ada9519eb76c6f96a7e657d8d555732a18fe71ef428a67cc9fc81ca0d3562fb7afdc70549c5fec343190cbaa9b03
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.20.13":
-  version: 7.20.13
-  resolution: "@babel/runtime@npm:7.20.13"
-  dependencies:
-    regenerator-runtime: ^0.13.11
-  checksum: 09b7a97a05c80540db6c9e4ddf8c5d2ebb06cae5caf3a87e33c33f27f8c4d49d9c67a2d72f1570e796045288fad569f98a26ceba0c4f5fad2af84b6ad855c4fb
   languageName: node
   linkType: hard
 
@@ -5983,7 +5983,13 @@ __metadata:
   version: 0.13.1
   resolution: "emittery@npm:0.13.1"
   checksum: 2b089ab6306f38feaabf4f6f02792f9ec85fc054fda79f44f6790e61bbf6bc4e1616afb9b232e0c5ec5289a8a452f79bfa6d905a6fd64e94b49981f0934001c6
+  languageName: node
+  linkType: hard
 
+"emoji-regex@npm:^10.0.0":
+  version: 10.2.1
+  resolution: "emoji-regex@npm:10.2.1"
+  checksum: 1aa2d16881c56531fdfc03d0b36f5c2b6221cc4097499a5665b88b711dc3fb4d5b8804f0ca6f00c56e5dcf89bac75f0487eee85da1da77df3a33accc6ecbe426
   languageName: node
   linkType: hard
 
@@ -6007,13 +6013,6 @@ __metadata:
   peerDependencies:
     emojibase: "*"
   checksum: 54335bebf30b9e403b8abc33fed761e0378ebc2aad56b285706bdda20777a3f00ea0700253a853d40f7c20817788adbb580e50cbcb29894a16e2a16f8c1b7f9f
-  languageName: node
-  linkType: hard
-
-"emojis-list@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "emojis-list@npm:3.0.0"
-  checksum: ddaaa02542e1e9436c03970eeed445f4ed29a5337dfba0fe0c38dfdd2af5da2429c2a0821304e8a8d1cadf27fdd5b22ff793571fa803ae16852a6975c65e8e70
   languageName: node
   linkType: hard
 
@@ -7987,6 +7986,7 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@babel/preset-react": ^7.18.6
     "@babel/runtime": ^7.20.13
+    "@tiptap-pro/extension-emoji": 2.0.0-beta.209
     "@tiptap/extension-hard-break": 2.0.0-beta.209
     "@tiptap/extension-mention": 2.0.0-beta.209
     "@tiptap/extension-underline": 2.0.0-beta.209
@@ -8038,7 +8038,7 @@ __metadata:
     prosemirror-history: ^1.3.0
     prosemirror-keymap: ^1.2.0
     prosemirror-schema-list: ^1.2.2
-    prosemirror-view: 1.30.0
+    prosemirror-view: 1.28.2
     rc-menu: 8.9.0
     rc-slider: ^9.7.4
     rc-steps: ^4.1.4
@@ -8062,6 +8062,7 @@ __metadata:
     react-switch: ^7.0.0
     react-test-renderer: ^18.2.0
     react-toastify: ^9.1.1
+    react-window: ^1.8.8
     replace-in-file: ^6.3.5
     tippy.js: ^6.3.7
     webpack: 5.75.0
@@ -10728,6 +10729,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"memoize-one@npm:>=3.1.1 <6":
+  version: 5.2.1
+  resolution: "memoize-one@npm:5.2.1"
+  checksum: a3cba7b824ebcf24cdfcd234aa7f86f3ad6394b8d9be4c96ff756dafb8b51c7f71320785fbc2304f1af48a0467cbbd2a409efc9333025700ed523f254cb52e3d
+  languageName: node
+  linkType: hard
+
 "memoize-one@npm:^6.0.0":
   version: 6.0.0
   resolution: "memoize-one@npm:6.0.0"
@@ -12161,14 +12169,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prosemirror-view@npm:1.30.0":
-  version: 1.30.0
-  resolution: "prosemirror-view@npm:1.30.0"
+"prosemirror-view@npm:1.28.2":
+  version: 1.28.2
+  resolution: "prosemirror-view@npm:1.28.2"
   dependencies:
     prosemirror-model: ^1.16.0
     prosemirror-state: ^1.0.0
     prosemirror-transform: ^1.1.0
-  checksum: ffd29ce9a37254337541a06ff961934f457e872374d0aac8b5b1c938c1d6726820f24a75b83b4f55c2f46e3ab5ec907664e72db3863ec17e2c8701c393384fd1
+  checksum: a14bee6f1d3533d9ce165082eed03487fff996f13e4d0893934674d879d1a30bf5866999e6ddc5932c1dc936d265b2456fb3cdd45aeee33b6d01496438cf3e04
   languageName: node
   linkType: hard
 
@@ -12946,10 +12954,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-window@npm:^1.8.8":
+  version: 1.8.8
+  resolution: "react-window@npm:1.8.8"
+  dependencies:
+    "@babel/runtime": ^7.0.0
+    memoize-one: ">=3.1.1 <6"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: a19f43b9015fb84e16db983617dac618a8b298881d2ca96ffc2fb00534afd958ee57a00fd0017733b56f8c34dd84e5be59337877aed3c66329ed3b84e8d018ba
+  languageName: node
+  linkType: hard
+
 "react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
-
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
