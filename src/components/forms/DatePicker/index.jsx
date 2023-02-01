@@ -76,19 +76,21 @@ function DatePicker({
 
     const onChangeDate = useCallback(
         (date) => {
+            if (isReadOnly) return;
             const formattedDate =
                 outputType === 'string'
                     ? flatpickr.formatDate(date[0], flatpickrOptions.dateFormat)
                     : date[0];
             onChange && onChange(formattedDate, name);
         },
-        [flatpickrOptions.dateFormat, name, onChange, outputType],
+        [flatpickrOptions.dateFormat, isReadOnly, name, onChange, outputType],
     );
 
     // Remove handler
     const onInputChange = useCallback(() => {
+        if (isReadOnly) return;
         onChange && onChange(undefined, name);
-    }, [name, onChange]);
+    }, [isReadOnly, name, onChange]);
 
     const shouldDisableToday = useMemo(() => {
         if (minDate || maxDate) {
@@ -192,7 +194,7 @@ function DatePicker({
                     className={className}
                     isReadOnly={isReadOnly}
                     isFullWidth={isFullWidth}
-                    onChange={isReadOnly ? undefined : onInputChange}
+                    onChange={onInputChange}
                     overrides={{ input: { ref }, ...inputOverride }}
                     placeholder={placeholder}
                     postComponent={
@@ -233,7 +235,7 @@ function DatePicker({
             overrides={overridesProp}
             value={value}
             onReady={onReady}
-            onChange={isReadOnly ? undefined : onChangeDate}
+            onChange={onChangeDate}
             {...override.flatpickr}
         />
     );
