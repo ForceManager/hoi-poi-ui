@@ -114,7 +114,7 @@ const MentionList = forwardRef(
                                 className={classNames(classes.item, {
                                     [classes.selected]: index === selectedIndex,
                                 })}
-                                key={index}
+                                key={`suggestion-${item.id}`}
                                 onClick={() => selectItem(index)}
                             >
                                 <Avatar
