@@ -306,6 +306,7 @@ Modal.propTypes = {
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     isOpen: PropTypes.bool,
     width: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big', 'full']),
     useAutoHeight: PropTypes.bool,
     useAutoWidth: PropTypes.bool,
