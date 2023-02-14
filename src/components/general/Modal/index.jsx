@@ -36,6 +36,7 @@ function Modal({
     useAutoWidth,
     useContentStaticHeight,
     size,
+    height,
     width,
     cancelText,
     middleButtonText,
@@ -128,10 +129,13 @@ function Modal({
         return () => window.removeEventListener('resize', onResize);
     }, [onResize, useAutoWidth, useAutoHeight]);
 
-    let rootContentStyle = useMemo(
-        () => ({
+    let rootContentStyle = useMemo(() => {
+        let finalHeight = size === 'full' ? '90%' : 'auto';
+        if (height) finalHeight = height;
+
+        return {
             width: useAutoWidth ? autoWidth : width || SIZES[size],
-            height: size === 'full' ? '90%' : 'auto',
+            height: finalHeight,
             maxWidth: '100%',
             maxHeight: '100%',
             top: '50%',
@@ -140,9 +144,8 @@ function Modal({
             bottom: 'auto',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
-        }),
-        [useAutoWidth, autoWidth, width, size],
-    );
+        };
+    }, [useAutoWidth, autoWidth, width, size, height]);
 
     const rootProps = {
         ariaHideApp: false,
@@ -160,11 +163,11 @@ function Modal({
     };
 
     const contentStyles = useMemo(() => {
-        if (size === 'full') return { height: '100%' };
+        if (size === 'full' || height) return { height: '100%' };
         if (!useContentStaticHeight && !useAutoHeight) return {};
         if (useContentStaticHeight) return { height: autoHeight };
         else return { maxHeight: autoHeight };
-    }, [size, useContentStaticHeight, useAutoHeight, autoHeight]);
+    }, [height, size, useContentStaticHeight, useAutoHeight, autoHeight]);
 
     const showFooter = onConfirm || onCancel || onDelete;
 
