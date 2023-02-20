@@ -57,6 +57,7 @@ const RichText = memo(
         canSubmit,
         onChangeFocus,
         emoji,
+        hideClear,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -264,7 +265,7 @@ const RichText = memo(
 
         const getIcons = useMemo(() => {
             switch (true) {
-                case editorContent?.text && !isReadOnly && !compactMode:
+                case editorContent?.text && !isReadOnly && !compactMode && !hideClear:
                     return (
                         <Icon
                             name="closeSmall"
@@ -292,6 +293,7 @@ const RichText = memo(
             isReadOnly,
             theme.colors.neutral600,
             compactMode,
+            hideClear,
         ]);
 
         const inputWrapperProps = useMemo(
@@ -435,6 +437,7 @@ RichText.defaultProps = {
     value: '',
     compactMode: false,
     autofocus: false,
+    hideClear: false,
 };
 
 RichText.propTypes = {
@@ -486,6 +489,8 @@ RichText.propTypes = {
         /** Max visible items in the suggestions list */
         maxVisibleItems: PropTypes.number,
     }),
+    /** Hide clear action button in the editor's input area */
+    hideClear: PropTypes.bool,
 };
 
 export default RichText;
