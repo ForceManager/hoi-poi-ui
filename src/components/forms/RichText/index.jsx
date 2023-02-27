@@ -58,6 +58,7 @@ const RichText = memo(
         onChangeFocus,
         emoji,
         hideClear,
+        submitTooltip,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -362,6 +363,7 @@ const RichText = memo(
                 handleSubmit,
                 toolbar,
                 toolbarStyle,
+                submitTooltip,
             }),
             [
                 compactMode,
@@ -371,6 +373,7 @@ const RichText = memo(
                 handleSubmit,
                 toolbar,
                 toolbarStyle,
+                submitTooltip,
             ],
         );
 
@@ -438,6 +441,7 @@ RichText.defaultProps = {
     compactMode: false,
     autofocus: false,
     hideClear: false,
+    submitTooltip: 'Send ⏎',
 };
 
 RichText.propTypes = {
@@ -491,6 +495,7 @@ RichText.propTypes = {
     }),
     /** Hide clear action button in the editor's input area */
     hideClear: PropTypes.bool,
+    submitTooltip: PropTypes.string,
 };
 
 export default RichText;

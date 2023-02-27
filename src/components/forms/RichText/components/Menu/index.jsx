@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../../../utils/styles';
 import Icon from '../../../../general/Icon';
+import Tooltip from '../../../../utils/Tooltip';
 import ToolbarItem from '../ToolbarItem';
 import { RichTextContext } from '../..';
 
@@ -29,6 +30,7 @@ const Menu = ({
     handleSubmit,
     toolbar,
     toolbarStyle,
+    submitTooltip,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -89,16 +91,7 @@ const Menu = ({
         }
 
         return toolbarItems;
-    }, [
-        classes,
-        compactMode,
-        editor,
-        mention,
-        theme,
-        toolbar,
-        toolbarStyle,
-        emoji,
-    ]);
+    }, [classes, compactMode, editor, mention, theme, toolbar, toolbarStyle, emoji]);
 
     const toolbarClassNames = classNames(classes.toolbar, {
         [classes.compactMode]: compactMode && !focused,
@@ -107,6 +100,28 @@ const Menu = ({
 
     if (!editor) return null;
 
+    const submitComponent = !!editorContent?.text?.length ? (
+        <Tooltip placement="top" content={submitTooltip}>
+            <span>
+                <Icon
+                    name="send"
+                    size="large"
+                    color={theme.colors.orange500}
+                    onClick={handleSubmit}
+                    key="submit"
+                />
+            </span>
+        </Tooltip>
+    ) : (
+        <Icon
+            name="send"
+            size="large"
+            color={theme.colors.neutral700}
+            onClick={handleSubmit}
+            key="submit"
+        />
+    );
+
     switch (true) {
         case compactMode:
             return (
@@ -114,17 +129,7 @@ const Menu = ({
                     <div className={classes.toolbarItems} onClick={(e) => e.stopPropagation()}>
                         {toolbarItems()}
                     </div>
-                    <Icon
-                        name="send"
-                        size="large"
-                        color={
-                            !!editorContent?.text?.length
-                                ? theme.colors.orange500
-                                : theme.colors.neutral700
-                        }
-                        onClick={handleSubmit}
-                        key="submit"
-                    />
+                    {submitComponent}
                 </div>
             );
         case editor && toolbarStyle === 'floating':
