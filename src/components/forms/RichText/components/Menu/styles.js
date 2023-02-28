@@ -107,6 +107,9 @@ export default (theme) => {
             '& $toolbarItems': {
                 opacity: 1,
             },
+            '& > span': {
+                display: 'inherit',
+            },
         },
     };
 };

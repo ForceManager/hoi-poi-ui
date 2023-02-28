@@ -142,6 +142,20 @@ const RichText = memo(
             editable: !isReadOnly,
             extensions: getExtensions,
             content: value,
+            onCreate: ({ editor }) => {
+                const content = {
+                    text: editor.getText(),
+                    html: editor.getHTML(),
+                    json: editor.getJSON(),
+                };
+
+                setEditorContent(content);
+
+                if (content.text.length && autofocus) {
+                    setFocused(true);
+                    editor.commands.focus('end');
+                }
+            },
             onUpdate: ({ editor }) => {
                 const content = {
                     text: editor.getText(),
@@ -166,7 +180,7 @@ const RichText = memo(
 
         useEffect(() => {
             if (autofocus && editor && !showingMenuPopover) {
-                editor.commands.focus();
+                editor.commands.focus('end');
                 setFocused(true);
             }
         }, [autofocus, editor, showingMenuPopover]);

@@ -22,6 +22,23 @@ const toolbar = [
     },
 ];
 
+const loremJSON = {
+    type: 'doc',
+    content: [
+        {
+            type: 'paragraph',
+            content: [
+                { type: 'text', text: 'Lorem ipsum ' },
+                { type: 'text', marks: [{ type: 'bold' }], text: 'dolor sit amet' },
+                { type: 'text', text: ', consectetur ' },
+                { type: 'text', marks: [{ type: 'italic' }], text: 'adipiscing elit' },
+                { type: 'text', text: '.' },
+            ],
+        },
+        { type: 'paragraph', content: [{ type: 'text', text: '👾👾👾👾👾👾' }] },
+    ],
+};
+
 const fetchSuggestions = (query) =>
     new Promise(
         (resolve, reject) =>
@@ -244,6 +261,8 @@ const fetchSuggestions = (query) =>
             }}
             onSubmit={() => console.log('SUBMIT!')}
             onEsc={() => console.log('ESCAPE!')}
+            value={loremJSON}
+            autofocus
         />
     </div>
 </div>;
