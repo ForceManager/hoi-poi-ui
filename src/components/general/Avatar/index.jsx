@@ -1,99 +1,32 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { memo, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getDataUri from './getDataUri';
-import { getOverrides, useClasses } from '../../../utils/overrides';
-import Icon from '../../general/Icon';
-import Text from '../../typography/Text';
-import { getFirstTwoInitials, removeAccents } from '../../../utils/string';
+import Avatar from './Avatar';
+import MultiAvatar from './MultiAvatar';
 
-import { createUseStyles } from '../../../utils/styles';
-import styles from './styles';
-const useStyles = createUseStyles(styles, 'Avatar');
+const AvatarMain = memo(({ sources, ...props }) => {
+    const Component = sources ? MultiAvatar : Avatar;
 
-function Avatar({
-    classes: classesProp,
-    overrides: overridesProps,
-    className: classNameProps,
-    type,
-    size,
-    src,
-    icon,
-    alt,
-    placeholder,
-    ...props
-}) {
-    const classes = useClasses(useStyles, classesProp);
-    const [defaultSrc, setDefaultSrc] = useState(placeholder || src);
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
-    const [hadError, setHadError] = useState(false);
-    const initialSrc = useRef(src).current;
-
-    const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProps);
-    const override = getOverrides(overridesProps, Avatar.overrides);
-    const rootProps = {
-        ...props,
-        className: rootClassName,
-    };
-
-    useEffect(() => {
-        let willUnmount = false;
-        
-        if (!isImageLoaded || initialSrc !== src) {
-            if (src && !hadError) {
-                getDataUri(src)
-                    .then((dataUri) => {
-                        if (!willUnmount) {
-                            if (dataUri) setDefaultSrc(dataUri);
-                            setIsImageLoaded(true);
-                        }
-                    })
-                    .catch(() => {
-                        if (placeholder && !willUnmount) {
-                            setDefaultSrc(placeholder);
-                            setHadError(true);
-                            setIsImageLoaded(true);
-                        }
-                    });
-            } else if (placeholder) {
-                setDefaultSrc(placeholder);
-                setIsImageLoaded(true);
-            }
-        }
-        return () => {
-            willUnmount = true;
-        };
-    }, [src, placeholder, initialSrc, defaultSrc, isImageLoaded, hadError]);
-
-    const content = useMemo(() => {
-        if (src || placeholder) {
-            return <img src={defaultSrc} alt={alt} />;
-        }
-        if (icon) {
-            return <Icon className={classes.icon} name={icon} />;
-        }
-        if (alt) {
-            const initials = getFirstTwoInitials(removeAccents(alt));
-            return <Text className={classes.initials}>{initials}</Text>;
-        }
-        return null;
-    }, [alt, classes.icon, classes.initials, defaultSrc, icon, placeholder, src]);
-
-    return (
-        <div {...rootProps} {...override.root}>
-            {content}
-        </div>
+    const finalProps = useMemo(
+        () => (sources ? { sources, ...props } : { ...props }),
+        [props, sources],
     );
-}
 
-Avatar.overrides = ['root'];
+    return <Component {...finalProps} />;
+});
 
-Avatar.defaultProps = {
+AvatarMain.defaultProps = {
     type: 'round',
     size: 'medium',
 };
 
-Avatar.propTypes = {
+AvatarMain.propTypes = {
+    sources: PropTypes.arrayOf(
+        PropTypes.shape({
+            src: PropTypes.string,
+            placeholder: PropTypes.string,
+            alt: PropTypes.string,
+        }),
+    ),
     src: PropTypes.string,
     placeholder: PropTypes.string,
     alt: PropTypes.string,
@@ -102,4 +35,4 @@ Avatar.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
 };
 
-export default React.memo(Avatar);
+export default AvatarMain;

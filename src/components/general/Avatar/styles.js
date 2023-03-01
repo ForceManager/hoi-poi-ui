@@ -68,4 +68,45 @@ export default (theme) => ({
         height: '100%',
         textTransform: 'uppercase',
     },
+    multiAvatar: {
+        display: 'grid',
+        overflow: 'hidden',
+    },
+    multiAvatarItem: {
+        '& img': {
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            display: 'block',
+        },
+        '&:first-child': {
+            gridColumn: 1,
+            gridRow: '1 / span 2',
+            aspectRatio: 0.5,
+        },
+
+        '&:nth-child(2)': {
+            gridColumn: 2,
+            gridRow: 1,
+            aspectRatio: 1,
+        },
+
+        '&:nth-child(3)': {
+            gridColumn: 2,
+            gridRow: 2,
+            aspectRatio: 1,
+        },
+
+        '&:nth-child(2):is(:last-child)': {
+            gridColumn: 2,
+            gridRow: '1 / span 2',
+            aspectRatio: 0.5,
+        },
+
+        '&:only-child': {
+            gridColumn: '1 / span 2',
+            gridRow: '1 / span 2',
+            aspectRatio: 1,
+        },
+    },
 });
