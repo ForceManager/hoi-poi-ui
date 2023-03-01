@@ -31,6 +31,27 @@ const [values, setValues] = useState([]);
 </div>;
 ```
 
+Horizontal with fieldsMode vertical:
+
+```jsx
+import { useState } from 'react';
+import Input from '../Input';
+
+const [values, setValues] = useState([]);
+
+<div>
+    <FieldGroup
+        label="Horizontal Label"
+        labelMode="horizontal"
+        inputs={[Input, Input]}
+        onChange={setValues}
+        value={values}
+        isFullWidth
+        fieldsMode="vertical"
+    />
+</div>;
+```
+
 Full width:
 
 ```jsx

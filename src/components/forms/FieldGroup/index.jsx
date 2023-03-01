@@ -22,6 +22,7 @@ const FieldGroup = memo(
         divider,
         dividerText,
         isFullWidth,
+        fieldsMode,
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -32,9 +33,14 @@ const FieldGroup = memo(
             {
                 [classes.error]: error,
                 [classes.isFullWidth]: isFullWidth,
+                [classes.alignLabelTop]: fieldsMode === 'vertical',
             },
             classNameProp,
         );
+
+        const rangeWrapperClassName = classnames(classes.rangeWrapper, {
+            [classes.verticalFieldsMode]: fieldsMode === 'vertical',
+        });
 
         const onChangeInput = useCallback(
             (newValue, index, event, info) => {
@@ -65,7 +71,7 @@ const FieldGroup = memo(
                 );
 
                 // Adding dividers
-                if (inputs[index + 1] && (divider || dividerText)) {
+                if (inputs[index + 1] && fieldsMode !== 'vertical' && (divider || dividerText)) {
                     if (divider)
                         inputNodes.push(
                             <div
@@ -105,6 +111,7 @@ const FieldGroup = memo(
             override.divider,
             override.dividerText,
             value,
+            fieldsMode,
         ]);
 
         return (
@@ -115,7 +122,7 @@ const FieldGroup = memo(
                 className={rootClassName}
                 overrides={overridesProp}
             >
-                <div className={classes.rangeWrapper} {...override.rangeWrapper}>
+                <div className={rangeWrapperClassName} {...override.rangeWrapper}>
                     {Inputs}
                 </div>
             </InputWrapper>
@@ -132,6 +139,7 @@ FieldGroup.defaultProps = {
     overrides: {},
     inputs: [],
     dividerText: '',
+    fieldsMode: 'horizontal',
 };
 
 FieldGroup.propTypes = {
@@ -139,6 +147,7 @@ FieldGroup.propTypes = {
     overrides: PropTypes.object,
     label: PropTypes.string,
     labelMode: PropTypes.oneOf(['horizontal', 'vertical']),
+    fieldsMode: PropTypes.oneOf(['horizontal', 'vertical']),
     isFullWidth: PropTypes.bool,
     /** Info popover */
     hint: PropTypes.string,
