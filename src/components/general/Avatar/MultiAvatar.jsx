@@ -36,10 +36,16 @@ const MultiAvatar = memo(
         };
 
         useEffect(() => {
+            let willUnmount = false;
             const slicedSources = sources.slice(0, 3);
             Promise.all(slicedSources.map(({ src }) => getDataUri(src).catch(() => null)))
-                .then((dataUris) => setImageDataUris(dataUris))
+                .then((dataUris) => {
+                    if (!willUnmount) setImageDataUris(dataUris);
+                })
                 .catch((error) => console.error('Image preload error:', error));
+            return () => {
+                willUnmount = true;
+            };
         }, [sources]);
 
         return (
