@@ -183,6 +183,9 @@ import UnPin from './icons/actions/UnPin';
 import Merge from './icons/actions/Merge';
 import OpportunityLink from './icons/actions/OpportunityLink';
 import OpportunityUnlink from './icons/actions/OpportunityUnlink';
+import BellEnable from './icons/actions/BellEnable';
+import BellDisable from './icons/actions/BellDisable';
+import BellSnooze from './icons/actions/BellSnooze';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -586,6 +589,9 @@ export const ICONS = {
     merge: Merge,
     opportunityLink: OpportunityLink,
     opportunityUnlink: OpportunityUnlink,
+    bellEnable: BellEnable,
+    bellDisable: BellDisable,
+    bellSnooze: BellSnooze,
     //Communication
     message: Message,
     comment: Comment,

@@ -226,6 +226,11 @@ import Icon from './IconWithTooltip';
     <span> </span>
     <Icon name="opportunityUnlink" />
     <span> </span>
+    <Icon name="bellEnable" />
+    <span> </span>
+    <Icon name="bellDisable" />
+    <span> </span>
+    <Icon name="bellSnooze" />
 </div>;
 ```
 
