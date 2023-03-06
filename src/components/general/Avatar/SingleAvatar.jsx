@@ -9,9 +9,9 @@ import { getFirstTwoInitials, removeAccents } from '../../../utils/string';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
-const useStyles = createUseStyles(styles, 'Avatar');
+const useStyles = createUseStyles(styles, 'SingleAvatar');
 
-function Avatar({
+function SingleAvatar({
     classes: classesProp,
     overrides: overridesProps,
     className: classNameProps,
@@ -30,7 +30,7 @@ function Avatar({
     const initialSrc = useRef(src).current;
 
     const rootClassName = classnames(classes.root, classes[type], classes[size], classNameProps);
-    const override = getOverrides(overridesProps, Avatar.overrides);
+    const override = getOverrides(overridesProps, SingleAvatar.overrides);
     const rootProps = {
         ...props,
         className: rootClassName,
@@ -86,14 +86,14 @@ function Avatar({
     );
 }
 
-Avatar.overrides = ['root'];
+SingleAvatar.overrides = ['root'];
 
-Avatar.defaultProps = {
+SingleAvatar.defaultProps = {
     type: 'round',
     size: 'medium',
 };
 
-Avatar.propTypes = {
+SingleAvatar.propTypes = {
     src: PropTypes.string,
     placeholder: PropTypes.string,
     alt: PropTypes.string,
@@ -102,4 +102,4 @@ Avatar.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
 };
 
-export default React.memo(Avatar);
+export default React.memo(SingleAvatar);

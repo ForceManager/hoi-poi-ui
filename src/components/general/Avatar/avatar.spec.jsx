@@ -71,4 +71,34 @@ describe('Avatar', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('multi avatar with count', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Avatar
+                    showCount
+                    sources={[
+                        {
+                            placeholder:
+                                'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            alt: 'image',
+                        },
+                        {
+                            placeholder:
+                                'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            alt: 'image',
+                        },
+                        {
+                            placeholder:
+                                'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+                            src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+                            alt: 'image',
+                        },
+                    ]}
+                />
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

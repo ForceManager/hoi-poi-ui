@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getDataUri from './getDataUri';
 import { getOverrides, useClasses } from '../../../utils/overrides';
+import BadgeNotification from '../BadgeNotification';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
@@ -17,6 +18,7 @@ const MultiAvatar = memo(
         size,
         icon,
         sources,
+        showCount,
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -37,7 +39,7 @@ const MultiAvatar = memo(
 
         useEffect(() => {
             let willUnmount = false;
-            const slicedSources = sources.slice(0, 3);
+            const slicedSources = showCount ? sources.slice(0, 1) : sources.slice(0, 3);
             Promise.all(slicedSources.map(({ src }) => getDataUri(src).catch(() => null)))
                 .then((dataUris) => {
                     if (!willUnmount) setImageDataUris(dataUris);
@@ -46,18 +48,32 @@ const MultiAvatar = memo(
             return () => {
                 willUnmount = true;
             };
-        }, [sources]);
+        }, [sources, showCount]);
 
         return (
             <div {...rootProps} {...override.root}>
-                {imageDataUris.map((dataUri, index) => (
-                    <div
-                        key={dataUri || sources[index].placeholder}
-                        className={classes.multiAvatarItem}
+                <div className={classes.multiAvatarInner}>
+                    {imageDataUris.map((dataUri, index) => (
+                        <div
+                            key={dataUri || sources[index].placeholder}
+                            className={classes.multiAvatarItem}
+                        >
+                            <img
+                                src={dataUri || sources[index].placeholder}
+                                alt={sources[index].alt}
+                            />
+                        </div>
+                    ))}
+                </div>
+                {showCount && (
+                    <BadgeNotification
+                        size="tiny"
+                        className={classes.count}
+                        overrides={{ Text: { color: 'neutral900' } }}
                     >
-                        <img src={dataUri || sources[index].placeholder} alt={sources[index].alt} />
-                    </div>
-                ))}
+                        {sources.length}
+                    </BadgeNotification>
+                )}
             </div>
         );
     },

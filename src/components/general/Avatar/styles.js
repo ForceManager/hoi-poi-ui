@@ -4,6 +4,7 @@ export default (theme) => ({
         color: theme.colors.neutral700,
         overflow: 'hidden',
         background: theme.colors.neutral400,
+        position: 'relative',
         '& > img': {
             height: '100%',
             width: '100%',
@@ -33,6 +34,9 @@ export default (theme) => ({
         '& $initials': {
             fontSize: '10px',
         },
+        '& $count': {
+            transform: 'translate3d(40%, 40%, 0)',
+        },
     },
     medium: {
         height: '25px',
@@ -58,6 +62,9 @@ export default (theme) => ({
         '& $initials': {
             fontSize: '38px',
         },
+        '& $count': {
+            transform: 'none',
+        },
     },
     icon: {},
     initials: {
@@ -69,8 +76,12 @@ export default (theme) => ({
         textTransform: 'uppercase',
     },
     multiAvatar: {
+        overflow: 'visible',
+    },
+    multiAvatarInner: {
         display: 'grid',
         overflow: 'hidden',
+        borderRadius: '50%',
     },
     multiAvatarItem: {
         '& img': {
@@ -108,5 +119,14 @@ export default (theme) => ({
             gridRow: '1 / span 2',
             aspectRatio: 1,
         },
+    },
+    count: {
+        position: 'absolute',
+        bottom: 0,
+        right: 0,
+        boxSizing: 'border-box',
+        boxShadow: `0 0 0 2px ${theme.colors.neutralBase}`,
+        backgroundColor: theme.colors.neutral400,
+        transform: 'translate3d(25%, 25%, 0)',
     },
 });

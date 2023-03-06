@@ -1,10 +1,10 @@
 import React, { memo, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import Avatar from './Avatar';
+import SingleAvatar from './SingleAvatar';
 import MultiAvatar from './MultiAvatar';
 
-const AvatarMain = memo(({ sources, ...props }) => {
-    const Component = sources ? MultiAvatar : Avatar;
+const Avatar = memo(({ sources, ...props }) => {
+    const Component = sources ? MultiAvatar : SingleAvatar;
 
     const finalProps = useMemo(
         () => (sources ? { sources, ...props } : { ...props }),
@@ -14,12 +14,12 @@ const AvatarMain = memo(({ sources, ...props }) => {
     return <Component {...finalProps} />;
 });
 
-AvatarMain.defaultProps = {
+Avatar.defaultProps = {
     type: 'round',
     size: 'medium',
 };
 
-AvatarMain.propTypes = {
+Avatar.propTypes = {
     sources: PropTypes.arrayOf(
         PropTypes.shape({
             src: PropTypes.string,
@@ -35,4 +35,4 @@ AvatarMain.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
 };
 
-export default AvatarMain;
+export default Avatar;
