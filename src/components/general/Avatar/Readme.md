@@ -203,6 +203,89 @@ import { Avatar } from 'hoi-poi-ui';
 </div>;
 ```
 
+MultiAvatar
+
+```jsx
+import { Avatar } from 'hoi-poi-ui';
+
+const sources = [
+    {
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        placeholder: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+        alt: 'image',
+    },
+    {
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        placeholder: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+        alt: 'image',
+    },
+    {
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        placeholder: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+        alt: 'image',
+    },
+];
+
+<div style={{ height: '100%', display: 'flex', alignItems: 'center', gap: 10 }}>
+    <Avatar sources={sources} size="huge" />
+    <Avatar sources={sources} size="big" />
+    <Avatar sources={sources} size="large" />
+    <Avatar sources={sources} size="medium" />
+    <Avatar sources={sources} size="small" />
+    <Avatar sources={sources.slice(0,2)} size="huge" />
+    <Avatar sources={sources.slice(0,2)} size="big" />
+    <Avatar sources={sources.slice(0,2)} size="large" />
+    <Avatar sources={sources.slice(0,2)} size="medium" />
+    <Avatar sources={sources.slice(0,2)} size="small" />
+    <Avatar sources={sources.slice(0,1)} size="huge" />
+    <Avatar sources={sources.slice(0,1)} size="big" />
+    <Avatar sources={sources.slice(0,1)} size="large" />
+    <Avatar sources={sources.slice(0,1)} size="medium" />
+    <Avatar sources={sources.slice(0,1)} size="small" />
+</div>;
+```
+MultiAvatar with count
+
+```jsx
+import { Avatar } from 'hoi-poi-ui';
+
+const sources = [
+    {
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        placeholder: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+        alt: 'image',
+    },
+    {
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        placeholder: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+        alt: 'image',
+    },
+    {
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        placeholder: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png',
+        alt: 'image',
+    },
+];
+
+<div style={{ height: '100%', display: 'flex', alignItems: 'center', gap: 10 }}>
+    <Avatar sources={sources} size="huge" showCount />
+    <Avatar sources={sources} size="big" showCount />
+    <Avatar sources={sources} size="large" showCount />
+    <Avatar sources={sources} size="medium" showCount />
+    <Avatar sources={sources} size="small" showCount />
+    <Avatar sources={sources.slice(0,2)} size="huge" showCount />
+    <Avatar sources={sources.slice(0,2)} size="big" showCount />
+    <Avatar sources={sources.slice(0,2)} size="large" showCount />
+    <Avatar sources={sources.slice(0,2)} size="medium" showCount />
+    <Avatar sources={sources.slice(0,2)} size="small" showCount />
+    <Avatar sources={sources.slice(0,1)} size="huge" showCount />
+    <Avatar sources={sources.slice(0,1)} size="big" showCount />
+    <Avatar sources={sources.slice(0,1)} size="large" showCount />
+    <Avatar sources={sources.slice(0,1)} size="medium" showCount />
+    <Avatar sources={sources.slice(0,1)} size="small" showCount />
+</div>;
+```
+
 ### Component tree
 
 -   root - root element
