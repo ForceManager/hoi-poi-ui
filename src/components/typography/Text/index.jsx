@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useMemo } from 'react';
+import React, { forwardRef, useRef, useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -11,65 +11,77 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'Text');
 
-function Text({
-    children,
-    isTruncated,
-    useTooltip,
-    type,
-    bold,
-    color,
-    classes: classesProp,
-    overrides: overridesProp,
-    className: classNameProp,
-    ...props
-}) {
-    const [tooltipContent, setTooltipContent] = useState(null);
-    const ref = useRef(null);
-    const classes = useClasses(useStyles, classesProp);
-    //Overrides
-    const rootClassName = classnames(classes.root, classNameProp, classes[type], {
-        [classes.bold]: bold,
-        [classes.truncated]: isTruncated,
-    });
+const Text = forwardRef(
+    (
+        {
+            children,
+            isTruncated,
+            useTooltip,
+            type,
+            bold,
+            color,
+            classes: classesProp,
+            overrides: overridesProp,
+            className: classNameProp,
+            ...props
+        },
+        ref,
+    ) => {
+        const [tooltipContent, setTooltipContent] = useState(null);
+        const defaultRef = useRef(null);
+        const classes = useClasses(useStyles, classesProp);
+        //Overrides
+        const rootClassName = classnames(classes.root, classNameProp, classes[type], {
+            [classes.bold]: bold,
+            [classes.truncated]: isTruncated,
+        });
 
-    const override = getOverrides(overridesProp, Text.overrides);
+        const override = getOverrides(overridesProp, Text.overrides);
 
-    const rootProps = useMemo(
-        () => ({
-            ...props,
-            ...override.root,
-        }),
-        [override.root, props],
-    );
-
-    useEffect(() => {
-        if (useTooltip && ref.current?.offsetWidth < ref.current?.scrollWidth)
-            setTooltipContent(<span>{children}</span>);
-    }, [children, useTooltip]);
-
-    const style = useMemo(
-        () => (color && defaultTheme.colors[color] ? { color: defaultTheme.colors[color] } : {}),
-        [color],
-    );
-
-    const textContainer = useMemo(
-        () => (
-            <span ref={ref} className={rootClassName} style={style} {...rootProps}>
-                {children}
-            </span>
-        ),
-        [children, rootClassName, rootProps, style],
-    );
-
-    if (useTooltip)
-        return (
-            <Tooltip placement="top" content={tooltipContent}>
-                {textContainer}
-            </Tooltip>
+        const rootProps = useMemo(
+            () => ({
+                ...props,
+                ...override.root,
+            }),
+            [override.root, props],
         );
 
-    return textContainer;
-}
+        useEffect(() => {
+            const finalRef = ref || defaultRef;
+            if (useTooltip && finalRef.current?.offsetWidth < finalRef.current?.scrollWidth)
+                setTooltipContent(<span>{children}</span>);
+        }, [children, useTooltip, ref]);
+
+        const style = useMemo(
+            () =>
+                color && defaultTheme.colors[color] ? { color: defaultTheme.colors[color] } : {},
+            [color],
+        );
+
+        const textContainer = useMemo(
+            () => (
+                <span
+                    ref={ref || defaultRef}
+                    className={rootClassName}
+                    style={style}
+                    {...rootProps}
+                >
+                    {children}
+                </span>
+            ),
+            [children, ref, rootClassName, rootProps, style],
+        );
+
+        if (useTooltip)
+            return (
+                <Tooltip placement="top" content={tooltipContent}>
+                    {textContainer}
+                </Tooltip>
+            );
+
+        return textContainer;
+    },
+);
 
 Text.overrides = ['root', 'Loader'];
 

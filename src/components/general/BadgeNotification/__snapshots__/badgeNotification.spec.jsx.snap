@@ -404,7 +404,7 @@ exports[`BadgeNotification default match 1`] = `
         <div
           className="HoiPoi__Badge__root-1-0 HoiPoi__Badge__medium-1-2"
         >
-          <Text
+          <ForwardRef
             className="HoiPoi__Badge__Text-1-1"
             isTruncated={false}
             overrides={{}}
@@ -416,7 +416,7 @@ exports[`BadgeNotification default match 1`] = `
             >
               123
             </span>
-          </Text>
+          </ForwardRef>
         </div>
       </BadgeNotification>
     </JssProvider>

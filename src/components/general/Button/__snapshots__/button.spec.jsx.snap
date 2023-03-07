@@ -412,7 +412,7 @@ exports[`Button is disabled 1`] = `
           <div
             className="HoiPoi__Button__content-4-1"
           >
-            <Text
+            <ForwardRef
               className="HoiPoi__Button__Text-4-2"
               isTruncated={false}
               overrides={{}}
@@ -424,7 +424,7 @@ exports[`Button is disabled 1`] = `
               >
                 Hello
               </span>
-            </Text>
+            </ForwardRef>
           </div>
         </button>
       </ForwardRef>
@@ -843,7 +843,7 @@ exports[`Button is rendered as a link 1`] = `
           <div
             className="HoiPoi__Button__content-3-1"
           >
-            <Text
+            <ForwardRef
               className="HoiPoi__Button__Text-3-2"
               isTruncated={false}
               overrides={{}}
@@ -855,7 +855,7 @@ exports[`Button is rendered as a link 1`] = `
               >
                 Hello
               </span>
-            </Text>
+            </ForwardRef>
           </div>
         </a>
       </ForwardRef>
@@ -1273,7 +1273,7 @@ exports[`Button is rendered combining props 1`] = `
           <div
             className="HoiPoi__Button__content-2-1"
           >
-            <Text
+            <ForwardRef
               className="HoiPoi__Button__Text-2-2"
               isTruncated={false}
               overrides={{}}
@@ -1285,7 +1285,7 @@ exports[`Button is rendered combining props 1`] = `
               >
                 ACTION
               </span>
-            </Text>
+            </ForwardRef>
           </div>
         </button>
       </ForwardRef>
@@ -1302,7 +1302,7 @@ exports[`Button is rendered combining props 1`] = `
           <div
             className="HoiPoi__Button__content-2-1"
           >
-            <Text
+            <ForwardRef
               className="HoiPoi__Button__Text-2-2"
               isTruncated={false}
               overrides={{}}
@@ -1314,7 +1314,7 @@ exports[`Button is rendered combining props 1`] = `
               >
                 ACTION
               </span>
-            </Text>
+            </ForwardRef>
           </div>
         </button>
       </ForwardRef>
@@ -1732,7 +1732,7 @@ exports[`Button is rendered without crashes 1`] = `
           <div
             className="HoiPoi__Button__content-1-1"
           >
-            <Text
+            <ForwardRef
               className="HoiPoi__Button__Text-1-2"
               isTruncated={false}
               overrides={{}}
@@ -1744,7 +1744,7 @@ exports[`Button is rendered without crashes 1`] = `
               >
                 Hello
               </span>
-            </Text>
+            </ForwardRef>
           </div>
         </button>
       </ForwardRef>
