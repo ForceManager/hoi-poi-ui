@@ -19,6 +19,7 @@ module.exports = {
                 './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Chip/index.jsx',
                 './src/components/general/Drawer/index.jsx',
+                './src/components/general/EllipsedInlineList/index.jsx',
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/Loader/index.jsx',
                 './src/components/general/Menus/index.jsx',
