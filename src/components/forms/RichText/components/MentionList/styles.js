@@ -33,5 +33,9 @@ export default (theme) => {
         name: {
             display: 'inline-block',
         },
+        isEmpty: {
+            opacity: 0,
+            pointerEvents: 'none',
+        },
     };
 };

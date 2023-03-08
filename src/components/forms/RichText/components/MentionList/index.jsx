@@ -30,6 +30,7 @@ const MentionList = forwardRef(
             classes: classesProp,
             items = [],
             maxVisibleItems = MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL,
+            hideNoResultsPopover,
         },
         ref,
     ) => {
@@ -99,7 +100,11 @@ const MentionList = forwardRef(
         );
 
         return (
-            <div className={classes.root}>
+            <div
+                className={classNames(classes.root, {
+                    [classes.isEmpty]: items.length === 0 && hideNoResultsPopover,
+                })}
+            >
                 {texts?.advice && (
                     <Advice type="info" showIcon showCollapse={false} className={classes.advice}>
                         <Text type="caption" color="aqua700">

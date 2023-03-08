@@ -138,7 +138,7 @@ const fetchSuggestions = (query) =>
                     .filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
                     .slice(0, 5);
                 resolve(options);
-            }, 500),
+            }, 100),
         [],
     );
 
@@ -229,6 +229,7 @@ const fetchSuggestions = (query) =>
                     noResults: 'No Results...',
                 },
                 maxVisibleItems: 7,
+                hideNoResultsPopover: true,
             }}
             emoji={{
                 tooltip: 'Emoji',
