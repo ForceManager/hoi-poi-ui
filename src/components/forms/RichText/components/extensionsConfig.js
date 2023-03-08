@@ -114,6 +114,7 @@ export const getSuggestionsConfig = ({ mention, showingMention }) => ({
             onStart: (props) => {
                 props.texts = mention.texts || {};
                 props.maxVisibleItems = mention.maxVisibleItems;
+                props.hideNoResultsPopover = mention.hideNoResultsPopover;
 
                 reactRenderer = new ReactRenderer(MentionList, {
                     props,
