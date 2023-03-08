@@ -396,7 +396,7 @@ exports[`Text bold 1`] = `
         }
       }
     >
-      <Text
+      <ForwardRef
         bold={true}
         className=""
         isTruncated={false}
@@ -409,7 +409,7 @@ exports[`Text bold 1`] = `
         >
           Hello
         </span>
-      </Text>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -811,7 +811,7 @@ exports[`Text is rendered without crashes 1`] = `
         }
       }
     >
-      <Text
+      <ForwardRef
         className=""
         isTruncated={false}
         overrides={{}}
@@ -823,7 +823,7 @@ exports[`Text is rendered without crashes 1`] = `
         >
           Hello
         </span>
-      </Text>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -1225,7 +1225,7 @@ exports[`Text isTruncated 1`] = `
         }
       }
     >
-      <Text
+      <ForwardRef
         className=""
         isTruncated={true}
         overrides={{}}
@@ -1237,7 +1237,7 @@ exports[`Text isTruncated 1`] = `
         >
           Hello
         </span>
-      </Text>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -1639,7 +1639,7 @@ exports[`Text type h1 1`] = `
         }
       }
     >
-      <Text
+      <ForwardRef
         className=""
         isTruncated={false}
         overrides={{}}
@@ -1651,7 +1651,7 @@ exports[`Text type h1 1`] = `
         >
           Hello
         </span>
-      </Text>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -2053,7 +2053,7 @@ exports[`Text type subtitle 1`] = `
         }
       }
     >
-      <Text
+      <ForwardRef
         className=""
         isTruncated={false}
         overrides={{}}
@@ -2065,7 +2065,7 @@ exports[`Text type subtitle 1`] = `
         >
           Hello
         </span>
-      </Text>
+      </ForwardRef>
     </JssProvider>
   </ThemeProvider>
 </Component>

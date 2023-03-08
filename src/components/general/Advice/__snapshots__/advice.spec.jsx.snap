@@ -440,7 +440,7 @@ exports[`Badge default match 1`] = `
                     <div
                       className="HoiPoi__Advice__textContainer-1-9"
                     >
-                      <Text
+                      <ForwardRef
                         bold={false}
                         className="HoiPoi__Advice__Text-1-3"
                         isTruncated={true}
@@ -465,7 +465,7 @@ exports[`Badge default match 1`] = `
                         >
                           Lorem ipsum
                         </span>
-                      </Text>
+                      </ForwardRef>
                     </div>
                   </div>
                 </div>
@@ -952,7 +952,7 @@ exports[`Badge with icon and type match 1`] = `
                     <div
                       className="HoiPoi__Advice__textContainer-4-9"
                     >
-                      <Text
+                      <ForwardRef
                         bold={false}
                         className="HoiPoi__Advice__Text-4-3"
                         isTruncated={true}
@@ -977,7 +977,7 @@ exports[`Badge with icon and type match 1`] = `
                         >
                           Lorem ipsum
                         </span>
-                      </Text>
+                      </ForwardRef>
                     </div>
                   </div>
                 </div>
@@ -1465,7 +1465,7 @@ exports[`Badge with icon match 1`] = `
                     <div
                       className="HoiPoi__Advice__textContainer-3-9"
                     >
-                      <Text
+                      <ForwardRef
                         bold={false}
                         className="HoiPoi__Advice__Text-3-3"
                         isTruncated={true}
@@ -1490,7 +1490,7 @@ exports[`Badge with icon match 1`] = `
                         >
                           Lorem ipsum
                         </span>
-                      </Text>
+                      </ForwardRef>
                     </div>
                   </div>
                 </div>
@@ -1944,7 +1944,7 @@ exports[`Badge with type match 1`] = `
                     <div
                       className="HoiPoi__Advice__textContainer-2-9"
                     >
-                      <Text
+                      <ForwardRef
                         bold={false}
                         className="HoiPoi__Advice__Text-2-3"
                         isTruncated={true}
@@ -1969,7 +1969,7 @@ exports[`Badge with type match 1`] = `
                         >
                           Lorem ipsum
                         </span>
-                      </Text>
+                      </ForwardRef>
                     </div>
                   </div>
                 </div>
@@ -2428,7 +2428,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
                 </span>
               </Icon>
             </div>
-            <Text
+            <ForwardRef
               className="HoiPoi__Advice__Text-5-3"
               isTruncated={false}
               overrides={
@@ -2452,7 +2452,7 @@ exports[`Badge with with icon and disabled collapase 1`] = `
               >
                 Lorem ipsum
               </span>
-            </Text>
+            </ForwardRef>
           </div>
         </div>
       </Advice>
