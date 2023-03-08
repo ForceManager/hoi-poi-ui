@@ -28,6 +28,8 @@ const EllipsedInlineList = ({
     const override = getOverrides(overridesProp, EllipsedInlineList.overrides);
 
     const handleEllipsis = useCallback(() => {
+        if (!containerRef.current) return;
+        
         const container = containerRef.current;
         const containerWidth = container.offsetWidth;
         const items = container.children;
