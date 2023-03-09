@@ -25,6 +25,7 @@ module.exports = {
                 './src/components/general/Menus/index.jsx',
                 './src/components/general/Modal/index.jsx',
                 './src/components/general/ModalCrop/index.jsx',
+                './src/components/general/Progress/index.jsx',
                 './src/components/general/RadioBox/index.jsx',
                 './src/components/general/RadioBoxGroup/index.jsx',
                 './src/components/general/SearchBar/index.jsx',
