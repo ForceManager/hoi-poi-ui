@@ -396,34 +396,38 @@ exports[`Icon default match snapshot 1`] = `
         }
       }
     >
-      <Icon
+      <Component
         name="chevron"
-        overrides={{}}
-        size="medium"
       >
-        <span
-          className="HoiPoi__Icon__root-1-0 HoiPoi__Icon__medium-1-2"
-          onMouseDown={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
+        <ForwardRef
+          name="chevron"
+          overrides={{}}
+          size="medium"
         >
-          <Chevron
-            color="#7d8a96"
+          <span
+            className="HoiPoi__Icon__root-1-0 HoiPoi__Icon__medium-1-2"
+            onMouseDown={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
           >
-            <svg
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
+            <Chevron
+              color="#7d8a96"
             >
-              <path
-                d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                fill="#7d8a96"
-                fillRule="evenodd"
-              />
-            </svg>
-          </Chevron>
-        </span>
-      </Icon>
+              <svg
+                viewBox="0 0 10 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
+                  fill="#7d8a96"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Chevron>
+          </span>
+        </ForwardRef>
+      </Component>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -825,64 +829,75 @@ exports[`Icon with color match snapshot 1`] = `
         }
       }
     >
-      <Icon
+      <Component
         color="#e98789"
         name="chevron"
-        overrides={{}}
-        size="medium"
       >
-        <span
-          className="HoiPoi__Icon__root-3-0 HoiPoi__Icon__medium-3-2"
-          onMouseDown={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
+        <ForwardRef
+          color="#e98789"
+          name="chevron"
+          overrides={{}}
+          size="medium"
         >
-          <Chevron
-            color="#e98789"
+          <span
+            className="HoiPoi__Icon__root-3-0 HoiPoi__Icon__medium-3-2"
+            onMouseDown={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
           >
-            <svg
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
+            <Chevron
+              color="#e98789"
             >
-              <path
-                d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                fill="#e98789"
-                fillRule="evenodd"
-              />
-            </svg>
-          </Chevron>
-        </span>
-      </Icon>
-      <Icon
+              <svg
+                viewBox="0 0 10 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
+                  fill="#e98789"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Chevron>
+          </span>
+        </ForwardRef>
+      </Component>
+      <Component
         color="#e98789"
         name="chevron"
-        overrides={{}}
         size="small"
       >
-        <span
-          className="HoiPoi__Icon__root-3-0 HoiPoi__Icon__small-3-1"
-          onMouseDown={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
+        <ForwardRef
+          color="#e98789"
+          name="chevron"
+          overrides={{}}
+          size="small"
         >
-          <Chevron
-            color="#e98789"
+          <span
+            className="HoiPoi__Icon__root-3-0 HoiPoi__Icon__small-3-1"
+            onMouseDown={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
           >
-            <svg
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
+            <Chevron
+              color="#e98789"
             >
-              <path
-                d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                fill="#e98789"
-                fillRule="evenodd"
-              />
-            </svg>
-          </Chevron>
-        </span>
-      </Icon>
+              <svg
+                viewBox="0 0 10 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
+                  fill="#e98789"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Chevron>
+          </span>
+        </ForwardRef>
+      </Component>
     </JssProvider>
   </ThemeProvider>
 </Component>
@@ -1284,118 +1299,138 @@ exports[`Icon with size match snapshot 1`] = `
         }
       }
     >
-      <Icon
+      <Component
         name="chevron"
-        overrides={{}}
         size="small"
       >
-        <span
-          className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__small-2-1"
-          onMouseDown={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
+        <ForwardRef
+          name="chevron"
+          overrides={{}}
+          size="small"
         >
-          <Chevron
-            color="#7d8a96"
+          <span
+            className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__small-2-1"
+            onMouseDown={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
           >
-            <svg
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
+            <Chevron
+              color="#7d8a96"
             >
-              <path
-                d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                fill="#7d8a96"
-                fillRule="evenodd"
-              />
-            </svg>
-          </Chevron>
-        </span>
-      </Icon>
-      <Icon
+              <svg
+                viewBox="0 0 10 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
+                  fill="#7d8a96"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Chevron>
+          </span>
+        </ForwardRef>
+      </Component>
+      <Component
         name="chevron"
-        overrides={{}}
         size="medium"
       >
-        <span
-          className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__medium-2-2"
-          onMouseDown={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
+        <ForwardRef
+          name="chevron"
+          overrides={{}}
+          size="medium"
         >
-          <Chevron
-            color="#7d8a96"
+          <span
+            className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__medium-2-2"
+            onMouseDown={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
           >
-            <svg
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
+            <Chevron
+              color="#7d8a96"
             >
-              <path
-                d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                fill="#7d8a96"
-                fillRule="evenodd"
-              />
-            </svg>
-          </Chevron>
-        </span>
-      </Icon>
-      <Icon
+              <svg
+                viewBox="0 0 10 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
+                  fill="#7d8a96"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Chevron>
+          </span>
+        </ForwardRef>
+      </Component>
+      <Component
         name="chevron"
-        overrides={{}}
         size="large"
       >
-        <span
-          className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__large-2-3"
-          onMouseDown={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
+        <ForwardRef
+          name="chevron"
+          overrides={{}}
+          size="large"
         >
-          <Chevron
-            color="#7d8a96"
+          <span
+            className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__large-2-3"
+            onMouseDown={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
           >
-            <svg
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
+            <Chevron
+              color="#7d8a96"
             >
-              <path
-                d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                fill="#7d8a96"
-                fillRule="evenodd"
-              />
-            </svg>
-          </Chevron>
-        </span>
-      </Icon>
-      <Icon
+              <svg
+                viewBox="0 0 10 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
+                  fill="#7d8a96"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Chevron>
+          </span>
+        </ForwardRef>
+      </Component>
+      <Component
         name="chevron"
-        overrides={{}}
         size="big"
       >
-        <span
-          className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__big-2-4"
-          onMouseDown={[Function]}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          onMouseUp={[Function]}
+        <ForwardRef
+          name="chevron"
+          overrides={{}}
+          size="big"
         >
-          <Chevron
-            color="#7d8a96"
+          <span
+            className="HoiPoi__Icon__root-2-0 HoiPoi__Icon__big-2-4"
+            onMouseDown={[Function]}
+            onMouseOut={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
           >
-            <svg
-              viewBox="0 0 10 10"
-              xmlns="http://www.w3.org/2000/svg"
+            <Chevron
+              color="#7d8a96"
             >
-              <path
-                d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
-                fill="#7d8a96"
-                fillRule="evenodd"
-              />
-            </svg>
-          </Chevron>
-        </span>
-      </Icon>
+              <svg
+                viewBox="0 0 10 10"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 5.836l3.67-3.212a.5.5 0 0 1 .66.752L5.334 6.872a.499.499 0 0 1-.67 0L.671 3.376a.5.5 0 0 1 .658-.752L5 5.836z"
+                  fill="#7d8a96"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </Chevron>
+          </span>
+        </ForwardRef>
+      </Component>
     </JssProvider>
   </ThemeProvider>
 </Component>

@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useMemo, useState } from 'react';
 import Text from '../../../typography/Text';
 import SearchBar from '../../../general/SearchBar';
-import Icon, { ICONS } from '../index';
+import Icon, { ICONS } from '../Icon';
 import { useClasses } from '../../../../utils/overrides';
 import { createUseStyles } from '../../../../utils/styles';
 import styles from './styles';

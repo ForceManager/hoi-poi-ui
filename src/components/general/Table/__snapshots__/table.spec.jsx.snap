@@ -417,10 +417,8 @@ exports[`Table default table 1`] = `
         rows={
           [
             {
-              "isFeatured": <Icon
+              "isFeatured": <Unknown
                 name="starBorder"
-                overrides={{}}
-                size="medium"
               />,
               "label": <ForwardRef
                 className=""
@@ -433,19 +431,15 @@ exports[`Table default table 1`] = `
               "value": 1,
             },
             {
-              "isFeatured": <Icon
+              "isFeatured": <Unknown
                 name="starBorder"
-                overrides={{}}
-                size="medium"
               />,
               "label": "Cell2",
               "value": 2,
             },
             {
-              "isFeatured": <Icon
+              "isFeatured": <Unknown
                 name="star"
-                overrides={{}}
-                size="medium"
               />,
               "label": "Cell3",
               "value": 4,
@@ -523,34 +517,38 @@ exports[`Table default table 1`] = `
                   className="HoiPoi__Text__root-1-4 HoiPoi__Text__body-1-14"
                   style={{}}
                 >
-                  <Icon
+                  <Component
                     name="starBorder"
-                    overrides={{}}
-                    size="medium"
                   >
-                    <span
-                      className="HoiPoi__Icon__root-1-22 HoiPoi__Icon__medium-1-24"
-                      onMouseDown={[Function]}
-                      onMouseOut={[Function]}
-                      onMouseOver={[Function]}
-                      onMouseUp={[Function]}
+                    <ForwardRef
+                      name="starBorder"
+                      overrides={{}}
+                      size="medium"
                     >
-                      <StarBorder
-                        color="#7d8a96"
+                      <span
+                        className="HoiPoi__Icon__root-1-22 HoiPoi__Icon__medium-1-24"
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        onMouseUp={[Function]}
                       >
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <StarBorder
+                          color="#7d8a96"
                         >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                            fill="#7d8a96"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </StarBorder>
-                    </span>
-                  </Icon>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                              fill="#7d8a96"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </StarBorder>
+                      </span>
+                    </ForwardRef>
+                  </Component>
                 </span>
               </ForwardRef>
             </div>
@@ -609,34 +607,38 @@ exports[`Table default table 1`] = `
                   className="HoiPoi__Text__root-1-4 HoiPoi__Text__body-1-14"
                   style={{}}
                 >
-                  <Icon
+                  <Component
                     name="starBorder"
-                    overrides={{}}
-                    size="medium"
                   >
-                    <span
-                      className="HoiPoi__Icon__root-1-22 HoiPoi__Icon__medium-1-24"
-                      onMouseDown={[Function]}
-                      onMouseOut={[Function]}
-                      onMouseOver={[Function]}
-                      onMouseUp={[Function]}
+                    <ForwardRef
+                      name="starBorder"
+                      overrides={{}}
+                      size="medium"
                     >
-                      <StarBorder
-                        color="#7d8a96"
+                      <span
+                        className="HoiPoi__Icon__root-1-22 HoiPoi__Icon__medium-1-24"
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        onMouseUp={[Function]}
                       >
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <StarBorder
+                          color="#7d8a96"
                         >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                            fill="#7d8a96"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </StarBorder>
-                    </span>
-                  </Icon>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                              fill="#7d8a96"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </StarBorder>
+                      </span>
+                    </ForwardRef>
+                  </Component>
                 </span>
               </ForwardRef>
             </div>
@@ -695,34 +697,38 @@ exports[`Table default table 1`] = `
                   className="HoiPoi__Text__root-1-4 HoiPoi__Text__body-1-14"
                   style={{}}
                 >
-                  <Icon
+                  <Component
                     name="star"
-                    overrides={{}}
-                    size="medium"
                   >
-                    <span
-                      className="HoiPoi__Icon__root-1-22 HoiPoi__Icon__medium-1-24"
-                      onMouseDown={[Function]}
-                      onMouseOut={[Function]}
-                      onMouseOver={[Function]}
-                      onMouseUp={[Function]}
+                    <ForwardRef
+                      name="star"
+                      overrides={{}}
+                      size="medium"
                     >
-                      <Star
-                        color="#7d8a96"
+                      <span
+                        className="HoiPoi__Icon__root-1-22 HoiPoi__Icon__medium-1-24"
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        onMouseUp={[Function]}
                       >
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <Star
+                          color="#7d8a96"
                         >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                            fill="#7d8a96"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </Star>
-                    </span>
-                  </Icon>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                              fill="#7d8a96"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </Star>
+                      </span>
+                    </ForwardRef>
+                  </Component>
                 </span>
               </ForwardRef>
             </div>
@@ -1151,10 +1157,8 @@ exports[`Table with headers 1`] = `
         rows={
           [
             {
-              "isFeatured": <Icon
+              "isFeatured": <Unknown
                 name="starBorder"
-                overrides={{}}
-                size="medium"
               />,
               "label": <ForwardRef
                 className=""
@@ -1167,19 +1171,15 @@ exports[`Table with headers 1`] = `
               "value": 3,
             },
             {
-              "isFeatured": <Icon
+              "isFeatured": <Unknown
                 name="starBorder"
-                overrides={{}}
-                size="medium"
               />,
               "label": "Cell2",
               "value": 5,
             },
             {
-              "isFeatured": <Icon
+              "isFeatured": <Unknown
                 name="star"
-                overrides={{}}
-                size="medium"
               />,
               "label": "Cell3",
               "value": 7,
@@ -1279,34 +1279,38 @@ exports[`Table with headers 1`] = `
                   className="HoiPoi__Text__root-2-4 HoiPoi__Text__body-2-14"
                   style={{}}
                 >
-                  <Icon
+                  <Component
                     name="starBorder"
-                    overrides={{}}
-                    size="medium"
                   >
-                    <span
-                      className="HoiPoi__Icon__root-2-22 HoiPoi__Icon__medium-2-24"
-                      onMouseDown={[Function]}
-                      onMouseOut={[Function]}
-                      onMouseOver={[Function]}
-                      onMouseUp={[Function]}
+                    <ForwardRef
+                      name="starBorder"
+                      overrides={{}}
+                      size="medium"
                     >
-                      <StarBorder
-                        color="#7d8a96"
+                      <span
+                        className="HoiPoi__Icon__root-2-22 HoiPoi__Icon__medium-2-24"
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        onMouseUp={[Function]}
                       >
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <StarBorder
+                          color="#7d8a96"
                         >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                            fill="#7d8a96"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </StarBorder>
-                    </span>
-                  </Icon>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                              fill="#7d8a96"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </StarBorder>
+                      </span>
+                    </ForwardRef>
+                  </Component>
                 </span>
               </ForwardRef>
             </div>
@@ -1365,34 +1369,38 @@ exports[`Table with headers 1`] = `
                   className="HoiPoi__Text__root-2-4 HoiPoi__Text__body-2-14"
                   style={{}}
                 >
-                  <Icon
+                  <Component
                     name="starBorder"
-                    overrides={{}}
-                    size="medium"
                   >
-                    <span
-                      className="HoiPoi__Icon__root-2-22 HoiPoi__Icon__medium-2-24"
-                      onMouseDown={[Function]}
-                      onMouseOut={[Function]}
-                      onMouseOver={[Function]}
-                      onMouseUp={[Function]}
+                    <ForwardRef
+                      name="starBorder"
+                      overrides={{}}
+                      size="medium"
                     >
-                      <StarBorder
-                        color="#7d8a96"
+                      <span
+                        className="HoiPoi__Icon__root-2-22 HoiPoi__Icon__medium-2-24"
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        onMouseUp={[Function]}
                       >
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <StarBorder
+                          color="#7d8a96"
                         >
-                          <path
-                            d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-                            fill="#7d8a96"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </StarBorder>
-                    </span>
-                  </Icon>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+                              fill="#7d8a96"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </StarBorder>
+                      </span>
+                    </ForwardRef>
+                  </Component>
                 </span>
               </ForwardRef>
             </div>
@@ -1451,34 +1459,38 @@ exports[`Table with headers 1`] = `
                   className="HoiPoi__Text__root-2-4 HoiPoi__Text__body-2-14"
                   style={{}}
                 >
-                  <Icon
+                  <Component
                     name="star"
-                    overrides={{}}
-                    size="medium"
                   >
-                    <span
-                      className="HoiPoi__Icon__root-2-22 HoiPoi__Icon__medium-2-24"
-                      onMouseDown={[Function]}
-                      onMouseOut={[Function]}
-                      onMouseOver={[Function]}
-                      onMouseUp={[Function]}
+                    <ForwardRef
+                      name="star"
+                      overrides={{}}
+                      size="medium"
                     >
-                      <Star
-                        color="#7d8a96"
+                      <span
+                        className="HoiPoi__Icon__root-2-22 HoiPoi__Icon__medium-2-24"
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        onMouseUp={[Function]}
                       >
-                        <svg
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
+                        <Star
+                          color="#7d8a96"
                         >
-                          <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-                            fill="#7d8a96"
-                            fillRule="evenodd"
-                          />
-                        </svg>
-                      </Star>
-                    </span>
-                  </Icon>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                              fill="#7d8a96"
+                              fillRule="evenodd"
+                            />
+                          </svg>
+                        </Star>
+                      </span>
+                    </ForwardRef>
+                  </Component>
                 </span>
               </ForwardRef>
             </div>
