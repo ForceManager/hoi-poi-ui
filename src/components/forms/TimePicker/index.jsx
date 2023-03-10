@@ -39,7 +39,11 @@ const TimePicker = memo(
         const override = getOverrides(overridesProp, TimePicker.overrides);
         const classes = useClasses(useStyles, classesProp);
 
-        const rootClassName = classnames(classes.root, {}, classNameProp);
+        const rootClassName = classnames(
+            classes.root,
+            { [classes.isFullWidth]: isFullWidth },
+            classNameProp,
+        );
 
         const [newOptions, setNewOptions] = useState(options || []);
         const [timeValue, setTimeValue] = useState(null);
@@ -381,7 +385,8 @@ const TimePicker = memo(
 
                 return (
                     option.label === selectedValues[0]?.label ||
-                    (nearestPastInterval && option.value.toString() === nearestPastInterval.toString())
+                    (nearestPastInterval &&
+                        option.value.toString() === nearestPastInterval.toString())
                 );
             },
             [interval, timeValue],

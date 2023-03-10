@@ -3,4 +3,7 @@ export default (theme) => ({
     clockIcon: {
         marginLeft: 6,
     },
+    isFullWidth: {
+        width: '100%',
+    },
 });
