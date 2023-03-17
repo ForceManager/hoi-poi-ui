@@ -48,4 +48,42 @@ export default (theme) => ({
             color: theme.colors.purple500,
         },
     },
+    promotion: {
+        backgroundColor: theme.colors.neutral150,
+        '& $Text': {
+            backgroundClip: 'text',
+            '-webkit-background-clip': 'text',
+            color: 'transparent',
+            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
+        },
+    },
+    inverted: {
+        '& $Text': {
+            color: theme.colors.neutralBase,
+        },
+        '&$default': {
+            backgroundColor: theme.colors.neutral600,
+        },
+        '&$success': {
+            backgroundColor: theme.colors.green400,
+        },
+        '&$warning': {
+            backgroundColor: theme.colors.yellow400,
+        },
+        '&$error': {
+            backgroundColor: theme.colors.red400,
+        },
+        '&$info': {
+            backgroundColor: theme.colors.blue400,
+        },
+        '&$ongoing': {
+            backgroundColor: theme.colors.purple400,
+        },
+        '&$promotion': {
+            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
+            '& $Text': {
+                color: theme.colors.neutralBase,
+            },
+        },
+    },
 });

@@ -1,37 +1,64 @@
 Default:
 
 ```jsx
-<Badge>Lorem ipsum</Badge>
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge>Lorem ipsum</Badge>
+    <Badge variant="inverted">Lorem ipsum</Badge>
+</div>
 ```
 
 Success:
 
 ```jsx
-<Badge type="success">Lorem ipsum</Badge>
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge type="success">Lorem ipsum</Badge>
+    <Badge type="success" variant="inverted">Lorem ipsum</Badge>
+</div>
 ```
 
 Warning:
 
 ```jsx
-<Badge type="warning">Lorem ipsum</Badge>
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge type="warning">Lorem ipsum</Badge>
+    <Badge type="warning" variant="inverted">Lorem ipsum</Badge>
+</div>
 ```
 
 Error:
 
 ```jsx
-<Badge type="error">Lorem ipsum</Badge>
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge type="error">Lorem ipsum</Badge>
+    <Badge type="error" variant="inverted">Lorem ipsum</Badge>
+</div>
 ```
 
 Info:
 
 ```jsx
-<Badge type="info">Lorem ipsum</Badge>
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge type="info">Lorem ipsum</Badge>
+    <Badge type="info" variant="inverted">Lorem ipsum</Badge>
+</div>
 ```
 
 Ongoing:
 
 ```jsx
-<Badge type="ongoing">Lorem ipsum</Badge>
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge type="ongoing">Lorem ipsum</Badge>
+    <Badge type="ongoing" variant="inverted">Lorem ipsum</Badge>
+</div>
+```
+
+Promotion:
+
+```jsx
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge type="promotion">Lorem ipsum</Badge>
+    <Badge type="promotion" variant="inverted">Lorem ipsum</Badge>
+</div>
 ```
 
 ### Component tree

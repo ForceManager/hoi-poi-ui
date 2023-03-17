@@ -14,6 +14,7 @@ function Badge({
     overrides: overridesProp,
     className: classNameProp,
     type,
+    variant,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -25,6 +26,7 @@ function Badge({
         classes.root,
         {
             [classes[type]]: type,
+            [classes[variant]]: variant,
         },
         classNameProp,
     );
@@ -55,7 +57,8 @@ Badge.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warning', 'ongoing']),
+    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warning', 'ongoing', 'promotion']),
+    variant: PropTypes.oneOf(['inverted']),
 };
 
 export default React.memo(Badge);
