@@ -1,4 +1,4 @@
-import React, { memo, forwardRef, useCallback, useState, useEffect, useRef, useMemo } from 'react';
+import React, { memo, forwardRef, useEffect, useMemo, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
@@ -11,47 +11,30 @@ const useStyles = createUseStyles(styles, 'Progress');
 const Progress = forwardRef(
     (
         {
+            animation,
             classes: classesProp,
             className: classNameProp,
-            value,
             max,
             overrides: overridesProp,
+            value,
             ...props
         },
         ref,
     ) => {
-        const [width, setWidth] = useState(0);
-        const prevValueRef = useRef();
-
+        const [percentage, setPercentage] = useState(0);
+        const oldPercentage = useRef(0);
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Progress.overrides);
 
         useEffect(() => {
-            prevValueRef.current = value;
-        });
-
-        const handleAnimate = useCallback(() => {
-            if (width < value) {
-                setWidth((prevWidth) => prevWidth + 1);
-                requestAnimationFrame(handleAnimate);
+            const newPercentage = (value / max) * 100;
+            if (newPercentage !== percentage) {
+                oldPercentage.current = percentage;
+                setPercentage(newPercentage);
             }
-        }, [value, width]);
+        }, [value, max, percentage]);
 
-        useEffect(() => {
-            const prevValue = prevValueRef.current;
-
-            if (prevValue < value) {
-                handleAnimate();
-            } else {
-                setWidth(value);
-            }
-        }, [handleAnimate, value, width]);
-
-        const progressProps = useMemo(() => {
-            const percentage = (width / max) * 100;
-
-            console.log(percentage);
-
+        const containerProps = useMemo(() => {
             return {
                 className: classNames(classes.root, classNameProp, {
                     [classes.low]: percentage < 25,
@@ -59,15 +42,20 @@ const Progress = forwardRef(
                     [classes.high]: percentage >= 50,
                     [classes.higher]: percentage >= 75,
                     [classes.full]: percentage === 100,
+                    [classes.animated]: !!animation,
                 }),
-                value: width,
-                max,
+                'aria-valuenow': value,
+                'aria-valueMin': 0,
+                'aria-valuemax': max,
                 ref,
+                role: 'progressbar',
                 ...props,
                 ...override.root,
             };
         }, [
+            animation,
             classNameProp,
+            classes.animated,
             classes.full,
             classes.high,
             classes.higher,
@@ -76,12 +64,35 @@ const Progress = forwardRef(
             classes.root,
             max,
             override.root,
+            percentage,
             props,
             ref,
-            width,
+            value,
         ]);
 
-        return <progress {...progressProps} />;
+        const progressProps = useMemo(() => {
+            const width = `${percentage}%`;
+            const style = !!animation
+                ? {
+                      width,
+                      '--progress-percentage-from': `${oldPercentage.current}%`,
+                      '--progress-percentage-to': `${percentage}%`,
+                      '--progress-duration': animation.animationDuration || '1s',
+                      '--progress-delay': animation.animationDelay || 0,
+                      '--progress-timing-function': animation.animationTimingFunction || 'ease',
+                  }
+                : { width };
+            return {
+                className: classes.progressBar,
+                style,
+            };
+        }, [animation, percentage, classes.progressBar]);
+
+        return (
+            <div {...containerProps}>
+                <span {...progressProps}></span>
+            </div>
+        );
     },
 );
 
@@ -92,9 +103,17 @@ Progress.defaultProps = {
 
 Progress.propTypes = {
     className: PropTypes.string,
-    value: PropTypes.number,
+    value: PropTypes.number.isRequired,
     max: PropTypes.number,
     overrides: PropTypes.object,
+    animation: PropTypes.shape({
+        /** Any valid time string that specifies the duration of the animation */
+        animationDuration: PropTypes.string,
+        /** Any valid time string that specifies the delay of the animation */
+        animationDelay: PropTypes.string,
+        /** Any valid string that specifies the speed curve of the animation */
+        animationTimingFunction: PropTypes.string,
+    }),
 };
 
 export default memo(Progress);
