@@ -53,6 +53,7 @@ const Button = forwardRef(
                 [classes.secondaryError]: type === 'secondary-error',
                 [classes.terciary]: type === 'terciary',
                 [classes.dashed]: type === 'dashed',
+                [classes.promotion]: type === 'promotion',
                 [classes[size]]: size,
                 [classes.disabled]: isDisabled,
                 [classes.loading]: isLoading && ALLOWED_LOADING_TYPES.includes(type),
@@ -93,6 +94,11 @@ const Button = forwardRef(
                         ...properties,
                         color: theme.colors.neutral700,
                     };
+                case 'promotion':
+                    return {
+                        ...properties,
+                        color: theme.colors.neutral900,
+                    };
                 case 'primary':
                 case 'primary-error':
                 default:
@@ -104,6 +110,7 @@ const Button = forwardRef(
         }, [
             icon,
             theme.colors.neutral700,
+            theme.colors.neutral900,
             theme.colors.neutralBase,
             theme.colors.orange500,
             theme.colors.red500,
@@ -173,6 +180,7 @@ Button.propTypes = {
         'secondary-error',
         'terciary',
         'dashed',
+        'promotion',
     ]),
     isDisabled: PropTypes.bool,
     /** Use the whole container */

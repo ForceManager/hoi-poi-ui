@@ -498,6 +498,7 @@ import Icon from './IconWithTooltip';
     <Icon name="bill" />
     <Icon name="geolocation" />
     <Icon name="storage" />
+    <Icon name="playTutorial" />
 </div>;
 ```
 

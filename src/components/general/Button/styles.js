@@ -153,6 +153,20 @@ export default (theme) => ({
             },
         },
     },
+    promotion: {
+        backgroundColor: theme.colors.orange100,
+        color: theme.colors.neutral900,
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                backgroundColor: theme.colors.orange300,
+                color: theme.colors.neutral900,
+            },
+            '&:active': {
+                backgroundColor: theme.colors.orange200,
+                color: theme.colors.neutral700,
+            },
+        },
+    },
 
     iconOnly: {
         justifyContent: 'center',
