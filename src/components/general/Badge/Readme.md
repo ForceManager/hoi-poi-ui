@@ -52,12 +52,12 @@ Ongoing:
 </div>
 ```
 
-Promo:
+Promotion:
 
 ```jsx
 <div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
-    <Badge type="promo">Lorem ipsum</Badge>
-    <Badge type="promo" variant="inverted">Lorem ipsum</Badge>
+    <Badge type="promotion">Lorem ipsum</Badge>
+    <Badge type="promotion" variant="inverted">Lorem ipsum</Badge>
 </div>
 ```
 

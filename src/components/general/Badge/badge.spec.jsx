@@ -109,10 +109,10 @@ describe('Badge', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-    test('type promo inverted match', () => {
+    test('type promotion inverted match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="promo" variant="inverted">Lorem ipsum</Badge>
+                <Badge type="promotion" variant="inverted">Lorem ipsum</Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();

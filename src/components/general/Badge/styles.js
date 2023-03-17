@@ -48,7 +48,7 @@ export default (theme) => ({
             color: theme.colors.purple500,
         },
     },
-    promo: {
+    promotion: {
         backgroundColor: theme.colors.neutral150,
         '& $Text': {
             backgroundClip: 'text',
@@ -79,7 +79,7 @@ export default (theme) => ({
         '&$ongoing': {
             backgroundColor: theme.colors.purple400,
         },
-        '&$promo': {
+        '&$promotion': {
             backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
             '& $Text': {
                 color: theme.colors.neutralBase,

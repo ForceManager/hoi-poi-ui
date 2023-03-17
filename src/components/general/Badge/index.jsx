@@ -57,7 +57,7 @@ Badge.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warning', 'ongoing', 'promo']),
+    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warning', 'ongoing', 'promotion']),
     variant: PropTypes.oneOf(['inverted']),
 };
 
