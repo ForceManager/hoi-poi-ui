@@ -46,8 +46,8 @@ IconGradient.defaultProps = {
     size: 'medium',
     overrides: {},
     gradientStops: [
-        { offset: '0%', color: '#F54752' },
-        { offset: '100%', color: '#FF8C00' },
+        { offset: '0%', color: '#FF3B30' }, // Red 500
+        { offset: '100%', color: '#FF8C00' }, // Orange 500
     ],
 };
 
