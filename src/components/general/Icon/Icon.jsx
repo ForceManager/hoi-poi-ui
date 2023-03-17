@@ -84,6 +84,7 @@ import QuotesOutlined from './icons/QuotesOutlined';
 import DatabaseExport from './icons/DatabaseExport';
 import Bill from './icons/Bill';
 import Storage from './icons/Storage';
+import PlayTutorial from './icons/PlayTutorial';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -502,6 +503,7 @@ export const ICONS = {
     databaseExport: DatabaseExport,
     bill: Bill,
     storage: Storage,
+    playTutorial: PlayTutorial,
 
     //Actions
     accountCheckin: AccountCheckin,
@@ -820,20 +822,23 @@ export const ICONS = {
 };
 
 const Icon = forwardRef(
-    ({
-        name,
-        color,
-        size,
-        classes: classesProp,
-        overrides: overridesProp,
-        className: classNameProp,
-        onClick,
-        onMouseOver,
-        onMouseOut,
-        onMouseDown,
-        onMouseUp,
-        ...props
-    }, ref) => {
+    (
+        {
+            name,
+            color,
+            size,
+            classes: classesProp,
+            overrides: overridesProp,
+            className: classNameProp,
+            onClick,
+            onMouseOver,
+            onMouseOut,
+            onMouseDown,
+            onMouseUp,
+            ...props
+        },
+        ref,
+    ) => {
         const classes = useClasses(useStyles, classesProp);
         const theme = useTheme();
 
