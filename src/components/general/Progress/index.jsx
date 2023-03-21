@@ -45,7 +45,7 @@ const Progress = forwardRef(
                     [classes.animated]: !!animation,
                 }),
                 'aria-valuenow': value,
-                'aria-valueMin': 0,
+                'aria-valuemin': 0,
                 'aria-valuemax': max,
                 ref,
                 role: 'progressbar',
