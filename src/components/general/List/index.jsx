@@ -52,9 +52,9 @@ const List = forwardRef(
         const textProps = useMemo(
             () => ({
                 className: classes.text,
-                ...override.text,
+                ...override.Text,
             }),
-            [classes.text, override.text],
+            [classes.text, override.Text],
         );
 
         const iconProps = useMemo(
@@ -62,9 +62,9 @@ const List = forwardRef(
                 className: classes.bullet,
                 name: bullet,
                 color: theme.colors.orange500,
-                ...override.bullet,
+                ...override.Icon,
             }),
-            [bullet, classes.bullet, override.bullet, theme.colors.orange500],
+            [bullet, classes.bullet, override.Icon, theme.colors.orange500],
         );
 
         const listItems = useMemo(
@@ -82,7 +82,7 @@ const List = forwardRef(
     },
 );
 
-List.overrides = ['root', 'listItem', 'text', 'bullet'];
+List.overrides = ['root', 'listItem', 'Text', 'Icon'];
 
 List.defaultProps = {
     type: 'unordered',
