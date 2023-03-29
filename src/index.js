@@ -29,6 +29,7 @@ export { default as Stepper } from './components/general/Stepper';
 export { default as Table } from './components/general/Table';
 export { default as Tabs } from './components/general/Tabs';
 export { default as EllipsedInlineList } from './components/general/EllipsedInlineList';
+export { default as List } from './components/general/List';
 
 export { default as Code } from './components/forms/Code';
 export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
