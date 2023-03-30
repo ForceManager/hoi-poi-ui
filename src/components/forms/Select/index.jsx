@@ -7,6 +7,7 @@ import InputWrapper from '../components/InputWrapper';
 import { default as RSelect } from 'react-select';
 import AsyncSelect from 'react-select/async';
 
+import Input from './components/Input';
 import Control from './components/Control';
 import DropdownIndicator from './components/DropdownIndicator';
 import ClearIndicator from './components/ClearIndicator';
@@ -107,6 +108,8 @@ const Select = memo(
         isOptionSelected,
         notSelectingDefaultOption,
         optionAllLabel,
+        autoComplete,
+        role,
         ...props
     }) => {
         const selectRef = useRef();
@@ -765,6 +768,8 @@ const Select = memo(
                 numSelectedLiteral,
                 onMenuOpen,
                 isOptionSelected,
+                autoComplete,
+                role,
                 menuProps: {
                     dropdownWidth,
                     className: classes.menu,
@@ -815,6 +820,7 @@ const Select = memo(
                             option: override.option,
                         },
                     }),
+                    Input,
                     ...additionalComponents,
                 },
                 styles: {
@@ -964,6 +970,7 @@ const Select = memo(
             numSelectedLiteral,
             onMenuOpen,
             isOptionSelected,
+            autoComplete,
             dropdownWidth,
             classes.menu,
             classes.actionContainer,
@@ -972,12 +979,15 @@ const Select = memo(
             classes.actionText,
             classes.actionTextWithIcon,
             classes.singleValueIcon,
-            classes.group,
-            classes.option,
             classes.optionAll,
             classes.optionAllCheckbox,
             classes.optionAllText,
+            classes.group,
+            classes.option,
             onClickAction,
+            shouldRenderOptionAll,
+            optionAllLabel,
+            isAllSelected,
             override,
             getRef,
             controlStyles,
@@ -989,10 +999,6 @@ const Select = memo(
             hideMultivalueChips,
             multiValueLabelStyles,
             multiValueRemoveStyles,
-            optionAllLabel,
-            isAllSelected,
-            setIsAllSelected,
-            shouldRenderOptionAll,
         ]);
 
         let SelectComponent = RSelect;
