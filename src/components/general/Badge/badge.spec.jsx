@@ -56,7 +56,7 @@ describe('Badge', () => {
     test('type promo match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="promo">Lorem ipsum</Badge>
+                <Badge type="promotion">Lorem ipsum</Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -72,7 +72,9 @@ describe('Badge', () => {
     test('type success inverted match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="success" variant="inverted">Lorem ipsum</Badge>
+                <Badge type="success" variant="inverted">
+                    Lorem ipsum
+                </Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -80,7 +82,9 @@ describe('Badge', () => {
     test('type error inverted match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="error" variant="inverted">Lorem ipsum</Badge>
+                <Badge type="error" variant="inverted">
+                    Lorem ipsum
+                </Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -88,7 +92,9 @@ describe('Badge', () => {
     test('type info inverted match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="info" variant="inverted">Lorem ipsum</Badge>
+                <Badge type="info" variant="inverted">
+                    Lorem ipsum
+                </Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -96,7 +102,9 @@ describe('Badge', () => {
     test('type warning inverted match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="warning" variant="inverted">Lorem ipsum</Badge>
+                <Badge type="warning" variant="inverted">
+                    Lorem ipsum
+                </Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -104,7 +112,9 @@ describe('Badge', () => {
     test('type ongoing inverted match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="ongoing" variant="inverted">Lorem ipsum</Badge>
+                <Badge type="ongoing" variant="inverted">
+                    Lorem ipsum
+                </Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -112,7 +122,9 @@ describe('Badge', () => {
     test('type promotion inverted match', () => {
         const wrapper = mount(
             <HoiPoiProvider>
-                <Badge type="promotion" variant="inverted">Lorem ipsum</Badge>
+                <Badge type="promotion" variant="inverted">
+                    Lorem ipsum
+                </Badge>
             </HoiPoiProvider>,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
