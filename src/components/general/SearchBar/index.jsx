@@ -71,6 +71,8 @@ function SearchBar({
                     showNumSelected={allowMultipleTypes}
                     numSelectedLiteral={selectedTypesLiteral}
                     placeholder={selectedTypesPlaceholder}
+                    autoComplete="nope" // must be an invalid value
+                    role="representation"
                     classes={{
                         inputComponents: classes.typeSelectorInput,
                         singleValue: classes.typeSingleValue,
