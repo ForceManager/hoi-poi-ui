@@ -139,6 +139,8 @@ function SearchBar({
                 shouldSetValueOnChange={isMulti ? true : shouldSetValueOnChange}
                 focusDefaultOption={focusDefaultOption}
                 withoutFilter
+                autoComplete="nope" // must be an invalid value
+                role="representation"
                 {...override.Select}
                 {...props}
             />
