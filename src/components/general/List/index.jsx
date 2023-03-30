@@ -1,6 +1,7 @@
 import React, { memo, useMemo, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { v4 as uuidv4 } from 'uuid';
 import Icon from '../Icon';
 import Text from '../../typography/Text';
 
@@ -68,8 +69,8 @@ const List = forwardRef(
 
         const listItems = useMemo(
             () =>
-                items.map((item, idx) => (
-                    <li key={idx} {...listItemProps}>
+                items.map((item) => (
+                    <li key={uuidv4()} {...listItemProps}>
                         {bullet && !unStyled && <Icon {...iconProps} />}
                         <Text {...textProps}>{item}</Text>
                     </li>

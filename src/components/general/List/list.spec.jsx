@@ -4,7 +4,13 @@ import toJson from 'enzyme-to-json';
 import { HoiPoiProvider } from '../../../utils/styles';
 import List from '../../general/List';
 
-describe('Avatar', () => {
+jest.mock('uuid', () => {
+    return {
+        v4: jest.fn(() => 1),
+    };
+});
+
+describe('List', () => {
     const items = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         'Aenean euismod elementum nisi quis eleifend quam adipiscing.',
