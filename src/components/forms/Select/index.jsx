@@ -108,8 +108,7 @@ const Select = memo(
         isOptionSelected,
         notSelectingDefaultOption,
         optionAllLabel,
-        autoComplete,
-        role,
+        inputProps,
         ...props
     }) => {
         const selectRef = useRef();
@@ -768,8 +767,7 @@ const Select = memo(
                 numSelectedLiteral,
                 onMenuOpen,
                 isOptionSelected,
-                autoComplete,
-                role,
+                inputProps,
                 menuProps: {
                     dropdownWidth,
                     className: classes.menu,
@@ -970,7 +968,7 @@ const Select = memo(
             numSelectedLiteral,
             onMenuOpen,
             isOptionSelected,
-            autoComplete,
+            inputProps,
             dropdownWidth,
             classes.menu,
             classes.actionContainer,
@@ -1106,8 +1104,7 @@ Select.propTypes = {
     onKeyDown: PropTypes.func,
     /** Native input id */
     id: PropTypes.string,
-    /** Native input name */
-    name: PropTypes.string,
+    inputProps: PropTypes.object,
     options: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string,
