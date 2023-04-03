@@ -69,7 +69,7 @@ const List = forwardRef(
         const listItems = useMemo(
             () =>
                 items.map((item, index) => (
-                    <li key={`li-${index}`} {...listItemProps}>
+                    <li key={index} {...listItemProps}>
                         {bullet && !unStyled && <Icon {...iconProps} />}
                         <Text {...textProps}>{item}</Text>
                     </li>
