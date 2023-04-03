@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PhoneIncoming({ color = '#788590', color2 = '#FF8C00', ...props }) {
+function PhoneIncoming({ color = '#A9B1B9', color2 = '#00A8BE', ...props }) {
     return (
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
             <path

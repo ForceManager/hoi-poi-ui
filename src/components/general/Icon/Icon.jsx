@@ -114,10 +114,6 @@ import Documents from './icons/actions/Documents';
 import Done from './icons/actions/Done';
 import DoneAll from './icons/actions/DoneAll';
 import EditArea from './icons/actions/EditArea';
-import Email from './icons/actions/Email';
-import EmailLate from './icons/actions/EmailLate';
-import EmailReceive from './icons/actions/EmailReceive';
-import EmailRefresh from './icons/actions/EmailRefresh';
 import Event from './icons/actions/Event';
 import Weekly from './icons/actions/Weekly';
 import Monthly from './icons/actions/Monthly';
@@ -196,6 +192,10 @@ import ScanCard from './icons/actions/ScanCard';
 import Message from './icons/communication/Message';
 import Comment from './icons/communication/Comment';
 import Call from './icons/communication/Call';
+import Email from './icons/communication/Email';
+import EmailLate from './icons/communication/EmailLate';
+import EmailReceive from './icons/communication/EmailReceive';
+import EmailRefresh from './icons/communication/EmailRefresh';
 import EmailSend from './icons/communication/EmailSend';
 import EmailSendOutline from './icons/communication/EmailSendOutline';
 import PhoneIncoming from './icons/communication/PhoneIncoming';
@@ -533,10 +533,6 @@ export const ICONS = {
     done: Done,
     doneAll: DoneAll,
     editArea: EditArea,
-    email: Email,
-    emailLate: EmailLate,
-    emailReceive: EmailReceive,
-    emailRefresh: EmailRefresh,
     branch: Branch,
     event: Event,
     weekly: Weekly,
@@ -610,6 +606,10 @@ export const ICONS = {
     message: Message,
     comment: Comment,
     call: Call,
+    email: Email,
+    emailLate: EmailLate,
+    emailReceive: EmailReceive,
+    emailRefresh: EmailRefresh,
     emailSend: EmailSend,
     emailSendOutline: EmailSendOutline,
     phoneIncoming: PhoneIncoming,
