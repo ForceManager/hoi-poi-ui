@@ -35,10 +35,6 @@ import Icon from './IconWithTooltip';
     <Icon name="done" />
     <Icon name="doneAll" />
     <Icon name="editArea" />
-    <Icon name="email" />
-    <Icon name="emailLate" />
-    <Icon name="emailReceive" />
-    <Icon name="emailRefresh" />
     <Icon name="branch" />
     <Icon name="event" />
     <Icon name="weekly" />
@@ -138,6 +134,10 @@ import Icon from './IconWithTooltip';
     <Icon name="message" />
     <Icon name="comment" />
     <Icon name="call" />
+    <Icon name="email" />
+    <Icon name="emailLate" />
+    <Icon name="emailReceive" />
+    <Icon name="emailRefresh" />
     <Icon name="emailSend" />
     <Icon name="phoneIncoming" />
     <Icon name="phoneOutgoing" />
