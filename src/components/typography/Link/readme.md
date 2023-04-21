@@ -130,6 +130,12 @@ Underline:
 <Link underline>Lorem Ipsum</Link>
 ```
 
+Type Variations:
+
+```jsx
+<Link type="primary">Primary Link</Link>
+```
+
 ### Component tree
 
 ---

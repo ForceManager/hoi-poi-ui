@@ -42,4 +42,12 @@ describe('Link', () => {
         expect(wrapper.find('button').props().onClick).toEqual(null);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+    test('is primary variation', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <Link variation="primary">Hello</Link>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

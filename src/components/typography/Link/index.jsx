@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import defaultTheme from '../../../utils/styles/defaultTheme';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
+
 import styles from './styles';
+
 const useStyles = createUseStyles(styles, 'Link');
 
 function Link({
@@ -19,9 +22,11 @@ function Link({
     isTruncated,
     bold,
     underline,
+    variation,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
+
     //Overrides
     const override = getOverrides(overridesProp, Link.overrides);
 
@@ -31,23 +36,28 @@ function Link({
         [classes.truncated]: href && isTruncated,
         [classes.bold]: bold,
         [classes.underline]: underline,
+        [classes.primary]: variation === 'primary',
     });
 
-    const rootProps = {
-        ...props,
-        className: rootClassName,
-        onClick: isDisabled ? null : onClick,
-    };
+    const rootProps = useMemo(
+        () => ({
+            ...props,
+            className: rootClassName,
+            onClick: isDisabled ? null : onClick,
+            ...override.root,
+        }),
+        [isDisabled, onClick, override.root, props, rootClassName],
+    );
 
     if (href) {
         return (
-            <a href={href} target={target} {...rootProps} {...override.root}>
+            <a href={href} target={target} {...rootProps}>
                 {children}
             </a>
         );
     } else {
         return (
-            <button {...rootProps} type="button" {...override.root}>
+            <button type="button" {...rootProps}>
                 {children}
             </button>
         );
@@ -93,6 +103,7 @@ Link.propTypes = {
     isTruncated: PropTypes.bool,
     bold: PropTypes.bool,
     underline: PropTypes.bool,
+    variation: PropTypes.oneOf(['primary']),
 };
 
 export default React.memo(Link);
