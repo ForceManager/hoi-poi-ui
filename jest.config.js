@@ -11,4 +11,7 @@ module.exports = {
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
     moduleFileExtensions: ['js', 'json', 'jsx'],
     snapshotSerializers: ['enzyme-to-json/serializer'],
+    moduleNameMapper: {
+        'react-markdown': '<rootDir>/node_modules/react-markdown/react-markdown.min.js',
+    },
 };

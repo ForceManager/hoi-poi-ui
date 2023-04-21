@@ -23,6 +23,7 @@ module.exports = {
                 './src/components/general/Icon/index.jsx',
                 './src/components/general/List/index.jsx',
                 './src/components/general/Loader/index.jsx',
+                './src/components/general/Markdown/index.jsx',
                 './src/components/general/Menus/index.jsx',
                 './src/components/general/Modal/index.jsx',
                 './src/components/general/ModalCrop/index.jsx',
