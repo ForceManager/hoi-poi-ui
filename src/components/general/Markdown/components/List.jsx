@@ -9,7 +9,7 @@ const List = ({ items, ...otherProps }) => {
         return { items: finalItems, ...otherProps };
     }, [items, otherProps]);
 
-    return <ListComponent items={items} {...listProps} />;
+    return <ListComponent {...listProps} />;
 };
 
 export default memo(List);
