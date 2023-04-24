@@ -5,7 +5,7 @@ const List = ({ items, ...otherProps }) => {
     const listProps = useMemo(() => {
         const finalItems = items
             .filter((item) => item.type === 'li')
-            .map((item) => item.props.children[0]);
+            .map((item) => item?.props?.children?.[0] || null);
         return { items: finalItems, ...otherProps };
     }, [items, otherProps]);
 
