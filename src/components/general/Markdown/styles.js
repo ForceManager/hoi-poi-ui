@@ -7,4 +7,7 @@ export default (theme) => ({
             margin: 0,
         },
     },
+    block: {
+        display: 'block',
+    },
 });

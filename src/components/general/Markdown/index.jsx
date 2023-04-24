@@ -28,46 +28,62 @@ const Markdown = memo(
                         </Link>
                     ),
                     p: ({ children }) => (
-                        <Text type="body" as="p" {...override.p}>
+                        <Text type="body" as="p" className={classes.block} {...override.p}>
                             {children}
                         </Text>
                     ),
                     h1: ({ children }) => (
-                        <Text type="h1" as="h1" {...override.h1}>
+                        <Text type="h1" as="h1" className={classes.block} {...override.h1}>
                             {children}
                         </Text>
                     ),
                     h2: ({ children }) => (
-                        <Text type="h2" as="h2" {...override.h2}>
+                        <Text type="h2" as="h2" className={classes.block} {...override.h2}>
                             {children}
                         </Text>
                     ),
                     h3: ({ children }) => (
-                        <Text type="h3" as="h3" {...override.h3}>
+                        <Text type="h3" as="h3" className={classes.block} {...override.h3}>
                             {children}
                         </Text>
                     ),
                     h4: ({ children }) => (
-                        <Text type="h4" as="h4" {...override.h4}>
+                        <Text type="h4" as="h4" className={classes.block} {...override.h4}>
                             {children}
                         </Text>
                     ),
                     h5: ({ children }) => (
-                        <Text type="h5" as="h5" {...override.h5}>
+                        <Text type="h5" as="h5" className={classes.block} {...override.h5}>
                             {children}
                         </Text>
                     ),
                     h6: ({ children }) => (
-                        <Text type="h6" as="h6" {...override.h6}>
+                        <Text type="h6" as="h6" className={classes.block} {...override.h6}>
                             {children}
                         </Text>
                     ),
-                    ul: ({ children }) => <List items={children} />,
-                    ol: ({ children }) => <List items={children} type="ordered" />,
+                    ul: ({ children }) => <List items={children} {...override.ul} />,
+                    ol: ({ children }) => <List items={children} type="ordered" {...override.ol} />,
                 },
                 ...override.root,
             }),
-            [classNameProp, classes.root, content, override],
+            [
+                classNameProp,
+                classes.block,
+                classes.root,
+                content,
+                override.a,
+                override.h1,
+                override.h2,
+                override.h3,
+                override.h4,
+                override.h5,
+                override.h6,
+                override.ol,
+                override.p,
+                override.root,
+                override.ul,
+            ],
         );
 
         return <ReactMarkdown {...rootProps} />;
