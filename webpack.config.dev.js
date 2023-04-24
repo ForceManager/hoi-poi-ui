@@ -21,7 +21,7 @@ module.exports = {
     resolve: {
         alias: {
             'hoi-poi-ui': srcPath,
-            process: 'process/browser',
+            process: 'process/browser.js',
         },
         extensions: ['js', 'json', 'jsx'],
     },
@@ -67,7 +67,7 @@ module.exports = {
     plugins: [
         new ESLintPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.ProvidePlugin({ process: 'process/browser' }),
+        new webpack.ProvidePlugin({ process: 'process/browser.js' }),
     ].filter(Boolean),
     performance: false,
 };

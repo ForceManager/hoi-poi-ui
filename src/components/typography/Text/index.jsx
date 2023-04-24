@@ -14,6 +14,7 @@ const useStyles = createUseStyles(styles, 'Text');
 const Text = forwardRef(
     (
         {
+            as,
             children,
             isTruncated,
             useTooltip,
@@ -58,19 +59,14 @@ const Text = forwardRef(
             [color],
         );
 
-        const textContainer = useMemo(
-            () => (
-                <span
-                    ref={ref || defaultRef}
-                    className={rootClassName}
-                    style={style}
-                    {...rootProps}
-                >
+        const textContainer = useMemo(() => {
+            const Tag = as || 'span';
+            return (
+                <Tag ref={ref || defaultRef} className={rootClassName} style={style} {...rootProps}>
                     {children}
-                </span>
-            ),
-            [children, ref, rootClassName, rootProps, style],
-        );
+                </Tag>
+            );
+        }, [as, children, ref, rootClassName, rootProps, style]);
 
         if (useTooltip)
             return (
@@ -86,6 +82,7 @@ const Text = forwardRef(
 Text.overrides = ['root', 'Loader'];
 
 Text.defaultProps = {
+    as: 'span',
     type: 'body',
     className: '',
     overrides: {},
@@ -93,6 +90,23 @@ Text.defaultProps = {
 };
 
 Text.propTypes = {
+    as: PropTypes.oneOf([
+        'div',
+        'span',
+        'strong',
+        'em',
+        'p',
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'pre',
+        'blockquote',
+        'label',
+        'li',
+    ]),
     className: PropTypes.string,
     type: PropTypes.oneOf([
         'h1',

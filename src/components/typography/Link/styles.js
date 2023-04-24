@@ -57,4 +57,10 @@ export default (theme) => ({
             textDecoration: 'underline',
         },
     },
+    primary: {
+        color: theme.colors.orange500,
+        '&:hover': {
+            color: theme.colors.orange600,
+        },
+    },
 });
