@@ -1,8 +1,10 @@
-Default:
+Markdown Code Sandbox:
 
 ```jsx
-const markdown = `
-# Heading 1
+import { useState } from 'react';
+import { Code } from 'hoi-poi-ui';
+
+const markdown = `# Heading 1
 
 ## Heading 2
 
@@ -66,17 +68,15 @@ console.log(example);
 \`\`\`
 `;
 
-<Markdown
-    content={markdown}
-    overrides={{
-        a: { variation: 'primary' },
-        ul: {
-            bullet: 'arrowRight',
-            overrides: {
-                listItem: { style: { margin: 0 } },
-                Text: { color: 'neutral700' },
-            },
-        },
-    }}
-/>;
+const [state, setState] = useState(markdown);
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+    <Code
+        isFullWidth
+        onChange={setState}
+        value={state}
+        overrides={{ AceEditor: { mode: 'markdown' } }}
+    />
+    <Markdown content={state} />
+</div>;
 ```
