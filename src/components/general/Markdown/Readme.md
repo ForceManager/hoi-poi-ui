@@ -66,5 +66,17 @@ console.log(example);
 \`\`\`
 `;
 
-<Markdown content={markdown} overrides={{ a: { variation: 'primary' } }} />;
+<Markdown
+    content={markdown}
+    overrides={{
+        a: { variation: 'primary' },
+        ul: {
+            bullet: 'arrowRight',
+            overrides: {
+                listItem: { style: { margin: 0 } },
+                Text: { color: 'neutral700' },
+            },
+        },
+    }}
+/>;
 ```
