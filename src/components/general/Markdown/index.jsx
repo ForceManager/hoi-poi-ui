@@ -23,7 +23,7 @@ const Markdown = memo(
                 children: content,
                 components: {
                     a: ({ node, children, ...props }) => (
-                        <Link {...props} {...override.a}>
+                        <Link variation="primary" {...props} {...override.a}>
                             {children}
                         </Link>
                     ),
@@ -62,7 +62,7 @@ const Markdown = memo(
                             {children}
                         </Text>
                     ),
-                    ul: ({ children }) => <List items={children} {...override.ul} />,
+                    ul: ({ children }) => <List items={children} bullet="arrowRight" {...override.ul} />,
                     ol: ({ children }) => <List items={children} type="ordered" {...override.ol} />,
                 },
                 ...override.root,
