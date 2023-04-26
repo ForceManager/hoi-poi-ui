@@ -107,7 +107,7 @@ const Select = memo(
         menuShouldScrollIntoView,
         isOptionSelected,
         notSelectingDefaultOption,
-        optionAllLabel,
+        selectAllLabel,
         inputProps,
         ...props
     }) => {
@@ -126,8 +126,8 @@ const Select = memo(
         const menuPlacementRef = useRef('bottom');
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
-        const shouldRenderOptionAll =
-            optionAllLabel && isMulti && !isFuzzy && !innerOptions?.[0]?.options;
+        const shouldRenderSelectAll =
+            selectAllLabel && isMulti && !isFuzzy && !innerOptions?.[0]?.options;
 
         const rootClassName = classnames(
             classes.root,
@@ -205,9 +205,9 @@ const Select = memo(
                 }
 
                 if (getCanChange && !getCanChange(data, action)) return;
-                if (shouldSetValueOnChange || shouldRenderOptionAll) setNewValue(data);
+                if (shouldSetValueOnChange || shouldRenderSelectAll) setNewValue(data);
                 if (!isMulti) setFocused(false);
-                if (shouldRenderOptionAll) {
+                if (shouldRenderSelectAll) {
                     if (!data?.length) {
                         setIsAllSelected(false);
                     } else {
@@ -232,7 +232,7 @@ const Select = memo(
                 getCanChange,
                 customOnChange,
                 setIsAllSelected,
-                shouldRenderOptionAll,
+                shouldRenderSelectAll,
             ],
         );
 
@@ -386,9 +386,17 @@ const Select = memo(
                     };
                 }
 
+                if (shouldRenderSelectAll) {
+                    styles = {
+                        ...styles,
+                        ...newStyles.optionWithSelectAll,
+                        ...(override.optionWithSelectAll?.style || {}),
+                    };
+                }
+
                 return styles;
             },
-            [override],
+            [override, shouldRenderSelectAll],
         );
 
         const valueContainerStyles = useCallback(
@@ -777,12 +785,12 @@ const Select = memo(
                     actionTextClassName: classes.actionText,
                     actionTextWithIconClassName: classes.actionTextWithIcon,
                     singleValueIconClassName: classes.singleValueIcon,
-                    optionAllClassName: classes.optionAll,
-                    optionAllCheckboxClassName: classes.optionAllCheckbox,
-                    optionAllTextClassName: classes.optionAllText,
+                    selectAllClassName: classes.selectAll,
+                    selectAllCheckboxClassName: classes.selectAllCheckbox,
+                    selectAllTextClassName: classes.selectAllText,
                     actions,
                     onClickAction,
-                    optionAllLabel: shouldRenderOptionAll && optionAllLabel,
+                    selectAllLabel: shouldRenderSelectAll && selectAllLabel,
                     selectRef: selectRef.current,
                     value: newValue,
                     options: lazyOptions.options || innerOptions || [],
@@ -977,14 +985,14 @@ const Select = memo(
             classes.actionText,
             classes.actionTextWithIcon,
             classes.singleValueIcon,
-            classes.optionAll,
-            classes.optionAllCheckbox,
-            classes.optionAllText,
+            classes.selectAll,
+            classes.selectAllCheckbox,
+            classes.selectAllText,
             classes.group,
             classes.option,
             onClickAction,
-            shouldRenderOptionAll,
-            optionAllLabel,
+            shouldRenderSelectAll,
+            selectAllLabel,
             isAllSelected,
             override,
             getRef,
@@ -1031,14 +1039,17 @@ Select.overrides = [
     'option',
     'optionFocused',
     'optionSelected',
-    'optionsDisabled',
+    'optionDisabled',
+    'optionWithSelectAll',
     'valueContainer',
     'valueContainerDisabled',
     'input',
     'group',
     'groupHeading',
     'indicatorsContainer',
+    'indicatorSeparator',
     'clearIndicator',
+    'dropdownIndicator',
     'placeholder',
     'placeholderDisabled',
     'multiValue',
@@ -1058,6 +1069,7 @@ Select.overrides = [
     'optionLabelText',
     'optionLabelSubLabel',
     'menu',
+    'menuList',
     'actionContainer',
     'action',
     'actionIcon',
@@ -1198,7 +1210,7 @@ Select.propTypes = {
     /** Keep input focused when there is a value on it*/
     keepInputFocused: PropTypes.bool,
     /** Defines wether it should have Select All option and also the label that should be printed in the option row */
-    optionAllLabel: PropTypes.string,
+    selectAllLabel: PropTypes.string,
 };
 
 export default Select;
