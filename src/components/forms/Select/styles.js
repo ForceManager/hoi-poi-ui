@@ -171,22 +171,22 @@ export default (theme) => ({
     hideMultivalueChips: {
         display: 'none',
     },
-    optionAll: {
+    selectAll: {
         marginTop: '4px',
         padding: '8px 16px',
         display: 'flex',
         alignItems: 'center',
         color: theme.colors.neutral900,
-        backgroundColor: theme.colors.orange100,
+        // backgroundColor: theme.colors.orange100,
         cursor: 'pointer',
-        '&:hover': {
-            backgroundColor: theme.colors.orange200,
-        },
+        // '&:hover': {
+        //     backgroundColor: theme.colors.orange200,
+        // },
     },
-    optionAllCheckbox: {
+    selectAllCheckbox: {
         marginRight: '10px',
     },
-    optionAllText: {
+    selectAllText: {
         ...theme.typography.subtitle,
     },
     option: {
@@ -213,6 +213,9 @@ export default (theme) => ({
     optionDisabled: {
         backgroundColor: 'none',
         cursor: 'default',
+    },
+    optionWithSelectAll: {
+        padding: '8px 16px 8px 46px',
     },
     multiValue: {
         margin: '3px 6px 3px 2px',

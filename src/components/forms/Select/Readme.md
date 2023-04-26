@@ -610,7 +610,7 @@ const onChange = (value) => {
         value={state.value}
         isMulti={true}
         isClearable
-        optionAllLabel="Select all"
+        selectAllLabel="Select all"
     />
 </div>;
 ```

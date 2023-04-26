@@ -11,6 +11,9 @@ module.exports = {
     entry: [require.resolve('react-dev-utils/webpackHotDevClient'), indexPath],
     devServer: {
         host: '0.0.0.0',
+        client: {
+            overlay: false,
+        },
     },
     output: {
         pathinfo: true,

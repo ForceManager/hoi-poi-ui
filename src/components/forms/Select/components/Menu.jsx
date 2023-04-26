@@ -16,14 +16,14 @@ export default React.memo(({ children, ...props }) => {
         actionIconClassName,
         actionTextClassName,
         actionTextWithIconClassName,
-        optionAllClassName,
-        optionAllCheckboxClassName,
-        optionAllTextClassName,
+        selectAllClassName,
+        selectAllCheckboxClassName,
+        selectAllTextClassName,
         override,
         actions,
         onClickAction,
         dropdownWidth,
-        optionAllLabel,
+        selectAllLabel,
         selectRef,
         value,
         options,
@@ -130,23 +130,23 @@ export default React.memo(({ children, ...props }) => {
     }, [value, filteredOptions]);
 
     const allRow = useMemo(() => {
-        if (!optionAllLabel || !filteredOptions?.length) return null;
+        if (!selectAllLabel || !filteredOptions?.length) return null;
         return (
-            <div className={optionAllClassName} onClick={onClickAll}>
+            <div className={selectAllClassName} onClick={onClickAll}>
                 <Checkbox
-                    className={optionAllCheckboxClassName}
+                    className={selectAllCheckboxClassName}
                     checked={isAllSelected || isIndeterminate}
                     color="orange"
                     indeterminate={isIndeterminate}
                 />
-                <Text className={optionAllTextClassName}>{optionAllLabel}</Text>
+                <Text className={selectAllTextClassName}>{selectAllLabel}</Text>
             </div>
         );
     }, [
-        optionAllClassName,
-        optionAllCheckboxClassName,
-        optionAllTextClassName,
-        optionAllLabel,
+        selectAllClassName,
+        selectAllCheckboxClassName,
+        selectAllTextClassName,
+        selectAllLabel,
         onClickAll,
         isAllSelected,
         isIndeterminate,
