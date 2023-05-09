@@ -3,7 +3,6 @@ import { components } from 'react-select';
 import Link from '../../../typography/Link';
 import Icon from '../../../general/Icon';
 import Text from '../../../typography/Text';
-import Checkbox from '../../../general/Checkbox';
 
 import { useTheme } from '../../../../utils/styles';
 
@@ -16,19 +15,10 @@ export default React.memo(({ children, ...props }) => {
         actionIconClassName,
         actionTextClassName,
         actionTextWithIconClassName,
-        selectAllClassName,
-        selectAllCheckboxClassName,
-        selectAllTextClassName,
         override,
         actions,
         onClickAction,
         dropdownWidth,
-        selectAllLabel,
-        selectRef,
-        value,
-        options,
-        isAllSelected,
-        setIsAllSelected,
     } = props.selectProps.menuProps;
 
     const linkRow = useCallback(
@@ -110,49 +100,6 @@ export default React.memo(({ children, ...props }) => {
         ],
     );
 
-    const filteredOptions = useMemo(() => {
-        return options.filter((current) => !current.isDisabled);
-    }, [options]);
-
-    const onClickAll = useCallback(() => {
-        if (isAllSelected) {
-            selectRef.clearValue();
-        } else {
-            selectRef.setValue(filteredOptions, 'set-value');
-        }
-
-        setIsAllSelected(!isAllSelected);
-    }, [isAllSelected, setIsAllSelected, filteredOptions, selectRef]);
-
-    const isIndeterminate = useMemo(() => {
-        if (value?.length && filteredOptions?.length !== value?.length) return true;
-        return false;
-    }, [value, filteredOptions]);
-
-    const allRow = useMemo(() => {
-        if (!selectAllLabel || !filteredOptions?.length) return null;
-        return (
-            <div className={selectAllClassName} onClick={onClickAll}>
-                <Checkbox
-                    className={selectAllCheckboxClassName}
-                    checked={isAllSelected || isIndeterminate}
-                    color="orange"
-                    indeterminate={isIndeterminate}
-                />
-                <Text className={selectAllTextClassName}>{selectAllLabel}</Text>
-            </div>
-        );
-    }, [
-        selectAllClassName,
-        selectAllCheckboxClassName,
-        selectAllTextClassName,
-        selectAllLabel,
-        onClickAll,
-        isAllSelected,
-        isIndeterminate,
-        filteredOptions,
-    ]);
-
     const innerProps = useMemo(() => {
         if (dropdownWidth) return { ...props.innerProps, style: { width: dropdownWidth } };
         return props.innerProps;
@@ -166,7 +113,6 @@ export default React.memo(({ children, ...props }) => {
                 innerProps={innerProps}
                 {...override.menu}
             >
-                {allRow}
                 {children}
                 {actions && (
                     <div className={actionContainerClassName} {...override.actionContainer}>
