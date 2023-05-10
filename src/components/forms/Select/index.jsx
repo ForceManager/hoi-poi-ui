@@ -18,6 +18,7 @@ import MultiValueLabel from './components/MultiValueLabel';
 import MultiValueRemove from './components/MultiValueRemove';
 import LoadingIndicator from './components/LoadingIndicator';
 import Menu from './components/Menu';
+import MenuList from './components/MenuList';
 import MenuSingle from './components/MenuSingle';
 import MenuMulti from './components/MenuMulti';
 import Group from './components/Group';
@@ -785,17 +786,11 @@ const Select = memo(
                     actionTextClassName: classes.actionText,
                     actionTextWithIconClassName: classes.actionTextWithIcon,
                     singleValueIconClassName: classes.singleValueIcon,
-                    selectAllClassName: classes.selectAll,
-                    selectAllCheckboxClassName: classes.selectAllCheckbox,
-                    selectAllTextClassName: classes.selectAllText,
                     actions,
                     onClickAction,
-                    selectAllLabel: shouldRenderSelectAll && selectAllLabel,
                     selectRef: selectRef.current,
                     value: newValue,
                     options: lazyOptions.options || innerOptions || [],
-                    isAllSelected,
-                    setIsAllSelected,
                     override: {
                         menu: override.menu,
                         actionContainer: override.actionContainer,
@@ -803,6 +798,21 @@ const Select = memo(
                         actionIcon: override.actionIcon,
                         actionText: override.actionText,
                         actionTextWithIcon: override.actionTextWithIcon,
+                    },
+                },
+                menuListProps: {
+                    className: classes.menuList,
+                    selectAllClassName: classes.selectAll,
+                    selectAllCheckboxClassName: classes.selectAllCheckbox,
+                    selectAllTextClassName: classes.selectAllText,
+                    selectAllLabel: shouldRenderSelectAll && selectAllLabel,
+                    value: newValue,
+                    options: lazyOptions.options || innerOptions || [],
+                    selectRef: selectRef.current,
+                    isAllSelected,
+                    setIsAllSelected,
+                    override: {
+                        menuList: override.menuList,
                     },
                 },
                 components: {
@@ -814,6 +824,7 @@ const Select = memo(
                     MultiValueRemove,
                     LoadingIndicator,
                     Menu,
+                    MenuList,
                     Group: Group({
                         className: classes.group,
                         override: {
@@ -979,6 +990,7 @@ const Select = memo(
             inputProps,
             dropdownWidth,
             classes.menu,
+            classes.menuList,
             classes.actionContainer,
             classes.action,
             classes.actionIcon,
