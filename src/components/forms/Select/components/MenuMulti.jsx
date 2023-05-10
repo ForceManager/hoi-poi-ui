@@ -3,7 +3,7 @@ import Checkbox from '../../../general/Checkbox';
 import Icon from '../../../general/Icon';
 
 export default ({ option, value, classes, override, getHighlighted }) => {
-    const isSelected = value ? !!value.find((item) => item.value === option.value) : false;
+    const isSelected = value ? !!value?.find((item) => item.value === option.value) : false;
     let bulletClasses = [classes.optionLabelBullet];
     let textClasses = [classes.optionLabelText];
     let iconClasses = [classes.optionLabelIcon];

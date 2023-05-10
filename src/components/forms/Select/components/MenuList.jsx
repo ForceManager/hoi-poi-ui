@@ -1,12 +1,14 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo, useEffect } from 'react';
 import { components } from 'react-select';
 import Text from '../../../typography/Text';
 import Checkbox from '../../../general/Checkbox';
+import classnames from 'classnames';
 
 export default React.memo(({ children, ...props }) => {
     const {
         className,
         selectAllClassName,
+        selectAllSelectedClassName,
         selectAllCheckboxClassName,
         selectAllTextClassName,
         override,
@@ -14,34 +16,51 @@ export default React.memo(({ children, ...props }) => {
         selectAllLabel,
         selectRef,
         value,
-        options,
         isAllSelected,
         setIsAllSelected,
     } = props.selectProps.menuListProps;
+
+    const { options } = props.selectProps;
 
     const filteredOptions = useMemo(() => {
         return options.filter((current) => !current.isDisabled);
     }, [options]);
 
-    const onClickAll = useCallback(() => {
-        if (isAllSelected) {
-            selectRef.clearValue();
-        } else {
-            selectRef.setValue(filteredOptions, 'set-value');
+    useEffect(() => {
+        if (
+            selectAllLabel &&
+            value?.length &&
+            value?.length === filteredOptions?.length &&
+            !isAllSelected
+        ) {
+            setIsAllSelected(true);
         }
-
-        setIsAllSelected(!isAllSelected);
-    }, [isAllSelected, setIsAllSelected, filteredOptions, selectRef]);
+    }, [selectAllLabel, value, filteredOptions, isAllSelected, setIsAllSelected]);
 
     const isIndeterminate = useMemo(() => {
         if (value?.length && filteredOptions?.length !== value?.length) return true;
         return false;
     }, [value, filteredOptions]);
 
+    const onClickAll = useCallback(() => {
+        if (isAllSelected || isIndeterminate) {
+            selectRef.clearValue();
+            setIsAllSelected(false);
+        } else {
+            selectRef.setValue(filteredOptions, 'set-value');
+            setIsAllSelected(true);
+        }
+    }, [isAllSelected, setIsAllSelected, filteredOptions, selectRef, isIndeterminate]);
+
     const allRow = useMemo(() => {
         if (!selectAllLabel || !filteredOptions?.length) return null;
         return (
-            <div className={selectAllClassName} onClick={onClickAll}>
+            <div
+                className={classnames(selectAllClassName, {
+                    [selectAllSelectedClassName]: isAllSelected || isIndeterminate,
+                })}
+                onClick={onClickAll}
+            >
                 <Checkbox
                     className={selectAllCheckboxClassName}
                     checked={isAllSelected || isIndeterminate}
@@ -53,6 +72,7 @@ export default React.memo(({ children, ...props }) => {
         );
     }, [
         selectAllClassName,
+        selectAllSelectedClassName,
         selectAllCheckboxClassName,
         selectAllTextClassName,
         selectAllLabel,

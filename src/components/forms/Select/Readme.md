@@ -591,23 +591,67 @@ const loadOptions = () =>
         [],
     );
 
-const [state, setState] = useState([
+const [stateWithout, setStateWithout] = useState([]);
+
+const onChangeWithout = (value) => setStateWithout(value);
+
+const [stateOneValue, setStateOneValue] = useState([
     {
         label: 'Lorem ipsum 1',
         value: 'lorem-ipsum-1',
     },
 ]);
-const onChange = (value) => {
-    setState({ value });
-};
+
+const onChangeOneValue = (value) => setStateOneValue(value);
+
+const [stateAllValues, setStateAllValues] = useState([
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: 'lorem-ipsum-5',
+    },
+    {
+        label: 'Lorem ipsum 6',
+        value: 'lorem-ipsum-6',
+    },
+]);
+
+const onChangeAllValues = (value) => setStateAllValues(value);
 
 <div>
     <Select
-        label="Lorem ipsum"
+        label="Without value"
         placeholder="Select one"
-        onChange={onChange}
+        onChange={onChangeWithout}
         loadOptions={loadOptions}
-        value={state.value}
+        value={stateWithout}
+        isMulti={true}
+        isClearable
+        selectAllLabel="Select all"
+    />
+    <Select
+        label="One value"
+        placeholder="Select one"
+        onChange={onChangeOneValue}
+        loadOptions={loadOptions}
+        value={stateOneValue}
+        isMulti={true}
+        isClearable
+        selectAllLabel="Select all"
+    />
+    <Select
+        label="All values"
+        placeholder="Select one"
+        onChange={onChangeAllValues}
+        loadOptions={loadOptions}
+        value={stateAllValues}
         isMulti={true}
         isClearable
         selectAllLabel="Select all"
