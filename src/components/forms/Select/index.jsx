@@ -803,6 +803,7 @@ const Select = memo(
                 menuListProps: {
                     className: classes.menuList,
                     selectAllClassName: classes.selectAll,
+                    selectAllSelectedClassName: classes.selectAllSelected,
                     selectAllCheckboxClassName: classes.selectAllCheckbox,
                     selectAllTextClassName: classes.selectAllText,
                     selectAllLabel: shouldRenderSelectAll && selectAllLabel,
@@ -998,6 +999,7 @@ const Select = memo(
             classes.actionTextWithIcon,
             classes.singleValueIcon,
             classes.selectAll,
+            classes.selectAllSelected,
             classes.selectAllCheckbox,
             classes.selectAllText,
             classes.group,

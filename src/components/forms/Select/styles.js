@@ -177,11 +177,13 @@ export default (theme) => ({
         display: 'flex',
         alignItems: 'center',
         color: theme.colors.neutral900,
-        // backgroundColor: theme.colors.orange100,
         cursor: 'pointer',
-        // '&:hover': {
-        //     backgroundColor: theme.colors.orange200,
-        // },
+        '&:hover': {
+            backgroundColor: theme.colors.neutral200,
+        },
+    },
+    selectAllSelected: {
+        backgroundColor: theme.colors.neutral200,
     },
     selectAllCheckbox: {
         marginRight: '10px',
