@@ -118,6 +118,11 @@ export default (theme) => ({
     },
     groupHeading: {
         marginBottom: '0px',
+        marginTop: '0px',
+    },
+    groupHeadingWithSelectAll: {
+        paddingLeft: '0px !important',
+        paddingRight: '0px !important',
     },
     groupLabel: {
         padding: '6px 0px',
@@ -173,7 +178,7 @@ export default (theme) => ({
     },
     selectAll: {
         marginTop: '4px',
-        padding: '8px 16px',
+        padding: '8px 12px',
         display: 'flex',
         alignItems: 'center',
         color: theme.colors.neutral900,
@@ -190,6 +195,8 @@ export default (theme) => ({
     },
     selectAllText: {
         ...theme.typography.subtitle,
+        color: theme.colors.neutral900,
+        textTransform: 'initial',
     },
     option: {
         ...theme.typography.body,
@@ -205,6 +212,9 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutral200,
         },
     },
+    optionFocusDisabled: {
+        backgroundColor: `${theme.colors.neutralBase} !important`,
+    },
     optionSelected: {
         backgroundColor: theme.colors.neutral200,
         cursor: 'pointer',
@@ -217,7 +227,7 @@ export default (theme) => ({
         cursor: 'default',
     },
     optionWithSelectAll: {
-        padding: '8px 16px 8px 46px',
+        padding: '8px 16px 8px 42px !important',
     },
     multiValue: {
         margin: '3px 6px 3px 2px',

@@ -22,6 +22,7 @@ import MenuList from './components/MenuList';
 import MenuSingle from './components/MenuSingle';
 import MenuMulti from './components/MenuMulti';
 import Group from './components/Group';
+import GroupHeading from './components/GroupHeading';
 import Option from './components/Option';
 import ValueContainer from './components/ValueContainer';
 import { isEqual } from '../../../utils/arrays';
@@ -122,13 +123,13 @@ const Select = memo(
             options: null,
             isLoading: false,
         });
-        const [isAllSelected, setIsAllSelected] = useState(false);
         const debounce = useRef(null);
         const menuPlacementRef = useRef('bottom');
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
-        const shouldRenderSelectAll =
-            selectAllLabel && isMulti && !isFuzzy && !innerOptions?.[0]?.options;
+        const shouldRenderSelectAll = selectAllLabel && isMulti && !isFuzzy;
+        const isSelectAllWithGroups = shouldRenderSelectAll && innerOptions?.[0]?.options;
+        const [isSelectAllFocused, setIsSelectAllFocused] = useState(false);
 
         const rootClassName = classnames(
             classes.root,
@@ -208,13 +209,7 @@ const Select = memo(
                 if (getCanChange && !getCanChange(data, action)) return;
                 if (shouldSetValueOnChange || shouldRenderSelectAll) setNewValue(data);
                 if (!isMulti) setFocused(false);
-                if (shouldRenderSelectAll) {
-                    if (!data?.length) {
-                        setIsAllSelected(false);
-                    } else {
-                        setIsAllSelected(true);
-                    }
-                }
+
                 onChange && onChange(data, action);
 
                 if (
@@ -232,7 +227,6 @@ const Select = memo(
                 shouldSetValueOnChange,
                 getCanChange,
                 customOnChange,
-                setIsAllSelected,
                 shouldRenderSelectAll,
             ],
         );
@@ -499,14 +493,17 @@ const Select = memo(
             [override],
         );
 
-        const menuListStyles = useMemo(() => {
-            let styles = {
-                ...newStyles.menuList,
-                ...(override.menuList?.style || {}),
-            };
+        const menuListStyles = useMemo(
+            (props) => {
+                let styles = {
+                    ...newStyles.menuList,
+                    ...(override.menuList?.style || {}),
+                };
 
-            return styles;
-        }, [override]);
+                return styles;
+            },
+            [override],
+        );
 
         const indicatorSeparatorStyles = useMemo(() => {
             if ((isRequired && !isMulti) || (isMulti && hideMultivalueChips)) {
@@ -806,15 +803,34 @@ const Select = memo(
                     selectAllSelectedClassName: classes.selectAllSelected,
                     selectAllCheckboxClassName: classes.selectAllCheckbox,
                     selectAllTextClassName: classes.selectAllText,
-                    selectAllLabel: shouldRenderSelectAll && selectAllLabel,
+                    selectAllLabel:
+                        shouldRenderSelectAll && !isSelectAllWithGroups && selectAllLabel,
+                    setIsSelectAllFocused,
                     value: newValue,
                     options: lazyOptions.options || innerOptions || [],
                     selectRef: selectRef.current,
-                    isAllSelected,
-                    setIsAllSelected,
                     override: {
                         menuList: override.menuList,
                     },
+                },
+                groupHeadingProps: {
+                    className: classes.groupHeading,
+                    classNameWithSelectAll: classes.groupHeadingWithSelectAll,
+                    selectAllClassName: classes.selectAll,
+                    selectAllSelectedClassName: classes.selectAllSelected,
+                    selectAllCheckboxClassName: classes.selectAllCheckbox,
+                    selectAllTextClassName: classes.selectAllText,
+                    setIsSelectAllFocused,
+                    selectAllLabel:
+                        shouldRenderSelectAll && isSelectAllWithGroups && selectAllLabel,
+                    selectRef: selectRef.current,
+                    override: {
+                        groupHeading: override.groupHeading,
+                        groupLabel: override.groupLabel,
+                    },
+                },
+                optionProps: {
+                    optionFocusDisabledClassName: classes.optionFocusDisabled,
                 },
                 components: {
                     DropdownIndicator: Indicator,
@@ -826,6 +842,7 @@ const Select = memo(
                     LoadingIndicator,
                     Menu,
                     MenuList,
+                    GroupHeading,
                     Group: Group({
                         className: classes.group,
                         override: {
@@ -834,6 +851,7 @@ const Select = memo(
                     }),
                     Option: Option({
                         className: classes.option,
+                        isSelectAllFocused,
                         override: {
                             option: override.option,
                         },
@@ -1002,12 +1020,15 @@ const Select = memo(
             classes.selectAllSelected,
             classes.selectAllCheckbox,
             classes.selectAllText,
+            classes.groupHeading,
+            classes.groupHeadingWithSelectAll,
             classes.group,
             classes.option,
+            classes.optionFocusDisabled,
             onClickAction,
             shouldRenderSelectAll,
+            isSelectAllWithGroups,
             selectAllLabel,
-            isAllSelected,
             override,
             getRef,
             controlStyles,
@@ -1019,6 +1040,8 @@ const Select = memo(
             hideMultivalueChips,
             multiValueLabelStyles,
             multiValueRemoveStyles,
+            setIsSelectAllFocused,
+            isSelectAllFocused,
         ]);
 
         let SelectComponent = RSelect;

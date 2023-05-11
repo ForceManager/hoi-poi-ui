@@ -1,10 +1,11 @@
-import React, { useCallback, useMemo, useEffect } from 'react';
+import React, { useCallback, useMemo, useEffect, useState } from 'react';
 import { components } from 'react-select';
 import Text from '../../../typography/Text';
 import Checkbox from '../../../general/Checkbox';
 import classnames from 'classnames';
 
 export default React.memo(({ children, ...props }) => {
+    const [isAllSelected, setIsAllSelected] = useState(false);
     const {
         className,
         selectAllClassName,
@@ -16,11 +17,10 @@ export default React.memo(({ children, ...props }) => {
         selectAllLabel,
         selectRef,
         value,
-        isAllSelected,
-        setIsAllSelected,
+        setIsSelectAllFocused,
     } = props.selectProps.menuListProps;
 
-    const { options } = props.selectProps;
+    const { options, filterOption, inputValue } = props.selectProps;
 
     const filteredOptions = useMemo(() => {
         return options.filter((current) => !current.isDisabled);
@@ -47,10 +47,34 @@ export default React.memo(({ children, ...props }) => {
             selectRef.clearValue();
             setIsAllSelected(false);
         } else {
-            selectRef.setValue(filteredOptions, 'set-value');
+            let newOptions = filteredOptions;
+
+            if (filterOption) {
+                newOptions = filteredOptions.filter((current) => filterOption(current, inputValue));
+            }
+
+            selectRef.setValue(newOptions, 'set-value');
             setIsAllSelected(true);
         }
-    }, [isAllSelected, setIsAllSelected, filteredOptions, selectRef, isIndeterminate]);
+    }, [
+        isAllSelected,
+        setIsAllSelected,
+        filteredOptions,
+        selectRef,
+        isIndeterminate,
+        filterOption,
+        inputValue,
+    ]);
+
+    const handleOnEnter = useCallback(() => {
+        if (!selectAllLabel) return;
+        setIsSelectAllFocused(true);
+    }, [selectAllLabel, setIsSelectAllFocused]);
+
+    const handleOnLeave = useCallback(() => {
+        if (!selectAllLabel) return;
+        setIsSelectAllFocused(false);
+    }, [selectAllLabel, setIsSelectAllFocused]);
 
     const allRow = useMemo(() => {
         if (!selectAllLabel || !filteredOptions?.length) return null;
@@ -60,6 +84,8 @@ export default React.memo(({ children, ...props }) => {
                     [selectAllSelectedClassName]: isAllSelected || isIndeterminate,
                 })}
                 onClick={onClickAll}
+                onMouseEnter={handleOnEnter}
+                onMouseLeave={handleOnLeave}
             >
                 <Checkbox
                     className={selectAllCheckboxClassName}
@@ -80,6 +106,8 @@ export default React.memo(({ children, ...props }) => {
         isAllSelected,
         isIndeterminate,
         filteredOptions,
+        handleOnEnter,
+        handleOnLeave,
     ]);
 
     const innerProps = useMemo(() => {
