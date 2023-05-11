@@ -625,6 +625,70 @@ const [stateAllValues, setStateAllValues] = useState([
 
 const onChangeAllValues = (value) => setStateAllValues(value);
 
+const optionsGroup = [
+    {
+        label: 'Lorem ipsum',
+        options: [
+            {
+                label: 'Lorem ipsum 1',
+                value: 'lorem-ipsum-1',
+            },
+            {
+                label: 'Lorem ipsum 2',
+                value: 'lorem-ipsum-2',
+            },
+            {
+                label: 'Lorem ipsum 3',
+                value: 'lorem-ipsum-3',
+            },
+            {
+                label: 'Lorem ipsum 4',
+                value: 'lorem-ipsum-4',
+            },
+        ],
+    },
+    {
+        label: 'Dolor amet',
+        options: [
+            {
+                label: 'Dolor amet 1',
+                value: 'dolor-amet-1',
+            },
+            {
+                label: 'Dolor amet 2',
+                value: 'dolor-amet-2',
+                isDisabled: true,
+            },
+            {
+                label: 'Dolor amet 3',
+                value: 'dolor-amet-3',
+            },
+            {
+                label: 'Dolor amet 4',
+                value: 'dolor-amet-4',
+                isDisabled: true,
+            },
+        ],
+    },
+];
+
+const [stateGroupValues, setStateGroupValues] = useState([
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+]);
+
+const onChangeGroupValue = (value) => setStateGroupValues(value);
+
 <div>
     <Select
         label="Without value"
@@ -652,6 +716,16 @@ const onChangeAllValues = (value) => setStateAllValues(value);
         onChange={onChangeAllValues}
         loadOptions={loadOptions}
         value={stateAllValues}
+        isMulti={true}
+        isClearable
+        selectAllLabel="Select all"
+    />
+    <Select
+        label="Groups"
+        placeholder="Select one"
+        onChange={onChangeGroupValue}
+        options={optionsGroup}
+        value={stateGroupValues}
         isMulti={true}
         isClearable
         selectAllLabel="Select all"
@@ -1126,14 +1200,108 @@ const options = [
 const [state, setState] = useState({});
 const onChange = (value) => setState({ value });
 
+const optionsGroup = [
+    {
+        label: 'Lorem ipsum',
+        options: [
+            {
+                label: 'Lorem ipsum 1',
+                value: 'lorem-ipsum-1',
+            },
+            {
+                label: 'Lorem ipsum 2',
+                value: 'lorem-ipsum-2',
+            },
+            {
+                label: 'Lorem ipsum 3',
+                value: 'lorem-ipsum-3',
+            },
+            {
+                label: 'Lorem ipsum 4',
+                value: 'lorem-ipsum-4',
+            },
+        ],
+    },
+    {
+        label: 'Dolor amet',
+        options: [
+            {
+                label: 'Dolor amet 1',
+                value: 'dolor-amet-1',
+                isDisabled: true,
+            },
+            {
+                label: 'Dolor amet 2',
+                value: 'dolor-amet-2',
+            },
+            {
+                label: 'Dolor amet 3',
+                value: 'dolor-amet-3',
+            },
+            {
+                label: 'Dolor amet 4',
+                value: 'dolor-amet-4',
+                isDisabled: true,
+            },
+        ],
+    },
+];
+
+const [stateGroupValues, setStateGroupValues] = useState([
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+]);
+
+const onChangeGroupValue = (value) => setStateGroupValues(value);
+
+const [stateGroupValuesAll, setStateGroupValuesAll] = useState([
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+]);
+
+const onChangeGroupValueAll = (value) => setStateGroupValuesAll(value);
+
 <div>
     <Select
-        label="Lorem ipsum"
+        label="Single"
         placeholder="Select one"
         onChange={onChange}
         options={options}
         value={state.value}
         menuIsOpen={true}
+        isFullWidth={true}
+    />
+    <Select
+        label="Multi"
+        placeholder="Select one"
+        onChange={onChangeGroupValue}
+        options={optionsGroup}
+        value={stateGroupValues}
+        isMulti={true}
+        isClearable
+        isFullWidth={true}
+    />
+    <Select
+        label="Multi With Select All"
+        placeholder="Select one"
+        onChange={onChangeGroupValueAll}
+        options={optionsGroup}
+        value={stateGroupValuesAll}
+        isMulti={true}
+        selectAllLabel="Select All"
+        isClearable
         isFullWidth={true}
     />
 </div>;
