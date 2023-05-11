@@ -22,12 +22,12 @@ export default React.memo(({ children, ...props }) => {
     const { label, options } = props.data;
 
     const filteredOptions = useMemo(() => {
-        if (!options.length) return [];
+        if (!options?.length) return [];
         return options.filter((current) => !current.isDisabled);
     }, [options]);
 
     const mappedValues = useMemo(() => {
-        if (!value.length) return {};
+        if (!value?.length) return {};
         return value.reduce((obj, current) => {
             obj[current.value] = current;
             return obj;
@@ -57,7 +57,7 @@ export default React.memo(({ children, ...props }) => {
     }, [filteredOptions, mappedValues]);
 
     const mappedGroupValue = useMemo(() => {
-        if (!groupValue.length) return {};
+        if (!groupValue?.length) return {};
         return groupValue.reduce((obj, current) => {
             obj[current.value] = current;
             return obj;
@@ -66,7 +66,7 @@ export default React.memo(({ children, ...props }) => {
 
     // Values from other groups
     const otherGroupValue = useMemo(() => {
-        if (!value.length) return [];
+        if (!value?.length) return [];
         return value.filter((current) => !mappedOptions?.[current.value]);
     }, [value, mappedOptions]);
 
