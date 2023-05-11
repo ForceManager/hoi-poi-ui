@@ -729,7 +729,6 @@ const onChangeGroupValue = (value) => setStateGroupValues(value);
         isMulti={true}
         isClearable
         selectAllLabel="Select all"
-        forceMenuIsOpen={true}
     />
 </div>;
 ```

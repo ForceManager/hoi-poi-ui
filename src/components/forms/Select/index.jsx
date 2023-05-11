@@ -831,6 +831,11 @@ const Select = memo(
                 },
                 optionProps: {
                     optionFocusDisabledClassName: classes.optionFocusDisabled,
+                    className: classes.option,
+                    isSelectAllFocused,
+                    override: {
+                        option: override.option,
+                    },
                 },
                 components: {
                     DropdownIndicator: Indicator,
@@ -849,13 +854,7 @@ const Select = memo(
                             group: override.group,
                         },
                     }),
-                    Option: Option({
-                        className: classes.option,
-                        isSelectAllFocused,
-                        override: {
-                            option: override.option,
-                        },
-                    }),
+                    Option,
                     Input,
                     ...additionalComponents,
                 },

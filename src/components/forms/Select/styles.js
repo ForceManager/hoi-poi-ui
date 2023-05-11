@@ -11,10 +11,6 @@ export default (theme) => ({
     isMulti: {},
     menu: {
         boxShadow: `${theme.effects.boxShadow} !important`,
-        paddingTop: 4,
-        paddingBottom: 4,
-        marginTop: 8,
-        marginBottom: 8,
         '& [class*="Divider"]:last-child, & [class*="Divider"] + [class*="Divider"]': {
             display: 'none',
         },
@@ -22,7 +18,6 @@ export default (theme) => ({
     menuList: {
         ...theme.utils.scrollbar,
         maxHeight: 300,
-        padding: '4px 0px',
     },
     actionContainer: {
         borderTop: '1px solid',
@@ -177,7 +172,6 @@ export default (theme) => ({
         display: 'none',
     },
     selectAll: {
-        marginTop: '4px',
         padding: '8px 12px',
         display: 'flex',
         alignItems: 'center',

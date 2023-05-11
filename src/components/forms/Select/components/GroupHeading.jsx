@@ -1,11 +1,10 @@
-import React, { useMemo, useCallback, useState, useEffect } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { components } from 'react-select';
 import Text from '../../../typography/Text';
 import Checkbox from '../../../general/Checkbox';
 import classnames from 'classnames';
 
 export default React.memo(({ children, ...props }) => {
-    const [isAllGroupSelected, setIsAllGroupSelected] = useState(false);
     const {
         className,
         classNameWithSelectAll,
@@ -43,6 +42,15 @@ export default React.memo(({ children, ...props }) => {
         }, {});
     }, [options]);
 
+    const mappedFilteredOptions = useMemo(() => {
+        if (!filteredOptions?.length) return {};
+        return filteredOptions.reduce((obj, current) => {
+            obj[current.value] = current;
+            return obj;
+        }, {});
+    }, [filteredOptions]);
+
+    // Values from this group
     const groupValue = useMemo(() => {
         if (!Object.keys(mappedValues).length) return [];
         return filteredOptions.filter((current) => mappedValues[current.value]);
@@ -56,21 +64,17 @@ export default React.memo(({ children, ...props }) => {
         }, {});
     }, [groupValue]);
 
+    // Values from other groups
     const otherGroupValue = useMemo(() => {
         if (!value.length) return [];
         return value.filter((current) => !mappedOptions?.[current.value]);
     }, [value, mappedOptions]);
 
-    useEffect(() => {
-        if (
-            selectAllLabel &&
-            groupValue?.length &&
-            groupValue?.length === filteredOptions?.length &&
-            !isAllGroupSelected
-        ) {
-            setIsAllGroupSelected(true);
-        }
-    }, [selectAllLabel, groupValue, filteredOptions, isAllGroupSelected, setIsAllGroupSelected]);
+    const isAllSelected = useMemo(() => {
+        if (!groupValue?.length) return false;
+        const selected = groupValue.filter((current) => mappedFilteredOptions[current.value]);
+        return selected.length === filteredOptions.length;
+    }, [filteredOptions, groupValue, mappedFilteredOptions]);
 
     const isIndeterminate = useMemo(() => {
         if (groupValue?.length && filteredOptions?.length !== groupValue?.length) return true;
@@ -78,9 +82,8 @@ export default React.memo(({ children, ...props }) => {
     }, [groupValue, filteredOptions]);
 
     const onClickAll = useCallback(() => {
-        if (isAllGroupSelected || isIndeterminate) {
+        if (isAllSelected || isIndeterminate) {
             selectRef.setValue(otherGroupValue, 'set-value');
-            setIsAllGroupSelected(false);
         } else {
             let newOptions = filteredOptions;
 
@@ -91,11 +94,8 @@ export default React.memo(({ children, ...props }) => {
             const newValue = value.filter((current) => !mappedGroupValue[current.value]);
             const final = [...newValue, ...newOptions];
             selectRef.setValue(final, 'set-value');
-            setIsAllGroupSelected(true);
         }
     }, [
-        isAllGroupSelected,
-        setIsAllGroupSelected,
         filteredOptions,
         selectRef,
         isIndeterminate,
@@ -104,6 +104,7 @@ export default React.memo(({ children, ...props }) => {
         otherGroupValue,
         value,
         mappedGroupValue,
+        isAllSelected,
     ]);
 
     const handleOnEnter = useCallback(() => {
@@ -113,16 +114,19 @@ export default React.memo(({ children, ...props }) => {
 
     const handleOnLeave = useCallback(() => {
         if (!selectAllLabel) return;
-        setIsSelectAllFocused(false);
+        //To prevent flikering
+        setTimeout(() => {
+            setIsSelectAllFocused(false);
+        }, 30);
     }, [selectAllLabel, setIsSelectAllFocused]);
 
     const allRow = useMemo(() => {
-        if (!selectAllLabel || !filteredOptions?.length) return null;
+        if (!selectAllLabel && !filteredOptions?.length) return null;
         return (
             <div
                 key={label}
                 className={classnames(selectAllClassName, {
-                    [selectAllSelectedClassName]: isAllGroupSelected || isIndeterminate,
+                    [selectAllSelectedClassName]: isAllSelected || isIndeterminate,
                 })}
                 onClick={onClickAll}
                 onMouseEnter={handleOnEnter}
@@ -130,7 +134,7 @@ export default React.memo(({ children, ...props }) => {
             >
                 <Checkbox
                     className={selectAllCheckboxClassName}
-                    checked={isAllGroupSelected || isIndeterminate}
+                    checked={isAllSelected || isIndeterminate}
                     color="orange"
                     indeterminate={isIndeterminate}
                 />
@@ -147,7 +151,7 @@ export default React.memo(({ children, ...props }) => {
         label,
         selectAllLabel,
         onClickAll,
-        isAllGroupSelected,
+        isAllSelected,
         isIndeterminate,
         filteredOptions,
         override.groupLabel,

@@ -1,11 +1,10 @@
-import React, { useCallback, useMemo, useEffect, useState } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { components } from 'react-select';
 import Text from '../../../typography/Text';
 import Checkbox from '../../../general/Checkbox';
 import classnames from 'classnames';
 
 export default React.memo(({ children, ...props }) => {
-    const [isAllSelected, setIsAllSelected] = useState(false);
     const {
         className,
         selectAllClassName,
@@ -26,26 +25,28 @@ export default React.memo(({ children, ...props }) => {
         return options.filter((current) => !current.isDisabled);
     }, [options]);
 
-    useEffect(() => {
-        if (
-            selectAllLabel &&
-            value?.length &&
-            value?.length === filteredOptions?.length &&
-            !isAllSelected
-        ) {
-            setIsAllSelected(true);
-        }
-    }, [selectAllLabel, value, filteredOptions, isAllSelected, setIsAllSelected]);
+    const mappedFilteredOptions = useMemo(() => {
+        if (!filteredOptions?.length) return {};
+        return filteredOptions.reduce((obj, current) => {
+            obj[current.value] = current;
+            return obj;
+        }, {});
+    }, [filteredOptions]);
 
     const isIndeterminate = useMemo(() => {
         if (value?.length && filteredOptions?.length !== value?.length) return true;
         return false;
     }, [value, filteredOptions]);
 
+    const isAllSelected = useMemo(() => {
+        if (!value?.length) return false;
+        const selected = value.filter((current) => mappedFilteredOptions[current.value]);
+        return selected.length === filteredOptions.length;
+    }, [filteredOptions, value, mappedFilteredOptions]);
+
     const onClickAll = useCallback(() => {
         if (isAllSelected || isIndeterminate) {
             selectRef.clearValue();
-            setIsAllSelected(false);
         } else {
             let newOptions = filteredOptions;
 
@@ -54,17 +55,8 @@ export default React.memo(({ children, ...props }) => {
             }
 
             selectRef.setValue(newOptions, 'set-value');
-            setIsAllSelected(true);
         }
-    }, [
-        isAllSelected,
-        setIsAllSelected,
-        filteredOptions,
-        selectRef,
-        isIndeterminate,
-        filterOption,
-        inputValue,
-    ]);
+    }, [isAllSelected, filteredOptions, selectRef, isIndeterminate, filterOption, inputValue]);
 
     const handleOnEnter = useCallback(() => {
         if (!selectAllLabel) return;
