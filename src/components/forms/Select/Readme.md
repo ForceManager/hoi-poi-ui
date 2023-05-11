@@ -672,6 +672,10 @@ const optionsGroup = [
     },
 ];
 
+const [stateGroupNoValues, setStateGroupNoValues] = useState([]);
+
+const onChangeGroupNoValue = (value) => setStateGroupNOValues(value);
+
 const [stateGroupValues, setStateGroupValues] = useState([
     {
         label: 'Lorem ipsum 1',
@@ -721,7 +725,17 @@ const onChangeGroupValue = (value) => setStateGroupValues(value);
         selectAllLabel="Select all"
     />
     <Select
-        label="Groups"
+        label="Groups No Value"
+        placeholder="Select one"
+        onChange={onChangeGroupNoValue}
+        options={optionsGroup}
+        value={stateGroupNoValues}
+        isMulti={true}
+        isClearable
+        selectAllLabel="Select all"
+    />
+    <Select
+        label="Groups Value"
         placeholder="Select one"
         onChange={onChangeGroupValue}
         options={optionsGroup}
