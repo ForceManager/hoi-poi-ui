@@ -139,7 +139,7 @@ export default React.memo(({ children, ...props }) => {
                     indeterminate={isIndeterminate}
                 />
                 <Text className={selectAllTextClassName} {...override.groupLabel}>
-                    {label}
+                    {label || selectAllLabel}
                 </Text>
             </div>
         );

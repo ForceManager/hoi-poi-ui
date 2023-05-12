@@ -672,6 +672,15 @@ const optionsGroup = [
     },
 ];
 
+const loadGroupOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                resolve(optionsGroup);
+            }, 1000),
+        [],
+    );
+
 const [stateGroupNoValues, setStateGroupNoValues] = useState([]);
 
 const onChangeGroupNoValue = (value) => setStateGroupNOValues(value);
@@ -728,7 +737,7 @@ const onChangeGroupValue = (value) => setStateGroupValues(value);
         label="Groups No Value"
         placeholder="Select one"
         onChange={onChangeGroupNoValue}
-        options={optionsGroup}
+        loadOptions={loadGroupOptions}
         value={stateGroupNoValues}
         isMulti={true}
         isClearable
@@ -738,7 +747,7 @@ const onChangeGroupValue = (value) => setStateGroupValues(value);
         label="Groups Value"
         placeholder="Select one"
         onChange={onChangeGroupValue}
-        options={optionsGroup}
+        loadOptions={loadGroupOptions}
         value={stateGroupValues}
         isMulti={true}
         isClearable
