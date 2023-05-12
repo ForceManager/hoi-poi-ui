@@ -27,6 +27,8 @@ export default (theme) => ({
     },
     customOptions: {
         padding: '8px 12px',
+        overflowY: 'auto',
+        ...theme.utils.scrollbar,
         '& [class*="inputWrapper"]': {
             padding: '0 !important',
         },
