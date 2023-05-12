@@ -18,7 +18,7 @@ export default React.memo(({ children, ...props }) => {
         setIsSelectAllFocused,
     } = props.selectProps.groupHeadingProps;
 
-    const { filterOption, inputValue, value } = props.selectProps;
+    const { filterOption, inputValue, value = [] } = props.selectProps;
     const { label, options } = props.data;
 
     const filteredOptions = useMemo(() => {
@@ -91,7 +91,7 @@ export default React.memo(({ children, ...props }) => {
                 newOptions = filteredOptions.filter((current) => filterOption(current, inputValue));
             }
 
-            const newValue = value.filter((current) => !mappedGroupValue[current.value]);
+            const newValue = value?.filter((current) => !mappedGroupValue[current.value]) || [];
             const final = [...newValue, ...newOptions];
             selectRef.setValue(final, 'set-value');
         }
