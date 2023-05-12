@@ -128,8 +128,11 @@ const Select = memo(
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
         const shouldRenderSelectAll = selectAllLabel && isMulti && !isFuzzy;
-        const isSelectAllWithGroups = shouldRenderSelectAll && innerOptions?.[0]?.options;
         const [isSelectAllFocused, setIsSelectAllFocused] = useState(false);
+
+        const getIsSelectAllWithGroups = useCallback(() => {
+            return shouldRenderSelectAll && innerOptions?.[0]?.options;
+        }, [shouldRenderSelectAll, innerOptions]);
 
         const rootClassName = classnames(
             classes.root,
@@ -804,7 +807,7 @@ const Select = memo(
                     selectAllCheckboxClassName: classes.selectAllCheckbox,
                     selectAllTextClassName: classes.selectAllText,
                     selectAllLabel:
-                        shouldRenderSelectAll && !isSelectAllWithGroups && selectAllLabel,
+                        shouldRenderSelectAll && !getIsSelectAllWithGroups && selectAllLabel,
                     setIsSelectAllFocused,
                     value: newValue,
                     options: lazyOptions.options || innerOptions || [],
@@ -822,7 +825,7 @@ const Select = memo(
                     selectAllTextClassName: classes.selectAllText,
                     setIsSelectAllFocused,
                     selectAllLabel:
-                        shouldRenderSelectAll && isSelectAllWithGroups && selectAllLabel,
+                        shouldRenderSelectAll && getIsSelectAllWithGroups && selectAllLabel,
                     selectRef: selectRef.current,
                     override: {
                         groupHeading: override.groupHeading,
@@ -1026,7 +1029,7 @@ const Select = memo(
             classes.optionFocusDisabled,
             onClickAction,
             shouldRenderSelectAll,
-            isSelectAllWithGroups,
+            getIsSelectAllWithGroups,
             selectAllLabel,
             override,
             getRef,
