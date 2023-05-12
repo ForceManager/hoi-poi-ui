@@ -123,16 +123,23 @@ const Select = memo(
             options: null,
             isLoading: false,
         });
+        const [isSelectAllFocused, setIsSelectAllFocused] = useState(false);
+        const shouldRenderSelectAll = selectAllLabel && isMulti && !isFuzzy;
+        const [isSelectAllWithGroups, setIsSelectAllWithGroups] = useState(
+            shouldRenderSelectAll && innerOptions?.[0]?.options,
+        );
         const debounce = useRef(null);
         const menuPlacementRef = useRef('bottom');
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
-        const shouldRenderSelectAll = selectAllLabel && isMulti && !isFuzzy;
-        const [isSelectAllFocused, setIsSelectAllFocused] = useState(false);
 
-        const getIsSelectAllWithGroups = useCallback(() => {
-            return shouldRenderSelectAll && innerOptions?.[0]?.options;
-        }, [shouldRenderSelectAll, innerOptions]);
+        const getIsSelectAllWithGroups = useCallback(
+            (options) => {
+                if (!shouldRenderSelectAll) return;
+                setIsSelectAllWithGroups(!!options?.[0]?.options);
+            },
+            [shouldRenderSelectAll],
+        );
 
         const rootClassName = classnames(
             classes.root,
@@ -292,6 +299,7 @@ const Select = memo(
                         isLoading: true,
                     });
                     loadOptions().then((options) => {
+                        getIsSelectAllWithGroups(options);
                         setLazyOptions({
                             areLoaded: true,
                             isLoading: false,
@@ -322,6 +330,7 @@ const Select = memo(
                 loadOptions,
                 setMenuPlacement,
                 newValue,
+                getIsSelectAllWithGroups,
             ],
         );
 
@@ -807,7 +816,7 @@ const Select = memo(
                     selectAllCheckboxClassName: classes.selectAllCheckbox,
                     selectAllTextClassName: classes.selectAllText,
                     selectAllLabel:
-                        shouldRenderSelectAll && !getIsSelectAllWithGroups && selectAllLabel,
+                        shouldRenderSelectAll && !isSelectAllWithGroups && selectAllLabel,
                     setIsSelectAllFocused,
                     value: newValue,
                     options: lazyOptions.options || innerOptions || [],
@@ -825,7 +834,7 @@ const Select = memo(
                     selectAllTextClassName: classes.selectAllText,
                     setIsSelectAllFocused,
                     selectAllLabel:
-                        shouldRenderSelectAll && getIsSelectAllWithGroups && selectAllLabel,
+                        shouldRenderSelectAll && isSelectAllWithGroups && selectAllLabel,
                     selectRef: selectRef.current,
                     override: {
                         groupHeading: override.groupHeading,
@@ -1029,7 +1038,7 @@ const Select = memo(
             classes.optionFocusDisabled,
             onClickAction,
             shouldRenderSelectAll,
-            getIsSelectAllWithGroups,
+            isSelectAllWithGroups,
             selectAllLabel,
             override,
             getRef,
