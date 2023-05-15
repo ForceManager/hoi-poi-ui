@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback, useState } from 'react';
+import React, { memo, useMemo, useCallback, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Popover from '../../utils/Popover';
@@ -7,7 +7,7 @@ import OptionList from './components/OptionList';
 
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
-import { useEffect } from 'react';
+
 const useStyles = createUseStyles(styles, 'SelectWrapper');
 
 const SelectWrapper = memo(
@@ -184,7 +184,12 @@ const SelectWrapper = memo(
                     className={popoverClassName}
                     onVisibleChange={onChangeOpen}
                     overlayStyle={overlayStyle}
-                    overlayInnerStyle={overlayInnerStyle}
+                    overlayInnerStyle={{
+                        ...overlayInnerStyle,
+                        maxHeight:
+                            window?.innerHeight - 100 > 400 ? window?.innerHeight - 100 : 400,
+                        overflowY: 'scroll',
+                    }}
                     overrides={override.Popover || {}}
                 >
                     {children && children}
