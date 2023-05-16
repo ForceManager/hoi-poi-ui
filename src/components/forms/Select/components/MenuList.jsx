@@ -22,8 +22,14 @@ export default React.memo(({ children, ...props }) => {
     const { options, filterOption, inputValue } = props.selectProps;
 
     const filteredOptions = useMemo(() => {
+        if (!options?.length) return [];
+        if (filterOption) {
+            return options.filter(
+                (current) => !current.isDisabled && filterOption(current, inputValue),
+            );
+        }
         return options.filter((current) => !current.isDisabled);
-    }, [options]);
+    }, [options, filterOption, inputValue]);
 
     const mappedFilteredOptions = useMemo(() => {
         if (!filteredOptions?.length) return {};
@@ -34,9 +40,10 @@ export default React.memo(({ children, ...props }) => {
     }, [filteredOptions]);
 
     const isIndeterminate = useMemo(() => {
-        if (value?.length && filteredOptions?.length !== value?.length) return true;
+        const selected = value.filter((current) => mappedFilteredOptions[current.value]);
+        if (selected?.length && filteredOptions?.length !== selected?.length) return true;
         return false;
-    }, [value, filteredOptions]);
+    }, [value, mappedFilteredOptions, filteredOptions]);
 
     const isAllSelected = useMemo(() => {
         if (!value?.length) return false;
@@ -46,17 +53,28 @@ export default React.memo(({ children, ...props }) => {
 
     const onClickAll = useCallback(() => {
         if (isAllSelected || isIndeterminate) {
-            selectRef.clearValue();
-        } else {
-            let newOptions = filteredOptions;
-
-            if (filterOption) {
-                newOptions = filteredOptions.filter((current) => filterOption(current, inputValue));
+            if (inputValue && filteredOptions.length) {
+                let newOptions = value.filter((current) => !mappedFilteredOptions[current.value]);
+                selectRef.setValue(newOptions, 'set-value');
+            } else {
+                selectRef.clearValue();
             }
-
-            selectRef.setValue(newOptions, 'set-value');
+        } else {
+            if (inputValue && filteredOptions.length) {
+                selectRef.setValue([...value, ...filteredOptions], 'set-value');
+            } else {
+                selectRef.setValue(filteredOptions, 'set-value');
+            }
         }
-    }, [isAllSelected, filteredOptions, selectRef, isIndeterminate, filterOption, inputValue]);
+    }, [
+        isAllSelected,
+        filteredOptions,
+        selectRef,
+        isIndeterminate,
+        inputValue,
+        value,
+        mappedFilteredOptions,
+    ]);
 
     const handleOnEnter = useCallback(() => {
         if (!selectAllLabel) return;
@@ -69,7 +87,7 @@ export default React.memo(({ children, ...props }) => {
     }, [selectAllLabel, setIsSelectAllFocused]);
 
     const allRow = useMemo(() => {
-        if (!selectAllLabel || !filteredOptions?.length) return null;
+        if (!selectAllLabel || !filteredOptions?.length || !filterOption) return null;
         return (
             <div
                 className={classnames(selectAllClassName, {
@@ -100,6 +118,7 @@ export default React.memo(({ children, ...props }) => {
         filteredOptions,
         handleOnEnter,
         handleOnLeave,
+        filterOption,
     ]);
 
     const innerProps = useMemo(() => {
