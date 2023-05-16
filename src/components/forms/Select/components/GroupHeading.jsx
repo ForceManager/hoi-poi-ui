@@ -141,6 +141,7 @@ export default React.memo(({ children, ...props }) => {
         }, 30);
     }, [selectAllLabel, setIsSelectAllFocused]);
 
+    // It depents also on filterOption because without it, won't have a correct behavior
     const allRow = useMemo(() => {
         if (!selectAllLabel || !filteredOptions?.length || !filterOption) return null;
         return (
