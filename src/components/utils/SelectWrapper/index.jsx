@@ -186,8 +186,7 @@ const SelectWrapper = memo(
                     overlayStyle={overlayStyle}
                     overlayInnerStyle={{
                         ...overlayInnerStyle,
-                        maxHeight:
-                            window?.innerHeight - 100 > 400 ? window?.innerHeight - 100 : 400,
+                        maxHeight: window?.innerHeight - 100,
                         overflowY: 'scroll',
                     }}
                     overrides={override.Popover || {}}
