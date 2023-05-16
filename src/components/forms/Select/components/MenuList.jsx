@@ -40,6 +40,7 @@ export default React.memo(({ children, ...props }) => {
     }, [filteredOptions]);
 
     const isIndeterminate = useMemo(() => {
+        if (!value?.length) return false;
         const selected = value.filter((current) => mappedFilteredOptions[current.value]);
         if (selected?.length && filteredOptions?.length !== selected?.length) return true;
         return false;
@@ -54,14 +55,15 @@ export default React.memo(({ children, ...props }) => {
     const onClickAll = useCallback(() => {
         if (isAllSelected || isIndeterminate) {
             if (inputValue && filteredOptions.length) {
-                let newOptions = value.filter((current) => !mappedFilteredOptions[current.value]);
+                let newOptions =
+                    value?.filter((current) => !mappedFilteredOptions[current.value]) || [];
                 selectRef.setValue(newOptions, 'set-value');
             } else {
                 selectRef.clearValue();
             }
         } else {
             if (inputValue && filteredOptions.length) {
-                selectRef.setValue([...value, ...filteredOptions], 'set-value');
+                selectRef.setValue([...(value || []), ...filteredOptions], 'set-value');
             } else {
                 selectRef.setValue(filteredOptions, 'set-value');
             }
@@ -86,6 +88,7 @@ export default React.memo(({ children, ...props }) => {
         setIsSelectAllFocused(false);
     }, [selectAllLabel, setIsSelectAllFocused]);
 
+    // It depents also on filterOption, because without it won't have a correct behavior
     const allRow = useMemo(() => {
         if (!selectAllLabel || !filteredOptions?.length || !filterOption) return null;
         return (
