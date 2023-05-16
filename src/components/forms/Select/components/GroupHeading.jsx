@@ -21,10 +21,20 @@ export default React.memo(({ children, ...props }) => {
     const { filterOption, inputValue, value = [] } = props.selectProps;
     const { label, options } = props.data;
 
-    const filteredOptions = useMemo(() => {
+    const nonDisabledOptions = useMemo(() => {
         if (!options?.length) return [];
         return options.filter((current) => !current.isDisabled);
     }, [options]);
+
+    const filteredOptions = useMemo(() => {
+        if (!options?.length) return [];
+        if (filterOption) {
+            return options.filter(
+                (current) => !current.isDisabled && filterOption(current, inputValue),
+            );
+        }
+        return options.filter((current) => !current.isDisabled);
+    }, [options, filterOption, inputValue]);
 
     const mappedValues = useMemo(() => {
         if (!value?.length) return {};
@@ -50,19 +60,25 @@ export default React.memo(({ children, ...props }) => {
         }, {});
     }, [filteredOptions]);
 
-    // Values from this group
+    // Values from this group without filter
     const groupValue = useMemo(() => {
+        if (!Object.keys(mappedValues).length) return [];
+        return nonDisabledOptions.filter((current) => mappedValues[current.value]);
+    }, [mappedValues, nonDisabledOptions]);
+
+    // Values from this group filtered
+    const groupFilteredValue = useMemo(() => {
         if (!Object.keys(mappedValues).length) return [];
         return filteredOptions.filter((current) => mappedValues[current.value]);
     }, [filteredOptions, mappedValues]);
 
-    const mappedGroupValue = useMemo(() => {
-        if (!groupValue?.length) return {};
-        return groupValue.reduce((obj, current) => {
+    const mappedGroupFilteredValue = useMemo(() => {
+        if (!groupFilteredValue?.length) return {};
+        return groupFilteredValue.reduce((obj, current) => {
             obj[current.value] = current;
             return obj;
         }, {});
-    }, [groupValue]);
+    }, [groupFilteredValue]);
 
     // Values from other groups
     const otherGroupValue = useMemo(() => {
@@ -71,40 +87,45 @@ export default React.memo(({ children, ...props }) => {
     }, [value, mappedOptions]);
 
     const isAllSelected = useMemo(() => {
-        if (!groupValue?.length) return false;
-        const selected = groupValue.filter((current) => mappedFilteredOptions[current.value]);
+        if (!groupFilteredValue?.length) return false;
+        const selected = groupFilteredValue.filter(
+            (current) => mappedFilteredOptions[current.value],
+        );
         return selected.length === filteredOptions.length;
-    }, [filteredOptions, groupValue, mappedFilteredOptions]);
+    }, [filteredOptions, groupFilteredValue, mappedFilteredOptions]);
 
     const isIndeterminate = useMemo(() => {
-        if (groupValue?.length && filteredOptions?.length !== groupValue?.length) return true;
+        if (groupFilteredValue?.length && filteredOptions?.length !== groupFilteredValue?.length)
+            return true;
         return false;
-    }, [groupValue, filteredOptions]);
+    }, [groupFilteredValue, filteredOptions]);
 
     const onClickAll = useCallback(() => {
         if (isAllSelected || isIndeterminate) {
-            selectRef.setValue(otherGroupValue, 'set-value');
+            let newOptions = groupValue.filter((current) => !mappedFilteredOptions[current.value]);
+            selectRef.setValue([...otherGroupValue, ...newOptions], 'set-value');
         } else {
-            let newOptions = filteredOptions;
-
-            if (filterOption) {
-                newOptions = filteredOptions.filter((current) => filterOption(current, inputValue));
+            const newValue =
+                value?.filter((current) => !mappedGroupFilteredValue[current.value]) || [];
+            if (inputValue && filteredOptions.length) {
+                selectRef.setValue([...newValue, ...groupFilteredValue, ...filteredOptions]);
+            } else {
+                const final = [...newValue, ...filteredOptions];
+                selectRef.setValue(final, 'set-value');
             }
-
-            const newValue = value?.filter((current) => !mappedGroupValue[current.value]) || [];
-            const final = [...newValue, ...newOptions];
-            selectRef.setValue(final, 'set-value');
         }
     }, [
         filteredOptions,
         selectRef,
         isIndeterminate,
-        filterOption,
         inputValue,
         otherGroupValue,
         value,
-        mappedGroupValue,
+        mappedGroupFilteredValue,
         isAllSelected,
+        groupFilteredValue,
+        mappedFilteredOptions,
+        groupValue,
     ]);
 
     const handleOnEnter = useCallback(() => {
@@ -121,7 +142,7 @@ export default React.memo(({ children, ...props }) => {
     }, [selectAllLabel, setIsSelectAllFocused]);
 
     const allRow = useMemo(() => {
-        if (!selectAllLabel && !filteredOptions?.length) return null;
+        if (!selectAllLabel || !filteredOptions?.length || !filterOption) return null;
         return (
             <div
                 key={label}
@@ -157,6 +178,7 @@ export default React.memo(({ children, ...props }) => {
         override.groupLabel,
         handleOnEnter,
         handleOnLeave,
+        filterOption,
     ]);
 
     return (
