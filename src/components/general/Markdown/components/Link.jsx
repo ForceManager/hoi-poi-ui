@@ -1,22 +1,7 @@
 import React, { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import LinkComponent from '../../../typography/Link';
 
-const validLinkAttributes = [
-    'charset',
-    'className',
-    'crossorigin',
-    'download',
-    'hreflang',
-    'id',
-    'integrity',
-    'media',
-    'ping',
-    'referrerpolicy',
-    'rel',
-    'target',
-    'title',
-    'type',
-];
+const validLinkAttributes = ['id', 'title'];
 
 const Link = ({ callback, href, target, title, ...otherProps }) => {
     const [finalTitle, setFinalTitle] = useState(undefined);
@@ -60,12 +45,13 @@ const Link = ({ callback, href, target, title, ...otherProps }) => {
     }, [parseTitleString, title]);
 
     const linkProps = useMemo(() => {
+        const { id, ...otherAttrs } = attributes;
         return {
             href,
             target,
             title: finalTitle,
             onClick: handleClick,
-            ...attributes,
+            ...otherAttrs,
             ...otherProps,
         };
     }, [attributes, finalTitle, handleClick, href, otherProps, target]);
