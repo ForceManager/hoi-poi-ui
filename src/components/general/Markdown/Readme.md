@@ -50,7 +50,7 @@ Ordered lists can be created using numbers:
 2. Item 2
 3. Item 3
 
-You can create a link by using square brackets followed by the URL in parentheses: [Google](https://www.google.com/)
+You can create a link by using square brackets followed by the URL in parentheses: [Google](https://www.google.com/ '{"id":"link-1","target":"_blank"}')
 
 You can create an image by using an exclamation mark, followed by square brackets with the alt text, and the image URL in parentheses:
 
@@ -78,5 +78,37 @@ const [state, setState] = useState(markdown);
         overrides={{ AceEditor: { mode: 'markdown' } }}
     />
     <Markdown content={state} />
+</div>;
+```
+
+Custom callback for links:
+
+```jsx
+import { Code } from 'hoi-poi-ui';
+
+const markdown = `
+Example of how to use the link's \`title\` attribute to add custom attributes to the links in the markdown document and use them in a callback function:
+
+- \`title\` attributes in links are natively supported by the markdown syntax and it can be used like this: [Google](https://www.google.com/ 'Visit Google')
+- We have customized the \`Link\` component so it accepts a stringified JSON with an object of valid HTML link attributes like this [Google](https://www.google.com/ '{"title":"Visit Google","id":"link-1","target":"_blank"}'), the attributes in the JSON will be added to the rendered HTML link.
+- If a \`linkCallback\` prop is provided, it prevents the default link behavior and invokes the callback function with the event, attributes, and a link function that performs the redirection.
+
+`;
+
+const linkCallback = ({ attributes, link }) => {
+    const { id } = attributes;
+    switch (id) {
+        case 'link-1':
+            console.log('The Visit Google link has been clicked');
+            link();
+            break;
+        default:
+            break;
+    }
+};
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+    <Code isFullWidth value={markdown} overrides={{ AceEditor: { mode: 'markdown' } }} />
+    <Markdown content={markdown} linkCallback={linkCallback} />
 </div>;
 ```
