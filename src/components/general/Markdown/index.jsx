@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 import Text from '../../typography/Text';
-// import Link from '../../typography/Link';
 import List from './components/List';
 import Link from './components/Link';
 

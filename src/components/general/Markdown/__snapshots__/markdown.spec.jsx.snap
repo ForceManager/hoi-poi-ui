@@ -1652,9 +1652,15 @@ console.log(example);
                   bullet="arrowRight"
                   items={
                     [
-                      "Item 1",
-                      "Item 2",
-                      "Item 3",
+                      [
+                        "Item 1",
+                      ],
+                      [
+                        "Item 2",
+                      ],
+                      [
+                        "Item 3",
+                      ],
                     ]
                   }
                   type="unordered"
@@ -2016,9 +2022,15 @@ console.log(example);
                   bullet="arrowRight"
                   items={
                     [
-                      "Item 1",
-                      "Item 2",
-                      "Item 3",
+                      [
+                        "Item 1",
+                      ],
+                      [
+                        "Item 2",
+                      ],
+                      [
+                        "Item 3",
+                      ],
                     ]
                   }
                   type="unordered"
@@ -2380,9 +2392,15 @@ console.log(example);
                   bullet="arrowRight"
                   items={
                     [
-                      "Item 1",
-                      "Item 2",
-                      "Item 3",
+                      [
+                        "Item 1",
+                      ],
+                      [
+                        "Item 2",
+                      ],
+                      [
+                        "Item 3",
+                      ],
                     ]
                   }
                   type="unordered"
@@ -2800,9 +2818,15 @@ console.log(example);
                 <ForwardRef
                   items={
                     [
-                      "Item 1",
-                      "Item 2",
-                      "Item 3",
+                      [
+                        "Item 1",
+                      ],
+                      [
+                        "Item 2",
+                      ],
+                      [
+                        "Item 3",
+                      ],
                     ]
                   }
                   type="ordered"
@@ -3008,18 +3032,25 @@ console.log(example);
                   >
                     <Link
                       href="https://www.google.com/"
-                      isTruncated={false}
-                      overrides={{}}
-                      type="body"
-                      underline={false}
                       variation="primary"
                     >
-                      <a
-                        className="HoiPoi__Link__root-1-34 HoiPoi__Link__body-1-45 HoiPoi__Link__primary-1-54"
+                      <Link
                         href="https://www.google.com/"
+                        isTruncated={false}
+                        onClick={[Function]}
+                        overrides={{}}
+                        type="body"
+                        underline={false}
+                        variation="primary"
                       >
-                        Google
-                      </a>
+                        <a
+                          className="HoiPoi__Link__root-1-34 HoiPoi__Link__body-1-45 HoiPoi__Link__primary-1-54"
+                          href="https://www.google.com/"
+                          onClick={[Function]}
+                        >
+                          Google
+                        </a>
+                      </Link>
                     </Link>
                   </a>
                 </p>

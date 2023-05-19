@@ -89,7 +89,7 @@ import { Code } from 'hoi-poi-ui';
 const markdown = `
 Example of how to use the link's \`title\` attribute to add custom attributes to the links in the markdown document and use them in a callback function:
 
-- \`title\` attributes in links are natively supported by the markdown syntax and it can be used like this: [Google](https://www.google.com/ 'Visit Google')
+- \`title\` attributes in links are natively supported by the markdown syntax and them can be used like this: [Google](https://www.google.com/ 'Visit Google')
 - We have customized the \`Link\` component so it accepts a stringified JSON with an object of valid HTML link attributes like this [Google](https://www.google.com/ '{"title":"Visit Google","id":"link-1","target":"_blank"}'), the attributes in the JSON will be added to the rendered HTML link.
 - If a \`linkCallback\` prop is provided, it prevents the default link behavior and invokes the callback function with the event, attributes, and a link function that performs the redirection.
 
@@ -103,6 +103,7 @@ const linkCallback = ({ attributes, link }) => {
             link();
             break;
         default:
+            link();
             break;
     }
 };
