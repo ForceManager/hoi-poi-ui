@@ -5,7 +5,7 @@ const validLinkAttributes = ['id', 'title'];
 
 const Link = ({ callback, href, target, title, ...otherProps }) => {
     const [finalTitle, setFinalTitle] = useState(undefined);
-    const [attributes, setAttributes] = useState(null);
+    const [attributes, setAttributes] = useState({});
 
     const handleClick = useCallback(
         (event) => {
