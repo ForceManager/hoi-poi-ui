@@ -5,15 +5,22 @@ import ReactMarkdown from 'react-markdown';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 import Text from '../../typography/Text';
-import Link from '../../typography/Link';
 import List from './components/List';
+import Link from './components/Link';
 
 import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'Markdown');
 
 const Markdown = memo(
-    ({ classes: classesProp, className: classNameProp, content, overrides: overridesProp }) => {
+    ({
+        classes: classesProp,
+        className: classNameProp,
+        components,
+        content,
+        linkCallback,
+        overrides: overridesProp,
+    }) => {
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Markdown.overrides);
 
@@ -23,7 +30,12 @@ const Markdown = memo(
                 children: content,
                 components: {
                     a: ({ node, children, ...props }) => (
-                        <Link variation="primary" {...props} {...override.a}>
+                        <Link
+                            variation="primary"
+                            callback={linkCallback}
+                            {...props}
+                            {...override.a}
+                        >
                             {children}
                         </Link>
                     ),
@@ -62,8 +74,11 @@ const Markdown = memo(
                             {children}
                         </Text>
                     ),
-                    ul: ({ children }) => <List items={children} bullet="arrowRight" {...override.ul} />,
+                    ul: ({ children }) => (
+                        <List items={children} bullet="arrowRight" {...override.ul} />
+                    ),
                     ol: ({ children }) => <List items={children} type="ordered" {...override.ol} />,
+                    ...components,
                 },
                 ...override.root,
             }),
@@ -71,7 +86,9 @@ const Markdown = memo(
                 classNameProp,
                 classes.block,
                 classes.root,
+                components,
                 content,
+                linkCallback,
                 override.a,
                 override.h1,
                 override.h2,
@@ -99,7 +116,9 @@ Markdown.defaultProps = {
 
 Markdown.propTypes = {
     className: PropTypes.string,
+    components: PropTypes.object,
     content: PropTypes.string.isRequired,
+    linkCallback: PropTypes.linkCallback,
     overrides: PropTypes.object,
 };
 
