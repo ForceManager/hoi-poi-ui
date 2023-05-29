@@ -41,7 +41,7 @@ const Progress = forwardRef(
                     [classes.medium]: percentage >= 25,
                     [classes.high]: percentage >= 50,
                     [classes.higher]: percentage >= 75,
-                    [classes.full]: percentage === 100,
+                    [classes.full]: percentage >= 100,
                     [classes.animated]: !!animation,
                 }),
                 'aria-valuenow': value,
