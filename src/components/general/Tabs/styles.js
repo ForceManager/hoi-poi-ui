@@ -59,24 +59,22 @@ export default (theme) => ({
             overflow: 'hidden',
         },
         '& .hoi-poi-ui__tabs-nav': {
+            display: 'flex',
             boxSizing: 'border-box',
             paddingLeft: 0,
             position: 'relative',
             margin: 0,
-            float: 'left',
             listStyle: 'none',
-            display: 'inline-block',
             transformOrigin: '0 0',
+            '& > div': {
+                display: 'flex',
+                flexFlow: 'row nowrap',
+                gap: 20,
+                flex: 1,
+            },
         },
         '& .hoi-poi-ui__tabs-nav-animated': {
             transition: 'transform 0.5s cubic-bezier(0.35, 0, 0.25, 1)',
-        },
-        '& .hoi-poi-ui__tabs-nav:before': {
-            display: 'table',
-            content: '""',
-        },
-        '& .hoi-poi-ui__tabs-nav:after': {
-            clear: 'both',
         },
         '& .hoi-poi-ui__tabs-tab': {
             boxSizing: 'border-box',
@@ -99,9 +97,9 @@ export default (theme) => ({
                 zIndex: 1,
                 backgroundColor: theme.colors.neutral900,
                 height: 2,
-                top: '37px',
                 left: 0,
                 right: 0,
+                bottom: 0,
                 content: '""',
                 position: 'absolute',
             },
@@ -127,7 +125,6 @@ export default (theme) => ({
             willChange: 'transform',
         },
         '& .hoi-poi-ui__tabs-content-animated .hoi-poi-ui__tabs-tabpane': {
-            MsFlexNegative: 0,
             flexShrink: 0,
         },
         '& .no-flexbox .hoi-poi-ui__tabs-content': {
@@ -147,7 +144,6 @@ export default (theme) => ({
             borderRight: `2px solid ${theme.colors.neutral400}`,
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-bar': {
-            float: 'left',
             height: '100%',
             marginRight: '10px',
         },
@@ -162,7 +158,6 @@ export default (theme) => ({
             height: '100%',
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-content-animated': {
-            MsFlexDirection: 'column',
             flexDirection: 'column',
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-content-animated .hoi-poi-ui__tabs-tabpane': {
@@ -177,17 +172,13 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav': {
             display: 'flex',
-            MsFlex: 1,
             flex: 1,
-            MsFlexDirection: 'column',
             flexDirection: 'column',
             height: '100%',
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
             display: 'flex',
-            MsFlexNegative: 0,
             flexShrink: 0,
-            MsFlexPack: 'center',
             justifyContent: 'center',
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-tab-prev': {
@@ -244,7 +235,6 @@ export default (theme) => ({
             borderLeft: `2px solid ${theme.colors.neutral400}`,
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-bar': {
-            float: 'right',
             height: '100%',
             marginLeft: '10px',
         },
@@ -266,17 +256,13 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav': {
             display: 'flex',
-            MsFlex: 1,
             flex: 1,
-            MsFlexDirection: 'column',
             flexDirection: 'column',
             height: '100%',
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
             display: 'flex',
-            MsFlexNegative: 0,
             flexShrink: 0,
-            MsFlexPack: 'center',
             justifyContent: 'center',
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-tab-prev': {
@@ -302,7 +288,6 @@ export default (theme) => ({
                 'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSIxMHB4IiB2aWV3LWJveD0iMCAwIDEwIDEwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIHRyYW5zZm9ybT0icm90YXRlKDkwLCA1LCA1KSIgZD0iTTUgNS44MzZsMy42Ny0zLjIxMmEuNS41IDAgMCAxIC42Ni43NTJMNS4zMzQgNi44NzJhLjQ5OS40OTkgMCAwIDEtLjY3IDBMLjY3MSAzLjM3NmEuNS41IDAgMCAxIC42NTgtLjc1Mkw1IDUuODM2eiIgZmlsbD0iIzc4ODU5MCIgZmlsbFJ1bGU9ImV2ZW5vZGQiPjwvcGF0aD48L3N2Zz4=)',
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-content-animated': {
-            MsFlexDirection: 'column',
             flexDirection: 'column',
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-content-animated .hoi-poi-ui__tabs-tabpane': {
@@ -335,31 +320,28 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav': {
             display: 'flex',
-            MsFlex: 1,
             flex: 1,
             width: '100%',
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
             display: 'flex',
-            MsFlexNegative: 0,
             flexShrink: 0,
             marginRight: 0,
             padding: '8px 0',
-            MsFlexPack: 'center',
             justifyContent: 'center',
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-nav-wrap': {
             width: '100%',
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-content-animated': {
-            MsFlexDirection: 'row',
             flexDirection: 'row',
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-content-animated .hoi-poi-ui__tabs-tabpane': {
             width: '100%',
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-tab-next': {
-            marginRight: '-2px',
+            marginRight: -2,
+            marginTop: -4,
             width: '32px',
             height: '100%',
             top: 0,
@@ -370,7 +352,8 @@ export default (theme) => ({
                 'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSIxMHB4IiB2aWV3LWJveD0iMCAwIDEwIDEwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIHRyYW5zZm9ybT0icm90YXRlKDI3MCwgNSwgNSkiIGQ9Ik01IDUuODM2bDMuNjctMy4yMTJhLjUuNSAwIDAgMSAuNjYuNzUyTDUuMzM0IDYuODcyYS40OTkuNDk5IDAgMCAxLS42NyAwTC42NzEgMy4zNzZhLjUuNSAwIDAgMSAuNjU4LS43NTJMNSA1LjgzNnoiIGZpbGw9IiM3ODg1OTAiIGZpbGxSdWxlPSJldmVub2RkIj48L3BhdGg+PC9zdmc+)',
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-tab-prev': {
-            marginRight: '-2px',
+            marginRight: -2,
+            marginTop: -4,
             width: '32px',
             height: '100%',
             top: 0,
@@ -386,7 +369,7 @@ export default (theme) => ({
             left: 0,
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-tab': {
-            float: 'left',
+            // float: 'left',
             height: '100%',
             marginRight: '20px',
         },
@@ -402,7 +385,7 @@ export default (theme) => ({
             paddingRight: '32px',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-scroll': {
-            width: '99999px',
+            width: 'unset',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-swipe': {
             position: 'relative',
@@ -410,34 +393,30 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav': {
             display: 'flex',
-            MsFlex: 1,
             flex: 1,
             width: '100%',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
             display: 'flex',
-            MsFlexNegative: 0,
             flexShrink: 0,
             marginRight: 0,
             padding: '8px 0',
-            MsFlexPack: 'center',
             justifyContent: 'center',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-wrap': {
             width: '100%',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-content-animated': {
-            MsFlexDirection: 'row',
             flexDirection: 'row',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-content-animated .hoi-poi-ui__tabs-tabpane': {
             width: '100%',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-tab-next': {
-            marginRight: '-2px',
+            marginRight: -2,
+            marginTop: -4,
             width: 0,
             height: 0,
-            top: '-4px',
             textAlign: 'center',
             transition: 'width .3s, height .3s, opacity .3s',
             right: 0,
@@ -447,10 +426,10 @@ export default (theme) => ({
                 'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSIxMHB4IiB2aWV3LWJveD0iMCAwIDEwIDEwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIHRyYW5zZm9ybT0icm90YXRlKDI3MCwgNSwgNSkiIGQ9Ik01IDUuODM2bDMuNjctMy4yMTJhLjUuNSAwIDAgMSAuNjYuNzUyTDUuMzM0IDYuODcyYS40OTkuNDk5IDAgMCAxLS42NyAwTC42NzEgMy4zNzZhLjUuNSAwIDAgMSAuNjU4LS43NTJMNSA1LjgzNnoiIGZpbGw9IiM3ODg1OTAiIGZpbGxSdWxlPSJldmVub2RkIj48L3BhdGg+PC9zdmc+)',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-tab-prev': {
-            marginRight: '-2px',
+            marginRight: -2,
+            marginTop: -4,
             width: 0,
             height: 0,
-            top: '-4px',
             textAlign: 'center',
             transition: 'width .3s, height .3s, opacity .3s',
             left: 0,
@@ -465,9 +444,7 @@ export default (theme) => ({
             left: 0,
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-tab': {
-            float: 'left',
             height: '100%',
-            marginRight: '20px',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-tabpane-inactive': {
             height: 0,
@@ -499,6 +476,10 @@ export default (theme) => ({
         '& .hoi-poi-ui__tabs-nav': {
             float: 'none',
             display: 'block',
+            '& > div': {
+                flexFlow: 'column nowrap',
+                gap: 0,
+            },
         },
         '& .hoi-poi-ui__tabs-nav > *': {
             display: 'flex',
