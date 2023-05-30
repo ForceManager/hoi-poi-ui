@@ -369,7 +369,6 @@ export default (theme) => ({
             left: 0,
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-tab': {
-            // float: 'left',
             height: '100%',
             marginRight: '20px',
         },
