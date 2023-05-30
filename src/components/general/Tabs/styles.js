@@ -102,6 +102,7 @@ export default (theme) => ({
                 bottom: 0,
                 content: '""',
                 position: 'absolute',
+                display: 'block',
             },
             color: theme.colors.neutral900,
             cursor: 'default',
@@ -382,9 +383,6 @@ export default (theme) => ({
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-container-scrolling': {
             paddingLeft: '32px',
             paddingRight: '32px',
-        },
-        '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-scroll': {
-            width: 'unset',
         },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-swipe': {
             position: 'relative',
