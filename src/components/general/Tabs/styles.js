@@ -1,10 +1,12 @@
 export default (theme) => ({
     root: {
-        borderBottom: `1px solid ${theme.colors.neutral400}`,
         '& .hoi-poi-ui__tabs': {
             boxSizing: 'border-box',
             position: 'relative',
             overflow: 'hidden',
+        },
+        '& .hoi-poi-ui__tabs-nav-container': {
+            borderBottom: `1px solid ${theme.colors.neutral400}`,
         },
         '& .hoi-poi-ui__tabs-bar, & .hoi-poi-ui__tabs-nav-container': {
             fontSize: '14px',
@@ -50,11 +52,12 @@ export default (theme) => ({
         '& .hoi-poi-ui__tabs-tab-prev-icon:before, & .hoi-poi-ui__tabs-tab-next-icon:before': {
             display: 'block',
         },
-        '& .hoi-poi-ui__tabs-tab-btn-disabled, & .hoi-poi-ui__tabs-tab-arrow-show.hoi-poi-ui__tabs-tab-btn-disabled': {
-            cursor: 'default',
-            color: '#ccc',
-            opacity: '0.5 !important',
-        },
+        '& .hoi-poi-ui__tabs-tab-btn-disabled, & .hoi-poi-ui__tabs-tab-arrow-show.hoi-poi-ui__tabs-tab-btn-disabled':
+            {
+                cursor: 'default',
+                color: '#ccc',
+                opacity: '0.5 !important',
+            },
         '& .hoi-poi-ui__tabs-nav-wrap': {
             overflow: 'hidden',
         },
@@ -66,7 +69,7 @@ export default (theme) => ({
             margin: 0,
             listStyle: 'none',
             transformOrigin: '0 0',
-            '& > div': {
+            '& > div:not([class])': {
                 display: 'flex',
                 flexFlow: 'row nowrap',
                 gap: 20,
@@ -177,11 +180,12 @@ export default (theme) => ({
             flexDirection: 'column',
             height: '100%',
         },
-        '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
-            display: 'flex',
-            flexShrink: 0,
-            justifyContent: 'center',
-        },
+        '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab':
+            {
+                display: 'flex',
+                flexShrink: 0,
+                justifyContent: 'center',
+            },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-tab-prev': {
             top: '2px !important',
         },
@@ -261,11 +265,12 @@ export default (theme) => ({
             flexDirection: 'column',
             height: '100%',
         },
-        '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
-            display: 'flex',
-            flexShrink: 0,
-            justifyContent: 'center',
-        },
+        '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab':
+            {
+                display: 'flex',
+                flexShrink: 0,
+                justifyContent: 'center',
+            },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-tab-prev': {
             top: '2px !important',
         },
@@ -324,13 +329,14 @@ export default (theme) => ({
             flex: 1,
             width: '100%',
         },
-        '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
-            display: 'flex',
-            flexShrink: 0,
-            marginRight: 0,
-            padding: '8px 0',
-            justifyContent: 'center',
-        },
+        '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab':
+            {
+                display: 'flex',
+                flexShrink: 0,
+                marginRight: 0,
+                padding: '8px 0',
+                justifyContent: 'center',
+            },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-nav-wrap': {
             width: '100%',
         },
@@ -393,13 +399,14 @@ export default (theme) => ({
             flex: 1,
             width: '100%',
         },
-        '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab': {
-            display: 'flex',
-            flexShrink: 0,
-            marginRight: 0,
-            padding: '8px 0',
-            justifyContent: 'center',
-        },
+        '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-swipe .hoi-poi-ui__tabs-nav .hoi-poi-ui__tabs-tab':
+            {
+                display: 'flex',
+                flexShrink: 0,
+                marginRight: 0,
+                padding: '8px 0',
+                justifyContent: 'center',
+            },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-wrap': {
             width: '100%',
         },
@@ -456,7 +463,9 @@ export default (theme) => ({
         paddingBottom: '10px',
     },
     vertical: {
-        borderBottom: 'none', 
+        '& .hoi-poi-ui__tabs-nav-container': {
+            borderBottom: 'none',
+        },
         '& .hoi-poi-ui__tabs-top .hoi-poi-ui__tabs-nav-scroll': {
             width: '100%',
         },
@@ -468,12 +477,12 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-tab': {
             padding: '14px 0',
-            borderBottom: `1px solid ${theme.colors.neutral400}`
+            borderBottom: `1px solid ${theme.colors.neutral400}`,
         },
         '& .hoi-poi-ui__tabs-nav': {
             float: 'none',
             display: 'block',
-            '& > div': {
+            '& > div:not([class])': {
                 flexFlow: 'column nowrap',
                 gap: 0,
             },
