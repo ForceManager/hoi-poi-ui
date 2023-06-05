@@ -82,7 +82,10 @@ export default (theme) => ({
         '& .hoi-poi-ui__tabs-tab': {
             boxSizing: 'border-box',
             position: 'relative',
-            display: 'block',
+            display: 'flex',
+            flexFlow: 'row nowrap',
+            alignItems: 'center',
+            gap: 8,
             transition: 'color 0.3s cubic-bezier(0.35, 0, 0.25, 1)',
             padding: '5px 0 14px 0',
             lineHeight: '20px',
@@ -478,6 +481,7 @@ export default (theme) => ({
         '& .hoi-poi-ui__tabs-tab': {
             padding: '14px 0',
             borderBottom: `1px solid ${theme.colors.neutral400}`,
+            justifyContent: 'center',
         },
         '& .hoi-poi-ui__tabs-nav': {
             float: 'none',
