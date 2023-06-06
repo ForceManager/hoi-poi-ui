@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useMemo, useState, Fragment } from 'react';
+import React, { memo, useCallback, useEffect, useMemo, useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCTabs, { TabPane } from 'rc-tabs';
@@ -28,12 +28,16 @@ function Tabs({
     ...props
 }) {
     const [state, setState] = useState({
-        tabs,
-        activeKey,
+        tabs: [],
+        activeKey: null,
     });
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Tabs.overrides);
+
+    useEffect(() => {
+        setState({ activeKey, tabs });
+    }, [activeKey, tabs])
 
     // Classes
     const rootClassName = classnames(
