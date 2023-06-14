@@ -25,6 +25,7 @@ function Tabs({
     postComponent,
     vertical,
     editable,
+    alwaysShowCloseTab,
     ...props
 }) {
     const [state, setState] = useState({
@@ -37,7 +38,7 @@ function Tabs({
 
     useEffect(() => {
         setState({ activeKey, tabs });
-    }, [activeKey, tabs])
+    }, [activeKey, tabs]);
 
     // Classes
     const rootClassName = classnames(
@@ -60,10 +61,8 @@ function Tabs({
     const handleClose = useCallback(
         (event, key) => {
             event.stopPropagation();
+
             let { activeKey, tabs } = state;
-
-            if (tabs.length === 1) return;
-
             let foundIndex = 0;
 
             const finalTabs = tabs.filter((tab, index) => {
@@ -74,7 +73,7 @@ function Tabs({
 
             if (activeKey === key) {
                 if (!!foundIndex) foundIndex--;
-                activeKey = finalTabs[foundIndex].key;
+                activeKey = finalTabs[foundIndex]?.key;
             }
 
             setState((state) => ({ ...state, activeKey, tabs: finalTabs }));
@@ -102,7 +101,7 @@ function Tabs({
             <RCTabs {...tabsProps}>
                 {state.tabs.map(({ key, title, content }) => {
                     const finalTitle =
-                        editable && state.tabs.length > 1 ? (
+                        editable && (state.tabs.length > 1 || alwaysShowCloseTab) ? (
                             <Fragment>
                                 {title}
                                 <Icon
@@ -132,6 +131,8 @@ Tabs.overrides = ['root', 'rc-tabs', 'close'];
 Tabs.defaultProps = {
     position: 'top',
     tabs: [],
+    editable: false,
+    alwaysShowCloseTab: false,
 };
 
 Tabs.propTypes = {
@@ -150,6 +151,7 @@ Tabs.propTypes = {
     position: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
     postComponent: PropTypes.node,
     editable: PropTypes.bool,
+    alwaysShowCloseTab: PropTypes.bool,
 };
 
 export default memo(Tabs);
