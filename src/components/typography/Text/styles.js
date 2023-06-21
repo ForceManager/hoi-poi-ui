@@ -28,4 +28,8 @@ export default (theme) => ({
         textOverflow: 'ellipsis',
     },
     bold: { fontWeight: 500 },
+    divider: {
+        borderBottom: `1px solid ${theme.colors.neutral400}`,
+        paddingBottom: 8,
+    },
 });
