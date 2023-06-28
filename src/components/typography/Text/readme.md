@@ -104,6 +104,12 @@ Truncated:
 </Text>
 ```
 
+With divider:
+
+```jsx
+<Text withDivider>Lorem ipsum dolor sit amet</Text>
+```
+
 Tooltip:
 
 ```jsx

@@ -7,6 +7,7 @@ Default:
     <Progress value={55} />
     <Progress value={75} />
     <Progress value={100} />
+    <Progress value={150} />
 </div>
 ```
 

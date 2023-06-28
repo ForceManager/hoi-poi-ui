@@ -72,6 +72,37 @@ function onChange(key) {
 <Tabs onChange={onChange} activeKey={activeKey} tabs={tabs} postComponent={<Text>Lorem</Text>} />;
 ```
 
+Closeable Tabs:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState({
+    activeKey: 'tab-1',
+    tabs: [...Array(5)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` })),
+});
+
+function onChange(key) {
+    setState((state) => ({
+        ...state,
+        activeKey: key,
+    }));
+}
+
+function onClose({ key, activeKey, tabs }) {
+    console.log(`Closed ${key} tab`);
+    setState((state) => ({ activeKey, tabs }));
+}
+
+<Tabs
+    onChange={onChange}
+    onClose={onClose}
+    activeKey={state.activeKey}
+    tabs={state.tabs}
+    editable
+/>;
+```
+
 ### Component tree
 
 ---
