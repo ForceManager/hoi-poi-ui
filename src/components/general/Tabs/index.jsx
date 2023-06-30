@@ -99,12 +99,12 @@ function Tabs({
     return (
         <div className={rootClassName} {...override.root}>
             <RCTabs {...tabsProps}>
-                {state.tabs.map(({ key, title, content, readOnly }) => {
+                {state.tabs.map(({ key, title, content, fixed }) => {
                     const finalTitle =
                         editable && (state.tabs.length > 1 || alwaysShowCloseTab) ? (
                             <Fragment>
                                 {title}
-                                {!readOnly && (
+                                {!fixed && (
                                     <Icon
                                         name="close"
                                         size="small"

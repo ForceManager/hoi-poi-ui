@@ -81,7 +81,7 @@ const [state, setState] = useState({
     activeKey: 'tab-1',
     tabs: [...Array(5)]
         .fill(0)
-        .map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}`, readOnly: i === 0 })),
+        .map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}`, fixed: i === 0 })),
 });
 
 function onChange(key) {
