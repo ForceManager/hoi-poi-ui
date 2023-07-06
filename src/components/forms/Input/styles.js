@@ -152,6 +152,10 @@ export default (theme) => {
         postComponentCopy: {},
         custom: {
             '& $inputComponents': {
+                backgroundColor: 'transparent',
+                border: 0,
+                borderRadius: 0,
+                padding: 0,
                 '&::before': {
                     borderBottom: 'none',
                 },
