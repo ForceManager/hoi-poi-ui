@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../../../utils/styles';
 import Icon from '../../../../general/Icon';
+import Loader from '../../../../general/Loader';
 import Tooltip from '../../../../utils/Tooltip';
 import ToolbarItem from '../ToolbarItem';
 import { RichTextContext } from '../..';
@@ -32,6 +33,7 @@ const Menu = ({
     toolbarStyle,
     submitTooltip,
     isBasic,
+    loading,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -103,29 +105,31 @@ const Menu = ({
 
     const submitComponent = !!editorContent?.text?.length ? (
         <Tooltip placement="top" content={submitTooltip}>
-            <span>
-                <Icon
-                    name="send"
-                    size="large"
-                    color={theme.colors.orange500}
-                    onClick={handleSubmit}
-                    key="submit"
-                />
+            <span className={classes.submmitIcon} onClick={handleSubmit}>
+                <Icon name="send" size="large" color={theme.colors.orange500} key="submit" />
             </span>
         </Tooltip>
     ) : (
-        <Icon
-            name="send"
-            size="large"
-            color={theme.colors.neutral700}
-            onClick={handleSubmit}
-            key="submit"
-        />
+        <Icon name="send" size="large" color={theme.colors.neutral700} key="submit" />
     );
 
     switch (true) {
         case isBasic:
-            return <div className={classes.basicSubmit}>{submitComponent}</div>;
+            if (loading)
+                return (
+                    <div className={classes.basicLoader}>
+                        <Loader size="tiny" />
+                    </div>
+                );
+            return (
+                <div
+                    className={classNames(classes.basicSubmit, {
+                        [classes.basicSubmitClickable]: !!editorContent?.text?.length,
+                    })}
+                >
+                    {submitComponent}
+                </div>
+            );
         case compactMode:
             return (
                 <div className={toolbarClassNames}>

@@ -60,7 +60,8 @@ const RichText = memo(
         hideClear,
         submitTooltip,
         isBasic,
-        basicType = 'dynamic',
+        basicType,
+        loading,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -273,11 +274,11 @@ const RichText = memo(
                         showingEmoji.current = false;
                         return;
                     }
-                    if (canSubmit && !canSubmit(editorContent)) return;
+                    if (loading || (canSubmit && !canSubmit(editorContent))) return;
                     handleSubmit();
                 }
             },
-            [editor, onEsc, canSubmit, editorContent, handleSubmit, showingMenuPopover],
+            [editor, onEsc, canSubmit, editorContent, handleSubmit, showingMenuPopover, loading],
         );
 
         const getIcons = useMemo(() => {
@@ -386,6 +387,7 @@ const RichText = memo(
                 toolbarStyle,
                 submitTooltip,
                 isBasic,
+                loading,
             }),
             [
                 compactMode,
@@ -397,6 +399,7 @@ const RichText = memo(
                 toolbarStyle,
                 submitTooltip,
                 isBasic,
+                loading,
             ],
         );
 
@@ -465,6 +468,8 @@ RichText.defaultProps = {
     autofocus: false,
     hideClear: false,
     submitTooltip: 'Send ⏎',
+    basicType: 'dynamic',
+    loading: false,
 };
 
 RichText.propTypes = {
@@ -480,6 +485,7 @@ RichText.propTypes = {
     onClick: PropTypes.func,
     onFocus: PropTypes.func,
     onSubmit: PropTypes.func,
+    onEsc: PropTypes.func,
     placeholder: PropTypes.string,
     toolbar: PropTypes.arrayOf(
         PropTypes.shape({
@@ -522,6 +528,8 @@ RichText.propTypes = {
     /** No toolbar is shown, no emoji tool, just the text box and Submit button on the right */
     isBasic: PropTypes.bool,
     basicType: PropTypes.PropTypes.oneOf(['static', 'dynamic']),
+    //**In basic richtext a loader can be shown instead of submit button */
+    loading: PropTypes.bool,
 };
 
 export default RichText;
