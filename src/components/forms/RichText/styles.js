@@ -1,4 +1,4 @@
-import { alphaColor } from "../../../utils/styles/defaultTheme"; 
+import { alphaColor } from '../../../utils/styles/defaultTheme';
 
 export default (theme) => ({
     root: {
@@ -99,6 +99,33 @@ export default (theme) => ({
         },
         '& $editor': {
             color: theme.colors.neutral700,
+        },
+    },
+    isBasic: {
+        '& $editorWrapper': {
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexFlow: 'row',
+            borderRadius: 15,
+            alignItems: 'end',
+        },
+        '& $editor': {
+            width: 'calc(100% - 44px)',
+            minHeight: 30,
+        },
+        '& .ProseMirror': {
+            width: '100%',
+            padding: '5px 0 5px 12px',
+        },
+    },
+    basicStatic: {
+        '& $editor': {
+            maxHeight: 30,
+        },
+        '& .ProseMirror': {
+            textOverflow: 'ellipsis',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
         },
     },
     hasFixedToolbar: {

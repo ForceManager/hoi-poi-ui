@@ -68,6 +68,9 @@ export default (theme) => {
             marginLeft: 'auto',
             gap: 8,
         },
+        basicSubmit: {
+            padding: '5px 12px 0 8px',
+        },
         compactMode: {
             backgroundColor: 'transparent',
             position: 'absolute',

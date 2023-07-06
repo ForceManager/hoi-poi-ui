@@ -31,6 +31,7 @@ const Menu = ({
     toolbar,
     toolbarStyle,
     submitTooltip,
+    isBasic,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -123,6 +124,8 @@ const Menu = ({
     );
 
     switch (true) {
+        case isBasic:
+            return <div className={classes.basicSubmit}>{submitComponent}</div>;
         case compactMode:
             return (
                 <div className={toolbarClassNames}>
