@@ -81,6 +81,12 @@ export default (theme) => ({
             backgroundColor: theme.colors.neutralBase,
             borderColor: theme.colors.orange500,
         },
+        '&$isBasic': {
+            '& $editorWrapper': {
+                backgroundColor: theme.colors.neutral200,
+                borderColor: 'transparent',
+            },
+        },
     },
     isFullWidth: {
         width: '100%',
@@ -106,12 +112,14 @@ export default (theme) => ({
             display: 'flex',
             justifyContent: 'space-between',
             flexFlow: 'row',
-            borderRadius: 15,
+            borderRadius: 20,
             alignItems: 'end',
         },
         '& $editor': {
-            width: 'calc(100% - 44px)',
-            minHeight: 30,
+            width: 'calc(100% - 46px)',
+            display: 'flex',
+            alignItems: 'center',
+            minHeight: 40,
         },
         '& .ProseMirror': {
             width: '100%',
@@ -126,6 +134,13 @@ export default (theme) => ({
             textOverflow: 'ellipsis',
             overflow: 'hidden',
             whiteSpace: 'nowrap',
+            marginLeft: '2px',
+        },
+        '& [class*="basicSubmit"]': {
+            margin: '8px 16px 8px 8px',
+        },
+        '& [class*="basicLoader"]': {
+            margin: '9px 16px 10px 8px',
         },
     },
     hasFixedToolbar: {

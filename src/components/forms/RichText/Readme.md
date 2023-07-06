@@ -272,65 +272,59 @@ const fetchSuggestions = (query) =>
 RichText basic:
 
 ```jsx
+import { useState } from 'react';
+
+const [loading, setLoading] = useState(false);
+
+const onSubmit = () => {
+    setLoading(true);
+    setTimeout(() => {
+        setLoading(false);
+    }, 1000);
+};
+
 const lorem =
     '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Vivamus eleifend, odio in consectetur pretium, lectus justo malesuada nunc, ut vestibulum felis neque non tortor.</p>';
-<div
-    style={{
-        backgroundColor: 'rgba(211, 227, 254, 0.35)',
-        padding: '4px 8px',
-        borderRadius: 8,
-        marginTop: 8,
-    }}
->
-    <RichText
-        isBasic
-        basicType="static"
-        isFullWidth
-        placeholder="Write @ to mention a colleague"
-        overrides={{
-            editorWrapper: {
-                style: {
-                    backgroundColor: '#fff',
-                },
-            },
-        }}
-        onSubmit={() => console.log('SUBMIT!')}
-        onEsc={() => console.log('ESCAPE!')}
-        value={lorem}
-        autofocus
-    />
-</div>;
+
+<RichText
+    isBasic
+    basicType="static"
+    isFullWidth
+    placeholder="Write @ to mention a colleague"
+    onSubmit={onSubmit}
+    onEsc={() => console.log('ESCAPE!')}
+    value={lorem}
+    autofocus
+    loading={loading}
+/>;
 ```
 
 RichText basic dynamic:
 
 ```jsx
+import { useState } from 'react';
+
+const [loading, setLoading] = useState(false);
+
+const onSubmit = () => {
+    setLoading(true);
+    setTimeout(() => {
+        setLoading(false);
+    }, 1000);
+};
+
 const lorem =
     '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod consequat eros, at tincidunt purus semper a. Nulla facilisi. Vivamus eleifend, odio in consectetur pretium, lectus justo malesuada nunc, ut vestibulum felis neque non tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>';
-<div
-    style={{
-        backgroundColor: 'rgba(211, 227, 254, 0.35)',
-        padding: '4px 8px',
-        borderRadius: 8,
-        marginTop: 8,
-    }}
->
-    <RichText
-        isBasic
-        basicType="dynamic"
-        isFullWidth
-        placeholder="Write @ to mention a colleague"
-        overrides={{
-            editorWrapper: {
-                style: {
-                    backgroundColor: '#fff',
-                },
-            },
-        }}
-        onSubmit={() => console.log('SUBMIT!')}
-        onEsc={() => console.log('ESCAPE!')}
-        value={lorem}
-        autofocus
-    />
-</div>;
+
+<RichText
+    isBasic
+    basicType="dynamic"
+    isFullWidth
+    placeholder="Write @ to mention a colleague"
+    onSubmit={onSubmit}
+    onEsc={() => console.log('ESCAPE!')}
+    value={lorem}
+    autofocus
+    loading={loading}
+/>;
 ```

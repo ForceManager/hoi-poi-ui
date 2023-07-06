@@ -68,8 +68,34 @@ export default (theme) => {
             marginLeft: 'auto',
             gap: 8,
         },
+        submmitIcon: {
+            cursor: 'pointer',
+        },
         basicSubmit: {
-            padding: '5px 12px 0 8px',
+            margin: '5px 16px 8px 8px',
+            backgroundColor: theme.colors.neutralBase,
+            borderRadius: '50px',
+            width: '24px',
+            height: '24px',
+            '& span': {
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            },
+            '& svg': {
+                height: '17px',
+                width: '17px',
+            },
+
+            '&$basicSubmitClickable': {
+                '&:hover': {
+                    backgroundColor: theme.colors.orange100,
+                },
+            },
+        },
+        basicSubmitClickable: {},
+        basicLoader: {
+            margin: '6px 16px 8px 8px',
         },
         compactMode: {
             backgroundColor: 'transparent',
