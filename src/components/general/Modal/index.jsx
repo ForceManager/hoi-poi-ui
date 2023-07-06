@@ -19,6 +19,7 @@ const SIZES = {
     medium: 640,
     large: 960,
     big: 1120,
+    huge: 1280,
     full: '90%',
 };
 
@@ -307,7 +308,7 @@ Modal.propTypes = {
     isOpen: PropTypes.bool,
     width: PropTypes.string,
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big', 'full']),
+    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big', 'huge', 'full']),
     useAutoHeight: PropTypes.bool,
     useAutoWidth: PropTypes.bool,
     useContentStaticHeight: PropTypes.bool,
