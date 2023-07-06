@@ -167,6 +167,22 @@ export default (theme) => ({
             },
         },
     },
+    primarySoft: {
+        backgroundColor: theme.colors.orange100,
+        color: theme.colors.orange500,
+        '& path': { fill: theme.colors.orange500 },
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                backgroundColor: theme.colors.orange200,
+                color: theme.colors.orange500,
+            },
+            '&:active': {
+                backgroundColor: theme.colors.orange300,
+                color: theme.colors.orange600,
+                '& path': { fill: theme.colors.orange600 },
+            },
+        },
+    },
 
     iconOnly: {
         justifyContent: 'center',

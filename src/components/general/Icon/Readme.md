@@ -120,6 +120,7 @@ import Icon from './IconWithTooltip';
     <Icon name="bellSnooze" />
     <Icon name="geolocation" />
     <Icon name="scanCard" />
+    <Icon name="changeLog" />
 </div>;
 ```
 

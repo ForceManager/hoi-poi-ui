@@ -85,6 +85,7 @@ import DatabaseExport from './icons/DatabaseExport';
 import Bill from './icons/Bill';
 import Storage from './icons/Storage';
 import PlayTutorial from './icons/PlayTutorial';
+import ChangeLog from './icons/ChangeLog';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -504,6 +505,7 @@ export const ICONS = {
     bill: Bill,
     storage: Storage,
     playTutorial: PlayTutorial,
+    changeLog: ChangeLog,
 
     //Actions
     accountCheckin: AccountCheckin,

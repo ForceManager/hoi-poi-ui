@@ -54,6 +54,7 @@ const Button = forwardRef(
                 [classes.terciary]: type === 'terciary',
                 [classes.dashed]: type === 'dashed',
                 [classes.promotion]: type === 'promotion',
+                [classes.primarySoft]: type === 'primary-soft',
                 [classes[size]]: size,
                 [classes.disabled]: isDisabled,
                 [classes.loading]: isLoading && ALLOWED_LOADING_TYPES.includes(type),
