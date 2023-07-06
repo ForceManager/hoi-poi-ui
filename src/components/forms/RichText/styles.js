@@ -60,7 +60,6 @@ export default (theme) => ({
         border: '1px solid transparent',
         backgroundColor: theme.colors.neutral200,
         transition: 'all 0.15s ease',
-        container: 'inline-size',
     },
     editor: {
         ...theme.typography.body,
