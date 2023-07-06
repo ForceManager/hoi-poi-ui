@@ -59,6 +59,8 @@ const RichText = memo(
         emoji,
         hideClear,
         submitTooltip,
+        isBasic,
+        basicType = 'dynamic',
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -280,7 +282,7 @@ const RichText = memo(
 
         const getIcons = useMemo(() => {
             switch (true) {
-                case editorContent?.text && !isReadOnly && !compactMode && !hideClear:
+                case editorContent?.text && !isReadOnly && !compactMode && !isBasic && !hideClear:
                     return (
                         <Icon
                             name="closeSmall"
@@ -309,6 +311,7 @@ const RichText = memo(
             theme.colors.neutral600,
             compactMode,
             hideClear,
+            isBasic,
         ]);
 
         const inputWrapperProps = useMemo(
@@ -321,9 +324,11 @@ const RichText = memo(
                         [classes.isFullWidth]: isFullWidth,
                         [classes.isReadOnly]: isReadOnly,
                         [classes.hasFixedToolbar]: toolbarStyle === 'fixed',
-                        [classes.compactMode]: compactMode && !focused,
+                        [classes.compactMode]: !isBasic && compactMode && !focused,
                         [classes.compactModeFocused]:
-                            compactMode && (focused || !!editorContent?.text?.length),
+                            !isBasic && compactMode && (focused || !!editorContent?.text?.length),
+                        [classes.isBasic]: isBasic,
+                        [classes.basicStatic]: basicType === 'static',
                     },
                     classNameProp,
                 ),
@@ -344,6 +349,8 @@ const RichText = memo(
                 isReadOnly,
                 otherProps,
                 toolbarStyle,
+                isBasic,
+                basicType,
                 override,
             ],
         );
@@ -378,6 +385,7 @@ const RichText = memo(
                 toolbar,
                 toolbarStyle,
                 submitTooltip,
+                isBasic,
             }),
             [
                 compactMode,
@@ -388,6 +396,7 @@ const RichText = memo(
                 toolbar,
                 toolbarStyle,
                 submitTooltip,
+                isBasic,
             ],
         );
 
@@ -510,6 +519,9 @@ RichText.propTypes = {
     /** Hide clear action button in the editor's input area */
     hideClear: PropTypes.bool,
     submitTooltip: PropTypes.string,
+    /** No toolbar is shown, no emoji tool, just the text box and Submit button on the right */
+    isBasic: PropTypes.bool,
+    basicType: PropTypes.PropTypes.oneOf(['static', 'dynamic']),
 };
 
 export default RichText;
