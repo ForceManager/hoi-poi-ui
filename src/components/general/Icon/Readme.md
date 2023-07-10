@@ -122,6 +122,7 @@ import Icon from './IconWithTooltip';
     <Icon name="scanCard" />
     <Icon name="changeLog" />
     <Icon name="hrule" />
+    <Icon name="thumbs" />
 </div>;
 ```
 
