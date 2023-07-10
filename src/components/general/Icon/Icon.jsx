@@ -86,6 +86,7 @@ import Bill from './icons/Bill';
 import Storage from './icons/Storage';
 import PlayTutorial from './icons/PlayTutorial';
 import ChangeLog from './icons/ChangeLog';
+import Hrule from './icons/Hrule';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -506,6 +507,7 @@ export const ICONS = {
     storage: Storage,
     playTutorial: PlayTutorial,
     changeLog: ChangeLog,
+    hrule: Hrule,
 
     //Actions
     accountCheckin: AccountCheckin,
