@@ -118,7 +118,7 @@ Markdown.propTypes = {
     className: PropTypes.string,
     components: PropTypes.object,
     content: PropTypes.string.isRequired,
-    linkCallback: PropTypes.function,
+    linkCallback: PropTypes.func,
     overrides: PropTypes.object,
 };
 
