@@ -78,6 +78,7 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-nav-animated': {
             transition: 'transform 0.5s cubic-bezier(0.35, 0, 0.25, 1)',
+            transitionDelay: '.5s',
         },
         '& .hoi-poi-ui__tabs-tab': {
             boxSizing: 'border-box',
