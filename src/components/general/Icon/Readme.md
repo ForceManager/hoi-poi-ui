@@ -123,6 +123,9 @@ import Icon from './IconWithTooltip';
     <Icon name="changeLog" />
     <Icon name="hrule" />
     <Icon name="thumbs" />
+    <Icon name="clearOutline" nameOver="clear" />
+    <Icon name="clear" />
+    <Icon name="stopRecording" />
 </div>;
 ```
 
@@ -342,6 +345,8 @@ import Icon from './IconWithTooltip';
     <Icon name="videoCamera" />
     <Icon name="videoCamOff" />
     <Icon name="videoCamOutline" />
+    <Icon name="micOutline" nameOver="mic" />
+    <Icon name="mic" />
 </div>;
 ```
 

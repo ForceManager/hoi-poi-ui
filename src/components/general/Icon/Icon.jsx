@@ -190,6 +190,9 @@ import BellDisable from './icons/actions/BellDisable';
 import BellSnooze from './icons/actions/BellSnooze';
 import Geolocation from './icons/actions/Geolocation';
 import ScanCard from './icons/actions/ScanCard';
+import ClearOutline from './icons/actions/ClearOutline';
+import Clear from './icons/actions/Clear';
+import StopRecording from './icons/actions/StopRecording';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -339,6 +342,8 @@ import VideoCamera from './icons/audiovisual/VideoCamera';
 import VideoCamOff from './icons/audiovisual/VideoCamOff';
 import VideoCamOutline from './icons/audiovisual/VideoCamOutline';
 import VideoLeft from './icons/audiovisual/VideoLeft';
+import MicOutline from './icons/audiovisual/MicOutline';
+import Mic from './icons/audiovisual/Mic';
 //Content
 import ContentCopy from './icons/content/ContentCopy';
 import ContentCut from './icons/content/ContentCut';
@@ -608,6 +613,9 @@ export const ICONS = {
     bellSnooze: BellSnooze,
     geolocation: Geolocation,
     scanCard: ScanCard,
+    clearOutline: ClearOutline,
+    clear: Clear,
+    stopRecording: StopRecording,
     //Communication
     message: Message,
     comment: Comment,
@@ -749,6 +757,8 @@ export const ICONS = {
     videoCamOff: VideoCamOff,
     videoCamOutline: VideoCamOutline,
     videoLeft: VideoLeft,
+    micOutline: MicOutline,
+    mic: Mic,
     //Content
     contentCopy: ContentCopy,
     contentCut: ContentCut,
@@ -831,6 +841,7 @@ const Icon = forwardRef(
     (
         {
             name,
+            nameOver,
             color,
             size,
             classes: classesProp,
@@ -849,6 +860,7 @@ const Icon = forwardRef(
         const theme = useTheme();
 
         const [newColor, setNewColor] = useState(color || theme.colors.neutral700);
+        const [newName, setNewName] = useState(name);
 
         useEffect(() => {
             if (color && color !== newColor) {
@@ -858,13 +870,15 @@ const Icon = forwardRef(
 
         const handleOnMouseOver = useCallback(() => {
             onClick && setNewColor(theme.colors.neutral800);
+            if (nameOver) setNewName(nameOver);
             onMouseOver && onMouseOver();
-        }, [onClick, theme, onMouseOver]);
+        }, [onClick, theme, onMouseOver, nameOver]);
 
         const handleOnMouseOut = useCallback(() => {
             onClick && setNewColor(theme.colors.neutral700);
+            if (nameOver && nameOver === newName) setNewName(name);
             onMouseOut && onMouseOut();
-        }, [onClick, theme, onMouseOut]);
+        }, [onClick, theme, onMouseOut, nameOver, name, newName]);
 
         const handleOnMouseDown = useCallback(() => {
             onClick && setNewColor(theme.colors.neutral600);
@@ -876,7 +890,7 @@ const Icon = forwardRef(
             onMouseUp && onMouseUp();
         }, [onClick, theme, onMouseUp]);
 
-        let SelectedIcon = ICONS[name];
+        let SelectedIcon = ICONS[newName];
         if (!SelectedIcon) return null;
 
         // Overrides
