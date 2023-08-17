@@ -62,6 +62,7 @@ const RichText = memo(
         isBasic,
         basicType,
         loading,
+        getEditorRef,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -180,6 +181,10 @@ const RichText = memo(
                 onChangeFocus && onChangeFocus(false);
             },
         });
+
+        useEffect(() => {
+            if (editor && getEditorRef) getEditorRef(editor);
+        }, [editor, getEditorRef]);
 
         useEffect(() => {
             if (autofocus && editor && !showingMenuPopover) {
@@ -528,8 +533,10 @@ RichText.propTypes = {
     /** No toolbar is shown, no emoji tool, just the text box and Submit button on the right */
     isBasic: PropTypes.bool,
     basicType: PropTypes.PropTypes.oneOf(['static', 'dynamic']),
-    //**In basic richtext a loader can be shown instead of submit button */
+    //** In basic richtext a loader can be shown instead of submit button */
     loading: PropTypes.bool,
+    //** Allows direct access to the editor and set content */
+    getEditorRef: PropTypes.func,
 };
 
 export default RichText;
