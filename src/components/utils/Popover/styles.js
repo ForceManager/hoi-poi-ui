@@ -11,13 +11,13 @@ export default (theme) => ({
         },
         '& .hoi-poi-popover-inner': {
             ...theme.typography.defaultText,
-            padding: 32,
+            padding: 16,
             color: theme.colors.neutral900,
             lineHeight: 1.4285714,
             textDecoration: 'none',
             backgroundColor: theme.colors.neutralBase,
             boxShadow: theme.effects.boxShadow,
-            borderRadius: 16,
+            borderRadius: 8,
         },
         '& .hoi-poi-popover-arrow': {
             display: 'none',
