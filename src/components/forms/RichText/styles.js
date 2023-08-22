@@ -25,7 +25,6 @@ export default (theme) => ({
             pointerEvents: 'none',
         },
         '& [data-type="emoji"]': {
-            fontSize: 17,
             lineHeight: 1,
         },
         '& [data-type="mention"]': {
