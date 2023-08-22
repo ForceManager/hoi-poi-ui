@@ -63,6 +63,7 @@ const RichText = memo(
         basicType,
         loading,
         getEditorRef,
+        isSubmitDisabled,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -279,11 +280,21 @@ const RichText = memo(
                         showingEmoji.current = false;
                         return;
                     }
-                    if (loading || (canSubmit && !canSubmit(editorContent))) return;
+                    if (loading || isSubmitDisabled || (canSubmit && !canSubmit(editorContent)))
+                        return;
                     handleSubmit();
                 }
             },
-            [editor, onEsc, canSubmit, editorContent, handleSubmit, showingMenuPopover, loading],
+            [
+                editor,
+                onEsc,
+                isSubmitDisabled,
+                canSubmit,
+                editorContent,
+                handleSubmit,
+                showingMenuPopover,
+                loading,
+            ],
         );
 
         const getIcons = useMemo(() => {
@@ -393,6 +404,7 @@ const RichText = memo(
                 submitTooltip,
                 isBasic,
                 loading,
+                isSubmitDisabled,
             }),
             [
                 compactMode,
@@ -405,6 +417,7 @@ const RichText = memo(
                 submitTooltip,
                 isBasic,
                 loading,
+                isSubmitDisabled,
             ],
         );
 
@@ -475,6 +488,7 @@ RichText.defaultProps = {
     submitTooltip: 'Send ⏎',
     basicType: 'dynamic',
     loading: false,
+    isSubmitDisabled: false,
 };
 
 RichText.propTypes = {
@@ -537,6 +551,8 @@ RichText.propTypes = {
     loading: PropTypes.bool,
     //** Allows direct access to the editor and set content */
     getEditorRef: PropTypes.func,
+    //** Disables the submit button */
+    isSubmitDisabled: PropTypes.bool,
 };
 
 export default RichText;
