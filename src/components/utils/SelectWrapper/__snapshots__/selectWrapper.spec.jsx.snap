@@ -674,9 +674,8 @@ exports[`SelectWrapper default match 1`] = `
                     "click",
                   ]
                 }
-                afterPopupVisibleChange={[Function]}
+                arrow={true}
                 autoDestroy={false}
-                blurDelay={0.15}
                 builtinPlacements={
                   {
                     "bottom": {
@@ -685,8 +684,8 @@ exports[`SelectWrapper default match 1`] = `
                         4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "tc",
@@ -703,8 +702,8 @@ exports[`SelectWrapper default match 1`] = `
                         4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "tl",
@@ -721,8 +720,8 @@ exports[`SelectWrapper default match 1`] = `
                         4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "tr",
@@ -740,7 +739,7 @@ exports[`SelectWrapper default match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "cr",
@@ -758,7 +757,7 @@ exports[`SelectWrapper default match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "br",
@@ -776,7 +775,7 @@ exports[`SelectWrapper default match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "tr",
@@ -794,7 +793,7 @@ exports[`SelectWrapper default match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "cl",
@@ -812,7 +811,7 @@ exports[`SelectWrapper default match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "bl",
@@ -830,7 +829,7 @@ exports[`SelectWrapper default match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "tl",
@@ -847,8 +846,8 @@ exports[`SelectWrapper default match 1`] = `
                         -4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "bc",
@@ -865,8 +864,8 @@ exports[`SelectWrapper default match 1`] = `
                         -4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "bl",
@@ -883,8 +882,8 @@ exports[`SelectWrapper default match 1`] = `
                         -4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "br",
@@ -897,64 +896,141 @@ exports[`SelectWrapper default match 1`] = `
                     },
                   }
                 }
-                defaultPopupVisible={false}
-                destroyPopupOnHide={false}
-                focusDelay={0}
-                getDocument={[Function]}
-                getPopupClassNameFromAlign={[Function]}
-                hideAction={[]}
-                mask={false}
-                maskClosable={true}
                 mouseEnterDelay={0}
                 mouseLeaveDelay={0.1}
-                onPopupAlign={[Function]}
                 onPopupVisibleChange={[Function]}
                 popup={[Function]}
                 popupAlign={{}}
                 popupClassName="HoiPoi__Popover__root-1-26 HoiPoi__SelectWrapper__Popover-1-1"
                 popupPlacement="bottomLeft"
-                popupStyle={{}}
                 popupTransitionName="hoi-poi-popover--fade"
                 prefixCls="hoi-poi-popover"
-                showAction={[]}
               >
-                <ForwardRef
-                  iconPosition="left"
-                  key="trigger"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchStart={[Function]}
-                  overrides={{}}
-                  size="medium"
-                  type="primary"
+                <ResizeObserver
+                  disabled={true}
+                  onResize={[Function]}
                 >
-                  <button
-                    className="HoiPoi__Button__root-1-27 HoiPoi__Button__primary-1-32 HoiPoi__Button__medium-1-42"
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+                  <SingleObserver
+                    disabled={true}
+                    key="rc-observer-key-0"
+                    onResize={[Function]}
                   >
-                    <div
-                      className="HoiPoi__Button__content-1-28"
+                    <DomWrapper>
+                      <TriggerWrapper>
+                        <ForwardRef
+                          iconPosition="left"
+                          onClick={[Function]}
+                          overrides={{}}
+                          size="medium"
+                          type="primary"
+                        >
+                          <button
+                            className="HoiPoi__Button__root-1-27 HoiPoi__Button__primary-1-32 HoiPoi__Button__medium-1-42"
+                            onClick={[Function]}
+                            type="button"
+                          >
+                            <div
+                              className="HoiPoi__Button__content-1-28"
+                            >
+                              <ForwardRef
+                                as="span"
+                                className="HoiPoi__Button__Text-1-29"
+                                isTruncated={false}
+                                overrides={{}}
+                                type="body"
+                              >
+                                <span
+                                  className="HoiPoi__Text__root-1-47 HoiPoi__Button__Text-1-29 HoiPoi__Text__body-1-57"
+                                  style={{}}
+                                >
+                                  Select One
+                                </span>
+                              </ForwardRef>
+                            </div>
+                          </button>
+                        </ForwardRef>
+                      </TriggerWrapper>
+                    </DomWrapper>
+                  </SingleObserver>
+                </ResizeObserver>
+                <Popup
+                  align={
+                    {
+                      "offset": [
+                        0,
+                        4,
+                      ],
+                      "overflow": {
+                        "adjustY": 1,
+                        "shiftX": 64,
+                      },
+                      "points": [
+                        "tl",
+                        "bl",
+                      ],
+                      "targetOffset": [
+                        0,
+                        0,
+                      ],
+                    }
+                  }
+                  arrow={{}}
+                  arrowPos={
+                    {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  autoDestroy={false}
+                  className="HoiPoi__Popover__root-1-26 HoiPoi__SelectWrapper__Popover-1-1 hoi-poi-popover-placement-bottomLeft"
+                  keepDom={false}
+                  maskMotion={null}
+                  motion={
+                    {
+                      "motionName": "hoi-poi-popover--fade",
+                    }
+                  }
+                  offsetB={0}
+                  offsetR={0}
+                  offsetX={0}
+                  offsetY={0}
+                  onAlign={[Function]}
+                  onPrepare={[Function]}
+                  onVisibleChanged={[Function]}
+                  open={false}
+                  popup={[Function]}
+                  portal={
+                    {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    }
+                  }
+                  prefixCls="hoi-poi-popover"
+                  ready={false}
+                  target={
+                    <button
+                      class="HoiPoi__Button__root-1-27 HoiPoi__Button__primary-1-32 HoiPoi__Button__medium-1-42"
+                      type="button"
                     >
-                      <ForwardRef
-                        as="span"
-                        className="HoiPoi__Button__Text-1-29"
-                        isTruncated={false}
-                        overrides={{}}
-                        type="body"
+                      <div
+                        class="HoiPoi__Button__content-1-28"
                       >
                         <span
-                          className="HoiPoi__Text__root-1-47 HoiPoi__Button__Text-1-29 HoiPoi__Text__body-1-57"
-                          style={{}}
+                          class="HoiPoi__Text__root-1-47 HoiPoi__Button__Text-1-29 HoiPoi__Text__body-1-57"
                         >
                           Select One
                         </span>
-                      </ForwardRef>
-                    </div>
-                  </button>
-                </ForwardRef>
+                      </div>
+                    </button>
+                  }
+                  targetHeight={0}
+                  targetWidth={0}
+                >
+                  <Portal
+                    autoDestroy={false}
+                    open={false}
+                  />
+                </Popup>
               </Trigger>
             </ForwardRef(Tooltip)>
           </Popover>
@@ -1645,9 +1721,8 @@ exports[`SelectWrapper with disabled options match 1`] = `
                     "click",
                   ]
                 }
-                afterPopupVisibleChange={[Function]}
+                arrow={true}
                 autoDestroy={false}
-                blurDelay={0.15}
                 builtinPlacements={
                   {
                     "bottom": {
@@ -1656,8 +1731,8 @@ exports[`SelectWrapper with disabled options match 1`] = `
                         4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "tc",
@@ -1674,8 +1749,8 @@ exports[`SelectWrapper with disabled options match 1`] = `
                         4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "tl",
@@ -1692,8 +1767,8 @@ exports[`SelectWrapper with disabled options match 1`] = `
                         4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "tr",
@@ -1711,7 +1786,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "cr",
@@ -1729,7 +1804,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "br",
@@ -1747,7 +1822,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "tr",
@@ -1765,7 +1840,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "cl",
@@ -1783,7 +1858,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "bl",
@@ -1801,7 +1876,7 @@ exports[`SelectWrapper with disabled options match 1`] = `
                       ],
                       "overflow": {
                         "adjustX": 1,
-                        "adjustY": 1,
+                        "shiftY": true,
                       },
                       "points": [
                         "tl",
@@ -1818,8 +1893,8 @@ exports[`SelectWrapper with disabled options match 1`] = `
                         -4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "bc",
@@ -1836,8 +1911,8 @@ exports[`SelectWrapper with disabled options match 1`] = `
                         -4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "bl",
@@ -1854,8 +1929,8 @@ exports[`SelectWrapper with disabled options match 1`] = `
                         -4,
                       ],
                       "overflow": {
-                        "adjustX": 1,
                         "adjustY": 1,
+                        "shiftX": 64,
                       },
                       "points": [
                         "br",
@@ -1868,64 +1943,141 @@ exports[`SelectWrapper with disabled options match 1`] = `
                     },
                   }
                 }
-                defaultPopupVisible={false}
-                destroyPopupOnHide={false}
-                focusDelay={0}
-                getDocument={[Function]}
-                getPopupClassNameFromAlign={[Function]}
-                hideAction={[]}
-                mask={false}
-                maskClosable={true}
                 mouseEnterDelay={0}
                 mouseLeaveDelay={0.1}
-                onPopupAlign={[Function]}
                 onPopupVisibleChange={[Function]}
                 popup={[Function]}
                 popupAlign={{}}
                 popupClassName="HoiPoi__Popover__root-2-26 HoiPoi__SelectWrapper__Popover-2-1"
                 popupPlacement="bottomLeft"
-                popupStyle={{}}
                 popupTransitionName="hoi-poi-popover--fade"
                 prefixCls="hoi-poi-popover"
-                showAction={[]}
               >
-                <ForwardRef
-                  iconPosition="left"
-                  key="trigger"
-                  onClick={[Function]}
-                  onMouseDown={[Function]}
-                  onTouchStart={[Function]}
-                  overrides={{}}
-                  size="medium"
-                  type="primary"
+                <ResizeObserver
+                  disabled={true}
+                  onResize={[Function]}
                 >
-                  <button
-                    className="HoiPoi__Button__root-2-27 HoiPoi__Button__primary-2-32 HoiPoi__Button__medium-2-42"
-                    onClick={[Function]}
-                    onMouseDown={[Function]}
-                    onTouchStart={[Function]}
-                    type="button"
+                  <SingleObserver
+                    disabled={true}
+                    key="rc-observer-key-0"
+                    onResize={[Function]}
                   >
-                    <div
-                      className="HoiPoi__Button__content-2-28"
+                    <DomWrapper>
+                      <TriggerWrapper>
+                        <ForwardRef
+                          iconPosition="left"
+                          onClick={[Function]}
+                          overrides={{}}
+                          size="medium"
+                          type="primary"
+                        >
+                          <button
+                            className="HoiPoi__Button__root-2-27 HoiPoi__Button__primary-2-32 HoiPoi__Button__medium-2-42"
+                            onClick={[Function]}
+                            type="button"
+                          >
+                            <div
+                              className="HoiPoi__Button__content-2-28"
+                            >
+                              <ForwardRef
+                                as="span"
+                                className="HoiPoi__Button__Text-2-29"
+                                isTruncated={false}
+                                overrides={{}}
+                                type="body"
+                              >
+                                <span
+                                  className="HoiPoi__Text__root-2-47 HoiPoi__Button__Text-2-29 HoiPoi__Text__body-2-57"
+                                  style={{}}
+                                >
+                                  Select One
+                                </span>
+                              </ForwardRef>
+                            </div>
+                          </button>
+                        </ForwardRef>
+                      </TriggerWrapper>
+                    </DomWrapper>
+                  </SingleObserver>
+                </ResizeObserver>
+                <Popup
+                  align={
+                    {
+                      "offset": [
+                        0,
+                        4,
+                      ],
+                      "overflow": {
+                        "adjustY": 1,
+                        "shiftX": 64,
+                      },
+                      "points": [
+                        "tl",
+                        "bl",
+                      ],
+                      "targetOffset": [
+                        0,
+                        0,
+                      ],
+                    }
+                  }
+                  arrow={{}}
+                  arrowPos={
+                    {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  autoDestroy={false}
+                  className="HoiPoi__Popover__root-2-26 HoiPoi__SelectWrapper__Popover-2-1 hoi-poi-popover-placement-bottomLeft"
+                  keepDom={false}
+                  maskMotion={null}
+                  motion={
+                    {
+                      "motionName": "hoi-poi-popover--fade",
+                    }
+                  }
+                  offsetB={0}
+                  offsetR={0}
+                  offsetX={0}
+                  offsetY={0}
+                  onAlign={[Function]}
+                  onPrepare={[Function]}
+                  onVisibleChanged={[Function]}
+                  open={false}
+                  popup={[Function]}
+                  portal={
+                    {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "render": [Function],
+                    }
+                  }
+                  prefixCls="hoi-poi-popover"
+                  ready={false}
+                  target={
+                    <button
+                      class="HoiPoi__Button__root-2-27 HoiPoi__Button__primary-2-32 HoiPoi__Button__medium-2-42"
+                      type="button"
                     >
-                      <ForwardRef
-                        as="span"
-                        className="HoiPoi__Button__Text-2-29"
-                        isTruncated={false}
-                        overrides={{}}
-                        type="body"
+                      <div
+                        class="HoiPoi__Button__content-2-28"
                       >
                         <span
-                          className="HoiPoi__Text__root-2-47 HoiPoi__Button__Text-2-29 HoiPoi__Text__body-2-57"
-                          style={{}}
+                          class="HoiPoi__Text__root-2-47 HoiPoi__Button__Text-2-29 HoiPoi__Text__body-2-57"
                         >
                           Select One
                         </span>
-                      </ForwardRef>
-                    </div>
-                  </button>
-                </ForwardRef>
+                      </div>
+                    </button>
+                  }
+                  targetHeight={0}
+                  targetWidth={0}
+                >
+                  <Portal
+                    autoDestroy={false}
+                    open={false}
+                  />
+                </Popup>
               </Trigger>
             </ForwardRef(Tooltip)>
           </Popover>

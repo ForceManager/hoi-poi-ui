@@ -3439,9 +3439,8 @@ exports[`Input with hint match 1`] = `
                             "hover",
                           ]
                         }
-                        afterPopupVisibleChange={[Function]}
+                        arrow={true}
                         autoDestroy={false}
-                        blurDelay={0.15}
                         builtinPlacements={
                           {
                             "bottom": {
@@ -3450,8 +3449,8 @@ exports[`Input with hint match 1`] = `
                                 4,
                               ],
                               "overflow": {
-                                "adjustX": 1,
                                 "adjustY": 1,
+                                "shiftX": 64,
                               },
                               "points": [
                                 "tc",
@@ -3468,8 +3467,8 @@ exports[`Input with hint match 1`] = `
                                 4,
                               ],
                               "overflow": {
-                                "adjustX": 1,
                                 "adjustY": 1,
+                                "shiftX": 64,
                               },
                               "points": [
                                 "tl",
@@ -3486,8 +3485,8 @@ exports[`Input with hint match 1`] = `
                                 4,
                               ],
                               "overflow": {
-                                "adjustX": 1,
                                 "adjustY": 1,
+                                "shiftX": 64,
                               },
                               "points": [
                                 "tr",
@@ -3505,7 +3504,7 @@ exports[`Input with hint match 1`] = `
                               ],
                               "overflow": {
                                 "adjustX": 1,
-                                "adjustY": 1,
+                                "shiftY": true,
                               },
                               "points": [
                                 "cr",
@@ -3523,7 +3522,7 @@ exports[`Input with hint match 1`] = `
                               ],
                               "overflow": {
                                 "adjustX": 1,
-                                "adjustY": 1,
+                                "shiftY": true,
                               },
                               "points": [
                                 "br",
@@ -3541,7 +3540,7 @@ exports[`Input with hint match 1`] = `
                               ],
                               "overflow": {
                                 "adjustX": 1,
-                                "adjustY": 1,
+                                "shiftY": true,
                               },
                               "points": [
                                 "tr",
@@ -3559,7 +3558,7 @@ exports[`Input with hint match 1`] = `
                               ],
                               "overflow": {
                                 "adjustX": 1,
-                                "adjustY": 1,
+                                "shiftY": true,
                               },
                               "points": [
                                 "cl",
@@ -3577,7 +3576,7 @@ exports[`Input with hint match 1`] = `
                               ],
                               "overflow": {
                                 "adjustX": 1,
-                                "adjustY": 1,
+                                "shiftY": true,
                               },
                               "points": [
                                 "bl",
@@ -3595,7 +3594,7 @@ exports[`Input with hint match 1`] = `
                               ],
                               "overflow": {
                                 "adjustX": 1,
-                                "adjustY": 1,
+                                "shiftY": true,
                               },
                               "points": [
                                 "tl",
@@ -3612,8 +3611,8 @@ exports[`Input with hint match 1`] = `
                                 -4,
                               ],
                               "overflow": {
-                                "adjustX": 1,
                                 "adjustY": 1,
+                                "shiftX": 64,
                               },
                               "points": [
                                 "bc",
@@ -3630,8 +3629,8 @@ exports[`Input with hint match 1`] = `
                                 -4,
                               ],
                               "overflow": {
-                                "adjustX": 1,
                                 "adjustY": 1,
+                                "shiftX": 64,
                               },
                               "points": [
                                 "bl",
@@ -3648,8 +3647,8 @@ exports[`Input with hint match 1`] = `
                                 -4,
                               ],
                               "overflow": {
-                                "adjustX": 1,
                                 "adjustY": 1,
+                                "shiftX": 64,
                               },
                               "points": [
                                 "br",
@@ -3662,68 +3661,157 @@ exports[`Input with hint match 1`] = `
                             },
                           }
                         }
-                        defaultPopupVisible={false}
-                        destroyPopupOnHide={false}
-                        focusDelay={0}
-                        getDocument={[Function]}
-                        getPopupClassNameFromAlign={[Function]}
-                        hideAction={[]}
-                        mask={false}
-                        maskClosable={true}
                         mouseEnterDelay={0}
                         mouseLeaveDelay={0.1}
-                        onPopupAlign={[Function]}
-                        onPopupVisibleChange={[Function]}
                         popup={[Function]}
                         popupAlign={{}}
                         popupClassName="HoiPoi__Popover__root-2-52"
                         popupPlacement="top"
-                        popupStyle={{}}
                         popupTransitionName="hoi-poi-popover--fade"
                         prefixCls="hoi-poi-popover"
-                        showAction={[]}
                       >
-                        <span
-                          className="HoiPoi__Label__info-2-31"
-                          key="trigger"
+                        <ResizeObserver
+                          disabled={true}
+                          onResize={[Function]}
+                        >
+                          <SingleObserver
+                            disabled={true}
+                            key="rc-observer-key-0"
+                            onResize={[Function]}
+                          >
+                            <DomWrapper>
+                              <TriggerWrapper>
+                                <span
+                                  className="HoiPoi__Label__info-2-31"
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
+                                  onPointerEnter={[Function]}
+                                  onPointerLeave={[Function]}
+                                >
+                                  <Component
+                                    className="HoiPoi__Label__icon-2-32"
+                                    name="info"
+                                  >
+                                    <ForwardRef
+                                      className="HoiPoi__Label__icon-2-32"
+                                      name="info"
+                                      overrides={{}}
+                                      size="medium"
+                                    >
+                                      <span
+                                        className="HoiPoi__Icon__root-2-53 HoiPoi__Icon__medium-2-55 HoiPoi__Label__icon-2-32"
+                                        onMouseDown={[Function]}
+                                        onMouseOut={[Function]}
+                                        onMouseOver={[Function]}
+                                        onMouseUp={[Function]}
+                                      >
+                                        <Info
+                                          color="#7d8a96"
+                                        >
+                                          <svg
+                                            viewBox="0 0 18 18"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
+                                              fill="#7d8a96"
+                                              fillRule="nonzero"
+                                            />
+                                          </svg>
+                                        </Info>
+                                      </span>
+                                    </ForwardRef>
+                                  </Component>
+                                </span>
+                              </TriggerWrapper>
+                            </DomWrapper>
+                          </SingleObserver>
+                        </ResizeObserver>
+                        <Popup
+                          align={
+                            {
+                              "offset": [
+                                0,
+                                -4,
+                              ],
+                              "overflow": {
+                                "adjustY": 1,
+                                "shiftX": 64,
+                              },
+                              "points": [
+                                "bc",
+                                "tc",
+                              ],
+                              "targetOffset": [
+                                0,
+                                0,
+                              ],
+                            }
+                          }
+                          arrow={{}}
+                          arrowPos={
+                            {
+                              "x": 0,
+                              "y": 0,
+                            }
+                          }
+                          autoDestroy={false}
+                          className="HoiPoi__Popover__root-2-52 hoi-poi-popover-placement-top"
+                          keepDom={false}
+                          maskMotion={null}
+                          motion={
+                            {
+                              "motionName": "hoi-poi-popover--fade",
+                            }
+                          }
+                          offsetB={0}
+                          offsetR={0}
+                          offsetX={0}
+                          offsetY={0}
+                          onAlign={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
-                        >
-                          <Component
-                            className="HoiPoi__Label__icon-2-32"
-                            name="info"
-                          >
-                            <ForwardRef
-                              className="HoiPoi__Label__icon-2-32"
-                              name="info"
-                              overrides={{}}
-                              size="medium"
+                          onPointerEnter={[Function]}
+                          onPrepare={[Function]}
+                          onVisibleChanged={[Function]}
+                          open={false}
+                          popup={[Function]}
+                          portal={
+                            {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "render": [Function],
+                            }
+                          }
+                          prefixCls="hoi-poi-popover"
+                          ready={false}
+                          target={
+                            <span
+                              class="HoiPoi__Label__info-2-31"
                             >
                               <span
-                                className="HoiPoi__Icon__root-2-53 HoiPoi__Icon__medium-2-55 HoiPoi__Label__icon-2-32"
-                                onMouseDown={[Function]}
-                                onMouseOut={[Function]}
-                                onMouseOver={[Function]}
-                                onMouseUp={[Function]}
+                                class="HoiPoi__Icon__root-2-53 HoiPoi__Icon__medium-2-55 HoiPoi__Label__icon-2-32"
                               >
-                                <Info
-                                  color="#7d8a96"
+                                <svg
+                                  viewBox="0 0 18 18"
+                                  xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <svg
-                                    viewBox="0 0 18 18"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
-                                      fill="#7d8a96"
-                                      fillRule="nonzero"
-                                    />
-                                  </svg>
-                                </Info>
+                                  <path
+                                    d="M8.998.001C3.913.08-.077 4.227.001 9.157.08 14.165 3.991 18 8.841 18h.157c2.426-.078 4.694-1.017 6.416-2.739 1.72-1.722 2.66-3.991 2.581-6.417-.078-5.008-3.99-8.921-8.997-8.843zm1.096 13.93c0 .547-.47 1.095-1.096 1.095-.547 0-1.095-.47-1.095-1.095v-5.4c0-.548.47-1.096 1.095-1.096.548 0 1.096.47 1.096 1.096v5.4zm-1.096-7.2c-.704 0-1.33-.626-1.33-1.33 0-.704.626-1.252 1.33-1.252.704 0 1.33.626 1.33 1.33-.078.704-.626 1.252-1.33 1.252z"
+                                    fill="#7d8a96"
+                                    fill-rule="nonzero"
+                                  />
+                                </svg>
                               </span>
-                            </ForwardRef>
-                          </Component>
-                        </span>
+                            </span>
+                          }
+                          targetHeight={0}
+                          targetWidth={0}
+                        >
+                          <Portal
+                            autoDestroy={false}
+                            open={false}
+                          />
+                        </Popup>
                       </Trigger>
                     </ForwardRef(Tooltip)>
                   </Popover>
