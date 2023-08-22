@@ -34,6 +34,7 @@ const Menu = ({
     submitTooltip,
     isBasic,
     loading,
+    isSubmitDisabled,
 }) => {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -103,15 +104,16 @@ const Menu = ({
 
     if (!editor) return null;
 
-    const submitComponent = !!editorContent?.text?.length ? (
-        <Tooltip placement="top" content={submitTooltip}>
-            <span className={classes.submmitIcon} onClick={handleSubmit}>
-                <Icon name="send" size="large" color={theme.colors.orange500} key="submit" />
-            </span>
-        </Tooltip>
-    ) : (
-        <Icon name="send" size="large" color={theme.colors.neutral700} key="submit" />
-    );
+    const submitComponent =
+        !!editorContent?.text?.length && !isSubmitDisabled ? (
+            <Tooltip placement="top" content={submitTooltip}>
+                <span className={classes.submmitIcon} onClick={handleSubmit}>
+                    <Icon name="send" size="large" color={theme.colors.orange500} key="submit" />
+                </span>
+            </Tooltip>
+        ) : (
+            <Icon name="send" size="large" color={theme.colors.neutral700} key="submit" />
+        );
 
     switch (true) {
         case isBasic:
@@ -124,7 +126,8 @@ const Menu = ({
             return (
                 <div
                     className={classNames(classes.basicSubmit, {
-                        [classes.basicSubmitClickable]: !!editorContent?.text?.length,
+                        [classes.basicSubmitClickable]:
+                            !!editorContent?.text?.length && !isSubmitDisabled,
                     })}
                 >
                     {submitComponent}
