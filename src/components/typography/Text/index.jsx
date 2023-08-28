@@ -22,6 +22,7 @@ const Text = forwardRef(
             bold,
             color,
             withDivider,
+            isHighlighted,
             classes: classesProp,
             overrides: overridesProp,
             className: classNameProp,
@@ -37,6 +38,7 @@ const Text = forwardRef(
             [classes.bold]: bold,
             [classes.truncated]: isTruncated,
             [classes.divider]: withDivider,
+            [classes.highlighted]: isHighlighted,
         });
 
         const override = getOverrides(overridesProp, Text.overrides);
@@ -202,6 +204,7 @@ Text.propTypes = {
     bold: PropTypes.bool,
     useTooltip: PropTypes.bool,
     withDivider: PropTypes.bool,
+    isHighlighted: PropTypes.bool,
 };
 
 export default React.memo(Text);

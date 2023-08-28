@@ -122,6 +122,26 @@ Tooltip:
 </Text>
 ```
 
+Highlighted:
+
+```jsx
+<Text type="h1" isHighlighted>Lorem Ipsum</Text>
+<Text type="h2" isHighlighted>Lorem Ipsum</Text>
+<Text type="h3" isHighlighted>Lorem Ipsum</Text>
+<Text type="h4" isHighlighted>Lorem Ipsum</Text>
+<Text type="h5" isHighlighted>Lorem Ipsum</Text>
+<Text type="h6" isHighlighted>Lorem Ipsum</Text>
+<Text type="subtitle1" isHighlighted>Lorem Ipsum</Text>
+<Text type="subtitle" isHighlighted>Lorem Ipsum</Text>
+<Text type="body1" isHighlighted>Lorem Ipsum</Text>
+<Text type="body" isHighlighted>Lorem Ipsum</Text>
+<Text type="button" isHighlighted>Lorem Ipsum</Text>
+<Text type="caption" isHighlighted>Lorem Ipsum</Text>
+<Text type="captionMedium" isHighlighted>Lorem Ipsum</Text>
+<Text type="badges" isHighlighted>Lorem Ipsum</Text>
+<Text type="overline" isHighlighted>Lorem Ipsum</Text>
+```
+
 ### Component tree
 
 ---
