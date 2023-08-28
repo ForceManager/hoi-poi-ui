@@ -1,7 +1,8 @@
 module.exports = {
     setupFilesAfterEnv: ['react-app-polyfill/jsdom', '<rootDir>/jest/setupTests.js'],
+    setupFiles: ['<rootDir>/jest/testEncoder.js'],
     testMatch: ['**/**.spec.jsx'],
-    testEnvironment: 'jsdom',
+    testEnvironment: 'jest-environment-jsdom',
     testEnvironmentOptions: {
         url: 'http://localhost',
     },
