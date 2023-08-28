@@ -88,6 +88,7 @@ import PlayTutorial from './icons/PlayTutorial';
 import ChangeLog from './icons/ChangeLog';
 import Hrule from './icons/Hrule';
 import Thumbs from './icons/Thumbs';
+import MobileDevice from './icons/MobileDevice';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -515,6 +516,7 @@ export const ICONS = {
     changeLog: ChangeLog,
     hrule: Hrule,
     thumbs: Thumbs,
+    mobileDevice: MobileDevice,
 
     //Actions
     accountCheckin: AccountCheckin,
