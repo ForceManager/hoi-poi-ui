@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Duplicate({ color, ...props }) {
+function Duplicate({ color = '#788590', ...props }) {
     return (
         <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
             <path
