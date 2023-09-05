@@ -507,6 +507,7 @@ import Icon from './IconWithTooltip';
     <Icon name="geolocation" />
     <Icon name="storage" />
     <Icon name="playTutorial" />
+    <Icon name="securePayment" />
 </div>;
 ```
 

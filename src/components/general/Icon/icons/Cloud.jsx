@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cloud({ color, ...props }) {
+function Cloud({ color = '#788590', ...props }) {
     return (
         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path

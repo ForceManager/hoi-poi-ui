@@ -89,6 +89,7 @@ import ChangeLog from './icons/ChangeLog';
 import Hrule from './icons/Hrule';
 import Thumbs from './icons/Thumbs';
 import MobileDevice from './icons/MobileDevice';
+import SecurePayment from './icons/SecurePayment';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -517,6 +518,7 @@ export const ICONS = {
     hrule: Hrule,
     thumbs: Thumbs,
     mobileDevice: MobileDevice,
+    securePayment: SecurePayment,
 
     //Actions
     accountCheckin: AccountCheckin,
