@@ -22,6 +22,7 @@ You can skip this dependecy by commenting the following code lines in `src/compo
 ```
 import Emoji from '@tiptap-pro/extension-emoji';
 ```
+
 ```
 if (emoji) {
     extensions.push(
@@ -47,7 +48,7 @@ yarn add hoi-poi-ui
 
 ```
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { HoiPoiProvider, Button } from 'hoi-poi-ui';
 
 function App() {
@@ -60,7 +61,8 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+const root = createRoot(document.querySelector('#app'))
+root.render(<App />);
 ```
 
 [![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/9kz3q68qw)
@@ -74,7 +76,7 @@ You can see the default theme [here](https://github.com/ForceManager/hoi-poi-ui/
 
 ```
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { HoiPoiProvider, createHoiPoiTheme, Button } from 'hoi-poi-ui';
 
 const theme = createHoiPoiTheme({
@@ -93,7 +95,8 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+const root = createRoot(document.querySelector('#app'))
+root.render(<App />);
 ```
 
 ### Classes
