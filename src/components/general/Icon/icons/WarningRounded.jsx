@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WarningRounded({ color, ...props }) {
+function WarningRounded({ color = '#788590', ...props }) {
     return (
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

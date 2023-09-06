@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Tick({ color, ...props }) {
+function Tick({ color = '#788590', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
             <path

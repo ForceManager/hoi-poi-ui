@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ThreeDots({ color, ...props }) {
+function ThreeDots({ color = '#788590', ...props }) {
     return (
         <svg viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g
