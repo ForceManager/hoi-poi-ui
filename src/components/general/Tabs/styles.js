@@ -505,4 +505,16 @@ export default (theme) => ({
             },
         },
     },
+    tabWithPopover: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: 8,
+    },
+    popover: {
+        display: 'none',
+        position: 'absolute',
+        background: theme.colors.neutralBase,
+        boxShadow: '0px 8px 10px 0px rgba(39, 60, 80, 0.14)',
+        borderRadius: '6px',
+    },
 });

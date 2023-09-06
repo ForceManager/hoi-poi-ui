@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect, useMemo, useState, Fragment } from 'react';
+import React, { memo, useCallback, useEffect, useMemo, useState, Fragment, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCTabs, { TabPane } from 'rc-tabs';
@@ -32,6 +32,9 @@ function Tabs({
         tabs: [],
         activeKey: null,
     });
+    const [popoverComponent, setPopoverComponent] = useState(null);
+    const [popoverStyles, setPopoverStyles] = useState({});
+    const tabRef = useRef(null);
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Tabs.overrides);
@@ -96,12 +99,96 @@ function Tabs({
         [handleChange, override, position, props, state.activeKey],
     );
 
+    const getParentNode = useCallback((target) => {
+        let parentNode = null;
+        if (target.classList.contains('[class*="HoiPoi__Tabs__tabWithPopover"]')) {
+            parentNode = target?.parentNode || null;
+        } else if (target.closest('[class*="HoiPoi__Tabs__tabWithPopover"]')) {
+            parentNode = target?.closest('[class*="HoiPoi__Tabs__tabWithPopover"]') || null;
+            parentNode = parentNode?.parentNode || null;
+        }
+        return parentNode;
+    }, []);
+
+    const getAbsolutePosition = useCallback((element) => {
+        const rect = element.getBoundingClientRect();
+
+        return {
+            top: rect.top,
+            bottom: rect.bottom,
+            left: rect.left,
+            right: rect.right,
+        };
+    }, []);
+
+    const onMouseOver = useCallback(
+        (e, popoverContent, popoverWidth) => {
+            e.stopPropagation();
+            const element = tabRef.current || null;
+            if (!element) return;
+            const popover = element.querySelector('[class*="HoiPoi__Tabs__popover"]');
+            if (!popover) return;
+
+            let parentNode = null;
+
+            parentNode = getParentNode(e.target);
+            if (!parentNode) return;
+
+            const { left, right } = getAbsolutePosition(parentNode);
+
+            let offsetToTabCenter = right - left;
+            offsetToTabCenter = offsetToTabCenter / 2;
+
+            const positionToTabCenter = left + offsetToTabCenter;
+            const pixelsToPopoverCenter = popoverWidth / 2;
+
+            setPopoverComponent(popoverContent);
+            setPopoverStyles({
+                display: 'block',
+                left: `${positionToTabCenter - pixelsToPopoverCenter}px`,
+                top: `${element.offsetTop + element.offsetHeight}px`,
+            });
+        },
+        [getParentNode, getAbsolutePosition],
+    );
+
+    const onMouseOut = useCallback((e) => {
+        e.stopPropagation();
+        setPopoverComponent(null);
+        setPopoverStyles({ display: 'none' });
+    }, []);
+
+    const onClickForPopover = useCallback((e) => {
+        setPopoverComponent(null);
+        setPopoverStyles({ display: 'none' });
+    }, []);
+
     return (
-        <div className={rootClassName} {...override.root}>
+        <div className={rootClassName} {...override.root} ref={tabRef}>
             <RCTabs {...tabsProps}>
-                {state.tabs.map(({ key, title, content, fixed }) => {
-                    const finalTitle =
-                        editable && (state.tabs.length > 1 || alwaysShowCloseTab) ? (
+                {state.tabs.map(({ key, title, content, fixed, popoverContent, popoverWidth }) => {
+                    let finalTitle = null;
+                    if (popoverContent && state.activeKey !== key) {
+                        finalTitle = (
+                            <div
+                                className={classes.tabWithPopover}
+                                onMouseOver={(e) => onMouseOver(e, popoverContent, popoverWidth)}
+                                onMouseOut={(e) => onMouseOut(e)}
+                                onClick={onClickForPopover}
+                            >
+                                {title}
+                                {!fixed && (
+                                    <Icon
+                                        name="close"
+                                        size="small"
+                                        onClick={(e) => handleClose(e, key)}
+                                        {...override.close}
+                                    />
+                                )}
+                            </div>
+                        );
+                    } else if (editable && (state.tabs.length > 1 || alwaysShowCloseTab)) {
+                        finalTitle = (
                             <Fragment>
                                 {title}
                                 {!fixed && (
@@ -113,9 +200,9 @@ function Tabs({
                                     />
                                 )}
                             </Fragment>
-                        ) : (
-                            title
                         );
+                    } else finalTitle = title;
+
                     return (
                         <TabPane key={key} tab={finalTitle}>
                             {content}
@@ -124,6 +211,9 @@ function Tabs({
                 })}
             </RCTabs>
             {postComponent && <div className={classes.postComponent}>{postComponent}</div>}
+            <div className={classes.popover} style={popoverStyles}>
+                {popoverComponent}
+            </div>
         </div>
     );
 }

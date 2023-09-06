@@ -60,7 +60,16 @@ import { useState } from 'react';
 
 const [state, setState] = useState({});
 
-let tabs = [...Array(100)].fill(0).map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}` }));
+let tabs = [...Array(100)].fill(0).map((_, i) => ({
+    key: `tab-${i}`,
+    title: `Tab ${i}`,
+    popoverContent: (
+        <div style={{ width: 200, height: 100, padding: 16, boxSizing: 'border-box' }}>
+            <Text>{`Popover for tab-${i}`}</Text>
+        </div>
+    ),
+    popoverWidth: 200,
+}));
 const activeKey = state.activeKey || 'tab-1';
 
 function onChange(key) {
@@ -82,6 +91,51 @@ const [state, setState] = useState({
     tabs: [...Array(5)]
         .fill(0)
         .map((_, i) => ({ key: `tab-${i}`, title: `Tab ${i}`, fixed: i === 0 })),
+});
+
+function onChange(key) {
+    setState((state) => ({
+        ...state,
+        activeKey: key,
+    }));
+}
+
+function onClose({ key, activeKey, tabs }) {
+    console.log(`Closed ${key} tab`);
+    setState((state) => ({ activeKey, tabs }));
+}
+
+<Tabs
+    onChange={onChange}
+    onClose={onClose}
+    activeKey={state.activeKey}
+    tabs={state.tabs}
+    editable
+/>;
+```
+
+Preview Tabs:
+
+```jsx
+import { useState } from 'react';
+import Text from '../../typography/Text';
+
+const [state, setState] = useState({
+    activeKey: 'tab-1',
+    tabs: [...Array(5)].fill(0).map((_, i) => ({
+        key: `tab-${i}`,
+        title: `Tab ${i}`,
+        fixed: i === 0,
+        popoverContent: (
+            <div
+                className="hereeeee"
+                style={{ width: 200, height: 100, padding: 16, boxSizing: 'border-box' }}
+            >
+                <Text>{`Popover for tab-${i}`}</Text>
+            </div>
+        ),
+        popoverWidth: 200,
+    })),
 });
 
 function onChange(key) {
