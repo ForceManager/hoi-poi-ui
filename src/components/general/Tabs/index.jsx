@@ -99,30 +99,58 @@ function Tabs({
         [handleChange, override, position, props, state.activeKey],
     );
 
-    const onMouseOver = useCallback((e, popoverContent) => {
-        const element = tabRef.current || null;
-        if (!element) return;
-        const popover = element.querySelector('.tabs-popover');
-        if (!popover) return;
+    const getParentNode = useCallback((target) => {
         let parentNode = null;
-        if (e.target.classList.contains('tab-with-popover')) {
-            parentNode = e.target.parentNode;
-        } else {
-            parentNode = e.target.parentNode.closes('.tab-with-popover') || null;
+        if (target.classList.contains('[class*="HoiPoi__Tabs__tabWithPopover"]')) {
+            parentNode = target?.parentNode || null;
+        } else if (target.closest('[class*="HoiPoi__Tabs__tabWithPopover"]')) {
+            parentNode = target?.closest('[class*="HoiPoi__Tabs__tabWithPopover"]') || null;
+            parentNode = parentNode?.parentNode || null;
         }
-        if (!parentNode) return;
-
-        e.stopPropagation();
-
-        const positionX = parentNode.offsetLeft + parentNode.offsetWidth / 2;
-
-        setPopoverComponent(popoverContent);
-        setPopoverStyles({
-            display: 'block',
-            left: `${element.offsetLeft + positionX}px`,
-            top: `${element.offsetTop + element.offsetHeight}px`,
-        });
+        return parentNode;
     }, []);
+
+    const getAbsolutePosition = useCallback((element) => {
+        const rect = element.getBoundingClientRect();
+
+        return {
+            top: rect.top,
+            bottom: rect.bottom,
+            left: rect.left,
+            right: rect.right,
+        };
+    }, []);
+
+    const onMouseOver = useCallback(
+        (e, popoverContent, popoverWidth) => {
+            e.stopPropagation();
+            const element = tabRef.current || null;
+            if (!element) return;
+            const popover = element.querySelector('[class*="HoiPoi__Tabs__popover"]');
+            if (!popover) return;
+
+            let parentNode = null;
+
+            parentNode = getParentNode(e.target);
+            if (!parentNode) return;
+
+            const { left, right } = getAbsolutePosition(parentNode);
+
+            let offsetToTabCenter = right - left;
+            offsetToTabCenter = offsetToTabCenter / 2;
+
+            const positionToTabCenter = left + offsetToTabCenter;
+            const pixelsToPopoverCenter = popoverWidth / 2;
+
+            setPopoverComponent(popoverContent);
+            setPopoverStyles({
+                display: 'block',
+                left: `${positionToTabCenter - pixelsToPopoverCenter}px`,
+                top: `${element.offsetTop + element.offsetHeight}px`,
+            });
+        },
+        [getParentNode, getAbsolutePosition],
+    );
 
     const onMouseOut = useCallback((e) => {
         e.stopPropagation();
@@ -138,13 +166,13 @@ function Tabs({
     return (
         <div className={rootClassName} {...override.root} ref={tabRef}>
             <RCTabs {...tabsProps}>
-                {state.tabs.map(({ key, title, content, fixed, popoverContent }) => {
+                {state.tabs.map(({ key, title, content, fixed, popoverContent, popoverWidth }) => {
                     let finalTitle = null;
                     if (popoverContent && state.activeKey !== key) {
                         finalTitle = (
                             <div
-                                className={`${classes.tabWithPopover} tab-with-popover`}
-                                onMouseOver={(e) => onMouseOver(e, popoverContent)}
+                                className={classes.tabWithPopover}
+                                onMouseOver={(e) => onMouseOver(e, popoverContent, popoverWidth)}
                                 onMouseOut={(e) => onMouseOut(e)}
                                 onClick={onClickForPopover}
                             >
@@ -183,7 +211,7 @@ function Tabs({
                 })}
             </RCTabs>
             {postComponent && <div className={classes.postComponent}>{postComponent}</div>}
-            <div className={[classes.popover, 'tabs-popover'].join(' ')} style={popoverStyles}>
+            <div className={classes.popover} style={popoverStyles}>
                 {popoverComponent}
             </div>
         </div>

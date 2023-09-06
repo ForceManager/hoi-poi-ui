@@ -64,10 +64,11 @@ let tabs = [...Array(100)].fill(0).map((_, i) => ({
     key: `tab-${i}`,
     title: `Tab ${i}`,
     popoverContent: (
-        <div style={{ width: 200, height: 100, padding: 16 }}>
+        <div style={{ width: 200, height: 100, padding: 16, boxSizing: 'border-box' }}>
             <Text>{`Popover for tab-${i}`}</Text>
         </div>
     ),
+    popoverWidth: 200,
 }));
 const activeKey = state.activeKey || 'tab-1';
 
@@ -126,10 +127,14 @@ const [state, setState] = useState({
         title: `Tab ${i}`,
         fixed: i === 0,
         popoverContent: (
-            <div style={{ width: 200, height: 100, padding: 16 }}>
+            <div
+                className="hereeeee"
+                style={{ width: 200, height: 100, padding: 16, boxSizing: 'border-box' }}
+            >
                 <Text>{`Popover for tab-${i}`}</Text>
             </div>
         ),
+        popoverWidth: 200,
     })),
 });
 
