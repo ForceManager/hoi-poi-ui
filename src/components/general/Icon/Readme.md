@@ -277,10 +277,15 @@ import Icon from './IconWithTooltip';
 
 <div style={{ display: 'flex', flexFlow: 'row wrap', gap: 4, alignItems: 'flex-end' }}>
     <Icon name="mailchimp" />
+    <Icon name="zendesk" />
+    <Icon name="docusign" />
+    <Icon name="google" />
+    <Icon name="linkedin" />
+    <Icon name="slack" />
+    <Icon name="wordpress" />
     <Icon name="microsoftTeams" />
     <Icon name="zoomCam" />
     <Icon name="zoomList" />
-    <Icon name="zendesk" />
     <Icon name="salesforce" />
     <Icon name="softland" />
     <Icon name="sage" />
