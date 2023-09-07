@@ -283,10 +283,15 @@ import WarningOutlineTwoToned from './icons/alert/WarningOutlineTwoToned';
 
 //Logos
 import Mailchimp from './icons/logos/Mailchimp';
+import Zendesk from './icons/logos/Zendesk';
+import Docusign from './icons/logos/Docusign';
+import Google from './icons/logos/Google';
+import Linkedin from './icons/logos/Linkedin';
+import Slack from './icons/logos/Slack';
+import Wordpress from './icons/logos/Wordpress';
 import MicrosoftTeams from './icons/logos/MicrosoftTeams';
 import ZoomCam from './icons/logos/ZoomCam';
 import ZoomList from './icons/logos/ZoomList';
-import Zendesk from './icons/logos/Zendesk';
 import Salesforce from './icons/logos/Salesforce';
 import Softland from './icons/logos/Softland';
 import Sage from './icons/logos/Sage';
@@ -703,10 +708,15 @@ export const ICONS = {
     warningOutlineTwoToned: WarningOutlineTwoToned,
     //Logos
     mailchimp: Mailchimp,
+    zendesk: Zendesk,
+    docusign: Docusign,
+    google: Google,
+    linkedin: Linkedin,
+    slack: Slack,
+    wordpress: Wordpress,   
     microsoftTeams: MicrosoftTeams,
     zoomCam: ZoomCam,
     zoomList: ZoomList,
-    zendesk: Zendesk,
     salesforce: Salesforce,
     softland: Softland,
     sage: Sage,
