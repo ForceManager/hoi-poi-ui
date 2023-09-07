@@ -285,6 +285,7 @@ import WarningOutlineTwoToned from './icons/alert/WarningOutlineTwoToned';
 import Mailchimp from './icons/logos/Mailchimp';
 import Zendesk from './icons/logos/Zendesk';
 import Docusign from './icons/logos/Docusign';
+import Facebook from './icons/logos/Facebook';
 import Google from './icons/logos/Google';
 import Linkedin from './icons/logos/Linkedin';
 import Slack from './icons/logos/Slack';
@@ -710,6 +711,7 @@ export const ICONS = {
     mailchimp: Mailchimp,
     zendesk: Zendesk,
     docusign: Docusign,
+    facebook: Facebook,
     google: Google,
     linkedin: Linkedin,
     slack: Slack,

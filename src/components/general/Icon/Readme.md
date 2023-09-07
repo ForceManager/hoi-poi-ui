@@ -279,6 +279,7 @@ import Icon from './IconWithTooltip';
     <Icon name="mailchimp" />
     <Icon name="zendesk" />
     <Icon name="docusign" />
+    <Icon name="facebook" />
     <Icon name="google" />
     <Icon name="linkedin" />
     <Icon name="slack" />
