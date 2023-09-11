@@ -124,7 +124,7 @@ function Tabs({
     }, []);
 
     const onMouseOver = useCallback(
-        (e, popoverContent, popoverWidth) => {
+        (e, popoverContent, popoverWidth = 100) => {
             e.stopPropagation();
             const element = tabRef.current || null;
             if (!element) return;
@@ -263,6 +263,8 @@ Tabs.propTypes = {
             key: PropTypes.string.isRequired,
             title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
             content: PropTypes.node,
+            popoverContent: PropTypes.node,
+            popoverWidth: PropTypes.number,
         }),
     ),
     activeKey: PropTypes.string,
