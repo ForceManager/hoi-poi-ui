@@ -205,11 +205,6 @@ function onClose({ key, activeKey, tabs }) {
         isOpen={isOpen}
         onRequestClose={() => setIsOpen(false)}
         getContentRef={(ref) => {
-            // console.log(ref, ref.classList[1]);
-            // const element = document.querySelector(`.${ref.classList[1]}`);
-            // const container = element.closest('.ReactModal__Content');
-            // const parentElement = element.parentElement;
-            // console.log(parentElement);
             setContainerElement(ref);
         }}
         height="400px"
