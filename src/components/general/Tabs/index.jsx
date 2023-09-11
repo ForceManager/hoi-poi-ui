@@ -26,6 +26,8 @@ function Tabs({
     vertical,
     editable,
     alwaysShowCloseTab,
+    containerElement,
+    popoverOffsetCorrection,
     ...props
 }) {
     const [state, setState] = useState({
@@ -122,7 +124,7 @@ function Tabs({
     }, []);
 
     const onMouseOver = useCallback(
-        (e, popoverContent, popoverWidth) => {
+        (e, popoverContent, popoverWidth = 100) => {
             e.stopPropagation();
             const element = tabRef.current || null;
             if (!element) return;
@@ -136,20 +138,46 @@ function Tabs({
 
             const { left, right } = getAbsolutePosition(parentNode);
 
-            let offsetToTabCenter = right - left;
-            offsetToTabCenter = offsetToTabCenter / 2;
+            let tabWidth = right - left;
+            let offsetToTabCenter = tabWidth / 2;
 
-            const positionToTabCenter = left + offsetToTabCenter;
+            let positionToTabCenter = left + offsetToTabCenter;
             const pixelsToPopoverCenter = popoverWidth / 2;
+            let offsetToBorderLeft = null;
+
+            let popoverStyles = {
+                display: 'block',
+                top: `${element.offsetTop + element.offsetHeight}px`,
+            };
+
+            if (containerElement) {
+                const containerElementPosition = getAbsolutePosition(containerElement);
+                let halfPopover = popoverWidth / 2;
+                const shadowOffset = 14;
+                if (left - containerElementPosition.left < halfPopover) {
+                    offsetToBorderLeft = left - containerElementPosition.left;
+                    popoverStyles.left =
+                        positionToTabCenter -
+                        containerElementPosition.left -
+                        offsetToBorderLeft +
+                        shadowOffset;
+                } else if (containerElementPosition.right - right < halfPopover) {
+                    popoverStyles.left =
+                        right - containerElementPosition.left - offsetToTabCenter - popoverWidth;
+                } else {
+                    let finalOffsetCorrection = popoverOffsetCorrection || 0;
+                    positionToTabCenter =
+                        positionToTabCenter - containerElementPosition.left - finalOffsetCorrection;
+                    popoverStyles.left = positionToTabCenter - pixelsToPopoverCenter;
+                }
+            } else {
+                popoverStyles.left = positionToTabCenter - pixelsToPopoverCenter;
+            }
 
             setPopoverComponent(popoverContent);
-            setPopoverStyles({
-                display: 'block',
-                left: `${positionToTabCenter - pixelsToPopoverCenter}px`,
-                top: `${element.offsetTop + element.offsetHeight}px`,
-            });
+            setPopoverStyles(popoverStyles);
         },
-        [getParentNode, getAbsolutePosition],
+        [getParentNode, getAbsolutePosition, containerElement, popoverOffsetCorrection],
     );
 
     const onMouseOut = useCallback((e) => {
@@ -235,6 +263,8 @@ Tabs.propTypes = {
             key: PropTypes.string.isRequired,
             title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
             content: PropTypes.node,
+            popoverContent: PropTypes.node,
+            popoverWidth: PropTypes.number,
         }),
     ),
     activeKey: PropTypes.string,

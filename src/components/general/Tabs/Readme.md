@@ -159,6 +159,81 @@ function onClose({ key, activeKey, tabs }) {
 />;
 ```
 
+Preview Tabs in Modal:
+
+```jsx
+import { useState, useRef, useMemo } from 'react';
+import Text from '../../typography/Text';
+import Button from '../Button';
+import Modal from '../Modal';
+
+const [state, setState] = useState({
+    activeKey: 'tab-1',
+    tabs: [...Array(15)].fill(0).map((_, i) => ({
+        key: `tab-${i}`,
+        title: `Tab ${i}`,
+        fixed: i === 0,
+        popoverContent: (
+            <div
+                className="hereeeee"
+                style={{ width: 200, height: 100, padding: 16, boxSizing: 'border-box' }}
+            >
+                <Text>{`Popover for tab-${i}`}</Text>
+            </div>
+        ),
+        popoverWidth: 200,
+    })),
+});
+const [isOpen, setIsOpen] = useState(false);
+const [containerElement, setContainerElement] = useState(null);
+
+function onChange(key) {
+    setState((state) => ({
+        ...state,
+        activeKey: key,
+    }));
+}
+
+function onClose({ key, activeKey, tabs }) {
+    console.log(`Closed ${key} tab`);
+    setState((state) => ({ activeKey, tabs }));
+}
+
+<div>
+    <Button onClick={() => setIsOpen(true)}>Open Modal</Button>
+    <Modal
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+        getContentRef={(ref) => {
+            setContainerElement(ref);
+        }}
+        height="400px"
+        size="big"
+    >
+        <Tabs
+            onChange={onChange}
+            onClose={onClose}
+            activeKey={state.activeKey}
+            tabs={state.tabs}
+            editable
+            containerElement={containerElement}
+            popoverOffsetCorrection={32}
+        />
+        <div
+            style={{
+                height: '200px',
+                boxSizing: 'border-box',
+                padding: '20px',
+                display: 'flex',
+                justifyContent: 'center',
+            }}
+        >
+            this is content
+        </div>
+    </Modal>
+</div>;
+```
+
 ### Component tree
 
 ---
