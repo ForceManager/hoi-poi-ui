@@ -56,6 +56,7 @@ function Modal({
     shouldCloseOnEsc,
     shouldCloseOnOverlayClick,
     closeTimeoutMS,
+    getContentRef,
     preComponent,
     postComponent,
     ...props
@@ -160,6 +161,7 @@ function Modal({
         shouldCloseOnOverlayClick,
         shouldCloseOnEsc,
         closeTimeoutMS,
+        contentRef: getContentRef,
         ...override.root,
     };
 
