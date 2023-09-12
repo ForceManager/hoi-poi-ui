@@ -149,11 +149,21 @@ function Tabs({
 
             if (containerElement) {
                 const containerElementPosition = getAbsolutePosition(containerElement);
-                let halfPopover = popoverWidth / 2;
+                const canFit = tabWidth > popoverWidth;
+                const differenceTabAndPopover = popoverWidth - tabWidth;
                 const shadowOffset = 6;
-                if (left - containerElementPosition.left < halfPopover) {
+
+                if (
+                    !canFit &&
+                    left - containerElementPosition.left + popoverOffsetCorrection <
+                        differenceTabAndPopover
+                ) {
                     popoverStyles.left = shadowOffset;
-                } else if (containerElementPosition.right - right < halfPopover) {
+                } else if (
+                    !canFit &&
+                    containerElementPosition.right + popoverOffsetCorrection - right <
+                        differenceTabAndPopover
+                ) {
                     popoverStyles.right = shadowOffset;
                 } else {
                     positionToTabCenter =
