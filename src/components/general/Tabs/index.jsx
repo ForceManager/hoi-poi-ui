@@ -27,7 +27,7 @@ function Tabs({
     editable,
     alwaysShowCloseTab,
     containerElement,
-    popoverOffsetCorrection,
+    popoverOffsetCorrection = 0,
     ...props
 }) {
     const [state, setState] = useState({
@@ -128,8 +128,6 @@ function Tabs({
             e.stopPropagation();
             const element = tabRef.current || null;
             if (!element) return;
-            const popover = element.querySelector('[class*="HoiPoi__Tabs__popover"]');
-            if (!popover) return;
 
             let parentNode = null;
 
@@ -143,31 +141,25 @@ function Tabs({
 
             let positionToTabCenter = left + offsetToTabCenter;
             const pixelsToPopoverCenter = popoverWidth / 2;
-            let offsetToBorderLeft = null;
 
             let popoverStyles = {
                 display: 'block',
-                top: `${element.offsetTop + element.offsetHeight}px`,
+                top: element.offsetTop + element.offsetHeight,
             };
 
             if (containerElement) {
                 const containerElementPosition = getAbsolutePosition(containerElement);
                 let halfPopover = popoverWidth / 2;
-                const shadowOffset = 14;
+                const shadowOffset = 6;
                 if (left - containerElementPosition.left < halfPopover) {
-                    offsetToBorderLeft = left - containerElementPosition.left;
-                    popoverStyles.left =
+                    popoverStyles.left = shadowOffset;
+                } else if (containerElementPosition.right - right < halfPopover) {
+                    popoverStyles.right = shadowOffset;
+                } else {
+                    positionToTabCenter =
                         positionToTabCenter -
                         containerElementPosition.left -
-                        offsetToBorderLeft +
-                        shadowOffset;
-                } else if (containerElementPosition.right - right < halfPopover) {
-                    popoverStyles.left =
-                        right - containerElementPosition.left - offsetToTabCenter - popoverWidth;
-                } else {
-                    let finalOffsetCorrection = popoverOffsetCorrection || 0;
-                    positionToTabCenter =
-                        positionToTabCenter - containerElementPosition.left - finalOffsetCorrection;
+                        popoverOffsetCorrection;
                     popoverStyles.left = positionToTabCenter - pixelsToPopoverCenter;
                 }
             } else {
@@ -239,9 +231,11 @@ function Tabs({
                 })}
             </RCTabs>
             {postComponent && <div className={classes.postComponent}>{postComponent}</div>}
-            <div className={classes.popover} style={popoverStyles}>
-                {popoverComponent}
-            </div>
+            {popoverComponent && (
+                <div className={classes.popover} style={popoverStyles}>
+                    {popoverComponent}
+                </div>
+            )}
         </div>
     );
 }
@@ -274,6 +268,8 @@ Tabs.propTypes = {
     postComponent: PropTypes.node,
     editable: PropTypes.bool,
     alwaysShowCloseTab: PropTypes.bool,
+    containerElement: PropTypes.node,
+    popoverOffsetCorrection: PropTypes.number,
 };
 
 export default memo(Tabs);

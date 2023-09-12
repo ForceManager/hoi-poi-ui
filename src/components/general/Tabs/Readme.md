@@ -210,15 +210,18 @@ function onClose({ key, activeKey, tabs }) {
         height="400px"
         size="big"
     >
-        <Tabs
-            onChange={onChange}
-            onClose={onClose}
-            activeKey={state.activeKey}
-            tabs={state.tabs}
-            editable
-            containerElement={containerElement}
-            popoverOffsetCorrection={32}
-        />
+        <div style={{ padding: '0px 16px' }}>
+            <Tabs
+                onChange={onChange}
+                onClose={onClose}
+                activeKey={state.activeKey}
+                tabs={state.tabs}
+                editable
+                containerElement={containerElement}
+                popoverOffsetCorrection={32}
+            />
+        </div>
+
         <div
             style={{
                 height: '200px',
