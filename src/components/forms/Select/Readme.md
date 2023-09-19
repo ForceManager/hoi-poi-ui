@@ -683,7 +683,7 @@ const loadGroupOptions = () =>
 
 const [stateGroupNoValues, setStateGroupNoValues] = useState([]);
 
-const onChangeGroupNoValue = (value) => setStateGroupNOValues(value);
+const onChangeGroupNoValue = (value) => setStateGroupNoValues(value);
 
 const [stateGroupValues, setStateGroupValues] = useState([
     {
