@@ -514,7 +514,9 @@ export default (theme) => ({
         display: 'none',
         position: 'absolute',
         background: theme.colors.neutralBase,
-        boxShadow: '0px 8px 10px 0px rgba(39, 60, 80, 0.14)',
+        boxShadow: `0px 4px 5px 0px rgba(39, 60, 80, 0.2),
+                    0px 3px 14px 0px rgba(39, 60, 80, 0.12),
+                    0px 8px 10px 0px rgba(39, 60, 80, 0.14)`,
         borderRadius: '6px',
     },
 });
