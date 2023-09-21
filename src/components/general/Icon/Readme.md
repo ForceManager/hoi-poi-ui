@@ -176,6 +176,7 @@ import Icon from './IconWithTooltip';
     <Icon name="share" />
     <Icon name="whatsapp" />
     <Icon name="whatsappGreen" />
+    <Icon name="skype" />
 </div>;
 ```
 
@@ -202,6 +203,7 @@ import Icon from './IconWithTooltip';
 
 <div style={{ display: 'flex', flexFlow: 'row wrap', gap: 4, alignItems: 'flex-end' }}>
     <Icon name="timeZone" />
+    <Icon name="localPhone" />
 </div>;
 ```
 
@@ -282,6 +284,7 @@ import Icon from './IconWithTooltip';
     <Icon name="facebook" />
     <Icon name="google" />
     <Icon name="linkedin" />
+    <Icon name="linkedinSimple">
     <Icon name="slack" />
     <Icon name="wordpress" />
     <Icon name="microsoftTeams" />

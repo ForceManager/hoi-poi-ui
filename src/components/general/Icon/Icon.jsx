@@ -228,6 +228,7 @@ import SupervisorAccount from './icons/social/SupervisorAccount';
 import Share from './icons/social/Share';
 import Whatsapp from './icons/social/Whatsapp';
 import WhatsappGreen from './icons/social/WhatsappGreen';
+import Skype from './icons/social/Skype';
 
 //Image
 import Timer from './icons/image/Timer';
@@ -236,6 +237,7 @@ import Image from './icons/image/Image';
 
 //Map
 import TimeZone from './icons/map/TimeZone';
+import LocalPhone from './icons/map/LocalPhone';
 
 //Menu
 import Accounts from './icons/menu/Accounts';
@@ -288,6 +290,7 @@ import Docusign from './icons/logos/Docusign';
 import Facebook from './icons/logos/Facebook';
 import Google from './icons/logos/Google';
 import Linkedin from './icons/logos/Linkedin';
+import LinkedinSimple from './icons/logos/LinkedinSimple';
 import Slack from './icons/logos/Slack';
 import Wordpress from './icons/logos/Wordpress';
 import MicrosoftTeams from './icons/logos/MicrosoftTeams';
@@ -657,12 +660,14 @@ export const ICONS = {
     share: Share,
     whatsapp: Whatsapp,
     whatsappGreen: WhatsappGreen,
+    skype: Skype,
     //Image
     timer: Timer,
     timerOff: TimerOff,
     image: Image,
     //Map
     timeZone: TimeZone,
+    localPhone: LocalPhone,
     //Menu
     accounts: Accounts,
     activities: Activities,
@@ -714,8 +719,9 @@ export const ICONS = {
     facebook: Facebook,
     google: Google,
     linkedin: Linkedin,
+    linkedinSimple: LinkedinSimple,
     slack: Slack,
-    wordpress: Wordpress,   
+    wordpress: Wordpress,
     microsoftTeams: MicrosoftTeams,
     zoomCam: ZoomCam,
     zoomList: ZoomList,
