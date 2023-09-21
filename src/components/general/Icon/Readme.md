@@ -291,6 +291,9 @@ import Icon from './IconWithTooltip';
     <Icon name="softland" />
     <Icon name="sage" />
     <Icon name="outlook" />
+    <Icon name="hubspot" />
+    <Icon name="typeform" />
+    <Icon name="microsoft" />
 </div>;
 ```
 

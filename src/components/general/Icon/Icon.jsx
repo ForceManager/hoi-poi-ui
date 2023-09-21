@@ -291,6 +291,9 @@ import Linkedin from './icons/logos/Linkedin';
 import Slack from './icons/logos/Slack';
 import Wordpress from './icons/logos/Wordpress';
 import MicrosoftTeams from './icons/logos/MicrosoftTeams';
+import Typeform from './icons/logos/Typeform';
+import Microsoft from './icons/logos/Microsoft';
+import Hubspot from './icons/logos/Hubspot';
 import ZoomCam from './icons/logos/ZoomCam';
 import ZoomList from './icons/logos/ZoomList';
 import Salesforce from './icons/logos/Salesforce';
@@ -715,8 +718,11 @@ export const ICONS = {
     google: Google,
     linkedin: Linkedin,
     slack: Slack,
-    wordpress: Wordpress,   
+    wordpress: Wordpress,
     microsoftTeams: MicrosoftTeams,
+    typeform: Typeform,
+    hubspot: Hubspot,
+    microsoft: Microsoft,
     zoomCam: ZoomCam,
     zoomList: ZoomList,
     salesforce: Salesforce,
