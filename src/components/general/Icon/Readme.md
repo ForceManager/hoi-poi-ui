@@ -284,7 +284,7 @@ import Icon from './IconWithTooltip';
     <Icon name="facebook" />
     <Icon name="google" />
     <Icon name="linkedin" />
-    <Icon name="linkedinSimple">
+    <Icon name="linkedinSimple" />
     <Icon name="slack" />
     <Icon name="wordpress" />
     <Icon name="microsoftTeams" />
