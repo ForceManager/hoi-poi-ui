@@ -9,12 +9,14 @@ const [state, setState] = useState({
     text: 'Lorem ipsum',
     type: 'info',
     position: 'top-right',
-    autoClose: 2000,
-    newestOnTop: false,
+    autoClose: false,
+    newestOnTop: true,
     closeOnClick: true,
     toastId: '',
     useDefaultCloseButton: false,
 });
+
+const [notifications, setNotifications] = useState([]);
 
 let radioOptions = [
     {
@@ -168,17 +170,76 @@ let onChangeUseDefaultCloseButton = (value) =>
     <br />
     <Button
         type="terciary"
-        onClick={() =>
-            showToast({
+        onClick={() => {
+            const toastId = showToast({
                 type: state.type,
                 text: state.text,
                 title: state.title,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
-            })
-        }
+            });
+            setNotifications([...notifications, toastId]);
+        }}
     >
         Show Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            const toastId = showToast({
+                content: <div>Custom Toast</div>,
+                closeOnClick: state.closeOnClick,
+                useDefaultCloseButton: state.useDefaultCloseButton,
+            });
+            setNotifications([...notifications, toastId]);
+        }}
+    >
+        Show Custom Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            const toastId = showToast({
+                type: 'warning',
+                text: state.text,
+                title: state.title,
+                order: 1,
+                closeOnClick: state.closeOnClick,
+                useDefaultCloseButton: state.useDefaultCloseButton,
+            });
+            setNotifications([...notifications, toastId]);
+        }}
+    >
+        Show Custom Toast At The Bottom
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            if (notifications[0]) {
+                clearToast(notifications[0]);
+                const newNotifications = notifications.slice(1);
+                setNotifications([...newNotifications]);
+            }
+        }}
+    >
+        Dismiss Toast Via Id
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            clearToast();
+            setNotifications([]);
+        }}
+    >
+        Dismiss All Toast
     </Button>
 </div>;
 ```

@@ -9,6 +9,7 @@ import { useToastContainer, useToastAutoClose } from './hooks';
 import { POSITION } from './constants';
 import { CLEAR_TOAST, publish, SHOW_TOAST } from '../../../utils/eventBuser';
 import styles from './styles';
+import { TransitionGroup } from './transitions';
 const useStyles = createUseStyles(styles, 'ToastContainer');
 
 /**
@@ -39,7 +40,7 @@ const ToastContainer = forwardRef(
         },
         ref,
     ) => {
-        const { loaded, portalId, toasts, setToasts } = useToastContainer({
+        const { loaded, portalId, toasts, setToasts, clearDeletedToast } = useToastContainer({
             position,
             newestOnTop,
         });
@@ -85,19 +86,25 @@ const ToastContainer = forwardRef(
             ReactDOM.createPortal(
                 <div className={rootClassName}>
                     {preComponent && preComponent}
+                    <TransitionGroup>
+                        {toasts.map((t) => (
+                            <Toast
+                                key={t.id}
+                                id={t.id}
+                                type={t.type}
+                                title={t.title || ''}
+                                text={t.text || ''}
+                                content={t.content || null}
+                                isActive={t.isActive}
+                                onClose={() => removeToast(t.id)}
+                                position={POSITION[position]}
+                                transition={transition}
+                                useDefaultCloseButton={t.useDefaultCloseButton}
+                                clearDeletedToast={clearDeletedToast}
+                            />
+                        ))}
+                    </TransitionGroup>
 
-                    {toasts.map((t) => (
-                        <Toast
-                            key={t.id}
-                            type={t.type}
-                            title={t.title || ''}
-                            text={t.text || ''}
-                            content={t.content || null}
-                            onClose={() => removeToast(t.id)}
-                            position={POSITION[position]}
-                            transition={transition}
-                        />
-                    ))}
                     {postComponent && postComponent}
                 </div>,
 
@@ -112,6 +119,8 @@ const ToastContainer = forwardRef(
 ToastContainer.defaultProps = {
     className: '',
     autoClose: 4000,
+    newestOnTop: true,
+    closeOnClick: false,
 };
 
 ToastContainer.propTypes = {
@@ -132,7 +141,6 @@ ToastContainer.propTypes = {
         'bottom-right',
     ]),
     autoClose: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
-    useDefaultCloseButton: PropTypes.bool,
 };
 
 export default ToastContainer;

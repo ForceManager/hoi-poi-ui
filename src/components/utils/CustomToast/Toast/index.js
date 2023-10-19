@@ -1,10 +1,12 @@
-import React, { memo } from 'react';
+import React, { memo, useMemo, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Text from '../../../typography/Text';
+import Icon from '../../../general/Icon';
 import { useClasses } from '../../../../utils/overrides';
-import { createUseStyles } from '../../../../utils/styles';
-import { TYPES } from '../constants';
+import { createUseStyles, useTheme } from '../../../../utils/styles';
+import { Transition } from '../transitions';
+import { TYPES, POSITION } from '../constants';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'NewToast');
 
@@ -12,39 +14,108 @@ const Toast = memo(
     ({
         classes: classesProp,
         className: classNameProp,
-        type = 'success',
-        transition = 'slide',
+        id,
+        type,
+        transition,
         onClose,
         title,
         content,
         text,
+        isActive,
         position,
+        clearDeletedToast,
     }) => {
+        const theme = useTheme();
         const classes = useClasses(useStyles, classesProp);
         const rootClassName = classnames(
             classes.root,
             {
-                [classes[TYPES.success]]: type === TYPES.success,
-                [classes[TYPES.warning]]: type === TYPES.warning,
-                [classes[TYPES.error]]: type === TYPES.error,
-                [classes[TYPES.info]]: type === TYPES.info,
+                [classes[TYPES.success]]: !content && type === TYPES.success,
+                [classes[TYPES.warning]]: !content && type === TYPES.warning,
+                [classes[TYPES.error]]: !content && type === TYPES.error,
+                [classes[TYPES.info]]: !content && type === TYPES.info,
             },
             classNameProp,
         );
 
+        const toastContent = useMemo(() => {
+            return (
+                <Fragment>
+                    <div className={classes.header}>
+                        <Text className={classes.title} type="subtitle" bold>
+                            {title}
+                        </Text>
+                        <Icon name="close" size="large" onClick={onClose} />
+                    </div>
+                    {!text && content}
+                    <div className={classes.content}>
+                        <Text className={classes.text} type="caption" color="neutral700">
+                            {text}
+                        </Text>
+                    </div>
+                </Fragment>
+            );
+        }, [classes, content, text, title, onClose]);
+
+        const icon = useMemo(() => {
+            const icons = {
+                [TYPES.success]: { name: 'taskChecked', color: theme.colors.green400 },
+                [TYPES.warning]: { name: 'warning', color: theme.colors.yellow400 },
+                [TYPES.error]: { name: 'error', color: theme.colors.red400 },
+                [TYPES.info]: { name: 'info', color: theme.colors.blue400 },
+            };
+
+            if (!icons[type]) return null;
+
+            return <Icon name={icons[type].name} color={icons[type].color} />;
+        }, [type, theme]);
+
+        const finalTransition = useMemo(() => {
+            if (!transition) return null;
+            if (transition === 'fade') return transition;
+            if (transition === 'slide') {
+                if (position === POSITION['top-left'] || position === POSITION['bottom-left'])
+                    return 'slideRight';
+                else if (
+                    position === POSITION['top-right'] ||
+                    position === POSITION['bottom-right']
+                )
+                    return 'slideLeft';
+            }
+        }, [transition, position]);
+
         return (
-            <div onClick={onClose} className={rootClassName}>
-                <div classNam={classes.header}>
-                    <Text className={classes.title}>{title}</Text>
+            <Transition
+                transition={finalTransition}
+                transitionKey={id}
+                show={isActive}
+                timeout={500}
+                onExited={() => clearDeletedToast(id)}
+            >
+                <div className={rootClassName}>
+                    {icon && !content && (
+                        <div className={classes.toastWrapper}>
+                            <div className={classes.withIcon}>
+                                <div className={classes.iconBox}>{icon}</div>
+                                <div className={classes.contentBox}>{toastContent}</div>
+                            </div>
+                        </div>
+                    )}
+                    {!icon && !content && (
+                        <div className={classes.toastWrapper}>{toastContent}</div>
+                    )}
+                    {content}
                 </div>
-                {!text && content}
-                <div className={classes.content}>
-                    <Text className={classes.text}>{text}</Text>
-                </div>
-            </div>
+            </Transition>
         );
     },
 );
+
+Toast.defaultProps = {
+    type: 'success',
+    transition: 'slide',
+    content: null,
+};
 
 Toast.propTypes = {
     className: PropTypes.string,
