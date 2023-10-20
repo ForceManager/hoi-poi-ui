@@ -7,12 +7,12 @@ export const TYPES = {
 };
 
 export const POSITION = {
-    'top-left': 'top-left',
-    'top-center': 'top-center',
-    'top-right': 'top-right',
-    'bottom-left': 'bottom-left',
-    'bottom-center': 'bottom-center',
-    'bottom-right': 'bottom-right',
+    topLeft: 'top-left',
+    topCenter: 'top-center',
+    topRight: 'top-right',
+    bottomLeft: 'bottom-left',
+    bottomCenter: 'bottom-center',
+    bottomRight: 'bottom-right',
 };
 
 export const TRANSITIONS = {
@@ -20,4 +20,4 @@ export const TRANSITIONS = {
     slide: 'slide',
 };
 
-export const POSITIONS_TOP = [POSITION['top-left'], POSITION['top-center'], POSITION['top-right']];
+export const POSITIONS_TOP = [POSITION['topLeft'], POSITION['topCenter'], POSITION['topRight']];

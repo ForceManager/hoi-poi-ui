@@ -1,14 +1,15 @@
 Default ToastContainer:
 
 ```jsx
-import { Button, Input, RadioGroup, ToastContainer, showToast, clearToast } from 'hoi-poi-ui';
+import { Button, Input, RadioGroup, ToastContainer, showToast, clearToast, Text } from 'hoi-poi-ui';
 import { useState } from 'react';
 
 const [state, setState] = useState({
     title: 'Lorem',
     text: 'Lorem ipsum',
     type: 'info',
-    position: 'top-right',
+    position: 'topRight',
+    transition: 'slide',
     autoClose: false,
     newestOnTop: true,
     closeOnClick: true,
@@ -18,7 +19,7 @@ const [state, setState] = useState({
 
 const [notifications, setNotifications] = useState([]);
 
-let radioOptions = [
+let typeOptions = [
     {
         label: 'Info',
         value: 'info',
@@ -37,22 +38,35 @@ let radioOptions = [
     },
 ];
 
+let transitionOptions = [
+    { label: 'slide', value: 'slide' },
+    { label: 'fade', value: 'fade' },
+];
+
 let positionOptions = [
     {
-        label: 'top-left',
-        value: 'top-left',
+        label: 'topLeft',
+        value: 'topLeft',
     },
     {
-        label: 'top-right',
-        value: 'top-right',
+        label: 'topCenter',
+        value: 'topCenter',
     },
     {
-        label: 'bottom-left',
-        value: 'bottom-left',
+        label: 'topRight',
+        value: 'topRight',
     },
     {
-        label: 'bottom-right',
-        value: 'bottom-right',
+        label: 'bottomLeft',
+        value: 'bottomLeft',
+    },
+    {
+        label: 'bottomCenter',
+        value: 'bottomCenter',
+    },
+    {
+        label: 'bottomRight',
+        value: 'bottomRight',
     },
 ];
 
@@ -116,6 +130,7 @@ let onChangeText = (value) => {
     setState({ ...state, text: value });
 };
 let onChangePosition = (value) => setState({ ...state, position: value });
+let onChangeTransition = (value) => setState({ ...state, transition: value });
 let onChangeAutoClose = (value) => setState({ ...state, autoClose: value });
 let onChangeNewestOnTop = (value) => setState({ ...state, newestOnTop: !state.newestOnTop });
 let onChangeCloseOnClick = (value) => setState({ ...state, closeOnClick: !state.closeOnClick });
@@ -123,7 +138,7 @@ let onChangeUseDefaultCloseButton = (value) =>
     setState({ ...state, useDefaultCloseButton: !state.useDefaultCloseButton });
 
 <div>
-    <RadioGroup label="Toast type" options={radioOptions} onChange={onChange} value={state.type} />
+    <RadioGroup label="Toast type" options={typeOptions} onChange={onChange} value={state.type} />
     <Input
         label="Toast title"
         placeholder="Type here"
@@ -136,6 +151,12 @@ let onChangeUseDefaultCloseButton = (value) =>
         options={positionOptions}
         onChange={onChangePosition}
         value={state.position}
+    />
+    <RadioGroup
+        label="transition"
+        options={transitionOptions}
+        onChange={onChangeTransition}
+        value={state.transition}
     />
     <RadioGroup
         label="autoClose"
@@ -166,6 +187,15 @@ let onChangeUseDefaultCloseButton = (value) =>
         position={state.position}
         autoClose={state.autoClose}
         newestOnTop={state.newestOnTop}
+        transition={state.transition}
+        preComponent={{
+            topRight: <Text>PreComponent TopLeft</Text>,
+            bottomRight: <Text>PreComponent TopLeft</Text>,
+        }}
+        postComponent={{
+            topRight: <Text>PostComponent TopRight</Text>,
+            bottomRight: <Text>PostComponent BottomRight</Text>,
+        }}
     />
     <br />
     <Button
@@ -189,7 +219,7 @@ let onChangeUseDefaultCloseButton = (value) =>
         type="terciary"
         onClick={() => {
             const toastId = showToast({
-                content: <div>Custom Toast</div>,
+                content: <Text>Custom Toast</Text>,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
             });
@@ -197,24 +227,6 @@ let onChangeUseDefaultCloseButton = (value) =>
         }}
     >
         Show Custom Toast
-    </Button>
-    <br />
-    <br />
-    <Button
-        type="terciary"
-        onClick={() => {
-            const toastId = showToast({
-                type: 'warning',
-                text: state.text,
-                title: state.title,
-                order: 1,
-                closeOnClick: state.closeOnClick,
-                useDefaultCloseButton: state.useDefaultCloseButton,
-            });
-            setNotifications([...notifications, toastId]);
-        }}
-    >
-        Show Custom Toast At The Bottom
     </Button>
     <br />
     <br />

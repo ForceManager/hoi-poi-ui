@@ -6,7 +6,7 @@ import Icon from '../../../general/Icon';
 import { useClasses } from '../../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../../utils/styles';
 import { Transition } from '../transitions';
-import { TYPES, POSITION } from '../constants';
+import { TYPES } from '../constants';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'NewToast');
 
@@ -22,7 +22,6 @@ const Toast = memo(
         content,
         text,
         isActive,
-        position,
         clearDeletedToast,
     }) => {
         const theme = useTheme();
@@ -70,26 +69,12 @@ const Toast = memo(
             return <Icon name={icons[type].name} color={icons[type].color} />;
         }, [type, theme]);
 
-        const finalTransition = useMemo(() => {
-            if (!transition) return null;
-            if (transition === 'fade') return transition;
-            if (transition === 'slide') {
-                if (position === POSITION['top-left'] || position === POSITION['bottom-left'])
-                    return 'slideRight';
-                else if (
-                    position === POSITION['top-right'] ||
-                    position === POSITION['bottom-right']
-                )
-                    return 'slideLeft';
-            }
-        }, [transition, position]);
-
         return (
             <Transition
-                transition={finalTransition}
+                transition={transition}
                 transitionKey={id}
                 show={isActive}
-                timeout={500}
+                timeout={300}
                 onExited={() => clearDeletedToast(id)}
             >
                 <div className={rootClassName}>
@@ -128,7 +113,6 @@ Toast.propTypes = {
     closeButtonClassName: PropTypes.string,
     closeOnClick: PropTypes.bool,
     newestOnTop: PropTypes.bool,
-    position: PropTypes.oneOf(['top-right', 'top-left', 'bottom-right', 'bottom-left']),
     autoClose: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
     useDefaultCloseButton: PropTypes.bool,
 };

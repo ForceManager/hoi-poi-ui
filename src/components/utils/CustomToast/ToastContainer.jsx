@@ -1,8 +1,7 @@
-import ReactDOM from 'react-dom';
 import React, { useCallback, forwardRef, useImperativeHandle } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Toast from './Toast';
+import ToastGroup from './ToastGroup';
 import { useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 import { useToastContainer, useToastAutoClose } from './hooks';
@@ -11,18 +10,6 @@ import { CLEAR_TOAST, publish, SHOW_TOAST } from '../../../utils/eventBuser';
 import styles from './styles';
 import { TransitionGroup } from './transitions';
 const useStyles = createUseStyles(styles, 'ToastContainer');
-
-/**
- * The parent of this component should not have
- * to worry about maintaining a list of message
- * objects. That would require the parent to
- * also manage the deletion of toasts, etc.
- *
- * To accommodate this, we are using a combination
- * of useImperativeHandle and forwardRef to give
- * the parent access to this component's addMessage
- * functionality.
- */
 
 const DEFAULT_CLOSE_TIME = 4000;
 
@@ -40,24 +27,14 @@ const ToastContainer = forwardRef(
         },
         ref,
     ) => {
-        const { loaded, portalId, toasts, setToasts, clearDeletedToast } = useToastContainer({
+        const { toasts, setToasts, clearDeletedToast } = useToastContainer({
             position,
+            transition,
             newestOnTop,
         });
 
         const classes = useClasses(useStyles, classesProp);
-        const rootClassName = classnames(
-            classes.root,
-            {
-                [classes.topLeft]: position === 'top-left',
-                [classes.topCenter]: position === 'top-center',
-                [classes.topRight]: position === 'top-right',
-                [classes.bottomLeft]: position === 'bottom-left',
-                [classes.bottomCenter]: position === 'bottom-center',
-                [classes.bottomRight]: position === 'bottom-right',
-            },
-            classNameProp,
-        );
+        const rootClassName = classnames(classes.root, {}, classNameProp);
 
         useToastAutoClose({
             toasts,
@@ -82,36 +59,26 @@ const ToastContainer = forwardRef(
             },
         }));
 
-        return loaded ? (
-            ReactDOM.createPortal(
-                <div className={rootClassName}>
-                    {preComponent && preComponent}
-                    <TransitionGroup>
-                        {toasts.map((t) => (
-                            <Toast
-                                key={t.id}
-                                id={t.id}
-                                type={t.type}
-                                title={t.title || ''}
-                                text={t.text || ''}
-                                content={t.content || null}
-                                isActive={t.isActive}
-                                onClose={() => removeToast(t.id)}
-                                position={POSITION[position]}
-                                transition={transition}
-                                useDefaultCloseButton={t.useDefaultCloseButton}
+        return (
+            <div className={rootClassName}>
+                <TransitionGroup>
+                    {Object.entries(POSITION).map(([key, value]) => {
+                        const finalPreComponent = preComponent?.[key];
+                        const finalPostComponent = postComponent?.[key];
+                        return (
+                            <ToastGroup
+                                key={key}
+                                position={key}
+                                toasts={toasts[value] || []}
+                                removeToast={removeToast}
                                 clearDeletedToast={clearDeletedToast}
+                                preComponent={finalPreComponent}
+                                postComponent={finalPostComponent}
                             />
-                        ))}
-                    </TransitionGroup>
-
-                    {postComponent && postComponent}
-                </div>,
-
-                document.getElementById(portalId),
-            )
-        ) : (
-            <></>
+                        );
+                    })}
+                </TransitionGroup>
+            </div>
         );
     },
 );
@@ -133,13 +100,29 @@ ToastContainer.propTypes = {
     closeOnClick: PropTypes.bool,
     newestOnTop: PropTypes.bool,
     position: PropTypes.oneOf([
-        'top-left',
-        'top-center',
-        'top-right',
-        'bottom-left',
-        'bottom-center',
-        'bottom-right',
+        'topLeft',
+        'topCenter',
+        'topRight',
+        'bottomLeft',
+        'bottomCenter',
+        'bottomRight',
     ]),
+    preComponent: PropTypes.shape({
+        topLeft: PropTypes.element,
+        topCenter: PropTypes.element,
+        topRight: PropTypes.element,
+        bottomLeft: PropTypes.element,
+        bottomCenter: PropTypes.element,
+        bottomRight: PropTypes.element,
+    }),
+    postComponent: PropTypes.shape({
+        topLeft: PropTypes.element,
+        topCenter: PropTypes.element,
+        topRight: PropTypes.element,
+        bottomLeft: PropTypes.element,
+        bottomCenter: PropTypes.element,
+        bottomRight: PropTypes.element,
+    }),
     autoClose: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
 };
 

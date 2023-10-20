@@ -12,8 +12,6 @@ const Transition = ({ children, show, transitionKey, transition, timeout }) => {
 
     const transitionClass = useMemo(() => {
         switch (transition) {
-            case 'slideDown':
-                return 'slideDownTransition';
             case 'slideLeft':
                 return 'slideLeftTransition';
             case 'slideRight':
@@ -25,7 +23,7 @@ const Transition = ({ children, show, transitionKey, transition, timeout }) => {
     }, [transition]);
 
     const transitionProps = useMemo(() => {
-        const classNames = classnames({ smooth: true }, transitionClass);
+        const classNames = classnames({}, transitionClass);
 
         return {
             key: transitionKey,

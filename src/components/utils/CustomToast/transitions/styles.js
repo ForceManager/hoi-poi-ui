@@ -1,8 +1,4 @@
 export default (theme) => ({
-    smooth: {
-        height: 'auto',
-        transition: 'all .3s ease-in-out',
-    },
     fadeTransition: {
         '&.fadeTransition-enter': {
             opacity: 0,
@@ -10,7 +6,7 @@ export default (theme) => ({
 
         '&.fadeTransition-enter-active': {
             opacity: 1,
-            transition: 'all 200ms ease-in',
+            transition: 'all .2s ease-in',
         },
 
         '&.fadeTransition-exit': {
@@ -19,36 +15,17 @@ export default (theme) => ({
 
         '&.fadeTransition-exit-active': {
             opacity: 0,
-            transition: 'all 200ms ease-in',
-        },
-    },
-    slideLeftTransition: {
-        '&.slideLeftTransition-enter': {
-            transform: 'translateX(110%)',
-        },
-
-        '&.slideLeftTransition-enter-active': {
-            transform: 'translateX(0)',
-            transition: 'all 300ms ease-in-out',
-        },
-
-        '&.slideLeftTransition-exit': {
-            transform: 'translateX(0)',
-        },
-
-        '&.slideLeftTransition-exit-active': {
-            transform: 'translateX(110%)',
-            transition: 'all 300ms ease-in-out',
+            transition: 'all .2s ease-in',
         },
     },
     slideRightTransition: {
         '&.slideRightTransition-enter': {
-            transform: 'translateX(-110%)',
+            transform: 'translateX(110%)',
         },
 
         '&.slideRightTransition-enter-active': {
             transform: 'translateX(0)',
-            transition: 'opacity 300ms ease-in-out',
+            transition: 'all .3s ease-in-out',
         },
 
         '&.slideRightTransition-exit': {
@@ -56,30 +33,26 @@ export default (theme) => ({
         },
 
         '&.slideRightTransition-exit-active': {
-            transform: 'translateX(-110%)',
-            transition: 'opacity 300ms ease-in-out',
+            transform: 'translateX(110%)',
+            transition: 'all .3s ease-in-out',
         },
     },
-    slideDownTransition: {
-        '&.slideDownTransition-enter': {
-            transform: 'translateY(-100%)',
-            opacity: 0,
+    slideLeftTransition: {
+        '&.slideLeftTransition-enter': {
+            transform: 'translateX(-110%)',
         },
 
-        '&.slideDownTransition-enter-active': {
-            transform: 'translateY(0%)',
-            opacity: 1,
+        '&.slideLeftTransition-enter-active': {
+            transform: 'translateX(0)',
             transition: 'all .3s ease-in-out',
         },
 
-        '&.slideDownTransition-exit': {
-            transform: 'translateY(0%)',
-            opacity: 1,
+        '&.slideLeftTransition-exit': {
+            transform: 'translateX(0)',
         },
 
-        '&.slideDownTransition-exit-active': {
-            transform: 'translateY(-100%)',
-            opacity: 0,
+        '&.slideLeftTransition-exit-active': {
+            transform: 'translateX(-110%)',
             transition: 'all .3s ease-in-out',
         },
     },

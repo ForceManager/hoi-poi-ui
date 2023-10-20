@@ -1,36 +1,49 @@
 import { useState, useEffect, useCallback } from 'react';
-import { v4 as uuid } from 'uuid';
 import { subscribe, SHOW_TOAST, CLEAR_TOAST } from '../../../../utils/eventBuser';
+import { POSITION } from '../constants';
 
-export const useToastContainer = ({ position, newestOnTop }) => {
-    const [loaded, setLoaded] = useState(false);
-    const [portalId] = useState(`toast-portal-${uuid()}`);
-    const [toasts, setToasts] = useState([]);
+const getDefaultToasts = () => {
+    return Object.entries(POSITION).reduce((obj, [key, value]) => {
+        obj[value] = [];
+        return obj;
+    }, {});
+};
+
+export const useToastContainer = ({ position, transition, newestOnTop }) => {
+    const [toasts, setToasts] = useState(getDefaultToasts());
 
     const removeToast = useCallback(
         (id) => {
-            // setToasts(toasts.filter((t) => t.id !== id));
-            const newToasts = toasts.map((current) => {
-                if (current.id === id) current.isActive = false;
-                return current;
-            });
+            const newToasts = Object.entries(toasts).reduce((obj, [key, value]) => {
+                obj[key] = value.map((current) => {
+                    if (current.id === id) current.isActive = false;
+                    return current;
+                });
+                return obj;
+            }, {});
             setToasts(newToasts);
         },
         [toasts],
     );
 
     const removeAllToast = useCallback(() => {
-        // setToasts([]);
-        const newToasts = toasts.map((current) => {
-            current.isActive = false;
-            return current;
-        });
+        const newToasts = Object.entries(toasts).reduce((obj, [key, value]) => {
+            obj[key] = value.map((current) => {
+                current.isActive = false;
+                return current;
+            });
+            return obj;
+        }, {});
         setToasts(newToasts);
     }, [toasts]);
 
     const clearDeletedToast = useCallback(
         (id) => {
-            setToasts(toasts.filter((t) => t.id !== id));
+            const newToasts = Object.entries(toasts).reduce((obj, [key, value]) => {
+                obj[key] = value.filter((t) => t.id !== id);
+                return obj;
+            }, {});
+            setToasts(newToasts);
         },
         [toasts],
     );
@@ -40,18 +53,23 @@ export const useToastContainer = ({ position, newestOnTop }) => {
             if (!toast) return;
 
             toast.isActive = true;
-            let newToasts = [...toasts];
+            if (!toast.transition) toast.transition = transition;
+            if (!toast.position) toast.position = position;
 
-            if (!isNaN(toast.order)) {
-                let index = toast.order - 1;
-                newToasts.splice(index, 0, toast);
-            } else if (newestOnTop) {
-                newToasts.push(toast);
-            } else newToasts.unshift(toast);
+            const toastPosition = POSITION?.[toast.position] || null;
+            if (!toastPosition) return;
 
+            let toastsByPosition = [...toasts[toastPosition]];
+
+            if (newestOnTop) {
+                toastsByPosition.push(toast);
+            } else {
+                toastsByPosition.unshift(toast);
+            }
+            let newToasts = { ...toasts, [toastPosition]: toastsByPosition };
             setToasts(newToasts);
         });
-    }, [toasts, position, newestOnTop]);
+    }, [toasts, position, newestOnTop, transition]);
 
     useEffect(() => {
         return subscribe(CLEAR_TOAST, (props) => {
@@ -60,16 +78,5 @@ export const useToastContainer = ({ position, newestOnTop }) => {
         });
     });
 
-    useEffect(() => {
-        const div = document.createElement('div');
-        div.id = portalId;
-        div.style = 'position: fixed; top: 10px; right: 10px';
-        document.getElementsByTagName('body')[0].prepend(div);
-
-        setLoaded(true);
-
-        return () => document.getElementsByTagName('body')[0].removeChild(div);
-    }, [portalId]);
-
-    return { loaded, portalId, toasts, setToasts, clearDeletedToast };
+    return { toasts, setToasts, clearDeletedToast, removeToast };
 };
