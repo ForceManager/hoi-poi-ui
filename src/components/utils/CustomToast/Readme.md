@@ -1,7 +1,16 @@
 Default ToastContainer:
 
 ```jsx
-import { Button, Input, RadioGroup, ToastContainer, showToast, clearToast, Text } from 'hoi-poi-ui';
+import {
+    Button,
+    Input,
+    RadioGroup,
+    ToastContainer,
+    showToast,
+    clearToast,
+    Text,
+    CheckboxGroup,
+} from 'hoi-poi-ui';
 import { useState } from 'react';
 
 const [state, setState] = useState({
@@ -15,6 +24,8 @@ const [state, setState] = useState({
     closeOnClick: true,
     toastId: '',
     useDefaultCloseButton: false,
+    preComponent: {},
+    postComponent: {},
 });
 
 const [notifications, setNotifications] = useState([]);
@@ -122,6 +133,43 @@ let useDefaultCloseButton = [
     },
 ];
 
+let preComponentOptions = [
+    {
+        label: 'preComponent topRight',
+        value: 'topRight',
+    },
+    {
+        label: 'preComponent bottomRight',
+        value: 'bottomRight',
+    },
+    {
+        label: 'preComponent topLeft',
+        value: 'topLeft',
+    },
+    {
+        label: 'preComponent bottomLeft',
+        value: 'bottomLeft',
+    },
+];
+let postComponentOptions = [
+    {
+        label: 'postComponent topRight',
+        value: 'topRight',
+    },
+    {
+        label: 'postComponent bottomRight',
+        value: 'bottomRight',
+    },
+    {
+        label: 'postComponent topLeft',
+        value: 'topLeft',
+    },
+    {
+        label: 'postComponent bottomLeft',
+        value: 'bottomLeft',
+    },
+];
+
 let onChange = (value) => setState({ ...state, type: value });
 let onChangeTitle = (value) => {
     setState({ ...state, title: value });
@@ -136,6 +184,8 @@ let onChangeNewestOnTop = (value) => setState({ ...state, newestOnTop: !state.ne
 let onChangeCloseOnClick = (value) => setState({ ...state, closeOnClick: !state.closeOnClick });
 let onChangeUseDefaultCloseButton = (value) =>
     setState({ ...state, useDefaultCloseButton: !state.useDefaultCloseButton });
+let onChangePreComponent = (value) => setState({ ...state, preComponent: value });
+let onChangePostComponent = (value) => setState({ ...state, postComponent: value });
 
 <div>
     <RadioGroup label="Toast type" options={typeOptions} onChange={onChange} value={state.type} />
@@ -182,19 +232,42 @@ let onChangeUseDefaultCloseButton = (value) =>
         onChange={onChangeNewestOnTop}
         value={state.newestOnTop}
     />
-
+    <CheckboxGroup
+        label="PreComponent"
+        color="orange"
+        options={preComponentOptions}
+        onChange={onChangePreComponent}
+        value={state.preComponent}
+    />
+    <CheckboxGroup
+        label="PostComponent"
+        color="orange"
+        options={postComponentOptions}
+        onChange={onChangePostComponent}
+        value={state.postComponent}
+    />
     <ToastContainer
         position={state.position}
         autoClose={state.autoClose}
         newestOnTop={state.newestOnTop}
         transition={state.transition}
         preComponent={{
-            topRight: <Text>PreComponent TopLeft</Text>,
-            bottomRight: <Text>PreComponent TopLeft</Text>,
+            topLeft: state.preComponent.topLeft ? <Text>PreComponent TopLeft</Text> : null,
+            topRight: state.preComponent.topRight ? <Text>PreComponent TopRight</Text> : null,
+            bottomLeft: state.preComponent.bottomLeft ? <Text>PreComponent BottomLeft</Text> : null,
+            bottomRight: state.preComponent.bottomRight ? (
+                <Text>PreComponent BottomRight</Text>
+            ) : null,
         }}
         postComponent={{
-            topRight: <Text>PostComponent TopRight</Text>,
-            bottomRight: <Text>PostComponent BottomRight</Text>,
+            topLeft: state.postComponent.topLeft ? <Text>PostComponent TopLeft</Text> : null,
+            topRight: state.postComponent.topRight ? <Text>PostComponent TopRight</Text> : null,
+            bottomLeft: state.postComponent.bottomLeft ? (
+                <Text>PostComponent BottomLeft</Text>
+            ) : null,
+            bottomRight: state.postComponent.bottomRight ? (
+                <Text>PostComponent BottomRight</Text>
+            ) : null,
         }}
     />
     <br />

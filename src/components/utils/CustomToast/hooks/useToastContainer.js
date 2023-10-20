@@ -9,8 +9,9 @@ const getDefaultToasts = () => {
     }, {});
 };
 
-export const useToastContainer = ({ position, transition, newestOnTop }) => {
+export const useToastContainer = ({ position, transition, autoClose, newestOnTop }) => {
     const [toasts, setToasts] = useState(getDefaultToasts());
+    const [lastToast, setLastToast] = useState(null);
 
     const removeToast = useCallback(
         (id) => {
@@ -55,6 +56,9 @@ export const useToastContainer = ({ position, transition, newestOnTop }) => {
             toast.isActive = true;
             if (!toast.transition) toast.transition = transition;
             if (!toast.position) toast.position = position;
+            if (toast?.autoClose === undefined || toast?.autoClose === null) {
+                toast.autoClose = autoClose;
+            }
 
             const toastPosition = POSITION?.[toast.position] || null;
             if (!toastPosition) return;
@@ -67,9 +71,11 @@ export const useToastContainer = ({ position, transition, newestOnTop }) => {
                 toastsByPosition.unshift(toast);
             }
             let newToasts = { ...toasts, [toastPosition]: toastsByPosition };
+
+            setLastToast(toast);
             setToasts(newToasts);
         });
-    }, [toasts, position, newestOnTop, transition]);
+    }, [toasts, position, newestOnTop, transition, autoClose]);
 
     useEffect(() => {
         return subscribe(CLEAR_TOAST, (props) => {
@@ -78,5 +84,5 @@ export const useToastContainer = ({ position, transition, newestOnTop }) => {
         });
     });
 
-    return { toasts, setToasts, clearDeletedToast, removeToast };
+    return { toasts, setToasts, clearDeletedToast, removeToast, lastToast };
 };

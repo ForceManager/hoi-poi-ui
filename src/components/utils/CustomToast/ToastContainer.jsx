@@ -27,9 +27,10 @@ const ToastContainer = forwardRef(
         },
         ref,
     ) => {
-        const { toasts, setToasts, clearDeletedToast } = useToastContainer({
+        const { toasts, lastToast, setToasts, clearDeletedToast } = useToastContainer({
             position,
             transition,
+            autoClose,
             newestOnTop,
         });
 
@@ -40,6 +41,7 @@ const ToastContainer = forwardRef(
             toasts,
             setToasts,
             autoClose,
+            lastToast,
             autoCloseTime:
                 autoClose && typeof autoClose !== 'boolean' && !isNaN(autoClose)
                     ? autoClose

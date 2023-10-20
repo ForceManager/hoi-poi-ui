@@ -1,18 +1,26 @@
 import { useEffect, useState } from 'react';
 
-export const useToastAutoClose = ({ toasts, setToasts, autoClose, autoCloseTime }) => {
+export const useToastAutoClose = ({ toasts, setToasts, lastToast, autoCloseTime }) => {
     const [removing, setRemoving] = useState('');
 
     useEffect(() => {
         if (removing) {
-            setToasts((t) => t.filter((current) => current.id !== removing));
+            const newToasts = Object.entries(toasts).reduce((obj, [key, value]) => {
+                obj[key] = value.map((current) => {
+                    if (current.id === removing) current.isActive = false;
+                    return current;
+                });
+                return obj;
+            }, {});
+            setToasts(newToasts);
+            setRemoving('');
         }
-    }, [removing, setToasts]);
+    }, [removing, setToasts, toasts]);
 
     useEffect(() => {
-        if (autoClose && toasts.length) {
-            const id = toasts[toasts.length - 1].id;
+        if (lastToast?.autoClose) {
+            const id = lastToast.id;
             setTimeout(() => setRemoving(id), autoCloseTime);
         }
-    }, [toasts, autoClose, autoCloseTime]);
+    }, [toasts, lastToast, autoCloseTime, removing]);
 };

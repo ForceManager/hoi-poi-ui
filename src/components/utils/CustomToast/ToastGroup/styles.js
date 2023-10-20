@@ -1,5 +1,6 @@
 export default (theme) => ({
     root: {
+        minWidth: '350px',
         gap: '14px',
         display: 'flex',
         flexDirection: 'column',
