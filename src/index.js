@@ -56,6 +56,7 @@ export { default as Password } from './components/forms/Password';
 export { default as Popover } from './components/utils/Popover';
 export { default as ScrollBar } from './components/utils/ScrollBar';
 export { Toast, toast, dismissToast } from './components/utils/Toast';
+export { ToastContainer, showToast, clearToast } from './components/utils/CustomToast';
 export { default as Tooltip } from './components/utils/Tooltip';
 export { default as SelectWrapper } from './components/utils/SelectWrapper';
 
