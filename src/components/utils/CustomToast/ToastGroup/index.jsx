@@ -10,7 +10,15 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'ToastGroup');
 
 const ToastGroup = memo(
-    ({ position, toasts, removeToast, clearDeletedToast, preComponent, postComponent }) => {
+    ({
+        position,
+        toasts,
+        removeToast,
+        clearDeletedToast,
+        preComponent,
+        postComponent,
+        override,
+    }) => {
         const classes = useClasses(useStyles);
         const rootClassName = classnames(classes.root, {
             [classes.topLeft]: POSITION[position] === 'top-left',
@@ -47,7 +55,7 @@ const ToastGroup = memo(
         if (!toasts?.length && !preComponent && !postComponent) return null;
 
         return (
-            <div className={rootClassName}>
+            <div className={rootClassName} {...override.ToastGroup}>
                 {preComponent && preComponent}
                 {toasts.map((t) => (
                     <Toast
@@ -62,6 +70,7 @@ const ToastGroup = memo(
                         transition={getTransition(t.transition)}
                         useDefaultCloseButton={t.useDefaultCloseButton}
                         clearDeletedToast={clearDeletedToast}
+                        override={override.Toast}
                     />
                 ))}
                 {postComponent && postComponent}
@@ -69,5 +78,9 @@ const ToastGroup = memo(
         );
     },
 );
+
+ToastGroup.defaultProps = {
+    override: {},
+};
 
 export default ToastGroup;

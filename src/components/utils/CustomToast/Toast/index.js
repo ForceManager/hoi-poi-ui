@@ -23,6 +23,7 @@ const Toast = memo(
         text,
         isActive,
         clearDeletedToast,
+        override,
     }) => {
         const theme = useTheme();
         const classes = useClasses(useStyles, classesProp);
@@ -69,6 +70,10 @@ const Toast = memo(
             return <Icon name={icons[type].name} color={icons[type].color} />;
         }, [type, theme]);
 
+        const toastWrapperClassName = classnames(classes.toastWrapper, {
+            [classes.withIcon]: !!icon,
+        });
+
         return (
             <Transition
                 transition={transition}
@@ -77,17 +82,17 @@ const Toast = memo(
                 timeout={300}
                 onExited={() => clearDeletedToast(id)}
             >
-                <div className={rootClassName}>
+                <div className={rootClassName} {...override.Toast}>
                     {icon && !content && (
-                        <div className={classes.toastWrapper}>
-                            <div className={classes.withIcon}>
-                                <div className={classes.iconBox}>{icon}</div>
-                                <div className={classes.contentBox}>{toastContent}</div>
-                            </div>
+                        <div className={toastWrapperClassName} {...override.ToastWrapper}>
+                            <div className={classes.iconBox}>{icon}</div>
+                            <div className={classes.contentBox}>{toastContent}</div>
                         </div>
                     )}
                     {!icon && !content && (
-                        <div className={classes.toastWrapper}>{toastContent}</div>
+                        <div className={toastWrapperClassName} {...override.ToastWrapper}>
+                            {toastContent}
+                        </div>
                     )}
                     {content}
                 </div>
@@ -97,6 +102,7 @@ const Toast = memo(
 );
 
 Toast.defaultProps = {
+    override: {},
     type: 'success',
     transition: 'slide',
     content: null,

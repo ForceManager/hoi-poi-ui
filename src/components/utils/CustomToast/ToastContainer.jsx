@@ -2,7 +2,7 @@ import React, { useCallback, forwardRef, useImperativeHandle } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ToastGroup from './ToastGroup';
-import { useClasses } from '../../../utils/overrides';
+import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 import { useToastContainer, useToastAutoClose } from './hooks';
 import { POSITION } from './constants';
@@ -18,6 +18,7 @@ const ToastContainer = forwardRef(
         {
             classes: classesProp,
             className: classNameProp,
+            overrides: overridesProp,
             autoClose = false,
             position,
             transition,
@@ -35,6 +36,7 @@ const ToastContainer = forwardRef(
         });
 
         const classes = useClasses(useStyles, classesProp);
+        const override = getOverrides(overridesProp, ToastContainer.overrides);
         const rootClassName = classnames(classes.root, {}, classNameProp);
 
         useToastAutoClose({
@@ -62,7 +64,7 @@ const ToastContainer = forwardRef(
         }));
 
         return (
-            <div className={rootClassName}>
+            <div className={rootClassName} {...override.root}>
                 <TransitionGroup>
                     {Object.entries(POSITION).map(([key, value]) => {
                         const finalPreComponent = preComponent?.[key];
@@ -76,6 +78,7 @@ const ToastContainer = forwardRef(
                                 clearDeletedToast={clearDeletedToast}
                                 preComponent={finalPreComponent}
                                 postComponent={finalPostComponent}
+                                override={override}
                             />
                         );
                     })}
@@ -87,6 +90,7 @@ const ToastContainer = forwardRef(
 
 ToastContainer.defaultProps = {
     className: '',
+    overrides: {},
     autoClose: 4000,
     newestOnTop: true,
     closeOnClick: false,

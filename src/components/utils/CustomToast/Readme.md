@@ -19,7 +19,7 @@ const [state, setState] = useState({
     type: 'info',
     position: 'topRight',
     transition: 'slide',
-    autoClose: false,
+    autoClose: 2000,
     newestOnTop: true,
     closeOnClick: true,
     toastId: '',

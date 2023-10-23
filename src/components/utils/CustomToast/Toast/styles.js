@@ -16,27 +16,6 @@ export default (theme) => ({
         boxShadow: `0px 4px 5px 0px rgba(39, 60, 80, 0.2), 0px 3px 14px 0px rgba(39, 60, 80, 0.12), 0px 8px 10px 0px rgba(39, 60, 80, 0.14)`,
         transition: 'transform 2s ease-in-out',
     },
-    // topLeft: {
-    //     transform: 'translate(100%, 0)',
-    // },
-    // topCenter: {
-    //     transform: 'translate(0, 100%)',
-    // },
-    // topRight: {
-    //     transform: 'translate(-100%, 0)',
-    // },
-    // bottomLeft: {
-    //     transform: 'translate(100%, 0)',
-    // },
-    // bottomCenter: {
-    //     transform: 'translate(0, -100%)',
-    // },
-    // bottomRight: {
-    //     transform: 'translate(-100%, 0)',
-    // },
-    // active: {
-    //     transform: 'translate(0, 0)',
-    // },
     'fade-enter': {
         opacity: 0,
         transform: 'scale(0.9)',
@@ -60,7 +39,6 @@ export default (theme) => ({
         padding: '10px 15px',
     },
     withIcon: {
-        width: '100%',
         display: 'flex',
     },
     iconBox: { padding: '5px 10px 0 0' },
@@ -70,7 +48,6 @@ export default (theme) => ({
     header: {
         width: '100%',
         boxSizing: 'border-box',
-        // padding: '8px',
         display: 'flex',
         justifyContent: 'space-between',
     },
