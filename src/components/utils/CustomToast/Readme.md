@@ -23,7 +23,7 @@ const [state, setState] = useState({
     newestOnTop: true,
     closeOnClick: true,
     toastId: '',
-    useDefaultCloseButton: false,
+    useDefaultCloseButton: true,
     preComponent: {},
     postComponent: {},
 });

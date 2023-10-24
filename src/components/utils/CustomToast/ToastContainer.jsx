@@ -20,6 +20,8 @@ const ToastContainer = forwardRef(
             className: classNameProp,
             overrides: overridesProp,
             autoClose = false,
+            useDefaultCloseButton,
+            closeOnClick,
             position,
             transition,
             newestOnTop,
@@ -28,10 +30,12 @@ const ToastContainer = forwardRef(
         },
         ref,
     ) => {
-        const { toasts, lastToast, setToasts, clearDeletedToast } = useToastContainer({
+        const { toasts, setToasts, clearDeletedToast } = useToastContainer({
             position,
             transition,
             autoClose,
+            useDefaultCloseButton,
+            closeOnClick,
             newestOnTop,
         });
 
@@ -43,7 +47,6 @@ const ToastContainer = forwardRef(
             toasts,
             setToasts,
             autoClose,
-            lastToast,
             autoCloseTime:
                 autoClose && typeof autoClose !== 'boolean' && !isNaN(autoClose)
                     ? autoClose

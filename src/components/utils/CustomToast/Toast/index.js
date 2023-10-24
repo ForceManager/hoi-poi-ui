@@ -14,16 +14,18 @@ const Toast = memo(
     ({
         classes: classesProp,
         className: classNameProp,
+        override,
         id,
         type,
         transition,
+        closeOnClick,
+        useDefaultCloseButton,
         onClose,
         title,
         content,
         text,
         isActive,
         clearDeletedToast,
-        override,
     }) => {
         const theme = useTheme();
         const classes = useClasses(useStyles, classesProp);
@@ -45,7 +47,9 @@ const Toast = memo(
                         <Text className={classes.title} type="subtitle" bold>
                             {title}
                         </Text>
-                        <Icon name="close" size="large" onClick={onClose} />
+                        {useDefaultCloseButton && (
+                            <Icon name="close" size="large" onClick={onClose} />
+                        )}
                     </div>
                     {!text && content}
                     <div className={classes.content}>
@@ -55,7 +59,7 @@ const Toast = memo(
                     </div>
                 </Fragment>
             );
-        }, [classes, content, text, title, onClose]);
+        }, [classes, content, text, title, onClose, useDefaultCloseButton]);
 
         const icon = useMemo(() => {
             const icons = {
@@ -82,7 +86,11 @@ const Toast = memo(
                 timeout={300}
                 onExited={() => clearDeletedToast(id)}
             >
-                <div className={rootClassName} {...override.Toast}>
+                <div
+                    className={rootClassName}
+                    {...override.Toast}
+                    onClick={closeOnClick && onClose}
+                >
                     {icon && !content && (
                         <div className={toastWrapperClassName} {...override.ToastWrapper}>
                             <div className={classes.iconBox}>{icon}</div>
@@ -106,6 +114,7 @@ Toast.defaultProps = {
     type: 'success',
     transition: 'slide',
     content: null,
+    useDefaultCloseButton: true,
 };
 
 Toast.propTypes = {

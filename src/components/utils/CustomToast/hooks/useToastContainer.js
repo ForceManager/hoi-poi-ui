@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { subscribe, SHOW_TOAST, CLEAR_TOAST } from '../../../../utils/eventBuser';
 import { POSITION } from '../constants';
 
@@ -9,9 +9,16 @@ const getDefaultToasts = () => {
     }, {});
 };
 
-export const useToastContainer = ({ position, transition, autoClose, newestOnTop }) => {
+export const useToastContainer = ({
+    position,
+    transition,
+    autoClose,
+    newestOnTop,
+    useDefaultCloseButton,
+    closeOnClick,
+}) => {
     const [toasts, setToasts] = useState(getDefaultToasts());
-    const [lastToast, setLastToast] = useState(null);
+    const toastNumberRef = useRef(1);
 
     const removeToast = useCallback(
         (id) => {
@@ -59,6 +66,17 @@ export const useToastContainer = ({ position, transition, autoClose, newestOnTop
             if (toast?.autoClose === undefined || toast?.autoClose === null) {
                 toast.autoClose = autoClose;
             }
+            if (
+                toast?.useDefaultCloseButton === undefined ||
+                toast?.useDefaultCloseButton === null
+            ) {
+                toast.useDefaultCloseButton = useDefaultCloseButton;
+            }
+            if (toast?.closeOnClick === undefined || toast?.closeOnClick === null) {
+                toast.closeOnClick = closeOnClick;
+            }
+            toast.number = toastNumberRef.current;
+            toastNumberRef.current++;
 
             const toastPosition = POSITION?.[toast.position] || null;
             if (!toastPosition) return;
@@ -72,10 +90,9 @@ export const useToastContainer = ({ position, transition, autoClose, newestOnTop
             }
             let newToasts = { ...toasts, [toastPosition]: toastsByPosition };
 
-            setLastToast(toast);
             setToasts(newToasts);
         });
-    }, [toasts, position, newestOnTop, transition, autoClose]);
+    }, [toasts, position, newestOnTop, transition, autoClose, useDefaultCloseButton, closeOnClick]);
 
     useEffect(() => {
         return subscribe(CLEAR_TOAST, (props) => {
@@ -84,5 +101,5 @@ export const useToastContainer = ({ position, transition, autoClose, newestOnTop
         });
     });
 
-    return { toasts, setToasts, clearDeletedToast, removeToast, lastToast };
+    return { toasts, setToasts, clearDeletedToast, removeToast };
 };
