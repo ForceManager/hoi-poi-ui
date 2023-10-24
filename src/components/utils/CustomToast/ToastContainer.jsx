@@ -40,6 +40,7 @@ const ToastContainer = forwardRef(
         });
 
         const classes = useClasses(useStyles, classesProp);
+
         const override = getOverrides(overridesProp, ToastContainer.overrides);
         const rootClassName = classnames(classes.root, {}, classNameProp);
 
@@ -90,6 +91,8 @@ const ToastContainer = forwardRef(
         );
     },
 );
+
+ToastContainer.overrides = ['root', 'ToastGroup', 'Toast', 'ToastWrapper'];
 
 ToastContainer.defaultProps = {
     className: '',
