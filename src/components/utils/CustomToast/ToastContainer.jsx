@@ -94,6 +94,7 @@ const ToastContainer = forwardRef(
 ToastContainer.defaultProps = {
     className: '',
     overrides: {},
+    position: POSITION.topRight,
     autoClose: 4000,
     newestOnTop: true,
     closeOnClick: false,

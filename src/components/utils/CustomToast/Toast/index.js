@@ -1,4 +1,4 @@
-import React, { memo, useMemo, Fragment } from 'react';
+import React, { memo, useMemo, Fragment, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Text from '../../../typography/Text';
@@ -78,6 +78,11 @@ const Toast = memo(
             [classes.withIcon]: !!icon,
         });
 
+        const handleCloseOnClick = useCallback(() => {
+            if (!closeOnClick) return;
+            onClose();
+        }, [closeOnClick, onClose]);
+
         return (
             <Transition
                 transition={transition}
@@ -86,11 +91,7 @@ const Toast = memo(
                 timeout={300}
                 onExited={() => clearDeletedToast(id)}
             >
-                <div
-                    className={rootClassName}
-                    {...override.Toast}
-                    onClick={closeOnClick && onClose}
-                >
+                <div className={rootClassName} {...override.Toast} onClick={handleCloseOnClick}>
                     {icon && !content && (
                         <div className={toastWrapperClassName} {...override.ToastWrapper}>
                             <div className={classes.iconBox}>{icon}</div>
@@ -114,7 +115,6 @@ Toast.defaultProps = {
     type: 'success',
     transition: 'slide',
     content: null,
-    useDefaultCloseButton: true,
 };
 
 Toast.propTypes = {
