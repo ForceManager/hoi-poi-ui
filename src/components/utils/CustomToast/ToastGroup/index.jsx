@@ -62,14 +62,18 @@ const ToastGroup = memo(
                         key={t.id}
                         id={t.id}
                         type={t.type}
+                        transition={getTransition(t.transition)}
                         title={t.title || ''}
                         text={t.text || ''}
                         content={t.content || null}
+                        icon={t.icon || null}
                         isActive={t.isActive}
                         onClose={() => removeToast(t.id)}
-                        transition={getTransition(t.transition)}
+                        onClick={t.onClick}
                         useDefaultCloseButton={t.useDefaultCloseButton}
                         closeOnClick={t.closeOnClick}
+                        onClickLink={t.onClickLink}
+                        linkText={t.linkText}
                         clearDeletedToast={clearDeletedToast}
                         override={override.Toast}
                     />

@@ -69,7 +69,7 @@ const ToastContainer = forwardRef(
 
         return (
             <div className={rootClassName} {...override.root}>
-                <TransitionGroup>
+                <TransitionGroup className={classes.TransitionGroup}>
                     {Object.entries(POSITION).map(([key, value]) => {
                         const finalPreComponent = preComponent?.[key];
                         const finalPostComponent = postComponent?.[key];
@@ -106,7 +106,6 @@ ToastContainer.defaultProps = {
 ToastContainer.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
-    containerId: PropTypes.any,
     content: PropTypes.element,
     closeButton: PropTypes.element,
     closeButtonClassName: PropTypes.string,
