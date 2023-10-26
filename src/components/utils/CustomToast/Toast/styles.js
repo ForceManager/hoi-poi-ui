@@ -7,7 +7,7 @@ export default (theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
-
+        borderLeft: `8px solid transparent`,
         opacity: 1,
         cursor: 'pointer',
         borderRadius: '8px',
@@ -47,17 +47,27 @@ export default (theme) => ({
     },
     header: {
         width: '100%',
+        height: 'auto',
         boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'space-between',
+        '& span': {
+            alignSelf: 'center',
+        },
     },
     content: {
         width: '100%',
-        height: '100%',
+        height: 'auto',
         boxSizing: 'border-box',
         paddingTop: '8px',
         display: 'flex',
         justifyContent: 'flex-start',
+        flexDirection: 'column',
+    },
+    text: {},
+    link: {
+        display: 'flex',
+        alignSelf: 'flex-end',
     },
     info: {
         borderLeft: `8px solid ${theme.colors.blue300}`,

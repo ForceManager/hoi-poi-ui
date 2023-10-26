@@ -2,6 +2,7 @@ import React, { memo, useMemo, Fragment, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Text from '../../../typography/Text';
+import Link from '../../../typography/Link';
 import Icon from '../../../general/Icon';
 import { useClasses } from '../../../../utils/overrides';
 import { createUseStyles, useTheme } from '../../../../utils/styles';
@@ -18,14 +19,18 @@ const Toast = memo(
         id,
         type,
         transition,
+        onClick,
         closeOnClick,
         useDefaultCloseButton,
         onClose,
         title,
-        content,
         text,
+        content,
+        icon,
         isActive,
         clearDeletedToast,
+        onClickLink,
+        linkText,
     }) => {
         const theme = useTheme();
         const classes = useClasses(useStyles, classesProp);
@@ -56,12 +61,15 @@ const Toast = memo(
                         <Text className={classes.text} type="caption" color="neutral700">
                             {text}
                         </Text>
+                        <Link className={classes.link} type="caption" onClick={onClickLink}>
+                            {linkText}
+                        </Link>
                     </div>
                 </Fragment>
             );
-        }, [classes, content, text, title, onClose, useDefaultCloseButton]);
+        }, [classes, content, text, title, onClose, useDefaultCloseButton, onClickLink, linkText]);
 
-        const icon = useMemo(() => {
+        const iconType = useMemo(() => {
             const icons = {
                 [TYPES.success]: { name: 'taskChecked', color: theme.colors.green400 },
                 [TYPES.warning]: { name: 'warning', color: theme.colors.yellow400 },
@@ -75,13 +83,14 @@ const Toast = memo(
         }, [type, theme]);
 
         const toastWrapperClassName = classnames(classes.toastWrapper, {
-            [classes.withIcon]: !!icon,
+            [classes.withIcon]: !!iconType || !!icon,
         });
 
-        const handleCloseOnClick = useCallback(() => {
+        const handleOnClickToast = useCallback(() => {
+            if (onClick) onClick();
             if (!closeOnClick) return;
             onClose();
-        }, [closeOnClick, onClose]);
+        }, [closeOnClick, onClose, onClick]);
 
         return (
             <Transition
@@ -91,14 +100,14 @@ const Toast = memo(
                 timeout={300}
                 onExited={() => clearDeletedToast(id)}
             >
-                <div className={rootClassName} {...override.Toast} onClick={handleCloseOnClick}>
-                    {icon && !content && (
+                <div className={rootClassName} {...override.Toast} onClick={handleOnClickToast}>
+                    {(iconType || icon) && !content && (
                         <div className={toastWrapperClassName} {...override.ToastWrapper}>
-                            <div className={classes.iconBox}>{icon}</div>
+                            <div className={classes.iconBox}>{iconType || icon}</div>
                             <div className={classes.contentBox}>{toastContent}</div>
                         </div>
                     )}
-                    {!icon && !content && (
+                    {!iconType && !content && !icon && (
                         <div className={toastWrapperClassName} {...override.ToastWrapper}>
                             {toastContent}
                         </div>
@@ -112,7 +121,6 @@ const Toast = memo(
 
 Toast.defaultProps = {
     override: {},
-    type: 'success',
     transition: 'slide',
     content: null,
 };

@@ -10,6 +10,8 @@ import {
     clearToast,
     Text,
     CheckboxGroup,
+    Icon,
+    useTheme,
 } from 'hoi-poi-ui';
 import { useState } from 'react';
 
@@ -29,6 +31,8 @@ const [state, setState] = useState({
 });
 
 const [notifications, setNotifications] = useState([]);
+
+const theme = useTheme();
 
 let typeOptions = [
     {
@@ -280,11 +284,30 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
                 title: state.title,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
+                onClickLink: () => console.log('Link clicked'),
+                linkText: 'Click link',
             });
             setNotifications([...notifications, toastId]);
         }}
     >
         Show Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            const toastId = showToast({
+                text: state.text,
+                title: state.title,
+                icon: <Icon name="email" color={theme.colors.purple400} />,
+                closeOnClick: state.closeOnClick,
+                useDefaultCloseButton: state.useDefaultCloseButton,
+            });
+            setNotifications([...notifications, toastId]);
+        }}
+    >
+        Show Toast With Icon
     </Button>
     <br />
     <br />
