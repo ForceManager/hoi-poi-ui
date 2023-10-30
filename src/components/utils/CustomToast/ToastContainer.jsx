@@ -1,4 +1,4 @@
-import React, { useCallback, forwardRef, useImperativeHandle } from 'react';
+import React, { memo, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ToastGroup from './ToastGroup';
@@ -6,30 +6,28 @@ import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 import { useToastContainer, useToastAutoClose } from './hooks';
 import { POSITION } from './constants';
-import { CLEAR_TOAST, publish, SHOW_TOAST } from '../../../utils/eventBuser';
+import { CLEAR_TOAST, publish } from '../../../utils/eventBuser';
 import styles from './styles';
 import { TransitionGroup } from './transitions';
 const useStyles = createUseStyles(styles, 'ToastContainer');
 
 const DEFAULT_CLOSE_TIME = 4000;
 
-const ToastContainer = forwardRef(
-    (
-        {
-            classes: classesProp,
-            className: classNameProp,
-            overrides: overridesProp,
-            autoClose = false,
-            useDefaultCloseButton,
-            closeOnClick,
-            position,
-            transition,
-            newestOnTop,
-            preComponent,
-            postComponent,
-        },
-        ref,
-    ) => {
+const ToastContainer = memo(
+    ({
+        classes: classesProp,
+        className: classNameProp,
+        overrides: overridesProp,
+        autoClose = false,
+        useDefaultCloseButton,
+        closeOnClick,
+        position,
+        transition,
+        newestOnTop,
+        preComponent,
+        postComponent,
+        containerId,
+    }) => {
         const { toasts, setToasts, clearDeletedToast } = useToastContainer({
             position,
             transition,
@@ -37,6 +35,7 @@ const ToastContainer = forwardRef(
             useDefaultCloseButton,
             closeOnClick,
             newestOnTop,
+            containerId,
         });
 
         const classes = useClasses(useStyles, classesProp);
@@ -58,17 +57,14 @@ const ToastContainer = forwardRef(
             publish(CLEAR_TOAST, { id });
         }, []);
 
-        useImperativeHandle(ref, () => ({
-            toast(toast) {
-                publish(SHOW_TOAST, { toast });
-            },
-            dismissToast(id) {
-                removeToast(id);
-            },
-        }));
+        const rootProps = useMemo(() => {
+            const props = {};
+            props.id = containerId || 'hoi-poi-ui-toast-container';
+            return props;
+        }, [containerId]);
 
         return (
-            <div className={rootClassName} {...override.root}>
+            <div className={rootClassName} {...rootProps} {...override.root}>
                 <TransitionGroup className={classes.TransitionGroup}>
                     {Object.entries(POSITION).map(([key, value]) => {
                         const finalPreComponent = preComponent?.[key];
@@ -97,7 +93,7 @@ ToastContainer.overrides = ['root', 'ToastGroup', 'Toast', 'ToastWrapper'];
 ToastContainer.defaultProps = {
     className: '',
     overrides: {},
-    position: POSITION.topRight,
+    position: 'topRight',
     autoClose: 4000,
     newestOnTop: true,
     closeOnClick: false,
