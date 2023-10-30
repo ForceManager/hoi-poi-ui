@@ -274,6 +274,7 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
             ) : null,
         }}
     />
+    <ToastContainer containerId="second-container" autoClose={false} />
     <br />
     <Button
         type="terciary"
@@ -323,6 +324,22 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
         }}
     >
         Show Custom Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            showToast({
+                text: state.text,
+                title: 'Toast second-container containerId',
+                closeOnClick: true,
+                useDefaultCloseButton: true,
+                containerId: 'second-container',
+            });
+        }}
+    >
+        Show Toast in ContainerId
     </Button>
     <br />
     <br />
