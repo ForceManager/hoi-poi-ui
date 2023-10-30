@@ -61,9 +61,11 @@ const Toast = memo(
                         <Text className={classes.text} type="caption" color="neutral700">
                             {text}
                         </Text>
-                        <Link className={classes.link} type="caption" onClick={onClickLink}>
-                            {linkText}
-                        </Link>
+                        {onClickLink && linkText && (
+                            <Link className={classes.link} type="caption" onClick={onClickLink}>
+                                {linkText}
+                            </Link>
+                        )}
                     </div>
                 </Fragment>
             );

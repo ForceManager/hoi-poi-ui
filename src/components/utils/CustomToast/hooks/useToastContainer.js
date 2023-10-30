@@ -16,6 +16,7 @@ export const useToastContainer = ({
     newestOnTop,
     useDefaultCloseButton,
     closeOnClick,
+    containerId,
 }) => {
     const [toasts, setToasts] = useState(getDefaultToasts());
     const toastNumberRef = useRef(1);
@@ -59,10 +60,17 @@ export const useToastContainer = ({
     useEffect(() => {
         return subscribe(SHOW_TOAST, (toast) => {
             if (!toast) return;
+            if (
+                (!containerId && toast.containerId) ||
+                (containerId && toast?.containerId !== containerId)
+            )
+                return;
 
             toast.isActive = true;
+
             if (!toast.transition) toast.transition = transition;
             if (!toast.position) toast.position = position;
+
             if (toast?.autoClose === undefined || toast?.autoClose === null) {
                 toast.autoClose = autoClose;
             }
@@ -92,7 +100,16 @@ export const useToastContainer = ({
 
             setToasts(newToasts);
         });
-    }, [toasts, position, newestOnTop, transition, autoClose, useDefaultCloseButton, closeOnClick]);
+    }, [
+        toasts,
+        containerId,
+        position,
+        newestOnTop,
+        transition,
+        autoClose,
+        useDefaultCloseButton,
+        closeOnClick,
+    ]);
 
     useEffect(() => {
         return subscribe(CLEAR_TOAST, (props) => {
