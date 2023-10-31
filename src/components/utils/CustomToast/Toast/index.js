@@ -45,6 +45,20 @@ const Toast = memo(
             classNameProp,
         );
 
+        const handleOnClose = useCallback(
+            (e) => {
+                e.stopPropagation();
+                onClose();
+            },
+            [onClose],
+        );
+
+        const handleOnClick = useCallback(() => {
+            if (onClick) onClick();
+            if (!closeOnClick) return;
+            onClose();
+        }, [closeOnClick, onClose, onClick]);
+
         const toastContent = useMemo(() => {
             return (
                 <Fragment>
@@ -53,7 +67,7 @@ const Toast = memo(
                             {title}
                         </Text>
                         {useDefaultCloseButton && (
-                            <Icon name="close" size="large" onClick={onClose} />
+                            <Icon name="close" size="large" onClick={handleOnClose} />
                         )}
                     </div>
                     {!text && content}
@@ -69,7 +83,16 @@ const Toast = memo(
                     </div>
                 </Fragment>
             );
-        }, [classes, content, text, title, onClose, useDefaultCloseButton, onClickLink, linkText]);
+        }, [
+            classes,
+            content,
+            text,
+            title,
+            handleOnClose,
+            useDefaultCloseButton,
+            onClickLink,
+            linkText,
+        ]);
 
         const iconType = useMemo(() => {
             const icons = {
@@ -88,12 +111,6 @@ const Toast = memo(
             [classes.withIcon]: !!iconType || !!icon,
         });
 
-        const handleOnClickToast = useCallback(() => {
-            if (onClick) onClick();
-            if (!closeOnClick) return;
-            onClose();
-        }, [closeOnClick, onClose, onClick]);
-
         return (
             <Transition
                 transition={transition}
@@ -102,7 +119,7 @@ const Toast = memo(
                 timeout={300}
                 onExited={() => clearDeletedToast(id)}
             >
-                <div className={rootClassName} {...override.Toast} onClick={handleOnClickToast}>
+                <div className={rootClassName} {...override.Toast} onClick={handleOnClick}>
                     {(iconType || icon) && !content && (
                         <div className={toastWrapperClassName} {...override.ToastWrapper}>
                             <div className={classes.iconBox}>{iconType || icon}</div>
