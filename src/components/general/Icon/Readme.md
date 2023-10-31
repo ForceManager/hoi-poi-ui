@@ -297,6 +297,9 @@ import Icon from './IconWithTooltip';
     <Icon name="hubspot" />
     <Icon name="typeform" />
     <Icon name="microsoft" />
+    <Icon name="shopify" />
+    <Icon name="prestashop" />
+    <Icon name="clearbit" />
 </div>;
 ```
 

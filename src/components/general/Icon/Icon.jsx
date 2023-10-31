@@ -303,6 +303,9 @@ import Salesforce from './icons/logos/Salesforce';
 import Softland from './icons/logos/Softland';
 import Sage from './icons/logos/Sage';
 import Outlook from './icons/logos/Outlook';
+import Prestashop from './icons/logos/Prestashop';
+import Shopify from './icons/logos/Shopify';
+import Clearbit from './icons/logos/Clearbit';
 
 //Navigation
 import Apps from './icons/navigation/Apps';
@@ -733,6 +736,9 @@ export const ICONS = {
     zoomList: ZoomList,
     salesforce: Salesforce,
     softland: Softland,
+    shopify: Shopify,
+    prestashop: Prestashop,
+    clearbit: Clearbit,
     sage: Sage,
     outlook: Outlook,
     //Navigation
