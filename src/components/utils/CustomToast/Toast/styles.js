@@ -40,6 +40,10 @@ export default (theme) => ({
     },
     withIcon: {
         display: 'flex',
+        '& svg': {
+            width: 20,
+            height: 20,
+        },
     },
     iconBox: { padding: '5px 10px 0 0' },
     contentBox: {
@@ -59,7 +63,7 @@ export default (theme) => ({
         width: '100%',
         height: 'auto',
         boxSizing: 'border-box',
-        paddingTop: '8px',
+        paddingTop: '4px',
         display: 'flex',
         justifyContent: 'flex-start',
         flexDirection: 'column',
