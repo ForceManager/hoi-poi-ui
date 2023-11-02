@@ -68,7 +68,10 @@ const ToastGroup = memo(
                         content={t.content || null}
                         icon={t.icon || null}
                         isActive={t.isActive}
-                        onClose={() => removeToast(t.id)}
+                        onClose={() => {
+                            t.onClose && t.onClose();
+                            removeToast(t.id);
+                        }}
                         onClick={t.onClick}
                         closeButton={t.closeButton}
                         useDefaultCloseButton={t.useDefaultCloseButton}
