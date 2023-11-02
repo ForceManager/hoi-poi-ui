@@ -21,6 +21,7 @@ const Toast = memo(
         transition,
         onClick,
         closeOnClick,
+        closeButton,
         useDefaultCloseButton,
         onClose,
         title,
@@ -59,6 +60,14 @@ const Toast = memo(
             onClose();
         }, [closeOnClick, onClose, onClick]);
 
+        const handleOnClickLink = useCallback(
+            (e) => {
+                e.stopPropagation();
+                onClickLink();
+            },
+            [onClickLink],
+        );
+
         const toastContent = useMemo(() => {
             return (
                 <Fragment>
@@ -66,21 +75,28 @@ const Toast = memo(
                         <Text className={classes.title} type="subtitle" bold>
                             {title}
                         </Text>
-                        {useDefaultCloseButton && (
+                        {closeButton && closeButton}
+                        {!closeButton && useDefaultCloseButton && (
                             <Icon name="close" size="large" onClick={handleOnClose} />
                         )}
                     </div>
                     {!text && content}
-                    <div className={classes.content}>
-                        <Text className={classes.text} type="caption" color="neutral700">
-                            {text}
-                        </Text>
-                        {onClickLink && linkText && (
-                            <Link className={classes.link} type="caption" onClick={onClickLink}>
-                                {linkText}
-                            </Link>
-                        )}
-                    </div>
+                    {!content && (
+                        <div className={classes.content}>
+                            <Text className={classes.text} type="caption" color="neutral700">
+                                {text}
+                            </Text>
+                            {onClickLink && linkText && (
+                                <Link
+                                    className={classes.link}
+                                    type="caption"
+                                    onClick={handleOnClickLink}
+                                >
+                                    {linkText}
+                                </Link>
+                            )}
+                        </div>
+                    )}
                 </Fragment>
             );
         }, [
@@ -89,8 +105,10 @@ const Toast = memo(
             text,
             title,
             handleOnClose,
+            closeButton,
             useDefaultCloseButton,
             onClickLink,
+            handleOnClickLink,
             linkText,
         ]);
 
@@ -120,7 +138,7 @@ const Toast = memo(
                 onExited={() => clearDeletedToast(id)}
             >
                 <div className={rootClassName} {...override.Toast} onClick={handleOnClick}>
-                    {(iconType || icon) && !content && (
+                    {(iconType || icon) && (
                         <div className={toastWrapperClassName} {...override.ToastWrapper}>
                             <div className={classes.iconBox}>{iconType || icon}</div>
                             <div className={classes.contentBox}>{toastContent}</div>
@@ -131,7 +149,7 @@ const Toast = memo(
                             {toastContent}
                         </div>
                     )}
-                    {content}
+                    {!title && !icon && !iconType && content}
                 </div>
             </Transition>
         );

@@ -13,7 +13,8 @@ import {
     Icon,
     useTheme,
 } from 'hoi-poi-ui';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { v4 as uuid } from 'uuid';
 
 const [state, setState] = useState({
     title: 'Lorem',
@@ -31,6 +32,7 @@ const [state, setState] = useState({
 });
 
 const [notifications, setNotifications] = useState([]);
+const notificationsCloseButtonRef = useRef({});
 
 const theme = useTheme();
 
@@ -285,13 +287,30 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
                 title: state.title,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
-                onClickLink: () => console.log('Link clicked'),
-                linkText: 'Click link',
             });
             setNotifications([...notifications, toastId]);
         }}
     >
         Show Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            const toastId = showToast({
+                type: state.type,
+                text: state.text,
+                title: state.title,
+                closeOnClick: state.closeOnClick,
+                useDefaultCloseButton: state.useDefaultCloseButton,
+                onClickLink: () => alert('Link clicked'),
+                linkText: 'Click link',
+            });
+            setNotifications([...notifications, toastId]);
+        }}
+    >
+        Show Toast With Link
     </Button>
     <br />
     <br />
@@ -324,6 +343,55 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
         }}
     >
         Show Custom Toast
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            const toastId = showToast({
+                title: 'Title',
+                icon: <Icon name="email" color={theme.colors.orange400} />,
+                content: <Text>Custom Toast</Text>,
+                closeOnClick: state.closeOnClick,
+                useDefaultCloseButton: state.useDefaultCloseButton,
+            });
+            setNotifications([...notifications, toastId]);
+        }}
+    >
+        Show Custom Toast With Icon And Title
+    </Button>
+    <br />
+    <br />
+    <Button
+        type="terciary"
+        onClick={() => {
+            const id = uuid();
+            const toastId = showToast({
+                title: 'Title',
+                icon: <Icon name="email" color={theme.colors.orange400} />,
+                content: <Text>Custom Toast</Text>,
+                closeOnClick: state.closeOnClick,
+                closeButton: (
+                    <Button
+                        onClick={() => {
+                            console.log({ n: notificationsCloseButtonRef.current, id });
+                            clearToast(notificationsCloseButtonRef.current[id]);
+                        }}
+                    >
+                        Close
+                    </Button>
+                ),
+                useDefaultCloseButton: state.useDefaultCloseButton,
+            });
+            notificationsCloseButtonRef.current = {
+                ...notificationsCloseButtonRef.current,
+                [id]: toastId,
+            };
+            setNotifications([...notifications, toastId]);
+        }}
+    >
+        Show Toast With CloseButton
     </Button>
     <br />
     <br />

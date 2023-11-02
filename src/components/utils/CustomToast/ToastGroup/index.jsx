@@ -70,6 +70,7 @@ const ToastGroup = memo(
                         isActive={t.isActive}
                         onClose={() => removeToast(t.id)}
                         onClick={t.onClick}
+                        closeButton={t.closeButton}
                         useDefaultCloseButton={t.useDefaultCloseButton}
                         closeOnClick={t.closeOnClick}
                         onClickLink={t.onClickLink}
