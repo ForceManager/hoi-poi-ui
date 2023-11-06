@@ -59,6 +59,7 @@ export default (theme) => ({
             alignSelf: 'center',
         },
     },
+    close: {},
     content: {
         width: '100%',
         height: 'auto',
