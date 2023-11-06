@@ -9,7 +9,7 @@ import { createUseStyles, useTheme } from '../../../../utils/styles';
 import { Transition } from '../transitions';
 import { TYPES } from '../constants';
 import styles from './styles';
-const useStyles = createUseStyles(styles, 'NewToast');
+const useStyles = createUseStyles(styles, 'Toast');
 
 const Toast = memo(
     ({
@@ -77,7 +77,12 @@ const Toast = memo(
                         </Text>
                         {closeButton && closeButton}
                         {!closeButton && useDefaultCloseButton && (
-                            <Icon name="close" size="large" onClick={handleOnClose} />
+                            <Icon
+                                className={classes.close}
+                                name="close"
+                                size="large"
+                                onClick={handleOnClose}
+                            />
                         )}
                     </div>
                     {!text && content}
