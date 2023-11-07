@@ -119,10 +119,10 @@ const Toast = memo(
 
         const iconType = useMemo(() => {
             const icons = {
-                [TYPES.success]: { name: 'taskChecked', color: theme.colors.green400 },
-                [TYPES.warning]: { name: 'warning', color: theme.colors.yellow400 },
-                [TYPES.error]: { name: 'error', color: theme.colors.red400 },
-                [TYPES.info]: { name: 'info', color: theme.colors.blue400 },
+                [TYPES.success]: { name: 'taskChecked', color: theme.colors.green500 },
+                [TYPES.warning]: { name: 'warning', color: theme.colors.yellow500 },
+                [TYPES.error]: { name: 'error', color: theme.colors.red500 },
+                [TYPES.info]: { name: 'info', color: theme.colors.blue500 },
             };
 
             if (!icons[type]) return null;
