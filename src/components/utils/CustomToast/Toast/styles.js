@@ -75,16 +75,16 @@ export default (theme) => ({
         alignSelf: 'flex-end',
     },
     info: {
-        borderLeft: `8px solid ${theme.colors.blue300}`,
+        borderLeft: `8px solid ${theme.colors.blue500}`,
     },
     success: {
-        borderLeft: `8px solid ${theme.colors.green300}`,
+        borderLeft: `8px solid ${theme.colors.green500}`,
     },
     warning: {
-        borderLeft: `8px solid ${theme.colors.yellow300}`,
+        borderLeft: `8px solid ${theme.colors.yellow500}`,
     },
     error: {
-        borderLeft: `8px solid ${theme.colors.red300}`,
+        borderLeft: `8px solid ${theme.colors.red500}`,
     },
     base: {
         backgroundColor: theme.colors.neutralBase,
