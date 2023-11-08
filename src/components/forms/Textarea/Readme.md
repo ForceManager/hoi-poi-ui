@@ -17,6 +17,7 @@ const onChange = (field) => {
         onChange={onChange(1)}
         value={state[1]}
         type="text"
+        isResizable={false}
     />
 </div>;
 ```
