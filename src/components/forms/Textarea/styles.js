@@ -43,6 +43,10 @@ export default (theme) => {
                 borderRadius: 6,
             },
         },
+        notResizable: {
+            resize: 'none',
+            overflow: 'hidden',
+        },
         error: {
             '& $textareaComponents': {
                 backgroundColor: theme.colors.neutralBase,
