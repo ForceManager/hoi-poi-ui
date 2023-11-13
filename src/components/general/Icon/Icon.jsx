@@ -90,6 +90,9 @@ import Hrule from './icons/Hrule';
 import Thumbs from './icons/Thumbs';
 import MobileDevice from './icons/MobileDevice';
 import SecurePayment from './icons/SecurePayment';
+import Logout from './icons/Logout';
+import DatabaseClear from './icons/DatabaseClear';
+import LocalDatabaseClear from './icons/LocalDatabaseClear';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -534,6 +537,9 @@ export const ICONS = {
     thumbs: Thumbs,
     mobileDevice: MobileDevice,
     securePayment: SecurePayment,
+    logout: Logout,
+    databaseClear: DatabaseClear,
+    localDatabaseClear: LocalDatabaseClear,
 
     //Actions
     accountCheckin: AccountCheckin,
