@@ -198,6 +198,7 @@ import ScanCard from './icons/actions/ScanCard';
 import ClearOutline from './icons/actions/ClearOutline';
 import Clear from './icons/actions/Clear';
 import StopRecording from './icons/actions/StopRecording';
+import RelationFields from './icons/actions/RelationFields';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -641,6 +642,7 @@ export const ICONS = {
     clearOutline: ClearOutline,
     clear: Clear,
     stopRecording: StopRecording,
+    relationFields: RelationFields,
     //Communication
     message: Message,
     comment: Comment,

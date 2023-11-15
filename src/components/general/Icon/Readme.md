@@ -126,6 +126,7 @@ import Icon from './IconWithTooltip';
     <Icon name="clearOutline" nameOver="clear" />
     <Icon name="clear" />
     <Icon name="stopRecording" />
+    <Icon name="relationFields" />
 </div>;
 ```
 
