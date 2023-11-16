@@ -15,6 +15,8 @@ function Badge({
     className: classNameProp,
     type,
     variant,
+    isTruncated,
+    useTooltip,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -38,7 +40,13 @@ function Badge({
 
     return (
         <div {...rootProps} {...override.root}>
-            <Text type="caption" className={classes.Text} {...override.Text}>
+            <Text
+                type="caption"
+                className={classes.Text}
+                {...override.Text}
+                isTruncated={isTruncated}
+                useTooltip={useTooltip}
+            >
                 {children}
             </Text>
         </div>
@@ -57,7 +65,15 @@ Badge.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     overrides: PropTypes.object,
-    type: PropTypes.oneOf(['error', 'default', 'info', 'success', 'warning', 'ongoing', 'promotion']),
+    type: PropTypes.oneOf([
+        'error',
+        'default',
+        'info',
+        'success',
+        'warning',
+        'ongoing',
+        'promotion',
+    ]),
     variant: PropTypes.oneOf(['inverted']),
 };
 

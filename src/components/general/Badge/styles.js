@@ -4,7 +4,8 @@ export default (theme) => ({
         minWidth: '70px',
         padding: '2px 8px',
         borderRadius: '4px',
-        display: 'inline-block',
+        display: 'inline-flex',
+        alignItems: 'center',
         textAlign: 'center',
     },
     Text: {
