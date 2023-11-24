@@ -431,6 +431,8 @@ import Strikethrough from './icons/editor/Strikethrough';
 import OrderedList from './icons/editor/OrderedList';
 import UnorderedList from './icons/editor/UnorderedList';
 import Mention from './icons/editor/Mention';
+import EmptyFile from './icons/editor/EmptyFile';
+import FullFile from './icons/editor/FullFile';
 
 // Raw icons
 import LockRaw from './rawIcons/Lock';
@@ -864,6 +866,8 @@ export const ICONS = {
     orderedList: OrderedList,
     unorderedList: UnorderedList,
     mention: Mention,
+    emptyFile: EmptyFile,
+    fullFile: FullFile,
     //Raw
     lockRaw: LockRaw,
     closeRaw: CloseRaw,
