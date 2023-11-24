@@ -612,6 +612,8 @@ import Icon from './IconWithTooltip';
     <Icon name="orderedList" />
     <Icon name="unorderedList" />
     <Icon name="mention" />
+    <Icon name="emptyFile" />
+    <Icon name="fullFile" />
 </div>;
 ```
 
