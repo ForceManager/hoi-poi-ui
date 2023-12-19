@@ -503,6 +503,7 @@ import Icon from './IconWithTooltip';
     <Icon name="chatFilled" />
     <Icon name="send" />
     <Icon name="scheduleSend" />
+    <Icon name="scheduleEvents" />
     <Icon name="emptyAvatar" />
     <Icon name="draggableSort" />
     <Icon name="fileDownload" />
