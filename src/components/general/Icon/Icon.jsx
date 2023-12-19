@@ -56,6 +56,7 @@ import Chat from './icons/Chat';
 import ChatFilled from './icons/ChatFilled';
 import Send from './icons/Send';
 import ScheduleSend from './icons/ScheduleSend';
+import ScheduleEvents from './icons/actions/ScheduleEvents';
 import EmptyAvatar from './icons/EmptyAvatar';
 import DraggableSort from './icons/DraggableSort';
 import FileDownload from './icons/FileDownload';
@@ -858,6 +859,7 @@ export const ICONS = {
     starsCircle: StarsCircle,
     send: Send,
     scheduleSend: ScheduleSend,
+    scheduleEvents: ScheduleEvents,
     //Editor
     bold: Bold,
     italic: Italic,
