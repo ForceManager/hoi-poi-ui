@@ -276,6 +276,7 @@ import Sandbox from './icons/menu/Sandbox';
 import Support from './icons/menu/Support';
 import Tasks from './icons/menu/Tasks';
 import Workspace from './icons/menu/Workspace';
+import Document from './icons/menu/Document';
 
 //Alert
 import Alert from './icons/alert/Alert';
@@ -719,6 +720,7 @@ export const ICONS = {
     support: Support,
     tasks: Tasks,
     workspace: Workspace,
+    document: Document,
     //Alert
     alert: Alert,
     addAlert: AddAlert,
