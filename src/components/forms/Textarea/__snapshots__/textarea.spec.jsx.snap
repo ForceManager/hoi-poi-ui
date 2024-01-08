@@ -403,6 +403,7 @@ exports[`Textarea default match 1`] = `
         isResizable={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -450,19 +451,31 @@ exports[`Textarea default match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-1-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-1-2"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
-                    rows={3}
                     value="Hello"
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-1-2"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder="Write here"
+                      readOnly={null}
+                      value="Hello"
+                    />
+                  </ForwardRef(TextareaAutosize)>
                   <div
                     className="HoiPoi__Textarea__postComponent-1-13"
                   >
@@ -927,6 +940,7 @@ exports[`Textarea hide clear match 1`] = `
         isResizable={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -974,19 +988,31 @@ exports[`Textarea hide clear match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-8-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-8-2"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
-                    rows={3}
                     value=""
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-8-2"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder="Write here"
+                      readOnly={null}
+                      value=""
+                    />
+                  </ForwardRef(TextareaAutosize)>
                 </div>
               </div>
             </div>
@@ -1405,6 +1431,7 @@ exports[`Textarea horizontal label mode match 1`] = `
         isResizable={true}
         label="Lorem ipsum"
         labelMode="horizontal"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -1452,19 +1479,31 @@ exports[`Textarea horizontal label mode match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-6-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-6-2"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
-                    rows={3}
                     value=""
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-6-2"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder="Write here"
+                      readOnly={null}
+                      value=""
+                    />
+                  </ForwardRef(TextareaAutosize)>
                 </div>
               </div>
             </div>
@@ -1883,6 +1922,7 @@ exports[`Textarea is read only match 1`] = `
         isResizable={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -1930,18 +1970,30 @@ exports[`Textarea is read only match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-5-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-5-2"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder={null}
                     readOnly={true}
-                    rows={3}
                     value=""
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-5-2"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder={null}
+                      readOnly={true}
+                      value=""
+                    />
+                  </ForwardRef(TextareaAutosize)>
                   <div
                     className="HoiPoi__Textarea__postComponent-5-13"
                   >
@@ -2403,6 +2455,7 @@ exports[`Textarea is required match 1`] = `
         isResizable={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -2453,19 +2506,31 @@ exports[`Textarea is required match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-3-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-3-2"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
-                    rows={3}
                     value=""
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-3-2"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder="Write here"
+                      readOnly={null}
+                      value=""
+                    />
+                  </ForwardRef(TextareaAutosize)>
                 </div>
               </div>
             </div>
@@ -2885,6 +2950,7 @@ exports[`Textarea with error match 1`] = `
         isResizable={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -2933,19 +2999,31 @@ exports[`Textarea with error match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-4-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-4-2"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
-                    rows={3}
                     value=""
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-4-2"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder="Write here"
+                      readOnly={null}
+                      value=""
+                    />
+                  </ForwardRef(TextareaAutosize)>
                 </div>
               </div>
             </div>
@@ -3376,6 +3454,7 @@ exports[`Textarea with hint match 1`] = `
         isResizable={true}
         label="Lorem ipsum"
         labelMode="vertical"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -3829,20 +3908,33 @@ exports[`Textarea with hint match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-2-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-2-2"
                     hint="Hello"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
-                    rows={3}
                     value=""
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-2-2"
+                      hint="Hello"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder="Write here"
+                      readOnly={null}
+                      value=""
+                    />
+                  </ForwardRef(TextareaAutosize)>
                 </div>
               </div>
             </div>
@@ -4260,6 +4352,7 @@ exports[`Textarea without label mode match 1`] = `
         isReadOnly={false}
         isResizable={true}
         labelMode="vertical"
+        maxRows={6}
         minRows={3}
         onChange={[Function]}
         overrides={{}}
@@ -4283,19 +4376,31 @@ exports[`Textarea without label mode match 1`] = `
                 <div
                   className="HoiPoi__Textarea__textareaComponents-7-1"
                 >
-                  <textarea
+                  <ForwardRef(TextareaAutosize)
                     className="HoiPoi__Textarea__textarea-7-2"
+                    maxRows={6}
+                    minRows={3}
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
-                    onInput={[Function]}
                     onKeyDown={[Function]}
                     onKeyUp={[Function]}
                     placeholder="Write here"
                     readOnly={null}
-                    rows={3}
                     value=""
-                  />
+                  >
+                    <textarea
+                      className="HoiPoi__Textarea__textarea-7-2"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyUp={[Function]}
+                      placeholder="Write here"
+                      readOnly={null}
+                      value=""
+                    />
+                  </ForwardRef(TextareaAutosize)>
                 </div>
               </div>
             </div>
