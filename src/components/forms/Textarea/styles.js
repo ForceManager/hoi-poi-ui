@@ -35,7 +35,7 @@ export default (theme) => {
                 width: 12,
             },
             '&::-webkit-scrollbar-track': {
-                background: theme.colors.neutralBase,
+                background: 'transparent',
             },
             '&::-webkit-scrollbar-thumb': {
                 backgroundColor: theme.colors.neutral700,
@@ -45,7 +45,6 @@ export default (theme) => {
         },
         notResizable: {
             resize: 'none',
-            overflow: 'hidden',
         },
         error: {
             '& $textareaComponents': {

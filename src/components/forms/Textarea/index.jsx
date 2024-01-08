@@ -1,6 +1,7 @@
 import React, { forwardRef, memo, useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import TextareaAutosize from 'react-textarea-autosize';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
@@ -36,6 +37,7 @@ const Textarea = forwardRef(
             labelMode,
             isRequired,
             minRows,
+            maxRows,
             autofocus,
             ...props
         },
@@ -118,21 +120,6 @@ const Textarea = forwardRef(
             [onChange],
         );
 
-        const getScrollHeight = useCallback((el) => {
-            const savedValue = el.value;
-            el.value = '';
-            el._baseScrollHeight = el.scrollHeight;
-            el.value = savedValue;
-        }, []);
-
-        const handleInput = useCallback(() => {
-            const el = textAreaRef.current;
-            !el._baseScrollHeight && getScrollHeight(el);
-            el.rows = minRows;
-            const rows = Math.ceil((el.scrollHeight - el._baseScrollHeight) / 20); // 20 = textarea's line-height CSS value
-            el.rows = rows + minRows;
-        }, [getScrollHeight, minRows]);
-
         let textareaProps = useMemo(
             () => ({
                 id,
@@ -142,13 +129,13 @@ const Textarea = forwardRef(
                 value: value,
                 onChange: isReadOnly ? undefined : handleOnChange,
                 onFocus: handleOnFocus,
-                onInput: handleInput,
                 onBlur: handleOnBlur,
                 onKeyDown: handleOnKeyDown,
                 onKeyUp: handleOnKeyUp,
                 readOnly: isReadOnly || ref,
                 ref: textAreaRef,
-                rows: minRows,
+                minRows,
+                maxRows,
                 ...props,
                 ...override.textarea,
             }),
@@ -157,18 +144,18 @@ const Textarea = forwardRef(
                 name,
                 classes.textarea,
                 classes.notResizable,
+                isResizable,
+                isReadOnly,
                 placeholder,
                 value,
-                isReadOnly,
-                isResizable,
                 handleOnChange,
                 handleOnFocus,
-                handleInput,
                 handleOnBlur,
                 handleOnKeyDown,
                 handleOnKeyUp,
                 ref,
                 minRows,
+                maxRows,
                 props,
                 override.textarea,
             ],
@@ -275,7 +262,7 @@ const Textarea = forwardRef(
                 isRequired={isRequired}
             >
                 <div className={classes.textareaComponents} {...override.textareaComponents}>
-                    <textarea {...textareaProps} />
+                    <TextareaAutosize {...textareaProps} />
                     {newPostComponent.length > 0 && (
                         <div className={classes.postComponent} {...override.postComponent}>
                             {newPostComponent}
@@ -299,6 +286,7 @@ Textarea.defaultProps = {
     hideClear: false,
     overrides: {},
     minRows: 3,
+    maxRows: 6,
 };
 
 Textarea.propTypes = {
@@ -334,6 +322,8 @@ Textarea.propTypes = {
     ref: PropTypes.func,
     /** Minimum text rows visible (initial height of the textarea) */
     minRows: PropTypes.number,
+    /** Maximum rows visible for growing until scroll bars */
+    maxRows: PropTypes.number,
 };
 
 export default memo(Textarea);

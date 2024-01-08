@@ -3,7 +3,7 @@ Textarea Field:
 ```jsx
 import { useState } from 'react';
 
-const [state, setState] = useState({});
+const [state, setState] = useState({ 1: 'Lorem ipsum' });
 const onChange = (field) => {
     return (value) => {
         setState({ ...state, [field]: value });
