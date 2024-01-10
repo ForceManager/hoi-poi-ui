@@ -13,4 +13,13 @@ describe('TitleDivider', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    test('changing text type', () => {
+        const wrapper = mount(
+            <HoiPoiProvider>
+                <TitleDivider type="body">Lorem ipsum</TitleDivider>
+            </HoiPoiProvider>,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
