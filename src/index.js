@@ -29,6 +29,7 @@ export { default as SearchBar } from './components/general/SearchBar';
 export { default as Stepper } from './components/general/Stepper';
 export { default as Table } from './components/general/Table';
 export { default as Tabs } from './components/general/Tabs';
+export { default as TitleDivider } from './components/general/TitleDivider';
 export { default as EllipsedInlineList } from './components/general/EllipsedInlineList';
 export { default as List } from './components/general/List';
 
