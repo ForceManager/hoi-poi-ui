@@ -18,6 +18,7 @@ module.exports = {
                 './src/components/general/Button/index.jsx',
                 './src/components/general/Checkbox/index.jsx',
                 './src/components/general/Chip/index.jsx',
+                './src/components/general/Divider/index.jsx',
                 './src/components/general/Drawer/index.jsx',
                 './src/components/general/EllipsedInlineList/index.jsx',
                 './src/components/general/Icon/index.jsx',
@@ -34,6 +35,7 @@ module.exports = {
                 './src/components/general/Stepper/index.jsx',
                 './src/components/general/Table/index.jsx',
                 './src/components/general/Tabs/index.jsx',
+                './src/components/general/TitleDivider/index.jsx',
             ],
         },
         {
