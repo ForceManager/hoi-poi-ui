@@ -397,9 +397,29 @@ exports[`Carousel default match 1`] = `
       }
     >
       <Carousel
-        images={[]}
+        images={
+          [
+            {
+              "original": "https://picsum.photos/1200/900",
+              "thumbnail": "https://picsum.photos/1200/900",
+            },
+            {
+              "original": "https://picsum.photos/1000/900",
+              "thumbnail": "https://picsum.photos/1200/900",
+            },
+            {
+              "original": "https://picsum.photos/400/400",
+              "thumbnail": "https://picsum.photos/1200/900",
+            },
+            {
+              "original": "https://picsum.photos/200/600",
+              "thumbnail": "https://picsum.photos/1200/900",
+            },
+          ]
+        }
         minVersion={false}
         overrides={{}}
+        placeholder="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"
       >
         <div
           className="HoiPoi__Carousel__root-1-0"
@@ -416,12 +436,31 @@ exports[`Carousel default match 1`] = `
             indexSeparator=" / "
             infinite={true}
             isRTL={false}
-            items={[]}
+            items={
+              [
+                {
+                  "original": "https://picsum.photos/1200/900",
+                  "thumbnail": "https://picsum.photos/1200/900",
+                },
+                {
+                  "original": "https://picsum.photos/1000/900",
+                  "thumbnail": "https://picsum.photos/1200/900",
+                },
+                {
+                  "original": "https://picsum.photos/400/400",
+                  "thumbnail": "https://picsum.photos/1200/900",
+                },
+                {
+                  "original": "https://picsum.photos/200/600",
+                  "thumbnail": "https://picsum.photos/1200/900",
+                },
+              ]
+            }
             lazyLoad={false}
             onBeforeSlide={null}
             onBulletClick={null}
             onClick={null}
-            onErrorImageURL=""
+            onErrorImageURL="https://static.vecteezy.com/system/resources/previews/004/141/669/non_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"
             onImageError={null}
             onImageLoad={null}
             onMouseLeave={null}
@@ -471,9 +510,263 @@ exports[`Carousel default match 1`] = `
                 <div
                   className="image-gallery-slide-wrapper  image-gallery-thumbnails-bottom"
                 >
-                  <div
-                    className="image-gallery-slides"
-                  />
+                  <button
+                    aria-label="Previous Slide"
+                    className="image-gallery-icon image-gallery-left-nav"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <Component
+                      color="white"
+                      name="chevronLeft"
+                      size="large"
+                    >
+                      <ForwardRef
+                        color="white"
+                        name="chevronLeft"
+                        overrides={{}}
+                        size="large"
+                      >
+                        <span
+                          className="HoiPoi__Icon__root-1-2 HoiPoi__Icon__large-1-5"
+                          onMouseDown={[Function]}
+                          onMouseOut={[Function]}
+                          onMouseOver={[Function]}
+                          onMouseUp={[Function]}
+                        >
+                          <ChevronLeft
+                            color="white"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                                fill="white"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </ChevronLeft>
+                        </span>
+                      </ForwardRef>
+                    </Component>
+                  </button>
+                  <button
+                    aria-label="Next Slide"
+                    className="image-gallery-icon image-gallery-right-nav"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <Component
+                      color="white"
+                      name="chevronRight"
+                      size="large"
+                    >
+                      <ForwardRef
+                        color="white"
+                        name="chevronRight"
+                        overrides={{}}
+                        size="large"
+                      >
+                        <span
+                          className="HoiPoi__Icon__root-1-2 HoiPoi__Icon__large-1-5"
+                          onMouseDown={[Function]}
+                          onMouseOut={[Function]}
+                          onMouseOver={[Function]}
+                          onMouseUp={[Function]}
+                        >
+                          <ChevronRight
+                            color="white"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                                fill="white"
+                                fillRule="evenodd"
+                              />
+                            </svg>
+                          </ChevronRight>
+                        </span>
+                      </ForwardRef>
+                    </Component>
+                  </button>
+                  <Be
+                    className="image-gallery-swipe"
+                    delta={0}
+                    onSwiped={[Function]}
+                    onSwiping={[Function]}
+                  >
+                    <div
+                      className="image-gallery-swipe"
+                    >
+                      <div
+                        className="image-gallery-slides"
+                      >
+                        <div
+                          aria-label="Go to Slide 1"
+                          className="image-gallery-slide  image-gallery-center "
+                          key="slide-0"
+                          onClick={null}
+                          onFocus={null}
+                          onKeyUp={[Function]}
+                          onMouseLeave={null}
+                          onMouseOver={null}
+                          onTouchEnd={null}
+                          onTouchMove={null}
+                          onTouchStart={null}
+                          role="button"
+                          style={
+                            {
+                              "MozTransform": "translate3d(0%, 0, 0)",
+                              "OTransform": "translate3d(0%, 0, 0)",
+                              "WebkitTransform": "translate3d(0%, 0, 0)",
+                              "display": "inherit",
+                              "msTransform": "translate3d(0%, 0, 0)",
+                              "transform": "translate3d(0%, 0, 0)",
+                            }
+                          }
+                          tabIndex="-1"
+                        >
+                          <Item
+                            handleImageLoaded={[Function]}
+                            isFullscreen={false}
+                            onImageError={[Function]}
+                            original="https://picsum.photos/1200/900"
+                          >
+                            <img
+                              className="image-gallery-image"
+                              onError={[Function]}
+                              onLoad={[Function]}
+                              src="https://picsum.photos/1200/900"
+                            />
+                          </Item>
+                        </div>
+                        <div
+                          aria-label="Go to Slide 2"
+                          className="image-gallery-slide  image-gallery-right "
+                          key="slide-1"
+                          onClick={null}
+                          onFocus={null}
+                          onKeyUp={[Function]}
+                          onMouseLeave={null}
+                          onMouseOver={null}
+                          onTouchEnd={null}
+                          onTouchMove={null}
+                          onTouchStart={null}
+                          role="button"
+                          style={
+                            {
+                              "MozTransform": "translate3d(100%, 0, 0)",
+                              "OTransform": "translate3d(100%, 0, 0)",
+                              "WebkitTransform": "translate3d(100%, 0, 0)",
+                              "display": "inherit",
+                              "msTransform": "translate3d(100%, 0, 0)",
+                              "transform": "translate3d(100%, 0, 0)",
+                            }
+                          }
+                          tabIndex="-1"
+                        >
+                          <Item
+                            handleImageLoaded={[Function]}
+                            isFullscreen={false}
+                            onImageError={[Function]}
+                            original="https://picsum.photos/1000/900"
+                          >
+                            <img
+                              className="image-gallery-image"
+                              onError={[Function]}
+                              onLoad={[Function]}
+                              src="https://picsum.photos/1000/900"
+                            />
+                          </Item>
+                        </div>
+                        <div
+                          aria-label="Go to Slide 3"
+                          className="image-gallery-slide  "
+                          key="slide-2"
+                          onClick={null}
+                          onFocus={null}
+                          onKeyUp={[Function]}
+                          onMouseLeave={null}
+                          onMouseOver={null}
+                          onTouchEnd={null}
+                          onTouchMove={null}
+                          onTouchStart={null}
+                          role="button"
+                          style={
+                            {
+                              "MozTransform": "translate3d(200%, 0, 0)",
+                              "OTransform": "translate3d(200%, 0, 0)",
+                              "WebkitTransform": "translate3d(200%, 0, 0)",
+                              "display": "inherit",
+                              "msTransform": "translate3d(200%, 0, 0)",
+                              "transform": "translate3d(200%, 0, 0)",
+                            }
+                          }
+                          tabIndex="-1"
+                        >
+                          <Item
+                            handleImageLoaded={[Function]}
+                            isFullscreen={false}
+                            onImageError={[Function]}
+                            original="https://picsum.photos/400/400"
+                          >
+                            <img
+                              className="image-gallery-image"
+                              onError={[Function]}
+                              onLoad={[Function]}
+                              src="https://picsum.photos/400/400"
+                            />
+                          </Item>
+                        </div>
+                        <div
+                          aria-label="Go to Slide 4"
+                          className="image-gallery-slide  image-gallery-left "
+                          key="slide-3"
+                          onClick={null}
+                          onFocus={null}
+                          onKeyUp={[Function]}
+                          onMouseLeave={null}
+                          onMouseOver={null}
+                          onTouchEnd={null}
+                          onTouchMove={null}
+                          onTouchStart={null}
+                          role="button"
+                          style={
+                            {
+                              "MozTransform": "translate3d(-100%, 0, 0)",
+                              "OTransform": "translate3d(-100%, 0, 0)",
+                              "WebkitTransform": "translate3d(-100%, 0, 0)",
+                              "display": "inherit",
+                              "msTransform": "translate3d(-100%, 0, 0)",
+                              "transform": "translate3d(-100%, 0, 0)",
+                            }
+                          }
+                          tabIndex="-1"
+                        >
+                          <Item
+                            handleImageLoaded={[Function]}
+                            isFullscreen={false}
+                            onImageError={[Function]}
+                            original="https://picsum.photos/200/600"
+                          >
+                            <img
+                              className="image-gallery-image"
+                              onError={[Function]}
+                              onLoad={[Function]}
+                              src="https://picsum.photos/200/600"
+                            />
+                          </Item>
+                        </div>
+                      </div>
+                    </div>
+                  </Be>
                   <button
                     aria-label="Open Fullscreen"
                     className="image-gallery-icon image-gallery-fullscreen-button"
