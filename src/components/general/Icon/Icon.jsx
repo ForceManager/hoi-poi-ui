@@ -200,6 +200,7 @@ import ClearOutline from './icons/actions/ClearOutline';
 import Clear from './icons/actions/Clear';
 import StopRecording from './icons/actions/StopRecording';
 import RelationFields from './icons/actions/RelationFields';
+import GeolocatedOpportunity from './icons/actions/GeolocatedOpportunity';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -647,6 +648,7 @@ export const ICONS = {
     clear: Clear,
     stopRecording: StopRecording,
     relationFields: RelationFields,
+    geolocatedOpportunity: GeolocatedOpportunity,
     //Communication
     message: Message,
     comment: Comment,

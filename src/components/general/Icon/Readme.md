@@ -127,6 +127,7 @@ import Icon from './IconWithTooltip';
     <Icon name="clear" />
     <Icon name="stopRecording" />
     <Icon name="relationFields" />
+    <Icon name="geolocatedOpportunity" />
 </div>;
 ```
 
@@ -664,6 +665,7 @@ import Icon from './IconWithTooltip';
         <Icon name="geolocation" hasGradient />
         <Icon name="storage" hasGradient />
         <Icon name="cloud" hasGradient />
+        <Icon name="geolocatedOpportunity" hasGradient />
     </div>
 </Fragment>;
 ```
