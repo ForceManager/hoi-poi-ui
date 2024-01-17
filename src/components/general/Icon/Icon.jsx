@@ -183,6 +183,7 @@ import TaskUnchecked from './icons/actions/TaskUnchecked';
 import TaskCheckedStroke from './icons/actions/TaskCheckedStroke';
 import TaskCheckedOutline from './icons/actions/TaskCheckedOutline';
 import AttachFile from './icons/actions/AttachFile';
+import AttachFileVertical from './icons/actions/AttachFileVertical';
 import PhonecallOut from './icons/actions/PhonecallOut';
 import PhonecallMissed from './icons/actions/PhonecallMissed';
 import EventNote from './icons/actions/EventNote';
@@ -201,6 +202,7 @@ import Clear from './icons/actions/Clear';
 import StopRecording from './icons/actions/StopRecording';
 import RelationFields from './icons/actions/RelationFields';
 import GeolocatedOpportunity from './icons/actions/GeolocatedOpportunity';
+import TrackingLink from './icons/actions/TrackingLink';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -529,6 +531,7 @@ export const ICONS = {
     sandBox: SandBox,
     settings: Settings,
     attachFile: AttachFile,
+    attachFileVertical: AttachFileVertical,
     phonecallOut: PhonecallOut,
     phonecallMissed: PhonecallMissed,
     eventNote: EventNote,
@@ -649,6 +652,7 @@ export const ICONS = {
     stopRecording: StopRecording,
     relationFields: RelationFields,
     geolocatedOpportunity: GeolocatedOpportunity,
+    trackingLink: TrackingLink,
     //Communication
     message: Message,
     comment: Comment,
