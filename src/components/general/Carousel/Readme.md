@@ -21,7 +21,7 @@ import { Carousel } from 'hoi-poi-ui';
             },
             {
                 original: 'https://picsum.photos/200/600',
-                thumbnail: 'https://picsum.photos/1200/900',
+                thumbnail: 'https://picsum.photos/200/600',
             },
         ]}
     />
@@ -51,7 +51,7 @@ import { Carousel } from 'hoi-poi-ui';
             },
             {
                 original: 'https://picsum.photos/200/1200',
-                thumbnail: 'https://picsum.photos/1200/900',
+                thumbnail: 'https://picsum.photos/200/1200',
             },
         ]}
         minVersion
