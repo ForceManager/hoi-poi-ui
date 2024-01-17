@@ -2686,6 +2686,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extension-color@npm:^2.1.16":
+  version: 2.1.16
+  resolution: "@tiptap/extension-color@npm:2.1.16"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0
+    "@tiptap/extension-text-style": ^2.0.0
+  checksum: 86ff6635e7b1f0273a2451705cf16ff23d621c31f13079dd66fc781228c560c0188290ac00142b653802f0b52922e0c11856a7d7a43b37e8641227a675e2518d
+  languageName: node
+  linkType: hard
+
 "@tiptap/extension-document@npm:^2.1.7":
   version: 2.1.7
   resolution: "@tiptap/extension-document@npm:2.1.7"
@@ -2714,6 +2724,16 @@ __metadata:
     "@tiptap/core": ^2.0.0
     "@tiptap/pm": ^2.0.0
   checksum: d451c22fe53a119a8a061b4ad88bdf97e6ce6130d2e795ad4e668f4b8b42285b44012839b75b01e071a4a3352fc833149eb1fc442a4afaafc4128d8e562ccc5f
+  languageName: node
+  linkType: hard
+
+"@tiptap/extension-font-family@npm:^2.1.16":
+  version: 2.1.16
+  resolution: "@tiptap/extension-font-family@npm:2.1.16"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0
+    "@tiptap/extension-text-style": ^2.0.0
+  checksum: 73bfe7d7e2d1d8551db5984bf8cbaf0781d0e2875fcc06d01b2b0ec5d85b7a54651c54da58a2f31870a778218db7c4381711f05c2d9ce607f6ee97ec1e8eb8ed
   languageName: node
   linkType: hard
 
@@ -2818,6 +2838,15 @@ __metadata:
   peerDependencies:
     "@tiptap/core": ^2.0.0
   checksum: 8932f89865d174b6d6d79d8fc28f94e20a866efcaa73890e6666bb5510fca8ac23431afe526bd8814882ddd35ea8082a282563210d04200f1c2c745927f01824
+  languageName: node
+  linkType: hard
+
+"@tiptap/extension-text-style@npm:^2.1.16":
+  version: 2.1.16
+  resolution: "@tiptap/extension-text-style@npm:2.1.16"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0
+  checksum: e321d4456d108af0937f8f9898d2e06cce1555fe9b0423b421f9ce9f5d2a080641fea7684c0c78a6e2a9b6f3d8196b73761e35729291ecf90fa1cafcae130038
   languageName: node
   linkType: hard
 
@@ -8319,8 +8348,11 @@ __metadata:
     "@babel/preset-react": ^7.22.5
     "@babel/runtime": ^7.22.11
     "@tiptap-pro/extension-emoji": 2.2.1
+    "@tiptap/extension-color": ^2.1.16
+    "@tiptap/extension-font-family": ^2.1.16
     "@tiptap/extension-hard-break": 2.1.7
     "@tiptap/extension-mention": 2.1.7
+    "@tiptap/extension-text-style": ^2.1.16
     "@tiptap/extension-underline": 2.1.7
     "@tiptap/pm": ^2.1.7
     "@tiptap/react": 2.1.7

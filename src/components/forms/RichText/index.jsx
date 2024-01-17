@@ -11,11 +11,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Placeholder from './components/placeholderExtension';
 import Underline from '@tiptap/extension-underline';
 import Mention from '@tiptap/extension-mention';
 import HardBreak from '@tiptap/extension-hard-break';
+import TextStyle from '@tiptap/extension-text-style';
+import FontFamily from '@tiptap/extension-font-family';
+import { Color } from '@tiptap/extension-color';
 import Emoji from './components/emojiExtension.js';
+import Placeholder from './components/placeholderExtension';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
 import Menu from './components/Menu';
@@ -64,6 +67,7 @@ const RichText = memo(
         loading,
         getEditorRef,
         isSubmitDisabled,
+        withCustomToolbar,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -111,6 +115,9 @@ const RichText = memo(
                         };
                     },
                 }),
+                TextStyle,
+                FontFamily,
+                Color,
             ];
 
             if (emoji) {
@@ -245,10 +252,14 @@ const RichText = memo(
         );
 
         const handleSubmit = useCallback(() => {
-            if (!onSubmit) return;
-            onSubmit();
-            editor.commands.blur();
-            editor.commands.clearContent(true);
+            if (!onSubmit) {
+                // Standard enter behavior: new paragraph
+                editor.commands.splitBlock();
+            } else {
+                onSubmit();
+                editor.commands.blur();
+                editor.commands.clearContent(true);
+            }
         }, [editor, onSubmit]);
 
         const handleKeyDown = useCallback(
@@ -435,7 +446,7 @@ const RichText = memo(
                 <InputWrapper {...inputWrapperProps}>
                     <div {...editorWrapperProps}>
                         <EditorContent {...editorProps} />
-                        <Menu {...menuProps} />
+                        {!withCustomToolbar && <Menu {...menuProps} />}
                         {getIcons}
                     </div>
                 </InputWrapper>
@@ -489,6 +500,7 @@ RichText.defaultProps = {
     basicType: 'dynamic',
     loading: false,
     isSubmitDisabled: false,
+    withCustomToolbar: false,
 };
 
 RichText.propTypes = {
@@ -547,12 +559,14 @@ RichText.propTypes = {
     /** No toolbar is shown, no emoji tool, just the text box and Submit button on the right */
     isBasic: PropTypes.bool,
     basicType: PropTypes.PropTypes.oneOf(['static', 'dynamic']),
-    //** In basic richtext a loader can be shown instead of submit button */
+    /** In basic richtext a loader can be shown instead of submit button */
     loading: PropTypes.bool,
-    //** Allows direct access to the editor and set content */
+    /** Allows direct access to the editor and set content */
     getEditorRef: PropTypes.func,
-    //** Disables the submit button */
+    /** Disables the submit button */
     isSubmitDisabled: PropTypes.bool,
+    /** Set it to `true` if you're planning to provide a custom toolbar for the editor */
+    withCustomToolbar: PropTypes.bool,
 };
 
 export default RichText;

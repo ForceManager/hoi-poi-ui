@@ -107,6 +107,7 @@ import Icon from './IconWithTooltip';
     <Icon name="calendarViewWorkDay" />
     <Icon name="update" />
     <Icon name="attachFile" />
+    <Icon name="attachFileVertical" />
     <Icon name="phonecallOut" />
     <Icon name="phonecallMissed" />
     <Icon name="eventNote" />
@@ -128,6 +129,7 @@ import Icon from './IconWithTooltip';
     <Icon name="stopRecording" />
     <Icon name="relationFields" />
     <Icon name="geolocatedOpportunity" />
+    <Icon name="trackingLink" />
 </div>;
 ```
 
