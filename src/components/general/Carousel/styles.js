@@ -187,7 +187,7 @@ export default (theme) => ({
             },
         },
         '.image-gallery-content .image-gallery-slide .image-gallery-image': {
-            maxHeight: 'calc(100vh - 100px)',
+            maxHeight: 'calc(100vh - 116px)',
         },
         '.image-gallery-content.image-gallery-thumbnails-left .image-gallery-slide .image-gallery-image, .image-gallery-content.image-gallery-thumbnails-right .image-gallery-slide .image-gallery-image':
             {
@@ -226,7 +226,7 @@ export default (theme) => ({
             position: 'relative',
         },
         '.image-gallery-slide .image-gallery-image': {
-            width: '100%',
+            width: 'calc(100% - 1px)',
             height: '100%',
             objectFit: 'contain',
         },
@@ -342,7 +342,9 @@ export default (theme) => ({
         },
         '.image-gallery-thumbnail .image-gallery-thumbnail-image': {
             verticalAlign: 'middle',
-            width: '100%',
+            width: '100px',
+            height: '100px',
+            objectFit: 'cover',
             lineHeight: '0',
             cursor: 'pointer',
             borderRadius: '4px',
