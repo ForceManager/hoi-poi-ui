@@ -33,7 +33,7 @@ function Link({
     // Classes
     const rootClassName = classnames(classes.root, classNameProp, classes[type], {
         [classes.isDisabled]: isDisabled,
-        [classes.truncated]: href && isTruncated,
+        [classes.truncated]: isTruncated,
         [classes.bold]: bold,
         [classes.underline]: underline,
         [classes.primary]: variation === 'primary',
