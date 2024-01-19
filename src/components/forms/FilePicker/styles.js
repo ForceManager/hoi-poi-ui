@@ -69,9 +69,6 @@ export default (theme) => ({
     cloudUploadIcon: {
         marginBottom: 2,
     },
-    files: {
-        width: '100%',
-    },
     file: {
         position: 'relative',
         display: 'flex',
@@ -81,7 +78,6 @@ export default (theme) => ({
         boxSizing: 'border-box',
         padding: '10px 16px 10px 12px',
         borderBottom: `1px solid  ${theme.colors.neutral500}`,
-        marginBottom: 16,
     },
     fileError: {
         backgroundColor: theme.colors.red100,
@@ -112,6 +108,7 @@ export default (theme) => ({
         flexShrink: 0,
         '& span': {
             display: 'flex',
+            alignItems: 'center',
             width: '100%',
             height: '100%',
             backgroundPosition: 'center',
@@ -229,5 +226,61 @@ export default (theme) => ({
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
         },
+    },
+    group: {
+        width: '100%',
+    },
+    groupMargin: {
+        marginTop: '16px',
+    },
+    groupHeader: {
+        width: '100%',
+        height: '22px',
+        marginBottom: '8px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    groupTitle: {},
+    groupFooter: {
+        width: '100%',
+        boxSizing: 'border-box',
+        padding: '8px 14px',
+        display: 'flex',
+        justifyContent: 'flex-end',
+    },
+    groupFooterTextContainer: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        gap: '6px',
+        cursor: 'pointer',
+    },
+    groupFooterText: {},
+    groupFooterIcon: {
+        transition: 'all .3s ease-out',
+    },
+    groupFooterIconRotate: {
+        transform: 'rotate(180deg)',
+    },
+    groupTitleDivider: {
+        height: '1px',
+        backgroundColor: theme.colors.neutral400,
+        marginBottom: '10px',
+    },
+    groupListWrapper: {
+        width: '100%',
+        height: 'auto',
+        transition: 'all .6s ease-out',
+    },
+    groupListWrapperMargin: {
+        marginBottom: '12px',
+    },
+    filesList: {
+        width: '100%',
+    },
+    filesListWrapper: {
+        width: '100%',
+        height: 'auto',
     },
 });

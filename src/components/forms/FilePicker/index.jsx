@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { useDropzone } from 'react-dropzone';
 
-import File from './components/File';
+import Groups from './components/Groups';
 import ModalCrop from '../../general/ModalCrop';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
@@ -44,6 +44,7 @@ function FilePicker({
     labelMode,
     maxFiles,
     maxSize,
+    maxVisible,
     minSize,
     maxHeight,
     maxWidth,
@@ -59,6 +60,9 @@ function FilePicker({
     singleImagePreview,
     title,
     subtitle,
+    groups,
+    foldedText,
+    unfoldedText,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -158,59 +162,6 @@ function FilePicker({
         ...override.Label,
     };
 
-    const renderFiles = useMemo(() => {
-        if (!files.length) return null;
-
-        const filesList = files.map((file, i) => {
-            let newFile = file;
-            let fileId = '';
-            if (file.file) newFile = file.file;
-            // if there is file.file then file.id will be used to keep tracking of the file
-            // and the file will be returned with the same format in onRemove and onCrop {id, file}
-            if (file.id && file.file) fileId = file.id;
-            const isUrl = typeof newFile === 'string';
-            const isImage =
-                (!isUrl && imageTypes.includes(newFile.type)) ||
-                (isUrl && imageExtensions.includes(newFile.split('.').pop()));
-            const preview = previewImages && isImage;
-            const crop = cropImages && isImage;
-            const data = filesData?.[newFile.id] || {};
-
-            return (
-                <File
-                    key={i}
-                    index={i}
-                    id={fileId}
-                    classes={classesProp}
-                    crop={crop}
-                    cropTooltip={cropTooltip}
-                    loading={data.loading}
-                    error={data.error}
-                    progress={data.progress}
-                    file={newFile}
-                    isUrl={isUrl}
-                    onCrop={handleOnCrop}
-                    onRemove={onRemove}
-                    overrides={overridesProp}
-                    preview={preview}
-                />
-            );
-        });
-
-        return <div className={classes.files}>{filesList}</div>;
-    }, [
-        classes.files,
-        classesProp,
-        cropImages,
-        cropTooltip,
-        files,
-        filesData,
-        handleOnCrop,
-        onRemove,
-        overridesProp,
-        previewImages,
-    ]);
-
     const showDragzone = useMemo(
         () => !(maxFiles && files.length === maxFiles),
         [files.length, maxFiles],
@@ -261,7 +212,24 @@ function FilePicker({
                         </Button>
                     </div>
                 )}
-                {renderFiles}
+                <Groups
+                    classes={classes}
+                    classesProp={classesProp}
+                    overrides={override}
+                    files={files}
+                    imageTypes={imageTypes}
+                    imageExtensions={imageExtensions}
+                    previewImages={previewImages}
+                    cropImages={cropImages}
+                    cropTooltip={cropTooltip}
+                    handleOnCrop={handleOnCrop}
+                    onRemove={onRemove}
+                    filesData={filesData}
+                    groups={groups}
+                    foldedText={foldedText}
+                    unfoldedText={unfoldedText}
+                    maxVisible={maxVisible}
+                />
                 {info && (
                     <div className={classes.info} {...override.info}>
                         {info}
@@ -289,7 +257,19 @@ function FilePicker({
     );
 }
 
-FilePicker.overrides = ['root', 'filePicker', 'error', 'info', 'formControl', 'Label'];
+FilePicker.overrides = [
+    'root',
+    'filePicker',
+    'error',
+    'info',
+    'formControl',
+    'Label',
+    'groups',
+    'groupsHeader',
+    'groupsTitle',
+    'file',
+    'filesList',
+];
 
 FilePicker.defaultProps = {
     labelMode: 'vertical',
@@ -305,6 +285,7 @@ FilePicker.defaultProps = {
     cropAcceptLabel: 'Crop',
     cropCancelLabel: 'Cancel',
     previewImages: false,
+    maxVisible: 6,
 };
 
 FilePicker.propTypes = {
@@ -370,6 +351,16 @@ FilePicker.propTypes = {
     /** Additional info for size limits, accepted file types and others */
     subtitle: PropTypes.string,
     previewImages: PropTypes.bool,
+    groups: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string,
+            maxFiles: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+            validateFiles: PropTypes.func,
+        }),
+    ),
+    groupFoldedText: PropTypes.string,
+    groupUnfoldedText: PropTypes.string,
+    maxVisible: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default React.memo(FilePicker);

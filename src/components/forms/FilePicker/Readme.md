@@ -122,6 +122,87 @@ const onRemove = (deletedFile) => {
 </div>;
 ```
 
+Preview Images Group:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState([]);
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...acceptedFiles]);
+};
+
+const onCrop = (file, index) => {
+    const files = [...state];
+
+    files[index] = file;
+    setState(files);
+};
+
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
+};
+
+const formats = [
+    'image/png',
+    'image/jpeg',
+    'image/jpg',
+    'image/webp',
+    'image/gif',
+    'image/bmp',
+    'image/tiff',
+];
+
+const groups = [
+    {
+        title: 'Images',
+        maxFiles: 10,
+        validateFiles: (file) => {
+            if (formats.includes(file.type)) return true;
+            else return false;
+        },
+    },
+    {
+        title: 'Other Files',
+        maxFiles: 10,
+        validateFiles: (file) => {
+            if (!formats.includes(file.type)) return true;
+            else return false;
+        },
+    },
+];
+
+<div>
+    <FilePicker
+        label="File"
+        title="Drop files here"
+        subtitle="Logo image shouyld be at least 609x81px"
+        foldedText="See More"
+        unfoldedText="See Less"
+        buttonLabel="Select file"
+        onCrop={onCrop}
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
+        multiple
+        isFullWidth
+        previewImages
+        cropImages
+        groups={groups}
+        maxVisible={6}
+    />
+</div>;
+```
+
 Single Image Preview:
 
 ```jsx
