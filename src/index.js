@@ -61,6 +61,7 @@ export { Toast, toast, dismissToast } from './components/utils/Toast';
 export { ToastContainer, showToast, clearToast } from './components/utils/CustomToast';
 export { default as Tooltip } from './components/utils/Tooltip';
 export { default as SelectWrapper } from './components/utils/SelectWrapper';
+export { default as Spacer } from './components/utils/Spacer';
 
 export { default as Link } from './components/typography/Link';
 export { default as Text } from './components/typography/Text';

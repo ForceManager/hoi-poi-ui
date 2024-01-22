@@ -76,6 +76,7 @@ module.exports = {
                 './src/components/utils/CustomToast/ToastContainer.jsx',
                 './src/components/utils/Tooltip/index.jsx',
                 './src/components/utils/SelectWrapper/index.jsx',
+                './src/components/utils/Spacer/index.jsx',
             ],
         },
         {
