@@ -67,6 +67,7 @@ function FilePicker({
 }) {
     const classes = useClasses(useStyles, classesProp);
     const [crop, setCrop] = useState({ isOpen: false, file: null });
+    const [totalDroppedTooltip, setTotalDroppedTooltip] = useState(0);
 
     const handleOnDrop = useCallback(
         (droppedFiles) => {
@@ -81,16 +82,25 @@ function FilePicker({
             }
             return (
                 onDrop &&
-                onDrop(
-                    droppedFiles.map((file) =>
-                        Object.assign(file, {
-                            id: Date.now(),
-                        }),
+                Promise.resolve(
+                    onDrop(
+                        droppedFiles.map((file) =>
+                            Object.assign(file, {
+                                id: Date.now(),
+                            }),
+                        ),
                     ),
-                )
+                ).then((result) => {
+                    if ((groups && groups?.every((current) => current.maxVisible)) || maxVisible) {
+                        setTotalDroppedTooltip(droppedFiles.length);
+                        setTimeout(() => {
+                            setTotalDroppedTooltip(0);
+                        }, 3000);
+                    }
+                })
             );
         },
-        [cropAspect, cropImages, onCrop, onDrop],
+        [cropAspect, cropImages, onCrop, onDrop, groups, maxVisible],
     );
 
     const handleOnCrop = useCallback((file, index, id) => {
@@ -229,6 +239,7 @@ function FilePicker({
                     foldedText={foldedText}
                     unfoldedText={unfoldedText}
                     maxVisible={maxVisible}
+                    totalDroppedTooltip={totalDroppedTooltip}
                 />
                 {info && (
                     <div className={classes.info} {...override.info}>
@@ -343,8 +354,9 @@ FilePicker.propTypes = {
     /** Native filePicker name */
     name: PropTypes.string,
     onCrop: PropTypes.func,
-    /** Cb for when the drop event occurs. Note that this callback is invoked after the getFilesFromEvent callback is done. */
+    /** For a better behaviour use a Promise. Cb for when the drop event occurs. Note that this callback is invoked after the getFilesFromEvent callback is done. */
     onDrop: PropTypes.func,
+    /** For a better behaviour use a Promise */
     onRemove: PropTypes.func,
     overrides: PropTypes.object,
     title: PropTypes.string,

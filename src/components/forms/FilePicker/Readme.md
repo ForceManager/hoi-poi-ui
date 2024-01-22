@@ -128,8 +128,46 @@ Preview Images Group:
 import { useState } from 'react';
 
 const [state, setState] = useState([]);
+
+const renameDuplicates = (oldFiles, newFiles) => {
+    const oldFilesMapped = oldFiles.reduce((obj, current) => {
+        obj[current.name] = current;
+        return obj;
+    }, {});
+
+    let renamedFiles = [];
+    newFiles.forEach((newFile) => {
+        if (oldFilesMapped[newFile.name]) {
+            for (let i = 1; i <= oldFiles.length; i++) {
+                const sufix = `_${i}`;
+                const nameSplitted = newFile.name.split('.');
+                const proposalName = `${nameSplitted[0]}${sufix}.${nameSplitted[1]}`;
+
+                if (!oldFilesMapped[proposalName]) {
+                    let finalFile = new File([newFile], proposalName, {
+                        type: newFile.type,
+                        lastModified: newFile.lastModified,
+                    });
+                    if (newFile.id) {
+                        Object.assign(finalFile, {
+                            id: newFile.id,
+                        });
+                    }
+                    renamedFiles.push(finalFile);
+                    break;
+                }
+            }
+        } else renamedFiles.push(newFile);
+    });
+
+    return renamedFiles;
+};
+
 const onDrop = (acceptedFiles) => {
-    setState([...state, ...acceptedFiles]);
+    return new Promise((resolve) => {
+        setState([...state, ...renameDuplicates(state, acceptedFiles)]);
+        resolve();
+    });
 };
 
 const onCrop = (file, index) => {
@@ -140,16 +178,19 @@ const onCrop = (file, index) => {
 };
 
 const onRemove = (deletedFile) => {
-    setState(
-        state.filter(
-            (file) =>
-                !(
-                    file.name === deletedFile.name &&
-                    file.size === deletedFile.size &&
-                    file.type === deletedFile.type
-                ),
-        ),
-    );
+    return new Promise((resolve) => {
+        setState(
+            state.filter(
+                (file) =>
+                    !(
+                        file.name === deletedFile.name &&
+                        file.size === deletedFile.size &&
+                        file.type === deletedFile.type
+                    ),
+            ),
+        );
+        resolve();
+    });
 };
 
 const formats = [
@@ -166,6 +207,7 @@ const groups = [
     {
         title: 'Images',
         maxFiles: 10,
+        maxVisible: 3,
         validateFiles: (file) => {
             if (formats.includes(file.type)) return true;
             else return false;
@@ -174,6 +216,7 @@ const groups = [
     {
         title: 'Other Files',
         maxFiles: 10,
+        maxVisible: 3,
         validateFiles: (file) => {
             if (!formats.includes(file.type)) return true;
             else return false;
@@ -198,7 +241,7 @@ const groups = [
         previewImages
         cropImages
         groups={groups}
-        maxVisible={6}
+        maxVisible={4}
     />
 </div>;
 ```

@@ -2,6 +2,7 @@ import React, { memo, useMemo, useState, useCallback, useRef, useEffect } from '
 import classnames from 'classnames';
 import Text from '../../../typography/Text';
 import Icon from '../../../general/Icon';
+import Popover from '../../../utils/Popover';
 import FilesList from './FilesList';
 import { useTheme } from '../../../../utils/styles';
 
@@ -24,6 +25,7 @@ const Groups = memo(
         handleOnCrop,
         onRemove,
         maxVisible,
+        totalDroppedTooltip,
     }) => {
         const theme = useTheme();
 
@@ -43,6 +45,19 @@ const Groups = memo(
                 setGroupsFolded(initialGroupsFolded);
             }
         }, [groups]);
+
+        const handleOnRemove = useCallback(
+            (group, index) => (deletedFile) => {
+                onRemove &&
+                    Promise.resolve(onRemove(deletedFile)).then((result) => {
+                        console.log('result', result);
+                        const groupFiles = files.filter((file) => group.validateFiles(file));
+                        if (groupFiles.length - 1 <= 0)
+                            setGroupsFolded({ ...groupsFolded, [index]: true });
+                    });
+            },
+            [onRemove, files, groupsFolded],
+        );
 
         const onClick = useCallback(
             (index) => {
@@ -76,7 +91,7 @@ const Groups = memo(
                     textUnfolded = !isFolded ? unfoldedText : '';
                 }
 
-                return (
+                const content = (
                     <div
                         className={classes.groupFooterTextContainer}
                         onClick={() => onClick(index)}
@@ -93,6 +108,28 @@ const Groups = memo(
                         />
                     </div>
                 );
+
+                if (totalDroppedTooltip) {
+                    return (
+                        <Popover
+                            content={<Text>{`+ ${totalDroppedTooltip}`}</Text>}
+                            visible={!!totalDroppedTooltip}
+                            overlayStyle={{ zIndex: 99999 }}
+                            overrides={{
+                                root: {
+                                    style: {
+                                        '& .hoi-poi-popover-inner': {
+                                            backgroundColor: `${theme.colors.neutral700} !important`,
+                                            color: `${theme.colors.neutralBase} !important`,
+                                        },
+                                    },
+                                },
+                            }}
+                        >
+                            {content}
+                        </Popover>
+                    );
+                } else return content;
             },
             [
                 groupsFolded,
@@ -104,26 +141,9 @@ const Groups = memo(
                 isFolded,
                 onClick,
                 theme,
+                totalDroppedTooltip,
             ],
         );
-
-        const allowedVisibleByGroup = useMemo(() => {
-            if (!groups) return null;
-            const filesByGroup = groups.reduce((obj, group, index) => {
-                const selectedFiles = files.filter((file) => group.validateFiles(file));
-                obj[index] = selectedFiles.length;
-                return obj;
-            }, {});
-
-            if (files.length <= maxVisible) return filesByGroup;
-            else {
-                const numVisible = maxVisible / groups.length;
-                return groups.reduce((obj, current, index) => {
-                    obj[index] = numVisible;
-                    return obj;
-                }, {});
-            }
-        }, [groups, files, maxVisible]);
 
         const renderGroups = useMemo(() => {
             if (!groups?.length) return null;
@@ -147,17 +167,32 @@ const Groups = memo(
                     [classes.groupMargin]: index > 0,
                 });
 
-                console.log(allowedVisibleByGroup, index);
-
                 let inlineStyles = {};
-                if (
-                    groupsFolded[index] &&
-                    maxVisible &&
-                    allowedVisibleByGroup &&
-                    selectedFiles.length > maxVisible
-                ) {
-                    inlineStyles.height = ROW_HEIGHT * allowedVisibleByGroup[index];
-                    inlineStyles.overflow = 'hidden';
+
+                const stylesUnfolded = {
+                    height: ROW_HEIGHT * selectedFiles.length,
+                    overflow: 'auto',
+                };
+
+                const stylesFolded = {
+                    height: ROW_HEIGHT * group.maxVisible,
+                    overflow: 'hidden',
+                };
+
+                if (groupsFolded[index]) {
+                    if (
+                        group.hasOwnProperty('maxVisible') &&
+                        selectedFiles.length > group.maxVisible
+                    ) {
+                        inlineStyles = stylesFolded;
+                    } else {
+                        inlineStyles = {
+                            height: ROW_HEIGHT * selectedFiles.length,
+                            overflow: 'auto',
+                        };
+                    }
+                } else {
+                    inlineStyles = stylesUnfolded;
                 }
 
                 return (
@@ -178,14 +213,16 @@ const Groups = memo(
                                 cropImages={cropImages}
                                 cropTooltip={cropTooltip}
                                 handleOnCrop={handleOnCrop}
-                                onRemove={onRemove}
+                                setIsFolded={setIsFolded}
+                                onRemove={handleOnRemove(group, index)}
                                 filesData={filesData}
                                 overrides={overrides}
                             />
                         </div>
-                        {maxVisible && selectedFiles.length > maxVisible && (
-                            <div className={classes.groupFooter}>{renderExpand(index)}</div>
-                        )}
+                        {group.hasOwnProperty('maxVisible') &&
+                            selectedFiles.length > group.maxVisible && (
+                                <div className={classes.groupFooter}>{renderExpand(index)}</div>
+                            )}
                     </div>
                 );
             });
@@ -200,12 +237,10 @@ const Groups = memo(
             cropImages,
             cropTooltip,
             handleOnCrop,
-            onRemove,
+            handleOnRemove,
             filesData,
             groupsFolded,
             renderExpand,
-            maxVisible,
-            allowedVisibleByGroup,
         ]);
 
         const renderList = useMemo(() => {
@@ -225,6 +260,7 @@ const Groups = memo(
                         cropImages={cropImages}
                         cropTooltip={cropTooltip}
                         handleOnCrop={handleOnCrop}
+                        setIsFolded={setIsFolded}
                         onRemove={onRemove}
                         filesData={filesData}
                         overrides={overrides}

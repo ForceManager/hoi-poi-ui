@@ -271,7 +271,6 @@ export default (theme) => ({
     groupListWrapper: {
         width: '100%',
         height: 'auto',
-        transition: 'all .6s ease-out',
     },
     groupListWrapperMargin: {
         marginBottom: '12px',
