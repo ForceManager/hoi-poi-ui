@@ -130,6 +130,8 @@ import Icon from './IconWithTooltip';
     <Icon name="relationFields" />
     <Icon name="geolocatedOpportunity" />
     <Icon name="trackingLink" />
+    <Icon name="fontColor" />
+    <Icon name="fontSize" />
 </div>;
 ```
 
