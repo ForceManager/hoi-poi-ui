@@ -203,6 +203,8 @@ import StopRecording from './icons/actions/StopRecording';
 import RelationFields from './icons/actions/RelationFields';
 import GeolocatedOpportunity from './icons/actions/GeolocatedOpportunity';
 import TrackingLink from './icons/actions/TrackingLink';
+import FontColor from './icons/actions/FontColor';
+import FontSize from './icons/actions/FontSize';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -653,6 +655,8 @@ export const ICONS = {
     relationFields: RelationFields,
     geolocatedOpportunity: GeolocatedOpportunity,
     trackingLink: TrackingLink,
+    fontColor: FontColor,
+    fontSize: FontSize,
     //Communication
     message: Message,
     comment: Comment,
