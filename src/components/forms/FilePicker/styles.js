@@ -244,6 +244,7 @@ export default (theme) => ({
     groupTitle: {},
     groupFooter: {
         width: '100%',
+        // position: 'relative',
         boxSizing: 'border-box',
         padding: '8px 14px',
         display: 'flex',
@@ -281,5 +282,12 @@ export default (theme) => ({
     filesListWrapper: {
         width: '100%',
         height: 'auto',
+    },
+    uploadedFilesPopover: {
+        '& .hoi-poi-popover-inner': {
+            padding: '10px',
+            backgroundColor: `${theme.colors.neutral800} !important`,
+            color: `${theme.colors.neutralBase} !important`,
+        },
     },
 });

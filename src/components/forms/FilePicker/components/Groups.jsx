@@ -25,7 +25,9 @@ const Groups = memo(
         handleOnCrop,
         onRemove,
         maxVisible,
+        maxFiles,
         totalDroppedTooltip,
+        totalDroppedByGroupTooltip,
     }) => {
         const theme = useTheme();
 
@@ -50,7 +52,6 @@ const Groups = memo(
             (group, index) => (deletedFile) => {
                 onRemove &&
                     Promise.resolve(onRemove(deletedFile)).then((result) => {
-                        console.log('result', result);
                         const groupFiles = files.filter((file) => group.validateFiles(file));
                         if (groupFiles.length - 1 <= 0)
                             setGroupsFolded({ ...groupsFolded, [index]: true });
@@ -73,7 +74,7 @@ const Groups = memo(
                 return classnames(classes.groupFooterIcon, {
                     [classes.groupFooterIconRotate]: !isNaN(index)
                         ? !groupsFolded[index]
-                        : isFolded,
+                        : !isFolded,
                 });
             },
             [classes, groupsFolded, isFolded],
@@ -109,22 +110,26 @@ const Groups = memo(
                     </div>
                 );
 
-                if (totalDroppedTooltip) {
+                if (groups && totalDroppedByGroupTooltip[index]) {
                     return (
                         <Popover
-                            content={<Text>{`+ ${totalDroppedTooltip}`}</Text>}
+                            content={
+                                <Text color="neutralBase">{`+ ${totalDroppedByGroupTooltip[index]}`}</Text>
+                            }
+                            visible={!!totalDroppedByGroupTooltip[index]}
+                            overlayStyle={{ zIndex: 99999 }}
+                            className={classes.uploadedFilesPopover}
+                        >
+                            {content}
+                        </Popover>
+                    );
+                } else if (!groups && totalDroppedTooltip) {
+                    return (
+                        <Popover
+                            content={<Text color="neutralBase">{`+ ${totalDroppedTooltip}`}</Text>}
                             visible={!!totalDroppedTooltip}
                             overlayStyle={{ zIndex: 99999 }}
-                            overrides={{
-                                root: {
-                                    style: {
-                                        '& .hoi-poi-popover-inner': {
-                                            backgroundColor: `${theme.colors.neutral700} !important`,
-                                            color: `${theme.colors.neutralBase} !important`,
-                                        },
-                                    },
-                                },
-                            }}
+                            className={classes.uploadedFilesPopover}
                         >
                             {content}
                         </Popover>
@@ -142,6 +147,7 @@ const Groups = memo(
                 onClick,
                 theme,
                 totalDroppedTooltip,
+                totalDroppedByGroupTooltip,
             ],
         );
 
@@ -195,6 +201,12 @@ const Groups = memo(
                     inlineStyles = stylesUnfolded;
                 }
 
+                const displayGroupFooter =
+                    group.hasOwnProperty('maxVisible') &&
+                    selectedFiles.length > group.maxVisible &&
+                    foldedText &&
+                    unfoldedText;
+
                 return (
                     <div key={index} className={groupClassNames} {...overrides.group}>
                         <div className={classes.groupHeader} {...overrides.groupHeader}>
@@ -219,10 +231,9 @@ const Groups = memo(
                                 overrides={overrides}
                             />
                         </div>
-                        {group.hasOwnProperty('maxVisible') &&
-                            selectedFiles.length > group.maxVisible && (
-                                <div className={classes.groupFooter}>{renderExpand(index)}</div>
-                            )}
+                        {displayGroupFooter && (
+                            <div className={classes.groupFooter}>{renderExpand(index)}</div>
+                        )}
                     </div>
                 );
             });
@@ -241,31 +252,84 @@ const Groups = memo(
             filesData,
             groupsFolded,
             renderExpand,
+            foldedText,
+            unfoldedText,
         ]);
 
+        const displayFooter = useMemo(() => {
+            if (
+                !isNaN(parseInt(maxVisible, 10)) &&
+                files.length > maxVisible &&
+                foldedText &&
+                unfoldedText
+            ) {
+                return true;
+            } else return false;
+        }, [files, maxVisible, foldedText, unfoldedText]);
+
         const renderList = useMemo(() => {
-            let inlineStyles = {};
-            if (isFolded && maxVisible && files.length > maxVisible) {
-                inlineStyles.height = ROW_HEIGHT * maxVisible;
-                inlineStyles.overflow = 'hidden';
+            let title = '';
+
+            if (maxFiles) {
+                title = `(${files.length}/${maxFiles})`;
             }
+
+            let inlineStyles = {};
+
+            const stylesUnfolded = {
+                height: ROW_HEIGHT * files.length,
+                overflow: 'auto',
+            };
+
+            const stylesFolded = {
+                height: ROW_HEIGHT * maxVisible,
+                overflow: 'hidden',
+            };
+
+            if (isFolded) {
+                if (maxVisible && files.length > maxVisible) {
+                    inlineStyles = stylesFolded;
+                } else {
+                    inlineStyles = {
+                        height: ROW_HEIGHT * files.length,
+                        overflow: 'auto',
+                    };
+                }
+            } else {
+                inlineStyles = stylesUnfolded;
+            }
+
+            if (!files.length) return null;
+
             return (
-                <div className={classes.filesListWrapper} style={inlineStyles}>
-                    <FilesList
-                        classes={classes}
-                        files={files}
-                        imageTypes={imageTypes}
-                        imageExtensions={imageExtensions}
-                        previewImages={previewImages}
-                        cropImages={cropImages}
-                        cropTooltip={cropTooltip}
-                        handleOnCrop={handleOnCrop}
-                        setIsFolded={setIsFolded}
-                        onRemove={onRemove}
-                        filesData={filesData}
-                        overrides={overrides}
-                    />
-                    {maxVisible && files.length > maxVisible && renderExpand()}
+                <div className={classes.group} {...overrides.group}>
+                    {maxFiles && (
+                        <>
+                            <div className={classes.groupHeader} {...overrides.groupHeader}>
+                                <div className={classes.groupTitle} {...overrides.groupTitle}>
+                                    <Text color="neutral700">{title}</Text>
+                                </div>
+                            </div>
+                            <div className={classes.groupTitleDivider} />
+                        </>
+                    )}
+                    <div className={classes.filesListWrapper} style={inlineStyles}>
+                        <FilesList
+                            classes={classes}
+                            files={files}
+                            imageTypes={imageTypes}
+                            imageExtensions={imageExtensions}
+                            previewImages={previewImages}
+                            cropImages={cropImages}
+                            cropTooltip={cropTooltip}
+                            handleOnCrop={handleOnCrop}
+                            setIsFolded={setIsFolded}
+                            onRemove={onRemove}
+                            filesData={filesData}
+                            overrides={overrides}
+                        />
+                    </div>
+                    {displayFooter && <div className={classes.groupFooter}>{renderExpand()}</div>}
                 </div>
             );
         }, [
@@ -282,7 +346,9 @@ const Groups = memo(
             overrides,
             isFolded,
             maxVisible,
+            maxFiles,
             renderExpand,
+            displayFooter,
         ]);
 
         if (groups) return renderGroups;

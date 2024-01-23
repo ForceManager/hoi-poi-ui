@@ -122,6 +122,93 @@ const onRemove = (deletedFile) => {
 </div>;
 ```
 
+Preview Images With maxFiles and maxVisible:
+
+```jsx
+import { useState } from 'react';
+
+const [state, setState] = useState([]);
+
+const renameDuplicates = (oldFiles, newFiles) => {
+    const oldFilesMapped = oldFiles.reduce((obj, current) => {
+        obj[current.name] = current;
+        return obj;
+    }, {});
+
+    let renamedFiles = [];
+    newFiles.forEach((newFile) => {
+        if (oldFilesMapped[newFile.name]) {
+            for (let i = 1; i <= oldFiles.length; i++) {
+                const sufix = `_${i}`;
+                const nameSplitted = newFile.name.split('.');
+                const proposalName = `${nameSplitted[0]}${sufix}.${nameSplitted[1]}`;
+
+                if (!oldFilesMapped[proposalName]) {
+                    let finalFile = new File([newFile], proposalName, {
+                        type: newFile.type,
+                        lastModified: newFile.lastModified,
+                    });
+                    if (newFile.id) {
+                        Object.assign(finalFile, {
+                            id: newFile.id,
+                        });
+                    }
+                    renamedFiles.push(finalFile);
+                    break;
+                }
+            }
+        } else renamedFiles.push(newFile);
+    });
+
+    return renamedFiles;
+};
+
+const onDrop = (acceptedFiles) => {
+    setState([...state, ...renameDuplicates(state, acceptedFiles)]);
+};
+
+const onCrop = (file, index) => {
+    const files = [...state];
+
+    files[index] = file;
+    setState(files);
+};
+
+const onRemove = (deletedFile) => {
+    setState(
+        state.filter(
+            (file) =>
+                !(
+                    file.name === deletedFile.name &&
+                    file.size === deletedFile.size &&
+                    file.type === deletedFile.type
+                ),
+        ),
+    );
+};
+
+<div>
+    <FilePicker
+        label="File"
+        title="Drop files here"
+        subtitle="Logo image shouyld be at least 609x81px"
+        buttonLabel="Select file"
+        onCrop={onCrop}
+        onDrop={onDrop}
+        onRemove={onRemove}
+        files={state}
+        multiple
+        isFullWidth
+        previewImages
+        cropImages
+        maxFiles={4}
+        maxVisible={2}
+        foldedText="See More"
+        unfoldedText="See Less"
+    />
+</div>;
+```
+
 Preview Images Group:
 
 ```jsx

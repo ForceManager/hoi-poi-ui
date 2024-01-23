@@ -63,14 +63,44 @@ function FilePicker({
     groups,
     foldedText,
     unfoldedText,
+    onGroupMaxFiles,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     const [crop, setCrop] = useState({ isOpen: false, file: null });
     const [totalDroppedTooltip, setTotalDroppedTooltip] = useState(0);
+    const [totalDroppedByGroupTooltip, setTotalDroppedByGroupTooltip] = useState({});
 
     const handleOnDrop = useCallback(
         (droppedFiles) => {
+            const tempDroppedByGroup = {};
+            if (groups?.length) {
+                const isExceededList = groups.reduce((arr, group, index) => {
+                    if (!group.maxFiles || !group.validateFiles) return arr;
+                    let selectedFiles = [];
+                    const selectedDroppedFiles = droppedFiles.filter((file) =>
+                        group.validateFiles(file),
+                    );
+                    tempDroppedByGroup[index] = selectedDroppedFiles;
+                    if (selectedDroppedFiles.length) {
+                        selectedFiles = files.filter((file) => group.validateFiles(file));
+
+                        const isExceeded =
+                            [...selectedFiles, ...selectedDroppedFiles].length > group.maxFiles;
+                        arr.push(isExceeded);
+                    }
+                    return arr;
+                }, []);
+
+                if (isExceededList?.length) {
+                    const isExceeded = isExceededList.some((current) => current === true);
+                    if (isExceeded) {
+                        onGroupMaxFiles && onGroupMaxFiles(droppedFiles);
+                        return;
+                    }
+                }
+            }
+
             if (
                 cropImages &&
                 onCrop &&
@@ -91,7 +121,19 @@ function FilePicker({
                         ),
                     ),
                 ).then((result) => {
-                    if ((groups && groups?.every((current) => current.maxVisible)) || maxVisible) {
+                    if (groups) {
+                        const newGroupTooltips = groups.reduce((obj, group, index) => {
+                            if (group.maxVisible && tempDroppedByGroup?.[index]?.length) {
+                                obj[index] = tempDroppedByGroup[index].length;
+                            }
+                            return obj;
+                        }, {});
+
+                        setTotalDroppedByGroupTooltip(newGroupTooltips);
+                        setTimeout(() => {
+                            setTotalDroppedByGroupTooltip({});
+                        }, 3000);
+                    } else if (maxVisible) {
                         setTotalDroppedTooltip(droppedFiles.length);
                         setTimeout(() => {
                             setTotalDroppedTooltip(0);
@@ -100,7 +142,7 @@ function FilePicker({
                 })
             );
         },
-        [cropAspect, cropImages, onCrop, onDrop, groups, maxVisible],
+        [cropAspect, cropImages, onCrop, onDrop, groups, maxVisible, files, onGroupMaxFiles],
     );
 
     const handleOnCrop = useCallback((file, index, id) => {
@@ -239,7 +281,9 @@ function FilePicker({
                     foldedText={foldedText}
                     unfoldedText={unfoldedText}
                     maxVisible={maxVisible}
+                    maxFiles={maxFiles}
                     totalDroppedTooltip={totalDroppedTooltip}
+                    totalDroppedByGroupTooltip={totalDroppedByGroupTooltip}
                 />
                 {info && (
                     <div className={classes.info} {...override.info}>
@@ -288,7 +332,6 @@ FilePicker.defaultProps = {
     files: [],
     isReadOnly: false,
     overrides: {},
-    maxFiles: 0,
     title: 'Drop files here',
     buttonLabel: 'Select file',
     cropTitle: 'Crop image',
@@ -296,7 +339,6 @@ FilePicker.defaultProps = {
     cropAcceptLabel: 'Crop',
     cropCancelLabel: 'Cancel',
     previewImages: false,
-    maxVisible: 6,
 };
 
 FilePicker.propTypes = {
@@ -370,9 +412,12 @@ FilePicker.propTypes = {
             validateFiles: PropTypes.func,
         }),
     ),
-    groupFoldedText: PropTypes.string,
-    groupUnfoldedText: PropTypes.string,
+    /** If maxVisible is true you need to provide foldedText/unfoldedText */
     maxVisible: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    foldedText: PropTypes.string,
+    unfoldedText: PropTypes.string,
+    /** Callback triggered when dropped files exceed the group maxFiles*/
+    onGroupMaxFiles: PropTypes.func,
 };
 
 export default React.memo(FilePicker);

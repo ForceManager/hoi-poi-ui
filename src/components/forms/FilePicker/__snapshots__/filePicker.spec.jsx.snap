@@ -406,8 +406,6 @@ exports[`Input default match 1`] = `
         isReadOnly={false}
         label="File"
         labelMode="vertical"
-        maxFiles={0}
-        maxVisible={6}
         onDrop={[Function]}
         onRemove={[Function]}
         overrides={{}}
@@ -424,17 +422,17 @@ exports[`Input default match 1`] = `
             overrides={{}}
           >
             <div
-              className="HoiPoi__Label__root-1-47 HoiPoi__FilePicker__Label-1-1"
+              className="HoiPoi__Label__root-1-48 HoiPoi__FilePicker__Label-1-1"
             >
               <ForwardRef
                 as="span"
-                className="HoiPoi__Label__Text-1-48"
+                className="HoiPoi__Label__Text-1-49"
                 isTruncated={false}
                 overrides={{}}
                 type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-1-51 HoiPoi__Label__Text-1-48 HoiPoi__Text__body-1-61"
+                  className="HoiPoi__Text__root-1-52 HoiPoi__Label__Text-1-49 HoiPoi__Text__body-1-62"
                   style={{}}
                 >
                   File
@@ -477,7 +475,7 @@ exports[`Input default match 1`] = `
                 type="subtitle"
               >
                 <span
-                  className="HoiPoi__Text__root-1-51 HoiPoi__FilePicker__title-1-9 HoiPoi__Text__subtitle-1-59"
+                  className="HoiPoi__Text__root-1-52 HoiPoi__FilePicker__title-1-9 HoiPoi__Text__subtitle-1-60"
                   style={{}}
                 >
                   Drop files here
@@ -491,7 +489,7 @@ exports[`Input default match 1`] = `
                 type="caption"
               >
                 <span
-                  className="HoiPoi__Text__root-1-51 HoiPoi__FilePicker__subtitle-1-10 HoiPoi__Text__caption-1-63"
+                  className="HoiPoi__Text__root-1-52 HoiPoi__FilePicker__subtitle-1-10 HoiPoi__Text__caption-1-64"
                   style={{}}
                 />
               </ForwardRef>
@@ -504,22 +502,22 @@ exports[`Input default match 1`] = `
                 type="secondary"
               >
                 <button
-                  className="HoiPoi__Button__root-1-71 HoiPoi__Button__secondary-1-78 HoiPoi__Button__medium-1-86 HoiPoi__FilePicker__button-1-8"
+                  className="HoiPoi__Button__root-1-72 HoiPoi__Button__secondary-1-79 HoiPoi__Button__medium-1-87 HoiPoi__FilePicker__button-1-8"
                   onClick={[Function]}
                   type="button"
                 >
                   <div
-                    className="HoiPoi__Button__content-1-72"
+                    className="HoiPoi__Button__content-1-73"
                   >
                     <ForwardRef
                       as="span"
-                      className="HoiPoi__Button__Text-1-73"
+                      className="HoiPoi__Button__Text-1-74"
                       isTruncated={false}
                       overrides={{}}
                       type="body"
                     >
                       <span
-                        className="HoiPoi__Text__root-1-51 HoiPoi__Button__Text-1-73 HoiPoi__Text__body-1-61"
+                        className="HoiPoi__Text__root-1-52 HoiPoi__Button__Text-1-74 HoiPoi__Text__body-1-62"
                         style={{}}
                       >
                         Select file
@@ -578,6 +576,7 @@ exports[`Input default match 1`] = `
                   "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-1-32",
                   "subtitle": "HoiPoi__FilePicker__subtitle-1-10",
                   "title": "HoiPoi__FilePicker__title-1-9",
+                  "uploadedFilesPopover": "HoiPoi__FilePicker__uploadedFilesPopover-1-47",
                   "vertical": "HoiPoi__FilePicker__vertical-1-28",
                 }
               }
@@ -603,7 +602,6 @@ exports[`Input default match 1`] = `
                   "image/bmp",
                 ]
               }
-              maxVisible={6}
               onRemove={[Function]}
               overrides={
                 {
@@ -621,111 +619,9 @@ exports[`Input default match 1`] = `
                 }
               }
               previewImages={false}
+              totalDroppedByGroupTooltip={{}}
               totalDroppedTooltip={0}
-            >
-              <div
-                className="HoiPoi__FilePicker__filesListWrapper-1-46"
-                style={{}}
-              >
-                <Component
-                  classes={
-                    {
-                      "Label": "HoiPoi__FilePicker__Label-1-1",
-                      "actions": "HoiPoi__FilePicker__actions-1-22",
-                      "button": "HoiPoi__FilePicker__button-1-8",
-                      "clear": "HoiPoi__FilePicker__clear-1-23",
-                      "cloudUploadIcon": "HoiPoi__FilePicker__cloudUploadIcon-1-11",
-                      "crop": "HoiPoi__FilePicker__crop-1-24",
-                      "disabled": "HoiPoi__FilePicker__disabled-1-7",
-                      "dropZone": "HoiPoi__FilePicker__dropZone-1-5",
-                      "error": "HoiPoi__FilePicker__error-1-3",
-                      "errored": "HoiPoi__FilePicker__errored-1-26",
-                      "file": "HoiPoi__FilePicker__file-1-12",
-                      "fileDataContainer": "HoiPoi__FilePicker__fileDataContainer-1-16",
-                      "fileError": "HoiPoi__FilePicker__fileError-1-13",
-                      "fileErrorText": "HoiPoi__FilePicker__fileErrorText-1-15",
-                      "fileIconContainer": "HoiPoi__FilePicker__fileIconContainer-1-17",
-                      "fileLoading": "HoiPoi__FilePicker__fileLoading-1-14",
-                      "fileName": "HoiPoi__FilePicker__fileName-1-20",
-                      "fileNameContainer": "HoiPoi__FilePicker__fileNameContainer-1-19",
-                      "fileSize": "HoiPoi__FilePicker__fileSize-1-21",
-                      "fileTextContainer": "HoiPoi__FilePicker__fileTextContainer-1-18",
-                      "filesList": "HoiPoi__FilePicker__filesList-1-45",
-                      "filesListWrapper": "HoiPoi__FilePicker__filesListWrapper-1-46",
-                      "focused": "HoiPoi__FilePicker__focused-1-31",
-                      "formControl": "HoiPoi__FilePicker__formControl-1-4",
-                      "group": "HoiPoi__FilePicker__group-1-33",
-                      "groupFooter": "HoiPoi__FilePicker__groupFooter-1-37",
-                      "groupFooterIcon": "HoiPoi__FilePicker__groupFooterIcon-1-40",
-                      "groupFooterIconRotate": "HoiPoi__FilePicker__groupFooterIconRotate-1-41",
-                      "groupFooterText": "HoiPoi__FilePicker__groupFooterText-1-39",
-                      "groupFooterTextContainer": "HoiPoi__FilePicker__groupFooterTextContainer-1-38",
-                      "groupHeader": "HoiPoi__FilePicker__groupHeader-1-35",
-                      "groupListWrapper": "HoiPoi__FilePicker__groupListWrapper-1-43",
-                      "groupListWrapperMargin": "HoiPoi__FilePicker__groupListWrapperMargin-1-44",
-                      "groupMargin": "HoiPoi__FilePicker__groupMargin-1-34",
-                      "groupTitle": "HoiPoi__FilePicker__groupTitle-1-36",
-                      "groupTitleDivider": "HoiPoi__FilePicker__groupTitleDivider-1-42",
-                      "horizontal": "HoiPoi__FilePicker__horizontal-1-29",
-                      "info": "HoiPoi__FilePicker__info-1-2",
-                      "isDragActive": "HoiPoi__FilePicker__isDragActive-1-6",
-                      "isFullWidth": "HoiPoi__FilePicker__isFullWidth-1-30",
-                      "isReadOnly": "HoiPoi__FilePicker__isReadOnly-1-27",
-                      "progress": "HoiPoi__FilePicker__progress-1-25",
-                      "root": "HoiPoi__FilePicker__root-1-0",
-                      "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-1-32",
-                      "subtitle": "HoiPoi__FilePicker__subtitle-1-10",
-                      "title": "HoiPoi__FilePicker__title-1-9",
-                      "vertical": "HoiPoi__FilePicker__vertical-1-28",
-                    }
-                  }
-                  cropTooltip="Crop image"
-                  files={[]}
-                  handleOnCrop={[Function]}
-                  imageExtensions={
-                    [
-                      "png",
-                      "jpeg",
-                      "jpg",
-                      "webp",
-                      "gif",
-                      "bmp",
-                    ]
-                  }
-                  imageTypes={
-                    [
-                      "image/png",
-                      "image/jpeg",
-                      "image/webp",
-                      "image/gif",
-                      "image/bmp",
-                    ]
-                  }
-                  onRemove={[Function]}
-                  overrides={
-                    {
-                      "Label": {},
-                      "error": {},
-                      "file": {},
-                      "filePicker": {},
-                      "filesList": {},
-                      "formControl": {},
-                      "groups": {},
-                      "groupsHeader": {},
-                      "groupsTitle": {},
-                      "info": {},
-                      "root": {},
-                    }
-                  }
-                  previewImages={false}
-                  setIsFolded={[Function]}
-                >
-                  <div
-                    className="HoiPoi__FilePicker__filesList-1-45"
-                  />
-                </Component>
-              </div>
-            </Component>
+            />
           </div>
           <ModalCrop
             cancelText="Cancel"
@@ -739,7 +635,7 @@ exports[`Input default match 1`] = `
           >
             <Modal
               cancelText="Cancel"
-              className="HoiPoi__ModalCrop__cropModal-1-91"
+              className="HoiPoi__ModalCrop__cropModal-1-92"
               closeTimeoutMS={300}
               confirmText="Crop"
               isOpen={false}
@@ -759,11 +655,11 @@ exports[`Input default match 1`] = `
               <Modal
                 ariaHideApp={false}
                 bodyOpenClassName="ReactModal__Body--open"
-                className="HoiPoi__Modal__root-1-94 HoiPoi__ModalCrop__cropModal-1-91"
+                className="HoiPoi__Modal__root-1-95 HoiPoi__ModalCrop__cropModal-1-92"
                 closeTimeoutMS={300}
                 contentElement={[Function]}
                 isOpen={false}
-                overlayClassName="HoiPoi__Modal__overlay-1-95"
+                overlayClassName="HoiPoi__Modal__overlay-1-96"
                 overlayElement={[Function]}
                 parentSelector={[Function]}
                 portalClassName="ReactModalPortal"
@@ -800,7 +696,7 @@ exports[`Input default match 1`] = `
                   <ModalPortal
                     ariaHideApp={false}
                     bodyOpenClassName="ReactModal__Body--open"
-                    className="HoiPoi__Modal__root-1-94 HoiPoi__ModalCrop__cropModal-1-91"
+                    className="HoiPoi__Modal__root-1-95 HoiPoi__ModalCrop__cropModal-1-92"
                     closeTimeoutMS={300}
                     contentElement={[Function]}
                     defaultStyles={
@@ -830,7 +726,7 @@ exports[`Input default match 1`] = `
                       }
                     }
                     isOpen={false}
-                    overlayClassName="HoiPoi__Modal__overlay-1-95"
+                    overlayClassName="HoiPoi__Modal__overlay-1-96"
                     overlayElement={[Function]}
                     parentSelector={[Function]}
                     portalClassName="ReactModalPortal"
@@ -1275,8 +1171,6 @@ exports[`Input is full width match 1`] = `
         isReadOnly={false}
         label="File"
         labelMode="vertical"
-        maxFiles={0}
-        maxVisible={6}
         onDrop={[Function]}
         onRemove={[Function]}
         overrides={{}}
@@ -1293,17 +1187,17 @@ exports[`Input is full width match 1`] = `
             overrides={{}}
           >
             <div
-              className="HoiPoi__Label__root-4-47 HoiPoi__FilePicker__Label-4-1"
+              className="HoiPoi__Label__root-4-48 HoiPoi__FilePicker__Label-4-1"
             >
               <ForwardRef
                 as="span"
-                className="HoiPoi__Label__Text-4-48"
+                className="HoiPoi__Label__Text-4-49"
                 isTruncated={false}
                 overrides={{}}
                 type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-4-51 HoiPoi__Label__Text-4-48 HoiPoi__Text__body-4-61"
+                  className="HoiPoi__Text__root-4-52 HoiPoi__Label__Text-4-49 HoiPoi__Text__body-4-62"
                   style={{}}
                 >
                   File
@@ -1346,7 +1240,7 @@ exports[`Input is full width match 1`] = `
                 type="subtitle"
               >
                 <span
-                  className="HoiPoi__Text__root-4-51 HoiPoi__FilePicker__title-4-9 HoiPoi__Text__subtitle-4-59"
+                  className="HoiPoi__Text__root-4-52 HoiPoi__FilePicker__title-4-9 HoiPoi__Text__subtitle-4-60"
                   style={{}}
                 >
                   Drop files here
@@ -1360,7 +1254,7 @@ exports[`Input is full width match 1`] = `
                 type="caption"
               >
                 <span
-                  className="HoiPoi__Text__root-4-51 HoiPoi__FilePicker__subtitle-4-10 HoiPoi__Text__caption-4-63"
+                  className="HoiPoi__Text__root-4-52 HoiPoi__FilePicker__subtitle-4-10 HoiPoi__Text__caption-4-64"
                   style={{}}
                 />
               </ForwardRef>
@@ -1373,22 +1267,22 @@ exports[`Input is full width match 1`] = `
                 type="secondary"
               >
                 <button
-                  className="HoiPoi__Button__root-4-71 HoiPoi__Button__secondary-4-78 HoiPoi__Button__medium-4-86 HoiPoi__FilePicker__button-4-8"
+                  className="HoiPoi__Button__root-4-72 HoiPoi__Button__secondary-4-79 HoiPoi__Button__medium-4-87 HoiPoi__FilePicker__button-4-8"
                   onClick={[Function]}
                   type="button"
                 >
                   <div
-                    className="HoiPoi__Button__content-4-72"
+                    className="HoiPoi__Button__content-4-73"
                   >
                     <ForwardRef
                       as="span"
-                      className="HoiPoi__Button__Text-4-73"
+                      className="HoiPoi__Button__Text-4-74"
                       isTruncated={false}
                       overrides={{}}
                       type="body"
                     >
                       <span
-                        className="HoiPoi__Text__root-4-51 HoiPoi__Button__Text-4-73 HoiPoi__Text__body-4-61"
+                        className="HoiPoi__Text__root-4-52 HoiPoi__Button__Text-4-74 HoiPoi__Text__body-4-62"
                         style={{}}
                       >
                         Select file
@@ -1447,6 +1341,7 @@ exports[`Input is full width match 1`] = `
                   "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-4-32",
                   "subtitle": "HoiPoi__FilePicker__subtitle-4-10",
                   "title": "HoiPoi__FilePicker__title-4-9",
+                  "uploadedFilesPopover": "HoiPoi__FilePicker__uploadedFilesPopover-4-47",
                   "vertical": "HoiPoi__FilePicker__vertical-4-28",
                 }
               }
@@ -1472,7 +1367,6 @@ exports[`Input is full width match 1`] = `
                   "image/bmp",
                 ]
               }
-              maxVisible={6}
               onRemove={[Function]}
               overrides={
                 {
@@ -1490,111 +1384,9 @@ exports[`Input is full width match 1`] = `
                 }
               }
               previewImages={false}
+              totalDroppedByGroupTooltip={{}}
               totalDroppedTooltip={0}
-            >
-              <div
-                className="HoiPoi__FilePicker__filesListWrapper-4-46"
-                style={{}}
-              >
-                <Component
-                  classes={
-                    {
-                      "Label": "HoiPoi__FilePicker__Label-4-1",
-                      "actions": "HoiPoi__FilePicker__actions-4-22",
-                      "button": "HoiPoi__FilePicker__button-4-8",
-                      "clear": "HoiPoi__FilePicker__clear-4-23",
-                      "cloudUploadIcon": "HoiPoi__FilePicker__cloudUploadIcon-4-11",
-                      "crop": "HoiPoi__FilePicker__crop-4-24",
-                      "disabled": "HoiPoi__FilePicker__disabled-4-7",
-                      "dropZone": "HoiPoi__FilePicker__dropZone-4-5",
-                      "error": "HoiPoi__FilePicker__error-4-3",
-                      "errored": "HoiPoi__FilePicker__errored-4-26",
-                      "file": "HoiPoi__FilePicker__file-4-12",
-                      "fileDataContainer": "HoiPoi__FilePicker__fileDataContainer-4-16",
-                      "fileError": "HoiPoi__FilePicker__fileError-4-13",
-                      "fileErrorText": "HoiPoi__FilePicker__fileErrorText-4-15",
-                      "fileIconContainer": "HoiPoi__FilePicker__fileIconContainer-4-17",
-                      "fileLoading": "HoiPoi__FilePicker__fileLoading-4-14",
-                      "fileName": "HoiPoi__FilePicker__fileName-4-20",
-                      "fileNameContainer": "HoiPoi__FilePicker__fileNameContainer-4-19",
-                      "fileSize": "HoiPoi__FilePicker__fileSize-4-21",
-                      "fileTextContainer": "HoiPoi__FilePicker__fileTextContainer-4-18",
-                      "filesList": "HoiPoi__FilePicker__filesList-4-45",
-                      "filesListWrapper": "HoiPoi__FilePicker__filesListWrapper-4-46",
-                      "focused": "HoiPoi__FilePicker__focused-4-31",
-                      "formControl": "HoiPoi__FilePicker__formControl-4-4",
-                      "group": "HoiPoi__FilePicker__group-4-33",
-                      "groupFooter": "HoiPoi__FilePicker__groupFooter-4-37",
-                      "groupFooterIcon": "HoiPoi__FilePicker__groupFooterIcon-4-40",
-                      "groupFooterIconRotate": "HoiPoi__FilePicker__groupFooterIconRotate-4-41",
-                      "groupFooterText": "HoiPoi__FilePicker__groupFooterText-4-39",
-                      "groupFooterTextContainer": "HoiPoi__FilePicker__groupFooterTextContainer-4-38",
-                      "groupHeader": "HoiPoi__FilePicker__groupHeader-4-35",
-                      "groupListWrapper": "HoiPoi__FilePicker__groupListWrapper-4-43",
-                      "groupListWrapperMargin": "HoiPoi__FilePicker__groupListWrapperMargin-4-44",
-                      "groupMargin": "HoiPoi__FilePicker__groupMargin-4-34",
-                      "groupTitle": "HoiPoi__FilePicker__groupTitle-4-36",
-                      "groupTitleDivider": "HoiPoi__FilePicker__groupTitleDivider-4-42",
-                      "horizontal": "HoiPoi__FilePicker__horizontal-4-29",
-                      "info": "HoiPoi__FilePicker__info-4-2",
-                      "isDragActive": "HoiPoi__FilePicker__isDragActive-4-6",
-                      "isFullWidth": "HoiPoi__FilePicker__isFullWidth-4-30",
-                      "isReadOnly": "HoiPoi__FilePicker__isReadOnly-4-27",
-                      "progress": "HoiPoi__FilePicker__progress-4-25",
-                      "root": "HoiPoi__FilePicker__root-4-0",
-                      "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-4-32",
-                      "subtitle": "HoiPoi__FilePicker__subtitle-4-10",
-                      "title": "HoiPoi__FilePicker__title-4-9",
-                      "vertical": "HoiPoi__FilePicker__vertical-4-28",
-                    }
-                  }
-                  cropTooltip="Crop image"
-                  files={[]}
-                  handleOnCrop={[Function]}
-                  imageExtensions={
-                    [
-                      "png",
-                      "jpeg",
-                      "jpg",
-                      "webp",
-                      "gif",
-                      "bmp",
-                    ]
-                  }
-                  imageTypes={
-                    [
-                      "image/png",
-                      "image/jpeg",
-                      "image/webp",
-                      "image/gif",
-                      "image/bmp",
-                    ]
-                  }
-                  onRemove={[Function]}
-                  overrides={
-                    {
-                      "Label": {},
-                      "error": {},
-                      "file": {},
-                      "filePicker": {},
-                      "filesList": {},
-                      "formControl": {},
-                      "groups": {},
-                      "groupsHeader": {},
-                      "groupsTitle": {},
-                      "info": {},
-                      "root": {},
-                    }
-                  }
-                  previewImages={false}
-                  setIsFolded={[Function]}
-                >
-                  <div
-                    className="HoiPoi__FilePicker__filesList-4-45"
-                  />
-                </Component>
-              </div>
-            </Component>
+            />
           </div>
           <ModalCrop
             cancelText="Cancel"
@@ -1608,7 +1400,7 @@ exports[`Input is full width match 1`] = `
           >
             <Modal
               cancelText="Cancel"
-              className="HoiPoi__ModalCrop__cropModal-4-91"
+              className="HoiPoi__ModalCrop__cropModal-4-92"
               closeTimeoutMS={300}
               confirmText="Crop"
               isOpen={false}
@@ -1628,11 +1420,11 @@ exports[`Input is full width match 1`] = `
               <Modal
                 ariaHideApp={false}
                 bodyOpenClassName="ReactModal__Body--open"
-                className="HoiPoi__Modal__root-4-94 HoiPoi__ModalCrop__cropModal-4-91"
+                className="HoiPoi__Modal__root-4-95 HoiPoi__ModalCrop__cropModal-4-92"
                 closeTimeoutMS={300}
                 contentElement={[Function]}
                 isOpen={false}
-                overlayClassName="HoiPoi__Modal__overlay-4-95"
+                overlayClassName="HoiPoi__Modal__overlay-4-96"
                 overlayElement={[Function]}
                 parentSelector={[Function]}
                 portalClassName="ReactModalPortal"
@@ -1669,7 +1461,7 @@ exports[`Input is full width match 1`] = `
                   <ModalPortal
                     ariaHideApp={false}
                     bodyOpenClassName="ReactModal__Body--open"
-                    className="HoiPoi__Modal__root-4-94 HoiPoi__ModalCrop__cropModal-4-91"
+                    className="HoiPoi__Modal__root-4-95 HoiPoi__ModalCrop__cropModal-4-92"
                     closeTimeoutMS={300}
                     contentElement={[Function]}
                     defaultStyles={
@@ -1699,7 +1491,7 @@ exports[`Input is full width match 1`] = `
                       }
                     }
                     isOpen={false}
-                    overlayClassName="HoiPoi__Modal__overlay-4-95"
+                    overlayClassName="HoiPoi__Modal__overlay-4-96"
                     overlayElement={[Function]}
                     parentSelector={[Function]}
                     portalClassName="ReactModalPortal"
@@ -2143,8 +1935,6 @@ exports[`Input vertical label mode match 1`] = `
         isReadOnly={false}
         label="File"
         labelMode="vertical"
-        maxFiles={0}
-        maxVisible={6}
         onDrop={[Function]}
         onRemove={[Function]}
         overrides={{}}
@@ -2161,17 +1951,17 @@ exports[`Input vertical label mode match 1`] = `
             overrides={{}}
           >
             <div
-              className="HoiPoi__Label__root-5-47 HoiPoi__FilePicker__Label-5-1"
+              className="HoiPoi__Label__root-5-48 HoiPoi__FilePicker__Label-5-1"
             >
               <ForwardRef
                 as="span"
-                className="HoiPoi__Label__Text-5-48"
+                className="HoiPoi__Label__Text-5-49"
                 isTruncated={false}
                 overrides={{}}
                 type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-5-51 HoiPoi__Label__Text-5-48 HoiPoi__Text__body-5-61"
+                  className="HoiPoi__Text__root-5-52 HoiPoi__Label__Text-5-49 HoiPoi__Text__body-5-62"
                   style={{}}
                 >
                   File
@@ -2214,7 +2004,7 @@ exports[`Input vertical label mode match 1`] = `
                 type="subtitle"
               >
                 <span
-                  className="HoiPoi__Text__root-5-51 HoiPoi__FilePicker__title-5-9 HoiPoi__Text__subtitle-5-59"
+                  className="HoiPoi__Text__root-5-52 HoiPoi__FilePicker__title-5-9 HoiPoi__Text__subtitle-5-60"
                   style={{}}
                 >
                   Drop files here
@@ -2228,7 +2018,7 @@ exports[`Input vertical label mode match 1`] = `
                 type="caption"
               >
                 <span
-                  className="HoiPoi__Text__root-5-51 HoiPoi__FilePicker__subtitle-5-10 HoiPoi__Text__caption-5-63"
+                  className="HoiPoi__Text__root-5-52 HoiPoi__FilePicker__subtitle-5-10 HoiPoi__Text__caption-5-64"
                   style={{}}
                 />
               </ForwardRef>
@@ -2241,22 +2031,22 @@ exports[`Input vertical label mode match 1`] = `
                 type="secondary"
               >
                 <button
-                  className="HoiPoi__Button__root-5-71 HoiPoi__Button__secondary-5-78 HoiPoi__Button__medium-5-86 HoiPoi__FilePicker__button-5-8"
+                  className="HoiPoi__Button__root-5-72 HoiPoi__Button__secondary-5-79 HoiPoi__Button__medium-5-87 HoiPoi__FilePicker__button-5-8"
                   onClick={[Function]}
                   type="button"
                 >
                   <div
-                    className="HoiPoi__Button__content-5-72"
+                    className="HoiPoi__Button__content-5-73"
                   >
                     <ForwardRef
                       as="span"
-                      className="HoiPoi__Button__Text-5-73"
+                      className="HoiPoi__Button__Text-5-74"
                       isTruncated={false}
                       overrides={{}}
                       type="body"
                     >
                       <span
-                        className="HoiPoi__Text__root-5-51 HoiPoi__Button__Text-5-73 HoiPoi__Text__body-5-61"
+                        className="HoiPoi__Text__root-5-52 HoiPoi__Button__Text-5-74 HoiPoi__Text__body-5-62"
                         style={{}}
                       >
                         Select file
@@ -2315,6 +2105,7 @@ exports[`Input vertical label mode match 1`] = `
                   "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-5-32",
                   "subtitle": "HoiPoi__FilePicker__subtitle-5-10",
                   "title": "HoiPoi__FilePicker__title-5-9",
+                  "uploadedFilesPopover": "HoiPoi__FilePicker__uploadedFilesPopover-5-47",
                   "vertical": "HoiPoi__FilePicker__vertical-5-28",
                 }
               }
@@ -2340,7 +2131,6 @@ exports[`Input vertical label mode match 1`] = `
                   "image/bmp",
                 ]
               }
-              maxVisible={6}
               onRemove={[Function]}
               overrides={
                 {
@@ -2358,111 +2148,9 @@ exports[`Input vertical label mode match 1`] = `
                 }
               }
               previewImages={false}
+              totalDroppedByGroupTooltip={{}}
               totalDroppedTooltip={0}
-            >
-              <div
-                className="HoiPoi__FilePicker__filesListWrapper-5-46"
-                style={{}}
-              >
-                <Component
-                  classes={
-                    {
-                      "Label": "HoiPoi__FilePicker__Label-5-1",
-                      "actions": "HoiPoi__FilePicker__actions-5-22",
-                      "button": "HoiPoi__FilePicker__button-5-8",
-                      "clear": "HoiPoi__FilePicker__clear-5-23",
-                      "cloudUploadIcon": "HoiPoi__FilePicker__cloudUploadIcon-5-11",
-                      "crop": "HoiPoi__FilePicker__crop-5-24",
-                      "disabled": "HoiPoi__FilePicker__disabled-5-7",
-                      "dropZone": "HoiPoi__FilePicker__dropZone-5-5",
-                      "error": "HoiPoi__FilePicker__error-5-3",
-                      "errored": "HoiPoi__FilePicker__errored-5-26",
-                      "file": "HoiPoi__FilePicker__file-5-12",
-                      "fileDataContainer": "HoiPoi__FilePicker__fileDataContainer-5-16",
-                      "fileError": "HoiPoi__FilePicker__fileError-5-13",
-                      "fileErrorText": "HoiPoi__FilePicker__fileErrorText-5-15",
-                      "fileIconContainer": "HoiPoi__FilePicker__fileIconContainer-5-17",
-                      "fileLoading": "HoiPoi__FilePicker__fileLoading-5-14",
-                      "fileName": "HoiPoi__FilePicker__fileName-5-20",
-                      "fileNameContainer": "HoiPoi__FilePicker__fileNameContainer-5-19",
-                      "fileSize": "HoiPoi__FilePicker__fileSize-5-21",
-                      "fileTextContainer": "HoiPoi__FilePicker__fileTextContainer-5-18",
-                      "filesList": "HoiPoi__FilePicker__filesList-5-45",
-                      "filesListWrapper": "HoiPoi__FilePicker__filesListWrapper-5-46",
-                      "focused": "HoiPoi__FilePicker__focused-5-31",
-                      "formControl": "HoiPoi__FilePicker__formControl-5-4",
-                      "group": "HoiPoi__FilePicker__group-5-33",
-                      "groupFooter": "HoiPoi__FilePicker__groupFooter-5-37",
-                      "groupFooterIcon": "HoiPoi__FilePicker__groupFooterIcon-5-40",
-                      "groupFooterIconRotate": "HoiPoi__FilePicker__groupFooterIconRotate-5-41",
-                      "groupFooterText": "HoiPoi__FilePicker__groupFooterText-5-39",
-                      "groupFooterTextContainer": "HoiPoi__FilePicker__groupFooterTextContainer-5-38",
-                      "groupHeader": "HoiPoi__FilePicker__groupHeader-5-35",
-                      "groupListWrapper": "HoiPoi__FilePicker__groupListWrapper-5-43",
-                      "groupListWrapperMargin": "HoiPoi__FilePicker__groupListWrapperMargin-5-44",
-                      "groupMargin": "HoiPoi__FilePicker__groupMargin-5-34",
-                      "groupTitle": "HoiPoi__FilePicker__groupTitle-5-36",
-                      "groupTitleDivider": "HoiPoi__FilePicker__groupTitleDivider-5-42",
-                      "horizontal": "HoiPoi__FilePicker__horizontal-5-29",
-                      "info": "HoiPoi__FilePicker__info-5-2",
-                      "isDragActive": "HoiPoi__FilePicker__isDragActive-5-6",
-                      "isFullWidth": "HoiPoi__FilePicker__isFullWidth-5-30",
-                      "isReadOnly": "HoiPoi__FilePicker__isReadOnly-5-27",
-                      "progress": "HoiPoi__FilePicker__progress-5-25",
-                      "root": "HoiPoi__FilePicker__root-5-0",
-                      "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-5-32",
-                      "subtitle": "HoiPoi__FilePicker__subtitle-5-10",
-                      "title": "HoiPoi__FilePicker__title-5-9",
-                      "vertical": "HoiPoi__FilePicker__vertical-5-28",
-                    }
-                  }
-                  cropTooltip="Crop image"
-                  files={[]}
-                  handleOnCrop={[Function]}
-                  imageExtensions={
-                    [
-                      "png",
-                      "jpeg",
-                      "jpg",
-                      "webp",
-                      "gif",
-                      "bmp",
-                    ]
-                  }
-                  imageTypes={
-                    [
-                      "image/png",
-                      "image/jpeg",
-                      "image/webp",
-                      "image/gif",
-                      "image/bmp",
-                    ]
-                  }
-                  onRemove={[Function]}
-                  overrides={
-                    {
-                      "Label": {},
-                      "error": {},
-                      "file": {},
-                      "filePicker": {},
-                      "filesList": {},
-                      "formControl": {},
-                      "groups": {},
-                      "groupsHeader": {},
-                      "groupsTitle": {},
-                      "info": {},
-                      "root": {},
-                    }
-                  }
-                  previewImages={false}
-                  setIsFolded={[Function]}
-                >
-                  <div
-                    className="HoiPoi__FilePicker__filesList-5-45"
-                  />
-                </Component>
-              </div>
-            </Component>
+            />
           </div>
           <ModalCrop
             cancelText="Cancel"
@@ -2476,7 +2164,7 @@ exports[`Input vertical label mode match 1`] = `
           >
             <Modal
               cancelText="Cancel"
-              className="HoiPoi__ModalCrop__cropModal-5-91"
+              className="HoiPoi__ModalCrop__cropModal-5-92"
               closeTimeoutMS={300}
               confirmText="Crop"
               isOpen={false}
@@ -2496,11 +2184,11 @@ exports[`Input vertical label mode match 1`] = `
               <Modal
                 ariaHideApp={false}
                 bodyOpenClassName="ReactModal__Body--open"
-                className="HoiPoi__Modal__root-5-94 HoiPoi__ModalCrop__cropModal-5-91"
+                className="HoiPoi__Modal__root-5-95 HoiPoi__ModalCrop__cropModal-5-92"
                 closeTimeoutMS={300}
                 contentElement={[Function]}
                 isOpen={false}
-                overlayClassName="HoiPoi__Modal__overlay-5-95"
+                overlayClassName="HoiPoi__Modal__overlay-5-96"
                 overlayElement={[Function]}
                 parentSelector={[Function]}
                 portalClassName="ReactModalPortal"
@@ -2537,7 +2225,7 @@ exports[`Input vertical label mode match 1`] = `
                   <ModalPortal
                     ariaHideApp={false}
                     bodyOpenClassName="ReactModal__Body--open"
-                    className="HoiPoi__Modal__root-5-94 HoiPoi__ModalCrop__cropModal-5-91"
+                    className="HoiPoi__Modal__root-5-95 HoiPoi__ModalCrop__cropModal-5-92"
                     closeTimeoutMS={300}
                     contentElement={[Function]}
                     defaultStyles={
@@ -2567,7 +2255,7 @@ exports[`Input vertical label mode match 1`] = `
                       }
                     }
                     isOpen={false}
-                    overlayClassName="HoiPoi__Modal__overlay-5-95"
+                    overlayClassName="HoiPoi__Modal__overlay-5-96"
                     overlayElement={[Function]}
                     parentSelector={[Function]}
                     portalClassName="ReactModalPortal"
@@ -3017,8 +2705,6 @@ exports[`Input with accept 1`] = `
         isReadOnly={false}
         label="File"
         labelMode="vertical"
-        maxFiles={0}
-        maxVisible={6}
         onDrop={[Function]}
         onRemove={[Function]}
         overrides={{}}
@@ -3035,17 +2721,17 @@ exports[`Input with accept 1`] = `
             overrides={{}}
           >
             <div
-              className="HoiPoi__Label__root-3-47 HoiPoi__FilePicker__Label-3-1"
+              className="HoiPoi__Label__root-3-48 HoiPoi__FilePicker__Label-3-1"
             >
               <ForwardRef
                 as="span"
-                className="HoiPoi__Label__Text-3-48"
+                className="HoiPoi__Label__Text-3-49"
                 isTruncated={false}
                 overrides={{}}
                 type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-3-51 HoiPoi__Label__Text-3-48 HoiPoi__Text__body-3-61"
+                  className="HoiPoi__Text__root-3-52 HoiPoi__Label__Text-3-49 HoiPoi__Text__body-3-62"
                   style={{}}
                 >
                   File
@@ -3088,7 +2774,7 @@ exports[`Input with accept 1`] = `
                 type="subtitle"
               >
                 <span
-                  className="HoiPoi__Text__root-3-51 HoiPoi__FilePicker__title-3-9 HoiPoi__Text__subtitle-3-59"
+                  className="HoiPoi__Text__root-3-52 HoiPoi__FilePicker__title-3-9 HoiPoi__Text__subtitle-3-60"
                   style={{}}
                 >
                   Drop files here
@@ -3102,7 +2788,7 @@ exports[`Input with accept 1`] = `
                 type="caption"
               >
                 <span
-                  className="HoiPoi__Text__root-3-51 HoiPoi__FilePicker__subtitle-3-10 HoiPoi__Text__caption-3-63"
+                  className="HoiPoi__Text__root-3-52 HoiPoi__FilePicker__subtitle-3-10 HoiPoi__Text__caption-3-64"
                   style={{}}
                 />
               </ForwardRef>
@@ -3115,22 +2801,22 @@ exports[`Input with accept 1`] = `
                 type="secondary"
               >
                 <button
-                  className="HoiPoi__Button__root-3-71 HoiPoi__Button__secondary-3-78 HoiPoi__Button__medium-3-86 HoiPoi__FilePicker__button-3-8"
+                  className="HoiPoi__Button__root-3-72 HoiPoi__Button__secondary-3-79 HoiPoi__Button__medium-3-87 HoiPoi__FilePicker__button-3-8"
                   onClick={[Function]}
                   type="button"
                 >
                   <div
-                    className="HoiPoi__Button__content-3-72"
+                    className="HoiPoi__Button__content-3-73"
                   >
                     <ForwardRef
                       as="span"
-                      className="HoiPoi__Button__Text-3-73"
+                      className="HoiPoi__Button__Text-3-74"
                       isTruncated={false}
                       overrides={{}}
                       type="body"
                     >
                       <span
-                        className="HoiPoi__Text__root-3-51 HoiPoi__Button__Text-3-73 HoiPoi__Text__body-3-61"
+                        className="HoiPoi__Text__root-3-52 HoiPoi__Button__Text-3-74 HoiPoi__Text__body-3-62"
                         style={{}}
                       >
                         Select file
@@ -3189,6 +2875,7 @@ exports[`Input with accept 1`] = `
                   "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-3-32",
                   "subtitle": "HoiPoi__FilePicker__subtitle-3-10",
                   "title": "HoiPoi__FilePicker__title-3-9",
+                  "uploadedFilesPopover": "HoiPoi__FilePicker__uploadedFilesPopover-3-47",
                   "vertical": "HoiPoi__FilePicker__vertical-3-28",
                 }
               }
@@ -3214,7 +2901,6 @@ exports[`Input with accept 1`] = `
                   "image/bmp",
                 ]
               }
-              maxVisible={6}
               onRemove={[Function]}
               overrides={
                 {
@@ -3232,111 +2918,9 @@ exports[`Input with accept 1`] = `
                 }
               }
               previewImages={false}
+              totalDroppedByGroupTooltip={{}}
               totalDroppedTooltip={0}
-            >
-              <div
-                className="HoiPoi__FilePicker__filesListWrapper-3-46"
-                style={{}}
-              >
-                <Component
-                  classes={
-                    {
-                      "Label": "HoiPoi__FilePicker__Label-3-1",
-                      "actions": "HoiPoi__FilePicker__actions-3-22",
-                      "button": "HoiPoi__FilePicker__button-3-8",
-                      "clear": "HoiPoi__FilePicker__clear-3-23",
-                      "cloudUploadIcon": "HoiPoi__FilePicker__cloudUploadIcon-3-11",
-                      "crop": "HoiPoi__FilePicker__crop-3-24",
-                      "disabled": "HoiPoi__FilePicker__disabled-3-7",
-                      "dropZone": "HoiPoi__FilePicker__dropZone-3-5",
-                      "error": "HoiPoi__FilePicker__error-3-3",
-                      "errored": "HoiPoi__FilePicker__errored-3-26",
-                      "file": "HoiPoi__FilePicker__file-3-12",
-                      "fileDataContainer": "HoiPoi__FilePicker__fileDataContainer-3-16",
-                      "fileError": "HoiPoi__FilePicker__fileError-3-13",
-                      "fileErrorText": "HoiPoi__FilePicker__fileErrorText-3-15",
-                      "fileIconContainer": "HoiPoi__FilePicker__fileIconContainer-3-17",
-                      "fileLoading": "HoiPoi__FilePicker__fileLoading-3-14",
-                      "fileName": "HoiPoi__FilePicker__fileName-3-20",
-                      "fileNameContainer": "HoiPoi__FilePicker__fileNameContainer-3-19",
-                      "fileSize": "HoiPoi__FilePicker__fileSize-3-21",
-                      "fileTextContainer": "HoiPoi__FilePicker__fileTextContainer-3-18",
-                      "filesList": "HoiPoi__FilePicker__filesList-3-45",
-                      "filesListWrapper": "HoiPoi__FilePicker__filesListWrapper-3-46",
-                      "focused": "HoiPoi__FilePicker__focused-3-31",
-                      "formControl": "HoiPoi__FilePicker__formControl-3-4",
-                      "group": "HoiPoi__FilePicker__group-3-33",
-                      "groupFooter": "HoiPoi__FilePicker__groupFooter-3-37",
-                      "groupFooterIcon": "HoiPoi__FilePicker__groupFooterIcon-3-40",
-                      "groupFooterIconRotate": "HoiPoi__FilePicker__groupFooterIconRotate-3-41",
-                      "groupFooterText": "HoiPoi__FilePicker__groupFooterText-3-39",
-                      "groupFooterTextContainer": "HoiPoi__FilePicker__groupFooterTextContainer-3-38",
-                      "groupHeader": "HoiPoi__FilePicker__groupHeader-3-35",
-                      "groupListWrapper": "HoiPoi__FilePicker__groupListWrapper-3-43",
-                      "groupListWrapperMargin": "HoiPoi__FilePicker__groupListWrapperMargin-3-44",
-                      "groupMargin": "HoiPoi__FilePicker__groupMargin-3-34",
-                      "groupTitle": "HoiPoi__FilePicker__groupTitle-3-36",
-                      "groupTitleDivider": "HoiPoi__FilePicker__groupTitleDivider-3-42",
-                      "horizontal": "HoiPoi__FilePicker__horizontal-3-29",
-                      "info": "HoiPoi__FilePicker__info-3-2",
-                      "isDragActive": "HoiPoi__FilePicker__isDragActive-3-6",
-                      "isFullWidth": "HoiPoi__FilePicker__isFullWidth-3-30",
-                      "isReadOnly": "HoiPoi__FilePicker__isReadOnly-3-27",
-                      "progress": "HoiPoi__FilePicker__progress-3-25",
-                      "root": "HoiPoi__FilePicker__root-3-0",
-                      "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-3-32",
-                      "subtitle": "HoiPoi__FilePicker__subtitle-3-10",
-                      "title": "HoiPoi__FilePicker__title-3-9",
-                      "vertical": "HoiPoi__FilePicker__vertical-3-28",
-                    }
-                  }
-                  cropTooltip="Crop image"
-                  files={[]}
-                  handleOnCrop={[Function]}
-                  imageExtensions={
-                    [
-                      "png",
-                      "jpeg",
-                      "jpg",
-                      "webp",
-                      "gif",
-                      "bmp",
-                    ]
-                  }
-                  imageTypes={
-                    [
-                      "image/png",
-                      "image/jpeg",
-                      "image/webp",
-                      "image/gif",
-                      "image/bmp",
-                    ]
-                  }
-                  onRemove={[Function]}
-                  overrides={
-                    {
-                      "Label": {},
-                      "error": {},
-                      "file": {},
-                      "filePicker": {},
-                      "filesList": {},
-                      "formControl": {},
-                      "groups": {},
-                      "groupsHeader": {},
-                      "groupsTitle": {},
-                      "info": {},
-                      "root": {},
-                    }
-                  }
-                  previewImages={false}
-                  setIsFolded={[Function]}
-                >
-                  <div
-                    className="HoiPoi__FilePicker__filesList-3-45"
-                  />
-                </Component>
-              </div>
-            </Component>
+            />
           </div>
           <ModalCrop
             cancelText="Cancel"
@@ -3350,7 +2934,7 @@ exports[`Input with accept 1`] = `
           >
             <Modal
               cancelText="Cancel"
-              className="HoiPoi__ModalCrop__cropModal-3-91"
+              className="HoiPoi__ModalCrop__cropModal-3-92"
               closeTimeoutMS={300}
               confirmText="Crop"
               isOpen={false}
@@ -3370,11 +2954,11 @@ exports[`Input with accept 1`] = `
               <Modal
                 ariaHideApp={false}
                 bodyOpenClassName="ReactModal__Body--open"
-                className="HoiPoi__Modal__root-3-94 HoiPoi__ModalCrop__cropModal-3-91"
+                className="HoiPoi__Modal__root-3-95 HoiPoi__ModalCrop__cropModal-3-92"
                 closeTimeoutMS={300}
                 contentElement={[Function]}
                 isOpen={false}
-                overlayClassName="HoiPoi__Modal__overlay-3-95"
+                overlayClassName="HoiPoi__Modal__overlay-3-96"
                 overlayElement={[Function]}
                 parentSelector={[Function]}
                 portalClassName="ReactModalPortal"
@@ -3411,7 +2995,7 @@ exports[`Input with accept 1`] = `
                   <ModalPortal
                     ariaHideApp={false}
                     bodyOpenClassName="ReactModal__Body--open"
-                    className="HoiPoi__Modal__root-3-94 HoiPoi__ModalCrop__cropModal-3-91"
+                    className="HoiPoi__Modal__root-3-95 HoiPoi__ModalCrop__cropModal-3-92"
                     closeTimeoutMS={300}
                     contentElement={[Function]}
                     defaultStyles={
@@ -3441,7 +3025,7 @@ exports[`Input with accept 1`] = `
                       }
                     }
                     isOpen={false}
-                    overlayClassName="HoiPoi__Modal__overlay-3-95"
+                    overlayClassName="HoiPoi__Modal__overlay-3-96"
                     overlayElement={[Function]}
                     parentSelector={[Function]}
                     portalClassName="ReactModalPortal"
@@ -3886,8 +3470,6 @@ exports[`Input with limit 1`] = `
         label="File"
         labelMode="vertical"
         limit={1}
-        maxFiles={0}
-        maxVisible={6}
         onDrop={[Function]}
         onRemove={[Function]}
         overrides={{}}
@@ -3904,17 +3486,17 @@ exports[`Input with limit 1`] = `
             overrides={{}}
           >
             <div
-              className="HoiPoi__Label__root-2-47 HoiPoi__FilePicker__Label-2-1"
+              className="HoiPoi__Label__root-2-48 HoiPoi__FilePicker__Label-2-1"
             >
               <ForwardRef
                 as="span"
-                className="HoiPoi__Label__Text-2-48"
+                className="HoiPoi__Label__Text-2-49"
                 isTruncated={false}
                 overrides={{}}
                 type="body"
               >
                 <span
-                  className="HoiPoi__Text__root-2-51 HoiPoi__Label__Text-2-48 HoiPoi__Text__body-2-61"
+                  className="HoiPoi__Text__root-2-52 HoiPoi__Label__Text-2-49 HoiPoi__Text__body-2-62"
                   style={{}}
                 >
                   File
@@ -3957,7 +3539,7 @@ exports[`Input with limit 1`] = `
                 type="subtitle"
               >
                 <span
-                  className="HoiPoi__Text__root-2-51 HoiPoi__FilePicker__title-2-9 HoiPoi__Text__subtitle-2-59"
+                  className="HoiPoi__Text__root-2-52 HoiPoi__FilePicker__title-2-9 HoiPoi__Text__subtitle-2-60"
                   style={{}}
                 >
                   Drop files here
@@ -3971,7 +3553,7 @@ exports[`Input with limit 1`] = `
                 type="caption"
               >
                 <span
-                  className="HoiPoi__Text__root-2-51 HoiPoi__FilePicker__subtitle-2-10 HoiPoi__Text__caption-2-63"
+                  className="HoiPoi__Text__root-2-52 HoiPoi__FilePicker__subtitle-2-10 HoiPoi__Text__caption-2-64"
                   style={{}}
                 />
               </ForwardRef>
@@ -3984,22 +3566,22 @@ exports[`Input with limit 1`] = `
                 type="secondary"
               >
                 <button
-                  className="HoiPoi__Button__root-2-71 HoiPoi__Button__secondary-2-78 HoiPoi__Button__medium-2-86 HoiPoi__FilePicker__button-2-8"
+                  className="HoiPoi__Button__root-2-72 HoiPoi__Button__secondary-2-79 HoiPoi__Button__medium-2-87 HoiPoi__FilePicker__button-2-8"
                   onClick={[Function]}
                   type="button"
                 >
                   <div
-                    className="HoiPoi__Button__content-2-72"
+                    className="HoiPoi__Button__content-2-73"
                   >
                     <ForwardRef
                       as="span"
-                      className="HoiPoi__Button__Text-2-73"
+                      className="HoiPoi__Button__Text-2-74"
                       isTruncated={false}
                       overrides={{}}
                       type="body"
                     >
                       <span
-                        className="HoiPoi__Text__root-2-51 HoiPoi__Button__Text-2-73 HoiPoi__Text__body-2-61"
+                        className="HoiPoi__Text__root-2-52 HoiPoi__Button__Text-2-74 HoiPoi__Text__body-2-62"
                         style={{}}
                       >
                         Select file
@@ -4058,6 +3640,7 @@ exports[`Input with limit 1`] = `
                   "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-2-32",
                   "subtitle": "HoiPoi__FilePicker__subtitle-2-10",
                   "title": "HoiPoi__FilePicker__title-2-9",
+                  "uploadedFilesPopover": "HoiPoi__FilePicker__uploadedFilesPopover-2-47",
                   "vertical": "HoiPoi__FilePicker__vertical-2-28",
                 }
               }
@@ -4083,7 +3666,6 @@ exports[`Input with limit 1`] = `
                   "image/bmp",
                 ]
               }
-              maxVisible={6}
               onRemove={[Function]}
               overrides={
                 {
@@ -4101,111 +3683,9 @@ exports[`Input with limit 1`] = `
                 }
               }
               previewImages={false}
+              totalDroppedByGroupTooltip={{}}
               totalDroppedTooltip={0}
-            >
-              <div
-                className="HoiPoi__FilePicker__filesListWrapper-2-46"
-                style={{}}
-              >
-                <Component
-                  classes={
-                    {
-                      "Label": "HoiPoi__FilePicker__Label-2-1",
-                      "actions": "HoiPoi__FilePicker__actions-2-22",
-                      "button": "HoiPoi__FilePicker__button-2-8",
-                      "clear": "HoiPoi__FilePicker__clear-2-23",
-                      "cloudUploadIcon": "HoiPoi__FilePicker__cloudUploadIcon-2-11",
-                      "crop": "HoiPoi__FilePicker__crop-2-24",
-                      "disabled": "HoiPoi__FilePicker__disabled-2-7",
-                      "dropZone": "HoiPoi__FilePicker__dropZone-2-5",
-                      "error": "HoiPoi__FilePicker__error-2-3",
-                      "errored": "HoiPoi__FilePicker__errored-2-26",
-                      "file": "HoiPoi__FilePicker__file-2-12",
-                      "fileDataContainer": "HoiPoi__FilePicker__fileDataContainer-2-16",
-                      "fileError": "HoiPoi__FilePicker__fileError-2-13",
-                      "fileErrorText": "HoiPoi__FilePicker__fileErrorText-2-15",
-                      "fileIconContainer": "HoiPoi__FilePicker__fileIconContainer-2-17",
-                      "fileLoading": "HoiPoi__FilePicker__fileLoading-2-14",
-                      "fileName": "HoiPoi__FilePicker__fileName-2-20",
-                      "fileNameContainer": "HoiPoi__FilePicker__fileNameContainer-2-19",
-                      "fileSize": "HoiPoi__FilePicker__fileSize-2-21",
-                      "fileTextContainer": "HoiPoi__FilePicker__fileTextContainer-2-18",
-                      "filesList": "HoiPoi__FilePicker__filesList-2-45",
-                      "filesListWrapper": "HoiPoi__FilePicker__filesListWrapper-2-46",
-                      "focused": "HoiPoi__FilePicker__focused-2-31",
-                      "formControl": "HoiPoi__FilePicker__formControl-2-4",
-                      "group": "HoiPoi__FilePicker__group-2-33",
-                      "groupFooter": "HoiPoi__FilePicker__groupFooter-2-37",
-                      "groupFooterIcon": "HoiPoi__FilePicker__groupFooterIcon-2-40",
-                      "groupFooterIconRotate": "HoiPoi__FilePicker__groupFooterIconRotate-2-41",
-                      "groupFooterText": "HoiPoi__FilePicker__groupFooterText-2-39",
-                      "groupFooterTextContainer": "HoiPoi__FilePicker__groupFooterTextContainer-2-38",
-                      "groupHeader": "HoiPoi__FilePicker__groupHeader-2-35",
-                      "groupListWrapper": "HoiPoi__FilePicker__groupListWrapper-2-43",
-                      "groupListWrapperMargin": "HoiPoi__FilePicker__groupListWrapperMargin-2-44",
-                      "groupMargin": "HoiPoi__FilePicker__groupMargin-2-34",
-                      "groupTitle": "HoiPoi__FilePicker__groupTitle-2-36",
-                      "groupTitleDivider": "HoiPoi__FilePicker__groupTitleDivider-2-42",
-                      "horizontal": "HoiPoi__FilePicker__horizontal-2-29",
-                      "info": "HoiPoi__FilePicker__info-2-2",
-                      "isDragActive": "HoiPoi__FilePicker__isDragActive-2-6",
-                      "isFullWidth": "HoiPoi__FilePicker__isFullWidth-2-30",
-                      "isReadOnly": "HoiPoi__FilePicker__isReadOnly-2-27",
-                      "progress": "HoiPoi__FilePicker__progress-2-25",
-                      "root": "HoiPoi__FilePicker__root-2-0",
-                      "singleImagePreview": "HoiPoi__FilePicker__singleImagePreview-2-32",
-                      "subtitle": "HoiPoi__FilePicker__subtitle-2-10",
-                      "title": "HoiPoi__FilePicker__title-2-9",
-                      "vertical": "HoiPoi__FilePicker__vertical-2-28",
-                    }
-                  }
-                  cropTooltip="Crop image"
-                  files={[]}
-                  handleOnCrop={[Function]}
-                  imageExtensions={
-                    [
-                      "png",
-                      "jpeg",
-                      "jpg",
-                      "webp",
-                      "gif",
-                      "bmp",
-                    ]
-                  }
-                  imageTypes={
-                    [
-                      "image/png",
-                      "image/jpeg",
-                      "image/webp",
-                      "image/gif",
-                      "image/bmp",
-                    ]
-                  }
-                  onRemove={[Function]}
-                  overrides={
-                    {
-                      "Label": {},
-                      "error": {},
-                      "file": {},
-                      "filePicker": {},
-                      "filesList": {},
-                      "formControl": {},
-                      "groups": {},
-                      "groupsHeader": {},
-                      "groupsTitle": {},
-                      "info": {},
-                      "root": {},
-                    }
-                  }
-                  previewImages={false}
-                  setIsFolded={[Function]}
-                >
-                  <div
-                    className="HoiPoi__FilePicker__filesList-2-45"
-                  />
-                </Component>
-              </div>
-            </Component>
+            />
           </div>
           <ModalCrop
             cancelText="Cancel"
@@ -4219,7 +3699,7 @@ exports[`Input with limit 1`] = `
           >
             <Modal
               cancelText="Cancel"
-              className="HoiPoi__ModalCrop__cropModal-2-91"
+              className="HoiPoi__ModalCrop__cropModal-2-92"
               closeTimeoutMS={300}
               confirmText="Crop"
               isOpen={false}
@@ -4239,11 +3719,11 @@ exports[`Input with limit 1`] = `
               <Modal
                 ariaHideApp={false}
                 bodyOpenClassName="ReactModal__Body--open"
-                className="HoiPoi__Modal__root-2-94 HoiPoi__ModalCrop__cropModal-2-91"
+                className="HoiPoi__Modal__root-2-95 HoiPoi__ModalCrop__cropModal-2-92"
                 closeTimeoutMS={300}
                 contentElement={[Function]}
                 isOpen={false}
-                overlayClassName="HoiPoi__Modal__overlay-2-95"
+                overlayClassName="HoiPoi__Modal__overlay-2-96"
                 overlayElement={[Function]}
                 parentSelector={[Function]}
                 portalClassName="ReactModalPortal"
@@ -4280,7 +3760,7 @@ exports[`Input with limit 1`] = `
                   <ModalPortal
                     ariaHideApp={false}
                     bodyOpenClassName="ReactModal__Body--open"
-                    className="HoiPoi__Modal__root-2-94 HoiPoi__ModalCrop__cropModal-2-91"
+                    className="HoiPoi__Modal__root-2-95 HoiPoi__ModalCrop__cropModal-2-92"
                     closeTimeoutMS={300}
                     contentElement={[Function]}
                     defaultStyles={
@@ -4310,7 +3790,7 @@ exports[`Input with limit 1`] = `
                       }
                     }
                     isOpen={false}
-                    overlayClassName="HoiPoi__Modal__overlay-2-95"
+                    overlayClassName="HoiPoi__Modal__overlay-2-96"
                     overlayElement={[Function]}
                     parentSelector={[Function]}
                     portalClassName="ReactModalPortal"
