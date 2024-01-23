@@ -19,6 +19,7 @@ import FontFamily from '@tiptap/extension-font-family';
 import { Color } from '@tiptap/extension-color';
 import Emoji from './components/emojiExtension.js';
 import Placeholder from './components/placeholderExtension';
+import FontSize from './components/fontSizeExtension';
 import Icon from '../../general/Icon';
 import InputWrapper from '../components/InputWrapper';
 import Menu from './components/Menu';
@@ -117,6 +118,7 @@ const RichText = memo(
                 }),
                 TextStyle,
                 FontFamily,
+                FontSize,
                 Color,
             ];
 
