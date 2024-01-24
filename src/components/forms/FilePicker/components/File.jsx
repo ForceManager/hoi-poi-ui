@@ -2,40 +2,32 @@ import React, { useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import prettyBytes from '../../../../utils/prettyBytes';
-import { getOverrides, useClasses } from '../../../../utils/overrides';
 import Icon from '../../../general/Icon';
 import Loader from '../../../general/Loader';
 import Tooltip from '../../../utils/Tooltip';
 import Text from '../../../typography/Text';
 import FILE_TYPES from '../FILE_TYPES';
 
-import { createUseStyles, useTheme } from '../../../../utils/styles';
-import styles from '../styles';
-
-const useStyles = createUseStyles(styles, 'FilePickerFile');
+import { useTheme } from '../../../../utils/styles';
 
 function File({
-    classes: classesProp,
-    error,
+    classes,
+    index,
+    id,
     file,
+    loading,
+    progress,
+    error,
     isUrl,
     preview,
     crop,
     cropTooltip,
-    index,
-    id,
-    loading,
     onRemove,
     onCrop,
-    overrides: overridesProp,
-    progress,
+    overrides,
     ...props
 }) {
-    const classes = useClasses(useStyles, classesProp);
     const theme = useTheme();
-
-    // Overrides
-    const override = getOverrides(overridesProp, File.overrides);
 
     const canRemove = useMemo(() => {
         if (typeof file?.canRemove === 'boolean' && !file.canRemove) return false;
@@ -96,20 +88,24 @@ function File({
     });
 
     return (
-        <div className={fileClassName} {...override.file}>
+        <div className={fileClassName} {...overrides.file}>
             <div className={classes.fileDataContainer}>
                 <div className={classes.fileIconContainer}>{renderIcon}</div>
                 <div className={classes.fileTextContainer}>
                     <div className={classes.fileNameContainer}>
-                        <Text className={classes.fileName} isTruncated useTooltip>
+                        <Text className={classes.fileName} type="caption" isTruncated useTooltip>
                             {isUrl ? file.split('/').pop() : file.name}
                         </Text>
                     </div>
                     {!error && !isUrl && (
-                        <Text className={classes.fileSize}>({prettyBytes(file.size)})</Text>
+                        <Text className={classes.fileSize} type="caption">
+                            ({prettyBytes(file.size)})
+                        </Text>
                     )}
                     {error && error.length && (
-                        <Text className={classes.fileErrorText}>{error}</Text>
+                        <Text className={classes.fileErrorText} type="caption">
+                            {error}
+                        </Text>
                     )}
                 </div>
             </div>

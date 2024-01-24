@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { useDropzone } from 'react-dropzone';
 
-import File from './components/File';
+import Groups from './components/Groups';
 import ModalCrop from '../../general/ModalCrop';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
@@ -44,6 +44,7 @@ function FilePicker({
     labelMode,
     maxFiles,
     maxSize,
+    maxVisible,
     minSize,
     maxHeight,
     maxWidth,
@@ -59,13 +60,47 @@ function FilePicker({
     singleImagePreview,
     title,
     subtitle,
+    groups,
+    foldedText,
+    unfoldedText,
+    onGroupMaxFiles,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     const [crop, setCrop] = useState({ isOpen: false, file: null });
+    const [totalDroppedTooltip, setTotalDroppedTooltip] = useState(0);
+    const [totalDroppedByGroupTooltip, setTotalDroppedByGroupTooltip] = useState({});
 
     const handleOnDrop = useCallback(
         (droppedFiles) => {
+            const tempDroppedByGroup = {};
+            if (groups?.length) {
+                const isExceededList = groups.reduce((arr, group, index) => {
+                    if (!group.maxFiles || !group.validateFiles) return arr;
+                    let selectedFiles = [];
+                    const selectedDroppedFiles = droppedFiles.filter((file) =>
+                        group.validateFiles(file),
+                    );
+                    tempDroppedByGroup[index] = selectedDroppedFiles;
+                    if (selectedDroppedFiles.length) {
+                        selectedFiles = files.filter((file) => group.validateFiles(file));
+
+                        const isExceeded =
+                            [...selectedFiles, ...selectedDroppedFiles].length > group.maxFiles;
+                        arr.push(isExceeded);
+                    }
+                    return arr;
+                }, []);
+
+                if (isExceededList?.length) {
+                    const isExceeded = isExceededList.some((current) => current === true);
+                    if (isExceeded) {
+                        onGroupMaxFiles && onGroupMaxFiles(droppedFiles);
+                        return;
+                    }
+                }
+            }
+
             if (
                 cropImages &&
                 onCrop &&
@@ -77,16 +112,37 @@ function FilePicker({
             }
             return (
                 onDrop &&
-                onDrop(
-                    droppedFiles.map((file) =>
-                        Object.assign(file, {
-                            id: Date.now(),
-                        }),
+                Promise.resolve(
+                    onDrop(
+                        droppedFiles.map((file) =>
+                            Object.assign(file, {
+                                id: Date.now(),
+                            }),
+                        ),
                     ),
-                )
+                ).then((result) => {
+                    if (groups) {
+                        const newGroupTooltips = groups.reduce((obj, group, index) => {
+                            if (group.maxVisible && tempDroppedByGroup?.[index]?.length) {
+                                obj[index] = tempDroppedByGroup[index].length;
+                            }
+                            return obj;
+                        }, {});
+
+                        setTotalDroppedByGroupTooltip(newGroupTooltips);
+                        setTimeout(() => {
+                            setTotalDroppedByGroupTooltip({});
+                        }, 3000);
+                    } else if (maxVisible) {
+                        setTotalDroppedTooltip(droppedFiles.length);
+                        setTimeout(() => {
+                            setTotalDroppedTooltip(0);
+                        }, 3000);
+                    }
+                })
             );
         },
-        [cropAspect, cropImages, onCrop, onDrop],
+        [cropAspect, cropImages, onCrop, onDrop, groups, maxVisible, files, onGroupMaxFiles],
     );
 
     const handleOnCrop = useCallback((file, index, id) => {
@@ -158,59 +214,6 @@ function FilePicker({
         ...override.Label,
     };
 
-    const renderFiles = useMemo(() => {
-        if (!files.length) return null;
-
-        const filesList = files.map((file, i) => {
-            let newFile = file;
-            let fileId = '';
-            if (file.file) newFile = file.file;
-            // if there is file.file then file.id will be used to keep tracking of the file
-            // and the file will be returned with the same format in onRemove and onCrop {id, file}
-            if (file.id && file.file) fileId = file.id;
-            const isUrl = typeof newFile === 'string';
-            const isImage =
-                (!isUrl && imageTypes.includes(newFile.type)) ||
-                (isUrl && imageExtensions.includes(newFile.split('.').pop()));
-            const preview = previewImages && isImage;
-            const crop = cropImages && isImage;
-            const data = filesData?.[newFile.id] || {};
-
-            return (
-                <File
-                    key={i}
-                    index={i}
-                    id={fileId}
-                    classes={classesProp}
-                    crop={crop}
-                    cropTooltip={cropTooltip}
-                    loading={data.loading}
-                    error={data.error}
-                    progress={data.progress}
-                    file={newFile}
-                    isUrl={isUrl}
-                    onCrop={handleOnCrop}
-                    onRemove={onRemove}
-                    overrides={overridesProp}
-                    preview={preview}
-                />
-            );
-        });
-
-        return <div className={classes.files}>{filesList}</div>;
-    }, [
-        classes.files,
-        classesProp,
-        cropImages,
-        cropTooltip,
-        files,
-        filesData,
-        handleOnCrop,
-        onRemove,
-        overridesProp,
-        previewImages,
-    ]);
-
     const showDragzone = useMemo(
         () => !(maxFiles && files.length === maxFiles),
         [files.length, maxFiles],
@@ -261,7 +264,27 @@ function FilePicker({
                         </Button>
                     </div>
                 )}
-                {renderFiles}
+                <Groups
+                    classes={classes}
+                    classesProp={classesProp}
+                    overrides={override}
+                    files={files}
+                    imageTypes={imageTypes}
+                    imageExtensions={imageExtensions}
+                    previewImages={previewImages}
+                    cropImages={cropImages}
+                    cropTooltip={cropTooltip}
+                    handleOnCrop={handleOnCrop}
+                    onRemove={onRemove}
+                    filesData={filesData}
+                    groups={groups}
+                    foldedText={foldedText}
+                    unfoldedText={unfoldedText}
+                    maxVisible={maxVisible}
+                    maxFiles={maxFiles}
+                    totalDroppedTooltip={totalDroppedTooltip}
+                    totalDroppedByGroupTooltip={totalDroppedByGroupTooltip}
+                />
                 {info && (
                     <div className={classes.info} {...override.info}>
                         {info}
@@ -289,7 +312,19 @@ function FilePicker({
     );
 }
 
-FilePicker.overrides = ['root', 'filePicker', 'error', 'info', 'formControl', 'Label'];
+FilePicker.overrides = [
+    'root',
+    'filePicker',
+    'error',
+    'info',
+    'formControl',
+    'Label',
+    'groups',
+    'groupsHeader',
+    'groupsTitle',
+    'file',
+    'filesList',
+];
 
 FilePicker.defaultProps = {
     labelMode: 'vertical',
@@ -297,7 +332,6 @@ FilePicker.defaultProps = {
     files: [],
     isReadOnly: false,
     overrides: {},
-    maxFiles: 0,
     title: 'Drop files here',
     buttonLabel: 'Select file',
     cropTitle: 'Crop image',
@@ -362,14 +396,28 @@ FilePicker.propTypes = {
     /** Native filePicker name */
     name: PropTypes.string,
     onCrop: PropTypes.func,
-    /** Cb for when the drop event occurs. Note that this callback is invoked after the getFilesFromEvent callback is done. */
+    /** For a better behaviour use a Promise. Cb for when the drop event occurs. Note that this callback is invoked after the getFilesFromEvent callback is done. */
     onDrop: PropTypes.func,
+    /** For a better behaviour use a Promise */
     onRemove: PropTypes.func,
     overrides: PropTypes.object,
     title: PropTypes.string,
     /** Additional info for size limits, accepted file types and others */
     subtitle: PropTypes.string,
     previewImages: PropTypes.bool,
+    groups: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string,
+            maxFiles: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+            validateFiles: PropTypes.func,
+        }),
+    ),
+    /** If maxVisible is true you need to provide foldedText/unfoldedText */
+    maxVisible: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    foldedText: PropTypes.string,
+    unfoldedText: PropTypes.string,
+    /** Callback triggered when dropped files exceed the group maxFiles*/
+    onGroupMaxFiles: PropTypes.func,
 };
 
 export default React.memo(FilePicker);
