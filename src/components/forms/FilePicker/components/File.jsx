@@ -7,6 +7,7 @@ import Loader from '../../../general/Loader';
 import Tooltip from '../../../utils/Tooltip';
 import Text from '../../../typography/Text';
 import FILE_TYPES from '../FILE_TYPES';
+import FILE_EXTENSIONS from '../FILE_EXTENSIONS';
 
 import { useTheme } from '../../../../utils/styles';
 
@@ -68,7 +69,7 @@ function File({
                     }}
                 />
             );
-        return <Icon name={FILE_TYPES[file.type] || 'file'} />;
+        return <Icon name={FILE_TYPES[file.type] || FILE_EXTENSIONS[file.type] || 'file'} />;
     }, [error, theme.colors.red500, loading, preview, isUrl, file]);
 
     const renderCrop = useMemo(() => {
