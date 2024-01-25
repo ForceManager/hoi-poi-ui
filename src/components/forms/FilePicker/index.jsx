@@ -63,7 +63,7 @@ function FilePicker({
     groups,
     foldedText,
     unfoldedText,
-    onGroupMaxFiles,
+    onExceedFileLimitDrop,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -83,7 +83,7 @@ function FilePicker({
                     );
                     tempDroppedByGroup[index] = selectedDroppedFiles;
                     if (selectedDroppedFiles.length) {
-                        selectedFiles = files.filter((file) => group.validateFiles(file));
+                        selectedFiles = files?.filter((file) => group.validateFiles(file)) || [];
 
                         const isExceeded =
                             [...selectedFiles, ...selectedDroppedFiles].length > group.maxFiles;
@@ -95,9 +95,15 @@ function FilePicker({
                 if (isExceededList?.length) {
                     const isExceeded = isExceededList.some((current) => current === true);
                     if (isExceeded) {
-                        onGroupMaxFiles && onGroupMaxFiles(droppedFiles);
+                        onExceedFileLimitDrop && onExceedFileLimitDrop(droppedFiles);
                         return;
                     }
+                }
+            } else if (maxFiles) {
+                const isExceeded = (files?.length || 0) + (droppedFiles?.length || 0) > maxFiles;
+                if (isExceeded) {
+                    onExceedFileLimitDrop && onExceedFileLimitDrop(droppedFiles);
+                    return;
                 }
             }
 
@@ -132,17 +138,27 @@ function FilePicker({
                         setTotalDroppedByGroupTooltip(newGroupTooltips);
                         setTimeout(() => {
                             setTotalDroppedByGroupTooltip({});
-                        }, 3000);
+                        }, 2500);
                     } else if (maxVisible) {
                         setTotalDroppedTooltip(droppedFiles.length);
                         setTimeout(() => {
                             setTotalDroppedTooltip(0);
-                        }, 3000);
+                        }, 2500);
                     }
                 })
             );
         },
-        [cropAspect, cropImages, onCrop, onDrop, groups, maxVisible, files, onGroupMaxFiles],
+        [
+            cropAspect,
+            cropImages,
+            onCrop,
+            onDrop,
+            groups,
+            maxVisible,
+            files,
+            maxFiles,
+            onExceedFileLimitDrop,
+        ],
     );
 
     const handleOnCrop = useCallback((file, index, id) => {
@@ -215,8 +231,8 @@ function FilePicker({
     };
 
     const showDragzone = useMemo(
-        () => !(maxFiles && files.length === maxFiles),
-        [files.length, maxFiles],
+        () => !(!groups && maxFiles && files.length >= maxFiles),
+        [files.length, maxFiles, groups],
     );
 
     const renderSingleImagePreview = useMemo(() => {
@@ -416,8 +432,8 @@ FilePicker.propTypes = {
     maxVisible: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     foldedText: PropTypes.string,
     unfoldedText: PropTypes.string,
-    /** Callback triggered when dropped files exceed the group maxFiles*/
-    onGroupMaxFiles: PropTypes.func,
+    /** Callback triggered when dropped files exceed the maxFiles*/
+    onExceedFileLimitDrop: PropTypes.func,
 };
 
 export default React.memo(FilePicker);

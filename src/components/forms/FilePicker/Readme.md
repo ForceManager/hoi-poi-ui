@@ -167,6 +167,10 @@ const onDrop = (acceptedFiles) => {
     setState([...state, ...renameDuplicates(state, acceptedFiles)]);
 };
 
+const onExceedFileLimitDrop = () => {
+    console.log('File limit exceeded');
+};
+
 const onCrop = (file, index) => {
     const files = [...state];
 
@@ -205,6 +209,7 @@ const onRemove = (deletedFile) => {
         maxVisible={2}
         foldedText="See More"
         unfoldedText="See Less"
+        onExceedFileLimitDrop={onExceedFileLimitDrop}
     />
 </div>;
 ```
@@ -255,6 +260,10 @@ const onDrop = (acceptedFiles) => {
         setState([...state, ...renameDuplicates(state, acceptedFiles)]);
         resolve();
     });
+};
+
+const onExceedFileLimitDrop = () => {
+    console.log('File limit exceeded');
 };
 
 const onCrop = (file, index) => {
@@ -329,6 +338,7 @@ const groups = [
         cropImages
         groups={groups}
         maxVisible={4}
+        onExceedFileLimitDrop={onExceedFileLimitDrop}
     />
 </div>;
 ```
