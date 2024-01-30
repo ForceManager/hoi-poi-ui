@@ -6,7 +6,8 @@ import Icon from '../../../general/Icon';
 export default React.memo((props) => {
     const label = useMemo(
         () =>
-            props.selectProps.showMediaInSelectedValues ? (
+            props.selectProps.showMediaInSelectedValues &&
+            (props.data.iconType || props.data.src) ? (
                 <span>
                     {props.data.iconType && (
                         <Icon
