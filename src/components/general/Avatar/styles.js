@@ -29,8 +29,8 @@ export default (theme) => ({
         },
     },
     tiny: {
-        height: 16,
-        width: 16,
+        height: 18,
+        width: 18,
         '& $initials': {
             fontSize: 10,
         },

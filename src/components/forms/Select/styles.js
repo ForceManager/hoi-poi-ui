@@ -56,8 +56,8 @@ export default (theme) => ({
         marginRight: 10,
     },
     optionLabelAvatar: {
-        width: 20,
-        height: 20,
+        // width: 20,
+        // height: 20,
         marginRight: 10,
         borderRadius: '50%',
         position: 'relative',
@@ -227,7 +227,7 @@ export default (theme) => ({
         margin: '3px 6px 3px 2px',
         padding: '4px 4px 4px 8px',
         border: 'none',
-        borderRadius: '20px',
+        borderRadius: 20,
         backgroundColor: theme.colors.blue100,
         color: theme.colors.blue500,
         transition: 'all 0.15s ease',
@@ -242,6 +242,11 @@ export default (theme) => ({
         paddingLeft: 0,
         paddingRight: 4,
         lineHeight: '18px',
+        '& > span': {
+            display: 'flex',
+            gap: 4,
+            alignItems: 'center',
+        },
     },
     multiValueLabelDisabled: {
         color: theme.colors.blue200,
