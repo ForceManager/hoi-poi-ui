@@ -56,8 +56,6 @@ export default (theme) => ({
         marginRight: 10,
     },
     optionLabelAvatar: {
-        // width: 20,
-        // height: 20,
         marginRight: 10,
         borderRadius: '50%',
         position: 'relative',
