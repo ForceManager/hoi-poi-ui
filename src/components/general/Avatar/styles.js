@@ -28,45 +28,59 @@ export default (theme) => ({
             padding: '2%',
         },
     },
-    small: {
-        height: '20px',
-        width: '20px',
+    tiny: {
+        height: 16,
+        width: 16,
         '& $initials': {
-            fontSize: '10px',
+            fontSize: 10,
+        },
+        '& $count': {
+            transform: 'translate3d(40%, 40%, 0)',
+        },
+    },
+    small: {
+        height: 20,
+        width: 20,
+        '& $initials': {
+            fontSize: 10,
         },
         '& $count': {
             transform: 'translate3d(40%, 40%, 0)',
         },
     },
     medium: {
-        height: '25px',
-        width: '25px',
+        height: 25,
+        width: 25,
     },
     large: {
-        height: '30px',
-        width: '30px',
+        height: 30,
+        width: 30,
         '& $initials': {
-            fontSize: '16px',
+            fontSize: 16,
         },
     },
     big: {
-        height: '32px',
-        width: '32px',
+        height: 32,
+        width: 32,
         '& $initials': {
-            fontSize: '18px',
+            fontSize: 18,
         },
     },
     huge: {
-        height: '64px',
-        width: '64px',
+        height: 64,
+        width: 64,
         '& $initials': {
-            fontSize: '38px',
+            fontSize: 38,
         },
         '& $count': {
             transform: 'none',
         },
     },
-    icon: {},
+    icon: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     initials: {
         display: 'flex',
         justifyContent: 'center',

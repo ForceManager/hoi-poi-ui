@@ -38,7 +38,7 @@ function SingleAvatar({
 
     useEffect(() => {
         let willUnmount = false;
-        
+
         if (!isImageLoaded || initialSrc !== src) {
             if (src && !hadError) {
                 getDataUri(src)
@@ -99,7 +99,7 @@ SingleAvatar.propTypes = {
     alt: PropTypes.string,
     icon: PropTypes.string,
     type: PropTypes.oneOf(['round', 'square']),
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
+    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big', 'huge']),
 };
 
 export default React.memo(SingleAvatar);

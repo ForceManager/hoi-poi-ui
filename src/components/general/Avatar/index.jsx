@@ -32,7 +32,7 @@ Avatar.propTypes = {
     alt: PropTypes.string,
     icon: PropTypes.string,
     type: PropTypes.oneOf(['round', 'square']),
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'big', 'huge']),
+    size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'big', 'huge']),
 };
 
 export default Avatar;
