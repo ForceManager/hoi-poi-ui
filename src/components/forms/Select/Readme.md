@@ -1573,6 +1573,10 @@ for (let i = 0; i < total; i++) {
     options.push({
         label: `Lorem ipsum ${i}`,
         value: `lorem-ipsum-${i}`,
+        src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
+        placeholder: '/public/placeholder.png',
+        alt: 'image',
+        subLabel: `Lorem sublabel ${i}`,
     });
 }
 
@@ -1599,6 +1603,7 @@ const loadOptions = (text, cb) =>
         isFuzzy
         isMulti
         highlightMatch
+        showMediaInSelectedValues
     />
 </div>;
 ```

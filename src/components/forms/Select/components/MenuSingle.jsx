@@ -37,7 +37,7 @@ export default ({ classes, option, override, getHighlighted }) => {
                         <div className={classes.disabledAvatar} {...override.disabledAvatar} />
                     )}
                     <Avatar
-                        size="small"
+                        size={option.subLabel ? 'big' : 'small'}
                         src={option.src}
                         placeholder={option.placeholder || ''}
                         alt={option.alt}
@@ -46,7 +46,7 @@ export default ({ classes, option, override, getHighlighted }) => {
             )}
 
             {!option.subLabel && (
-                <div className={textClasses.join(' ')} {...override.label}>
+                <div className={textClasses.join(' ')} {...override.optionLabelText}>
                     {(getHighlighted && getHighlighted(option)) || option.label}
                 </div>
             )}

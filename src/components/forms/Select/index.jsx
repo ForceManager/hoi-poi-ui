@@ -111,6 +111,7 @@ const Select = memo(
         notSelectingDefaultOption,
         selectAllLabel,
         inputProps,
+        showMediaInSelectedValues,
         ...props
     }) => {
         const selectRef = useRef();
@@ -967,6 +968,7 @@ const Select = memo(
                     }),
                     ...override.styles,
                 },
+                showMediaInSelectedValues,
                 ...override['react-select'],
             };
         }, [
@@ -1053,6 +1055,7 @@ const Select = memo(
             multiValueRemoveStyles,
             setIsSelectAllFocused,
             isSelectAllFocused,
+            showMediaInSelectedValues,
         ]);
 
         let SelectComponent = RSelect;
@@ -1148,6 +1151,7 @@ Select.defaultProps = {
     focusDefaultOption: true,
     withoutFilter: false,
     useMenuPortal: true,
+    showMediaInSelectedValues: false,
 };
 
 Select.propTypes = {
@@ -1259,6 +1263,8 @@ Select.propTypes = {
     keepInputFocused: PropTypes.bool,
     /** Defines wether it should have Select All option and also the label that should be printed in the option row */
     selectAllLabel: PropTypes.string,
+    /** Show/hide icon or avatar in selected values in multiselect */
+    showMediaInSelectedValues: PropTypes.bool,
 };
 
 export default Select;
