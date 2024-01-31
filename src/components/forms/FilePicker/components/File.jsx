@@ -100,7 +100,7 @@ function File({
                     </div>
                     {!error && !isUrl && (
                         <Text className={classes.fileSize} type="caption">
-                            ({prettyBytes(file.size)})
+                            ({prettyBytes(parseInt(file.size, 10))})
                         </Text>
                     )}
                     {error && error.length && (
