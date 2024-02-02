@@ -339,7 +339,10 @@ const Select = memo(
         const handleOnBlur = useCallback(
             (e) => {
                 setFocused(false);
-                if (!keepInputValueOnBlur || (isMulti && !keepInputValueOnBlurInMulti))
+                if (
+                    (!keepInputValueOnBlur && !keepInputValueOnBlurInMulti) ||
+                    (isMulti && !keepInputValueOnBlurInMulti)
+                )
                     setNewInputValue('');
                 onBlur && onBlur(e, value);
             },
