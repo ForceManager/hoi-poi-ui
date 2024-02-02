@@ -61,6 +61,7 @@ const Select = memo(
         inputValue,
         forceBlurOnEnter,
         keepInputValueOnBlur,
+        keepInputValueOnBlurInMulti,
         keepInputFocused,
         keepValueOnInputChange,
         useAsSimpleSearch,
@@ -338,10 +339,11 @@ const Select = memo(
         const handleOnBlur = useCallback(
             (e) => {
                 setFocused(false);
-                if (!keepInputValueOnBlur || isMulti) setNewInputValue('');
+                if (!keepInputValueOnBlur || (isMulti && !keepInputValueOnBlurInMulti))
+                    setNewInputValue('');
                 onBlur && onBlur(e, value);
             },
-            [onBlur, keepInputValueOnBlur, isMulti, value],
+            [keepInputValueOnBlur, isMulti, keepInputValueOnBlurInMulti, onBlur, value],
         );
 
         const controlStyles = useCallback(
@@ -644,7 +646,7 @@ const Select = memo(
                         selectRef.current.blur();
                         setFocused(false);
                     }
-                    if (keepInputValueOnBlur && !isMulti) {
+                    if (keepInputValueOnBlur && (!isMulti || keepInputValueOnBlurInMulti)) {
                         setNewValue(null);
                     }
                     onEnter && onEnter(e);
@@ -658,6 +660,7 @@ const Select = memo(
                 notSelectingDefaultOption,
                 forceBlurOnEnter,
                 keepInputValueOnBlur,
+                keepInputValueOnBlurInMulti,
                 isMulti,
                 onEnter,
             ],
@@ -681,7 +684,7 @@ const Select = memo(
                     if (
                         !keepValueOnInputChange &&
                         keepInputValueOnBlur &&
-                        !isMulti &&
+                        (!isMulti || keepInputValueOnBlurInMulti) &&
                         newValue?.value
                     ) {
                         setNewValue(null);
@@ -694,6 +697,7 @@ const Select = memo(
             [
                 keepValueOnInputChange,
                 keepInputValueOnBlur,
+                keepInputValueOnBlurInMulti,
                 isMulti,
                 newValue,
                 onBlurSearch,
@@ -725,7 +729,8 @@ const Select = memo(
             let additionalComponents = {};
             if ((loadOptions && isFuzzy) || useAsSimpleSearch || hideDropdownIndicator)
                 Indicator = null;
-            if (newInputValue && !newValue && keepInputValueOnBlur) Indicator = ClearIndicator;
+            if (newInputValue && !newValue && (keepInputValueOnBlur || keepInputValueOnBlurInMulti))
+                Indicator = ClearIndicator;
             if (isReadOnly) Indicator = LockIndicator;
             if (dropDownIcon) Indicator = CustomIndicator;
             if (showNumSelected) additionalComponents = { ...additionalComponents, ValueContainer };
@@ -1152,6 +1157,7 @@ Select.defaultProps = {
     withoutFilter: false,
     useMenuPortal: true,
     showMediaInSelectedValues: false,
+    keepInputValueOnBlurInMulti: false,
 };
 
 Select.propTypes = {
@@ -1192,6 +1198,8 @@ Select.propTypes = {
     inputValue: PropTypes.string,
     forceBlurOnEnter: PropTypes.bool,
     keepInputValueOnBlur: PropTypes.bool,
+    /** Keep input value on blur in multi select */
+    keepInputValueOnBlurInMulti: PropTypes.bool,
     /** It allows using the Select as a simple input for search uses */
     useAsSimpleSearch: PropTypes.bool,
     onBlurSearch: PropTypes.func,
