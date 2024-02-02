@@ -1572,7 +1572,7 @@ let total = 100;
 for (let i = 0; i < total; i++) {
     options.push({
         label: `Lorem ipsum ${i}`,
-        value: `lorem-ipsum-${i}`,
+        value: `lorem ipsum ${i}`,
         src: 'https://live.staticflickr.com/2862/9899551176_b8c9c7dd30_b.jpg',
         placeholder: '/public/placeholder.png',
         alt: 'image',
@@ -1585,7 +1585,7 @@ const loadOptions = (text, cb) =>
         (resolve, reject) =>
             setTimeout(() => {
                 const newOptions = options.filter((current) => {
-                    return current.value.includes(text);
+                    return current.value.includes(text.trim().toLowerCase());
                 });
                 resolve(newOptions);
             }, 1000),
