@@ -16,6 +16,7 @@ import Mention from '@tiptap/extension-mention';
 import HardBreak from '@tiptap/extension-hard-break';
 import TextStyle from '@tiptap/extension-text-style';
 import FontFamily from '@tiptap/extension-font-family';
+import Link from '@tiptap/extension-link'
 import { Color } from '@tiptap/extension-color';
 import Emoji from './components/emojiExtension.js';
 import Placeholder from './components/placeholderExtension';
@@ -120,6 +121,10 @@ const RichText = memo(
                 FontFamily,
                 FontSize,
                 Color,
+                Link.configure({
+                    openOnClick: false,
+                    autolink: true,
+                }),
             ];
 
             if (emoji) {

@@ -205,6 +205,7 @@ import GeolocatedOpportunity from './icons/actions/GeolocatedOpportunity';
 import TrackingLink from './icons/actions/TrackingLink';
 import FontColor from './icons/actions/FontColor';
 import FontSize from './icons/actions/FontSize';
+import Reply from './icons/actions/Reply';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -657,6 +658,7 @@ export const ICONS = {
     trackingLink: TrackingLink,
     fontColor: FontColor,
     fontSize: FontSize,
+    reply: Reply,
     //Communication
     message: Message,
     comment: Comment,
