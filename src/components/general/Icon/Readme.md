@@ -132,6 +132,7 @@ import Icon from './IconWithTooltip';
     <Icon name="trackingLink" />
     <Icon name="fontColor" />
     <Icon name="fontSize" />
+    <Icon name="reply" />
 </div>;
 ```
 
