@@ -55,6 +55,10 @@ export default (theme) => ({
         display: 'flex',
         gap: '20px',
     },
+    footerComponent: {
+        display: 'flex',
+        flexGrow: 1,
+    },
     content: {
         position: 'relative',
         overflow: 'auto',

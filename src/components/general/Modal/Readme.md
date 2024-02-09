@@ -1179,6 +1179,71 @@ let isOpen = state.isOpen || false;
 </div>;
 ```
 
+With FooterComponent:
+
+```jsx
+import { Button, Text, Advice } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+let isOpen = state.isOpen || false;
+
+<div>
+    <Button onClick={() => setState({ isOpen: !isOpen })}>Show</Button>
+    <span> </span>
+    <Modal
+        title="Lorem modal ipsum dolor sit amet, consectetur adipiscing elit"
+        isOpen={isOpen}
+        onRequestClose={() => setState({ isOpen: false })}
+        // onConfirm={() => {
+        //     setState({ isOpen: !isOpen });
+        // }}
+        // confirmText="Confirm"
+        footerComponent={<Text>Here goes the footer component</Text>}
+    >
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui, morbi donec quis sed. Nisl
+            convallis enim quam arcu. Mi sapien mattis ut justo gravida diam nulla in. Tellus, donec
+            amet, urna praesent auctor. Cras nulla orci nisi, nunc venenatis massa. Ut est, lectus
+            adipiscing ut nunc augue proin nisi pellentesque. Molestie ac ac quis elit eu id est.
+            Enim et elementum quam accumsan. Sapien pellentesque pharetra et a ac eu. Scelerisque
+            netus consequat vel arcu habitant. Velit sed velit est ultrices enim. Auctor arcu
+            tincidunt nibh ut sed lacus faucibus. Malesuada dignissim quam adipiscing quam. Sed
+            viverra massa neque aliquam, amet feugiat. Libero non, ultrices id sem convallis orci
+            purus porttitor. Purus orci malesuada diam nisl vel aliquet blandit orci pulvinar. Etiam
+            viverra nam nullam elit, tellus non sit neque in. Volutpat viverra condimentum tellus
+            mauris cras curabitur. In suspendisse pretium ornare accumsan. Nunc eros fringilla
+            interdum integer et rhoncus, sed feugiat. Eu eu etiam laoreet risus ultrices porttitor
+            sollicitudin. Tincidunt tortor, pharetra phasellus in maecenas et aenean placerat. Amet
+            nam sed cum sem id. Lacus pellentesque viverra neque mi volutpat purus vitae. Arcu urna
+            et lacus, laoreet quis massa. Varius sem donec risus, ultricies etiam. Porttitor diam
+            elementum egestas volutpat ullamcorper vitae vitae. Viverra morbi sed quis quis egestas
+            phasellus odio. Et ut in dignissim vulputate facilisis nunc. Rhoncus, euismod sit cras
+            pellentesque dictum condimentum auctor nibh. Eget elementum velit lectus vestibulum.
+            Ullamcorper mollis condimentum at id nulla amet. Eu venenatis leo risus sociis proin
+            arcu arcu. Sit sit purus arcu in morbi facilisis morbi ultrices. Feugiat nibh volutpat
+            integer rutrum felis, cum venenatis. Amet, donec sed aenean vivamus vitae amet, sagittis
+            enim phasellus. Proin sodales placerat vitae, cras. A eget lorem nunc, duis consequat
+            tempus dolor consectetur vulputate. Libero, nulla nunc blandit iaculis vel vehicula. A
+            aliquam leo cursus felis. Malesuada leo eget quis auctor id varius pellentesque
+            venenatis et. Mi donec eu eleifend sed gravida mi eget. Sit ut bibendum vitae nec mi,
+            tristique euismod diam. Sit at amet tincidunt arcu quam sapien et. Tellus volutpat
+            aliquet malesuada vitae scelerisque proin varius nec elementum. Montes, sed proin neque
+            vestibulum. Lectus scelerisque nisl, nunc porta consequat id amet, risus at. Sed aliquam
+            faucibus commodo sed volutpat quis tristique imperdiet. Tortor integer metus eros,
+            egestas quis ornare nisi, lobortis. Sit tristique proin tristique consectetur vel donec
+            semper dolor tempor. Faucibus sed pretium tincidunt scelerisque vitae tempus in. Fames
+            sagittis sit a luctus ultrices commodo. Quam laoreet mattis feugiat in massa eget
+            sapien. A habitant ac egestas a. Diam faucibus vestibulum integer proin dolor. Ornare
+            eros, tristique eu nunc suspendisse vitae. Faucibus dignissim sed sed enim mi. Dolor
+            ullamcorper sed in suspendisse ultrices ipsum. Massa at non donec sit sed. Mauris
+            habitasse aliquam morbi et. Adipiscing tristique velit sodales feugiat enim amet ut
+            turpis.
+        </Text>
+    </Modal>
+</div>;
+```
+
 ### Component tree
 
 ---
