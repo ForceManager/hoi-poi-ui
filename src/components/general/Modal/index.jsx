@@ -59,6 +59,7 @@ function Modal({
     getContentRef,
     preComponent,
     postComponent,
+    footerComponent,
     ...props
 }) {
     const modalRef = useRef();
@@ -172,7 +173,7 @@ function Modal({
         else return { maxHeight: autoHeight };
     }, [height, size, useContentStaticHeight, useAutoHeight, autoHeight]);
 
-    const showFooter = onConfirm || onCancel || onDelete;
+    const showFooter = onConfirm || onCancel || onDelete || footerComponent;
 
     const renderTitle = useMemo(() => {
         if (typeof title === 'string') {
@@ -217,6 +218,11 @@ function Modal({
                 )}
                 {showFooter && (
                     <div className={classes.footer} {...override.footer}>
+                        {footerComponent && (
+                            <div className={classes.footerComponent} {...override.footerComponent}>
+                                {footerComponent}
+                            </div>
+                        )}
                         <div className={classes.footerLeft} {...override.footerLeft}>
                             {onDelete && (
                                 <Link
@@ -282,6 +288,7 @@ Modal.overrides = [
     'footer',
     'footerLeft',
     'footerRight',
+    'footerComponent',
     'closeIcon',
     'cancelButton',
     'middleButton',
