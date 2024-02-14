@@ -94,6 +94,7 @@ import SecurePayment from './icons/SecurePayment';
 import Logout from './icons/Logout';
 import DatabaseClear from './icons/DatabaseClear';
 import LocalDatabaseClear from './icons/LocalDatabaseClear';
+import Tool from './icons/Tool';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -552,6 +553,7 @@ export const ICONS = {
     logout: Logout,
     databaseClear: DatabaseClear,
     localDatabaseClear: LocalDatabaseClear,
+    tool: Tool,
 
     //Actions
     accountCheckin: AccountCheckin,
