@@ -143,7 +143,7 @@ const fetchSuggestions = (query) =>
     );
 
 <div>
-    <RichText label="Editor" />
+    <RichText label="Editor" chatbox />
 
     <RichText label="Editor with placeholder" placeholder="Type something…" />
 
