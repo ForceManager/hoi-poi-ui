@@ -16,7 +16,7 @@ import Mention from '@tiptap/extension-mention';
 import HardBreak from '@tiptap/extension-hard-break';
 import TextStyle from '@tiptap/extension-text-style';
 import FontFamily from '@tiptap/extension-font-family';
-import Link from '@tiptap/extension-link'
+import Link from '@tiptap/extension-link';
 import { Color } from '@tiptap/extension-color';
 import Emoji from './components/emojiExtension.js';
 import Placeholder from './components/placeholderExtension';
@@ -70,6 +70,7 @@ const RichText = memo(
         getEditorRef,
         isSubmitDisabled,
         withCustomToolbar,
+        chatbox,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -91,32 +92,6 @@ const RichText = memo(
                     hardBreak: false,
                 }),
                 Underline,
-                HardBreak.extend({
-                    addKeyboardShortcuts() {
-                        const handleShiftEnter = () => {
-                            if (
-                                this.editor.isActive('bulletList') ||
-                                this.editor.isActive('orderedList')
-                            ) {
-                                this.editor.commands.first(({ commands }) => [
-                                    () => commands.splitListItem('listItem'),
-                                ]);
-                            } else {
-                                this.editor.commands.first(({ commands }) => [
-                                    () => commands.newlineInCode(),
-                                    () => commands.createParagraphNear(),
-                                    () => commands.liftEmptyBlock(),
-                                    () => commands.splitBlock(),
-                                ]);
-                            }
-                        };
-
-                        return {
-                            Enter: () => true, // Prevent extra line-break on submiting via Enter
-                            'Shift-Enter': handleShiftEnter,
-                        };
-                    },
-                }),
                 TextStyle,
                 FontFamily,
                 FontSize,
@@ -126,6 +101,37 @@ const RichText = memo(
                     autolink: true,
                 }),
             ];
+
+            if (chatbox) {
+                extensions.push(
+                    HardBreak.extend({
+                        addKeyboardShortcuts() {
+                            const handleShiftEnter = () => {
+                                if (
+                                    this.editor.isActive('bulletList') ||
+                                    this.editor.isActive('orderedList')
+                                ) {
+                                    this.editor.commands.first(({ commands }) => [
+                                        () => commands.splitListItem('listItem'),
+                                    ]);
+                                } else {
+                                    this.editor.commands.first(({ commands }) => [
+                                        () => commands.newlineInCode(),
+                                        () => commands.createParagraphNear(),
+                                        () => commands.liftEmptyBlock(),
+                                        () => commands.splitBlock(),
+                                    ]);
+                                }
+                            };
+
+                            return {
+                                Enter: () => true, // Prevent extra line-break on submiting via Enter
+                                'Shift-Enter': handleShiftEnter,
+                            };
+                        },
+                    }),
+                );
+            }
 
             if (emoji) {
                 extensions.push(
@@ -155,7 +161,7 @@ const RichText = memo(
             }
 
             return extensions;
-        }, [emoji, mention, placeholder]);
+        }, [chatbox, emoji, mention, placeholder]);
 
         const editor = useEditor({
             editable: !isReadOnly,
@@ -292,7 +298,7 @@ const RichText = memo(
                     return;
                 }
 
-                if (e.key === 'Enter' && !e.shiftKey) {
+                if (chatbox && e.key === 'Enter' && !e.shiftKey) {
                     if (showingMention.current || showingEmoji.current || showingMenuPopover) {
                         showingMention.current = false;
                         showingEmoji.current = false;
@@ -312,6 +318,7 @@ const RichText = memo(
                 handleSubmit,
                 showingMenuPopover,
                 loading,
+                chatbox,
             ],
         );
 
@@ -508,6 +515,7 @@ RichText.defaultProps = {
     loading: false,
     isSubmitDisabled: false,
     withCustomToolbar: false,
+    chatbox: false,
 };
 
 RichText.propTypes = {
@@ -574,6 +582,8 @@ RichText.propTypes = {
     isSubmitDisabled: PropTypes.bool,
     /** Set it to `true` if you're planning to provide a custom toolbar for the editor */
     withCustomToolbar: PropTypes.bool,
+    /** Set it to `true` if you want the editor to behave like in a chat client. p.e 'Enter' submits the message */
+    chatbox: PropTypes.bool,
 };
 
 export default RichText;
