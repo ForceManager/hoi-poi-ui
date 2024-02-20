@@ -89,7 +89,7 @@ const RichText = memo(
                     placeholder: () => placeholder || null,
                 }),
                 StarterKit.configure({
-                    hardBreak: false,
+                    hardBreak: !chatbox,
                 }),
                 Underline,
                 TextStyle,
