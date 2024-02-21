@@ -71,6 +71,7 @@ const RichText = memo(
         isSubmitDisabled,
         withCustomToolbar,
         chatbox,
+        linkConfig,
         ...otherProps
     }) => {
         const theme = useTheme();
@@ -96,10 +97,7 @@ const RichText = memo(
                 FontFamily,
                 FontSize,
                 Color,
-                Link.configure({
-                    openOnClick: false,
-                    autolink: true,
-                }),
+                Link.configure(linkConfig),
             ];
 
             if (chatbox) {
@@ -516,6 +514,10 @@ RichText.defaultProps = {
     isSubmitDisabled: false,
     withCustomToolbar: false,
     chatbox: false,
+    linkConfig: {
+        openOnClick: true,
+        autolink: true,
+    },
 };
 
 RichText.propTypes = {
@@ -584,6 +586,11 @@ RichText.propTypes = {
     withCustomToolbar: PropTypes.bool,
     /** Set it to `true` if you want the editor to behave like in a chat client. p.e 'Enter' submits the message */
     chatbox: PropTypes.bool,
+    /** Set it to override link extension's config */
+    linkConfig: PropTypes.shape({
+        openOnClick: PropTypes.bool,
+        autolink: PropTypes.bool,
+    }),
 };
 
 export default RichText;
