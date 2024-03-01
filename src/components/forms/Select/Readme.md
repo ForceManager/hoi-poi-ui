@@ -756,6 +756,69 @@ const onChangeGroupValue = (value) => setStateGroupValues(value);
 </div>;
 ```
 
+Single With Custom Colors:
+
+```jsx
+import { useState } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: '1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: '2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: '3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: '4',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 5',
+        value: '5',
+    },
+];
+
+const [state, setState] = useState([
+    {
+        label: 'Lorem ipsum 1',
+        value: '1',
+    },
+]);
+
+const onChange = (value) => setState({ value });
+
+<Select
+    label="Lorem ipsum"
+    placeholder="Select one"
+    onChange={onChange}
+    options={options}
+    value={state.value}
+    isMulti={false}
+    isClearable={true}
+    overrides={{
+        option: {
+            getStyles: ({ data }) => {
+                return {
+                    color: 'red',
+                    cursor: 'pointer',
+                    '&:hover': {
+                        color: 'blue',
+                    },
+                };
+            },
+        },
+    }}
+/>;
+```
+
 Multi With Custom Colors:
 
 ```jsx
