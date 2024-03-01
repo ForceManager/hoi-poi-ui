@@ -369,10 +369,16 @@ const Select = memo(
         );
 
         const optionStyles = useCallback(
-            ({ isDisabled, isSelected, isFocused }) => {
+            ({ data, isDisabled, isSelected, isFocused }) => {
                 let styles = {
                     ...newStyles.option,
                     ...(override.option?.style || {}),
+                    ...(override.option?.getStyles?.({
+                        data,
+                        isDisabled,
+                        isFocused,
+                        isSelected,
+                    }) || {}),
                 };
 
                 if (isFocused) {
@@ -380,6 +386,12 @@ const Select = memo(
                         ...styles,
                         ...newStyles.optionFocused,
                         ...(override.optionFocused?.style || {}),
+                        ...(override.option?.getStyles?.({
+                            data,
+                            isDisabled,
+                            isFocused,
+                            isSelected,
+                        }) || {}),
                     };
                 }
 
@@ -388,6 +400,12 @@ const Select = memo(
                         ...styles,
                         ...newStyles.optionSelected,
                         ...(override.optionSelected?.style || {}),
+                        ...(override.option?.getStyles?.({
+                            data,
+                            isDisabled,
+                            isFocused,
+                            isSelected,
+                        }) || {}),
                     };
                 }
 
@@ -396,6 +414,12 @@ const Select = memo(
                         ...styles,
                         ...newStyles.optionDisabled,
                         ...(override.optionDisabled?.style || {}),
+                        ...(override.option?.getStyles?.({
+                            data,
+                            isDisabled,
+                            isFocused,
+                            isSelected,
+                        }) || {}),
                     };
                 }
 
@@ -404,6 +428,12 @@ const Select = memo(
                         ...styles,
                         ...newStyles.optionWithSelectAll,
                         ...(override.optionWithSelectAll?.style || {}),
+                        ...(override.option?.getStyles?.({
+                            data,
+                            isDisabled,
+                            isFocused,
+                            isSelected,
+                        }) || {}),
                     };
                 }
 
@@ -741,6 +771,9 @@ const Select = memo(
             if (withoutFilter) filterOption = undefined;
             if (customFilter) filterOption = customFilter;
 
+            // We exclude getStyles here because we don't want them to be overriding the getStyles passed via styles.
+            const { getStyles, ...overrideOptionNoGetStyle } = override.option;
+
             return {
                 ref: (ref) => {
                     getRef && getRef(ref);
@@ -855,7 +888,7 @@ const Select = memo(
                     className: classes.option,
                     isSelectAllFocused,
                     override: {
-                        option: override.option,
+                        option: overrideOptionNoGetStyle,
                     },
                 },
                 components: {
@@ -893,7 +926,7 @@ const Select = memo(
                         ...styles,
                         ...valueContainerStyles({ data, isDisabled, isFocused, isSelected }),
                     }),
-                    input: (styles) => ({
+                    input: (styles, { data }) => ({
                         ...styles,
                         ...newStyles.input,
                         ...(override.input?.style || {}),
@@ -1064,6 +1097,7 @@ const Select = memo(
             setIsSelectAllFocused,
             isSelectAllFocused,
             showMediaInSelectedValues,
+            keepInputValueOnBlurInMulti,
         ]);
 
         let SelectComponent = RSelect;
