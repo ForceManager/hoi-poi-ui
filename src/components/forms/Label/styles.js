@@ -11,13 +11,17 @@ export default (theme) => ({
     },
     info: {
         display: 'block',
-        width: 10,
     },
     icon: {
         display: 'block',
-        width: 13,
-        height: 13,
+        width: 14,
+        height: 14,
         cursor: 'pointer',
+        '& svg': {
+            width: 14,
+            height: 14,
+            marginTop: -1,
+        },
         '& path': {
             fill: theme.colors.neutral600,
         },
