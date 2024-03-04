@@ -1,9 +1,8 @@
 import React, { memo, useEffect, useCallback, useMemo, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { getOverrides, useClasses } from '../../../utils/overrides';
+import { useClasses } from '../../../utils/overrides';
 import Icon from '../../general/Icon';
-import InputWrapper from '../components/InputWrapper';
 import Select from '../Select';
 import { filterKeyValue } from '../Select/utils';
 
@@ -36,7 +35,6 @@ const TimePicker = memo(
         dropDownIcon,
         ...props
     }) => {
-        const override = getOverrides(overridesProp, TimePicker.overrides);
         const classes = useClasses(useStyles, classesProp);
 
         const rootClassName = classnames(
@@ -398,8 +396,7 @@ const TimePicker = memo(
         }, [dropDownIcon, classes.clockIcon]);
 
         return (
-            <InputWrapper
-                {...props}
+            <Select
                 error={error}
                 className={rootClassName}
                 overrides={overridesProp}
@@ -409,26 +406,21 @@ const TimePicker = memo(
                 hint={hint}
                 info={info}
                 isRequired={isRequired}
-            >
-                <Select
-                    overrides={override.timePicker}
-                    dropDownIcon={iconDropDown}
-                    options={newOptions}
-                    value={timeValue}
-                    inputValue={inputValue}
-                    hideSelectedOptions={false}
-                    isSearchable={true}
-                    isFullWidth={isFullWidth}
-                    keepInputValueOnBlur={true}
-                    keepValueOnInputChange={true}
-                    customOnChange={customOnChange}
-                    customOnChangeInput={customOnChangeInput}
-                    customFilter={customFilter}
-                    menuShouldScrollIntoView={true}
-                    isOptionSelected={isOptionSelected}
-                    {...props}
-                />
-            </InputWrapper>
+                dropDownIcon={iconDropDown}
+                options={newOptions}
+                value={timeValue}
+                inputValue={inputValue}
+                hideSelectedOptions={false}
+                isSearchable={true}
+                keepInputValueOnBlur={true}
+                keepValueOnInputChange={true}
+                customOnChange={customOnChange}
+                customOnChangeInput={customOnChangeInput}
+                customFilter={customFilter}
+                menuShouldScrollIntoView={true}
+                isOptionSelected={isOptionSelected}
+                {...props}
+            />
         );
     },
 );
