@@ -223,6 +223,7 @@ import PhoneOutgoing from './icons/communication/PhoneOutgoing';
 import RingVolume from './icons/communication/RingVolume';
 import TextInfo from './icons/communication/TextInfo';
 import QuotationMark from './icons/communication/quotationMark';
+import EmailTracking from './icons/communication/EmailTracking';
 
 //Social
 import Group from './icons/social/Group';
@@ -676,6 +677,7 @@ export const ICONS = {
     ringVolume: RingVolume,
     textInfo: TextInfo,
     quotationMark: QuotationMark,
+    emailTracking: EmailTracking,
     //Social
     group: Group,
     groupAdd: GroupAdd,
