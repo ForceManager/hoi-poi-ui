@@ -157,6 +157,7 @@ import Icon from './IconWithTooltip';
     <Icon name="ringVolume" />
     <Icon name="textInfo" />
     <Icon name="quotationMark" />
+    <Icon name="emailTracking" />
 </div>;
 ```
 
@@ -671,6 +672,7 @@ import Icon from './IconWithTooltip';
         <Icon name="storage" hasGradient />
         <Icon name="cloud" hasGradient />
         <Icon name="geolocatedOpportunity" hasGradient />
+        <Icon name="emailTracking" hasGradient />
     </div>
 </Fragment>;
 ```
