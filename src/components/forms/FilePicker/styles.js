@@ -225,6 +225,8 @@ export default (theme) => ({
             backgroundPosition: 'center',
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
+            alignItems: 'center',
+            justifyContent: 'center',
         },
     },
     group: {

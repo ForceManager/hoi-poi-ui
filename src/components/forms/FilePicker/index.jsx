@@ -5,19 +5,28 @@ import { useDropzone } from 'react-dropzone';
 
 import Groups from './components/Groups';
 import ModalCrop from '../../general/ModalCrop';
+import Icon from '../../general/Icon';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import Button from '../../general/Button';
 import Label from '../Label';
 import Text from '../../typography/Text';
 
+import { checkBrowserCanRender } from './utils';
 import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'FilePicker');
 
-const imageTypes = ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/bmp'];
-const imageExtensions = ['png', 'jpeg', 'jpg', 'webp', 'gif', 'bmp'];
+const imageTypes = [
+    'image/png',
+    'image/jpeg',
+    'image/webp',
+    'image/gif',
+    'image/bmp',
+    'image/heic',
+];
+const imageExtensions = ['png', 'jpeg', 'jpg', 'webp', 'gif', 'bmp', 'heic'];
 
 function FilePicker({
     accept,
@@ -243,13 +252,20 @@ function FilePicker({
 
         const isUrl = typeof newFile === 'string';
 
+        const canRender = checkBrowserCanRender(isUrl ? newFile : newFile.name);
+
         return (
             <div className={classes.singleImagePreview}>
-                <span
-                    style={{
-                        backgroundImage: `url("${isUrl ? newFile : URL.createObjectURL(newFile)}")`,
-                    }}
-                />
+                {canRender && (
+                    <span
+                        style={{
+                            backgroundImage: `url("${
+                                isUrl ? newFile : URL.createObjectURL(newFile)
+                            }")`,
+                        }}
+                    />
+                )}
+                {!canRender && <Icon name="img" size="big" />}
             </div>
         );
     }, [classes.singleImagePreview, files, maxFiles, showDragzone, singleImagePreview]);

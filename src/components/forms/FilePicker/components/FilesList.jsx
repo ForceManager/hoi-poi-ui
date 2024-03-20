@@ -28,7 +28,7 @@ const FilesList = memo(
                 const isUrl = typeof newFile === 'string';
                 const isImage =
                     (!isUrl && imageTypes.includes(newFile.type)) ||
-                    (isUrl && imageExtensions.includes(newFile.split('.').pop()));
+                    (isUrl && imageExtensions.includes(newFile.split('.').pop()?.toLowerCase()));
                 const preview = previewImages && isImage;
                 const crop = cropImages && isImage;
                 const data = filesData?.[newFile.id] || {};

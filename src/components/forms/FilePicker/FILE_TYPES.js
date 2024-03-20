@@ -71,4 +71,5 @@ export default {
     'video/3gpp2': 'mov',
     'audio/3gpp2': 'file',
     'application/x-7z-compressed': 'zip',
+    'image/heic': 'img',
 };
