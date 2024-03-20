@@ -49,4 +49,5 @@ export default {
     gzip: 'zip',
     zip: 'zip',
     rar: 'zip',
+    heic: 'img',
 };

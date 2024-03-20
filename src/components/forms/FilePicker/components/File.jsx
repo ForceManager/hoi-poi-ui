@@ -8,7 +8,7 @@ import Tooltip from '../../../utils/Tooltip';
 import Text from '../../../typography/Text';
 import FILE_TYPES from '../FILE_TYPES';
 import FILE_EXTENSIONS from '../FILE_EXTENSIONS';
-
+import { checkBrowserCanRender } from '../utils';
 import { useTheme } from '../../../../utils/styles';
 
 function File({
@@ -61,7 +61,7 @@ function File({
     const renderIcon = useMemo(() => {
         if (error) return <Icon name="errorOutline" color={theme.colors.red500} />;
         if (loading) return <Loader size="tiny" />;
-        if (preview)
+        if (preview && checkBrowserCanRender(isUrl ? file : file.name))
             return (
                 <span
                     style={{
