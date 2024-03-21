@@ -18,6 +18,7 @@ function Popover({
     placement,
     trigger,
     getRef,
+    getContentRef,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -33,7 +34,7 @@ function Popover({
         transitionName: 'hoi-poi-popover--fade',
         trigger,
         overlayClassName: rootClassName,
-        overlay: content,
+        overlay: getContentRef ? <div ref={(ref) => getContentRef(ref)}>{content}</div> : content,
         placement,
         ...props,
     };
@@ -73,6 +74,7 @@ Popover.propTypes = {
         'rightBottom',
     ]),
     getRef: PropTypes.func,
+    getContentRef: PropTypes.func,
 };
 
 export default React.memo(Popover);
