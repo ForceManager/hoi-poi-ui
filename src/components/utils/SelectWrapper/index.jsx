@@ -36,6 +36,7 @@ const SelectWrapper = memo(
         overlayStyle,
         overlayInnerStyle,
         getPopoverRef,
+        getPopoverContentRef,
         closeOnChangeSingle,
     }) => {
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
@@ -178,6 +179,7 @@ const SelectWrapper = memo(
             <div className={rootClassName} {...(override.root || {})}>
                 <Popover
                     getRef={getPopoverRef}
+                    getContentRef={getPopoverContentRef}
                     content={finalOptions}
                     placement={placement}
                     trigger={trigger}
@@ -246,6 +248,7 @@ SelectWrapper.propTypes = {
     overlayStyle: PropTypes.object,
     overlayInnerStyle: PropTypes.object,
     getPopoverRef: PropTypes.func,
+    getPopoverContentRef: PropTypes.func,
     /** Enable to close the valuelist after changing the selection */
     closeOnChangeSingle: PropTypes.bool,
 };
