@@ -287,6 +287,7 @@ import WarningOutlineTwoToned from './icons/alert/WarningOutlineTwoToned';
 //Logos
 import Mailchimp from './icons/logos/Mailchimp';
 import Zendesk from './icons/logos/Zendesk';
+import PowerBI from './icons/logos/PowerBI';
 import Docusign from './icons/logos/Docusign';
 import Facebook from './icons/logos/Facebook';
 import Google from './icons/logos/Google';
@@ -722,6 +723,7 @@ export const ICONS = {
     //Logos
     mailchimp: Mailchimp,
     zendesk: Zendesk,
+    powerbi: PowerBI,
     docusign: Docusign,
     facebook: Facebook,
     google: Google,
