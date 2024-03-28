@@ -290,6 +290,7 @@ import Icon from './IconWithTooltip';
 <div style={{ display: 'flex', flexFlow: 'row wrap', gap: 4, alignItems: 'flex-end' }}>
     <Icon name="mailchimp" />
     <Icon name="zendesk" />
+    <Icon name="powerbi" />
     <Icon name="docusign" />
     <Icon name="facebook" />
     <Icon name="google" />
