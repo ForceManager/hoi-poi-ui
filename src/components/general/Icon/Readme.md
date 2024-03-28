@@ -133,6 +133,7 @@ import Icon from './IconWithTooltip';
     <Icon name="fontColor" />
     <Icon name="fontSize" />
     <Icon name="reply" />
+    <Icon name="emailStar" />
 </div>;
 ```
 

@@ -10,11 +10,11 @@ export default (theme) => ({
     },
     // Colors
     primary: {
-        borderColor: 'transparent',
+        borderColor: theme.colors.orange200,
         borderTopColor: theme.colors.orange500,
     },
     danger: {
-        borderColor: 'transparent',
+        borderColor: theme.colors.red200,
         borderTopColor: theme.colors.red500,
     },
     white: {

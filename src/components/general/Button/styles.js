@@ -178,8 +178,30 @@ export default (theme) => ({
             },
             '&:active': {
                 backgroundColor: theme.colors.orange300,
-                color: theme.colors.orange600,
-                '& path': { fill: theme.colors.orange600 },
+                color: theme.colors.orange500,
+                '& path': { fill: theme.colors.orange500 },
+            },
+        },
+    },
+
+    text: {
+        backgroundColor: 'transparent',
+        color: theme.colors.orange500,
+        '& path': { fill: theme.colors.orange500 },
+        '&$disabled': {
+            opacity: 1,
+            color: theme.colors.neutral600,
+            '& path': { fill: theme.colors.neutral600 },
+        },
+        '&:not($loading):not($disabled)': {
+            '&:hover': {
+                backgroundColor: theme.colors.orange100,
+                color: theme.colors.orange500,
+            },
+            '&:active': {
+                backgroundColor: theme.colors.orange200,
+                color: theme.colors.orange500,
+                '& path': { fill: theme.colors.orange500 },
             },
         },
     },
