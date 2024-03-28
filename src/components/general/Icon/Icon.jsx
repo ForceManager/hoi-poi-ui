@@ -207,6 +207,7 @@ import TrackingLink from './icons/actions/TrackingLink';
 import FontColor from './icons/actions/FontColor';
 import FontSize from './icons/actions/FontSize';
 import Reply from './icons/actions/Reply';
+import EmailStar from './icons/actions/EmailStar';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -662,6 +663,7 @@ export const ICONS = {
     fontColor: FontColor,
     fontSize: FontSize,
     reply: Reply,
+    emailStar: EmailStar,
     //Communication
     message: Message,
     comment: Comment,

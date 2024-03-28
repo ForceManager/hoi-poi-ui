@@ -6,7 +6,7 @@ export default React.memo((props) => {
     return (
         components.DropdownIndicator && (
             <components.DropdownIndicator {...props}>
-                <Icon name="arrowDropDown" size="large" />
+                <Icon name="arrowDropDown" />
             </components.DropdownIndicator>
         )
     );

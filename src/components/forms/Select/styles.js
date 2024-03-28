@@ -223,9 +223,9 @@ export default (theme) => ({
     },
     multiValue: {
         margin: '3px 6px 3px 2px',
-        padding: '4px 4px 4px 8px',
+        padding: '3px 4px 3px 8px',
         border: 'none',
-        borderRadius: 20,
+        borderRadius: 4,
         backgroundColor: theme.colors.blue100,
         color: theme.colors.blue500,
         transition: 'all 0.15s ease',

@@ -73,7 +73,6 @@ function Chip({
                     className={iconClass}
                     key="chip__dropdown"
                     name="arrowDropDown"
-                    size="large"
                     {...override.DropDownIcon}
                 />,
             );

@@ -55,6 +55,7 @@ const Button = forwardRef(
                 [classes.dashed]: type === 'dashed',
                 [classes.promotion]: type === 'promotion',
                 [classes.primarySoft]: type === 'primary-soft',
+                [classes.text]: type === 'text',
                 [classes[size]]: size,
                 [classes.disabled]: isDisabled,
                 [classes.loading]: isLoading && ALLOWED_LOADING_TYPES.includes(type),
@@ -79,6 +80,7 @@ const Button = forwardRef(
         const iconProps = useMemo(() => {
             const properties = { size: 'medium', name: icon };
             switch (type) {
+                case 'text':
                 case 'secondary':
                     return {
                         ...properties,
@@ -182,6 +184,7 @@ Button.propTypes = {
         'terciary',
         'dashed',
         'promotion',
+        'text',
     ]),
     isDisabled: PropTypes.bool,
     /** Use the whole container */
