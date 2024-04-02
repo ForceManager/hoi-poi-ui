@@ -208,6 +208,7 @@ import FontColor from './icons/actions/FontColor';
 import FontSize from './icons/actions/FontSize';
 import Reply from './icons/actions/Reply';
 import EmailStar from './icons/actions/EmailStar';
+import Variables from './icons/actions/Variables';
 
 //Communication
 import Message from './icons/communication/Message';
@@ -665,6 +666,7 @@ export const ICONS = {
     fontSize: FontSize,
     reply: Reply,
     emailStar: EmailStar,
+    variables: Variables,
     //Communication
     message: Message,
     comment: Comment,
