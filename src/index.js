@@ -33,6 +33,7 @@ export { default as TitleDivider } from './components/general/TitleDivider';
 export { default as EllipsedInlineList } from './components/general/EllipsedInlineList';
 export { default as List } from './components/general/List';
 export { default as Carousel } from './components/general/Carousel';
+export { default as Tree } from './components/general/Tree';
 
 export { default as Code } from './components/forms/Code';
 export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
