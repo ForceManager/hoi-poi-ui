@@ -37,6 +37,7 @@ module.exports = {
                 './src/components/general/Table/index.jsx',
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/TitleDivider/index.jsx',
+                './src/components/general/Tree/index.jsx',
             ],
         },
         {
