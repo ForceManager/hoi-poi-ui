@@ -6,6 +6,14 @@ export default (theme) => ({
         overflow: 'hidden',
         maxWidth: '100%',
     },
+    '& .ReactCrop__crop-mask': {
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        bottom: '0',
+        left: '0',
+        pointerEvents: 'none',
+    },
     '& .ReactCrop:focus': { outline: 'none' },
     '& .ReactCrop--disabled, .ReactCrop--locked': { cursor: 'inherit' },
     '& .ReactCrop__image': {

@@ -12,6 +12,9 @@ export default (theme) => {
         },
         gridWrapper: {
             position: 'relative',
+            '& > div': {
+                ...theme.utils.scrollbar,
+            },
         },
         popover: {
             '& .hoi-poi-popover-inner': {
@@ -82,7 +85,7 @@ export default (theme) => {
                 display: 'block',
                 width: 'auto',
                 height: 32,
-            }
+            },
         },
         empty: {
             display: 'flex',
@@ -90,6 +93,6 @@ export default (theme) => {
             justifyContent: 'center',
             height: 176,
             width: 336,
-        }
+        },
     };
 };

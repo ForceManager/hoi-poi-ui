@@ -10,7 +10,6 @@
 -   High customizable components.
 -   Theming with JSS.
 -   React Styleguidist
--   Unit testing
 -   Weekly [dependabot](https://dependabot.com) dependency updates
 
 ### 🔒 Disabling payment project dependencies

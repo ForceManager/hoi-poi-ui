@@ -72,7 +72,6 @@ module.exports = {
             sectionDepth: 0,
             components: [
                 './src/components/utils/Popover/index.jsx',
-                './src/components/utils/ScrollBar/index.jsx',
                 './src/components/utils/Toast/Toast.jsx',
                 './src/components/utils/CustomToast/ToastContainer.jsx',
                 './src/components/utils/Tooltip/index.jsx',

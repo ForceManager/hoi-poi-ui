@@ -10,6 +10,7 @@ export default (theme) => {
             maxWidth: '100%',
             maxHeight: '50vh',
             width: 300,
+            ...theme.utils.scrollbar,
         },
         item: {
             display: 'flex',

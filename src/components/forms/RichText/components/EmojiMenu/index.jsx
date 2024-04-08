@@ -17,8 +17,6 @@ import Text from '../../../../typography/Text';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles } from '../../../../../utils/styles';
 import { RichTextContext } from '../..';
-import CustomScrollbarsVirtualList from './components/CustomScrollbarsVirtualList';
-
 
 import styles from './styles';
 
@@ -86,15 +84,7 @@ const reducer = (state, action) => {
 };
 
 const EmojiMenu = forwardRef(
-    (
-        {
-            children,
-            classes: classesProp,
-            onVisibleChange,
-            popoverVisible,
-        },
-        ref,
-    ) => {
+    ({ children, classes: classesProp, onVisibleChange, popoverVisible }, ref) => {
         const { cache, editor, emoji, saveCache } = useContext(RichTextContext);
         const { texts, defaultFrequentlyUsed } = emoji;
         const [state, dispatch] = useReducer(reducer, initialState);
@@ -443,10 +433,9 @@ const EmojiMenu = forwardRef(
                                 columnWidth={GRID_COLUMN_WIDTH}
                                 rowCount={emojiGridRowsCount}
                                 rowHeight={GRID_ROW_HEIGHT}
-                                width={GRID_COLUMN_WIDTH * GRID_COLS}
+                                width={GRID_COLUMN_WIDTH * GRID_COLS + 16 + 1}
                                 height={GRID_ROW_HEIGHT * 5.5}
                                 onScroll={handleScroll}
-                                outerElementType={CustomScrollbarsVirtualList}
                             >
                                 {GridItem}
                             </Grid>

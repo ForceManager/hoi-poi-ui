@@ -1,17 +1,8 @@
-import React, {
-    forwardRef,
-    useCallback,
-    useEffect,
-    useImperativeHandle,
-    useMemo,
-    useState,
-    useRef,
-} from 'react';
+import React, { forwardRef, useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Advice from '../../../../general/Advice';
 import Avatar from '../../../../general/Avatar';
 import Text from '../../../../typography/Text';
-import ScrollBar from '../../../../utils/ScrollBar';
 import { useClasses } from '../../../../../utils/overrides';
 import { createUseStyles } from '../../../../../utils/styles';
 
@@ -19,24 +10,10 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'MentionList');
 
-const MENTION_LIST_ITEM_HEIGHT = 33;
-const MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL = 8;
-
 const MentionList = forwardRef(
-    (
-        {
-            texts,
-            command,
-            classes: classesProp,
-            items = [],
-            maxVisibleItems = MAX_MENTION_LIST_ITEMS_VISIBLE_WITHOUT_SCROLL,
-            hideNoResultsPopover,
-        },
-        ref,
-    ) => {
+    ({ texts, command, classes: classesProp, items = [], hideNoResultsPopover }, ref) => {
         const classes = useClasses(useStyles, classesProp);
         const [selectedIndex, setSelectedIndex] = useState(0);
-        const scrollBarRef = useRef();
 
         useEffect(() => setSelectedIndex(0), [items]);
 
@@ -48,55 +25,6 @@ const MentionList = forwardRef(
                 }
             },
             [command, items],
-        );
-
-        const scrollHandler = useCallback((index) => {
-            scrollBarRef?.current?.scrollTop(index * MENTION_LIST_ITEM_HEIGHT);
-        }, []);
-
-        const upHandler = useCallback(() => {
-            const newIndex = (selectedIndex + items.length - 1) % items.length;
-            setSelectedIndex(newIndex);
-            scrollHandler(newIndex);
-        }, [items, selectedIndex, scrollHandler]);
-
-        const downHandler = useCallback(() => {
-            const newIndex = (selectedIndex + 1) % items.length;
-            setSelectedIndex(newIndex);
-            scrollHandler(newIndex);
-        }, [items, selectedIndex, scrollHandler]);
-
-        const enterHandler = useCallback(() => {
-            selectItem(selectedIndex);
-        }, [selectItem, selectedIndex]);
-
-        useImperativeHandle(ref, () => ({
-            onKeyDown: ({ event }) => {
-                switch (event.key) {
-                    case 'ArrowUp':
-                        upHandler();
-                        return true;
-                    case 'ArrowDown':
-                        downHandler();
-                        return true;
-                    case 'Enter':
-                    case 'Tab':
-                        enterHandler();
-                        return true;
-                    default:
-                        return false;
-                }
-            },
-        }));
-
-        const scrollBarProps = useMemo(
-            () => ({
-                autoHeight: true,
-                autoHeightMax: MENTION_LIST_ITEM_HEIGHT * maxVisibleItems,
-                autoHide: false,
-                ref: scrollBarRef,
-            }),
-            [maxVisibleItems],
         );
 
         return (
@@ -113,31 +41,29 @@ const MentionList = forwardRef(
                     </Advice>
                 )}
                 {items.length ? (
-                    <ScrollBar {...scrollBarProps}>
-                        {items.map((item, index) => (
-                            <div
-                                className={classNames(classes.item, {
-                                    [classes.selected]: index === selectedIndex,
-                                })}
-                                key={`suggestion-${item.id}`}
-                                onClick={() => selectItem(index)}
+                    items.map((item, index) => (
+                        <div
+                            className={classNames(classes.item, {
+                                [classes.selected]: index === selectedIndex,
+                            })}
+                            key={`suggestion-${item.id}`}
+                            onClick={() => selectItem(index)}
+                        >
+                            <Avatar
+                                src={item.avatar.src}
+                                placeholder={item.avatar.placeholder}
+                                className={classes.avatar}
+                            />
+                            <Text
+                                color="neutral900"
+                                type="body"
+                                className={classes.name}
+                                isTruncated
                             >
-                                <Avatar
-                                    src={item.avatar.src}
-                                    placeholder={item.avatar.placeholder}
-                                    className={classes.avatar}
-                                />
-                                <Text
-                                    color="neutral900"
-                                    type="body"
-                                    className={classes.name}
-                                    isTruncated
-                                >
-                                    {item.name}
-                                </Text>
-                            </div>
-                        ))}
-                    </ScrollBar>
+                                {item.name}
+                            </Text>
+                        </div>
+                    ))
                 ) : (
                     <Text>{texts?.noResults || 'No Results'}</Text>
                 )}

@@ -341,7 +341,9 @@ const lorem =
     '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod consequat eros, at tincidunt purus semper a. Nulla facilisi. Vivamus eleifend, odio in consectetur pretium, lectus justo malesuada nunc, ut vestibulum felis neque non tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>';
 
 <Fragment>
-    <div><Button onClick={() => editor.chain().focus().toggleBold().run()}>Bold</Button></div>
+    <div>
+        <Button onClick={() => editor.chain().focus().toggleBold().run()}>Bold</Button>
+    </div>
     <RichText value={lorem} getEditorRef={setEditor} hideClear isFullWidth withCustomToolbar />
 </Fragment>;
 ```

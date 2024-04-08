@@ -15,8 +15,6 @@ We expect everyone to follow the code of conduct anywhere in our project codebas
 -   Make your changes
     -   Create examples with styleguidist
     -   Provide a complete documentation using current addons
-    -   Create new passing tests if needed
--   Make sure the tests pass
 -   Write a good commit message
 -   Push to your fork
 -   Submit a pull request
