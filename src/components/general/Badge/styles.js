@@ -1,15 +1,16 @@
 export default (theme) => ({
     root: {
-        height: '20px',
-        minWidth: '70px',
+        height: 20,
+        minWidth: 70,
         padding: '2px 8px',
-        borderRadius: '4px',
+        borderRadius: 4,
         display: 'inline-flex',
         alignItems: 'center',
-        textAlign: 'center',
+        justifyContent: 'center',
     },
     Text: {
         display: 'inline-block',
+        textAlign: 'center',
     },
     // Types
     default: {
