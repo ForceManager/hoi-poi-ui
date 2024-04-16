@@ -4,43 +4,35 @@ exports[`InputGroup default match 1`] = `
 <Component>
   <ThemeProvider
     theme={
-      Object {
-        "colors": Object {
+      {
+        "colors": {
           "aqua100": "#e4fafd",
           "aqua200": "#cbf3fc",
+          "aqua300": "#AEE5F8",
           "aqua400": "#98d5f1",
           "aqua500": "#76bde8",
           "aqua600": "#5695c7",
           "aqua700": "#3b71a7",
           "aqua900": "#16386f",
-          "black": "#262B34",
-          "blackLight": "#5f656b",
-          "blackberry": "#2e2d4c",
-          "blackberryDark": "#24243C",
+          "black": "#3c4248",
           "blue100": "#d3e3fe",
           "blue200": "#a7c5fe",
+          "blue300": "#7BA4FE",
           "blue400": "#5a89fd",
           "blue500": "#245dfd",
           "blue600": "#1a47d9",
           "blue700": "#1234b6",
           "blue900": "#061879",
-          "disabledGrey": "#ced4d9",
-          "green": "#86AD20",
-          "green100": "#f4fad2",
-          "green200": "#e7f6a6",
-          "green400": "#aecd50",
-          "green500": "#86ad20",
-          "green600": "#6e9417",
+          "green100": "#E9FAD2",
+          "green200": "#CFF6A6",
+          "green300": "#A7E675",
+          "green400": "#7FCD50",
+          "green500": "#4CAD20",
+          "green600": "#369417",
           "green700": "#237c10",
-          "green900": "#345306",
-          "greenLight": "#e7f1d5",
-          "grey": "#697782",
-          "greyLight": "#f0f3f5",
-          "greySoft": "#788590",
-          "lines": "#dce3eb",
-          "link": "#216db3",
-          "linkDark": "#174a79",
+          "green900": "#095306",
           "neutral100": "#f9f9fa",
+          "neutral150": "#f6f7f9",
           "neutral200": "#f4f5f6",
           "neutral300": "#e9ecee",
           "neutral400": "#dfe2e5",
@@ -52,251 +44,214 @@ exports[`InputGroup default match 1`] = `
           "neutralBase": "#ffffff",
           "orange100": "#fff1cc",
           "orange200": "#ffde99",
+          "orange300": "#FFC766",
           "orange400": "#ffb13f",
           "orange500": "#ff8c00",
           "orange600": "#db6e00",
           "orange700": "#b75400",
           "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
-          "placeholders": "#e1e4e7",
-          "placeholdersHover": "#d0d4d8",
-          "primary": "#FF8C00",
-          "primaryDark": "#C87600",
-          "primaryLight": "#fef4e6",
-          "primarySoft": "#ff9d26",
-          "purple": "#AA5B9C",
           "purple100": "#fae3ed",
           "purple200": "#f6c8e1",
+          "purple300": "#E5A5CE",
           "purple400": "#cc84b8",
           "purple500": "#aa5b9c",
           "purple600": "#92428b",
           "purple700": "#792d7a",
           "purple900": "#441151",
-          "purpleLight": "#EEDEEB",
-          "red": "#f04540",
           "red100": "#ffe5d5",
           "red200": "#ffc5ac",
+          "red300": "#FF9E82",
           "red400": "#ff7863",
           "red500": "#ff3b30",
           "red600": "#db2328",
           "red700": "#b7182a",
           "red900": "#7a0929",
-          "redDark": "#C43833",
-          "redLight": "#FAE7E7",
-          "redSoft": "#FF544F",
-          "secondary": "#00A8Be",
-          "secondaryGrey": "#e4eeff",
-          "secondaryLight": "#D6EEF2",
           "secondaryOverlay": "rgba(2,168,189,0.10)",
-          "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
-          "tableHeader": "#f6f7f9",
-          "tableHeaderHover": "#EBECEF",
-          "tableHover": "#FAFBFC",
-          "text": Object {
-            "black": "#3c4248",
-            "danger": "white",
-            "default": "#697782",
-            "green": "#86AD20",
-            "greySoft": "#788590",
-            "primary": "white",
-            "red": "#f04540",
-            "secondary": "#00A8Be",
-            "white": "#FFFFFF",
-            "yellow": "#E9B200",
-          },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "turquoise100": "#c9fbf1",
           "turquoise200": "#95f8ec",
+          "turquoise300": "#5EEBE5",
           "turquoise400": "#36d2d8",
           "turquoise500": "#00a8be",
           "turquoise600": "#0083a3",
           "turquoise700": "#006388",
           "turquoise900": "#00335b",
-          "white": "#FFFFFF",
-          "yellow": "#E9B200",
           "yellow100": "#fdf6cb",
           "yellow200": "#fcec97",
+          "yellow300": "#F8DC63",
           "yellow400": "#f1cb3c",
           "yellow500": "#e9b200",
           "yellow600": "#c89400",
           "yellow700": "#a77700",
           "yellow900": "#6f4a00",
-          "yellowDark": "#BE9100",
-          "yellowLight": "#FCF7E5",
         },
-        "effects": Object {
+        "effects": {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-          "buttonActive": Object {
+          "boxShadow24": {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
+          "buttonActive": {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
-        "typography": Object {
-          "bigText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+        "typography": {
+          "badges": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
+          "bigText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "letterSpacing": 0.5,
           },
-          "body": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+          "body": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
-          "body1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+          "body1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
-          "button": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "button": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+          "caption": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
-          "caption": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
-          },
-          "captionMedium": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "captionMedium": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
-          "defaultText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+          "defaultText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
-          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h2": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+          "h3": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+          "h4": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h5": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
-          "largeText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "largeText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "letterSpacing": 0.5,
           },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
-          "overline": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "overline": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
-          "smallText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "smallText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "letterSpacing": 0.5,
           },
-          "subtitle": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "subtitle": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "20px",
           },
-          "subtitle1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+          "subtitle1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
-        "utils": Object {
-          "scrollbar": Object {
-            "&::-webkit-scrollbar": Object {
+        "utils": {
+          "scrollbar": {
+            "&::-webkit-scrollbar": {
               "height": 17,
               "width": 17,
             },
-            "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+            "&::-webkit-scrollbar-thumb": {
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
-            "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+            "&::-webkit-scrollbar-thumb:window-inactive": {
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": {
+            "& ::-moz-selection": {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -310,117 +265,98 @@ exports[`InputGroup default match 1`] = `
         Jss {
           "generateId": [Function],
           "id": 3,
-          "options": Object {
+          "options": {
             "Renderer": [Function],
             "createGenerateId": [Function],
-            "id": Object {
+            "id": {
               "minify": false,
             },
-            "plugins": Array [],
+            "plugins": [],
           },
           "plugins": PluginsRegistry {
-            "plugins": Object {
-              "external": Array [
-                Object {
+            "plugins": {
+              "external": [
+                {
                   "onCreateRule": [Function],
                   "onProcessStyle": [Function],
                   "onUpdate": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessRule": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
               ],
-              "internal": Array [
-                Object {
+              "internal": [
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onCreateRule": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
               ],
             },
-            "registry": Object {
-              "onChangeValue": Array [
+            "registry": {
+              "onChangeValue": [
                 [Function],
                 [Function],
                 [Function],
                 [Function],
                 [Function],
               ],
-              "onCreateRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessSheet": Array [],
-              "onProcessStyle": Array [
+              "onCreateRule": [
                 [Function],
                 [Function],
                 [Function],
@@ -432,28 +368,47 @@ exports[`InputGroup default match 1`] = `
                 [Function],
                 [Function],
               ],
-              "onUpdate": Array [
+              "onProcessRule": [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessSheet": [],
+              "onProcessStyle": [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onUpdate": [
                 [Function],
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.10.0",
         }
       }
     >
       <InputGroup
         hideInputsLabel="Hide inputs"
         inputs={
-          Array [
-            Object {
+          [
+            {
               "label": "Lorem ipsum",
               "name": "lorem",
             },
-            Object {
+            {
               "label": "Lorem ipsum 2",
               "name": "lorem2",
             },
-            Object {
+            {
               "label": "Lorem ipsum 3",
               "name": "lorem3",
             },
@@ -463,9 +418,9 @@ exports[`InputGroup default match 1`] = `
         label="Lorem ipsum"
         labelMode="horizontal"
         onChange={[Function]}
-        overrides={Object {}}
+        overrides={{}}
         showInputsLabel="Show inputs"
-        value={Object {}}
+        value={{}}
       >
         <div
           className="HoiPoi__InputGroup__root-1-0 HoiPoi__InputGroup__horizontal-1-6"
@@ -483,66 +438,98 @@ exports[`InputGroup default match 1`] = `
               onEnter={[Function]}
               onFocus={[Function]}
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum"
                 labelMode="horizontal"
                 name="lorem"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
                 onEnter={[Function]}
                 onFocus={[Function]}
-                override={Object {}}
+                overrides={{}}
                 type="text"
                 value=""
               >
-                <div
-                  className="HoiPoi__Input__root-1-8 HoiPoi__Input__horizontal-1-29"
+                <ForwardRef
+                  className="HoiPoi__Input__root-1-8 HoiPoi__Input__isFullWidth-1-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum"
+                  labelMode="horizontal"
+                  overrides={{}}
                 >
-                  <Label
-                    className="HoiPoi__Input__Label-1-9"
-                  >
-                    <span
-                      className="HoiPoi__Label__root-1-35 HoiPoi__Input__Label-1-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-1-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-1-39 HoiPoi__Label__Text-1-36"
-                        >
-                          Lorem ipsum
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
                   <div
-                    className="HoiPoi__Input__formControl-1-14"
+                    className="HoiPoi__InputWrapper__root-1-28 HoiPoi__InputWrapper__horizontal-1-33 HoiPoi__InputWrapper__isFullWidth-1-35 HoiPoi__Input__root-1-8 HoiPoi__Input__isFullWidth-1-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-1-15"
-                      name="lorem"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value=""
+                    <div
+                      className="HoiPoi__InputWrapper__inputWrapper-1-29"
+                    >
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-1-31"
+                        overrides={{}}
+                      >
+                        <div
+                          className="HoiPoi__Label__root-1-37 HoiPoi__InputWrapper__Label-1-31"
+                        >
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-1-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-1-41 HoiPoi__Label__Text-1-38 HoiPoi__Text__body-1-51"
+                              style={{}}
+                            >
+                              Lorem ipsum
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-1-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-1-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-1-11"
+                            name="lorem"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-1-30"
+                      isFullWidth={true}
+                      overrides={{}}
                     />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
             <Link
+              isTruncated={false}
               onClick={[Function]}
-              overrides={Object {}}
-              size="small"
+              overrides={{}}
+              type="caption"
+              underline={false}
             >
               <button
-                className="HoiPoi__Link__root-1-50 HoiPoi__Link__small-1-54"
+                className="HoiPoi__Link__root-1-65 HoiPoi__Link__caption-1-78"
                 onClick={[Function]}
                 type="button"
               >
@@ -562,28 +549,30 @@ exports[`InputGroup default match 1`] = `
               onBlur={[Function]}
               onChange={[Function]}
               overrides={
-                Object {
-                  "Label": Object {
-                    "classes": Object {
+                {
+                  "Label": {
+                    "classes": {
                       "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
                     },
                   },
                 }
               }
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum 2"
                 labelMode="horizontal"
                 name="lorem2"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
-                override={Object {}}
                 overrides={
-                  Object {
-                    "Label": Object {
-                      "classes": Object {
+                  {
+                    "Label": {
+                      "classes": {
                         "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
                       },
                     },
@@ -592,49 +581,92 @@ exports[`InputGroup default match 1`] = `
                 type="text"
                 value=""
               >
-                <div
-                  className="HoiPoi__Input__root-1-8 HoiPoi__Input__horizontal-1-29"
-                >
-                  <Label
-                    className="HoiPoi__Input__Label-1-9"
-                    classes={
-                      Object {
-                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
-                      }
+                <ForwardRef
+                  className="HoiPoi__Input__root-1-8 HoiPoi__Input__isFullWidth-1-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum 2"
+                  labelMode="horizontal"
+                  overrides={
+                    {
+                      "Label": {
+                        "classes": {
+                          "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
+                        },
+                      },
                     }
-                  >
-                    <span
-                      className="HoiPoi__Label__root-1-35 HoiPoi__Input__Label-1-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-1-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-1-39 HoiPoi__Label__Text-1-36"
-                        >
-                          Lorem ipsum 2
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
+                  }
+                >
                   <div
-                    className="HoiPoi__Input__formControl-1-14"
+                    className="HoiPoi__InputWrapper__root-1-28 HoiPoi__InputWrapper__horizontal-1-33 HoiPoi__InputWrapper__isFullWidth-1-35 HoiPoi__Input__root-1-8 HoiPoi__Input__isFullWidth-1-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-1-15"
-                      name="lorem2"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value=""
+                    <div
+                      className="HoiPoi__InputWrapper__inputWrapper-1-29"
+                    >
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-1-31"
+                        classes={
+                          {
+                            "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
+                          }
+                        }
+                        overrides={{}}
+                      >
+                        <div
+                          className="HoiPoi__Label__root-1-37 HoiPoi__InputWrapper__Label-1-31"
+                        >
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-1-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-1-41 HoiPoi__Label__Text-1-38 HoiPoi__Text__body-1-51"
+                              style={{}}
+                            >
+                              Lorem ipsum 2
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-1-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-1-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-1-11"
+                            name="lorem2"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-1-30"
+                      isFullWidth={true}
+                      overrides={
+                        {
+                          "Label": {
+                            "classes": {
+                              "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
+                            },
+                          },
+                        }
+                      }
                     />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
             <InputControl
               isReadOnly={false}
@@ -645,28 +677,30 @@ exports[`InputGroup default match 1`] = `
               onBlur={[Function]}
               onChange={[Function]}
               overrides={
-                Object {
-                  "Label": Object {
-                    "classes": Object {
+                {
+                  "Label": {
+                    "classes": {
                       "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
                     },
                   },
                 }
               }
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum 3"
                 labelMode="horizontal"
                 name="lorem3"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
-                override={Object {}}
                 overrides={
-                  Object {
-                    "Label": Object {
-                      "classes": Object {
+                  {
+                    "Label": {
+                      "classes": {
                         "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
                       },
                     },
@@ -675,49 +709,92 @@ exports[`InputGroup default match 1`] = `
                 type="text"
                 value=""
               >
-                <div
-                  className="HoiPoi__Input__root-1-8 HoiPoi__Input__horizontal-1-29"
-                >
-                  <Label
-                    className="HoiPoi__Input__Label-1-9"
-                    classes={
-                      Object {
-                        "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
-                      }
+                <ForwardRef
+                  className="HoiPoi__Input__root-1-8 HoiPoi__Input__isFullWidth-1-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum 3"
+                  labelMode="horizontal"
+                  overrides={
+                    {
+                      "Label": {
+                        "classes": {
+                          "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
+                        },
+                      },
                     }
-                  >
-                    <span
-                      className="HoiPoi__Label__root-1-35 HoiPoi__Input__Label-1-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-1-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-1-39 HoiPoi__Label__Text-1-36"
-                        >
-                          Lorem ipsum 3
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
+                  }
+                >
                   <div
-                    className="HoiPoi__Input__formControl-1-14"
+                    className="HoiPoi__InputWrapper__root-1-28 HoiPoi__InputWrapper__horizontal-1-33 HoiPoi__InputWrapper__isFullWidth-1-35 HoiPoi__Input__root-1-8 HoiPoi__Input__isFullWidth-1-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-1-15"
-                      name="lorem3"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value=""
+                    <div
+                      className="HoiPoi__InputWrapper__inputWrapper-1-29"
+                    >
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-1-31"
+                        classes={
+                          {
+                            "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
+                          }
+                        }
+                        overrides={{}}
+                      >
+                        <div
+                          className="HoiPoi__Label__root-1-37 HoiPoi__InputWrapper__Label-1-31"
+                        >
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-1-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-1-41 HoiPoi__Label__Text-1-38 HoiPoi__Text__body-1-51"
+                              style={{}}
+                            >
+                              Lorem ipsum 3
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-1-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-1-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-1-11"
+                            name="lorem3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-1-30"
+                      isFullWidth={true}
+                      overrides={
+                        {
+                          "Label": {
+                            "classes": {
+                              "text": "HoiPoi__InputGroup__hiddenInputLabel-1-1",
+                            },
+                          },
+                        }
+                      }
                     />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
           </div>
         </div>
@@ -731,43 +808,35 @@ exports[`InputGroup is disabled match 1`] = `
 <Component>
   <ThemeProvider
     theme={
-      Object {
-        "colors": Object {
+      {
+        "colors": {
           "aqua100": "#e4fafd",
           "aqua200": "#cbf3fc",
+          "aqua300": "#AEE5F8",
           "aqua400": "#98d5f1",
           "aqua500": "#76bde8",
           "aqua600": "#5695c7",
           "aqua700": "#3b71a7",
           "aqua900": "#16386f",
-          "black": "#262B34",
-          "blackLight": "#5f656b",
-          "blackberry": "#2e2d4c",
-          "blackberryDark": "#24243C",
+          "black": "#3c4248",
           "blue100": "#d3e3fe",
           "blue200": "#a7c5fe",
+          "blue300": "#7BA4FE",
           "blue400": "#5a89fd",
           "blue500": "#245dfd",
           "blue600": "#1a47d9",
           "blue700": "#1234b6",
           "blue900": "#061879",
-          "disabledGrey": "#ced4d9",
-          "green": "#86AD20",
-          "green100": "#f4fad2",
-          "green200": "#e7f6a6",
-          "green400": "#aecd50",
-          "green500": "#86ad20",
-          "green600": "#6e9417",
+          "green100": "#E9FAD2",
+          "green200": "#CFF6A6",
+          "green300": "#A7E675",
+          "green400": "#7FCD50",
+          "green500": "#4CAD20",
+          "green600": "#369417",
           "green700": "#237c10",
-          "green900": "#345306",
-          "greenLight": "#e7f1d5",
-          "grey": "#697782",
-          "greyLight": "#f0f3f5",
-          "greySoft": "#788590",
-          "lines": "#dce3eb",
-          "link": "#216db3",
-          "linkDark": "#174a79",
+          "green900": "#095306",
           "neutral100": "#f9f9fa",
+          "neutral150": "#f6f7f9",
           "neutral200": "#f4f5f6",
           "neutral300": "#e9ecee",
           "neutral400": "#dfe2e5",
@@ -779,251 +848,214 @@ exports[`InputGroup is disabled match 1`] = `
           "neutralBase": "#ffffff",
           "orange100": "#fff1cc",
           "orange200": "#ffde99",
+          "orange300": "#FFC766",
           "orange400": "#ffb13f",
           "orange500": "#ff8c00",
           "orange600": "#db6e00",
           "orange700": "#b75400",
           "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
-          "placeholders": "#e1e4e7",
-          "placeholdersHover": "#d0d4d8",
-          "primary": "#FF8C00",
-          "primaryDark": "#C87600",
-          "primaryLight": "#fef4e6",
-          "primarySoft": "#ff9d26",
-          "purple": "#AA5B9C",
           "purple100": "#fae3ed",
           "purple200": "#f6c8e1",
+          "purple300": "#E5A5CE",
           "purple400": "#cc84b8",
           "purple500": "#aa5b9c",
           "purple600": "#92428b",
           "purple700": "#792d7a",
           "purple900": "#441151",
-          "purpleLight": "#EEDEEB",
-          "red": "#f04540",
           "red100": "#ffe5d5",
           "red200": "#ffc5ac",
+          "red300": "#FF9E82",
           "red400": "#ff7863",
           "red500": "#ff3b30",
           "red600": "#db2328",
           "red700": "#b7182a",
           "red900": "#7a0929",
-          "redDark": "#C43833",
-          "redLight": "#FAE7E7",
-          "redSoft": "#FF544F",
-          "secondary": "#00A8Be",
-          "secondaryGrey": "#e4eeff",
-          "secondaryLight": "#D6EEF2",
           "secondaryOverlay": "rgba(2,168,189,0.10)",
-          "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
-          "tableHeader": "#f6f7f9",
-          "tableHeaderHover": "#EBECEF",
-          "tableHover": "#FAFBFC",
-          "text": Object {
-            "black": "#3c4248",
-            "danger": "white",
-            "default": "#697782",
-            "green": "#86AD20",
-            "greySoft": "#788590",
-            "primary": "white",
-            "red": "#f04540",
-            "secondary": "#00A8Be",
-            "white": "#FFFFFF",
-            "yellow": "#E9B200",
-          },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "turquoise100": "#c9fbf1",
           "turquoise200": "#95f8ec",
+          "turquoise300": "#5EEBE5",
           "turquoise400": "#36d2d8",
           "turquoise500": "#00a8be",
           "turquoise600": "#0083a3",
           "turquoise700": "#006388",
           "turquoise900": "#00335b",
-          "white": "#FFFFFF",
-          "yellow": "#E9B200",
           "yellow100": "#fdf6cb",
           "yellow200": "#fcec97",
+          "yellow300": "#F8DC63",
           "yellow400": "#f1cb3c",
           "yellow500": "#e9b200",
           "yellow600": "#c89400",
           "yellow700": "#a77700",
           "yellow900": "#6f4a00",
-          "yellowDark": "#BE9100",
-          "yellowLight": "#FCF7E5",
         },
-        "effects": Object {
+        "effects": {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-          "buttonActive": Object {
+          "boxShadow24": {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
+          "buttonActive": {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
-        "typography": Object {
-          "bigText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+        "typography": {
+          "badges": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
+          "bigText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "letterSpacing": 0.5,
           },
-          "body": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+          "body": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
-          "body1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+          "body1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
-          "button": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "button": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+          "caption": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
-          "caption": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
-          },
-          "captionMedium": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "captionMedium": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
-          "defaultText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+          "defaultText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
-          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h2": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+          "h3": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+          "h4": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h5": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
-          "largeText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "largeText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "letterSpacing": 0.5,
           },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
-          "overline": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "overline": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
-          "smallText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "smallText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "letterSpacing": 0.5,
           },
-          "subtitle": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "subtitle": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "20px",
           },
-          "subtitle1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+          "subtitle1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
-        "utils": Object {
-          "scrollbar": Object {
-            "&::-webkit-scrollbar": Object {
+        "utils": {
+          "scrollbar": {
+            "&::-webkit-scrollbar": {
               "height": 17,
               "width": 17,
             },
-            "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+            "&::-webkit-scrollbar-thumb": {
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
-            "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+            "&::-webkit-scrollbar-thumb:window-inactive": {
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": {
+            "& ::-moz-selection": {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -1037,117 +1069,98 @@ exports[`InputGroup is disabled match 1`] = `
         Jss {
           "generateId": [Function],
           "id": 3,
-          "options": Object {
+          "options": {
             "Renderer": [Function],
             "createGenerateId": [Function],
-            "id": Object {
+            "id": {
               "minify": false,
             },
-            "plugins": Array [],
+            "plugins": [],
           },
           "plugins": PluginsRegistry {
-            "plugins": Object {
-              "external": Array [
-                Object {
+            "plugins": {
+              "external": [
+                {
                   "onCreateRule": [Function],
                   "onProcessStyle": [Function],
                   "onUpdate": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessRule": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
               ],
-              "internal": Array [
-                Object {
+              "internal": [
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onCreateRule": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
               ],
             },
-            "registry": Object {
-              "onChangeValue": Array [
+            "registry": {
+              "onChangeValue": [
                 [Function],
                 [Function],
                 [Function],
                 [Function],
                 [Function],
               ],
-              "onCreateRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessSheet": Array [],
-              "onProcessStyle": Array [
+              "onCreateRule": [
                 [Function],
                 [Function],
                 [Function],
@@ -1159,28 +1172,47 @@ exports[`InputGroup is disabled match 1`] = `
                 [Function],
                 [Function],
               ],
-              "onUpdate": Array [
+              "onProcessRule": [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessSheet": [],
+              "onProcessStyle": [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onUpdate": [
                 [Function],
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.10.0",
         }
       }
     >
       <InputGroup
         hideInputsLabel="Hide inputs"
         inputs={
-          Array [
-            Object {
+          [
+            {
               "label": "Lorem ipsum",
               "name": "lorem",
             },
-            Object {
+            {
               "label": "Lorem ipsum 2",
               "name": "lorem2",
             },
-            Object {
+            {
               "label": "Lorem ipsum 3",
               "name": "lorem3",
             },
@@ -1191,9 +1223,9 @@ exports[`InputGroup is disabled match 1`] = `
         label="Lorem ipsum"
         labelMode="horizontal"
         onChange={[Function]}
-        overrides={Object {}}
+        overrides={{}}
         showInputsLabel="Show inputs"
-        value={Object {}}
+        value={{}}
       >
         <div
           className="HoiPoi__InputGroup__root-2-0 HoiPoi__InputGroup__horizontal-2-6"
@@ -1211,66 +1243,98 @@ exports[`InputGroup is disabled match 1`] = `
               onEnter={[Function]}
               onFocus={[Function]}
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum"
                 labelMode="horizontal"
                 name="lorem"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
                 onEnter={[Function]}
                 onFocus={[Function]}
-                override={Object {}}
+                overrides={{}}
                 type="text"
                 value=""
               >
-                <div
-                  className="HoiPoi__Input__root-2-8 HoiPoi__Input__horizontal-2-29"
+                <ForwardRef
+                  className="HoiPoi__Input__root-2-8 HoiPoi__Input__isFullWidth-2-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum"
+                  labelMode="horizontal"
+                  overrides={{}}
                 >
-                  <Label
-                    className="HoiPoi__Input__Label-2-9"
-                  >
-                    <span
-                      className="HoiPoi__Label__root-2-35 HoiPoi__Input__Label-2-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-2-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-2-39 HoiPoi__Label__Text-2-36"
-                        >
-                          Lorem ipsum
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
                   <div
-                    className="HoiPoi__Input__formControl-2-14"
+                    className="HoiPoi__InputWrapper__root-2-28 HoiPoi__InputWrapper__horizontal-2-33 HoiPoi__InputWrapper__isFullWidth-2-35 HoiPoi__Input__root-2-8 HoiPoi__Input__isFullWidth-2-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-2-15"
-                      name="lorem"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value=""
+                    <div
+                      className="HoiPoi__InputWrapper__inputWrapper-2-29"
+                    >
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-2-31"
+                        overrides={{}}
+                      >
+                        <div
+                          className="HoiPoi__Label__root-2-37 HoiPoi__InputWrapper__Label-2-31"
+                        >
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-2-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-2-41 HoiPoi__Label__Text-2-38 HoiPoi__Text__body-2-51"
+                              style={{}}
+                            >
+                              Lorem ipsum
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-2-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-2-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-2-11"
+                            name="lorem"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-2-30"
+                      isFullWidth={true}
+                      overrides={{}}
                     />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
             <Link
+              isTruncated={false}
               onClick={[Function]}
-              overrides={Object {}}
-              size="small"
+              overrides={{}}
+              type="caption"
+              underline={false}
             >
               <button
-                className="HoiPoi__Link__root-2-50 HoiPoi__Link__small-2-54"
+                className="HoiPoi__Link__root-2-65 HoiPoi__Link__caption-2-78"
                 onClick={[Function]}
                 type="button"
               >
@@ -1290,28 +1354,30 @@ exports[`InputGroup is disabled match 1`] = `
               onBlur={[Function]}
               onChange={[Function]}
               overrides={
-                Object {
-                  "Label": Object {
-                    "classes": Object {
+                {
+                  "Label": {
+                    "classes": {
                       "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
                     },
                   },
                 }
               }
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum 2"
                 labelMode="horizontal"
                 name="lorem2"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
-                override={Object {}}
                 overrides={
-                  Object {
-                    "Label": Object {
-                      "classes": Object {
+                  {
+                    "Label": {
+                      "classes": {
                         "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
                       },
                     },
@@ -1320,49 +1386,92 @@ exports[`InputGroup is disabled match 1`] = `
                 type="text"
                 value=""
               >
-                <div
-                  className="HoiPoi__Input__root-2-8 HoiPoi__Input__horizontal-2-29"
-                >
-                  <Label
-                    className="HoiPoi__Input__Label-2-9"
-                    classes={
-                      Object {
-                        "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
-                      }
+                <ForwardRef
+                  className="HoiPoi__Input__root-2-8 HoiPoi__Input__isFullWidth-2-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum 2"
+                  labelMode="horizontal"
+                  overrides={
+                    {
+                      "Label": {
+                        "classes": {
+                          "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
+                        },
+                      },
                     }
-                  >
-                    <span
-                      className="HoiPoi__Label__root-2-35 HoiPoi__Input__Label-2-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-2-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-2-39 HoiPoi__Label__Text-2-36"
-                        >
-                          Lorem ipsum 2
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
+                  }
+                >
                   <div
-                    className="HoiPoi__Input__formControl-2-14"
+                    className="HoiPoi__InputWrapper__root-2-28 HoiPoi__InputWrapper__horizontal-2-33 HoiPoi__InputWrapper__isFullWidth-2-35 HoiPoi__Input__root-2-8 HoiPoi__Input__isFullWidth-2-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-2-15"
-                      name="lorem2"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value=""
+                    <div
+                      className="HoiPoi__InputWrapper__inputWrapper-2-29"
+                    >
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-2-31"
+                        classes={
+                          {
+                            "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
+                          }
+                        }
+                        overrides={{}}
+                      >
+                        <div
+                          className="HoiPoi__Label__root-2-37 HoiPoi__InputWrapper__Label-2-31"
+                        >
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-2-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-2-41 HoiPoi__Label__Text-2-38 HoiPoi__Text__body-2-51"
+                              style={{}}
+                            >
+                              Lorem ipsum 2
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-2-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-2-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-2-11"
+                            name="lorem2"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-2-30"
+                      isFullWidth={true}
+                      overrides={
+                        {
+                          "Label": {
+                            "classes": {
+                              "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
+                            },
+                          },
+                        }
+                      }
                     />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
             <InputControl
               isReadOnly={false}
@@ -1373,28 +1482,30 @@ exports[`InputGroup is disabled match 1`] = `
               onBlur={[Function]}
               onChange={[Function]}
               overrides={
-                Object {
-                  "Label": Object {
-                    "classes": Object {
+                {
+                  "Label": {
+                    "classes": {
                       "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
                     },
                   },
                 }
               }
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum 3"
                 labelMode="horizontal"
                 name="lorem3"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
-                override={Object {}}
                 overrides={
-                  Object {
-                    "Label": Object {
-                      "classes": Object {
+                  {
+                    "Label": {
+                      "classes": {
                         "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
                       },
                     },
@@ -1403,49 +1514,92 @@ exports[`InputGroup is disabled match 1`] = `
                 type="text"
                 value=""
               >
-                <div
-                  className="HoiPoi__Input__root-2-8 HoiPoi__Input__horizontal-2-29"
-                >
-                  <Label
-                    className="HoiPoi__Input__Label-2-9"
-                    classes={
-                      Object {
-                        "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
-                      }
+                <ForwardRef
+                  className="HoiPoi__Input__root-2-8 HoiPoi__Input__isFullWidth-2-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum 3"
+                  labelMode="horizontal"
+                  overrides={
+                    {
+                      "Label": {
+                        "classes": {
+                          "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
+                        },
+                      },
                     }
-                  >
-                    <span
-                      className="HoiPoi__Label__root-2-35 HoiPoi__Input__Label-2-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-2-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-2-39 HoiPoi__Label__Text-2-36"
-                        >
-                          Lorem ipsum 3
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
+                  }
+                >
                   <div
-                    className="HoiPoi__Input__formControl-2-14"
+                    className="HoiPoi__InputWrapper__root-2-28 HoiPoi__InputWrapper__horizontal-2-33 HoiPoi__InputWrapper__isFullWidth-2-35 HoiPoi__Input__root-2-8 HoiPoi__Input__isFullWidth-2-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-2-15"
-                      name="lorem3"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value=""
+                    <div
+                      className="HoiPoi__InputWrapper__inputWrapper-2-29"
+                    >
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-2-31"
+                        classes={
+                          {
+                            "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
+                          }
+                        }
+                        overrides={{}}
+                      >
+                        <div
+                          className="HoiPoi__Label__root-2-37 HoiPoi__InputWrapper__Label-2-31"
+                        >
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-2-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-2-41 HoiPoi__Label__Text-2-38 HoiPoi__Text__body-2-51"
+                              style={{}}
+                            >
+                              Lorem ipsum 3
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-2-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-2-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-2-11"
+                            name="lorem3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-2-30"
+                      isFullWidth={true}
+                      overrides={
+                        {
+                          "Label": {
+                            "classes": {
+                              "text": "HoiPoi__InputGroup__hiddenInputLabel-2-1",
+                            },
+                          },
+                        }
+                      }
                     />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
           </div>
         </div>
@@ -1459,43 +1613,35 @@ exports[`InputGroup with values match 1`] = `
 <Component>
   <ThemeProvider
     theme={
-      Object {
-        "colors": Object {
+      {
+        "colors": {
           "aqua100": "#e4fafd",
           "aqua200": "#cbf3fc",
+          "aqua300": "#AEE5F8",
           "aqua400": "#98d5f1",
           "aqua500": "#76bde8",
           "aqua600": "#5695c7",
           "aqua700": "#3b71a7",
           "aqua900": "#16386f",
-          "black": "#262B34",
-          "blackLight": "#5f656b",
-          "blackberry": "#2e2d4c",
-          "blackberryDark": "#24243C",
+          "black": "#3c4248",
           "blue100": "#d3e3fe",
           "blue200": "#a7c5fe",
+          "blue300": "#7BA4FE",
           "blue400": "#5a89fd",
           "blue500": "#245dfd",
           "blue600": "#1a47d9",
           "blue700": "#1234b6",
           "blue900": "#061879",
-          "disabledGrey": "#ced4d9",
-          "green": "#86AD20",
-          "green100": "#f4fad2",
-          "green200": "#e7f6a6",
-          "green400": "#aecd50",
-          "green500": "#86ad20",
-          "green600": "#6e9417",
+          "green100": "#E9FAD2",
+          "green200": "#CFF6A6",
+          "green300": "#A7E675",
+          "green400": "#7FCD50",
+          "green500": "#4CAD20",
+          "green600": "#369417",
           "green700": "#237c10",
-          "green900": "#345306",
-          "greenLight": "#e7f1d5",
-          "grey": "#697782",
-          "greyLight": "#f0f3f5",
-          "greySoft": "#788590",
-          "lines": "#dce3eb",
-          "link": "#216db3",
-          "linkDark": "#174a79",
+          "green900": "#095306",
           "neutral100": "#f9f9fa",
+          "neutral150": "#f6f7f9",
           "neutral200": "#f4f5f6",
           "neutral300": "#e9ecee",
           "neutral400": "#dfe2e5",
@@ -1507,251 +1653,214 @@ exports[`InputGroup with values match 1`] = `
           "neutralBase": "#ffffff",
           "orange100": "#fff1cc",
           "orange200": "#ffde99",
+          "orange300": "#FFC766",
           "orange400": "#ffb13f",
           "orange500": "#ff8c00",
           "orange600": "#db6e00",
           "orange700": "#b75400",
           "orange900": "#7a2c00",
           "overlay": "rgba(33,33,33,0.55)",
-          "placeholders": "#e1e4e7",
-          "placeholdersHover": "#d0d4d8",
-          "primary": "#FF8C00",
-          "primaryDark": "#C87600",
-          "primaryLight": "#fef4e6",
-          "primarySoft": "#ff9d26",
-          "purple": "#AA5B9C",
           "purple100": "#fae3ed",
           "purple200": "#f6c8e1",
+          "purple300": "#E5A5CE",
           "purple400": "#cc84b8",
           "purple500": "#aa5b9c",
           "purple600": "#92428b",
           "purple700": "#792d7a",
           "purple900": "#441151",
-          "purpleLight": "#EEDEEB",
-          "red": "#f04540",
           "red100": "#ffe5d5",
           "red200": "#ffc5ac",
+          "red300": "#FF9E82",
           "red400": "#ff7863",
           "red500": "#ff3b30",
           "red600": "#db2328",
           "red700": "#b7182a",
           "red900": "#7a0929",
-          "redDark": "#C43833",
-          "redLight": "#FAE7E7",
-          "redSoft": "#FF544F",
-          "secondary": "#00A8Be",
-          "secondaryGrey": "#e4eeff",
-          "secondaryLight": "#D6EEF2",
           "secondaryOverlay": "rgba(2,168,189,0.10)",
-          "secondarySoft": "#AADFE7",
           "shadow": "rgba(0, 0, 0, 0.25)",
-          "tableHeader": "#f6f7f9",
-          "tableHeaderHover": "#EBECEF",
-          "tableHover": "#FAFBFC",
-          "text": Object {
-            "black": "#3c4248",
-            "danger": "white",
-            "default": "#697782",
-            "green": "#86AD20",
-            "greySoft": "#788590",
-            "primary": "white",
-            "red": "#f04540",
-            "secondary": "#00A8Be",
-            "white": "#FFFFFF",
-            "yellow": "#E9B200",
-          },
           "transparentBlack": "rgba(38, 43, 52, 0.8)",
           "turquoise100": "#c9fbf1",
           "turquoise200": "#95f8ec",
+          "turquoise300": "#5EEBE5",
           "turquoise400": "#36d2d8",
           "turquoise500": "#00a8be",
           "turquoise600": "#0083a3",
           "turquoise700": "#006388",
           "turquoise900": "#00335b",
-          "white": "#FFFFFF",
-          "yellow": "#E9B200",
           "yellow100": "#fdf6cb",
           "yellow200": "#fcec97",
+          "yellow300": "#F8DC63",
           "yellow400": "#f1cb3c",
           "yellow500": "#e9b200",
           "yellow600": "#c89400",
           "yellow700": "#a77700",
           "yellow900": "#6f4a00",
-          "yellowDark": "#BE9100",
-          "yellowLight": "#FCF7E5",
         },
-        "effects": Object {
+        "effects": {
           "boxShadow": "0 3px 9px 0 rgba(0, 0, 0, 0.25)",
-          "buttonActive": Object {
+          "boxShadow24": {
+            "boxShadow": "0px 18px 40px rgba(39, 60, 80, 0.4)",
+          },
+          "buttonActive": {
             "boxShadow": "inset 0 -2px 4px 0 rgba(51, 51, 51, 0.23)",
           },
         },
-        "typography": Object {
-          "bigText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+        "typography": {
+          "badges": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 10,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
+          },
+          "bigText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 20,
             "letterSpacing": 0.5,
           },
-          "body": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.43,
+          "body": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
+            "fontWeight": 400,
+            "letterSpacing": 0.6,
+            "lineHeight": "20px",
           },
-          "body1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.5px",
-            "lineHeight": 1.75,
+          "body1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.5,
+            "lineHeight": "28px",
           },
-          "button": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "button": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.6px",
-            "lineHeight": 1.14,
+            "letterSpacing": 0.6,
+            "lineHeight": "16px",
           },
-          "buttonText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 11,
-            "lineHeight": 1.5,
+          "caption": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 400,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
-          "caption": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
-          },
-          "captionMedium": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "captionMedium": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "0.4px",
-            "lineHeight": 1.33,
+            "letterSpacing": 0.4,
+            "lineHeight": "16px",
           },
-          "defaultText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": 13,
+          "defaultText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "letterSpacing": 0.5,
           },
-          "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-          "fontSizeBase": 13,
+          "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+          "fontSizeBase": 14,
           "fontSizeSmall": 11,
-          "headline1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "96px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 96,
             "fontWeight": 300,
-            "letterSpacing": "-1.5px",
-            "lineHeight": 1.17,
+            "letterSpacing": -1.5,
+            "lineHeight": "112px",
           },
-          "headline2": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "60px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h2": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 60,
             "fontWeight": 300,
-            "letterSpacing": "-0.5px",
-            "lineHeight": 1.18,
+            "letterSpacing": -0.5,
+            "lineHeight": "71px",
           },
-          "headline3": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "48px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.19,
+          "h3": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 48,
+            "fontWeight": 400,
+            "lineHeight": "57px",
           },
-          "headline5": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "24px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "normal",
-            "lineHeight": 1.17,
+          "h4": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 34,
+            "fontWeight": 400,
+            "letterSpacing": 0.25,
+            "lineHeight": "40px",
           },
-          "headline6": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "20px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "h5": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 24,
+            "fontWeight": 400,
+            "lineHeight": "28px",
+          },
+          "h6": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 20,
             "fontWeight": 500,
-            "letterSpacing": "0.25px",
-            "lineHeight": 1.2,
+            "letterSpacing": 0.25,
+            "lineHeight": "24px",
           },
-          "largeText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "largeText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 16,
             "letterSpacing": 0.5,
           },
           "letterSpacing": 0.5,
           "lineHeightBase": 1.5,
-          "overline": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "12px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "overline": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 12,
             "fontWeight": 500,
-            "letterSpacing": "2px",
-            "lineHeight": 1.33,
+            "letterSpacing": 2,
+            "lineHeight": "16px",
+            "textTransform": "uppercase",
           },
-          "smallText": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
+          "smallText": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
             "fontSize": 11,
             "letterSpacing": 0.5,
           },
-          "subtitle": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "14px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
+          "subtitle": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 14,
             "fontWeight": 500,
-            "letterSpacing": "0.09px",
-            "lineHeight": 1.71,
+            "letterSpacing": 0.09,
+            "lineHeight": "20px",
           },
-          "subtitle1": Object {
-            "fontFamily": "\\"Roboto\\", \\"Helvetica Neue\\", Helvetica, Arial, sans-serif",
-            "fontSize": "16px",
-            "fontStretch": "normal",
-            "fontStyle": "normal",
-            "fontWeight": "normal",
-            "letterSpacing": "0.15px",
-            "lineHeight": 1.5,
+          "subtitle1": {
+            "fontFamily": ""Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif",
+            "fontSize": 16,
+            "fontWeight": 400,
+            "letterSpacing": 0.15,
+            "lineHeight": "24px",
           },
         },
-        "utils": Object {
-          "scrollbar": Object {
-            "&::-webkit-scrollbar": Object {
+        "utils": {
+          "scrollbar": {
+            "&::-webkit-scrollbar": {
               "height": 17,
               "width": 17,
             },
-            "&::-webkit-scrollbar-thumb": Object {
-              "background": "#e1e4e7",
+            "&::-webkit-scrollbar-thumb": {
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
             },
-            "&::-webkit-scrollbar-thumb:window-inactive": Object {
-              "background": "#e1e4e7",
+            "&::-webkit-scrollbar-thumb:window-inactive": {
+              "background": "#dfe2e5",
               "backgroundClip": "content-box",
               "border": "4px solid rgba(0, 0, 0, 0)",
               "borderRadius": 10,
+            },
+          },
+          "selection": {
+            "& ::-moz-selection": {
+              "backgroundColor": "#ffde99",
+            },
+            "& ::selection": {
+              "backgroundColor": "#ffde99",
             },
           },
         },
@@ -1765,117 +1874,98 @@ exports[`InputGroup with values match 1`] = `
         Jss {
           "generateId": [Function],
           "id": 3,
-          "options": Object {
+          "options": {
             "Renderer": [Function],
             "createGenerateId": [Function],
-            "id": Object {
+            "id": {
               "minify": false,
             },
-            "plugins": Array [],
+            "plugins": [],
           },
           "plugins": PluginsRegistry {
-            "plugins": Object {
-              "external": Array [
-                Object {
+            "plugins": {
+              "external": [
+                {
                   "onCreateRule": [Function],
                   "onProcessStyle": [Function],
                   "onUpdate": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                   "onProcessRule": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onProcessRule": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onProcessStyle": [Function],
                 },
               ],
-              "internal": Array [
-                Object {
+              "internal": [
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onChangeValue": [Function],
                   "onCreateRule": [Function],
                   "onProcessStyle": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
-                Object {
+                {
                   "onCreateRule": [Function],
                 },
               ],
             },
-            "registry": Object {
-              "onChangeValue": Array [
+            "registry": {
+              "onChangeValue": [
                 [Function],
                 [Function],
                 [Function],
                 [Function],
                 [Function],
               ],
-              "onCreateRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessRule": Array [
-                [Function],
-                [Function],
-                [Function],
-                [Function],
-              ],
-              "onProcessSheet": Array [],
-              "onProcessStyle": Array [
+              "onCreateRule": [
                 [Function],
                 [Function],
                 [Function],
@@ -1887,28 +1977,47 @@ exports[`InputGroup with values match 1`] = `
                 [Function],
                 [Function],
               ],
-              "onUpdate": Array [
+              "onProcessRule": [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onProcessSheet": [],
+              "onProcessStyle": [
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+                [Function],
+              ],
+              "onUpdate": [
                 [Function],
               ],
             },
           },
-          "version": "10.3.0",
+          "version": "10.10.0",
         }
       }
     >
       <InputGroup
         hideInputsLabel="Hide inputs"
         inputs={
-          Array [
-            Object {
+          [
+            {
               "label": "Lorem ipsum",
               "name": "lorem",
             },
-            Object {
+            {
               "label": "Lorem ipsum 2",
               "name": "lorem2",
             },
-            Object {
+            {
               "label": "Lorem ipsum 3",
               "name": "lorem3",
             },
@@ -1918,10 +2027,10 @@ exports[`InputGroup with values match 1`] = `
         label="Lorem ipsum"
         labelMode="horizontal"
         onChange={[Function]}
-        overrides={Object {}}
+        overrides={{}}
         showInputsLabel="Show inputs"
         value={
-          Object {
+          {
             "lorem": true,
             "lorem3": true,
           }
@@ -1944,99 +2053,144 @@ exports[`InputGroup with values match 1`] = `
               onFocus={[Function]}
               value={true}
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum"
                 labelMode="horizontal"
                 name="lorem"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
                 onEnter={[Function]}
                 onFocus={[Function]}
-                override={Object {}}
+                overrides={{}}
                 type="text"
                 value={true}
               >
-                <div
-                  className="HoiPoi__Input__root-3-8 HoiPoi__Input__horizontal-3-29"
+                <ForwardRef
+                  className="HoiPoi__Input__root-3-8 HoiPoi__Input__isFullWidth-3-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum"
+                  labelMode="horizontal"
+                  overrides={{}}
                 >
-                  <Label
-                    className="HoiPoi__Input__Label-3-9"
-                  >
-                    <span
-                      className="HoiPoi__Label__root-3-35 HoiPoi__Input__Label-3-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-3-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-3-39 HoiPoi__Label__Text-3-36"
-                        >
-                          Lorem ipsum
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
                   <div
-                    className="HoiPoi__Input__formControl-3-14"
+                    className="HoiPoi__InputWrapper__root-3-28 HoiPoi__InputWrapper__horizontal-3-33 HoiPoi__InputWrapper__isFullWidth-3-35 HoiPoi__Input__root-3-8 HoiPoi__Input__isFullWidth-3-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-3-15"
-                      name="lorem"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value={true}
-                    />
                     <div
-                      className="HoiPoi__Input__postComponent-3-32"
+                      className="HoiPoi__InputWrapper__inputWrapper-3-29"
                     >
-                      <span
-                        className="HoiPoi__Input__postCloseComponent-3-33 HoiPoi__Input__isClickable-3-24 HoiPoi__Input__clear-3-25"
-                        onClick={[Function]}
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-3-31"
+                        overrides={{}}
                       >
-                        <Icon
-                          name="close"
-                          overrides={Object {}}
-                          size="medium"
+                        <div
+                          className="HoiPoi__Label__root-3-37 HoiPoi__InputWrapper__Label-3-31"
                         >
-                          <span
-                            className="HoiPoi__Icon__root-3-50 HoiPoi__Icon__medium-3-52"
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-3-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
                           >
-                            <Close
-                              color="#788590"
+                            <span
+                              className="HoiPoi__Text__root-3-41 HoiPoi__Label__Text-3-38 HoiPoi__Text__body-3-51"
+                              style={{}}
                             >
-                              <svg
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
+                              Lorem ipsum
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-3-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-3-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-3-11"
+                            name="lorem"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value={true}
+                          />
+                          <div
+                            className="HoiPoi__Input__postComponent-3-22"
+                          >
+                            <div
+                              className="HoiPoi__Input__postComponentClose-3-24 HoiPoi__Input__isClickable-3-15 HoiPoi__Input__clear-3-16"
+                              key="close"
+                            >
+                              <Component
+                                name="closeSmall"
+                                onClick={[Function]}
+                                size="large"
                               >
-                                <path
-                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                                  fill="#788590"
-                                  fillRule="evenodd"
-                                />
-                              </svg>
-                            </Close>
-                          </span>
-                        </Icon>
-                      </span>
+                                <ForwardRef
+                                  name="closeSmall"
+                                  onClick={[Function]}
+                                  overrides={{}}
+                                  size="large"
+                                >
+                                  <span
+                                    className="HoiPoi__Icon__root-3-61 HoiPoi__Icon__large-3-64 HoiPoi__Icon__clickable-3-68"
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseOut={[Function]}
+                                    onMouseOver={[Function]}
+                                    onMouseUp={[Function]}
+                                  >
+                                    <CloseSmall
+                                      color="#7d8a96"
+                                    >
+                                      <svg
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          clipRule="evenodd"
+                                          d="M11.9289 13.3288L14.7292 16.1291L16.1434 14.7148L13.3431 11.9146L16.1286 9.12906L14.7144 7.71484L11.9289 10.5003L9.14337 7.71484L7.72915 9.12906L10.5146 11.9146L7.71436 14.7148L9.12857 16.1291L11.9289 13.3288Z"
+                                          fill="#7d8a96"
+                                          fillRule="evenodd"
+                                        />
+                                      </svg>
+                                    </CloseSmall>
+                                  </span>
+                                </ForwardRef>
+                              </Component>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-3-30"
+                      isFullWidth={true}
+                      overrides={{}}
+                    />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
             <Link
+              isTruncated={false}
               onClick={[Function]}
-              overrides={Object {}}
-              size="small"
+              overrides={{}}
+              type="caption"
+              underline={false}
             >
               <button
-                className="HoiPoi__Link__root-3-57 HoiPoi__Link__small-3-61"
+                className="HoiPoi__Link__root-3-73 HoiPoi__Link__caption-3-86"
                 onClick={[Function]}
                 type="button"
               >
@@ -2056,28 +2210,30 @@ exports[`InputGroup with values match 1`] = `
               onBlur={[Function]}
               onChange={[Function]}
               overrides={
-                Object {
-                  "Label": Object {
-                    "classes": Object {
+                {
+                  "Label": {
+                    "classes": {
                       "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
                     },
                   },
                 }
               }
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum 2"
                 labelMode="horizontal"
                 name="lorem2"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
-                override={Object {}}
                 overrides={
-                  Object {
-                    "Label": Object {
-                      "classes": Object {
+                  {
+                    "Label": {
+                      "classes": {
                         "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
                       },
                     },
@@ -2086,49 +2242,92 @@ exports[`InputGroup with values match 1`] = `
                 type="text"
                 value=""
               >
-                <div
-                  className="HoiPoi__Input__root-3-8 HoiPoi__Input__horizontal-3-29"
-                >
-                  <Label
-                    className="HoiPoi__Input__Label-3-9"
-                    classes={
-                      Object {
-                        "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
-                      }
+                <ForwardRef
+                  className="HoiPoi__Input__root-3-8 HoiPoi__Input__isFullWidth-3-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum 2"
+                  labelMode="horizontal"
+                  overrides={
+                    {
+                      "Label": {
+                        "classes": {
+                          "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
+                        },
+                      },
                     }
-                  >
-                    <span
-                      className="HoiPoi__Label__root-3-35 HoiPoi__Input__Label-3-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-3-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-3-39 HoiPoi__Label__Text-3-36"
-                        >
-                          Lorem ipsum 2
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
+                  }
+                >
                   <div
-                    className="HoiPoi__Input__formControl-3-14"
+                    className="HoiPoi__InputWrapper__root-3-28 HoiPoi__InputWrapper__horizontal-3-33 HoiPoi__InputWrapper__isFullWidth-3-35 HoiPoi__Input__root-3-8 HoiPoi__Input__isFullWidth-3-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-3-15"
-                      name="lorem2"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value=""
+                    <div
+                      className="HoiPoi__InputWrapper__inputWrapper-3-29"
+                    >
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-3-31"
+                        classes={
+                          {
+                            "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
+                          }
+                        }
+                        overrides={{}}
+                      >
+                        <div
+                          className="HoiPoi__Label__root-3-37 HoiPoi__InputWrapper__Label-3-31"
+                        >
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-3-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
+                          >
+                            <span
+                              className="HoiPoi__Text__root-3-41 HoiPoi__Label__Text-3-38 HoiPoi__Text__body-3-51"
+                              style={{}}
+                            >
+                              Lorem ipsum 2
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-3-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-3-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-3-11"
+                            name="lorem2"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-3-30"
+                      isFullWidth={true}
+                      overrides={
+                        {
+                          "Label": {
+                            "classes": {
+                              "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
+                            },
+                          },
+                        }
+                      }
                     />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
             <InputControl
               isReadOnly={false}
@@ -2139,9 +2338,9 @@ exports[`InputGroup with values match 1`] = `
               onBlur={[Function]}
               onChange={[Function]}
               overrides={
-                Object {
-                  "Label": Object {
-                    "classes": Object {
+                {
+                  "Label": {
+                    "classes": {
                       "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
                     },
                   },
@@ -2149,19 +2348,21 @@ exports[`InputGroup with values match 1`] = `
               }
               value={true}
             >
-              <Input
+              <ForwardRef
+                hideClear={false}
                 isCopyable={false}
+                isFullWidth={true}
                 isReadOnly={false}
                 label="Lorem ipsum 3"
                 labelMode="horizontal"
                 name="lorem3"
+                numberDecimals={2}
                 onBlur={[Function]}
                 onChange={[Function]}
-                override={Object {}}
                 overrides={
-                  Object {
-                    "Label": Object {
-                      "classes": Object {
+                  {
+                    "Label": {
+                      "classes": {
                         "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
                       },
                     },
@@ -2170,82 +2371,138 @@ exports[`InputGroup with values match 1`] = `
                 type="text"
                 value={true}
               >
-                <div
-                  className="HoiPoi__Input__root-3-8 HoiPoi__Input__horizontal-3-29"
-                >
-                  <Label
-                    className="HoiPoi__Input__Label-3-9"
-                    classes={
-                      Object {
-                        "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
-                      }
+                <ForwardRef
+                  className="HoiPoi__Input__root-3-8 HoiPoi__Input__isFullWidth-3-20"
+                  isFullWidth={true}
+                  label="Lorem ipsum 3"
+                  labelMode="horizontal"
+                  overrides={
+                    {
+                      "Label": {
+                        "classes": {
+                          "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
+                        },
+                      },
                     }
-                  >
-                    <span
-                      className="HoiPoi__Label__root-3-35 HoiPoi__Input__Label-3-9"
-                    >
-                      <Text
-                        className="HoiPoi__Label__Text-3-36"
-                        overrides={Object {}}
-                      >
-                        <span
-                          className="HoiPoi__Text__root-3-39 HoiPoi__Label__Text-3-36"
-                        >
-                          Lorem ipsum 3
-                        </span>
-                      </Text>
-                    </span>
-                  </Label>
+                  }
+                >
                   <div
-                    className="HoiPoi__Input__formControl-3-14"
+                    className="HoiPoi__InputWrapper__root-3-28 HoiPoi__InputWrapper__horizontal-3-33 HoiPoi__InputWrapper__isFullWidth-3-35 HoiPoi__Input__root-3-8 HoiPoi__Input__isFullWidth-3-20"
                   >
-                    <input
-                      className="HoiPoi__Input__input-3-15"
-                      name="lorem3"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      readOnly={false}
-                      type="text"
-                      value={true}
-                    />
                     <div
-                      className="HoiPoi__Input__postComponent-3-32"
+                      className="HoiPoi__InputWrapper__inputWrapper-3-29"
                     >
-                      <span
-                        className="HoiPoi__Input__postCloseComponent-3-33 HoiPoi__Input__isClickable-3-24 HoiPoi__Input__clear-3-25"
-                        onClick={[Function]}
+                      <Label
+                        className="HoiPoi__InputWrapper__Label-3-31"
+                        classes={
+                          {
+                            "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
+                          }
+                        }
+                        overrides={{}}
                       >
-                        <Icon
-                          name="close"
-                          overrides={Object {}}
-                          size="medium"
+                        <div
+                          className="HoiPoi__Label__root-3-37 HoiPoi__InputWrapper__Label-3-31"
                         >
-                          <span
-                            className="HoiPoi__Icon__root-3-50 HoiPoi__Icon__medium-3-52"
+                          <ForwardRef
+                            as="span"
+                            className="HoiPoi__Label__Text-3-38"
+                            isTruncated={false}
+                            overrides={{}}
+                            type="body"
                           >
-                            <Close
-                              color="#788590"
+                            <span
+                              className="HoiPoi__Text__root-3-41 HoiPoi__Label__Text-3-38 HoiPoi__Text__body-3-51"
+                              style={{}}
                             >
-                              <svg
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
+                              Lorem ipsum 3
+                            </span>
+                          </ForwardRef>
+                        </div>
+                      </Label>
+                      <div
+                        className="HoiPoi__InputWrapper__formControl-3-34"
+                      >
+                        <div
+                          className="HoiPoi__Input__inputComponents-3-10"
+                        >
+                          <input
+                            className="HoiPoi__Input__input-3-11"
+                            name="lorem3"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            readOnly={false}
+                            type="text"
+                            value={true}
+                          />
+                          <div
+                            className="HoiPoi__Input__postComponent-3-22"
+                          >
+                            <div
+                              className="HoiPoi__Input__postComponentClose-3-24 HoiPoi__Input__isClickable-3-15 HoiPoi__Input__clear-3-16"
+                              key="close"
+                            >
+                              <Component
+                                name="closeSmall"
+                                onClick={[Function]}
+                                size="large"
                               >
-                                <path
-                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                                  fill="#788590"
-                                  fillRule="evenodd"
-                                />
-                              </svg>
-                            </Close>
-                          </span>
-                        </Icon>
-                      </span>
+                                <ForwardRef
+                                  name="closeSmall"
+                                  onClick={[Function]}
+                                  overrides={{}}
+                                  size="large"
+                                >
+                                  <span
+                                    className="HoiPoi__Icon__root-3-61 HoiPoi__Icon__large-3-64 HoiPoi__Icon__clickable-3-68"
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseOut={[Function]}
+                                    onMouseOver={[Function]}
+                                    onMouseUp={[Function]}
+                                  >
+                                    <CloseSmall
+                                      color="#7d8a96"
+                                    >
+                                      <svg
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          clipRule="evenodd"
+                                          d="M11.9289 13.3288L14.7292 16.1291L16.1434 14.7148L13.3431 11.9146L16.1286 9.12906L14.7144 7.71484L11.9289 10.5003L9.14337 7.71484L7.72915 9.12906L10.5146 11.9146L7.71436 14.7148L9.12857 16.1291L11.9289 13.3288Z"
+                                          fill="#7d8a96"
+                                          fillRule="evenodd"
+                                        />
+                                      </svg>
+                                    </CloseSmall>
+                                  </span>
+                                </ForwardRef>
+                              </Component>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <Component
+                      className="HoiPoi__InputWrapper__fieldBottom-3-30"
+                      isFullWidth={true}
+                      overrides={
+                        {
+                          "Label": {
+                            "classes": {
+                              "text": "HoiPoi__InputGroup__hiddenInputLabel-3-1",
+                            },
+                          },
+                        }
+                      }
+                    />
                   </div>
-                </div>
-              </Input>
+                </ForwardRef>
+              </ForwardRef>
             </InputControl>
           </div>
         </div>
