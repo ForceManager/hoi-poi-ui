@@ -1,9 +1,10 @@
 export default (theme) => ({
     root: {},
     Label: {
-        width: 153,
+        width: 150,
         marginRight: 17,
-        padding: '11px 0',
+        padding: '0 0 8px 0',
+        flexShrink: 0,
     },
     formControl: {
         position: 'relative',

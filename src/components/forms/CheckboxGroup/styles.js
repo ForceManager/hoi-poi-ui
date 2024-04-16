@@ -1,8 +1,9 @@
 export default (theme) => ({
     root: {},
     Label: {
-        width: 153,
+        width: 150,
         marginRight: 17,
+        flexShrink: 0,
     },
     error: {
         ...theme.typography.smallText,

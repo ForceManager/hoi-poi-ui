@@ -55,6 +55,7 @@ export { default as Switch } from './components/forms/Switch';
 export { default as SwitchInput } from './components/forms/SwitchInput';
 export { default as Textarea } from './components/forms/Textarea';
 export { default as Password } from './components/forms/Password';
+export { default as InputGroup } from './components/forms/InputGroup';
 
 export { default as Popover } from './components/utils/Popover';
 export { default as ScrollBar } from './components/utils/ScrollBar';
