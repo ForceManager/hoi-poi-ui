@@ -1,26 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
-const ESLintPlugin = require('eslint-webpack-plugin');
-
 const srcPath = path.resolve(__dirname, './src');
-const indexPath = path.resolve(__dirname, './src/index.js');
 
 module.exports = {
-    mode: 'development',
-    devtool: 'cheap-module-source-map',
-    entry: [require.resolve('react-dev-utils/webpackHotDevClient'), indexPath],
-    devServer: {
-        host: '0.0.0.0',
-        client: {
-            overlay: false,
-        },
-    },
-    output: {
-        pathinfo: true,
-        filename: 'static/js/bundle.js',
-        devtoolModuleFilenameTemplate: (info) =>
-            path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
-    },
     resolve: {
         alias: {
             'hoi-poi-ui': srcPath,
@@ -67,10 +48,4 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new ESLintPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.ProvidePlugin({ process: 'process/browser.js' }),
-    ].filter(Boolean),
-    performance: false,
 };

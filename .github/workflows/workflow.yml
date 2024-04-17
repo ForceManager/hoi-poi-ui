@@ -25,7 +25,7 @@ jobs:
               run: yarn config set npmScopes.tiptap-pro.npmRegistryServer "https://registry.tiptap.dev/"
 
             - name: Install dependencies
-              run: yarn install && node postinstall.js
+              run: yarn install
 
             - name: Build Styleguidist
               run: yarn build:styleguidist
