@@ -73,6 +73,7 @@ function FilePicker({
     foldedText,
     unfoldedText,
     onExceedFileLimitDrop,
+    handleDownload,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -316,6 +317,7 @@ function FilePicker({
                     maxFiles={maxFiles}
                     totalDroppedTooltip={totalDroppedTooltip}
                     totalDroppedByGroupTooltip={totalDroppedByGroupTooltip}
+                    handleDownload={handleDownload}
                 />
                 {info && (
                     <div className={classes.info} {...override.info}>
@@ -450,6 +452,8 @@ FilePicker.propTypes = {
     unfoldedText: PropTypes.string,
     /** Callback triggered when dropped files exceed the maxFiles*/
     onExceedFileLimitDrop: PropTypes.func,
+    /** Callback triggered when clicking download icon*/
+    handleDownload: PropTypes.func,
 };
 
 export default React.memo(FilePicker);

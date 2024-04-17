@@ -26,6 +26,7 @@ function File({
     onRemove,
     onCrop,
     overrides,
+    handleDownload,
     ...props
 }) {
     const theme = useTheme();
@@ -98,7 +99,7 @@ function File({
                             {isUrl ? file.split('/').pop() : file.name}
                         </Text>
                     </div>
-                    {!error && !isUrl && (
+                    {!error && !isUrl && file?.size && (
                         <Text className={classes.fileSize} type="caption">
                             ({prettyBytes(parseInt(file.size, 10))})
                         </Text>
@@ -112,6 +113,11 @@ function File({
             </div>
             <div className={classes.actions}>
                 {renderCrop}
+                {!loading && handleDownload && (
+                    <span onClick={handleDownload} className={classes.clear}>
+                        <Icon name="fileDownload" />
+                    </span>
+                )}
                 {!loading && canRemove && (
                     <span onClick={handleOnRemove} className={classes.clear}>
                         <Icon name="close" />

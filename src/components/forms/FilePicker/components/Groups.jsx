@@ -28,6 +28,7 @@ const Groups = memo(
         maxFiles,
         totalDroppedTooltip,
         totalDroppedByGroupTooltip,
+        handleDownload,
     }) => {
         const theme = useTheme();
 
@@ -229,6 +230,7 @@ const Groups = memo(
                                 onRemove={handleOnRemove(group, index)}
                                 filesData={filesData}
                                 overrides={overrides}
+                                handleDownload={handleDownload}
                             />
                         </div>
                         {displayGroupFooter && (
@@ -239,9 +241,12 @@ const Groups = memo(
             });
         }, [
             groups,
-            classes,
-            overrides,
             files,
+            classes,
+            groupsFolded,
+            foldedText,
+            unfoldedText,
+            overrides,
             imageTypes,
             imageExtensions,
             previewImages,
@@ -250,10 +255,8 @@ const Groups = memo(
             handleOnCrop,
             handleOnRemove,
             filesData,
-            groupsFolded,
+            handleDownload,
             renderExpand,
-            foldedText,
-            unfoldedText,
         ]);
 
         const displayFooter = useMemo(() => {
@@ -327,28 +330,30 @@ const Groups = memo(
                             onRemove={onRemove}
                             filesData={filesData}
                             overrides={overrides}
+                            handleDownload={handleDownload}
                         />
                     </div>
                     {displayFooter && <div className={classes.groupFooter}>{renderExpand()}</div>}
                 </div>
             );
         }, [
-            classes,
-            cropImages,
-            cropTooltip,
+            maxFiles,
             files,
-            filesData,
+            maxVisible,
+            isFolded,
+            classes,
+            overrides,
             imageTypes,
             imageExtensions,
             previewImages,
+            cropImages,
+            cropTooltip,
             handleOnCrop,
             onRemove,
-            overrides,
-            isFolded,
-            maxVisible,
-            maxFiles,
-            renderExpand,
+            filesData,
+            handleDownload,
             displayFooter,
+            renderExpand,
         ]);
 
         if (groups) return renderGroups;
