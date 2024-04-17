@@ -33,6 +33,7 @@ const onRemove = (deletedFile) => {
         onDrop={onDrop}
         onRemove={onRemove}
         files={state}
+        handleDownload={() => alert('File downloaded')}
     />
 </div>;
 ```

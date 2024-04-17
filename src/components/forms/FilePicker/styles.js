@@ -138,6 +138,8 @@ export default (theme) => ({
     },
     actions: {
         flexShrink: 0,
+        display: 'flex',
+        gap: 8,
     },
     clear: {
         cursor: 'pointer',

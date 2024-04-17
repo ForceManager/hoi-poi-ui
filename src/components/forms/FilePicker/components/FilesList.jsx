@@ -15,6 +15,7 @@ const FilesList = memo(
         onRemove,
         filesData,
         overrides,
+        handleDownload,
     }) => {
         const renderFiles = useMemo(() => {
             if (!files.length) return null;
@@ -50,21 +51,23 @@ const FilesList = memo(
                         onRemove={onRemove}
                         overrides={overrides}
                         preview={preview}
+                        handleDownload={handleDownload}
                     />
                 );
             });
         }, [
-            classes,
-            imageExtensions,
-            imageTypes,
-            cropImages,
-            cropTooltip,
             files,
+            imageTypes,
+            imageExtensions,
+            previewImages,
+            cropImages,
             filesData,
+            classes,
+            cropTooltip,
             handleOnCrop,
             onRemove,
             overrides,
-            previewImages,
+            handleDownload,
         ]);
 
         return (
