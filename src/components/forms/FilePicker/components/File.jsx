@@ -99,7 +99,7 @@ function File({
                             {isUrl ? file.split('/').pop() : file.name}
                         </Text>
                     </div>
-                    {!error && !isUrl && file?.size && (
+                    {!error && !isUrl && file?.size > 0 && (
                         <Text className={classes.fileSize} type="caption">
                             ({prettyBytes(parseInt(file.size, 10))})
                         </Text>
