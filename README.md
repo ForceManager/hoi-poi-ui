@@ -1,7 +1,7 @@
  <div align="center">
   <h1>HoiPoi UI</h1>
   <blockquote>A flexible and customizable react component library.</blockquote>
-  <img src="https://img.shields.io/npm/l/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/npm/v/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/travis/com/ForceManager/hoi-poi-ui/master.svg?style=flat-square" /> <img src="https://img.shields.io/david/ForceManager/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/david/dev/ForceManager/hoi-poi-ui.svg?style=flat-square" /> <img src="https://api.dependabot.com/badges/status?host=github&repo=ForceManager/hoi-poi-ui&style=flat-square" />
+  <img src="https://img.shields.io/npm/l/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/npm/v/hoi-poi-ui.svg?style=flat-square" />
 
 </div>
 
@@ -10,29 +10,6 @@
 -   High customizable components.
 -   Theming with JSS.
 -   React Styleguidist
--   Unit testing
--   Weekly [dependabot](https://dependabot.com) dependency updates
-
-### 🔒 Disabling payment project dependencies
-
-Hoi-Poi UI relies on `@tiptap-pro/extension-emoji` to provide Emoji support for the RichText component. Tiptap Pro extensions require access to Tiptap's [private registry](https://tiptap.dev/registry).
-
-You can skip this dependecy by commenting the following code lines in `src/components/forms/RichText/index.jsx`:
-
-```
-import Emoji from '@tiptap-pro/extension-emoji';
-```
-
-```
-if (emoji) {
-    extensions.push(
-        Emoji.configure({
-            enableEmoticons: true,
-            suggestion: getEmojiConfig({ emoji, showingEmoji }),
-        }),
-    );
-}
-```
 
 ## 📦 Installation
 
