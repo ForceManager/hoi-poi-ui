@@ -1,7 +1,7 @@
  <div align="center">
   <h1>HoiPoi UI</h1>
   <blockquote>A flexible and customizable react component library.</blockquote>
-  <img src="https://img.shields.io/npm/l/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/npm/v/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/travis/com/ForceManager/hoi-poi-ui/master.svg?style=flat-square" /> <img src="https://img.shields.io/david/ForceManager/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/david/dev/ForceManager/hoi-poi-ui.svg?style=flat-square" /> <img src="https://api.dependabot.com/badges/status?host=github&repo=ForceManager/hoi-poi-ui&style=flat-square" />
+  <img src="https://img.shields.io/npm/l/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/npm/v/hoi-poi-ui.svg?style=flat-square" /> <img src="https://img.shields.io/travis/com/ForceManager/hoi-poi-ui/master.svg?style=flat-square" />
 
 </div>
 
