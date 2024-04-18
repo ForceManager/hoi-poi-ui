@@ -161,10 +161,10 @@ const Groups = memo(
                 const selectedFiles = files.filter((file) => group.validateFiles(file));
 
                 let title = group?.title || '';
-                if (group.maxFiles) {
-                    title = `${title} (${selectedFiles.length}/${group.maxFiles})`;
-                } else if (group?.customTitle) {
+                if (group.customTitle) {
                     title = group.customTitle;
+                } else if (group?.maxFiles) {
+                    title = `${title} (${selectedFiles.length}/${group.maxFiles})`;
                 } else {
                     title = `${title} (${selectedFiles.length})`;
                 }
@@ -281,11 +281,10 @@ const Groups = memo(
 
         const renderList = useMemo(() => {
             let title = '';
-
-            if (maxFiles) {
-                title = `(${files.length}/${maxFiles})`;
-            } else if (customTitle) {
+            if (customTitle) {
                 title = customTitle;
+            } else if (maxFiles) {
+                title = `(${files.length}/${maxFiles})`;
             }
 
             let inlineStyles = {};
@@ -351,6 +350,7 @@ const Groups = memo(
             );
         }, [
             maxFiles,
+            customTitle,
             files,
             maxVisible,
             isFolded,
@@ -362,13 +362,13 @@ const Groups = memo(
             cropImages,
             cropTooltip,
             downloadTooltip,
+            deleteTooltip,
             handleOnCrop,
             onRemove,
             filesData,
             handleDownload,
             displayFooter,
             renderExpand,
-            deleteTooltip,
         ]);
 
         if (groups) return renderGroups;
