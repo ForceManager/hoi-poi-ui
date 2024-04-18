@@ -12,27 +12,6 @@
 -   React Styleguidist
 -   Weekly [dependabot](https://dependabot.com) dependency updates
 
-### 🔒 Disabling payment project dependencies
-
-Hoi-Poi UI relies on `@tiptap-pro/extension-emoji` to provide Emoji support for the RichText component. Tiptap Pro extensions require access to Tiptap's [private registry](https://tiptap.dev/registry).
-
-You can skip this dependecy by commenting the following code lines in `src/components/forms/RichText/index.jsx`:
-
-```
-import Emoji from '@tiptap-pro/extension-emoji';
-```
-
-```
-if (emoji) {
-    extensions.push(
-        Emoji.configure({
-            enableEmoticons: true,
-            suggestion: getEmojiConfig({ emoji, showingEmoji }),
-        }),
-    );
-}
-```
-
 ## 📦 Installation
 
 ```
