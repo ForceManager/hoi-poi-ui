@@ -76,6 +76,7 @@ function FilePicker({
     handleDownload,
     downloadTooltip,
     deleteTooltip,
+    customTitle,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -322,6 +323,7 @@ function FilePicker({
                     totalDroppedTooltip={totalDroppedTooltip}
                     totalDroppedByGroupTooltip={totalDroppedByGroupTooltip}
                     handleDownload={handleDownload}
+                    customTitle={customTitle}
                 />
                 {info && (
                     <div className={classes.info} {...override.info}>

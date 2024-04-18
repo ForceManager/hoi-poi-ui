@@ -31,6 +31,7 @@ const Groups = memo(
         handleDownload,
         downloadTooltip,
         deleteTooltip,
+        customTitle,
     }) => {
         const theme = useTheme();
 
@@ -162,6 +163,8 @@ const Groups = memo(
                 let title = group?.title || '';
                 if (group.maxFiles) {
                     title = `${title} (${selectedFiles.length}/${group.maxFiles})`;
+                } else if (group?.customTitle) {
+                    title = group.customTitle;
                 } else {
                     title = `${title} (${selectedFiles.length})`;
                 }
@@ -281,6 +284,8 @@ const Groups = memo(
 
             if (maxFiles) {
                 title = `(${files.length}/${maxFiles})`;
+            } else if (customTitle) {
+                title = customTitle;
             }
 
             let inlineStyles = {};
