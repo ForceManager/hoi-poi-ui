@@ -54,7 +54,6 @@ module.exports = {
                 './src/components/forms/Input/index.jsx',
                 './src/components/forms/Label/index.jsx',
                 './src/components/forms/Multiplier/index.jsx',
-                './src/components/forms/RichText/index.jsx',
                 './src/components/forms/Radio/index.jsx',
                 './src/components/forms/RadioGroup/index.jsx',
                 './src/components/forms/Password/index.jsx',
@@ -73,7 +72,6 @@ module.exports = {
             sectionDepth: 0,
             components: [
                 './src/components/utils/Popover/index.jsx',
-                './src/components/utils/ScrollBar/index.jsx',
                 './src/components/utils/Toast/Toast.jsx',
                 './src/components/utils/CustomToast/ToastContainer.jsx',
                 './src/components/utils/Tooltip/index.jsx',

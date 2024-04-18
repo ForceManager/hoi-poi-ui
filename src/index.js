@@ -4,6 +4,7 @@ import 'core-js/es/function/name';
 
 // Utils
 export { HoiPoiProvider, createHoiPoiTheme, useTheme, createUseStyles } from './utils/styles';
+export { getOverrides, useClasses } from './utils/overrides';
 
 // Components
 export { default as Advice } from './components/general/Advice';
@@ -47,7 +48,6 @@ export { default as Label } from './components/forms/Label';
 export { default as Multiplier } from './components/forms/Multiplier';
 export { default as Radio } from './components/forms/Radio';
 export { default as RadioGroup } from './components/forms/RadioGroup';
-export { default as RichText } from './components/forms/RichText';
 export { default as Section } from './components/forms/Section';
 export { default as Select } from './components/forms/Select';
 export { default as Slider } from './components/forms/Slider';
@@ -58,7 +58,6 @@ export { default as Password } from './components/forms/Password';
 export { default as InputGroup } from './components/forms/InputGroup';
 
 export { default as Popover } from './components/utils/Popover';
-export { default as ScrollBar } from './components/utils/ScrollBar';
 export { Toast, toast, dismissToast } from './components/utils/Toast';
 export { ToastContainer, showToast, clearToast } from './components/utils/CustomToast';
 export { default as Tooltip } from './components/utils/Tooltip';
@@ -67,3 +66,8 @@ export { default as Spacer } from './components/utils/Spacer';
 
 export { default as Link } from './components/typography/Link';
 export { default as Text } from './components/typography/Text';
+
+// Internal components
+export { default as FieldBottom } from './components/forms/components/FieldBottom';
+export { default as FieldControl } from './components/forms/components/FieldControl';
+export { default as InputWrapper } from './components/forms/components/InputWrapper';
