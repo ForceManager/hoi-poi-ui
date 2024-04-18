@@ -10,7 +10,6 @@
 -   High customizable components.
 -   Theming with JSS.
 -   React Styleguidist
--   Weekly [dependabot](https://dependabot.com) dependency updates
 
 ## 📦 Installation
 
