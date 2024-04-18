@@ -34,6 +34,10 @@ const onRemove = (deletedFile) => {
         onRemove={onRemove}
         files={state}
         handleDownload={() => alert('File downloaded')}
+        downloadTooltip="Download file"
+        deleteTooltip="Delete file"
+        maxFiles={1}
+        showDragzone
     />
 </div>;
 ```
@@ -71,6 +75,7 @@ const onRemove = (deletedFile) => {
         onDrop={onDrop}
         onRemove={onRemove}
         files={state}
+        maxFiles={1}
     />
 </div>;
 ```

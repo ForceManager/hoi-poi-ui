@@ -29,6 +29,8 @@ const Groups = memo(
         totalDroppedTooltip,
         totalDroppedByGroupTooltip,
         handleDownload,
+        downloadTooltip,
+        deleteTooltip,
     }) => {
         const theme = useTheme();
 
@@ -225,6 +227,8 @@ const Groups = memo(
                                 previewImages={previewImages}
                                 cropImages={cropImages}
                                 cropTooltip={cropTooltip}
+                                downloadTooltip={downloadTooltip}
+                                deleteTooltip={deleteTooltip}
                                 handleOnCrop={handleOnCrop}
                                 setIsFolded={setIsFolded}
                                 onRemove={handleOnRemove(group, index)}
@@ -252,11 +256,13 @@ const Groups = memo(
             previewImages,
             cropImages,
             cropTooltip,
+            downloadTooltip,
             handleOnCrop,
             handleOnRemove,
             filesData,
             handleDownload,
             renderExpand,
+            deleteTooltip,
         ]);
 
         const displayFooter = useMemo(() => {
@@ -325,6 +331,8 @@ const Groups = memo(
                             previewImages={previewImages}
                             cropImages={cropImages}
                             cropTooltip={cropTooltip}
+                            downloadTooltip={downloadTooltip}
+                            deleteTooltip={deleteTooltip}
                             handleOnCrop={handleOnCrop}
                             setIsFolded={setIsFolded}
                             onRemove={onRemove}
@@ -348,12 +356,14 @@ const Groups = memo(
             previewImages,
             cropImages,
             cropTooltip,
+            downloadTooltip,
             handleOnCrop,
             onRemove,
             filesData,
             handleDownload,
             displayFooter,
             renderExpand,
+            deleteTooltip,
         ]);
 
         if (groups) return renderGroups;

@@ -16,6 +16,8 @@ const FilesList = memo(
         filesData,
         overrides,
         handleDownload,
+        downloadTooltip,
+        deleteTooltip,
     }) => {
         const renderFiles = useMemo(() => {
             if (!files.length) return null;
@@ -42,6 +44,8 @@ const FilesList = memo(
                         classes={classes}
                         crop={crop}
                         cropTooltip={cropTooltip}
+                        downloadTooltip={downloadTooltip}
+                        deleteTooltip={deleteTooltip}
                         loading={data.loading}
                         error={data.error}
                         progress={data.progress}
@@ -64,10 +68,12 @@ const FilesList = memo(
             filesData,
             classes,
             cropTooltip,
+            downloadTooltip,
             handleOnCrop,
             onRemove,
             overrides,
             handleDownload,
+            deleteTooltip,
         ]);
 
         return (
