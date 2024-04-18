@@ -74,6 +74,8 @@ function FilePicker({
     unfoldedText,
     onExceedFileLimitDrop,
     handleDownload,
+    downloadTooltip,
+    deleteTooltip,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -307,6 +309,8 @@ function FilePicker({
                     previewImages={previewImages}
                     cropImages={cropImages}
                     cropTooltip={cropTooltip}
+                    downloadTooltip={downloadTooltip}
+                    deleteTooltip={deleteTooltip}
                     handleOnCrop={handleOnCrop}
                     onRemove={onRemove}
                     filesData={filesData}
