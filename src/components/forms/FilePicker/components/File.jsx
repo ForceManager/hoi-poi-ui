@@ -27,6 +27,8 @@ function File({
     onCrop,
     overrides,
     handleDownload,
+    downloadTooltip,
+    deleteTooltip,
     ...props
 }) {
     const theme = useTheme();
@@ -114,14 +116,18 @@ function File({
             <div className={classes.actions}>
                 {renderCrop}
                 {!loading && handleDownload && (
-                    <span onClick={handleDownload} className={classes.clear}>
-                        <Icon name="fileDownload" />
-                    </span>
+                    <Tooltip placement="top" content={<span>{downloadTooltip}</span>}>
+                        <span onClick={handleDownload} className={classes.clear}>
+                            <Icon name="fileDownload" />
+                        </span>
+                    </Tooltip>
                 )}
                 {!loading && canRemove && (
-                    <span onClick={handleOnRemove} className={classes.clear}>
-                        <Icon name="close" />
-                    </span>
+                    <Tooltip placement="top" content={<span>{deleteTooltip}</span>}>
+                        <span onClick={handleOnRemove} className={classes.clear}>
+                            <Icon name="close" />
+                        </span>
+                    </Tooltip>
                 )}
             </div>
             {!!progress && <span className={classes.progress} style={{ width: `${progress}%` }} />}
