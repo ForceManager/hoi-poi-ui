@@ -253,6 +253,8 @@ import Image from './icons/image/Image';
 //Map
 import TimeZone from './icons/map/TimeZone';
 import LocalPhone from './icons/map/LocalPhone';
+import UserRoute from './icons/map/UserRoute';
+import MapRoute from './icons/map/MapRoute';
 
 //Menu
 import Accounts from './icons/menu/Accounts';
@@ -707,6 +709,8 @@ export const ICONS = {
     //Map
     timeZone: TimeZone,
     localPhone: LocalPhone,
+    userRoute: UserRoute,
+    mapRoute: MapRoute,
     //Menu
     accounts: Accounts,
     activities: Activities,

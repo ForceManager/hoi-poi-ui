@@ -213,6 +213,8 @@ import Icon from './IconWithTooltip';
 <div style={{ display: 'flex', flexFlow: 'row wrap', gap: 4, alignItems: 'flex-end' }}>
     <Icon name="timeZone" />
     <Icon name="localPhone" />
+    <Icon name="userRoute" />
+    <Icon name="mapRoute" />
 </div>;
 ```
 
