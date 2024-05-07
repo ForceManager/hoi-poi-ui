@@ -10,6 +10,7 @@ export default React.memo(({ children, ...props }) => {
     const icon = props.data.icon;
     const iconType = props.data.iconType;
     const src = props.data.src;
+    const placeholder = props.data.placeholder;
 
     let finalIcon;
     if (icon) finalIcon = icon;
@@ -23,9 +24,9 @@ export default React.memo(({ children, ...props }) => {
                         {finalIcon ? finalIcon : null}
                     </div>
                 )}
-                {src && (
+                {src && props.selectProps.showMediaInSelectedValues && (
                     <div className={singleValueAvatarClassName}>
-                        <Avatar size="small" src={src} />
+                        <Avatar size="small" src={src} placeholder={placeholder} />
                     </div>
                 )}
                 {props.data.label}
