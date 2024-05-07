@@ -348,4 +348,11 @@ export default (theme) => ({
         width: 18,
         height: 18,
     },
+    singleValueAvatar: {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        marginRight: 10,
+        borderRadius: '50%',
+        position: 'relative',
+    },
 });
