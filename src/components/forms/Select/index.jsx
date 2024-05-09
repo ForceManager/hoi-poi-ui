@@ -295,11 +295,12 @@ const Select = memo(
                     newInputValue ||
                     newValue?.label?.charAt(0)?.toLowerCase() ||
                     '';
+
                 if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
-                    setLazyOptions({
-                        ...lazyOptions,
+                    setLazyOptions((currentOptions) => ({
+                        ...currentOptions,
                         isLoading: true,
-                    });
+                    }));
                     loadOptions().then((options) => {
                         getIsSelectAllWithGroups(options);
                         setLazyOptions({
@@ -308,11 +309,11 @@ const Select = memo(
                             options,
                         });
                     });
-                } else if (searchText && loadOptions && isFuzzy && !lazyOptions.areLoaded) {
-                    setLazyOptions({
-                        ...lazyOptions,
+                } else if (searchText && loadOptions && isFuzzy) {
+                    setLazyOptions((currentOptions) => ({
+                        ...currentOptions,
                         isLoading: true,
-                    });
+                    }));
 
                     loadOptions(searchText).then((options) => {
                         setInnerOptions(options);
@@ -342,8 +343,9 @@ const Select = memo(
                 if (
                     (!keepInputValueOnBlur && !keepInputValueOnBlurInMulti) ||
                     (isMulti && !keepInputValueOnBlurInMulti)
-                )
+                ) {
                     setNewInputValue('');
+                }
                 onBlur && onBlur(e, value);
             },
             [keepInputValueOnBlur, isMulti, keepInputValueOnBlurInMulti, onBlur, value],
