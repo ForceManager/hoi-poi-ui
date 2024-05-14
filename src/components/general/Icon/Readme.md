@@ -215,6 +215,7 @@ import Icon from './IconWithTooltip';
     <Icon name="localPhone" />
     <Icon name="userRoute" />
     <Icon name="mapRoute" />
+    <Icon name="locationOff" />
 </div>;
 ```
 
