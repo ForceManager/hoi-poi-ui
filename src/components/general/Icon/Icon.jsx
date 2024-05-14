@@ -255,6 +255,7 @@ import TimeZone from './icons/map/TimeZone';
 import LocalPhone from './icons/map/LocalPhone';
 import UserRoute from './icons/map/UserRoute';
 import MapRoute from './icons/map/MapRoute';
+import LocationOff from './icons/map/LocationOff';
 
 //Menu
 import Accounts from './icons/menu/Accounts';
@@ -711,6 +712,7 @@ export const ICONS = {
     localPhone: LocalPhone,
     userRoute: UserRoute,
     mapRoute: MapRoute,
+    locationOff: LocationOff,
     //Menu
     accounts: Accounts,
     activities: Activities,
