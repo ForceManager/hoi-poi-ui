@@ -207,6 +207,8 @@ import TrackingLink from './icons/actions/TrackingLink';
 import FontColor from './icons/actions/FontColor';
 import FontSize from './icons/actions/FontSize';
 import Reply from './icons/actions/Reply';
+import ReplyAll from './icons/actions/ReplyAll';
+import Resend from './icons/actions/Resend';
 import EmailStar from './icons/actions/EmailStar';
 import Variables from './icons/actions/Variables';
 
@@ -226,6 +228,8 @@ import RingVolume from './icons/communication/RingVolume';
 import TextInfo from './icons/communication/TextInfo';
 import QuotationMark from './icons/communication/quotationMark';
 import EmailTracking from './icons/communication/EmailTracking';
+import EmailPending from './icons/communication/EmailPending';
+import EmailError from './icons/communication/EmailError';
 
 //Social
 import Group from './icons/social/Group';
@@ -668,6 +672,8 @@ export const ICONS = {
     fontColor: FontColor,
     fontSize: FontSize,
     reply: Reply,
+    replyAll: ReplyAll,
+    resend: Resend,
     emailStar: EmailStar,
     variables: Variables,
     //Communication
@@ -686,6 +692,8 @@ export const ICONS = {
     textInfo: TextInfo,
     quotationMark: QuotationMark,
     emailTracking: EmailTracking,
+    emailPending: EmailPending,
+    emailError: EmailError,
     //Social
     group: Group,
     groupAdd: GroupAdd,

@@ -133,6 +133,8 @@ import Icon from './IconWithTooltip';
     <Icon name="fontColor" />
     <Icon name="fontSize" />
     <Icon name="reply" />
+    <Icon name="replyAll" />
+    <Icon name="resend" />
     <Icon name="emailStar" />
 </div>;
 ```
@@ -159,6 +161,8 @@ import Icon from './IconWithTooltip';
     <Icon name="textInfo" />
     <Icon name="quotationMark" />
     <Icon name="emailTracking" />
+    <Icon name="emailPending" />
+    <Icon name="emailError" />
 </div>;
 ```
 
