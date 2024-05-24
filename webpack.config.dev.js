@@ -2,6 +2,11 @@ const path = require('path');
 const srcPath = path.resolve(__dirname, './src');
 
 module.exports = {
+    devServer: {
+        client: {
+            overlay: false,
+        },
+    },
     resolve: {
         alias: {
             'hoi-poi-ui': srcPath,
