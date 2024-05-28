@@ -929,6 +929,7 @@ const Icon = forwardRef(
             name,
             nameOver,
             color,
+            color2,
             size,
             classes: classesProp,
             overrides: overridesProp,
@@ -1003,7 +1004,7 @@ const Icon = forwardRef(
                 {...override.root}
                 ref={ref}
             >
-                <SelectedIcon color={newColor} {...override.icon} />
+                <SelectedIcon color={newColor} color2={color2} {...override.icon} />
             </span>
         );
     },
