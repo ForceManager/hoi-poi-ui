@@ -58,7 +58,6 @@ function Table({
             if (getColumnStyle)
                 style = { ...style, ...(getColumnStyle({ column, index, isHeader }) || {}) };
 
-            console.log({ style });
             return style;
         },
         [getColumnStyle],

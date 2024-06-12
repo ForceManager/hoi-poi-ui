@@ -60,36 +60,10 @@ export default (theme) => ({
     scrollAll: {
         overflow: 'auto',
         ...theme.utils.scrollbar,
-
-        // '&::-webkit-scrollbar': {
-        //     width: '14px',
-        // },
-        // '&::-webkit-scrollbar-thumb': {
-        //     backgroundColor: 'rgba(0,0,0,0.15)',
-        //     borderRadius: '10px',
-        //     border: '3px solid transparent',
-        //     backgroundClip: 'padding-box',
-        // },
-        // '&::-webkit-scrollbar-track': {
-        //     background: 'transparent',
-        // },
     },
     scrollRows: {
         height: 'calc(100% - 37px)',
         overflow: 'auto',
         ...theme.utils.scrollbar,
-
-        // '&::-webkit-scrollbar': {
-        //     width: '14px',
-        // },
-        // '&::-webkit-scrollbar-thumb': {
-        //     backgroundColor: 'rgba(0,0,0,0.15)',
-        //     borderRadius: '10px',
-        //     border: '3px solid transparent',
-        //     backgroundClip: 'padding-box',
-        // },
-        // '&::-webkit-scrollbar-track': {
-        //     background: 'transparent',
-        // },
     },
 });
