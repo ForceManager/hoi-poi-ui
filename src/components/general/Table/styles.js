@@ -1,28 +1,69 @@
 export default (theme) => ({
     root: {
-        '& > :first-child': {
-            borderTop: `1px solid ${theme.colors.neutral400}`,
-            borderTopLeftRadius: 6,
-            borderTopRightRadius: 6,
-        },
+        height: '100%',
+        width: '100%',
+        border: `1px solid ${theme.colors.neutral400}`,
+        borderRadius: 6,
+    },
+    rows: {
         '& > :last-child': {
-            borderBottomLeftRadius: 6,
-            borderBottomRightRadius: 6,
+            borderBottom: 'none',
         },
+    },
+    rowsWithHeader: {
+        '& > :first-child': {
+            borderTop: 'none',
+        },
+    },
+    header: {},
+    headerHighlighted: {
+        backgroundColor: theme.colors.neutral300,
     },
     row: {
         display: 'flex',
-        alignItems: 'center',
         height: 32,
-        padding: '4px 0 0px 16px',
-        borderRight: `1px solid ${theme.colors.neutral400}`,
-        borderLeft: `1px solid ${theme.colors.neutral400}`,
         borderBottom: `1px solid ${theme.colors.neutral400}`,
+    },
+    evenBackground: {
+        '& > :nth-child(even)': {
+            backgroundColor: theme.colors.neutral150,
+        },
+    },
+    oddBackground: {
+        '& > :nth-child(odd)': {
+            backgroundColor: theme.colors.neutral150,
+        },
     },
     emptyTable: {
         justifyContent: 'center',
     },
     cell: {
+        display: 'flex',
+        alignItems: 'center',
         flex: 1,
+        boxSizing: 'border-box',
+        padding: '4px 12px',
+    },
+    alignLeft: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+    },
+    alignCenter: {
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    alignRight: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+    },
+    cellText: {},
+    scrollAll: {
+        overflow: 'auto',
+        ...theme.utils.scrollbar,
+    },
+    scrollRows: {
+        height: 'calc(100% - 37px)',
+        overflow: 'auto',
+        ...theme.utils.scrollbar,
     },
 });
