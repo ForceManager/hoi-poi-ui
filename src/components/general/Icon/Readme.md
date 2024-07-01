@@ -318,6 +318,8 @@ import Icon from './IconWithTooltip';
     <Icon name="shopify" />
     <Icon name="prestashop" />
     <Icon name="clearbit" />
+    <Icon name="androidLogo" />
+    <Icon name="iOSLogo" />
 </div>;
 ```
 

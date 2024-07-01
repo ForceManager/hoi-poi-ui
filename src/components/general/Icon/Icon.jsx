@@ -330,6 +330,8 @@ import Outlook from './icons/logos/Outlook';
 import Prestashop from './icons/logos/Prestashop';
 import Shopify from './icons/logos/Shopify';
 import Clearbit from './icons/logos/Clearbit';
+import AndroidLogo from './icons/logos/AndroidLogo';
+import iOSLogo from './icons/logos/iOSLogo';
 
 //Navigation
 import Apps from './icons/navigation/Apps';
@@ -790,6 +792,8 @@ export const ICONS = {
     clearbit: Clearbit,
     sage: Sage,
     outlook: Outlook,
+    androidLogo: AndroidLogo,
+    iOSLogo: iOSLogo,
     //Navigation
     apps: Apps,
     arrowBack: ArrowBack,
