@@ -63,6 +63,17 @@ function Tabs({
         [onChange],
     );
 
+    const onMouseOut = useCallback((e) => {
+        e?.stopPropagation();
+        setPopoverComponent(null);
+        setPopoverStyles({ display: 'none' });
+    }, []);
+
+    const onClickForPopover = useCallback((e) => {
+        setPopoverComponent(null);
+        setPopoverStyles({ display: 'none' });
+    }, []);
+
     const handleClose = useCallback(
         (event, key) => {
             event.stopPropagation();
@@ -83,8 +94,9 @@ function Tabs({
 
             setState((state) => ({ ...state, activeKey, tabs: finalTabs }));
             onClose && onClose({ key, activeKey, tabs: finalTabs });
+            onMouseOut();
         },
-        [onClose, state],
+        [onClose, onMouseOut, state],
     );
 
     const tabsProps = useMemo(
@@ -181,17 +193,6 @@ function Tabs({
         },
         [getParentNode, getAbsolutePosition, containerElement, popoverOffsetCorrection],
     );
-
-    const onMouseOut = useCallback((e) => {
-        e.stopPropagation();
-        setPopoverComponent(null);
-        setPopoverStyles({ display: 'none' });
-    }, []);
-
-    const onClickForPopover = useCallback((e) => {
-        setPopoverComponent(null);
-        setPopoverStyles({ display: 'none' });
-    }, []);
 
     return (
         <div className={rootClassName} {...override.root} ref={tabRef}>
