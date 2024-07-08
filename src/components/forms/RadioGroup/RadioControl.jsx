@@ -10,13 +10,13 @@ const useStyles = createUseStyles(styles);
 function RadioControl({
     children,
     classes: classesProp,
-    overrides: overridesProp,
+    overrides: overridesProp = {},
     className: classNameProp,
-    option,
-    onChange,
     onBlur,
     value,
-    isReadOnly,
+    onChange = () => {},
+    option = {},
+    isReadOnly = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -55,12 +55,6 @@ function RadioControl({
 }
 
 RadioControl.overrides = ['radioLabel', 'radioControl'];
-
-RadioControl.defaultProps = {
-    onChange: () => {},
-    option: {},
-    isReadOnly: false,
-};
 
 RadioControl.propTypes = {
     overrides: PropTypes.object,

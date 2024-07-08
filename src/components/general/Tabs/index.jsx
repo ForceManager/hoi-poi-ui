@@ -17,17 +17,17 @@ function Tabs({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    tabs,
     onChange,
     onClose,
     activeKey,
-    position,
     postComponent,
     vertical,
-    editable,
-    alwaysShowCloseTab,
     containerElement,
     popoverOffsetCorrection = 0,
+    position = 'top',
+    tabs = [],
+    editable = false,
+    alwaysShowCloseTab = false,
     ...props
 }) {
     const [state, setState] = useState({
@@ -252,13 +252,6 @@ function Tabs({
 }
 
 Tabs.overrides = ['root', 'rc-tabs', 'close'];
-
-Tabs.defaultProps = {
-    position: 'top',
-    tabs: [],
-    editable: false,
-    alwaysShowCloseTab: false,
-};
 
 Tabs.propTypes = {
     className: PropTypes.string,

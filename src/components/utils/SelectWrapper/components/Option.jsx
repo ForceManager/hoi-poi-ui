@@ -15,7 +15,7 @@ const Option = memo(
         onChange,
         checkboxColor,
         checkBoxIsMonotone,
-        isTruncated,
+        isTruncated = true,
     }) => {
         let rootClasses = [classes.option, option.className];
         if (option.isDisabled) rootClasses.push(classes.optionDisabled);
@@ -121,10 +121,6 @@ const Option = memo(
         );
     },
 );
-
-Option.defaultProps = {
-    isTruncated: true,
-};
 
 Option.propTypes = {
     option: PropTypes.array,

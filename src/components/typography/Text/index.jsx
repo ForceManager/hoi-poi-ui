@@ -14,11 +14,8 @@ const useStyles = createUseStyles(styles, 'Text');
 const Text = forwardRef(
     (
         {
-            as,
             children,
-            isTruncated,
             useTooltip,
-            type,
             bold,
             color,
             withDivider,
@@ -26,6 +23,9 @@ const Text = forwardRef(
             classes: classesProp,
             overrides: overridesProp,
             className: classNameProp,
+            as = 'span',
+            type = 'body',
+            isTruncated = false,
             ...props
         },
         ref,
@@ -84,14 +84,6 @@ const Text = forwardRef(
 );
 
 Text.overrides = ['root', 'Loader'];
-
-Text.defaultProps = {
-    as: 'span',
-    type: 'body',
-    className: '',
-    overrides: {},
-    isTruncated: false,
-};
 
 Text.propTypes = {
     as: PropTypes.oneOf([

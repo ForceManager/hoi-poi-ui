@@ -49,8 +49,6 @@ const Input = memo(
 
 Input.overrides = ['root', 'error', 'info'];
 
-Input.defaultProps = {};
-
 Input.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,

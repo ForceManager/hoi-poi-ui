@@ -16,9 +16,6 @@ const SelectWrapper = memo(
         classes: classesProp,
         overrides: overridesProp,
         className: classNameProp,
-        placement,
-        trigger,
-        isMulti,
         options,
         loadOptions,
         customOptions,
@@ -27,17 +24,20 @@ const SelectWrapper = memo(
         onOpen,
         onClose,
         onChange,
-        checkboxColor,
-        checkBoxIsMonotone,
         loadingMessage,
         noOptionsPlaceholder,
-        truncateOptions,
-        popoverWide,
         overlayStyle,
         overlayInnerStyle,
         getPopoverRef,
         getPopoverContentRef,
-        closeOnChangeSingle,
+        placement = 'bottomLeft',
+        trigger = ['click'],
+        isMulti = false,
+        checkboxColor = 'orange',
+        checkBoxIsMonotone = false,
+        truncateOptions = true,
+        popoverWide = false,
+        closeOnChangeSingle = true,
     }) => {
         const override = getOverrides(overridesProp, SelectWrapper.overrides);
         const classes = useClasses(useStyles, classesProp);
@@ -223,17 +223,6 @@ SelectWrapper.overrides = [
     'optionLabelAvatar',
     'optionDisabledAvatar',
 ];
-
-SelectWrapper.defaultProps = {
-    placement: 'bottomLeft',
-    trigger: ['click'],
-    isMulti: false,
-    checkboxColor: 'orange',
-    checkBoxIsMonotone: false,
-    truncateOptions: true,
-    popoverWide: false,
-    closeOnChangeSingle: true,
-};
 
 SelectWrapper.propTypes = {
     children: PropTypes.any,

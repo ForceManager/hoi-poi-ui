@@ -7,7 +7,7 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './messageStyles';
 const useStyles = createUseStyles(styles, 'ToastMessage');
 
-function ToastMessage({ classes: classesProp, title, text, type }) {
+function ToastMessage({ classes: classesProp, title, text, type = 'info' }) {
     const classes = useClasses(useStyles, classesProp);
     const rootProps = {
         className: classes.root,
@@ -26,12 +26,6 @@ function ToastMessage({ classes: classesProp, title, text, type }) {
         </div>
     );
 }
-
-ToastMessage.defaultProps = {
-    title: '',
-    text: '',
-    type: 'info',
-};
 
 ToastMessage.propTypes = {
     title: PropTypes.string,

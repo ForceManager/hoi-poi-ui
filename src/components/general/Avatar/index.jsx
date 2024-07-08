@@ -3,21 +3,16 @@ import PropTypes from 'prop-types';
 import SingleAvatar from './SingleAvatar';
 import MultiAvatar from './MultiAvatar';
 
-const Avatar = memo(({ sources, ...props }) => {
+const Avatar = memo(({ sources, type = 'round', size = 'medium', ...props }) => {
     const Component = sources ? MultiAvatar : SingleAvatar;
 
     const finalProps = useMemo(
-        () => (sources ? { sources, ...props } : { ...props }),
-        [props, sources],
+        () => (sources ? { sources, type, size, ...props } : { type, size, ...props }),
+        [props, size, sources, type],
     );
 
     return <Component {...finalProps} />;
 });
-
-Avatar.defaultProps = {
-    type: 'round',
-    size: 'medium',
-};
 
 Avatar.propTypes = {
     sources: PropTypes.arrayOf(

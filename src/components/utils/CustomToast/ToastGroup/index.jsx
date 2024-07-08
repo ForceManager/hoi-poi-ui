@@ -88,8 +88,4 @@ const ToastGroup = memo(
     },
 );
 
-ToastGroup.defaultProps = {
-    override: {},
-};
-
 export default ToastGroup;

@@ -11,22 +11,20 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'CheckboxGroup');
 
 function CheckboxGroup({
-    children,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    options,
-    onChange,
     onBlur,
-    value,
     label,
-    labelMode,
     hint,
     error,
-    isReadOnly,
     isFullWidth,
     color,
-    ...props
+    labelMode = 'horizontal',
+    onChange = () => {},
+    value = {},
+    options = [],
+    isReadOnly = false,
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
@@ -114,15 +112,6 @@ CheckboxGroup.overrides = [
     'formControl',
     'Label',
 ];
-
-CheckboxGroup.defaultProps = {
-    labelMode: 'horizontal',
-    onChange: () => {},
-    value: {},
-    options: [],
-    isReadOnly: false,
-    overrides: {},
-};
 
 CheckboxGroup.propTypes = {
     className: PropTypes.string,

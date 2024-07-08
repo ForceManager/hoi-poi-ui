@@ -16,9 +16,9 @@ const Carousel = ({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    images,
     placeholder,
-    minVersion,
+    images = [],
+    minVersion = false,
 }) => {
     const classes = useClasses(useStyles, classesProp);
     const override = getOverrides(overridesProp, Carousel.overrides);
@@ -107,12 +107,6 @@ const Carousel = ({
 };
 
 Carousel.overrides = ['root', 'ImageGallery'];
-
-Carousel.defaultProps = {
-    overrides: {},
-    images: [],
-    minVersion: false,
-};
 
 Carousel.propTypes = {
     className: PropTypes.string,

@@ -21,18 +21,16 @@ const defaultColors = [
 ];
 
 function Checkbox({
-    children,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
     checked,
     indeterminate,
     isDisabled,
-    onChange,
-    size,
-    color: colorProp,
+    color: colorProp = 'neutral',
     isMonotone,
-    ...props
+    onChange = () => {},
+    size = 'medium',
 }) {
     const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
@@ -114,13 +112,6 @@ function Checkbox({
 }
 
 Checkbox.overrides = ['root', 'input', 'svg'];
-
-Checkbox.defaultProps = {
-    onChange: () => {},
-    overrides: {},
-    color: 'neutral',
-    size: 'medium',
-};
 
 Checkbox.propTypes = {
     className: PropTypes.string,

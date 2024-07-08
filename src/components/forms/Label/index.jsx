@@ -57,10 +57,6 @@ function Label({
 
 Label.overrides = ['root', 'Popover', 'Text'];
 
-Label.defaultProps = {
-    overrides: {},
-};
-
 Label.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,

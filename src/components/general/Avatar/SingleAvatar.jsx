@@ -15,12 +15,12 @@ function SingleAvatar({
     classes: classesProp,
     overrides: overridesProps,
     className: classNameProps,
-    type,
-    size,
     src,
     icon,
     alt,
     placeholder,
+    type = 'round',
+    size = 'medium',
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -87,11 +87,6 @@ function SingleAvatar({
 }
 
 SingleAvatar.overrides = ['root'];
-
-SingleAvatar.defaultProps = {
-    type: 'round',
-    size: 'medium',
-};
 
 SingleAvatar.propTypes = {
     src: PropTypes.string,

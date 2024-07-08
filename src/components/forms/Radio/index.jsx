@@ -10,13 +10,12 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Radio');
 
 function Radio({
-    checked,
     classes: classesProp,
     className: classNameProp,
     isDisabled,
-    onChange,
     overrides: overridesProp,
-    ...props
+    checked = false,
+    onChange = () => {},
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
@@ -53,12 +52,6 @@ function Radio({
 }
 
 Radio.overrides = ['root', 'input', 'svg'];
-
-Radio.defaultProps = {
-    checked: false,
-    onChange: () => {},
-    overrides: {},
-};
 
 Radio.propTypes = {
     checked: PropTypes.bool,

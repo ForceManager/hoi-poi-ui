@@ -16,9 +16,9 @@ const Tree = ({
     classes: classesProp,
     onToggle,
     onSelect,
-    nodes,
-    customs,
     canSelectParents,
+    nodes = {},
+    customs = {},
 }) => {
     const classes = useClasses(useStyles, classesProp);
     const [data, setData] = useState(nodes);
@@ -165,11 +165,6 @@ const Tree = ({
 };
 
 Tree.overrides = ['root', 'node', 'nodeItem', 'nodeIcon'];
-
-Tree.defaultProps = {
-    nodes: {},
-    customs: {},
-};
 
 Tree.propTypes = {
     id: PropTypes.any,

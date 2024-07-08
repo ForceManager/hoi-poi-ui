@@ -18,8 +18,6 @@ function MultiplierControl({
     index,
     type,
     schema,
-    labelMode,
-    isFullWidth,
     isReadOnly,
     values,
     errors,
@@ -30,7 +28,8 @@ function MultiplierControl({
     onRemove,
     removeIconClassName,
     orientation,
-    ...props
+    labelMode = 'horizontal',
+    isFullWidth = false,
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
@@ -119,11 +118,6 @@ function MultiplierControl({
 }
 
 MultiplierControl.overrides = ['Form', 'fieldControl', 'removeIcon'];
-
-MultiplierControl.defaultProps = {
-    labelMode: 'horizontal',
-    isFullWidth: false,
-};
 
 MultiplierControl.propTypes = {
     /** Native form class */

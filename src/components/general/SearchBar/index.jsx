@@ -19,20 +19,20 @@ function SearchBar({
     typeOptions,
     type,
     inputValue,
-    keepInputValueOnBlur,
-    forceBlurOnEnter,
-    allowMultipleTypes,
-    selectedTypesLiteral,
-    selectedTypesPlaceholder,
     onBlurSearch,
     useAsSimpleSearch,
     hideDropdownIndicator,
     isMulti,
     customOption,
     customTypeOption,
-    hideSelectedOptions,
-    shouldSetValueOnChange,
-    focusDefaultOption,
+    keepInputValueOnBlur = true,
+    forceBlurOnEnter = true,
+    allowMultipleTypes = false,
+    selectedTypesLiteral = '%@ Selected',
+    selectedTypesPlaceholder = 'Selected...',
+    hideSelectedOptions = false,
+    shouldSetValueOnChange = false,
+    focusDefaultOption = true,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -149,19 +149,6 @@ function SearchBar({
 }
 
 SearchBar.overrides = ['root', 'typeDivider', 'TypeSelector', 'Select'];
-
-SearchBar.defaultProps = {
-    className: '',
-    overrides: {},
-    keepInputValueOnBlur: true,
-    forceBlurOnEnter: true,
-    allowMultipleTypes: false,
-    selectedTypesLiteral: '%@ Selected',
-    selectedTypesPlaceholder: 'Selected...',
-    hideSelectedOptions: false,
-    shouldSetValueOnChange: false,
-    focusDefaultOption: true,
-};
 
 SearchBar.propTypes = {
     className: PropTypes.string,

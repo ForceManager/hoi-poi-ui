@@ -23,8 +23,8 @@ function Menus({
     overrides: overridesProp,
     className: classNameProp,
     classNameMenu,
-    triggerAction,
-    size,
+    triggerAction = 'click',
+    size = 'large',
 }) {
     const popupSize = SIZES[size];
     const classes = useClasses(useStyles, classesProp, { popupSize });
@@ -85,11 +85,6 @@ function Menus({
 }
 
 Menus.overrides = ['root', 'rc-menu'];
-
-Menus.defaultProps = {
-    triggerAction: 'click',
-    size: 'large',
-};
 
 Menus.propTypes = {
     title: PropTypes.any,

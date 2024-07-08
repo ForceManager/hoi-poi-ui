@@ -29,7 +29,7 @@ const EllipsedInlineList = ({
 
     const handleEllipsis = useCallback(() => {
         if (!containerRef.current) return;
-        
+
         const container = containerRef.current;
         const containerWidth = container.offsetWidth;
         const items = container.children;
@@ -107,10 +107,6 @@ const EllipsedInlineList = ({
 };
 
 EllipsedInlineList.overrides = ['root', 'List', 'Count'];
-
-EllipsedInlineList.defaultProps = {
-    separator: ',\u0020',
-};
 
 EllipsedInlineList.propTypes = {
     className: PropTypes.string,

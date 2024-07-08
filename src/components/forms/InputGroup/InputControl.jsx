@@ -20,8 +20,6 @@ function InputControl({ onChange, onBlur, ...props }) {
     return <Input {...props} isFullWidth onChange={onChangeInput} onBlur={onBlurInput} />;
 }
 
-InputControl.defaultProps = {};
-
 InputControl.propTypes = {
     onChange: PropTypes.func,
 };

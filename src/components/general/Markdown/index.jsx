@@ -109,11 +109,6 @@ const Markdown = memo(
 
 Markdown.overrides = ['root', 'a', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol'];
 
-Markdown.defaultProps = {
-    className: '',
-    overrides: {},
-};
-
 Markdown.propTypes = {
     className: PropTypes.string,
     components: PropTypes.object,

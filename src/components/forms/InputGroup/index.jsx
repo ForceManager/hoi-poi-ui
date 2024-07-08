@@ -11,32 +11,27 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'InputGroup');
 
 function InputGroup({
-    children,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
     id,
-    name,
     type,
-    onChange,
     onBlur,
     onFocus,
     onEnter,
     autoFocus,
-    value,
-    labelMode,
     isFullWidth,
     placeholder,
     hint,
     error,
     isRequired,
-    isReadOnly,
-    preComponent,
-    postComponent,
-    inputs,
-    showInputsLabel,
-    hideInputsLabel,
-    ...props
+    labelMode = 'horizontal',
+    onChange = () => {},
+    value = {},
+    inputs = [],
+    isReadOnly = false,
+    showInputsLabel = 'Show inputs',
+    hideInputsLabel = 'Hide inputs',
 }) {
     const classes = useClasses(useStyles, classesProp);
     // State && Callbacks
@@ -174,17 +169,6 @@ function InputGroup({
 }
 
 InputGroup.overrides = ['root', 'Input', 'formControl', 'inputsControl', 'Link'];
-
-InputGroup.defaultProps = {
-    overrides: {},
-    labelMode: 'horizontal',
-    onChange: () => {},
-    value: {},
-    inputs: [],
-    isReadOnly: false,
-    showInputsLabel: 'Show inputs',
-    hideInputsLabel: 'Hide inputs',
-};
 
 InputGroup.propTypes = {
     className: PropTypes.string,

@@ -17,8 +17,8 @@ function Toast({
     closeButtonClassName,
     newestOnTop,
     position,
-    autoClose,
-    useDefaultCloseButton,
+    autoClose = 4000,
+    useDefaultCloseButton = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -65,17 +65,10 @@ function Toast({
         icon: false,
     };
 
-    return <ToastContainer {...rootProps} enableMultiContainer {...override['react-toastify']} />;
+    return <ToastContainer {...rootProps} {...override['react-toastify']} />;
 }
 
 Toast.overrides = ['close'];
-
-Toast.defaultProps = {
-    className: '',
-    overrides: {},
-    autoClose: 4000,
-    useDefaultCloseButton: false,
-};
 
 Toast.propTypes = {
     className: PropTypes.string,

@@ -4,13 +4,6 @@ import ToastMessage from './ToastMessage';
 import CustomCloseButton from './CustomCloseButton';
 import Icon from '../../general/Icon';
 
-const TOAST_TYPES = {
-    success: toast.TYPE.SUCCESS,
-    info: toast.TYPE.INFO,
-    error: toast.TYPE.ERROR,
-    warning: toast.TYPE.WARNING,
-};
-
 const handleCloseToast = (closeToast) => {
     return (e) => {
         e.preventDefault();
@@ -50,7 +43,6 @@ const showToast = (props) => {
         });
     }
 
-    const toastType = TOAST_TYPES[type];
     const messageProps = {
         title,
         text,
@@ -60,7 +52,7 @@ const showToast = (props) => {
     const defaultCloseButton = useDefaultCloseButton ? renderDefaultCloseButton : null;
 
     return toast(<ToastMessage {...messageProps} />, {
-        type: toastType,
+        type,
         containerId: containerId || 'hoi-poi-ui',
         closeButton: defaultCloseButton || closeButton || false,
         ...newProps,

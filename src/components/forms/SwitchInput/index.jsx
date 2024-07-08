@@ -17,14 +17,14 @@ function SwitchInput({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    labelMode,
     error,
     checked,
-    isReadOnly,
     isRange,
-    onChange,
     value,
     isFullWidth,
+    labelMode = 'horizontal',
+    onChange = () => {},
+    isReadOnly = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -72,13 +72,6 @@ function SwitchInput({
 }
 
 SwitchInput.overrides = ['root', 'Switch', 'overlay', 'overlayLabel'];
-
-SwitchInput.defaultProps = {
-    overrides: {},
-    labelMode: 'horizontal',
-    onChange: () => {},
-    isReadOnly: false,
-};
 
 SwitchInput.propTypes = {
     className: PropTypes.string,

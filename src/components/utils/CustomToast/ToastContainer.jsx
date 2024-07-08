@@ -20,13 +20,13 @@ const ToastContainer = memo(
         overrides: overridesProp,
         autoClose = false,
         useDefaultCloseButton,
-        closeOnClick,
-        position,
         transition,
-        newestOnTop,
         preComponent,
         postComponent,
         containerId,
+        position = 'topRight',
+        newestOnTop = true,
+        closeOnClick = false,
     }) => {
         const { toasts, setToasts, clearDeletedToast } = useToastContainer({
             position,
@@ -89,15 +89,6 @@ const ToastContainer = memo(
 );
 
 ToastContainer.overrides = ['root', 'ToastGroup', 'Toast', 'ToastWrapper'];
-
-ToastContainer.defaultProps = {
-    className: '',
-    overrides: {},
-    position: 'topRight',
-    autoClose: 4000,
-    newestOnTop: true,
-    closeOnClick: false,
-};
 
 ToastContainer.propTypes = {
     className: PropTypes.string,

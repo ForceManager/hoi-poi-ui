@@ -31,18 +31,17 @@ function Drawer({
     overrides: overridesProp,
     className: classNameProp,
     isOpen,
-    width,
-    side,
-    closeTimeout,
     onAfterOpen,
     onRequestClose,
-    shouldCloseOnOverlayClick,
-    shouldCloseOnEsc,
     contentStyles,
     style,
     onTransitionEnds,
-    hideOverlay,
-    ...props
+    width = '500px',
+    side = 'right',
+    closeTimeout = 500,
+    shouldCloseOnOverlayClick = false,
+    shouldCloseOnEsc = false,
+    hideOverlay = false,
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
@@ -107,15 +106,6 @@ function Drawer({
 }
 
 Drawer.overrides = ['root', 'Text'];
-
-Drawer.defaultProps = {
-    width: '500px',
-    side: 'right',
-    closeTimeout: 500,
-    shouldCloseOnOverlayClick: false,
-    shouldCloseOnEsc: false,
-    hideOverlay: false,
-};
 
 Drawer.propTypes = {
     className: PropTypes.string,

@@ -95,11 +95,6 @@ function Breadcrumbs({
 
 Breadcrumbs.overrides = ['root', 'item', 'divider'];
 
-Breadcrumbs.defaultProps = {
-    className: '',
-    overrides: {},
-};
-
 Breadcrumbs.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,

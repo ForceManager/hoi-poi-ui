@@ -9,13 +9,13 @@ const useStyles = createUseStyles(styles, 'RadioBoxControl');
 
 function RadioBoxControl({
     classes: classesProp,
-    overrides: overridesProp,
+    overrides: overridesProp = {},
     className: classNameProp,
-    option,
     value,
-    isReadOnly,
-    onChange,
     onBlur,
+    onChange = () => {},
+    option = {},
+    isReadOnly = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -50,12 +50,6 @@ function RadioBoxControl({
         </div>
     );
 }
-
-RadioBoxControl.defaultProps = {
-    onChange: () => {},
-    option: {},
-    isReadOnly: false,
-};
 
 RadioBoxControl.propTypes = {
     overrides: PropTypes.object,

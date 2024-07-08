@@ -13,11 +13,11 @@ const RadioBoxGroup = ({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    options,
-    value,
-    isReadOnly,
     onBlur,
-    onChange,
+    onChange = () => {},
+    value = null,
+    options = [],
+    isReadOnly = false,
     ...props
 }) => {
     const classes = useClasses(useStyles, classesProp);
@@ -52,14 +52,6 @@ const RadioBoxGroup = ({
 };
 
 RadioBoxGroup.overrides = ['root', 'RadioBox', 'radioBoxControl'];
-
-RadioBoxGroup.defaultProps = {
-    onChange: () => {},
-    value: null,
-    options: [],
-    isReadOnly: false,
-    overrides: {},
-};
 
 RadioBoxGroup.propTypes = {
     className: PropTypes.string,

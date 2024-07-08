@@ -14,11 +14,11 @@ const MultiAvatar = memo(
         classes: classesProp,
         overrides: overridesProps,
         className: classNameProps,
-        type,
-        size,
         icon,
         sources,
         showCount,
+        type = 'round',
+        size = 'medium',
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -80,11 +80,6 @@ const MultiAvatar = memo(
 );
 
 MultiAvatar.overrides = ['root'];
-
-MultiAvatar.defaultProps = {
-    type: 'round',
-    size: 'medium',
-};
 
 MultiAvatar.propTypes = {
     sources: PropTypes.arrayOf(
