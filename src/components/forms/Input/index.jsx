@@ -27,28 +27,28 @@ const Input = forwardRef(
             classes: classesProp,
             overrides: overridesProp,
             className: classNameProp,
-            onChange,
             onCopy,
             onFocus,
             onBlur,
             onEnter,
             id,
             name,
-            type,
-            numberDecimals,
-            value,
             placeholder,
             error,
-            isReadOnly,
             isFullWidth,
             preComponent,
             postComponent,
             component,
-            isCopyable,
-            hideClear,
             label,
-            labelMode,
             isRequired,
+            labelMode = 'vertical',
+            type = 'text',
+            onChange = () => {},
+            value = '',
+            isReadOnly = false,
+            isCopyable = false,
+            hideClear = false,
+            numberDecimals = 2,
             ...props
         },
         ref,
@@ -345,18 +345,6 @@ const Input = forwardRef(
 );
 
 Input.overrides = ['root', 'input', 'preComponent', 'postComponent', 'inputComponents'];
-
-Input.defaultProps = {
-    ...InputWrapper.defaultProps,
-    type: 'text',
-    onChange: () => {},
-    value: '',
-    isReadOnly: false,
-    isCopyable: false,
-    hideClear: false,
-    numberDecimals: 2,
-    overrides: {},
-};
 
 Input.propTypes = {
     className: PropTypes.string,

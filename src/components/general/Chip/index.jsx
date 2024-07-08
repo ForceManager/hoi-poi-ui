@@ -15,21 +15,21 @@ function Chip({
     children,
     overrides: overridesProp,
     className: classNameProp,
-    size,
-    isFilled,
-    isOutlined,
-    isOutlinedColor,
-    isFolded,
-    isUnfolded,
-    isDisabled,
-    isReadOnly,
-    isActive,
     onClick,
     onRemove,
     src,
     placeholder,
     alt,
     icon,
+    size = 'small',
+    isFilled = false,
+    isOutlined = false,
+    isOutlinedColor = false,
+    isFolded = false,
+    isUnfolded = false,
+    isDisabled = false,
+    isReadOnly = false,
+    isActive = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -192,20 +192,6 @@ Chip.overrides = [
     'icons',
     'wrapper',
 ];
-
-Chip.defaultProps = {
-    className: '',
-    overrides: {},
-    size: 'small',
-    isFilled: false,
-    isOutlined: false,
-    isOutlinedColor: false,
-    isFolded: false,
-    isUnfolded: false,
-    isDisabled: false,
-    isReadOnly: false,
-    isActive: false,
-};
 
 Chip.propTypes = {
     children: PropTypes.string.isRequired,

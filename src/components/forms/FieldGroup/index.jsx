@@ -14,15 +14,15 @@ const FieldGroup = memo(
         classes: classesProp,
         overrides: overridesProp,
         className: classNameProp,
-        onChange,
-        value,
         error,
-        inputs,
         inputProps,
         divider,
-        dividerText,
         isFullWidth,
-        fieldsMode,
+        onChange = () => {},
+        value = [],
+        inputs = [],
+        dividerText = '',
+        fieldsMode = 'horizontal',
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -131,16 +131,6 @@ const FieldGroup = memo(
 );
 
 FieldGroup.overrides = ['root', 'rangeWrapper', 'divider', 'dividerText'];
-
-FieldGroup.defaultProps = {
-    ...InputWrapper.defaultProps,
-    onChange: () => {},
-    value: [],
-    overrides: {},
-    inputs: [],
-    dividerText: '',
-    fieldsMode: 'horizontal',
-};
 
 FieldGroup.propTypes = {
     className: PropTypes.string,

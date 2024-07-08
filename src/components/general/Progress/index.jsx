@@ -14,9 +14,9 @@ const Progress = forwardRef(
             animation,
             classes: classesProp,
             className: classNameProp,
-            max,
             overrides: overridesProp,
-            value,
+            value = 0,
+            max = 100,
             ...props
         },
         ref,
@@ -95,11 +95,6 @@ const Progress = forwardRef(
         );
     },
 );
-
-Progress.defaultProps = {
-    value: 0,
-    max: 100,
-};
 
 Progress.propTypes = {
     className: PropTypes.string,

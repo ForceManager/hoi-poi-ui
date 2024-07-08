@@ -11,8 +11,6 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'Table');
 
 function Table({
-    rows,
-    columns,
     classes: classesProp,
     overrides: overridesProp,
     containerClass,
@@ -20,15 +18,17 @@ function Table({
     rowClass,
     headerClass,
     cellClass,
-    withHeaders,
     loadingComp,
-    emptyTable,
     isHeaderFixed,
     getRowStyle,
     getColumnStyle,
     isEvenBackground,
     isOddBackground,
     isHeaderHighlighted,
+    rows = [],
+    columns = [],
+    withHeaders = false,
+    emptyTable = 'NO ROWS',
 }) {
     const classes = useClasses(useStyles, classesProp);
     const override = getOverrides(overridesProp, Table.overrides);
@@ -200,13 +200,6 @@ Table.overrides = [
     'cellText',
     'emptyTable',
 ];
-
-Table.defaultProps = {
-    rows: [],
-    columns: [],
-    withHeaders: false,
-    emptyTable: 'NO ROWS',
-};
 
 Table.propTypes = {
     rows: PropTypes.array,

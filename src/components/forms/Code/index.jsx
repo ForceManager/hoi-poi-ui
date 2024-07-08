@@ -21,14 +21,14 @@ const Code = memo(
     ({
         className: classNameProp,
         classes: classesProp,
-        overrides: overridesProp,
+        overrides: overridesProp = {},
         error,
-        isFullWidth,
-        isReadOnly,
-        onChange,
-        value,
-        minLines,
-        maxLines,
+        isFullWidth = false,
+        isReadOnly = false,
+        onChange = () => {},
+        value = '',
+        minLines = 20,
+        maxLines = Infinity,
         ...props
     }) => {
         const classes = useClasses(useStyles, classesProp);
@@ -78,16 +78,6 @@ const Code = memo(
 );
 
 Code.overrides = ['AceEditor'];
-
-Code.defaultProps = {
-    ...InputWrapper.defaultProps,
-    isFullWidth: false,
-    isReadOnly: false,
-    onChange: () => {},
-    value: '',
-    minLines: 20,
-    maxLines: Infinity,
-};
 
 Code.propTypes = {
     className: PropTypes.string,

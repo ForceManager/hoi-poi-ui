@@ -14,7 +14,7 @@ function Tooltip({
     overrides: overridesProp,
     className: classNameProp,
     content,
-    placement,
+    placement = 'top',
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -44,11 +44,6 @@ function Tooltip({
 }
 
 Tooltip.overrides = ['root'];
-
-Tooltip.defaultProps = {
-    overrides: {},
-    placement: 'top',
-};
 
 Tooltip.propTypes = {
     className: PropTypes.string,

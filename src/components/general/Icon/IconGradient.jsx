@@ -3,53 +3,57 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import Icon from './Icon';
 
-const IconGradient = memo(({ color, gradientStops, ...props }) => {
-    const spanRef = useRef();
-    const gradientId = uuidv4();
+const IconGradient = memo(
+    ({
+        color,
+        size = 'medium',
+        gradientStops = [
+            { offset: '0%', color: '#FF3B30' }, // Red 500
+            { offset: '100%', color: '#FF8C00' }, // Orange 500
+        ],
+        ...props
+    }) => {
+        const spanRef = useRef();
+        const gradientId = uuidv4();
 
-    useEffect(() => {
-        if (!spanRef.current) return;
+        useEffect(() => {
+            if (!spanRef.current) return;
 
-        let defs = spanRef.current.querySelector('svg defs');
+            let defs = spanRef.current.querySelector('svg defs');
 
-        if (!defs) {
-            defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-            spanRef.current.querySelector('svg').appendChild(defs);
-        }
+            if (!defs) {
+                defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+                spanRef.current.querySelector('svg').appendChild(defs);
+            }
 
-        const gradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
-        gradient.setAttribute('id', gradientId);
+            const gradient = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'linearGradient',
+            );
+            gradient.setAttribute('id', gradientId);
 
-        gradientStops.forEach((stop) => {
-            const newStop = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
-            newStop.setAttribute('offset', stop.offset);
-            newStop.setAttribute('stop-color', stop.color);
-            gradient.appendChild(newStop);
-        });
-        
-        defs.appendChild(gradient);
-    }, [gradientId, gradientStops]);
+            gradientStops.forEach((stop) => {
+                const newStop = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+                newStop.setAttribute('offset', stop.offset);
+                newStop.setAttribute('stop-color', stop.color);
+                gradient.appendChild(newStop);
+            });
 
-    const iconProps = useMemo(
-        () => ({
-            ref: spanRef,
-            color: `url(#${gradientId})`,
-            ...props,
-        }),
-        [gradientId, props],
-    );
+            defs.appendChild(gradient);
+        }, [gradientId, gradientStops]);
 
-    return <Icon {...iconProps} />;
-});
+        const iconProps = useMemo(
+            () => ({
+                ref: spanRef,
+                color: `url(#${gradientId})`,
+                ...props,
+            }),
+            [gradientId, props],
+        );
 
-IconGradient.defaultProps = {
-    size: 'medium',
-    overrides: {},
-    gradientStops: [
-        { offset: '0%', color: '#FF3B30' }, // Red 500
-        { offset: '100%', color: '#FF8C00' }, // Orange 500
-    ],
-};
+        return <Icon {...iconProps} />;
+    },
+);
 
 IconGradient.propTypes = {
     className: PropTypes.string,

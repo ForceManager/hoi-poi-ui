@@ -25,15 +25,15 @@ const Button = forwardRef(
             overrides: overridesProp,
             className: classNameProp,
             onClick,
-            size,
-            type,
             isDisabled,
             isFullWidth,
             isLoading,
             href,
             target,
             icon,
-            iconPosition,
+            size = 'medium',
+            type = 'primary',
+            iconPosition = 'left',
             ...props
         },
         ref,
@@ -163,13 +163,6 @@ const Button = forwardRef(
 
 Button.overrides = ['root', 'Text', 'Loader'];
 
-Button.defaultProps = {
-    size: 'medium',
-    type: 'primary',
-    overrides: {},
-    iconPosition: 'left',
-};
-
 Button.propTypes = {
     className: PropTypes.string,
     overrides: PropTypes.object,
@@ -178,6 +171,7 @@ Button.propTypes = {
     size: PropTypes.oneOf(['big', 'medium', 'small']),
     type: PropTypes.oneOf([
         'primary',
+        'primary-soft',
         'primary-error',
         'secondary',
         'secondary-error',

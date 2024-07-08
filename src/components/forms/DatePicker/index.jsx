@@ -29,19 +29,20 @@ function DatePicker({
     overrides: overridesProp,
     className: classNameProp,
     name,
-    dateFormat,
     formatDate,
-    onChange,
-    value,
-    outputType,
-    lang,
-    isReadOnly,
     isFullWidth,
-    calendarButtonLabel,
-    placeholder,
     minDate,
     maxDate,
     customComponent,
+    labelMode = 'vertical',
+    outputType = 'object',
+    onChange = () => {},
+    value = '',
+    dateFormat = '',
+    lang = 'en',
+    isReadOnly = false,
+    calendarButtonLabel = 'Today',
+    placeholder = 'Select date',
     ...props
 }) {
     const flatpickrRef = useRef();
@@ -242,19 +243,6 @@ function DatePicker({
 }
 
 DatePicker.overrides = ['root', 'input', 'flatpickr', 'flatpickrOptions'];
-
-DatePicker.defaultProps = {
-    labelMode: 'vertical',
-    outputType: 'object',
-    onChange: () => {},
-    value: '',
-    dateFormat: '',
-    lang: 'en',
-    isReadOnly: false,
-    calendarButtonLabel: 'Today',
-    placeholder: 'Select date',
-    override: {},
-};
 
 DatePicker.propTypes = {
     className: PropTypes.string,

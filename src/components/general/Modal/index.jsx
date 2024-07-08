@@ -31,12 +31,6 @@ function Modal({
     overlayClassName,
     title,
     isOpen,
-    useCornerClose,
-    useHeader,
-    useAutoHeight,
-    useAutoWidth,
-    useContentStaticHeight,
-    size,
     height,
     width,
     cancelText,
@@ -53,14 +47,19 @@ function Modal({
     isConfirmLoading,
     onAfterOpen,
     onRequestClose,
-    shouldCloseOnEsc,
-    shouldCloseOnOverlayClick,
-    closeTimeoutMS,
     getContentRef,
     preComponent,
     postComponent,
     footerComponent,
-    ...props
+    size = 'medium',
+    useAutoHeight = true,
+    useAutoWidth = true,
+    useContentStaticHeight = false,
+    shouldCloseOnOverlayClick = true,
+    shouldCloseOnEsc = true,
+    useCornerClose = true,
+    useHeader = true,
+    closeTimeoutMS = 300,
 }) {
     const modalRef = useRef();
     const maxHeight = useMemo(() => {
@@ -295,18 +294,6 @@ Modal.overrides = [
     'confirmButton',
     'deleteButton',
 ];
-
-Modal.defaultProps = {
-    size: 'medium',
-    useAutoHeight: true,
-    useAutoWidth: true,
-    useContentStaticHeight: false,
-    shouldCloseOnOverlayClick: true,
-    shouldCloseOnEsc: true,
-    useCornerClose: true,
-    useHeader: true,
-    closeTimeoutMS: 300,
-};
 
 Modal.propTypes = {
     className: PropTypes.string,

@@ -17,9 +17,9 @@ const List = forwardRef(
             classes: classesProp,
             className,
             items,
-            type,
             overrides: overridesProp,
-            unStyled,
+            type = 'unordered',
+            unStyled = false,
         },
         ref,
     ) => {
@@ -82,11 +82,6 @@ const List = forwardRef(
 );
 
 List.overrides = ['root', 'listItem', 'Text', 'Icon'];
-
-List.defaultProps = {
-    type: 'unordered',
-    unStyled: false,
-};
 
 List.propTypes = {
     classes: PropTypes.object,

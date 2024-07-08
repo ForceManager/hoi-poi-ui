@@ -26,18 +26,17 @@ const FIELD_MAP = {
 function MultiplierFieldControl({
     overrides: overridesProp,
     className: classNameProp,
-    labelMode,
-    isFullWidth,
     isReadOnly,
-    field,
     onChange,
     onFocus,
     onBlur,
     onEnter,
     value,
-    error,
     customFields,
-    ...props
+    labelMode = 'horizontal',
+    isFullWidth = false,
+    error = '',
+    field = {},
 }) {
     const onChangeField = useCallback(
         (input) => {
@@ -96,13 +95,6 @@ function MultiplierFieldControl({
     let attrs = field.attrs || {};
     return <Field {...fieldProps} {...attrs} />;
 }
-
-MultiplierFieldControl.defaultProps = {
-    labelMode: 'horizontal',
-    isFullWidth: false,
-    error: '',
-    field: {},
-};
 
 MultiplierFieldControl.propTypes = {
     /** Native form class */

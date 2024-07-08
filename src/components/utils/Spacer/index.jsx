@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides } from '../../../utils/overrides';
 
-const Spacer = ({ x, y, overrides: overridesProp, className: classNameProp }) => {
+const Spacer = ({ x = 0, y = 0, overrides: overridesProp, className: classNameProp }) => {
     // Overrides
     const override = getOverrides(overridesProp, Spacer.overrides);
 
@@ -18,11 +18,6 @@ const Spacer = ({ x, y, overrides: overridesProp, className: classNameProp }) =>
 };
 
 Spacer.overrides = ['root'];
-
-Spacer.defaultProps = {
-    x: 0,
-    y: 0,
-};
 
 Spacer.propTypes = {
     x: PropTypes.number,

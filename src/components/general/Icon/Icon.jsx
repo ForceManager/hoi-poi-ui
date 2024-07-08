@@ -934,7 +934,7 @@ const Icon = forwardRef(
             nameOver,
             color,
             color2,
-            size,
+            size = 'medium',
             classes: classesProp,
             overrides: overridesProp,
             className: classNameProp,
@@ -943,7 +943,6 @@ const Icon = forwardRef(
             onMouseOut,
             onMouseDown,
             onMouseUp,
-            ...props
         },
         ref,
     ) => {
@@ -1015,11 +1014,6 @@ const Icon = forwardRef(
 );
 
 Icon.overrides = ['root', 'icon'];
-
-Icon.defaultProps = {
-    size: 'medium',
-    overrides: {},
-};
 
 Icon.propTypes = {
     className: PropTypes.string,

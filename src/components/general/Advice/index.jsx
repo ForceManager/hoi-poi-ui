@@ -18,13 +18,13 @@ function Advice({
     className: classNameProp,
     overrides: overridesProp,
     title,
-    showIcon,
-    showCollapse,
-    type,
-    defaultCollapsed,
-    isDismissable,
     dismissText,
     onDismiss,
+    showIcon = false,
+    showCollapse = true,
+    type = 'default',
+    defaultCollapsed = true,
+    isDismissable = false,
     ...props
 }) {
     const theme = useTheme();
@@ -195,16 +195,6 @@ Advice.overrides = [
     'dropdownIcon',
     'react-collapse',
 ];
-
-Advice.defaultProps = {
-    className: '',
-    overrides: {},
-    showIcon: false,
-    showCollapse: true,
-    type: 'default',
-    defaultCollapsed: true,
-    isDismissable: false,
-};
 
 Advice.propTypes = {
     children: PropTypes.node.isRequired,

@@ -13,10 +13,10 @@ function Badge({
     children,
     overrides: overridesProp,
     className: classNameProp,
-    type,
     variant,
     isTruncated,
     useTooltip,
+    type = 'default',
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -54,12 +54,6 @@ function Badge({
 }
 
 Badge.overrides = ['root', 'Text'];
-
-Badge.defaultProps = {
-    className: '',
-    overrides: {},
-    type: 'default',
-};
 
 Badge.propTypes = {
     children: PropTypes.node.isRequired,

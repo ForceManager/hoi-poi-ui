@@ -18,7 +18,6 @@ const Toast = memo(
         override,
         id,
         type,
-        transition,
         onClick,
         closeOnClick,
         closeButton,
@@ -26,12 +25,13 @@ const Toast = memo(
         onClose,
         title,
         text,
-        content,
         icon,
         isActive,
         clearDeletedToast,
         onClickLink,
         linkText,
+        transition = 'slide',
+        content = null,
     }) => {
         const theme = useTheme();
         const classes = useClasses(useStyles, classesProp);
@@ -160,12 +160,6 @@ const Toast = memo(
         );
     },
 );
-
-Toast.defaultProps = {
-    override: {},
-    transition: 'slide',
-    content: null,
-};
 
 Toast.propTypes = {
     className: PropTypes.string,

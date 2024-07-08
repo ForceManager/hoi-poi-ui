@@ -28,18 +28,17 @@ const FIELD_MAP = {
 function FieldControl({
     overrides: overridesProp,
     className: classNameProp,
-    labelMode,
-    isFullWidth,
     isReadOnly,
-    field,
     onChange,
     onFocus,
     onBlur,
     onEnter,
     value,
-    error,
     customFields,
-    ...props
+    labelMode = 'horizontal',
+    isFullWidth = false,
+    error = '',
+    field = {},
 }) {
     const onChangeField = useCallback(
         (input) => {
@@ -97,13 +96,6 @@ function FieldControl({
     let attrs = field.attrs || {};
     return <Field {...fieldProps} {...attrs} />;
 }
-
-FieldControl.defaultProps = {
-    labelMode: 'horizontal',
-    isFullWidth: false,
-    error: '',
-    field: {},
-};
 
 FieldControl.propTypes = {
     /** Native form class */

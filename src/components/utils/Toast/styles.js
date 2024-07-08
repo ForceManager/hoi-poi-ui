@@ -152,10 +152,11 @@ export default (theme) => ({
             bottom: '0',
             left: '0',
             width: '100%',
-            height: 5,
+            height: 0,
             zIndex: 9999,
             opacity: '0.7',
             transformOrigin: 'left',
+            display: 'none',
         },
         '.Toastify__progress-bar--animated': {
             animation: 'Toastify__trackProgress linear 1 forwards',

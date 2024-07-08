@@ -16,11 +16,11 @@ function Stepper({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    currentStep,
-    steps,
     onClick,
-    withoutLabels = false,
+    steps = [],
+    currentStep = 1,
     labelPlacement = 'horizontal',
+    withoutLabels = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -88,13 +88,6 @@ function Stepper({
 }
 
 Stepper.overrides = ['root', 'rc-steps'];
-
-Stepper.defaultProps = {
-    steps: [],
-    currentStep: 1,
-    labelPlacement: 'horizontal',
-    withoutLabels: false,
-};
 
 Stepper.propTypes = {
     className: PropTypes.string,

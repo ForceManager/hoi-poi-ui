@@ -19,7 +19,7 @@ function BadgeNotification({
     children,
     overrides: overridesProp,
     className: classNameProp,
-    size,
+    size = 'medium',
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -54,12 +54,6 @@ function BadgeNotification({
 }
 
 BadgeNotification.overrides = ['root', 'Text'];
-
-BadgeNotification.defaultProps = {
-    className: '',
-    overrides: {},
-    size: 'medium',
-};
 
 BadgeNotification.propTypes = {
     children: PropTypes.node.isRequired,

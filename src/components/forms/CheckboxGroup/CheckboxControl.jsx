@@ -11,17 +11,14 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'CheckboxControl');
 
 function CheckboxControl({
-    children,
     classes: classesProp,
     overrides: overridesProp,
-    className: classNameProp,
-    option,
-    onChange,
-    value,
-    isReadOnly,
+    onChange = () => {},
+    value = false,
+    option = {},
+    isReadOnly = false,
     color,
     error,
-    ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
     const theme = useTheme();
@@ -89,13 +86,6 @@ function CheckboxControl({
 }
 
 CheckboxControl.overrides = ['checkboxLabel', 'checkboxControl'];
-
-CheckboxControl.defaultProps = {
-    onChange: () => {},
-    value: false,
-    option: {},
-    isReadOnly: false,
-};
 
 CheckboxControl.propTypes = {
     className: PropTypes.string,

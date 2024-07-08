@@ -18,14 +18,12 @@ const InputWrapper = forwardRef(
             overrides: overridesProp,
             className: classNameProp,
             label,
-            labelMode,
             isFullWidth,
-            placeholder,
             hint,
             error,
             info,
             isRequired,
-            ...props
+            labelMode = 'vertical',
         },
         ref,
     ) => {
@@ -76,11 +74,6 @@ const InputWrapper = forwardRef(
 );
 
 InputWrapper.overrides = ['root', 'error', 'info', 'formControl', 'Label', 'inputWrapper'];
-
-InputWrapper.defaultProps = {
-    labelMode: 'vertical',
-    overrides: {},
-};
 
 InputWrapper.propTypes = {
     className: PropTypes.string,

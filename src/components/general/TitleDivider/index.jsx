@@ -13,7 +13,7 @@ const TitleDivider = ({
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    type,
+    type = 'subtitle',
     children,
     ...props
 }) => {
@@ -38,12 +38,6 @@ const TitleDivider = ({
 };
 
 TitleDivider.overrides = ['root', 'Text'];
-
-TitleDivider.defaultProps = {
-    type: 'subtitle',
-    className: '',
-    overrides: {},
-};
 
 TitleDivider.propTypes = {
     className: PropTypes.string,

@@ -135,8 +135,6 @@ function File({
     );
 }
 
-File.defaultProps = {};
-
 File.propTypes = {
     classes: PropTypes.object,
     className: PropTypes.string,

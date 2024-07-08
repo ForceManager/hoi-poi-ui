@@ -11,21 +11,19 @@ import styles from './styles';
 const useStyles = createUseStyles(styles, 'RadioGroup');
 
 function RadioGroup({
-    children,
     classes: classesProp,
     overrides: overridesProp,
     className: classNameProp,
-    options,
-    onChange,
     onBlur,
-    value,
     label,
-    labelMode,
-    orientation,
     hint,
-    isReadOnly,
     isFullWidth,
-    ...props
+    labelMode = 'horizontal',
+    orientation = 'vertical',
+    onChange = () => {},
+    value = null,
+    options = [],
+    isReadOnly = false,
 }) {
     const classes = useClasses(useStyles, classesProp);
     // Overrides
@@ -80,16 +78,6 @@ function RadioGroup({
 }
 
 RadioGroup.overrides = ['root', 'Radio', 'formControl', 'Label'];
-
-RadioGroup.defaultProps = {
-    labelMode: 'horizontal',
-    orientation: 'vertical',
-    onChange: () => {},
-    value: null,
-    options: [],
-    isReadOnly: false,
-    overrides: {},
-};
 
 RadioGroup.propTypes = {
     className: PropTypes.string,

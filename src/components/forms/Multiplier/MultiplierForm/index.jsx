@@ -8,20 +8,19 @@ import Section from '../../Section';
 function MultiplierForm({
     overrides: overridesProp,
     className: classNameProp,
-    labelMode,
-    isFullWidth,
     isReadOnly,
-    schema,
     onSubmit,
     onChange,
     onFocus,
     onBlur,
-    values,
-    errors,
     customFields,
-    useNativeForm,
     orientation,
-    ...props
+    labelMode = 'horizontal',
+    isFullWidth = false,
+    errors = {},
+    values = {},
+    schema = [],
+    useNativeForm = false,
 }) {
     // Overrides
     const override = getOverrides(overridesProp, MultiplierForm.overrides);
@@ -143,16 +142,6 @@ function MultiplierForm({
 }
 
 MultiplierForm.overrides = ['root', 'Section'];
-
-MultiplierForm.defaultProps = {
-    labelMode: 'horizontal',
-    isFullWidth: false,
-    errors: {},
-    values: {},
-    schema: [],
-    override: {},
-    useNativeForm: false,
-};
 
 MultiplierForm.propTypes = {
     /** Native form class */

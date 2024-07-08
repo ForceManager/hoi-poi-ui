@@ -19,17 +19,18 @@ function Slider({
     className: classNameProp,
     value,
     error,
-    isReadOnly,
-    isRange,
-    min,
-    max,
-    step,
     tipFormatter,
-    isPercentage,
     size,
-    onChange,
-    reverse,
     showValue,
+    overrides = {},
+    onChange = () => {},
+    isReadOnly = false,
+    max = 100,
+    min = 0,
+    step = 1,
+    isRange = false,
+    isPercentage = false,
+    reverse = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -173,18 +174,6 @@ function Slider({
 }
 
 Slider.overrides = ['root', 'rc-slider', 'overlay', 'overlayLabel', 'overlayHandler'];
-
-Slider.defaultProps = {
-    overrides: {},
-    onChange: () => {},
-    isReadOnly: false,
-    max: 100,
-    min: 0,
-    step: 1,
-    isRange: false,
-    isPercentage: false,
-    reverse: false,
-};
 
 Slider.propTypes = {
     className: PropTypes.string,

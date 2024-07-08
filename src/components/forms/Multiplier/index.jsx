@@ -14,22 +14,20 @@ function Multiplier({
     overrides: overridesProp,
     className: classNameProp,
     schema,
-    name,
     buttonLabel,
     buttonClassName,
-    isFullWidth,
     isReadOnly,
     max,
-    separator,
-    value,
-    error,
     onChange,
     onFocus,
     onBlur,
-    labelMode,
     customFields,
     orientation,
-    ...props
+    error = {},
+    value = [null],
+    separator = false,
+    labelMode = 'horizontal',
+    isFullWidth = false,
 }) {
     const classes = useClasses(useStyles, classesProp);
     // State
@@ -142,15 +140,6 @@ function Multiplier({
 }
 
 Multiplier.overrides = ['root', 'multiplierControl', 'button'];
-
-Multiplier.defaultProps = {
-    error: {},
-    value: [null],
-    fields: [],
-    separator: false,
-    labelMode: 'horizontal',
-    isFullWidth: false,
-};
 
 Multiplier.propTypes = {
     /** Native form class */

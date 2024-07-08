@@ -7,17 +7,12 @@ import { createUseStyles } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Loader');
 
-function Loader({ classes: classesProp, className, size, color }) {
+function Loader({ classes: classesProp, className, size = 'medium', color = 'primary' }) {
     const classes = useClasses(useStyles, classesProp);
     const rootClassName = classnames(className, classes.root, [classes[color]], [classes[size]]);
 
     return <div className={rootClassName} />;
 }
-
-Loader.defaultProps = {
-    size: 'medium',
-    color: 'primary',
-};
 
 Loader.propTypes = {
     className: PropTypes.string,

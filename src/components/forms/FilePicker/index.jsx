@@ -30,27 +30,19 @@ const imageExtensions = ['png', 'jpeg', 'jpg', 'webp', 'gif', 'bmp', 'heic'];
 
 function FilePicker({
     accept,
-    buttonLabel,
     classes: classesProp,
     className: classNameProp,
     cropAspect,
     cropImages,
-    cropTitle,
-    cropTooltip,
-    cropAcceptLabel,
-    cropCancelLabel,
     disabled,
     error,
-    files,
     filesData,
     hint,
     id,
     info,
     isFullWidth,
-    isReadOnly,
     isRequired,
     label,
-    labelMode,
     maxFiles,
     maxSize,
     maxVisible,
@@ -62,12 +54,9 @@ function FilePicker({
     multiple,
     name,
     onCrop,
-    onDrop,
     onRemove,
     overrides: overridesProp,
-    previewImages,
     singleImagePreview,
-    title,
     subtitle,
     groups,
     foldedText,
@@ -77,6 +66,17 @@ function FilePicker({
     downloadTooltip,
     deleteTooltip,
     customTitle,
+    labelMode = 'vertical',
+    onDrop = () => {},
+    files = [],
+    isReadOnly = false,
+    title = 'Drop files here',
+    buttonLabel = 'Select file',
+    cropTitle = 'Crop image',
+    cropTooltip = 'Crop image',
+    cropAcceptLabel = 'Crop',
+    cropCancelLabel = 'Cancel',
+    previewImages = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -365,21 +365,6 @@ FilePicker.overrides = [
     'file',
     'filesList',
 ];
-
-FilePicker.defaultProps = {
-    labelMode: 'vertical',
-    onDrop: () => {},
-    files: [],
-    isReadOnly: false,
-    overrides: {},
-    title: 'Drop files here',
-    buttonLabel: 'Select file',
-    cropTitle: 'Crop image',
-    cropTooltip: 'Crop image',
-    cropAcceptLabel: 'Crop',
-    cropCancelLabel: 'Cancel',
-    previewImages: false,
-};
 
 FilePicker.propTypes = {
     /** Set accepted file types */

@@ -18,27 +18,28 @@ const Textarea = forwardRef(
             classes: classesProp,
             overrides: overridesProp,
             className: classNameProp,
-            onChange,
             onCopy,
             onFocus,
             onBlur,
             onEnter,
             id,
             name,
-            value,
             placeholder,
             error,
-            isReadOnly,
             isFullWidth,
-            isCopyable,
-            isResizable,
-            hideClear,
             label,
-            labelMode,
             isRequired,
-            minRows,
-            maxRows,
             autofocus,
+            labelMode = 'vertical',
+            onChange = () => {},
+            value = '',
+            isReadOnly = false,
+            isCopyable = false,
+            isResizable = true,
+            hideClear = false,
+            overrides = {},
+            minRows = 3,
+            maxRows = 6,
             ...props
         },
         ref,
@@ -275,19 +276,6 @@ const Textarea = forwardRef(
 );
 
 Textarea.overrides = ['root', 'input', 'postComponent', 'textareaComponents'];
-
-Textarea.defaultProps = {
-    ...InputWrapper.defaultProps,
-    onChange: () => {},
-    value: '',
-    isReadOnly: false,
-    isCopyable: false,
-    isResizable: true,
-    hideClear: false,
-    overrides: {},
-    minRows: 3,
-    maxRows: 6,
-};
 
 Textarea.propTypes = {
     className: PropTypes.string,

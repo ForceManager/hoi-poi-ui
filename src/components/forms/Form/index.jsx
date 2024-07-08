@@ -8,20 +8,19 @@ import Section from '../Section';
 function Form({
     overrides: overridesProp,
     className: classNameProp,
-    labelMode,
-    isFullWidth,
     isReadOnly,
-    schema,
     onSubmit,
     onChange,
     onFocus,
     onBlur,
-    values,
-    errors,
     customFields,
-    useNativeForm,
     orientation,
-    ...props
+    labelMode = 'horizontal',
+    isFullWidth = false,
+    errors = {},
+    values = {},
+    schema = [],
+    useNativeForm = false,
 }) {
     // Overrides
     const override = getOverrides(overridesProp, Form.overrides);
@@ -143,16 +142,6 @@ function Form({
 }
 
 Form.overrides = ['root', 'Section'];
-
-Form.defaultProps = {
-    labelMode: 'horizontal',
-    isFullWidth: false,
-    errors: {},
-    values: {},
-    schema: [],
-    override: {},
-    useNativeForm: false,
-};
 
 Form.propTypes = {
     /** Native form class */

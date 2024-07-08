@@ -20,14 +20,14 @@ const Section = memo(
         overrides: overridesProp,
         className: classNameProp,
         title,
-        isExpandable,
-        defaultOpen,
         onChange,
         onRemove,
         activeFields,
         orientation,
         headerPreComponent,
         headerPostComponent,
+        isExpandable = true,
+        defaultOpen = true,
     }) => {
         const classes = useClasses(useStyles, classesProp);
         const [isOpen, setIsOpen] = useState(onChange ? isOpenProp : defaultOpen);
@@ -149,11 +149,6 @@ const Section = memo(
 
 Section.overrides = ['root', 'header', 'Text', 'BadgeNotification', 'icon', 'react-animate-height'];
 
-Section.defaultProps = {
-    isExpandable: true,
-    defaultOpen: true,
-    overrides: {},
-};
 Section.propTypes = {
     className: PropTypes.string,
     title: PropTypes.any,

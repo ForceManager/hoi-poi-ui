@@ -15,10 +15,10 @@ function Popover({
     overrides: overridesProp,
     className: classNameProp,
     content,
-    placement,
-    trigger,
     getRef,
     getContentRef,
+    placement = 'top',
+    trigger = ['click'],
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -47,12 +47,6 @@ function Popover({
 }
 
 Popover.overrides = ['root'];
-
-Popover.defaultProps = {
-    overrides: {},
-    placement: 'top',
-    trigger: ['click'],
-};
 
 Popover.propTypes = {
     className: PropTypes.string,

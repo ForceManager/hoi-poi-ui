@@ -172,8 +172,6 @@ function ModalCrop({
     );
 }
 
-ModalCrop.defaultProps = {};
-
 ModalCrop.propTypes = {
     aspect: PropTypes.number,
     confirmText: PropTypes.string,

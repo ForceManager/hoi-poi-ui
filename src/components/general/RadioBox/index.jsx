@@ -14,13 +14,13 @@ const RadioBox = ({
     icon,
     title,
     text,
-    checked,
-    onChange,
     isReadOnly,
     className: classNameProp,
     classes: classesProp,
     overrides: overridesProp,
     children,
+    checked = false,
+    onChange = () => {},
     ...props
 }) => {
     const classes = useClasses(useStyles, classesProp);
@@ -61,12 +61,6 @@ const RadioBox = ({
 };
 
 RadioBox.overrides = ['root', 'icon', 'content', 'title', 'text', 'radio'];
-
-Radio.defaultProps = {
-    checked: false,
-    onChange: () => {},
-    overrides: {},
-};
 
 RadioBox.propTypes = {
     icon: PropTypes.string,

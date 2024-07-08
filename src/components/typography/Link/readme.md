@@ -133,7 +133,7 @@ Underline:
 Type Variations:
 
 ```jsx
-<Link type="primary">Primary Link</Link>
+<Link variation="primary">Primary Link</Link>
 ```
 
 ### Component tree

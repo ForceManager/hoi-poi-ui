@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import defaultTheme from '../../../utils/styles/defaultTheme';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 
@@ -17,12 +16,12 @@ function Link({
     onClick,
     isDisabled,
     href,
-    type,
     target,
-    isTruncated,
     bold,
-    underline,
     variation,
+    type = 'body',
+    isTruncated = false,
+    underline = false,
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -65,13 +64,6 @@ function Link({
 }
 
 Link.overrides = ['root'];
-
-Link.defaultProps = {
-    overrides: {},
-    type: 'body',
-    isTruncated: false,
-    underline: false,
-};
 
 Link.propTypes = {
     className: PropTypes.string,

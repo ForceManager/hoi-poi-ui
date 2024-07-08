@@ -16,13 +16,13 @@ const sizes = {
 };
 
 function Switch({
-    checked,
     classes: classesProp,
     className: classNameProp,
     isDisabled,
-    onChange,
-    size,
     overrides: overridesProp,
+    checked = false,
+    onChange = () => {},
+    size = 'medium',
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -86,13 +86,6 @@ function Switch({
 }
 
 Switch.overrides = ['root', 'Switch'];
-
-Switch.defaultProps = {
-    checked: false,
-    onChange: () => {},
-    overrides: {},
-    size: 'medium',
-};
 
 Switch.propTypes = {
     checked: PropTypes.bool,
