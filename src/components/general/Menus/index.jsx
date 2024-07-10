@@ -80,7 +80,7 @@ function Menus({
                                         </div>
                                     </MenuItem>
                                 )}
-                                {item.divider && <div className={classes.divider}></div>}
+                                {item.divider && <div className={classes.divider} />}
                             </Fragment>
                         ))}
                 </SubMenu>
