@@ -58,25 +58,30 @@ function Menus({
                 <SubMenu key="rc-menu-sub-menu" {...subMenuProps}>
                     {items &&
                         items.map((item, id) => (
-                            <MenuItem
-                                key={id}
-                                itemIcon={item.icon}
-                                onClick={item.onClick}
-                                className={
-                                    item.infoItem
-                                        ? classnames(classes.menuItem, item.className)
-                                        : classnames(
-                                              classes.menuItem,
-                                              item.className,
-                                              classes.clickable,
-                                          )
-                                }
-                            >
-                                <div className={classes.menuItemContent}>
-                                    {item.title}
-                                    {item.description}
-                                </div>
-                            </MenuItem>
+                            <Fragment>
+                                {!item.divider && (
+                                    <MenuItem
+                                        key={id}
+                                        itemIcon={item.icon}
+                                        onClick={item.onClick}
+                                        className={
+                                            item.infoItem
+                                                ? classnames(classes.menuItem, item.className)
+                                                : classnames(
+                                                      classes.menuItem,
+                                                      item.className,
+                                                      classes.clickable,
+                                                  )
+                                        }
+                                    >
+                                        <div className={classes.menuItemContent}>
+                                            {item.title}
+                                            {item.description}
+                                        </div>
+                                    </MenuItem>
+                                )}
+                                {item.divider && <div className={classes.divider}></div>}
+                            </Fragment>
                         ))}
                 </SubMenu>
             </RCMenu>
