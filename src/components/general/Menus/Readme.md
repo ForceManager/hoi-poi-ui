@@ -14,6 +14,7 @@ const items = [
         icon: <Icon name="info" color="#a9b1b9" />,
         onClick: () => console.log('edit'),
     },
+    { divider: true },
     {
         title: <Text>Delete</Text>,
         icon: <Icon name="info" color="#a9b1b9" />,

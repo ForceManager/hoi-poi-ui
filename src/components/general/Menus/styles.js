@@ -27,11 +27,10 @@ export default (theme) => {
             width: (props) => props.popupSize,
             minWidth: 'auto !important',
             overflow: 'hidden',
-            paddingTop: '8px',
-            paddingBottom: '8px',
+            padding: '18px 10px',
             backgroundColor: theme.colors.neutralBase,
             boxShadow: theme.effects.boxShadow,
-            borderRadius: 4,
+            borderRadius: 6,
 
             '& .rc-menu-sub': {
                 padding: '0',
@@ -54,7 +53,7 @@ export default (theme) => {
             ...theme.typography.subtitle,
 
             '& span': {
-                marginRight: '10px',
+                marginRight: '8px',
             },
         },
         menuItemContent: {
@@ -63,8 +62,14 @@ export default (theme) => {
         clickable: {
             cursor: 'pointer',
             '&:hover': {
-                backgroundColor: theme.colors.neutral300,
+                backgroundColor: theme.colors.neutral200,
             },
+        },
+        divider: {
+            width: '100%',
+            height: '1px',
+            margin: '4px 0',
+            backgroundColor: theme.colors.neutral400,
         },
     };
 };
