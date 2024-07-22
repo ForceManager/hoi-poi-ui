@@ -16,11 +16,17 @@ export default React.memo(({ children, ...props }) => {
     if (icon) finalIcon = icon;
     else if (iconType) finalIcon = <Icon name={iconType} />;
 
+    const iconKey = iconType || props.data.label;
+
     return (
         components.SingleValue && (
             <components.SingleValue {...props}>
                 {finalIcon && (
-                    <div className={singleValueIconClassName} {...override.actionIcon}>
+                    <div
+                        key={iconKey}
+                        className={singleValueIconClassName}
+                        {...override.actionIcon}
+                    >
                         {finalIcon ? finalIcon : null}
                     </div>
                 )}
