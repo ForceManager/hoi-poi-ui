@@ -299,8 +299,10 @@ const Select = memo(
                     newInputValue ||
                     newValue?.label?.charAt(0)?.toLowerCase() ||
                     '';
-
-                if (loadOptions && !isFuzzy && !lazyOptions.areLoaded) {
+                if (
+                    (loadOptions && !isFuzzy && !lazyOptions.areLoaded) ||
+                    (loadOptions && !cacheOptions)
+                ) {
                     setLazyOptions((currentOptions) => ({
                         ...currentOptions,
                         isLoading: true,
@@ -338,6 +340,7 @@ const Select = memo(
                 setMenuPlacement,
                 newValue,
                 getIsSelectAllWithGroups,
+                cacheOptions,
             ],
         );
 
@@ -350,9 +353,25 @@ const Select = memo(
                 ) {
                     setNewInputValue('');
                 }
+                if (loadOptions && !cacheOptions) {
+                    setInnerOptions([]);
+                    setLazyOptions({
+                        areLoaded: false,
+                        isLoading: false,
+                        options: null,
+                    });
+                }
                 onBlur && onBlur(e, value);
             },
-            [keepInputValueOnBlur, isMulti, keepInputValueOnBlurInMulti, onBlur, value],
+            [
+                keepInputValueOnBlur,
+                isMulti,
+                keepInputValueOnBlurInMulti,
+                onBlur,
+                value,
+                loadOptions,
+                cacheOptions,
+            ],
         );
 
         const controlStyles = useCallback(

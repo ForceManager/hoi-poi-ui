@@ -2038,6 +2038,72 @@ const componentOverride = useMemo(() => {
 </div>;
 ```
 
+Avoid cache:
+
+```jsx
+import { useState, useMemo } from 'react';
+
+const options = [
+    [
+        {
+            label: 'Lorem ipsum 1',
+            value: 'lorem-ipsum-1',
+        },
+        {
+            label: 'Lorem ipsum 2',
+            value: 'lorem-ipsum-2',
+        },
+        {
+            label: 'Lorem ipsum 3',
+            value: 'lorem-ipsum-3',
+        },
+        {
+            label: 'Lorem ipsum 4',
+            value: 'lorem-ipsum-4',
+        },
+    ],
+    [
+        {
+            label: 'Lorem ipsum 5',
+            value: 'lorem-ipsum-5',
+        },
+        {
+            label: 'Lorem ipsum 6',
+            value: 'lorem-ipsum-6',
+        },
+        {
+            label: 'Lorem ipsum 7',
+            value: 'lorem-ipsum-7',
+        },
+        {
+            label: 'Lorem ipsum 8',
+            value: 'lorem-ipsum-8',
+        },
+    ],
+];
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const loadOptions = () =>
+    new Promise(
+        (resolve, reject) =>
+            setTimeout(() => {
+                const randomIndex = Math.round(Math.random());
+                resolve(options[randomIndex]);
+            }, 1000),
+        [],
+    );
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        onChange={onChange}
+        loadOptions={loadOptions}
+        cacheOptions={false}
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
