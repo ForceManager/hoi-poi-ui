@@ -1993,6 +1993,51 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Overriding native components:
+
+```jsx
+import { useState, useMemo } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+    },
+];
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+const componentOverride = useMemo(() => {
+    return {
+        MultiValue: (props) => {
+            return <span>{props.data.label}</span>;
+        },
+    };
+}, []);
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        isMulti
+        componentOverride={componentOverride}
+    />
+</div>;
+```
+
 ### Component tree
 
 ---
@@ -2042,3 +2087,7 @@ const onChange = (value) => setState({ value });
 -   actionIcon - Action icon
 -   actionText - Action text
 -   actionTextWithIcon - Action
+
+```
+
+```
