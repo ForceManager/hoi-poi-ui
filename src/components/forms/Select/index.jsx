@@ -116,6 +116,7 @@ const Select = memo(
         useMenuPortal = true,
         showMediaInSelectedValues = false,
         keepInputValueOnBlurInMulti = false,
+        componentOverride = {},
         ...props
     }) => {
         const selectRef = useRef();
@@ -917,6 +918,7 @@ const Select = memo(
                     Option,
                     Input,
                     ...additionalComponents,
+                    ...componentOverride,
                 },
                 styles: {
                     menuPortal: (base) => ({ ...base, zIndex: 9999 }),
@@ -1038,8 +1040,8 @@ const Select = memo(
             customFilter,
             override,
             selectClassName,
-            placeholder,
             placeholderReadOnly,
+            placeholder,
             lazyOptions.options,
             lazyOptions.isLoading,
             cacheOptions,
@@ -1094,6 +1096,7 @@ const Select = memo(
             isSelectAllWithGroups,
             selectAllLabel,
             isSelectAllFocused,
+            componentOverride,
             showMediaInSelectedValues,
             getRef,
             controlStyles,
@@ -1291,6 +1294,8 @@ Select.propTypes = {
     selectAllLabel: PropTypes.string,
     /** Show/hide icon or avatar in selected values in multiselect */
     showMediaInSelectedValues: PropTypes.bool,
+    /** Full native react-select component override */
+    componentOverride: PropTypes.object,
 };
 
 export default Select;
