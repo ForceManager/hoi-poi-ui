@@ -294,6 +294,7 @@ import Support from './icons/menu/Support';
 import Tasks from './icons/menu/Tasks';
 import Workspace from './icons/menu/Workspace';
 import Document from './icons/menu/Document';
+import DashboardMenu from './icons/menu/Dashboard';
 
 //Alert
 import Alert from './icons/alert/Alert';
@@ -758,6 +759,7 @@ export const ICONS = {
     tasks: Tasks,
     workspace: Workspace,
     document: Document,
+    dashboardMenu: DashboardMenu,
     //Alert
     alert: Alert,
     addAlert: AddAlert,
