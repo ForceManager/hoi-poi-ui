@@ -1042,6 +1042,7 @@ const Icon = forwardRef(
             onMouseDown,
             onMouseUp,
             tooltip,
+            placement = 'top',
         },
         ref,
     ) => {
@@ -1112,7 +1113,7 @@ const Icon = forwardRef(
 
         if (tooltip) {
             return (
-                <Tooltip placement="top" content={tooltip}>
+                <Tooltip placement={placement} content={tooltip}>
                     {icon}
                 </Tooltip>
             );
