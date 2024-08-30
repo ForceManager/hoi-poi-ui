@@ -3,7 +3,7 @@ import { colors } from '../../../../../utils/styles/defaultTheme';
 
 function Dashboard({ color = colors.neutral700, ...props }) {
     return (
-        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
                 fill={color}
                 fillRule="evenodd"

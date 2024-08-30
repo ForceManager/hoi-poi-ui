@@ -139,6 +139,60 @@ import Icon from './IconWithTooltip';
 </div>;
 ```
 
+Dashboards:
+
+```jsx
+import Icon from './IconWithTooltip';
+
+<div style={{ display: 'flex', flexFlow: 'row wrap', gap: 4, alignItems: 'flex-end' }}>
+    <Icon name="chart" />
+    <Icon name="areaChart" />
+    <Icon name="areaChartColor" />
+    <Icon name="xAxis" />
+    <Icon name="xAxisColor" />
+    <Icon name="yAxis" />
+    <Icon name="yAxisColor" />
+    <Icon name="horizontalBarChart" />
+    <Icon name="horizontalBarChartColor" />
+    <Icon name="verticalBarChart" />
+    <Icon name="verticalBarChartColor" />
+    <Icon name="counterChart" />
+    <Icon name="counterChartColor" />
+    <Icon name="linesChart" />
+    <Icon name="linesChartColor" />
+    <Icon name="mapChart" />
+    <Icon name="mapChartColor" />
+    <Icon name="radialBarChart" />
+    <Icon name="radialBarChartColor" />
+    <Icon name="tableChart" />
+    <Icon name="tableChartColor" />
+    <Icon name="boxPlotChart" />
+    <Icon name="boxPlotChartColor" />
+    <Icon name="bubbleChart" />
+    <Icon name="bubbleChartColor" />
+    <Icon name="bumpChart" />
+    <Icon name="bumpChartColor" />
+    <Icon name="funnelChart" />
+    <Icon name="funnelChartColor" />
+    <Icon name="networkChart" />
+    <Icon name="networkChartColor" />
+    <Icon name="pieChart" />
+    <Icon name="pieChartColor" />
+    <Icon name="piramidChart" />
+    <Icon name="piramidChartColor" />
+    <Icon name="radarChart" />
+    <Icon name="radarChartColor" />
+    <Icon name="scatterPlotChart" />
+    <Icon name="scatterPlotChartColor" />
+    <Icon name="stackedChart" />
+    <Icon name="stackedChartColor" />
+    <Icon name="sunburstChart" />
+    <Icon name="sunburstChartColor" />
+    <Icon name="timeRangeChart" />
+    <Icon name="timeRangeChartColor" />
+</div>;
+```
+
 Communication:
 
 ```jsx

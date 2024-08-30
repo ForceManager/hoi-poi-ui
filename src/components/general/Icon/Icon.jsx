@@ -117,7 +117,7 @@ import Cached from './icons/actions/Cached';
 import Cognitive from './icons/actions/Cognitive';
 import CognitiveTwoToned from './icons/actions/CognitiveTwoToned';
 import CreditCard from './icons/actions/CreditCard';
-import Dashboard from './icons/actions/Dashboard';
+import VuMeter from './icons/actions/VuMeter';
 import DateRange from './icons/actions/DateRange';
 import Delete from './icons/actions/Delete';
 import Documents from './icons/actions/Documents';
@@ -212,6 +212,55 @@ import Resend from './icons/actions/Resend';
 import EmailStar from './icons/actions/EmailStar';
 import Variables from './icons/actions/Variables';
 
+//Dashboard
+import Chart from './icons/dashboards/Chart';
+import AreaChart from './icons/dashboards/AreaChart';
+import AreaChartColor from './icons/dashboards/AreaChartColor';
+import XAxis from './icons/dashboards/XAxis';
+import XAxisColor from './icons/dashboards/XAxisColor';
+import YAxis from './icons/dashboards/YAxis';
+import YAxisColor from './icons/dashboards/YAxisColor';
+import HorizontalBarChart from './icons/dashboards/HorizontalBarChart';
+import HorizontalBarChartColor from './icons/dashboards/HorizontalBarChartColor';
+import VerticalBarChart from './icons/dashboards/VerticalBarChart';
+import VerticalBarChartColor from './icons/dashboards/VerticalBarChartColor';
+import CounterChart from './icons/dashboards/CounterChart';
+import CounterChartColor from './icons/dashboards/CounterChartColor';
+import LinesChart from './icons/dashboards/LinesChart';
+import LinesChartColor from './icons/dashboards/LinesChartColor';
+import MapChart from './icons/dashboards/MapChart';
+import MapChartColor from './icons/dashboards/MapChartColor';
+import RadialBarChart from './icons/dashboards/RadialBarChart';
+import RadialBarChartColor from './icons/dashboards/RadialBarChartColor';
+import TableChart from './icons/dashboards/TableChart';
+import TableChartColor from './icons/dashboards/TableChartColor';
+import BoxPlotChart from './icons/dashboards/BoxPlotChart';
+import BoxPlotChartColor from './icons/dashboards/BoxPlotChartColor';
+import BubbleChart from './icons/dashboards/BubbleChart';
+import BubbleChartColor from './icons/dashboards/BubbleChartColor';
+import BumpChart from './icons/dashboards/BumpChart';
+import BumpChartColor from './icons/dashboards/BumpChartColor';
+import FunnelChart from './icons/dashboards/FunnelChart';
+import FunnelChartColor from './icons/dashboards/FunnelChartColor';
+import NetworkChart from './icons/dashboards/NetworkChart';
+import NetworkChartColor from './icons/dashboards/NetworkChartColor';
+import PieChart from './icons/dashboards/PieChart';
+import PieChartColor from './icons/dashboards/PieChartColor';
+import PiramidChart from './icons/dashboards/PiramidChart';
+import PiramidChartColor from './icons/dashboards/PiramidChartColor';
+import RadarChart from './icons/dashboards/RadarChart';
+import RadarChartColor from './icons/dashboards/RadarChartColor';
+import ScatterPlotChart from './icons/dashboards/ScatterPlotChart';
+import ScatterPlotChartColor from './icons/dashboards/ScatterPlotChartColor';
+import StackedChart from './icons/dashboards/StackedChart';
+import StackedChartColor from './icons/dashboards/StackedChartColor';
+import SunburstChart from './icons/dashboards/SunburstChart';
+import SunburstChartColor from './icons/dashboards/SunburstChartColor';
+import TimeRangeChart from './icons/dashboards/TimeRangeChart';
+import TimeRangeChartColor from './icons/dashboards/TimeRangeChartColor';
+import TreeChart from './icons/dashboards/TreeChart';
+import TreeChartColor from './icons/dashboards/TreeChartColor';
+
 //Communication
 import Message from './icons/communication/Message';
 import Comment from './icons/communication/Comment';
@@ -266,7 +315,6 @@ import Accounts from './icons/menu/Accounts';
 import AddWidgetsOutline from './icons/menu/AddWidgetsOutline';
 import AnalyticsPro from './icons/menu/AnalyticsPro';
 import Authentication from './icons/menu/Authentication';
-import BubleChart from './icons/menu/BubleChart';
 import Campaigns from './icons/menu/Campaigns';
 import Contacts from './icons/menu/Contacts';
 import Credentials from './icons/menu/Credentials';
@@ -294,7 +342,7 @@ import Support from './icons/menu/Support';
 import Tasks from './icons/menu/Tasks';
 import Workspace from './icons/menu/Workspace';
 import Document from './icons/menu/Document';
-import DashboardMenu from './icons/menu/Dashboard';
+import Dashboard from './icons/menu/Dashboard';
 
 //Alert
 import Alert from './icons/alert/Alert';
@@ -590,7 +638,7 @@ export const ICONS = {
     cognitive: Cognitive,
     cognitiveTwoToned: CognitiveTwoToned,
     creditCard: CreditCard,
-    dashboard: Dashboard,
+    vuMeter: VuMeter,
     dateRange: DateRange,
     delete: Delete,
     documents: Documents,
@@ -679,6 +727,54 @@ export const ICONS = {
     resend: Resend,
     emailStar: EmailStar,
     variables: Variables,
+    //Dashboards
+    chart: Chart,
+    areaChart: AreaChart,
+    areaChartColor: AreaChartColor,
+    xAxis: XAxis,
+    xAxisColor: XAxisColor,
+    yAxis: YAxis,
+    yAxisColor: YAxisColor,
+    horizontalBarChart: HorizontalBarChart,
+    horizontalBarChartColor: HorizontalBarChartColor,
+    verticalBarChart: VerticalBarChart,
+    verticalBarChartColor: VerticalBarChartColor,
+    counterChart: CounterChart,
+    counterChartColor: CounterChartColor,
+    linesChart: LinesChart,
+    linesChartColor: LinesChartColor,
+    mapChart: MapChart,
+    mapChartColor: MapChartColor,
+    radialBarChart: RadialBarChart,
+    radialBarChartColor: RadialBarChartColor,
+    tableChart: TableChart,
+    tableChartColor: TableChartColor,
+    boxPlotChart: BoxPlotChart,
+    boxPlotChartColor: BoxPlotChartColor,
+    bubbleChart: BubbleChart,
+    bubbleChartColor: BubbleChartColor,
+    bumpChart: BumpChart,
+    bumpChartColor: BumpChartColor,
+    funnelChart: FunnelChart,
+    funnelChartColor: FunnelChartColor,
+    networkChart: NetworkChart,
+    networkChartColor: NetworkChartColor,
+    pieChart: PieChart,
+    pieChartColor: PieChartColor,
+    piramidChart: PiramidChart,
+    piramidChartColor: PiramidChartColor,
+    radarChart: RadarChart,
+    radarChartColor: RadarChartColor,
+    scatterPlotChart: ScatterPlotChart,
+    scatterPlotChartColor: ScatterPlotChartColor,
+    stackedChart: StackedChart,
+    stackedChartColor: StackedChartColor,
+    sunburstChart: SunburstChart,
+    sunburstChartColor: SunburstChartColor,
+    timeRangeChart: TimeRangeChart,
+    timeRangeChartColor: TimeRangeChartColor,
+    treeChart: TreeChart,
+    treeChartColor: TreeChartColor,
     //Communication
     message: Message,
     comment: Comment,
@@ -730,7 +826,6 @@ export const ICONS = {
     addWidgetsOutline: AddWidgetsOutline,
     analyticsPro: AnalyticsPro,
     authentication: Authentication,
-    bubleChart: BubleChart,
     calendar: Calendar,
     campaigns: Campaigns,
     contacts: Contacts,
@@ -759,7 +854,7 @@ export const ICONS = {
     tasks: Tasks,
     workspace: Workspace,
     document: Document,
-    dashboardMenu: DashboardMenu,
+    dashboard: Dashboard,
     //Alert
     alert: Alert,
     addAlert: AddAlert,
