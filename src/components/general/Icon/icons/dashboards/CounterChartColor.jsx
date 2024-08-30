@@ -4,7 +4,7 @@ import { colors } from '../../../../../utils/styles/defaultTheme';
 function CounterChartColor({ color = colors.neutral700, ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
-            <circle cx="12" cy="12" r="9.25" stroke="#7D8A96" stroke-width="1.5" />
+            <circle cx="12" cy="12" r="9.25" stroke="#7D8A96" strokeWidth="1.5" />
             <path
                 fill="#7BA4FE"
                 fillRule="evenodd"
