@@ -1,6 +1,7 @@
 import React, { forwardRef, useCallback, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import Tooltip from '../../utils/Tooltip';
 
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
@@ -1040,6 +1041,7 @@ const Icon = forwardRef(
             onMouseOut,
             onMouseDown,
             onMouseUp,
+            tooltip,
         },
         ref,
     ) => {
@@ -1093,7 +1095,7 @@ const Icon = forwardRef(
             classNameProp,
         );
 
-        return (
+        const icon = (
             <span
                 onClick={onClick}
                 onMouseOver={handleOnMouseOver}
@@ -1107,6 +1109,16 @@ const Icon = forwardRef(
                 <SelectedIcon color={newColor} color2={color2} {...override.icon} />
             </span>
         );
+
+        if (tooltip) {
+            return (
+                <Tooltip placement="top" content={tooltip}>
+                    {icon}
+                </Tooltip>
+            );
+        }
+
+        return icon;
     },
 );
 
