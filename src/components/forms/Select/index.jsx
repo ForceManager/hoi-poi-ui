@@ -117,6 +117,7 @@ const Select = memo(
         showMediaInSelectedValues = false,
         keepInputValueOnBlurInMulti = false,
         componentOverride = {},
+        alwaysLoadOnFocus = false,
         ...props
     }) => {
         const selectRef = useRef();
@@ -294,11 +295,7 @@ const Select = memo(
             (e) => {
                 setMenuPlacement(e);
                 setFocused(true);
-                const searchText =
-                    defaultSearch ||
-                    newInputValue ||
-                    newValue?.label?.charAt(0)?.toLowerCase() ||
-                    '';
+                const searchText = defaultSearch || newInputValue || '';
                 if (
                     (loadOptions && !isFuzzy && !lazyOptions.areLoaded) ||
                     (loadOptions && !cacheOptions)
@@ -315,7 +312,11 @@ const Select = memo(
                             options,
                         });
                     });
-                } else if (searchText && loadOptions && isFuzzy) {
+                } else if (
+                    (searchText || newValue?.value || alwaysLoadOnFocus) &&
+                    loadOptions &&
+                    isFuzzy
+                ) {
                     setLazyOptions((currentOptions) => ({
                         ...currentOptions,
                         isLoading: true,
@@ -332,15 +333,16 @@ const Select = memo(
                 }
             },
             [
-                isFuzzy,
+                setMenuPlacement,
                 defaultSearch,
                 newInputValue,
-                lazyOptions,
                 loadOptions,
-                setMenuPlacement,
-                newValue,
-                getIsSelectAllWithGroups,
+                isFuzzy,
+                lazyOptions.areLoaded,
                 cacheOptions,
+                newValue?.value,
+                alwaysLoadOnFocus,
+                getIsSelectAllWithGroups,
             ],
         );
 
@@ -1315,6 +1317,8 @@ Select.propTypes = {
     showMediaInSelectedValues: PropTypes.bool,
     /** Full native react-select component override */
     componentOverride: PropTypes.object,
+    /** Always load results on focus when is fuzzy */
+    alwaysLoadOnFocus: PropTypes.bool,
 };
 
 export default Select;
