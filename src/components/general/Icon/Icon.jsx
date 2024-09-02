@@ -1,4 +1,4 @@
-import React, { forwardRef, useCallback, useState, useEffect } from 'react';
+import React, { forwardRef, useCallback, useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Tooltip from '../../utils/Tooltip';
@@ -1051,6 +1051,14 @@ const Icon = forwardRef(
 
         const [newColor, setNewColor] = useState(color || theme.colors.neutral700);
         const [newName, setNewName] = useState(name);
+        const oldName = useRef(name);
+
+        useEffect(() => {
+            if (oldName.current !== name) {
+                setNewName(name);
+                oldName.current = name;
+            }
+        }, [name, setNewName]);
 
         useEffect(() => {
             if (color && color !== newColor) {
