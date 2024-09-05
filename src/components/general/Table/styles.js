@@ -3,6 +3,7 @@ export default (theme) => ({
         height: '100%',
         width: '100%',
         border: `1px solid ${theme.colors.neutral400}`,
+        boxSizing: 'border-box',
         borderRadius: 6,
     },
     rows: {
@@ -23,6 +24,7 @@ export default (theme) => ({
         display: 'flex',
         height: 32,
         borderBottom: `1px solid ${theme.colors.neutral400}`,
+        boxSizing: 'border-box',
     },
     evenBackground: {
         '& > :nth-child(even)': {
