@@ -318,6 +318,8 @@ import Icon from './IconWithTooltip';
     <Icon name="tasks" />
     <Icon name="workspace" />
     <Icon name="document" />
+    <Icon name="dashboard" />
+    <Icon name="integrations" />
 </div>;
 ```
 
