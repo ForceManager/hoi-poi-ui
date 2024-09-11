@@ -96,6 +96,7 @@ import Logout from './icons/Logout';
 import DatabaseClear from './icons/DatabaseClear';
 import LocalDatabaseClear from './icons/LocalDatabaseClear';
 import Tool from './icons/Tool';
+import Location from './icons/Location';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -618,6 +619,7 @@ export const ICONS = {
     databaseClear: DatabaseClear,
     localDatabaseClear: LocalDatabaseClear,
     tool: Tool,
+    location: Location,
 
     //Actions
     accountCheckin: AccountCheckin,
