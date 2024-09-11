@@ -136,6 +136,7 @@ import Icon from './IconWithTooltip';
     <Icon name="replyAll" />
     <Icon name="resend" />
     <Icon name="emailStar" />
+    <Icon name="location" />
 </div>;
 ```
 
