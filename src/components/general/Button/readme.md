@@ -205,6 +205,12 @@ const onClickPs = () => console.log('buttonRef', buttonRef.current);
 </Button>;
 ```
 
+With href
+
+```jsx
+<Button href="https://github.com/ForceManager/hoi-poi-ui">Push me</Button>
+```
+
 ### Component tree
 
 ---
