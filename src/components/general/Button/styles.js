@@ -261,4 +261,8 @@ export default (theme) => ({
         },
     },
     fullWidth: {},
+    href: {
+        textDecoration: 'none',
+        display: 'inline-flex',
+    },
 });
