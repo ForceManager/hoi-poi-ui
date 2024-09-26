@@ -377,6 +377,7 @@ import Icon from './IconWithTooltip';
     <Icon name="clearbit" />
     <Icon name="androidLogo" />
     <Icon name="iOSLogo" />
+    <Icon name="dana" />
 </div>;
 ```
 
@@ -741,6 +742,7 @@ import Icon from './IconWithTooltip';
         <Icon name="cloud" hasGradient />
         <Icon name="geolocatedOpportunity" hasGradient />
         <Icon name="emailTracking" hasGradient />
+        <Icon name="dana" hasGradient />
     </div>
 </Fragment>;
 ```
