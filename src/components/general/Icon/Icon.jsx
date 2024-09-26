@@ -384,6 +384,7 @@ import Shopify from './icons/logos/Shopify';
 import Clearbit from './icons/logos/Clearbit';
 import AndroidLogo from './icons/logos/AndroidLogo';
 import iOSLogo from './icons/logos/iOSLogo';
+import Dana from './icons/logos/Dana';
 
 //Navigation
 import Apps from './icons/navigation/Apps';
@@ -896,6 +897,7 @@ export const ICONS = {
     outlook: Outlook,
     androidLogo: AndroidLogo,
     iOSLogo: iOSLogo,
+    dana: Dana,
     //Navigation
     apps: Apps,
     arrowBack: ArrowBack,
