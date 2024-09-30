@@ -345,6 +345,7 @@ import Tasks from './icons/menu/Tasks';
 import Workspace from './icons/menu/Workspace';
 import Document from './icons/menu/Document';
 import Dashboard from './icons/menu/Dashboard';
+import DashboardCustomize from './icons/menu/DashboardCustomize';
 import Integrations from './icons/menu/Integrations';
 
 //Alert
@@ -859,6 +860,7 @@ export const ICONS = {
     workspace: Workspace,
     document: Document,
     dashboard: Dashboard,
+    dashboardCustomize: DashboardCustomize,
     integrations: Integrations,
     //Alert
     alert: Alert,
