@@ -458,6 +458,7 @@ export default (theme) => ({
             height: 0,
             overflow: 'visible',
         },
+        '& .hoi-poi-ui__tabs-tab-draggable': {},
     },
     withPostComponent: {
         display: 'flex',

@@ -4,10 +4,15 @@ import classnames from 'classnames';
 import RCTabs, { TabPane } from 'rc-tabs';
 import TabContent from 'rc-tabs/lib/TabContent';
 import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+
 import Icon from '../Icon';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 
+import DragWrapperContainer from './DragWrapperContainer';
+import DragWrapperTab from './DragWrapperTab';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles, 'Tabs');
@@ -28,6 +33,8 @@ function Tabs({
     tabs = [],
     editable = false,
     alwaysShowCloseTab = false,
+    draggable,
+    onSorting,
     ...props
 }) {
     const [state, setState] = useState({
@@ -99,18 +106,52 @@ function Tabs({
         [onClose, onMouseOut, state],
     );
 
+    const findTab = useCallback(
+        (key) => {
+            const tab = state.tabs.filter((c) => `${c.key}` === key)[0];
+            return {
+                tab,
+                index: state.tabs.indexOf(tab),
+            };
+        },
+        [state.tabs],
+    );
+    const moveTab = useCallback(
+        (key, atIndex) => {
+            const { tab, index } = findTab(key);
+            const newTabs = [...state.tabs];
+            newTabs.splice(index, 1);
+            newTabs.splice(atIndex, 0, tab);
+            findTab({ activeKey, tabs: newTabs });
+            setState((current) => ({ ...current, tabs: newTabs }));
+            onSorting?.(newTabs);
+        },
+        [findTab, state.tabs, activeKey],
+    );
+
     const tabsProps = useMemo(
         () => ({
             ...props,
             activeKey: state.activeKey,
             onChange: handleChange,
-            renderTabBar: () => <ScrollableInkTabBar />,
+            renderTabBar: () =>
+                draggable ? (
+                    <ScrollableInkTabBar>
+                        {(node) => (
+                            <DragWrapperTab id={node.key} moveTab={moveTab} findTab={findTab}>
+                                {node}
+                            </DragWrapperTab>
+                        )}
+                    </ScrollableInkTabBar>
+                ) : (
+                    <ScrollableInkTabBar />
+                ),
             renderTabContent: () => <TabContent />,
             tabBarPosition: position,
             prefixCls: 'hoi-poi-ui__tabs',
             ...override['rc-tabs'],
         }),
-        [handleChange, override, position, props, state.activeKey],
+        [draggable, findTab, handleChange, moveTab, override, position, props, state.activeKey],
     );
 
     const getParentNode = useCallback((target) => {
@@ -194,8 +235,8 @@ function Tabs({
         [getParentNode, getAbsolutePosition, containerElement, popoverOffsetCorrection],
     );
 
-    return (
-        <div className={rootClassName} {...override.root} ref={tabRef}>
+    const TabsEl = useMemo(() => {
+        return (
             <RCTabs {...tabsProps}>
                 {state.tabs.map(({ key, title, content, fixed, popoverContent, popoverWidth }) => {
                     let finalTitle = null;
@@ -241,6 +282,36 @@ function Tabs({
                     );
                 })}
             </RCTabs>
+        );
+    }, [
+        alwaysShowCloseTab,
+        classes.tabWithPopover,
+        editable,
+        handleClose,
+        onClickForPopover,
+        onMouseOut,
+        onMouseOver,
+        override.close,
+        state.activeKey,
+        state.tabs,
+        tabsProps,
+    ]);
+
+    const WrappedTabsEl = useMemo(() => {
+        if (draggable) {
+            return (
+                <DndProvider backend={HTML5Backend}>
+                    <DragWrapperContainer>{TabsEl}</DragWrapperContainer>
+                </DndProvider>
+            );
+        } else {
+            return TabsEl;
+        }
+    }, [TabsEl, draggable]);
+
+    return (
+        <div className={rootClassName} {...override.root} ref={tabRef}>
+            {WrappedTabsEl}
             {postComponent && <div className={classes.postComponent}>{postComponent}</div>}
             {popoverComponent && (
                 <div className={classes.popover} style={popoverStyles}>
@@ -272,7 +343,7 @@ Tabs.propTypes = {
     postComponent: PropTypes.node,
     editable: PropTypes.bool,
     alwaysShowCloseTab: PropTypes.bool,
-    containerElement: PropTypes.node,
+    containerElement: PropTypes.any,
     popoverOffsetCorrection: PropTypes.number,
 };
 
