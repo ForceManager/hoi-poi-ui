@@ -11,7 +11,6 @@ module.exports = {
         alias: {
             'hoi-poi-ui': srcPath,
             process: 'process/browser.js',
-            'react-dnd': path.resolve('./node_modules/react-dnd'),
         },
         extensions: ['js', 'json', 'jsx'],
     },
