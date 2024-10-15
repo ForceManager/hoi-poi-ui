@@ -1225,7 +1225,7 @@ Select.propTypes = {
             src: PropTypes.string,
             icon: PropTypes.element,
             iconType: PropTypes.string,
-            subLabel: PropTypes.string,
+            subLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
         }),
     ),
     defaultSearch: PropTypes.string,
