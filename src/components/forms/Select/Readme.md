@@ -429,6 +429,49 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+Multiple sub-labels:
+
+```jsx
+import { useState } from 'react';
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        subLabel: ['lorem-ipsum-1', 'lorem-ipsum-1-1'],
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        subLabel: ['lorem-ipsum-2', 'lorem-ipsum-2-1'],
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        subLabel: ['lorem-ipsum-3', 'lorem-ipsum-3-1'],
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        subLabel: ['lorem-ipsum-4', 'lorem-ipsum-4-1'],
+    },
+];
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+
+<div>
+    <Select
+        label="Lorem ipsum"
+        placeholder="Select one"
+        onChange={onChange}
+        options={options}
+        value={state.value}
+        filterByKey
+    />
+</div>;
+```
+
 Multi ReadOnly:
 
 ```jsx

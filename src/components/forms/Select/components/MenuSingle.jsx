@@ -15,6 +15,27 @@ export default ({ classes, option, override, getHighlighted }) => {
         customIconClasses.push(classes.disabledIcon);
     }
 
+    const renderSubLabels = () => {
+        if (!option.subLabel) return null;
+        const finalSublabels = Array.isArray(option.subLabel) ? option.subLabel : [option.subLabel];
+        return (
+            <div className={classes.optionLabelBlock} {...override.optionLabelBlock}>
+                <div className={textClasses.join(' ')} {...override.optionLabelText}>
+                    {(getHighlighted && getHighlighted(option)) || option.label}
+                </div>
+                {finalSublabels.map((subLabel, index) => (
+                    <div
+                        key={`subLabel-${index}`}
+                        className={subtitleClasses.join(' ')}
+                        {...override.optionLabelSubLabel}
+                    >
+                        {subLabel}
+                    </div>
+                ))}
+            </div>
+        );
+    };
+
     return (
         <div className={classes.optionLabel} {...override.optionLabel}>
             {option.iconType && (
@@ -50,16 +71,7 @@ export default ({ classes, option, override, getHighlighted }) => {
                     {(getHighlighted && getHighlighted(option)) || option.label}
                 </div>
             )}
-            {option.subLabel && (
-                <div className={classes.optionLabelBlock} {...override.optionLabelBlock}>
-                    <div className={textClasses.join(' ')} {...override.optionLabelText}>
-                        {(getHighlighted && getHighlighted(option)) || option.label}
-                    </div>
-                    <div className={subtitleClasses.join(' ')} {...override.optionLabelSubLabel}>
-                        {option.subLabel}
-                    </div>
-                </div>
-            )}
+            {renderSubLabels()}
         </div>
     );
 };
