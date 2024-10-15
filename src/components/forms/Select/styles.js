@@ -85,6 +85,9 @@ export default (theme) => ({
     optionLabelSubtitle: {
         ...theme.typography.caption,
         color: theme.colors.neutral700,
+        '& + $optionLabelSubtitle': {
+            marginTop: 2,
+        },
     },
     disabledText: {
         color: theme.colors.neutral500,
