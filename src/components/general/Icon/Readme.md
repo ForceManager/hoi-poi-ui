@@ -479,6 +479,7 @@ import Icon from './IconWithTooltip';
     <Icon name="flagOutline" />
     <Icon name="addCircle" />
     <Icon name="addCircleOutline" />
+    <Icon name="save" />
 </div>;
 ```
 

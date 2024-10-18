@@ -18,7 +18,7 @@ export default (theme) => ({
     },
     header: {},
     headerHighlighted: {
-        backgroundColor: theme.colors.neutral300,
+        backgroundColor: theme.colors.neutral150,
     },
     row: {
         display: 'flex',
@@ -28,12 +28,12 @@ export default (theme) => ({
     },
     evenBackground: {
         '& > :nth-child(even)': {
-            backgroundColor: theme.colors.neutral150,
+            backgroundColor: theme.colors.neutral100,
         },
     },
     oddBackground: {
         '& > :nth-child(odd)': {
-            backgroundColor: theme.colors.neutral150,
+            backgroundColor: theme.colors.neutral100,
         },
     },
     emptyTable: {
