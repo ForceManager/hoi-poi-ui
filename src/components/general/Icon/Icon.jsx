@@ -449,6 +449,7 @@ import Flag from './icons/content/Flag';
 import FlagOutline from './icons/content/FlagOutline';
 import AddCircle from './icons/content/AddCircle';
 import AddCircleOutline from './icons/content/AddCircleOutline';
+import Save from './icons/content/Save';
 
 //Device
 import AccessAlarms from './icons/device/AccessAlarms';
@@ -959,6 +960,7 @@ export const ICONS = {
     flagOutline: FlagOutline,
     addCircle: AddCircle,
     addCircleOutline: AddCircleOutline,
+    save: Save,
     //Device
     accessAlarms: AccessAlarms,
     accessTime: AccessTime,
