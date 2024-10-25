@@ -1,4 +1,5 @@
 import React, { memo, useCallback, useEffect, useMemo, useState, Fragment, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCTabs, { TabPane } from 'rc-tabs';
@@ -313,11 +314,13 @@ function Tabs({
         <div className={rootClassName} {...override.root} ref={tabRef}>
             {WrappedTabsEl}
             {postComponent && <div className={classes.postComponent}>{postComponent}</div>}
-            {popoverComponent && (
-                <div className={classes.popover} style={popoverStyles}>
-                    {popoverComponent}
-                </div>
-            )}
+            {popoverComponent &&
+                createPortal(
+                    <div className={classes.popover} style={popoverStyles}>
+                        {popoverComponent}
+                    </div>,
+                    document.body,
+                )}
         </div>
     );
 }
