@@ -337,6 +337,7 @@ Modal.propTypes = {
     /** Show header section */
     useHeader: PropTypes.bool,
     closeTimeoutMS: PropTypes.number,
+    headerComponent: PropTypes.element,
     preComponent: PropTypes.element,
     postComponent: PropTypes.element,
 };
