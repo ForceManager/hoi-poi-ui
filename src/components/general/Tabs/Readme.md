@@ -156,6 +156,7 @@ function onClose({ key, activeKey, tabs }) {
     activeKey={state.activeKey}
     tabs={state.tabs}
     editable
+    popoverAlignLeft
 />;
 ```
 

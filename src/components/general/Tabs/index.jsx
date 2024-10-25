@@ -1,5 +1,4 @@
 import React, { memo, useCallback, useEffect, useMemo, useState, Fragment, useRef } from 'react';
-import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import RCTabs, { TabPane } from 'rc-tabs';
@@ -30,6 +29,7 @@ function Tabs({
     vertical,
     containerElement,
     popoverOffsetCorrection = 0,
+    popoverAlignLeft,
     position = 'top',
     tabs = [],
     editable = false,
@@ -127,7 +127,7 @@ function Tabs({
             setState((current) => ({ ...current, tabs: newTabs }));
             onSorting?.(newTabs);
         },
-        [findTab, state.tabs, activeKey],
+        [findTab, state.tabs, activeKey, onSorting],
     );
 
     const tabsProps = useMemo(
@@ -230,10 +230,18 @@ function Tabs({
                 popoverStyles.left = positionToTabCenter - pixelsToPopoverCenter;
             }
 
+            if (popoverAlignLeft) popoverStyles.left = left;
+
             setPopoverComponent(popoverContent);
             setPopoverStyles(popoverStyles);
         },
-        [getParentNode, getAbsolutePosition, containerElement, popoverOffsetCorrection],
+        [
+            getParentNode,
+            getAbsolutePosition,
+            popoverAlignLeft,
+            containerElement,
+            popoverOffsetCorrection,
+        ],
     );
 
     const TabsEl = useMemo(() => {
@@ -314,13 +322,11 @@ function Tabs({
         <div className={rootClassName} {...override.root} ref={tabRef}>
             {WrappedTabsEl}
             {postComponent && <div className={classes.postComponent}>{postComponent}</div>}
-            {popoverComponent &&
-                createPortal(
-                    <div className={classes.popover} style={popoverStyles}>
-                        {popoverComponent}
-                    </div>,
-                    document.body,
-                )}
+            {popoverComponent && (
+                <div className={classes.popover} style={popoverStyles}>
+                    {popoverComponent}
+                </div>
+            )}
         </div>
     );
 }
