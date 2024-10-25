@@ -194,7 +194,7 @@ function Modal({
                 {useHeader && (
                     <div className={classes.header} {...override.header}>
                         {renderTitle}
-                        {headerComponent && headerComponent}
+                        {headerComponent}
                         {useCornerClose && (
                             <Icon
                                 size="large"
@@ -337,6 +337,7 @@ Modal.propTypes = {
     /** Show header section */
     useHeader: PropTypes.bool,
     closeTimeoutMS: PropTypes.number,
+    headerComponent: PropTypes.element,
     preComponent: PropTypes.element,
     postComponent: PropTypes.element,
 };
