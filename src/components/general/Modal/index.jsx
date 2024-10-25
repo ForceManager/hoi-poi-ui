@@ -194,7 +194,7 @@ function Modal({
                 {useHeader && (
                     <div className={classes.header} {...override.header}>
                         {renderTitle}
-                        {headerComponent && headerComponent}
+                        {headerComponent}
                         {useCornerClose && (
                             <Icon
                                 size="large"
