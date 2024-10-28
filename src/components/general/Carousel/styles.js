@@ -228,7 +228,7 @@ export default (theme) => ({
         '.image-gallery-slide .image-gallery-image': {
             width: 'calc(100% - 1px)',
             height: '100%',
-            objectFit: 'contain',
+            objectFit: 'scale-down',
         },
         '.image-gallery-slide .image-gallery-description': {
             background: 'rgba(0, 0, 0, .4)',
@@ -348,6 +348,7 @@ export default (theme) => ({
             lineHeight: '0',
             cursor: 'pointer',
             borderRadius: '4px',
+            objectPosition: 'left',
         },
         '.image-gallery-thumbnail.active': {
             outline: 'none',
