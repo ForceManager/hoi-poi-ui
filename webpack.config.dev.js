@@ -13,6 +13,7 @@ module.exports = {
             process: 'process/browser.js',
         },
         extensions: ['js', 'json', 'jsx'],
+        fallback: { 'process/browser': require.resolve('process/browser'), },
     },
     module: {
         rules: [
