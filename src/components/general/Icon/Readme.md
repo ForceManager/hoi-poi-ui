@@ -287,6 +287,7 @@ import Icon from './IconWithTooltip';
 
 <div style={{ display: 'flex', flexFlow: 'row wrap', gap: 4, alignItems: 'flex-end' }}>
     <Icon name="accounts" />
+    <Icon name="automations" />
     <Icon name="activities" />
     <Icon name="addWidgetsOutline" />
     <Icon name="analyticsPro" />
