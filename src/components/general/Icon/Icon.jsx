@@ -314,6 +314,7 @@ import LocationOff from './icons/map/LocationOff';
 
 //Menu
 import Accounts from './icons/menu/Accounts';
+import Automations from './icons/menu/Automations';
 import AddWidgetsOutline from './icons/menu/AddWidgetsOutline';
 import AnalyticsPro from './icons/menu/AnalyticsPro';
 import Authentication from './icons/menu/Authentication';
@@ -828,6 +829,7 @@ export const ICONS = {
     locationOff: LocationOff,
     //Menu
     accounts: Accounts,
+    automations: Automations,
     activities: Activities,
     addWidgetsOutline: AddWidgetsOutline,
     analyticsPro: AnalyticsPro,
