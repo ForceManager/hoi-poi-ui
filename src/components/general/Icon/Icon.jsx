@@ -97,6 +97,7 @@ import DatabaseClear from './icons/DatabaseClear';
 import LocalDatabaseClear from './icons/LocalDatabaseClear';
 import Tool from './icons/Tool';
 import Location from './icons/Location';
+import DeviceHub from './icons/DeviceHub';
 
 //Actions
 import AccountCheckin from './icons/actions/AccountCheckin';
@@ -623,6 +624,7 @@ export const ICONS = {
     localDatabaseClear: LocalDatabaseClear,
     tool: Tool,
     location: Location,
+    deviceHub: DeviceHub,
 
     //Actions
     accountCheckin: AccountCheckin,
