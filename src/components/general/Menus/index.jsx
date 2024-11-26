@@ -50,6 +50,7 @@ function Menus({
             </Fragment>
         ),
         popupClassName: menuClassName,
+        ...override['rc-menu-sub-menu'],
     };
 
     return (
@@ -89,7 +90,7 @@ function Menus({
     );
 }
 
-Menus.overrides = ['root', 'rc-menu'];
+Menus.overrides = ['root', 'rc-menu', 'rc-menu-sub-menu'];
 
 Menus.propTypes = {
     title: PropTypes.any,
