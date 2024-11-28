@@ -129,6 +129,13 @@ export default (theme) => ({
             color: 'red',
         },
     },
+    optionSideLabelBlock: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    optionSideLabel: {},
     optionLabelIcon: {
         marginRight: 10,
     },
