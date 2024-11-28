@@ -90,7 +90,7 @@ const Option = memo(
                         />
                     </div>
                 )}
-                {!option.subLabel && (
+                {!option.subLabel && !option.sideLabel && (
                     <div className={classes.optionLabel} {...(override.optionLabel || {})}>
                         <Text type="body" isTruncated={isTruncated}>
                             {option.label}
@@ -113,6 +113,24 @@ const Option = memo(
                         >
                             <Text type="caption" isTruncated={isTruncated} color="neutral700">
                                 {option.subLabel}
+                            </Text>
+                        </div>
+                    </div>
+                )}
+                {!isMulti && option.sideLabel && (
+                    <div
+                        className={classes.optionSideLabelBlock}
+                        {...(override.optionSideLabelBlock || {})}
+                    >
+                        <div className={classes.optionLabel} {...(override.optionLabel || {})}>
+                            <Text isTruncated={isTruncated}>{option.label}</Text>
+                        </div>
+                        <div
+                            className={classes.optionSideLabel}
+                            {...(override.optionSideLabel || {})}
+                        >
+                            <Text isTruncated={isTruncated} color="neutral600">
+                                {option.sideLabel}
                             </Text>
                         </div>
                     </div>

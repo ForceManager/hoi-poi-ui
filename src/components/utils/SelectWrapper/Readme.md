@@ -164,6 +164,63 @@ const options = [
 </div>;
 ```
 
+Side label:
+
+```jsx
+import { useState } from 'react';
+import { Chip } from 'hoi-poi-ui';
+
+const [state, setState] = useState({});
+
+const onChange = (value) => setState({ value });
+const [chipState, setChipState] = useState({
+    isFolded: true,
+});
+const getIsOpen = (isOpen) => setChipState({ isFolded: !isOpen });
+const onRemove = (e) => {
+    e.stopPropagation();
+    setState({});
+};
+
+const options = [
+    {
+        label: 'Lorem ipsum 1',
+        value: 'lorem-ipsum-1',
+        sideLabel: 'ALT + 1',
+    },
+    {
+        label: 'Lorem ipsum 2',
+        value: 'lorem-ipsum-2',
+        sideLabel: 'ALT + 2',
+        isDisabled: true,
+    },
+    {
+        label: 'Lorem ipsum 3',
+        value: 'lorem-ipsum-3',
+        sideLabel: 'ALT + 3',
+    },
+    {
+        label: 'Lorem ipsum 4',
+        value: 'lorem-ipsum-4',
+        sideLabel: 'ALT + 4',
+    },
+];
+
+<div>
+    <SelectWrapper options={options} value={state.value} getIsOpen={getIsOpen} onChange={onChange}>
+        <Chip
+            isFolded={chipState.isFolded}
+            isUnfolded={!chipState.isFolded}
+            isFilled
+            isActive={state.value ? !!state.value : false}
+            onRemove={state.value ? onRemove : null}
+        >
+            Select Multi
+        </Chip>
+    </SelectWrapper>
+</div>;
+```
+
 Icon:
 
 ```jsx
