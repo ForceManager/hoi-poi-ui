@@ -92,18 +92,18 @@ export default (theme) => ({
         },
     },
     warning: {
-        backgroundColor: theme.colors.yellow100,
+        backgroundColor: theme.colors.semantic.focusCustom100,
         '& $Text': {
-            color: theme.colors.yellow700,
+            color: theme.colors.semantic.focusCustom600,
         },
         '& $dismiss': {
-            color: `${theme.colors.yellow700} !important`,
-            borderColor: `${theme.colors.yellow700} !important`,
+            color: `${theme.colors.semantic.focusCustom600} !important`,
+            borderColor: `${theme.colors.semantic.focusCustom600} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.yellow200} !important`,
+                backgroundColor: `${theme.colors.semantic.focusCustom200} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.yellow400} !important`,
+                backgroundColor: `${theme.colors.semantic.focusCustom400} !important`,
             },
         },
     },

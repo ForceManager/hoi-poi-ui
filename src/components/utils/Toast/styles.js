@@ -125,7 +125,7 @@ export default (theme) => ({
             borderLeft: `8px solid ${theme.colors.semantic.negative500}`,
         },
         '.Toastify__toast--warning': {
-            borderLeft: `8px solid ${theme.colors.yellow500}`,
+            borderLeft: `8px solid ${theme.colors.semantic.focus500}`,
         },
         '.Toastify__progress-bar--info': {
             background: theme.colors.semantic.positive500,
@@ -134,7 +134,7 @@ export default (theme) => ({
             background: theme.colors.semantic.positive500,
         },
         '.Toastify__progress-bar--warning': {
-            background: theme.colors.yellow500,
+            background: theme.colors.semantic.focus500,
         },
         '.Toastify__progress-bar--error': {
             background: theme.colors.semantic.negative500,

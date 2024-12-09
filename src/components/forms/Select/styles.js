@@ -342,7 +342,7 @@ export default (theme) => ({
     },
     highlightedContainer: {},
     highlighted: {
-        backgroundColor: theme.colors.yellow200,
+        backgroundColor: theme.colors.semantic.focusCustom200,
     },
     singleValueIcon: {
         display: 'inline-block',

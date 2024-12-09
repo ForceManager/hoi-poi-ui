@@ -26,9 +26,9 @@ export default (theme) => ({
         },
     },
     warning: {
-        backgroundColor: theme.colors.yellow100,
+        backgroundColor: theme.colors.semantic.focusCustom100,
         '& $Text': {
-            color: theme.colors.yellow600,
+            color: theme.colors.semantic.focus500,
         },
     },
     error: {
@@ -69,7 +69,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.semantic.positive400,
         },
         '&$warning': {
-            backgroundColor: theme.colors.yellow400,
+            backgroundColor: theme.colors.semantic.focusCustom400,
         },
         '&$error': {
             backgroundColor: theme.colors.semantic.negative450,

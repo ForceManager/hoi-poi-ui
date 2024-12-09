@@ -26,7 +26,7 @@ export default (theme) => ({
     },
     warning: {
         '&$title': {
-            color: theme.colors.yellow500,
+            color: theme.colors.semantic.focus500,
         },
     },
 });

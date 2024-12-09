@@ -83,7 +83,7 @@ function Advice({
                 return {
                     ...properties,
                     name: 'warningRounded',
-                    color: theme.colors.yellow700,
+                    color: theme.colors.semantic.focusCustom600,
                 };
             case 'info':
                 return {
@@ -104,7 +104,7 @@ function Advice({
         theme.colors.semantic.positive600,
         theme.colors.textLight.secondary,
         theme.colors.semantic.negative500,
-        theme.colors.yellow700,
+        theme.colors.semantic.focusCustom600,
         type,
     ]);
 
