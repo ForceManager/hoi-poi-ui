@@ -100,20 +100,20 @@ const Section = memo(
                         <div className={classes.headerContent} {...override.headerContent}>
                             {headerPreComponent}
                             <div className={classes.titleContainer} {...override.titleContainer}>
+                                {renderTitle}
                                 <div className={classes.icon} {...override.icon}>
                                     <Icon name="arrowDropDown" />
+                                    {newActiveFields}
+                                    {onRemove && (
+                                        <Icon
+                                            onClick={onInnerRemove}
+                                            className={classes.trashIcon}
+                                            name="delete"
+                                        />
+                                    )}
                                 </div>
-                                {renderTitle}
                             </div>
-                            {newActiveFields}
                             {headerPostComponent}
-                            {onRemove && (
-                                <Icon
-                                    onClick={onInnerRemove}
-                                    className={classes.trashIcon}
-                                    name="delete"
-                                />
-                            )}
                         </div>
                     </div>
                     <AnimateHeight
@@ -131,8 +131,8 @@ const Section = memo(
                         <div className={classes.headerContent} {...override.headerContent}>
                             <div className={classes.titleContainer} {...override.titleContainer}>
                                 {renderTitle}
+                                {newActiveFields}
                             </div>
-                            {newActiveFields}
                         </div>
                     </div>
                     {children}
