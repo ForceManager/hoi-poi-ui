@@ -88,6 +88,12 @@ module.exports = {
                 './src/components/typography/Text/index.jsx',
             ],
         },
+        {
+            name: 'Colors',
+            description: 'Semantic Color Palette',
+            sectionDepth: 0,
+            components: ['./src/components/colors/index.jsx'],
+        },
     ],
     theme: {
         color: {
