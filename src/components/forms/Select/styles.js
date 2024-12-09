@@ -79,7 +79,7 @@ export default (theme) => ({
         backgroundColor: theme.colors.semantic.negative500,
     },
     optionLabelBulletSuccess: {
-        backgroundColor: theme.colors.green500,
+        backgroundColor: theme.colors.semantic.positive500,
     },
     optionLabelText: {},
     optionLabelSubtitle: {

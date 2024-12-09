@@ -119,7 +119,7 @@ export default (theme) => ({
         '.Toastify__toast--default': {},
         '.Toastify__toast--info': {},
         '.Toastify__toast--success': {
-            borderLeft: `8px solid ${theme.colors.green500}`,
+            borderLeft: `8px solid ${theme.colors.semantic.positive500}`,
         },
         '.Toastify__toast--error': {
             borderLeft: `8px solid ${theme.colors.semantic.negative500}`,
@@ -128,10 +128,10 @@ export default (theme) => ({
             borderLeft: `8px solid ${theme.colors.yellow500}`,
         },
         '.Toastify__progress-bar--info': {
-            background: theme.colors.green500,
+            background: theme.colors.semantic.positive500,
         },
         '.Toastify__progress-bar--success': {
-            background: theme.colors.green500,
+            background: theme.colors.semantic.positive500,
         },
         '.Toastify__progress-bar--warning': {
             background: theme.colors.yellow500,

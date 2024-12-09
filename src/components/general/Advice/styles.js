@@ -76,18 +76,18 @@ export default (theme) => ({
         },
     },
     success: {
-        backgroundColor: theme.colors.green100,
+        backgroundColor: theme.colors.semantic.positiveCustom100,
         '& $Text': {
-            color: theme.colors.green700,
+            color: theme.colors.semantic.positive600,
         },
         '& $dismiss': {
-            color: `${theme.colors.green700} !important`,
-            borderColor: `${theme.colors.green700} !important`,
+            color: `${theme.colors.semantic.positive600} !important`,
+            borderColor: `${theme.colors.semantic.positive600} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.green200} !important`,
+                backgroundColor: `${theme.colors.semantic.positiveCustom200} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.green400} !important`,
+                backgroundColor: `${theme.colors.semantic.positive400} !important`,
             },
         },
     },

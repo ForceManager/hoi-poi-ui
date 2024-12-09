@@ -78,7 +78,7 @@ export default (theme) => ({
         borderLeft: `8px solid ${theme.colors.blue500}`,
     },
     success: {
-        borderLeft: `8px solid ${theme.colors.green500}`,
+        borderLeft: `8px solid ${theme.colors.semantic.positive500}`,
     },
     warning: {
         borderLeft: `8px solid ${theme.colors.yellow500}`,

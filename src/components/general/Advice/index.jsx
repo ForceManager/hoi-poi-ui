@@ -77,7 +77,7 @@ function Advice({
                 return {
                     ...properties,
                     name: 'thickEnabled',
-                    color: theme.colors.green700,
+                    color: theme.colors.semantic.positive600,
                 };
             case 'warning':
                 return {
@@ -101,7 +101,7 @@ function Advice({
         }
     }, [
         theme.colors.aqua700,
-        theme.colors.green700,
+        theme.colors.semantic.positive600,
         theme.colors.textLight.secondary,
         theme.colors.semantic.negative500,
         theme.colors.yellow700,

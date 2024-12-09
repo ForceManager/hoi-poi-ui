@@ -20,9 +20,9 @@ export default (theme) => ({
         },
     },
     success: {
-        backgroundColor: theme.colors.green100,
+        backgroundColor: theme.colors.semantic.positiveCustom100,
         '& $Text': {
-            color: theme.colors.green600,
+            color: theme.colors.semantic.positive500,
         },
     },
     warning: {
@@ -66,7 +66,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.grey[500],
         },
         '&$success': {
-            backgroundColor: theme.colors.green400,
+            backgroundColor: theme.colors.semantic.positive400,
         },
         '&$warning': {
             backgroundColor: theme.colors.yellow400,

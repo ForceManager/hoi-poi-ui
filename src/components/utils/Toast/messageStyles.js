@@ -16,7 +16,7 @@ export default (theme) => ({
     },
     success: {
         '&$title': {
-            color: theme.colors.green500,
+            color: theme.colors.semantic.positive500,
         },
     },
     error: {
