@@ -62,8 +62,12 @@ export default (theme) => ({
     titleContainer: {
         width: '100%',
         display: 'flex',
-        alignItems: 'center',
         overflow: 'hidden',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        boxSizing: 'border-box',
+        paddingBottom: 8,
+        borderBottom: `1px solid ${theme.colors.neutral400}`,
     },
     textContainer: {
         overflow: 'hidden',
@@ -81,6 +85,8 @@ export default (theme) => ({
         marginLeft: '8px',
     },
     icon: {
+        display: 'flex',
+        alignItems: 'center',
         marginRight: 4,
         lineHeight: '0',
         alignSelf: 'center',
