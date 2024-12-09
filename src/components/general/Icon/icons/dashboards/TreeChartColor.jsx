@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function TreeChartColor({ color = colors.neutral700, ...props }) {
+function TreeChartColor({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                stroke="#7D8A96"
+                stroke="#335B70"
                 strokeWidth="1.5"
                 d="m6.84 17.811 2.38-3.936M12.577 19.266c0 1.06.91 1.978 2.106 1.978 1.196 0 2.105-.918 2.105-1.978s-.91-1.977-2.105-1.977c-1.196 0-2.106.917-2.106 1.977ZM11.34 13.233l2.38 3.937M11.166 10.373l2.38-3.936M15.147 6.437l2.38 3.936"
             />

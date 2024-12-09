@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddMultipleUsers({ color = '#788590', ...props }) {
+function AddMultipleUsers({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" fill="none" id="AndWeb/Social/ic_group_add" {...props}>
             <path

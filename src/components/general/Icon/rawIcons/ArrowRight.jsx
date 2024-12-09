@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ArrowRight({ color = '#788590', ...props }) {
+function ArrowRight({ color = '#335B70', ...props }) {
     return (
         <svg width={7} height={10} viewBox="0 0 7 10" fill="none" {...props}>
             <path

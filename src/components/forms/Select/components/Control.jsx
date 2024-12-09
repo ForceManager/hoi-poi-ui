@@ -16,7 +16,7 @@ const Control = ({ children, ...props }) => {
                     className="hoi-poi-select__search-indicator"
                     name="searchRaw"
                     size="raw"
-                    color={theme.colors.neutral600}
+                    color={theme.colors.grey[500]}
                 />
             )}
             {beforeControl && beforeControl}

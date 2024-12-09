@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function TimeRangeChartColor({ color = colors.neutral700, ...props }) {
+function TimeRangeChartColor({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                stroke="#7D8A96"
+                stroke="#335B70"
                 strokeWiterlimit="16"
                 strokeWidth="1.2"
                 d="M2.6 19v-8.5A1.4 1.4 0 0 1 4 9.1h3.625c.592 0 1.072-.48 1.072-1.072V5a1.4 1.4 0 0 1 1.4-1.4H20A1.4 1.4 0 0 1 21.4 5v9.077a1.4 1.4 0 0 1-1.4 1.4h-3.724a.88.88 0 0 0-.881.88V19a1.4 1.4 0 0 1-1.4 1.4H4A1.4 1.4 0 0 1 2.6 19Z"

@@ -61,7 +61,7 @@ export default (theme) => ({
     // Types
     primary: {
         backgroundColor: theme.colors.orange500,
-        color: theme.colors.neutralBase,
+        color: theme.colors.primary.white,
         '&:not($loading):not($disabled)': {
             '&:hover': {
                 backgroundColor: theme.colors.orange600,
@@ -73,7 +73,7 @@ export default (theme) => ({
     },
     primaryError: {
         backgroundColor: theme.colors.red500,
-        color: theme.colors.neutralBase,
+        color: theme.colors.primary.white,
         '&:not($loading):not($disabled)': {
             '&:hover': {
                 backgroundColor: theme.colors.red600,
@@ -96,13 +96,13 @@ export default (theme) => ({
             '&:active': {
                 borderColor: theme.colors.orange400,
                 backgroundColor: theme.colors.orange400,
-                color: theme.colors.neutralBase,
-                '& path': { fill: theme.colors.neutralBase },
+                color: theme.colors.primary.white,
+                '& path': { fill: theme.colors.primary.white },
             },
         },
     },
     secondaryError: {
-        border: `1px solid ${theme.colors.neutral400}`,
+        border: `1px solid ${theme.colors.grey[100]}`,
         backgroundColor: 'transparent',
         color: theme.colors.red500,
         '&:not($loading):not($disabled)': {
@@ -114,56 +114,56 @@ export default (theme) => ({
             '&:active': {
                 borderColor: theme.colors.red400,
                 backgroundColor: theme.colors.red400,
-                color: theme.colors.neutralBase,
-                '& path': { fill: theme.colors.neutralBase },
+                color: theme.colors.primary.white,
+                '& path': { fill: theme.colors.primary.white },
             },
         },
     },
     terciary: {
-        border: `1px solid ${theme.colors.neutral400}`,
+        border: `1px solid ${theme.colors.grey[100]}`,
         backgroundColor: 'transparent',
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.neutral400,
-                backgroundColor: theme.colors.neutral300,
-                color: theme.colors.neutral700,
+                borderColor: theme.colors.grey[100],
+                backgroundColor: theme.colors.grey[100],
+                color: theme.colors.textLight.secondary,
             },
             '&:active': {
-                borderColor: theme.colors.neutral500,
-                backgroundColor: theme.colors.neutral400,
-                color: theme.colors.neutral700,
+                borderColor: theme.colors.grey[200],
+                backgroundColor: theme.colors.grey[100],
+                color: theme.colors.textLight.secondary,
             },
         },
     },
     dashed: {
-        border: `1px dashed ${theme.colors.neutral500}`,
+        border: `1px dashed ${theme.colors.grey[200]}`,
         backgroundColor: 'transparent',
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.neutral500,
-                backgroundColor: theme.colors.neutral300,
-                color: theme.colors.neutral700,
+                borderColor: theme.colors.grey[200],
+                backgroundColor: theme.colors.grey[100],
+                color: theme.colors.textLight.secondary,
             },
             '&:active': {
-                borderColor: theme.colors.neutral600,
-                backgroundColor: theme.colors.neutral400,
-                color: theme.colors.neutral700,
+                borderColor: theme.colors.grey[500],
+                backgroundColor: theme.colors.grey[100],
+                color: theme.colors.textLight.secondary,
             },
         },
     },
     promotion: {
         backgroundColor: theme.colors.orange100,
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
         '&:not($loading):not($disabled)': {
             '&:hover': {
                 backgroundColor: theme.colors.orange300,
-                color: theme.colors.neutral900,
+                color: theme.colors.textLight.primary,
             },
             '&:active': {
                 backgroundColor: theme.colors.orange200,
-                color: theme.colors.neutral700,
+                color: theme.colors.textLight.secondary,
             },
         },
     },
@@ -190,8 +190,8 @@ export default (theme) => ({
         '& path': { fill: theme.colors.orange500 },
         '&$disabled': {
             opacity: 1,
-            color: theme.colors.neutral600,
-            '& path': { fill: theme.colors.neutral600 },
+            color: theme.colors.grey[500],
+            '& path': { fill: theme.colors.grey[500] },
         },
         '&:not($loading):not($disabled)': {
             '&:hover': {

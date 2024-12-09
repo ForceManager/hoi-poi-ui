@@ -7,7 +7,7 @@ export default (theme) => ({
     Text: {
         paddingRight: 5,
         ...theme.typography.body,
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
     },
     info: {
         display: 'block',
@@ -23,7 +23,7 @@ export default (theme) => ({
             marginTop: -1,
         },
         '& path': {
-            fill: theme.colors.neutral600,
+            fill: theme.colors.grey[500],
         },
     },
 });

@@ -96,26 +96,26 @@ const Button = forwardRef(
                 case 'terciary':
                     return {
                         ...properties,
-                        color: theme.colors.neutral700,
+                        color: theme.colors.textLight.secondary,
                     };
                 case 'promotion':
                     return {
                         ...properties,
-                        color: theme.colors.neutral900,
+                        color: theme.colors.textLight.primary,
                     };
                 case 'primary':
                 case 'primary-error':
                 default:
                     return {
                         ...properties,
-                        color: theme.colors.neutralBase,
+                        color: theme.colors.primary.white,
                     };
             }
         }, [
             icon,
-            theme.colors.neutral700,
-            theme.colors.neutral900,
-            theme.colors.neutralBase,
+            theme.colors.textLight.secondary,
+            theme.colors.textLight.primary,
+            theme.colors.primary.white,
             theme.colors.orange500,
             theme.colors.red500,
             type,

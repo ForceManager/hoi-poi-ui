@@ -1,6 +1,6 @@
 import React from 'react';
 
-function EmailRefresh({ color = '#788590', ...props }) {
+function EmailRefresh({ color = '#335B70', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}>
             <g fill="none" fillRule="evenodd">

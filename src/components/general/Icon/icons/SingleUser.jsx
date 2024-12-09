@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SingleUser({ color = '#788590', ...props }) {
+function SingleUser({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" fill="none" id="AndWeb/Social/ic_person" {...props}>
             <path

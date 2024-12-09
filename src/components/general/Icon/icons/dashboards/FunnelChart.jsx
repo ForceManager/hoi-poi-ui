@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function FunnelChart({ color = colors.neutral700, ...props }) {
+function FunnelChart({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                stroke="#7D8A96"
+                stroke="#335B70"
                 strokeWidth="1.5"
                 d="m8.762 13.066.071.096.038.113L11.2 20.25h1.6l2.33-6.975.037-.114.072-.096 4.079-5.483 1.565-3.832H3.115l1.534 3.773 4.113 5.543Z"
             />

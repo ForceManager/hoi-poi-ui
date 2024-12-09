@@ -212,7 +212,7 @@ export default (theme) => ({
             whiteSpace: 'nowrap',
             textAlign: 'center',
             height: '100%',
-            background: theme.colors.neutral300,
+            background: theme.colors.grey[100],
             borderRadius: 8,
         },
         '.image-gallery-slide': {

@@ -43,13 +43,13 @@ export default (theme) => ({
                 left: 'calc(100% + 8px)',
                 width: '1000px',
                 height: 1,
-                backgroundColor: theme.colors.neutral400,
+                backgroundColor: theme.colors.grey[100],
             },
             '& .rc-steps-item-finish .rc-steps-item-title:after': {
                 backgroundColor: theme.colors.orange500,
             },
             '& .rc-steps-item-active .rc-steps-item-title:after': {
-                background: `transparent linear-gradient(to right, ${theme.colors.orange500} 48px, ${theme.colors.neutral400} 48px)`,
+                background: `transparent linear-gradient(to right, ${theme.colors.orange500} 48px, ${theme.colors.grey[100]} 48px)`,
             },
         },
         // Label vertical
@@ -73,13 +73,13 @@ export default (theme) => ({
                 zIndex: -1,
                 width: '100%',
                 height: 1,
-                backgroundColor: theme.colors.neutral400,
+                backgroundColor: theme.colors.grey[100],
             },
             '& .rc-steps-item-finish .rc-steps-item-tail': {
                 backgroundColor: theme.colors.orange500,
             },
             '& .rc-steps-item-active .rc-steps-item-tail': {
-                background: `transparent linear-gradient(to right, ${theme.colors.orange500} 50%, ${theme.colors.neutral400} 50%)`,
+                background: `transparent linear-gradient(to right, ${theme.colors.orange500} 50%, ${theme.colors.grey[100]} 50%)`,
             },
             '& .rc-steps-item:last-child .rc-steps-item-tail': {
                 display: 'none',
@@ -98,13 +98,13 @@ export default (theme) => ({
             zIndex: -1,
             width: 'calc(100% - 32px)',
             height: 1,
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
         },
         '& .rc-steps-item-finish .rc-steps-item-tail': {
             backgroundColor: theme.colors.orange500,
         },
         '& .rc-steps-item-active .rc-steps-item-tail': {
-            background: `transparent linear-gradient(to right, ${theme.colors.orange500} 50%, ${theme.colors.neutral400} 50%)`,
+            background: `transparent linear-gradient(to right, ${theme.colors.orange500} 50%, ${theme.colors.grey[100]} 50%)`,
         },
         '& .rc-steps-item:last-child .rc-steps-item-tail': {
             display: 'none',
@@ -117,17 +117,17 @@ export default (theme) => ({
         width: 32,
         height: 32,
         borderRadius: '50%',
-        color: theme.colors.neutral700,
-        backgroundColor: theme.colors.neutralBase,
+        color: theme.colors.textLight.secondary,
+        backgroundColor: theme.colors.primary.white,
         border: 1,
         borderStyle: 'solid',
-        borderColor: theme.colors.neutral400,
+        borderColor: theme.colors.grey[100],
     },
     active: {
         '& $icon': {
             backgroundColor: theme.colors.orange500,
             borderColor: 'transparent',
-            color: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
         },
     },
     completed: {

@@ -5,12 +5,12 @@ export default (theme) => ({
         lineHeight: '20px',
     },
     title: {
-        color: theme.colors.neutralBase,
+        color: theme.colors.primary.white,
         display: 'block',
     },
     message: {
         ...theme.typography.caption,
-        color: theme.colors.neutralBase,
+        color: theme.colors.primary.white,
         display: 'block',
         whiteSpace: 'pre-wrap',
     },

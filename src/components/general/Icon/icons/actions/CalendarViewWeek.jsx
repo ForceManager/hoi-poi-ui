@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CalendarViewWeek({ color = '#788590', ...props }) {
+function CalendarViewWeek({ color = '#335B70', ...props }) {
     return (
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
             <path

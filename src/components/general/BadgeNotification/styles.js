@@ -9,7 +9,7 @@ export default (theme) => ({
     Text: {
         padding: '0px 8px',
         verticalAlign: 'middle',
-        color: theme.colors.neutralBase,
+        color: theme.colors.primary.white,
     },
     medium: {
         height: 24,

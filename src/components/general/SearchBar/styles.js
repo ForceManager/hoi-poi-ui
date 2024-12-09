@@ -13,7 +13,7 @@ export default (theme) => ({
             top: 'auto',
             transform: 'none',
             ...theme.typography.caption,
-            color: theme.colors.neutral700,
+            color: theme.colors.textLight.secondary,
         },
         '& .hoi-poi-select__value-container': {
             height: 32,
@@ -30,7 +30,7 @@ export default (theme) => ({
             padding: '2px 4px 2px 8px',
         },
         '& .hoi-poi-select__control--is-focused > div': {
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
         },
         '& .hoi-poi-select__indicators': {
             height: 32,
@@ -58,6 +58,6 @@ export default (theme) => ({
     typeDivider: {
         width: 1,
         height: 23,
-        backgroundColor: theme.colors.neutral400,
+        backgroundColor: theme.colors.grey[100],
     },
 });

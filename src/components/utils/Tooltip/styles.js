@@ -14,7 +14,7 @@ export default (theme) => ({
             ...theme.typography.caption,
             textAlign: 'left',
             textDecoration: 'none',
-            backgroundColor: theme.colors.neutral800,
+            backgroundColor: theme.colors.actionMinor[550],
             borderRadius: '4px',
         },
         '& .hoi-poi-tooltip-arrow': {
@@ -42,7 +42,7 @@ export default (theme) => ({
             bottom: distance - arrowWidth,
             marginLeft: -arrowWidth,
             borderWidth: `${arrowWidth}px ${arrowWidth}px  0`,
-            borderTopColor: theme.colors.neutral800,
+            borderTopColor: theme.colors.actionMinor[550],
         },
         '&.hoi-poi-tooltip-placement-top .hoi-poi-tooltip-arrow': {
             left: '50%',
@@ -57,7 +57,7 @@ export default (theme) => ({
             left: distance - arrowWidth,
             marginTop: -arrowWidth,
             borderWidth: `${arrowWidth}px ${arrowWidth}px ${arrowWidth}px 0`,
-            borderRightColor: theme.colors.neutral800,
+            borderRightColor: theme.colors.actionMinor[550],
         },
         '&.hoi-poi-tooltip-placement-right .hoi-poi-tooltip-arrow': {
             top: '50%',
@@ -73,7 +73,7 @@ export default (theme) => ({
             right: distance - arrowWidth,
             marginTop: -arrowWidth,
             borderWidth: `${arrowWidth}px 0 ${arrowWidth}px ${arrowWidth}px`,
-            borderLeftColor: theme.colors.neutral800,
+            borderLeftColor: theme.colors.actionMinor[550],
         },
         '&.hoi-poi-tooltip-placement-left .hoi-poi-tooltip-arrow': {
             top: '50%',
@@ -90,7 +90,7 @@ export default (theme) => ({
             top: distance - arrowWidth,
             marginLeft: -arrowWidth,
             borderWidth: `0 ${arrowWidth}px ${arrowWidth}px`,
-            borderBottomColor: theme.colors.neutral800,
+            borderBottomColor: theme.colors.actionMinor[550],
         },
         '&.hoi-poi-tooltip-placement-bottom .hoi-poi-tooltip-arrow': {
             left: '50%',

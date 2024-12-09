@@ -29,7 +29,7 @@ export default (theme) => ({
         maxHeight: 'calc(100vh - 20px)',
         padding: '32px',
         boxSizing: 'border-box',
-        background: theme.colors.neutralBase,
+        background: theme.colors.primary.white,
         ...theme.effects.boxShadow24,
         borderRadius: 16,
         display: 'flex',

@@ -56,7 +56,7 @@ export default (theme) => ({
         alignItems: 'center',
         transition: 'all 0.15s ease',
         '&:hover': {
-            backgroundColor: theme.colors.neutral200,
+            backgroundColor: theme.colors.grey[50],
             cursor: 'pointer',
         },
     },
@@ -64,25 +64,25 @@ export default (theme) => ({
         height: 52,
     },
     optionSelected: {
-        backgroundColor: theme.colors.neutral200,
+        backgroundColor: theme.colors.grey[50],
         '&:hover': {
-            backgroundColor: theme.colors.neutral200,
+            backgroundColor: theme.colors.grey[50],
         },
     },
     optionDisabled: {
         '&:hover': {
-            backgroundColor: theme.colors.neutralBase,
+            backgroundColor: theme.colors.primary.white,
             cursor: 'default',
         },
         '& $optionLabel': {
             '& span': {
-                color: theme.colors.neutral700,
+                color: theme.colors.textLight.secondary,
             },
         },
     },
     optionDisabledIcon: {
         '& path': {
-            fill: theme.colors.neutral500,
+            fill: theme.colors.grey[200],
         },
     },
     optionDisabledAvatar: {
@@ -90,7 +90,7 @@ export default (theme) => ({
         width: 20,
         height: 20,
         borderRadius: '50%',
-        backgroundColor: theme.colors.neutral500,
+        backgroundColor: theme.colors.grey[200],
         opacity: '0.8',
     },
     optionCheckbox: {
@@ -110,7 +110,7 @@ export default (theme) => ({
         flexShrink: 0,
     },
     optionLabelBulletDisabled: {
-        backgroundColor: theme.colors.neutral500,
+        backgroundColor: theme.colors.grey[200],
     },
     optionLabelBulletPrimary: {
         backgroundColor: theme.colors.orange500,

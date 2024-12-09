@@ -9,7 +9,7 @@ export default (theme) => ({
         border: 'none',
         borderRadius: 2,
         overflow: 'hidden',
-        backgroundColor: theme.colors.neutral300,
+        backgroundColor: theme.colors.grey[100],
     },
     progressBar: {
         display: 'block',

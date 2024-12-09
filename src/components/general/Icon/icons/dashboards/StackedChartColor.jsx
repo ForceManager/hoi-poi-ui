@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function StackedChartColor({ color = colors.neutral700, ...props }) {
+function StackedChartColor({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                fill="#7D8A96"
+                fill="#335B70"
                 d="M3 21v-3.375h4.5V21H3Zm0-4.5V12h4.5v4.5H3Zm0-5.625V3h4.5v7.875H3ZM9.75 21v-7.875h4.5V21h-4.5Zm0-9V7.5h4.5V12h-4.5Zm0-5.625V3h4.5v3.375h-4.5ZM16.5 21v-2.25H21V21h-4.5Zm0-3.375v-4.5H21v4.5h-4.5Zm0-5.625V3H21v9h-4.5Z"
             />
             <path

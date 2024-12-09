@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MultipleUsers({ color = '#788590', ...props }) {
+function MultipleUsers({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" fill="none" id="Icons/Social/ic_group" {...props}>
             <path

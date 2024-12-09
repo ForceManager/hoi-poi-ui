@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Columns = ({ color = '#788590', ...props }) => (
+const Columns = ({ color = '#335B70', ...props }) => (
     <svg {...props} viewBox="0 0 32 32">
         <path
             fill={color}

@@ -3,7 +3,7 @@ export default (theme) => ({
         position: 'relative',
         padding: '8px 16px',
         borderRadius: '4px',
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.primary.white,
     },
     header: {
         display: 'flex',
@@ -13,25 +13,25 @@ export default (theme) => ({
         boxSizing: 'border-box',
         '&:hover': {
             '& $Text': {
-                color: `${theme.colors.neutral800} !important`,
+                color: `${theme.colors.grey[700]} !important`,
             },
             '& $icon': {
                 '& svg path': {
-                    fill: theme.colors.neutral800,
+                    fill: theme.colors.grey[700],
                 },
             },
         },
     },
     open: {
         '& $Text': {
-            color: theme.colors.neutral900,
+            color: theme.colors.textLight.primary,
         },
         '& $icon': {
             '& svg': {
                 transform: 'rotate(0deg) translateY(0px)',
             },
             '& svg path': {
-                fill: theme.colors.neutral900,
+                fill: theme.colors.textLight.primary,
             },
         },
         '& $trashIcon': {
@@ -43,11 +43,11 @@ export default (theme) => ({
     },
     headerActiveFields: {
         '& $Text': {
-            color: `${theme.colors.neutral900} !important`,
+            color: `${theme.colors.textLight.primary} !important`,
         },
         '& $icon': {
             '& svg path': {
-                fill: theme.colors.neutral900,
+                fill: theme.colors.textLight.primary,
             },
         },
     },
@@ -72,7 +72,7 @@ export default (theme) => ({
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
         overflow: 'hidden',
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
         transition: 'all 0.15s ease',
     },
     BadgeNotification: {

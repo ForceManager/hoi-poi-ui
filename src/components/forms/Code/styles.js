@@ -16,7 +16,7 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
     },
     error: {
         ...theme.typography.smallText,

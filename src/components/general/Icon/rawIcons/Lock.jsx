@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Lock({ color = '#788590', ...props }) {
+function Lock({ color = '#335B70', ...props }) {
     return (
         <svg width={11} height={14} viewBox="0 0 11 14" fill="none" {...props}>
             <path

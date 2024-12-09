@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-function Currency({ color = '#7D8A96', ...props }) {
+function Currency({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
             <path

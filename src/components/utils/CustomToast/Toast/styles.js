@@ -12,7 +12,7 @@ export default (theme) => ({
         cursor: 'pointer',
         borderRadius: '8px',
         boxSizing: 'border-box',
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.primary.white,
         boxShadow: `0px 4px 5px 0px rgba(39, 60, 80, 0.2), 0px 3px 14px 0px rgba(39, 60, 80, 0.12), 0px 8px 10px 0px rgba(39, 60, 80, 0.14)`,
         transition: 'transform 2s ease-in-out',
     },
@@ -87,6 +87,6 @@ export default (theme) => ({
         borderLeft: `8px solid ${theme.colors.red500}`,
     },
     base: {
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.primary.white,
     },
 });

@@ -9,7 +9,7 @@ export default (theme) => {
         },
         info: {
             ...theme.typography.caption,
-            color: theme.colors.neutral600,
+            color: theme.colors.grey[500],
             paddingBottom: 5,
         },
         error: {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NewWidget({ color = '#788590', ...props }) {
+function NewWidget({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path

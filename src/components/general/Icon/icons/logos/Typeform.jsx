@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Typeform = ({ color = '#788590', ...props }) => (
+const Typeform = ({ color = '#335B70', ...props }) => (
     <svg {...props} viewBox="0 0 24 24">
         <path
             fill={color}

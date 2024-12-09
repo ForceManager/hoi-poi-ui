@@ -10,13 +10,13 @@ export default (theme) => {
             lineHeight: 0,
             borderRadius: 4,
             border: '1px solid transparent',
-            backgroundColor: theme.colors.neutral200,
+            backgroundColor: theme.colors.grey[50],
             transition: 'all 0.15s ease',
         },
         textarea: {
             ...theme.typography.body,
             background: 'transparent',
-            color: theme.colors.neutral900,
+            color: theme.colors.textLight.primary,
             minHeight: 38,
             width: '100% !important',
             maxWidth: '100%',
@@ -27,9 +27,9 @@ export default (theme) => {
             margin: 0,
             caretColor: theme.colors.orange500,
             scrollbarWidth: 'thin',
-            scrollbarColor: `${theme.colors.neutral700} ${theme.colors.neutralBase}`,
+            scrollbarColor: `${theme.colors.textLight.secondary} ${theme.colors.primary.white}`,
             '&::placeholder': {
-                color: theme.colors.neutral600,
+                color: theme.colors.grey[500],
             },
             '&::-webkit-scrollbar': {
                 width: 12,
@@ -38,8 +38,8 @@ export default (theme) => {
                 background: 'transparent',
             },
             '&::-webkit-scrollbar-thumb': {
-                backgroundColor: theme.colors.neutral700,
-                border: `3px solid ${theme.colors.neutralBase}`,
+                backgroundColor: theme.colors.textLight.secondary,
+                border: `3px solid ${theme.colors.primary.white}`,
                 borderRadius: 6,
             },
         },
@@ -48,22 +48,22 @@ export default (theme) => {
         },
         error: {
             '& $textareaComponents': {
-                backgroundColor: theme.colors.neutralBase,
+                backgroundColor: theme.colors.primary.white,
                 border: `1px solid ${theme.colors.red500}`,
             },
         },
         isReadOnly: {
             '& $textareaComponents': {
-                border: `1px solid ${theme.colors.neutral500}`,
-                backgroundColor: theme.colors.neutralBase,
+                border: `1px solid ${theme.colors.grey[200]}`,
+                backgroundColor: theme.colors.primary.white,
 
                 '&::placeholder': {
-                    color: theme.colors.neutral500,
+                    color: theme.colors.grey[200],
                 },
             },
             '& $textarea': {
                 cursor: 'text',
-                color: theme.colors.neutral700,
+                color: theme.colors.textLight.secondary,
             },
         },
         isReadAndDuplicable: {
@@ -78,13 +78,13 @@ export default (theme) => {
         clearSeparator: {
             width: 2,
             height: 8,
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
             margin: '0 2px',
         },
         copy: {},
         focused: {
             '& $textareaComponents': {
-                backgroundColor: theme.colors.neutralBase,
+                backgroundColor: theme.colors.primary.white,
                 border: `1px solid ${theme.colors.orange500}`,
             },
         },

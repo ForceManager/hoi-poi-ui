@@ -14,9 +14,9 @@ export default (theme) => ({
     },
     // Types
     default: {
-        backgroundColor: theme.colors.neutral300,
+        backgroundColor: theme.colors.grey[100],
         '& $Text': {
-            color: theme.colors.neutral700,
+            color: theme.colors.textLight.secondary,
         },
     },
     success: {
@@ -51,7 +51,7 @@ export default (theme) => ({
         },
     },
     promotion: {
-        backgroundColor: theme.colors.neutral150,
+        backgroundColor: theme.colors.actionMinor[50],
         '& $Text': {
             backgroundClip: 'text',
             '-webkit-background-clip': 'text',
@@ -61,10 +61,10 @@ export default (theme) => ({
     },
     inverted: {
         '& $Text': {
-            color: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
         },
         '&$default': {
-            backgroundColor: theme.colors.neutral600,
+            backgroundColor: theme.colors.grey[500],
         },
         '&$success': {
             backgroundColor: theme.colors.green400,
@@ -84,7 +84,7 @@ export default (theme) => ({
         '&$promotion': {
             backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
             '& $Text': {
-                color: theme.colors.neutralBase,
+                color: theme.colors.primary.white,
             },
         },
     },

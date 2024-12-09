@@ -83,7 +83,7 @@ export default (theme) => ({
             overflow: 'hidden',
             cursor: 'pointer',
             direction: 'ltr',
-            background: theme.colors.neutral900,
+            background: theme.colors.textLight.primary,
         },
         '.Toastify__toast--rtl': {
             direction: 'rtl',
@@ -93,7 +93,7 @@ export default (theme) => ({
             msFlex: '1 1 auto',
             flex: '1',
             ...theme.typography.body,
-            color: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
         },
         '.Toastify__toast-icon': {
             webkitMarginEnd: 10,

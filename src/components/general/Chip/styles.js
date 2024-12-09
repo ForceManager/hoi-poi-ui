@@ -5,14 +5,14 @@ export default (theme) => ({
         boxSizing: 'border-box',
         transition: 'background-color 0.15s ease',
         '&$clickable:hover': {
-            backgroundColor: theme.colors.neutral300,
+            backgroundColor: theme.colors.grey[100],
         },
         '&$isActive': {
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
         },
         '&$isDisabled': {
             '& $Text': {
-                color: theme.colors.neutral600,
+                color: theme.colors.grey[500],
             },
         },
     },
@@ -22,7 +22,7 @@ export default (theme) => ({
         height: '100%',
     },
     Text: {
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
         transition: 'color 0.15s ease',
     },
     small: {
@@ -45,7 +45,7 @@ export default (theme) => ({
             cursor: 'unset',
         },
         '& $icon path, & $icon rect': {
-            fill: theme.colors.neutral600,
+            fill: theme.colors.grey[500],
         },
     },
     isReadOnly: {
@@ -53,7 +53,7 @@ export default (theme) => ({
             cursor: 'unset',
         },
         '& $icon path, & $icon rect': {
-            fill: theme.colors.neutral600,
+            fill: theme.colors.grey[500],
         },
     },
     isActive: {},
@@ -65,7 +65,7 @@ export default (theme) => ({
     icon: {
         cursor: 'pointer',
         '& path, & rect': {
-            fill: theme.colors.neutral700,
+            fill: theme.colors.textLight.secondary,
             transition: 'all 0.15s ease',
         },
     },
@@ -104,10 +104,10 @@ export default (theme) => ({
         '&$isActive': {
             backgroundColor: theme.colors.blue400,
             '& $Text': {
-                color: theme.colors.neutralBase,
+                color: theme.colors.primary.white,
             },
             '& $icon path, & $icon rect': {
-                fill: theme.colors.neutralBase,
+                fill: theme.colors.primary.white,
             },
         },
         '&$isDisabled': {
@@ -132,10 +132,10 @@ export default (theme) => ({
     },
     isOutlined: {
         border: '1px solid',
-        borderColor: theme.colors.neutral400,
+        borderColor: theme.colors.grey[100],
         transition: 'border-color 0.15s ease-in-out',
         '&$clickable:hover': {
-            borderColor: theme.colors.neutral300,
+            borderColor: theme.colors.grey[100],
         },
     },
     isOutlinedColor: {

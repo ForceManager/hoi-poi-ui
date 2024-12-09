@@ -28,18 +28,18 @@ export default (theme) => ({
 
     // Types
     default: {
-        backgroundColor: theme.colors.neutral100,
+        backgroundColor: theme.colors.actionMinor[50],
         '& $Text': {
-            color: theme.colors.neutral700,
+            color: theme.colors.textLight.secondary,
         },
         '& $dismiss': {
-            color: `${theme.colors.neutral700} !important`,
+            color: `${theme.colors.textLight.secondary} !important`,
             borderColor: `${theme.neutral700} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.neutral200} !important`,
+                backgroundColor: `${theme.colors.grey[50]} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.neutral400} !important`,
+                backgroundColor: `${theme.colors.grey[100]} !important`,
             },
         },
     },

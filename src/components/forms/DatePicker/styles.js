@@ -10,7 +10,7 @@ export default (theme) => ({
         cursor: 'pointer',
         '&:hover': {
             '& svg path': {
-                fill: theme.colors.neutral800,
+                fill: theme.colors.grey[700],
             },
         },
     },
@@ -18,7 +18,7 @@ export default (theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        borderTop: `solid 1px ${theme.colors.neutral400}`,
+        borderTop: `solid 1px ${theme.colors.grey[100]}`,
         marginLeft: 16,
         marginRight: 16,
         height: '39px',
@@ -96,7 +96,7 @@ export default (theme) => ({
             },
         '&.flatpickr-calendar.multiMonth .flatpickr-days .dayContainer:nth-child(n+2) .flatpickr-day.inRange:nth-child(7n+1)':
             {
-                boxShadow: `-2px 0 0 ${theme.colors.neutral300}, 5px 0 0 ${theme.colors.neutral300}`,
+                boxShadow: `-2px 0 0 ${theme.colors.grey[100]}, 5px 0 0 ${theme.colors.grey[100]}`,
             },
         '&.flatpickr-calendar .hasWeeks .dayContainer, &.flatpickr-calendar .hasTime .dayContainer':
             {
@@ -159,8 +159,8 @@ export default (theme) => ({
         '& .flatpickr-months .flatpickr-month': {
             borderRadius: '5px 5px 0 0',
             background: theme.colors.orange500,
-            color: theme.colors.neutralBase,
-            fill: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
+            fill: theme.colors.primary.white,
             height: 34,
             lineHeight: '1',
             textAlign: 'center',
@@ -178,8 +178,8 @@ export default (theme) => ({
             height: 40,
             padding: '7px 0',
             zIndex: '3',
-            color: theme.colors.neutralBase,
-            fill: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
+            fill: theme.colors.primary.white,
         },
         '& .flatpickr-months .flatpickr-prev-month.flatpickr-disabled, & .flatpickr-months .flatpickr-next-month.flatpickr-disabled':
             {
@@ -214,7 +214,7 @@ export default (theme) => ({
             {
                 transition: 'fill 0.1s',
                 fill: 'inherit',
-                border: `2px solid ${theme.colors.neutralBase}`,
+                border: `2px solid ${theme.colors.primary.white}`,
             },
         '& .numInputWrapper': {
             position: 'relative',
@@ -318,10 +318,10 @@ export default (theme) => ({
             display: 'inline-block',
         },
         '& .flatpickr-current-month .numInputWrapper span.arrowUp:after': {
-            borderBottomColor: theme.colors.neutralBase,
+            borderBottomColor: theme.colors.primary.white,
         },
         '& .flatpickr-current-month .numInputWrapper span.arrowDown:after': {
-            borderTopColor: theme.colors.neutralBase,
+            borderTopColor: theme.colors.primary.white,
         },
         '& .flatpickr-current-month input.cur-year': {
             background: 'transparent',
@@ -409,7 +409,7 @@ export default (theme) => ({
             textAlign: 'center',
             display: 'block',
             flex: '1',
-            color: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
             ...theme.typography.defaultText,
         },
         '& .dayContainer, & .flatpickr-weeks': {
@@ -449,7 +449,7 @@ export default (theme) => ({
             border: '1px solid transparent',
             borderRadius: 4,
             boxSizing: 'border-box',
-            color: theme.colors.neutral900,
+            color: theme.colors.textLight.primary,
             cursor: 'pointer',
             fontWeight: '400',
             width: '14.2857143%',
@@ -476,13 +476,13 @@ export default (theme) => ({
         '& .flatpickr-day.today:hover, & .flatpickr-day.today:focus': {
             borderColor: theme.colors.orange500,
             background: theme.colors.orange500,
-            color: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
         },
         '& .flatpickr-day.selected, & .flatpickr-day.startRange, & .flatpickr-day.endRange, & .flatpickr-day.selected.inRange, & .flatpickr-day.startRange.inRange, & .flatpickr-day.endRange.inRange, & .flatpickr-day.selected:focus, & .flatpickr-day.startRange:focus, & .flatpickr-day.endRange:focus, & .flatpickr-day.selected:hover, & .flatpickr-day.startRange:hover, & .flatpickr-day.endRange:hover, & .flatpickr-day.selected.prevMonthDay, & .flatpickr-day.startRange.prevMonthDay, & .flatpickr-day.endRange.prevMonthDay, & .flatpickr-day.selected.nextMonthDay, & .flatpickr-day.startRange.nextMonthDay, & .flatpickr-day.endRange.nextMonthDay':
             {
                 background: theme.colors.orange500,
                 boxShadow: 'none',
-                color: theme.colors.neutralBase,
+                color: theme.colors.primary.white,
             },
         '& .flatpickr-day.selected.startRange, & .flatpickr-day.startRange.startRange, & .flatpickr-day.endRange.startRange':
             {
@@ -502,11 +502,11 @@ export default (theme) => ({
             },
         '& .flatpickr-day.inRange': {
             borderRadius: '0',
-            boxShadow: `-5px 0 0 ${theme.colors.neutral400}, 5px 0 0 `,
+            boxShadow: `-5px 0 0 ${theme.colors.grey[100]}, 5px 0 0 `,
         },
         '& .flatpickr-day.flatpickr-disabled, & .flatpickr-day.flatpickr-disabled:hover, & .flatpickr-day.prevMonthDay, & .flatpickr-day.nextMonthDay, & .flatpickr-day.notAllowed, & .flatpickr-day.notAllowed.prevMonthDay, & .flatpickr-day.notAllowed.nextMonthDay':
             {
-                color: theme.colors.neutral500,
+                color: theme.colors.grey[200],
                 background: 'transparent',
                 borderColor: 'transparent',
                 cursor: 'default',
@@ -550,7 +550,7 @@ export default (theme) => ({
             display: 'flex',
             boxSizing: 'border-box',
             overflow: 'hidden',
-            background: theme.colors.neutralBase,
+            background: theme.colors.primary.white,
             borderBottomLeftRadius: 5,
             borderBottomRightRadius: 5,
         },

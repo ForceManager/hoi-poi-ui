@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-const ExecuteIcon = ({ color = '#788590', ...props }) => {
+const ExecuteIcon = ({ color = '#335B70', ...props }) => {
     return (
         <svg viewBox="0 0 24 24" {...props}>
             <path

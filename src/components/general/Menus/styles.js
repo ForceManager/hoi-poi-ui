@@ -28,7 +28,7 @@ export default (theme) => {
             minWidth: 'auto !important',
             overflow: 'hidden',
             padding: '18px 10px',
-            backgroundColor: theme.colors.neutralBase,
+            backgroundColor: theme.colors.primary.white,
             boxShadow: theme.effects.boxShadow,
             borderRadius: 6,
 
@@ -62,14 +62,14 @@ export default (theme) => {
         clickable: {
             cursor: 'pointer',
             '&:hover': {
-                backgroundColor: theme.colors.neutral200,
+                backgroundColor: theme.colors.grey[50],
             },
         },
         divider: {
             width: '100%',
             height: '1px',
             margin: '4px 0',
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
         },
     };
 };

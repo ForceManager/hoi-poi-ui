@@ -16,7 +16,7 @@ function PlayTutorial({ ...props }) {
                     fillRule="evenodd"
                     clipRule="evenodd"
                     d="M7.5 12.375v-6.75L12 9l-4.5 3.375Z"
-                    fill="#7D8A96"
+                    fill="#335B70"
                 />
             </g>
             <defs>

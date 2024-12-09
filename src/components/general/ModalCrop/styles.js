@@ -10,8 +10,8 @@ export default (theme) => ({
         position: 'relative',
         borderRadius: 4,
         padding: 22,
-        border: `1px dashed ${theme.colors.neutral400}`,
-        backgroundColor: theme.colors.neutral300,
+        border: `1px dashed ${theme.colors.grey[100]}`,
+        backgroundColor: theme.colors.grey[100],
     },
     cropCanvas: {
         position: 'relative',

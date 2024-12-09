@@ -19,7 +19,7 @@ const typographies = [
 export default (theme) => ({
     root: {
         display: 'inherit',
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
     },
     ...typographies.reduce((obj, key) => ({ ...obj, [key]: { ...theme.typography[key] } }), {}),
     truncated: {
@@ -29,7 +29,7 @@ export default (theme) => ({
     },
     bold: { fontWeight: 500 },
     divider: {
-        borderBottom: `1px solid ${theme.colors.neutral400}`,
+        borderBottom: `1px solid ${theme.colors.grey[100]}`,
         paddingBottom: 8,
     },
     highlighted: {

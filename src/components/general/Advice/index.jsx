@@ -96,13 +96,13 @@ function Advice({
                 return {
                     ...properties,
                     name: 'infoOutlined',
-                    color: theme.colors.neutral700,
+                    color: theme.colors.textLight.secondary,
                 };
         }
     }, [
         theme.colors.aqua700,
         theme.colors.green700,
-        theme.colors.neutral700,
+        theme.colors.textLight.secondary,
         theme.colors.red500,
         theme.colors.yellow700,
         type,

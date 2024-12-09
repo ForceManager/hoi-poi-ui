@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Close({ color = '#788590', ...props }) {
+function Close({ color = '#335B70', ...props }) {
     return (
         <svg width={9} height={8} viewBox="0 0 9 8" fill="none" {...props}>
             <path

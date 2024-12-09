@@ -1,5 +1,5 @@
 import React from 'react';
-const MobileDevice = ({ color = '#7D8A96', ...props }) => (
+const MobileDevice = ({ color = '#335B70', ...props }) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none" {...props}>
         <path fill="#fff" d="M0 .5h24v24H0z" />
         <path

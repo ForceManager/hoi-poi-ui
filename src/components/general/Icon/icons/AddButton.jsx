@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddButton({ color = '#788590', ...props }) {
+function AddButton({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" {...props}>
             <g fill="none" fillRule="evenodd">

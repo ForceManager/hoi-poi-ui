@@ -12,10 +12,10 @@ export default (theme) => ({
         '& .hoi-poi-popover-inner': {
             ...theme.typography.defaultText,
             padding: 16,
-            color: theme.colors.neutral900,
+            color: theme.colors.textLight.primary,
             lineHeight: 1.4285714,
             textDecoration: 'none',
-            backgroundColor: theme.colors.neutralBase,
+            backgroundColor: theme.colors.primary.white,
             boxShadow: theme.effects.boxShadow,
             borderRadius: 8,
         },

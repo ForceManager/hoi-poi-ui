@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AttachFile({ color = '#788590', ...props }) {
+function AttachFile({ color = '#335B70', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" {...props}>
             <path

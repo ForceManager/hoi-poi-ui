@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Help({ color = '#788590', ...props }) {
+function Help({ color = '#335B70', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path

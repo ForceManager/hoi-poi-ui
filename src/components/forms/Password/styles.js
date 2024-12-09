@@ -3,7 +3,7 @@ export default (theme) => ({
         cursor: 'pointer',
         '&:hover': {
             '& svg path': {
-                fill: theme.colors.neutral800,
+                fill: theme.colors.grey[700],
             },
         },
     },

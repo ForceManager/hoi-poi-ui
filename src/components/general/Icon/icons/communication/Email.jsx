@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Email = ({ color = '#788590', ...props }) => (
+const Email = ({ color = '#335B70', ...props }) => (
     <svg {...props} viewBox="0 0 24 24">
         <path
             fillRule="evenodd"

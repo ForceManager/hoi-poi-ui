@@ -50,18 +50,18 @@ function Checkbox({
         (checkState) => {
             if (isMonotone) {
                 if (colorProp === 'neutral') {
-                    return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
+                    return isDisabled ? theme.colors.grey[200] : theme.colors.textLight.secondary;
                 }
                 return isDisabled
-                    ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
-                    : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
+                    ? theme.colors[`${colorProp}200`] || theme.colors.grey[200]
+                    : theme.colors[`${colorProp}500`] || theme.colors.textLight.secondary;
             } else {
                 if (checkState === 'unchecked') {
-                    return isDisabled ? theme.colors.neutral500 : theme.colors.neutral700;
+                    return isDisabled ? theme.colors.grey[200] : theme.colors.textLight.secondary;
                 } else {
                     return isDisabled
-                        ? theme.colors[`${colorProp}200`] || theme.colors.neutral500
-                        : theme.colors[`${colorProp}500`] || theme.colors.neutral700;
+                        ? theme.colors[`${colorProp}200`] || theme.colors.grey[200]
+                        : theme.colors[`${colorProp}500`] || theme.colors.textLight.secondary;
                 }
             }
         },

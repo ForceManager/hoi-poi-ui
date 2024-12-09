@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DatabaseClear = ({ color = '#7D8A96', color2 = '#FF8C00' }) => (
+const DatabaseClear = ({ color = '#335B70', color2 = '#FF8C00' }) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
         <path
             fill={color}

@@ -13,7 +13,7 @@ export default (theme) => ({
             boxSizing: 'border-box',
             position: 'absolute',
             width: '100%',
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
             height: 4,
             borderRadius: 6,
         },
@@ -40,7 +40,7 @@ export default (theme) => ({
         top: 5,
         marginLeft: -8,
         textAlign: 'center',
-        color: theme.colors.neutral600,
+        color: theme.colors.grey[500],
         fontSize: 12,
         fontFamily: theme.typography.fontFamily,
         letterSpacing: theme.typography.letterSpacing,
@@ -71,7 +71,7 @@ export default (theme) => ({
     },
     isReadOnly: {
         '& $overlayHandler': {
-            backgroundColor: theme.colors.neutral500,
+            backgroundColor: theme.colors.grey[200],
             cursor: 'default',
             '&:active': {
                 border: 0,
@@ -83,7 +83,7 @@ export default (theme) => ({
             },
         },
         '& .rc-slider-track': {
-            backgroundColor: theme.colors.neutral500,
+            backgroundColor: theme.colors.grey[200],
         },
     },
 });

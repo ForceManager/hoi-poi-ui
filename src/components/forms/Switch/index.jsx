@@ -67,11 +67,11 @@ function Switch({
                 checked={checked}
                 disabled={isDisabled}
                 offColor={
-                    hovered && !isDisabled ? theme.colors.neutral800 : theme.colors.neutral700
+                    hovered && !isDisabled ? theme.colors.grey[700] : theme.colors.textLight.secondary
                 }
                 onColor={hovered && !isDisabled ? theme.colors.orange600 : theme.colors.orange500}
-                offHandleColor={theme.colors.neutralBase}
-                onHandleColor={theme.colors.neutralBase}
+                offHandleColor={theme.colors.primary.white}
+                onHandleColor={theme.colors.primary.white}
                 boxShadow={null}
                 activeBoxShadow={null}
                 handleDiameter={sizes[size].handle}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DownloadAlt = ({ color = '#788590', ...props }) => (
+const DownloadAlt = ({ color = '#335B70', ...props }) => (
     <svg {...props} viewBox="0 0 32 32">
         <path
             fill={color}

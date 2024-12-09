@@ -2,7 +2,7 @@ export default (theme) => ({
     root: {
         display: 'flex',
         borderRadius: 8,
-        border: `1px solid ${theme.colors.neutral400}`,
+        border: `1px solid ${theme.colors.grey[100]}`,
         padding: 24,
         width: '100%',
         justifyContent: 'space-between',
