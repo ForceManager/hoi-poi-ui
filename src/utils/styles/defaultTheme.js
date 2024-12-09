@@ -128,6 +128,17 @@ export const colors = {
         info600: '#004D86',
         notification600: '#BB4F00',
     },
+    // Pending to be refactored when we have matching colors in the new palette
+    temp: {
+        purple100: '#fae3ed',
+        purple200: '#f6c8e1',
+        purple300: '#E5A5CE',
+        purple400: '#cc84b8',
+        purple500: '#aa5b9c',
+        purple600: '#92428b',
+        purple700: '#792d7a',
+        purple900: '#441151',
+    },
 };
 
 export const typography = {

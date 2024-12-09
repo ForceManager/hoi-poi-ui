@@ -43,11 +43,10 @@ export default (theme) => ({
             color: theme.colors.blue400,
         },
     },
-
     ongoing: {
-        backgroundColor: theme.colors.purple100,
+        backgroundColor: theme.colors.custom.purple100,
         '& $Text': {
-            color: theme.colors.purple500,
+            color: theme.colors.custom.purple500,
         },
     },
     promotion: {
@@ -79,7 +78,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.blue400,
         },
         '&$ongoing': {
-            backgroundColor: theme.colors.purple400,
+            backgroundColor: theme.colors.custom.purple400,
         },
         '&$promotion': {
             backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,

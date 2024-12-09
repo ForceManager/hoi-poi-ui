@@ -320,7 +320,7 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
             const toastId = showToast({
                 text: state.text,
                 title: state.title,
-                icon: <Icon name="email" color={theme.colors.purple400} />,
+                icon: <Icon name="email" color={theme.colors.temp.purple400} />,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
             });
