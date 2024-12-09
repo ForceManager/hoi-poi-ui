@@ -76,9 +76,9 @@ export default (theme) => ({
     confirmButton: {},
     cancelButton: {},
     deleteButton: {
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
         '&:hover': {
-            color: theme.colors.red600,
+            color: theme.colors.semantic.negative500,
         },
     },
 });

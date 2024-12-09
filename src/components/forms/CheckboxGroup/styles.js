@@ -10,11 +10,11 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
     },
     errorPerCheck: {
         ...theme.typography.smallText,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
         margin: '-6px 0 14px',
     },
     formControl: {

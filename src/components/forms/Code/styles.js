@@ -23,7 +23,7 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
     },
     formControl: {
         position: 'relative',

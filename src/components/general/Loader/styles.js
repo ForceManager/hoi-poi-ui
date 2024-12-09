@@ -14,8 +14,8 @@ export default (theme) => ({
         borderTopColor: theme.colors.orange500,
     },
     danger: {
-        borderColor: theme.colors.red200,
-        borderTopColor: theme.colors.red500,
+        borderColor: theme.colors.semantic.negativeCustom200,
+        borderTopColor: theme.colors.semantic.negative500,
     },
     white: {
         borderColor: 'transparent',

@@ -76,7 +76,7 @@ export default (theme) => ({
         backgroundColor: theme.colors.orange500,
     },
     optionLabelBulletDanger: {
-        backgroundColor: theme.colors.red500,
+        backgroundColor: theme.colors.semantic.negative500,
     },
     optionLabelBulletSuccess: {
         backgroundColor: theme.colors.green500,

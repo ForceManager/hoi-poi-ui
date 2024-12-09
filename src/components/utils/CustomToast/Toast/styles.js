@@ -84,7 +84,7 @@ export default (theme) => ({
         borderLeft: `8px solid ${theme.colors.yellow500}`,
     },
     error: {
-        borderLeft: `8px solid ${theme.colors.red500}`,
+        borderLeft: `8px solid ${theme.colors.semantic.negative500}`,
     },
     base: {
         backgroundColor: theme.colors.primary.white,

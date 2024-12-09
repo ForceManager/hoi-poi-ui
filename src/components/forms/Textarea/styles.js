@@ -49,7 +49,7 @@ export default (theme) => {
         error: {
             '& $textareaComponents': {
                 backgroundColor: theme.colors.primary.white,
-                border: `1px solid ${theme.colors.red500}`,
+                border: `1px solid ${theme.colors.semantic.negative500}`,
             },
         },
         isReadOnly: {

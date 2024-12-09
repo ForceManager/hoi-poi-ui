@@ -38,7 +38,7 @@ export default (theme) => ({
     },
     full: {
         '& $progressBar': {
-            background: `transparent linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
+            background: `transparent linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.semantic.negative500} 50%)`,
         },
     },
     animated: {

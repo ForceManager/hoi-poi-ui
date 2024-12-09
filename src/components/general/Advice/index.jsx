@@ -71,7 +71,7 @@ function Advice({
                 return {
                     ...properties,
                     name: 'warningOutline',
-                    color: theme.colors.red500,
+                    color: theme.colors.semantic.negative500,
                 };
             case 'success':
                 return {
@@ -103,7 +103,7 @@ function Advice({
         theme.colors.aqua700,
         theme.colors.green700,
         theme.colors.textLight.secondary,
-        theme.colors.red500,
+        theme.colors.semantic.negative500,
         theme.colors.yellow700,
         type,
     ]);

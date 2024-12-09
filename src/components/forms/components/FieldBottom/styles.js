@@ -14,7 +14,7 @@ export default (theme) => {
         },
         error: {
             ...theme.typography.caption,
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
             paddingBottom: 5,
         },
     };

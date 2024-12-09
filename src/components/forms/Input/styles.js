@@ -81,7 +81,7 @@ export default (theme) => {
         error: {
             '& $inputComponents': {
                 backgroundColor: theme.colors.primary.white,
-                border: `1px solid ${theme.colors.red500}`,
+                border: `1px solid ${theme.colors.semantic.negative500}`,
             },
         },
         isReadOnly: {

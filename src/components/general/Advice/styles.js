@@ -44,18 +44,18 @@ export default (theme) => ({
         },
     },
     error: {
-        backgroundColor: theme.colors.red100,
+        backgroundColor: theme.colors.semantic.negativeCustom100,
         '& $Text': {
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
         },
         '& $dismiss': {
-            color: `${theme.colors.red500} !important`,
-            borderColor: `${theme.colors.red500} !important`,
+            color: `${theme.colors.semantic.negative500} !important`,
+            borderColor: `${theme.colors.semantic.negative500} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.red200} !important`,
+                backgroundColor: `${theme.colors.semantic.negativeCustom200} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.red400} !important`,
+                backgroundColor: `${theme.colors.semantic.negative450} !important`,
             },
         },
     },

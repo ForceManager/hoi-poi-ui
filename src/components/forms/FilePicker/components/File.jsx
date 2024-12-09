@@ -62,7 +62,7 @@ function File({
     }, [file, index, id, isUrl, onCrop]);
 
     const renderIcon = useMemo(() => {
-        if (error) return <Icon name="errorOutline" color={theme.colors.red500} />;
+        if (error) return <Icon name="errorOutline" color={theme.colors.semantic.negative500} />;
         if (loading) return <Loader size="tiny" />;
         if (preview && checkBrowserCanRender(isUrl ? file : file.name))
             return (
@@ -73,7 +73,7 @@ function File({
                 />
             );
         return <Icon name={FILE_TYPES[file.type] || FILE_EXTENSIONS[file.type] || 'file'} />;
-    }, [error, theme.colors.red500, loading, preview, isUrl, file]);
+    }, [error, theme.colors.semantic.negative500, loading, preview, isUrl, file]);
 
     const renderCrop = useMemo(() => {
         if (!crop) return null;

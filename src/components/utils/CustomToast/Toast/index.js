@@ -121,7 +121,7 @@ const Toast = memo(
             const icons = {
                 [TYPES.success]: { name: 'taskChecked', color: theme.colors.green500 },
                 [TYPES.warning]: { name: 'warning', color: theme.colors.yellow500 },
-                [TYPES.error]: { name: 'error', color: theme.colors.red500 },
+                [TYPES.error]: { name: 'error', color: theme.colors.semantic.negative500 },
                 [TYPES.info]: { name: 'info', color: theme.colors.blue500 },
             };
 

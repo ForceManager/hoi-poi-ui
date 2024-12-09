@@ -20,7 +20,7 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
     },
     formControl: {
         position: 'relative',
@@ -81,7 +81,7 @@ export default (theme) => ({
         borderBottom: `1px solid  ${theme.colors.grey[200]}`,
     },
     fileError: {
-        backgroundColor: theme.colors.red100,
+        backgroundColor: theme.colors.semantic.negativeCustom100,
         borderBottom: 'none',
         borderRadius: 4,
     },
@@ -92,7 +92,7 @@ export default (theme) => ({
     },
     fileErrorText: {
         marginLeft: 4,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
     },
     fileDataContainer: {
         display: 'flex',
@@ -160,10 +160,10 @@ export default (theme) => ({
     errored: {
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.red500} !important`,
+                borderBottom: `1px solid ${theme.colors.semantic.negative500} !important`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.red500} !important`,
+                borderBottom: `1px solid ${theme.colors.semantic.negative500} !important`,
             },
         },
     },

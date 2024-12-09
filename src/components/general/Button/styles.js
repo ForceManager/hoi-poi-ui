@@ -72,14 +72,14 @@ export default (theme) => ({
         },
     },
     primaryError: {
-        backgroundColor: theme.colors.red500,
+        backgroundColor: theme.colors.semantic.negative500,
         color: theme.colors.primary.white,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                backgroundColor: theme.colors.red600,
+                backgroundColor: theme.colors.semantic.negative500,
             },
             '&:active': {
-                backgroundColor: theme.colors.red400,
+                backgroundColor: theme.colors.semantic.negative450,
             },
         },
     },
@@ -104,16 +104,16 @@ export default (theme) => ({
     secondaryError: {
         border: `1px solid ${theme.colors.grey[100]}`,
         backgroundColor: 'transparent',
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.red500,
-                backgroundColor: theme.colors.red200,
-                color: theme.colors.red500,
+                borderColor: theme.colors.semantic.negative500,
+                backgroundColor: theme.colors.semantic.negativeCustom200,
+                color: theme.colors.semantic.negative500,
             },
             '&:active': {
-                borderColor: theme.colors.red400,
-                backgroundColor: theme.colors.red400,
+                borderColor: theme.colors.semantic.negative450,
+                backgroundColor: theme.colors.semantic.negative450,
                 color: theme.colors.primary.white,
                 '& path': { fill: theme.colors.primary.white },
             },

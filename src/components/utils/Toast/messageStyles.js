@@ -21,7 +21,7 @@ export default (theme) => ({
     },
     error: {
         '&$title': {
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
         },
     },
     warning: {

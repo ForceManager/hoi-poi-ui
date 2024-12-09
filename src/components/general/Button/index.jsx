@@ -90,7 +90,7 @@ const Button = forwardRef(
                 case 'secondary-error':
                     return {
                         ...properties,
-                        color: theme.colors.red500,
+                        color: theme.colors.semantic.negative500,
                     };
                 case 'dashed':
                 case 'terciary':
@@ -117,7 +117,7 @@ const Button = forwardRef(
             theme.colors.textLight.primary,
             theme.colors.primary.white,
             theme.colors.orange500,
-            theme.colors.red500,
+            theme.colors.semantic.negative500,
             type,
         ]);
 

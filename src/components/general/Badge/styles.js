@@ -32,9 +32,9 @@ export default (theme) => ({
         },
     },
     error: {
-        backgroundColor: theme.colors.red100,
+        backgroundColor: theme.colors.semantic.negativeCustom100,
         '& $Text': {
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
         },
     },
     info: {
@@ -55,7 +55,7 @@ export default (theme) => ({
             backgroundClip: 'text',
             '-webkit-background-clip': 'text',
             color: 'transparent',
-            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
+            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.semantic.negative500} 50%)`,
         },
     },
     inverted: {
@@ -72,7 +72,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.yellow400,
         },
         '&$error': {
-            backgroundColor: theme.colors.red400,
+            backgroundColor: theme.colors.semantic.negative450,
         },
         '&$info': {
             backgroundColor: theme.colors.blue400,
@@ -81,7 +81,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.custom.purple400,
         },
         '&$promotion': {
-            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
+            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.semantic.negative500} 50%)`,
             '& $Text': {
                 color: theme.colors.primary.white,
             },
