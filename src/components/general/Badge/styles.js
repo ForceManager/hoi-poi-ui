@@ -44,9 +44,9 @@ export default (theme) => ({
         },
     },
     ongoing: {
-        backgroundColor: theme.colors.custom.purple100,
+        backgroundColor: theme.colors.temp.purple100,
         '& $Text': {
-            color: theme.colors.custom.purple500,
+            color: theme.colors.temp.purple500,
         },
     },
     promotion: {
@@ -78,7 +78,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.semantic.info400,
         },
         '&$ongoing': {
-            backgroundColor: theme.colors.custom.purple400,
+            backgroundColor: theme.colors.temp.purple400,
         },
         '&$promotion': {
             backgroundImage: `linear-gradient(to right, ${theme.colors.actionMajor[500]} 0%, ${theme.colors.semantic.negative500} 50%)`,
