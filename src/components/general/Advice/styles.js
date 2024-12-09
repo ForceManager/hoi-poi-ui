@@ -60,18 +60,18 @@ export default (theme) => ({
         },
     },
     info: {
-        backgroundColor: theme.colors.aqua100,
+        backgroundColor: theme.colors.semantic.infoCustom50,
         '& $Text': {
-            color: theme.colors.aqua700,
+            color: theme.colors.semantic.info600,
         },
         '& $dismiss': {
-            color: `${theme.colors.aqua700} !important`,
-            borderColor: `${theme.colors.aqua700} !important`,
+            color: `${theme.colors.semantic.info600} !important`,
+            borderColor: `${theme.colors.semantic.info600} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.aqua200} !important`,
+                backgroundColor: `${theme.colors.semantic.infoCustom100} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.aqua400} !important`,
+                backgroundColor: `${theme.colors.semantic.info400} !important`,
             },
         },
     },

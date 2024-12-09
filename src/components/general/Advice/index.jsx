@@ -89,7 +89,7 @@ function Advice({
                 return {
                     ...properties,
                     name: 'infoOutlined',
-                    color: theme.colors.aqua700,
+                    color: theme.colors.semantic.info600,
                 };
             case 'default':
             default:
@@ -100,7 +100,7 @@ function Advice({
                 };
         }
     }, [
-        theme.colors.aqua700,
+        theme.colors.semantic.info600,
         theme.colors.semantic.positive600,
         theme.colors.textLight.secondary,
         theme.colors.semantic.negative500,
