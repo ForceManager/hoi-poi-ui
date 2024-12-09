@@ -96,8 +96,8 @@ export default (theme) => ({
         height: 20,
         padding: '0px 3px',
         borderRadius: 18,
-        backgroundColor: theme.colors.orange100,
-        color: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[25],
+        color: theme.colors.actionMajor[500],
         position: 'relative',
         '& span': {
             position: 'absolute',

@@ -351,7 +351,7 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
         onClick={() => {
             const toastId = showToast({
                 title: 'Title',
-                icon: <Icon name="email" color={theme.colors.orange400} />,
+                icon: <Icon name="email" color={theme.colors.actionMajor[450]} />,
                 content: <Text>Custom Toast</Text>,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
@@ -369,7 +369,7 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
             const id = uuid();
             const toastId = showToast({
                 title: 'Title',
-                icon: <Icon name="email" color={theme.colors.orange400} />,
+                icon: <Icon name="email" color={theme.colors.actionMajor[450]} />,
                 content: <Text>Custom Toast</Text>,
                 closeOnClick: state.closeOnClick,
                 closeButton: (

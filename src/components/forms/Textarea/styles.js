@@ -25,7 +25,7 @@ export default (theme) => {
             border: 'none',
             padding: '8px 48px 8px 12px',
             margin: 0,
-            caretColor: theme.colors.orange500,
+            caretColor: theme.colors.actionMajor[500],
             scrollbarWidth: 'thin',
             scrollbarColor: `${theme.colors.textLight.secondary} ${theme.colors.primary.white}`,
             '&::placeholder': {
@@ -85,7 +85,7 @@ export default (theme) => {
         focused: {
             '& $textareaComponents': {
                 backgroundColor: theme.colors.primary.white,
-                border: `1px solid ${theme.colors.orange500}`,
+                border: `1px solid ${theme.colors.actionMajor[500]}`,
             },
         },
         isFullWidth: {

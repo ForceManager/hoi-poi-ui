@@ -85,7 +85,7 @@ const Button = forwardRef(
                 case 'secondary':
                     return {
                         ...properties,
-                        color: theme.colors.orange500,
+                        color: theme.colors.actionMajor[500],
                     };
                 case 'secondary-error':
                     return {
@@ -116,7 +116,7 @@ const Button = forwardRef(
             theme.colors.textLight.secondary,
             theme.colors.textLight.primary,
             theme.colors.primary.white,
-            theme.colors.orange500,
+            theme.colors.actionMajor[500],
             theme.colors.semantic.negative500,
             type,
         ]);

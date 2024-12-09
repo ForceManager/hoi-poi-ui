@@ -154,7 +154,7 @@ export default (theme) => ({
         left: 0,
         height: 2,
         borderRadius: 10,
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
     },
 
     errored: {

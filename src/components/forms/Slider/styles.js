@@ -23,7 +23,7 @@ export default (theme) => ({
             left: '0',
             height: 4,
             borderRadius: 6,
-            backgroundColor: theme.colors.orange500,
+            backgroundColor: theme.colors.actionMajor[500],
         },
         '& .rc-slider-step': {
             boxSizing: 'border-box',
@@ -53,19 +53,19 @@ export default (theme) => ({
         cursor: 'grab',
         borderRadius: '50%',
         border: '0',
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
         MsTouchAction: 'pan-x',
         touchAction: 'pan-x',
         '&:active': {
             cursor: 'grabbing',
-            border: `solid 4px ${theme.colors.orange100}`,
+            border: `solid 4px ${theme.colors.actionMajor[25]}`,
             marginTop: -10,
         },
         '&:focus': {
             outline: 'none',
         },
         '&:hover': {
-            border: `solid 4px ${theme.colors.orange100}`,
+            border: `solid 4px ${theme.colors.actionMajor[25]}`,
             marginTop: -10,
         },
     },

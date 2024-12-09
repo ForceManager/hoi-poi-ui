@@ -113,7 +113,7 @@ export default (theme) => ({
         backgroundColor: theme.colors.grey[200],
     },
     optionLabelBulletPrimary: {
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
     },
     optionLabelBulletDanger: {
         backgroundColor: theme.colors.semantic.negative500,

@@ -12,7 +12,7 @@ export default (theme) => {
             '&$focused': {
                 '& $inputComponents': {
                     ...titleBorder,
-                    borderBottomColor: theme.colors.orange500,
+                    borderBottomColor: theme.colors.actionMajor[500],
                 },
             },
             '&$error': {
@@ -117,7 +117,7 @@ export default (theme) => {
         focused: {
             '& $inputComponents': {
                 backgroundColor: theme.colors.primary.white,
-                border: `1px solid ${theme.colors.orange500}`,
+                border: `1px solid ${theme.colors.actionMajor[500]}`,
             },
         },
         isFullWidth: {

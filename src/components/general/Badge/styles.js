@@ -55,7 +55,7 @@ export default (theme) => ({
             backgroundClip: 'text',
             '-webkit-background-clip': 'text',
             color: 'transparent',
-            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.semantic.negative500} 50%)`,
+            backgroundImage: `linear-gradient(to right, ${theme.colors.actionMajor[500]} 0%, ${theme.colors.semantic.negative500} 50%)`,
         },
     },
     inverted: {
@@ -81,7 +81,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.custom.purple400,
         },
         '&$promotion': {
-            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.semantic.negative500} 50%)`,
+            backgroundImage: `linear-gradient(to right, ${theme.colors.actionMajor[500]} 0%, ${theme.colors.semantic.negative500} 50%)`,
             '& $Text': {
                 color: theme.colors.primary.white,
             },

@@ -3,7 +3,7 @@ export default (theme) => ({
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
         position: 'relative',
     },
     Text: {

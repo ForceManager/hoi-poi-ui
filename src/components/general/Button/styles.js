@@ -60,14 +60,14 @@ export default (theme) => ({
     },
     // Types
     primary: {
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
         color: theme.colors.primary.white,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                backgroundColor: theme.colors.orange600,
+                backgroundColor: theme.colors.actionMajor[600],
             },
             '&:active': {
-                backgroundColor: theme.colors.orange400,
+                backgroundColor: theme.colors.actionMajor[450],
             },
         },
     },
@@ -84,18 +84,18 @@ export default (theme) => ({
         },
     },
     secondary: {
-        border: `1px solid ${theme.colors.orange500}`,
+        border: `1px solid ${theme.colors.actionMajor[500]}`,
         backgroundColor: 'transparent',
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                borderColor: theme.colors.orange500,
-                backgroundColor: theme.colors.orange200,
-                color: theme.colors.orange500,
+                borderColor: theme.colors.actionMajor[500],
+                backgroundColor: theme.colors.actionMajor[150],
+                color: theme.colors.actionMajor[500],
             },
             '&:active': {
-                borderColor: theme.colors.orange400,
-                backgroundColor: theme.colors.orange400,
+                borderColor: theme.colors.actionMajor[450],
+                backgroundColor: theme.colors.actionMajor[450],
                 color: theme.colors.primary.white,
                 '& path': { fill: theme.colors.primary.white },
             },
@@ -154,40 +154,40 @@ export default (theme) => ({
         },
     },
     promotion: {
-        backgroundColor: theme.colors.orange100,
+        backgroundColor: theme.colors.actionMajor[25],
         color: theme.colors.textLight.primary,
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                backgroundColor: theme.colors.orange300,
+                backgroundColor: theme.colors.actionMajor[300],
                 color: theme.colors.textLight.primary,
             },
             '&:active': {
-                backgroundColor: theme.colors.orange200,
+                backgroundColor: theme.colors.actionMajor[150],
                 color: theme.colors.textLight.secondary,
             },
         },
     },
     primarySoft: {
-        backgroundColor: theme.colors.orange100,
-        color: theme.colors.orange500,
-        '& path': { fill: theme.colors.orange500 },
+        backgroundColor: theme.colors.actionMajor[25],
+        color: theme.colors.actionMajor[500],
+        '& path': { fill: theme.colors.actionMajor[500] },
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                backgroundColor: theme.colors.orange200,
-                color: theme.colors.orange500,
+                backgroundColor: theme.colors.actionMajor[150],
+                color: theme.colors.actionMajor[500],
             },
             '&:active': {
-                backgroundColor: theme.colors.orange300,
-                color: theme.colors.orange500,
-                '& path': { fill: theme.colors.orange500 },
+                backgroundColor: theme.colors.actionMajor[300],
+                color: theme.colors.actionMajor[500],
+                '& path': { fill: theme.colors.actionMajor[500] },
             },
         },
     },
 
     text: {
         backgroundColor: 'transparent',
-        color: theme.colors.orange500,
-        '& path': { fill: theme.colors.orange500 },
+        color: theme.colors.actionMajor[500],
+        '& path': { fill: theme.colors.actionMajor[500] },
         '&$disabled': {
             opacity: 1,
             color: theme.colors.grey[500],
@@ -195,13 +195,13 @@ export default (theme) => ({
         },
         '&:not($loading):not($disabled)': {
             '&:hover': {
-                backgroundColor: theme.colors.orange100,
-                color: theme.colors.orange500,
+                backgroundColor: theme.colors.actionMajor[25],
+                color: theme.colors.actionMajor[500],
             },
             '&:active': {
-                backgroundColor: theme.colors.orange200,
-                color: theme.colors.orange500,
-                '& path': { fill: theme.colors.orange500 },
+                backgroundColor: theme.colors.actionMajor[150],
+                color: theme.colors.actionMajor[500],
+                '& path': { fill: theme.colors.actionMajor[500] },
             },
         },
     },

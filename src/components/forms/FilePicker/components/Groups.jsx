@@ -109,7 +109,7 @@ const Groups = memo(
                             className={getIconClassNames(index)}
                             name="chevron"
                             size="small"
-                            color={theme.colors.orange500}
+                            color={theme.colors.actionMajor[500]}
                         />
                     </div>
                 );

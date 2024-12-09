@@ -48,7 +48,7 @@ export default React.memo(({ children, ...props }) => {
 
             let finalIcon;
             if (icon) finalIcon = icon;
-            else if (iconType) finalIcon = <Icon name={iconType} color={theme.colors.orange500} />;
+            else if (iconType) finalIcon = <Icon name={iconType} color={theme.colors.actionMajor[500]} />;
 
             let textClasses = [actionTextClassName];
             let textOverride = { ...override.actionText };
@@ -87,7 +87,7 @@ export default React.memo(({ children, ...props }) => {
             );
         },
         [
-            theme.colors.orange500,
+            theme.colors.actionMajor[500],
             actionTextClassName,
             override.actionText,
             override.action,

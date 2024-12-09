@@ -296,10 +296,10 @@ export default {
     utils: {
         selection: {
             '& ::selection': {
-                backgroundColor: colors.orange200,
+                backgroundColor: colors.actionMajor[150],
             },
             '& ::-moz-selection': {
-                backgroundColor: colors.orange200,
+                backgroundColor: colors.actionMajor[150],
             },
         },
         scrollbar: {

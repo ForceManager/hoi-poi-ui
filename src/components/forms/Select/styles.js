@@ -37,11 +37,11 @@ export default (theme) => ({
     },
     actionText: {
         marginLeft: 0,
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
     },
     actionTextWithIcon: {
         marginLeft: 8,
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
     },
     optionLabel: {
         display: 'flex',
@@ -73,7 +73,7 @@ export default (theme) => ({
         backgroundColor: theme.colors.grey[200],
     },
     optionLabelBulletPrimary: {
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
     },
     optionLabelBulletDanger: {
         backgroundColor: theme.colors.semantic.negative500,
@@ -153,7 +153,7 @@ export default (theme) => ({
     },
     controlFocused: {
         backgroundColor: theme.colors.primary.white,
-        border: `1px solid ${theme.colors.orange500}`,
+        border: `1px solid ${theme.colors.actionMajor[500]}`,
         boxShadow: 'none',
     },
     placeholder: {

@@ -58,9 +58,9 @@ export default (theme) => ({
         },
     },
     primary: {
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
         '&:hover': {
-            color: theme.colors.orange600,
+            color: theme.colors.actionMajor[600],
         },
     },
 });

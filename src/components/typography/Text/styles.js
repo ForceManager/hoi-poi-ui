@@ -36,6 +36,6 @@ export default (theme) => ({
         '-webkit-background-clip': 'text',
         '-webkit-text-fill-color': 'transparent',
         background: 'linear-gradient(90deg, #FF8905 0%, #F54853 80%)',
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
     },
 });

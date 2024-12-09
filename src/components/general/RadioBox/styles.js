@@ -11,8 +11,8 @@ export default (theme) => ({
         transition: 'height .3s ease',
     },
     checked: {
-        border: `1px solid ${theme.colors.orange500}`,
-        backgroundColor: theme.colors.orange100,
+        border: `1px solid ${theme.colors.actionMajor[500]}`,
+        backgroundColor: theme.colors.actionMajor[25],
     },
     content: {
         flex: 1,

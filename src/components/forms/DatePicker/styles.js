@@ -22,19 +22,19 @@ export default (theme) => ({
         marginLeft: 16,
         marginRight: 16,
         height: '39px',
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
         fontWeight: 500,
         cursor: 'pointer',
         ...theme.typography.defaultText,
         '&:hover': {
-            color: theme.colors.orange600,
+            color: theme.colors.actionMajor[600],
         },
     },
     todayContainerDisabled: {
-        color: theme.colors.orange200,
+        color: theme.colors.actionMajor[150],
         cursor: 'not-allowed',
         '&:hover': {
-            color: theme.colors.orange200,
+            color: theme.colors.actionMajor[150],
         },
     },
     container: {
@@ -158,7 +158,7 @@ export default (theme) => ({
         },
         '& .flatpickr-months .flatpickr-month': {
             borderRadius: '5px 5px 0 0',
-            background: theme.colors.orange500,
+            background: theme.colors.actionMajor[500],
             color: theme.colors.primary.white,
             fill: theme.colors.primary.white,
             height: 34,
@@ -203,7 +203,7 @@ export default (theme) => ({
             },
         '& .flatpickr-months .flatpickr-prev-month:hover svg, & .flatpickr-months .flatpickr-next-month:hover svg':
             {
-                fill: theme.colors.orange700,
+                fill: theme.colors.actionMajor[700],
             },
         '& .flatpickr-months .flatpickr-prev-month svg, & .flatpickr-months .flatpickr-next-month svg':
             {
@@ -283,7 +283,7 @@ export default (theme) => ({
             fill: 'rgba(255, 255, 255, 0.5)',
         },
         '& .numInputWrapper:hover': {
-            background: theme.colors.orange600,
+            background: theme.colors.actionMajor[600],
         },
         '& .numInputWrapper:hover span': {
             opacity: '1',
@@ -355,7 +355,7 @@ export default (theme) => ({
             appearance: 'menulist',
             '-moz-appearance': 'none',
             '-webkit-appearance': 'none',
-            background: theme.colors.orange500,
+            background: theme.colors.actionMajor[500],
             border: 'none',
             borderRadius: '0',
             boxSizing: 'border-box',
@@ -376,18 +376,18 @@ export default (theme) => ({
                 outline: 'none',
             },
         '& .flatpickr-current-month .flatpickr-monthDropdown-months:hover': {
-            background: theme.colors.orange600,
+            background: theme.colors.actionMajor[600],
         },
         '& .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month':
             {
-                backgroundColor: theme.colors.orange500,
+                backgroundColor: theme.colors.actionMajor[500],
                 outline: 'none',
                 border: 0,
                 padding: '10px 0 10px 10px',
                 ...theme.typography.defaultText,
             },
         '& .flatpickr-weekdays': {
-            background: theme.colors.orange500,
+            background: theme.colors.actionMajor[500],
             textAlign: 'center',
             overflow: 'hidden',
             width: '100%',
@@ -403,7 +403,7 @@ export default (theme) => ({
         },
         '& span.flatpickr-weekday': {
             cursor: 'default',
-            background: theme.colors.orange500,
+            background: theme.colors.actionMajor[500],
             lineHeight: '1px',
             margin: '0',
             textAlign: 'center',
@@ -468,19 +468,19 @@ export default (theme) => ({
             {
                 cursor: 'pointer',
                 outline: '0',
-                background: theme.colors.orange200,
+                background: theme.colors.actionMajor[150],
             },
         '& .flatpickr-day.today': {
-            borderColor: theme.colors.orange500,
+            borderColor: theme.colors.actionMajor[500],
         },
         '& .flatpickr-day.today:hover, & .flatpickr-day.today:focus': {
-            borderColor: theme.colors.orange500,
-            background: theme.colors.orange500,
+            borderColor: theme.colors.actionMajor[500],
+            background: theme.colors.actionMajor[500],
             color: theme.colors.primary.white,
         },
         '& .flatpickr-day.selected, & .flatpickr-day.startRange, & .flatpickr-day.endRange, & .flatpickr-day.selected.inRange, & .flatpickr-day.startRange.inRange, & .flatpickr-day.endRange.inRange, & .flatpickr-day.selected:focus, & .flatpickr-day.startRange:focus, & .flatpickr-day.endRange:focus, & .flatpickr-day.selected:hover, & .flatpickr-day.startRange:hover, & .flatpickr-day.endRange:hover, & .flatpickr-day.selected.prevMonthDay, & .flatpickr-day.startRange.prevMonthDay, & .flatpickr-day.endRange.prevMonthDay, & .flatpickr-day.selected.nextMonthDay, & .flatpickr-day.startRange.nextMonthDay, & .flatpickr-day.endRange.nextMonthDay':
             {
-                background: theme.colors.orange500,
+                background: theme.colors.actionMajor[500],
                 boxShadow: 'none',
                 color: theme.colors.primary.white,
             },
@@ -494,7 +494,7 @@ export default (theme) => ({
             },
         '& .flatpickr-day.selected.startRange+ & .endRange:not(:nth-child(7n+1)), & .flatpickr-day.startRange.startRange+ & .endRange:not(:nth-child(7n+1)), & .flatpickr-day.endRange.startRange+ & .endRange:not(:nth-child(7n+1))':
             {
-                boxShadow: `-10px 0 0 ${theme.colors.orange500}`,
+                boxShadow: `-10px 0 0 ${theme.colors.actionMajor[500]}`,
             },
         '& .flatpickr-day.selected.startRange.endRange, & .flatpickr-day.startRange.startRange.endRange, & .flatpickr-day.endRange.startRange.endRange':
             {
@@ -517,7 +517,7 @@ export default (theme) => ({
         },
         '& .flatpickr-day.week.selected': {
             borderRadius: '0',
-            boxShadow: `-5px 0 0 ${theme.colors.orange500}, 5px 0 0 ${theme.colors.orange500}`,
+            boxShadow: `-5px 0 0 ${theme.colors.actionMajor[500]}, 5px 0 0 ${theme.colors.actionMajor[500]}`,
         },
         '& .flatpickr-day.hidden': {
             visibility: 'hidden',
