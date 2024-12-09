@@ -122,7 +122,7 @@ const Toast = memo(
                 [TYPES.success]: { name: 'taskChecked', color: theme.colors.semantic.positive500 },
                 [TYPES.warning]: { name: 'warning', color: theme.colors.semantic.focus500 },
                 [TYPES.error]: { name: 'error', color: theme.colors.semantic.negative500 },
-                [TYPES.info]: { name: 'info', color: theme.colors.blue500 },
+                [TYPES.info]: { name: 'info', color: theme.colors.semantic.info500 },
             };
 
             if (!icons[type]) return null;

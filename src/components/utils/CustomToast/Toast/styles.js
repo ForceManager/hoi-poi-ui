@@ -75,7 +75,7 @@ export default (theme) => ({
         alignSelf: 'flex-end',
     },
     info: {
-        borderLeft: `8px solid ${theme.colors.blue500}`,
+        borderLeft: `8px solid ${theme.colors.semantic.info500}`,
     },
     success: {
         borderLeft: `8px solid ${theme.colors.semantic.positive500}`,

@@ -38,9 +38,9 @@ export default (theme) => ({
         },
     },
     info: {
-        backgroundColor: theme.colors.blue100,
+        backgroundColor: theme.colors.semantic.infoCustom50,
         '& $Text': {
-            color: theme.colors.blue400,
+            color: theme.colors.semantic.info400,
         },
     },
     ongoing: {
@@ -75,7 +75,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.semantic.negative450,
         },
         '&$info': {
-            backgroundColor: theme.colors.blue400,
+            backgroundColor: theme.colors.semantic.info400,
         },
         '&$ongoing': {
             backgroundColor: theme.colors.custom.purple400,

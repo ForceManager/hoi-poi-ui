@@ -20,7 +20,7 @@ export default (theme) => ({
             cursor: 'pointer',
             '&:hover': {
                 '& span': {
-                    color: theme.colors.blue500,
+                    color: theme.colors.semantic.info500,
                 },
                 '&:last-child': {
                     '& span': {

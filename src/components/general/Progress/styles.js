@@ -18,22 +18,22 @@ export default (theme) => ({
     },
     low: {
         '& $progressBar': {
-            background: theme.colors.blue200,
+            background: theme.colors.semantic.infoCustom100,
         },
     },
     medium: {
         '& $progressBar': {
-            background: theme.colors.blue300,
+            background: theme.colors.semantic.info150,
         },
     },
     high: {
         '& $progressBar': {
-            background: theme.colors.blue400,
+            background: theme.colors.semantic.info400,
         },
     },
     higher: {
         '& $progressBar': {
-            background: theme.colors.blue500,
+            background: theme.colors.semantic.info500,
         },
     },
     full: {

@@ -46,8 +46,8 @@ export default (theme) => ({
         backgroundColor: theme.colors.actionMinor[50],
     },
     isDragActive: {
-        border: `1px dashed ${theme.colors.blue400}`,
-        backgroundColor: theme.colors.blue100,
+        border: `1px dashed ${theme.colors.semantic.info400}`,
+        backgroundColor: theme.colors.semantic.infoCustom50,
     },
     disabled: {
         border: `1px dashed ${theme.colors.grey[100]}`,
