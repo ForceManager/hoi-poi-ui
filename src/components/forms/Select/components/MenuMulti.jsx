@@ -56,7 +56,7 @@ export default ({ option, value, classes, override, getHighlighted }) => {
             <Checkbox
                 className={classes.optionLabelCheckbox}
                 checked={isSelected}
-                color="orange"
+                color="actionMajor"
                 isDisabled={isDisabled || false}
                 {...override.optionLabelCheckbox}
             />

@@ -240,14 +240,14 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
     />
     <CheckboxGroup
         label="PreComponent"
-        color="orange"
+        color="actionMajor"
         options={preComponentOptions}
         onChange={onChangePreComponent}
         value={state.preComponent}
     />
     <CheckboxGroup
         label="PostComponent"
-        color="orange"
+        color="actionMajor"
         options={postComponentOptions}
         onChange={onChangePostComponent}
         value={state.postComponent}
