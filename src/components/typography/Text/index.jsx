@@ -1,8 +1,6 @@
 import React, { forwardRef, useRef, useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
-import defaultTheme from '../../../utils/styles/defaultTheme';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import { createUseStyles } from '../../../utils/styles';
 import Tooltip from '../../utils/Tooltip';
@@ -57,11 +55,7 @@ const Text = forwardRef(
                 setTooltipContent(<span>{children}</span>);
         }, [children, useTooltip, ref]);
 
-        const style = useMemo(
-            () =>
-                color && defaultTheme.colors[color] ? { color: defaultTheme.colors[color] } : {},
-            [color],
-        );
+        const style = useMemo(() => (!!color ? { color } : {}), [color]);
 
         const textContainer = useMemo(() => {
             const Tag = as || 'span';
@@ -121,75 +115,7 @@ Text.propTypes = {
         'badges',
         'overline',
     ]),
-    color: PropTypes.oneOf([
-        'neutralBase',
-        'neutral100',
-        'neutral150',
-        'neutral200',
-        'neutral300',
-        'neutral400',
-        'neutral500',
-        'neutral600',
-        'neutral700',
-        'neutral800',
-        'neutral900',
-        'red100',
-        'red200',
-        'red400',
-        'red500',
-        'red600',
-        'red700',
-        'red900',
-        'colors.actionMajor[25]',
-        'colors.actionMajor[150]',
-        'orange400',
-        'orange500',
-        'orange600',
-        'orange700',
-        'orange900',
-        'green100',
-        'green200',
-        'green400',
-        'green500',
-        'green600',
-        'green700',
-        'green900',
-        'blue100',
-        'blue200',
-        'blue400',
-        'blue500',
-        'blue600',
-        'blue700',
-        'blue900',
-        'purple100',
-        'purple200',
-        'purple400',
-        'purple500',
-        'purple600',
-        'purple700',
-        'purple900',
-        'aqua100',
-        'aqua200',
-        'aqua400',
-        'aqua500',
-        'aqua600',
-        'aqua700',
-        'aqua900',
-        'yellow100',
-        'yellow200',
-        'yellow400',
-        'yellow500',
-        'yellow600',
-        'yellow700',
-        'yellow900',
-        'turquoise100',
-        'turquoise200',
-        'turquoise400',
-        'turquoise500',
-        'turquoise600',
-        'turquoise700',
-        'turquoise900',
-    ]),
+    color: PropTypes.string,
     overrides: PropTypes.object,
     children: PropTypes.node,
     isTruncated: PropTypes.bool,
