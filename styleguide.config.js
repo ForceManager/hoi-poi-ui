@@ -101,7 +101,7 @@ module.exports = {
             linkHover: '#007777',
         },
         fontFamily: {
-            base: '"Roboto", "Helvetica", sans-serif',
+            base: '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif',
         },
     },
     template: {
@@ -109,7 +109,7 @@ module.exports = {
             links: [
                 {
                     rel: 'stylesheet',
-                    href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
+                    href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700',
                 },
             ],
         },
