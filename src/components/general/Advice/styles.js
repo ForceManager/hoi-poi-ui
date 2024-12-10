@@ -43,7 +43,7 @@ export default (theme) => ({
             },
         },
     },
-    error: {
+    semanticNegative: {
         backgroundColor: theme.colors.semantic.negativeCustom100,
         '& $Text': {
             color: theme.colors.semantic.negative500,
@@ -59,7 +59,7 @@ export default (theme) => ({
             },
         },
     },
-    info: {
+    semanticInfo: {
         backgroundColor: theme.colors.semantic.infoCustom50,
         '& $Text': {
             color: theme.colors.semantic.info600,
@@ -75,7 +75,7 @@ export default (theme) => ({
             },
         },
     },
-    success: {
+    semanticPositive: {
         backgroundColor: theme.colors.semantic.positiveCustom100,
         '& $Text': {
             color: theme.colors.semantic.positive600,
@@ -91,7 +91,7 @@ export default (theme) => ({
             },
         },
     },
-    warning: {
+    semanticFocus: {
         backgroundColor: theme.colors.semantic.focusCustom100,
         '& $Text': {
             color: theme.colors.semantic.focusCustom600,
@@ -138,5 +138,18 @@ export default (theme) => ({
     dismiss: {
         alignSelf: 'flex-end',
         marginTop: 16,
+    },
+    // For retrocompatibility
+    error: {
+        extend: 'semanticNegative',
+    },
+    success: {
+        extend: 'semanticPositive',
+    },
+    info: {
+        extend: 'semanticInfo',
+    },
+    warning: {
+        extend: 'semanticFocus',
     },
 });

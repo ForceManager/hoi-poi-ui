@@ -68,24 +68,28 @@ function Advice({
         const properties = { size: 'medium' };
         switch (type) {
             case 'error':
+            case 'semanticNegative':
                 return {
                     ...properties,
                     name: 'warningOutline',
                     color: theme.colors.semantic.negative500,
                 };
             case 'success':
+            case 'semanticPositive':
                 return {
                     ...properties,
                     name: 'thickEnabled',
                     color: theme.colors.semantic.positive600,
                 };
             case 'warning':
+            case 'semanticFocus':
                 return {
                     ...properties,
                     name: 'warningRounded',
                     color: theme.colors.semantic.focusCustom600,
                 };
             case 'info':
+            case 'semanticInfo':
                 return {
                     ...properties,
                     name: 'infoOutlined',
@@ -204,7 +208,17 @@ Advice.propTypes = {
     showIcon: PropTypes.bool,
     showCollapse: PropTypes.bool,
     defaultCollapsed: PropTypes.bool,
-    type: PropTypes.oneOf(['default', 'error', 'info', 'success', 'warning']),
+    type: PropTypes.oneOf([
+        'semanticPositive',
+        'semanticNegative',
+        'semanticInfo',
+        'semanticFocus',
+        'default',
+        'error',
+        'info',
+        'success',
+        'warning',
+    ]),
     isDismissable: PropTypes.bool,
     dismissText: PropTypes.string,
     onDismiss: PropTypes.func,

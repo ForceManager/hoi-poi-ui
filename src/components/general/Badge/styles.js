@@ -19,25 +19,25 @@ export default (theme) => ({
             color: theme.colors.textLight.secondary,
         },
     },
-    success: {
+    semanticPositive: {
         backgroundColor: theme.colors.semantic.positiveCustom100,
         '& $Text': {
             color: theme.colors.semantic.positive500,
         },
     },
-    warning: {
+    semanticFocus: {
         backgroundColor: theme.colors.semantic.focusCustom100,
         '& $Text': {
             color: theme.colors.semantic.focus500,
         },
     },
-    error: {
+    semanticNegative: {
         backgroundColor: theme.colors.semantic.negativeCustom100,
         '& $Text': {
             color: theme.colors.semantic.negative500,
         },
     },
-    info: {
+    semanticInfo: {
         backgroundColor: theme.colors.semantic.infoCustom50,
         '& $Text': {
             color: theme.colors.semantic.info400,
@@ -58,6 +58,19 @@ export default (theme) => ({
             backgroundImage: `linear-gradient(to right, ${theme.colors.actionMajor[500]} 0%, ${theme.colors.semantic.negative500} 50%)`,
         },
     },
+    // For retrocompatibility
+    error: {
+        extend: 'semanticNegative',
+    },
+    success: {
+        extend: 'semanticPositive',
+    },
+    info: {
+        extend: 'semanticInfo',
+    },
+    warning: {
+        extend: 'semanticFocus',
+    },
     inverted: {
         '& $Text': {
             color: theme.colors.primary.white,
@@ -65,14 +78,26 @@ export default (theme) => ({
         '&$default': {
             backgroundColor: theme.colors.grey[500],
         },
+        '&$semanticPositive': {
+            backgroundColor: theme.colors.semantic.positive400,
+        },
         '&$success': {
             backgroundColor: theme.colors.semantic.positive400,
+        },
+        '&$semanticFocus': {
+            backgroundColor: theme.colors.semantic.focusCustom400,
         },
         '&$warning': {
             backgroundColor: theme.colors.semantic.focusCustom400,
         },
+        '&$semanticNegative': {
+            backgroundColor: theme.colors.semantic.negative450,
+        },
         '&$error': {
             backgroundColor: theme.colors.semantic.negative450,
+        },
+        '&$semanticInfo': {
+            backgroundColor: theme.colors.semantic.info400,
         },
         '&$info': {
             backgroundColor: theme.colors.semantic.info400,
