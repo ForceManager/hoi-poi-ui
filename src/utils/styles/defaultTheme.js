@@ -216,7 +216,7 @@ export const typography = {
         fontFamily,
         fontSize: 14,
         fontWeight: 500,
-        lineHeight: '160%',
+        lineHeight: 1,
         letterSpacing: 0.6,
     },
     caption: {
