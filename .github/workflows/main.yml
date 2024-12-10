@@ -1,8 +1,8 @@
-name: Deploy Styleguide
+name: Deploy Rebranding Site
 on:
     push:
         branches:
-            - main
+            - feature/rebranding
 permissions:
     contents: write
 jobs:
@@ -30,4 +30,6 @@ jobs:
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
+                  branch: gh-pages
                   folder: styleguide # The folder the action should deploy.
+                  target-folder: rebranding
