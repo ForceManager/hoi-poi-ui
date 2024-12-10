@@ -11,6 +11,7 @@ export default (theme) => ({
         alignItems: 'center',
         height: 36,
         boxSizing: 'border-box',
+        marginBottom: 4,
         '&:hover': {
             '& $Text': {
                 color: `${theme.colors.neutral800} !important`,
