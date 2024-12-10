@@ -32,6 +32,9 @@ export default (theme) => ({
         height: 60,
         padding: 8,
     },
+    swatchWhite: {
+        boxShadow: `inset 0 0 1px ${theme.colors.primary.black}`,
+    },
     swatchTextDark: {
         color: theme.colors.primary.black,
     },

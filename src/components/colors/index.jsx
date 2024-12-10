@@ -79,7 +79,13 @@ const Colors = () => {
                     ? classes.swatchTextDark
                     : classes.swatchTextLight;
             return (
-                <div key={name} style={{ backgroundColor: color }} className={classes.swatch}>
+                <div
+                    key={name}
+                    style={{ backgroundColor: color }}
+                    className={classNames(classes.swatch, {
+                        [classes.swatchWhite]: color === '#FFF',
+                    })}
+                >
                     <Text type="caption" className={textClass}>
                         {name}
                     </Text>
@@ -89,7 +95,7 @@ const Colors = () => {
                 </div>
             );
         },
-        [classes.swatch, classes.swatchTextDark, classes.swatchTextLight],
+        [classes.swatch, classes.swatchTextDark, classes.swatchTextLight, classes.swatchWhite],
     );
 
     const renderSection = useCallback(
