@@ -11,7 +11,7 @@ function LinesChartColor({ color = colors.actionMinor[500], ...props }) {
                 d="M2 20 9 4l7 13.778L22 5.37"
             />
             <path
-                stroke="#FFB13F"
+                stroke="#198E59"
                 strokeLinecap="round"
                 strokeWidth="1.5"
                 d="M2 9.545 9 15l7-6 6 5.454"

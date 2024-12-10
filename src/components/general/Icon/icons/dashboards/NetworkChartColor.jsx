@@ -8,26 +8,26 @@ function NetworkChartColor({ color = colors.actionMinor[500], ...props }) {
                 stroke="#335B70"
                 d="M12.068 5.581v3.716M12.068 18.419v-3.716M18.351 11.932h-3.716M5.649 11.932h3.716"
             />
-            <circle cx="12.068" cy="4.23" r="1.73" stroke="#FFB13F" />
+            <circle cx="12.068" cy="4.23" r="1.73" stroke="#198E59" />
             <circle
                 cx="2.23"
                 cy="2.23"
                 r="1.73"
-                stroke="#FFB13F"
+                stroke="#198E59"
                 transform="matrix(1 0 0 -1 9.838 22)"
             />
             <circle
                 cx="19.77"
                 cy="11.932"
                 r="1.73"
-                stroke="#FFB13F"
+                stroke="#198E59"
                 transform="rotate(90 19.77 11.932)"
             />
             <circle
                 cx="4.23"
                 cy="11.932"
                 r="1.73"
-                stroke="#FFB13F"
+                stroke="#198E59"
                 transform="rotate(-90 4.23 11.932)"
             />
             <circle

@@ -11,7 +11,7 @@ function FilterListActive({ color = '#335B70', ...props }) {
                 />
                 <path
                     d="M18.5 15a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
-                    fill="#FF8C00"
+                    fill="#007E45"
                     fillRule="evenodd"
                 />
             </g>

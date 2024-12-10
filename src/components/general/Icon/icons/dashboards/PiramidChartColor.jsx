@@ -10,7 +10,7 @@ function PiramidChartColor({ color = colors.actionMinor[500], ...props }) {
                 d="m18.844 16.864 1.881 3.386H3.275l1.847-3.325 2.534-4.56L12 4.544l4.344 7.82 2.5 4.5Z"
             />
             <path
-                stroke="#FFB13F"
+                stroke="#198E59"
                 strokeWidth="1.6"
                 d="M7.912 11.968h8.16l2.543 4.602H5.382l2.53-4.602Z"
             />

@@ -11,7 +11,7 @@ function RadialBarChartColor({ color = colors.actionMinor[500], ...props }) {
                 d="M12 2.75a9.25 9.25 0 1 1-7.208 3.452"
             />
             <path
-                stroke="#FFB13F"
+                stroke="#198E59"
                 strokeLinecap="round"
                 strokeWidth="1.5"
                 d="M12 6.95a5.05 5.05 0 1 1-5.024 5.565"

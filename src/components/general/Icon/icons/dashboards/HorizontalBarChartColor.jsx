@@ -11,12 +11,12 @@ function HorizontalBarChartColor({ color = colors.actionMinor[500], ...props }) 
                 clipRule="evenodd"
             />
             <path
-                fill="#7BA4FE"
+                fill="#B3CFE5"
                 fillRule="evenodd"
                 d="M2 16.222V12.89h8.889v3.333H2Z"
                 clipRule="evenodd"
             />
-            <path fill="#FFB13F" fillRule="evenodd" d="M2 5.333V2h20v3.333H2Z" clipRule="evenodd" />
+            <path fill="#198E59" fillRule="evenodd" d="M2 5.333V2h20v3.333H2Z" clipRule="evenodd" />
         </svg>
     );
 }

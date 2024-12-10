@@ -10,7 +10,7 @@ function PhonecallOut({ color = '#A9B1B9', ...props }) {
                 clipRule="evenodd"
             />
             <path
-                fill="#FF8C00"
+                fill="#007E45"
                 fillRule="evenodd"
                 d="M15 3v1.5h3.5L13 10l1 1 5.5-5.5V9H21V3h-6z"
                 clipRule="evenodd"
