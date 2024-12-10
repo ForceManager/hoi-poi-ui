@@ -21,8 +21,8 @@ export const alphaColor = (hex, a) => {
 
 // New color scheme
 const brilliantGreen = '#00D639';
-const black = '#000';
-const white = '#FFF';
+const black = '#000000';
+const white = '#FFFFFF';
 const jadeAccessible = '#007E45';
 const jadeUniversal = '#00A310';
 
@@ -63,13 +63,13 @@ export const colors = {
     grey: {
         50: '#F2F2F2',
         100: '#E6E6E6',
-        200: '#CCC',
+        200: '#CCCCCC',
         300: '#B3B3B3',
-        400: '#999',
+        400: '#999999',
         500: '#808080',
-        600: '#666',
+        600: '#666666',
         700: '#4D4D4D',
-        850: '#333',
+        850: '#333333',
         900: '#1A1A1A',
     },
     actionMajor: {
