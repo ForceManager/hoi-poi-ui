@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react';
 import classNames from 'classnames';
+import defaultTheme from '../../utils/styles/defaultTheme';
 import { createUseStyles, useTheme } from '../../utils/styles';
 import { useClasses } from '../../utils/overrides';
 import Text from '../typography/Text';
@@ -83,7 +84,7 @@ const Colors = () => {
                     key={name}
                     style={{ backgroundColor: color }}
                     className={classNames(classes.swatch, {
-                        [classes.swatchWhite]: color === '#FFF',
+                        [classes.swatchWhite]: color === defaultTheme.colors.primary.white,
                     })}
                 >
                     <Text type="caption" className={textClass}>
