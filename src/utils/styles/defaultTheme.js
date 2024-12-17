@@ -1,8 +1,8 @@
 //Text
 const fontFamily = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
-const lineHeightBase = 1.5;
+const lineHeightBase = '160%';
 const fontSizeBase = 14;
-const fontSizeSmall = 11;
+const fontSizeSmall = 10;
 const fontSizeLarge = 16;
 const fontSizeBig = 20;
 
@@ -260,27 +260,27 @@ export default {
     },
     typography: {
         lineHeightBase,
-        letterSpacing: 0.5,
+        letterSpacing: 0.6,
         fontSizeBase,
         fontSizeSmall,
         fontFamily,
         defaultText: {
-            letterSpacing: 0.5,
+            letterSpacing: 0.6,
             fontSize: fontSizeBase,
             fontFamily,
         },
         smallText: {
-            letterSpacing: 0.5,
+            letterSpacing: 0.6,
             fontSize: fontSizeSmall,
             fontFamily,
         },
         largeText: {
-            letterSpacing: 0.5,
+            letterSpacing: 0.6,
             fontSize: fontSizeLarge,
             fontFamily,
         },
         bigText: {
-            letterSpacing: 0.5,
+            letterSpacing: 0.6,
             fontSize: fontSizeBig,
             fontFamily,
         },
