@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { getOverrides } from '../../../../utils/overrides';
 
 import MultiplierFieldControl from '../MultiplierFieldControl';
-import Section from '../../Section';
+import Section from '../../../general/Section';
 
 function MultiplierForm({
     overrides: overridesProp,

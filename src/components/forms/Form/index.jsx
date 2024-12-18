@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { getOverrides } from '../../../utils/overrides';
 
 import FieldControl from '../components/FieldControl';
-import Section from '../Section';
+import Section from '../../general/Section';
 
 function Form({
     overrides: overridesProp,

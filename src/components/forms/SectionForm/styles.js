@@ -28,7 +28,7 @@ export default (theme) => ({
             color: theme.colors.neutral900,
         },
         '& $icon': {
-            '& svg': {
+            '& span:first-child svg': {
                 transform: 'rotate(0deg) translateY(0px)',
             },
             '& svg path': {
@@ -92,7 +92,7 @@ export default (theme) => ({
         lineHeight: '0',
         alignSelf: 'center',
         cursor: 'pointer',
-        '& svg': {
+        '& span:first-child svg': {
             willChange: 'transform',
             transition: 'transform 0.3s ease-out',
             transform: 'rotate(-90deg) translateY(0px)',
@@ -106,7 +106,7 @@ export default (theme) => ({
         backgroundColor: theme.colors.orange100,
         color: theme.colors.orange500,
         position: 'relative',
-        '& span': {
+        '& span:first-child': {
             position: 'absolute',
             marginTop: 1,
             top: '50%',

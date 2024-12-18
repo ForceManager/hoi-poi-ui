@@ -38,6 +38,7 @@ module.exports = {
                 './src/components/general/Tabs/index.jsx',
                 './src/components/general/TitleDivider/index.jsx',
                 './src/components/general/Tree/index.jsx',
+                './src/components/general/Section/index.jsx',
             ],
         },
         {
@@ -57,7 +58,7 @@ module.exports = {
                 './src/components/forms/Radio/index.jsx',
                 './src/components/forms/RadioGroup/index.jsx',
                 './src/components/forms/Password/index.jsx',
-                './src/components/forms/Section/index.jsx',
+                './src/components/forms/SectionForm/index.jsx',
                 './src/components/forms/Select/index.jsx',
                 './src/components/forms/Slider/index.jsx',
                 './src/components/forms/Switch/index.jsx',
