@@ -101,7 +101,7 @@ const Groups = memo(
                         className={classes.groupFooterTextContainer}
                         onClick={() => onClick(index)}
                     >
-                        <Text type="caption" color="orange500">
+                        <Text type="caption" color={theme.colors.actionMajor[500]}>
                             {textFolded}
                             {textUnfolded}
                         </Text>
