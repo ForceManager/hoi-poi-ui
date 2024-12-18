@@ -35,6 +35,7 @@ export { default as EllipsedInlineList } from './components/general/EllipsedInli
 export { default as List } from './components/general/List';
 export { default as Carousel } from './components/general/Carousel';
 export { default as Tree } from './components/general/Tree';
+export { default as Section } from './components/general/Section';
 
 export { default as Code } from './components/forms/Code';
 export { default as CheckboxGroup } from './components/forms/CheckboxGroup';
@@ -48,7 +49,7 @@ export { default as Label } from './components/forms/Label';
 export { default as Multiplier } from './components/forms/Multiplier';
 export { default as Radio } from './components/forms/Radio';
 export { default as RadioGroup } from './components/forms/RadioGroup';
-export { default as Section } from './components/forms/Section';
+export { default as SectionForm } from './components/forms/SectionForm';
 export { default as Select } from './components/forms/Select';
 export { default as Slider } from './components/forms/Slider';
 export { default as Switch } from './components/forms/Switch';
