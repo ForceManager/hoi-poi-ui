@@ -20,14 +20,12 @@ const Section = memo(
         overrides: overridesProp,
         className: classNameProp,
         title,
+        isExpandable,
+        defaultOpen,
         onChange,
         onRemove,
         activeFields,
         orientation,
-        headerPreComponent,
-        headerPostComponent,
-        isExpandable = true,
-        defaultOpen = true,
     }) => {
         const classes = useClasses(useStyles, classesProp);
         const [isOpen, setIsOpen] = useState(onChange ? isOpenProp : defaultOpen);
@@ -98,22 +96,20 @@ const Section = memo(
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} onClick={onToggle} {...override.header}>
                         <div className={classes.headerContent} {...override.headerContent}>
-                            {headerPreComponent}
                             <div className={classes.titleContainer} {...override.titleContainer}>
-                                {renderTitle}
                                 <div className={classes.icon} {...override.icon}>
                                     <Icon name="arrowDropDown" />
-                                    {newActiveFields}
-                                    {onRemove && (
-                                        <Icon
-                                            onClick={onInnerRemove}
-                                            className={classes.trashIcon}
-                                            name="delete"
-                                        />
-                                    )}
                                 </div>
+                                {renderTitle}
                             </div>
-                            {headerPostComponent}
+                            {newActiveFields}
+                            {onRemove && (
+                                <Icon
+                                    onClick={onInnerRemove}
+                                    className={classes.trashIcon}
+                                    name="delete"
+                                />
+                            )}
                         </div>
                     </div>
                     <AnimateHeight
@@ -131,8 +127,8 @@ const Section = memo(
                         <div className={classes.headerContent} {...override.headerContent}>
                             <div className={classes.titleContainer} {...override.titleContainer}>
                                 {renderTitle}
-                                {newActiveFields}
                             </div>
+                            {newActiveFields}
                         </div>
                     </div>
                     {children}
@@ -149,11 +145,14 @@ const Section = memo(
 
 Section.overrides = ['root', 'header', 'Text', 'BadgeNotification', 'icon', 'react-animate-height'];
 
+Section.defaultProps = {
+    isExpandable: true,
+    defaultOpen: true,
+    overrides: {},
+};
 Section.propTypes = {
     className: PropTypes.string,
     title: PropTypes.any,
-    headerPreComponent: PropTypes.any,
-    headerPostComponent: PropTypes.any,
     defaultOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
     activeFields: PropTypes.number,
