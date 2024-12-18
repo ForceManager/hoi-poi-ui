@@ -88,7 +88,11 @@ const Toast = memo(
                     {!text && content}
                     {!content && (
                         <div className={classes.content}>
-                            <Text className={classes.text} type="caption" color="neutral700">
+                            <Text
+                                className={classes.text}
+                                type="caption"
+                                color={theme.colors.utility.textSecondary}
+                            >
                                 {text}
                             </Text>
                             {onClickLink && linkText && (
@@ -115,6 +119,7 @@ const Toast = memo(
             onClickLink,
             handleOnClickLink,
             linkText,
+            theme,
         ]);
 
         const iconType = useMemo(() => {

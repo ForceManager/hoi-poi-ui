@@ -34,7 +34,7 @@ export default (theme) => ({
         },
         '& $dismiss': {
             color: `${theme.colors.textLight.secondary} !important`,
-            borderColor: `${theme.neutral700} !important`,
+            borderColor: `${theme.colors.textLight.secondary} !important`,
             '&:hover': {
                 backgroundColor: `${theme.colors.grey[50]} !important`,
             },

@@ -3,7 +3,7 @@ export default (theme) => ({
         position: 'relative',
         padding: '8px 16px',
         borderRadius: '4px',
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.utility.bg,
     },
     header: {
         display: 'flex',
@@ -14,25 +14,25 @@ export default (theme) => ({
         marginBottom: 4,
         '&:hover': {
             '& $Text': {
-                color: `${theme.colors.neutral800} !important`,
+                color: `${theme.colors.grey[700]} !important`,
             },
             '& $icon': {
                 '& svg path': {
-                    fill: theme.colors.neutral800,
+                    fill: theme.colors.actionMinor[500],
                 },
             },
         },
     },
     open: {
         '& $Text': {
-            color: theme.colors.neutral900,
+            color: theme.colors.utility.textPrimary,
         },
         '& $icon': {
             '& span:first-child svg': {
                 transform: 'rotate(0deg) translateY(0px)',
             },
             '& svg path': {
-                fill: theme.colors.neutral900,
+                fill: theme.colors.utility.textPrimary,
             },
         },
         '& $trashIcon': {
@@ -44,11 +44,11 @@ export default (theme) => ({
     },
     headerActiveFields: {
         '& $Text': {
-            color: `${theme.colors.neutral900} !important`,
+            color: `${theme.colors.utility.textPrimary} !important`,
         },
         '& $icon': {
             '& svg path': {
-                fill: theme.colors.neutral900,
+                fill: theme.colors.utility.textPrimary,
             },
         },
     },
@@ -68,7 +68,7 @@ export default (theme) => ({
         justifyContent: 'space-between',
         boxSizing: 'border-box',
         paddingBottom: 8,
-        borderBottom: `1px solid ${theme.colors.neutral400}`,
+        borderBottom: `1px solid ${theme.colors.grey[100]}`,
     },
     textContainer: {
         overflow: 'hidden',
@@ -77,7 +77,7 @@ export default (theme) => ({
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
         overflow: 'hidden',
-        color: theme.colors.neutral700,
+        color: theme.colors.utility.textSecondary,
         transition: 'all 0.15s ease',
     },
     BadgeNotification: {

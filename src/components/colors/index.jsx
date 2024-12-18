@@ -138,6 +138,7 @@ const Colors = () => {
                         'actionMinor',
                         'semantic',
                         'temp',
+                        'utility',
                     ].includes(palette)
                 )
                     arr.push(renderSection(palette, swatches));

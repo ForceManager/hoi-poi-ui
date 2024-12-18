@@ -4,6 +4,7 @@ import Checkbox from '../../../general/Checkbox';
 import Text from '../../../typography/Text';
 import Icon from '../../../general/Icon';
 import Avatar from '../../../general/Avatar';
+import { useTheme } from '../../../../utils/styles';
 
 const Option = memo(
     ({
@@ -17,6 +18,7 @@ const Option = memo(
         checkBoxIsMonotone,
         isTruncated = true,
     }) => {
+        const theme = useTheme();
         let rootClasses = [classes.option, option.className];
         if (option.isDisabled) rootClasses.push(classes.optionDisabled);
         if (option.subLabel) rootClasses.push(classes.optionTwoLines);
@@ -111,7 +113,7 @@ const Option = memo(
                             className={classes.optionSubLabel}
                             {...(override.optionSubLabel || {})}
                         >
-                            <Text type="caption" isTruncated={isTruncated} color="neutral700">
+                            <Text type="caption" isTruncated={isTruncated} color={T}>
                                 {option.subLabel}
                             </Text>
                         </div>
@@ -129,7 +131,10 @@ const Option = memo(
                             className={classes.optionSideLabel}
                             {...(override.optionSideLabel || {})}
                         >
-                            <Text isTruncated={isTruncated} color="neutral600">
+                            <Text
+                                isTruncated={isTruncated}
+                                color={theme.colors.utility.textDisabled}
+                            >
                                 {option.sideLabel}
                             </Text>
                         </div>

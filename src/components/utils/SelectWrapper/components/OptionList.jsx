@@ -2,6 +2,7 @@ import React, { memo, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import Option from './Option';
 import Text from '../../../typography/Text';
+import { useTheme } from '../../../../utils/styles';
 
 const OptionsList = memo(
     ({
@@ -18,11 +19,13 @@ const OptionsList = memo(
         noOptionsPlaceholder,
         truncateOptions,
     }) => {
+        const theme = useTheme();
+
         const renderOptions = useMemo(() => {
             if (!options || options.length === 0) {
                 return (
                     <div className={classes.noOptions} {...(override.noOptions || {})}>
-                        <Text type="body" color="neutral700">
+                        <Text type="body" color={theme.colors.utility.textSecondary}>
                             {noOptionsPlaceholder || 'No options'}
                         </Text>
                     </div>
@@ -93,13 +96,14 @@ const OptionsList = memo(
             checkBoxIsMonotone,
             noOptionsPlaceholder,
             truncateOptions,
+            theme,
         ]);
 
         return (
             <div className={classes.optionList} {...(override.optionList || {})}>
                 {isLoading && (
                     <div className={classes.loaderContainer} {...(override.loaderContainer || {})}>
-                        <Text type="body" color="neutral700">
+                        <Text type="body" color={theme.colors.utility.textSecondary}>
                             {loadingMessage || 'Loading...'}
                         </Text>
                     </div>

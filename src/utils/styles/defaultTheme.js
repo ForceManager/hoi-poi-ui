@@ -139,6 +139,15 @@ export const colors = {
         purple700: '#792d7a',
         purple900: '#441151',
     },
+    utility: {
+        bg: '#FFFFFF',
+        textPrimary: 'rgba(0,0,0,0.9)',
+        textSecondary: 'rgba(0,0,0,0.65)',
+        textDisabled: 'rgba(0,0,0,0.3)',
+        textNegative: '#cd384b',
+        textAccessible: jadeAccessible,
+        textUniversal: jadeUniversal,
+    },
 };
 
 export const typography = {

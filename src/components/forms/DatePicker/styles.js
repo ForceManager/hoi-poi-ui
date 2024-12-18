@@ -199,7 +199,7 @@ export default (theme) => ({
             },
         '& .flatpickr-months .flatpickr-prev-month:hover, & .flatpickr-months .flatpickr-next-month:hover':
             {
-                color: theme.colors.neutralbase,
+                color: theme.colors.primary.white,
             },
         '& .flatpickr-months .flatpickr-prev-month:hover svg, & .flatpickr-months .flatpickr-next-month:hover svg':
             {
