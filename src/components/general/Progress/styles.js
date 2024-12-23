@@ -47,7 +47,7 @@ export default (theme) => ({
             animationDuration: 'var(--progress-duration)',
             animationDelay: 'var(--progress-delay)',
             animationTimingFunction: 'var(--progress-timing-function)',
-            transition: 'background-color var(--progress-duration) var(--progress-timing-function)',
+            transition: 'all var(--progress-duration) var(--progress-timing-function)',
         },
     },
 });
