@@ -50,13 +50,9 @@ export default (theme) => ({
         },
     },
     promotion: {
-        backgroundColor: theme.colors.actionMinor[50],
+        backgroundColor: theme.colors.primary.brilliantGreen,
         '& $Text': {
-            backgroundClip: 'text',
-            '-webkit-background-clip': 'text',
-            color: 'transparent',
-            backgroundImage: `linear-gradient(to right, ${theme.colors.actionMajor[500]} 0%, ${theme.colors.semantic.negative500} 50%)`,
-        },
+            color: theme.colors.primary.black,        },
     },
     // For retrocompatibility
     error: {
@@ -106,7 +102,7 @@ export default (theme) => ({
             backgroundColor: theme.colors.temp.purple400,
         },
         '&$promotion': {
-            backgroundImage: `linear-gradient(to right, ${theme.colors.actionMajor[500]} 0%, ${theme.colors.semantic.negative500} 50%)`,
+            backgroundColor: theme.colors.background.gray900,
             '& $Text': {
                 color: theme.colors.primary.white,
             },
