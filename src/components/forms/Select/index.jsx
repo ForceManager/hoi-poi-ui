@@ -27,12 +27,10 @@ import Option from './components/Option';
 import ValueContainer from './components/ValueContainer';
 import { isEqual } from '../../../utils/arrays';
 
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
-import defaultTheme from '../../../utils/styles/defaultTheme';
 
 const useStyles = createUseStyles(styles, 'Select');
-const newStyles = styles(defaultTheme);
 
 function groupsAreEqual(options, innerOptions) {
     return options
@@ -139,6 +137,8 @@ const Select = memo(
         const menuPlacementRef = useRef('bottom');
         const classes = useClasses(useStyles, classesProp);
         const override = getOverrides(overridesProp, Select.overrides);
+        const defaultTheme = useTheme();
+        const newStyles = styles(defaultTheme);
 
         const getIsSelectAllWithGroups = useCallback(
             (options) => {
