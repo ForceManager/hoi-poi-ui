@@ -24,6 +24,7 @@ const Text = forwardRef(
             as = 'span',
             type = 'body',
             isTruncated = false,
+            strikethrough = false,
             ...props
         },
         ref,
@@ -31,12 +32,13 @@ const Text = forwardRef(
         const [tooltipContent, setTooltipContent] = useState(null);
         const defaultRef = useRef(null);
         const classes = useClasses(useStyles, classesProp);
-        //Overrides
+
         const rootClassName = classnames(classes.root, classNameProp, classes[type], {
             [classes.bold]: bold,
             [classes.truncated]: isTruncated,
             [classes.divider]: withDivider,
             [classes.highlighted]: isHighlighted,
+            [classes.strikethrough]: strikethrough,
         });
 
         const override = getOverrides(overridesProp, Text.overrides);
@@ -120,6 +122,7 @@ Text.propTypes = {
     children: PropTypes.node,
     isTruncated: PropTypes.bool,
     bold: PropTypes.bool,
+    strikethrough: PropTypes.bool,
     useTooltip: PropTypes.bool,
     withDivider: PropTypes.bool,
     isHighlighted: PropTypes.bool,

@@ -111,15 +111,7 @@ const Button = forwardRef(
                         color: theme.colors.primary.white,
                     };
             }
-        }, [
-            icon,
-            theme.colors.textLight.secondary,
-            theme.colors.textLight.primary,
-            theme.colors.primary.white,
-            theme.colors.actionMajor[500],
-            theme.colors.semantic.negative500,
-            type,
-        ]);
+        }, [icon, theme, type]);
 
         const content = (
             <div className={classes.content}>

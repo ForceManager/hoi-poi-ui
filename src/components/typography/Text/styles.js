@@ -38,4 +38,7 @@ export default (theme) => ({
         background: 'linear-gradient(90deg, #FF8905 0%, #F54853 80%)',
         color: theme.colors.actionMajor[500],
     },
+    strikethrough: {
+        textDecoration: 'line-through',
+    },
 });
