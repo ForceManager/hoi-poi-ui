@@ -30,7 +30,7 @@ export default (theme) => ({
             position: 'absolute',
             width: '100%',
             height: 16,
-            background: 'transparent',
+            background: theme.colors.transparent,
         },
     },
     overlay: {},

@@ -126,14 +126,14 @@ export default (theme) => ({
     active: {
         '& $icon': {
             backgroundColor: theme.colors.actionMajor[500],
-            borderColor: 'transparent',
+            borderColor: theme.colors.transparent,
             color: theme.colors.primary.white,
         },
     },
     completed: {
         '& $icon': {
             backgroundColor: theme.colors.actionMajor[500],
-            borderColor: 'transparent',
+            borderColor: theme.colors.transparent,
         },
         '& .rc-steps-item-icon, & .rc-steps-item-content': {
             cursor: 'pointer',

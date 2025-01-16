@@ -12,6 +12,7 @@ const overlay = 'rgba(33,33,33,0.55)';
 const secondaryOverlay = 'rgba(2,168,189,0.10)';
 const shadow = 'rgba(0, 0, 0, 0.25)';
 const boxShadow = `0 3px 9px 0 ${shadow}`;
+const transparent = 'transparent';
 
 export const alphaColor = (hex, a) => {
     const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -110,8 +111,8 @@ export const colors = {
         positive400: '#33A14D',
         positive500: '#00821F',
         positive600: '#006819',
-        negativeCustom100: '#FFE5D5',
-        negativeCustom200: '#FFC5AC',
+        negativeCustom100: '#F4D7DB',
+        negativeCustom200: '#EAAEB6',
         negative350: '#DB7380',
         negative450: '#D04B5C',
         negative500: '#CB374A',
@@ -227,7 +228,7 @@ export const typography = {
         fontFamily,
         fontSize: 14,
         fontWeight: 500,
-        lineHeight: 1,
+        lineHeight: 'calc(22/14)',
         letterSpacing: 0.6,
     },
     caption: {
@@ -263,6 +264,7 @@ export const typography = {
 
 export default {
     colors: {
+        transparent,
         transparentBlack,
         overlay,
         secondaryOverlay,

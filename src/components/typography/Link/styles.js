@@ -25,7 +25,7 @@ export default (theme) => ({
         transition: 'color .1s ease-in-out',
         border: 'none',
         outline: 'none',
-        background: 'transparent',
+        background: theme.colors.transparent,
         textDecoration: 'none',
         '&:hover': {
             color: theme.colors.semantic.info500,

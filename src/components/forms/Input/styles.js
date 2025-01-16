@@ -49,7 +49,7 @@ export default (theme) => {
         },
         input: {
             ...theme.typography.body,
-            background: 'transparent',
+            background: theme.colors.transparent,
             color: theme.colors.textLight.primary,
             width: '100%',
             height: '38px',
@@ -152,7 +152,7 @@ export default (theme) => {
         postComponentCopy: {},
         custom: {
             '& $inputComponents': {
-                backgroundColor: 'transparent',
+                backgroundColor: theme.colors.transparent,
                 border: 0,
                 borderRadius: 0,
                 padding: 0,

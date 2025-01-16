@@ -34,7 +34,7 @@ export default (theme) => ({
     },
     highlighted: {
         '-webkit-background-clip': 'text',
-        '-webkit-text-fill-color': 'transparent',
+        '-webkit-text-fill-color': theme.colors.transparent,
         background: 'linear-gradient(90deg, #FF8905 0%, #F54853 80%)',
         color: theme.colors.actionMajor[500],
     },

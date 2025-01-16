@@ -21,7 +21,7 @@ export default (theme) => ({
             position: 'absolute',
             width: 0,
             height: 0,
-            borderColor: 'transparent',
+            borderColor: theme.colors.transparent,
             borderStyle: 'solid',
         },
         // Placements

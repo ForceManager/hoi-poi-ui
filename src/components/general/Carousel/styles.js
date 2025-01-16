@@ -12,7 +12,7 @@ export default (theme) => ({
             color: '#fff',
             transition: 'all .3s ease-out',
             appearance: 'none',
-            backgroundColor: 'transparent',
+            backgroundColor: theme.colors.transparent,
             border: '0',
             cursor: 'pointer',
             outline: 'none',
@@ -179,7 +179,7 @@ export default (theme) => ({
 
             '& .image-gallery-slides': {
                 height: 'auto',
-                background: 'transparent',
+                background: theme.colors.transparent,
             },
 
             '& .image-gallery-image': {
@@ -256,7 +256,7 @@ export default (theme) => ({
         },
         '.image-gallery-bullets .image-gallery-bullet': {
             appearance: 'none',
-            backgroundColor: 'transparent',
+            backgroundColor: theme.colors.transparent,
             border: '1px solid #fff',
             borderRadius: '50%',
             boxShadow: '0 2px 2px #1a1a1a',
@@ -329,7 +329,7 @@ export default (theme) => ({
             border: 'none',
             transition: 'border .3s ease-out',
             width: '100px',
-            background: 'transparent',
+            background: theme.colors.transparent,
             padding: '0',
             margin: 8,
         },

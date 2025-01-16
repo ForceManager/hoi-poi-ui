@@ -57,7 +57,7 @@ const Tree = ({
             tree: {
                 base: {
                     listStyle: 'none',
-                    background: 'transparent',
+                    background: theme.colors.transparent,
                     margin: 0,
                     padding: 0,
                 },

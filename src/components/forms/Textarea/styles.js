@@ -15,7 +15,7 @@ export default (theme) => {
         },
         textarea: {
             ...theme.typography.body,
-            background: 'transparent',
+            background: theme.colors.transparent,
             color: theme.colors.textLight.primary,
             minHeight: 38,
             width: '100% !important',
@@ -35,7 +35,7 @@ export default (theme) => {
                 width: 12,
             },
             '&::-webkit-scrollbar-track': {
-                background: 'transparent',
+                background: theme.colors.transparent,
             },
             '&::-webkit-scrollbar-thumb': {
                 backgroundColor: theme.colors.textLight.secondary,

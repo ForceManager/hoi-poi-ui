@@ -18,7 +18,7 @@ export default (theme) => ({
         borderTopColor: theme.colors.semantic.negative500,
     },
     white: {
-        borderColor: 'transparent',
+        borderColor: theme.colors.transparent,
         borderTopColor: 'white',
     },
     // Sizes

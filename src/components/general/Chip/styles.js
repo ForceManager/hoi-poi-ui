@@ -149,7 +149,7 @@ export default (theme) => ({
             fill: theme.colors.semantic.info500,
         },
         '&$clickable:hover': {
-            borderColor: 'transparent',
+            borderColor: theme.colors.transparent,
             backgroundColor: theme.colors.semantic.infoCustom100,
             '& $Text': {
                 color: theme.colors.semantic.info500,
@@ -159,7 +159,7 @@ export default (theme) => ({
             },
         },
         '&$isActive': {
-            borderColor: 'transparent',
+            borderColor: theme.colors.transparent,
             backgroundColor: theme.colors.semantic.infoCustom100,
             '& $Text': {
                 color: theme.colors.semantic.info500,

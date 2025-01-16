@@ -42,7 +42,7 @@ export default (theme) => ({
             boxSizing: 'inherit',
         },
         '&.flatpickr-calendar': {
-            background: 'transparent',
+            background: theme.colors.transparent,
             opacity: '0',
             marginTop: 12,
             marginLeft: -12,
@@ -324,7 +324,7 @@ export default (theme) => ({
             borderTopColor: theme.colors.primary.white,
         },
         '& .flatpickr-current-month input.cur-year': {
-            background: 'transparent',
+            background: theme.colors.transparent,
             boxSizing: 'border-box',
             color: 'inherit',
             cursor: 'text',
@@ -348,7 +348,7 @@ export default (theme) => ({
             {
                 fontSize: '100%',
                 color: 'rgba(255, 255, 255, 0.5)',
-                background: 'transparent',
+                background: theme.colors.transparent,
                 pointerEvents: 'none',
             },
         '& .flatpickr-current-month .flatpickr-monthDropdown-months': {
@@ -507,8 +507,8 @@ export default (theme) => ({
         '& .flatpickr-day.flatpickr-disabled, & .flatpickr-day.flatpickr-disabled:hover, & .flatpickr-day.prevMonthDay, & .flatpickr-day.nextMonthDay, & .flatpickr-day.notAllowed, & .flatpickr-day.notAllowed.prevMonthDay, & .flatpickr-day.notAllowed.nextMonthDay':
             {
                 color: theme.colors.grey[200],
-                background: 'transparent',
-                borderColor: 'transparent',
+                background: theme.colors.transparent,
+                borderColor: theme.colors.transparent,
                 cursor: 'default',
             },
         '& .flatpickr-day.flatpickr-disabled, & .flatpickr-day.flatpickr-disabled:hover': {
@@ -543,7 +543,7 @@ export default (theme) => ({
                 width: '100%',
                 maxWidth: 'none',
                 color: 'rgba(72, 72, 72, 0.3)',
-                background: 'transparent',
+                background: theme.colors.transparent,
                 cursor: 'default',
             },
         '& .flatpickr-innerContainer': {

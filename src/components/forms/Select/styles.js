@@ -337,7 +337,7 @@ export default (theme) => ({
     onlyText: {
         '& .hoi-poi-select__control': {
             border: 'none',
-            background: 'transparent',
+            background: theme.colors.transparent,
         },
     },
     highlightedContainer: {},

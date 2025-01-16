@@ -28,7 +28,7 @@ export default (theme) => ({
             lineHeight: '30px',
             cursor: 'pointer',
             border: 'none',
-            backgroundColor: 'transparent',
+            backgroundColor: theme.colors.transparent,
             position: 'absolute',
             display: 'flex',
             alignItems: 'center',
