@@ -60,7 +60,7 @@ export default (theme) => ({
     isExpandable: {
         cursor: 'pointer',
     },
-    titleContainer: {
+    title: {
         width: '100%',
         display: 'flex',
         overflow: 'hidden',
@@ -69,6 +69,22 @@ export default (theme) => ({
         boxSizing: 'border-box',
         paddingBottom: 8,
         borderBottom: `1px solid ${theme.colors.neutral400}`,
+    },
+    titleContainer: {
+        width: '100%',
+        display: 'flex',
+        overflow: 'hidden',
+        alignItems: 'center',
+        boxSizing: 'border-box',
+        paddingBottom: 8,
+        borderBottom: `1px solid ${theme.colors.neutral400}`,
+    },
+    titleContainerInner: {
+        display: 'flex',
+        overflow: 'hidden',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        width: '100%',
     },
     textContainer: {
         overflow: 'hidden',
