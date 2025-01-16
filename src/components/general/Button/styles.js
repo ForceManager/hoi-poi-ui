@@ -293,7 +293,7 @@ export default (theme) => ({
         padding: '0 8px',
         '& $Text': {
             fontSize: 12,
-            linHeight: 'calc(19/12)',
+            lineHeight: 'calc(19/12)',
             fontWeight: 400,
         },
         '& $icon': {
