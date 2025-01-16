@@ -98,22 +98,24 @@ const SectionForm = memo(
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} onClick={onToggle} {...override.header}>
                         <div className={classes.headerContent} {...override.headerContent}>
-                            {headerPreComponent}
                             <div className={classes.titleContainer} {...override.titleContainer}>
-                                {renderTitle}
-                                <div className={classes.icon} {...override.icon}>
-                                    <Icon name="arrowDropDown" />
-                                    {newActiveFields}
-                                    {onRemove && (
-                                        <Icon
-                                            onClick={onInnerRemove}
-                                            className={classes.trashIcon}
-                                            name="delete"
-                                        />
-                                    )}
+                                {headerPreComponent}
+                                <div className={classes.titleContainerInner}>
+                                    {renderTitle}
+                                    <div className={classes.icon} {...override.icon}>
+                                        <Icon name="arrowDropDown" />
+                                        {newActiveFields}
+                                        {onRemove && (
+                                            <Icon
+                                                onClick={onInnerRemove}
+                                                className={classes.trashIcon}
+                                                name="delete"
+                                            />
+                                        )}
+                                    </div>
                                 </div>
+                                {headerPostComponent}
                             </div>
-                            {headerPostComponent}
                         </div>
                     </div>
                     <AnimateHeight
@@ -129,7 +131,7 @@ const SectionForm = memo(
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} {...override.header}>
                         <div className={classes.headerContent} {...override.headerContent}>
-                            <div className={classes.titleContainer} {...override.titleContainer}>
+                            <div className={classes.title} {...override.titleContainer}>
                                 {renderTitle}
                                 {newActiveFields}
                             </div>

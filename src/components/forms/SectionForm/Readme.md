@@ -167,16 +167,8 @@ const onChange = (value) => setState({ value });
 <div style={{ padding: 20, backgroundColor: '#F4F5F6' }}>
     <SectionForm
         title="Title here"
-        headerPreComponent={
-            <div>
-                <Icon name="apps" />
-            </div>
-        }
-        headerPostComponent={
-            <div>
-                <Icon name="apps" />
-            </div>
-        }
+        headerPreComponent={<Icon name="apps" />}
+        headerPostComponent={<Icon name="apps" />}
     >
         <Input
             label="Lorem ipsum"
