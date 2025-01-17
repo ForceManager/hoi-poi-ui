@@ -21,14 +21,14 @@ export default (theme) => ({
         display: 'inline-block',
         cursor: 'pointer !important',
         padding: 0,
-        color: theme.colors.semantic.info500,
+        color: theme.colors.actionMajor[500],
         transition: 'color .1s ease-in-out',
         border: 'none',
         outline: 'none',
         background: theme.colors.transparent,
         textDecoration: 'none',
         '&:hover': {
-            color: theme.colors.semantic.info500,
+            color: theme.colors.actionMajor[600],
         },
         '& *': {
             cursor: 'pointer',
