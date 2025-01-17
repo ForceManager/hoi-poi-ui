@@ -180,6 +180,27 @@ const onChange = (value) => setState({ value });
 </div>;
 ```
 
+With remove icon
+
+```jsx
+import { Input, Icon } from 'hoi-poi-ui';
+import { useState } from 'react';
+
+const [state, setState] = useState({});
+const onChange = (value) => setState({ value });
+
+<div style={{ padding: 20, backgroundColor: '#F4F5F6' }}>
+    <SectionForm title="Title here" onRemove={() => console.log('remove')} isExpandable={false}>
+        <Input
+            label="Lorem ipsum"
+            placeholder="Write here"
+            onChange={onChange}
+            value={state.value}
+        />
+    </SectionForm>
+</div>;
+```
+
 ### Component tree
 
 ---

@@ -16,7 +16,7 @@ export default (theme) => ({
             '& $Text': {
                 color: `${theme.colors.neutral800} !important`,
             },
-            '& $icon': {
+            '& $expandableIcon': {
                 '& svg path': {
                     fill: theme.colors.neutral800,
                 },
@@ -31,7 +31,7 @@ export default (theme) => ({
             '& span:first-child svg': {
                 transform: 'rotate(0deg) translateY(0px)',
             },
-            '& svg path': {
+            '& $expandableIcon svg path': {
                 fill: theme.colors.neutral900,
             },
         },
@@ -158,4 +158,5 @@ export default (theme) => ({
     trashIcon: {
         display: 'none',
     },
+    expandableIcon: {},
 });

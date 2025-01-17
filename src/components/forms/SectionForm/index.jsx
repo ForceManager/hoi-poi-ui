@@ -93,30 +93,55 @@ const SectionForm = memo(
             );
         }, [classes, override, activeFields, isOpen]);
 
+        const innerComponent = useMemo(() => {
+            return (
+                <div className={classes.headerContent} {...override.headerContent}>
+                    <div className={classes.titleContainer} {...override.titleContainer}>
+                        {headerPreComponent}
+                        <div className={classes.titleContainerInner}>
+                            {renderTitle}
+                            <div className={classes.icon} {...override.icon}>
+                                {isExpandable && (
+                                    <Icon name="arrowDropDown" className={classes.expandableIcon} />
+                                )}
+                                {newActiveFields}
+                                {onRemove && (
+                                    <Icon
+                                        onClick={onInnerRemove}
+                                        className={classes.trashIcon}
+                                        name="delete"
+                                    />
+                                )}
+                            </div>
+                        </div>
+                        {headerPostComponent}
+                    </div>
+                </div>
+            );
+        }, [
+            classes.expandableIcon,
+            classes.headerContent,
+            classes.icon,
+            classes.titleContainer,
+            classes.titleContainerInner,
+            classes.trashIcon,
+            headerPostComponent,
+            headerPreComponent,
+            isExpandable,
+            newActiveFields,
+            onInnerRemove,
+            onRemove,
+            override.headerContent,
+            override.icon,
+            override.titleContainer,
+            renderTitle,
+        ]);
+
         if (title && isExpandable) {
             return (
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} onClick={onToggle} {...override.header}>
-                        <div className={classes.headerContent} {...override.headerContent}>
-                            <div className={classes.titleContainer} {...override.titleContainer}>
-                                {headerPreComponent}
-                                <div className={classes.titleContainerInner}>
-                                    {renderTitle}
-                                    <div className={classes.icon} {...override.icon}>
-                                        <Icon name="arrowDropDown" />
-                                        {newActiveFields}
-                                        {onRemove && (
-                                            <Icon
-                                                onClick={onInnerRemove}
-                                                className={classes.trashIcon}
-                                                name="delete"
-                                            />
-                                        )}
-                                    </div>
-                                </div>
-                                {headerPostComponent}
-                            </div>
-                        </div>
+                        {innerComponent}
                     </div>
                     <AnimateHeight
                         height={isOpen ? 'auto' : 0}
@@ -130,12 +155,7 @@ const SectionForm = memo(
             return (
                 <div className={rootClassName} {...override.root}>
                     <div className={headerClassName} {...override.header}>
-                        <div className={classes.headerContent} {...override.headerContent}>
-                            <div className={classes.title} {...override.titleContainer}>
-                                {renderTitle}
-                                {newActiveFields}
-                            </div>
-                        </div>
+                        {innerComponent}
                     </div>
                     {children}
                 </div>
@@ -163,6 +183,7 @@ SectionForm.propTypes = {
     title: PropTypes.any,
     headerPreComponent: PropTypes.any,
     headerPostComponent: PropTypes.any,
+    onRemove: PropTypes.func,
     defaultOpen: PropTypes.bool,
     isExpandable: PropTypes.bool,
     activeFields: PropTypes.number,
