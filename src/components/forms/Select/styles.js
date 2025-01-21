@@ -229,16 +229,16 @@ export default (theme) => ({
         padding: '3px 4px 3px 8px',
         border: 'none',
         borderRadius: 4,
-        backgroundColor: theme.colors.semantic.infoCustom50,
-        color: theme.colors.semantic.info500,
+        backgroundColor: theme.colors.actionMinor[100],
+        color: theme.colors.actionMinor[550],
         transition: 'all 0.15s ease',
         '&:hover': {
-            backgroundColor: theme.colors.semantic.infoCustom100,
+            backgroundColor: theme.colors.actionMinor[150],
         },
     },
     multiValueLabel: {
         ...theme.typography.caption,
-        color: theme.colors.semantic.info500,
+        color: theme.colors.actionMinor[550],
         padding: 0,
         paddingLeft: 0,
         paddingRight: 4,
@@ -250,24 +250,24 @@ export default (theme) => ({
         },
     },
     multiValueLabelDisabled: {
-        color: theme.colors.semantic.infoCustom100,
+        color: theme.colors.textLight.disabled,
     },
     multiValueRemove: {
         padding: 0,
         transition: 'all 0.15s ease',
         '& svg path': {
-            fill: theme.colors.semantic.info500,
+            fill: theme.colors.actionMinor[550],
         },
         '&:hover': {
             backgroundColor: 'initial',
             '& svg path': {
-                fill: theme.colors.semantic.info500,
+                fill: theme.colors.actionMinor[550],
             },
         },
     },
     multiValueRemoveDisabled: {
         '& svg path': {
-            fill: theme.colors.semantic.infoCustom100,
+            fill: theme.colors.textLight.disabled,
         },
     },
     noOptionsMessage: {
