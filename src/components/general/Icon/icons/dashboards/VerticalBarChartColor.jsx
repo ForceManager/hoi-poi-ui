@@ -11,7 +11,7 @@ function VerticalBarChartColor({ color = colors.actionMinor[500], ...props }) {
                 clipRule="evenodd"
             />
             <path
-                fill="#335B70"
+                fill={color}
                 fillRule="evenodd"
                 d="M18.333 22h3.334v-4.445h-3.334V22Z"
                 clipRule="evenodd"
@@ -22,7 +22,7 @@ function VerticalBarChartColor({ color = colors.actionMinor[500], ...props }) {
                 d="M13.111 22h3.333v-8.889h-3.333V22Z"
                 clipRule="evenodd"
             />
-            <path fill="#335B70" fillRule="evenodd" d="M2 22h3.333V2H2v20Z" clipRule="evenodd" />
+            <path fill={color} fillRule="evenodd" d="M2 22h3.333V2H2v20Z" clipRule="evenodd" />
         </svg>
     );
 }

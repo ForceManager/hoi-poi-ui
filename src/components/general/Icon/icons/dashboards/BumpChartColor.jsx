@@ -19,7 +19,7 @@ function BumpChartColor({ color = colors.actionMinor[500], ...props }) {
                 d="M2 21c2.777-.571 6.888-5.52 9.11-4.759 2.222.762 4.888 4.569 6.666 4.188 1.777-.38 4-4.949 4-4.949"
             />
             <path
-                stroke="#335B70"
+                stroke={color}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1.5"

@@ -5,7 +5,7 @@ function SunburstChartColor({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                stroke="#335B70"
+                stroke={color}
                 strokeWidth="1.5"
                 d="M3 12a7.82 7.82 0 0 0 7.07 7.784c.413.04.75-.3.75-.714v-1.748c0-.415-.338-.744-.747-.811a4.573 4.573 0 0 1 0-9.022c.409-.067.747-.396.747-.81V4.93c0-.414-.337-.753-.75-.714A7.82 7.82 0 0 0 3 12Z"
             />

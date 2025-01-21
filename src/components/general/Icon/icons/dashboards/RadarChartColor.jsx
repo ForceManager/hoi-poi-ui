@@ -5,7 +5,7 @@ function RadarChartColor({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                stroke="#335B70"
+                stroke={color}
                 strokeWidth="1.5"
                 d="M2.871 9.918 12 2.944l9.129 6.974-3.502 11.332H6.373L2.87 9.918Zm18.341.063Zm-.052-.163Z"
             />

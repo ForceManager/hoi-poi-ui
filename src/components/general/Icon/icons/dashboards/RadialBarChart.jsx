@@ -5,7 +5,7 @@ function RadialBarChart({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                stroke="#335B70"
+                stroke={color}
                 strokeLinecap="round"
                 strokeWidth="1.5"
                 d="M12 2.75a9.25 9.25 0 1 1-7.208 3.452"
