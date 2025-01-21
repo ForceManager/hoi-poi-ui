@@ -12,6 +12,7 @@ const defaultColors = [
     'grey',
     'semanticNegative',
     'actionMajor',
+    'actionMinor',
     'semanticPositive',
     'semanticInfo',
     'semanticFocus',
@@ -46,7 +47,7 @@ function Checkbox({
 
     const { colorEnabled, colorDisabled } = useMemo(() => {
         let disabled = theme.colors.grey[200];
-        let enabled = theme.colors.textLight.secondary;
+        let enabled = theme.colors.grey[500];
 
         switch (colorProp) {
             case 'grey':
@@ -56,6 +57,10 @@ function Checkbox({
             case 'actionMajor':
                 disabled = theme.colors.actionMajor[150];
                 enabled = theme.colors.actionMajor[500];
+                break;
+            case 'actionMinor':
+                disabled = theme.colors.actionMinor[150];
+                enabled = theme.colors.actionMinor[400];
                 break;
             case 'semanticPositive':
                 disabled = theme.colors.semantic.positiveCustom200;
@@ -85,6 +90,7 @@ function Checkbox({
     }, [
         colorProp,
         theme.colors.actionMajor,
+        theme.colors.actionMinor,
         theme.colors.grey,
         theme.colors.semantic.focus500,
         theme.colors.semantic.focusCustom200,
@@ -96,37 +102,24 @@ function Checkbox({
         theme.colors.semantic.positiveCustom200,
         theme.colors.temp.purple200,
         theme.colors.temp.purple500,
-        theme.colors.textLight.secondary,
     ]);
 
     const getColor = useCallback(
         (checkState) => {
             if (isMonotone) {
                 if (colorProp === 'grey') {
-                    return isDisabled ? theme.colors.grey[200] : theme.colors.textLight.secondary;
+                    return isDisabled ? theme.colors.grey[200] : theme.colors.grey[500];
                 }
                 return isDisabled
                     ? colorDisabled || theme.colors.grey[200]
-                    : colorEnabled || theme.colors.textLight.secondary;
+                    : colorEnabled || theme.colors.grey[500];
             } else {
-                if (checkState === 'unchecked') {
-                    return isDisabled ? theme.colors.grey[200] : theme.colors.textLight.secondary;
-                } else {
-                    return isDisabled
-                        ? colorDisabled || theme.colors.grey[200]
-                        : colorEnabled || theme.colors.textLight.secondary;
-                }
+                return isDisabled
+                    ? colorDisabled || theme.colors.grey[200]
+                    : colorEnabled || theme.colors.grey[500];
             }
         },
-        [
-            isMonotone,
-            colorProp,
-            isDisabled,
-            colorDisabled,
-            theme.colors.grey,
-            theme.colors.textLight.secondary,
-            colorEnabled,
-        ],
+        [isMonotone, colorProp, isDisabled, colorDisabled, theme.colors.grey, colorEnabled],
     );
 
     const rootProps = {

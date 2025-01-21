@@ -44,6 +44,19 @@ States default with color
     <span> </span>
     <Checkbox color="actionMajor" checked indeterminate isDisabled />
     <br />
+    <br />
+    <Checkbox color="actionMinor" />
+    <span> </span>
+    <Checkbox color="actionMinor" checked />
+    <span> </span>
+    <Checkbox color="actionMinor" checked indeterminate />
+    <br />
+    <Checkbox color="actionMinor" isDisabled />
+    <span> </span>
+    <Checkbox color="actionMinor" checked isDisabled />
+    <span> </span>
+    <Checkbox color="actionMinor" checked indeterminate isDisabled />
+    <br />
     <Checkbox color="semanticPositive" />
     <span> </span>
     <Checkbox color="semanticPositive" checked />
@@ -70,6 +83,10 @@ States monotone color:
     <span> </span>
     <Checkbox isMonotone color="actionMajor" checked />
     <span> </span>
+    <Checkbox isMonotone color="actionMinor" />
+    <span> </span>
+    <Checkbox isMonotone color="actionMinor" checked />
+    <span> </span>
     <Checkbox isMonotone color="semanticPositive" />
     <span> </span>
     <Checkbox isMonotone color="semanticPositive" checked />
@@ -93,6 +110,10 @@ States monotone color:
     <Checkbox isMonotone color="actionMajor" isDisabled />
     <span> </span>
     <Checkbox isMonotone color="actionMajor" checked isDisabled />
+    <span> </span>
+    <Checkbox isMonotone color="actionMinor" isDisabled />
+    <span> </span>
+    <Checkbox isMonotone color="actionMinor" checked isDisabled />
     <span> </span>
     <Checkbox isMonotone color="semanticPositive" isDisabled />
     <span> </span>

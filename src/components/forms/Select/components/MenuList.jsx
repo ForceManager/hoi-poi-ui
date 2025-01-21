@@ -103,7 +103,7 @@ export default React.memo(({ children, ...props }) => {
                 <Checkbox
                     className={selectAllCheckboxClassName}
                     checked={isAllSelected || isIndeterminate}
-                    color="actionMajor"
+                    color="actionMinor"
                     indeterminate={isIndeterminate}
                 />
                 <Text className={selectAllTextClassName}>{selectAllLabel}</Text>
