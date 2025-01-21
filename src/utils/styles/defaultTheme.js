@@ -235,14 +235,14 @@ export const typography = {
         fontFamily,
         fontSize: 12,
         fontWeight: 400,
-        lineHeight: 'calc(16/12)',
+        lineHeight: 'calc(19/12)',
         letterSpacing: 0.6,
     },
     captionMedium: {
         fontFamily,
         fontSize: 12,
         fontWeight: 500,
-        lineHeight: 'calc(16/12)',
+        lineHeight: 'calc(19/12)',
         letterSpacing: 0.6,
     },
     badges: {
