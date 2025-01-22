@@ -150,6 +150,9 @@ export const colors = {
         textNegative: '#cd384b',
         textAccessible: jadeAccessible,
         textUniversal: jadeUniversal,
+        promoGradientGreen: brilliantGreen,
+        promoGradientBlue: '#00D6DE',
+        promoGradientPurple: '#9D60FF',
     },
 };
 
