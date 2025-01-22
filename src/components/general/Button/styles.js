@@ -191,36 +191,36 @@ export default (theme) => ({
         },
     },
     promotion: {
-        border: '1px solid transparent',
+        border: 'none',
         color: theme.colors.textLight.primary,
         zIndex: 0,
-        '& $Text, & $icon': {
+        '& $content': {
+            position: 'relative',
             zIndex: 3,
         },
-        '&::before': {
+        '&::before, &::after': {
             content: '""',
             position: 'absolute',
-            zIndex: 1,
-            top: -1,
-            right: -1,
-            bottom: -1,
-            left: -1,
             borderRadius: 'inherit',
             opacity: 1,
-            background: `linear-gradient(to right, ${theme.colors.utility.promoGradientGreen}, ${theme.colors.utility.promoGradientBlue}, ${theme.colors.utility.promoGradientPurple})`,
+            transition: 'inherit',
         },
-        '&::after': {
-            content: '""',
-            position: 'absolute',
-            zIndex: 2,
+        '&::before': {
+            zIndex: 1,
             top: 0,
             right: 0,
             bottom: 0,
             left: 0,
-            borderRadius: 'inherit',
+            background: `linear-gradient(to right, ${theme.colors.utility.promoGradientGreen}, ${theme.colors.utility.promoGradientBlue}, ${theme.colors.utility.promoGradientPurple})`,
+        },
+        '&::after': {
+            zIndex: 2,
+            top: 2,
+            right: 2,
+            bottom: 2,
+            left: 2,
             opacity: 1,
             background: theme.colors.primary.white,
-            transition: 'inherit',
         },
         '& path': { fill: theme.colors.textLight.primary },
         '&$disabled': {
@@ -229,8 +229,7 @@ export default (theme) => ({
             '&::before': {
                 opacity: 1,
                 background: theme.colors.textLight.disabled,
-                backgroundImage: 'none',
-            }
+            },
         },
         '&:not($loading):not($disabled)': {
             '&:hover': {
@@ -242,7 +241,7 @@ export default (theme) => ({
                 '&::before, &::after': {
                     opacity: 1,
                     background: theme.colors.background.gray900,
-                }
+                },
             },
         },
     },
