@@ -27,15 +27,13 @@ export default (theme) => ({
         overflow: 'hidden',
         textOverflow: 'ellipsis',
     },
-    bold: { fontWeight: 500 },
+    bold: { fontWeight: 700 },
+    medium: { fontWeight: 500 },
     divider: {
         borderBottom: `1px solid ${theme.colors.grey[100]}`,
         paddingBottom: 8,
     },
     highlighted: {
-        '-webkit-background-clip': 'text',
-        '-webkit-text-fill-color': theme.colors.transparent,
-        background: 'linear-gradient(90deg, #FF8905 0%, #F54853 80%)',
         color: theme.colors.actionMajor[500],
     },
     strikethrough: {

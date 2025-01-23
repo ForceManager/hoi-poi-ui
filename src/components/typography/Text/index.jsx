@@ -14,7 +14,8 @@ const Text = forwardRef(
         {
             children,
             useTooltip,
-            bold,
+            bold = false,
+            medium = false,
             color,
             withDivider,
             isHighlighted,
@@ -35,6 +36,7 @@ const Text = forwardRef(
 
         const rootClassName = classnames(classes.root, classNameProp, classes[type], {
             [classes.bold]: bold,
+            [classes.medium]: !bold && medium,
             [classes.truncated]: isTruncated,
             [classes.divider]: withDivider,
             [classes.highlighted]: isHighlighted,
@@ -122,6 +124,7 @@ Text.propTypes = {
     children: PropTypes.node,
     isTruncated: PropTypes.bool,
     bold: PropTypes.bool,
+    medium: PropTypes.bool,
     strikethrough: PropTypes.bool,
     useTooltip: PropTypes.bool,
     withDivider: PropTypes.bool,

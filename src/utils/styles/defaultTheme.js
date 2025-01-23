@@ -173,7 +173,7 @@ export const typography = {
     },
     h3: {
         fontFamily,
-        fontSize: 24,
+        fontSize: 20,
         fontWeight: 700,
         lineHeight: '140%',
         letterSpacing: 0.6,
@@ -194,9 +194,9 @@ export const typography = {
     },
     h6: {
         fontFamily,
-        fontSize: 14,
-        fontWeight: 700,
-        lineHeight: '140%',
+        fontSize: 18,
+        fontWeight: 400,
+        lineHeight: '160%',
         letterSpacing: 0.6,
     },
     subtitle1: {
@@ -209,7 +209,7 @@ export const typography = {
     subtitle: {
         fontFamily,
         fontSize: 13,
-        fontWeight: 500,
+        fontWeight: 400,
         lineHeight: '160%',
         letterSpacing: 0.6,
     },
