@@ -36,7 +36,7 @@ const newStyles = styles(defaultTheme);
 
 function groupsAreEqual(options, innerOptions) {
     return options
-        .map((group, i) => isEqual(group.options, innerOptions[i].options))
+        .map((group, i) => isEqual(group?.options, innerOptions[i]?.options))
         .reduce((allEqual, el) => allEqual && el, true);
 }
 
