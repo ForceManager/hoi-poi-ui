@@ -288,7 +288,7 @@ const Select = memo(
                 if (bodyHeight - y > baseMenuHeight) menuPlacementRef.current = 'bottom';
                 else menuPlacementRef.current = 'top';
             },
-            [override],
+            [override, newStyles],
         );
 
         const handleOnFocus = useCallback(
@@ -392,7 +392,7 @@ const Select = memo(
                 }
                 return styles;
             },
-            [override, keepInputFocused, newInputValue],
+            [newStyles, override, keepInputFocused, newInputValue],
         );
 
         const optionStyles = useCallback(
@@ -466,7 +466,7 @@ const Select = memo(
 
                 return styles;
             },
-            [override, shouldRenderSelectAll],
+            [newStyles, override, shouldRenderSelectAll],
         );
 
         const valueContainerStyles = useCallback(
@@ -485,7 +485,7 @@ const Select = memo(
                 }
                 return styles;
             },
-            [override],
+            [newStyles, override],
         );
 
         const placeholderStyles = useCallback(
@@ -503,7 +503,7 @@ const Select = memo(
                 }
                 return styles;
             },
-            [override],
+            [newStyles, override],
         );
 
         const multiValueLabelStyles = useCallback(
@@ -534,7 +534,7 @@ const Select = memo(
 
                 return styles;
             },
-            [override],
+            [newStyles, override],
         );
 
         const multiValueRemoveStyles = useCallback(
@@ -565,7 +565,7 @@ const Select = memo(
 
                 return styles;
             },
-            [override],
+            [newStyles, override],
         );
 
         const menuListStyles = useMemo(
@@ -577,7 +577,7 @@ const Select = memo(
 
                 return styles;
             },
-            [override],
+            [newStyles, override],
         );
 
         const indicatorSeparatorStyles = useMemo(() => {
@@ -590,7 +590,7 @@ const Select = memo(
             ) {
                 return newStyles.indicatorSeparator;
             } else return newStyles.indicatorSeparatorHidden;
-        }, [isRequired, isMulti, hideMultivalueChips, isReadOnly, newValue]);
+        }, [isRequired, isMulti, hideMultivalueChips, isReadOnly, newValue, newStyles]);
 
         const getMatchingCharacters = useCallback(
             (optionLabel) => {
@@ -1094,24 +1094,7 @@ const Select = memo(
             isOptionSelected,
             inputProps,
             dropdownWidth,
-            classes.menu,
-            classes.actionContainer,
-            classes.action,
-            classes.actionIcon,
-            classes.actionText,
-            classes.actionTextWithIcon,
-            classes.singleValueIcon,
-            classes.singleValueAvatar,
-            classes.menuList,
-            classes.selectAll,
-            classes.selectAllSelected,
-            classes.selectAllCheckbox,
-            classes.selectAllText,
-            classes.groupHeading,
-            classes.groupHeadingWithSelectAll,
-            classes.optionFocusDisabled,
-            classes.option,
-            classes.group,
+            classes,
             onClickAction,
             shouldRenderSelectAll,
             isSelectAllWithGroups,
@@ -1123,6 +1106,7 @@ const Select = memo(
             controlStyles,
             placeholderStyles,
             valueContainerStyles,
+            newStyles,
             optionStyles,
             indicatorSeparatorStyles,
             menuListStyles,
