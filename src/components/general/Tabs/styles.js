@@ -92,11 +92,11 @@ export default (theme) => ({
             lineHeight: '20px',
             cursor: 'pointer',
             ...theme.typography.defaultText,
-            color: theme.colors.textLight.secondary,
+            color: theme.colors.grey[500],
             outline: 'none',
         },
         '& .hoi-poi-ui__tabs-tab:hover': {
-            color: theme.colors.textLight.primary,
+            color: theme.colors.actionMinor[600],
         },
         '& .hoi-poi-ui__tabs-tab-active, & .hoi-poi-ui__tabs-tab-active:hover': {
             position: 'relative',
@@ -111,10 +111,9 @@ export default (theme) => ({
                 position: 'absolute',
                 display: 'block',
             },
-            color: theme.colors.textLight.primary,
+            color: theme.colors.actionMinor[500],
             cursor: 'default',
             transform: 'translateZ(0)',
-            fontWeight: 500,
         },
         '& .hoi-poi-ui__tabs-tab-disabled, & .hoi-poi-ui__tabs-tab-disabled:hover': {
             cursor: 'default',
