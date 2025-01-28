@@ -322,6 +322,7 @@ import Icon from './IconWithTooltip';
     <Icon name="document" />
     <Icon name="dashboard" />
     <Icon name="integrations" />
+    <Icon name="users" />
 </div>;
 ```
 

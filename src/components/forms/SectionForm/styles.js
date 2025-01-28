@@ -16,7 +16,7 @@ export default (theme) => ({
             '& $Text': {
                 color: `${theme.colors.grey[700]} !important`,
             },
-            '& $icon': {
+            '& $expandableIcon': {
                 '& svg path': {
                     fill: theme.colors.actionMinor[500],
                 },
@@ -31,7 +31,7 @@ export default (theme) => ({
             '& span:first-child svg': {
                 transform: 'rotate(0deg) translateY(0px)',
             },
-            '& svg path': {
+            '& $expandableIcon svg path': {
                 fill: theme.colors.utility.textPrimary,
             },
         },
@@ -60,7 +60,7 @@ export default (theme) => ({
     isExpandable: {
         cursor: 'pointer',
     },
-    titleContainer: {
+    title: {
         width: '100%',
         display: 'flex',
         overflow: 'hidden',
@@ -69,6 +69,22 @@ export default (theme) => ({
         boxSizing: 'border-box',
         paddingBottom: 8,
         borderBottom: `1px solid ${theme.colors.grey[100]}`,
+    },
+    titleContainer: {
+        width: '100%',
+        display: 'flex',
+        overflow: 'hidden',
+        alignItems: 'center',
+        boxSizing: 'border-box',
+        paddingBottom: 8,
+        borderBottom: `1px solid ${theme.colors.neutral400}`,
+    },
+    titleContainerInner: {
+        display: 'flex',
+        overflow: 'hidden',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        width: '100%',
     },
     textContainer: {
         overflow: 'hidden',
@@ -142,4 +158,5 @@ export default (theme) => ({
     trashIcon: {
         display: 'none',
     },
+    expandableIcon: {},
 });
