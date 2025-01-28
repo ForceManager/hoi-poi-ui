@@ -17,7 +17,6 @@
         "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./babel.config.js ./src --out-dir ./dist/es --ignore \"**/*.spec.jsx\"",
         "build:watch": "yarn build:esm --watch",
         "release": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn npm login && yarn npm publish && yarn npm logout",
-        "release:next": "yarn build && cp package.json dist/ && cp README.md dist/ && yarn npm login && yarn npm publish --tag next && yarn npm logout",
         "build:styleguidist": "cross-env NODE_ENV=production styleguidist build",
         "eslint": "eslint"
     },
