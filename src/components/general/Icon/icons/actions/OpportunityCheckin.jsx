@@ -1,6 +1,6 @@
 import React from 'react';
 
-function OpportunityCheckin({ color = '#788590', ...props }) {
+function OpportunityCheckin({ color = '#335B70', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="none" fillRule="evenodd">
@@ -10,7 +10,7 @@ function OpportunityCheckin({ color = '#788590', ...props }) {
                 />
                 <path
                     d="M17.5 11c-2.488 0-4.5 2.034-4.5 4.55 0 3.412 4.5 8.45 4.5 8.45s4.5-5.038 4.5-8.45c0-2.516-2.012-4.55-4.5-4.55zm-.15 5.881c-.745 0-1.35-.624-1.35-1.393s.605-1.393 1.35-1.393c.745 0 1.35.624 1.35 1.393s-.605 1.393-1.35 1.393z"
-                    fill="#FF8C00"
+                    fill="#007E45"
                 />
             </g>
         </svg>

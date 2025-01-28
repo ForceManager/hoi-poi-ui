@@ -5,7 +5,7 @@ import getDataUri from './getDataUri';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import BadgeNotification from '../BadgeNotification';
 
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'MultiAvatar');
 
@@ -23,6 +23,7 @@ const MultiAvatar = memo(
     }) => {
         const classes = useClasses(useStyles, classesProp);
         const [imageDataUris, setImageDataUris] = useState([]);
+        const theme = useTheme();
 
         const rootClassName = classnames(
             classes.root,

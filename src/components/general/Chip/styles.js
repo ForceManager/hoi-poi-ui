@@ -5,14 +5,17 @@ export default (theme) => ({
         boxSizing: 'border-box',
         transition: 'background-color 0.15s ease',
         '&$clickable:hover': {
-            backgroundColor: theme.colors.neutral300,
+            backgroundColor: theme.colors.actionMinor[50],
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.actionMinor[550],
+            },
         },
         '&$isActive': {
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.actionMinor[100],
         },
         '&$isDisabled': {
             '& $Text': {
-                color: theme.colors.neutral600,
+                color: theme.colors.textLight.disabled,
             },
         },
     },
@@ -22,7 +25,7 @@ export default (theme) => ({
         height: '100%',
     },
     Text: {
-        color: theme.colors.neutral700,
+        color: theme.colors.actionMinor[550],
         transition: 'color 0.15s ease',
     },
     small: {
@@ -45,7 +48,7 @@ export default (theme) => ({
             cursor: 'unset',
         },
         '& $icon path, & $icon rect': {
-            fill: theme.colors.neutral600,
+            fill: theme.colors.textLight.disabled,
         },
     },
     isReadOnly: {
@@ -53,7 +56,7 @@ export default (theme) => ({
             cursor: 'unset',
         },
         '& $icon path, & $icon rect': {
-            fill: theme.colors.neutral600,
+            fill: theme.colors.actionMinor[550],
         },
     },
     isActive: {},
@@ -65,7 +68,7 @@ export default (theme) => ({
     icon: {
         cursor: 'pointer',
         '& path, & rect': {
-            fill: theme.colors.neutral700,
+            fill: theme.colors.actionMinor[550],
             transition: 'all 0.15s ease',
         },
     },
@@ -84,105 +87,83 @@ export default (theme) => ({
         boxSizing: 'content-box',
     },
     isFilled: {
-        backgroundColor: theme.colors.blue100,
+        backgroundColor: theme.colors.actionMinor[100],
 
         '& $Text': {
-            color: theme.colors.blue500,
+            color: theme.colors.actionMinor[550],
         },
         '& $icon path, & $icon rect': {
-            fill: theme.colors.blue500,
+            fill: theme.colors.actionMinor[550],
         },
         '&$clickable:hover': {
-            backgroundColor: theme.colors.blue200,
+            backgroundColor: theme.colors.actionMinor[150],
             '& $Text': {
-                color: theme.colors.blue500,
+                color: theme.colors.actionMinor[550],
             },
             '& $icon path, & $icon rect': {
-                fill: theme.colors.blue500,
+                color: theme.colors.actionMinor[550],
             },
         },
         '&$isActive': {
-            backgroundColor: theme.colors.blue400,
+            backgroundColor: theme.colors.actionMinor[500],
             '& $Text': {
-                color: theme.colors.neutralBase,
+                color: theme.colors.actionMinor[25],
             },
             '& $icon path, & $icon rect': {
-                fill: theme.colors.neutralBase,
+                fill: theme.colors.actionMinor[25],
             },
         },
         '&$isDisabled': {
-            backgroundColor: theme.colors.blue100,
+            backgroundColor: theme.colors.actionMinor[25],
             '& $Text': {
-                color: theme.colors.blue200,
+                color: theme.colors.textLight.disabled,
             },
             '& $icon path, & $icon rect': {
-                fill: theme.colors.blue200,
+                fill: theme.colors.textLight.disabled,
             },
         },
         '&$isReadOnly': {
-            backgroundColor: theme.colors.blue100,
-            '& $Text': {
-                color: theme.colors.blue400,
-            },
+            backgroundColor: theme.colors.actionMinor[100],
 
+            '& $Text': {
+                color: theme.colors.actionMinor[550],
+            },
             '& $icon path, & $icon rect': {
-                fill: theme.colors.blue400,
+                fill: theme.colors.actionMinor[550],
             },
         },
     },
     isOutlined: {
         border: '1px solid',
-        borderColor: theme.colors.neutral400,
+        borderColor: theme.colors.actionMinor[550],
         transition: 'border-color 0.15s ease-in-out',
         '&$clickable:hover': {
-            borderColor: theme.colors.neutral300,
+            borderColor: theme.colors.actionMinor[550],
+        },
+        '&$isDisabled': {
+            borderColor: theme.colors.textLight.disabled,
+            '& $Text': {
+                color: theme.colors.textLight.disabled,
+            },
+            '& $icon path, & $icon rect': {
+                fill: theme.colors.textLight.disabled,
+            },
         },
     },
     isOutlinedColor: {
         border: '1px solid',
-        borderColor: theme.colors.blue400,
-        transition: 'border-color 0.15s ease',
-        '& $Text': {
-            color: theme.colors.blue500,
-        },
-        '& $icon path, & $icon rect': {
-            fill: theme.colors.blue500,
-        },
+        borderColor: theme.colors.actionMinor[550],
+        transition: 'border-color 0.15s ease-in-out',
         '&$clickable:hover': {
-            borderColor: 'transparent',
-            backgroundColor: theme.colors.blue200,
-            '& $Text': {
-                color: theme.colors.blue500,
-            },
-            '& $icon path, & $icon rect': {
-                fill: theme.colors.blue500,
-            },
-        },
-        '&$isActive': {
-            borderColor: 'transparent',
-            backgroundColor: theme.colors.blue200,
-            '& $Text': {
-                color: theme.colors.blue500,
-            },
-            '& $icon path, & $icon rect': {
-                fill: theme.colors.blue500,
-            },
+            borderColor: theme.colors.actionMinor[550],
         },
         '&$isDisabled': {
+            borderColor: theme.colors.textLight.disabled,
             '& $Text': {
-                color: theme.colors.blue200,
+                color: theme.colors.textLight.disabled,
             },
             '& $icon path, & $icon rect': {
-                fill: theme.colors.blue200,
-            },
-        },
-        '&$isReadOnly': {
-            '& $Text': {
-                color: theme.colors.blue200,
-            },
-
-            '& $icon path, & $icon rect': {
-                fill: theme.colors.blue200,
+                fill: theme.colors.textLight.disabled,
             },
         },
     },

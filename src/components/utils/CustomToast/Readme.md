@@ -240,14 +240,14 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
     />
     <CheckboxGroup
         label="PreComponent"
-        color="orange"
+        color="actionMajor"
         options={preComponentOptions}
         onChange={onChangePreComponent}
         value={state.preComponent}
     />
     <CheckboxGroup
         label="PostComponent"
-        color="orange"
+        color="actionMajor"
         options={postComponentOptions}
         onChange={onChangePostComponent}
         value={state.postComponent}
@@ -320,7 +320,7 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
             const toastId = showToast({
                 text: state.text,
                 title: state.title,
-                icon: <Icon name="email" color={theme.colors.purple400} />,
+                icon: <Icon name="email" color={theme.colors.temp.purple400} />,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
             });
@@ -351,7 +351,7 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
         onClick={() => {
             const toastId = showToast({
                 title: 'Title',
-                icon: <Icon name="email" color={theme.colors.orange400} />,
+                icon: <Icon name="email" color={theme.colors.actionMajor[450]} />,
                 content: <Text>Custom Toast</Text>,
                 closeOnClick: state.closeOnClick,
                 useDefaultCloseButton: state.useDefaultCloseButton,
@@ -369,7 +369,7 @@ let onChangePostComponent = (value) => setState({ ...state, postComponent: value
             const id = uuid();
             const toastId = showToast({
                 title: 'Title',
-                icon: <Icon name="email" color={theme.colors.orange400} />,
+                icon: <Icon name="email" color={theme.colors.actionMajor[450]} />,
                 content: <Text>Custom Toast</Text>,
                 closeOnClick: state.closeOnClick,
                 closeButton: (

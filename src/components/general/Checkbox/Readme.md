@@ -20,41 +20,54 @@ States default with color
 
 ```jsx
 <div>
-    <Checkbox color="red" />
+    <Checkbox color="semanticNegative" />
     <span> </span>
-    <Checkbox color="red" checked />
+    <Checkbox color="semanticNegative" checked />
     <span> </span>
-    <Checkbox color="red" checked indeterminate />
+    <Checkbox color="semanticNegative" checked indeterminate />
     <br />
-    <Checkbox color="red" isDisabled />
+    <Checkbox color="semanticNegative" isDisabled />
     <span> </span>
-    <Checkbox color="red" checked isDisabled />
+    <Checkbox color="semanticNegative" checked isDisabled />
     <span> </span>
-    <Checkbox color="red" checked indeterminate isDisabled />
+    <Checkbox color="semanticNegative" checked indeterminate isDisabled />
     <br />
-    <Checkbox color="orange" />
+    <Checkbox color="actionMajor" />
     <span> </span>
-    <Checkbox color="orange" checked />
+    <Checkbox color="actionMajor" checked />
     <span> </span>
-    <Checkbox color="orange" checked indeterminate />
+    <Checkbox color="actionMajor" checked indeterminate />
     <br />
-    <Checkbox color="orange" isDisabled />
+    <Checkbox color="actionMajor" isDisabled />
     <span> </span>
-    <Checkbox color="orange" checked isDisabled />
+    <Checkbox color="actionMajor" checked isDisabled />
     <span> </span>
-    <Checkbox color="orange" checked indeterminate isDisabled />
+    <Checkbox color="actionMajor" checked indeterminate isDisabled />
     <br />
-    <Checkbox color="green" />
-    <span> </span>
-    <Checkbox color="green" checked />
-    <span> </span>
-    <Checkbox color="green" checked indeterminate />
     <br />
-    <Checkbox color="green" isDisabled />
+    <Checkbox color="actionMinor" />
     <span> </span>
-    <Checkbox color="green" checked isDisabled />
+    <Checkbox color="actionMinor" checked />
     <span> </span>
-    <Checkbox color="green" checked indeterminate isDisabled />
+    <Checkbox color="actionMinor" checked indeterminate />
+    <br />
+    <Checkbox color="actionMinor" isDisabled />
+    <span> </span>
+    <Checkbox color="actionMinor" checked isDisabled />
+    <span> </span>
+    <Checkbox color="actionMinor" checked indeterminate isDisabled />
+    <br />
+    <Checkbox color="semanticPositive" />
+    <span> </span>
+    <Checkbox color="semanticPositive" checked />
+    <span> </span>
+    <Checkbox color="semanticPositive" checked indeterminate />
+    <br />
+    <Checkbox color="semanticPositive" isDisabled />
+    <span> </span>
+    <Checkbox color="semanticPositive" checked isDisabled />
+    <span> </span>
+    <Checkbox color="semanticPositive" checked indeterminate isDisabled />
 </div>
 ```
 
@@ -62,69 +75,61 @@ States monotone color:
 
 ```jsx
 <div>
-    <Checkbox isMonotone color="red" />
+    <Checkbox isMonotone color="semanticNegative" />
     <span> </span>
-    <Checkbox isMonotone color="red" checked />
+    <Checkbox isMonotone color="semanticNegative" checked />
     <span> </span>
-    <Checkbox isMonotone color="orange" />
+    <Checkbox isMonotone color="actionMajor" />
     <span> </span>
-    <Checkbox isMonotone color="orange" checked />
+    <Checkbox isMonotone color="actionMajor" checked />
     <span> </span>
-    <Checkbox isMonotone color="green" />
+    <Checkbox isMonotone color="actionMinor" />
     <span> </span>
-    <Checkbox isMonotone color="green" checked />
+    <Checkbox isMonotone color="actionMinor" checked />
     <span> </span>
-    <Checkbox isMonotone color="blue" />
+    <Checkbox isMonotone color="semanticPositive" />
     <span> </span>
-    <Checkbox isMonotone color="blue" checked />
+    <Checkbox isMonotone color="semanticPositive" checked />
+    <span> </span>
+    <Checkbox isMonotone color="semanticInfo" />
+    <span> </span>
+    <Checkbox isMonotone color="semanticInfo" checked />
+    <span> </span>
+    <Checkbox isMonotone color="semanticFocus" />
+    <span> </span>
+    <Checkbox isMonotone color="semanticFocus" checked />
     <span> </span>
     <Checkbox isMonotone color="purple" />
     <span> </span>
     <Checkbox isMonotone color="purple" checked />
-    <span> </span>
-    <Checkbox isMonotone color="aqua" />
-    <span> </span>
-    <Checkbox isMonotone color="aqua" checked />
-    <span> </span>
-    <Checkbox isMonotone color="yellow" />
-    <span> </span>
-    <Checkbox isMonotone color="yellow" checked />
-    <span> </span>
-    <Checkbox isMonotone color="turquoise" />
-    <span> </span>
-    <Checkbox isMonotone color="turquoise" checked />
     <br />
-    <Checkbox isMonotone color="red" isDisabled />
+    <Checkbox isMonotone color="semanticNegative" isDisabled />
     <span> </span>
-    <Checkbox isMonotone color="red" checked isDisabled />
+    <Checkbox isMonotone color="semanticNegative" checked isDisabled />
     <span> </span>
-    <Checkbox isMonotone color="orange" isDisabled />
+    <Checkbox isMonotone color="actionMajor" isDisabled />
     <span> </span>
-    <Checkbox isMonotone color="orange" checked isDisabled />
+    <Checkbox isMonotone color="actionMajor" checked isDisabled />
     <span> </span>
-    <Checkbox isMonotone color="green" isDisabled />
+    <Checkbox isMonotone color="actionMinor" isDisabled />
     <span> </span>
-    <Checkbox isMonotone color="green" checked isDisabled />
+    <Checkbox isMonotone color="actionMinor" checked isDisabled />
     <span> </span>
-    <Checkbox isMonotone color="blue" isDisabled />
+    <Checkbox isMonotone color="semanticPositive" isDisabled />
     <span> </span>
-    <Checkbox isMonotone color="blue" checked isDisabled />
+    <Checkbox isMonotone color="semanticPositive" checked isDisabled />
+    <span> </span>
+    <Checkbox isMonotone color="semanticInfo" isDisabled />
+    <span> </span>
+    <Checkbox isMonotone color="semanticInfo" checked isDisabled />
+    <span> </span>
+    <Checkbox isMonotone color="semanticFocus" isDisabled />
+    <span> </span>
+    <Checkbox isMonotone color="semanticFocus" checked isDisabled />
     <span> </span>
     <Checkbox isMonotone color="purple" isDisabled />
     <span> </span>
     <Checkbox isMonotone color="purple" checked isDisabled />
-    <span> </span>
-    <Checkbox isMonotone color="aqua" isDisabled />
-    <span> </span>
-    <Checkbox isMonotone color="aqua" checked isDisabled />
-    <span> </span>
-    <Checkbox isMonotone color="yellow" isDisabled />
-    <span> </span>
-    <Checkbox isMonotone color="yellow" checked isDisabled />
-    <span> </span>
-    <Checkbox isMonotone color="turquoise" isDisabled />
-    <span> </span>
-    <Checkbox isMonotone color="turquoise" checked isDisabled />
 </div>
 ```
 

@@ -13,7 +13,7 @@ export default (theme) => ({
             boxSizing: 'border-box',
             position: 'absolute',
             width: '100%',
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
             height: 4,
             borderRadius: 6,
         },
@@ -23,14 +23,14 @@ export default (theme) => ({
             left: '0',
             height: 4,
             borderRadius: 6,
-            backgroundColor: theme.colors.orange500,
+            backgroundColor: theme.colors.actionMajor[500],
         },
         '& .rc-slider-step': {
             boxSizing: 'border-box',
             position: 'absolute',
             width: '100%',
             height: 16,
-            background: 'transparent',
+            background: theme.colors.transparent,
         },
     },
     overlay: {},
@@ -40,7 +40,7 @@ export default (theme) => ({
         top: 5,
         marginLeft: -8,
         textAlign: 'center',
-        color: theme.colors.neutral600,
+        color: theme.colors.grey[500],
         fontSize: 12,
         fontFamily: theme.typography.fontFamily,
         letterSpacing: theme.typography.letterSpacing,
@@ -53,25 +53,25 @@ export default (theme) => ({
         cursor: 'grab',
         borderRadius: '50%',
         border: '0',
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
         MsTouchAction: 'pan-x',
         touchAction: 'pan-x',
         '&:active': {
             cursor: 'grabbing',
-            border: `solid 4px ${theme.colors.orange100}`,
+            border: `solid 4px ${theme.colors.actionMajor[25]}`,
             marginTop: -10,
         },
         '&:focus': {
             outline: 'none',
         },
         '&:hover': {
-            border: `solid 4px ${theme.colors.orange100}`,
+            border: `solid 4px ${theme.colors.actionMajor[25]}`,
             marginTop: -10,
         },
     },
     isReadOnly: {
         '& $overlayHandler': {
-            backgroundColor: theme.colors.neutral500,
+            backgroundColor: theme.colors.grey[200],
             cursor: 'default',
             '&:active': {
                 border: 0,
@@ -83,7 +83,7 @@ export default (theme) => ({
             },
         },
         '& .rc-slider-track': {
-            backgroundColor: theme.colors.neutral500,
+            backgroundColor: theme.colors.grey[200],
         },
     },
 });

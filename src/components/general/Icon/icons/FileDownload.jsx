@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FileDownload({ color = '#788590', ...props }) {
+function FileDownload({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" {...props}>
             <path

@@ -68,7 +68,7 @@ function CheckboxControl({
                         >
                             <Icon
                                 className={classes.info}
-                                color={theme.colors.neutral600}
+                                color={theme.colors.grey[500]}
                                 name="info"
                                 size="small"
                             />

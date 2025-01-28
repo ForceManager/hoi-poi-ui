@@ -1,6 +1,6 @@
 import React from 'react';
 
-function InfoOutlined({ color = '#7D8A96', ...props }) {
+function InfoOutlined({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 16 16" fill="none" {...props}>
             <path

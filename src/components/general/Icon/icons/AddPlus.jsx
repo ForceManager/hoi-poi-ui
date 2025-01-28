@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddPlus({ color = '#788590', ...props }) {
+function AddPlus({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" {...props}>
             <g fill="none" fillRule="evenodd">

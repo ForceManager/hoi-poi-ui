@@ -20,7 +20,7 @@ const [state, setState] = useState({});
 let onChange = (value) => setState({ value });
 <CheckboxGroup
     label="Lorem ipsum"
-    color="orange"
+    color="actionMajor"
     options={options}
     onChange={onChange}
     value={state.value}

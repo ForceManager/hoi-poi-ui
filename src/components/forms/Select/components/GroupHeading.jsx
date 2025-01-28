@@ -157,7 +157,7 @@ export default React.memo(({ children, ...props }) => {
                 <Checkbox
                     className={selectAllCheckboxClassName}
                     checked={isAllSelected || isIndeterminate}
-                    color="orange"
+                    color="actionMinor"
                     indeterminate={isIndeterminate}
                 />
                 <Text className={selectAllTextClassName} {...override.groupLabel}>

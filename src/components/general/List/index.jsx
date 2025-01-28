@@ -60,10 +60,10 @@ const List = forwardRef(
             () => ({
                 className: classes.bullet,
                 name: bullet,
-                color: theme.colors.orange500,
+                color: theme.colors.actionMajor[500],
                 ...override.Icon,
             }),
-            [bullet, classes.bullet, override.Icon, theme.colors.orange500],
+            [bullet, classes.bullet, override.Icon, theme.colors.actionMajor[500]],
         );
 
         const listItems = useMemo(

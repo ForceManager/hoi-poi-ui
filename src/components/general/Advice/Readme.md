@@ -6,36 +6,36 @@ Default:
 <Advice showIcon>This is an important information that will help you out in this process.</Advice>
 ```
 
-info:
+semanticInfo:
 
 ```jsx
-<Advice type='info'>This is an important information that will help you out in this process.</Advice>
+<Advice type='semanticInfo'>This is an important information that will help you out in this process.</Advice>
 <br />
-<Advice type='info' showIcon>This is an important information that will help you out in this process.</Advice>
+<Advice type='semanticInfo' showIcon>This is an important information that will help you out in this process.</Advice>
 ```
 
-Error:
+semanticNegative:
 
 ```jsx
-<Advice type="error">An error occurred while uploading your file.</Advice>
+<Advice type="semanticNegative">An error occurred while uploading your file.</Advice>
 <br />
-<Advice type="error" showIcon>An error occurred while uploading your file.</Advice>
+<Advice type="semanticNegative" showIcon>An error occurred while uploading your file.</Advice>
 ```
 
-Success:
+semanticPositive:
 
 ```jsx
-<Advice type="success">Success! Everything went pretty well.</Advice>
+<Advice type="semanticPositive">Success! Everything went pretty well.</Advice>
 <br />
-<Advice type="success" showIcon>Success! Everything went pretty well.</Advice>
+<Advice type="semanticPositive" showIcon>Success! Everything went pretty well.</Advice>
 ```
 
-Warning:
+semanticFocus:
 
 ```jsx
-<Advice type="warning">Watchout! This might be dangerous!</Advice>
+<Advice type="semanticFocus">Watchout! This might be dangerous!</Advice>
 <br />
-<Advice type="warning" showIcon>Watchout! This might be dangerous!</Advice>
+<Advice type="semanticFocus" showIcon>Watchout! This might be dangerous!</Advice>
 ```
 
 With ellipsis:

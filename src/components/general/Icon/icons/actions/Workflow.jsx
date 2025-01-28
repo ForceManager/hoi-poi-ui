@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Workflow({ color = '#788590', ...props }) {
+function Workflow({ color = '#335B70', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="none" fillRule="evenodd">

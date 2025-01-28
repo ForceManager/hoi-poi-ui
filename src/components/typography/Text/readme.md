@@ -142,6 +142,13 @@ Highlighted:
 <Text type="overline" isHighlighted>Lorem Ipsum</Text>
 ```
 
+Strikethrough:
+
+```
+<Text type="caption" strikethrough>Lorem Ipsum</Text>
+<Text type="captionMedium" strikethrough>Lorem Ipsum</Text>
+```
+
 ### Component tree
 
 ---

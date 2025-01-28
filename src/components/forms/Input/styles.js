@@ -1,8 +1,8 @@
 export default (theme) => {
     const titleBorder = {
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.primary.white,
         border: '1px solid transparent',
-        borderBottom: `1px solid ${theme.colors.neutral400}`,
+        borderBottom: `1px solid ${theme.colors.grey[100]}`,
     };
     return {
         root: {
@@ -12,7 +12,7 @@ export default (theme) => {
             '&$focused': {
                 '& $inputComponents': {
                     ...titleBorder,
-                    borderBottomColor: theme.colors.orange500,
+                    borderBottomColor: theme.colors.actionMajor[500],
                 },
             },
             '&$error': {
@@ -44,13 +44,13 @@ export default (theme) => {
             lineHeight: 0,
             borderRadius: '4px',
             border: '1px solid transparent',
-            backgroundColor: theme.colors.neutral200,
+            backgroundColor: theme.colors.grey[50],
             transition: 'all 0.15s ease',
         },
         input: {
             ...theme.typography.body,
-            background: 'transparent',
-            color: theme.colors.neutral900,
+            background: theme.colors.transparent,
+            color: theme.colors.textLight.primary,
             width: '100%',
             height: '38px',
             alignItems: 'center',
@@ -64,7 +64,7 @@ export default (theme) => {
                 boxShadow: 'none',
             },
             '&::placeholder': {
-                color: theme.colors.neutral600,
+                color: theme.colors.grey[500],
             },
             '&::-webkit-outer-spin-button': {
                 '-webkit-appearance': 'none',
@@ -80,22 +80,22 @@ export default (theme) => {
         },
         error: {
             '& $inputComponents': {
-                backgroundColor: theme.colors.neutralBase,
-                border: `1px solid ${theme.colors.red500}`,
+                backgroundColor: theme.colors.primary.white,
+                border: `1px solid ${theme.colors.semantic.negative500}`,
             },
         },
         isReadOnly: {
             '& $inputComponents': {
-                border: `1px solid ${theme.colors.neutral500}`,
-                backgroundColor: theme.colors.neutralBase,
+                border: `1px solid ${theme.colors.grey[200]}`,
+                backgroundColor: theme.colors.primary.white,
 
                 '&::placeholder': {
-                    color: theme.colors.neutral500,
+                    color: theme.colors.grey[200],
                 },
             },
             '& $input': {
                 cursor: 'text',
-                color: theme.colors.neutral700,
+                color: theme.colors.textLight.secondary,
             },
         },
         isReadAndDuplicable: {
@@ -110,14 +110,14 @@ export default (theme) => {
         clearSeparator: {
             width: 2,
             height: 8,
-            backgroundColor: theme.colors.neutral400,
+            backgroundColor: theme.colors.grey[100],
             margin: '0 2px',
         },
         copy: {},
         focused: {
             '& $inputComponents': {
-                backgroundColor: theme.colors.neutralBase,
-                border: `1px solid ${theme.colors.orange500}`,
+                backgroundColor: theme.colors.primary.white,
+                border: `1px solid ${theme.colors.actionMajor[500]}`,
             },
         },
         isFullWidth: {
@@ -152,7 +152,7 @@ export default (theme) => {
         postComponentCopy: {},
         custom: {
             '& $inputComponents': {
-                backgroundColor: 'transparent',
+                backgroundColor: theme.colors.transparent,
                 border: 0,
                 borderRadius: 0,
                 padding: 0,

@@ -1,9 +1,9 @@
 export default (theme) => ({
     root: {
         ...theme.typography.defaultText,
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
         overflow: 'hidden',
-        background: theme.colors.neutral400,
+        background: theme.colors.grey[100],
         position: 'relative',
         '& > img': {
             height: '100%',
@@ -139,8 +139,8 @@ export default (theme) => ({
         bottom: 0,
         right: 0,
         boxSizing: 'border-box',
-        boxShadow: `0 0 0 2px ${theme.colors.neutralBase}`,
-        backgroundColor: theme.colors.neutral400,
+        boxShadow: `0 0 0 2px ${theme.colors.primary.white}`,
+        backgroundColor: theme.colors.grey[100],
         transform: 'translate3d(25%, 25%, 0)',
     },
 });

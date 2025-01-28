@@ -23,7 +23,7 @@ export default (theme) => ({
         lineHeight: '20px',
         marginBottom: 16,
         borderRadius: 4,
-        border: `solid 1px ${theme.colors.neutral400}`,
+        border: `solid 1px ${theme.colors.grey[100]}`,
         padding: 8,
         '&:last-child': {
             marginBottom: 0,
@@ -32,17 +32,17 @@ export default (theme) => ({
     radioLabel: {
         marginLeft: 10,
         ...theme.typography.defaultText,
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
         fontWeight: 400,
     },
     isReadOnly: {
         '& $formControl': {
             cursor: 'not-allowed',
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.neutral400}`,
+                borderBottom: `1px solid ${theme.colors.grey[100]}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.neutral400}`,
+                borderBottom: `1px solid ${theme.colors.grey[100]}`,
             },
         },
     },

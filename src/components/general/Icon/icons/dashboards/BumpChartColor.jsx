@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function BumpChartColor({ color = colors.neutral700, ...props }) {
+function BumpChartColor({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
-                stroke="#FFB13F"
+                stroke="#198E59"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1.5"
@@ -19,7 +19,7 @@ function BumpChartColor({ color = colors.neutral700, ...props }) {
                 d="M2 21c2.777-.571 6.888-5.52 9.11-4.759 2.222.762 4.888 4.569 6.666 4.188 1.777-.38 4-4.949 4-4.949"
             />
             <path
-                stroke="#7D8A96"
+                stroke={color}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1.5"

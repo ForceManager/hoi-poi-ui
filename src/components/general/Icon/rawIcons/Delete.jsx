@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Delete = ({ color = '#788590', ...props }) => (
+const Delete = ({ color = '#335B70', ...props }) => (
     <svg viewBox="0 0 1024 1024" {...props}>
         <path
             fill={color}

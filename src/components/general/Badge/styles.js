@@ -14,77 +14,97 @@ export default (theme) => ({
     },
     // Types
     default: {
-        backgroundColor: theme.colors.neutral300,
+        backgroundColor: theme.colors.grey[100],
         '& $Text': {
-            color: theme.colors.neutral700,
+            color: theme.colors.textLight.secondary,
         },
     },
-    success: {
-        backgroundColor: theme.colors.green100,
+    semanticPositive: {
+        backgroundColor: theme.colors.semantic.positiveCustom100,
         '& $Text': {
-            color: theme.colors.green600,
+            color: theme.colors.semantic.positive500,
         },
     },
-    warning: {
-        backgroundColor: theme.colors.yellow100,
+    semanticFocus: {
+        backgroundColor: theme.colors.semantic.focusCustom100,
         '& $Text': {
-            color: theme.colors.yellow600,
+            color: theme.colors.semantic.focus500,
         },
     },
-    error: {
-        backgroundColor: theme.colors.red100,
+    semanticNegative: {
+        backgroundColor: theme.colors.semantic.negativeCustom100,
         '& $Text': {
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
         },
     },
-    info: {
-        backgroundColor: theme.colors.blue100,
+    semanticInfo: {
+        backgroundColor: theme.colors.semantic.infoCustom50,
         '& $Text': {
-            color: theme.colors.blue400,
+            color: theme.colors.semantic.info400,
         },
     },
-
     ongoing: {
-        backgroundColor: theme.colors.purple100,
+        backgroundColor: theme.colors.temp.purple100,
         '& $Text': {
-            color: theme.colors.purple500,
+            color: theme.colors.temp.purple500,
         },
     },
     promotion: {
-        backgroundColor: theme.colors.neutral150,
+        backgroundColor: theme.colors.primary.brilliantGreen,
         '& $Text': {
-            backgroundClip: 'text',
-            '-webkit-background-clip': 'text',
-            color: 'transparent',
-            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
-        },
+            color: theme.colors.primary.black,        },
+    },
+    // For retrocompatibility
+    error: {
+        extend: 'semanticNegative',
+    },
+    success: {
+        extend: 'semanticPositive',
+    },
+    info: {
+        extend: 'semanticInfo',
+    },
+    warning: {
+        extend: 'semanticFocus',
     },
     inverted: {
         '& $Text': {
-            color: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
         },
         '&$default': {
-            backgroundColor: theme.colors.neutral600,
+            backgroundColor: theme.colors.grey[500],
+        },
+        '&$semanticPositive': {
+            backgroundColor: theme.colors.semantic.positive400,
         },
         '&$success': {
-            backgroundColor: theme.colors.green400,
+            backgroundColor: theme.colors.semantic.positive400,
+        },
+        '&$semanticFocus': {
+            backgroundColor: theme.colors.semantic.focusCustom400,
         },
         '&$warning': {
-            backgroundColor: theme.colors.yellow400,
+            backgroundColor: theme.colors.semantic.focusCustom400,
+        },
+        '&$semanticNegative': {
+            backgroundColor: theme.colors.semantic.negative450,
         },
         '&$error': {
-            backgroundColor: theme.colors.red400,
+            backgroundColor: theme.colors.semantic.negative450,
+        },
+        '&$semanticInfo': {
+            backgroundColor: theme.colors.semantic.info400,
         },
         '&$info': {
-            backgroundColor: theme.colors.blue400,
+            backgroundColor: theme.colors.semantic.info400,
         },
         '&$ongoing': {
-            backgroundColor: theme.colors.purple400,
+            backgroundColor: theme.colors.temp.purple400,
         },
         '&$promotion': {
-            backgroundImage: `linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
+            backgroundColor: theme.colors.background.gray900,
             '& $Text': {
-                color: theme.colors.neutralBase,
+                color: theme.colors.primary.white,
             },
         },
     },

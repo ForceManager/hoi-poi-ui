@@ -13,14 +13,14 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
     },
     error: {
         ...theme.typography.smallText,
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
     },
     formControl: {
         position: 'relative',
@@ -42,16 +42,16 @@ export default (theme) => ({
         justifyContent: 'center',
         borderRadius: 4,
         marginBottom: 20,
-        border: `1px dashed ${theme.colors.neutral400}`,
-        backgroundColor: theme.colors.neutral100,
+        border: `1px dashed ${theme.colors.grey[100]}`,
+        backgroundColor: theme.colors.actionMinor[50],
     },
     isDragActive: {
-        border: `1px dashed ${theme.colors.blue400}`,
-        backgroundColor: theme.colors.blue100,
+        border: `1px dashed ${theme.colors.semantic.info400}`,
+        backgroundColor: theme.colors.semantic.infoCustom50,
     },
     disabled: {
-        border: `1px dashed ${theme.colors.neutral400}`,
-        backgroundColor: theme.colors.neutral200,
+        border: `1px dashed ${theme.colors.grey[100]}`,
+        backgroundColor: theme.colors.grey[50],
     },
     button: {
         marginTop: 16,
@@ -65,7 +65,7 @@ export default (theme) => ({
         display: 'block',
         textAlign: 'center',
         width: '100%',
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
     },
     cloudUploadIcon: {
         marginBottom: 2,
@@ -78,21 +78,21 @@ export default (theme) => ({
         minHeight: 40,
         boxSizing: 'border-box',
         padding: '10px 16px 10px 12px',
-        borderBottom: `1px solid  ${theme.colors.neutral500}`,
+        borderBottom: `1px solid  ${theme.colors.grey[200]}`,
     },
     fileError: {
-        backgroundColor: theme.colors.red100,
+        backgroundColor: theme.colors.semantic.negativeCustom100,
         borderBottom: 'none',
         borderRadius: 4,
     },
     fileLoading: {
-        backgroundColor: theme.colors.neutral300,
+        backgroundColor: theme.colors.grey[100],
         borderBottom: 'none',
         borderRadius: 4,
     },
     fileErrorText: {
         marginLeft: 4,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
     },
     fileDataContainer: {
         display: 'flex',
@@ -128,12 +128,12 @@ export default (theme) => ({
         minWidth: 0,
     },
     fileName: {
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
         display: 'block',
     },
     fileSize: {
         marginLeft: 4,
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
         flexShrink: 0,
     },
     actions: {
@@ -154,26 +154,26 @@ export default (theme) => ({
         left: 0,
         height: 2,
         borderRadius: 10,
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
     },
 
     errored: {
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.red500} !important`,
+                borderBottom: `1px solid ${theme.colors.semantic.negative500} !important`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.red500} !important`,
+                borderBottom: `1px solid ${theme.colors.semantic.negative500} !important`,
             },
         },
     },
     isReadOnly: {
         '& $formControl': {
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.neutral400}`,
+                borderBottom: `1px solid ${theme.colors.grey[100]}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.neutral400}`,
+                borderBottom: `1px solid ${theme.colors.grey[100]}`,
             },
         },
         '&$focused': {
@@ -219,8 +219,8 @@ export default (theme) => ({
         boxSizing: 'border-box',
         padding: 20,
         marginBottom: 20,
-        border: `1px solid ${theme.colors.neutral400}`,
-        backgroundColor: theme.colors.neutral100,
+        border: `1px solid ${theme.colors.grey[100]}`,
+        backgroundColor: theme.colors.actionMinor[50],
         '& span': {
             display: 'flex',
             width: '100%',
@@ -271,7 +271,7 @@ export default (theme) => ({
     },
     groupTitleDivider: {
         height: '1px',
-        backgroundColor: theme.colors.neutral400,
+        backgroundColor: theme.colors.grey[100],
         marginBottom: '10px',
     },
     groupListWrapper: {
@@ -291,8 +291,8 @@ export default (theme) => ({
     uploadedFilesPopover: {
         '& .hoi-poi-popover-inner': {
             padding: '10px',
-            backgroundColor: `${theme.colors.neutral800} !important`,
-            color: `${theme.colors.neutralBase} !important`,
+            backgroundColor: `${theme.colors.grey[700]} !important`,
+            color: `${theme.colors.primary.white} !important`,
         },
     },
 });

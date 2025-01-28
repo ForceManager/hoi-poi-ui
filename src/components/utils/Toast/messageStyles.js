@@ -5,28 +5,28 @@ export default (theme) => ({
         lineHeight: '20px',
     },
     title: {
-        color: theme.colors.neutralBase,
+        color: theme.colors.primary.white,
         display: 'block',
     },
     message: {
         ...theme.typography.caption,
-        color: theme.colors.neutralBase,
+        color: theme.colors.primary.white,
         display: 'block',
         whiteSpace: 'pre-wrap',
     },
     success: {
         '&$title': {
-            color: theme.colors.green500,
+            color: theme.colors.semantic.positive500,
         },
     },
     error: {
         '&$title': {
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
         },
     },
     warning: {
         '&$title': {
-            color: theme.colors.yellow500,
+            color: theme.colors.semantic.focus500,
         },
     },
 });

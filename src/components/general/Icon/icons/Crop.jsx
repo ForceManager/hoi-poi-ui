@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Crop({ color = '#788590', ...props }) {
+function Crop({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 24 24" fill="none" id="ic_crop" {...props}>
             <path

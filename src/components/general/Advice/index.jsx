@@ -68,43 +68,47 @@ function Advice({
         const properties = { size: 'medium' };
         switch (type) {
             case 'error':
+            case 'semanticNegative':
                 return {
                     ...properties,
                     name: 'warningOutline',
-                    color: theme.colors.red500,
+                    color: theme.colors.semantic.negative500,
                 };
             case 'success':
+            case 'semanticPositive':
                 return {
                     ...properties,
                     name: 'thickEnabled',
-                    color: theme.colors.green700,
+                    color: theme.colors.semantic.positive600,
                 };
             case 'warning':
+            case 'semanticFocus':
                 return {
                     ...properties,
                     name: 'warningRounded',
-                    color: theme.colors.yellow700,
+                    color: theme.colors.semantic.focusCustom600,
                 };
             case 'info':
+            case 'semanticInfo':
                 return {
                     ...properties,
                     name: 'infoOutlined',
-                    color: theme.colors.aqua700,
+                    color: theme.colors.semantic.info600,
                 };
             case 'default':
             default:
                 return {
                     ...properties,
                     name: 'infoOutlined',
-                    color: theme.colors.neutral700,
+                    color: theme.colors.textLight.secondary,
                 };
         }
     }, [
-        theme.colors.aqua700,
-        theme.colors.green700,
-        theme.colors.neutral700,
-        theme.colors.red500,
-        theme.colors.yellow700,
+        theme.colors.semantic.info600,
+        theme.colors.semantic.positive600,
+        theme.colors.textLight.secondary,
+        theme.colors.semantic.negative500,
+        theme.colors.semantic.focusCustom600,
         type,
     ]);
 
@@ -204,7 +208,17 @@ Advice.propTypes = {
     showIcon: PropTypes.bool,
     showCollapse: PropTypes.bool,
     defaultCollapsed: PropTypes.bool,
-    type: PropTypes.oneOf(['default', 'error', 'info', 'success', 'warning']),
+    type: PropTypes.oneOf([
+        'semanticPositive',
+        'semanticNegative',
+        'semanticInfo',
+        'semanticFocus',
+        'default',
+        'error',
+        'info',
+        'success',
+        'warning',
+    ]),
     isDismissable: PropTypes.bool,
     dismissText: PropTypes.string,
     onDismiss: PropTypes.func,

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function FastCheckin({ color = '#788590', ...props }) {
+function FastCheckin({ color = '#335B70', ...props }) {
     return (
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path
                 d="M5.868 14.514c-.007-.766.008-1.534.05-2.292L1 12.223v2.292h4.868ZM6.144 9.93c.118-.8.278-1.571.487-2.292L1 7.64V9.93h5.144ZM7.58 5.348a9.632 9.632 0 0 1 1.821-2.293L1 3.056v2.292h6.58Z"
-                fill="#FF8C00"
+                fill="#007E45"
             />
             <path
                 fillRule="evenodd"

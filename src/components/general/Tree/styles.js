@@ -24,7 +24,7 @@ export default (theme) => ({
     },
     active: {
         '& $nodeItem': {
-            background: 'transparent',
+            background: theme.colors.transparent,
             fontWeight: 500,
             color: theme.colors.black,
         },

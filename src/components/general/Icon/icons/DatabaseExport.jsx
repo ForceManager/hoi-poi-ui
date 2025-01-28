@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DatabaseExport({ color = '#788590', secondaryColor = '#D4D8DC', ...props }) {
+function DatabaseExport({ color = '#335B70', secondaryColor = '#D4D8DC', ...props }) {
     return (
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
             <path

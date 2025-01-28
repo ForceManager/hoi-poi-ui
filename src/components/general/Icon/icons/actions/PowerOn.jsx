@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PowerOn({ color = '#788590', ...props }) {
+function PowerOn({ color = '#335B70', ...props }) {
     return (
         <svg
             viewBox="0 0 24 24"

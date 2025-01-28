@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ArrowDown({ color = '#788590', ...props }) {
+function ArrowDown({ color = '#335B70', ...props }) {
     return (
         <svg width={11} height={8} viewBox="0 0 11 8" fill="none" {...props}>
             <path

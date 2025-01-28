@@ -101,7 +101,7 @@ const Groups = memo(
                         className={classes.groupFooterTextContainer}
                         onClick={() => onClick(index)}
                     >
-                        <Text type="caption" color="orange500">
+                        <Text type="caption" color={theme.colors.actionMajor[500]}>
                             {textFolded}
                             {textUnfolded}
                         </Text>
@@ -109,7 +109,7 @@ const Groups = memo(
                             className={getIconClassNames(index)}
                             name="chevron"
                             size="small"
-                            color={theme.colors.orange500}
+                            color={theme.colors.actionMajor[500]}
                         />
                     </div>
                 );
@@ -118,7 +118,9 @@ const Groups = memo(
                     return (
                         <Popover
                             content={
-                                <Text color="neutralBase">{`+ ${totalDroppedByGroupTooltip[index]}`}</Text>
+                                <Text
+                                    color={theme.colors.primary.white}
+                                >{`+ ${totalDroppedByGroupTooltip[index]}`}</Text>
                             }
                             visible={!!totalDroppedByGroupTooltip[index]}
                             overlayStyle={{ zIndex: 99999 }}
@@ -130,7 +132,11 @@ const Groups = memo(
                 } else if (!groups && totalDroppedTooltip) {
                     return (
                         <Popover
-                            content={<Text color="neutralBase">{`+ ${totalDroppedTooltip}`}</Text>}
+                            content={
+                                <Text
+                                    color={theme.colors.primary.white}
+                                >{`+ ${totalDroppedTooltip}`}</Text>
+                            }
                             visible={!!totalDroppedTooltip}
                             overlayStyle={{ zIndex: 99999 }}
                             className={classes.uploadedFilesPopover}
@@ -217,7 +223,7 @@ const Groups = memo(
                     <div key={index} className={groupClassNames} {...overrides.group}>
                         <div className={classes.groupHeader} {...overrides.groupHeader}>
                             <div className={classes.groupTitle} {...overrides.groupTitle}>
-                                <Text color="neutral700">{title}</Text>
+                                <Text color={theme.colors.utility.textSecondary}>{title}</Text>
                             </div>
                         </div>
                         <div className={classes.groupTitleDivider} />
@@ -266,6 +272,7 @@ const Groups = memo(
             handleDownload,
             renderExpand,
             deleteTooltip,
+            theme,
         ]);
 
         const displayFooter = useMemo(() => {
@@ -320,7 +327,7 @@ const Groups = memo(
                         <>
                             <div className={classes.groupHeader} {...overrides.groupHeader}>
                                 <div className={classes.groupTitle} {...overrides.groupTitle}>
-                                    <Text color="neutral700">{title}</Text>
+                                    <Text color={theme.colors.utility.textSecondary}>{title}</Text>
                                 </div>
                             </div>
                             <div className={classes.groupTitleDivider} />
@@ -369,6 +376,7 @@ const Groups = memo(
             handleDownload,
             displayFooter,
             renderExpand,
+            theme,
         ]);
 
         if (groups) return renderGroups;

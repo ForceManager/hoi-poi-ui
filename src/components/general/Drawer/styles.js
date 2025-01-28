@@ -25,7 +25,7 @@ export default (theme) => ({
         bottom: 0,
         background: theme.colors.overlay,
         '&.ReactModal__Overlay--before-close': {
-            background: 'transparent',
+            background: theme.colors.transparent,
         },
     },
     overlayLeft: {
@@ -37,7 +37,7 @@ export default (theme) => ({
         bottom: 0,
         background: theme.colors.overlay,
         '&.ReactModal__Overlay--before-close': {
-            background: 'transparent',
+            background: theme.colors.transparent,
         },
     },
     right: {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CognitiveTwoToned({ color = '#788590', ...props }) {
+function CognitiveTwoToned({ color = '#335B70', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill="none" fillRule="evenodd">
@@ -10,7 +10,7 @@ function CognitiveTwoToned({ color = '#788590', ...props }) {
                 />
                 <path
                     d="M13.636 2c.452 0 .819.366.819.818v18.364a.818.818 0 01-1.637 0V2.818c0-.452.366-.818.818-.818zM7.091 8.667c.452 0 .818.366.818.818v5.03a.818.818 0 11-1.636 0v-5.03c0-.452.366-.818.818-.818zm13.09.833c.453 0 .819.366.819.818v3.364a.818.818 0 01-1.636 0v-3.364c0-.452.366-.818.818-.818z"
-                    fill="#FF8C00"
+                    fill="#007E45"
                 />
             </g>
         </svg>

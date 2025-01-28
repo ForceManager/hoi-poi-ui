@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Magnifier({ color = '#788590', ...props }) {
+function Magnifier({ color = '#335B70', ...props }) {
     return (
         <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
             <path

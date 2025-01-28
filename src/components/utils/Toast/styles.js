@@ -83,7 +83,7 @@ export default (theme) => ({
             overflow: 'hidden',
             cursor: 'pointer',
             direction: 'ltr',
-            background: theme.colors.neutral900,
+            background: theme.colors.textLight.primary,
         },
         '.Toastify__toast--rtl': {
             direction: 'rtl',
@@ -93,7 +93,7 @@ export default (theme) => ({
             msFlex: '1 1 auto',
             flex: '1',
             ...theme.typography.body,
-            color: theme.colors.neutralBase,
+            color: theme.colors.primary.white,
         },
         '.Toastify__toast-icon': {
             webkitMarginEnd: 10,
@@ -119,25 +119,25 @@ export default (theme) => ({
         '.Toastify__toast--default': {},
         '.Toastify__toast--info': {},
         '.Toastify__toast--success': {
-            borderLeft: `8px solid ${theme.colors.green500}`,
+            borderLeft: `8px solid ${theme.colors.semantic.positive500}`,
         },
         '.Toastify__toast--error': {
-            borderLeft: `8px solid ${theme.colors.red500}`,
+            borderLeft: `8px solid ${theme.colors.semantic.negative500}`,
         },
         '.Toastify__toast--warning': {
-            borderLeft: `8px solid ${theme.colors.yellow500}`,
+            borderLeft: `8px solid ${theme.colors.semantic.focus500}`,
         },
         '.Toastify__progress-bar--info': {
-            background: theme.colors.green500,
+            background: theme.colors.semantic.positive500,
         },
         '.Toastify__progress-bar--success': {
-            background: theme.colors.green500,
+            background: theme.colors.semantic.positive500,
         },
         '.Toastify__progress-bar--warning': {
-            background: theme.colors.yellow500,
+            background: theme.colors.semantic.focus500,
         },
         '.Toastify__progress-bar--error': {
-            background: theme.colors.red500,
+            background: theme.colors.semantic.negative500,
         },
         '@keyframes Toastify__trackProgress': {
             '0%': {

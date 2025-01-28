@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GoogleIcon = ({ color = '#788590', ...props }) => (
+const GoogleIcon = ({ color = '#335B70', ...props }) => (
     <svg {...props} viewBox="0 0 24 24">
         <g clipPath="url(#a)">
             <path fill={color} d="M21.787 12.225c0-.658-.058-1.283-.159-1.892h-9.416v3.759h5.392c-.242 1.233-.95 2.275-2 2.983v2.5h3.216c1.883-1.742 2.967-4.308 2.967-7.35Z"/>

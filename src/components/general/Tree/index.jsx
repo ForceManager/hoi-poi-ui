@@ -6,7 +6,7 @@ import { Treebeard } from 'react-treebeard';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 import Icon from '../Icon';
 
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'Tree');
 
@@ -23,6 +23,7 @@ const Tree = ({
     const classes = useClasses(useStyles, classesProp);
     const [data, setData] = useState(nodes);
     const [cursor, setCursor] = useState(false);
+    const theme = useTheme();
 
     useEffect(() => {
         setData(nodes);
@@ -57,7 +58,7 @@ const Tree = ({
             tree: {
                 base: {
                     listStyle: 'none',
-                    background: 'transparent',
+                    background: theme.colors.transparent,
                     margin: 0,
                     padding: 0,
                 },

@@ -6,7 +6,7 @@ export default (theme) => ({
             overflow: 'hidden',
         },
         '& .hoi-poi-ui__tabs-nav-container': {
-            borderBottom: `1px solid ${theme.colors.neutral400}`,
+            borderBottom: `1px solid ${theme.colors.grey[100]}`,
         },
         '& .hoi-poi-ui__tabs-bar, & .hoi-poi-ui__tabs-nav-container': {
             fontSize: '14px',
@@ -28,7 +28,7 @@ export default (theme) => ({
             lineHeight: '30px',
             cursor: 'pointer',
             border: 'none',
-            backgroundColor: 'transparent',
+            backgroundColor: theme.colors.transparent,
             position: 'absolute',
             display: 'flex',
             alignItems: 'center',
@@ -92,17 +92,17 @@ export default (theme) => ({
             lineHeight: '20px',
             cursor: 'pointer',
             ...theme.typography.defaultText,
-            color: theme.colors.neutral700,
+            color: theme.colors.grey[500],
             outline: 'none',
         },
         '& .hoi-poi-ui__tabs-tab:hover': {
-            color: theme.colors.neutral900,
+            color: theme.colors.actionMinor[600],
         },
         '& .hoi-poi-ui__tabs-tab-active, & .hoi-poi-ui__tabs-tab-active:hover': {
             position: 'relative',
             '&::after': {
                 zIndex: 1,
-                backgroundColor: theme.colors.neutral900,
+                backgroundColor: theme.colors.textLight.primary,
                 height: 2,
                 left: 0,
                 right: 0,
@@ -111,10 +111,9 @@ export default (theme) => ({
                 position: 'absolute',
                 display: 'block',
             },
-            color: theme.colors.neutral900,
+            color: theme.colors.actionMinor[500],
             cursor: 'default',
             transform: 'translateZ(0)',
-            fontWeight: 500,
         },
         '& .hoi-poi-ui__tabs-tab-disabled, & .hoi-poi-ui__tabs-tab-disabled:hover': {
             cursor: 'default',
@@ -149,7 +148,7 @@ export default (theme) => ({
             display: 'none',
         },
         '& .hoi-poi-ui__tabs-left': {
-            borderRight: `2px solid ${theme.colors.neutral400}`,
+            borderRight: `2px solid ${theme.colors.grey[100]}`,
         },
         '& .hoi-poi-ui__tabs-left .hoi-poi-ui__tabs-bar': {
             height: '100%',
@@ -241,7 +240,7 @@ export default (theme) => ({
             padding: '16px 24px',
         },
         '& .hoi-poi-ui__tabs-right': {
-            borderLeft: `2px solid ${theme.colors.neutral400}`,
+            borderLeft: `2px solid ${theme.colors.grey[100]}`,
         },
         '& .hoi-poi-ui__tabs-right .hoi-poi-ui__tabs-bar': {
             height: '100%',
@@ -312,7 +311,7 @@ export default (theme) => ({
             padding: '16px 24px',
         },
         '& .hoi-poi-ui__tabs-bottom': {
-            borderTop: `2px solid ${theme.colors.neutral400}`,
+            borderTop: `2px solid ${theme.colors.grey[100]}`,
         },
         '& .hoi-poi-ui__tabs-bottom .hoi-poi-ui__tabs-content': {
             width: '100%',
@@ -482,7 +481,7 @@ export default (theme) => ({
         },
         '& .hoi-poi-ui__tabs-tab': {
             padding: '14px 0',
-            borderBottom: `1px solid ${theme.colors.neutral400}`,
+            borderBottom: `1px solid ${theme.colors.grey[100]}`,
             justifyContent: 'center',
         },
         '& .hoi-poi-ui__tabs-nav': {
@@ -499,7 +498,7 @@ export default (theme) => ({
             alignItems: 'center',
         },
         '& .hoi-poi-ui__tabs-tab-active': {
-            borderBottom: `2px solid ${theme.colors.neutral900}`,
+            borderBottom: `2px solid ${theme.colors.textLight.primary}`,
             paddingBottom: 13,
             '&::after, &:hover::after': {
                 content: 'none',
@@ -514,7 +513,7 @@ export default (theme) => ({
     popover: {
         display: 'none',
         position: 'absolute',
-        background: theme.colors.neutralBase,
+        background: theme.colors.primary.white,
         boxShadow: `0px 4px 5px 0px rgba(39, 60, 80, 0.2),
                     0px 3px 14px 0px rgba(39, 60, 80, 0.12),
                     0px 8px 10px 0px rgba(39, 60, 80, 0.14)`,

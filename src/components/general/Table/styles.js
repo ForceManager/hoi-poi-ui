@@ -2,7 +2,7 @@ export default (theme) => ({
     root: {
         height: '100%',
         width: '100%',
-        border: `1px solid ${theme.colors.neutral400}`,
+        border: `1px solid ${theme.colors.grey[100]}`,
         boxSizing: 'border-box',
         borderRadius: 6,
     },
@@ -18,22 +18,22 @@ export default (theme) => ({
     },
     header: {},
     headerHighlighted: {
-        backgroundColor: theme.colors.neutral150,
+        backgroundColor: theme.colors.actionMinor[50],
     },
     row: {
         display: 'flex',
         height: 32,
-        borderBottom: `1px solid ${theme.colors.neutral400}`,
+        borderBottom: `1px solid ${theme.colors.grey[100]}`,
         boxSizing: 'border-box',
     },
     evenBackground: {
         '& > :nth-child(even)': {
-            backgroundColor: theme.colors.neutral100,
+            backgroundColor: theme.colors.actionMinor[50],
         },
     },
     oddBackground: {
         '& > :nth-child(odd)': {
-            backgroundColor: theme.colors.neutral100,
+            backgroundColor: theme.colors.actionMinor[50],
         },
     },
     emptyTable: {

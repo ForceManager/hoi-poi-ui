@@ -1,7 +1,7 @@
 import React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function PeopleOutline({ color = colors.neutral700, ...props }) {
+function PeopleOutline({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
             <path

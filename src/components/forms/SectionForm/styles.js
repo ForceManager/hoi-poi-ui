@@ -3,7 +3,7 @@ export default (theme) => ({
         position: 'relative',
         padding: '8px 16px',
         borderRadius: '4px',
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.utility.bg,
     },
     header: {
         display: 'flex',
@@ -14,25 +14,25 @@ export default (theme) => ({
         marginBottom: 4,
         '&:hover': {
             '& $Text': {
-                color: `${theme.colors.neutral800} !important`,
+                color: `${theme.colors.grey[700]} !important`,
             },
             '& $expandableIcon': {
                 '& svg path': {
-                    fill: theme.colors.neutral800,
+                    fill: theme.colors.actionMinor[500],
                 },
             },
         },
     },
     open: {
         '& $Text': {
-            color: theme.colors.neutral900,
+            color: theme.colors.utility.textPrimary,
         },
         '& $icon': {
             '& span:first-child svg': {
                 transform: 'rotate(0deg) translateY(0px)',
             },
             '& $expandableIcon svg path': {
-                fill: theme.colors.neutral900,
+                fill: theme.colors.utility.textPrimary,
             },
         },
         '& $trashIcon': {
@@ -44,11 +44,11 @@ export default (theme) => ({
     },
     headerActiveFields: {
         '& $Text': {
-            color: `${theme.colors.neutral900} !important`,
+            color: `${theme.colors.utility.textPrimary} !important`,
         },
         '& $icon': {
             '& svg path': {
-                fill: theme.colors.neutral900,
+                fill: theme.colors.utility.textPrimary,
             },
         },
     },
@@ -68,7 +68,7 @@ export default (theme) => ({
         justifyContent: 'space-between',
         boxSizing: 'border-box',
         paddingBottom: 8,
-        borderBottom: `1px solid ${theme.colors.neutral400}`,
+        borderBottom: `1px solid ${theme.colors.grey[100]}`,
     },
     titleContainer: {
         width: '100%',
@@ -93,7 +93,7 @@ export default (theme) => ({
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
         overflow: 'hidden',
-        color: theme.colors.neutral700,
+        color: theme.colors.utility.textSecondary,
         transition: 'all 0.15s ease',
     },
     BadgeNotification: {
@@ -119,8 +119,8 @@ export default (theme) => ({
         height: 20,
         padding: '0px 3px',
         borderRadius: 18,
-        backgroundColor: theme.colors.orange100,
-        color: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[25],
+        color: theme.colors.actionMajor[500],
         position: 'relative',
         '& span:first-child': {
             position: 'absolute',

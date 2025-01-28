@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EmailError = ({ color = '#788590', color2, ...props }) => (
+const EmailError = ({ color = '#335B70', color2, ...props }) => (
     <svg {...props} viewBox="0 0 24 24">
         <path
             fill={color}

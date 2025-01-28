@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ClearOutline({ color = '#788590', ...props }) {
+function ClearOutline({ color = '#335B70', ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" {...props}>
             <path

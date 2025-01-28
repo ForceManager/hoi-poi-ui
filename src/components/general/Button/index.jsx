@@ -85,41 +85,33 @@ const Button = forwardRef(
                 case 'secondary':
                     return {
                         ...properties,
-                        color: theme.colors.orange500,
+                        color: theme.colors.actionMajor[500],
                     };
                 case 'secondary-error':
                     return {
                         ...properties,
-                        color: theme.colors.red500,
+                        color: theme.colors.semantic.negative500,
                     };
                 case 'dashed':
                 case 'terciary':
                     return {
                         ...properties,
-                        color: theme.colors.neutral700,
+                        color: theme.colors.textLight.secondary,
                     };
                 case 'promotion':
                     return {
                         ...properties,
-                        color: theme.colors.neutral900,
+                        color: theme.colors.textLight.primary,
                     };
                 case 'primary':
                 case 'primary-error':
                 default:
                     return {
                         ...properties,
-                        color: theme.colors.neutralBase,
+                        color: theme.colors.primary.white,
                     };
             }
-        }, [
-            icon,
-            theme.colors.neutral700,
-            theme.colors.neutral900,
-            theme.colors.neutralBase,
-            theme.colors.orange500,
-            theme.colors.red500,
-            type,
-        ]);
+        }, [icon, theme, type]);
 
         const content = (
             <div className={classes.content}>

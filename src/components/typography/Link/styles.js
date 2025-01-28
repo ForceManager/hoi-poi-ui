@@ -21,14 +21,14 @@ export default (theme) => ({
         display: 'inline-block',
         cursor: 'pointer !important',
         padding: 0,
-        color: theme.colors.blue500,
+        color: theme.colors.actionMajor[500],
         transition: 'color .1s ease-in-out',
         border: 'none',
         outline: 'none',
-        background: 'transparent',
+        background: theme.colors.transparent,
         textDecoration: 'none',
         '&:hover': {
-            color: theme.colors.blue600,
+            color: theme.colors.actionMajor[600],
         },
         '& *': {
             cursor: 'pointer',
@@ -58,9 +58,9 @@ export default (theme) => ({
         },
     },
     primary: {
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
         '&:hover': {
-            color: theme.colors.orange600,
+            color: theme.colors.actionMajor[600],
         },
     },
 });

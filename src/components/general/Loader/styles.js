@@ -10,15 +10,15 @@ export default (theme) => ({
     },
     // Colors
     primary: {
-        borderColor: theme.colors.orange200,
-        borderTopColor: theme.colors.orange500,
+        borderColor: theme.colors.actionMajor[150],
+        borderTopColor: theme.colors.actionMajor[500],
     },
     danger: {
-        borderColor: theme.colors.red200,
-        borderTopColor: theme.colors.red500,
+        borderColor: theme.colors.semantic.negativeCustom200,
+        borderTopColor: theme.colors.semantic.negative500,
     },
     white: {
-        borderColor: 'transparent',
+        borderColor: theme.colors.transparent,
         borderTopColor: 'white',
     },
     // Sizes

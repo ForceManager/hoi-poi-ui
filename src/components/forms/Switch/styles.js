@@ -4,12 +4,12 @@ export default (theme) => ({
     },
     disabledOn: {
         '& div': {
-            '& .react-switch-bg': { backgroundColor: `${theme.colors.orange200}!important` },
+            '& .react-switch-bg': { backgroundColor: `${theme.colors.actionMajor[150]}!important` },
         },
     },
     disabledOff: {
         '& div': {
-            '& .react-switch-bg': { backgroundColor: `${theme.colors.neutral500}!important` },
+            '& .react-switch-bg': { backgroundColor: `${theme.colors.grey[200]}!important` },
         },
     },
 });

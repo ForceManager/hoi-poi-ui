@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ScheduleSend = ({ color = '#788590', ...props }) => (
+const ScheduleSend = ({ color = '#335B70', ...props }) => (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path
             d="M17 12c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L16.5 17.2V14h1v2.79l1.85 1.85-.7.71z"

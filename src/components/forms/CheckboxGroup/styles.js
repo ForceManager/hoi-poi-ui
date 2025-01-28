@@ -10,11 +10,11 @@ export default (theme) => ({
         position: 'absolute',
         lineHeight: '20px',
         bottom: -21,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
     },
     errorPerCheck: {
         ...theme.typography.smallText,
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
         margin: '-6px 0 14px',
     },
     formControl: {
@@ -48,7 +48,7 @@ export default (theme) => ({
     checkboxLabel: {
         marginLeft: 10,
         ...theme.typography.defaultText,
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
     },
     iconContainer: {
         height: 18,
@@ -68,10 +68,10 @@ export default (theme) => ({
         '& $formControl': {
             cursor: 'not-allowed',
             '&::before': {
-                borderBottom: `1px solid ${theme.colors.neutral400}`,
+                borderBottom: `1px solid ${theme.colors.grey[100]}`,
             },
             '&::after': {
-                borderBottom: `1px solid ${theme.colors.neutral400}`,
+                borderBottom: `1px solid ${theme.colors.grey[100]}`,
             },
         },
     },

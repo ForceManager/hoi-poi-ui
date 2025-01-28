@@ -28,82 +28,82 @@ export default (theme) => ({
 
     // Types
     default: {
-        backgroundColor: theme.colors.neutral100,
+        backgroundColor: theme.colors.actionMinor[50],
         '& $Text': {
-            color: theme.colors.neutral700,
+            color: theme.colors.textLight.secondary,
         },
         '& $dismiss': {
-            color: `${theme.colors.neutral700} !important`,
-            borderColor: `${theme.neutral700} !important`,
+            color: `${theme.colors.textLight.secondary} !important`,
+            borderColor: `${theme.colors.textLight.secondary} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.neutral200} !important`,
+                backgroundColor: `${theme.colors.grey[50]} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.neutral400} !important`,
+                backgroundColor: `${theme.colors.grey[100]} !important`,
             },
         },
     },
-    error: {
-        backgroundColor: theme.colors.red100,
+    semanticNegative: {
+        backgroundColor: theme.colors.semantic.negativeCustom100,
         '& $Text': {
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
         },
         '& $dismiss': {
-            color: `${theme.colors.red500} !important`,
-            borderColor: `${theme.colors.red500} !important`,
+            color: `${theme.colors.semantic.negative500} !important`,
+            borderColor: `${theme.colors.semantic.negative500} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.red200} !important`,
+                backgroundColor: `${theme.colors.semantic.negativeCustom200} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.red400} !important`,
+                backgroundColor: `${theme.colors.semantic.negative450} !important`,
             },
         },
     },
-    info: {
-        backgroundColor: theme.colors.aqua100,
+    semanticInfo: {
+        backgroundColor: theme.colors.semantic.infoCustom50,
         '& $Text': {
-            color: theme.colors.aqua700,
+            color: theme.colors.semantic.info600,
         },
         '& $dismiss': {
-            color: `${theme.colors.aqua700} !important`,
-            borderColor: `${theme.colors.aqua700} !important`,
+            color: `${theme.colors.semantic.info600} !important`,
+            borderColor: `${theme.colors.semantic.info600} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.aqua200} !important`,
+                backgroundColor: `${theme.colors.semantic.infoCustom100} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.aqua400} !important`,
+                backgroundColor: `${theme.colors.semantic.info400} !important`,
             },
         },
     },
-    success: {
-        backgroundColor: theme.colors.green100,
+    semanticPositive: {
+        backgroundColor: theme.colors.semantic.positiveCustom100,
         '& $Text': {
-            color: theme.colors.green700,
+            color: theme.colors.semantic.positive600,
         },
         '& $dismiss': {
-            color: `${theme.colors.green700} !important`,
-            borderColor: `${theme.colors.green700} !important`,
+            color: `${theme.colors.semantic.positive600} !important`,
+            borderColor: `${theme.colors.semantic.positive600} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.green200} !important`,
+                backgroundColor: `${theme.colors.semantic.positiveCustom200} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.green400} !important`,
+                backgroundColor: `${theme.colors.semantic.positive400} !important`,
             },
         },
     },
-    warning: {
-        backgroundColor: theme.colors.yellow100,
+    semanticFocus: {
+        backgroundColor: theme.colors.semantic.focusCustom100,
         '& $Text': {
-            color: theme.colors.yellow700,
+            color: theme.colors.semantic.focusCustom600,
         },
         '& $dismiss': {
-            color: `${theme.colors.yellow700} !important`,
-            borderColor: `${theme.colors.yellow700} !important`,
+            color: `${theme.colors.semantic.focusCustom600} !important`,
+            borderColor: `${theme.colors.semantic.focusCustom600} !important`,
             '&:hover': {
-                backgroundColor: `${theme.colors.yellow200} !important`,
+                backgroundColor: `${theme.colors.semantic.focusCustom200} !important`,
             },
             '&:active': {
-                backgroundColor: `${theme.colors.yellow400} !important`,
+                backgroundColor: `${theme.colors.semantic.focusCustom400} !important`,
             },
         },
     },
@@ -138,5 +138,18 @@ export default (theme) => ({
     dismiss: {
         alignSelf: 'flex-end',
         marginTop: 16,
+    },
+    // For retrocompatibility
+    error: {
+        extend: 'semanticNegative',
+    },
+    success: {
+        extend: 'semanticPositive',
+    },
+    info: {
+        extend: 'semanticInfo',
+    },
+    warning: {
+        extend: 'semanticFocus',
     },
 });

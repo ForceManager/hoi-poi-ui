@@ -1063,7 +1063,7 @@ const Icon = forwardRef(
         const classes = useClasses(useStyles, classesProp);
         const theme = useTheme();
 
-        const [newColor, setNewColor] = useState(color || theme.colors.neutral700);
+        const [newColor, setNewColor] = useState(color || theme.colors.actionMinor[500]);
         const [newName, setNewName] = useState(name);
         const oldName = useRef(name);
 
@@ -1081,24 +1081,24 @@ const Icon = forwardRef(
         }, [color, newColor]);
 
         const handleOnMouseOver = useCallback(() => {
-            onClick && setNewColor(theme.colors.neutral800);
+            onClick && setNewColor(theme.colors.grey[700]);
             if (nameOver) setNewName(nameOver);
             onMouseOver && onMouseOver();
         }, [onClick, theme, onMouseOver, nameOver]);
 
         const handleOnMouseOut = useCallback(() => {
-            onClick && setNewColor(theme.colors.neutral700);
+            onClick && setNewColor(theme.colors.textLight.secondary);
             if (nameOver && nameOver === newName) setNewName(name);
             onMouseOut && onMouseOut();
         }, [onClick, theme, onMouseOut, nameOver, name, newName]);
 
         const handleOnMouseDown = useCallback(() => {
-            onClick && setNewColor(theme.colors.neutral600);
+            onClick && setNewColor(theme.colors.grey[500]);
             onMouseDown && onMouseDown();
         }, [onClick, theme, onMouseDown]);
 
         const handleOnMouseUp = useCallback(() => {
-            onClick && setNewColor(theme.colors.neutral700);
+            onClick && setNewColor(theme.colors.textLight.secondary);
             onMouseUp && onMouseUp();
         }, [onClick, theme, onMouseUp]);
 

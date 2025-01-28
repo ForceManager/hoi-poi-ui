@@ -88,7 +88,11 @@ const Toast = memo(
                     {!text && content}
                     {!content && (
                         <div className={classes.content}>
-                            <Text className={classes.text} type="caption" color="neutral700">
+                            <Text
+                                className={classes.text}
+                                type="caption"
+                                color={theme.colors.utility.textSecondary}
+                            >
                                 {text}
                             </Text>
                             {onClickLink && linkText && (
@@ -115,14 +119,15 @@ const Toast = memo(
             onClickLink,
             handleOnClickLink,
             linkText,
+            theme,
         ]);
 
         const iconType = useMemo(() => {
             const icons = {
-                [TYPES.success]: { name: 'taskChecked', color: theme.colors.green500 },
-                [TYPES.warning]: { name: 'warning', color: theme.colors.yellow500 },
-                [TYPES.error]: { name: 'error', color: theme.colors.red500 },
-                [TYPES.info]: { name: 'info', color: theme.colors.blue500 },
+                [TYPES.success]: { name: 'taskChecked', color: theme.colors.semantic.positive500 },
+                [TYPES.warning]: { name: 'warning', color: theme.colors.semantic.focus500 },
+                [TYPES.error]: { name: 'error', color: theme.colors.semantic.negative500 },
+                [TYPES.info]: { name: 'info', color: theme.colors.semantic.info500 },
             };
 
             if (!icons[type]) return null;

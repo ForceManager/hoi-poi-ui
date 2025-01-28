@@ -21,7 +21,7 @@ export default (theme) => ({
     },
     actionContainer: {
         borderTop: '1px solid',
-        borderTopColor: theme.colors.neutral400,
+        borderTopColor: theme.colors.grey[100],
     },
     action: {
         height: '40px',
@@ -37,11 +37,11 @@ export default (theme) => ({
     },
     actionText: {
         marginLeft: 0,
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
     },
     actionTextWithIcon: {
         marginLeft: 8,
-        color: theme.colors.orange500,
+        color: theme.colors.actionMajor[500],
     },
     optionLabel: {
         display: 'flex',
@@ -70,31 +70,31 @@ export default (theme) => ({
         borderRadius: '50%',
     },
     optionLabelBulletDisabled: {
-        backgroundColor: theme.colors.neutral500,
+        backgroundColor: theme.colors.grey[200],
     },
     optionLabelBulletPrimary: {
-        backgroundColor: theme.colors.orange500,
+        backgroundColor: theme.colors.actionMajor[500],
     },
     optionLabelBulletDanger: {
-        backgroundColor: theme.colors.red500,
+        backgroundColor: theme.colors.semantic.negative500,
     },
     optionLabelBulletSuccess: {
-        backgroundColor: theme.colors.green500,
+        backgroundColor: theme.colors.semantic.positive500,
     },
     optionLabelText: {},
     optionLabelSubtitle: {
         ...theme.typography.caption,
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
         '& + $optionLabelSubtitle': {
             marginTop: 2,
         },
     },
     disabledText: {
-        color: theme.colors.neutral500,
+        color: theme.colors.grey[200],
     },
     disabledIcon: {
         '& path': {
-            fill: theme.colors.neutral500,
+            fill: theme.colors.grey[200],
         },
     },
     disabledAvatar: {
@@ -102,7 +102,7 @@ export default (theme) => ({
         width: 20,
         height: 20,
         borderRadius: '50%',
-        backgroundColor: theme.colors.neutral500,
+        backgroundColor: theme.colors.grey[200],
         opacity: '0.8',
     },
     group: {
@@ -123,7 +123,7 @@ export default (theme) => ({
     groupLabel: {
         padding: '6px 0px',
         ...theme.typography.subtitle,
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
         textTransform: 'initial',
     },
     inputComponents: {
@@ -136,8 +136,8 @@ export default (theme) => ({
         outline: 'none',
         padding: '2px 4px 2px 12px',
         borderRadius: '4px',
-        border: `1px solid ${theme.colors.neutral200}`,
-        backgroundColor: theme.colors.neutral200,
+        border: `1px solid ${theme.colors.grey[50]}`,
+        backgroundColor: theme.colors.grey[50],
         transition: 'all 0.15s ease',
         '&:hover': {
             cursor: 'pointer',
@@ -152,22 +152,22 @@ export default (theme) => ({
         },
     },
     controlFocused: {
-        backgroundColor: theme.colors.neutralBase,
-        border: `1px solid ${theme.colors.orange500}`,
+        backgroundColor: theme.colors.primary.white,
+        border: `1px solid ${theme.colors.actionMajor[500]}`,
         boxShadow: 'none',
     },
     placeholder: {
-        color: theme.colors.neutral600,
+        color: theme.colors.grey[500],
     },
     placeholderDisabled: {
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
     },
     valueContainer: {
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
         padding: '1px 10px 1px 0px',
     },
     valueContainerDisabled: {
-        color: theme.colors.neutral700,
+        color: theme.colors.textLight.secondary,
     },
     hideMultivalueChips: {
         display: 'none',
@@ -176,45 +176,45 @@ export default (theme) => ({
         padding: '8px 12px',
         display: 'flex',
         alignItems: 'center',
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
         cursor: 'pointer',
         '&:hover': {
-            backgroundColor: theme.colors.neutral200,
+            backgroundColor: theme.colors.grey[50],
         },
     },
     selectAllSelected: {
-        backgroundColor: theme.colors.neutral200,
+        backgroundColor: theme.colors.grey[50],
     },
     selectAllCheckbox: {
         marginRight: '10px',
     },
     selectAllText: {
         ...theme.typography.subtitle,
-        color: theme.colors.neutral900,
+        color: theme.colors.textLight.primary,
         textTransform: 'initial',
     },
     option: {
         ...theme.typography.body,
         padding: '8px 16px',
-        color: theme.colors.neutral900,
-        backgroundColor: theme.colors.neutralBase,
+        color: theme.colors.textLight.primary,
+        backgroundColor: theme.colors.primary.white,
         transition: 'all 0.15s ease',
     },
     optionFocused: {
-        backgroundColor: theme.colors.neutral200,
+        backgroundColor: theme.colors.grey[50],
         cursor: 'pointer',
         '&:hover': {
-            backgroundColor: theme.colors.neutral200,
+            backgroundColor: theme.colors.grey[50],
         },
     },
     optionFocusDisabled: {
-        backgroundColor: `${theme.colors.neutralBase} !important`,
+        backgroundColor: `${theme.colors.primary.white} !important`,
     },
     optionSelected: {
-        backgroundColor: theme.colors.neutral200,
+        backgroundColor: theme.colors.grey[50],
         cursor: 'pointer',
         '&:hover': {
-            backgroundColor: theme.colors.neutral200,
+            backgroundColor: theme.colors.grey[50],
         },
     },
     optionDisabled: {
@@ -229,16 +229,16 @@ export default (theme) => ({
         padding: '3px 4px 3px 8px',
         border: 'none',
         borderRadius: 4,
-        backgroundColor: theme.colors.blue100,
-        color: theme.colors.blue500,
+        backgroundColor: theme.colors.actionMinor[100],
+        color: theme.colors.actionMinor[550],
         transition: 'all 0.15s ease',
         '&:hover': {
-            backgroundColor: theme.colors.blue200,
+            backgroundColor: theme.colors.actionMinor[150],
         },
     },
     multiValueLabel: {
         ...theme.typography.caption,
-        color: theme.colors.blue500,
+        color: theme.colors.actionMinor[550],
         padding: 0,
         paddingLeft: 0,
         paddingRight: 4,
@@ -250,24 +250,24 @@ export default (theme) => ({
         },
     },
     multiValueLabelDisabled: {
-        color: theme.colors.blue200,
+        color: theme.colors.textLight.disabled,
     },
     multiValueRemove: {
         padding: 0,
         transition: 'all 0.15s ease',
         '& svg path': {
-            fill: theme.colors.blue500,
+            fill: theme.colors.actionMinor[550],
         },
         '&:hover': {
             backgroundColor: 'initial',
             '& svg path': {
-                fill: theme.colors.blue600,
+                fill: theme.colors.actionMinor[550],
             },
         },
     },
     multiValueRemoveDisabled: {
         '& svg path': {
-            fill: theme.colors.blue200,
+            fill: theme.colors.textLight.disabled,
         },
     },
     noOptionsMessage: {
@@ -285,7 +285,7 @@ export default (theme) => ({
         transition: 'all 0.15s ease',
         padding: 0,
         '&:hover svg path': {
-            fill: theme.colors.neutral800,
+            fill: theme.colors.grey[700],
         },
     },
     indicatorSeparator: {
@@ -294,7 +294,7 @@ export default (theme) => ({
         marginLeft: 4,
         marginRight: 4,
         alignSelf: 'center',
-        backgroundColor: theme.colors.neutral400,
+        backgroundColor: theme.colors.grey[100],
     },
     indicatorSeparatorHidden: {
         display: 'none',
@@ -304,7 +304,7 @@ export default (theme) => ({
         paddingRight: 2,
         transition: 'all 0.15s ease',
         '&:hover svg path': {
-            fill: theme.colors.neutral800,
+            fill: theme.colors.grey[700],
         },
     },
     loadingIndicator: {
@@ -337,12 +337,12 @@ export default (theme) => ({
     onlyText: {
         '& .hoi-poi-select__control': {
             border: 'none',
-            background: 'transparent',
+            background: theme.colors.transparent,
         },
     },
     highlightedContainer: {},
     highlighted: {
-        backgroundColor: theme.colors.yellow200,
+        backgroundColor: theme.colors.semantic.focusCustom200,
     },
     singleValueIcon: {
         display: 'inline-block',

@@ -29,7 +29,7 @@ export default (theme) => ({
         maxHeight: 'calc(100vh - 20px)',
         padding: '32px',
         boxSizing: 'border-box',
-        background: theme.colors.neutralBase,
+        background: theme.colors.primary.white,
         ...theme.effects.boxShadow24,
         borderRadius: 16,
         display: 'flex',
@@ -76,9 +76,9 @@ export default (theme) => ({
     confirmButton: {},
     cancelButton: {},
     deleteButton: {
-        color: theme.colors.red500,
+        color: theme.colors.semantic.negative500,
         '&:hover': {
-            color: theme.colors.red600,
+            color: theme.colors.semantic.negative500,
         },
     },
 });

@@ -2,11 +2,12 @@ import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import ReactSwitch from 'react-switch';
-
 import { getOverrides, useClasses } from '../../../utils/overrides';
-
 import { createUseStyles, useTheme } from '../../../utils/styles';
+import { getVar } from '../../../utils/getVar';
+
 import styles from './styles';
+
 const useStyles = createUseStyles(styles, 'Switch');
 
 const sizes = {
@@ -67,11 +68,17 @@ function Switch({
                 checked={checked}
                 disabled={isDisabled}
                 offColor={
-                    hovered && !isDisabled ? theme.colors.neutral800 : theme.colors.neutral700
+                    hovered && !isDisabled
+                        ? getVar(theme.colors.actionMinor[600])
+                        : getVar(theme.colors.actionMinor[500])
                 }
-                onColor={hovered && !isDisabled ? theme.colors.orange600 : theme.colors.orange500}
-                offHandleColor={theme.colors.neutralBase}
-                onHandleColor={theme.colors.neutralBase}
+                onColor={
+                    hovered && !isDisabled
+                        ? getVar(theme.colors.actionMajor[600])
+                        : getVar(theme.colors.actionMajor[500])
+                }
+                offHandleColor={getVar(theme.colors.primary.white)}
+                onHandleColor={getVar(theme.colors.primary.white)}
                 boxShadow={null}
                 activeBoxShadow={null}
                 handleDiameter={sizes[size].handle}

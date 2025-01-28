@@ -7,45 +7,45 @@ Default:
 </div>
 ```
 
-Success:
+semanticPositive:
 
 ```jsx
 <div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
-    <Badge type="success">Lorem ipsum</Badge>
-    <Badge type="success" variant="inverted">
+    <Badge type="semanticPositive">Lorem ipsum</Badge>
+    <Badge type="semanticPositive" variant="inverted">
         Lorem ipsum
     </Badge>
 </div>
 ```
 
-Warning:
+semanticFocus:
 
 ```jsx
 <div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
-    <Badge type="warning">Lorem ipsum</Badge>
-    <Badge type="warning" variant="inverted">
+    <Badge type="semanticFocus">Lorem ipsum</Badge>
+    <Badge type="semanticFocus" variant="inverted">
         Lorem ipsum
     </Badge>
 </div>
 ```
 
-Error:
+semanticNegative:
 
 ```jsx
 <div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
-    <Badge type="error">Lorem ipsum</Badge>
-    <Badge type="error" variant="inverted">
+    <Badge type="semanticNegative">Lorem ipsum</Badge>
+    <Badge type="semanticNegative" variant="inverted">
         Lorem ipsum
     </Badge>
 </div>
 ```
 
-Info:
+semanticInfo:
 
 ```jsx
 <div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
-    <Badge type="info">Lorem ipsum</Badge>
-    <Badge type="info" variant="inverted">
+    <Badge type="semanticInfo">Lorem ipsum</Badge>
+    <Badge type="semanticInfo" variant="inverted">
         Lorem ipsum
     </Badge>
 </div>

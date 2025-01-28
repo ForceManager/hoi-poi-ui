@@ -9,7 +9,7 @@ export default (theme) => ({
         border: 'none',
         borderRadius: 2,
         overflow: 'hidden',
-        backgroundColor: theme.colors.neutral300,
+        backgroundColor: theme.colors.grey[100],
     },
     progressBar: {
         display: 'block',
@@ -18,27 +18,27 @@ export default (theme) => ({
     },
     low: {
         '& $progressBar': {
-            background: theme.colors.blue200,
+            background: theme.colors.semantic.infoCustom100,
         },
     },
     medium: {
         '& $progressBar': {
-            background: theme.colors.blue300,
+            background: theme.colors.semantic.info150,
         },
     },
     high: {
         '& $progressBar': {
-            background: theme.colors.blue400,
+            background: theme.colors.semantic.info400,
         },
     },
     higher: {
         '& $progressBar': {
-            background: theme.colors.blue500,
+            background: theme.colors.semantic.info500,
         },
     },
     full: {
         '& $progressBar': {
-            background: `transparent linear-gradient(to right, ${theme.colors.orange500} 0%, ${theme.colors.red500} 50%)`,
+            background: theme.colors.semantic.negative500,
         },
     },
     animated: {
@@ -47,7 +47,7 @@ export default (theme) => ({
             animationDuration: 'var(--progress-duration)',
             animationDelay: 'var(--progress-delay)',
             animationTimingFunction: 'var(--progress-timing-function)',
-            transition: 'background-color var(--progress-duration) var(--progress-timing-function)',
+            transition: 'all var(--progress-duration) var(--progress-timing-function)',
         },
     },
 });

@@ -2,7 +2,7 @@ import React, { memo, useCallback, useEffect, useMemo, useState, useRef } from '
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import Text from '../../typography/Text';
 import PostComponent from './components/PostComponent';
 
@@ -24,6 +24,7 @@ const EllipsedInlineList = ({
     const containerRef = useRef();
     const resizeObserver = useRef(null);
 
+    const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
     const override = getOverrides(overridesProp, EllipsedInlineList.overrides);
 
@@ -82,11 +83,11 @@ const EllipsedInlineList = ({
     const countProps = useMemo(
         () => ({
             className: classes.count,
-            color: 'orange500',
+            color: theme.colors.actionMajor[500],
             count: overflowCount,
             ...override.Count,
         }),
-        [classes.count, override.Count, overflowCount],
+        [classes.count, override.Count, overflowCount, theme],
     );
 
     const FinalPostComponent = customPostComponent || PostComponent;

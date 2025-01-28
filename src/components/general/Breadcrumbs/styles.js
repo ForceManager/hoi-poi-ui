@@ -6,12 +6,12 @@ export default (theme) => ({
     item: {
         marginRight: 8,
         '& span': {
-            color: theme.colors.neutral700,
+            color: theme.colors.textLight.secondary,
         },
         '&:last-child': {
             margin: 0,
             '& span': {
-                color: theme.colors.neutral900,
+                color: theme.colors.textLight.primary,
             },
         },
     },
@@ -20,11 +20,11 @@ export default (theme) => ({
             cursor: 'pointer',
             '&:hover': {
                 '& span': {
-                    color: theme.colors.blue500,
+                    color: theme.colors.semantic.info500,
                 },
                 '&:last-child': {
                     '& span': {
-                        color: theme.colors.neutral900,
+                        color: theme.colors.textLight.primary,
                     },
                 },
             },

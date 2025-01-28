@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { colors } from '../../../../../utils/styles/defaultTheme';
 
-function XAxis({ color = colors.neutral700, ...props }) {
+function XAxis({ color = colors.actionMinor[500], ...props }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" {...props}>
             <path
@@ -9,7 +9,7 @@ function XAxis({ color = colors.neutral700, ...props }) {
                 d="M5.19 22h15.62c.638 0 1.19-.458 1.19-1.005 0-.546-.552-.995-1.19-.995H5.19c-.627 0-1.19.45-1.19.995C4 21.543 4.563 22 5.19 22Z"
             />
             <path
-                fill="#7D8A96"
+                fill={color}
                 d="M4 18.81V3.19C4 2.553 3.542 2 2.996 2 2.449 2 2 2.552 2 3.19v15.62c0 .627.45 1.19.996 1.19S4 19.437 4 18.81Z"
             />
             <path

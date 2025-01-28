@@ -2,7 +2,7 @@ export default (theme) => ({
     root: {
         display: 'flex',
         borderRadius: 8,
-        border: `1px solid ${theme.colors.neutral400}`,
+        border: `1px solid ${theme.colors.grey[100]}`,
         padding: 24,
         width: '100%',
         justifyContent: 'space-between',
@@ -11,8 +11,8 @@ export default (theme) => ({
         transition: 'height .3s ease',
     },
     checked: {
-        border: `1px solid ${theme.colors.orange500}`,
-        backgroundColor: theme.colors.orange100,
+        border: `1px solid ${theme.colors.actionMajor[500]}`,
+        backgroundColor: theme.colors.actionMajor[25],
     },
     content: {
         flex: 1,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EmailPending = ({ color = '#788590', color2, ...props }) => (
+const EmailPending = ({ color = '#335B70', color2, ...props }) => (
     <svg {...props} viewBox="0 0 24 24">
         <path
             fill={color}

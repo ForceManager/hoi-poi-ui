@@ -12,7 +12,7 @@ export default (theme) => ({
         cursor: 'pointer',
         borderRadius: '8px',
         boxSizing: 'border-box',
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.primary.white,
         boxShadow: `0px 4px 5px 0px rgba(39, 60, 80, 0.2), 0px 3px 14px 0px rgba(39, 60, 80, 0.12), 0px 8px 10px 0px rgba(39, 60, 80, 0.14)`,
         transition: 'transform 2s ease-in-out',
     },
@@ -75,18 +75,18 @@ export default (theme) => ({
         alignSelf: 'flex-end',
     },
     info: {
-        borderLeft: `8px solid ${theme.colors.blue500}`,
+        borderLeft: `8px solid ${theme.colors.semantic.info500}`,
     },
     success: {
-        borderLeft: `8px solid ${theme.colors.green500}`,
+        borderLeft: `8px solid ${theme.colors.semantic.positive500}`,
     },
     warning: {
-        borderLeft: `8px solid ${theme.colors.yellow500}`,
+        borderLeft: `8px solid ${theme.colors.semantic.focus500}`,
     },
     error: {
-        borderLeft: `8px solid ${theme.colors.red500}`,
+        borderLeft: `8px solid ${theme.colors.semantic.negative500}`,
     },
     base: {
-        backgroundColor: theme.colors.neutralBase,
+        backgroundColor: theme.colors.primary.white,
     },
 });

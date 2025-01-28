@@ -9,12 +9,12 @@ export default (theme) => {
         },
         info: {
             ...theme.typography.caption,
-            color: theme.colors.neutral600,
+            color: theme.colors.grey[500],
             paddingBottom: 5,
         },
         error: {
             ...theme.typography.caption,
-            color: theme.colors.red500,
+            color: theme.colors.semantic.negative500,
             paddingBottom: 5,
         },
     };
