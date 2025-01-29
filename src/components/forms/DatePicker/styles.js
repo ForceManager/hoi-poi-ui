@@ -530,7 +530,7 @@ export default (theme) => ({
         },
         '& .flatpickr-weekwrapper .flatpickr-weeks': {
             padding: '0 12px',
-            borderLeft: theme.colors.grey[100],
+            borderLeft: `1px solid ${theme.colors.grey[100]}`,
         },
         '& .flatpickr-weekwrapper .flatpickr-weekday': {
             float: 'none',
