@@ -50,9 +50,9 @@ export default (theme) => ({
         },
     },
     promotion: {
-        backgroundColor: theme.colors.primary.brilliantGreen,
+        backgroundColor: theme.colors.background.jadeT7,
         '& $Text': {
-            color: theme.colors.primary.black,        },
+            color: theme.colors.textLight.jadeAccessible,        },
     },
     // For retrocompatibility
     error: {
@@ -102,9 +102,9 @@ export default (theme) => ({
             backgroundColor: theme.colors.temp.purple400,
         },
         '&$promotion': {
-            backgroundColor: theme.colors.background.gray900,
+            backgroundColor: theme.colors.actionMajor[350],
             '& $Text': {
-                color: theme.colors.primary.white,
+                color: theme.colors.textDark.primary,
             },
         },
     },
