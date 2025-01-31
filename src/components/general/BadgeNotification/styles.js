@@ -3,7 +3,7 @@ export default (theme) => ({
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.colors.actionMajor[500],
+        backgroundColor: theme.colors.semantic.notification600,
         position: 'relative',
     },
     Text: {
@@ -36,5 +36,5 @@ export default (theme) => ({
             padding: '0px 4px',
             lineHeight: '16px',
         },
-    }
+    },
 });

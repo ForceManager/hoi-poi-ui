@@ -71,7 +71,7 @@ const SectionForm = memo(
             if (typeof title === 'string') {
                 return (
                     <div className={classes.textContainer} {...override.textContainer}>
-                        <Text bold type="subtitle" className={classes.Text} {...override.Text}>
+                        <Text medium type="subtitle" className={classes.Text} {...override.Text}>
                             {title}
                         </Text>
                     </div>
