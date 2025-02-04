@@ -123,6 +123,7 @@ export default (theme) => ({
     groupLabel: {
         padding: '6px 0px',
         ...theme.typography.subtitle,
+        fontWeight: 500,
         color: theme.colors.textLight.primary,
         textTransform: 'initial',
     },
@@ -136,8 +137,8 @@ export default (theme) => ({
         outline: 'none',
         padding: '2px 4px 2px 12px',
         borderRadius: '4px',
-        border: `1px solid ${theme.colors.grey[50]}`,
-        backgroundColor: theme.colors.grey[50],
+        border: `1px solid ${theme.colors.actionMinor[50]}`,
+        backgroundColor: theme.colors.actionMinor[50],
         transition: 'all 0.15s ease',
         '&:hover': {
             cursor: 'pointer',
@@ -153,11 +154,11 @@ export default (theme) => ({
     },
     controlFocused: {
         backgroundColor: theme.colors.primary.white,
-        border: `1px solid ${theme.colors.actionMajor[500]}`,
+        border: `1px solid ${theme.colors.actionMinor[400]}`,
         boxShadow: 'none',
     },
     placeholder: {
-        color: theme.colors.grey[500],
+        color: theme.colors.actionMinor[500],
     },
     placeholderDisabled: {
         color: theme.colors.textLight.secondary,
@@ -179,11 +180,11 @@ export default (theme) => ({
         color: theme.colors.textLight.primary,
         cursor: 'pointer',
         '&:hover': {
-            backgroundColor: theme.colors.grey[50],
+            backgroundColor: theme.colors.actionMinor[50],
         },
     },
     selectAllSelected: {
-        backgroundColor: theme.colors.grey[50],
+        backgroundColor: theme.colors.actionMinor[50],
     },
     selectAllCheckbox: {
         marginRight: '10px',
@@ -201,20 +202,20 @@ export default (theme) => ({
         transition: 'all 0.15s ease',
     },
     optionFocused: {
-        backgroundColor: theme.colors.grey[50],
+        backgroundColor: theme.colors.actionMinor[50],
         cursor: 'pointer',
         '&:hover': {
-            backgroundColor: theme.colors.grey[50],
+            backgroundColor: theme.colors.actionMinor[50],
         },
     },
     optionFocusDisabled: {
         backgroundColor: `${theme.colors.primary.white} !important`,
     },
     optionSelected: {
-        backgroundColor: theme.colors.grey[50],
+        backgroundColor: theme.colors.actionMinor[50],
         cursor: 'pointer',
         '&:hover': {
-            backgroundColor: theme.colors.grey[50],
+            backgroundColor: theme.colors.actionMinor[50],
         },
     },
     optionDisabled: {
@@ -284,6 +285,9 @@ export default (theme) => ({
     clearIndicator: {
         transition: 'all 0.15s ease',
         padding: 0,
+        '& svg path': {
+            fill: theme.colors.grey[500],
+        },
         '&:hover svg path': {
             fill: theme.colors.grey[700],
         },
@@ -303,6 +307,9 @@ export default (theme) => ({
         paddingLeft: 0,
         paddingRight: 2,
         transition: 'all 0.15s ease',
+        '& svg path': {
+            fill: theme.colors.grey[500],
+        },
         '&:hover svg path': {
             fill: theme.colors.grey[700],
         },

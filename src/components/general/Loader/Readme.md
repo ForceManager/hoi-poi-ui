@@ -3,6 +3,8 @@ Default loader:
 ```jsx
 <Loader />
 <span> </span>
+<Loader color="actionMinor" />
+<span> </span>
 <Loader color="danger" />
 <span> </span>
 <span style={{

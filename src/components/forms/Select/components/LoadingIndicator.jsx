@@ -10,7 +10,7 @@ export default (props) => {
     let className = `${props.className} hoi-poi-select__loading-indicator`;
     return (
         <div className={className} style={newStyles.loadingIndicator}>
-            <Loader size="tiny" />
+            <Loader color="actionMinor" size="tiny" />
         </div>
     );
 };
