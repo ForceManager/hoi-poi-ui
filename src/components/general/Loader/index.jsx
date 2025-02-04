@@ -17,7 +17,7 @@ function Loader({ classes: classesProp, className, size = 'medium', color = 'pri
 Loader.propTypes = {
     className: PropTypes.string,
     size: PropTypes.oneOf(['mini', 'tiny', 'small', 'medium', 'large', 'big', 'huge', 'massive']),
-    color: PropTypes.oneOf(['primary', 'danger', 'white']),
+    color: PropTypes.oneOf(['primary', 'actionMinor', 'danger', 'white']),
 };
 
 export default React.memo(Loader);

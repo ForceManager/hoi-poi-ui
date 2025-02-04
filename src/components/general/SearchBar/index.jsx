@@ -2,7 +2,7 @@ import React, { useMemo, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getOverrides, useClasses } from '../../../utils/overrides';
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 
 import Select from '../../forms/Select';
 
@@ -35,11 +35,39 @@ function SearchBar({
     focusDefaultOption = true,
     ...props
 }) {
+    const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
     const actionsControlRef = useRef([]);
 
+    const defaultOverrides = useMemo(
+        () => ({
+            Select: {
+                overrides: {
+                    control: {
+                        style: {
+                            backgroundColor: theme.colors.transparent,
+                            borderRadius: 0,
+                            borderColor: `${theme.colors.transparent} ${theme.colors.transparent} ${theme.colors.grey[800]} !important`,
+                        },
+                    },
+                    controlFocused: {
+                        style: {
+                            backgroundColor: theme.colors.actionMinor[50],
+                        },
+                    },
+                    placeholder: {
+                        style: {
+                            color: theme.colors.grey[800],
+                        },
+                    },
+                },
+            },
+        }),
+        [],
+    );
+
     // Overrides
-    const override = getOverrides(overridesProp, SearchBar.overrides);
+    const override = getOverrides({ ...defaultOverrides, ...overridesProp }, SearchBar.overrides);
 
     // Classes
     const rootClassName = classnames(classes.root, classNameProp);

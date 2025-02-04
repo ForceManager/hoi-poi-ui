@@ -13,6 +13,10 @@ export default (theme) => ({
         borderColor: theme.colors.actionMajor[150],
         borderTopColor: theme.colors.actionMajor[500],
     },
+    actionMinor: {
+        borderColor: theme.colors.actionMinor[150],
+        borderTopColor: theme.colors.actionMinor[500],
+    },
     danger: {
         borderColor: theme.colors.semantic.negativeCustom200,
         borderTopColor: theme.colors.semantic.negative500,
