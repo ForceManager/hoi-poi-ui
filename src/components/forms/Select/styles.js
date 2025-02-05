@@ -315,7 +315,9 @@ export default (theme) => ({
         },
     },
     loadingIndicator: {
-        marginRight: '8px',
+        marginRight: 8,
+        width: 19,
+        height: 19,
     },
     input: {
         padding: 0,
