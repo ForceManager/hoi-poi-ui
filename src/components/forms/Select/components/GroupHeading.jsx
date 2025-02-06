@@ -160,7 +160,7 @@ export default React.memo(({ children, ...props }) => {
                     color="actionMinor"
                     indeterminate={isIndeterminate}
                 />
-                <Text className={selectAllTextClassName} {...override.groupLabel}>
+                <Text className={selectAllTextClassName} {...override.groupLabel} medium>
                     {label || selectAllLabel}
                 </Text>
             </div>
