@@ -8,10 +8,9 @@ export default (theme) => ({
     },
     calendarIcon: {
         cursor: 'pointer',
+        color: theme.colors.grey[500],
         '&:hover': {
-            '& svg path': {
-                fill: theme.colors.grey[700],
-            },
+            color: theme.colors.grey[700],
         },
     },
     todayContainer: {
