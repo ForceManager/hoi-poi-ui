@@ -201,7 +201,7 @@ function DatePicker({
                     postComponent={
                         !isReadOnly && (
                             <div className={classes.calendarIcon} onClick={onClick}>
-                                <Icon name="calendar" />
+                                <Icon name="calendar" color="currentColor" />
                             </div>
                         )
                     }

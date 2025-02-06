@@ -117,7 +117,7 @@ export default (theme) => {
         focused: {
             '& $inputComponents': {
                 backgroundColor: theme.colors.primary.white,
-                border: `1px solid ${theme.colors.actionMajor[500]}`,
+                border: `1px solid ${theme.colors.actionMinor[500]}`,
             },
         },
         isFullWidth: {
