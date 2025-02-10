@@ -180,7 +180,7 @@ function Modal({
     const renderTitle = useMemo(() => {
         if (typeof title === 'string') {
             return (
-                <Text type="h6" className={classes.title} {...override.title}>
+                <Text type="body" bold className={classes.title} {...override.title}>
                     {title}
                 </Text>
             );
@@ -197,6 +197,7 @@ function Modal({
                         {headerComponent}
                         {useCornerClose && (
                             <Icon
+                                color="currentColor"
                                 size="large"
                                 name="close"
                                 className={classes.closeIcon}

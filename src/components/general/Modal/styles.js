@@ -29,7 +29,7 @@ export default (theme) => ({
         maxHeight: 'calc(100vh - 20px)',
         padding: '32px',
         boxSizing: 'border-box',
-        background: theme.colors.primary.white,
+        background: theme.colors.background.white,
         ...theme.effects.boxShadow24,
         borderRadius: 16,
         display: 'flex',
@@ -42,7 +42,8 @@ export default (theme) => ({
         paddingBottom: 16,
     },
     title: {
-        color: theme.colors.black,
+        color: theme.colors.utility.textPrimary,
+        lineHeight: 'calc(24 / 14)',
     },
     footer: {
         display: 'flex',
@@ -72,6 +73,10 @@ export default (theme) => ({
     },
     closeIcon: {
         flexShrink: 0,
+        color: theme.colors.grey[500],
+        '&:hover': {
+            color: theme.colors.grey[700],
+        },
     },
     confirmButton: {},
     cancelButton: {},
