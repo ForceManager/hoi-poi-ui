@@ -19,6 +19,12 @@ export default (theme) => ({
             color: theme.colors.textLight.secondary,
         },
     },
+    actionMinor: {
+        backgroundColor: theme.colors.actionMinor[100],
+        '& $Text': {
+            color: theme.colors.actionMinor[500],
+        },
+    },
     semanticPositive: {
         backgroundColor: theme.colors.semantic.positiveCustom100,
         '& $Text': {
@@ -73,6 +79,9 @@ export default (theme) => ({
         },
         '&$default': {
             backgroundColor: theme.colors.grey[500],
+        },
+        '&$actionMinor': {
+            backgroundColor: theme.colors.actionMinor[500],
         },
         '&$semanticPositive': {
             backgroundColor: theme.colors.semantic.positive400,

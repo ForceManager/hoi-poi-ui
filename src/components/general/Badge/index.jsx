@@ -71,6 +71,7 @@ Badge.propTypes = {
         'semanticNegative',
         'semanticInfo',
         'semanticFocus',
+        'actionMinor',
     ]),
     variant: PropTypes.oneOf(['inverted']),
 };
