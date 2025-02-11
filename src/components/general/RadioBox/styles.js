@@ -9,6 +9,7 @@ export default (theme) => ({
         cursor: 'pointer',
         boxSizing: 'border-box',
         transition: 'height .3s ease',
+        backgroundColor: theme.colors.background.white,
     },
     checked: {
         border: `1px solid ${theme.colors.actionMajor[500]}`,
@@ -24,6 +25,7 @@ export default (theme) => ({
         height: 36,
         width: 36,
         marginRight: 16,
+        paddingTop: 5,
         '& svg': {
             height: 36,
             width: 36,
