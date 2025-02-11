@@ -6,7 +6,7 @@ import Radio from '../../forms/Radio';
 import Icon from '../../general/Icon';
 import Text from '../../typography/Text';
 
-import { createUseStyles } from '../../../utils/styles';
+import { createUseStyles, useTheme } from '../../../utils/styles';
 import styles from './styles';
 const useStyles = createUseStyles(styles, 'RadioBox');
 
@@ -23,6 +23,7 @@ const RadioBox = ({
     onChange = () => {},
     ...props
 }) => {
+    const theme = useTheme();
     const classes = useClasses(useStyles, classesProp);
     // Overrides
     const override = getOverrides(overridesProp, Radio.overrides);
@@ -39,9 +40,14 @@ const RadioBox = ({
 
     return (
         <div className={rootClassNames} {...props} {...override.root}>
-            <Icon className={classes.icon} name={icon} {...override.icon} />
+            <Icon
+                className={classes.icon}
+                name={icon}
+                color={theme.colors.grey[500]}
+                {...override.icon}
+            />
             <div className={classes.content} {...override.content}>
-                <Text type="h6" className={classes.title} {...override.title}>
+                <Text type="h6" bold className={classes.title} {...override.title}>
                     {title}
                 </Text>
                 <Text className={classes.text} {...override.text}>
