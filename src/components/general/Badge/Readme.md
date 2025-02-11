@@ -7,6 +7,17 @@ Default:
 </div>
 ```
 
+actionMinor:
+
+```jsx
+<div style={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
+    <Badge type="actionMinor">Lorem ipsum</Badge>
+    <Badge type="actionMinor" variant="inverted">
+        Lorem ipsum
+    </Badge>
+</div>
+```
+
 semanticPositive:
 
 ```jsx
