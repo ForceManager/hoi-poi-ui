@@ -173,7 +173,7 @@ export const typography = {
     },
     h3: {
         fontFamily,
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: 700,
         lineHeight: '140%',
         letterSpacing: 0.6,
