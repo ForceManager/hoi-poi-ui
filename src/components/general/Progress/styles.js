@@ -9,7 +9,7 @@ export default (theme) => ({
         border: 'none',
         borderRadius: 2,
         overflow: 'hidden',
-        backgroundColor: theme.colors.grey[100],
+        backgroundColor: theme.colors.grey[50],
     },
     progressBar: {
         display: 'block',
@@ -18,22 +18,22 @@ export default (theme) => ({
     },
     low: {
         '& $progressBar': {
-            background: theme.colors.semantic.infoCustom100,
+            background: theme.colors.semantic.positiveCustom200,
         },
     },
     medium: {
         '& $progressBar': {
-            background: theme.colors.semantic.info150,
+            background: theme.colors.semantic.positiveCustom300,
         },
     },
     high: {
         '& $progressBar': {
-            background: theme.colors.semantic.info400,
+            background: theme.colors.semantic.positive400,
         },
     },
     higher: {
         '& $progressBar': {
-            background: theme.colors.semantic.info500,
+            background: theme.colors.semantic.positive500,
         },
     },
     full: {
