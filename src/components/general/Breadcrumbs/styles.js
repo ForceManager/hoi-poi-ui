@@ -2,16 +2,16 @@ export default (theme) => ({
     root: {
         display: 'flex',
         alignItems: 'center',
+        gap: 8,
     },
     item: {
-        marginRight: 8,
         '& span': {
-            color: theme.colors.textLight.secondary,
+            color: theme.colors.utility.textDisabled,
         },
         '&:last-child': {
             margin: 0,
             '& span': {
-                color: theme.colors.textLight.primary,
+                color: theme.colors.actionMinor[500],
             },
         },
     },
@@ -20,12 +20,7 @@ export default (theme) => ({
             cursor: 'pointer',
             '&:hover': {
                 '& span': {
-                    color: theme.colors.semantic.info500,
-                },
-                '&:last-child': {
-                    '& span': {
-                        color: theme.colors.textLight.primary,
-                    },
+                    color: theme.colors.actionMinor[500],
                 },
             },
             '&:last-child': {
@@ -36,5 +31,7 @@ export default (theme) => ({
             cursor: 'inherit',
         },
     },
-    divider: {},
+    divider: {
+        color: theme.colors.utility.textDisabled,
+    },
 });
