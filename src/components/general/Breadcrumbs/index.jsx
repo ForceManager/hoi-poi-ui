@@ -61,15 +61,14 @@ function Breadcrumbs({
             }
 
             if (idx < items.length - 1) {
-                const dividerClass = classnames(classes.item, classes.divider);
                 arr.push(
                     <div
                         key={`divider-${idx}`}
-                        className={dividerClass}
+                        className={classes.divider}
                         {...override.item}
                         {...override.divider}
                     >
-                        <Icon name="arrowRightRaw" size="raw"></Icon>
+                        <Icon name="arrowRightRaw" size="raw" color="currentColor"></Icon>
                     </div>,
                 );
             }
