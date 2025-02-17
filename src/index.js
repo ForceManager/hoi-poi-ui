@@ -18,6 +18,7 @@ export { default as Chip } from './components/general/Chip';
 export { default as Divider } from './components/general/Divider';
 export { default as Drawer } from './components/general/Drawer';
 export { default as Icon } from './components/general/Icon';
+export { default as IconMultiple } from './components/general/IconMultiple';
 export { default as Loader } from './components/general/Loader';
 export { default as Markdown } from './components/general/Markdown';
 export { default as Modal } from './components/general/Modal';
