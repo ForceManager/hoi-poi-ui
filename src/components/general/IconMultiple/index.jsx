@@ -17,7 +17,9 @@ function IconMultiple({
     className: classNameProp,
     size = 'medium',
     firstIcon,
+    firstProps = {},
     secondIcon,
+    secondProps = {},
     ...props
 }) {
     const classes = useClasses(useStyles, classesProp);
@@ -44,12 +46,14 @@ function IconMultiple({
                 size={size}
                 className={classes.FirstIcon}
                 {...override.FirstIcon}
+                {...firstProps}
             />
             <Icon
                 name={secondIcon}
                 className={classes.SecondIcon}
                 size={secondSize}
                 {...override.SecondIcon}
+                {...secondProps}
             />
         </div>
     );
