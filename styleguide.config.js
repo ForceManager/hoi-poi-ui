@@ -23,6 +23,7 @@ module.exports = {
                 './src/components/general/Drawer/index.jsx',
                 './src/components/general/EllipsedInlineList/index.jsx',
                 './src/components/general/Icon/index.jsx',
+                './src/components/general/IconMultiple/index.jsx',
                 './src/components/general/List/index.jsx',
                 './src/components/general/Loader/index.jsx',
                 './src/components/general/Markdown/index.jsx',
