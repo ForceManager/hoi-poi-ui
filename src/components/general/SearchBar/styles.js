@@ -2,7 +2,7 @@ export default (theme) => ({
     root: {
         '& .hoi-poi-select__search-indicator': {
             '& svg path': {
-                fill: theme.colors.grey[800],
+                fill: theme.colors.grey[700],
             },
         },
     },
@@ -37,6 +37,12 @@ export default (theme) => ({
         },
         '& .hoi-poi-select__control': {
             padding: '2px 4px 2px 8px',
+            '& .hoi-poi-select__value-container--has-value': {
+                backgroundColor: theme.colors.actionMinor[50],
+                '& + .hoi-poi-select__indicators': {
+                    backgroundColor: theme.colors.actionMinor[50],
+                },
+            },
         },
         '& .hoi-poi-select__control--is-focused > div': {
             backgroundColor: theme.colors.actionMinor[100],
@@ -48,14 +54,6 @@ export default (theme) => ({
             borderBottomRightRadius: 4,
             '& svg path': {
                 fill: theme.colors.actionMinor[550],
-            },
-        },
-        '& .hoi-poi-select__control': {
-            '& .hoi-poi-select__value-container--has-value': {
-                backgroundColor: theme.colors.actionMinor[50],
-                '& + .hoi-poi-select__indicators': {
-                    backgroundColor: theme.colors.actionMinor[50],
-                },
             },
         },
         '& .hoi-poi-select__control:not(.hoi-poi-select__control--menu-is-open):hover': {
