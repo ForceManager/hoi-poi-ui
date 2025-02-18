@@ -67,11 +67,7 @@ const MultiAvatar = memo(
                     ))}
                 </div>
                 {showCount && (
-                    <BadgeNotification
-                        size="tiny"
-                        className={classes.count}
-                        overrides={{ Text: { color: 'neutral900' } }}
-                    >
+                    <BadgeNotification size="tiny" className={classes.count}>
                         {sources.length}
                     </BadgeNotification>
                 )}

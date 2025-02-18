@@ -12,7 +12,7 @@ const columns = [
 
 const rows = [
     {
-        label: <Text color="neutral700">Cell1</Text>,
+        label: <Text>Cell1</Text>,
         value: 1,
         isFeatured: <Icon name="starBorder" />,
         props: {
@@ -21,12 +21,12 @@ const rows = [
     },
     {
         value: 2,
-        label: <Text color="neutral700">Cell2</Text>,
+        label: <Text>Cell2</Text>,
         isFeatured: <Icon name="starBorder" />,
     },
     {
         value: 4,
-        label: <Text color="neutral700">Cell3</Text>,
+        label: <Text>Cell3</Text>,
         isFeatured: <Icon name="star" />,
     },
 ];
