@@ -77,7 +77,7 @@ export default (theme) => ({
         alignItems: 'center',
         boxSizing: 'border-box',
         paddingBottom: 8,
-        borderBottom: `1px solid ${theme.colors.neutral400}`,
+        borderBottom: `1px solid ${theme.colors.grey[100]}`,
     },
     titleContainerInner: {
         display: 'flex',
