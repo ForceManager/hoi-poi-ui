@@ -102,7 +102,7 @@ export default (theme) => ({
             position: 'relative',
             '&::after': {
                 zIndex: 1,
-                backgroundColor: theme.colors.textLight.primary,
+                backgroundColor: theme.colors.actionMinor[500],
                 height: 2,
                 left: 0,
                 right: 0,
@@ -498,7 +498,7 @@ export default (theme) => ({
             alignItems: 'center',
         },
         '& .hoi-poi-ui__tabs-tab-active': {
-            borderBottom: `2px solid ${theme.colors.textLight.primary}`,
+            borderBottom: `2px solid ${theme.colors.actionMinor[500]}`,
             paddingBottom: 13,
             '&::after, &:hover::after': {
                 content: 'none',
