@@ -1,8 +1,8 @@
 export default (theme) => ({
     root: {
-        display: 'inline-block',
-        textAlign: 'center',
-        lineHeight: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     small: {
         width: 10,
