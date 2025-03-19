@@ -1,7 +1,7 @@
 export default (theme) => ({
     root: {
-        width: '350px',
-        minHeight: '75px',
+        width: 350,
+        minHeight: 75,
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
@@ -10,7 +10,7 @@ export default (theme) => ({
         borderLeft: `8px solid transparent`,
         opacity: 1,
         cursor: 'pointer',
-        borderRadius: '8px',
+        borderRadius: 8,
         boxSizing: 'border-box',
         backgroundColor: theme.colors.primary.white,
         boxShadow: `0px 4px 5px 0px rgba(39, 60, 80, 0.2), 0px 3px 14px 0px rgba(39, 60, 80, 0.12), 0px 8px 10px 0px rgba(39, 60, 80, 0.14)`,
@@ -64,12 +64,14 @@ export default (theme) => ({
         width: '100%',
         height: 'auto',
         boxSizing: 'border-box',
-        paddingTop: '4px',
+        paddingTop: 4,
         display: 'flex',
         justifyContent: 'flex-start',
         flexDirection: 'column',
     },
-    text: {},
+    text: {
+        display: 'block',
+    },
     link: {
         display: 'flex',
         alignSelf: 'flex-end',
