@@ -6,6 +6,7 @@ import AnimateHeight from 'react-animate-height';
 import Icon from '../../general/Icon';
 import BadgeNotification from '../../general/BadgeNotification';
 import Text from '../../typography/Text';
+import Tooltip from '../../utils/Tooltip';
 import { getOverrides, useClasses } from '../../../utils/overrides';
 
 import { createUseStyles } from '../../../utils/styles';
@@ -22,6 +23,7 @@ const SectionForm = memo(
         title,
         onChange,
         onRemove,
+        onRemoveTooltip,
         activeFields,
         orientation,
         headerPreComponent,
@@ -94,6 +96,17 @@ const SectionForm = memo(
         }, [classes, override, activeFields, isOpen]);
 
         const innerComponent = useMemo(() => {
+            let RemoveIcon = (
+                <Icon onClick={onInnerRemove} className={classes.trashIcon} name="delete" />
+            );
+            if (onRemoveTooltip) {
+                RemoveIcon = (
+                    <Tooltip content={onRemoveTooltip}>
+                        <span>{RemoveIcon}</span>
+                    </Tooltip>
+                );
+            }
+
             return (
                 <div className={classes.headerContent} {...override.headerContent}>
                     <div className={classes.titleContainer} {...override.titleContainer}>
@@ -105,13 +118,7 @@ const SectionForm = memo(
                                     <Icon name="arrowDropDown" className={classes.expandableIcon} />
                                 )}
                                 {newActiveFields}
-                                {onRemove && (
-                                    <Icon
-                                        onClick={onInnerRemove}
-                                        className={classes.trashIcon}
-                                        name="delete"
-                                    />
-                                )}
+                                {onRemove && RemoveIcon}
                             </div>
                         </div>
                         {headerPostComponent}
@@ -131,6 +138,7 @@ const SectionForm = memo(
             newActiveFields,
             onInnerRemove,
             onRemove,
+            onRemoveTooltip,
             override.headerContent,
             override.icon,
             override.titleContainer,
