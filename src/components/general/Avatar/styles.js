@@ -3,7 +3,7 @@ export default (theme) => ({
         ...theme.typography.defaultText,
         color: theme.colors.textLight.secondary,
         overflow: 'hidden',
-        background: theme.colors.grey[100],
+        background: theme.colors.grey[50],
         position: 'relative',
         '& > img': {
             height: '100%',
@@ -140,7 +140,7 @@ export default (theme) => ({
         right: 0,
         boxSizing: 'border-box',
         boxShadow: `0 0 0 2px ${theme.colors.primary.white}`,
-        backgroundColor: theme.colors.grey[100],
+        backgroundColor: theme.colors.grey[50],
         transform: 'translate3d(25%, 25%, 0)',
     },
 });

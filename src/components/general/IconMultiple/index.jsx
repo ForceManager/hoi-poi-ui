@@ -31,7 +31,7 @@ function IconMultiple({
 
     const secondSize = useMemo(() => {
         const index = SIZES.findIndex((s) => size === s);
-        return SIZES[index + 2] || 'small';
+        return SIZES[index + 1] || 'small';
     }, [size]);
 
     const rootProps = {
