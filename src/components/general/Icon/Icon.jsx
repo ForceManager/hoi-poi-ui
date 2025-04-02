@@ -1063,7 +1063,7 @@ const Icon = forwardRef(
         const classes = useClasses(useStyles, classesProp);
         const theme = useTheme();
 
-        const [newColor, setNewColor] = useState(color || theme.colors.actionMinor[500]);
+        const [newColor, setNewColor] = useState(color || theme.colors.grey[500]);
         const [newName, setNewName] = useState(name);
         const oldName = useRef(name);
 

@@ -44,7 +44,7 @@ export default (theme) => {
             lineHeight: 0,
             borderRadius: '4px',
             border: '1px solid transparent',
-            backgroundColor: theme.colors.grey[50],
+            backgroundColor: theme.colors.actionMinor[50],
             transition: 'all 0.15s ease',
         },
         input: {
