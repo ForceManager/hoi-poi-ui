@@ -101,7 +101,11 @@ const SectionForm = memo(
             );
             if (onRemoveTooltip) {
                 RemoveIcon = (
-                    <Tooltip content={onRemoveTooltip}>
+                    <Tooltip
+                        placement="topRight"
+                        content={onRemoveTooltip}
+                        {...override.RemoveTooltip}
+                    >
                         <span>{RemoveIcon}</span>
                     </Tooltip>
                 );
@@ -139,6 +143,7 @@ const SectionForm = memo(
             onInnerRemove,
             onRemove,
             onRemoveTooltip,
+            override.RemoveTooltip,
             override.headerContent,
             override.icon,
             override.titleContainer,
@@ -184,6 +189,7 @@ SectionForm.overrides = [
     'BadgeNotification',
     'icon',
     'react-animate-height',
+    'RemoveTooltip',
 ];
 
 SectionForm.propTypes = {
